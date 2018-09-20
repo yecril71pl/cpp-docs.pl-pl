@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420156"
 ---
 # <a name="dynamic-object-creation"></a>Dynamiczne tworzenie obiektów
-W tym artykule opisano sposób tworzenia obiektu dynamicznie w czasie wykonywania. Procedura wykorzystuje informacje o klasie czasu wykonywania, zgodnie z opisem w artykule [podczas uzyskiwania dostępu do środowiska wykonawczego informacje o klasie](../mfc/accessing-run-time-class-information.md).  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Można dynamicznie utworzyć obiekt na podstawie jego klasa czasu wykonywania  
-  
-1.  Poniższy kod umożliwia dynamiczne tworzenie obiektów przy użyciu `CreateObject` funkcji `CRuntimeClass`. Należy pamiętać, że w przypadku awarii, `CreateObject` zwraca **NULL** zamiast wywoływanie wyjątek:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie obiektu CObject](../mfc/using-cobject.md)
+
+W tym artykule wyjaśniono, jak utworzyć obiekt dynamicznie w czasie wykonywania. Procedura używa informacji o klasie czasu wykonywania, zgodnie z opisem w artykule [uzyskiwania dostępu do środowiska wykonawczego informacji o klasie](../mfc/accessing-run-time-class-information.md).
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Umożliwia dynamiczne tworzenie dany obiekt na podstawie swojej klasy środowiska wykonawczego
+
+1. Użyj poniższego kodu, aby dynamicznie utworzyć obiekt przy użyciu `CreateObject` funkcji `CRuntimeClass`. Należy pamiętać, że w przypadku awarii `CreateObject` zwraca **NULL** zamiast zgłaszania wyjątku:
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie obiektu CObject](../mfc/using-cobject.md)
 

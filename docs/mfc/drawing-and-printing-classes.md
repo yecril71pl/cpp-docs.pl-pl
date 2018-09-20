@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344783"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380339"
 ---
 # <a name="drawing-and-printing-classes"></a>Klasy związane z rysowaniem i drukowaniem
-W systemie Windows wszystkie graficzne dane wyjściowe jest rysowana na obszar rysowania wirtualny o nazwie kontekstu urządzenia (DC). MFC udostępnia klasy do Hermetyzowanie różnych typów kontrolerów domeny, a także encapsulations rysowania narzędzi systemu Windows, takich jak mapy bitowe, pędzle palety i pióra.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+W Windows wszystkie dane wyjściowe graficzny jest rysowana na obszar rysowania wirtualnego o nazwie kontekstu urządzenia (DC). MFC udostępnia klasy do hermetyzacji różne typy kontrolerów domeny, a także encapsulations dla Windows narzędzi do rysowania, takie jak mapy bitowe, pędzle, palety i pióra.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

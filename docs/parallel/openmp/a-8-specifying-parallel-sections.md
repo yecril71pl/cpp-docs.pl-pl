@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acb28f4e7e99ea09696d116ab031778fcf9ff919
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d969f1a0e9d9b282104ee00a3b2d06610533ad4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440423"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   Określanie sekcji równoległych
-W poniższym przykładzie (dla [sekcji 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) na stronie 14) funkcje *xaxis*, *yaxis*, i *zaxis* mogą być wykonywane jednocześnie. Pierwszy `section` dyrektywa jest opcjonalne.  Należy pamiętać, że wszystkie `section` dyrektywy muszą występować w zakresie leksykalne `parallel sections` utworzenia.  
-  
-```  
-#pragma omp parallel sections  
-{  
-    #pragma omp section  
-        xaxis();  
-    #pragma omp section  
-        yaxis();  
-    #pragma omp section  
-        zaxis();  
-}  
+
+W poniższym przykładzie (dla [sekcji 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) na stronie 14) funkcje *liczbowa*, *yaxis*, i *zaxis* mogą być wykonywane jednocześnie. Pierwszy `section` dyrektywa jest opcjonalne.  Należy pamiętać, że wszystkie `section` dyrektyw, musi ono być widoczne w zakresie leksykalnym `parallel sections` konstruowania.
+
+```
+#pragma omp parallel sections
+{
+    #pragma omp section
+        xaxis();
+    #pragma omp section
+        yaxis();
+    #pragma omp section
+        zaxis();
+}
 ```

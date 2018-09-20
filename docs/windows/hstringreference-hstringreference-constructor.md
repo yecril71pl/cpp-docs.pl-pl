@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591188"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403585"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference — Konstruktor
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*sizeDest*  
+*sizeDest*<br/>
 Parametr szablonu, który określa rozmiar docelowy **HStringReference** buforu.
 
-*str*  
+*str*<br/>
 Odwołanie do ciągu znaków dwubajtowych.
 
-*Len*  
+*Len*<br/>
 Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany. Jeśli *len* jest większa niż *sizeDest*, *len* ustawiono *sizeDest*-1.
 
-*other*  
+*other*<br/>
 Inny **HStringReference** obiektu.
 
 ## <a name="remarks"></a>Uwagi

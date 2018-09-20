@@ -44,81 +44,87 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d3e6ca79794eafe64ee2797c12ec8a82a3bb064
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d4bbe44b7ae10b6b2ee448be8e9dcb682f9e0a1a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038223"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397419"
 ---
 # <a name="cmapptrtoptr-class"></a>Klasa CMapPtrToPtr
-Obsługuje mapy wskaźników typu void opartych na kluczach wskaźników typu void.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CMapPtrToPtr : public CObject  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
- Funkcje elementów członkowskich `CMapPtrToPtr` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, Wstaw wskaźnik do **void**.  
-  
- `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
-  
- na przykład przekłada się na  
-  
- `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów na tej mapie.|  
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|  
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Pobiera następny element do wykonania iteracji.|  
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Zwraca liczbę elementów na tej mapie.|  
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Zwraca pozycję pierwszego elementu.|  
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Oblicza wartość skrótu dla określonego klucza.|  
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicjuje tabelę mieszania.|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testuje pod kątem warunku pusta Mapa (Brak elementów).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Wyszukuje wskaźnika void oparte na kluczu wskaźnika void. Wartość wskaźnika, a nie jednostki, który wskazuje, służy do porównywania kluczy.|  
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Zwraca odwołanie do klucz skojarzony z określoną wartością klucza.|  
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Usuwa wszystkie elementy z tej mapie.|  
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Usuwa element określony przez klucz.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|  
-  
-## <a name="remarks"></a>Uwagi  
- `CMapPtrToPtr` dołącza IMPLEMENT_DYNAMIC — makro do obsługi dostępu typu run-time i zrzucanie `CDumpContext` obiektu. Zrzut mapy poszczególne elementy (wartości wskaźnika), należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą.  
-  
- Wskaźnik do wskaźnika map nie może być serializowany.  
-  
- Gdy `CMapPtrToPtr` obiekt zostanie usunięty lub usunięcie jej elementy są usuwane tylko wskaźników, nie mogą odwoływać się do jednostki.  
-  
- Aby uzyskać więcej informacji na temat `CMapPtrToPtr`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CMapPtrToPtr`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxcoll.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CObject](../../mfc/reference/cobject-class.md)   
- [Wykres hierarchii](../../mfc/hierarchy-chart.md)
+
+Obsługuje mapy wskaźników typu void opartych na kluczach wskaźników typu void.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CMapPtrToPtr : public CObject
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+Funkcje elementów członkowskich `CMapPtrToPtr` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, Wstaw wskaźnik do **void**.
+
+`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
+
+na przykład przekłada się na
+
+`BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów na tej mapie.|
+|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|
+|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Pobiera następny element do wykonania iteracji.|
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Zwraca liczbę elementów na tej mapie.|
+|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Zwraca pozycję pierwszego elementu.|
+|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Oblicza wartość skrótu dla określonego klucza.|
+|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicjuje tabelę mieszania.|
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testuje pod kątem warunku pusta Mapa (Brak elementów).|
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Wyszukuje wskaźnika void oparte na kluczu wskaźnika void. Wartość wskaźnika, a nie jednostki, który wskazuje, służy do porównywania kluczy.|
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Zwraca odwołanie do klucz skojarzony z określoną wartością klucza.|
+|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Usuwa wszystkie elementy z tej mapie.|
+|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Usuwa element określony przez klucz.|
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
+
+## <a name="remarks"></a>Uwagi
+
+`CMapPtrToPtr` dołącza IMPLEMENT_DYNAMIC — makro do obsługi dostępu typu run-time i zrzucanie `CDumpContext` obiektu. Zrzut mapy poszczególne elementy (wartości wskaźnika), należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą.
+
+Wskaźnik do wskaźnika map nie może być serializowany.
+
+Gdy `CMapPtrToPtr` obiekt zostanie usunięty lub usunięcie jej elementy są usuwane tylko wskaźników, nie mogą odwoływać się do jednostki.
+
+Aby uzyskać więcej informacji na temat `CMapPtrToPtr`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CMapPtrToPtr`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxcoll.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

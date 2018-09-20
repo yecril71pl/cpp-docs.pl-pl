@@ -24,29 +24,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f15ef532ba61a089f8adec9ed20f737c07eae2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23aa5e4c13e8049a2240462dab1c5b68bfb514f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348550"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436939"
 ---
 # <a name="ole-background-containers-and-servers"></a>Podstawy OLE: kontenery i serwery
-Aplikacji kontenera jest aplikacja, który można zastosować elementy osadzone lub połączone w swoich własnych dokumentów. Zarządza aplikacji kontenera dokumentów musi mieć możliwość przechowywania i wyświetlania elementów dokumentu OLE, a także dane utworzone przez samą aplikację. Aplikacji kontenera należy także zezwolić użytkownikom na wstawianie nowych elementów lub edytować istniejące elementy aktywowania aplikacji serwerowych, gdy jest to konieczne. Wymagania interfejsu użytkownika aplikacji kontenera są wymienione w artykule [kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md).  
-  
- Aplikacja serwera lub składnik aplikacji jest aplikacja, która można tworzyć składniki dokumentu OLE do użycia przez aplikacje kontenera. Aplikacje serwera zwykle obsługuje przeciągania i upuszczania lub kopiowania do Schowka swoje dane, tak aby aplikacji kontenera można wstawić danych jako element osadzony lub połączony. Aplikacja może być zarówno kontener, jak i serwera.  
-  
- Większość serwerów są aplikacje autonomiczne lub pełne serwerów; one albo mogą być uruchamiane jako aplikacje autonomiczne lub można uruchomić aplikacji kontenera. Miniserver jest specjalnym rodzajem aplikacji serwera, który można uruchomić tylko przez kontener. Nie można uruchomić jako aplikacja autonomiczna. Przykłady miniservers są serwery Microsoft Draw i Microsoft Graph.  
-  
- Kontenery i serwery nie komunikują się bezpośrednio. Zamiast tego komunikują się za pośrednictwem OLE systemu dołączanych dynamicznie bibliotekach (DLL). Te biblioteki DLL udostępniają funkcje, które wywołują kontenery i serwery i kontenery i serwery zapewniają funkcje wywołania zwrotnego, które wywołują bibliotek DLL.  
-  
- Przy użyciu tej metody komunikacji, kontener nie musi wiedzieć, szczegóły implementacji aplikacji serwera. Umożliwia on kontenera zaakceptować elementy utworzone przez dowolny serwer bez konieczności Definiowanie typów serwerów, z którymi można pracować. W związku z tym użytkownik aplikacji kontenera mogą wykorzystać przyszłych aplikacji i formatów danych. Jeśli te nowe aplikacje są składnikami OLE, to złożonego dokumentu będą mogli dołączyć do nich elementy utworzone przez te aplikacje.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawy OLE](../mfc/ole-background.md)   
- [Podstawy OLE: Implementacja MFC](../mfc/ole-background-mfc-implementation.md)   
- [Kontenery](../mfc/containers.md)   
- [Serwery](../mfc/servers.md)   
- [Kontenery: Elementy klienckie](../mfc/containers-client-items.md)   
- [Serwery: elementy serwera](../mfc/servers-server-items.md)
+
+Aplikacja kontenera jest aplikacja, która można zastosować osadzony lub połączony elementy w swoich własnych dokumentów. Dokumenty, zarządzane przez aplikację kontenera musi mieć możliwość przechowywania i wyświetlania elementów dokumentu OLE, a także dane utworzone przez samą aplikację. Aplikacja kontenera należy także zezwolić użytkownikom na wstawianie nowych elementów lub edycji istniejących elementów, aktywując aplikacji serwerowych, gdy jest to konieczne. Wymagania dotyczące interfejsu użytkownika aplikacji kontenera są wymienione w artykule [kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md).
+
+Serwer aplikacji lub składnika aplikacji to aplikacja, można utworzyć elementów dokumentu OLE do użycia przez aplikacje kontenera. Aplikacje serwera zwykle obsługi przeciągania i upuszczania lub kopiowania danych do Schowka, tak, aby wstawić dane jako element osadzony lub połączony aplikacji kontenera. Aplikacja może być zarówno kontenera, jak i serwera.
+
+Większość serwerów są aplikacje autonomiczne lub pełne serwerów; one albo mogą być uruchamiane jako autonomiczne aplikacje lub można uruchamiać przez aplikację kontenera. Miniserver jest specjalnym typem aplikacji serwera, które mogą być uruchamiane tylko przez kontener. Nie można uruchomić jako autonomiczną aplikację. Przykładami miniservers są serwery Microsoft Draw i programu Microsoft Graph.
+
+Kontenery i serwery nie komunikują się bezpośrednio. Zamiast tego komunikują się za pośrednictwem bibliotek OLE systemu dołączana dynamicznie (DLL). Te biblioteki DLL udostępniają funkcje, które wywołują kontenery i serwery i kontenery i serwery udostępniają funkcje wywołania zwrotnego, które wywołują biblioteki dll.
+
+Za pomocą oznacza, że komunikacji, kontener nie musi wiedzieć, szczegóły implementacji aplikacji serwera. Umożliwia to kontener zaakceptować elementy utworzone przez dowolnego serwera bez konieczności wcześniejszego definiowania typów serwerów, z którymi można pracować. W rezultacie użytkownik aplikacji kontenera korzystać z zalet formatów danych i aplikacji tworzonych w przyszłości. Jeśli te nowe aplikacje są składnikami OLE, złożonego dokumentu będą mieć możliwość zawierać elementy utworzone przez te aplikacje.
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawy OLE](../mfc/ole-background.md)<br/>
+[Podstawy OLE: implementacja MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Kontenery](../mfc/containers.md)<br/>
+[Serwery](../mfc/servers.md)<br/>
+[Kontenery: elementy klienckie](../mfc/containers-client-items.md)<br/>
+[Serwery: elementy serwera](../mfc/servers-server-items.md)
 

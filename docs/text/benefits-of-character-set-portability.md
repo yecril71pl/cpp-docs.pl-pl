@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b812b0712e6df24422ebe4a3b73376619051b484
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 115a4524f3b11d847291015f3bee5ca10f628310
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423445"
 ---
 # <a name="benefits-of-character-set-portability"></a>Zalety przenośności zestawu znaków
-Możesz korzystać z przy użyciu funkcji przenoszenia środowiska wykonawczego MFC i C, nawet wtedy, gdy nie można obecnie podjąć zamierzasz internationalize aplikacji:  
-  
--   Kodowanie portably sprawia, że Twój kod podstawowy elastyczne. Można później przenieść je łatwo do standardu Unicode i MBCS.  
-  
--   Przy użyciu standardu Unicode sprawia, że aplikacje dla Windows bardziej wydajne. Ponieważ Windows używa Unicode, innego niż Unicode ciągi przekazywane do i z systemu operacyjnego musi podlegać translacji, która wiąże się obciążenie.  
 
-  
-## <a name="see-also"></a>Zobacz też  
- [Unicode i MBCS](../text/unicode-and-mbcs.md)   
- [Obsługa formatu Unicode](../text/support-for-unicode.md)
+Możesz korzystać z przy użyciu funkcji przenoszenia środowiska wykonawczego MFC i C, nawet wtedy, gdy nie można obecnie podjąć zamierzasz internationalize aplikacji:
+
+- Kodowanie portably sprawia, że Twój kod podstawowy elastyczne. Można później przenieść je łatwo do standardu Unicode i MBCS.
+
+- Przy użyciu standardu Unicode sprawia, że aplikacje dla Windows bardziej wydajne. Ponieważ Windows używa Unicode, innego niż Unicode ciągi przekazywane do i z systemu operacyjnego musi podlegać translacji, która wiąże się obciążenie.
+
+
+## <a name="see-also"></a>Zobacz też
+
+[Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
+[Obsługa formatu Unicode](../text/support-for-unicode.md)

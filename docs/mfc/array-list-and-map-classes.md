@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8d044f8844fdf46969342d1b4fc5cf2f007c041
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436341"
 ---
 # <a name="array-list-and-map-classes"></a>Klasy tablic, list i map
-Obsługa wartości zagregowanych danych, biblioteki klas zawiera grupę klasy kolekcji — stałych, list i map — które mogą zawierać wiele obiektów i wstępnie zdefiniowanych typów. Kolekcje są dynamicznie o rozmiarze. Te klasy mogą być używane w programach, czy napisane dla systemu Windows, czy nie. Są one jednak najbardziej przydatny w przypadku implementowania struktury danych, które zdefiniowanie klas dokumentów w ramach aplikacji. Klasy specjalne kolekcji można łatwo pochodzi z tych lub można utworzyć je w oparciu klasy szablonu. Aby uzyskać więcej informacji o tych metod, zobacz artykuł [kolekcji](../mfc/collections.md). Lista szablonu klasy kolekcji, zobacz artykuł [klasy szablonów dla tablic, list i map](../mfc/template-classes-for-arrays-lists-and-maps.md).  
-  
- Tablice są struktury jednowymiarowa danych, które są połączone ze sobą przechowywane w pamięci. Obsługują one dostęp do bardzo szybkiego losowego, ponieważ adres pamięci żadnych danego elementu, może zostać obliczona przez pomnożenie indeks elementu według rozmiaru elementu i dodanie wynik do adres podstawowy tablicy. Ale są bardzo kosztowna, jeśli masz wstawianie elementów do tablicy, od ostatnich tablicy cały element dodaje ma do przeniesienia, aby zwolnić miejsce dla elementu, który ma zostać wstawiony tablic. Tablice można zwiększyć lub zmniejszyć w razie potrzeby.  
-  
- Listy są podobne do tablic, ale są przechowywane w bardzo inaczej. Każdy element na liście także wskaźnik do poprzedniego i następnego elementów, dzięki czemu podwójnie połączonej listy. Jest bardzo szybko, aby dodać lub usunąć elementy, ponieważ dzięki temu tylko obejmuje zmiana kilka wskazówek. Jednak wyszukiwanie listy może być kosztowne, ponieważ wszystkie wyszukiwania konieczne uruchomienie na jeden z końców listy.  
-  
- Mapy odnoszą się wartość klucza do wartości danych. Na przykład klucz mapy może być ciąg i danych wskaźnik do listy. Czy poproś mapy daje wskaźnika skojarzonego z konkretnym ciągiem. Mapa wyszukiwań są szybkie, ponieważ mapy Użyj skrótu tabel odnośników klucza. Dodawanie i usuwanie elementów jest również szybkie. Mapy często są używane przez inne struktury danych jako indeksów pomocniczych. MFC używa specjalny rodzaj mapy o nazwie [mapy komunikatów](../mfc/mapping-messages.md) mapowania komunikaty systemu Windows na wskaźnik do funkcji obsługi dla tej wiadomości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Obsługa wartości zagregowanych danych, biblioteka klas zawiera grupy klas kolekcji — tablic, list i map — który może zawierać wiele obiektów i wstępnie zdefiniowanych typów. Kolekcje są dynamicznie wielkości. Te klasy mogą być używane w dowolnym programie, czy napisane dla Windows, czy nie. Są najbardziej przydatne w przypadku implementowania struktur danych, które definiują swojej klasy dokumentów w ramach aplikacji. Można łatwo uzyskać klas wyspecjalizowanych kolekcji z tych lub możesz utworzyć je w oparciu o klasy szablonu. Aby uzyskać więcej informacji na temat tych metod, zobacz artykuł [kolekcje](../mfc/collections.md). Aby uzyskać listę klas kolekcji szablonów, zobacz artykuł [klasy szablonów dla tablic, list i map](../mfc/template-classes-for-arrays-lists-and-maps.md).
+
+Tablice są struktur danych jednowymiarowej, które są przechowywane w sposób ciągły w pamięci. Obsługiwane są też bardzo szybko swobodnego dostępu, ponieważ adres pamięci dowolnego danego elementu mogą być obliczane przez pomnożenie indeks elementu przez rozmiar elementu i dodanie wyniku na adres bazowy tablicy. Ale tablice są bardzo kosztowna, jeśli użytkownik ma do wstawienia elementów do tablicy, od całej tablicy w ciągu ostatnich element wstawiony ma do przeniesienia w celu zwolnienia miejsca dla elementu, który ma zostać wstawiony. Tablice można zwiększyć lub zmniejszyć gdy jest to konieczne.
+
+Listy są podobne do tablic, ale są przechowywane bardzo różny sposób. Każdy element na liście zawiera także wskaźnik do poprzedniego i następnego elementów, dzięki czemu podwójnie połączoną listą. Działa on bardzo szybko dodawać lub usuwać elementy, ponieważ to obejmuje tylko zmiana kilka wskazówek. Jednak wyszukiwania na liście może być kosztowne, ponieważ wszystkie wyszukiwania konieczne uruchomienie na jeden z końców listy.
+
+Mapy odnoszą się wartość klucza do wartości danych. Na przykład klucz mapy może być ciąg i wskaźnik na listę danych. Czy poproś map umożliwiają kursor skojarzony z określonego ciągu. Map, wyszukiwania są szybkie, ponieważ mapy korzystanie z tabel skrótu klucza wyszukiwania. Dodawanie i usuwanie elementów jest również szybkie. Mapy są często używane z innych struktur danych jako indeksy pomocnicze. MFC używa specjalnego rodzaju mapy o nazwie [mapy komunikatów](../mfc/mapping-messages.md) do mapowania Windows wiadomości na wskaźnik do funkcji obsługi dla tego komunikatu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

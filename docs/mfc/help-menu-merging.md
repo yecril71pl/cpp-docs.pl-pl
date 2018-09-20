@@ -16,48 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecdc450bbab725c6f81cf23e16fa32a2246b2b3a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 379e67d00969518400826e1f82d8801391512ef4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931295"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435626"
 ---
 # <a name="help-menu-merging"></a>Scalanie menu Pomoc
-Gdy obiekt jest aktywny w kontenerze, menu scalanie protokołu dokumentów OLE daje obiektu pełną kontrolę nad **pomocy** menu. W związku z tym kontenera tematy pomocy nie są dostępne, chyba że użytkownik dezaktywuje obiektu. Architektura zawierania dokumentów aktywnych rozszerza reguły menu w miejscu scalanie umożliwia aktywny dokument, który jest aktywny, aby udostępnić menu i kontenera. Nowe zasady są po prostu dodatkowe konwencje o jakie składnik jest właścicielem części menu i sposób jest tworzony udostępnionego menu.  
-  
- Nowe Konwencji jest proste. W dokumentach active **pomocy** menu zawiera dwa elementy menu najwyższego poziomu, uporządkowanych w następujący sposób:  
-  
- `Help`  
-  
- `Container Help >`  
-  
- `Object Help    >`  
-  
- Na przykład, gdy jest aktywny w Office Binder sekcji Word, a następnie **pomocy** menu będzie wyglądać następująco:  
-  
- `Help`  
-  
- `Binder Help >`  
-  
- `Word Help   >`  
-  
- Oba elementy menu są kaskadowych menu, w których wszystkie elementy menu dodatkowe określonego kontenera i obiektu są udostępniane użytkownikowi. Jakie elementy są wyświetlane tutaj zależy kontenera i obiekty związane.  
-  
- Do utworzenia to scalić **pomocy** menu, architektura zawierania dokumentów aktywnych modyfikuje normalnej procedury dokumentów OLE. Zgodnie z dokumentów OLE na pasku menu scalone grupy mogą być sześć menu, czyli **pliku**, **Edytuj**, **kontenera**, **obiektu**,  **Okno**, **pomocy**, w tej kolejności. W każdej grupie może być zero lub więcej menu. Grupy **pliku**, **kontenera**, i **okna** należy do kontenera i grupy **Edytuj**, **obiekt,** i **pomocy** należy do obiektu. Gdy obiekt chce wykonać scalania menu, tworzy pasek menu puste i przekazuje je do kontenera. Kontener wstawia jego menu, wywołując `IOleInPlaceFrame::InsertMenus`. Struktura, która jest tablicą sześciu długie wartości przekazuje także obiekt (**OLEMENUGROUPWIDTHS**). Po wstawieniu menu, kontenera oznacza liczbę menu dodać go w każdej z jej grupy, a następnie zwraca. Następnie obiekt wstawia jego menu, zwracając uwagę liczba menu w każdej grupie kontenera. Na koniec obiekt przekazuje na pasku menu scalone i tablicy (zawierający liczba menu w każdej grupie) do OLE, które zwraca moduł nieprzezroczyste "deskryptora menu" obsługi. Później obiekt przekazuje dojścia i na pasku menu scalone z kontenerem przy użyciu `IOleInPlaceFrame::SetMenu`. W tej chwili kontenera Wyświetla pasek menu scalone i przekazuje dojście do OLE, tak, aby zrobić OLE właściwego podczas wysyłania wiadomości menu.  
-  
- W procedurze modyfikacji dokumentów aktywnych najpierw należy zainicjować obiektu **OLEMENUGROUPWIDTHS** elementy do zera przed przekazaniem go do kontenera. Kontener wykona wstawiania normalne menu, z jednym wyjątkiem: wstawia kontenera **pomocy** menu jako ostatni element i przechowuje wartość 1 w ostatni wpis (szóstego) **OLEMENUGROUPWIDTHS** tablicy (oznacza to, że szerokość [5], który należy do grupy pomocy obiektu). To **pomocy** menu będzie mieć tylko jeden element, który jest podmenu, "**kontenera pomocy** >" menu cascade, jak opisano wcześniej.  
-  
- Obiekt wykonuje następnie jego kod wstawiania normalne menu, z wyjątkiem przed wstawieniem jego **pomocy** menu sprawdza szóstego wpisu **OLEMENUGROUPWIDTHS** tablicy. Jeśli wartość to 1, nazwa ostatniego menu **pomocy** (lub odpowiedni zlokalizowany ciąg), a następnie wstawia obiekt jego **pomocy** menu jako podmenu kontenera **Pomoc** menu.  
-  
- Obiekt następnie ustawia szóstego elementu **OLEMENUGROUPWIDTHS** od zera i zwiększa piątej element o jeden. Dzięki temu OLE pamiętać, że **pomocy** menu należy do kontenera i komunikaty menu odpowiadającego danego menu (i jego podmenu) powinny być kierowane do kontenera. Następnie jest odpowiedzialny za kontenera do przekazywania **WM_INITMENUPOPUP**, **WM_SELECT**, **WM_COMMAND**i inne związane z menu komunikaty, które należą do obiektu część **pomocy** menu. Jest to zrobić za pomocą **WM_INITMENU** Wyczyść flagę kontenera informuje, czy użytkownik ma przeszedł do obiektu **pomocy** menu. Następnie Obserwujący kontenera **WM_MENUSELECT** dla wejścia lub wyjścia z dowolny element widoczny na **pomocy** menu kontenera nie dodano samej siebie. Na wejściu, oznacza to użytkownik nawigację do menu obiekt, więc ustawia flagę "w menu Pomoc dla obiekt" i używa stan tej flagi do przekazywania żadnego kontenera **WM_MENUSELECT**, **WM_INITMENUPOPUP**i  **WM_COMMAND** wiadomości, co najmniej do okna obiektu. (Po zakończeniu kontenera usuwa flagę i przetwarza te komunikaty o tej samej sam) Kontener należy użyć okna zwrócony z obiektu `IOleInPlaceActiveObejct::GetWindow` działać jako miejsce docelowe dla tych wiadomości.  
-  
- Jeśli obiekt wykrywa zero w elemencie szóstego **OLEMENUGROUPWIDTHS**, będzie kontynuowana, zgodnie z normalnym regułami dokumentów OLE. Ta procedura obejmuje kontenerów, które uczestniczą w **pomocy** scalanie oraz te, które nie mają menu.  
-  
- Gdy wywołuje obiekt `IOleInPlaceFrame::SetMenu`, zanim czy wyświetlanie menu scalone paska kontroli kontenera **pomocy** menu ma dodatkowe podmenu, oprócz co wstawił kontenera. Jeśli tak, pozostawia kontenera jego **pomocy** menu na pasku menu scalone. Jeśli **pomocy** menu nie ma dodatkowych podmenu, kontener spowoduje usunięcie jej **pomocy** menu na pasku menu scalone. Ta procedura obejmuje obiekty, które uczestniczą w **pomocy** scalanie oraz te, które nie mają menu.  
-  
- Na koniec, gdy nadejdzie czas na dezasemblować menu Obiekt usuwa wstawionego **pomocy** menu oprócz innych usuwanie dodaje menu. Gdy kontener usuwa jego menu, spowoduje usunięcie jej **pomocy** menu oprócz menu, które ma on włożony.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)
+
+Gdy obiekt jest aktywny w kontenerze, menu, scalanie protokołu dokumentów OLE zapewnia obiekt, pełną kontrolę nad **pomocy** menu. W rezultacie tematy pomocy kontenera nie są dostępne, chyba że użytkownik dezaktywuje obiektu. Architektura zawierania dokumentów aktywnych rozszerza zasady menu w miejscu scalania, aby zezwolić na aktywny dokument aktywny, aby udostępnić menu i kontenera. Nowe zasady są po prostu dodatkowe konwencje o jakie składnik jest właścicielem, jakie części menu i jak jest konstruowany udostępnionego menu.
+
+Nowa Konwencja jest proste. W dokumentach active **pomocy** menu zawiera dwa elementy menu najwyższego poziomu zorganizowane w następujący sposób:
+
+`Help`
+
+`Container Help >`
+
+`Object Help    >`
+
+Na przykład, gdy sekcji Word jest aktywny w Office Binder, a następnie **pomocy** menu wyglądałby następująco:
+
+`Help`
+
+`Binder Help >`
+
+`Word Help   >`
+
+Oba elementy menu są kaskadowych menu, w których wszelkie dodatkowe elementy menu specyficzne dla kontenera i obiektu są dostarczane do użytkownika. Jakie elementy są wyświetlane w tym miejscu będą się różnić z kontenerów i obiektów związane.
+
+Do utworzenia tego scalone **pomocy** menu architektura zawierania dokumentów aktywnych modyfikuje normalnej procedury dokumenty OLE. Zgodnie z dokumentów OLE, na pasku menu scalone może mieć sześć grup menu, a mianowicie **pliku**, **Edytuj**, **kontenera**, **obiektu**,  **Okno**, **pomocy**, w tej kolejności. W każdej grupie można menu zero lub więcej. Grupy **pliku**, **kontenera**, i **okna** należą do grup i kontener **Edytuj**, **Object,** i **pomocy** należy do obiektu. Gdy obiekt chce wykonać scalanie menu, tworzy pasek menu puste i przekazuje je do kontenera. Kontener wstawia jego menu, wywołując `IOleInPlaceFrame::InsertMenus`. Obiekt przekazuje strukturę, która jest tablicą sześć długie wartości (**OLEMENUGROUPWIDTHS**). Po wstawieniu menu, kontener oznacza menu ile ono dodane w każdej z jej grupy, a następnie zwraca. Następnie obiekt wstawia jego menu, zwracając uwagę na liczbę menu w każdej grupy kontenerów. Na koniec obiekt przekazuje pasek menu scalonych i tablicy (co zawiera liczbę menu w każdej grupie) OLE, co powoduje zwrócenie wiadomość nieprzezroczysty "menu deskryptora" obsługi. Później obiekt przekazuje dojścia i pasek menu scalone z kontenerem przy użyciu `IOleInPlaceFrame::SetMenu`. W tej chwili kontenera jest wyświetlany pasek menu scalone i przekazuje dojście do OLE, tak, aby OLE można wykonać odpowiednie wysyłania komunikatów menu.
+
+W procedurze zmodyfikowane aktywnego dokumentu najpierw należy zainicjować obiekt **OLEMENUGROUPWIDTHS** elementy do zera przed przekazaniem go do kontenera. I wykona kontenera wstawiania normalne menu, z jednym wyjątkiem: wstawia kontenera **pomocy** menu jako ostatni element i zapisuje wartość 1 w ostatni wpis (szóstego) **OLEMENUGROUPWIDTHS** tablicy (oznacza to szerokość [5], która należy do grupy pomocy obiektu). To **pomocy** menu będzie mieć tylko jeden element, który jest podmenu, "**kontenera pomocy** >" menu cascade, jak opisano wcześniej.
+
+Obiekt jest następnie wykonuje jego kod wstawiania menu normalne, chyba że przed wstawieniem jego **pomocy** menu sprawdza szóstego wpis **OLEMENUGROUPWIDTHS** tablicy. Jeśli wartość wynosi 1, a nazwa ostatniego menu jest **pomocy** (lub odpowiedniego zlokalizowany ciąg), a następnie obiekt wstawia jego **pomocy** menu jako podmenu kontenera **pomocy** menu.
+
+Obiekt jest następnie ustawia szóstego elementu **OLEMENUGROUPWIDTHS** zero i zwiększa piąty element o jeden. Dzięki temu OLE poinformować, że **pomocy** menu należy do kontenera i komunikaty menu odpowiadający menu (i jego podmenu) powinien kierowane do kontenera. Odpowiada za następnie kontenera do przekazywania **WM_INITMENUPOPUP**, **WM_SELECT**, **WM_COMMAND**, a inne menu komunikatów, które należą do obiektu część **pomocy** menu. Jest to realizowane przy użyciu **WM_INITMENU** Wyczyść flagę, która informuje kontenera, czy użytkownik ma przeszedł do obiektu **pomocy** menu. Kontener jest następnie obserwuje **WM_MENUSELECT** wejścia lub wyjścia z dowolnym elementem **pomocy** menu kontenera nie został dodany sam. Przy uruchamianiu, oznacza to, użytkownik ma przeszedł do menu obiektu, więc kontener ustawia flagę "w menu Pomoc obiektu" i używa stan tej flagi, aby przekazywać dowolne **WM_MENUSELECT**, **WM_INITMENUPOPUP**i  **WM_COMMAND** wiadomości, co najmniej do okna obiektu. (Przy zamykaniu, kontener czyści flagę i następnie przetwarza te tymi samymi komunikatami sama.) Kontener należy używać okna zwrócony z obiektu `IOleInPlaceActiveObejct::GetWindow` działa jako miejsce docelowe dla tych wiadomości.
+
+Jeśli obiekt wykrywa zero w elemencie szóstego **OLEMENUGROUPWIDTHS**, rozpoczynające się zgodnie ze zwykłymi regułami dokumenty OLE. Ta procedura obejmuje kontenerów, które uczestniczą w **pomocy** menu scalania, a także tych, które nie obsługują.
+
+Kiedy wywołuje obiekt `IOleInPlaceFrame::SetMenu`, zanim czy wyświetlanie scalonych menu paska kontroli kontenera **pomocy** menu zawiera dodatkowe podmenu, oprócz co został wstawiony w kontenerze. Jeśli tak, kontener jego **pomocy** menu na pasku menu scalone. Jeśli **pomocy** menu nie ma dodatkowych podmenu, spowoduje to usunięcie kontenera jego **pomocy** menu na pasku menu scalone. Ta procedura obejmuje obiekty, które uczestniczą w **pomocy** menu scalania, a także tych, które nie obsługują.
+
+Na koniec, gdy nadejdzie czas, aby zdemontować menu, obiekt usuwa wstawionego **pomocy** menu oprócz usunięcie z drugiej dodaje menu. Gdy kontener usuwa jego menu, spowoduje usunięcie jej **pomocy** menu oprócz menu, które go został wstawiony.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)
 

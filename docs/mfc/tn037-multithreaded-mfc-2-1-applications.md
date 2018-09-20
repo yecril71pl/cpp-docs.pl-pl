@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3444caa966907267edc1621936296ca55a3e6356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30ea081ba03ae9a5cb17d1139f3d1fcf385000a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415567"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: wielowątkowe aplikacje MFC 2.1
-Ta uwaga techniczna opisane pierwotnie ograniczeń dotyczących programów wielowątkowych z MFC 2.1, pierwotnie wyposażone w Visual C++ 1.0 dla systemu Windows NT. MFC 3.0 obsługuje wielowątkowość bezpośrednio i jest udokumentowany. Zobacz tego odwołania, aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Ta uwaga techniczna pierwotnie opisano ograniczenia dotyczące programów wielowątkowych z MFC 2.1, pierwotnie dostarczana z Visual C++ 1.0 dla systemu Windows NT. MFC 3.0 obsługuje wielowątkowość bezpośrednio i jest udokumentowany. Zobacz tego odwołania, aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

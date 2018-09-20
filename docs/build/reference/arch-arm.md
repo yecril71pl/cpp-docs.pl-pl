@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0f0735981c0a851bcab62ca1ad39c97af3965
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bfa68eece4a7fd626c787fd5421d9dcac58cf805
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700685"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435471"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -59,6 +59,6 @@ Kiedy używasz [/CLR](../../build/reference/clr-common-language-runtime-compilat
 
 ## <a name="see-also"></a>Zobacz też
 
-[/ arch (minimalna architektura Procesora)](../../build/reference/arch-minimum-cpu-architecture.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[/arch (Minimalna architektura procesora CPU)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

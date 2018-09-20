@@ -25,39 +25,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32e1c743844d252b391a4a747d803ba0e8c81c54
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204692"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431427"
 ---
 # <a name="midl-property-pages-general"></a>Strony właściwości MIDL: ogólne
-**Ogólne** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:  
-  
--   Definicje preprocesora [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
-  
--   Dodatkowe katalogi dyrektywy Include ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
-  
--   Ignoruj standardową ścieżkę obejmują ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
-  
--   Zgodne z MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
-  
--   Poziom ostrzeżeń ([Wn](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
-  
--   Ostrzeżenie jako błąd ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
-  
--   Pomiń transparent początkowy ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
-  
--   Typ Char MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
-  
--   Środowisko docelowe ([/ENV](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
-  
--   Generuj proxy bez klas zastępczych ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
-  
- Aby uzyskać informacje dotyczące uzyskiwania dostępu do **ogólne** — strona właściwości w **MIDL** folderów, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
- Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Strony właściwości MIDL](../ide/midl-property-pages.md)
+
+**Ogólne** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:
+
+- Definicje preprocesora [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))
+
+- Dodatkowe katalogi dyrektywy Include ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))
+
+- Ignoruj standardową ścieżkę obejmują ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))
+
+- Zgodne z MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))
+
+- Poziom ostrzeżeń ([Wn](https://msdn.microsoft.com/library/windows/desktop/aa367383))
+
+- Ostrzeżenie jako błąd ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))
+
+- Pomiń transparent początkowy ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))
+
+- Typ Char MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))
+
+- Środowisko docelowe ([/ENV](https://msdn.microsoft.com/library/windows/desktop/aa367323))
+
+- Generuj proxy bez klas zastępczych ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))
+
+Aby uzyskać informacje dotyczące uzyskiwania dostępu do **ogólne** — strona właściwości w **MIDL** folderów, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Strony właściwości MIDL](../ide/midl-property-pages.md)

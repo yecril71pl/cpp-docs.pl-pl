@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709907"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445863"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ Tworzy polecenie OLE DB.
 
 ### <a name="parameters"></a>Parametry
 
-*Polecenie*  
+*Polecenie*<br/>
 Polecenie ciąg zawierający tekst polecenia OLE DB. Prostym przykładem jest:
 
 ```cpp
@@ -64,15 +64,15 @@ gdzie:
 
 - **\[** *bindtype* **]** jest jednym z następujących ciągów bez uwzględniania wielkości liter:
 
-  -   **\[db_column —]** wszystkich zmiennych składowych jest powiązana z kolumną w zestawie wierszy.
+  - **\[db_column —]** wszystkich zmiennych składowych jest powiązana z kolumną w zestawie wierszy.
 
-  -   **\[bindto]** (taka sama jak  **\[db_column —]**).
+  - **\[bindto]** (taka sama jak  **\[db_column —]**).
 
-  -   **\[w]** wiąże zmiennych składowych jako parametry wejściowe.
+  - **\[w]** wiąże zmiennych składowych jako parametry wejściowe.
 
-  -   **\[out]** wiąże zmiennych składowych jako parametrów wyjściowych.
+  - **\[out]** wiąże zmiennych składowych jako parametrów wyjściowych.
 
-  -   **\[w, poza]** wiąże zmiennych składowych jako parametry wejścia/wyjścia.
+  - **\[w, poza]** wiąże zmiennych składowych jako parametry wejścia/wyjścia.
 
 - *szVarX*, *nVarX* jest rozpoznawana jako zmienną składową w bieżącym zakresie.
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*Nazwa*  
+*Nazwa*<br/>
 (Opcjonalnie) Nazwa uchwyt, używanej do pracy z zestawu wierszy. Jeśli określisz *nazwa*, **db_command —** generuje klasę o określonej *nazwa*, które mogą służyć do przechodzenia w zestawie wierszy lub wykonywać wiele zapytań akcji. Jeśli nie określisz *nazwa*, nie będzie możliwe do zwrócenia więcej niż jeden wiersz wyników użytkownikowi.
 
-*source_name*  
+*source_name*<br/>
 (Opcjonalnie) `CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).
 
 **db_command —** kontrole, aby upewnić się, że zmienna umożliwiający *source_name* jest poprawny, dlatego należy określona zmienna w funkcji lub zakresu globalnego.
 
-*wartość HRESULT*  
+*wartość HRESULT*<br/>
 (Opcjonalnie) Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
 
-*Powiązania*  
+*Powiązania*<br/>
 (Opcjonalnie) Pozwala na oddzielne Parametry wiążące polecenia OLE DB.
 
 Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić `Bindings=""`.
 
 Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, przez co najmniej jeden wcześniej zadeklarowanej C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (Opcjonalnie) Wartość całkowita określająca liczbę wierszy do pobrania.
 
 Wartość domyślna to 1, który określa pobieranie pojedynczego wiersza (zestaw wierszy będzie mieć typ [CRowset](../data/oledb/crowset-class.md)).
@@ -266,5 +266,5 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Oddzielne atrybuty](../windows/stand-alone-attributes.md)  

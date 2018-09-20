@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465581"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444674"
 ---
 # <a name="loop"></a>pętla
 Określa, jak kod pętli jest uznawana za automatycznego zrównoleglacza i/lub wyłącza pętlę pod uwagę przy automatycznego wektoryzera.  
@@ -57,5 +57,5 @@ Do użycia **pętli** pragma, umieść go bezpośrednio przed — nie — defini
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Automatyczna Paralelizacja i Wektoryzacja](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[Automatyczna paralelizacja i wektoryzacja](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

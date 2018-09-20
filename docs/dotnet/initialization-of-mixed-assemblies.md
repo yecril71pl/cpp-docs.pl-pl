@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204545"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439578"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicjalizacja zestawów mieszanych
 
 Programiści Windows zawsze musi być ostrożnym blokady modułu ładującego podczas uruchamiania kodu podczas `DllMain`. Istnieją jednak pewne dodatkowe kwestie, które dochodzą do głosu podczas pracy z C + +/ clr trybu mieszanego zestawów.
 
 Kod w ramach [DllMain](/windows/desktop/Dlls/dllmain) nie może uzyskać dostępu do środowiska CLR. Oznacza to, że `DllMain` powinien sprawia, że żadne wywołania do funkcji zarządzanej, bezpośrednio lub pośrednio; bez kodu zarządzanego powinny być zadeklarowane lub zaimplementowane w `DllMain`; i nie wyrzucania elementów bezużytecznych lub biblioteki automatyczne ładowanie powinno odbywać się w ramach `DllMain` .
-  
+
 ## <a name="causes-of-loader-lock"></a>Przyczyny blokady modułu ładującego
 
 Wraz z wprowadzeniem platformy .NET, istnieją dwa odrębne mechanizmy ładowania modułu wykonywania (EXE lub DLL): jeden dla Windows, która jest używana dla modułów niezarządzanych, a drugi dla platformy .NET języka wspólnego środowiska uruchomieniowego (CLR), która ładuje zestawy .NET. Mieszane problem podczas ładowania biblioteki DLL koncentruje się wokół modułu ładującego systemu operacyjnego Windows firmy Microsoft.
@@ -130,7 +130,7 @@ Ponieważ ten sam nagłówek może być uwzględniane zarówno przez pliki języ
 Dla wygody użytkowników zajmujących się blokady modułu ładującego wybierze konsolidator natywnych implementacji za pośrednictwem zarządzanej umieszczeniem zarówno. Umożliwia to uniknięcie powyższe problemy. Istnieją jednak dwa wyjątki związane z regułą w tej wersji z powodu dwóch nierozwiązane problemy za pomocą kompilatora:
 
 - Wywołanie jest wbudowany funkcja jest za pomocą wskaźnika globalnych funkcji statycznych. Ten scenariusz jest szczególnie istotne, ponieważ wirtualne funkcje są wywoływane za pomocą wskaźników funkcji globalnych. Na przykład
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Aby zidentyfikować konkretną funkcję MSIL, która została wywołana w ramach
    Aby to zrobić, otwórz **właściwości** siatka projektu startowego w rozwiązaniu. Wybierz **właściwości konfiguracji** > **debugowania**. Ustaw **typ debugera** do **wyłącznie natywnego**.
 
 1. Uruchom debuger (F5).
-  
+
 1. Gdy **/CLR** diagnostyki jest generowany, wybierz polecenie **ponów próbę wykonania** , a następnie wybierz **Przerwij**.
-  
+
 1. Otwórz okno stosu wywołań. (Na pasku menu wybierz **debugowania** > **Windows** > **stos wywołań**.) Naruszeń `DllMain` lub statycznego inicjatora jest identyfikowany za pomocą zieloną strzałkę. Jeśli funkcja naruszającym nie zostanie zidentyfikowany, poniższe kroki należy go znaleźć.
 
 1. Otwórz **bezpośrednie** okna (na pasku menu wybierz **debugowania** > **Windows** > **bezpośrednie**.)
 
 1. Wpisz sos.dll .load do **bezpośrednie** okna, aby załadować usługi do debugowania SOS.
-  
+
 1. Typ! dumpstack do **bezpośrednie** okna, aby uzyskać pełną listę wewnętrzny **/CLR** stosu.
 
 1. Wyszukaj pierwszego wystąpienia (znajdujący się najbliżej spodzie stosu) albo _cordllmain — (Jeśli `DllMain` powoduje problemy) lub _VTableBootstrapThunkInitHelperStub lub GetTargetForVTableEntry (jeśli statycznego inicjatora powoduje, że problem). Wpis stosu tuż poniżej tego wywołania jest wywołania MSIL zaimplementowana funkcja, która podjęto próbę wykonania w ramach blokady modułu ładującego.

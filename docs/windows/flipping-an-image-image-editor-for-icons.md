@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15160ce25d0f20715ac05f1b3c525f932261bc0f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: be4ca3f7f11329505f665034a1f2983803c6d40c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417374"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Przerzucanie obrazu (Edytor obrazów dla ikon)
 
@@ -57,5 +57,5 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

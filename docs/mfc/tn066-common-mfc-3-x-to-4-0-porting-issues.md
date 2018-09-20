@@ -1,5 +1,5 @@
 ---
-title: 'TN066: Typowe MFC 3.x do 4.0 problemy | Dokumentacja firmy Microsoft'
+title: 'TN066: Typowe MFC 3.x do 4.0 problemy z | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d7e439224357f5c352fa96c06cfde639c413655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a25bb22dcd809c199bf00f57137208141627a434
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381793"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421872"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: typowe problemy z przenoszeniem aplikacji MFC 3.x do wersji 4.0
-Ta uwaga techniczna opisano najbardziej typowe problemy, które mogą wystąpić podczas próby portu aplikacji napisany za pomocą MFC 3.x (uwzględnionych w programie Visual C++ MFC 2.x) 4.0 MFC.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Ta uwaga techniczna opisano najbardziej typowe problemy, które mogą wystąpić podczas próby portu aplikacji napisanych przy użyciu biblioteki MFC 3.x (MFC zawarte w języku Visual C++ 2.x) 4.0 MFC.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

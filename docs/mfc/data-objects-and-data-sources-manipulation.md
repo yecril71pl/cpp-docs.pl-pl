@@ -1,5 +1,5 @@
 ---
-title: 'Obiekty danych i źródła danych: manipulowanie | Dokumentacja firmy Microsoft'
+title: 'Obiekty danych i źródeł danych: manipulowanie | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,81 +22,87 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a5b44dd343c068a6a98765f9740dcd96b68bd323
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929864"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415498"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
-Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych wyliczania formatów, z których dane są, i inne. W tym artykule opisano niezbędne do zakończenia operacji najbardziej typowe techniki. Tematy obejmują:  
-  
--   [Wstawianie danych do źródła danych](#_core_inserting_data_into_a_data_source)  
-  
--   [Określanie dostępnych w obiekcie danych formatów](#_core_determining_the_formats_available_in_a_data_object)  
-  
--   [Pobieranie danych z obiektu danych](#_core_retrieving_data_from_a_data_object)  
-  
-##  <a name="_core_inserting_data_into_a_data_source"></a> Wstawianie danych do źródła danych  
- Jak dane są wstawiane do źródła danych zależy od tego, czy dane są dostarczane bezpośrednio lub na żądanie, w których średnia podano. Dostępne są następujące możliwości.  
-  
-### <a name="supplying-data-immediately-immediate-rendering"></a>Dostarczająca dane od razu (renderowania bezpośrednim)  
-  
--   Wywołanie `COleDataSource::CacheGlobalData` wielokrotnie dla każdego formatu Schowka, w którym są dostarczająca dane. Przekaż formatu schowka mają być używane, dojścia do pamięci zawierający dane i, opcjonalnie, **FORMATETC** struktury opisujący dane.  
-  
-     —lub—  
-  
--   Jeśli chcesz pracować bezpośrednio z **STGMEDIUM** struktury, należy wywołać `COleDataSource::CacheData` zamiast `COleDataSource::CacheGlobalData` w powyższych opcji.  
-  
-### <a name="supplying-data-on-demand-delayed-rendering"></a>Udostępnia dane na żądanie (opóźnione renderowanie)  
- Jest to zaawansowane tematu.  
-  
--   Wywołanie `COleDataSource::DelayRenderData` wielokrotnie dla każdego formatu Schowka, w którym są dostarczająca dane. Przekaż formatu Schowka do użycia i, opcjonalnie, **FORMATETC** struktury opisujący dane. Po zażądaniu danych platforma wywoła `COleDataSource::OnRenderData`, który należy zastąpić.  
-  
-     —lub—  
-  
--   Jeśli używasz `CFile` obiektu jako źródło danych, wywołaj `COleDataSource::DelayRenderFileData` zamiast `COleDataSource::DelayRenderData` w poprzedniej opcji. Po zażądaniu danych platforma wywoła `COleDataSource::OnRenderFileData`, który należy zastąpić.  
-  
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Określanie dostępnych w obiekcie danych formatów  
- Zanim aplikacja umożliwia użytkownikowi wkleić dane, trzeba wiedzieć, czy istnieją formaty Schowka, który może obsługiwać. Aby to zrobić, aplikacja powinna wykonaj następujące czynności:  
-  
-1.  Utwórz `COleDataObject` obiektu i **FORMATETC** struktury.  
-  
-2.  Wywołanie obiektu danych `AttachClipboard` funkcji członkowskiej do skojarzenia obiektu danych z danych w Schowku.  
-  
-3.  Wykonaj jedną z następujących czynności:  
-  
-    -   Wywołanie obiektu danych `IsDataAvailable` funkcji członkowskiej, jeśli istnieje tylko jeden lub dwa formaty użytkownik należy. Spowoduje to zaoszczędzić czas w przypadkach, gdy dane w Schowku obsługuje znacznie więcej formatów niż aplikacja.  
-  
-         —lub—  
-  
-    -   Wywołanie obiektu danych `BeginEnumFormats` funkcji członkowskich rozpoczynają wyliczanie formatów dostępnych w Schowku. Następnie wywołaj `GetNextFormat` aż do Schowka zwraca obsługuje aplikację w formacie lub nie ma żadnych więcej formatów.  
-  
- Jeśli używasz **on_update_command_ui —**, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji powinien elementów menu i kiedy, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).  
-  
-##  <a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych  
- Po podjęciu decyzji dotyczącej format danych, wszystkie te pozostaje jest pobrać dane z obiektu danych. Aby to zrobić, użytkownik decyduje o tym, gdzie umieścić dane, a aplikacja wymaga odpowiedniej funkcji. Dane będą dostępne w jednym z następujących nośników:  
-  
-|Średnia liczba godzin|Funkcji do wywołania|  
-|------------|----------------------|  
-|Pamięć globalna (`HGLOBAL`)|`COleDataObject::GetGlobalData`|  
-|Plik (`CFile`)|`COleDataObject::GetFileData`|  
-|**STGMEDIUM** struktury (`IStorage`)|`COleDataObject::GetData`|  
-  
- Zazwyczaj nośnik zostanie określona wraz z jego formatu Schowka. Na przykład **CF_EMBEDDEDSTRUCT** obiektu jest zawsze w `IStorage` nośnika, który wymaga **STGMEDIUM** struktury. W związku z tym należy użyć `GetData` ponieważ jest tylko jeden z tych funkcji, które akceptują **STGMEDIUM** struktury.  
-  
- W przypadku formatu Schowka w przypadkach `IStream` lub `HGLOBAL` średnia, zapewnia platformę `CFile` wskaźnika, który odwołuje się do danych. Aplikacja następnie można użyć pliku odczytać w celu uzyskania danych w taki sam sposób go może importować dane z pliku. Zasadniczo jest to interfejs klienta do `OnRenderData` i `OnRenderFileData` procedury w źródle danych.  
-  
- Użytkownik może teraz wstawiania danych do dokumentu, podobnie jak w przypadku innych danych, w tym samym formacie.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Przeciągnij i upuść](../mfc/drag-and-drop-ole.md)  
-  
--   [Schowek](../mfc/clipboard.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
- [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)   
- [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)
+
+Po utworzeniu obiektu danych lub źródła danych można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych, wyliczanie formaty, w której znajduje się dane, i nie tylko. W tym artykule opisano techniki konieczny do realizacji typowych operacji. Tematy obejmują:
+
+- [Wstawianie danych do źródła danych](#_core_inserting_data_into_a_data_source)
+
+- [Określanie formatów dostępnych w obiekcie danych](#_core_determining_the_formats_available_in_a_data_object)
+
+- [Pobieranie danych z obiektu danych](#_core_retrieving_data_from_a_data_object)
+
+##  <a name="_core_inserting_data_into_a_data_source"></a> Wstawianie danych do źródła danych
+
+Jak dane są wstawiane do źródła danych zależy od tego, czy dane są dostarczane bezpośrednio lub na żądanie, w których średnia jest dostarczany. Dostępne są następujące możliwości.
+
+### <a name="supplying-data-immediately-immediate-rendering"></a>Dostarczanie danych natychmiast (renderowania bezpośrednim)
+
+- Wywołaj `COleDataSource::CacheGlobalData` wielokrotnie dla każdego format Schowka, w którym są dostarczająca dane. Przekaż format Schowka, który ma być używany, dojścia do pamięci zawierający dane i, opcjonalnie, **FORMATETC** struktury opisujący dane.
+
+     —lub—
+
+- Jeśli chcesz współpracować bezpośrednio z **STGMEDIUM** struktury, należy wywołać `COleDataSource::CacheData` zamiast `COleDataSource::CacheGlobalData` w powyższych opcji.
+
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Dostarczanie danych na żądanie (opóźnione renderowanie)
+
+Jest to zaawansowane tematu.
+
+- Wywołaj `COleDataSource::DelayRenderData` wielokrotnie dla każdego format Schowka, w którym są dostarczająca dane. Format Schowka, który ma być używany do przekazywania i, opcjonalnie, **FORMATETC** struktury opisujący dane. Jeśli wymagane są dane, struktura wywoła `COleDataSource::OnRenderData`, który należy zastąpić.
+
+     —lub—
+
+- Jeśli używasz `CFile` obiektu do dostarczania danych, wywołaj `COleDataSource::DelayRenderFileData` zamiast `COleDataSource::DelayRenderData` w przypadku poprzedniej opcji. Jeśli wymagane są dane, struktura wywoła `COleDataSource::OnRenderFileData`, który należy zastąpić.
+
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Określanie formatów dostępnych w obiekcie danych
+
+Zanim aplikacja umożliwia użytkownikowi wkleić dane, trzeba wiedzieć, czy formaty Schowka, która może obsłużyć. Aby to zrobić, aplikacja powinna wykonaj następujące czynności:
+
+1. Tworzenie `COleDataObject` obiektu i **FORMATETC** struktury.
+
+1. Wywołanie obiektu danych `AttachClipboard` funkcja elementu członkowskiego, aby skojarzyć obiekt danych przy użyciu danych w Schowku.
+
+1. Wykonaj jedną z następujących czynności:
+
+   - Wywołanie obiektu danych `IsDataAvailable` funkcja elementu członkowskiego, jeśli istnieje tylko jeden lub dwa formaty, użytkownik musi. Pozwoli to zaoszczędzić czas w przypadkach, w których dane w Schowku obsługuje formaty znacznie więcej niż aplikacja.
+
+         -or-
+
+   - Wywołanie obiektu danych `BeginEnumFormats` funkcja elementu członkowskiego rozpoczynają wyliczanie formatów dostępnych w Schowku. Następnie wywołaj `GetNextFormat` aż do momentu powrotu Schowka formatu aplikacja obsługuje lub jest nie więcej formatów.
+
+Jeśli używasz **ON_UPDATE_COMMAND_UI**, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji należy zrobić z elementami menu i when, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
+
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych
+
+Gdy zdecydujesz się na format danych, pozostaje tylko do pobierania danych z obiektu danych. Aby to zrobić, użytkownik decyduje, gdzie umieścić dane, a aplikacja wywołuje odpowiednią funkcję. Dane będą dostępne w jednym z następujących nośników:
+
+|Średni|Funkcja do wywołania|
+|------------|----------------------|
+|Pamięć globalna (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
+|Plik (`CFile`)|`COleDataObject::GetFileData`|
+|**STGMEDIUM** struktury (`IStorage`)|`COleDataObject::GetData`|
+
+Często nośnik zostanie określony, wraz z jego format Schowka. Na przykład **CF_EMBEDDEDSTRUCT** obiekt zawsze znajduje się w `IStorage` nośnika, który wymaga **STGMEDIUM** struktury. W związku z tym, należy użyć `GetData` ponieważ jest tylko jeden z tych funkcji, które mogą akceptować **STGMEDIUM** struktury.
+
+W przypadkach, gdzie jest format Schowka w `IStream` lub `HGLOBAL` średni, struktura może zapewnić `CFile` wskaźnika, który odwołuje się do danych. Aplikacja może następnie używać pliku odczytać w celu uzyskania danych w taki sam sposób go może importować dane z pliku. Zasadniczo jest to interfejs klienta do `OnRenderData` i `OnRenderFileData` procedur w źródle danych.
+
+Użytkownik może teraz wstawiania danych do dokumentu, podobnie jak w przypadku innych danych, w tym samym formacie.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)
+
+- [Schowek](../mfc/clipboard.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
+[Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie informacji o poleceniu na pasku stanu | Dokumentacja firmy Microsoft'
+title: 'Porady: wyświetlanie informacji o poleceniu na pasku stanu jest | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f1a12dd9ca25ec19415cde42dc8ce12e515833
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 089e0fd8f1853a4e219309c0df7659f90e4f4b3d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930956"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405752"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Porady: wyświetlanie informacji o poleceniu na pasku stanu
-Po uruchomieniu Kreatora aplikacji, aby utworzyć szkielet aplikacji może obsługiwać paska narzędzi i paska stanu. Tylko jedną opcję w Kreatorze aplikacji obsługuje zarówno. Pasek stanu jest obecny, aplikacja automatycznie zapewnia przydatne opinii jako użytkownik przesunie wskaźnik nad elementami menu. Aplikacja automatycznie wyświetla ciąg monitu w pasku stanu, gdy element menu zostanie wyróżniona. Na przykład, gdy użytkownik przesunie wskaźnik nad **Wytnij** na **Edytuj** menu na pasku stanu może być wyświetlany w obszarze wiadomości w pasku stanu "Wycina zaznaczenie i umieszcza je w Schowku". Monit ułatwia użytkownikom zrozumienie przeznaczenia elementu menu. Ta metoda działa również po kliknięciu przycisku paska narzędzi.  
-  
- Definiując monitu ciągów dla elementów menu, które dodajesz do programu, można dodać do tej pomocy paska stanu. Aby to zrobić, podaj ciągi Monituj podczas edytowania właściwości elementu menu w edytorze menu. Ciągów, które należy zdefiniować są przechowywane w pliku zasobów aplikacji. mają one takich samych identyfikatorów jako poleceń, których one wyjaśnienia.  
-  
- Domyślnie, Kreator aplikacji dodaje **AFX_IDS_IDLEMESSAGE**, identyfikator standardowe komunikat "Gotowe", która jest wyświetlana, gdy program oczekuje na nowe komunikaty. Jeśli określono opcję Context-Sensitive pomoc w Kreatorze aplikacji, wiadomości jest zmieniana na "Aby uzyskać pomoc, naciśnij klawisz F1".  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+Po uruchomieniu Kreatora aplikacji, aby utworzyć szkielet aplikacji, możesz korzystać z paska narzędzi i pasek stanu. Tylko jedną z opcji w Kreatorze aplikacji obsługuje obie. Pasek stanu jest obecny, aplikacja automatycznie zapewnia przydatne opinii gdy użytkownik przesuwa wskaźnik myszy nad elementami na pasku menu. Program automatycznie wyświetla ciąg monitu na pasku stanu wyróżnionego elementu menu. Na przykład, gdy użytkownik przesuwa wskaźnik myszy **Wytnij** polecenie **Edytuj** menu na pasku stanu może być wyświetlany w obszarze wiadomości w pasku stanu "Wycina zaznaczenie i umieszcza je w Schowku". Monit pomaga użytkownika zrozumienie przeznaczenia elementu menu. Działa to również, gdy użytkownik kliknie przycisk paska narzędzi.
+
+Możesz dodać tę pomoc pasek stanu, definiując monitu ciągi dla elementów menu, które dodajesz do programu. Aby to zrobić, podaj ciągi monitu podczas edytowania właściwości elementu menu, w edytorze menu. Ciągi znaków, jaką zdefiniujesz są przechowywane w pliku zasobów aplikacji; mają one takich samych identyfikatorów jako polecenia, które zawierają one objaśnienia.
+
+Domyślnie Kreator aplikacja dodaje **AFX_IDS_IDLEMESSAGE**, identyfikator standardową wiadomość "Gotowe", która jest wyświetlana, gdy program oczekuje na nowe wiadomości. Jeśli określisz opcję Context-Sensitive Help w Kreatorze aplikacji wiadomości zostanie zmieniony na "Aby uzyskać pomoc, naciśnij klawisz F1".
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
 

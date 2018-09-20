@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601215"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408950"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Jawne zastąpienia (C++ Component Extensions)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parametry
 
-*zastępowanie--deklaratora funkcji*  
+*zastępowanie--deklaratora funkcji*<br/>
 Zwracany typ, nazwa i argument lista przesłanianie funkcji.  Pamiętaj, że funkcja pomijania muszą mieć taką samą nazwę jak przesłaniana funkcja.
 
-*Typ*  
+*Typ*<br/>
 Typ podstawowy, zawierającego funkcję, aby zastąpić.
 
-*— Funkcja*  
+*— Funkcja*<br/>
 Rozdzielana przecinkami lista co najmniej jedną nazwę funkcji do zastąpienia.
 
-*zastępowanie funkcji definicji*  
+*zastępowanie funkcji definicji*<br/>
 Instrukcje treści funkcji, które definiują przesłanianie funkcji.
 
 ### <a name="remarks"></a>Uwagi

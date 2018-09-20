@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219955"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392869"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -38,7 +38,7 @@ Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (loka
 
 ### <a name="parameters"></a>Parametry
 
-*string*  
+*string*<br/>
 Biblioteki DLL, użyj, aby wykonać wyszukiwanie ciągu dokumentu.
 
 ## <a name="remarks"></a>Uwagi
@@ -75,7 +75,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty interfejsu](../windows/interface-attributes.md)  
-[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty interfejsu](../windows/interface-attributes.md)<br/>
+[Atrybuty klasy](../windows/class-attributes.md)<br/>
 [Atrybuty metody](../windows/method-attributes.md)  

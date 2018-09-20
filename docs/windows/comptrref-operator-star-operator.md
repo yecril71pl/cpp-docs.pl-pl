@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bb6bc06f65f53f919197b5350db8aacc268013f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e2af57b698558a33115cfcfc20ebc7136e72dc6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602962"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400743"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* Operator
 
@@ -50,5 +50,5 @@ Pobiera wskaźnik do interfejsu, reprezentowane przez bieżącą **comptrref —
 
 ## <a name="see-also"></a>Zobacz też
 
-[ComPtrRef, klasa](../windows/comptrref-class.md)  
+[ComPtrRef, klasa](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

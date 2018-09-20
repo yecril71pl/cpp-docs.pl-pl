@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery formantów ActiveX: Wstawianie formantu do aplikacji kontenera formantów | Dokumentacja firmy Microsoft'
+title: 'Kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji kontenera kontrolek | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 716c045fc10b4dd5f3dede20a233d958e669bbd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f025c9fa564bcd37c585db6ea5c5cd0f5be83e0d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346340"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432143"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek
-Aby formantu ActiveX mógł korzystać z aplikacji kontenera kontrolek ActiveX, należy dodać formantu ActiveX do aplikacji kontenera przy użyciu [Wstawianie formantu ActiveX](../windows/insert-activex-control-dialog-box.md) okno dialogowe.  
-  
- Aby dodać kontrolki ActiveX w projekcie kontenera formantu ActiveX, zobacz [wyświetlanie i dodawanie formantów ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
-  
- Po dodaniu formantu, należy dodać zmienną członkowską (z typu formantu ActiveX) do klasy okno dialogowe. Aby uzyskać więcej informacji dotyczących tej procedury, zobacz [Dodawanie zmiennej elementu członkowskiego](../ide/adding-a-member-variable-visual-cpp.md).  
-  
- Po dodaniu zmiennej członkowskiej klasy, określany jako klasa otoki jest automatycznie wygenerowany i dodany do projektu. Ta klasa jest używana jako interfejs między kontenera formantu i osadzonego formantu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+
+Zanim z aplikacji kontenera kontrolek ActiveX, uzyskujesz dostęp do formantu ActiveX, należy dodać formant ActiveX do aplikacji kontenera przy użyciu [Wstawianie formantu ActiveX](../windows/insert-activex-control-dialog-box.md) okno dialogowe.
+
+Aby dodać formant ActiveX do projektu kontener formantu ActiveX, zobacz [wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+
+Po dodaniu kontrolki, należy dodać zmienną członkowską (o typie formantu ActiveX) do klasy okno dialogowe. Aby uzyskać więcej informacji na temat tej procedury, zobacz [dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md).
+
+Po dodaniu zmiennej składowej klasy, określane jako klasę otoki jest automatycznie generowane i dodawane do projektu. Ta klasa jest używana jako interfejs między kontener formantu i osadzonego formantu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

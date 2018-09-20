@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f38fd833f6efe66dac23e25fe4a10fd5a6ca8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43944bfcf4563211fa89ebdc52680a65de158fde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348882"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415892"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Komunikaty i polecenia w strukturze
-Aplikacje przeznaczone dla Microsoft Windows są "na komunikat". W odpowiedzi na zdarzenia, takie jak kliknięcie myszą, naciśnięcia klawiszy, przeniesień okna i tak dalej system Windows wysyła wiadomości do okna właściwe. Aplikacje w ramach przetwarzania komunikatów systemu Windows, takich jak innych aplikacji dla systemu Windows. Ale niektóre ulepszenia powodujących, że przetwarzanie komunikatów łatwiejszy, więcej łatwy w obsłudze i lepsze hermetyzowany udostępnia platformę.  
-  
- W poniższych tematach przedstawiono kluczowe terminy używane w pozostałej części artykułu rodziny omówimy komunikaty i polecenia:  
-  
--   [Komunikaty](../mfc/messages.md)  
-  
--   [Programy obsługi wiadomości](../mfc/message-handlers.md)  
-  
--   [Kategorie komunikatów](../mfc/message-categories.md)  
-  
--   [Komunikaty systemu Windows i komunikaty powiadomień dotyczących formantu](../mfc/message-categories.md)  
-  
--   [Komunikaty poleceń](../mfc/message-categories.md)  
-  
--   [Mapy wiadomości](../mfc/mapping-messages.md)  
-  
--   [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)  
-  
--   [Obiekty docelowe poleceń](../mfc/command-targets.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+Aplikacje napisane z myślą o Microsoft Windows są "oparte na komunikat". W odpowiedzi na zdarzenia, takie jak kliknięć myszą, naciśnięć klawiszy, przemieszczania okna i tak dalej Windows wysyła komunikaty do odpowiednie okna. Aplikacje w ramach przetwarzania komunikatów Windows, jak wszystkie inne aplikacje dla Windows. Jednak Struktura ta oferuje niektóre udoskonalenia, wchodzące przetwarzanie komunikatów łatwiejsze, będzie łatwiejszy w utrzymaniu i skuteczniejsze zhermetyzowany.
+
+W poniższych tematach przedstawiono kluczowe terminy używane w dalszej części artykułu rodziny w celu omówienia komunikaty i polecenia:
+
+- [Komunikaty](../mfc/messages.md)
+
+- [Programy obsługi komunikatów](../mfc/message-handlers.md)
+
+- [Kategorie komunikatów](../mfc/message-categories.md)
+
+- [Windows komunikatów i powiadamianie kontrolki komunikatów](../mfc/message-categories.md)
+
+- [Komunikaty poleceń](../mfc/message-categories.md)
+
+- [Mapy komunikatów](../mfc/mapping-messages.md)
+
+- [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
+
+- [Obiekty docelowe poleceń](../mfc/command-targets.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
 

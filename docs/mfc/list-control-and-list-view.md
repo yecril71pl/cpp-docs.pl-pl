@@ -1,5 +1,5 @@
 ---
-title: Formant listy i widok listy | Dokumentacja firmy Microsoft
+title: Kontrolka listy i widok listy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9925bd7188faa97ab5aa32dc2830dc6498726381
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346002"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436757"
 ---
 # <a name="list-control-and-list-view"></a>Kontrolka listy i widok listy
-Dla wygody MFC hermetyzuje kontrolki listy na dwa sposoby. Można użyć kontrolki listy:  
-  
--   Bezpośrednio, poprzez zastosowanie [CListCtrl](../mfc/reference/clistctrl-class.md) obiekt klasy okien dialogowych.  
-  
--   Pośrednio, za pomocą klasy [clistview —](../mfc/reference/clistview-class.md).  
-  
- `CListView` ułatwia integrowanie formant listy o architekturze dokument/widok MFC, hermetyzując formantu znacznie jako [CEditView](../mfc/reference/ceditview-class.md) hermetyzuje formantu edycyjnego: kontrolki wypełnienia całego powierzchni widoku MFC. (Widok *jest* formantu rzutować `CListView`.)  
-  
- A `CListView` obiekt dziedziczy [CCtrlView](../mfc/reference/cctrlview-class.md) i jego elementów bazowych klas i dodaje funkcję członkowską do pobrania podstawowej kontrolki listy. Używanie widoku elementów członkowskich do pracy z widok jako widok. Użyj [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) funkcji członkowskiej, aby uzyskać dostęp do funkcji Członkowskich kontrolki listy. Użyj tych elementów członkowskich do:  
-  
--   Dodawanie, usuwanie lub manipulowania "elementy" na liście.  
-  
--   Ustawiać ani pobierać atrybuty kontrolki listy.  
-  
- Można uzyskać odwołania do `CListCtrl` bazowy `CListView`, wywołaj `GetListCtrl` z klasy widoku listy:  
-  
- [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]  
-  
- W tym temacie opisano zarówno sposoby używania kontrolki listy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Dla wygody MFC hermetyzuje kontrolki listy na dwa sposoby. Możesz użyć kontrolki listy:
+
+- Bezpośrednio, osadzając [CListCtrl](../mfc/reference/clistctrl-class.md) obiekt klasy okien dialogowych.
+
+- Pośrednio, za pomocą klasy [CListView](../mfc/reference/clistview-class.md).
+
+`CListView` można łatwo zintegrować formantu listy z architektury dokument/widok MFC, zawieranie kontrolki znacznie jako [CEditView](../mfc/reference/ceditview-class.md) hermetyzuje formant edycji: formant wypełnia cały obszar powierzchni widoku MFC. (Widok *jest* kontrolki rzutować `CListView`.)
+
+A `CListView` dziedziczy obiektu [CCtrlView](../mfc/reference/cctrlview-class.md) i klasy bazowej i dodaje funkcję członkowską do pobrania podstawowego kontrolki listy. Wyświetl członków należy używać do pracy z widok jako widok. Użyj [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) funkcja elementu członkowskiego w celu uzyskania dostępu do kontrolki listy elementów członkowskich. Użyj tych członków, aby:
+
+- Dodawanie, usuwanie lub manipulowania "elementy" na liście.
+
+- Set lub get atrybuty formantu listy.
+
+Aby uzyskać odwołanie do `CListCtrl` bazowego `CListView`, wywołania `GetListCtrl` od Twojej klasy widoku listy:
+
+[!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]
+
+W tym temacie opisano obie sposoby korzystania z formantu listy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Gniazda do przesyłania datagramów | Dokumentacja firmy Microsoft'
+title: 'Windows Sockets: Do przesyłania datagramów | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30ad7cab43301ae2cb7ebcb1fb4dfa850090955d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a63caa786ce5198fb902b8d48101507fb2b4113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444219"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: gniazda do przesyłania datagramów
-W tym artykule opisano gniazda do przesyłania datagramów, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazda strumienia](../mfc/windows-sockets-stream-sockets.md).)  
-  
- Gniazda do przesyłania datagramów obsługuje dwukierunkowy przepływ danych, która nie jest gwarantowana sekwencjonowania lub unduplicated. Datagramy również nie ma gwarancji wiarygodne; mogą one nie zostanie dostarczona. Danych datagramu może pojawić się poza kolejnością i prawdopodobnie zduplikowane, ale rekordów granice danych są zachowywane tak długo, jak rekordy są mniejsze niż limit rozmiaru wewnętrzny odbiorcy. Jest odpowiedzialny za zarządzanie sekwencjonowania i niezawodności. (Niezawodność jest dobra na lokalnej sieci LAN] ale mniej rozległej itd. sieci WAN], na przykład Internetem).  
-  
- Datagramy są "bez połączenia", czyli nie jawne jest ustanowić połączenia; Wyślij wiadomość datagramu do określonego gniazda i mogą odbierać komunikaty z określonym gniazda.  
-  
- Przykładem gniazdo datagramu jest aplikacja, która przechowuje zegarami systemowymi sieci zsynchronizowane. Przedstawiono to dodatkowe możliwości w co najmniej niektóre ustawienia gniazda do przesyłania datagramów: wiadomości emisji do wielu adresów sieciowych.  
-  
- Gniazda do przesyłania datagramów są lepsze niż gniazda strumieni danych zorientowane na rekordy. Aby uzyskać więcej informacji na temat gniazda do przesyłania datagramów zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)   
- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+
+W tym artykule opisano do przesyłania datagramów, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazda strumieni](../mfc/windows-sockets-stream-sockets.md).)
+
+Do przesyłania datagramów obsługi przepływu danych dwukierunkowy, który nie jest gwarantowane sekwencjonowanie zostało zakończone lub unduplicated. Datagramy również nie ma gwarancji, być zawodne; mogą one nie zostanie dostarczona. Dane datagram może pojawić się poza kolejnością i prawdopodobnie zduplikowanych, ale rekord granic w danych zostaną zachowane, tak długo, jak rekordy są mniejsze niż limit rozmiaru wewnętrznego odbiornika. Odpowiedzialność za zarządzanie sekwencjonowania i niezawodności. (Niezawodności jest zwykle dobry w lokalnej sieci LAN], ale mniej itd rozległej sieci WAN], takich jak Internet.)
+
+Datagramy są "bez połączenia", oznacza to, nie jawnego połączenie zostanie nawiązane; Wyślij wiadomość datagramu do gniazda określonego i może odbierać komunikaty z określonym gniazda.
+
+Przykładem gniazdo datagramu to aplikacja umożliwiająca zegary systemowe w sieci synchronizacji. Obrazuje to dodatkowe możliwości w co najmniej niektóre ustawienia do przesyłania datagramów: emisji wiadomości do dużej liczby adresów sieciowych.
+
+Do przesyłania datagramów są lepsze niż gniazda strumieni zorientowane danych. Aby uzyskać więcej informacji na temat do przesyłania datagramów zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.
+
+## <a name="see-also"></a>Zobacz też
+
+[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
 

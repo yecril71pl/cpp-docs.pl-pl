@@ -21,24 +21,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b398fedb8637ae6ce539a876410222485054919b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409548"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Ustawianie trybu obiektu CStatusBarCtrl
-Istnieją dwa tryby `CStatusBarCtrl` obiektu: proste i prostymi. W większości przypadków formantu paska stanu będzie mieć jeden lub więcej części, wraz z tekstu i prawdopodobnie ikony lub ikony. Jest to tryb prostymi. Aby uzyskać więcej informacji na ten tryb, zobacz [inicjowanie części obiektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
-  
- Istnieją jednak przypadki, w którym wystarczy do wyświetlania pojedynczy wiersz tekstu. W takim przypadku tryb prosty jest wystarczająca do własnych potrzeb. Aby zmienić tryb `CStatusBarCtrl` obiektu prosty, wywoływania [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) funkcję elementu członkowskiego. Po umieszczeniu formantu paska stanu w tryb prosty tekst ustawiony przez wywołanie `SetText` funkcji członkowskiej, przekazując 255 jako wartość *nPane* parametru.  
-  
- Można użyć [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) funkcji, aby ustalić, jakie tryb `CStatusBarCtrl` jest obiekt.  
-  
+
+Istnieją dwa tryby `CStatusBarCtrl` obiektu: proste i prostymi. W większości przypadków formant paska stanu ma jednej lub kilku części wraz z tekstu i prawdopodobnie ikony lub ikony. Jest to nazywane prostymi trybu. Aby uzyskać więcej informacji na ten tryb, zobacz [inicjowanie części obiektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).
+
+Jednak istnieją przypadki, w którym wystarczy wyświetlić pojedynczy wiersz tekstu. W tym przypadku prosty tryb jest wystarczające dla Twoich potrzeb. Aby zmienić tryb `CStatusBarCtrl` do prostego obiektu, wywołanie [setsimple —](../mfc/reference/cstatusbarctrl-class.md#setsimple) funkcja elementu członkowskiego. Gdy formantu paska stanu jest w trybie uproszczonym, ustawić tekst, wywołując `SetText` funkcji członkowskiej, przekazując 255 jako wartość *nPane* parametru.
+
+Możesz użyć [issimple —](../mfc/reference/cstatusbarctrl-class.md#issimple) funkcję, aby określić, jakie tryb `CStatusBarCtrl` obiekt jest w.
+
 > [!NOTE]
->  Jeśli obiekt paska stanu został zmieniony z nonsimple prosty lub odwrotnie, natychmiast rysowane jest okno i, jeśli ma to zastosowanie, wszystkie części zdefiniowanych automatycznie zostaną przywrócone.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+>  Jeśli obiekt paska stanu został zmieniony z nonsimple na prostej lub na odwrót okna jest od razu ponownie rysowany i, jeśli ma to zastosowanie, wszelkie zdefiniowane elementy zostaną automatycznie przywrócone.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

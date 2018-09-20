@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fdc8c70f7ef9bdd04bf40f408c4e014b3e3faa3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50348d36badb955a14f15e30d846b052b297b4a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442542"
 ---
 # <a name="user-defined-handlers"></a>Programy obsługi zdefiniowane przez użytkownika
-Następujące wpisy mapy odpowiadają prototypy funkcji.  
-  
-|Wpis w mapie|Prototyp funkcji|  
-|---------------|------------------------|  
-|On_message — ( \<wiadomości >, \<memberFxn >)|afx_msg elementu LRESULT memberFxn (WPARAM, LPARAM);|  
-|On_registered_message — ( \<nMessageVariable >, \<memberFxn >)|afx_msg elementu LRESULT memberFxn (WPARAM, LPARAM);|  
-|On_thread_message — ( \<wiadomości >, \<memberFxn >)|afx_msg memberFxn void (WPARAM, LPARAM);|  
-|On_registered_thread_message — ( \<nMessageVariable >, \<memberFxn >)|afx_msg memberFxn void (WPARAM, LPARAM);|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)   
- [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
+
+Następujące wpisy mapy odpowiadają prototypy funkcji.
+
+|Wpis mapy|Prototyp funkcji|
+|---------------|------------------------|
+|ON_MESSAGE ( \<komunikatu >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_REGISTERED_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_THREAD_MESSAGE ( \<komunikatu >, \<memberFxn >)|afx_msg memberFxn void (WPARAM, LPARAM);|
+|ON_REGISTERED_THREAD_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|afx_msg memberFxn void (WPARAM, LPARAM);|
+
+## <a name="see-also"></a>Zobacz też
+
+[Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
+[Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

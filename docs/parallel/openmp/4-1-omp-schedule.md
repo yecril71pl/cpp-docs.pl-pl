@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e13332077a40e741f56b5602ac5197bbdfef071
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbdad5ab56ea6979ae2b5952b092b5e85c7bdfa8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433455"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
-**OMP_SCHEDULE** dotyczą tylko **dla** i **równoległe w** dyrektywy, które mają typ harmonogramu **środowiska uruchomieniowego**. Rozmiar typu i fragmentu harmonogramu dla wszystkich takich pętli można ustawić w czasie wykonywania przez ustawienie tej zmiennej środowiskowej do dowolnego typu rozpoznanym harmonogram i opcjonalne *chunk_size*.  
-  
- Dla **dla** i **równoległe w** dyrektywy mających harmonogramu typu innego niż **środowiska uruchomieniowego**, **OMP_SCHEDULE** jest ignorowana. Domyślna wartość tej zmiennej środowiskowej jest zdefiniowane w implementacji. Jeśli opcjonalny *chunk_size* jest ustawiona, wartość musi być dodatnia. Jeśli *chunk_size* nie jest ustawiona, przyjmowana jest wartość 1, z wyjątkiem w odniesieniu **statycznych** harmonogramu. Dla **statycznych** , domyślny rozmiar fragmentu ustawiono harmonogramu do obszaru iteracji pętli podzielona przez liczbę wątków stosowane do pętli.  
-  
- Przykład:  
-  
-```  
-setenv OMP_SCHEDULE "guided,4"  
-setenv OMP_SCHEDULE "dynamic"  
-```  
-  
-## <a name="cross-references"></a>Odsyłacze:  
-  
--   **Aby uzyskać** dyrektywy, zobacz [sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11.  
-  
--   **równoległe dla** dyrektywy, zobacz [sekcji 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na stronie 16.
+
+**OMP_SCHEDULE** ma zastosowanie tylko do **dla** i **równoległe w** dyrektyw, które mają typ harmonogramu **środowiska uruchomieniowego**. Rozmiar typu i fragmentów harmonogram dla wszystkich takich pętli można ustawić w czasie wykonywania przez ustawienie tej zmiennej środowiskowej, do dowolnego typu harmonogramu rozpoznany i opcjonalnie *chunk_size*.
+
+Dla **dla** i **równoległe w** dyrektyw, które mają inny niż typ harmonogramu **środowiska uruchomieniowego**, **OMP_SCHEDULE** jest ignorowana. Wartością domyślną dla tej zmiennej środowiskowej jest zdefiniowane w implementacji. Jeśli opcjonalny *chunk_size* jest ustawiona, wartość musi być dodatnia. Jeśli *chunk_size* nie jest ustawiona, przyjmowana jest wartość 1, z wyjątkiem w przypadku właściwości **statyczne** harmonogramu. Aby uzyskać **statyczne** harmonogram, domyślny rozmiar fragmentu jest ustawiony do obszaru iteracji pętli dzielona przez liczbę wątków stosowane do pętli.
+
+Przykład:
+
+```
+setenv OMP_SCHEDULE "guided,4"
+setenv OMP_SCHEDULE "dynamic"
+```
+
+## <a name="cross-references"></a>Odsyłacze:
+
+- **Aby uzyskać** dyrektywy, zobacz [sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11.
+
+- **równoległe w** dyrektywy, zobacz [sekcji 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na stronie 16.

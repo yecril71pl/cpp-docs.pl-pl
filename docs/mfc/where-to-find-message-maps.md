@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dfaec7d97bed560665fce25c2ddf2cc816a483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81958eda508a3e0b4b93ac0d169f3aa3bfece2a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383396"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434274"
 ---
 # <a name="where-to-find-message-maps"></a>Gdzie można znaleźć mapy komunikatów
-Podczas tworzenia nowej aplikacji szkielet przy użyciu Kreatora aplikacji, Kreator aplikacji zapisuje mapy komunikatów dla każdej klasy docelowym polecenia, który tworzy dla Ciebie. W tym aplikacji pochodnej, dokument, widok i klasy okien ramowych. Niektóre z tych mapy komunikatów już wpisy dostarczonych przez Kreatora aplikacji dla niektórych komunikatów i wstępnie zdefiniowanych poleceń i niektóre są tylko symbole zastępcze dla programów obsługi, które mają zostać dodane.  
-  
- Mapy wiadomości klasy znajdują się w temacie. Pliku CPP klasy. Praca z mapy komunikatów podstawowe, tworzonych przez Kreatora aplikacji, użyj okna właściwości można dodawać komunikaty i polecenia, które będą obsługiwać każdej klasy. Dodanie niektórych pozycji mapy komunikatów typowe może wyglądać następująco:  
-  
- [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]  
-  
- Mapy wiadomości składa się z kolekcji makr. Makra dwóch [begin_message_map —](reference/message-map-macros-mfc.md#begin_message_map) i [end_message_map —](reference/message-map-macros-mfc.md#end_message_map), nawiasów mapy komunikatów. Makr, takich jak `ON_COMMAND`, wypełnij zawartości mapy wiadomości.  
-  
+
+Podczas tworzenia nowego szkielet aplikacji za pomocą Kreatora aplikacji, Kreator aplikacji zapisuje mapy komunikatów dla każdej klasy elemencie docelowym polecenia, który tworzy za Ciebie. W tym aplikacji pochodnej, dokumentów, widok i klasy okien ramowych. Niektóre z tych mapy komunikatów już wpisy dostarczonych przez Kreatora aplikacji dla określonych wiadomości i poleceń wstępnie zdefiniowanych i niektóre są tylko symbole zastępcze dla programów obsługi, które mają być dodane.
+
+Klasa mapy komunikatów znajduje się w. Plik CPP dla klasy. Praca z mapami wiadomości podstawowe, tworzonych przez Kreatora aplikacji, użyj okna właściwości dodać wpisy dla wiadomości i poleceń, które będą obsługiwać każdej klasy. Po dodaniu niektóre wpisy mapy komunikatów typowe może wyglądać następująco:
+
+[!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]
+
+Mapy komunikatów składa się z kolekcji makr. Dwa makra [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) i [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), dopasowywanie mapie komunikatów. Innych makr, takich jak `ON_COMMAND`, wypełnij zawartość w mapie komunikatów.
+
 > [!NOTE]
->  Makra mapy wiadomości nie zostaną wykonane przy użyciu średników.  
-  
- Korzystając z Kreatora dodawania klasy do utworzenia nowej klasy, zapewnia mapy komunikatów dla klasy. Alternatywnie można utworzyć mapy komunikatów ręcznie za pomocą edytora kodu źródłowego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md)
+>  Makra mapy komunikatów nie zostanie zastosowane przy użyciu średników.
+
+Korzystając z Kreatora dodawania klasy do utworzenia nowej klasy, zapewnia mapy komunikatów dla klasy. Alternatywnie można utworzyć mapy komunikatów ręcznie przy użyciu Edytor kodu źródłowego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md)
 

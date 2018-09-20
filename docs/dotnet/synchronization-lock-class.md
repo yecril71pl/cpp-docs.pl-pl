@@ -15,18 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a16fa84f250175b188ffd492fed40477d76c9d00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86eae14b61c985d3657781a7b641e9972ce76fdb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166689"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408332"
 ---
 # <a name="synchronization-lock-class"></a>Synchronizacja (klasa lock)
-Udostępnia mechanizm do automatyzacji wykonywania synchronizujący dostęp do obiektu blokady.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [lock](../dotnet/lock.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Udostępnia mechanizm do automatyzacji, biorąc blokady, która synchronizuje dostęp do obiektu.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[lock](../dotnet/lock.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

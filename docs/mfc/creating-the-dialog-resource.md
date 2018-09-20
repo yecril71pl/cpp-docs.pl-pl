@@ -19,29 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31011c9fffc87aa6bdac410009ad6170ad75eb5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c68f8f48ec08446a9fca20524a8309b041607a92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401592"
 ---
 # <a name="creating-the-dialog-resource"></a>Tworzenie zasobu okna dialogowego
-Projekt [okno dialogowe](../mfc/dialog-boxes.md) i tworzenie zasobu okna dialogowego, możesz użyć [Edytor okien dialogowych](../windows/dialog-editor.md). W edytorze okien dialogowych można:  
-  
--   Dostosuj rozmiar i lokalizacji, w której będą mieli Twoje okno dialogowe, gdy wygląda na to.  
-  
--   Przeciągnij różnego rodzaju formantów z palety kontrolek i upuść je w odpowiednie miejsca w oknie dialogowym.  
-  
--   Umieść formanty przycisków wyrównania na pasku narzędzi.  
-  
--   Przetestuj dialogowym symulując wygląd i zachowanie, które będzie mieć w programie. W trybie testowym można manipulować formantów okna dialogowego, wpisując tekst w polach tekstowych, klikając przycisków i tak dalej.  
-  
- Po zakończeniu zasobu szablonu okna dialogowego są przechowywane w pliku skryptu zasobu aplikacji. Można ją edytować później w razie potrzeby. Aby uzyskać pełny opis sposobu tworzenia i edytowania zasoby okna dialogowego, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematów. Ta technika jest również używać do tworzenia szablonu okna dialogowego zasoby [CFormView](../mfc/reference/cformview-class.md) i [CRecordView](../mfc/reference/crecordview-class.md) klasy.  
-  
- Gdy okno dialogowe wygląd potrzeby możesz, Tworzenie klasy okien dialogowych i mapowanie jego wiadomości, zgodnie z opisem w [Tworzenie klasy okien dialogowych za pomocą kreatorów kodu](../mfc/creating-a-dialog-class-with-code-wizards.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Aby zaprojektować [okno dialogowe](../mfc/dialog-boxes.md) i tworzenie zasobu okna dialogowego, możesz użyć [Edytor okien dialogowych](../windows/dialog-editor.md). W edytorze okien dialogowych można wykonywać następujące czynności:
+
+- Dostosuj rozmiar i lokalizacji, w której będą mieć Twoje okno dialogowe, gdy się pojawi.
+
+- Przeciągnij różne rodzaje formantów z palety kontrolek i upuścić je, której chcesz je w oknie dialogowym.
+
+- Umieść formanty za pomocą wyrównanie przycisków na pasku narzędzi.
+
+- Przetestuj dialogowym symulowania wyglądu i zachowania, które będzie mieć w programach. W trybie testowym okno dialogowe manipulowanie kontrolkami pochodzącymi, wpisując tekst w polach tekstowych, klikając przyciski i tak dalej.
+
+Po zakończeniu zasobu szablonu okna dialogowego są przechowywane w pliku skryptu zasobów aplikacji. Można edytować je później w razie potrzeby. Aby uzyskać pełny opis sposobu tworzenia i edytowania zasobów dialogowych, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematów. Ta metoda umożliwia również tworzenie zasobów szablonu okna dialogowego [CFormView](../mfc/reference/cformview-class.md) i [CRecordView](../mfc/reference/crecordview-class.md) klasy.
+
+Gdy okno dialogowe wygląd Ci odpowiada, Tworzenie klasy okien dialogowych i Mapuj swoje wiadomości, zgodnie z opisem w [Tworzenie klasy okien dialogowych za pomocą kreatorów kodu](../mfc/creating-a-dialog-class-with-code-wizards.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

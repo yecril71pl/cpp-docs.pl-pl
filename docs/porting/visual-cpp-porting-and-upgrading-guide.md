@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: a0be5d4cc09dbb5753bd8889ad880364ebd228bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466227"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433663"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
+
 Ten temat zawiera wskazówki dotyczące uaktualniania kodu Visual C++. W tym wprowadzenie kodu, aby skompilować i uruchomić się poprawnie w nowszej wersji narzędzi, a także korzystając z zalet nowego języka i funkcje programu Visual Studio. Ten temat zawiera także informacje o Migrowanie starszych aplikacji na bardziej nowoczesnych platformach.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Ze względu na uaktualnianie kodu Visual C++  

@@ -17,28 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0a32da23078973ed25e180d79cf4584a7c5a7895
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 255838021d945a3a861e034f255f6d354a7d8ec2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102683"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409600"
 ---
 # <a name="autogcroot"></a>auto_gcroot
-Definiuje `auto_gcroot` klasy i `swap` funkcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <msclr\auto_gcroot.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- W tym pliku nagłówka:  
-  
- [auto_gcroot, klasa](../dotnet/auto-gcroot-class.md)  
-  
- [Funkcja swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Definiuje `auto_gcroot` klasy i `swap` funkcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <msclr\auto_gcroot.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+W tym pliku nagłówkowym:
+
+[auto_gcroot, klasa](../dotnet/auto-gcroot-class.md)
+
+[Funkcja swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318193"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430556"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
@@ -39,24 +39,24 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 W tym artykule opisano plików zasobów i jak są używane w aplikacjach pulpitu Windows. Również zawiera łącza do tematów opisujących sposób korzystania z plików zasobów.
 
-[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
+[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)<br/>
 Opisuje symboli i zawiera informacje na temat korzystania z **symboli zasobów** okno dialogowe, aby zarządzać symbole w swoich projektach.
 
-[Edytory zasobów](../windows/resource-editors.md)  
+[Edytory zasobów](../windows/resource-editors.md)<br/>
 Opisuje edytory zasobów w programie Visual Studio typów zasobów możesz zmodyfikować z każdym edytorem i zawiera łącza do szczegółowych informacji na temat korzystania z każdym edytorem.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Oferuje łącza do dokumentacji języka Visual C++.
 
-[Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
+[Porozmawiaj z nami](/visualstudio/ide/talk-to-us)<br/>
 Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktując się z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)  
+[Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

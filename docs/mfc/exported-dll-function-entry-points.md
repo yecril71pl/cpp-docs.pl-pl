@@ -16,30 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b6bc9d6664ef1846523d5da90553e4a9e8cc6c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928628"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444121"
 ---
 # <a name="exported-dll-function-entry-points"></a>Punkty wejścia wyeksportowanej funkcji DLL
-Dla eksportowanych funkcji biblioteki dll, użyj [afx_manage_state —](reference/extension-dll-macros.md#afx_manage_state) makra w celu prawidłowego stanu globalnego podczas przełączania z modułu DLL do biblioteki DLL z aplikacji wywołującej.  
-  
- Po tym makro ustawia `pModuleState`, wskaźnik do `AFX_MODULE_STATE` struktury zawierającej dane globalne dla modułu, jak stan modułu skuteczne dla pozostałych zawierający zakres funkcji. Opuszczających zakres zawierający makro poprzedniego stanu modułu skuteczne zostanie automatycznie przywrócony.  
-  
- To przełączanie jest to osiągane przez utworzenie wystąpienia `AFX_MODULE_STATE` klasy na stosie. W jego konstruktorze tej klasy uzyskuje wskaźnik do bieżący stan modułu i zapisuje je w zmiennej członkowskiej, a następnie ustawia `pModuleState` jako nowy stan modułu skuteczne. W jego destruktora tej klasy przywraca wskaźnika przechowywane w jego zmiennej członkowskiej jako stan modułu skuteczne.  
-  
- Jeśli masz wyeksportowanej funkcji, takiej jak uruchamia okno dialogowe w bibliotece DLL należy dodać następujący kod na początku funkcji:  
-  
- [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]  
-  
- Zamienia to bieżący stan modułu ze stanem zwrócony z [AfxGetStaticModuleState —](reference/extension-dll-macros.md#afxgetstaticmodulestate) do końca bieżącego zakresu.  
-  
- Problemy z zasobami w bibliotekach DLL wystąpi, jeśli `AFX_MANAGE_STATE` makro nie jest używany. Domyślnie MFC używa zasobów dojście aplikacji głównej do załadowania szablonu zasobów. Ten szablon faktycznie jest przechowywany w bibliotece DLL. Główną przyczyną jest informacji o stanie modułu MFC nie został przełączony przez `AFX_MANAGE_STATE` makra. Dojście do zasobu jest odzyskiwana ze stanu modułu MFC. Nie przełączający stan modułu powoduje, że dojście niewłaściwego zasobu do użycia.  
-  
- `AFX_MANAGE_STATE` nie musi znajdować się w każdej funkcji w bibliotece DLL. Na przykład `InitInstance` może być wywoływany przez kod MFC w aplikacji bez `AFX_MANAGE_STATE` ponieważ MFC automatycznie przenosi stan modułu przed `InitInstance` , a następnie przełącza ją tu później za `InitInstance` zwraca. Dotyczy to wszystkich programów obsługi wiadomości mapy. Regularne biblioteki DLL MFC faktycznie mają specjalne okna głównego procedury, która automatycznie zmienia stan modułu przed przesłaniem wiadomości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+Do eksportowanych funkcji biblioteki dll, należy użyć [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) makra w celu prawidłowego stanu globalnego podczas przełączania z modułu DLL do biblioteki DLL z aplikacji wywołującej.
+
+Gdy zostanie wywołana, to makro ustawia `pModuleState`, wskaźnik do `AFX_MODULE_STATE` struktury zawierającej dane globalne dla modułu, jako stan modułu efektywne na pozostałą zawierającego zakresu funkcji. Po opuszczeniu zakres zawierający makra, zostanie automatycznie przywrócony poprzedniego stanu modułu skuteczne.
+
+To przełączanie odbywa się przez utworzenie wystąpienia `AFX_MODULE_STATE` klasy na stosie. W jego konstruktorze tej klasy uzyskuje wskaźnik do bieżącego stanu modułu i zapisuje ją w zmiennej składowej, a następnie ustawia `pModuleState` jako nowy stan modułu skuteczne. W destruktorze ta klasa przywraca wskaźnika, przechowywane w jego zmiennej składowej jako stanu modułu skuteczne.
+
+Jeśli masz eksportowanych funkcji, takich jak taki, który uruchamia okno dialogowe w bibliotece DLL, musisz Dodaj następujący kod na początku funkcji:
+
+[!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]
+
+Zamienia to bieżący stan modułu ze stanem zwróciło [AfxGetStaticModuleState —](reference/extension-dll-macros.md#afxgetstaticmodulestate) aż do końca bieżącego zakresu.
+
+Problemy z zasobami w bibliotekach DLL wystąpi `AFX_MANAGE_STATE` makr nie jest używany. Domyślnie MFC wykorzystuje uchwyt zasobów aplikacji głównej można załadować szablonu zasobów. Ten szablon rzeczywiście jest przechowywana w bibliotece DLL. Główną przyczyną jest informacje o stanie modułu MFC nie został przełączony przez `AFX_MANAGE_STATE` makra. Dojście do zasobu jest odzyskiwany od stanu modułu MFC. Nie przełączenie stanu modułu powoduje, że dojście niewłaściwych zasobów ma być używany.
+
+`AFX_MANAGE_STATE` nie musi znajdować się w każdej funkcji w bibliotece DLL. Na przykład `InitInstance` może być wywoływany przez kod MFC w aplikacji bez `AFX_MANAGE_STATE` ponieważ MFC jest kierowany w stanie modułu przed `InitInstance` i następnie przełączników je z powrotem po `InitInstance` zwraca. To samo dotyczy obsługi mapie komunikatów. Regularne biblioteki DLL MFC faktycznie istnieje procedura specjalne okna głównego, która automatycznie przełącza moduł przed przesłaniem wszystkie komunikaty.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424087"
 ---
 # <a name="basic-cstring-operations"></a>Operacje na obiekcie CString podstawowe
 
@@ -112,8 +112,8 @@ Bez rzutowania `cs` jest traktowany jako `void*` i `wcout` drukuje adres obiektu
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)   
-[Specjalizacja szablonu](../cpp/template-specialization-cpp.md)   
+[Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Specjalizacja szablonu](../cpp/template-specialization-cpp.md)<br/>
 [Instrukcje: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398680"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być
 
 ### <a name="parameters"></a>Parametry
 
-*interfaces*  
+*interfaces*<br/>
 Jeden lub więcej interfejsów, które może nie być wywoływana arbitralnie obiektu COM. Ten parametr jest prawidłowy tylko w przypadku zastosowania do klasy.
 
 ## <a name="remarks"></a>Uwagi
@@ -87,6 +87,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty interfejsu](../windows/interface-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty interfejsu](../windows/interface-attributes.md)<br/>
 [Atrybuty metody](../windows/method-attributes.md)  

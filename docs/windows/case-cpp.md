@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 109ca7b833791aa982e17335801e8fe1fc538987
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6b610ce888e91ed8029c4166fa79a847d700dba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606639"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436523"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -38,7 +38,7 @@ Używane z [switch_type —](../windows/switch-type.md) atrybutu w **Unii**.
 
 #### <a name="parameters"></a>Parametry
 
-*value*  
+*value*<br/>
 Możliwa wartość danych wejściowych, dla którego chcesz podać przetwarzania. Typ **wartość** może być jedną z następujących typów:
 
 - `int`
@@ -91,6 +91,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty klasy](../windows/class-attributes.md)  

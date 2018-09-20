@@ -17,37 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc39951270138e9bd243172b289e7bd96190f14
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ea32f473d96c8f48c6628d8f71212269bd6d345
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692324"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392618"
 ---
 # <a name="default-openmp"></a>domyślne (OpenMP)
-Określa zachowanie niewystępującego w zakresie zmiennych równoległego regionu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-default(shared | none)  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `shared`, które są włączone jeśli `default` klauzuli nie zostanie określony, oznacza, że dowolnej zmiennej w równoległego regionu będą traktowane jak została podana w [udostępnionego](../../../parallel/openmp/reference/shared-openmp.md) klauzuli. `none` oznacza, że wszystkie zmienne używane w równoległego regionu, które są poza zakresem z [prywatnej](../../../parallel/openmp/reference/private-openmp.md), [udostępnionego](../../../parallel/openmp/reference/shared-openmp.md), [redukcji](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), lub [lastprivate](../../../parallel/openmp/reference/lastprivate.md) klauzuli spowoduje błąd kompilatora.  
-  
- `default` ma zastosowanie do następujących dyrektyw:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Aby uzyskać więcej informacji, zobacz [2.7.2.5 domyślne](../../../parallel/openmp/2-7-2-5-default.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md) przykład przy użyciu `default`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Określa zachowanie zmiennych niewystępującego w zakresie równoległego regionu.
+
+## <a name="syntax"></a>Składnia
+
+```
+default(shared | none)
+```
+
+## <a name="remarks"></a>Uwagi
+
+`shared`, która obowiązuje Jeśli `default` klauzula nie jest określony, oznacza, że dowolnej zmiennej w równoległego regionu będą traktowane tak, jakby zostały określone z [udostępnionego](../../../parallel/openmp/reference/shared-openmp.md) klauzuli. `none` oznacza, że wszystkie zmienne używane w regionie równoległych, które nie są w zakresie z [prywatnej](../../../parallel/openmp/reference/private-openmp.md), [udostępnionego](../../../parallel/openmp/reference/shared-openmp.md), [redukcji](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), lub [lastprivate](../../../parallel/openmp/reference/lastprivate.md) klauzuli spowoduje błąd kompilatora.
+
+`default` mają zastosowanie do następujących dyrektywach:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)
+
+Aby uzyskać więcej informacji, zobacz [2.7.2.5 domyślne](../../../parallel/openmp/2-7-2-5-default.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md) na przykład za pomocą `default`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

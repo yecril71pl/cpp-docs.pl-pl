@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397902"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu C w wierszu polecenia
 
@@ -169,7 +169,7 @@ Kompilator Visual C++, C jest zazwyczaj zgodne ze standardem ISO C99, ale nie je
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wskazówki: Tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
-[Skorowidz języka c](../c-language/c-language-reference.md)<br/>
+[Przewodnik: tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
+[Dokumentacja języka C](../c-language/c-language-reference.md)<br/>
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>
 [Zgodność](../c-runtime-library/compatibility.md)

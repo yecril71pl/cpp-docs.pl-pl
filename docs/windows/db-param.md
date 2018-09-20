@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418388"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wej�
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba porządkowa*  
+*Liczba porządkowa*<br/>
 Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane.
 
-*paramtype*  
+*paramtype*<br/>
 (Opcjonalnie) Typ, który można ustawić dla parametru. Dostawcy obsługują tylko typy operacji We/Wy parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jedną wartość DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT parametr wejściowy.
@@ -56,19 +56,19 @@ Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie w
 
 - DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w wierszu Akcesory przypomina o tym użytkownika, parametry są ignorowane.
 
-*Atrybut DbType*  
+*Atrybut DbType*<br/>
 (Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) wpisu kolumny.
 
-*Precyzja*  
+*Precyzja*<br/>
 (Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Skala*  
+*Skala*<br/>
 (Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
-*Długość*  
+*Długość*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi

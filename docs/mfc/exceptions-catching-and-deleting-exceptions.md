@@ -19,47 +19,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434768"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: przechwytywanie i usuwanie wyjątków
-Poniższe instrukcje i przykłady przedstawiają sposób catch i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i **throw** słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).  
-  
- Twoje programy obsługi wyjątków należy usunąć obiekty wyjątków, które obsługują, ponieważ nie powiodło się usunięcie wyjątek powoduje przeciek pamięci, zawsze, gdy wyjątek zostanie przechwycony przez ten kod.  
-  
- Twoje **catch** bloku należy usunąć Wystąpił wyjątek podczas:  
-  
--   **Catch** bloku zgłasza wyjątek nowe.  
-  
-     Nie musi, Usuń wyjątek, jeśli zgłosić ten sam wyjątek:  
-  
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
-  
--   Zwraca wykonywania z poziomu **catch** bloku.  
-  
+
+Następujące instrukcje i przykłady pokazują, jak przechwytywać i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i **throw** słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).
+
+Inne programy obsługi wyjątków należy usunąć obiekty wyjątków, które obsługują, ponieważ nie można usunąć wyjątku powoduje przeciek pamięci, zawsze wtedy, gdy ten kod przechwytuje wyjątek.
+
+Twoje **catch** bloku musi usunąć wyjątek po:
+
+- **Catch** bloku zgłasza nowy wyjątek.
+
+     Nie należy oczywiście usunąć wyjątek, jeśli zgłosić ten sam wyjątek:
+
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+
+- Wykonywanie powraca z poziomu **catch** bloku.
+
 > [!NOTE]
->  Podczas usuwania `CException`, użyj `Delete` funkcji członkowskiej można usunąć wyjątku. Nie używaj **usunąć** — słowo kluczowe, ponieważ jego może zakończyć się niepowodzeniem, jeśli wyjątek nie znajduje się na stercie.  
-  
-#### <a name="to-catch-and-delete-exceptions"></a>Aby przechwycić i usuwanie wyjątków  
-  
-1.  Użyj **spróbuj** — słowo kluczowe, aby skonfigurować **spróbuj** bloku. Wykonanie instrukcji dowolnego programu, które może zgłosić wyjątek w **spróbuj** bloku.  
-  
-     Użyj **catch** — słowo kluczowe, aby skonfigurować **catch** bloku. Umieść kod obsługi wyjątków w **catch** bloku. Kod w **catch** bloku jest wykonywane tylko wtedy, gdy kod w **spróbuj** bloku zgłasza wyjątek typu określonego w **catch** instrukcji.  
-  
-     Poniżej przedstawiono szkielet jak **spróbuj** i **catch** zwykle ułożone bloków:  
-  
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
-  
-     Podczas wyjątek kontroli przechodzą do pierwszej **catch** bloku, w których deklaracji wyjątku jest zgodny z typem wyjątku. Można selektywnie obsługi różnych typów wyjątków z sekwencyjnych **catch** blokuje wymienione poniżej:  
-  
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
-  
- Aby uzyskać więcej informacji, zobacz [wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
+>  Podczas usuwania `CException`, użyj `Delete` funkcja elementu członkowskiego, można usunąć wyjątku. Nie używaj **Usuń** — słowo kluczowe, ponieważ jego może zakończyć się niepowodzeniem, jeśli wyjątek nie znajduje się na stosie.
+
+#### <a name="to-catch-and-delete-exceptions"></a>Aby przechwycić i usuwanie wyjątków
+
+1. Użyj **spróbuj** — słowo kluczowe, aby skonfigurować **spróbuj** bloku. Wykonaj wszelkie instrukcje programu, które mogą zgłosić wyjątek w ramach **spróbuj** bloku.
+
+     Użyj **catch** — słowo kluczowe, aby skonfigurować **catch** bloku. Umieść kod obsługi wyjątków w **catch** bloku. Kod w **catch** blok jest wykonywany tylko wtedy, gdy kod w **spróbuj** bloku zgłasza wyjątek typu określonego w **catch** instrukcji.
+
+     Poniższej przedstawiono szkielet jak **spróbuj** i **catch** zwykle ułożone bloków:
+
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+
+     Gdy wyjątek jest zgłaszany, kontrola przechodzi do pierwszej **catch** bloku, w których deklaracji wyjątku jest zgodny z typem wyjątku. Selektywnie mogą obsługiwać różne rodzaje wyjątków za pomocą sekwencyjne **catch** blokuje wymienione poniżej:
+
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+
+Aby uzyskać więcej informacji, zobacz [wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
 

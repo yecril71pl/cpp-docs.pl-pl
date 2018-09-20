@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obiekt Sink zdarzenia Windows Forms z klas natywnych języka C++ | Dokumentacja firmy Microsoft'
+title: 'Porady: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++ | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0fec32bf179424b5ec0164e4511f74eae44f7320
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9316d27637d335bc0e3a71656a5d7b9c8796ec28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130428"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424997"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Porady: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++
-Można włączyć macierzystych klas C++ odbierać wywołań zwrotnych z zarządzanego zdarzenia wywoływane z formanty formularzy systemu Windows lub innej formy w formacie mapy makr MFC. Wychwytywanie zdarzeń w widoków i okien dialogowych jest podobny do tego samego zadania dla formantów czynności.  
-  
- W tym celu należy:  
-  
--   Dołącz `OnClick` obsługi zdarzeń do sterowania przy użyciu [make_delegate —](../mfc/reference/delegate-and-interface-maps.md#make_delegate).  
-  
--   Tworzenie przy użyciu mapy delegata [begin_delegate_map —](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [end_delegate_map —](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), i [event_delegate_entry —](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).  
-  
- W tym przykładzie kontynuuje pracę, jak w [porady: czy powiązania danych DDX/ddv za pomocą interfejsu Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
-  
- Teraz, spowodują powiązania formantu MFC (`m_MyControl`) z obiektem delegowanym zdarzeń zarządzanego programu obsługi o nazwie `OnClick` dla zarządzanej <xref:System.Windows.Forms.Control.Click> zdarzeń.  
-  
-### <a name="to-attach-the-onclick-event-handler"></a>Aby dołączyć program obsługi zdarzeń:  
-  
-1.  Dodaj następujący kod do implementacji BOOL CMFC01Dlg::OnInitDialog:  
-  
-    ```  
-    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );  
-    ```  
-  
-2.  Dodaj następujący kod do sekcji publicznej w deklaracji klasy CMFC01Dlg: cdialog — publiczny.  
-  
-    ```  
-    // delegate map  
-    BEGIN_DELEGATE_MAP( CMFC01Dlg )  
-    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )  
-    END_DELEGATE_MAP()  
-  
-    void OnClick( System::Object^ sender, System::EventArgs^ e );  
-    ```  
-  
-3.  Na koniec należy dodać implementację `OnClick` do CMFC01Dlg.cpp:  
-  
-    ```  
-    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)  
-    {  
-        AfxMessageBox(_T("Button clicked"));  
-    }  
-    ```  
-  
-## <a name="see-also"></a>Zobacz też  
- [MAKE_DELEGATE —](../mfc/reference/delegate-and-interface-maps.md#make_delegate)   
- [BEGIN_DELEGATE_MAP —](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)   
- [END_DELEGATE_MAP —](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)   
- [EVENT_DELEGATE_ENTRY —](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)
+
+Można włączyć macierzystych klas C++ odbierać wywołania zwrotne z zarządzanego zdarzenia wywoływane z kontrolek formularzy Windows Forms lub inne formy z formatem mapy makr MFC. Wychwytywania zdarzeń w widokach i oknach dialogowych jest podobny do tego samego zadania dla formantów czynności.
+
+Aby to zrobić, należy:
+
+- Dołącz `OnClick` programu obsługi zdarzeń do formantu za pomocą [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).
+
+- Utwórz mapę delegata za pomocą [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), i [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
+
+W tym przykładzie kontynuuje pracę, jak w [porady: wykonaj powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+
+Teraz zostanie skojarzony formant MFC (`m_MyControl`) za pomocą delegata obsługi zdarzeń zarządzanych, o nazwie `OnClick` dla zarządzanej <xref:System.Windows.Forms.Control.Click> zdarzeń.
+
+### <a name="to-attach-the-onclick-event-handler"></a>Aby dołączyć program obsługi zdarzeń:
+
+1. Dodaj następujący kod do implementacji BOOL CMFC01Dlg::OnInitDialog:
+
+    ```
+    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );
+    ```
+
+1. Dodaj następujący kod do sekcji publicznej w deklaracji klasy CMFC01Dlg: CDialog publicznych.
+
+    ```
+    // delegate map
+    BEGIN_DELEGATE_MAP( CMFC01Dlg )
+    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )
+    END_DELEGATE_MAP()
+
+    void OnClick( System::Object^ sender, System::EventArgs^ e );
+    ```
+
+1. Na koniec należy dodać to implementacja `OnClick` do CMFC01Dlg.cpp:
+
+    ```
+    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)
+    {
+        AfxMessageBox(_T("Button clicked"));
+    }
+    ```
+
+## <a name="see-also"></a>Zobacz też
+
+[MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)<br/>
+[BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)<br/>
+[END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)<br/>
+[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)

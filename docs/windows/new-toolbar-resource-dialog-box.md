@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc933905cf4056d2be6c692728c621913687a6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316305"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425540"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Okno dialogowe Nowy zasób paska narzędzi (C++)
 
@@ -46,6 +46,6 @@ ATL i MFC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)  
-[Konwertowanie map bitowych na paski narzędzi](../windows/converting-bitmaps-to-toolbars.md)  
+[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>
+[Konwertowanie map bitowych na paski narzędzi](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Edytor paska narzędzi](../windows/toolbar-editor.md)

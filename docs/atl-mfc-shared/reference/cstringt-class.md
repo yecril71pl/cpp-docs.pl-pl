@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2f1e907864e096acfb385d8c340ab40fb82346
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445142"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -1744,7 +1744,7 @@ Usuwa końcowe wystąpienia jednego z następujących czynności:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)   
-[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)   
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT, klasa](../../atl-mfc-shared/reference/csimplestringt-class.md)
 

@@ -16,46 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04fcf796c7d08cc2733edbf23b66c591e07ec71a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a96b166f5fc2873736d01438d91fc971120abf2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437043"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Ustawienia aplikacji, kreator biblioteki MFC DLL
-Użyj tej strony Kreator biblioteki MFC DLL do projektowania i dodawanie podstawowych funkcji do nowego projektu biblioteki MFC DLL.  
-  
-## <a name="dll-type"></a>Typ biblioteki DLL  
- Wybierz typ biblioteki DLL, którą chcesz utworzyć.  
-  
+
+Użyj tej strony Kreator biblioteki MFC DLL do projektowania i dodawanie podstawowych funkcji do nowego projektu biblioteki MFC DLL.
+
+## <a name="dll-type"></a>Typ biblioteki DLL
+
+Wybierz typ biblioteki DLL, którą chcesz utworzyć.
+
 - **Regularne biblioteki MFC DLL za pomocą współdzielonej biblioteki DLL MFC**
 
-   Wybierz tę opcję, aby połączyć program jako współdzieloną DLL biblioteki MFC. Korzystając z tej opcji nie można udostępniać obiektów MFC między biblioteką DLL i aplikacji wywołującej. Program sprawia, że wywołania do biblioteki MFC w czasie wykonywania. Tej opcji zmniejsza wymagania dotyczące dysku i pamięci programu, jeśli składa się z wielu plików wykonywania korzystające z biblioteki MFC. Programy Win32 i MFC można wywołać funkcji w bibliotece DLL. Należy ponownie rozesłać biblioteki MFC DLL za pomocą tego typu projektu.  
-  
+   Wybierz tę opcję, aby połączyć program jako współdzieloną DLL biblioteki MFC. Korzystając z tej opcji nie można udostępniać obiektów MFC między biblioteką DLL i aplikacji wywołującej. Program sprawia, że wywołania do biblioteki MFC w czasie wykonywania. Tej opcji zmniejsza wymagania dotyczące dysku i pamięci programu, jeśli składa się z wielu plików wykonywania korzystające z biblioteki MFC. Programy Win32 i MFC można wywołać funkcji w bibliotece DLL. Należy ponownie rozesłać biblioteki MFC DLL za pomocą tego typu projektu.
+
 - **Połączone statycznie zwykłej biblioteki MFC DLL z MFC**
 
-   Wybierz tę opcję, aby połączyć program statycznie biblioteki MFC w czasie kompilacji. Programy Win32 i MFC można wywołać funkcji w bibliotece DLL. Gdy ta opcja zwiększa rozmiar program, nie musisz redystrybuować MFC DLL za pomocą tego typu projektu. Nie można udostępniać obiektów MFC między biblioteką DLL i aplikacji wywołującej.  
-  
+   Wybierz tę opcję, aby połączyć program statycznie biblioteki MFC w czasie kompilacji. Programy Win32 i MFC można wywołać funkcji w bibliotece DLL. Gdy ta opcja zwiększa rozmiar program, nie musisz redystrybuować MFC DLL za pomocą tego typu projektu. Nie można udostępniać obiektów MFC między biblioteką DLL i aplikacji wywołującej.
+
 - **Biblioteka DLL rozszerzenia MFC**
 
-   Wybierz tę opcję, jeśli chcesz, aby program, aby wykonywać wywołania do biblioteki MFC w czasie wykonywania, a chcesz się podzielić obiektami MFC między biblioteką DLL i aplikacji wywołującej. Tej opcji zmniejsza wymagania programu, dysku i pamięci, jeśli składa się z wielu plików wykonywalnych, które używają biblioteki MFC. Tylko programy MFC można wywołać funkcji w bibliotece DLL. Należy ponownie rozesłać biblioteki MFC DLL za pomocą tego typu projektu.  
-  
-## <a name="additional-features"></a>Dodatkowe funkcje  
+   Wybierz tę opcję, jeśli chcesz, aby program, aby wykonywać wywołania do biblioteki MFC w czasie wykonywania, a chcesz się podzielić obiektami MFC między biblioteką DLL i aplikacji wywołującej. Tej opcji zmniejsza wymagania programu, dysku i pamięci, jeśli składa się z wielu plików wykonywalnych, które używają biblioteki MFC. Tylko programy MFC można wywołać funkcji w bibliotece DLL. Należy ponownie rozesłać biblioteki MFC DLL za pomocą tego typu projektu.
 
-Wybierz, czy biblioteki MFC DLL powinien obsługiwać automatyzacji oraz czy powinien on obsługiwać Windows sockets.  
-  
+## <a name="additional-features"></a>Dodatkowe funkcje
+
+Wybierz, czy biblioteki MFC DLL powinien obsługiwać automatyzacji oraz czy powinien on obsługiwać Windows sockets.
+
 - **Automatyzacja**
 
-   Wybierz **automatyzacji** umożliwiające programowi manipulowania obiektami zaimplementowane w innym programie. Wybieranie **automatyzacji** udostępnia również program innym klientom automatyzacji. Zobacz [automatyzacji](../../mfc/automation.md) Aby uzyskać więcej informacji.  
-  
+   Wybierz **automatyzacji** umożliwiające programowi manipulowania obiektami zaimplementowane w innym programie. Wybieranie **automatyzacji** udostępnia również program innym klientom automatyzacji. Zobacz [automatyzacji](../../mfc/automation.md) Aby uzyskać więcej informacji.
+
 - **Windows sockets**
 
-   Wybierz tę opcję, aby wskazać, że program obsługuje Windows sockets. Windows sockets umożliwiają pisanie programów, które komunikują się za pośrednictwem sieci TCP/IP.  
-  
-   Jeśli biblioteka DLL MFC przy użyciu Windows sockets pomocy technicznej jest tworzony, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) Inicjuje obsługę gniazda, a plik nagłówka MFC StdAfx.h zawiera AfxSock.h.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator biblioteki MFC DLL](../../mfc/reference/mfc-dll-wizard.md)   
- [Tworzenie projektu MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)
+   Wybierz tę opcję, aby wskazać, że program obsługuje Windows sockets. Windows sockets umożliwiają pisanie programów, które komunikują się za pośrednictwem sieci TCP/IP.
+
+   Jeśli biblioteka DLL MFC przy użyciu Windows sockets pomocy technicznej jest tworzony, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) Inicjuje obsługę gniazda, a plik nagłówka MFC StdAfx.h zawiera AfxSock.h.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator biblioteki MFC DLL](../../mfc/reference/mfc-dll-wizard.md)<br/>
+[Tworzenie projektu MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)
 

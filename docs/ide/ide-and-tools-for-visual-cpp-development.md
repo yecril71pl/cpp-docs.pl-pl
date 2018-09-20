@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132023"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412525"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>Narzędzia projektowe Visual C++ i środowisko IDE
 
@@ -29,7 +29,7 @@ Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka na
 
 ## <a name="creating-a-solution-and-projects"></a>Tworzenie rozwiązań i projektów
 
-A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny. 
+A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny.
 
 Program Visual Studio 2015 udostępnia obsługę projektów programu MSBuild. Możesz pobrać rozszerzenia programu Visual Studio dla innych systemów kompilacji, takie jak Qt lub narzędzia CMake.
 
@@ -119,7 +119,7 @@ Program można debugować, naciskając klawisz **F5** kiedy konfigurację projek
 
 ## <a name="deploy-completed-applications"></a>Wdrażanie ukończone aplikacje
 
-Wdrażanie aplikacji platformy uniwersalnej systemu Windows do klientów za pośrednictwem witryny Microsoft Store przy użyciu **projektu** > **Store** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [Windows publikować aplikacje i gry](/windows/uwp/publish/). 
+Wdrażanie aplikacji platformy uniwersalnej systemu Windows do klientów za pośrednictwem witryny Microsoft Store przy użyciu **projektu** > **Store** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [Windows publikować aplikacje i gry](/windows/uwp/publish/).
 
 Podczas wdrażania natywnych aplikacji pulpitu języka C++ na innym komputerze, należy zainstalować samej aplikacji i plików biblioteki, od których zależy aplikacja. Istnieją trzy sposoby wdrożenia uniwersalne środowisko uruchomieniowe C++ (UCRT) z aplikacją: wdrożenie centralne, wdrożenie lokalne lub łączenia statycznego. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

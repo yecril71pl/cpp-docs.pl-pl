@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f5457cf9062de233a4489f92cb2a1bf561a2e30d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 511902e96870a82cfccadda4df47f47d848ae03f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417920"
 ---
 # <a name="resource-management-classes"></a>Klasy zarządzania zasobami
-Te klasy zapewniają automatyczne zarządzanie klas zarządzanych.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
-  
-|||  
-|-|-|  
-|[auto_gcroot](../dotnet/auto-gcroot.md)|Osadza dojścia wirtualnego w typie natywnym.|  
-|[auto_handle](../dotnet/auto-handle.md)|Osadza dojścia wirtualnego w typu zarządzanego.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Te klasy oferują automatyczne zarządzanie klas zarządzanych.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+|||
+|-|-|
+|[auto_gcroot](../dotnet/auto-gcroot.md)|Osadza uchwyt wirtualnego w polu typu natywnego.|
+|[auto_handle](../dotnet/auto-handle.md)|Osadza wirtualnego dojście w typ zarządzany.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

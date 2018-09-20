@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d30ac0d2e1d18b22c6130212503576f5fe343a8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594072"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407549"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -45,7 +45,7 @@ Tworzy odbiorca zdarzenia (ujścia).
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 Wyliczenie jednego z następujących wartości:
 
 - `native` dla niezarządzanego kodu C/C++ (domyślnie dla macierzystych klas).
@@ -58,7 +58,7 @@ Wyliczenie jednego z następujących wartości:
     #include <atlcom.h>
     ```
 
-*layout_dependent*  
+*layout_dependent*<br/>
 Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent* jest wartością logiczną:
 
 - **wartość true,** oznacza, że podpis delegatów w przypadku odbiornika musi dokładnie odpowiadać tych, do których są podłączone w zdarzeniu źródła. Nazwy programów obsługi odbiorcy zdarzeń muszą być zgodne nazwy określone w interfejsie źródła istotnych zdarzeń. Należy użyć `coclass` podczas *layout_dependent* jest **true**. Jest nieco bardziej efektywne, aby określić **true**.
@@ -91,9 +91,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty kompilatora](../windows/compiler-attributes.md)  
-[event_source](../windows/event-source.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Atrybuty kompilatora](../windows/compiler-attributes.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Atrybuty klasy](../windows/class-attributes.md)  

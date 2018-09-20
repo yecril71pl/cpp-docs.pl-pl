@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d34bdfd2d80690efae8efbc1f95ba0c50a530af3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425787"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (określ plik winmd)
 
@@ -45,6 +45,6 @@ Użyj wartości, który jest określony w `filename` do przesłaniania domyślne
 
 ## <a name="see-also"></a>Zobacz też
 
-[/ WINMD (Generuj metadane Windows)](../../build/reference/winmd-generate-windows-metadata.md)
+[/WINMD (Generuj metadane systemu Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
 [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)

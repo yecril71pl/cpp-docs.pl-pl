@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 329f1d21489b57130531db20014e249588f101a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400513"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych
 
@@ -82,7 +82,7 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)  
-[Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)  
-[Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)  
+[Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)<br/>
+[Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)<br/>
+[Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)<br/>
 [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

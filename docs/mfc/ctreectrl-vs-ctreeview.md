@@ -1,5 +1,5 @@
 ---
-title: Ctreectrl — vs. CTreeView — | Dokumentacja firmy Microsoft
+title: CTreeCtrl a CTreeView | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71048b6f03f7f1b4400c0a88c178d1b97acdf2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8acaecbdfb99b8ae0b27023145a0ef6aee1f219
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342036"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399154"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>Ctreectrl — vs. CTreeView —
-MFC oferuje dwie klasy, które hermetyzują drzewa formantów: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) i [CTreeView —](../mfc/reference/ctreeview-class.md). Każda klasa przydaje się w różnych sytuacjach.  
-  
- Użyj `CTreeCtrl` gdy będziesz potrzebować formantu okna podrzędnego zwykły; na przykład w oknie dialogowym. Szczególnie należy użyć `CTreeCtrl` jeśli mają być innych formantów podrzędnych w oknie, tak jak typowe okno dialogowe.  
-  
- Użyj `CTreeView` zużycia formant drzewa, aby działać tak jak widok okna architektury dokument/widok, a także formant drzewa. A `CTreeView` zajmie obszaru klienckiego całe okno ramowe lub okna podziału. Go będzie zmieniany automatycznie podczas zmiany rozmiaru jej okna nadrzędnego, a może przetwarzać komunikaty poleceń z menu, klawisze skrótów i pasków narzędzi. Ponieważ formant drzewa zawiera dane niezbędne do wyświetlania drzewa, odpowiedni obiekt dokumentu nie ma być skomplikowane — nawet można użyć [CDocument](../mfc/reference/cdocument-class.md) jako typ dokumentu w szablonie dokumentu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl a CTreeView
+
+Biblioteka MFC zawiera dwie klasy, które hermetyzują kontrolkach drzewa: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) i [CTreeView](../mfc/reference/ctreeview-class.md). Każda klasa przydaje się w różnych sytuacjach.
+
+Użyj `CTreeCtrl` gdy będziesz potrzebować kontrolki okna zwykły podrzędnej; na przykład w oknie dialogowym. Szczególnie chcesz użyć `CTreeCtrl` Jeśli nastąpi innych formantów podrzędnych w oknie, tak jak w typowej okno dialogowe.
+
+Użyj `CTreeView` kiedy zechcesz, formant drzewa, aby zachowywać się jak okno Widok, w ramach architektury dokument/widok, a także formantu drzewa. A `CTreeView` zajmie całego obszaru klienta ramki okna lub okna rozdzielacza. Jego rozmiar będzie automatycznie zmieniany po zmianie rozmiaru okna nadrzędnego, a może przetworzyć polecenia wiadomości z menu, klawisze skrótów i paski narzędzi. Ponieważ formantu drzewa zawiera dane niezbędne do wyświetlania w drzewie, odpowiedni obiekt dokumentu nie ma być skomplikowane — można nawet używać [CDocument](../mfc/reference/cdocument-class.md) jako typ dokumentu w szablonie dokumentu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2628df5f446105e6b7881709a0c72c19fe230e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425407"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Używanie paska dialogowego z formantem paska pomocniczego
-Jak wspomniano w [formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md), każdej grupy może zawierać tylko jeden podrzędny okna (lub sterowania). Może to być to ograniczenie, jeśli chcesz mieć więcej niż jedno okno podrzędne na poza pasmem. Obejście wygodny jest tworzenie zasobu paska dialogowego z wielu formantów, a następnie dodaj obiekt band paska pomocniczego (paska dialogowego zawierający) z formantem paska pomocniczego.  
-  
- Zwykle Jeśli potrzebujesz pasmem pasek okna dialogowego do przezroczysty ustawić ws_ex_transparent — rozszerzone style dla obiektu paska dialogowego. Jednak ponieważ ws_ex_transparent — ma problemy z prawidłowo malowanie tła paska dialogowego, należy wykonać nieco dodatkowej pracy w celu osiągnięcia pożądanych efektów.  
-  
- Poniższe szczegóły procedury kroki niezbędne do uzyskania przejrzystości bez użycia ws_ex_transparent — rozszerzone style.  
-  
-### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Aby zaimplementować paska dialogowego przezroczyste w paśmie paska pomocniczego  
-  
-1.  Przy użyciu [okno dialogowe Dodaj klasę](../mfc/reference/adding-an-mfc-class.md), Dodaj nową klasę (na przykład `CMyDlgBar`), który zawiera obiekt pasek okna dialogowego.  
-  
-2.  Dodaj obsługę wiadomości WM_ERASEBKGND.  
-  
-3.  W nowy program obsługi Zmień istniejący kod w celu dopasowania w poniższym przykładzie:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
-  
-4.  Dodaj obsługę wiadomości WM_MOVE.  
-  
-5.  W nowy program obsługi Zmień istniejący kod w celu dopasowania w poniższym przykładzie:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
-  
- Nowe obsługi symulować przezroczystość paska dialogowego przekazywania wiadomości WM_ERASEBKGND do nadrzędnego okna i wymuszanie odświeżenia za każdym razem, gdy obiektu paska dialogowego zostanie przeniesiony.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Jak wspomniano w [formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md), każdego pasma może zawierać tylko jeden podrzędny okna (lub sterowania). Może to być to ograniczenie, jeśli chcesz mieć więcej niż jedno okno podrzędne na poza pasmem. Wygodne obejście polega na tworzenie zasobu paska dialogowego z wieloma formantami, a następnie dodaj obiekt band paska pomocniczego (zawierające Pasek dialogowy) do formantu paska pomocniczego.
+
+Normalnie jeśli chce się poza pasmem paska dialogowego były przezroczyste, należy ustawić ws_ex_transparent — rozszerzone style dla obiektu paska dialogowego. Jednak ponieważ WS_EX_TRANSPARENT ma problemy z prawidłowo malowanie tła paska dialogowego, należy wykonać wykonaniu dodatkowych czynności w celu osiągnięcia pożądanych efektów.
+
+Poniższe szczegóły procedury kroki niezbędne do osiągnięcia przejrzystości bez użycia ws_ex_transparent — rozszerzone style.
+
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Aby zaimplementować paska dialogowego przezroczyste pasma paska pomocniczego
+
+1. Za pomocą [okno dialogowe Dodaj klasę](../mfc/reference/adding-an-mfc-class.md), Dodaj nową klasę (na przykład `CMyDlgBar`), który zawiera obiekt paska dialogowego.
+
+1. Dodaj program obsługi komunikatów WM_ERASEBKGND.
+
+1. W nowy program obsługi Zmień istniejący kod do zgodnie z poniższym przykładem:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+
+1. Dodaj program obsługi komunikatów WM_MOVE.
+
+1. W nowy program obsługi Zmień istniejący kod do zgodnie z poniższym przykładem:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+
+Nowe procedury obsługi symulować przezroczystość paska dialogowego przekazywania wiadomości WM_ERASEBKGND do nadrzędnego okna i wymuszanie repaint za każdym razem, gdy obiekt paska dialogowego jest przenoszony.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

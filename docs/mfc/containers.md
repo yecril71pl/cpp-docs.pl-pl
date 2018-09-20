@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 914b2eccf1d9896285eca5cf714dbb4b78a4fe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440683"
 ---
 # <a name="containers"></a>Kontenery
-Aplikacji kontenera jest aplikacja, który można zastosować elementy osadzone lub połączone w swoich własnych dokumentów. Zarządza aplikacji kontenera dokumentów musi mieć możliwość przechowywania i wyświetlania OLE dokumentów złożonych składników, a także dane utworzone przez samą aplikację. Aplikacji kontenera należy także zezwolić użytkownikom na wstawianie nowych elementów lub edycji istniejących elementów.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Implementowanie kontenera](../mfc/containers-implementing-a-container.md)  
-  
- [Elementy klienckie kontenerów](../mfc/containers-client-items.md)  
-  
- [Pliki złożone](../mfc/containers-compound-files.md)  
-  
- [Problemy z kontenera interfejsu użytkownika](../mfc/containers-user-interface-issues.md)  
-  
- [Zaawansowane funkcje kontenerów](../mfc/containers-advanced-features.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [OLE](../mfc/ole-in-mfc.md)   
- [Serwery](../mfc/servers.md)   
- [aktywacji](../mfc/activation-cpp.md)   
- [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)
+
+Aplikacja kontenera jest aplikacja, która można zastosować osadzony lub połączony elementy w swoich własnych dokumentów. Dokumenty, zarządzane przez aplikację kontenera musi mieć możliwość przechowywania i wyświetlania składników złożonego dokumentu OLE, a także dane utworzone przez samą aplikację. Aplikacja kontenera należy także zezwolić użytkownikom wstawić nowe elementy lub edytować istniejące elementy.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Implementowanie kontenera](../mfc/containers-implementing-a-container.md)
+
+[Elementy klienckie kontenerów](../mfc/containers-client-items.md)
+
+[Użyj plików złożonych](../mfc/containers-compound-files.md)
+
+[Problemy z interfejsem użytkownika kontenera](../mfc/containers-user-interface-issues.md)
+
+[Zaawansowane funkcje kontenerów](../mfc/containers-advanced-features.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Serwery](../mfc/servers.md)<br/>
+[Aktywacja](../mfc/activation-cpp.md)<br/>
+[Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)
 

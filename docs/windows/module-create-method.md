@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444700"
 ---
 # <a name="modulecreate-method"></a>Module::Create — Metoda
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ modułu.
 
-*Wywołanie zwrotne*  
+*Wywołanie zwrotne*<br/>
 Wywołuje się, gdy ostatni obiekt wystąpienia modułu jest zwalniany.
 
-*object*  
+*object*<br/>
 *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po udostępnieniu ostatni obiekt wystąpienia w module.
 
-*— Metoda*  
+*— Metoda*<br/>
 *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po udostępnieniu ostatni obiekt wystąpienia w module.
 
 ## <a name="return-value"></a>Wartość zwracana

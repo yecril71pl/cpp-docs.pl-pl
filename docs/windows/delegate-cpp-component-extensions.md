@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602937"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432414"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ Component Extensions)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametry
 
-*Dostęp do*  
+*Dostęp do*<br/>
 (opcjonalnie) Dostępność delegata, która może być **publicznych** (ustawienie domyślne) lub **prywatnej**. Prototyp funkcji również może być kwalifikowana za **const** lub **volatile** słów kluczowych.
 
-*zwracany typ*  
+*zwracany typ*<br/>
 Zwracany typ prototypu funkcji.
 
-*Delegat typu identyfikator*  
+*Delegat typu identyfikator*<br/>
 Nazwa typu zadeklarowana delegata.
 
-*Parametry*  
+*Parametry*<br/>
 (Opcjonalnie) Typy i identyfikatory prototypu funkcji.
 
 ### <a name="remarks"></a>Uwagi
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parametry
 
-*Dostęp do*  
+*Dostęp do*<br/>
 (opcjonalnie) Dostępność delegata spoza zestawu może być publicznym lub prywatnym.  Wartość domyślna jest prywatny.  Wewnątrz klasy delegata może mieć żadnych ułatwień dostępu.
 
-*function_declaration*  
+*function_declaration*<br/>
 Podpis funkcji, która może być powiązana z obiektu delegowanego. Zwracany typ delegata może być dowolnego typu zarządzanego. Ze względu na współdziałanie zalecane jest, że zwracany typ delegata być typem ze specyfikacją CLS.
 
 Aby zdefiniować niezwiązanego delegata, pierwszy parametr w *function_declaration* powinien być typem **to** wskaźnik do obiektu.

@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929763"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433715"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Operowanie menu podczas wykonywania programu
-Klasa `CMenu` do manipulowania menu i elementów menu na bieżąco. `CMenu` hermetyzuje dojście HMENU systemu Windows i dostarcza funkcje elementów członkowskich do pracy z menu.  
-  
- Zobacz Omówienie klasy [cmenu —](../mfc/reference/cmenu-class.md) szczegółowe informacje.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Menu](../mfc/menus-mfc.md)
+
+Używanie klasy `CMenu` do manipulowania menu i menu na bieżąco. `CMenu` hermetyzuje uchwyt Windows HMENU i dostarcza funkcji elementów członkowskich do pracy z menu.
+
+Zobacz Omówienie klasy [CMenu](../mfc/reference/cmenu-class.md) Aby uzyskać szczegółowe informacje.
+
+## <a name="see-also"></a>Zobacz też
+
+[Menu](../mfc/menus-mfc.md)
 

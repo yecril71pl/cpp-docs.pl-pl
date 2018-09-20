@@ -15,57 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0be6fa309975663126331a7e38be0f2bea7dcf17
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0ce828d15d68ade5ba24c3a010e76e3d702f9a83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686048"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405880"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Porady: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci
 
-Ten dokument przedstawia sposób użycia [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency::Free](reference/concurrency-namespace-functions.md#free) funkcje do poprawiania wydajności pamięci. Czas, który jest wymagany, aby odwrócić elementów tablicy równolegle na trzy różne typy, które są porównywane każdego określ `new` i `delete` operatorów.  
+Ten dokument przedstawia sposób użycia [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency::Free](reference/concurrency-namespace-functions.md#free) funkcje do poprawiania wydajności pamięci. Porównuje czas, który jest wymagany, aby odwrócić elementy tablicy w sposób równoległy dla trzech różnych typów, które każdy określa `new` i `delete` operatorów.
 
-  
- `Alloc` i `Free` funkcje są najbardziej przydatne, gdy wiele wątków często wywołać metodę `Alloc` i `Free`. Środowisko uruchomieniowe zawiera osobne pamięci podręcznej dla każdego wątku; w związku z tym środowiska uruchomieniowego zarządza pamięci bez użycia blokady lub bariery pamięci.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono trzy typy każdego określ `new` i `delete` operatorów. `new_delete` Klasa korzysta z globalnej `new` i `delete` operatorów, `malloc_free` klasy używa środowiska wykonawczego C [— funkcja malloc](../../c-runtime-library/reference/malloc.md) i [wolnego](../../c-runtime-library/reference/free.md) funkcje i `Alloc_Free` Klasa korzysta ze współbieżności środowiska wykonawczego `Alloc` i `Free` funkcji.  
-  
- [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `swap` i `reverse_array` funkcji. `swap` Funkcja wymiany zawartości tablicy w określonej indeksów. Przydzielania pamięci sterty dla zmiennej tymczasowej. `reverse_array` Funkcja tworzy dużą tablicę i oblicza czas, który jest wymagany, aby odwrócić tablicy w równolegle.  
-  
- [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `wmain` funkcji, która oblicza czas, który jest wymagany dla `reverse_array` funkcji, które działają na `new_delete`, `malloc_free`, i `Alloc_Free` typów, z których każdy wykorzystuje schemat alokacji pamięci inny.  
-  
- [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]  
-  
-## <a name="example"></a>Przykład  
- Pełny przykład jest zgodna.  
-  
- [!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]  
-  
- W tym przykładzie tworzy następujące przykładowe dane wyjściowe dla komputera, który ma cztery procesory.  
-  
-```Output  
-Took 2031 ms with new/delete.  
-Took 1672 ms with malloc/free.  
-Took 656 ms with Alloc/Free.  
-```  
-  
- W tym przykładzie typ, który używa `Alloc` i `Free` funkcje zapewnia najlepszą wydajność, ponieważ `Alloc` i `Free` funkcje są zoptymalizowane często podziału i zwalnianie bloków pamięci z wielu wątki.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `allocators.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe allocators.cpp/ehsc**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)   
- [ALLOC — funkcja](reference/concurrency-namespace-functions.md#alloc)   
- [Free — funkcja](reference/concurrency-namespace-functions.md#free)
+`Alloc` i `Free` funkcje są najbardziej przydatne w przypadku, gdy często wywołać wiele wątków `Alloc` i `Free`. Środowisko uruchomieniowe przechowuje w oddzielnych pamięci podręcznej dla każdego wątku; w związku z tym środowisko uruchomieniowe zarządza pamięcią bez użycia blokad lub barier pamięci.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono trzy typy, w których każdy określa `new` i `delete` operatorów. `new_delete` Klasa korzysta z globalnej `new` i `delete` operatorów, `malloc_free` klasa używa środowiska uruchomieniowego C [— funkcja malloc](../../c-runtime-library/reference/malloc.md) i [bezpłatne](../../c-runtime-library/reference/free.md) funkcje i `Alloc_Free` Klasa korzysta ze współbieżności środowiska wykonawczego `Alloc` i `Free` funkcji.
+
+[!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `swap` i `reverse_array` funkcji. `swap` Funkcja wymienia zawartość tablicy w określonej indeksów. Go przydziela pamięć ze stosu dla zmiennej tymczasowej. `reverse_array` Funkcja tworzy dużą tablicę i oblicza czas, który jest wymagany, aby wycofać tę tablicę kilka razy w sposób równoległy.
+
+[!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `wmain` funkcji, która oblicza czas, który jest wymagany dla `reverse_array` funkcja zajmującym się `new_delete`, `malloc_free`, i `Alloc_Free` typów, z których każdy wykorzystuje schemat alokacji pamięci różnych.
+
+[!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]
+
+## <a name="example"></a>Przykład
+
+Pełny przykład poniżej.
+
+[!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]
+
+Ten przykład generuje następujące przykładowe dane wyjściowe dla komputera, który ma cztery procesory.
+
+```Output
+Took 2031 ms with new/delete.
+Took 1672 ms with malloc/free.
+Took 656 ms with Alloc/Free.
+```
+
+W tym przykładzie typ, który używa `Alloc` i `Free` functions zapewnia najlepszą wydajność pamięci, ponieważ `Alloc` i `Free` funkcje są zoptymalizowane pod kątem często przydzielanie i zwalnianie bloki pamięci z wielu wątki.
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `allocators.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc allocators.cpp**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)<br/>
+[ALLOC — funkcja](reference/concurrency-namespace-functions.md#alloc)<br/>
+[Free — funkcja](reference/concurrency-namespace-functions.md#free)
 

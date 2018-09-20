@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4ff40e03bf464d4c6f434b491c8b48d2b797d72b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440540"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper — Struktura
 
@@ -41,13 +41,13 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>Parametry
 
-*RuntimeClassFlagsT*  
+*RuntimeClassFlagsT*<br/>
 Pola flagi, które określa co najmniej jeden [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) modułów wyliczających.
 
-*IList*  
+*IList*<br/>
 Lista identyfikatorów interfejsu.
 
-*IsDelegateToClass*  
+*IsDelegateToClass*<br/>
 Określ **true** Jeśli bieżące wystąpienie `Implements` będąca klasą bazową identyfikator pierwszego interfejsu w *IList*; w przeciwnym razie **false**.
 
 ## <a name="remarks"></a>Uwagi

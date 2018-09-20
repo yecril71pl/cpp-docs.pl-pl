@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c504b4f9a17c65affbcc2635ef63ec743f7ad93
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b593b56a967385e823629d370967c2ef6d27ed24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700898"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423170"
 ---
 # <a name="indwordstring"></a>__indwordstring
-**Microsoft Specific**  
-  
- Odczytuje dane z określonego portu przy użyciu `rep insd` instrukcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __indwordstring(  
-   unsigned short Port,  
-   unsigned long* Buffer,  
-   unsigned long Count  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Odczytuje dane z określonego portu przy użyciu `rep insd` instrukcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __indwordstring(
+   unsigned short Port,
+   unsigned long* Buffer,
+   unsigned long Count
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port do odczytu.  
-  
+[in] Port do odczytu.
+
 *Bufor*<br/>
-[out] Dane odczytywane z portu są zapisywane w tym miejscu.  
-  
+[out] Dane odczytywane z portu są zapisywane w tym miejscu.
+
 *Liczba*<br/>
-[in] Liczba bajtów danych do odczytu.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__indwordstring`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Liczba bajtów danych do odczytu.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__indwordstring`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

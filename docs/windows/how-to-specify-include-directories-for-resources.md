@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443543"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Porady: określanie katalogów dołączenia dla zasobów (C++)
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dołączone zasoby, okno dialogowe](../windows/resource-includes-dialog-box.md)  
-[TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
-[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Dołączone zasoby, okno dialogowe](../windows/resource-includes-dialog-box.md)<br/>
+[TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)<br/>
+[Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Edytory zasobów](../windows/resource-editors.md)

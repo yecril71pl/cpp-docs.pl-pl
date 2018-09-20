@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kierowanie wskaźników funkcji za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+title: 'Porady: przeprowadzanie Marshalingu wskaźników funkcji za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,82 +18,85 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1aa8da5e5b6931fb46ff283a5be15da5b2c7325d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5246105f8824c3514213a3f7733b731789837403
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415086"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke
-W tym temacie opisano sposób zarządzanych obiektów delegowanych podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke można użyć zamiast wskaźników funkcji. Jednak programistów Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:  
-  
--   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Instrukcje: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
-  
- Niezarządzane interfejsy API prowadzące wskaźników funkcji argumentów można wywołać z kodu zarządzanego z zarządzanego delegatem zamiast wskaźnika funkcji macierzystej. Kompilator automatycznie marshals delegata z funkcjami niezarządzanymi jako wskaźnik funkcji i wstawia kod niezbędne przejścia zarządzanych/niezarządzanych.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod składa się z modułu zarządzanych i niezarządzanych. Moduł niezarządzanym jest bibliotekę DLL, która definiuje funkcji o nazwie TakesCallback, który akceptuje wskaźnik funkcji. Ten adres służy do wykonywania funkcji.  
-  
- Moduł zarządzany definiuje delegata, który jest przekazywane do kodu macierzystego jako wskaźnik funkcji i używa <xref:System.Runtime.InteropServices.DllImportAttribute> atrybut do udostępnienia funkcji macierzystej TakesCallback do kodu zarządzanego. W funkcji main wystąpienia delegata jest utworzony i przekazany do funkcji TakesCallback. Dane wyjściowe programu pokazuje, że ta funkcja jest wykonywany przez funkcję TakesCallback macierzystego.  
-  
- Funkcja zarządzanych pomija wyrzucanie elementów bezużytecznych do zarządzanego pełnomocnika, aby zapobiec .NET Framework wyrzucanie elementów bezużytecznych z przemieszczanie delegata, podczas gdy wykonuje funkcji macierzystej.  
-  
-```cpp  
-// TraditionalDll5.cpp  
-// compile with: /LD /EHsc  
-#include <iostream>  
-#define TRADITIONALDLL_EXPORTS  
-#ifdef TRADITIONALDLL_EXPORTS  
-#define TRADITIONALDLL_API __declspec(dllexport)  
-#else  
-#define TRADITIONALDLL_API __declspec(dllimport)  
-#endif  
-  
-extern "C" {  
-   /* Declare an unmanaged function type that takes two int arguments  
-      Note the use of __stdcall for compatibility with managed code */  
-   typedef int (__stdcall *CALLBACK)(int);  
-   TRADITIONALDLL_API int TakesCallback(CALLBACK fp, int);  
-}  
-  
-int TakesCallback(CALLBACK fp, int n) {  
-   printf_s("[unmanaged] got callback address, calling it...\n");  
-   return fp(n);  
-}  
-```  
-  
-```cpp  
-// MarshalDelegate.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-public delegate int GetTheAnswerDelegate(int);  
-public value struct TraditionalDLL {  
-   [DllImport("TraditionalDLL5.dll")]  
-   static public int TakesCallback(GetTheAnswerDelegate^ pfn, int n);  
-};  
-  
-int GetNumber(int n) {  
-   Console::WriteLine("[managed] callback!");  
-   static int x = 0;  
-   ++x;  
-   return x + n;  
-}  
-  
-int main() {  
-   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);  
-   pin_ptr<GetTheAnswerDelegate^> pp = &fp;  
-   Console::WriteLine("[managed] sending delegate as callback...");  
-  
-   int answer = TraditionalDLL::TakesCallback(fp, 42);  
-}  
-```  
-  
- Należy pamiętać, że żadna jego część biblioteki DLL jest narażony na kod zarządzany przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, problemy z funkcjami zaimportowane z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+
+W tym temacie wyjaśniono, jak zarządzane delegatów mogą być używane zamiast wskaźników funkcji, podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke. Jednak w programowaniu w języku Visual C++ zachęcamy do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe) ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:
+
+- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+- [Instrukcje: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+
+Niezarządzane interfejsy API, które umożliwiają wykorzystywanie wskaźników funkcji, ponieważ argumenty mogą być wywoływane z kodu zarządzanego z zarządzanego delegatem zamiast wskaźnik natywnej funkcji. Kompilator automatycznie kieruje delegata z funkcjami niezarządzanymi jako wskaźnik funkcji i wstawia kod konieczne przejście zarządzanych/niezarządzanych.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod składa się z modułu zarządzanego i niezarządzanego. Moduł niezarządzane to biblioteki DLL, która definiuje funkcję o nazwie TakesCallback, który akceptuje wskaźnik funkcji. Ten adres jest używany do wykonywania funkcji.
+
+Moduł zarządzany definiowany delegat jest przekazywane do kodu macierzystego jako wskaźnik funkcji, która używa <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu do udostępnienia funkcji TakesCallback natywnej związane z kodem zarządzanym. Wystąpienie delegata funkcji main jest utworzony i przekazany do funkcji TakesCallback. Dane wyjściowe programu pokazuje, że ta funkcja pobiera wykonywane przez funkcji macierzystej TakesCallback.
+
+Funkcji zarządzanej pomija wyrzucania elementów bezużytecznych dla zarządzanych delegata zapobiec .NET Framework wyrzucania elementów bezużytecznych z przemieszczanie delegata, gdy wykonuje funkcji macierzystej.
+
+```cpp
+// TraditionalDll5.cpp
+// compile with: /LD /EHsc
+#include <iostream>
+#define TRADITIONALDLL_EXPORTS
+#ifdef TRADITIONALDLL_EXPORTS
+#define TRADITIONALDLL_API __declspec(dllexport)
+#else
+#define TRADITIONALDLL_API __declspec(dllimport)
+#endif
+
+extern "C" {
+   /* Declare an unmanaged function type that takes two int arguments
+      Note the use of __stdcall for compatibility with managed code */
+   typedef int (__stdcall *CALLBACK)(int);
+   TRADITIONALDLL_API int TakesCallback(CALLBACK fp, int);
+}
+
+int TakesCallback(CALLBACK fp, int n) {
+   printf_s("[unmanaged] got callback address, calling it...\n");
+   return fp(n);
+}
+```
+
+```cpp
+// MarshalDelegate.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+public delegate int GetTheAnswerDelegate(int);
+public value struct TraditionalDLL {
+   [DllImport("TraditionalDLL5.dll")]
+   static public int TakesCallback(GetTheAnswerDelegate^ pfn, int n);
+};
+
+int GetNumber(int n) {
+   Console::WriteLine("[managed] callback!");
+   static int x = 0;
+   ++x;
+   return x + n;
+}
+
+int main() {
+   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);
+   pin_ptr<GetTheAnswerDelegate^> pp = &fp;
+   Console::WriteLine("[managed] sending delegate as callback...");
+
+   int answer = TraditionalDLL::TakesCallback(fp, 42);
+}
+```
+
+Należy pamiętać, że części biblioteki DLL jest uwidaczniany związane z kodem zarządzanym przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, więc problemy z funkcjami zaimportowane wraz z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

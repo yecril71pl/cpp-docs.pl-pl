@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421989"
 ---
 # <a name="floating-point-migration-issues"></a>Problemy dotyczące migracji liczb zmiennoprzecinkowych  
+
   
 Czasami podczas uaktualniania projektów do nowszej wersji programu Visual Studio, może się okazać, że wyniki niektórych operacji zmiennoprzecinkowych zostały zmienione. Zwykle dzieje się z jednego z dwóch powodów: generowanie kodu zmienia tego lepiej korzystać z dostępnego procesora i usterki poprawki lub zmiany algorytmów używanych w funkcje matematyczne w bibliotece środowiska uruchomieniowego języka C (CRT). Ogólnie rzecz biorąc nowe wyniki są zgodne w granicach określonego przez standard języka. Zapoznaj się z Dowiedz się, co zostało zmienione, a jeśli ważne jest, jak uzyskać te same wyniki funkcji stało się przed.  
 
@@ -41,6 +42,6 @@ W większości przypadków zmiennoprzecinkowych zmian w najnowszych kompilatory 
   
 ## <a name="see-also"></a>Zobacz także  
   
-[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)  

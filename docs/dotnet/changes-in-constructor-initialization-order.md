@@ -15,107 +15,110 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 32dad73e3d2026726e3042b0c619eeff11a5f57c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd54e9810131f3ddfabe458c70ddef081568a9cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397692"
 ---
 # <a name="changes-in-constructor-initialization-order"></a>Zmiany w kolejności inicjowania konstruktorów
-Kolejność inicjowania dla konstruktorów klasy zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
-  
-## <a name="comparison-of-constructor-initialization-order"></a>Porównanie kolejności inicjowania konstruktorów  
- W obszarze rozszerzeń zarządzanych dla języka C++ Konstruktor inicjowania wystąpił w następującej kolejności:  
-  
-1.  Konstruktor klasy podstawowej, jeśli istnieje, jest wywoływana.  
-  
-2.  Listy inicjowania klasy jest obliczane.  
-  
-3.  Treść kodu konstruktora klasy jest wykonywana.  
-  
- Kolejność wykonywania konwencjami sam jak natywnego programowania w języku C++. W nowym języku Visual C++ określa kolejność wykonywania następujących klas CLR:  
-  
-1.  Listy inicjowania klasy jest obliczane.  
-  
-2.  Konstruktor klasy podstawowej, jeśli istnieje, jest wywoływana.  
-  
-3.  Treść kodu konstruktora klasy jest wykonywana.  
-  
- Należy zauważyć, że ta zmiana ma zastosowanie tylko do klasy CLR; macierzystych klas w programie Visual C++ są nadal zgodne z konwencjami poprzedniej. W obu przypadkach te reguły Kaskadowo w górę łańcuchu całej hierarchii danej klasy.  
-  
- Rozważmy poniższy przykład kodu przy użyciu rozszerzeń zarządzanych dla języka C++:  
-  
-```  
-__gc class A  
-{  
-public:  
-   A() : _n(1)  
-   {  
-   }  
-  
-protected:  
-   int _n;  
-};  
-  
-__gc class B : public A  
-{  
-public:  
-   B() : _m(_n)  
-   {  
-   }  
-private:  
-   int _m;  
-};  
-```  
-  
- Po kolejności inicjowania konstruktorów opisane powyżej, firma Microsoft powinny być widoczne następujące kolejność wykonywania, gdy nowe wystąpienia klasy `B` są wykonane:  
-  
-1.  Konstruktor klasy podstawowej `A` jest wywoływana. `_n` Elementu członkowskiego jest ustawiana na `1`.  
-  
-2.  Na liście inicjowania dla klasy `B` oceny. `_m` Elementu członkowskiego jest ustawiana na `1`.  
-  
-3.  Treść kodu klasy `B` jest wykonywana.  
-  
- Teraz należy wziąć pod uwagę taki sam kod w nowej składni Visual C++:  
-  
-```  
-ref class A  
-{  
-public:  
-   A() : _n(1)  
-   {  
-   }  
-  
-protected:  
-   int _n;  
-};  
-  
-ref class B : A  
-{  
-public:  
-   B() : _m(_n)  
-   {  
-   }  
-private:  
-   int _m;  
-};  
-```  
-  
- Kolejność wykonywania, gdy nowe wystąpienia klasy `B` są tworzone w nowym składnia jest następująca:  
-  
-1.  Na liście inicjowania dla klasy `B` oceny. `_m` Elementu członkowskiego jest ustawiana na `0` (`0` niezainicjowaną wartość `_m` elementu członkowskiego klasy).  
-  
-2.  Konstruktor klasy podstawowej `A` jest wywoływana. `_n` Elementu członkowskiego jest ustawiana na `1`.  
-  
-3.  Treść kodu klasy `B` jest wykonywana.  
-  
- Należy pamiętać, że podobne składni daje różne wyniki dla tych przykładów kodu. Konstruktor klasy `B` zależy od wartości z klasy podstawowej `A` zainicjować jego elementów członkowskich. Jednak konstruktora dla klasy `A` nie została jeszcze wywołana. Takie zależności mogą być szczególnie niebezpieczne dziedziczonej klasie jest zależna od pamięci lub zasobów alokacji w konstruktorze klasy podstawowej.  
-  
-## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Jakie oznacza to, przechodząc od rozszerzeń zarządzanych dla języka C++, Visual C++ 2010  
- W wielu przypadkach zmiany kolejności wykonywania konstruktorów klas powinny być przezroczyste dla programisty, ponieważ nie pojęcie zachowanie klasy dziedziczone mieć klas podstawowych. Jednak jak zilustrować te przykłady kodu, konstruktorów klasy dziedziczone mogą znacznie wpływać podczas ich inicjowania list są zależne od wartości elementów członkowskich klasy podstawowej. Podczas przenoszenia kodu rozszerzeń Managed Extensions for C++ do nowej składni, należy wziąć pod uwagę przenoszenie takie konstrukcje treść konstruktora klasy, których wykonanie musi występować jako ostatnia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy zarządzane (C + +/ CL)](../dotnet/managed-types-cpp-cl.md)   
- [Konstruktory](../cpp/constructors-cpp.md)   
- 
+
+Kolejności inicjowania konstruktorów klasy zmienił się z zarządzanych rozszerzeń dla C++ do Visual C++.
+
+## <a name="comparison-of-constructor-initialization-order"></a>Porównywanie kolejności inicjowania konstruktorów
+
+W obszarze zarządzanych rozszerzeń języka C++ Konstruktor inicjowania wystąpił w następującej kolejności:
+
+1. Konstruktor klasy bazowej, jeśli istnieje, jest wywoływana.
+
+1. Listy inicjowania klasy jest oceniany.
+
+1. Kod konstruktora klasy zostaje wykonana.
+
+Ta kolejność wykonywania jest zgodna z konwencjami ten sam, jak natywny programowania języka C++. Nowy język Visual C++, określa kolejność wykonywania następujących klas CLR:
+
+1. Listy inicjowania klasy jest oceniany.
+
+1. Konstruktor klasy bazowej, jeśli istnieje, jest wywoływana.
+
+1. Kod konstruktora klasy zostaje wykonana.
+
+Należy pamiętać, że ta zmiana dotyczy tylko klas CLR; macierzystych klas w programie Visual C++ nadal zgodne z konwencjami poprzedniego. W obu przypadkach te reguły narastać Kaskadowo w górę w całym łańcuchu całej hierarchii danej klasy.
+
+Rozważmy następujący przykład kodu przy użyciu zarządzanych rozszerzeń języka C++:
+
+```
+__gc class A
+{
+public:
+   A() : _n(1)
+   {
+   }
+
+protected:
+   int _n;
+};
+
+__gc class B : public A
+{
+public:
+   B() : _m(_n)
+   {
+   }
+private:
+   int _m;
+};
+```
+
+Następujące kolejności inicjowania konstruktorów opisane powyżej, powinniśmy zobaczyć następującej kolejności wykonywania, jeśli nowe wystąpienia klasy `B` są wykonane:
+
+1. Konstruktor klasy bazowej `A` zostanie wywołana. `_n` Elementu członkowskiego jest inicjowany do `1`.
+
+1. Listy inicjowania klasy `B` jest oceniany. `_m` Elementu członkowskiego jest inicjowany do `1`.
+
+1. Treść kodu klasy `B` jest wykonywany.
+
+Teraz należy wziąć pod uwagę ten sam kod w nowej składni języka Visual C++:
+
+```
+ref class A
+{
+public:
+   A() : _n(1)
+   {
+   }
+
+protected:
+   int _n;
+};
+
+ref class B : A
+{
+public:
+   B() : _m(_n)
+   {
+   }
+private:
+   int _m;
+};
+```
+
+Kolejność wykonywania, jeśli nowe wystąpienia klasy `B` są tworzone w nowym składnia jest następująca:
+
+1. Listy inicjowania klasy `B` jest oceniany. `_m` Elementu członkowskiego jest inicjowany do `0` (`0` jest wartością niezainicjowanej `_m` składowej klasy).
+
+1. Konstruktor klasy bazowej `A` zostanie wywołana. `_n` Elementu członkowskiego jest inicjowany do `1`.
+
+1. Treść kodu klasy `B` jest wykonywany.
+
+Należy pamiętać, że podobnej składni daje różne wyniki dla tych przykładów kodu. Konstruktor klasy `B` zależy od wartości z klasy bazowej `A` zainicjować członków. Jednakże Konstruktor dla klasy `A` nie została jeszcze wywołana. Takie zależności mogą być szczególnie niebezpieczne, gdy odziedziczoną klasę zależy od alokację pamięci lub zasobów występuje w konstruktorze klasy bazowej.
+
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Jakie oznacza to, przechodząc z zarządzanych rozszerzeń dla języka C++ do Visual C++ 2010
+
+W wielu przypadkach zmiany kolejności wykonywania konstruktorów klas powinny być przezroczyste do programisty należy, ponieważ klasy bazowe nie pojęcie zachowanie klasy dziedziczone. Jednak jak te przykłady kodu ilustrują, Konstruktory klasy dziedziczone mogą znacznie wpływać podczas ich listy inicjowania są zależne od wartości składowych klasy bazowej. Podczas przenoszenia kodu z zarządzanych rozszerzeń dla C++ do nowej składni, należy wziąć pod uwagę przeniesienie takich konstrukcji treść konstruktora klasy gdzie wykonywania musi występować jako ostatnia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Typy zarządzane (C + +/ CL)](../dotnet/managed-types-cpp-cl.md)<br/>
+[Konstruktory](../cpp/constructors-cpp.md)

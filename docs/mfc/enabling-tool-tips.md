@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598583360eca2a65a5352fc9d284d8d359ac021c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 968d31b49c6d2b2fe5a5f69e04f58f17de8df5a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346139"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440488"
 ---
 # <a name="enabling-tool-tips"></a>Włączanie etykietek narzędzi
-Można włączyć narzędzie Porada obsługę formantów podrzędnych okna (np. formanty w formie widoku lub okno dialogowe).  
-  
-### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Aby włączyć etykietki narzędzi dla formantów podrzędnych okna  
-  
-1.  Wywołanie `EnableToolTips` okna, dla którego chcesz podać etykietek narzędzi.  
-  
-2.  Podaj ciąg dla każdego formantu w Twojej [powiadomienia TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) programu obsługi. Procedura obsługi jest dostępna w mapie komunikatów okna zawierającego formantów podrzędnych (na przykład klasie widoku formularza). Ten program obsługi powinna wywołać funkcję, który identyfikuje formant i ustawia **pszText** na określanie tekstu używany przez formantem etykietki narzędzia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+Można włączyć narzędzie Porada obsługę formantów podrzędnych okna (np. kontrolki na formularzu widoku lub okno dialogowe).
+
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Aby włączyć etykietki narzędzi dla formantów podrzędnych okna
+
+1. Wywołaj `EnableToolTips` okna, dla którego chcesz podać etykietek narzędzi.
+
+1. Podaj ciąg dla każdego formantu w Twojej [powiadomienia TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) programu obsługi. Program obsługi jest w mapie komunikatów okna, który zawiera formanty podrzędne (na przykład klasy widoku formularza). Ta procedura obsługi powinna wywołać funkcję, identyfikuje formant i ustawia **pszText** do określania tekstu, używane przez formantem etykietki narzędzia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

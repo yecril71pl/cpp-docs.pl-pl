@@ -34,144 +34,163 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 94590b5f14fe8f8be072a1db751129045aaa08e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434859"
 ---
 # <a name="ccustomtransition-class"></a>Klasa CCustomTransition
-Implementuje niestandardowych przejścia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CCustomTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CCustomTransition::CCustomTransition](#ccustomtransition)|Tworzy obiekt niestandardowych przejścia.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CCustomTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-|[CCustomTransition::SetInitialValue](#setinitialvalue)|Ustawia wartość początkową, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.|  
-|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Ustawia początkowej szybkość pracy, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.|  
-  
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Określa, czy z SetInitialValue określono wartość początkowa.|  
-|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Określa, czy prędkość początkowa określono z SetInitialVelocity.|  
-|[CCustomTransition::m_initialValue](#m_initialvalue)|Przechowuje wartość początkowa.|  
-|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Przechowuje prędkość początkowa.|  
-|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Przechowuje wskaźnik do interpolatora niestandardowych.|  
-  
-## <a name="remarks"></a>Uwagi  
- Klasa CCustomTransitions umożliwia deweloperom wdrażanie niestandardowych przejścia. Ma ona utworzony i używany jako standardowa przejścia, ale jego konstruktora akceptuje jako parametr wskaźnik do niestandardowych interpolatora. Wykonaj poniższe kroki, aby użyć niestandardowej przejścia: 1. Wyprowadzenia klasy z CCustomInterpolator i wdrożenie co najmniej InterpolateValue metody. 2. Upewnij się, że okres istnienia obiektu niestandardowych interpolatora musi być dłuższy niż czas trwania animacji gdzie są używane. 3. Utwórz wystąpienie (użycie operatora new) obiektu CCustomTransition i przekazać wskaźnik do niestandardowych interpolatora w konstruktorze. 4. Jeśli te parametry są wymagane dla niestandardowych interpolacji wywołać CCustomTransition::SetInitialValue i CCustomTransition::SetInitialVelocity. 5. Zatrzymaj wskaźnik myszy niestandardowych przechodzenia do metody AddTransition obiektu animacji, którego wartość należy animowany przy użyciu niestandardowego algorytmu. 6. Jeśli należy zmienić wartość obiektu animacji interfejsu API systemu Windows animacji spowodują wywołanie w CCustomInterpolator InterpolateValue (i innych odpowiednich metod).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- `CCustomTransition`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxanimationcontroller.h  
-  
-##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
- Tworzy obiekt niestandardowych przejścia.  
-  
-```  
+
+Implementuje niestandardowe przejścia.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CCustomTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CCustomTransition::CCustomTransition](#ccustomtransition)|Tworzy obiekt niestandardowe przejścia.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CCustomTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CCustomTransition::SetInitialValue](#setinitialvalue)|Ustawia wartość początkową, które mają zostać zastosowane do skojarzonych z tym przejściem zmiennej animacji.|
+|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Ustawia prędkości początkowej, które mają zostać zastosowane do skojarzonych z tym przejściem zmiennej animacji.|
+
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Określa, czy wartość początkowa została określona za pomocą SetInitialValue.|
+|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Określa, czy z SetInitialVelocity określono prędkości początkowej.|
+|[CCustomTransition::m_initialValue](#m_initialvalue)|Przechowuje wartość początkową.|
+|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Przechowuje prędkości początkowej.|
+|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Przechowuje wskaźnik do interpolatora niestandardowych.|
+
+## <a name="remarks"></a>Uwagi
+
+Klasa CCustomTransitions umożliwia deweloperom implementuje niestandardowe przejścia. Utworzona i używany jako standardowy przejścia, ale jego Konstruktor akceptuje jako parametru wskaźnika do interpolatora niestandardowych. Wykonaj poniższe kroki, aby użyć niestandardowego przejścia: 1. Wyprowadzenia klasy z CCustomInterpolator i wdrożenie co najmniej InterpolateValue metody. 2. Upewnij się, że okres istnienia obiektu niestandardowego interpolatora musi być dłuższy niż czas trwania animacji gdzie jest używany. 3. Utwórz wystąpienie (nowe za pomocą operatora) obiektu CCustomTransition i przekazać wskaźnik do niestandardowych interpolatora w konstruktorze. 4. Jeśli te parametry są wymagane do interpolacji niestandardowe, należy wywołać CCustomTransition::SetInitialValue i CCustomTransition::SetInitialVelocity. 5. Zatrzymaj wskaźnik myszy na niestandardowe przejścia do metody AddTransition obiektu animacji, w których wartość powinna być animowane za pomocą niestandardowego algorytmu. 6. Gdy wartość obiektu animacji, należy zmienić interfejs API animacji Windows będzie wywoływać w CCustomInterpolator InterpolateValue (i inne odpowiednie metody).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+`CCustomTransition`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxanimationcontroller.h
+
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition
+
+Tworzy obiekt niestandardowe przejścia.
+
+```
 CCustomTransition(CCustomInterpolator* pInterpolator);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pInterpolator*  
- Wskaźnik do interpolatora niestandardowych.  
-  
-##  <a name="create"></a>  CCustomTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pInterpolator*<br/>
+Wskaźnik do interpolatora niestandardowych.
+
+##  <a name="create"></a>  CCustomTransition::Create
+
+Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* */,  
+    IUIAnimationTransitionLibrary* */,
     IUIAnimationTransitionFactory* pFactory);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pFactory*  
- Wskaźnik do przejścia factory, które jest odpowiedzialny za tworzenie niestandardowych przejścia.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
- Tej metody można również ustawić wartość początkowa i prędkość początkowa ma zostać zastosowany do zmiennej animacji, który jest skojarzony z tym przejścia. W tym celu należy wywołać SetInitialValue i SetInitialVelocity przed platformę tworzy obiekt COM hermetyzowany przejścia (zdarza się to podczas wywoływania CAnimationController::AnimateGroup).  
-  
-##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
- Określa, czy z SetInitialValue określono wartość początkowa.  
-  
-```  
-BOOL m_bInitialValueSpecified;  
-```  
-  
-##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
- Określa, czy prędkość początkowa określono z SetInitialVelocity.  
-  
-```  
-BOOL m_bInitialVelocitySpecified;  
-```  
-  
-##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
- Przechowuje wartość początkowa.  
-  
-```  
-DOUBLE m_initialValue;  
-```  
-  
-##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
- Przechowuje prędkość początkowa.  
-  
-```  
-DOUBLE m_initialVelocity;  
-```  
-  
-##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
- Przechowuje wskaźnik do interpolatora niestandardowych.  
-  
-```  
-CCustomInterpolator* m_pInterpolator;  
-```  
-  
-##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
- Ustawia wartość początkową, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pFactory*<br/>
+Wskaźnik do przejścia factory, która jest odpowiedzialna za tworzenie niestandardowe przejścia.
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+Tę metodę można również ustawić wartości początkowej oraz prędkości początkowej ma zostać zastosowany do zmiennej animacji, która jest skojarzona z tego przejścia. W tym celu należy wywołać SetInitialValue SetInitialVelocity przed szablon tworzy przejścia zhermetyzowanego obiektu COM (wykonywane po wywołaniu CAnimationController::AnimateGroup).
+
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified
+
+Określa, czy wartość początkowa została określona za pomocą SetInitialValue.
+
+```
+BOOL m_bInitialValueSpecified;
+```
+
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified
+
+Określa, czy z SetInitialVelocity określono prędkości początkowej.
+
+```
+BOOL m_bInitialVelocitySpecified;
+```
+
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue
+
+Przechowuje wartość początkową.
+
+```
+DOUBLE m_initialValue;
+```
+
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity
+
+Przechowuje prędkości początkowej.
+
+```
+DOUBLE m_initialVelocity;
+```
+
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator
+
+Przechowuje wskaźnik do interpolatora niestandardowych.
+
+```
+CCustomInterpolator* m_pInterpolator;
+```
+
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue
+
+Ustawia wartość początkową, które mają zostać zastosowane do skojarzonych z tym przejściem zmiennej animacji.
+
+```
 void SetInitialValue(DOUBLE initialValue);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Wartość początkowa*  
-  
-##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
- Ustawia początkowej szybkość pracy, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Wartość początkowa*
+
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity
+
+Ustawia prędkości początkowej, które mają zostać zastosowane do skojarzonych z tym przejściem zmiennej animacji.
+
+```
 void SetInitialVelocity(DOUBLE initialVelocity);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *initialVelocity*  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*initialVelocity*
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

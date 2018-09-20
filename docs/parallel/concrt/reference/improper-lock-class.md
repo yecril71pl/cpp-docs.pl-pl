@@ -18,58 +18,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 655776543a0c368bf5d13719d10b507c941a0fa9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106197"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404699"
 ---
 # <a name="improperlock-class"></a>improper_lock — Klasa
-Ta klasa opisuje wyjątek generowany, gdy jest blokada nieprawidłowo.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany, gdy jest blokada nieprawidłowo.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class improper_lock : public std::exception;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[improper_lock](#ctor)|Przeciążone. Konstruuje `improper_lock exception`.|  
-  
-## <a name="remarks"></a>Uwagi  
- Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania rekursywnie blokady nie obsługującą, w tym samym kontekście.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `improper_lock`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> improper_lock — 
+```
 
- Konstruuje `improper_lock exception`.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[improper_lock](#ctor)|Przeciążone. Konstruuje `improper_lock exception`.|
+
+## <a name="remarks"></a>Uwagi
+
+Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania rekursywnie blokady nie obsługującą, w tym samym kontekście.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`improper_lock`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> improper_lock —
+
+Konstruuje `improper_lock exception`.
+
 ```
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)   
- [critical_section — klasa](critical-section-class.md)   
- [reader_writer_lock, klasa](reader-writer-lock-class.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[critical_section, klasa](critical-section-class.md)<br/>
+[reader_writer_lock, klasa](reader-writer-lock-class.md)

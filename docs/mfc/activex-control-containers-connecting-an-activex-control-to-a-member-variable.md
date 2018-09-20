@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery formantów ActiveX: Łączenie formantu ActiveX ze zmienną członkowską | Dokumentacja firmy Microsoft'
+title: 'Kontenery kontrolek ActiveX: Łączenie kontrolki ActiveX ze zmienną członkowską | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433858"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską
-Najłatwiejszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kontenera formantów jest do skojarzenia z formantu ActiveX ze zmienną członkowską klasy okna dialogowego, który będzie zawierać formant.  
-  
+
+Jest najprostszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kontenera kontrolek do skojarzenia kontrolki ActiveX ze zmienną składową klasy okna dialogowego, który będzie zawierać formantu.
+
 > [!NOTE]
->  To nie jest jedynym sposobem, aby uzyskać dostęp do osadzonego formantu z wewnątrz klasy kontenera, ale na potrzeby tego artykułu jest wystarczająca.  
-  
-### <a name="adding-a-member-variable-to-the-dialog-class"></a>Dodawanie zmienną członkowską do klasy okien dialogowych  
-  
-1.  Z widoku klasy kliknij prawym przyciskiem myszy klasy głównym oknie dialogowym, aby otworzyć menu skrótów. Na przykład `CContainerDlg`.  
-  
-2.  W menu skrótów kliknij **Dodaj** , a następnie **Dodaj zmienną**.  
-  
-3.  W Kreatorze dodawania zmiennej elementu członkowskiego kliknij **zmienna sterująca**.  
-  
-4.  W **Identyfikatora formantu** pola listy, wybierz identyfikator formantu osadzonego formantu ActiveX. Na przykład `IDC_CIRCCTRL1`.  
-  
-5.  W **nazwa zmiennej** wprowadź nazwę.  
-  
-     Na przykład *m_circctl*.  
-  
-6.  Kliknij przycisk **Zakończ** aby zaakceptować wybrane opcje i zamknąć Dodaj kreatora zmiennej elementu członkowskiego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+>  Nie jest jedynym sposobem, aby uzyskać dostęp do osadzonego formantu z w obrębie klasy kontenera, ale na potrzeby tego artykułu jest wystarczająca.
+
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Dodawanie zmiennej członkowskiej do klasy okien dialogowych
+
+1. W widoku klas kliknij prawym przyciskiem myszy klasę głównym oknie dialogowym, aby otworzyć menu skrótów. Na przykład `CContainerDlg`.
+
+1. W menu skrótów kliknij **Dodaj** i następnie **Dodaj zmienną**.
+
+1. W Kreatorze dodawania zmiennej składowej kliknij **zmienna sterująca**.
+
+1. W **identyfikator formantu** pola listy, wybierz identyfikator formantu osadzonego formantu ActiveX. Na przykład `IDC_CIRCCTRL1`.
+
+1. W **nazwa zmiennej** wprowadź nazwę.
+
+     Na przykład *m_circctl*.
+
+1. Kliknij przycisk **Zakończ** aby zaakceptować wybór i zamknąć okno Dodaj kreatora zmiennej elementu członkowskiego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

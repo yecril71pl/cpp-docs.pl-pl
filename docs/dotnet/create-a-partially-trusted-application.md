@@ -20,31 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a4a0a4b8b1045a9107158c6e67ecdfa7939b6a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a009b7d70cebbf38f21cf33180acf80c2d2bb43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109001"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411374"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Porady: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT
-W tym temacie omówiono sposób tworzenia aplikacji środowisko uruchomieniowe języka wspólnego częściowo zaufanej przez usunięcie zależności msvcm90.dll przy użyciu programu Visual C++.  
-  
- Skompilowanej za pomocą aplikacji Visual C++ **/CLR** będzie zależy od msvcm90.dll, która jest częścią biblioteki C Runtime. Aplikacji do użycia w środowisku częściowej relacji zaufania, należy CLR będzie wymuszać niektórych reguł zabezpieczeń dostępu kodu na biblioteki DLL. W związku z tym będzie trzeba usunąć tę zależność, ponieważ msvcm90.dll zawiera kodu macierzystego i nie można wymusić zasady zabezpieczeń dostępu kodu na nim.  
-  
- Jeśli chcesz usunąć zależności do tej biblioteki w kodzie aplikacji nie korzystać z żadnej funkcji biblioteki C Runtime, trzeba będzie użyć **/NODEFAULTLIB:msvcmrt.lib** — opcja konsolidatora i powiązanie z ptrustm.lib lub ptrustmd.lib. Biblioteki zawierają pliki obiektu inicjowania i uninitialization aplikacji, używane przez kod inicjujący klasy wyjątków i zarządzany kod obsługi wyjątków. Łączenie w jednym z tych bibliotek spowoduje usunięcie jej zależności od msvcm90.dll.  
-  
+
+W tym temacie omówiono sposób tworzenia częściowo zaufanych aplikacji środowiska uruchomieniowego języka wspólnego przy użyciu języka Visual C++ przez usunięcie zależności od msvcm90.dll.
+
+Aplikacji Visual C++ skompilowanych przy użyciu **/CLR** ma zależności od msvcm90.dll, który jest częścią biblioteki środowiska uruchomieniowego C. Aplikacja ma być używany w środowisku częściowej relacji zaufania, należy środowiska CLR będzie wymuszać biblioteki DLL niektóre zasady zabezpieczeń dostępu kodu. W związku z tym będzie trzeba usunąć tę zależność, ponieważ msvcm90.dll zawiera kod natywny, a nie można wymusić zasady zabezpieczeń dostępu kodu na nim.
+
+Jeśli aplikacja nie używa żadnych funkcji biblioteki środowiska uruchomieniowego C i chcesz usunąć zależność tej biblioteki z kodu, będą musieli używać **/NODEFAULTLIB:msvcmrt.lib** — opcja konsolidatora i Połącz z biblioteką ptrustm.lib lub ptrustmd.lib. Biblioteki zawierają pliki obiektów do inicjowania i anulowania inicjowania aplikacji, klasy wyjątków używane przez kod inicjowania i zarządzanego kodu obsługi wyjątków. Łączenie w jednym z tych bibliotek spowoduje usunięcie wszelkich zależności od msvcm90.dll.
+
 > [!NOTE]
->  Kolejność uninitialization zestawu mogą różnić się w przypadku aplikacji korzystających z bibliotek ptrust. Dla zwykłych aplikacji zestawy są zazwyczaj zwalnianie w odwrotnej kolejności, są one ładowane, ale to nie jest gwarantowana. Dla aplikacje częściowo zaufane zestawy są zazwyczaj zwalnianie w tej samej kolejności, że są załadowane. To, ponadto nie jest gwarantowana.  
-  
-### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Do tworzenia częściowo zaufany mieszanego (/ clr) aplikacji  
-  
-1.  Aby usunąć zależność od msvcm90.dll, należy określić do konsolidatora nie, aby uwzględnić tę bibliotekę przy użyciu **/NODEFAULTLIB:msvcmrt.lib** — opcja konsolidatora. Aby uzyskać informacje o tym, jak to zrobić przy użyciu środowiska programowania Visual Studio lub programowo, zobacz [/nodefaultlib (Ignoruj biblioteki)](../build/reference/nodefaultlib-ignore-libraries.md).  
-  
-2.  Dodaj jednej z bibliotek ptrustm zależności wejściowe konsolidatora. Użyj ptrustm.lib, jeśli tworzysz aplikację w trybie przygotowania do wydania. Tryb debugowania można użyć ptrustmd.lib. Aby uzyskać informacje o tym, jak to zrobić przy użyciu środowiska programowania Visual Studio lub programowo, zobacz [. Lib pliki jako dane wejściowe konsolidatora](../build/reference/dot-lib-files-as-linker-input.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)   
- [Inicjalizacja zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)   
- [Obsługa bibliotek dla zestawów mieszanych](../dotnet/library-support-for-mixed-assemblies.md)   
- [/link (Przepuść opcje do konsolidatora)](../build/reference/link-pass-options-to-linker.md)   
+>  Kolejność anulowania inicjowania zestawu mogą się różnić w przypadku aplikacji korzystających z bibliotek ptrust. Dla zwykłych aplikacji zestawy są zazwyczaj pozostaną niezaładowane w odwrotnej kolejności są one ładowane, ale nie jest to gwarantowane. W przypadku aplikacji częściowej relacji zaufania zestawy są zwykle pozostaną niezaładowane w tej samej kolejności, że są ładowane. W efekcie również nie jest gwarantowana.
+
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Do tworzenia częściowo zaufanych mieszany (/ clr) aplikacji
+
+1. Aby usunąć zależności od msvcm90.dll, należy określić, aby konsolidator nie zawierają tej biblioteki za pomocą **/NODEFAULTLIB:msvcmrt.lib** — opcja konsolidatora. Aby uzyskać informacje o tym, jak to zrobić przy użyciu środowiska programistycznego Visual Studio lub programowo, zobacz [/nodefaultlib (Ignoruj biblioteki)](../build/reference/nodefaultlib-ignore-libraries.md).
+
+1. Dodanie jednego z biblioteki ptrustm zależności wejściowe konsolidatora. Jeśli tworzysz aplikację w trybie wydania, należy użyć ptrustm.lib. Tryb debugowania można użyć ptrustmd.lib. Aby uzyskać informacje o tym, jak to zrobić przy użyciu środowiska programistycznego Visual Studio lub programowo, zobacz [. Pliki lib — wejście konsolidatora](../build/reference/dot-lib-files-as-linker-input.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+[Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)<br/>
+[Obsługa bibliotek dla zestawów mieszanych](../dotnet/library-support-for-mixed-assemblies.md)<br/>
+[/link (Przepuść opcje do konsolidatora)](../build/reference/link-pass-options-to-linker.md)

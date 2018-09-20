@@ -22,88 +22,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 393c0ed7c9d1c5715528468e0c611ae399fbadf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431505"
 ---
 # <a name="creversaltransition-class"></a>Klasa CReversalTransition
-Hermetyzuje przejścia wycofania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CReversalTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Tworzy obiekt przejścia wycofania i inicjuje jego czas trwania.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CReversalTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CReversalTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
-  
-## <a name="remarks"></a>Uwagi  
- Przejście odwrócenia płynnie zmienia kierunek w danym czasie trwania. Końcowa wartość będzie taka sama jak wartość początkowa i prędkość końcowa będzie ujemna prędkości początkowej. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxanimationcontroller.h  
-  
-##  <a name="create"></a>  CReversalTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
-  
-```  
+
+Hermetyzuje odwrotne przejścia.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CReversalTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Tworzy obiekt odwrotne przejścia i inicjuje jego czas trwania.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CReversalTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CReversalTransition::m_duration](#m_duration)|Czas trwania przejścia.|
+
+## <a name="remarks"></a>Uwagi
+
+Odwrotne przejścia płynnie zmiany kierunku w danym czasie trwania. Końcowa wartość będzie taka sama jak wartość początkową i prędkość końcowa jest negacją prędkości początkowej. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxanimationcontroller.h
+
+##  <a name="create"></a>  CReversalTransition::Create
+
+Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pLibrary*  
- Wskaźnik do przejścia biblioteki, która odpowiada za tworzenie przejścia standardowe.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
- Tworzy obiekt przejścia wycofania i inicjuje jego czas trwania.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pLibrary*<br/>
+Wskaźnik do przejścia biblioteki, która jest odpowiedzialna za tworzenie standardowego przejścia.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+
+Tworzy obiekt odwrotne przejścia i inicjuje jego czas trwania.
+
+```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Czas trwania*  
- Czas trwania przejścia.  
-  
-##  <a name="m_duration"></a>  CReversalTransition::m_duration  
- Czas trwania przejścia.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*Czas trwania*<br/>
+Czas trwania przejścia.
+
+##  <a name="m_duration"></a>  CReversalTransition::m_duration
+
+Czas trwania przejścia.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

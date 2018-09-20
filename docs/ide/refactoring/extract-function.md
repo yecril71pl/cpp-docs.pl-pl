@@ -1,5 +1,5 @@
 ---
-title: Wyodrębnij funkcja | Dokumentacja firmy Microsoft
+title: Wyodrębnij funkcję | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,39 +10,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333160"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441372"
 ---
-# <a name="extract-function"></a>Wyodrębnij — funkcja
-**Co:** pozwala włączyć do odrębnej funkcji fragment kodu.
+# <a name="extract-function"></a>Wyodrębnij funkcję
+**Co:** pozwala włączyć fragment kodu do jego własnej funkcji.
 
-**Kiedy:** masz fragment kodu istniejących w niektórych funkcji, który musi być wywoływana z inną funkcję.  
+**Kiedy:** masz fragmentu istniejącego kodu w niektórych funkcji, która musi zostać wywołana z inną funkcję.
 
-**Dlaczego:** użytkownik może kopiowanie/wklejanie kodu, ale który może doprowadzić do duplikacji.  Lepszym rozwiązaniem jest Refaktoryzuj ten fragment do jego własnej funkcji, która może być za darmo wywoływany przez innych funkcji.
+**Dlaczego:** można kopiujesz/wklejasz kod, ale, co może spowodować dublowania.  Lepszym rozwiązaniem jest Refaktoryzacja tego fragmentu do jego własnej funkcji, która może być wywoływany za darmo przez innych funkcji.
 
 **Jak:**
 
-1. Wyróżnij kodu, który zostanie wyodrębniony:
+1. Wyróżnij kod w celu wyodrębnienia:
 
    ![Wyróżniony kod](images/extractfunction_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + M**.  (Należy pamiętać, że skrót klawiaturowy mogą być różne oparte na profil, który wybrano).
-     * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **wyodrębnić funkcji (eksperymentalne)** z menu kontekstowego.
+     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + M**.  (Należy pamiętać, że skrót klawiaturowy może różnić się w oparciu o profilu, który wybrano.)
+     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Wyodrębnij funkcję (funkcja eksperymentalna)** z menu kontekstowego.
    * **Myszy**
-     * Wybierz **Edytuj > Refaktoryzuj > wyodrębnić funkcji (funkcja eksperymentalna)**.
-     * Kliknij prawym przyciskiem myszy kod, wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **wyodrębnić funkcji (eksperymentalne)** z menu kontekstowego.
-     * Kliknij przycisk ![żarówka](images/bulb.png) ikonę, która pojawia się w lewym marginesie i wybierz **wyodrębnić funkcji (eksperymentalne)** z menu kontekstowego.
+     * Wybierz **Edytuj > Refaktoryzuj > Wyodrębnianie (eksperymentalne) funkcja**.
+     * Kliknij prawym przyciskiem myszy ten kod, wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Wyodrębnij funkcję (funkcja eksperymentalna)** z menu kontekstowego.
+     * Kliknij przycisk ![żarówki](images/bulb.png) ikonę, która pojawia się na lewym marginesie, a następnie wybierz pozycję **Wyodrębnij funkcję (funkcja eksperymentalna)** z menu kontekstowego.
 
-1. W **wyodrębnić funkcji/metodzie (eksperymentalne)** , wprowadź nazwę nowej funkcji, gdzie należy wybrać kod do umieszczenia, a kliknij **OK** przycisku.  
+1. W **Wyodrębnij funkcję/metodę (funkcja eksperymentalna)** , wprowadź nową nazwę funkcji, wybierz, gdzie kod do umieszczenia, a kliknij **OK** przycisku.
 
-   ![Wyodrębnij funkcja — funkcja](images/extractfunction_dialog.png)
+   ![Wyodrębnij funkcję — funkcja](images/extractfunction_dialog.png)
 
-1. Zostanie utworzona nowa funkcja w przypadku, gdy wybrano prototypu funkcji w odpowiedni plik nagłówka i oryginalny kod zostanie zmieniona do wywołania tej funkcji.
+1. Zostanie utworzona nowa funkcja w przypadku, gdy został określony, prototypu funkcji w odpowiedni plik nagłówkowy i oryginalny kod zostanie zmieniona tak, aby wywołać tę funkcję.
 
-   ![Wyodrębnij wyniku — funkcja](images/extractfunction_result.png)
+   ![Wyodrębnienie wyniku funkcji](images/extractfunction_result.png)

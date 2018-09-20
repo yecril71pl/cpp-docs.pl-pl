@@ -1,5 +1,5 @@
 ---
-title: cliext Namespace | Dokumentacja firmy Microsoft
+title: cliext — Namespace | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 20c36b4e3326ef8010558b4b99729ec8643b5af5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07433d1abe9fae109ee7a7be90219ce726f22eeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419090"
 ---
 # <a name="cliext-namespace"></a>Przestrzeń nazw cliext
-`cliext` Przestrzeń nazw zawiera typy biblioteki STL/CLR. Aby uzyskać listę wszystkich tych typów oraz łącza do dodatkowych informacji na temat typów STL/CLR, zobacz [odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+
+`cliext` Przestrzeń nazw zawiera wszystkie rodzaje biblioteki STL/CLR. Aby uzyskać listę wszystkich tych typów i linki do szczegółowych informacji na temat typów STL/CLR, zobacz [odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

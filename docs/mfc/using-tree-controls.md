@@ -1,5 +1,5 @@
 ---
-title: Używanie formantów drzewa | Dokumentacja firmy Microsoft
+title: Używanie kontrolek drzewa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1fc3efbf48a9005bf117c2dd7ab5f1bd01ed556d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403685"
 ---
 # <a name="using-tree-controls"></a>Używanie kontrolek drzewa
-Typowy sposób formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) jest zgodny ze wzorcem poniżej:  
-  
--   Formant nie zostanie utworzony. Jeśli formant jest określona w szablonie — okno dialogowe lub jeśli używasz `CTreeView`, tworzenie odbywa się automatycznie po utworzeniu okna dialogowego lub widoku. Jeśli chcesz utworzyć drzewie jako okna podrzędnego niektóre inne okna, użyj [Utwórz](../mfc/reference/ctreectrl-class.md#create) funkcję elementu członkowskiego.  
-  
--   Jeśli chcesz, aby używać obrazów formantu drzewa, ustaw listy obrazów, wywołując [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Możesz również zmienić wcięcie, wywołując [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Jest to dobry moment, w tym celu w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (dla formantów w oknach dialogowych) lub [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (dla widoków).  
-  
--   Umieszczanie danych w formancie przez wywołanie metody `CTreeCtrl`w [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcja raz dla każdego elementu danych. `InsertItem` Zwraca dojście do elementu, który służy do odwołuje się do niego później, takie jak kiedy dodawanie elementów podrzędnych. Odpowiedni moment, aby zainicjować danych jest w `OnInitDialog` (dla formantów w oknach dialogowych) lub `OnInitialUpdate` (dla widoków).  
-  
--   Gdy użytkownik rozpocznie się za pomocą formantu, wysyła komunikaty powiadomień dotyczących różnych. Można określić funkcji do obsługi wszystkich wiadomości, które mają być obsługiwane przez dodanie on_notify_reflect — makro w mapie komunikatów okna kontrolki lub dodawanie on_notify — makro do mapy komunikatów okna nadrzędnego. Zobacz [komunikaty powiadomień dotyczących formantu drzewa](../mfc/tree-control-notification-messages.md) dalszej części tego tematu listę możliwych powiadomienia.  
-  
--   Wywołanie różnych funkcji członkowskich zestawu, aby ustawić wartości dla formantu. Zmiany, które można wprowadzić obejmują ustawianie wcięć i zmiana tekstu, obrazów lub dane skojarzone z elementem.  
-  
--   Użyj różnych funkcji Get, sprawdź zawartość formantu. Można również przejść przez zawartość drzewie funkcje, dzięki którym można pobrać dojścia do elementów nadrzędnych i podrzędnych, elementów równorzędnych określonego elementu. Można nawet sortować element podrzędny określonego węzła.  
-  
--   Gdy wszystko będzie gotowe za pomocą formantu, upewnij się, że poprawnie zostanie zniszczony. Jeśli formant drzewa jest w oknie dialogowym lub jeśli jest to widok go i `CTreeCtrl` obiektu zostaną automatycznie usunięte. Jeśli nie, musisz upewnij się, że oba formantu i `CTreeCtrl` obiektu prawidłowo zostaną zniszczone.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Typowy kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) jest zgodna z wzorcem poniżej:
+
+- Formant zostanie utworzony. Jeśli kontrolka została określona w szablonu okna dialogowego, lub jeśli używasz `CTreeView`, tworzenia jest automatycznie, gdy tworzony jest okno dialogowe lub widoku. Aby utworzyć formant drzewa jako okna podrzędnego niektóre inne okna, należy użyć [Utwórz](../mfc/reference/ctreectrl-class.md#create) funkcja elementu członkowskiego.
+
+- Jeśli chcesz, aby używać obrazów kontrolki drzewa, ustaw listy obrazów, wywołując [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Możesz również zmienić wcięcie, wywołując [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Jest dobry moment, w tym celu [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (dla formantów w oknach dialogowych) lub [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (dla widoków).
+
+- Umieszczanie danych w formancie, wywołując `CTreeCtrl`firmy [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcję jeden raz dla każdego elementu danych. `InsertItem` Zwraca uchwyt do elementu, który służy do odwoływania się do niego później, takie jak czas dodawania elementów podrzędnych. Jest odpowiedni moment, aby zainicjować dane `OnInitDialog` (dla formantów w oknach dialogowych) lub `OnInitialUpdate` (dla widoków).
+
+- Jako użytkownik wchodzi w interakcję z kontrolką, wysyła komunikaty powiadomień dotyczących różnych. Można określić funkcję, która ma obsługiwać wszystkich wiadomości, które mają być obsługiwane przez dodanie on_notify_reflect — makro w mapie komunikatów okna kontrolki lub dodając ON_NOTIFY — makro do okna nadrzędnego mapy wiadomości. Zobacz [komunikaty powiadomień dotyczących kontrolki drzewa](../mfc/tree-control-notification-messages.md) później w tym temacie, aby uzyskać listę możliwych powiadomienia.
+
+- Wywołaj różnych funkcji składowych zestawu, aby ustawić wartości dla formantu. Zmiany, które można wprowadzić obejmują, ustawianie wcięć i zmiana typu text, image lub dane skojarzone z elementem.
+
+- Użyj różnych funkcji Get, aby sprawdzić zawartość formantu. Można również przechodzić zawartości formantu drzewa z funkcjami, które umożliwiają pobieranie dojścia do nadrzędne, podrzędne i elementów równorzędnych określonego elementu. Można nawet sortować elementy podrzędne określonego węzła.
+
+- Gdy skończysz, za pomocą kontrolki, upewnij się, że jest prawidłowo niszczone. Jeśli formant drzewa jest w oknie dialogowym lub jeśli jest to widok go i `CTreeCtrl` obiekt jest niszczony automatycznie. Jeśli nie, musisz upewnij się, że obie kontrolki i `CTreeCtrl` obiektu są poprawnie niszczone.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

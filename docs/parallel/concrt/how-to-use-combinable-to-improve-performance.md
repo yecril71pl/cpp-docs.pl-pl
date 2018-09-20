@@ -15,62 +15,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3185ee9f7546e6927197d2e3452ea4cf86f9ab5c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 22425ac212ee2bfb52354044b1a6193b6a9cd11a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692093"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432091"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Porady: korzystanie z wyników połączonych do poprawiania wydajności
-Ten przykład przedstawia sposób użycia [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy do obliczenia wartości w [std::array](../../standard-library/array-class-stl.md) obiekt, który jest pierwsze. `combinable` Klasy zwiększa wydajność przez wyeliminowanie udostępniania stanu.  
-  
+
+W tym przykładzie pokazano, jak używać [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy, aby obliczyć sumę dwóch liczb w [std::array](../../standard-library/array-class-stl.md) obiekt, który jest pierwsze. `combinable` Klasy zwiększa wydajność, eliminując udostępnionego stanu.
+
 > [!TIP]
->  W niektórych przypadkach równoległe mapy ([concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) i ograniczyć ([współbieżności:: parallel_reduce —](reference/concurrency-namespace-functions.md#parallel_reduce)) oferuje ulepszenia wydajności za pośrednictwem `combinable`. Na przykład, że używa mapowania i zmniejszanie operacji do działają tak samo jak w tym przykładzie, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji do obliczenia sumę elementów w tablicy, które są pierwsze. W tym przykładzie `a` jest `array` obiektu i `is_prime` funkcji określa, czy jego wartość wejściowa jest pierwsze.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]  
-  
-## <a name="example"></a>Przykład  
+>  W niektórych przypadkach równoległe mapy ([concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) i zmniejszyć ([współbieżności:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) zapewniają poprawę wydajności za pośrednictwem `combinable`. Aby uzyskać przykład, że używa operacji mapowania i redukcji do działają tak samo jak w tym przykładzie, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
- W poniższym przykładzie przedstawiono prosty sposób parallelize w poprzednim przykładzie. W tym przykładzie użyto [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm przetworzyć tablicy równolegle i [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) obiektu synchronizujący dostęp do `prime_sum` zmiennej . W tym przykładzie nie działa, ponieważ każdy wątek musi czekać na zasób udostępniony stanie się dostępne.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `combinable` obiekt, aby poprawić wydajność w poprzednim przykładzie. W tym przykładzie eliminuje potrzebę stosowania obiektów synchronizacji; skaluje się ponieważ `combinable` obiektu umożliwia każdy wątek do wykonywania swoich zadań niezależnie.  
-  
- A `combinable` obiekt jest zwykle używany w dwóch krokach. Po pierwsze produktu szereg szczegółowych obliczenia wykonywania pracy równolegle. Następnie połączyć (lub Zmniejsz) obliczenia do końcowego wyniku. W tym przykładzie użyto [concurrency::combinable::local](reference/combinable-class.md#local) metodę, aby uzyskać odwołania do zsumowania lokalnego. Następnie używa [concurrency::combinable::combine](reference/combinable-class.md#combine) — metoda i [std::plus](../../standard-library/plus-struct.md) obiektu Połączenie lokalne obliczenia do końcowego wyniku.  
+## <a name="example"></a>Przykład
 
-  
- [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pełną oblicza sumę liczb pierwszych zarówno szeregowe i równolegle. Przykład drukuje do konsoli czasu wymaganego do wykonania obu obliczenia.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]  
-  
- Następujące przykładowe dane wyjściowe jest dla komputera, który ma cztery procesory.  
-  
-```Output  
-1709600813  
-serial time: 6178 ms  
- 
-1709600813  
-parallel time: 1638 ms  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować kod, skopiuj go i następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-sum-of-primes.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe/ehsc równoległe — Suma elementu primes.cpp**  
-  
-## <a name="robust-programming"></a>Niezawodne programowanie  
- Na przykład, że używa mapowania i zmniejszanie operacji w celu uzyskania tego samego wyników, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Równoległe kontenery i obiekty](../../parallel/concrt/parallel-containers-and-objects.md)   
- [combinable — klasa](../../parallel/concrt/reference/combinable-class.md)   
- [critical_section, klasa](../../parallel/concrt/reference/critical-section-class.md)
+W poniższym przykładzie użyto [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji do obliczania sumy elementów w tablicy, które są pierwsze. W tym przykładzie `a` jest `array` obiektu i `is_prime` funkcji określa, czy jego wartości wejściowej jest pierwsze.
+
+[!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje sposób naiwni zrównoleglić w poprzednim przykładzie. W tym przykładzie użyto [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm przetwarzania tablicy równolegle i [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) obiektu do synchronizowania dostępu do `prime_sum` zmiennej . W tym przykładzie nie działa, ponieważ każdy wątek musi czekać na zasobie udostępnionym staną się dostępne.
+
+[!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie użyto `combinable` obiektu, aby zwiększyć wydajność w poprzednim przykładzie. W tym przykładzie eliminuje potrzebę stosowania obiektów synchronizacji; zostanie przeprowadzone skalowanie, ponieważ `combinable` obiektu umożliwia każdego wątku wykonać swoje zadania niezależnie.
+
+A `combinable` obiekt jest zwykle używany w dwóch krokach. Najpierw utworzyć serię szczegółowych obliczeń, wykonując pracę równolegle. Następnie połącz lub Zmniejsz obliczeń na wynik końcowy. W tym przykładzie użyto [concurrency::combinable::local](reference/combinable-class.md#local) metodę, aby uzyskać odwołanie do lokalnej sumy. Następnie używa [concurrency::combinable::combine](reference/combinable-class.md#combine) metody i [std::plus](../../standard-library/plus-struct.md) obiektu do łączenia lokalnych obliczeń na wynik końcowy.
+
+[!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]
+
+## <a name="example"></a>Przykład
+
+Następujący kompletny przykład oblicza sumę liczb pierwszych zarówno szeregowo i równolegle. Przykład drukuje do konsoli czas, który jest wymagany do wykonania obu obliczeń.
+
+[!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]
+
+Następujące przykładowe dane wyjściowe to dla komputera, który ma cztery procesory.
+
+```Output
+1709600813
+serial time: 6178 ms
+
+1709600813
+parallel time: 1638 ms
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-sum-of-primes.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc równoległych — Suma z primes.cpp**
+
+## <a name="robust-programming"></a>Niezawodne programowanie
+
+Aby uzyskać przykład, że używa operacji mapowania i redukcji w celu uzyskania tych samych wyników, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
+[combinable, klasa](../../parallel/concrt/reference/combinable-class.md)<br/>
+[critical_section, klasa](../../parallel/concrt/reference/critical-section-class.md)

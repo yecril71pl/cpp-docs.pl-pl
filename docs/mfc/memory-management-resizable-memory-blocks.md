@@ -19,19 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba66fb3d85d716b18486ef08f7f2025e78d6cc57
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 92582e4255c88b9cc78368a635b27772f2e51a30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929333"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443907"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Zarządzanie pamięcią: bloki pamięci o zmiennych rozmiarach
-**Nowe** i **usunąć** operatorów, opisaną w artykule [zarządzanie pamięcią: przykłady](../mfc/memory-management-examples.md), są odpowiednie w alokowanie i dealokowanie bloki pamięci o stałym rozmiarze i obiekty. Czasami może być konieczne aplikacji bloki pamięci o zmiennych rozmiarach. Należy użyć standardowe funkcje biblioteki wykonawczej języka C [— funkcja malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), i [wolnego](../c-runtime-library/reference/free.md) do zarządzania bloki pamięci o zmiennych rozmiarach na stosie.  
-  
+
+**Nowe** i **Usuń** operatorów, opisaną w artykule [zarządzanie pamięcią: przykłady](../mfc/memory-management-examples.md), są odpowiednie dla alokowanie i dealokowanie bloki pamięci o stałym rozmiarze i obiekty. Czasami aplikacja może wymagać bloki pamięci o zmiennych rozmiarach. Należy użyć standardowych funkcji biblioteki wykonawczej C [— funkcja malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), i [bezpłatne](../c-runtime-library/reference/free.md) Zarządzanie bloki pamięci o zmiennych rozmiarach na stosie.
+
 > [!IMPORTANT]
->  Mieszanie **nowe** i **usunąć** uszkodzony pamięci w wersji do debugowania MFC spowoduje operatory funkcji alokacji pamięci o zmiennych rozmiarach, w tym samym bloku pamięci. Nie należy używać **realloc** na blok pamięci przydzielony z **nowe**. Podobnie, nie należy przydzielić bloku pamięci z **nowe** operatora i usuń go z **wolnego**, lub użyj **usunąć** operator na blok pamięci przydzielony z **— funkcja malloc**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią: alokacja sterty](../mfc/memory-management-heap-allocation.md)
+>  Mieszanie **nowe** i **Usuń** operatory za pomocą funkcji alokacji pamięci o zmiennych rozmiarach, w tym samym bloku pamięci będzie skutkować uszkodzony pamięci w wersji debugowania MFC. Nie należy używać **realloc** na blok pamięci przydzielony przy użyciu **nowe**. Podobnie, nie należy przydzielić blok pamięci z **nowe** operatora i usuń ją za pomocą **bezpłatne**, lub użyj **Usuń** operatora na blok pamięci przydzielony przy użyciu **— funkcja malloc**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zarządzanie pamięcią: alokacja sterty](../mfc/memory-management-heap-allocation.md)
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410271"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Określa algorytm heurystyczny wbudowane wyszukiwanie głębi, taki sposób, że żadna funkcja nie będzie śródwierszowych, jeśli jest na głębokości (w wykresu wywołań) większy niż *n*.  
@@ -53,5 +53,5 @@ Głębokość wbudowanych można zmniejszyć podczas rozszerzania, ale nie zwię
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

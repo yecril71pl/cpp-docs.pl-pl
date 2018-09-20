@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882b2d93ba7938017f64b1ad8fb8e680e0af42db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfb5bd849c79d64769cb13d854605292689dfe73
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441986"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Arkusze właściwości i strony właściwości (MFC)
-MFC [okno dialogowe](../mfc/dialog-boxes.md) może przybrać "karcie okna dialogowego" wyszukiwania przez włączenie arkusze właściwości i strony właściwości. Tego rodzaju okno dialogowe podobne do wielu okien dialogowych w programie Microsoft Word, Excel i Visual C++ o nazwie "arkusz właściwości" w MFC, prawdopodobnie zawiera stosu arkuszy z kartami, podobnie jak w stosie widoczna od początku do końca lub grupy systemu windows w kaskadowego folderów plików. Formanty na karcie front są widoczne; tylko karcie etykietą jest widoczny na kartach tylnej. Arkusze właściwości są szczególnie użyteczne w przypadku zarządzania dużą liczbą ustawienia dość starannie dzielą się na kilka grup lub właściwości. Zazwyczaj jeden arkusz właściwości można uprościć interfejsu użytkownika, zastępując wiele oddzielnych okien dialogowych.  
-  
- Począwszy od wersji 4.0 MFC, arkuszy właściwości strony właściwości są stosowane i używanie formantów wspólnych, które pochodzą z wersji Windows 95 lub Windows NT 3.51 i nowszych.  
-  
- Arkusze właściwości są implementowane przy użyciu klasy [cpropertysheet —](../mfc/reference/cpropertysheet-class.md) i [cpropertypage —](../mfc/reference/cpropertypage-class.md) (opisany w *odwołania MFC*). `CPropertySheet` Definiuje ogólną okna dialogowego, które może zawierać wiele "stron" na podstawie `CPropertyPage`.  
-  
- Aby uzyskać informacje na temat tworzenia i Praca z arkuszami właściwości, zobacz temat [arkusze właściwości](../mfc/property-sheets-mfc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [Arkusze właściwości i strony właściwości w MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
- [Wymiana danych](../mfc/exchanging-data.md)   
- [Tworzenie niemodalnego arkusza właściwości](../mfc/creating-a-modeless-property-sheet.md)   
- [Obsługa przycisku Zastosuj](../mfc/handling-the-apply-button.md)
+
+MFC [okno dialogowe](../mfc/dialog-boxes.md) można wykonać na "kartę okna dialogowego" się przez dołączenie arkusze właściwości i strony właściwości. Tego rodzaju okno dialogowe, podobnie jak wiele okien dialogowych w programie Microsoft Word, Excel i Visual C++ o nazwie "arkusz właściwości" w MFC, prawdopodobnie zawiera stos arkuszy z kartami, podobnie jak w stosie foldery plików zaobserwować wzdłużnego lub grupy systemu windows kaskadowy. Formanty na pierwszej karcie są widoczne; labeled karty jest widoczny na tylnej karty. Arkusze właściwości są szczególnie przydatne w przypadku zarządzania dużą liczbą właściwości lub ustawień, które dość starannego dzielą się na kilka grup. Zazwyczaj jeden arkusz właściwości może uprościć interfejsu użytkownika, zastępując wiele oddzielnych okien dialogowych.
+
+Począwszy od wersji 4.0 MFC arkusze właściwości i strony właściwości są implementowane przy użyciu typowych kontrolek, które pochodzą z wersją Windows 95 i Windows NT 3.51 lub nowszej.
+
+Arkusze właściwości są implementowane za pomocą klasy [CPropertySheet](../mfc/reference/cpropertysheet-class.md) i [CPropertyPage](../mfc/reference/cpropertypage-class.md) (opisanego w *odwołanie MFC*). `CPropertySheet` Definiuje ogólny okno dialogowe, które mogą zawierać wiele "strony" na podstawie `CPropertyPage`.
+
+Aby uzyskać informacje na temat tworzenia i pracy z arkuszy właściwości, zobacz temat [arkusze właściwości](../mfc/property-sheets-mfc.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Arkusze właściwości i strony właściwości w MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)<br/>
+[Wymiana danych](../mfc/exchanging-data.md)<br/>
+[Tworzenie niemodalnego arkusza właściwości](../mfc/creating-a-modeless-property-sheet.md)<br/>
+[Obsługa przycisku Zastosuj](../mfc/handling-the-apply-button.md)
 

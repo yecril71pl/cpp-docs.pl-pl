@@ -1,5 +1,5 @@
 ---
-title: Kroki w typowej aplikacji klienckiej HTTP | Dokumentacja firmy Microsoft
+title: Kroki opisane w typowej aplikacji klienckiej HTTP | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c25402662296a9ebf2f15fe902dcefabb9d47073
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d6abb44aa9c4a59c23d8dbe8d957a32dfa4cc85
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419722"
 ---
 # <a name="steps-in-a-typical-http-client-application"></a>Kroki wykonywane w typowej aplikacji klienckiej HTTP
-W poniższej tabeli przedstawiono kroki, które mogą wykonywać w typowej aplikacji klienckiej HTTP:  
-  
-|Poznasz|Czynności|Efekty|  
-|---------------|----------------------|-------------|  
-|Rozpoczęcie sesji HTTP.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Inicjuje WinInet i łączy się z serwerem.|  
-|Połącz się z serwerem HTTP.|Użyj [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection).|Zwraca [CHttpConnection](../mfc/reference/chttpconnection-class.md) obiektu.|  
-|Otwórz żądania HTTP.|Użyj [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest).|Zwraca [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu.|  
-|Wyślij żądanie HTTP.|Użyj [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders) i [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|Znajduje plik. Zwraca wartość FAŁSZ, jeśli plik nie został znaleziony.|  
-|Odczytane z pliku.|Użyj [CHttpFile](../mfc/reference/chttpfile-class.md).|Odczytuje określoną liczbę bajtów, przy użyciu podanego buforu.|  
-|Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|  
-|Kończenie sesji HTTP.|Usuwa [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza dojścia do plików Otwórz i połączeń.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)   
- [Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+W poniższej tabeli przedstawiono kroki, które może wykonywać w typowej aplikacji klienckiej HTTP:
+
+|Cel|Wykonania akcji|Efekty|
+|---------------|----------------------|-------------|
+|Rozpocznij sesję protokołu HTTP.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Inicjuje WinInet i łączy się z serwerem.|
+|Połącz z serwerem HTTP.|Użyj [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection).|Zwraca [CHttpConnection](../mfc/reference/chttpconnection-class.md) obiektu.|
+|Otwórz żądanie HTTP.|Użyj [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest).|Zwraca [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu.|
+|Wyślij żądanie HTTP.|Użyj [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders) i [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|Umożliwia znalezienie pliku. Zwraca wartość FALSE, jeśli plik nie zostanie znaleziony.|
+|Odczytane z pliku.|Użyj [CHttpFile](../mfc/reference/chttpfile-class.md).|Odczytuje określoną liczbę bajtów przy użyciu buforu, który podasz.|
+|Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|
+|Kończenie sesji HTTP.|Usuwanie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza połączenia i uchwytów otwartego pliku.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

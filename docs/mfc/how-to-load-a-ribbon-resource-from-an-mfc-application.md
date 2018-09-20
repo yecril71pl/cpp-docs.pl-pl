@@ -14,38 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b014e1725ae6c5043c051242a74e29338c3ef2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1643989a96a9003847fb53de624bff12cd51cd88
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344194"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434298"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Porady: ładowanie zasobu wstążki z aplikacji MFC
-Aby użyć zasobu wstążki w aplikacji, należy zmodyfikować ładowanie zasobu Wstążki aplikacji.  
-  
-### <a name="to-load-a-ribbon-resource"></a>Ładowanie zasobu wstążki  
-  
-1.  Deklarowanie `Ribbon Control` obiektu w `CMainFrame` klasy.  
-  
- ```  
-    CMFCRibbonBar m_wndRibbonBar;   
- ```  
-  
-2.  W `CMainFrame::OnCreate`, Utwórz i zainicjuj formantu wstążki.  
-  
- ```  
-    if (!m_wndRibbonBar.Create (this))  
- {  
-    return -1;  
- }  
- 
-    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
- {  
-    return -1;  
- }  
- ```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
+
+Aby użyć zasobu wstążki do aplikacji, należy zmodyfikować ładowanie zasobu Wstążki aplikacji.
+
+### <a name="to-load-a-ribbon-resource"></a>Ładowanie zasobu wstążki
+
+1. Zadeklaruj `Ribbon Control` obiektu `CMainFrame` klasy.
+
+```
+    CMFCRibbonBar m_wndRibbonBar;
+```
+
+1. W `CMainFrame::OnCreate`, Utwórz i zainicjuj formantu wstążki.
+
+```
+    if (!m_wndRibbonBar.Create (this))
+{
+    return -1;
+}
+
+    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))
+{
+    return -1;
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
 

@@ -17,56 +17,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd5661a2b6aa257c91babcc3d17b1babb0b4d2c2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d0b584172a95fc388893c276b05b311365ad109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707164"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441788"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
-**Microsoft Specific**  
-  
- Inicjuje struktury sterowania określonej maszyny wirtualnej (VMCS) i ustawia jego stan uruchomienia `Clear`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned char __vmx_vmclear(  
-   unsigned __int64 *VmcsPhysicalAddress  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
-  
-|Parametr|Opis|  
-|---------------|-----------------|  
-|*VmcsPhysicalAddress*|[in] Wskaźnik do lokalizacji pamięci 64-bitowych, która zawiera adres fizyczny VMCS do wyczyszczenia.|  
-  
-## <a name="return-value"></a>Wartość zwracana  
-  
-|Wartość|Znaczenie|  
-|-----------|-------------|  
-|0|Operacja zakończyła się pomyślnie.|  
-|1|Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.|  
-|2|Operacja nie powiodła się bez informacji o stanie.|  
-  
-## <a name="remarks"></a>Uwagi  
- Aplikacja może wykonywać operację wprowadź maszyny Wirtualnej przy użyciu [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) lub [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Clear`i [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Launched`. W związku z tym, użyj [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkcję, aby ustawić stan uruchomienia VMCS do `Clear`. Użyj [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkcji do pierwszej operacji maszyny Wirtualnej, wprowadź i [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji dla kolejnych operacji wprowadź maszyny Wirtualnej.  
-  
- `__vmx_vmclear` Funkcji jest odpowiednikiem `VMCLEAR` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__vmx_vmclear`|X64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [__vmx_vmresume](../intrinsics/vmx-vmresume.md)
+
+**Microsoft Specific**
+
+Inicjuje struktury sterowania określonej maszyny wirtualnej (VMCS) i ustawia jego stan uruchomienia `Clear`.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned char __vmx_vmclear(
+   unsigned __int64 *VmcsPhysicalAddress
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+|Parametr|Opis|
+|---------------|-----------------|
+|*VmcsPhysicalAddress*|[in] Wskaźnik do lokalizacji pamięci 64-bitowych, która zawiera adres fizyczny VMCS do wyczyszczenia.|
+
+## <a name="return-value"></a>Wartość zwracana
+
+|Wartość|Znaczenie|
+|-----------|-------------|
+|0|Operacja zakończyła się pomyślnie.|
+|1|Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.|
+|2|Operacja nie powiodła się bez informacji o stanie.|
+
+## <a name="remarks"></a>Uwagi
+
+Aplikacja może wykonywać operację wprowadź maszyny Wirtualnej przy użyciu [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) lub [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Clear`i [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Launched`. W związku z tym, użyj [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkcję, aby ustawić stan uruchomienia VMCS do `Clear`. Użyj [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkcji do pierwszej operacji maszyny Wirtualnej, wprowadź i [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkcji dla kolejnych operacji wprowadź maszyny Wirtualnej.
+
+`__vmx_vmclear` Funkcji jest odpowiednikiem `VMCLEAR` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__vmx_vmclear`|X64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[__vmx_vmresume](../intrinsics/vmx-vmresume.md)

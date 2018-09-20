@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410315"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject — Metoda
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*  
+*serverName*<br/>
 W pełni kwalifikowaną nazwę serwera.
 
-*CLSID*  
+*CLSID*<br/>
 Tablica CLSID do zarejestrowania.
 
-*fabryki*  
+*fabryki*<br/>
 Tablica interfejsów IUnknown typów obiektów klas, których udostępnienie jest on publikowany.
 
-*Pliki cookie*  
+*Pliki cookie*<br/>
 Po zakończeniu operacji, tablicę wskaźników do wartości, które identyfikują klasy obiektów, które zostały zarejestrowane. Wartości te są później używane odwołać rejestracji.
 
-*Liczba*  
+*Liczba*<br/>
 Liczba CLSID do zarejestrowania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -74,4 +74,5 @@ Typ połączenia, aby zarejestrowane obiekty jest określony przy użyciu kombin
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
+
 [Klasa modułu](../windows/module-class.md)

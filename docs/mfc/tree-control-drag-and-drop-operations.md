@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d84c32450b763f0516f78c5fa339e1c4693172a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9b53196ded40bffd0a74f91df5ac938fc1616efa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446599"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania kontrolki drzewa
-Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiadomienie, gdy użytkownik rozpoczyna przeciągnij element. Kontrolka wysyła [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) komunikat powiadomienia, gdy użytkownik rozpoczyna przeciągania elementu z lewym przyciskiem myszy i [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) komunikat powiadomienia, gdy użytkownik rozpoczyna, przeciągając go Prawy przycisk. Kontrolka drzewa można zapobiec wysyłania powiadomień, zapewniając styl TVS_DISABLEDRAGDROP kontrolki drzewa.  
-  
- Uzyskanie obrazu do wyświetlenia w czasie trwania operacji przeciągania, wywołując [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) funkcja elementu członkowskiego. Kontrolka drzewa tworzy mapę bitową przeciągania na podstawie etykiety elementu przeciąganie. Następnie tworzy listy obrazów kontrolki drzewa, dodaje mapę bitową i zwraca wskaźnik do [CImageList](../mfc/reference/cimagelist-class.md) obiektu.  
-  
- Należy podać kod, który faktycznie przeciągnięty element. Zazwyczaj wiąże się to przy użyciu funkcji przeciągania funkcji listy obrazów i przetwarzanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) i [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (lub [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) Komunikaty wysyłane po rozpoczęciu operacji przeciągania. Aby uzyskać więcej informacji na temat funkcji listy obrazów, zobacz [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC* i [listy obrazów](https://msdn.microsoft.com/library/windows/desktop/bb761389) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat przeciągania elementu kontrolki drzewa, zobacz [przeciągnięcie elementu widoku drzewa](/windows/desktop/Controls/tree-view-controls), również w zestawie Windows SDK.  
-  
- W przypadku elementów kontrolki drzewa jako obiekty docelowe operacji przeciągania i upuszczania, musisz wiedzieć, gdy wskaźnik myszy znajduje się na element docelowy. Możesz dowiedzieć się, wywołując [hitTest —](../mfc/reference/ctreectrl-class.md#hittest) funkcja elementu członkowskiego. Określ punkt i liczby całkowitej lub adres [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) strukturę, która zawiera bieżące współrzędne kursora myszy. Po powrocie z tej funkcji liczby całkowitej lub struktura zawiera flagę wskazującą położenie kursora myszy względem kontrolki drzewa. Jeśli kursor znajduje się nad elementem w drzewie, struktura zawiera dojście także elementu.  
-  
- Można wskazać, że element jest obiekt docelowy operacji przeciągania i upuszczania, wywołując [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcja elementu członkowskiego, aby ustawić stan `TVIS_DROPHILITED` wartość. Element, który ma ten stan jest rysowana w stylu służy do wskazywania docelowej przeciągania i upuszczania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiadomienie, gdy użytkownik rozpoczyna przeciągnij element. Kontrolka wysyła [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) komunikat powiadomienia, gdy użytkownik rozpoczyna przeciągania elementu z lewym przyciskiem myszy i [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) komunikat powiadomienia, gdy użytkownik rozpoczyna, przeciągając go Prawy przycisk. Kontrolka drzewa można zapobiec wysyłania powiadomień, zapewniając styl TVS_DISABLEDRAGDROP kontrolki drzewa.
+
+Uzyskanie obrazu do wyświetlenia w czasie trwania operacji przeciągania, wywołując [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) funkcja elementu członkowskiego. Kontrolka drzewa tworzy mapę bitową przeciągania na podstawie etykiety elementu przeciąganie. Następnie tworzy listy obrazów kontrolki drzewa, dodaje mapę bitową i zwraca wskaźnik do [CImageList](../mfc/reference/cimagelist-class.md) obiektu.
+
+Należy podać kod, który faktycznie przeciągnięty element. Zazwyczaj wiąże się to przy użyciu funkcji przeciągania funkcji listy obrazów i przetwarzanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) i [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (lub [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) Komunikaty wysyłane po rozpoczęciu operacji przeciągania. Aby uzyskać więcej informacji na temat funkcji listy obrazów, zobacz [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC* i [listy obrazów](https://msdn.microsoft.com/library/windows/desktop/bb761389) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat przeciągania elementu kontrolki drzewa, zobacz [przeciągnięcie elementu widoku drzewa](/windows/desktop/Controls/tree-view-controls), również w zestawie Windows SDK.
+
+W przypadku elementów kontrolki drzewa jako obiekty docelowe operacji przeciągania i upuszczania, musisz wiedzieć, gdy wskaźnik myszy znajduje się na element docelowy. Możesz dowiedzieć się, wywołując [hitTest —](../mfc/reference/ctreectrl-class.md#hittest) funkcja elementu członkowskiego. Określ punkt i liczby całkowitej lub adres [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) strukturę, która zawiera bieżące współrzędne kursora myszy. Po powrocie z tej funkcji liczby całkowitej lub struktura zawiera flagę wskazującą położenie kursora myszy względem kontrolki drzewa. Jeśli kursor znajduje się nad elementem w drzewie, struktura zawiera dojście także elementu.
+
+Można wskazać, że element jest obiekt docelowy operacji przeciągania i upuszczania, wywołując [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcja elementu członkowskiego, aby ustawić stan `TVIS_DROPHILITED` wartość. Element, który ma ten stan jest rysowana w stylu służy do wskazywania docelowej przeciągania i upuszczania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

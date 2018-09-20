@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa66d9fb8a0a9af2fc33497690bfe67a3ea5d717
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b83c3dfc13b231a1314343a1dff496acf7a99b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690348"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412200"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Konstrukcja uporządkowana
-Następujące strukturalnego bloku **uporządkowane** dyrektywa jest wykonywany w kolejności, w którym będzie można wykonywać iteracji w pętli sekwencyjnych. Składnia **uporządkowane** dyrektywy wygląda następująco:  
-  
-```  
-#pragma omp ordered new-linestructured-block  
-```  
-  
- **Uporządkowane** dyrektywa musi być wewnątrz zakresu dynamicznego **dla** lub **równoległe w** utworzenia. **Dla** lub **równoległe w** dyrektywy, do którego **uporządkowane** wiązania konstrukcja musi mieć **uporządkowane** określony zgodnie z opisem w klauzuli [Sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11. Podczas wykonywania **dla** lub **równoległe w** skonstruować z **uporządkowane** klauzuli **uporządkowane** konstrukcji są wykonywane wyłącznie w kolejność, w której będzie można wykonać kolejne wykonanie pętli.  
-  
- Ograniczenia **uporządkowane** dyrektywy są następujące:  
-  
--   Iteracji pętli z **dla** konstrukcja nie musi wykonać dyrektywy uporządkowanej więcej niż jeden raz i nie musisz wykonać więcej niż jeden **uporządkowane** dyrektywy.
+
+Następujący blok strukturalny **uporządkowane** dyrektywa jest wykonywany w kolejności, w którym będzie można wykonywać iteracje, w pętli sekwencyjnej. Składnia **uporządkowane** dyrektywy jest następująca:
+
+```
+#pragma omp ordered new-linestructured-block
+```
+
+**Uporządkowane** dyrektywy musi należeć do zakresu dynamicznego **dla** lub **równoległe w** konstruowania. **Dla** lub **równoległe w** dyrektywy, do którego **uporządkowane** powiązań konstrukcja musi mieć **uporządkowane** klauzulę zgodnie z opisem w temacie [Sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11. W trakcie wykonania **dla** lub **równoległe w** skonstruować przy użyciu **uporządkowane** klauzuli **uporządkowane** konstrukcji są wykonywane wyłącznie w kolejność, w którym będzie można wykonywać w wykonanie sekwencyjne pętli.
+
+Ograniczenia **uporządkowane** dyrektywy jest następująca:
+
+- Iteracji pętli za pomocą **dla** konstrukcja nie musi wykonać uporządkowane dyrektywa więcej niż jeden raz i nie musisz wykonać więcej niż jedną **uporządkowane** dyrektywy.

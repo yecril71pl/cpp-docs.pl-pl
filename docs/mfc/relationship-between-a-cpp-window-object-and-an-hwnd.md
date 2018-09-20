@@ -20,19 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 844f62b110f54ba3e2c8909a78d58c9f2c01dcac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392817"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relacja między obiektem okna języka C++ a właściwością HWND
-Okno *obiektu* jest obiektem C++ `CWnd` klasy (lub klasy pochodnej) tworzącą bezpośrednio w programie. Zawiera, a odpowiedź na wywołania programu Konstruktor i destruktor jest częścią. Windows *okna*, z drugiej strony, jest nieprzezroczystego uchwyt do wewnętrzna struktura danych systemu Windows, która odpowiada okna i wykorzystuje zasoby systemowe, jeśli jest obecny. Okno systemu Windows jest identyfikowany przez "uchwytu okna" (`HWND`) i zostanie utworzony po `CWnd` obiekt jest tworzony przez wywołanie do `Create` funkcji członkowskiej klasy `CWnd`. Okno może zostać zniszczone przez wywołanie program lub akcji użytkownika. Uchwyt okna jest przechowywana w obiekcie okna *m_hWnd* zmiennej członkowskiej. Na poniższej ilustracji przedstawiono relacje między obiektem okna języka C++ i okna systemu Windows. Tworzenie okien omówione w [tworzenie Windows](../mfc/creating-windows.md). Niszczenie okien omówione w [niszczenie obiektów okien](../mfc/destroying-window-objects.md).  
-  
- ![CWnd obiekt window i okna wynikowego](../mfc/media/vc37fj1.gif "vc37fj1")  
-Obiekt Window i okno systemu Windows  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty okna](../mfc/window-objects.md)
+
+Okno *obiektu* jest obiektem C++ `CWnd` klasy (lub klasę pochodną) tworzący bezpośrednio w programie. Ona pochodzi i znajduje się w odpowiedź na wywołania Konstruktor i destruktor dla Twojego programu. Windows *okna*, z drugiej strony jest nieprzezroczysta dojścia do wewnętrznej struktury danych Windows, która odnosi się do okna i wykorzystuje zasoby systemowe, jeśli jest obecny. Okno Windows jest identyfikowany przez "uchwyt okna" (`HWND`) i jest tworzona po `CWnd` obiekt jest tworzony przez wywołanie `Create` funkcji składowej klasy typu `CWnd`. Okna może zostać zniszczone, przez wywołanie programu lub akcji przez użytkownika. Uchwyt okna jest przechowywany w obiekcie okna *m_hWnd* zmiennej składowej. Na poniższej ilustracji przedstawiono relację między obiektem okna języka C++ i okno Windows. Tworzenie okien zostało omówione w [tworzenia Windows](../mfc/creating-windows.md). Niszczenie okien zostało omówione w [niszczenie obiektów okien](../mfc/destroying-window-objects.md).
+
+![CWnd obiekt okna i okna wynikowe](../mfc/media/vc37fj1.gif "vc37fj1") obiekt okna i okna Windows
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty okna](../mfc/window-objects.md)
 

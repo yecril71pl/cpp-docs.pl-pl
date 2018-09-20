@@ -22,88 +22,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d35234c6f39c95a879ae092f79b6357065216f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210582"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446286"
 ---
 # <a name="cconstanttransition-class"></a>Klasa CConstantTransition
-Hermetyzuje stałe przejścia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CConstantTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Tworzy obiekt przejścia i inicjuje jego czas trwania.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CConstantTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CConstantTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
-  
-## <a name="remarks"></a>Uwagi  
- Stałe przejścia wartość zmiennej animacji nie ulegnie zmianie wartość początkową na czas trwania przejścia. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- `CConstantTransition`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxanimationcontroller.h  
-  
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
- Tworzy obiekt przejścia i inicjuje jego czas trwania.  
-  
-```  
-CConstantTransition (UI_ANIMATION_SECONDS duration);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Czas trwania*  
- Czas trwania przejścia.  
-  
-##  <a name="create"></a>  CConstantTransition::Create  
- Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
-  
-```  
-virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
-    IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
 
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="m_duration"></a>  CConstantTransition::m_duration  
- Czas trwania przejścia.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+Hermetyzuje stałe przejścia.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CConstantTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Tworzy obiekt przejścia i inicjuje jego czas trwania.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CConstantTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CConstantTransition::m_duration](#m_duration)|Czas trwania przejścia.|
+
+## <a name="remarks"></a>Uwagi
+
+Stałe przejścia wartość zmiennej animacji nie ulegnie zmianie wartość początkową na czas trwania przejścia. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+`CConstantTransition`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxanimationcontroller.h
+
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+
+Tworzy obiekt przejścia i inicjuje jego czas trwania.
+
+```
+CConstantTransition (UI_ANIMATION_SECONDS duration);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Czas trwania*<br/>
+Czas trwania przejścia.
+
+##  <a name="create"></a>  CConstantTransition::Create
+
+Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+
+```
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,
+    IUIAnimationTransitionFactory* \*not used*\);
+```
+
+### <a name="parameters"></a>Parametry
+
+*pLibrary*<br/>
+Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+
+##  <a name="m_duration"></a>  CConstantTransition::m_duration
+
+Czas trwania przejścia.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbcfa1042a8430c704bad93e4bc0ce5655b5921
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 408f63b80ff30a7ebdc51e5becb1dd97bb062852
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341300"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404231"
 ---
 # <a name="command-targets"></a>Obiekty docelowe poleceń
-Rysunek [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md) pokazuje połączenie między obiektu interfejsu użytkownika, takie jak element menu i funkcji programu obsługi, która struktura wywołuje do wykonania tego polecenia wynikowy, gdy obiekt zostanie kliknięty.  
-  
- System Windows wysyła komunikaty, które nie są komunikaty poleceń, bezpośrednio do okna, którego program obsługi wiadomości jest następnie wywoływana. Jednak platformę kieruje poleceń do liczby obiektów candidate — o nazwie "obiekty docelowe poleceń" — z których jedna zwykle wywołuje program obsługi dla polecenia. Funkcje obsługi działają tak samo dla poleceń i standardowe komunikaty systemu Windows, ale mechanizmy, które są nazywane są różne, zgodnie z objaśnieniem w [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+
+Rysunek [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md) Pokazuje połączenia między obiekt interfejsu użytkownika, na przykład element menu, a funkcja obsługi, który struktura wywołuje do przeprowadzania wynikowy polecenia, po kliknięciu obiektu.
+
+Windows wysyła komunikaty, które nie są komunikaty poleceń, bezpośrednio do okna, którego program obsługi wiadomości jest następnie wywoływana. Jednak struktura kieruje polecenia do liczby obiektów Release candidate — o nazwie "obiekty docelowe poleceń" — jeden z nich zwykle wywołuje program obsługi dla polecenia. Funkcje obsługi działają tak samo dla poleceń i standardowe komunikaty Windows, ale mechanizmy, według których są one nazywane różnią się, jak wyjaśniono w [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
 

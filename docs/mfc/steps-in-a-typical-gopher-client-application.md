@@ -1,5 +1,5 @@
 ---
-title: Kroki w typowej aplikacji klienckiej Gopher | Dokumentacja firmy Microsoft
+title: Kroki opisane w typowej aplikacji klienckiej Gopher | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a85e178f59eab88844b1990922870f52463f54a8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7c547d5b2a0bc9755fdf968fc1c42643e96e6fa6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955625"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392414"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>Kroki wykonywane w typowej aplikacji klienckiej Gopher
-W poniższej tabeli przedstawiono kroki, które mogą wykonywać w typowej aplikacji klienckiej gopher.  
-  
-|Poznasz|Czynności|Efekty|  
-|---------------|----------------------|-------------|  
-|Rozpocznij sesję gopher.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Inicjuje WinInet i łączy się z serwerem.|  
-|Połączenie z serwerem gopher.|Użyj [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Zwraca [CGopherConnection](../mfc/reference/cgopherconnection-class.md) obiektu.|  
-|Znajdź pierwszy zasób w gopher.|Użyj [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile).|Znajduje pierwszy plik. Zwraca wartość FAŁSZ, jeśli nie są można odnaleźć plików.|  
-|Znajdź następny zasobów w gopher.|Użyj [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile).|Znajduje następny plik. Zwraca wartość FAŁSZ, jeśli plik nie został znaleziony.|  
-|Otwórz plik został znaleziony przez klasę `FindFile` lub `FindNextFile` do odczytu.|Pobierz za pomocą lokalizatora gopher [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Użyj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Otwiera plik określony przez lokalizator. `OpenFile` Zwraca [cgopherfile —](../mfc/reference/cgopherfile-class.md) obiektu.|  
-|Otwórz plik za pomocą lokalizatora gopher podane.|Utwórz Lokalizator gopher przy użyciu [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator). Użyj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Otwiera plik określony przez lokalizator. `OpenFile` Zwraca [cgopherfile —](../mfc/reference/cgopherfile-class.md) obiektu.|  
-|Odczytane z pliku.|Użyj [cgopherfile —](../mfc/reference/cgopherfile-class.md).|Odczytuje określoną liczbę bajtów, przy użyciu podanego buforu.|  
-|Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|  
-|Kończenie sesji gopher.|Usuwa [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza dojścia do plików Otwórz i połączeń.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)   
- [Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+W poniższej tabeli przedstawiono kroki, które może wykonywać w typowej aplikacji klienckiej gopher.
+
+|Cel|Wykonania akcji|Efekty|
+|---------------|----------------------|-------------|
+|Rozpocznij sesję gopher.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Inicjuje WinInet i łączy się z serwerem.|
+|Łączenie z serwerem gopher.|Użyj [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Zwraca [CGopherConnection](../mfc/reference/cgopherconnection-class.md) obiektu.|
+|Znajdź pierwszy zasób w gopher.|Użyj [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile).|Znajdzie pierwszy plik. Zwraca wartość FALSE, jeśli nie zostaną znalezione żadne pliki.|
+|Znajdź następny zasobów gopher.|Użyj [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile).|Wyszukuje następny plik. Zwraca wartość FALSE, jeśli plik nie zostanie znaleziony.|
+|Otwórz plik znalezione przez `FindFile` lub `FindNextFile` do odczytu.|Pobierz lokalizatora gopher przy użyciu [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Użyj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Otwiera plik określony przez lokalizatora. `OpenFile` Zwraca [CGopherFile](../mfc/reference/cgopherfile-class.md) obiektu.|
+|Otwórz plik przy użyciu dostraczone lokalizatora gopher.|Tworzenie lokalizatora gopher przy użyciu [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator). Użyj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Otwiera plik określony przez lokalizatora. `OpenFile` Zwraca [CGopherFile](../mfc/reference/cgopherfile-class.md) obiektu.|
+|Odczytane z pliku.|Użyj [CGopherFile](../mfc/reference/cgopherfile-class.md).|Odczytuje określoną liczbę bajtów, przy użyciu buforu, który podasz.|
+|Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|
+|Kończenie sesji gopher.|Usuwanie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza połączenia i uchwytów otwartego pliku.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

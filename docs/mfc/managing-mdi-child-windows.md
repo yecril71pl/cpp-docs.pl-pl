@@ -1,5 +1,5 @@
 ---
-title: Zarządzanie oknami podrzędnymi MDI | Dokumentacja firmy Microsoft
+title: Zarządzanie Windows podrzędnego MDI | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 45989b7c07d27db1d7b2cda68751bd6165ee5382
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929484"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428281"
 ---
 # <a name="managing-mdi-child-windows"></a>Zarządzanie oknami podrzędnymi MDI
-MDI ramki głównej z systemem windows (po jednym dla każdego aplikacji) zawiera okno MDICLIENT okna podrzędnego specjalnych. Okno MDICLIENT zarządza obszaru klienckiego głównego okna ramowego i okien podrzędnych z kolei ma: okna dokumentów, pochodną `CMDIChildWnd`. Ponieważ okna dokumentów okien ramowych, same (okien podrzędnych MDI), mogą również mieć własne elementy podrzędne. We wszystkich tych przypadkach okno nadrzędne zarządza jego okien podrzędnych i przekazuje niektóre polecenia do nich.  
-  
- W oknie ramowym MDI okno ramowe zarządza okno MDICLIENT położenia go w połączeniu z paskami sterowania. Okno MDICLIENT z kolei zarządza wszystkich podrzędnych okien ramowych MDI. Na poniższej ilustracji przedstawiono relację między MDI ramkę okna, okno MDICLIENT i jego podrzędnych okien ramowych dokumentu.  
-  
- ![Okno podrzędne w oknie ramowym MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
-Okna ramowe MDI i elementy podrzędne  
-  
- Ramki okna MDI działa także w połączeniu z bieżącego okna podrzędnego MDI, jeśli istnieje. Okno ramowe MDI deleguje komunikaty poleceń do podrzędnego MDI przed ponowną próbą obsługi samej siebie.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)  
-  
--   [Style okna ramowego](../mfc/frame-window-styles-cpp.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+MDI głównego okna ramowe (po jednej dla aplikacji) zawierają okna specjalnego podrzędnego o nazwie MdiClient — okno. Okno MDICLIENT zarządza obszaru klienckiego okna ramki głównej, a sama platforma okna podrzędne: okna dokumentu pochodną `CMDIChildWnd`. Ponieważ okna dokumentów okien ramowych, samodzielnie (oknami podrzędnymi MDI), mogą również mieć własne elementy podrzędne. We wszystkich tych przypadkach okno nadrzędne zarządza jego okien podrzędnych i przekazuje niektórych poleceń do nich.
+
+W oknie ramki MDI ramki okna zarządza okno MDICLIENT, zmiana jego położenia w połączeniu z pasków sterowania. Okno MDICLIENT, z kolei zarządza wszystkich okien ramek podrzędnych MDI. Na poniższej ilustracji przedstawiono relację między okna ramki MDI, okno MDICLIENT i okien ramowych dokumentu jego podrzędnych.
+
+![Okien podrzędnych w oknie ramki MDI](../mfc/media/vc37gb1.gif "vc37gb1") Windows ramki MDI i elementy podrzędne
+
+Okno ramki MDI działa także w połączeniu z bieżącego okna podrzędnego MDI, jeśli taka istnieje. Okno ramek MDI deleguje komunikaty poleceń do elementu podrzędnego MDI przed ponowną próbą sam je obsłużyć.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+
+- [Style okna ramki](../mfc/frame-window-styles-cpp.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

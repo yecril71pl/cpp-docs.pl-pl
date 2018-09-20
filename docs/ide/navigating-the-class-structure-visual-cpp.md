@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c602717829db0b076add24b0db29b464068c68c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204654"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409132"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>Nawigacja w strukturze klas (Visual C++)
-Możesz przejść struktury klasy projektu, łącznie z funkcjami, dziedziczenie i interfejsy, za pomocą **Widok klas** lub **przeglądarki obiektów**. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
-  
- Możesz przejść do deklaracji funkcji przez dwukrotne kliknięcie nazwy funkcji w widoku klas. Możesz przejść do definicji klasy, klikając dwukrotnie nazwę klasy, w widoku klas.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)   
- [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+
+Możesz przejść struktury klasy projektu, łącznie z funkcjami, dziedziczenie i interfejsy, za pomocą **Widok klas** lub **przeglądarki obiektów**. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).
+
+Możesz przejść do deklaracji funkcji przez dwukrotne kliknięcie nazwy funkcji w widoku klas. Możesz przejść do definicji klasy, klikając dwukrotnie nazwę klasy, w widoku klas.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)

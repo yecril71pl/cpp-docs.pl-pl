@@ -20,40 +20,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444421a099fac7635dd668c12b22600d33d60f8b
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 09397b5a60dcc2cbe2b3e6265f6080f3c5c1e212
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428099"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Wielowątkowość z językiem C i podsystemem Win32
-Microsoft Visual C++ zapewnia obsługę tworzenia aplikacji wielowątkowych. Należy rozważyć użycie więcej niż jeden wątek, jeśli Twoja aplikacja potrzebuje do wykonywania kosztownych operacji, które mogą być przyczyną interfejsu użytkownika przestanie odpowiadać.  
-  
-Za pomocą języka Visual C++, istnieją dwa sposoby programowania z wieloma wątkami: za pomocą biblioteki Microsoft Foundation Class (MFC) lub biblioteki wykonawczej C i Win32 API. Aby uzyskać informacje o tworzeniu aplikacji wielowątkowych w MFC, zobacz [wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md) po przeczytaniu następujących tematów dotyczących wielowątkowości w C.  
-  
-Te tematy tłumaczą funkcje Visual C++, które obsługują tworzenie programów wielowątkowych.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
-  
-- [Co wielowątkowość dotyczy](multithread-programs.md)  
-  
-- [Obsługa bibliotek dla wielowątkowości](library-support-for-multithreading.md)  
-  
-- [Uwzględnianie plików na potrzeby wielowątkowości](include-files-for-multithreading.md)  
-  
-- [Funkcje biblioteki uruchomieniowej C do sterowania wątkami](c-run-time-library-functions-for-thread-control.md)  
-  
-- [Przykładowy program wielowątkowy w języku C](sample-multithread-c-program.md)  
-  
-- [Pisanie wielowątkowego programu Win32](writing-a-multithreaded-win32-program.md)  
-  
-- [Kompilowanie i łączenie programów wielowątkowych](compiling-and-linking-multithread-programs.md)  
-  
-- [Unikanie obszarów problemów z programami wielowątkowymi](avoiding-problem-areas-with-multithread-programs.md)  
-  
-- [Lokalny magazyn wątków (TLS)](thread-local-storage-tls.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+
+Microsoft Visual C++ zapewnia obsługę tworzenia aplikacji wielowątkowych. Należy rozważyć użycie więcej niż jeden wątek, jeśli Twoja aplikacja potrzebuje do wykonywania kosztownych operacji, które mogą być przyczyną interfejsu użytkownika przestanie odpowiadać.
+
+Za pomocą języka Visual C++, istnieją dwa sposoby programowania z wieloma wątkami: za pomocą biblioteki Microsoft Foundation Class (MFC) lub biblioteki wykonawczej C i Win32 API. Aby uzyskać informacje o tworzeniu aplikacji wielowątkowych w MFC, zobacz [wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md) po przeczytaniu następujących tematów dotyczących wielowątkowości w C.
+
+Te tematy tłumaczą funkcje Visual C++, które obsługują tworzenie programów wielowątkowych.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Co wielowątkowość dotyczy](multithread-programs.md)
+
+- [Obsługa bibliotek dla wielowątkowości](library-support-for-multithreading.md)
+
+- [Uwzględnianie plików na potrzeby wielowątkowości](include-files-for-multithreading.md)
+
+- [Funkcje biblioteki uruchomieniowej C do sterowania wątkami](c-run-time-library-functions-for-thread-control.md)
+
+- [Przykładowy program wielowątkowy w języku C](sample-multithread-c-program.md)
+
+- [Pisanie wielowątkowego programu Win32](writing-a-multithreaded-win32-program.md)
+
+- [Kompilowanie i łączenie programów wielowątkowych](compiling-and-linking-multithread-programs.md)
+
+- [Unikanie obszarów problemów z programami wielowątkowymi](avoiding-problem-areas-with-multithread-programs.md)
+
+- [Lokalny magazyn wątków (TLS)](thread-local-storage-tls.md)
+
+## <a name="see-also"></a>Zobacz też
+
 [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

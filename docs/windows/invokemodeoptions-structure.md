@@ -1,5 +1,5 @@
 ---
-title: Struktura InvokeModeOptions | Dokumentacja firmy Microsoft
+title: InvokeModeOptions, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392713"
 ---
-# <a name="invokemodeoptions-structure"></a>Struktura InvokeModeOptions
+# <a name="invokemodeoptions-structure"></a>InvokeModeOptions, struktura
 
-Określa, czy uruchomienie wszystkich zdarzeń w kolejce delegata lub zatrzymać wyzwalania po występuje błąd. Dopuszczalne wartości są określone w `InvokeMode` wyliczenia.
+Określa, czy do uruchamiania wszystkich zdarzeń w kolejce delegata lub aby zatrzymać wyzwalania po występuje błąd. Dopuszczalne wartości są określone w `InvokeMode` wyliczenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,9 +47,9 @@ struct InvokeModeOptions
 
 **Nagłówek:** event.h
 
-**Namespace:** Microsoft::wrl —
+**Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource — klasa](../windows/agileeventsource-class.md)
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)<br/>
+[Klasa Microsoft::WRL::AgileEventSource](../windows/agileeventsource-class.md)

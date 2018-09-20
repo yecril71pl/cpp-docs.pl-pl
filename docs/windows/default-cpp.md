@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429282"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinter
 
 ### <a name="parameters"></a>Parametry
 
-*interface1*  
+*interface1*<br/>
 Domyślny interfejs, które będą dostępne do wykonywania skryptów środowiska, w których utworzenia obiektu na podstawie klasy zdefiniowane za pomocą **domyślne** atrybutu.
 
 Jeśli nie domyślny interfejs jest określony, pierwsze wystąpienie interfejsu nonsource jest używany jako domyślny.
@@ -125,6 +125,6 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty klasy](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

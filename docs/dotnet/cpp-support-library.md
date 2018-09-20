@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d76705bded43b3b8686a8fe32736fb17dc02cca2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1bae6cf2369d5d0f9b8eefde19d332083f52648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405947"
 ---
 # <a name="c-support-library"></a>Biblioteka obsługi języka C++
-Biblioteka obsługi języka C++ zawiera klasy obsługujące zarządzanych programowania w języku C++.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)  
-  
- [Klasy zarządzania zasobami](../dotnet/resource-management-classes.md)  
-  
- [Synchronizacja (klasa lock)](../dotnet/synchronization-lock-class.md)  
-  
- [Wywoływanie funkcji w określonej domenie aplikacji](../dotnet/calling-functions-in-a-specific-application-domain.md)  
-  
- [com::ptr](../dotnet/com-ptr.md)
+
+Biblioteka obsługi języka C++ udostępnia klasy, które obsługują zarządzane programowania w języku C++.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Omówienie marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)
+
+[Klasy zarządzania zasobami](../dotnet/resource-management-classes.md)
+
+[Synchronizacja (klasa lock)](../dotnet/synchronization-lock-class.md)
+
+[Wywoływanie funkcji w określonej domenie aplikacji](../dotnet/calling-functions-in-a-specific-application-domain.md)
+
+[com::ptr](../dotnet/com-ptr.md)

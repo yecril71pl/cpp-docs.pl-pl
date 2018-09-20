@@ -10,42 +10,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399215"
 ---
 # <a name="rename"></a>Zmień nazwę
-**Co:** pozwala zmienić identyfikatory symboli kodu, takich jak pola, zmienne lokalne, metody, obszary nazw, właściwości i typów.
+**Co:** umożliwia zmianę nazwy identyfikatorów w celu symbole kodu, takie jak pola, zmienne lokalne, metody, przestrzenie nazw, właściwości i typów.
 
-**Kiedy:** chcesz zmienić element bezpiecznie bez konieczności Znajdź wszystkie wystąpienia i kopiowania/wklejania nową nazwę.  
+**Kiedy:** chcesz bezpiecznie zmienić coś bez konieczności Znajdź wszystkie wystąpienia i kopiowanie/wklejanie nowej nazwy.
 
-**Dlaczego:** kopiowania i wklejania nową nazwę dla całego projektu prawdopodobnie będą powodować błędy.  To narzędzie refaktoryzacji dokładnie będzie wykonywać operacji zmiany nazwy.
+**Dlaczego:** kopiowanie i wklejanie nową nazwę dla całego projektu, prawdopodobnie będą powodować błędy.  To narzędzie refaktoryzacji dokładnie wykona akcję zmiany nazwy.
 
 **Jak:**
 
-1. Zaznacz lub umieść kursor tekst wewnątrz można zmienić nazwy elementu:
+1. Zaznacz lub umieść kursor tekstu w można zmienić nazwy elementu:
 
    ![Wyróżniony kod](images/rename_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + R**.  (Należy pamiętać, że skrót klawiaturowy mogą być różne oparte na profil, który wybrano).
+     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + R**.  (Należy pamiętać, że skrót klawiaturowy może różnić się w oparciu o profilu, który wybrano.)
    * **Myszy**
      * Wybierz **Edytuj > Refaktoryzuj > Zmień nazwę**.
-     * Kliknij prawym przyciskiem myszy kod i wybierz **zmienić**.
+     * Kliknij prawym przyciskiem myszy ten kod, a następnie wybierz pozycję **Zmień nazwę**.
 
-1. W **zmienić** oknie wyskakującym, wprowadź nową nazwę dla wybranego elementu i kliknij przycisk **Podgląd** przycisku.  Zmień **zakres wyszukiwania** Aby rozszerzyć lub zawęzić zakres zmianą nazwy.
+1. W **Zmień nazwę** okna, które się pojawi, wprowadź nową nazwę wybranego elementu, a następnie kliknij przycisk **Podgląd** przycisku.  Zmiana **zakres wyszukiwania** Jeśli potrzebujesz rozszerzyć lub zawęzić zakres zmianą nazwy.
 
-   ![Zmień nazwę okna dialogowego](images/rename_dialog.png)
+   ![Zmienianie nazwy okna dialogowego](images/rename_dialog.png)
 
    > [!TIP]
-   > Wersja zapoznawcza można pominąć, sprawdzając **Pomiń podgląd zmian wszystkich odwołań** opcji.
+   > Możesz pominąć korzystania z wersji zapoznawczej, sprawdzając **Pomiń podgląd zmian w przypadku wszystkich odwołań** opcji.
 
-1. Gdy **zmienić podgląd zmian -** zostanie wyświetlone okno, upewnij się, że zażądano zmian odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć, zmiana nazwy każdego elementu.
+1. Gdy **podgląd zmian — zmiana nazwy** pojawi się okno, upewnij się, że zażądano zmian odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć, zmiana nazwy dowolnego elementu.
 
-   ![Zmień nazwę podglądu](images/rename_preview.png)
+   ![Zmień nazwę (wersja zapoznawcza)](images/rename_preview.png)
 
-1. Jeśli wszystko wygląda dobrze, kliknij przycisk **Zastosuj** przycisk i elementu zostanie zmieniona w kodzie źródłowym.
+1. Gdy wszystko będzie wyglądać dobrze, kliknij przycisk **Zastosuj** przycisk, a element zostanie zmieniona w kodzie źródłowym.

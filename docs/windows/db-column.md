@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406649"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ Wiąże określoną kolumnę do zmiennej w zestawie wierszy.
 
 #### <a name="parameters"></a>Parametry
 
-*Liczba porządkowa*  
+*Liczba porządkowa*<br/>
 Numeru porządkowego kolumny (`DBCOLUMNINFO` porządkowe) lub nazwą kolumny (ciąg ANSI lub Unicode) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane. Jeśli używasz liczb, możesz pominąć kolejne liczby porządkowe (na przykład: 1, 2, 3, 5). Nazwa może zawierać spacji, jeśli dostawca OLE DB, którego używasz obsługuje tę funkcję. Na przykład można użyć jednej z następujących formatów:
 
 ```cpp
@@ -51,19 +51,19 @@ Numeru porządkowego kolumny (`DBCOLUMNINFO` porządkowe) lub nazwą kolumny (ci
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*Atrybut DbType*  
+*Atrybut DbType*<br/>
 (Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) wpisu kolumny.
 
-*Precyzja*  
+*Precyzja*<br/>
 (Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Skala*  
+*Skala*<br/>
 (Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
-*Długość*  
+*Długość*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
@@ -131,5 +131,5 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Atrybuty klasy](../windows/class-attributes.md)  

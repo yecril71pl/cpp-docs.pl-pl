@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 395fc71f42dd947de331051233a5dcce086f7bb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400812"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
-Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `DoPropExchange` funkcję elementu członkowskiego. W formancie typowe tej funkcji zawiera kilka wywołania **PX_** funkcje (`PX_Color`, `PX_Font`i tak dalej), po jednej dla każdej właściwości.  
-  
- Zaletą tej metody jest który pojedynczy `DoPropExchange` implementacja może służyć do zainicjowania, trwałości w formacie binarnym i trwałości w formacie tak zwane "-zbioru właściwości" używanym przez niektóre kontenery. Ta funkcja jeden udostępnia wszystkie informacje o właściwościach i ich wartości domyślne w jednym miejscu wygodne.  
-  
- Jednak ta odpisy pochodzi kosztem wydajności. **PX_** funkcje Pobierz ich elastyczność za pośrednictwem wielowarstwowe implementacji, które są z założenia mniej wydajne niż podejścia bardziej bezpośrednie, ale mniej elastyczne. Ponadto jeśli formant przekazuje wartość domyślną do **PX_** działanie, że wartość domyślna musi zapewniać zawsze, nawet w sytuacjach, gdy wartość domyślna nie musi być używana. Jeśli Generowanie wartości domyślnej jest proste zadania (na przykład, jeśli wartość jest uzyskiwany z właściwością otoczenia), a następnie dodatkowy, niepotrzebne pracy odbywa się w przypadkach, gdy nie jest używana wartość domyślna.  
-  
- Formantu binarne trwałości wydajność można poprawić przez zastąpienie formantu `Serialize` funkcji. Domyślna implementacja funkcji członkowskiej nawiązuje połączenie z `DoPropExchange` funkcji. Przez zastąpienie go, musisz podać więcej bezpośredniej implementacji binarne trwałości. Rozważmy na przykład to `DoPropExchange` funkcji:  
-  
- [!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]  
-  
- Aby poprawić wydajność trwałości binarnych tego formantu, można zastąpić `Serialize` działają w następujący sposób:  
-  
- [!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]  
-  
- `dwVersion` Zmienna lokalna może służyć do wykrywania wersji trwały stan formantu jest zapisywany lub ładowany. Można użyć tej zmiennej, zamiast wywoływać metodę [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion).  
-  
- Zapisanie małej ilości miejsca w trwałym formacie dla **BOOL** właściwości (i być zgodny z formatem utworzonego przez `PX_Bool`), można przechowywać właściwość jako **BAJTÓW**w następujący sposób:  
-  
- [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
-  
- Zauważ, że w przypadku obciążenia zmiennej tymczasowej jest używana i następnie jego wartość jest przypisywana, zamiast rzutowanie *m_boolProp* do **BAJTÓW** odwołania. Techniki rzutowanie spowoduje tylko jednego bajtu *m_boolProp* są modyfikowane, pozostawiając Pozostała liczba bajtów, odinicjowany.  
-  
- Dla tej samej kontrolki, aby zoptymalizować inicjowania formantu przez zastąpienie [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) w następujący sposób:  
-  
- [!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]  
-  
- Mimo że `Serialize` i `OnResetState` została zastąpiona, `DoPropExchange` funkcji powinny być przechowywane bez zmian, ponieważ jest nadal używana trwałości w formacie zbioru właściwości. Należy zachować wszystkie trzy te funkcje zapewniające formantu spójnie zarządza jego właściwości, niezależnie od tego, które trwałości używa mechanizmu kontenera.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+
+Domyślnie stanu trwałego i inicjalizacji w kontrolce są obsługiwane przez `DoPropExchange` funkcja elementu członkowskiego. W kontrolce typowe tej funkcji zawiera kilka wywołań **PX_** funkcji (`PX_Color`, `PX_Font`i tak dalej), jeden dla każdej właściwości.
+
+Takie podejście ma tę zaletę, że jeden `DoPropExchange` implementacji może służyć do inicjowania, trwałości w formacie binarnym i trwałości w formacie tak zwane "-zbioru właściwości" używana przez niektóre kontenery. Ta funkcja jeden udostępnia wszystkie informacje o właściwościach i ich wartości domyślne w jednym wygodnym miejscu.
+
+Jednak ta ogólności pochodzi kosztem wydajności. **PX_** funkcje Pobierz ich elastyczność za pośrednictwem wielowarstwowego implementacji, które są natury mniej wydajne niż bardziej bezpośrednie, ale mniej elastyczne podejście. Ponadto jeśli kontrola przechodzi do wartości domyślnej **PX_** działać, musi być podana zawsze, nawet w sytuacjach, gdy wartość domyślna nie musi być używana wartość domyślna. Jeśli Generowanie wartością domyślną jest proste zadanie (na przykład, gdy wartości są uzyskiwane z właściwością otoczenia), a następnie dodatkowy, niepotrzebne zadania są wykonywane w przypadkach, gdy nie jest używana wartość domyślna.
+
+Możesz poprawić wydajność trwałości binarnych kontroli nad przez zastąpienie kontroli nad `Serialize` funkcji. Domyślna implementacja tej funkcji elementu członkowskiego nawiązuje połączenie z `DoPropExchange` funkcji. Przez zastąpienie go, możesz zapewnić bardziej bezpośrednie implementacji dla binarnego trwałości. Na przykład, rozważmy ten `DoPropExchange` funkcji:
+
+[!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
+
+Aby zwiększyć wydajność, trwałość binarne tej kontrolki, można zastąpić `Serialize` funkcji w następujący sposób:
+
+[!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
+
+`dwVersion` Zmienna lokalna może służyć do wykrywania wersji trwały stan formantu jest załadowany lub zapisać. Można użyć tej zmiennej, zamiast wywoływać metodę [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion).
+
+Aby zapisać małej ilości miejsca w trwałym formacie dla **BOOL** właściwości (i być zgodny z formatem produkowane przez `PX_Bool`), można przechowywać właściwość jako **BAJTÓW**, wykonując następujące czynności:
+
+[!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
+
+Należy pamiętać, że w przypadku obciążenia jest używana zmienna tymczasowa, a następnie jego wartość jest przypisywana, zamiast rzutowanie *m_boolProp* do **BAJTÓW** odwołania. Technika rzutowania spowoduje tylko jeden bajt *m_boolProp* jest modyfikowany, pozostawiając pozostałe bajty niezainicjowana.
+
+Dla tej samej kontrolki inicjowanie kontrolki można zoptymalizować poprzez zastąpienie [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) w następujący sposób:
+
+[!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
+
+Mimo że `Serialize` i `OnResetState` zostały nadpisane, `DoPropExchange` funkcji powinny być przechowywane bez zmian, ponieważ jest nadal używana potrzeby stanu trwałego w formacie zbioru właściwości. Jest to ważne, aby zachować wszystkie trzy te funkcje, aby upewnić się, formant spójnie zarządza jej właściwości niezależnie od tego, w którym trwałość używa mechanizmu kontenera.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

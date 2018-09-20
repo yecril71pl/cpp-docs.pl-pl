@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1c56bb4daaa6b87cf8e59e072cb73a746712f9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab664bf15dd098b9d3e3bd7d6bd9c73db47fff2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695892"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436913"
 ---
 # <a name="2-directives"></a>2. Dyrektyw
-Dyrektywy są oparte na **#pragma** dyrektywy zdefiniowana w standardach C i C++.  Kompilatory, które obsługują Openmpc i C++ interfejsu API będzie zawierać aktywuje i umożliwiający interpretacji dyrektywy kompilatora OpenMP wszystkich opcji wiersza polecenia.
+
+Dyrektywy opierają się na **#pragma** dyrektywy zdefiniowana w standardach C i C++.  Kompilatory, które obsługują OpenMP C i C++ interfejsu API będzie zawierać opcji wiersza polecenia, który aktywuje i umożliwia interpretacji wszystkich OpenMP, dyrektywy kompilatora.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055b14c38e3084a7368953cbce4f95373e1a77f3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2cd7288b4475197d9980aab2eb9037419304c0fd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706332"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442932"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -38,7 +38,7 @@ Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybut typu wartość logiczna*  
+*Atrybut typu wartość logiczna*<br/>
 (Opcjonalnie) **true** Jeśli chcesz, aby bez kodu, które są wstrzykiwane, **false** do kodu, ich wstrzyknięcie. **wartość true,** jest ustawieniem domyślnym.
 
 ## <a name="remarks"></a>Uwagi

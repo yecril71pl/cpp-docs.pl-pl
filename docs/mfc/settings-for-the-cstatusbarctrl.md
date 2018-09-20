@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2411659e6ae33fe9ce81d508d3e7c206b1e5b113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955459"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440033"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Ustawienia formantu CStatusBarCtrl
-To domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić styl CCS_TOP, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego.  
-  
- Można określić styl SBARS_SIZEGRIP, aby uwzględnić uchwyt zmiany rozmiaru w prawym końcu `CStatusBarCtrl` okno stanu. Uchwyt zmiany rozmiaru jest podobny do rozmiaru obramowanie; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.  
-  
+
+Domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić styl CCS_TOP, aby był wyświetlany w górnej części obszaru klienckiego okna nadrzędnego.
+
+Można określić styl SBARS_SIZEGRIP obejmujący uchwyt zmiany rozmiaru na prawym końcu `CStatusBarCtrl` okno stanu. Uchwyt zmiany rozmiaru jest podobny do granicę z ustalanym; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.
+
 > [!NOTE]
->  Jeśli znajdzie style CCS_TOP i SBARS_SIZEGRIP wynikowy uchwyt zmiany rozmiaru nie działa mimo że rysuje go w oknie Stan systemu.  
-  
- Procedury okna dla okna stanu automatycznie ustawia początkowy rozmiar i położenie okna formantu. Szerokość jest taka sama jak obszaru klienckiego okna nadrzędnego. Wysokość jest oparta na metryki czcionki aktualnie wybranego w oknie Stan kontekstu urządzenia i szerokości obramowania okna.  
-  
- Zawsze, gdy odbierze komunikat WM_SIZE procedurę okna automatycznie dostosowuje rozmiar okna stanu. Zwykle gdy zmienia się rozmiar okna nadrzędnego, nadrzędnego wysyła komunikat WM_SIZE w oknie stanu.  
-  
- Minimalna wysokość obszaru okno stanu można ustawić przez wywołanie metody [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), określając minimalną wysokość w pikselach. Obszar rysowania nie ma obramowanie okna.  
-  
- Pobrać szerokości obramowania okno stanu przez wywołanie metody [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Ta funkcja członkowska obejmuje wskaźnik do tablicy trzech elementu, która odbiera szerokość obramowania poziome, pionowe obramowanie i granicę między prostokąty.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+>  Jeśli łączone style CCS_TOP i SBARS_SIZEGRIP wynikowy uchwyt zmiany rozmiaru nie działa mimo, że system rysuje go w oknie stanu.
+
+Procedurę okna dla okna stanu automatycznie ustawia początkowy rozmiar i położenie okna kontrolki. Szerokość jest taka sama jak obszar klienta okna nadrzędnego. Wysokość opiera się na metryki czcionki, który jest aktualnie wybrany do kontekstu urządzenia okno stanu i szerokości obramowania okna.
+
+Po każdym odebraniu komunikatu WM_SIZE procedurę okna automatycznie dostosowuje rozmiar okna stanu. Zwykle po zmianie rozmiaru okna nadrzędnego obiektu nadrzędnego wysyła komunikat WM_SIZE do okna stanu.
+
+Minimalna wysokość obszaru okno stanu można ustawić, wywołując [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), określając minimalną wysokość w pikselach. Obszar rysowania nie ma obramowania okna.
+
+Pobieranie szerokości obramowania okna stanu przez wywołanie metody [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Ta funkcja elementu członkowskiego zawiera wskaźnik do trzech elementowej tablicy, która odbiera szerokość obramowania poziome, pionowe obramowanie i granicy między prostokąty.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

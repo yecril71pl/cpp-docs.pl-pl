@@ -14,27 +14,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8e5065cebab002e9c48aef560eb9f2feab67e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 95fa6fa506e4f471b90d39659b0908e2755b72b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398706"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>Program ATL lub źródło kontroli i pliki nagłówkowe
-Następujące pliki są tworzone podczas tworzenia projektu ATL w programie Visual Studio, w zależności od opcji wybranej dla projektu, który można utworzyć.  
-  
- Wszystkie te pliki znajdują się w *nazwa_projektu.nazwa_modułu.nazwa_procedury* katalogu i w folderze pliki nagłówków (.h pliki) lub folderu źródłowego (plików .cpp) w Eksploratorze rozwiązań.  
-  
-|Nazwa pliku|Opis|  
-|---------------|-----------------|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.h|Pliku dołączanego głównego zawierający definicje interfejsu C++ i deklaracje elementów zdefiniowanych w ATLSample.idl identyfikator GUID. Generowane przez MIDL podczas kompilacji.|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.cpp|Plik źródłowy głównego programu. Zawiera on eksporty biblioteki DLL serwera w trakcie wykonania i stosowania `WinMain` dla serwera lokalnego. Dla usługi dodatkowo implementuje wszystkie funkcje zarządzania usługi.|  
-|Resource.h|Plik nagłówka pliku zasobu.|  
-|StdAfx.cpp|Zawiera pliki StdAfx.h i Atlimpl.cpp.|  
-|StdAfx.h|Zawiera pliki nagłówkowe ATL.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [MFC Program lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)   
- [Projekty CLR](../ide/files-created-for-clr-projects.md)
+
+Następujące pliki są tworzone podczas tworzenia projektu ATL w programie Visual Studio, w zależności od opcji wybranej dla tworzonego projektu.
+
+Wszystkie te pliki znajdują się w *Projname* katalogu, a w folderze pliki nagłówków (.h pliki) lub pliki źródłowe (.cpp pliki) folder w Eksploratorze rozwiązań.
+
+|Nazwa pliku|Opis|
+|---------------|-----------------|
+|*Projname*.h|Plik dołączania głównego, zawierający definicje interfejsu C++ i identyfikator GUID deklaracje elementy zdefiniowane w ATLSample.idl. Generowane przez MIDL podczas kompilacji.|
+|*Projname*.cpp|Plik źródłowy głównego programu. Zawiera on implementacja eksportów biblioteki DLL serwera w procesie i wykonania `WinMain` dla serwera lokalnego. W przypadku usługi dodatkowo implementuje wszystkich funkcji zarządzania usługi.|
+|Resource.h|Plik nagłówka dla pliku zasobów.|
+|StdAfx.cpp|Dotyczy plików StdAfx.h i Atlimpl.cpp.|
+|StdAfx.h|Zawiera pliki nagłówkowe biblioteki ATL.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Program MFC lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)<br>
+[Projekty CLR](../ide/files-created-for-clr-projects.md)

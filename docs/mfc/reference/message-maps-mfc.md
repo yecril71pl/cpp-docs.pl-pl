@@ -19,60 +19,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1479ac7cb119ef206f8c20b6fa53bf7017b8ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d8953d637275ab44c43a58a15553f8e4284f84
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371715"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374252"
 ---
 # <a name="message-maps-mfc"></a>Mapy komunikatów (MFC)
-Ta sekcja dokumentacji Wyświetla listę wszystkich [makra mapowania wiadomości](../../mfc/reference/message-map-macros-mfc.md) i wszystkie [CWnd](../../mfc/reference/cwnd-class.md) prototypy funkcji wpisy mapy wiadomości wraz z odpowiadającego mu członka:  
-  
-|Kategoria|Opis|  
-|--------------|-----------------|  
-|ON\_polecenie obsługi wiadomości|Obsługuje `WM_COMMAND` komunikaty generowane przez użytkownika opcji menu lub menu klucze dostępu.|  
-|[Programy obsługi komunikatów powiadomień dotyczących okna podrzędnego](../../mfc/reference/child-window-notification-message-handlers.md)|Obsługa komunikatów powiadomień z okien podrzędnych.|  
-|[Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)|Obsługa `WM_` komunikaty, takie jak `WM_PAINT`.|  
-|[Programy obsługi komunikatów zdefiniowanych przez użytkownika](../../mfc/reference/user-defined-handlers.md)|Obsługa wiadomości zdefiniowane przez użytkownika.|  
-  
- (Aby uzyskać informacje o terminologii i konwencje użytego w niniejszej dokumentacji, zobacz [jak używanie odsyłacza mapy komunikatów](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).)  
-  
- Od systemu Windows to system operacyjny przesyłania wiadomości, duża część programowania w języku środowiska systemu Windows obejmuje obsługi wiadomości. Występuje zawsze kliknij zdarzenie, takich jak naciśnięcie klawisza lub mysz, wiadomości są wysyłane do aplikacji, która następnie musi obsługiwać zdarzenia.  
-  
- Microsoft Foundation Class Library zapewnia model programowania zoptymalizowane pod kątem Programowanie oparte na wiadomość. W tym modelu "mapy komunikatów" służą do wyznaczenia, które funkcje obsługi różnych wiadomości dla określonej klasy. Mapy komunikatów zawiera co najmniej jeden makra, które określają wiadomości, które będzie obsługiwany przez funkcje, które. Na przykład komunikat mapy zawierający `ON_COMMAND` makro może wyglądać mniej więcej tak:  
-  
- [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]  
-  
- `ON_COMMAND` Makro jest używane do obsługi polecenia komunikaty generowane przez menu, przycisków i klawiszy skrótów. [Makra](../../mfc/reference/message-map-macros-mfc.md) są dostępne następujące mapowania:  
-  
-## <a name="windows-messages"></a>Komunikaty systemu Windows  
-  
--   Powiadomień dotyczących formantu karty  
-  
--   Zdefiniowane przez użytkownika wiadomości  
-  
-## <a name="command-messages"></a>Komunikaty poleceń  
-  
--   Zarejestrowany wiadomości zdefiniowane przez użytkownika  
-  
--   Interfejs użytkownika aktualizacji wiadomości  
-  
-## <a name="ranges-of-messages"></a>Zakresy wiadomości  
-  
--   Polecenia  
-  
--   Aktualizacja programu obsługi wiadomości  
-  
--   Powiadomień dotyczących formantu karty  
-  
- Makra mapy wiadomości są ważne, zwykle nie trzeba ich używać bezpośrednio. Jest to spowodowane okna właściwości automatycznie tworzy wpisy mapy wiadomości w plikach źródłowych przypadku użycia jej do skojarzenia z komunikatami funkcji obsługi wiadomości. Zawsze, gdy chcesz edytować lub dodanie wpisu mapy wiadomości, można użyć okna właściwości.  
-  
+
+Ta sekcja odwołania zawiera listę wszystkich [makra mapowania wiadomości](../../mfc/reference/message-map-macros-mfc.md) i wszystkie [CWnd](../../mfc/reference/cwnd-class.md) wpisy mapy komunikatów oraz odpowiedni element członkowski funkcji prototypy:
+
+|Kategoria|Opis|
+|--------------|-----------------|
+|ON\_polecenia obsługi wiadomości|Obsługuje `WM_COMMAND` komunikaty generowane przez wybory menu użytkownika lub kluczy dostępu do menu.|
+|[Programy obsługi komunikatów powiadomień dotyczących okna podrzędnego](../../mfc/reference/child-window-notification-message-handlers.md)|Obsługa komunikatów powiadomień z okien podrzędnych.|
+|[Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)|Obsługa `WM_` komunikaty, takie jak `WM_PAINT`.|
+|[Programy obsługi komunikatów zdefiniowanych przez użytkownika](../../mfc/reference/user-defined-handlers.md)|Obsługi komunikatów zdefiniowanych przez użytkownika.|
+
+(Objaśnienia dotyczące terminologii i Konwencji używanych w ramach tego odwołania, zobacz [jak używanie odsyłacza mapy komunikatów](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).)
+
+Ponieważ Windows to system operacyjny ukierunkowane, dużą część Programowanie w środowisku Windows obejmuje Obsługa komunikatów. Występuje w każdym kliknij zdarzenie, takie jak myszy lub naciśnięcia klawisza, komunikat jest wysyłany do aplikacji, która następnie musi obsługiwać zdarzenia.
+
+Bibliotekę Microsoft Foundation Class oferuje model programowania, zoptymalizowane pod kątem programowania oparta na komunikatach. W tym modelu "map komunikatów" są używane do wyznaczenia, jakie funkcje będzie obsługiwać różne komunikaty dla określonej klasy. Mapy komunikatów zawierają co najmniej jeden makra, które określają, wiadomości, które będzie obsługiwany przez który działa. Na przykład komunikat o mapy nadrzędnym `ON_COMMAND` — makro może wyglądać mniej więcej tak:
+
+[!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
+
+`ON_COMMAND` Makro jest używane do obsługi wiadomości polecenia generowane przez menu, przyciski i klawiszy skrótów. [Makra](../../mfc/reference/message-map-macros-mfc.md) są dostępne następujące mapowania:
+
+## <a name="windows-messages"></a>Windows wiadomości
+
+- Powiadomień dotyczących formantu karty
+
+- Zdefiniowane przez użytkownika wiadomości
+
+## <a name="command-messages"></a>Komunikaty poleceń
+
+- Zarejestrowane komunikaty zdefiniowanych przez użytkownika
+
+- Komunikaty aktualizacji interfejsu użytkownika
+
+## <a name="ranges-of-messages"></a>Zakresy wiadomości
+
+- Polecenia
+
+- Aktualizacja obsługi wiadomości
+
+- Powiadomień dotyczących formantu karty
+
+Mimo że makra map wiadomości są ważne, zazwyczaj nie trzeba używać ich bezpośrednio. Jest to spowodowane w oknie dialogowym właściwości automatycznie tworzy wpisy mapy komunikatów w plikach źródłowych, gdy używasz do skojarzenia z funkcji obsługi wiadomości za pomocą wiadomości. Zawsze, gdy chcesz edytować lub dodać wpis mapy wiadomości, można użyć w oknie właściwości.
+
 > [!NOTE]
->  Okno właściwości nie obsługuje zakresów map komunikatów. Musisz zapisać te wpisy mapy wiadomości samodzielnie.  
-  
- Mapy komunikatów są jednak ważnym elementem Microsoft Foundation Class Library. Należy się dowiedzieć, co robią, i dokumentacja jest dostępna dla nich.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+>  W oknie właściwości nie obsługuje zakresów map komunikatów. Należy napisać te wpisy mapy komunikatów samodzielnie.
+
+Jednak mapy komunikatów są ważną częścią biblioteki klas Microsoft Foundation. Należy zrozumieć, co robią, a dokumentacja jest dostępna dla nich.
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

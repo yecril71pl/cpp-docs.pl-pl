@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne kompilatora i języka zestawu | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne kompilatora i język asemblera | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a195a9d3da3c474e535fe23ae75081679d383f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c01792485b3357105cdd7d84535164620d8bf1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399759"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Funkcje wewnętrzne i język asemblera
-Ta sekcja dokumentacji zawiera informacje o funkcjach wewnętrznych kompilatora i o języku asembler.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)|Opisuje funkcje wewnętrzne, które są dostępne w programie Microsoft C i C++ dla x86, ARM i x64 architektury.|  
-|[Wbudowany asembler](../assembler/inline/inline-assembler.md)|Wyjaśnia, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86.|  
-|[Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)|Zawiera materiały źródłowe dotyczące asemblera ARM firmy Microsoft (armasm) i pokrewnych narzędzi.|  
-|[Microsoft Macro Assembler — dokumentacja](../assembler/masm/microsoft-macro-assembler-reference.md)|Zawiera materiały źródłowe dotyczące asemblera makr firmy Microsoft (masm) i pokrewnych narzędzi.|  
+
+Ta sekcja dokumentacji zawiera informacje o funkcjach wewnętrznych kompilatora i o języku asembler.
+
+## <a name="related-articles"></a>Powiązane artykuły
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)|W tym artykule opisano funkcje wewnętrzne, które są dostępne w Microsoft C i C++ dla x86, ARM, a x64 architektury.|
+|[Wbudowany asembler](../assembler/inline/inline-assembler.md)|Wyjaśnia, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86.|
+|[Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)|Zawiera materiały źródłowe dotyczące asemblera ARM firmy Microsoft (armasm) i pokrewnych narzędzi.|
+|[Microsoft Macro Assembler — dokumentacja](../assembler/masm/microsoft-macro-assembler-reference.md)|Zawiera materiały źródłowe dotyczące asemblera makr firmy Microsoft (masm) i pokrewnych narzędzi.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Artykuł najwyższego poziomu dla dokumentacji języka Visual C++.|

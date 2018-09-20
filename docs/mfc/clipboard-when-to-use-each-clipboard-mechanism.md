@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379817"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Schowek: kiedy korzystać z mechanizmu schowka
-Skorzystaj z następujących wskazówek w korzystanie ze Schowka:  
-  
--   Korzystając z mechanizmu Schowka OLE można włączyć nowe funkcje w przyszłości. Standardowy interfejs API schowka zostaną zachowane, mechanizmu OLE jest przyszłości transferu danych.  
-  
--   Użyj mechanizmu Schowka OLE, jeśli piszesz aplikację OLE lub mają OLE funkcji, takich jak przeciągnij i upuść.  
-  
--   Korzystać z mechanizmu Schowka OLE, udostępniając formaty OLE.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić  
-  
--   [Korzystać z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Korzystać z mechanizmu Schowka systemu Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Schowek](../mfc/clipboard.md)
+
+Przestrzegać następujących wytycznych w korzystanie ze Schowka:
+
+- Użyj z mechanizmu Schowka OLE, aby włączyć nowe możliwości w przyszłości. Podczas standardowych interfejsów API schowka zostaną zachowane, mechanizmu OLE przyszłościowe transferu danych.
+
+- Jeśli piszesz aplikację OLE lub ma żadnych funkcji OLE, takich jak przeciągnij i upuść, należy użyć z mechanizmu Schowka OLE.
+
+- Jeśli udostępniasz formaty OLE, należy korzystać z mechanizmu Schowka OLE.
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
+
+- [Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Korzystać z mechanizmu Schowka Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Schowek](../mfc/clipboard.md)
 

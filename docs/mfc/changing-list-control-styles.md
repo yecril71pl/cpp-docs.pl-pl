@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dfe08e9e1be0c7473cdf9a5ca040730423006906
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427059"
 ---
 # <a name="changing-list-control-styles"></a>Zmienianie stylów kontrolki listy
-Można zmienić styl okna kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) w dowolnym momencie po jego utworzeniu. Zmiana stylu okna, możesz zmienić rodzaj widoku, który korzysta z kontrolki. Na przykład, aby emulować w Eksploratorze, może być podasz w menu i przycisków paska narzędzi do przełączania sterowania między różne widoki: widoku ikon, widoku listy i tak dalej.  
-  
- Na przykład po wybraniu elementu menu, możesz wykonać wywołanie do [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) można pobrać bieżącego stylu kontrolki, a następnie wywołać [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) zresetować stylu. Aby uzyskać więcej informacji, zobacz [za pomocą kontrolki widoku listy](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.  
-  
- Dostępne style są wymienione w [Utwórz](../mfc/reference/clistctrl-class.md#create). Style **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, i **LVS_REPORT** wyznaczyć widoki kontrolne cztery listy.  
-  
-## <a name="extended-styles"></a>Rozszerzone style  
- Oprócz standardowych stylów kontrolki listy istnieje inny zestaw, określane jako rozszerzone style. Te style omówione w [rozszerzone style widoku listy](/windows/desktop/Controls/extended-list-view-styles) w zestawie Windows SDK oferują różne przydatne funkcje, które dostosować zachowanie kontroli nad listy. Aby zaimplementować to zachowanie niektórych stylu (takie jak wybór aktywowaniu), wywoływania [CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), przekazanie wymaganych stylu. W poniższym przykładzie pokazano wywołanie funkcji:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]  
-  
+
+Można zmienić styl okna kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) w dowolnym momencie po jego utworzeniu. Zmiana stylu okna, możesz zmienić rodzaj widoku, który korzysta z kontrolki. Na przykład, aby emulować w Eksploratorze, może być podasz w menu i przycisków paska narzędzi do przełączania sterowania między różne widoki: widoku ikon, widoku listy i tak dalej.
+
+Na przykład po wybraniu elementu menu, możesz wykonać wywołanie do [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) można pobrać bieżącego stylu kontrolki, a następnie wywołać [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) zresetować stylu. Aby uzyskać więcej informacji, zobacz [za pomocą kontrolki widoku listy](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.
+
+Dostępne style są wymienione w [Utwórz](../mfc/reference/clistctrl-class.md#create). Style **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, i **LVS_REPORT** wyznaczyć widoki kontrolne cztery listy.
+
+## <a name="extended-styles"></a>Rozszerzone style
+
+Oprócz standardowych stylów kontrolki listy istnieje inny zestaw, określane jako rozszerzone style. Te style omówione w [rozszerzone style widoku listy](/windows/desktop/Controls/extended-list-view-styles) w zestawie Windows SDK oferują różne przydatne funkcje, które dostosować zachowanie kontroli nad listy. Aby zaimplementować to zachowanie niektórych stylu (takie jak wybór aktywowaniu), wywoływania [CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), przekazanie wymaganych stylu. W poniższym przykładzie pokazano wywołanie funkcji:
+
+[!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]
+
 > [!NOTE]
->  Do wyboru po wskazaniu wskaźnikiem do pracy, musisz również posiadać albo **LVS_EX_ONECLICKACTIVATE** lub **LVS_EX_TWOCLICKACTIVATE** włączona.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+>  Do wyboru po wskazaniu wskaźnikiem do pracy, musisz również posiadać albo **LVS_EX_ONECLICKACTIVATE** lub **LVS_EX_TWOCLICKACTIVATE** włączona.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

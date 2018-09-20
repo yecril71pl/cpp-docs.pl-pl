@@ -18,49 +18,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d050ee426817c04518a41b515f30ac348bf7d86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114387"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400175"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error — Klasa
-Ta klasa opisuje wyjątek generowany z powodu błędu tworzenia kontekstu wykonywania procesu roboczego w środowisku uruchomieniowym współbieżności.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany z powodu błędu tworzenia kontekstu wykonywania procesu roboczego w środowisku uruchomieniowym współbieżności.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[scheduler_worker_creation_error](#ctor)|Przeciążone. Konstruuje `scheduler_worker_creation_error` obiektu.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ten wyjątek zazwyczaj jest zgłaszany, gdy wywołanie do systemu operacyjnego w celu tworzenia kontekstów wykonanie z w środowisku uruchomieniowym współbieżności: nie powiodło się. Kontekstami wykonywania są wątki, które są wykonywane zadania w środowisku uruchomieniowym współbieżności. Kod błędu, który normalnie zostałyby zwrócone w wyniku wywołania metody Win32 `GetLastError` jest konwertowana na wartość typu `HRESULT` i mogą być pobierane przy użyciu metody klasy bazowej `get_error_code`.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)  
-  
- `scheduler_worker_creation_error`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> scheduler_worker_creation_error — 
+```
 
- Konstruuje `scheduler_worker_creation_error` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[scheduler_worker_creation_error](#ctor)|Przeciążone. Konstruuje `scheduler_worker_creation_error` obiektu.|
+
+## <a name="remarks"></a>Uwagi
+
+Ten wyjątek zazwyczaj jest zgłaszany, gdy wywołanie do systemu operacyjnego w celu tworzenia kontekstów wykonanie z w środowisku uruchomieniowym współbieżności: nie powiodło się. Kontekstami wykonywania są wątki, które są wykonywane zadania w środowisku uruchomieniowym współbieżności. Kod błędu, który normalnie zostałyby zwrócone w wyniku wywołania metody Win32 `GetLastError` jest konwertowana na wartość typu `HRESULT` i mogą być pobierane przy użyciu metody klasy bazowej `get_error_code`.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)
+
+`scheduler_worker_creation_error`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> scheduler_worker_creation_error —
+
+Konstruuje `scheduler_worker_creation_error` obiektu.
+
 ```
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
@@ -68,14 +72,16 @@ scheduler_worker_creation_error(
 
 explicit _CRTIMP scheduler_worker_creation_error(
     HRESULT _Hresult) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
+Opisowy komunikat dotyczący błędu.
+
 *_Hresult*<br/>
-`HRESULT` Wartości błędu, który spowodował wyjątek.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+`HRESULT` Wartości błędu, który spowodował wyjątek.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442594"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ Component Extensions)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*Modyfikator*  
+*Modyfikator*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
-*delegate*  
+*delegate*<br/>
 [Delegować](../windows/delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*nazwa_zdarzenia*  
+*nazwa_zdarzenia*<br/>
 Nazwa zdarzenia.
 
-*wartość_zwracana*  
+*wartość_zwracana*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*Parametry*  
+*Parametry*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -71,10 +71,10 @@ Zdarzenie jest skojarzenie między delegata, a funkcja członkowska (program obs
 
 Istnieją dwa rodzaje zdarzeń deklaracje:
 
-*element członkowski danych zdarzeń*  
+*element członkowski danych zdarzeń*<br/>
 Kompilator automatycznie tworzy magazynu dla zdarzenia w postaci elementu członkowskiego typu delegata i tworzy wewnętrzny `add()`, `remove()`, i `raise()` funkcji elementów członkowskich. Element członkowski danych zdarzenia muszą być zadeklarowane wewnątrz klasy. Zwracany typ zwracany typ obiektu delegowanego musi odpowiadać zwracanym typem obsługi zdarzeń.
 
-*bloku zdarzeń*  
+*bloku zdarzeń*<br/>
 Blok zdarzeń umożliwia jawnie zadeklarować i dostosowywanie zachowania `add()`, `remove()`, i `raise()` metody.
 
 Możesz użyć **+= operatory** i **operator-=** do dodawania i usuwania zdarzenia obsługi lub wywołanie `add()` i `remove()` metody jawnie.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*Modyfikator*  
+*Modyfikator*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
-*delegate*  
+*delegate*<br/>
 [Delegować](../windows/delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*nazwa_zdarzenia*  
+*nazwa_zdarzenia*<br/>
 Nazwa zdarzenia.
 
-*wartość_zwracana*  
+*wartość_zwracana*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*Parametry*  
+*Parametry*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -137,10 +137,10 @@ Delegat może mieć co najmniej jeden skojarzone metody, które będzie wywoływ
 
 Istnieją dwa rodzaje zdarzeń deklaracje:
 
-*elementy członkowskie danych zdarzeń*  
+*elementy członkowskie danych zdarzeń*<br/>
 Magazyn dla zdarzenia w formularzu elementu członkowskiego typu delegata jest tworzony przez kompilator dla zdarzenia element członkowski danych.  Element członkowski danych zdarzenia muszą być zadeklarowane wewnątrz klasy. To jest także znana jako zdarzenie proste (zobacz poniższy przykład kodu).
 
-*bloki zdarzeń*  
+*bloki zdarzeń*<br/>
 Bloki zdarzeń pozwalają dostosować zachowanie, Dodaj, Usuń i metod Zgłoś poprzez implementację, Dodaj, Usuń i zgłoś metod. Podpis metody Zgłoś Dodaj, Usuń i musi odpowiadać podpisowi delegata.  Blok zdarzeń nie są elementy członkowskie danych, a każde użycie jako element członkowski danych spowoduje wygenerowanie błędu kompilatora.
 
 Zwracany typ procedury obsługi zdarzeń musi odpowiadać zwracany typ delegata.

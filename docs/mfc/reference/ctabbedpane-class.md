@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407949"
 ---
 # <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*  
+[in] *pBar*
 
-[in] *bHide*  
+[in] *bHide*
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] [in] *nTabID*  
+[in] [in] *nTabID*
 *dockMethod*<br/>
-[in] [in] *bHide*  
+[in] [in] *bHide*
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -308,6 +308,7 @@ Przed okno zakładki, która została utworzona, należy ustawić tę wartość.
 Wartość domyślna to FALSE.
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Informacje o klasie czasu wykonywania niestandardowych `CMFCTabCtrl`-pochodnych obiektu.
 
 ```
@@ -351,8 +352,8 @@ Użyj [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) Aby włączyć lub 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)  
-[Klasy](../../mfc/reference/mfc-classes.md)  
-[Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)  
-[Klasa CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
-[Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
+[Klasa CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)

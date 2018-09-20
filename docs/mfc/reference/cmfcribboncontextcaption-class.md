@@ -20,94 +20,104 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fa63de2a633b2c8a9fff975de6eaaae7cbb470c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5726605af6b9a0d63c15cb232a094d48dd2f95a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370324"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405877"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Klasa CMFCRibbonContextCaption
-Implementuje kolorowe Podpis wyświetlany w górnej części kategoria Wstążki lub kontekstu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CMFCRibbonContextCaption : public CMFCRibbonButton  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`CMFCRibbonContextCaption::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|[CMFCRibbonContextCaption::GetColor](#getcolor)|Zwraca kolor podpis.|  
-|[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||  
-|`CMFCRibbonContextCaption::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa nie można wdrożyć bezpośrednio. [Klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) klasa korzysta z tej klasy wewnętrznie można dodać do wstążki kategorii koloru.  
-  
- Aby ustawić kolor dla kategorii wstążki, należy wywołać [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). Aby ustawić kolor dla kategorii kontekstu, wywołaj [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
-  
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
-  
- [CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxRibbonBar.h  
-  
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
- Zwraca kolor tła podpisu.  
-  
-```  
-AFX_RibbonCategoryColor GetColor() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwrócona wartość może być jedną z następujących wartości:  
-  
-- `AFX_CategoryColor_None`  
-  
-- `AFX_CategoryColor_Red`  
-  
-- `AFX_CategoryColor_Orange`  
-  
-- `AFX_CategoryColor_Yellow`  
-  
-- `AFX_CategoryColor_Green`  
-  
-- `AFX_CategoryColor_Blue`  
-  
-- `AFX_CategoryColor_Indigo`  
-  
-- `AFX_CategoryColor_Violet`  
-  
-### <a name="remarks"></a>Uwagi  
- Można ustawić kolor podpis wywołując [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) lub [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
-  
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
- Pobiera położenie prawej krawędzi kategorii karty wstążki.  
-  
-```  
-int GetRightTabX() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca po prawej stronie X wartość otaczającego prostokąt `CMFCRibbonCategory` obiektu karty Wstążki lub wartość -1, jeśli karcie zostały obcięte.  
-  
-### <a name="remarks"></a>Uwagi  
-  
-## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasy](../../mfc/reference/mfc-classes.md)   
- [Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)   
- [Klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)   
- [Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
+
+Implementuje kolorowy podpis, który pojawia się u góry kategorii Wstążki lub kontekstu.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CMFCRibbonContextCaption : public CMFCRibbonButton
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`CMFCRibbonContextCaption::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
+|[CMFCRibbonContextCaption::GetColor](#getcolor)|Zwraca kolor podpis.|
+|[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
+|`CMFCRibbonContextCaption::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
+
+## <a name="remarks"></a>Uwagi
+
+To nie można bezpośrednio utworzyć wystąpienia klasy. [Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) klasa korzysta z tej klasy wewnętrznie można dodać kolor do kategorii wstążki.
+
+Aby ustawić kolor dla kategorii wstążki, należy wywołać [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). Aby ustawić kolor dla kontekstu kategorii, należy wywołać [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+
+[CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxRibbonBar.h
+
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+
+Zwraca kolor tła podpis.
+
+```
+AFX_RibbonCategoryColor GetColor() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwracana wartość może być jedną z poniższych wyliczonych wartości:
+
+- `AFX_CategoryColor_None`
+
+- `AFX_CategoryColor_Red`
+
+- `AFX_CategoryColor_Orange`
+
+- `AFX_CategoryColor_Yellow`
+
+- `AFX_CategoryColor_Green`
+
+- `AFX_CategoryColor_Blue`
+
+- `AFX_CategoryColor_Indigo`
+
+- `AFX_CategoryColor_Violet`
+
+### <a name="remarks"></a>Uwagi
+
+Można ustawić kolor podpis, wywołując [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) lub [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
+
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+
+Pobiera pozycji po prawej stronie krawędzi karty wstążki w tej kategorii.
+
+```
+int GetRightTabX() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca po prawej stronie X wartość prostokąt otaczający `CMFCRibbonCategory` karty wstążki obiektu lub wartość -1, jeśli karta zostanie obcięta.
+
+### <a name="remarks"></a>Uwagi
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[Klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

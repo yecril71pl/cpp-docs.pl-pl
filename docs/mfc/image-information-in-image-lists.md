@@ -1,5 +1,5 @@
 ---
-title: Obraz informacji na listach obrazów | Dokumentacja firmy Microsoft
+title: Obraz informacji o listach obrazów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b45a685a9de44bdc40f83481cb83ef58a5c4234
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c98bc629cde74cf7a6fc8a416de862f50a1dd5ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422288"
 ---
 # <a name="image-information-in-image-lists"></a>Informacje o obrazach na listach obrazów
-[Cimagelist —](../mfc/reference/cimagelist-class.md) zawiera szereg funkcji, które służą do pobierania informacji z listy obrazów. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) wypełnia funkcji członkowskiej `IMAGEINFO` struktury z informacjami o pojedynczego obrazu, w tym uchwytów obrazu i maska mapy bitowe, liczba płaszczyzn kolorów i bitów na piksel i prostokąt ograniczający obraz mapy bitowej obrazu. Te informacje można użyć bezpośrednio manipulować mapy bitowe dla obrazu.  
-  
- [GetImageCount](../mfc/reference/cimagelist-class.md#getimagecount) funkcji członkowskiej pobiera liczbę obrazów na liście obrazów.  
-  
- Można utworzyć na podstawie obrazu i maska w listy obrazów za pomocą ikony [ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) funkcję elementu członkowskiego. Funkcja zwraca dojście ikonę Nowy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CImageList](../mfc/using-cimagelist.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+[CImageList](../mfc/reference/cimagelist-class.md) obejmuje pewną liczbę funkcji, które pobierać informacje z listy obrazów. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) funkcja elementu członkowskiego wypełnia `IMAGEINFO` strukturę z informacjami o pojedynczego obrazu, w tym obsługi obrazu i maska mapy bitowej, liczbę płaszczyzn kolorów i bity na piksel i prostokąt otaczający obraz mapy bitowej obrazu. Bezpośrednie manipulowanie mapy bitowe dla obrazu, można użyć tych informacji.
+
+[Getimagecount —](../mfc/reference/cimagelist-class.md#getimagecount) funkcja elementu członkowskiego pobiera liczbę obrazów w listy obrazów.
+
+Można utworzyć na podstawie obrazu i maska w listy obrazów za pomocą ikony [ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) funkcja elementu członkowskiego. Funkcja zwraca uchwyt ikonę nowego elementu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

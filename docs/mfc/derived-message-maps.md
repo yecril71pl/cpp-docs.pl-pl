@@ -1,5 +1,5 @@
 ---
-title: Pochodzące z mapy komunikatów | Dokumentacja firmy Microsoft
+title: Pochodne mapy komunikatów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e780d411e62d1347d8286f86b45df864b0fcdb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1bb9b05a6d3149e7bb6ac5e472652b499ff22c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342969"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416152"
 ---
 # <a name="derived-message-maps"></a>Pochodne mapy komunikatów
-Podczas komunikat obsługi, sprawdzanie komunikatów dla klasy mapy nie jest końca artykułu mapy komunikatów. Co się stanie, jeśli klasa `CMyView` (pochodną `CView`) nie ma pasującego wpisu wiadomości  
-  
- Należy pamiętać, że `CView`, klasa podstawowa `CMyView`, od którego pochodzi z kolei `CWnd`. W związku z tym `CMyView` *jest* `CView` i *jest* `CWnd`. Każda z tych klas ma własną mapy komunikatów. Wartość "A Widok hierarchii" poniżej przedstawia relacje hierarchiczne klasy, ale należy pamiętać, że `CMyView` obiekt jest pojedynczy obiekt, który ma właściwości wszystkich trzech klas.  
-  
- ![Hierarchia widoku](../mfc/media/vc38621.gif "vc38621")  
-Wyświetlanie hierarchii  
-  
- Tak, jeśli nie można dopasować wiadomości w klasie `CMyView`na mapę komunikatów w ramach wyszukuje również mapę komunikatów w swojej klasie podstawowej bezpośrednim. `BEGIN_MESSAGE_MAP` Makro na początku mapy wiadomości określa dwie nazwy klasy jako argumenty:  
-  
- [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
-  
- Pierwszy argument nazwy klasy, do której należy mapy komunikatów. Drugi argument zapewnia połączenie z bezpośrednim klasy podstawowej — `CView` tutaj — platformę można wyszukiwać za jego mapę komunikatów.  
-  
- Programy obsługi wiadomości w klasie podstawowej, w związku z tym są dziedziczone przez klasy pochodnej. Jest to bardzo podobnie do normalnych wirtualnych funkcji Członkowskich bez konieczności Tworzenie wirtualnego wszystkie funkcje Członkowskie obsługi.  
-  
- Jeśli nie odnaleźć programu obsługi jest w żadnym z mapy komunikatów klasy podstawowej, przeprowadzane jest domyślne przetwarzania komunikatu. Jeśli komunikat jest polecenie, platformę kieruje je do następnego docelowym polecenia. Jeśli jest standardowych komunikatów systemu Windows, wiadomości są przekazywane do odpowiednich domyślną procedurę okna.  
-  
- Aby przyśpieszyć dopasowania mapy komunikatów, platformę buforuje ostatnie dopasowań na prawdopodobieństwo, że go otrzymają tę samą wiadomość ponownie. W wyniku tego jest procesów framework bardzo wydajnie nieobsługiwany wiadomości. Mapy komunikatów zajmują również więcej miejsca niż implementacje używające funkcji wirtualnych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md)
+
+Podczas komunikatów, obsługa, sprawdzanie komunikatów tej klasy mapy jest koniec wątku mapie komunikatów. Co się stanie, jeśli klasa `CMyView` (pochodną `CView`) ma żadnego pasującego wpisu wiadomości
+
+Należy pamiętać, że `CView`, klasa bazowa `CMyView`, z kolei pochodzi od `CWnd`. Ten sposób `CMyView` *jest* `CView` i *jest* `CWnd`. Każda z tych klas ma swój własny mapy komunikatów. Rysunek "Widok hierarchii" poniżej przedstawia hierarchiczną relację klasy, ale należy pamiętać, że `CMyView` obiekt jest pojedynczy obiekt, który ma właściwości wszystkich trzech klasach.
+
+![Hierarchia widoku](../mfc/media/vc38621.gif "vc38621") Wyświetl hierarchię
+
+Jeśli komunikat nie można dopasować w klasie `CMyView`w mapie komunikatów, struktura wyszukuje również mapę komunikatów w klasie bazowej natychmiastowe. `BEGIN_MESSAGE_MAP` — Makro na początku mapy komunikatów określa nazwy dwóch klas jako jego argumenty:
+
+[!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]
+
+Pierwszy argument nazwy klasy, do której należy mapie komunikatów. Drugi argument zapewnia połączenie z bezpośrednim klasy bazowej — `CView` tutaj — dlatego ramach wyszukiwać za jego mapie komunikatów.
+
+Programy obsługi komunikatów, które podano w klasie bazowej związku z tym są dziedziczone przez klasy pochodnej. To bardzo podobna do normalnego wirtualny element członkowski funkcji bez konieczności Tworzenie wirtualnego wszystkie funkcje składowe programu obsługi.
+
+Jeśli żadna procedura obsługi nie zostanie znaleziony w żadnym z mapy komunikatów klasy bazowej, przetwarzanie domyślnego komunikatu jest wykonywane. Jeśli komunikat jest poleceniem, struktura kieruje je do następnej elemencie docelowym polecenia. Jeśli jest standardową wiadomość Windows, komunikat jest przekazywany do odpowiedniej domyślną procedurę okna.
+
+Aby przyśpieszyć dopasowania mapy komunikatów, struktura buforuje ostatnie dopasowanie prawdopodobieństwo, że będzie ona otrzymywać tego samego komunikatu ponownie. W wyniku tego jest procesy framework bardzo wydajne nieobsługiwany wiadomości. Mapy komunikatów są również miejsce skuteczniejsze od implementacji, które używają funkcji wirtualnych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md)
 

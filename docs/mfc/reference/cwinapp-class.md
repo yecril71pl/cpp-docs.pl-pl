@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412187"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -393,7 +393,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 ### <a name="parameters"></a>Parametry
 
-*pTemplate*  
+*pTemplate*<br/>
 Wskaźnik do `CDocTemplate` ma zostać dodana.
 
 ### <a name="remarks"></a>Uwagi
@@ -414,7 +414,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPathName*  
+*lpszPathName*<br/>
 Ścieżka pliku.
 
 ### <a name="remarks"></a>Uwagi
@@ -462,7 +462,7 @@ void CloseAllDocuments(BOOL bEndSession);
 
 ### <a name="parameters"></a>Parametry
 
-*bEndSession*  
+*bEndSession*<br/>
 Określa, czy sesja Windows zostanie zakończona. Ma wartość TRUE, jeśli sesja zostanie zakończona; w przeciwnym razie wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
@@ -479,7 +479,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*  
+*Kontroler domeny*<br/>
 Odwołanie do kontekstu urządzenia drukarki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -502,7 +502,7 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszAppName*  
+*lpszAppName*<br/>
 Ciąg zakończony znakiem null, który zawiera nazwę aplikacji, która korzysta z Windows. Jeśli ten argument nie jest podany lub ma wartość NULL, `CWinApp` używa ciągu zasobu AFX_IDS_APP_TITLE lub nazwę pliku wykonywalnego.
 
 ### <a name="remarks"></a>Uwagi
@@ -526,13 +526,13 @@ LONG DelRegTree(
 
 ### <a name="parameters"></a>Parametry
 
-*hParentKey*  
+*hParentKey*<br/>
 Dojście do klucza rejestru.
 
-*strKeyName*  
+*strKeyName*<br/>
 Nazwa klucza rejestru do usunięcia.
 
-*pTM*  
+*pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -556,13 +556,13 @@ virtual int DoMessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPrompt*  
+*lpszPrompt*<br/>
 Adres tekstu w oknie komunikatu.
 
-*nNie*  
+*nNie*<br/>
 W oknie komunikatu [styl](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
-*nIDPrompt*  
+*nIDPrompt*<br/>
 Indeks ciągu kontekstu pomocy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -585,7 +585,7 @@ virtual void DoWaitCursor(int nCode);
 
 ### <a name="parameters"></a>Parametry
 
-*nCode*  
+*nCode*<br/>
 Jeśli ten parametr ma wartość 1, pojawi się kursor oczekiwania. Jeśli jest to 0, kursor oczekiwania zostanie przywrócony bez zwiększania licznika odwołań. Jeśli wartość-1, kończy się kursor oczekiwania.
 
 ### <a name="remarks"></a>Uwagi
@@ -614,10 +614,10 @@ BOOL EnableD2DSupport(
 
 ### <a name="parameters"></a>Parametry
 
-*d2dFactoryType*  
+*d2dFactoryType*<br/>
 Model wątkowości fabryki D2D i zasoby, które tworzy.
 
-*writeFactoryType*  
+*writeFactoryType*<br/>
 Wartość, która określa, czy obiekt fabryki zapisu zostaną udostępnione lub izolowany
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -660,7 +660,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*  
+*bWłączenie*<br/>
 Określa, czy interakcji z paska zadań Windows 7 powinny być włączone (TRUE) lub wyłączony (FALSE).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -767,7 +767,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pTM*  
+*pTM*<br/>
 Wskaźnik do `CAtlTransactionManager` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -834,7 +834,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Odwołanie do wartości pozycji, zwrócony przez poprzednie wywołanie `GetNextDocTemplate` lub [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Wartość jest aktualizowana do następnej pozycji przez to wywołanie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -859,7 +859,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="parameters"></a>Parametry
 
-*pPrintDlg*  
+*pPrintDlg*<br/>
 Wskaźnik do [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -888,16 +888,16 @@ BOOL GetProfileBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, którego wartość ma zostać pobrane.
 
-*ppData*  
+*ppData*<br/>
 Wskazuje na wskaźnik, który będą wysyłane na adres danych.
 
-*pBytes*  
+*pBytes*<br/>
 Wskazuje UINT, który będzie otrzymywał rozmiar danych (w bajtach).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -933,13 +933,13 @@ UINT GetProfileInt(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, którego wartość ma zostać pobrane.
 
-*nDefault*  
+*nDefault*<br/>
 Określa domyślną wartość do zwrócenia, jeśli struktura nie może znaleźć wpisu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -974,13 +974,13 @@ CString GetProfileString(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, w ciągu którego ma być pobrana. Ta wartość nie może być równa NULL.
 
-*lpszDefault*  
+*lpszDefault*<br/>
 Wskazuje domyślną wartość ciągu dla danego wpisu, jeśli nie można odnaleźć wpisu w pliku inicjującym.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1010,10 +1010,10 @@ HKEY GetSectionKey(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Nazwa klucza, które mają zostać uzyskane.
 
-*pTM*  
+*pTM*<br/>
 Wskaźnik do `CAtlTransactionManager` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1042,10 +1042,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Określa dodatkowe dane. Wartość zależy od wartości *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz *uCommand* parametru opisanego w o HTMLHelp funkcji interfejsu API w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
@@ -1105,10 +1105,10 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu kursora. Możesz użyć `CString` dla tego argumentu.
 
-*nIDResource*  
+*nIDResource*<br/>
 Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1135,10 +1135,10 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu ikony. Można również użyć `CString` dla tego argumentu.
 
-*nIDResource*  
+*nIDResource*<br/>
 Identyfikator zasobu ikony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1164,7 +1164,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCursor*  
+*nIDCursor*<br/>
 **OCR_** manifestu stałych identyfikatora, który określa wstępnie zdefiniowanych kursora Windows. Konieczne jest posiadanie `#define OEMRESOURCE` przed `#include \<afxwin.h>` do uzyskania dostępu do **OCR_** stałe w systemie WINDOWS. H.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1191,7 +1191,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDIcon*  
+*nIDIcon*<br/>
 **OIC_** manifestu stałych identyfikatora, który określa wstępnie zdefiniowanych ikonę Windows. Konieczne jest posiadanie `#define OEMRESOURCE` przed `#include \<afxwin.h>` dostęp do **OIC_** stałe w systemie WINDOWS. H.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1212,7 +1212,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCursorName*  
+*lpszCursorName*<br/>
 **IDC_** manifestu stałych identyfikatora, który określa wstępnie zdefiniowanych kursora Windows. Te identyfikatory są definiowane w systemie WINDOWS. H. Na poniższej liście przedstawiono możliwe wartości wstępnie zdefiniowane i znaczenie dla *lpszCursorName*:
 
 - Standardowa IDC_ARROW kursora strzałkę
@@ -1261,7 +1261,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszIconName*  
+*lpszIconName*<br/>
 Manifestu identyfikator stałej określa wstępnie zdefiniowanych ikonę Windows. Te identyfikatory są definiowane w systemie WINDOWS. H. Aby uzyskać listę możliwych wartości wstępnie zdefiniowane i ich opisów, zobacz *lpIconName* parametru w [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1282,7 +1282,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxMRU*  
+*nMaxMRU*<br/>
 Liczba ostatnio używanych plików do śledzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1558,7 +1558,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCommand*  
+*lpszCommand*<br/>
 Wskazuje ciąg polecenia DDE odebranych przez aplikację.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1697,7 +1697,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*  
+*lCount*<br/>
 Licznik jest zwiększany każdorazowo `OnIdle` jest wywoływana, gdy kolejka komunikatów aplikacji jest pusta. Ten licznik jest resetowany do 0 każdorazowo, gdy nowy komunikat jest przetwarzany. Możesz użyć *lCount* parametru, aby określić względną długość czasu aplikacji była bezczynna bez przetwarzania wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1773,7 +1773,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Odwołanie do [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -1802,7 +1802,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Wskaźnik do [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat, który ma przetwarzać.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1821,10 +1821,10 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parametry
 
-*Kod*  
+*Kod*<br/>
 Określa kod punktów zaczepienia. Ta funkcja członkowska używa kodu, aby określić sposób przetwarzania *lpMsg.*
 
-*lpMsg*  
+*lpMsg*<br/>
 Wskaźnik do Windows [MSG](../../mfc/reference/msg-structure1.md) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1847,7 +1847,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Odwołanie do [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1892,10 +1892,10 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>Parametry
 
-*e*  
+*e*<br/>
 Wskaźnik do nieprzechwycony wyjątek.
 
-*pMsg*  
+*pMsg*<br/>
 A [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera informacje dotyczące komunikatów systemu windows, które spowodowało platformę, aby zgłosić wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2127,13 +2127,13 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>Parametry
 
-*hDevNames*  
+*hDevNames*<br/>
 Dojście do [DEVNAMES](../../mfc/reference/devnames-structure.md) struktura, która identyfikuje sterownika, urządzenia i dane wyjściowe nazwy portu określonej drukarki.
 
-*pole hDevMode*  
+*pole hDevMode*<br/>
 Dojście do [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) strukturę, która określa informacje dotyczące inicjowania urządzenia i środowiska drukarki.
 
-*bFreeOld*  
+*bFreeOld*<br/>
 Zwalnia wcześniej wybrane drukarki.
 
 ### <a name="remarks"></a>Uwagi
@@ -2150,7 +2150,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 ### <a name="parameters"></a>Parametry
 
-*eHelpType*  
+*eHelpType*<br/>
 Określa typ pomocy do użycia. Zobacz [CWinApp::m_eHelpType](#m_ehelptype) Aby uzyskać więcej informacji.
 
 ### <a name="remarks"></a>Uwagi
@@ -2170,10 +2170,10 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRegistryKey*  
+*lpszRegistryKey*<br/>
 Wskaźnik do ciągu zawierającego nazwę klucza.
 
-*nIDRegistryKey*  
+*nIDRegistryKey*<br/>
 Identyfikator zasobu ciągu zawierającego nazwę klucza rejestru.
 
 ### <a name="remarks"></a>Uwagi
@@ -2266,10 +2266,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Określa dodatkowe dane. Wartość zależy od wartości *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) funkcji Windows.
 
 ### <a name="remarks"></a>Uwagi
@@ -2296,16 +2296,16 @@ BOOL WriteProfileBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis. Jeśli sekcja nie istnieje, zostanie utworzony. Nazwa sekcji jest przypadek, niezależnie od; ciąg może być w dowolnej kombinacji wielkich i małych liter.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, w którym wartość ma być zapisywane. Jeśli wpis nie istnieje w określonej sekcji, zostanie utworzony.
 
-*pData*  
+*pData*<br/>
 Punkty danych, które ma zostać zapisany.
 
-*nBytes*  
+*nBytes*<br/>
 Zawiera liczbę bajtów do zapisania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2333,13 +2333,13 @@ BOOL WriteProfileInt(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis. Jeśli sekcja nie istnieje, zostanie utworzony. Nazwa sekcji jest przypadek, niezależnie od; ciąg może być w dowolnej kombinacji wielkich i małych liter.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, w którym wartość ma być zapisywane. Jeśli wpis nie istnieje w określonej sekcji, zostanie utworzony.
 
-*nWartość:*  
+*nWartość:*<br/>
 Zawiera wartość, która ma zostać zapisany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2367,13 +2367,13 @@ BOOL WriteProfileString(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Wskazuje ciąg zakończony znakiem null określa sekcję zawierającą wpis. Jeśli sekcja nie istnieje, zostanie utworzony. Nazwa sekcji jest przypadek, niezależnie od; ciąg może być w dowolnej kombinacji wielkich i małych liter.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Wskazuje ciąg zakończony wartością null zawierający wpis, w którym wartość ma być zapisywane. Jeśli wpis nie istnieje w określonej sekcji, zostanie utworzony. Jeśli ten parametr ma wartość NULL, sekcji określony przez *lpszSection* zostanie usunięty.
 
-*lpszValue*  
+*lpszValue*<br/>
 Wskazuje ciąg, który ma zostać zapisany. Jeśli ten parametr ma wartość NULL, wpis określony przez *lpszEntry* parametr zostanie usunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2396,13 +2396,13 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="parameters"></a>Parametry
 
-*lpcszAppID*  
+*lpcszAppID*<br/>
 Określa identyfikator modelu użytkownika aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CWinThread](../../mfc/reference/cwinthread-class.md)  
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)  
-[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)  
+[Klasa CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)

@@ -24,24 +24,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2589db4d316d8421b0792e4a152e7fa390725f
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dca6b7753ad3fd4024cadb899652336fa2f860b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403100"
 ---
 # <a name="registering-window-classes"></a>Rejestrowanie klas okien
-Okno "klasy" w tradycyjnych programowanie dla systemu Windows definiują właściwości "klasy" (nie klasy C++), z której można utworzyć dowolną liczbę systemu windows. Ten rodzaj klasy jest szablon lub modelu do tworzenia systemu windows.  
-  
-## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Rejestrowanie klasy okna w tradycyjnych programów dla systemu Windows  
- W programie tradycyjnego dla systemu Windows bez MFC, przetworzyć wszystkie wiadomości do okna jego "procedurę okna" lub "`WndProc`." A `WndProc` jest skojarzony z oknem za pomocą procesu "Rejestrowanie klasy okna". Okno główne jest zarejestrowany w `WinMain` funkcji, ale inne klasy systemu windows może być dowolnym zarejestrowany w aplikacji. Rejestracja jest zależna od struktury, która zawiera wskaźnik do `WndProc` działać wraz z specyfikacje kursora, Pędzel tła i tak dalej. Struktura jest przekazywana jako parametr, oraz nazwę ciągu we wcześniejszym wywołaniu do klasy `RegisterClass` funkcji. W związku z tym klasy rejestracji może być współużytkowane przez wiele okien.  
-  
-## <a name="window-class-registration-in-mfc-programs"></a>Rejestrowanie klasy okna w programach MFC  
- Natomiast większość działań rejestracja klasy okna odbywa się automatycznie w programu MFC framework. Jeśli używasz MFC zwykle wyprowadzenia klasy okna języka C++ z istniejącej klasy biblioteki dziedziczenia klasy przy użyciu normalnego składni języka C++. Platforma nadal korzysta z tradycyjnego "rejestracji klasy" który zawiera kilka z nich standardowe, rejestrowana w razie potrzeby. Możesz zarejestrować dodatkowych rejestracji klasy przez wywołanie metody [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) funkcji globalnej, a następnie przekazywanie zarejestrowanych klasy `Create` funkcji członkowskiej klasy `CWnd`. Zgodnie z opisem w tym miejscu tradycyjne "rejestracji class" w systemie Windows jest nie należy mylić z klasy C++.  
-  
- Aby uzyskać więcej informacji, zobacz [techniczne Uwaga 1](../mfc/tn001-window-class-registration.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie okien](../mfc/creating-windows.md)
+
+Okno "klasy" w tradycyjnego programowania Windows definiują właściwości "class" (nie klasy języka C++), z której można utworzyć dowolną liczbę systemu windows. Tego rodzaju klasy jest szablon lub modelu tworzenia systemu windows.
+
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Rejestrowanie klasy okna w tradycyjnych programów dla Windows
+
+W tradycyjnych program Windows bez MFC, są przetwarzane wszystkie komunikaty do okna w jego "procedurę okna" lub "`WndProc`." Element `WndProc` jest skojarzony z oknem przy użyciu procesu "Rejestrowanie klasy okna". Okno główne jest zarejestrowany w `WinMain` funkcji, ale inne klasy systemu windows można rejestrować dowolne miejsce w aplikacji. Rejestracja jest zależny od struktury, która zawiera wskaźnik do `WndProc` funkcji wraz z specyfikacją kursora, Pędzel tła i tak dalej. Struktura jest przekazywany jako parametr, wraz z nazwą ciągu klasy, w wywołaniu `RegisterClass` funkcji. W związku z tym klasa rejestracji może być współużytkowane przez wiele okien.
+
+## <a name="window-class-registration-in-mfc-programs"></a>Rejestrowanie klasy okna dla programów MFC
+
+Z kolei większość działań rejestracji klasy okna odbywa się automatycznie w programu MFC framework. Jeśli używasz MFC zazwyczaj pochodzić klasy okna języka C++ z istniejącej klasy biblioteki przy użyciu normalnych składni języka C++ do obsługi dziedziczenia klasy. Struktura nadal korzysta z tradycyjnych "klasy rejestracji" który zawiera kilka z nich standardowe, rejestrowana w razie. Możesz zarejestrować dodatkowe rejestracji klasy przez wywołanie metody [afxregisterwndclass —](../mfc/reference/application-information-and-management.md#afxregisterwndclass) funkcja globalna, a następnie przekazywanie zarejestrowanych klasy `Create` funkcji składowej typu `CWnd`. Zgodnie z opisem w tym miejscu tradycyjne "class rejestracji" w Windows jest nie należy mylić z klasy języka C++.
+
+Aby uzyskać więcej informacji, zobacz [techniczne Uwaga 1](../mfc/tn001-window-class-registration.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie okien](../mfc/creating-windows.md)
 

@@ -18,21 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ffc5b11783806555b210b8561cbe6cdd2878ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 518fbe754b676798c6d2acc2a3e26ea1d3e3d4ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444168"
 ---
 # <a name="testing-internet-applications"></a>Testowanie aplikacji internetowych
-Brak niektórych wyjątkowe wyzwanie testowania w Internecie, szczególnie w przypadku aplikacji uruchomionych na serwerze sieci Web. Testowanie początkowej prawdopodobnie będzie można wykonać za pomocą klienta pojedynczego użytkownika, nawiązania połączenia z serwerem testu. Będzie to przydatne w przypadku debugowania kodu.  
-  
- Należy również przetestować w rzeczywistych warunkach: z wielu klientów połączonych za pośrednictwem szybkich połączeń, a także małej szybkości linii szeregowych, łącznie z połączeniami modemu. Może być trudne do symulowania rzeczywistych warunkach, ale warto pewnością wydatków czasu projektowania możliwe scenariusze i ich wykonywania. Jeśli to możliwe również można użyć narzędzia pojemności i testy obciążenia. Niektóre klasy błędów, takich jak błędy czasu są trudne do znalezienia i do odtworzenia.  
-  
- Jednym z wyzwań związanych z programowaniem Internetu jest jej widoczność. Wiele operacji uzyskania dostępu do witryny może spowalniać działanie serwera. Chcesz, aby serwer zmniejszenie bezpiecznie zamknąć. Chcesz uniemożliwić wszystko, co może być destrukcyjnego na komputerze użytkownika, jeśli aplikacja nie powiedzie się (np. uszkodzenie danych podczas zapisywania w rejestrze lub podczas zapisywania plików cookie na komputerze klienckim).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)   
- [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
+
+Istnieją pewne unikatowe wyzwania testowania w Internecie, szczególnie w przypadku aplikacji uruchomionych na serwerze sieci Web. Wstępne testowanie będzie prawdopodobnie odbywać się przy użyciu pojedynczego użytkownika klienta nawiązującego połączenie z serwera testowego. To być przydatne podczas debugowania kodu.
+
+Należy również przetestować w rzeczywistych warunkach: za pomocą wielu klientów połączonych za pośrednictwem szybkich połączeń, a także o małej szybkości linii szeregowych, w tym połączeń modemu. Może być trudne do symulowania rzeczywistych warunków, ale warto bez obaw wydatków czasu projektowania możliwych scenariuszy i ich wykonania. Jeśli to możliwe również można użyć narzędzi, czy pojemność i testowania obciążeniowego. Niektóre klasy błędów, takie jak błędy czasu są trudne do znalezienia i do odtworzenia.
+
+Jednym z wyzwań programowania Internet jest jego widoczność. Wiele dostępów do swojej witryny może spowalniać działanie serwera. Chcesz, aby serwer do upadaj łagodnie. Chcesz uniemożliwić wszystko, co może stanowić destrukcyjne na komputerze użytkownika, jeśli aplikacja nie powiedzie się (np. uszkodzenie danych podczas zapisywania w rejestrze lub podczas zapisywania plików cookie na komputerze klienckim).
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
 

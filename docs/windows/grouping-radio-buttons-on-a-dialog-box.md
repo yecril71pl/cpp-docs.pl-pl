@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315395"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392968"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Grupowanie przycisków radiowych w oknie dialogowym (C++)
 
@@ -69,6 +69,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

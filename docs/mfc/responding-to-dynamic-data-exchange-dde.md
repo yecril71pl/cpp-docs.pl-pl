@@ -21,16 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327a719de5cdd3eef7c0eb769b0abf7cfe03ca49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f55836f013ffb85bb1d490190dc5c0d196cffcf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423471"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Odpowiadanie na dynamiczną wymianę danych (DDE)
-Okno ramowe może odpowiadać na żądania programu exchange (DDE) danych dynamicznych do otwierania plików z Menedżera plików (Jeśli rozszerzenie jest zarejestrowane lub skojarzone z aplikacją). Zobacz [powłoki rejestracji](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+Okno ramowe mogą odpowiadać na żądania programu exchange (DDE) dane dynamiczne umożliwia otwieranie plików z Menedżera plików (Jeśli rozszerzenie jest zarejestrowane lub skojarzone z aplikacją). Zobacz [powłoki rejestracji](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

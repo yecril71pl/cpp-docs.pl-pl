@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f1ed792407160c1d025dabb3b8cc01a2ebc7330
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8de12d1b421fd78fb9ed2a45cc14826541f72757
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441698"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>Tworzenie nowego przycisku paska narzędzi (C++)
 
@@ -71,6 +71,6 @@ ATL i MFC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)  
-[Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>
+[Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Edytor paska narzędzi](../windows/toolbar-editor.md)

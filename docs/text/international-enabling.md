@@ -18,35 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6c889e8b8312c3b4d6383fa2b82596faf1de444c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596201"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403776"
 ---
 # <a name="international-enabling"></a>Włączanie internacjonalizacji
-Założeń dotyczących znakowe i manipulowania, które nie będą działać dobrze sprawdza się w aplikacjach międzynarodowych sprawia, że tradycyjnych kodu C i C++. Chociaż MFC i biblioteki wykonawczej obsługi standardu Unicode i MBCS, ma nadal pracy należy wykonać. Przeprowadzenie Cię w tej sekcji wyjaśniono znaczenie "Włączanie internacjonalizacji" w programie Visual C++:  
-  
--   Unicode i MBCS są włączane przy użyciu przenośne typy danych w listy parametrów funkcji MFC i zwracanych typów. Te typy warunkowe są definiowane w odpowiedni sposób, w zależności od tego, czy kompilacja definiuje symbol `_UNICODE` lub symbol `_MBCS` (co oznacza DBCS). Różne rodzaje biblioteki MFC są automatycznie łączeni ze swoją aplikacją, w zależności od tego, który z tych dwóch symboli definiuje kompilacji.  
-  
--   Kod biblioteki klasy używa przenośnej funkcji wykonawczej i inny sposób do zapewnienia poprawnego zachowania Unicode i MBCS.  
-  
--   Możesz nadal obsługiwać niektórych rodzajów zadań internacjonalizacji w kodzie:  
-  
-    -   Użyj tych samych funkcji wykonawczej przenośne wchodzące w MFC przenośne w ramach jednego środowiska.  
-  
-    -   Wprowadzić ciągi literałów i znaki przenośne w ramach jednego środowiska za pomocą `_T` makra. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
-  
-    -   Podczas analizowania ciągów, w obszarze MBCS, należy zachować środki ostrożności. Te środki ostrożności nie są potrzebne w ramach standardu Unicode. Aby uzyskać więcej informacji, zobacz [porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md).  
-  
-    -   Zajmujemy się po przemieszaniu ANSI (8-bitowa) i Unicode (16-bitowy) znaki w aplikacji. Można używać znaków ANSI w niektórych części programu i znaki Unicode w innych, ale nie można mieszać je w ten sam ciąg.  
-  
-    -   Nie nie trwale kodować ciągów w aplikacji. Zamiast tego należy wprowadzić je STRINGTABLE zasobów przez dodanie ich do pliku .rc w aplikacji. Aplikacja może być lokalizowana następnie bez konieczności zmiany kodu źródłowego lub ponownej kompilacji. Aby uzyskać więcej informacji na temat zasobów STRINGTABLE zobacz [edytor ciągów](../windows/string-editor.md).  
-  
+
+Założeń dotyczących znakowe i manipulowania, które nie będą działać dobrze sprawdza się w aplikacjach międzynarodowych sprawia, że tradycyjnych kodu C i C++. Chociaż MFC i biblioteki wykonawczej obsługi standardu Unicode i MBCS, ma nadal pracy należy wykonać. Przeprowadzenie Cię w tej sekcji wyjaśniono znaczenie "Włączanie internacjonalizacji" w programie Visual C++:
+
+- Unicode i MBCS są włączane przy użyciu przenośne typy danych w listy parametrów funkcji MFC i zwracanych typów. Te typy warunkowe są definiowane w odpowiedni sposób, w zależności od tego, czy kompilacja definiuje symbol `_UNICODE` lub symbol `_MBCS` (co oznacza DBCS). Różne rodzaje biblioteki MFC są automatycznie łączeni ze swoją aplikacją, w zależności od tego, który z tych dwóch symboli definiuje kompilacji.
+
+- Kod biblioteki klasy używa przenośnej funkcji wykonawczej i inny sposób do zapewnienia poprawnego zachowania Unicode i MBCS.
+
+- Możesz nadal obsługiwać niektórych rodzajów zadań internacjonalizacji w kodzie:
+
+   - Użyj tych samych funkcji wykonawczej przenośne wchodzące w MFC przenośne w ramach jednego środowiska.
+
+   - Wprowadzić ciągi literałów i znaki przenośne w ramach jednego środowiska za pomocą `_T` makra. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+
+   - Podczas analizowania ciągów, w obszarze MBCS, należy zachować środki ostrożności. Te środki ostrożności nie są potrzebne w ramach standardu Unicode. Aby uzyskać więcej informacji, zobacz [porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md).
+
+   - Zajmujemy się po przemieszaniu ANSI (8-bitowa) i Unicode (16-bitowy) znaki w aplikacji. Można używać znaków ANSI w niektórych części programu i znaki Unicode w innych, ale nie można mieszać je w ten sam ciąg.
+
+   - Nie nie trwale kodować ciągów w aplikacji. Zamiast tego należy wprowadzić je STRINGTABLE zasobów przez dodanie ich do pliku .rc w aplikacji. Aplikacja może być lokalizowana następnie bez konieczności zmiany kodu źródłowego lub ponownej kompilacji. Aby uzyskać więcej informacji na temat zasobów STRINGTABLE zobacz [edytor ciągów](../windows/string-editor.md).
+
 > [!NOTE]
->  Zestawy znaków Europejską i MBCS mają niektórych znaków, takich jak akcentowanych liter z kody znaków jest większa od 0x80. Ponieważ większość kodu używa znaków podpisem, te znaki, które są większe niż 0x80 są rozszerzona o znak po przekonwertowaniu do **int**. Jest to problem dla indeksowania tablic, ponieważ znaki znakiem jest ujemna, indeksuje spoza tablicy. Języki, które używają MBCS, takich jak japoński, są również unikatowe. Ponieważ znak może składać się z 1 lub 2 bajtów, należy zawsze manipulować zarówno w bajtach, w tym samym czasie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Unicode i MBCS](../text/unicode-and-mbcs.md)   
- [Strategie internacjonalizacji](../text/internationalization-strategies.md)
+>  Zestawy znaków Europejską i MBCS mają niektórych znaków, takich jak akcentowanych liter z kody znaków jest większa od 0x80. Ponieważ większość kodu używa znaków podpisem, te znaki, które są większe niż 0x80 są rozszerzona o znak po przekonwertowaniu do **int**. Jest to problem dla indeksowania tablic, ponieważ znaki znakiem jest ujemna, indeksuje spoza tablicy. Języki, które używają MBCS, takich jak japoński, są również unikatowe. Ponieważ znak może składać się z 1 lub 2 bajtów, należy zawsze manipulować zarówno w bajtach, w tym samym czasie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
+[Strategie internacjonalizacji](../text/internationalization-strategies.md)

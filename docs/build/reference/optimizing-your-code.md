@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444414"
 ---
 # <a name="optimizing-your-code"></a>Optymalizacja kodu
 
@@ -33,11 +33,14 @@ Dzięki optymalizacji pliku wykonywalnego, można osiągnąć kompromis między 
 
 W następujących tematach opisano niektóre funkcje optymalizacji w języku C/C++.
 
-[Optymalizacja Pragm i słów kluczowych](../../build/reference/optimization-pragmas-and-keywords.md) listę słowa kluczowe i pragmy, można użyć w kodzie, aby zwiększyć wydajność.
+[Optymalizacja pragm i słów kluczowych](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+Lista słowa kluczowe i pragmy, można użyć w kodzie, aby zwiększyć wydajność.
 
-[Opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md) listę **/O** opcje kompilatora, które dotyczą wykonywania rozmiar szybkość lub kodu.
+[Opcje kompilatora w rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md)<br/>
+Lista **/O** opcje kompilatora, które dotyczą wykonywania rozmiar szybkość lub kodu.
 
-[Deklarator odwołania do wartości r: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) odwołania Rvalue wspierają implementację *semantyki przenoszenia*. Jeśli przenoszenie semantyki są używane do implementowania biblioteki szablonów, wydajność aplikacji, które używają tych szablonów może znacznie poprawić.
+[Deklarator odwołania do wartości R: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+Odwołania Rvalue wspierają implementację *semantyki przenoszenia*. Jeśli przenoszenie semantyki są używane do implementowania biblioteki szablonów, wydajność aplikacji, które używają tych szablonów może znacznie poprawić.
 
 ### <a name="the-optimize-pragma"></a>Pragma — Optymalizuj
 
@@ -59,9 +62,11 @@ Paradoxically optymalizacji programu dla danej szybkości spowodować wolniejsze
 
 W poniższych tematach omówiono dobrych praktyk programowania.
 
-[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](../../build/reference/tips-for-improving-time-critical-code.md) lepiej techniki tworzenia kodu może zapewnić lepszą wydajność. W tym temacie sugeruje kodowania technik, które pomogą Ci upewnić się, czy pomyślnie wykonać czas ma istotne znaczenie fragmenty kodu.
+[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+Lepiej techniki tworzenia kodu może zapewnić lepszą wydajność. W tym temacie sugeruje kodowania technik, które pomogą Ci upewnić się, czy pomyślnie wykonać czas ma istotne znaczenie fragmenty kodu.
 
-[Najlepsze rozwiązania dotyczące optymalizacji](../../build/reference/optimization-best-practices.md) zawiera ogólne wytyczne dotyczące najlepszy sposób optymalizacji aplikacji.
+[Najlepsze rozwiązania dotyczące optymalizacji](../../build/reference/optimization-best-practices.md)<br/>
+Zawiera ogólne wytyczne dotyczące najlepszy sposób optymalizacji aplikacji.
 
 ## <a name="debugging-optimized-code"></a>Debugowanie zoptymalizowanego kodu
 

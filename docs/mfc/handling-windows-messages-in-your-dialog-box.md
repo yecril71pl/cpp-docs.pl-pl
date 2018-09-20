@@ -1,5 +1,5 @@
 ---
-title: Obsługa komunikatów systemu Windows w oknie dialogowym | Dokumentacja firmy Microsoft
+title: Obsługa komunikatów Windows w oknie dialogowym | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401020"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Obsługa komunikatów systemu Windows w oknie dialogowym
-Okna dialogowe są systemu windows, więc może obsługiwać komunikaty systemu Windows, jeśli podasz funkcje obsługi odpowiednie. Po utworzeniu klasy okien dialogowych za pomocą Kreatora dodawania klasy z mapy pusty komunikat, Kreator dodaje do klasy. Okno właściwości, aby zamapować wszelkie komunikaty systemu Windows lub polecenia, które klasy do obsługi.  
-  
- Zobacz [mapowanie komunikatów systemu Windows do Twojej klasy okien dialogowych](../mfc/mapping-windows-messages-to-your-class.md) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Okna dialogowe są systemu windows, więc może obsługiwać komunikaty Windows, jeśli podasz funkcje odpowiedni program obsługi. Po utworzeniu klasy okien dialogowych za pomocą Kreatora dodawania klasy z mapy pustego komunikatu, Kreator dodaje do klasy. Okno właściwości służy do mapowania dowolnej wiadomości Windows lub polecenia, które klasy do obsługi.
+
+Zobacz [mapowanie komunikatów Windows Your klasy okien dialogowych](../mfc/mapping-windows-messages-to-your-class.md) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

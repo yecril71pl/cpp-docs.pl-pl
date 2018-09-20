@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 029528baabcc32c14fb6b35e4a13f4118602d5d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417803"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -38,7 +38,7 @@ Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniow
 
 ### <a name="parameters"></a>Parametry
 
-*uuid*  
+*uuid*<br/>
 Identyfikator UUID, który identyfikuje wersję interfejsu.
 
 ## <a name="remarks"></a>Uwagi
@@ -74,5 +74,5 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
 [Atrybuty interfejsu](../windows/interface-attributes.md)  

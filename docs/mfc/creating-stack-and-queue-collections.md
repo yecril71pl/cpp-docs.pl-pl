@@ -21,40 +21,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403789"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Tworzenie kolekcji stosów i kolejek
-W tym artykule opisano sposób tworzenia inne struktury danych, takich jak [stosy](#_core_stacks) i [kolejek](#_core_queues), z MFC lista klas. W przykładach użyto klasy pochodzące od `CList`, ale można użyć `CList` bezpośrednio, chyba że konieczne jest dodanie funkcji.  
-  
-##  <a name="_core_stacks"></a> Stosy  
- Ponieważ kolekcji standardowych listy head oraz tail, jest łatwo utworzyć kolekcję pochodnej listy, która symuluje zachowanie stosu ostatnich w pierwszym poza. Stos przypomina stosu zasobników w kawiarnia. Gdy zasobników są dodawane do stosu, przejdź na szczycie stosu. Ostatniego na pasku zadań, dodane jest pierwsze do usunięcia. Funkcje Członkowskie kolekcji listy `AddHead` i `RemoveHead` może służyć do dodania i usunięcia elementów w szczególności z węzła głównego z listy; w związku z tym najbardziej ostatnio dodany element to pierwszy do usunięcia.  
-  
-#### <a name="to-create-a-stack-collection"></a>Aby utworzyć kolekcję stosu  
-  
-1.  Klasa wyprowadzona z nowej listy na jednym z istniejących lista klas MFC i dodać więcej funkcji elementów członkowskich do obsługi funkcji operacji stosu.  
-  
-     W poniższym przykładzie przedstawiono sposób dodawania funkcji Członkowskich push elementów na stosie rzut oka na górnego elementu stosu, i pop górny element ze stosu:  
-  
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]  
-  
- Należy pamiętać, że to rozwiązanie przedstawia podstawową `CObList` klasy. Użytkownik może wywołać dowolną `CObList` funkcji członkowskiej, czy warto stosu lub nie.  
-  
-##  <a name="_core_queues"></a> Kolejki  
- Ponieważ kolekcji standardowych listy head oraz tail, również jest łatwo utworzyć kolekcję pochodnej listy, która symuluje zachowanie kolejki pierwszy w pierwszym poza. Kolejka jest jak linia życia osób w kawiarnia. Pierwsza osoba w wierszu jest pierwszy ma być obsługiwana. Ponieważ pochodzą więcej osób, przejdź do końca wiersza oczekiwania ich Włącz. Funkcje Członkowskie kolekcji listy `AddTail` i `RemoveHead` można dodać i usunąć elementy w szczególności head lub tail listy; w związku z tym maksymalnie niedawno dodano element jest zawsze ostatni usunięcie.  
-  
-#### <a name="to-create-a-queue-collection"></a>Aby utworzyć kolekcję kolejki  
-  
-1.  Pochodzić z jednej z klas wstępnie zdefiniowanej listy dostarczane z Microsoft Foundation Class Library nową klasę listy i dodać więcej funkcji elementów członkowskich do obsługi semantykę operacji kolejki.  
-  
-     W poniższym przykładzie pokazano, jak dołączyć funkcje Członkowskie Dodaj element na końcu kolejki i uzyskać elementu z przodu kolejki.  
-  
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kolekcje](../mfc/collections.md)
+
+W tym artykule opisano sposób tworzenia innych struktur danych, takich jak [stosy](#_core_stacks) i [kolejek](#_core_queues), MFC lista klas. W przykładach użyto klasy pochodne `CList`, ale można użyć `CList` bezpośrednio o ile nie trzeba dodawać funkcje.
+
+##  <a name="_core_stacks"></a> Stosy
+
+Ponieważ kolekcji standardowych listy ma head i ogon, to można łatwo utworzyć kolekcję listy pochodnej, która naśladuje zachowanie stosu ostatni wejściu — pierwszy na wyjściu. Stos jest jak stos zasobniki w danymi stołówki. Gdy zasobniki są dodawane do stosu, przejdź na górze stosu. Ostatni zasobnik, dodano jest pierwszy do usunięcia. Funkcje elementów członkowskich kolekcji listy `AddHead` i `RemoveHead` może służyć do dodawania i usuwania elementów w szczególności nagłówek listy; w związku z tym, najbardziej niedawno dodano element jest pierwszy do usunięcia.
+
+#### <a name="to-create-a-stack-collection"></a>Aby utworzyć kolekcję stosu
+
+1. Pochodzić nowa klasa listy z jednej z istniejących klas MFC w liście, a następnie dodać więcej funkcji elementów członkowskich do obsługi funkcji operacji stosu.
+
+     Poniższy przykład przedstawia sposób dodawania elementów członkowskich i wypychania elementów do stosu rzut oka na górnego elementu stosu, pop górnego elementu ze stosu:
+
+     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+
+Należy pamiętać, że tego podejścia ujawnia podstawowe `CObList` klasy. Użytkownik może wywoływać dowolną `CObList` funkcję członkowską, czy sens dla stosu lub nie.
+
+##  <a name="_core_queues"></a> kolejki
+
+Ponieważ kolekcji standardowych listy ma head i ogon, również jest łatwo utworzyć kolekcję listy pochodnej, która naśladuje zachowanie kolejką pierwszy wejściu — pierwszy na wyjściu. Kolejka jest jak linia osób z danymi stołówki. Pierwszą osobą w wierszu jest pierwszym, który ma być obsługiwana. Ponieważ pochodzą więcej osób, przejdź do końca wiersza, wyłącz ich oczekiwania. Funkcje elementów członkowskich kolekcji listy `AddTail` i `RemoveHead` może służyć do dodania i usunięcia elementów w szczególności związanych z węzłem głównym lub tail listy; w związku z tym, najbardziej niedawno dodano element zawsze jest ostatnim do usunięcia.
+
+#### <a name="to-create-a-queue-collection"></a>Aby utworzyć kolekcję kolejki
+
+1. Pochodzić nowa klasa listy z jednej ze wstępnie zdefiniowanej listy klas, wyposażone w bibliotece klas Microsoft Foundation, a następnie dodać więcej funkcji elementów członkowskich do obsługi semantykę operacji kolejki.
+
+     Poniższy przykład pokazuje, jak można dołączyć funkcji elementów członkowskich do dodania elementu do końca kolejki i pobrać element z przodu kolejki.
+
+     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Kolekcje](../mfc/collections.md)
 

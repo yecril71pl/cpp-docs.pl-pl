@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae5ac3ab417eddd2c0038a5948487913824ef673
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433208"
 ---
 # <a name="active-document-containment"></a>Zawieranie dokumentów aktywnych
-Zawieranie dokumentów aktywnych jest technologia, która udostępnia jeden ramki, w której do pracy z dokumentami, zamiast wymuszania wielokrotnego do utworzenia i użycia wielu klatek aplikacji dla każdego typu dokumentu. Różni się z podstawową technologię OLE w tym OLE współpracuje z obiektami osadzonego wewnątrz złożonego dokumentu, w którym mogą być aktywne tylko jednego fragmentu zawartości. W kontekście jedną ramkę z zawieranie dokumentów aktywnych aktywowania całego dokumentu (to znaczy całej aplikacji, w tym skojarzone menu, paski narzędzi i tak dalej).  
-  
- Microsoft Office zaimplementować Office Binder pierwotnie opracowano technologii zawierania dokumentów aktywnych. Jednak technologii jest wystarczająco elastyczny, aby obsługiwać kontenery dokumentów aktywnych niż Office Binder i może obsługiwać serwery dokumentu, innych niż aplikacje pakietu Office i zgodne z pakietem Office.  
-  
- Nosi nazwę aplikacji, która obsługuje dokumenty aktywne [kontenera dokumentów aktywnych](../mfc/active-document-containers.md). Przykładami takich kontenery są Microsoft Office Binder lub programu Microsoft Internet Explorer.  
-  
- Zawieranie dokumentów aktywnych jest implementowany jako zestaw rozszerzeń OLE dokumentów technologii złożonego dokumentu OLE. Rozszerzenia są dodatkowe interfejsy, które umożliwiają obiekt osadzenia, w miejsce, do reprezentowania cały dokument zamiast pojedynczy osadzonej zawartości. Podobnie jak w przypadku dokumentów OLE zawieranie dokumentów aktywnych używa kontenera, w którym miejsce wyświetlania dokumenty aktywne i serwerów, które umożliwiają możliwości interfejsu i manipulowania nimi dokumentów aktywnych się użytkownika.  
-  
- [Serwer dokumentów aktywnych](../mfc/active-document-servers.md) jest aplikacji (takich jak Word, Excel lub PowerPoint), która obsługuje co najmniej jednej klasy dokumentów aktywnych, w których każdy obiekt obsługuje interfejsy rozszerzenia, które umożliwiają obiektu aktywacji w odpowiedniego kontenera.  
-  
- [Dokumentów aktywnych](../mfc/active-documents.md) (udostępnione z serwer dokumentów aktywnych, takich jak Word czy Excel) jest zasadniczo dobrym przybliżeniem pełnego, z konwencjonalnej dokument, który jest osadzony jako obiekt w ramach innego kontenera dokumentów aktywnych. W przeciwieństwie do osadzonych obiektów active dokumenty mają pełną kontrolę nad ich stron, a pełna interfejs aplikacji (z wszystkie jego polecenia i narzędzia) jest dostępny dla użytkownika, aby je edytować.  
-  
- Dokument aktywny najlepiej jest rozpoznawany przez identyfikujący standardowe osadzonego obiektu OLE. Po Konwencji OLE osadzonego obiektu to taki, który jest wyświetlany na stronie dokumentu, który jest jego właścicielem, a dokumentu jest zarządzana przez kontener OLE. Kontener przechowuje dane osadzonego obiektu z pozostałej części dokumentu. Jednak obiekty osadzone są ograniczone, w tym kontroluje strony, na którym są wyświetlane.  
-  
- Użytkownicy aplikacji kontenera dokumentów aktywnych można tworzyć dokumenty aktywne (nazywanych sekcjami Office Binder) przy użyciu ich ulubionych aplikacji (zakładając, że te aplikacje są aktywnego dokumentu. włączone), jeszcze użytkownicy mogą zarządzać Projekt wynikowy jako pojedyncza jednostka, która może być jednoznacznie o nazwie, zapisany wydruku i tak dalej. W taki sam sposób użytkownika przeglądarki internetowej można traktować jako jednostki magazynu pojedynczego dokumentu, umożliwia przeglądanie dokumentów, w tym magazynie z jednej lokalizacji całej sieci, a także systemów pliku lokalnego.  
-  
-## <a name="sample-programs"></a>Przykładowe programy  
-  
--   [MFCBIND](../visual-cpp-samples.md) przykładową wdrożenia aplikacji kontenera dokumentów aktywnych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [MFC COM](../mfc/mfc-com.md)
+
+Zawieranie dokumentów aktywnych jest to technologia, która zawiera jedną klatkę, w której chcesz pracować z dokumentami, zamiast wymuszania wielokrotnego tworzenia i używania wielu klatek aplikacji dla każdego typu dokumentu. Różni się od podstawowych technologii OLE w tym OLE współpracuje z osadzonych obiektów w dokumencie złożonym, w którym może być aktywne tylko jednego elementu zawartości. W kontekście jednej ramce, przy użyciu zawierania dokumentów aktywnych aktywować cały dokument (czyli całej aplikacji, w tym skojarzonego menu, paski narzędzi i tak dalej).
+
+Technologia zawierania dokumentów aktywnych pierwotnie został opracowany pakietu Microsoft Office zaimplementować Office Binder. Jednak ta technologia jest na tyle elastyczna, aby obsługiwać kontenery dokumentów aktywnych niż Office Binder i może obsługiwać serwery dokumentów innych niż aplikacje pakietu Office i zgodny z pakietem Office.
+
+Nosi nazwę aplikacji, która obsługuje dokumenty aktywne [kontener dokumentów aktywnych](../mfc/active-document-containers.md). Przykładami takich kontenery są Microsoft Office Binder ani Microsoft Internet Explorer.
+
+Zawieranie dokumentów aktywnych jest wdrażany jako zestaw rozszerzeń OLE dokumenty technologii złożonego dokumentu OLE. Rozszerzenia są dodatkowe interfejsy, które umożliwiają obiektu możliwego do osadzenia, w miejscu do reprezentowania cały dokument zamiast jednego fragmentu zawartości osadzonej. Podobnie jak w przypadku dokumentów OLE, zawieranie dokumentów aktywnych korzysta z kontenerem, który udostępnia miejsce wyświetlania dokumentów aktywnych i serwerów, które dostarczają interfejs i manipulowania możliwości użytkownika dla samych dokumentach active.
+
+[Serwera aktywnego dokumentu](../mfc/active-document-servers.md) jest aplikacji (takich jak Word, Excel lub PowerPoint), która obsługuje co najmniej jedną klasę aktywnego dokumentu, gdzie każdy obiekt, sama obsługuje interfejsy rozszerzenia, które umożliwiają obiekt, aby ją aktywować na odpowiedniego kontenera.
+
+[Aktywnego dokumentu](../mfc/active-documents.md) (udostępnione z serwera aktywnego dokumentu, takich jak Word lub Excel) jest zasadniczo dobrym przybliżeniem pełnego, konwencjonalnych dokument, który jest osadzony jako obiekt w innym kontenerze aktywnego dokumentu. W przeciwieństwie do osadzonych obiektów active dokumenty mają pełną kontrolę nad nimi strony, a pełna interfejsu aplikacji (przy użyciu wszystkich jego podstawowych poleceń i narzędzi) jest dostępny dla użytkownika do ich edycji.
+
+Aktywny dokument najlepiej zrozumiałe odróżniające ją od standardowego osadzonego obiektu OLE. Po Konwencji OLE osadzony obiekt jest taki, który jest wyświetlany na stronie dokumentu, który jest jego właścicielem i dokumentu jest zarządzana przez kontener OLE. Dane osadzonego obiektu z pozostałej części dokumentu są przechowywane w kontenerze. Osadzone obiekty są jednak ograniczone, kontroluje strony, na którym są wyświetlane.
+
+Użytkownicy aplikacji kontenera dokumentów aktywnych można tworzyć dokumenty aktywne (nazywanych sekcjami Office Binder) przy użyciu swoich ulubionych aplikacji (pod warunkiem te aplikacje są aktywnego dokumentu, włączone), ale użytkownicy mogą zarządzać wynikowych projektu jako pojedyncza jednostka, która może być unikatową nazwę, zapisane, drukowania, i tak dalej. W taki sam sposób użytkownika przeglądarki internetowej można traktować jako jednostki magazynu pojedynczego dokumentu, z możliwością przeglądania dokumenty w tym magazynu z jednej lokalizacji całej sieci, a także systemy pliku lokalnego.
+
+## <a name="sample-programs"></a>Przykładowe programy
+
+- [MFCBIND](../visual-cpp-samples.md) przykładową implementację aplikacji kontenera dokumentów aktywnych.
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC COM](../mfc/mfc-com.md)
 

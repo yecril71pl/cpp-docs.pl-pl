@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b28868ee3df91c97c37ceb3451b59c0a12e6d0c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c791f2951eb7ac9947d48b563bde624bc3b7979f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592503"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393584"
 ---
 # <a name="aligning-groups-of-controls"></a>Dopasowanie grup formantów
 
@@ -54,6 +54,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

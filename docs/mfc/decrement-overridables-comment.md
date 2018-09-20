@@ -1,5 +1,5 @@
 ---
-title: — Z możliwością zastąpienia komentarz | Dokumentacja firmy Microsoft
+title: — Komentarz / / Overridables | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d50fb62767f2130e89cb75df5d66f8c18ce2a097
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428060"
 ---
 # <a name="-overridables-comment"></a>Komentarz // Overridables
-`// Overridables` Sekcja deklaracji klasy MFC zawiera funkcje wirtualne, które można zmienić w klasie pochodnej, jeśli trzeba zmodyfikować zachowanie klasy podstawowej. Są zwykle nazywane począwszy od "Włączone", mimo że nie jest to niezbędne. Funkcje w tym miejscu są przeznaczone do przesłonięcia i często zaimplementować lub podaj jakieś "wywołania zwrotnego" lub "Połącz". Zazwyczaj te elementy członkowskie są chronione.  
-  
- W MFC samego czystych funkcji wirtualnych są zawsze umieszczane w tej sekcji. W języku C++ czystej funkcji wirtualnej jest jednym z formularza:  
-  
- `virtual void OnDraw( ) = 0;`  
-  
- W przykładzie z klasy `CStdioFile`w [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista nie zawiera żadnych części z możliwością zastąpienia. Klasa `CDocument`, z drugiej strony, zawiera listę około 10 funkcji Członkowskich możliwym do zastąpienia.  
-  
- W niektórych klas może również wystąpić komentarz `// Advanced Overridables`. Są funkcje, które tylko zaawansowanych programistów powinny podejmować próby zastąpienia. Prawdopodobnie nigdy nie należy zastąpić je.  
-  
+
+`// Overridables` Część deklaracji klasy MFC zawiera funkcje wirtualne, które można przesłonić w klasie pochodnej, gdy trzeba zmienić zachowanie klasy bazowej. Są zwykle nazywane począwszy od "Włączone" mimo że nie jest bezwzględnie konieczne. Tutaj są przeznaczone do można przesłonić i często implementuje lub udostępnienia pewnego rodzaju "wywołanie zwrotne" lub "dołączyć". Zazwyczaj te elementy członkowskie są chronione.
+
+W MFC sam czystych funkcji wirtualnych są zawsze umieszczane w tej sekcji. Czystej funkcji wirtualnej w języku C++ jest jednym z formularza:
+
+`virtual void OnDraw( ) = 0;`
+
+W przykładzie z klasy `CStdioFile`w [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista zawiera żadna sekcja / / overridables. Klasa `CDocument`, z drugiej strony, Wyświetla około 10 możliwym do zastąpienia elementów członkowskich.
+
+W niektórych klas, może również zostać wyświetlony komentarz `// Advanced Overridables`. Są to funkcje, które tylko zaawansowanych programistów powinien próbować zastąpić. Najprawdopodobniej nigdy nie należy je zastąpić.
+
 > [!NOTE]
->  Konwencje opisane w tym artykule można tu również, ogólnie rzecz biorąc, dla właściwości i metod automatyzacji (wcześniej znane jako automatyzacji OLE). Metody automatyzacji są podobne do operacji MFC. Właściwości automatyzacji są podobne do atrybutów MFC. Zdarzenia automatyzacji (obsługiwane dla formantów ActiveX, wcześniej znana jako formantów OLE) są podobne do funkcji Członkowskich możliwym do zastąpienia MFC.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)   
- [Przykład komentarzy](../mfc/an-example-of-the-comments.md)   
- [Implementacja — komentarz](../mfc/decrement-implementation-comment.md)   
- [Komentarz / / constructors](../mfc/decrement-constructors-comment.md)   
- [Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)   
- [Komentarz / / Operations](../mfc/decrement-operations-comment.md)
+>  Konwencje opisanych w tym artykule również działać poprawnie, ogólnie rzecz biorąc, właściwości i metod automatyzacji (wcześniej znane jako automatyzacji OLE). Metody automatyzacji są podobne do operacji MFC. Właściwości automatyzacji są podobne do atrybutów MFC. Właściwości zdarzeń automatyzacji (obsługiwane dla kontrolek ActiveX, znana wcześniej jako formantów OLE) są podobne do elementów członkowskich MFC możliwym do zastąpienia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Przykład komentarzy](../mfc/an-example-of-the-comments.md)<br/>
+[Komentarz / / Implementation](../mfc/decrement-implementation-comment.md)<br/>
+[Komentarz / / constructors](../mfc/decrement-constructors-comment.md)<br/>
+[Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)<br/>
+[Komentarz / / Operations](../mfc/decrement-operations-comment.md)
 

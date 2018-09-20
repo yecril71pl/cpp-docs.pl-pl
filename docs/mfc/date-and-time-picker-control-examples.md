@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4eb89822a5014108628687bccf0525026cca64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa687d5b4b102db9a5aeee2bfb805f9e03550622
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432974"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Przykłady formantu selektora dat i godzin
-[CMNCTRL1](../visual-cpp-samples.md) przykładzie pokazano różnych atrybutów `CDateTimeCtrl` klasy. Osobnej stronie zawiera formant selektora daty i godziny, który użytkownik można manipulować zmieniając różnych atrybutów i testowania podstawowych funkcji formantu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+[CMNCTRL1](../visual-cpp-samples.md) przykład demonstruje różne atrybuty `CDateTimeCtrl` klasy. Oddzielne strona zawiera formant selektora daty i godziny, który użytkownika można manipulować zmieniając różne atrybuty i testowanie podstawową funkcjonalność formantu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

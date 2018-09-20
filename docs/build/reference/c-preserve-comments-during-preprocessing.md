@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8716c0a0f954b0a2ad0bbe0e25c29a4445b11823
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713187"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428346"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachowaj komentarze podczas przetwarzania wstępnego)
 
@@ -76,6 +76,6 @@ int i;   // a variable
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/E (Przetwarzaj wstępnie do stdout)](../../build/reference/e-preprocess-to-stdout.md)
-[/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md)
-[/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/E (Przetwarzaj wstępnie do stdout)](../../build/reference/e-preprocess-to-stdout.md)<br/>
+[/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[/EP (Wstępnie przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

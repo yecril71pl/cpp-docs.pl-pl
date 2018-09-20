@@ -16,53 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a291b5c53338137ae59d9361ee36b6df29df277e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2c39491543c4d3a16202dac3caee50122ba0c7cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686584"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403126"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Porady: używanie transformatora w potoku danych
-Ten temat zawiera podstawowe przykładzie, który przedstawia sposób użycia [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych. Aby uzyskać bardziej szczegółowy przykład potoku danych używaną do przetwarzania obrazu, zobacz [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
-  
- *Przetwarzanie potokowe danych* jest wspólnego wzorca w programowaniu współbieżnych. Potok danych składa się z szeregu etapach, gdzie na każdym z etapów wykonuje pracę, a następnie przekazuje jego wynik tej pracy do kolejnego etapu. `transformer` Klasy potoków kluczowym czynnikiem danych, ponieważ odbierze wartości wejściowej, przeprowadza pracę na tę wartość, a następnie powstaje innego składnika do użycia.  
-  
-## <a name="example"></a>Przykład  
- W tym przykładzie użyto następujących potoku danych można wykonać kilka przekształceń podane początkowej wartości wejściowej:  
-  
-1.  Pierwszym etapem oblicza wartość bezwzględna jej danych wejściowych.  
-  
-2.  Drugi etap oblicza pierwiastek kwadratowy jej danych wejściowych.  
-  
-3.  Trzeci etap oblicza kwadrat jej danych wejściowych.  
-  
-4.  Określonymi etap Negacja jej danych wejściowych.  
-  
-5.  Piątym etapie zapisuje wynik końcowy buforu komunikatu.  
-  
- Na koniec przykładzie drukowanie wyników dla potoku do konsoli.  
-  
- [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]  
-  
- Ten przykład generuje następujące wyniki:  
-  
-```Output  
-The result is -42.  
-```  
-  
- Jest typowe dla etapu w potoku danych zwracać wartość, której typ różni się od jego wartości wejściowej. W tym przykładzie drugiego etapu przyjmuje wartość typu `int` jako dane wejściowe i tworzy pierwiastek kwadratowy wartości ( `double`) jako dane wyjściowe.  
-  
+
+Ten temat zawiera przykład podstawowy, który pokazuje, jak używać [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych. Aby uzyskać bardziej szczegółowy przykład, który używa potoku danych do przetwarzania obrazu, zobacz [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+
+*Przetwarzanie potokowe danych* jest to typowy wzorzec w programowanie współbieżne. Potok danych składa się z szeregu etapach, gdzie każdy z etapów wykonuje pracę, a następnie przekazuje wynikiem tej pracy do kolejnego etapu. `transformer` Klasy potoków kluczowym czynnikiem danych, ponieważ odbierze wartości wejściowej, wykonuje pracę na tę wartość i następnie produkuje wynik dla innego składnika do użycia.
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie używa następujących potoku danych do wykonania szeregu przekształcenia, biorąc pod uwagę początkowej wartości wejściowej:
+
+1. Pierwszy etap oblicza wartość bezwzględną liczby danych wejściowych.
+
+1. Drugi etap oblicza pierwiastek kwadratowy danych wejściowych.
+
+1. Trzeci etap oblicza kwadratowy danych wejściowych.
+
+1. Do przodu etapu neguje dane wejściowe.
+
+1. Piątym etapie zapisuje wynik końcowy do buforu komunikatu.
+
+Na koniec przykład drukuje wynik potoku do konsoli.
+
+[!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
+
+Ten przykład generuje następujące wyniki:
+
+```Output
+The result is -42.
+```
+
+Powszechne jest wprowadzanie dla etapu w potoku danych do wyprowadzenia wartości, którego typ różni się od jego wartości wejściowej. W tym przykładzie drugiego etapu przyjmuje wartość typu `int` jako dane wejściowe i generuje pierwiastek kwadratowy wartości ( `double`) jako dane wyjściowe.
+
 > [!NOTE]
->  Potoki danych w tym przykładzie jest ilustracyjną. Ponieważ każdej operacji przekształcania wykonuje małego wysiłku, obciążenie wymagane do przeprowadzenia przekazywania wiadomości mogą przeważają korzyści wynikające ze stosowania potoku danych.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `data-pipeline.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe/ehsc danych pipeline.cpp**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)   
- [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+>  Potok danych przedstawiony w tym przykładzie jest do celów informacyjnych. Ponieważ każda operacja transformacji wykonuje małego wysiłku, obciążenie wymagane do wykonywania przekazywania komunikatów mogą przeważyć zalety przy użyciu potoku danych.
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `data-pipeline.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc danych pipeline.cpp**
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
 

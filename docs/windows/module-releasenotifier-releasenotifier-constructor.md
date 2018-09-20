@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e43abd46ccfb150936ff435360611289f18a1270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598791"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405024"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier — Konstruktor
 
@@ -36,7 +36,7 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Wydania*  
+*Wydania*<br/>
 **wartość true,** można usunąć to wystąpienie kiedy `Release` wywoływana jest metoda; **false** nie należy usuwać tego wystąpienia.
 
 ## <a name="exceptions"></a>Wyjątki

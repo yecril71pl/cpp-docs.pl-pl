@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050102"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435535"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
+
 Potężne klasa podstawowa dla rozwoju formantów OLE.
 
 ## <a name="syntax"></a>Składnia
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 Stanu gotowości może być jednym z następujących wartości:
 
-Stan inicjowania READYSTATE_UNINITIALIZED domyślne
-
-Obecnie ładowania właściwości formantu READYSTATE_LOADING
-
-Kontrolka READYSTATE_LOADED został zainicjowany.
-
-Kontrolka READYSTATE_INTERACTIVE ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne
-
-READYSTATE_COMPLETE formantem i jego danych
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stan inicjowania domyślnego|
+|READYSTATE_LOADING|Obecnie ładowania właściwości formantu|
+|READYSTATE_LOADED|Kontrolka została zainicjowana.|
+|READYSTATE_INTERACTIVE|Kontrolka ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne|
+|READYSTATE_COMPLETE|Kontrolka ma swoje dane|
 
 Użyj [GetReadyState](#getreadystate) ustalenie bieżącej gotowości formantu.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Kombinacja flag z wyliczenia POINTERINACTIVE. Możliwe flagi są:
 
-POINTERINACTIVE_ACTIVATEONENTRY obiekt powinien być aktywowany, gdy wskaźnik myszy zostanie przesunięty go podczas operacji przenoszenia myszy w miejscu.
-
-Operacja przenoszenia POINTERINACTIVE_DEACTIVATEONLEAVE, który zdezaktywowane obiektu, gdy wskaźnik myszy opuszcza obiektu podczas myszy.
-
-POINTERINACTIVE_ACTIVATEONDRAG obiekt powinien być w miejscu aktywowany, gdy wskaźnik myszy jest przeciągany nad nią podczas przeciągania i upuszczania operacji.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|Obiekt powinien być aktywowany, gdy wskaźnik myszy zostanie przesunięty go podczas operacji przenoszenia myszy w miejscu.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|Obiekt powinien zdezaktywowane, gdy wskaźnik myszy opuszcza obiektu podczas operacji przenoszenia myszy.|
+|POINTERINACTIVE_ACTIVATEONDRAG|Obiekt powinien być w miejscu aktywowany, gdy wskaźnik myszy jest przeciągany nad nią podczas przeciągania i upuszczania operacji.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 Stan gotowości kontrolki, jedną z następujących wartości:
 
-Stan inicjowania READYSTATE_UNINITIALIZED domyślne
-
-Obecnie ładowania właściwości formantu READYSTATE_LOADING
-
-Kontrolka READYSTATE_LOADED został zainicjowany.
-
-Kontrolka READYSTATE_INTERACTIVE ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne
-
-READYSTATE_COMPLETE formantem i jego danych
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stan inicjowania domyślnego|
+|READYSTATE_LOADING|Obecnie ładowania właściwości formantu|
+|READYSTATE_LOADED|Kontrolka została zainicjowana.|
+|READYSTATE_INTERACTIVE|Kontrolka ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne|
+|READYSTATE_COMPLETE|Kontrolka ma swoje dane|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 Stan gotowości, aby ustawić dla formantu, jedną z następujących wartości:
 
-Stan inicjowania READYSTATE_UNINITIALIZED domyślne
-
-Obecnie ładowania właściwości formantu READYSTATE_LOADING
-
-Kontrolka READYSTATE_LOADED został zainicjowany.
-
-Kontrolka READYSTATE_INTERACTIVE ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne
-
-READYSTATE_COMPLETE formantem i jego danych
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stan inicjowania domyślnego|
+|READYSTATE_LOADING|Obecnie ładowania właściwości formantu|
+|READYSTATE_LOADED|Kontrolka została zainicjowana.|
+|READYSTATE_INTERACTIVE|Kontrolka ma wystarczającej ilości danych w interaktywne, ale jeszcze ładowania danych nie wszystkie asynchroniczne|
+|READYSTATE_COMPLETE|Kontrolka ma swoje dane|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Jedna z wartości wyliczenia stan, jeśli to się powiedzie; w przeciwnym razie 0. Możliwe wartości to dowolnej kombinacji następujących czynności:
 
-Obiekt VIEWSTATUS_OPAQUE jest całkowicie nieprzezroczysty. Jeśli ten bit nie jest ustawiona, obiekt zawiera przezroczyste części. Ten bit ma zastosowanie tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.
-
-Obiekt VIEWSTATUS_SOLIDBKGND ma jednolite tło (składający się jednolitego koloru, nie zaś wzoru pędzla). Ten bit ma znaczenie tylko wtedy, gdy VIEWSTATUS_OPAQUE ustawiono dotyczy tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.
-
-Obiekt VIEWSTATUS_DVASPECTOPAQUE obsługuje DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx przyjmujące aspekt rysowania parametr można wywołać ten aspekt.
-
-Obiekt VIEWSTATUS_DVASPECTTRANSPARENT obsługuje DVASPECT_TRANSPARENT. Wszystkie `IViewObjectEx` metod, dla których aspekt rysowania jako parametr można wywołać ten aspekt.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Obiekt jest całkowicie nieprzezroczysty. Jeśli ten bit nie jest ustawiona, obiekt zawiera przezroczyste części. Ten bit ma zastosowanie tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Obiekt ma jednolite tło (składający się jednolitego koloru, nie zaś wzoru pędzla). Ten bit ma znaczenie tylko wtedy, gdy VIEWSTATUS_OPAQUE ustawiono dotyczy tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Obiekt obsługuje DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx przyjmujące aspekt rysowania parametr można wywołać ten aspekt.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Obiekt obsługuje DVASPECT_TRANSPARENT. Wszystkie `IViewObjectEx` metod, dla których aspekt rysowania jako parametr można wywołać ten aspekt.|
 
 ### <a name="remarks"></a>Uwagi
 

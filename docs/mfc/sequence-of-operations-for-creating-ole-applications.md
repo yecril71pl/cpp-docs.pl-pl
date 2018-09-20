@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412fa5c104d6e85bcaa6ba3703cc8c7ba535f25f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02542f8a4eb382ff4d7a88f98163b0052be09f75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392525"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Sekwencja operacji przy tworzeniu aplikacji OLE
-W poniższej tabeli przedstawiono roli i roli w ramach tworzenia OLE łączenie i osadzanie aplikacji. Reprezentuje on opcje dostępne zamiast sekwencji kroki do wykonania.  
-  
-### <a name="creating-ole-applications"></a>Tworzenie aplikacji OLE  
-  
-|Zadanie|Jak|Jest w ramach|  
-|----------|------------|------------------------|  
-|Tworzenie składnika COM.|Kreator aplikacji MFC. Wybierz **pełny serwer** lub **mini serwer** w **Obsługa dokumentów złożonych** kartę.|Platformę generuje szkielet aplikacji z możliwością składnika COM włączone. Wszystkie możliwości COM można przenosić do istniejącej aplikacji tylko niewielką modyfikacji.|  
-|Tworzenie aplikacji kontenera od początku.|Kreator aplikacji MFC. Wybierz **kontenera** w **Obsługa dokumentów złożonych** kartę. Korzystając z widoku klasy, przejdź do edytora kodu źródłowego. Wprowadź kod dla funkcji obsługi modelu COM.|Platformę generuje szkielet aplikacji, które można wstawić obiektów COM tworzony przez aplikacje (serwer) składnik COM.|  
-|Utwórz aplikację, która obsługuje automatyzacji od początku.|Kreator aplikacji MFC. Wybierz **automatyzacji** z **funkcje zaawansowane** kartę. Za pomocą widoku klasy ujawniać metod i właściwości w aplikacji w celu automatyzacji.|Platformę generuje szkielet aplikacji, która może być aktywowana i automatyzować przez inne aplikacje.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opieranie się na strukturze](../mfc/building-on-the-framework.md)   
- [Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Sekwencja operacji przy tworzeniu formantów ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+W poniższej tabeli przedstawiono usługi roli i roli w ramach tworzenia OLE, łączenie i osadzanie aplikacji. Reprezentują one dostępnymi zamiast sekwencję kroków do wykonania.
+
+### <a name="creating-ole-applications"></a>Tworzeniu aplikacji OLE
+
+|Zadanie|Możesz zrobić|Struktura jest|
+|----------|------------|------------------------|
+|Tworzenie składnika COM.|Uruchom Kreatora aplikacji MFC. Wybierz **pełny serwer** lub **miniserwera** w **Obsługa dokumentów złożonych** kartę.|Struktura generuje szkielet aplikacji dzięki możliwości składnika COM. Wszystkie możliwości COM mogą zostać przeniesione do istniejących aplikacji przy użyciu tylko niewielkich modyfikacji.|
+|Tworzenie aplikacji kontenera od podstaw.|Uruchom Kreatora aplikacji MFC. Wybierz **kontenera** w **Obsługa dokumentów złożonych** kartę. Za pomocą widoku klas, przejdź do edytora kodu źródłowego. Wprowadź kod dla funkcji obsługi COM.|Struktura generuje szkielet aplikacji, która może wstawiać obiektów COM, utworzone przez aplikacje (serwer) składnika COM.|
+|Utwórz aplikację, która obsługuje automatyzację od podstaw.|Uruchom Kreatora aplikacji MFC. Wybierz **automatyzacji** z **funkcje zaawansowane** kartę. Użyj widoku klas do udostępnienia, metody i właściwości w aplikacji automatyzacji.|Struktura generuje szkielet aplikacji, które mogą być aktywowany zautomatyzowane przez inne aplikacje.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Opieranie się na strukturze](../mfc/building-on-the-framework.md)<br/>
+[Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
+[Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
 

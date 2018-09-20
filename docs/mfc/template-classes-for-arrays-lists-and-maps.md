@@ -20,36 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feeb1b404a765e1ce24e8401ffd1163a18731780
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 218c5344ad8cdc1e63f3337cd031ac707fa7b5ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380256"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375539"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Klasy szablonów dla tablic, list i map
-Te klasy kolekcji są szablony, w której parametry określić typy obiektów przechowywanych w agregacji. `CArray`, `CMap`, I `CList` klasy za pomocą funkcji pomocnika globalne, które zwykle można dostosować. Aby uzyskać więcej informacji o tych funkcjach pomocnika, zobacz [pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md). Klasy typizowaną wskaźnika są otoki dla innych klas w bibliotece klas. Za pomocą tych otoki, możesz zarejestrować się przez kompilator typu sprawdzania pozwala uniknąć błędów. Aby uzyskać więcej informacji na temat używania tych klas, zobacz [kolekcji](../mfc/collections.md).  
-  
- Te klasy zawierają szablony, które służy do tworzenia tablic, list i map, przy użyciu dowolnego typu, który chcesz.  
-  
- [Carray —](../mfc/reference/carray-class.md)  
- Klasy szablonu do tworzenia tablic arbitralnie wybrane typy.  
-  
- [Clist —](../mfc/reference/clist-class.md)  
- Klasy szablonu do tworzenia list dowolnego typu.  
-  
- [cMap](../mfc/reference/cmap-class.md)  
- Klasy szablonu do tworzenia mapy z dowolnego typów kluczy i wartości.  
-  
- [Ctypedptrarray —](../mfc/reference/ctypedptrarray-class.md)  
- Klasy szablonów dla tablic bezpieczne wskaźników.  
-  
- [Ctypedptrlist —](../mfc/reference/ctypedptrlist-class.md)  
- Szablon klasy list bezpieczne wskaźników.  
-  
- [Ctypedptrmap —](../mfc/reference/ctypedptrmap-class.md)  
- Szablon klasy map bezpieczny z wskaźników.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Te klasy kolekcji są szablony, w której parametry Określ typy tych obiektów przechowywanych w wartości zagregowanych. `CArray`, `CMap`, I `CList` klasy za pomocą funkcji pomocnika globalne, które zwykle muszą być dostosowane. Aby uzyskać więcej informacji na temat tych funkcji pomocnika, zobacz [pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md). Klasy typizowanego wskaźnika są otoki dla innych klas w bibliotece klas. Za pomocą tych otoki, możesz zarejestrować się kompilatora sprawdzania typów co pozwala uniknąć błędów. Aby uzyskać więcej informacji na temat korzystania z tych klas, zobacz [kolekcje](../mfc/collections.md).
+
+Te klasy oferują szablonów służących do tworzenia tablic, list i map przy użyciu dowolnego typu, jaką chcesz.
+
+[CArray](../mfc/reference/carray-class.md)<br/>
+Klasa szablonu składania tablic dowolnego typu.
+
+[CList](../mfc/reference/clist-class.md)<br/>
+Klasa szablonu do tworzenia list dowolnego typu.
+
+[CMap](../mfc/reference/cmap-class.md)<br/>
+Klasa szablonu do tworzenia mapy za pomocą dowolnego typu klucza i wartości.
+
+[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)<br/>
+Klasa szablonu dla tablic bezpiecznych wskaźników.
+
+[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)<br/>
+Klasa szablonu bezpiecznego typu list wskaźników.
+
+[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)<br/>
+Klasa szablonu dla map bezpiecznegop typu za pomocą wskaźników.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

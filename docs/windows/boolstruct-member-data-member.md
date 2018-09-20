@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 69f9d3eed4a357df38e2c62e2f49e33f579b952a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402801"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member — Członek danych
 
@@ -46,5 +46,5 @@ Określa, że [ComPtr](../windows/comptr-class.md) jest lub nie jest dostępna, 
 
 ## <a name="see-also"></a>Zobacz też
 
-[BoolStruct, struktura](../windows/boolstruct-structure.md)  
+[BoolStruct, struktura](../windows/boolstruct-structure.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

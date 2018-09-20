@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e98bfb2922f95e75ef54f45c153f9ea80eb7d80e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cd0858763d31e1f46e1cb366154871f06ae7a910
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400409"
 ---
 # <a name="cimage-class"></a>CImage, klasa
 
@@ -1669,11 +1669,11 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe MMXSwarm](../../visual-cpp-samples.md)   
-[Przykładowe SimpleImage](../../visual-cpp-samples.md)   
-[Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)   
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
-[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)
-[map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)   
+[Przykładowe MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Przykładowe SimpleImage](../../visual-cpp-samples.md)<br/>
+[Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)<br/>
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
+[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
+[Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 

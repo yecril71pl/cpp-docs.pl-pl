@@ -24,125 +24,139 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1cec0a5c40d7937e8df20b5437b6dcc83b1b9ec1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712078"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441179"
 ---
 # <a name="cdockablepaneadapter-class"></a>Klasa CDockablePaneAdapter
-Dodano obsługę dokującej `CWnd`-pochodnych okienek.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CDockablePaneAdapter : public CDockablePane  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Zwraca okno opakowana.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](cdockablepane-class.md).)|  
-|[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
-  
-## <a name="remarks"></a>Uwagi  
- Zazwyczaj ramach tworzy obiekty tej klasy, gdy używasz [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) lub [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metody.  
-  
- Jeśli chcesz dostosować `CDockablePaneAdapter` zachowanie, po prostu dziedziczyć po nim nową klasę i ustaw informacje o klasie czasu wykonywania do okna z kartami za pomocą [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
-  
- [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxDockablePaneAdapter.h  
-  
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
- Zwraca okna bazowego dla karty dokowalne okienka.  
-  
-```  
-virtual CWnd* GetWrappedWnd() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okna opakowana.  
-  
-### <a name="remarks"></a>Uwagi  
- Aby uzyskać dostęp do okna opakowana, należy użyć tej funkcji.  
-  
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
- Ładuje stan okienka z rejestru.  
-  
-```  
+
+Dodano obsługę dokującej `CWnd`-pochodnych okienek.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CDockablePaneAdapter : public CDockablePane
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Zwraca okno opakowana.|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|
+|[CDockablePaneAdapter::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
+
+## <a name="remarks"></a>Uwagi
+
+Zazwyczaj ramach tworzy obiekty tej klasy, gdy używasz [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) lub [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metody.
+
+Jeśli chcesz dostosować `CDockablePaneAdapter` zachowanie, po prostu dziedziczyć po nim nową klasę i ustaw informacje o klasie czasu wykonywania do okna z kartami za pomocą [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
+
+[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxDockablePaneAdapter.h
+
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+
+Zwraca okna bazowego dla karty dokowalne okienka.
+
+```
+virtual CWnd* GetWrappedWnd() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do okna opakowana.
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać dostęp do okna opakowana, należy użyć tej funkcji.
+
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
+
+Ładuje stan okienka z rejestru.
+
+```
 virtual BOOL LoadState(
-    LPCTSTR lpszProfileName = NULL,  
-    int nIndex = -1,  
+    LPCTSTR lpszProfileName = NULL,
+    int nIndex = -1,
     UINT uiID = (UINT) -1);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *lpszProfileName*<br/>
-[in] Nazwa profilu.  
-  
+[in] Nazwa profilu.
+
 *nIndex*<br/>
-[in] Indeks profilu.  
-  
+[in] Indeks profilu.
+
 *uiID*<br/>
-[in] Identyfikator okienka.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
- Zapisuje stan okienka w rejestrze.  
-  
-```  
+[in] Identyfikator okienka.
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+
+Zapisuje stan okienka w rejestrze.
+
+```
 virtual BOOL SaveState(
-    LPCTSTR lpszProfileName = NULL,  
-    int nIndex = -1,  
+    LPCTSTR lpszProfileName = NULL,
+    int nIndex = -1,
     UINT uiID = (UINT) -1);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *lpszProfileName*<br/>
-[in] Nazwa profilu.  
-  
+[in] Nazwa profilu.
+
 *nIndex*<br/>
-[in] Indeks profilu (wartość domyślna to identyfikator formantu okna).  
-  
+[in] Indeks profilu (wartość domyślna to identyfikator formantu okna).
+
 *uiID*<br/>
-[in] Identyfikator okienka.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- Ustawia okno podstawowej karty dokowalne okienka.  
-  
-```  
+[in] Identyfikator okienka.
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+
+Ustawia okno podstawowej karty dokowalne okienka.
+
+```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *pWnd*<br/>
-[in] Wskaźnik do okna karty okienko do opakowania.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasy](../../mfc/reference/mfc-classes.md)   
- [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)
+[in] Wskaźnik do okna karty okienko do opakowania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)

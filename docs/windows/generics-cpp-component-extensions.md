@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448353"
 ---
 # <a name="generics--c-component-extensions"></a>Typy ogólne (C++ Component Extensions)
 
@@ -33,35 +33,35 @@ Typy ogólne są sparametryzowanych typów i metod. W tej sekcji Dowiedz się, o
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Obsługiwane przez środowisko wykonawcze Windows i środowisko uruchomieniowe języka wspólnego
 
-[Przegląd typów ogólnych w Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+[Przegląd typów ogólnych w Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informacje o ogólnych są motywacja dla funkcji języka, definicje terminów używanych do opisu typów ogólnych i informacji na temat używania typów referencyjnych i typów wartości jako parametrów typu dla typów ogólnych.
 
-[Interfejsy ogólne (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[Interfejsy ogólne (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informacje o definiowanie i korzystanie z interfejsów ogólnych.
 
-[Delegaty ogólne (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[Delegaty ogólne (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informacje dotyczące definiowania i używania delegatów ogólnych.
 
-[Ograniczenia parametrów typu ogólnego (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[Ograniczenia parametrów typu ogólnego (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informacje o korzystaniu z ograniczeniami w typach ogólnych.
 
-[Konsumowanie typów ogólnych (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[Konsumowanie typów ogólnych (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informacje o użycie typów ogólnych zdefiniowany w zestawach .NET, prawdopodobnie utworzonych w innych językach, w programie Visual C++.
 
-[Typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[Typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Porównanie typy ogólne i szablony do użycia każdego i sposób łączenia ich z korzyścią.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Obsługiwane przez środowisko uruchomieniowe języka wspólnego
 
-[Funkcje ogólne (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[Funkcje ogólne (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 Informacje o definiowanie i korzystanie z ogólnych funkcji i metod.
 
-[Klasy ogólne [C++/CLI]](../windows/generic-classes-cpp-cli.md)  
+[Klasy ogólne [C++/CLI]](../windows/generic-classes-cpp-cli.md)<br/>
 Informacje o definiowanie i korzystanie z klas ogólnych.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Instrukcje: iterowanie przez kolekcję ogólną za pomocą instrukcji for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[Instrukcje: iterowanie przez kolekcję ogólną za pomocą instrukcji for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Za pomocą [dla poszczególnych usług, w](../dotnet/for-each-in.md) słowo kluczowe w ogólnej kolekcji.
 
 ## <a name="see-also"></a>Zobacz też

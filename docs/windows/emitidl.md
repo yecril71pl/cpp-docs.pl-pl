@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687853"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429646"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Określa, czy wszystkie kolejne atrybuty IDL są przetwarzane i umieszczane w pl
 
 ### <a name="parameters"></a>Parametry
 
-*state*  
+*state*<br/>
 Jedną z następujących wartości: `true`, `false`, `forced`, `restricted`, `push`, lub `pop`.
 
 - Jeśli `true`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.
@@ -77,5 +77,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty kompilatora](../windows/compiler-attributes.md)  
+[Atrybuty kompilatora](../windows/compiler-attributes.md)<br/>
 [Oddzielne atrybuty](../windows/stand-alone-attributes.md)  

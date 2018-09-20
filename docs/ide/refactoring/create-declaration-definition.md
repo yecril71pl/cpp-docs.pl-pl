@@ -1,5 +1,5 @@
 ---
-title: Tworzenia deklaracji / definicji | Dokumentacja firmy Microsoft
+title: Utwórz deklarację / definicję | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,32 +10,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408391"
 ---
-# <a name="create-declaration--definition"></a>Tworzenia deklaracji / definicji
+# <a name="create-declaration--definition"></a>Utwórz deklarację / definicję
 **Co:** pozwala natychmiast wygenerować deklaracji lub definicji funkcji.
 
-**Kiedy:** ma funkcję, która wymaga delcaration, lub na odwrót.  
+**Kiedy:** ma funkcję, która wymaga delcaration lub na odwrót.
 
-**Dlaczego:** można ręcznie utworzyć deklaracji/definicji, ale to zostanie ona utworzona automatycznie, tworzenie pliku nagłówka/kodu, jeśli jest to wymagane.
+**Dlaczego:** można ręcznie utworzyć deklarację/definicję, ale spowoduje to utworzenie go automatycznie, tworząc nagłówek/plik kodu, jeśli jest to wymagane.
 
 **Jak:**
 
-1. Umieść kursor tekstu lub mysz za pośrednictwem funkcji, dla której chcesz utworzyć deklaracji lub definicji.
+1. Umieść kursor tekstu lub myszy za pośrednictwem funkcji, którą chcesz Utwórz deklarację lub definicję.
 
    ![Wyróżniony kod](images/createdefinition_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **tworzenia deklaracji / definicji** z menu kontekstowego.
+     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Utwórz deklarację / definicję** z menu kontekstowego.
    * **Myszy**
-     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **tworzenia deklaracji / definicji** z menu kontekstowego.
+     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Utwórz deklarację / definicję** z menu kontekstowego.
 
-1. Funkcja deklaracja/definicja zostanie utworzona w pliku źródłowego lub nagłówek, który pojawi się w oknie podręcznym podglądu.  Jeśli plik źródłowy lub nagłówka nie istnieje, jej zostanie również utworzona i umieszczane w projekcie.
+1. Funkcja deklaracji/definicji zostaną utworzone w pliku źródłowego lub nagłówek, który zostanie wyświetlony w okienku wyskakującym w wersji zapoznawczej.  Jeśli plik źródłowy lub nagłówka nie istnieje, zostanie również być utworzona i umieszczone w projekcie.
 
-   ![Tworzenia deklaracji / definicji wyniku](images/createdefinition_result.png)
+   ![Utwórz deklarację / definicję wyniku](images/createdefinition_result.png)

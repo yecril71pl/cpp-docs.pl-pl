@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a5a172a7b0f8a309f1d8fd0762e098dc5d416a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4574ac1c5ff1ab45dfdf935e5eba3a14a76b948a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419854"
 ---
 # <a name="readpmc"></a>__readpmc
-**Microsoft Specific**  
-  
- Generuje `rdpmc` instrukcji, które odczytuje monitorowania określony przez licznik wydajności `counter`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje `rdpmc` instrukcji, które odczytuje monitorowania określony przez licznik wydajności `counter`.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned __int64 __readpmc( 
+   unsigned long counter 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Licznik*<br/>
-[in] Licznik wydajności do odczytu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wartość licznika wydajności określony.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__readpmc`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Licznik wydajności do odczytu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wartość licznika wydajności określony.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__readpmc`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

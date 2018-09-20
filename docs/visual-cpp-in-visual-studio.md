@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 92ffcd9ecf292f07d78df75f75c8d1ce77a6cbfb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399785"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -84,7 +84,8 @@ Informacje dotyczące przykładów.
 [Środowisko IDE i narzędzia programistyczne](ide/ide-and-tools-for-visual-cpp-development.md).
 Jak używać programu Visual Studio IDE do tworzenia projektów, pracować z plikami kodu źródłowego, łącze do biblioteki, Kompiluj, Debuguj, Utwórz testy jednostkowe, czy analizy statycznej, Wdrażaj i nie tylko.
 
-[Kompilatory i narzędzia kompilacji](build/building-c-cpp-programs.md) opcje kompilatora i konsolidatora C++ firmy Microsoft, komunikaty o błędach, przykładach wierszy poleceń, skonfiguruj konfigurować skonfigurować dla różnych platform i tematy referencyjne kompilacji. 
+[Kompilatory i narzędzia do kompilacji](build/building-c-cpp-programs.md)<br/>
+Opcje kompilatora i konsolidatora C++ firmy Microsoft, komunikaty o błędach, przykładach wierszy poleceń, skonfiguruj konfigurować skonfigurować dla różnych platform i tematy referencyjne kompilacji. 
 
 ## <a name="write-applications-in-c"></a>Pisać aplikacje w języku C++
 
@@ -94,9 +95,11 @@ Znajdź przewodniki i treści referencyjne w Centrum deweloperów systemu Window
 [Aplikacje klasyczne (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Dowiedz się, jak utworzyć tradycyjnych natywnych języka C++ aplikacji komputerowych dla Windows.
 
-[.NET programowania w języku C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) informacje o sposobie tworzenia bibliotek DLL, które umożliwiają współdziałanie natywne C++ i .NET programy napisane w językach takich jak C# lub Visual Basic.
+[Programowanie .NET w języku C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+Informacje o sposobie tworzenia bibliotek DLL, które umożliwiają współdziałanie natywne C++ i .NET programy napisane w językach takich jak C# lub Visual Basic.
 
-[Programowanie Linux](linux/index.md) używania programu Visual Studio IDE do kodu i wdrożenie systemu Linux na maszynie zdalnej kompilacji za pomocą GCC.
+[Programowanie dla systemu Linux](linux/index.md)<br/>
+Użyj programu Visual Studio IDE do kodu i wdrożenia systemu Linux na maszynie zdalnej kompilacji za pomocą GCC.
 
 [Biblioteki DLL w programie Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Poznaj sposób używania Win32, ATL i MFC do tworzenia bibliotek DLL dla pulpitu systemu Windows, poznaj informacje o sposobach kompilowania i rejestrowania biblioteki DLL.

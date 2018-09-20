@@ -1,5 +1,5 @@
 ---
-title: Okna, okno dialogowe i klasy formantów | Dokumentacja firmy Microsoft
+title: Klasy okien, okno dialogowe i kontrola | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a5e197909a55e5c634bd31ec359a848293c001
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 690166ad8c7a823cc4d8dab76894add6aae973a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381849"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431934"
 ---
 # <a name="window-dialog-and-control-classes"></a>Klasy okien, okien dialogowych i formantów
-Klasa `CWnd` i pochodne Hermetyzowanie `HWND`, dojścia do okna systemu Windows. `CWnd` można samodzielnie lub jako podstawy do tworzenia klasy pochodnej nowe klasy. Klasy pochodne dostarczonych przez biblioteki klas reprezentuje różne rodzaje systemu windows.  
-  
- [CWnd](../mfc/reference/cwnd-class.md)  
- Klasa podstawowa dla wszystkich okien. Można użyć jednej z klas pochodnych `CWnd` lub pochodzi bezpośrednio z własnych klas.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Klasa `CWnd` i jej klasy pochodne hermetyzacji `HWND`, uchwytem do okna Windows. `CWnd` można samodzielnie lub jako podstawy dla elementu pochodnego dla nowych klas. Klasy pochodne, dostarczone przez bibliotekę klas reprezentuje różne rodzaje okien.
+
+[CWnd](../mfc/reference/cwnd-class.md)<br/>
+Klasa bazowa dla wszystkich okien. Można użyć jednej z klas pochodnych `CWnd` lub bezpośrednio od niej pochodzić własnych klas.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

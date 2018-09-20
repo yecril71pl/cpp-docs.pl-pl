@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214736"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435080"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tworzenie formantów nagłówka rysowanych przez właściciela
-Można zdefiniować poszczególne elementy kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Można zdefiniować poszczególne elementy kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

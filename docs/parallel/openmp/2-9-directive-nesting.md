@@ -12,28 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e690ba531b4b37973bc2555d904317181ff918
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b9558180a2f063171be563219f89ec3858e37a5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396992"
 ---
 # <a name="29-directive-nesting"></a>2.9 Zagnieżdżanie dyrektywy
-Dynamiczne zagnieżdżanie dyrektywy muszą być zgodne z następującymi zasadami:  
-  
--   A **równoległych** dyrektywy dynamicznie wewnątrz innego **równoległych** logicznie ustanawia nowy zespół, który składa się z bieżącego wątku, chyba że zagnieżdżone równoległości jest włączona.  
-  
--   **dla**, **sekcje**, i **pojedynczego** dyrektywy, które wiążą się do tej samej **równoległych** nie mogą być zagnieżdżone wewnątrz siebie nawzajem.  
-  
--   **krytyczne** dyrektywy o takiej samej nazwie nie mogą być zagnieżdżone wewnątrz siebie nawzajem. Należy zauważyć, że to ograniczenie nie są wystarczające do uniknięcia zakleszczenia.  
-  
--   **dla**, **sekcje**, i **pojedynczego** dyrektywy nie są dozwolone w zakresie dynamiczne **krytyczne**, **uporządkowane**, i **wzorca** regionów, jeśli dyrektywy powiązania do tej samej **równoległych** jako regionów.  
-  
--   **bariera** dyrektywy nie są dozwolone w zakresie dynamiczne **dla**, **uporządkowane**, **sekcje**, **pojedynczego**, **wzorca**, i **krytyczne** regionów, jeśli dyrektywy powiązania do tej samej **równoległych** jako regionów.  
-  
--   **główny** dyrektywy nie są dozwolone w zakresie dynamiczne **dla**, **sekcje**, i **pojedynczego** dyrektywy Jeśli **wzorzec** dyrektywy powiązania do tej samej **równoległych** jako podziału pracy dyrektywy.  
-  
--   **uporządkowane** dyrektywy nie są dozwolone w zakresie dynamiczne **krytyczne** regionów, jeśli dyrektywy powiązania do tej samej **równoległych** jako regionów.  
-  
--   Wszystkie dyrektywy, które są dozwolone podczas wykonywania dynamicznie w ramach równoległego regionu również jest dozwolone, gdy wykonywane poza równoległego regionu. Po wykonaniu dynamicznie poza określonymi przez użytkownika równoległego regionu dyrektywa jest wykonywana przez zespół składa się z głównego wątku.
+
+Dynamiczne zagnieżdżanie dyrektyw muszą być zgodne z następującymi zasadami:
+
+- A **równoległe** dyrektywy dynamicznie wewnątrz innego **równoległe** logicznie ustanawia nowy zespół, który składa się z bieżącym wątkiem, chyba że zagnieżdżone równoległości jest włączona.
+
+- **dla**, **sekcje**, i **pojedynczego** dyrektyw, które powiązania do tej samej **równoległe** nie mogą być zagnieżdżone wewnątrz siebie nawzajem.
+
+- **krytyczne** dyrektywy o takiej samej nazwie nie mogą być zagnieżdżone wewnątrz siebie nawzajem. Należy pamiętać, że to ograniczenie nie są wystarczające do uniknięcia zakleszczenia.
+
+- **dla**, **sekcje**, i **pojedynczego** dyrektywy nie są dozwolone w zakresie dynamiczne **krytyczne**, **uporządkowane**, i **wzorca** regionów, jeśli dyrektywy powiązania do tej samej **równoległe** jako regionów.
+
+- **bariera** dyrektywy nie są dozwolone w zakresie dynamiczne **dla**, **uporządkowane**, **sekcje**, **pojedynczego**, **wzorca**, i **krytyczne** regionów, jeśli dyrektywy powiązania do tej samej **równoległe** jako regionów.
+
+- **główny** dyrektywy nie są dozwolone w zakresie dynamiczne **dla**, **sekcje**, i **pojedynczego** dyrektywy Jeśli **wzorzec** dyrektywy powiązania do tej samej **równoległe** jako dyrektyw podziału pracy.
+
+- **uporządkowane** dyrektywy nie są dozwolone w zakresie dynamiczne **krytyczne** regionów, jeśli dyrektywy powiązania do tej samej **równoległe** jako regionów.
+
+- Wszystkie dyrektywy, które są dozwolone podczas wykonywania dynamicznie w ramach równoległego regionu również jest dozwolone, gdy wykonywane poza równoległego regionu. Po wykonaniu dynamicznie, poza regionem równolegle z określonych przez użytkownika, dyrektywa jest wykonywana przez zespół składa się z głównego wątku.

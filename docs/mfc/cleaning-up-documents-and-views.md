@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dfe54c13db6f44bc70289380ae5f50d99c3722b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4325b0de10861fc76ee9ab816376f40ba0ba587
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437420"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Oczyszczanie dokumentów i widoków
-Gdy dokument jest zamykany, struktura najpierw wywołuje jego [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) funkcję elementu członkowskiego. Jeśli przydzielone wszystkie pamięci na stercie w trakcie operacji dokumentu `DeleteContents` jest najlepszym miejscem, aby zwolnić go.  
-  
+
+Gdy dokument zostanie zamknięty, struktura najpierw wywołuje jego [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) funkcja elementu członkowskiego. Jeśli została przydzielona w trakcie operacji na dokumencie, wszystkie pamięci na stosie `DeleteContents` jest najlepszym miejscem, aby cofnąć jej przydział.
+
 > [!NOTE]
->  Nie należy deallocate dane dokumentu w destruktorze dokumentu. W przypadku aplikacji SDI obiektu dokumentu może zostać użyty ponownie.  
-  
- Można zastąpić destruktora widoku, aby zwolnić wszystkie przydzielone na stercie pamięci.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+>  Nie należy cofnąć przydział danych dokumentu w destruktorze dokumentu. W przypadku aplikacji interfejsu SDI obiekt dokumentu może być ponownie używane.
+
+Można zastąpić destruktor widoku można cofnąć alokacji wszelkie pamięci przydzielony na stosie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

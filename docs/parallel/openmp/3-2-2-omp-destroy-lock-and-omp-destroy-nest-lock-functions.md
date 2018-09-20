@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c21ec9ca07651480748ac705ea6b9e4dcf8e94
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2b7b762614e406e5fb4497ec901ad8f65dae15a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686298"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433879"
 ---
 # <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 Funkcje omp_destroy_lock i omp_destroy_nest_lock
-Te funkcje upewnij się, że wskazywany do zmiennej blokady *blokady* nie został zainicjowany. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-void omp_destroy_lock(omp_lock_t *lock);  
-void omp_destroy_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Jest niezgodne do wywołań dowolnej z tych procedur z zmiennej blokady, która jest niezainicjowana lub odblokować.
+
+Te funkcje upewnij się, że wskazywany do zmiennej blokady *blokady* nie został zainicjowany. Format jest następujący:
+
+```
+#include <omp.h>
+void omp_destroy_lock(omp_lock_t *lock);
+void omp_destroy_nest_lock(omp_nest_lock_t *lock);
+```
+
+Jest niezgodna, aby wywołać jedną z tych procedur, za pomocą zmiennej blokady jest niezainicjowane lub odblokować.

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 135c6d851be5de8f2eb976baf015f2ef449600c0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 05e26296646b61997baff880a671958769eb099b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433403"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType Operator
 
@@ -42,5 +42,5 @@ Jeśli interfejs jest skojarzony z tym **ComPtr**, adres [BoolStruct::Member](..
 
 ## <a name="see-also"></a>Zobacz też
 
-[ComPtr, klasa](../windows/comptr-class.md)  
+[ComPtr, klasa](../windows/comptr-class.md)<br/>
 [ComPtr::Get, metoda](../windows/comptr-get-method.md)

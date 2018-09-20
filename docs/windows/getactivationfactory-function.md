@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99c5d961f3e25e17506e25148260b6966152af44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5afaa14d926cc7dde86cdbdb6b5ca8162f81d7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402151"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory — Funkcja
 
@@ -42,13 +42,13 @@ inline HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Parametr szablonu, który określa typ fabryką aktywacji.
 
-*activatableClassId*  
+*activatableClassId*<br/>
 Nazwa klasy, która może spowodować fabryką aktywacji.
 
-*Fabryka*  
+*Fabryka*<br/>
 Po zakończeniu tej operacji, odwołanie do aktywacji fabryki dla typu *T*.
 
 ## <a name="return-value"></a>Wartość zwracana

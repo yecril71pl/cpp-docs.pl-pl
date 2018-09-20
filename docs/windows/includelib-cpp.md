@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5f15fcefe1a18156e4cbe8180138d7b6c1d944e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398589"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -38,7 +38,7 @@ Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygene
 
 ### <a name="parameters"></a>Parametry
 
-*name.IDL*  
+*name.IDL*<br/>
 Nazwa pliku .idl, którego mają być dołączane jako część pliku .idl wygenerowany.
 
 ## <a name="remarks"></a>Uwagi
@@ -71,9 +71,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [importlib](../windows/importlib.md)  

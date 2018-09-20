@@ -1,5 +1,5 @@
 ---
-title: Obiekty danych i źródła danych (OLE) | Dokumentacja firmy Microsoft
+title: Obiekty danych i źródeł danych (OLE) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,32 +20,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 766148494c6b8693f8d9e65f27e157b58d8e8689
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f933a8eb75c25921c3025f8ca1bc03a2c72fc81b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342982"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443946"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Obiekty danych i źródła danych (OLE)
-Podczas przeprowadzania transferu danych za pomocą Schowka lub przeciągania i upuszczania, dane mają źródłowym i docelowym. Co aplikacja udostępnia dane do kopiowania i inna aplikacja akceptuje on wklejania. Każdej strony przeniesienia musi wykonywać różne operacje na tych samych danych do przeniesienia powiodło się. Biblioteka Microsoft Foundation Class (MFC) zapewnia dwie klasy reprezentujące każdej strony to przeniesienie:  
-  
--   Źródła danych (zaimplementowanego przez `COleDataSource` obiektów) reprezentuje po stronie źródła transferu danych. Są one tworzone przez aplikację źródła, gdy danych ma zostać skopiowany do Schowka lub gdy podano danych dla operacji przeciągania i upuszczania.  
-  
--   Obiekty danych (zaimplementowanego przez `COleDataObject` obiektów) reprezentuje po stronie docelowej transferu danych. Są one tworzone po porzucony w niej lub monit o wykonanie operacji wklejania ze Schowka danych aplikacji docelowej.  
-  
- Następujące artykuły opisano sposób użycia obiekty danych i źródła danych w aplikacji. Te informacje dotyczą zarówno kontenera, jak i serwera aplikacji, ponieważ zarówno może zostać wywołana podczas kopiowania i wklejania danych.  
-  
--   [Obiekty danych i źródła danych: tworzenie i likwidacja](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
-  
--   [Obiekty danych i źródła danych: operowanie](../mfc/data-objects-and-data-sources-manipulation.md)  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)  
-  
- [Schowek](../mfc/clipboard.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [OLE](../mfc/ole-in-mfc.md)   
- [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)   
- [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)
+
+Podczas przeprowadzania transferu danych za pomocą Schowka lub przeciągnij i upuść danych ma źródło i miejsce docelowe. Jedna aplikacja dostarcza dane do kopiowania i inna aplikacja akceptuje on wklejania. Każdej stronie transferu potrzebuje do wykonywania różnych operacji na tych samych danych w celu wykonania transferu zakończyło się sukcesem. Biblioteka Microsoft Foundation Class (MFC) zapewnia dwie klasy, które reprezentują na każdej stronie tego przeniesienia:
+
+- Źródła danych (jako implementowany przez `COleDataSource` obiektów) reprezentują po stronie źródła transferu danych. Są one tworzone przez aplikację źródła, gdy dane, które ma zostać skopiowany do Schowka, lub gdy dane są dostarczane dla operacji przeciągania i upuszczania.
+
+- Obiekty danych (jako implementowany przez `COleDataObject` obiektów) reprezentują po stronie docelowej transferu danych. Są one tworzone, gdy docelowa aplikacja ma danych porzucić tę sytuację, lub po otrzymaniu żądania do wykonywania operacji wklejania ze Schowka.
+
+W poniższych artykułach opisano sposób użycia obiekty danych i źródeł danych w aplikacjach. Te informacje dotyczą zarówno kontenera, jak i serwera aplikacji, ponieważ oba może zostać wywołana podczas kopiowania i wklejania danych.
+
+- [Obiekty danych i źródła danych: tworzenie i likwidacja](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+
+- [Obiekty danych i źródła danych: operowanie](../mfc/data-objects-and-data-sources-manipulation.md)
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)
+
+[Schowek](../mfc/clipboard.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
+[Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

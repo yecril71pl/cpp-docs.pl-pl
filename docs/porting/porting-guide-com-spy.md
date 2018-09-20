@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427215"
 ---
 # <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: narzędzie Spy modelu COM
+
 Ten temat jest drugi w serii artykułów pokazano proces uaktualniania starszej projektów Visual C++ do najnowszej wersji programu Visual Studio. Przykładowy kod w tym temacie ostatnio został skompilowany przy użyciu programu Visual Studio 2005.  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ To został uruchomiony bez problemów i za pomocą narzędzie Spy modelu COM pra
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Przenoszenie i uaktualnianie: przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[Następny przykład: Narzędzie Spy ++](../porting/porting-guide-spy-increment.md)   
+[Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Następny przykład: Narzędzie Spy ++](../porting/porting-guide-spy-increment.md)<br/>
 [Poprzednim przykładzie: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md)

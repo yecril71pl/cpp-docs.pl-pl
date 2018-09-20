@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680415"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406870"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Lista funkcji wewnętrznych x64 (amd64)
 
@@ -1282,6 +1282,6 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x64 procesorów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)  
-[Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)  
-[x86 Intrinsics](../intrinsics/x86-intrinsics-list.md)    
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)<br/>
+[x86 Intrinsics](../intrinsics/x86-intrinsics-list.md)

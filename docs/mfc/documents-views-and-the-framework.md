@@ -26,52 +26,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8213ac8d45b2981a7b945fb0af0a590cf7974a8a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402359"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, widoki i struktura
-Istotą programu MFC framework są dokumentu i widoku. Dokument jest obiekt danych, z którą użytkownik wchodzi w interakcję w sesji. Jest tworzona przez **nowy** lub **Otwórz** na **pliku** menu i są zwykle zapisywane w pliku. (Dokumentów standardowego MFC, pochodzi z klasy `CDocument`, są inne niż dokumenty aktywne i dokumentów złożonych OLE.) Widok jest obiekt window, za pomocą którego użytkownik wchodzi w interakcję z dokumentu.  
-  
- Obiekt klucza w uruchomionej aplikacji są:  
-  
--   Dokument lub dokumenty.  
-  
-     Klasy dokumentów (pochodną [CDocument](../mfc/reference/cdocument-class.md)) określa dane aplikacji.  
-  
-     Chcąc funkcji OLE w aplikacji, pochodzi z klasy dokumentu [COleDocument](../mfc/reference/coledocument-class.md) lub jednej z jej klas pochodnych, w zależności od typu funkcji należy.  
-  
--   Widok lub widoków.  
-  
-     Klasy widoku (pochodną [CView](../mfc/reference/cview-class.md)) użytkownika "okna na danych." Klasa widoku Określa, jak użytkownik widzi danych dokumentu i wchodzi w interakcję z nią. W niektórych przypadkach można mieć wiele widoków danych dokumentu.  
-  
-     Jeśli potrzebujesz przewijania, pochodzi z [CScrollView](../mfc/reference/cscrollview-class.md). Jeśli widok ma interfejs użytkownika, który jest rozmieszczona w zasobie szablonu okna dialogowego, pochodzi z [CFormView](../mfc/reference/cformview-class.md). Prosty tekst danych, użyj lub pochodzić od [CEditView](../mfc/reference/ceditview-class.md). Dla aplikacji opartej na formularzu dostępu do danych, takich jak program wprowadzania danych pochodzi od [CRecordView](../mfc/reference/crecordview-class.md) (dla ODBC). Dostępne są także klasy [CTreeView —](../mfc/reference/ctreeview-class.md), [clistview —](../mfc/reference/clistview-class.md), i [cricheditview —](../mfc/reference/cricheditview-class.md).  
-  
--   Okna ramowe  
-  
-     Widoki są wyświetlane w elemencie "okien ramowych dokumentu." W aplikacji SDI okno ramowe dokument jest również "głównego okna ramowego" dla aplikacji. W aplikacji MDI okna dokumentów są wyświetlane w elemencie główne okno ramowe okien podrzędnych. Klasy pochodne głównego okna ramowego określa style i inne właściwości systemu windows ramki, które zawierają widoków. Jeśli musisz dostosować okien ramowych, pochodzi z [cframewnd —](../mfc/reference/cframewnd-class.md) dostosować okno ramowe dokumentów dla SDI — aplikacje. Pochodzić od [cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md) dostosować głównego okna ramowego dla aplikacji MDI. Również pochodzić z klasy [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dostosować każdego rodzaju różne okien ramowych dokumentu MDI obsługiwanych przez aplikację.  
-  
--   Szablon dokumentu lub szablonów  
-  
-     Szablon dokumentu organizuje tworzenie dokumentów, widoków i okien ramowych. Klasa określonego szablonu dokumentu, pochodzi z klasy [cdoctemplate —](../mfc/reference/cdoctemplate-class.md), tworzy i którymi zarządza wszystkie otwarte dokumenty jednego typu. Aplikacje, które obsługują więcej niż jeden typ dokumentu ma wielu szablonów dokumentów. Klasa [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI — aplikacje, lub użyj klasy [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI.  
-  
--   Obiekt aplikacji  
-  
-     Klasy aplikacji (pochodną [CWinApp](../mfc/reference/cwinapp-class.md)) wszystkie obiekty powyżej kontrolki oraz określa zachowanie aplikacji, takich jak inicjowanie i oczyszczanie. Tylko aplikacji i aplikacji jeden obiekt tworzy i którymi zarządza szablonów dokumentów, dla każdego dokumentu typy aplikacja obsługuje.  
-  
--   Obiekty wątków  
-  
-     Jeśli aplikacja tworzy oddzielnych wątkach wykonywania — na przykład w celu wykonywania obliczeń w tle — użyjesz klasy pochodzące od [cwinthread —](../mfc/reference/cwinthread-class.md). [Cwinapp —](../mfc/reference/cwinapp-class.md) sam jest pochodną `CWinThread` i reprezentuje podstawowy wątku wykonania (lub proces główny) w aplikacji. Umożliwia także MFC w dodatkowej wątków.  
-  
- W uruchomionej aplikacji te obiekty wspólnie odpowiadanie na działania użytkownika związane ze sobą polecenia i inne komunikaty. Obiekt pojedynczą aplikacją zarządza co najmniej jeden szablon dokumentu. Każdy szablon dokumentu tworzy i którymi zarządza jednego lub wielu dokumentów (w zależności od tego, czy aplikacja jest SDI lub MDI). Widoki i manipuluje dokumentu za pośrednictwem widoku znajdująca się wewnątrz okno ramowe użytkownika. Na poniższej ilustracji przedstawiono relacje między tymi obiektami SDI aplikacji.  
-  
- ![Obiekty w uruchomionej aplikacji SDI](../mfc/media/vc386v1.gif "vc386v1")  
-Obiekty w uruchomionej aplikacji SDI  
-  
- Pozostała część tej rodziny artykułów wyjaśniono, jak narzędzia framework, Kreator aplikacji MFC i edytory zasobów, utworzyć te obiekty, jak one współdziałają i sposobie korzystania w programowaniu usługi sieci. Dokumentów, widoków i okien ramowych omówiono bardziej szczegółowo w [obiektów okien](../mfc/window-objects.md) i [architektury dokument/widok](../mfc/document-view-architecture.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+
+W ramach programu MFC framework są koncepcji dokument i widok. Dokument jest obiekt danych, z którą użytkownik wchodzi w interakcję w sesji. Jest ono tworzone przez **New** lub **Otwórz** polecenie **pliku** menu i są zwykle zapisywane w pliku. (Dokumentów standardowych MFC, pochodzi z klasy `CDocument`, różnią się od dokumenty aktywne i dokumentów złożonych OLE.) Widok jest obiekt window, przez który użytkownik wchodzi w interakcję z dokumentem.
+
+Obiekty kluczy w uruchomionej aplikacji są:
+
+- Dokument lub dokumenty.
+
+     Klasy dokumentów (pochodną [CDocument](../mfc/reference/cdocument-class.md)) określa danych aplikacji.
+
+     Jeśli potrzebujesz funkcji OLE w aplikacji, pochodzi z klasy dokumentów z [COleDocument](../mfc/reference/coledocument-class.md) lub jedna z jej klas pochodnych, w zależności od typu funkcji, potrzebujesz.
+
+- Widoki lub widok.
+
+     Klasa widoku (pochodną [CView](../mfc/reference/cview-class.md)) jest użytkownika "okno na danych." Widok klasy określa, jak użytkownik widzi danych w dokumencie i wchodzi w interakcję z nią. W niektórych przypadkach może być dokumentu, aby mieć wiele widoków danych.
+
+     Jeśli potrzebujesz przewijania, pochodzi od [CScrollView](../mfc/reference/cscrollview-class.md). Jeśli widok ma interfejs użytkownika, który jest rozmieszczony w zasobach szablonu okna dialogowego, pochodzi od [CFormView](../mfc/reference/cformview-class.md). W przypadku zwykłego tekstu danych, użyj lub pochodzić od [CEditView](../mfc/reference/ceditview-class.md). Dla aplikacji opartej na formularzu dostępu do danych, takich jak program wprowadzania danych pochodzi od [CRecordView](../mfc/reference/crecordview-class.md) (dla ODBC). Dostępne są też klasy [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), i [CRichEditView](../mfc/reference/cricheditview-class.md).
+
+- Okien ramowych
+
+     Widoki są wyświetlane w "okien ramowych dokumentu." W aplikacji interfejsu SDI ramki okna dokumentu jest również "ramką głównego okna" dla aplikacji. W aplikacji MDI okna dokumentu są okien podrzędnych wyświetlany w oknie głównym ramki. Klasy pochodne główne okno ramek określa stylów i inne cechy charakterystyczne okien ramowych, które zawierają widoków. Jeśli musisz dostosować okien ramowych dziedziczyć [CFrameWnd](../mfc/reference/cframewnd-class.md) dostosowywania okna ramki dokumentu dla aplikacji interfejsu SDI. Pochodzi od [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) dostosować w oknie głównym ramki aplikacji MDI. Ponadto należy wyprowadzić klasę z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dostosowywania każdego distinct rodzaju okien ramowych dokumentu MDI, obsługiwanych przez aplikację.
+
+- Szablon dokumentu lub szablonów
+
+     Szablon dokumentu organizuje tworzenie dokumentów, widoków i okien ramowych. Klasa określonego szablonu dokumentu, pochodząca z klasy [CDocTemplate](../mfc/reference/cdoctemplate-class.md), tworzy i którymi zarządza wszystkich otwartych dokumentach jednego typu. Aplikacje, które obsługują więcej niż jeden typ dokumentu ma wielu szablonów dokumentów. Używanie klasy [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla aplikacji interfejsu SDI lub użyj klasy [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI.
+
+- Obiekt aplikacji
+
+     Klasa aplikacji (pochodną [CWinApp](../mfc/reference/cwinapp-class.md)) kontroluje wszystkie obiekty powyżej i określa zachowanie aplikacji, takich jak inicjowanie i oczyszczanie. Jeden aplikacji oraz pouze aplikace obiekt tworzy i którymi zarządza szablonów dokumentów, dla każdego dokumentu typów obsługuje aplikacja.
+
+- Obiekty wątków
+
+     Jeśli aplikacja tworzy oddzielnych wątkach wykonywania — na przykład w celu wykonywania obliczeń w tle — użyjesz klasy pochodne [CWinThread](../mfc/reference/cwinthread-class.md). [Klasa CWinApp](../mfc/reference/cwinapp-class.md) sam jest tworzony na podstawie `CWinThread` i reprezentuje podstawowy wątek wykonywania (lub głównego procesu) w aplikacji. Umożliwia także MFC w wątków pomocniczych.
+
+W uruchomionej aplikacji te obiekty wspólne reagować na działania użytkownika związane ze sobą polecenia i inne komunikaty. Obiekt pojedynczej aplikacji zarządza co najmniej jeden szablon dokumentu. Każdy szablon dokumentu, tworzy i zarządza jednego lub wielu dokumentów (w zależności od tego, czy aplikacja jest SDI lub MDI). Użytkownik przegląda i manipuluje dokumentu za pośrednictwem widoku zawarte wewnątrz okna ramki. Na poniższej ilustracji przedstawiono relacje między tymi obiektami dla aplikacji interfejsu SDI.
+
+![Obiekty w uruchomionej aplikacji interfejsu SDI](../mfc/media/vc386v1.gif "vc386v1") obiektów w aplikacji SDI uruchamiania
+
+Pozostała część tej rodziny artykuły wyjaśniono, jak narzędzia framework, Kreator aplikacji MFC i edytory zasobów, utworzyć te obiekty, jak one współdziałają ze sobą i sposób ich używania w programowaniu usługi. Dokumentów, widoków i okien ramowych zostały omówione bardziej szczegółowo w [obiektów okien](../mfc/window-objects.md) i [architektury dokument/widok](../mfc/document-view-architecture.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

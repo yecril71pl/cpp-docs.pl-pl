@@ -19,140 +19,144 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6c41e11653eebbea121e1faf0979817d4fde04fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374366"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Porady: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++
-W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
-  
- Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), specjalne zarządzanie nie jest wymagane. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
-  
-```  
-// PassStruct1.cpp  
-// compile with: /clr  
-  
-#include <stdio.h>  
-#include <math.h>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-struct Location {  
-   int x;  
-   int y;  
-};  
-  
-double GetDistance(Location loc1, Location loc2) {  
-   printf_s("[unmanaged] loc1(%d,%d)", loc1.x, loc1.y);  
-   printf_s(" loc2(%d,%d)\n", loc2.x, loc2.y);  
-  
-   double h = loc1.x - loc2.x;  
-   double v = loc1.y = loc2.y;  
-   double dist = sqrt( pow(h,2) + pow(v,2) );  
-  
-   return dist;  
-}  
-  
-void InitLocation(Location* lp) {  
-   printf_s("[unmanaged] Initializing location...\n");  
-   lp->x = 50;  
-   lp->y = 50;  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   Location loc1;  
-   loc1.x = 0;  
-   loc1.y = 0;  
-  
-   Location loc2;  
-   loc2.x = 100;  
-   loc2.y = 100;  
-  
-   double dist = GetDistance(loc1, loc2);  
-   Console::WriteLine("[managed] distance = {0}", dist);  
-  
-   Location loc3;  
-   InitLocation(&loc3);  
-   Console::WriteLine("[managed] x={0} y={1}", loc3.x, loc3.y);  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie kierowania jest wymagana. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
-  
-```  
-// PassStruct2.cpp  
-// compile with: /clr  
-#include <stdio.h>  
-#include <math.h>  
-using namespace System;  
-  
-// native structure definition  
-struct Location {  
-   int x;  
-   int y;  
-};  
-  
-#pragma managed  
-  
-double GetDistance(Location loc1, Location loc2) {  
-   Console::Write("[managed] got loc1({0},{1})", loc1.x, loc1.y);  
-   Console::WriteLine(" loc2({0},{1})", loc2.x, loc2.y);  
-  
-   double h = loc1.x - loc2.x;  
-   double v = loc1.y = loc2.y;  
-   double dist = sqrt( pow(h,2) + pow(v,2) );  
-  
-   return dist;  
-}  
-  
-void InitLocation(Location* lp) {  
-   Console::WriteLine("[managed] Initializing location...");  
-   lp->x = 50;  
-   lp->y = 50;  
-}  
-  
-#pragma unmanaged  
-  
-int UnmanagedFunc() {  
-   Location loc1;  
-   loc1.x = 0;  
-   loc1.y = 0;  
-  
-   Location loc2;  
-   loc2.x = 100;  
-   loc2.y = 100;  
-  
-   printf_s("(unmanaged) loc1=(%d,%d)", loc1.x, loc1.y);  
-   printf_s(" loc2=(%d,%d)\n", loc2.x, loc2.y);  
-  
-   double dist = GetDistance(loc1, loc2);  
-   printf_s("[unmanaged] distance = %f\n", dist);  
-  
-   Location loc3;  
-   InitLocation(&loc3);  
-   printf_s("[unmanaged] got x=%d y=%d\n", loc3.x, loc3.y);  
-  
-    return 0;  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   UnmanagedFunc();  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+
+Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), specjalne zarządzanie nie jest wymagane. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+
+```
+// PassStruct1.cpp
+// compile with: /clr
+
+#include <stdio.h>
+#include <math.h>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+struct Location {
+   int x;
+   int y;
+};
+
+double GetDistance(Location loc1, Location loc2) {
+   printf_s("[unmanaged] loc1(%d,%d)", loc1.x, loc1.y);
+   printf_s(" loc2(%d,%d)\n", loc2.x, loc2.y);
+
+   double h = loc1.x - loc2.x;
+   double v = loc1.y = loc2.y;
+   double dist = sqrt( pow(h,2) + pow(v,2) );
+
+   return dist;
+}
+
+void InitLocation(Location* lp) {
+   printf_s("[unmanaged] Initializing location...\n");
+   lp->x = 50;
+   lp->y = 50;
+}
+
+#pragma managed
+
+int main() {
+   Location loc1;
+   loc1.x = 0;
+   loc1.y = 0;
+
+   Location loc2;
+   loc2.x = 100;
+   loc2.y = 100;
+
+   double dist = GetDistance(loc1, loc2);
+   Console::WriteLine("[managed] distance = {0}", dist);
+
+   Location loc3;
+   InitLocation(&loc3);
+   Console::WriteLine("[managed] x={0} y={1}", loc3.x, loc3.y);
+}
+```
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie kierowania jest wymagana. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+
+```
+// PassStruct2.cpp
+// compile with: /clr
+#include <stdio.h>
+#include <math.h>
+using namespace System;
+
+// native structure definition
+struct Location {
+   int x;
+   int y;
+};
+
+#pragma managed
+
+double GetDistance(Location loc1, Location loc2) {
+   Console::Write("[managed] got loc1({0},{1})", loc1.x, loc1.y);
+   Console::WriteLine(" loc2({0},{1})", loc2.x, loc2.y);
+
+   double h = loc1.x - loc2.x;
+   double v = loc1.y = loc2.y;
+   double dist = sqrt( pow(h,2) + pow(v,2) );
+
+   return dist;
+}
+
+void InitLocation(Location* lp) {
+   Console::WriteLine("[managed] Initializing location...");
+   lp->x = 50;
+   lp->y = 50;
+}
+
+#pragma unmanaged
+
+int UnmanagedFunc() {
+   Location loc1;
+   loc1.x = 0;
+   loc1.y = 0;
+
+   Location loc2;
+   loc2.x = 100;
+   loc2.y = 100;
+
+   printf_s("(unmanaged) loc1=(%d,%d)", loc1.x, loc1.y);
+   printf_s(" loc2=(%d,%d)\n", loc2.x, loc2.y);
+
+   double dist = GetDistance(loc1, loc2);
+   printf_s("[unmanaged] distance = %f\n", dist);
+
+   Location loc3;
+   InitLocation(&loc3);
+   printf_s("[unmanaged] got x=%d y=%d\n", loc3.x, loc3.y);
+
+    return 0;
+}
+
+#pragma managed
+
+int main() {
+   UnmanagedFunc();
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

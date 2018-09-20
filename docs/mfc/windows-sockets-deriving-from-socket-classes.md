@@ -16,36 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c562a8d6bf1c3f00f3812f6c25a4afd70276c64f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953765"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418960"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: wyprowadzanie z klas gniazd
-W tym artykule opisano niektóre funkcje, które można uzyskać przez wyprowadzanie własne klasy z jednej z klas gniazd.  
-  
- Własnych klas gniazd może pochodzić z jednej [CAsyncSocket](../mfc/reference/casyncsocket-class.md) lub [CSocket —](../mfc/reference/csocket-class.md) Dodawanie własnych funkcji. W szczególności tych klas, podaj liczbę funkcji wirtualnego elementu członkowskiego, które można zastąpić. Te funkcje obejmują [zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), i [OnClose](../mfc/reference/casyncsocket-class.md#onclose). W klasie pochodnej gniazda przeprowadzać powiadomienia, które zapewniają po wystąpieniu zdarzenia sieci można zastąpić funkcji. Struktura wywołuje te funkcje wywołania zwrotnego powiadomień informujący o ważnych gniazda zdarzeń, takich jak odbieranie danych rozpocząć odczyt. Aby uzyskać więcej informacji na temat funkcji powiadomień, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).  
-  
- Ponadto klasa `CSocket` dostarcza [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) funkcji członkowskiej (zaawansowane możliwym do zastąpienia). MFC wywołania tej funkcji, gdy gniazda jest przekazywanie komunikatów systemu Windows. Można zastąpić `OnMessagePending` Aby znaleźć określone wiadomości z systemu Windows i nie odpowiadają.  
-  
- Domyślna wersja `OnMessagePending` podany w klasie `CSocket` sprawdza kolejki komunikatów dla komunikatów WM_PAINT podczas oczekiwania na blokadzie wywołania do wykonania. Wywołuje komunikaty dotyczące malowania w celu poprawienia jakości wyświetlania. Jako uzupełnienie robi przydatne to przedstawiono jeden sposób może zastąpić funkcję samodzielnie. Innym przykładem, należy rozważyć użycie `OnMessagePending` następujące zadania. Załóżmy, że wyświetlane jest niemodalne okno dialogowe podczas oczekiwania na zakończenie transakcji sieci. Okno dialogowe zawiera przycisk Anuluj, którego użytkownik może anulować blokowania transakcje, które zbyt długo. Twoje `OnMessagePending` zastąpienie może pompa komunikaty dotyczące tego niemodalnego okna dialogowego.  
-  
- W Twojej `OnMessagePending` zastępowania, zwracać **TRUE** lub powrót z wywołania do klasy podstawowej wersji `OnMessagePending`. Wywołuje wersji klasy podstawowej, jeśli wykonuje pracę, aby nadal chcesz wykonać.  
-  
- Aby uzyskać więcej informacji, zobacz:  
-  
--   [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
-  
--   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
-  
--   [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)  
-  
--   [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
-  
--   [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
+
+W tym artykule opisano niektóre funkcje, które można osiągnąć wyprowadzanie własne klasy z jednej z klas gniazd.
+
+Własne gniazdo klasy mogą dziedziczyć albo [CAsyncSocket](../mfc/reference/casyncsocket-class.md) lub [CSocket](../mfc/reference/csocket-class.md) Aby dodać własne funkcje. W szczególności w ramach tych zajęć, podaj liczbę funkcji wirtualnych elementów członkowskich, które można przesłonić. Funkcje te obejmują [zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), i [OnClose](../mfc/reference/casyncsocket-class.md#onclose). Możesz przesłonić funkcji w klasie pochodnej gniazda z zalet powiadomienia, które zapewniają po wystąpieniu zdarzenia sieci. Struktura wywołuje te funkcje wywołania zwrotnego powiadomienie informujące o zdarzeń ważne gniazda, takich jak odbieranie danych, można rozpocząć się odczyt. Aby uzyskać więcej informacji na temat funkcji powiadomień, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).
+
+Ponadto klasy `CSocket` dostarcza [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) funkcji składowej (zaawansowaną możliwością). MFC wywołuje tę funkcję, podczas gdy gniazdo jest przekazywanie komunikatów z systemem Windows. Można zastąpić `OnMessagePending` Wyszukaj określone wiadomości z Windows i Reaguj na nie.
+
+Domyślna wersja `OnMessagePending` dostarczone w klasie `CSocket` sprawdza, czy kolejka komunikatów dla komunikatów WM_PAINT podczas oczekiwania na ukończenie wywołania blokowania. Wywołuje komunikaty dotyczące malowania w celu poprawienia jakości wyświetlania. Oprócz wykonywania coś, co jest przydatne, to przedstawia jeden ze sposobów mogą zastąpić tę funkcję samodzielnie. Inny przykład Rozważ użycie `OnMessagePending` następujące zadania. Załóżmy, że podczas oczekiwania na ukończenie transakcji sieci wyświetlane jest niemodalne okno dialogowe. Okno dialogowe zawiera przycisk Anuluj, którego użytkownik może anulować blokowania transakcji, które zajmuje dużo czasu. Twoje `OnMessagePending` zastąpienie może pompy komunikatów związane z tym niemodalnego okna dialogowego.
+
+W swojej `OnMessagePending` zastąpienia, zwracać albo **TRUE** lub powrót z wywołania do klasy bazowej wersję `OnMessagePending`. Należy wywołać wersję klasy podstawowej, jeśli wykonuje pracy, która nadal chcesz wykonać.
+
+Aby uzyskać więcej informacji, zobacz:
+
+- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+
+- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+
+- [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)
+
+- [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)
+
+- [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
 

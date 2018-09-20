@@ -18,52 +18,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee14f187545e09bbdca81f760b85e771fba3936d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6698a58ec2a5363700f7751565f1dde8e25c2bcf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703914"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415983"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
-**Microsoft Specific**  
-  
- Wykonuje dodawanie blokowane, w której pierwszy argument operacji jest wartość 64-bitową.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-long _InterlockedAddLargeStatistic(  
-   __int64 volatile * Addend,  
-   long Value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Wykonuje dodawanie blokowane, w której pierwszy argument operacji jest wartość 64-bitową.
+
+## <a name="syntax"></a>Składnia
+
+```
+long _InterlockedAddLargeStatistic(
+   __int64 volatile * Addend,
+   long Value
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Składnik dodawania*<br/>
-[out w] Wskaźnik do pierwszego operandu do operacji dodawania. Wartość wskazywana jest zastępowany przez wynik dodawania.  
-  
+[out w] Wskaźnik do pierwszego operandu do operacji dodawania. Wartość wskazywana jest zastępowany przez wynik dodawania.
+
 *Wartość*<br/>
-[in] Drugi operand; wartość do dodania pierwszego operandu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wartość drugiego operandu.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`_InterlockedAddLargeStatistic`|x86|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Tym wewnętrzne nie jest atomic, ponieważ jest stosowana jako dwa osobne instrukcje zablokowane. Niepodzielne odczytu 64-bitowych, występujący w innym wątku podczas wykonywania tego wewnętrznej może spowodować niespójne wartości odczytywany.  
-  
- Ta funkcja działa jako czynnik blokujący odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [_readwritebarrier —](../intrinsics/readwritebarrier.md).  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Drugi operand; wartość do dodania pierwszego operandu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wartość drugiego operandu.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`_InterlockedAddLargeStatistic`|x86|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Tym wewnętrzne nie jest atomic, ponieważ jest stosowana jako dwa osobne instrukcje zablokowane. Niepodzielne odczytu 64-bitowych, występujący w innym wątku podczas wykonywania tego wewnętrznej może spowodować niespójne wartości odczytywany.
+
+Ta funkcja działa jako czynnik blokujący odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [_readwritebarrier —](../intrinsics/readwritebarrier.md).
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

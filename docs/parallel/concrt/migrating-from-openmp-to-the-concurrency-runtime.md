@@ -15,62 +15,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e10287526e6b815ba56183a8e3d590102507aa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e6c6ca3da9e1f66e068980deebce938a5603a4cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690491"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428183"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
-Współbieżność środowiska wykonawczego umożliwia różne modele programowania. Te modele mogą nakładać się lub uzupełniają modeli z innych bibliotek. Dokumenty w tej sekcji porównaj [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do współbieżności środowiska wykonawczego i zawierają przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.  
-  
- Model programowania OpenMP jest definiowana za pomocą standardem otwartym i ma dobrze zdefiniowanego powiązania z języków programowania Fortran i C/C++. OpenMP w wersji 2.0 i 2.5, które są obsługiwane przez kompilatora Visual C++, są odpowiednie dla algorytmów równoległych iteracyjne; oznacza to ich wykonywanie równoległe iteracji przez tablicę danych. OpenMP 3.0 obsługuje-iteracyjne zadania i zadania iteracji.  
-  
- OpenMP jest najbardziej efektywne, gdy stopień równoległości jest wstępnie określane i zgodny z dostępnych zasobów w systemie. OpenMP model jest szczególnie przydatne dopasowania dla przetwarzanie o wysokiej wydajności, których bardzo dużych problemów obliczeniowa są rozmieszczane przetwarzania zasobów z jednego komputera. W tym scenariuszu środowisko sprzętu zazwyczaj jest stała i deweloper może spodziewać ma wyłączny dostęp do wszystkich zasobów obliczeniowych, gdy wykonywane jest algorytm.  
-  
- Jednak mniej ograniczone środowisk komputerowych nie może być dobrym dopasowania dla OpenMP. Na przykład trudniejsze do zaimplementowania przy użyciu OpenMP 2.0 i 2.5 są cykliczne problemów (takich jak algorytm quicksort lub wyszukiwanie drzewa danych). Współbieżność środowiska wykonawczego uzupełnia możliwości OpenMP zapewniając [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) i [Biblioteka równoległych wzorców](../../parallel/concrt/parallel-patterns-library-ppl.md) (PLL). Biblioteki agentów asynchronicznych obsługuje równoległość zadań coarse-grained; PPL obsługuje więcej szczegółowych zadań równoległych. Współbieżność środowiska wykonawczego udostępnia infrastrukturę, która jest wymagana do wykonywania operacji równolegle, dzięki czemu można skupić się na logiki aplikacji. Jednak ponieważ współbieżności środowiska wykonawczego umożliwia różne modele programowania, jego planowania obciążenie może być większa niż innych bibliotek współbieżności, takich jak OpenMP. Dlatego zaleca się, że należy przetestować wydajność przyrostowo podczas konwertowania z istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.  
-  
-## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Podczas migracji z OpenMP do współbieżności środowiska wykonawczego  
- Może być korzystne w przypadku migracji z istniejącego kodu OpenMP do współbieżności środowiska wykonawczego w następujących przypadkach.  
-  
-|Przypadków|Zalety współbieżności środowiska wykonawczego|  
-|-----------|-------------------------------------------|  
-|Wymagane jest, czyli rozszerzalne środowisko programowania współbieżnych.|Można rozszerzyć wiele funkcji współbieżność środowiska wykonawczego. Można także połączyć istniejących funkcji, aby utworzyć nowe. Ponieważ OpenMP opiera się na dyrektywy kompilatora, nie można łatwo rozszerzyć.|  
-|Aplikacja będzie korzystać z blokuje współpracy.|Gdy zadanie blokuje, ponieważ wymaga ona z zasobem, który nie jest jeszcze dostępna, współbieżności środowiska wykonawczego można wykonywać inne zadania podczas pierwszego zadania oczekiwania przez zasób.|  
-|Aplikacja będzie korzystać z dynamicznego równoważenia obciążenia.|Współbieżność środowiska wykonawczego używa algorytmu planowania, które można dostosować przydziału zasobów obliczeniowych, jak zmienić obciążeń. W OpenMP gdy harmonogram przydziela zasoby obliczeniowe do równoległego regionu tych alokacji zasobów są ustalone w całym obliczenia.|  
-|Wymagana jest obsługa obsługi wyjątków.|PPL umożliwia przechwytywanie wyjątków wewnątrz i poza równoległego regionu lub pętli. W OpenMP musi obsługiwać wyjątek w ramach równoległego regionu lub pętli.|  
-|Wymagane jest mechanizm anulowania.|PPL umożliwia aplikacjom anulować zarówno poszczególne zadania i równoległych drzewa pracy. OpenMP wymaga, aby zaimplementować mechanizm anulowania aplikacja.|  
-|Równoległego kodu na zakończenie w kontekście innej, z którego uruchamiany jest wymagana.|Współbieżność środowiska wykonawczego pozwala uruchomić zadanie w kontekście jednej i poczekaj lub anulowanie tego zadania w innym kontekście. W OpenMP wszystkie wykonywane równolegle musi zakończyć się w kontekście, w którym rozpoczyna się.|  
-|Wymagane jest rozszerzoną obsługę debugowania.|Program Visual Studio udostępnia **stosów równoległych** i **zadań równoległych** systemu windows, dzięki czemu można łatwiej Debuguj wielowątkowe aplikacje.<br /><br /> Aby uzyskać więcej informacji o debugowaniu Obsługa współbieżności środowiska wykonawczego, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window), [za pomocą okna stosów równoległych](/visualstudio/debugger/using-the-parallel-stacks-window), i [wskazówki: debugowanie równoległego Aplikacja](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|  
-  
-## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Kiedy nie można migrować z OpenMP do współbieżności środowiska wykonawczego  
- Gdy opisano, gdy nie można zastosować do migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.  
-  
-|Przypadków|Wyjaśnienie|  
-|-----------|-----------------|  
-|Aplikacja już odpowiadać wymaganiom.|Jeśli są zadowalające wydajność aplikacji i bieżącego obsługę debugowania, migracji może nie być odpowiednie.|  
-|Twoje treści pętli równoległego wykonywania małego wysiłku.|Obciążenie współbieżność środowiska wykonawczego harmonogram zadań nie może rozwiązać zalet wykonywania pętli równolegle, szczególnie w przypadku względnie niewielkich treści pętli.|  
-|Aplikacja została napisana C.|Ponieważ współbieżności środowiska wykonawczego korzysta z wielu funkcji języka C++, może nie być odpowiednie, gdy nie można zapisać kodu, który umożliwia aplikacji C w pełni wykorzystać go.|  
-  
-## <a name="related-topics"></a>Tematy pokrewne  
- [Instrukcje: konwertowanie paraleli OpenMP dla pętli do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
 
- Podane podstawowe pętli, które używa OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektywy, pokazuje, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.  
+Środowisko uruchomieniowe współbieżności umożliwia różne modele programowania. Te modele mogą nakładać się na lub uzupełniają modele innych bibliotek. Dokumenty w tej sekcji porównania [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do współbieżności środowiska wykonawczego i zawierają przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.
 
-  
- [Instrukcje: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
- Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które nie wymaga wszystkich iteracji, aby uruchomić, pokazuje, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego mechanizmu anulowania.  
-  
- [Instrukcje: konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
- Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które wykonuje obsługi wyjątków, pokazuje, jak przekonwertować go pod kątem użycia mechanizmu obsługi wyjątków współbieżności środowiska wykonawczego.  
-  
- [Instrukcje: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
- Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które używa [redukcji](../../parallel/openmp/reference/reduction.md) klauzuli pokazano, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)   
- [Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
- [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)
+Model programowania OpenMP jest definiowany przez otwarty standard i dobrze zdefiniowanych powiązań dla języków programowania Fortran i języka C/C++. OpenMP w wersji 2.0 i 2.5, które są obsługiwane przez kompilator języka Visual C++, są one odpowiednie dla algorytmów równoległych, które są iteracyjne; oznacza to ich wykonywanie równoległe iteracji przez tablicę danych. OpenMP 3.0 obsługuje-iteracyjne zadania i zadania iteracyjne.
+
+OpenMP jest najbardziej efektywne, gdy stopień równoległości jest wstępnie określane i dopasowuje dostępnych zasobów w systemie. OpenMP model jest szczególnie dobre dopasowanie do obliczeń o wysokiej wydajności, bardzo duże rozwiązywania problemów obliczeniowych są dystrybuowane między przetwarzania zasobów z jednego komputera. W tym scenariuszu środowisko sprzętu zazwyczaj jest stała i deweloper może spodziewać ma wyłącznego dostępu do wszystkich zasobów obliczeniowych, podczas wykonywania algorytmu.
+
+Jednak mniej ograniczone środowiska obliczeniowe może nie być dobre dopasowanie dla OpenMP. Na przykład rekursywny problemy (np. algorytm szybkiego sortowania lub wyszukiwania drzewo danych) są trudniejsze do zaimplementowania za pomocą OpenMP 2.0 i 2.5. Środowisko uruchomieniowe współbieżności uzupełnia możliwości OpenMP, zapewniając [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) i [biblioteki wzorców równoległych](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Bibliotekę asynchronicznych agentów obsługuje równoległości gruboziarnistych zadań; PPL obsługuje więcej szczegółowych zadań równoległych. Środowisko uruchomieniowe współbieżności stanowi infrastrukturę, która jest wymagana do wykonywania operacji w sposób równoległy, dzięki czemu możesz skupić się na logice aplikacji. Jednak ponieważ środowisko uruchomieniowe współbieżności umożliwia różne modele programowania, jego planowaniem obciążenie może być większa niż inne biblioteki współbieżności, takich jak OpenMP. Dlatego zaleca się, należy przetestować wydajność przyrostowo gdy konwertujesz istniejący kod OpenMP do korzystania ze współbieżności środowiska wykonawczego.
+
+## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Kiedy Migrowanie z OpenMP do współbieżności środowiska wykonawczego
+
+Może być korzystne, aby przeprowadzić migrację istniejącego kodu OpenMP do współbieżności środowiska wykonawczego w następujących przypadkach.
+
+|Przypadków|Zalety środowiska uruchomieniowego współbieżności|
+|-----------|-------------------------------------------|
+|Wymagane jest rozszerzalny platformy programowania współbieżnego.|Wiele funkcji w środowisku uruchomieniowym współbieżności: można rozszerzyć. Można także połączyć istniejące funkcje do tworzenia nowych. Ponieważ OpenMP opiera się na dyrektywy kompilatora, nie można łatwo rozszerzyć.|
+|Aplikacja używającym blokowanie współpracy.|Gdy zadanie blokuje, ponieważ wymaga to zasób, który nie jest jeszcze dostępny, środowisku uruchomieniowym współbieżności: można wykonywać inne zadania, gdy pierwsze zadanie czeka na zasób.|
+|Aplikacja może korzystać z dynamicznego równoważenia obciążenia.|Środowisko uruchomieniowe współbieżności używa planowania algorytmu, który dostosowuje alokacji zasobów obliczeniowych, jak zmienić obciążeń. W OpenMP gdy harmonogram przydziela zasoby obliczeniowe do równoległego regionu alokacje tych zasobów są ustalone w całym obliczeń.|
+|Potrzebujesz pomocy technicznej do obsługi wyjątków.|PPL pozwala przechwytywać wyjątki i spoza równoległego regionu lub pętli. W OpenMP musi obsługiwać wyjątek w ramach równoległego regionu lub pętli.|
+|Wymagane jest mechanizmie anulowania.|PPL umożliwia aplikacjom anulowanie zarówno pojedynczych zadań, jak i równoległych drzew pracy. OpenMP — wymaga od aplikacji, aby zaimplementować własny mechanizm anulowania.|
+|Wymagane jest równoległy kod, aby zakończyć w innym kontekście, z którego został uruchomiony.|Środowisko uruchomieniowe współbieżności pozwala uruchomić zadanie w jednym kontekście, a następnie czekać lub anulować zadania w innym kontekście. W OpenMP wszystkie równoległą musi zakończyć się w kontekście, z którego został uruchomiony.|
+|Ulepszona obsługa debugowania jest wymagana.|Program Visual Studio udostępnia **stosów równoległych** i **zadań równoległych** systemu windows, dzięki czemu można łatwiej debugowanie aplikacji wielowątkowych.<br /><br /> Aby uzyskać więcej informacji o debugowaniu Obsługa środowiska uruchomieniowego współbieżności, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window), [przy użyciu Parallel Stacks Window](/visualstudio/debugger/using-the-parallel-stacks-window), i [wskazówki: debugowanie równoległego Aplikacja](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+
+## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Kiedy nie należy Migrowanie z OpenMP do współbieżności środowiska wykonawczego
+
+Gdy opisano, gdy nie mogą nie być odpowiednie przeprowadzić migrację istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.
+
+|Przypadków|Wyjaśnienie|
+|-----------|-----------------|
+|Twoja aplikacja już spełnia Twoje wymagania.|Jeśli jesteś zadowolony z wydajnością aplikacji i bieżącej obsługi debugowania, migracji mogą nie być odpowiednie.|
+|Twoje treści pętli równoległej wykonać małego wysiłku.|Koszty związane z harmonogramu zadań w środowisku uruchomieniowym współbieżności: nie może być Pokonaj zalety wykonywania pętli w sposób równoległy, szczególnie w przypadku, gdy ciało pętli jest stosunkowo niewielka.|
+|Aplikacja jest zapisywany w C.|Ponieważ środowisko uruchomieniowe współbieżności używa wielu funkcji języka C++, może nie być odpowiedni podczas nie można napisać kod, który umożliwia aplikacji C w pełni wykorzystać ją.|
+
+## <a name="related-topics"></a>Tematy pokrewne
+
+[Instrukcje: konwertowanie paraleli OpenMP dla pętli do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+
+Biorąc pod uwagę podstawowe pętli, która korzysta z OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektyw, opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.
+
+[Instrukcje: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które nie wymagają wszystkich iteracji, aby uruchomić, opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego mechanizmie anulowania.
+
+[Instrukcje: konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, która wykonuje obsługę wyjątków, opisano sposób konwertowania go do korzystania ze mechanizm obsługi wyjątków współbieżność środowiska wykonawczego.
+
+[Instrukcje: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, która używa [redukcji](../../parallel/openmp/reference/reduction.md) klauzuli opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
+[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
+[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)
 

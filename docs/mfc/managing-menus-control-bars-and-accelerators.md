@@ -22,31 +22,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 1bd7a6515e943351980051d5f2344e80119cc9d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428658"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Zarządzanie menu, paskami sterowania i akceleratorami
-Okno ramowe zarządza aktualizowanie obiektów interfejsu użytkownika, w tym menu, przycisków paska narzędzi, pasek stanu i akceleratorami. Umożliwia także zarządzanie na pasku menu MDI aplikacji do udostępniania.  
-  
-## <a name="managing-menus"></a>Zarządzanie menu  
- Okno ramowe uczestniczy w aktualizowanie elementów interfejsu użytkownika przy użyciu mechanizmu on_update_command_ui — opisanego w [jak obiekty interfejsu użytkownika aktualizacji](../mfc/how-to-update-user-interface-objects.md). Przyciski na paski narzędzi i innych paski kontrolki są aktualizowane podczas wykonywania pętli bezczynności. Elementy menu w menu rozwijanych na pasku menu są aktualizowane tuż przed menu górnego poziomu.  
-  
- Dla aplikacji MDI ramkę okna MDI zarządza paska menu i podpis. Ramka okna MDI jest właścicielem co domyślne menu używany jako paska menu, gdy nie ma żadnych aktywnych okien podrzędnych MDI. Gdy istnieją aktywne elementy podrzędne, pasek menu Okno ramowe MDI zostanie przejęty menu dla aktywnego okna podrzędnego MDI. W przypadku aplikacji MDI obsługuje wiele typów dokumentów, takich jak dokumenty wykresu i arkusza, każdego typu umieszcza własną menu paska menu i zmieni podpis główną ramkę okna.  
-  
- [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md) zawiera domyślne implementacje dla standardowych poleceń w wyświetlonym menu okna dla aplikacji MDI. W szczególności nowe okno polecenia (id_window_new —) jest implementowany Aby utworzyć nowe okno ramowe i widoku w bieżącym dokumencie. Należy zastąpić tych implementacji tylko wtedy, gdy potrzebujesz Dostosowywanie zaawansowane.  
-  
- Wiele okien podrzędnych MDI tego samego typu dokumentu udostępniać zasoby menu. Jeśli kilka okien podrzędnych MDI są tworzone przez tego samego szablonu dokumentu, wszystkie użyciem tego samego zasobu menu zapisywania zasobów systemowych w systemie Windows.  
-  
-## <a name="managing-the-status-bar"></a>Zarządzanie na pasku stanu  
- Okno ramowe również pozycji na pasku stanu wewnątrz obszaru klienckiego i zarządza stan paska wskaźników. Czyści okno ramowe i aktualizuje obszarze wiadomości w pasku stanu, w razie potrzeby i wyświetla monit ciągi jako użytkownik wybierze elementów menu lub przycisków paska narzędzi zgodnie z opisem w [sposób wyświetlania informacji o poleceniu na pasku stanu](../mfc/how-to-display-command-information-in-the-status-bar.md).  
-  
-## <a name="managing-accelerators"></a>Zarządzanie akceleratorami  
- Każde okno ramowe przechowuje tabeli akceleratora opcjonalne, który klawiatury akceleratora Translacja zostanie automatycznie. Ten mechanizm ułatwia określenie klawisze skrótów (nazywanych również klawiszy skrótu), które wywołują polecenia menu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+Okno ramowe zarządza aktualizowanie obiektów interfejsu użytkownika, w tym menu, przyciski paska narzędzi, pasek stanu i akceleratorów. Umożliwia także zarządzanie, udostępnianie na pasku menu w aplikacji MDI.
+
+## <a name="managing-menus"></a>Zarządzanie menu
+
+Okno ramowe uczestniczy w aktualizowania elementów interfejsu użytkownika przy użyciu mechanizmu ON_UPDATE_COMMAND_UI opisanego w [jak obiektów interfejsu użytkownika aktualizacji](../mfc/how-to-update-user-interface-objects.md). Przyciski na paskach narzędzi i innych pasków sterowania są aktualizowane podczas wykonywania pętli bezczynności. Elementy menu w menu rozwijane na pasku menu są aktualizowane, tuż przed, w menu zostanie rozwinięte.
+
+Dla aplikacji MDI okna ramki MDI zarządza pasek menu i podpis. Okno ramki MDI jest właścicielem co domyślne menu używany jako pasek menu, gdy nie ma żadnych aktywnych okien podrzędnych MDI. W przypadku aktywnych elementów podrzędnych pasek menu okna ramki MDI zostanie przejęty przez menu dla aktywnego okna podrzędnego MDI. Gdy aplikacja MDI obsługuje wiele typów dokumentów, takich jak dokumenty wykresu i arkusza każdego typu umieszcza swój własny menu z paska menu i zmieni podpis ramką głównego okna.
+
+[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) zawiera domyślne implementacje dla standardowych poleceń w menu Okno, który pojawia się dla aplikacji MDI. W szczególności polecenie nowe okno (id_window_new —) zaimplementowany, aby utworzyć nowe okno ramek i widok do bieżącego dokumentu. Należy zastąpić tych implementacji tylko wtedy, gdy potrzebujesz Dostosowywanie zaawansowane.
+
+Wiele okien podrzędnych MDI typu dokumentu udostępnianie zasobów menu. Jeśli kilka okien podrzędnych MDI są tworzone przez tego samego szablonu dokumentu, można wszystkie używają tego samego zasobu menu Zapisywanie zasobów systemu Windows.
+
+## <a name="managing-the-status-bar"></a>Zarządzanie na pasku stanu
+
+Okno ramowe również umieszcza na pasku stanu w obrębie obszaru klienckiego i zarządza nimi stan paska wskaźników. Okno ramowe Czyści i aktualizuje obszarze wiadomości w pasku stanu, zgodnie z potrzebami i wyświetla monit ciągi zgodnie z wybraniu przez użytkownika w menu i przycisków paska narzędzi, zgodnie z opisem w [jak wyświetlanie informacji polecenia na pasku stanu](../mfc/how-to-display-command-information-in-the-status-bar.md).
+
+## <a name="managing-accelerators"></a>Zarządzanie akceleratorów
+
+Każde okno ramki zachowuje tabeli akceleratora opcjonalne, za pomocą klawiatury tłumaczenia accelerator dla Ciebie automatycznie. Ten mechanizm można łatwo zdefiniować klawisze skrótów (nazywane również klawiszy skrótów), które wywołują polecenia menu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58156f6d1c361c24dc6cf04a9208157d614f91a8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33ee603f680919d69684ab94acfa0515d3ec6292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439500"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Zastępowanie standardowego routingu poleceń
-W rzadkich przypadkach, gdy musi implementować różnice standardowych ramy routingu można je zastąpić. Koncepcja jest zmiana routingu w co najmniej jednej klasy przez zastąpienie `OnCmdMsg` tych klas. To zrobić:  
-  
--   W klasie, która dzieli kolejności do przekazania do obiektu innych niż domyślne.  
-  
--   Nowy obiekt inny niż domyślny lub obiekty docelowe poleceń z kolei może przekazać co polecenia.  
-  
- Po wstawieniu niektóre nowy obiekt do routingu jej klasa musi być klasą docelowym polecenia. W Twojej wersji zastępowanie `OnCmdMsg`, należy wywołać wersję, która jest zastępowanie. Zobacz [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) funkcji członkowskiej klasy `CCmdTarget` w *odwołania MFC* i wersji w tych grupach jako `CView` i `CDocument` w kodzie źródłowym podane przykłady.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+
+W rzadkich przypadkach po musi implementować różnice w routingu standardowa platforma można zastąpić go. Chodzi o to, można zmienić, routing w co najmniej jedną klasę przez zastąpienie `OnCmdMsg` w tych klas. To zrobić:
+
+- W klasie, która dzieli kolejności do przekazania do obiektu inną niż domyślna.
+
+- Nowy obiekt inny niż domyślny lub obiekty docelowe poleceń z kolei może przekazać co polecenia, aby.
+
+Jeśli niektóre nowy obiekt Wstawianie routingu, swojej klasie musi być klasą elemencie docelowym polecenia. W Twojej wersji nadrzędnych `OnCmdMsg`, pamiętaj wywołać wersję, która jest zastąpienie. Zobacz [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) funkcji składowej klasy typu `CCmdTarget` w *odwołanie MFC* i wersje tych klas jako `CView` i `CDocument` w kodzie źródłowym podane przykłady.
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

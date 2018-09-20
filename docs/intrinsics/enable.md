@@ -19,38 +19,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce3b59bc6665c4622078285a0c3b4b5011bc7d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433383"
 ---
 # <a name="enable"></a>_enable
-**Microsoft Specific**  
-  
- Umożliwia przerwań.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _enable(void);  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`_enable`|x86, ARM, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- `_enable` powoduje, że procesor, która ma ustawienie flagi przerwania. Na x86 systemów, ta funkcja generuje Ustaw flagę przerwań (`sti`) instrukcji.  
-  
- Ta funkcja jest dostępna tylko w trybie jądra. Jeśli używane w trybie użytkownika, zwracany jest wyjątek instrukcja uprzywilejowana.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft Specific**
+
+Umożliwia przerwań.
+
+## <a name="syntax"></a>Składnia
+
+```
+void _enable(void);
+```
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`_enable`|x86, ARM, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+`_enable` powoduje, że procesor, która ma ustawienie flagi przerwania. Na x86 systemów, ta funkcja generuje Ustaw flagę przerwań (`sti`) instrukcji.
+
+Ta funkcja jest dostępna tylko w trybie jądra. Jeśli używane w trybie użytkownika, zwracany jest wyjątek instrukcja uprzywilejowana.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

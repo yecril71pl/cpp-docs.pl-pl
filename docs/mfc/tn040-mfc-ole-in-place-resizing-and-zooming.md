@@ -1,5 +1,5 @@
 ---
-title: 'TN040: MFC OLE w miejscu Zmienianie rozmiaru i powiększanie | Dokumentacja firmy Microsoft'
+title: 'TN040: MFC / OLE w miejscu Zmienianie rozmiaru i powiększanie | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,75 +19,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dbd817e6bcb9c7ff526bef98bd5c2c8c1f1bb3e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 5b8e43969389d26645ef987e9c96996d2cdea3b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955173"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434755"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE — zmienianie rozmiaru i powiększanie w miejscu
+
 > [!NOTE]
->  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.  
-  
- Ta uwaga będzie omawiać problemy odnoszące się do edycji w miejscu i jak serwer powinien wykonać poprawną powiększanie i zmiany rozmiaru w miejscu. Aktywacja w miejscu WYSIWYG koncepcja jest zajęta krok dalej w tym kontenery i serwery współpracować ze sobą, a w szczególności zinterpretować ze specyfikacją OLE w taki sam sposób.  
-  
- Z powodu zamknięcia interakcji między kontenera i serwera obsługującego Aktywacja w miejscu istnieje wiele oczekiwań od użytkownika końcowego, który należy utrzymywać:  
-  
--   Wyświetlanie prezentacji (metaplik na środku `COleServerItem::OnDraw` zastąpienia) powinien wyglądać dokładnie takie same jak podczas rysowania do edycji (z wyjątkiem tego, że narzędzia do edycji nie są widoczne).  
-  
--   Gdy powiększa kontenera, okno serwer powinien zbyt!  
-  
--   Obiekty do edycji przy użyciu tego samego metryki powinien być wyświetlany kontenera i serwera. Oznacza to, za pomocą tryb mapowania na podstawie liczby *logicznej* pikseli na cal — nie fizycznych pikseli na cal, podczas renderowania na urządzenia.  
-  
+>  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+
+Ta uwaga omówi zagadnienia odnoszące się do edycji w miejscu oraz jak serwer powinien wykonać poprawną powiększanie i zmiany rozmiaru w miejscu. Za pomocą aktywacji w miejscu WYSIWYG pojęcia są podejmowane krok dalej w tym kontenery i serwery współpracują ze sobą, a w szczególności interpretacji specyfikacji OLE w taki sam sposób.
+
+Ze względu na zamknięcia interakcji między kontenera i serwera obsługi aktywacji w miejscu istnieje szereg oczekiwań od użytkownika końcowego, który należy utrzymywać:
+
+- Wyświetlanie prezentacji (metaplik rysowania w `COleServerItem::OnDraw` zastąpić) powinna wyglądać dokładnie takie same jak podczas jej rysowania do edycji (z tą różnicą, że narzędzia do edycji nie jest widoczna).
+
+- Gdy kontener powiększa, okno serwer powinien to robić!
+
+- Kontener i serwer powinien być wyświetlany obiektów do edycji przy użyciu tych samych metryk. Oznacza to, przy użyciu trybu mapowania, w oparciu o liczbę *logiczne* pikseli na cal — nie fizycznych pikseli na cal, podczas renderowania na urządzenia.
+
 > [!NOTE]
->  Ponieważ aktywacja w miejscu dotyczy tylko elementów, które są osadzone (niepołączone), powiększając ma zastosowanie tylko do obiektów osadzonych. Zobaczysz interfejsów API w obu `COleServerDoc` i `COleServerItem` służące do powiększania. Przyczyna tego dichotomy są tylko funkcje, które są prawidłowe dla połączonych i osadzonych elementów w `COleServerItem` (dzięki temu można mieć wspólne implementacji) i funkcje, które są prawidłowe tylko dla osadzonych obiektów znajdują się w `COleServerDoc` klasy (z perspektywy serwera jest **dokumentu** którego jest osadzony).  
-  
- Większość obciążeń jest umieszczona na implementujący serwera, serwer musi mieć świadomość współczynnika powiększenia kontenera i zmodyfikować jego edycji interfejs zależnie od potrzeb. Jednak serwer ustalić sposób korzystających z kontenera współczynnika powiększenia  
-  
-## <a name="mfc-support-for-zooming"></a>Obsługa MFC dla powiększania  
- Można określić bieżącego współczynnika powiększenia przez wywołanie metody `COleServerDoc::GetZoomFactor`. To wywołanie, gdy dokument nie jest aktywny w miejscu zawsze spowoduje współczynnika powiększenia 100% (lub stosunek 1:1). Wywoływanie jej, gdy aktywny w miejscu, mogą zwracać inną niż 100%.  
-  
- Przykład poprawnie powiększanie Zobacz przykład MFC OLE [HIERSVR](../visual-cpp-samples.md). Powiększanie HIERSVR jest złożona przez fakt, że wyświetla tekst i tekst, ogólnie rzecz biorąc, nie działa w sposób liniowy (wskazówek, Konwencji typograficznych, projekt szerokości i wysokości wszystkich skomplikować sprawy). Nadal, HIERSVR jest uzasadnione odwołanie wykonywania powiększanie prawidłowo, i dlatego jest samouczek MFC [BAZGROŁY](../visual-cpp-samples.md) (krok 7).  
-  
- `COleServerDoc::GetZoomFactor` Określa współczynnika powiększenia na podstawie liczby różnych dostępnych metryk z kontenera lub ze stosowania sieci `COleServerItem` i `COleServerDoc` klasy. Krótko mówiąc bieżący współczynnika powiększenia jest określany przez następującej formuły:  
-  
-```  
-Position Rectangle (PR) / Container Extent (CE)  
-```  
-  
- Pozycja prostokąta zależy kontenera. Jest zwracany do serwera podczas aktywacji w miejscu po `COleClientItem::OnGetItemPosition` nosi nazwę i jest aktualizowany, gdy kontener wywoła serwera `COleServerDoc::OnSetItemRects` (w wyniku wywołania `COleClientItem::SetItemRects`).  
-  
- W zakresie kontenera jest nieco bardziej skomplikowane do obliczenia. Jeśli kontener została wywołana `COleServerItem::OnSetExtent` (w wyniku wywołania `COleClientItem::SetExtent`), ta wartość konwertowana na pikseli na podstawie liczby pikseli na cal logiczny jest w zakresie kontenera. Kontener nie została wywołana SetExtent (co jest zazwyczaj sytuacją), a następnie w zakresie kontenera jest rozmiar zwrócony z `COleServerItem::OnGetExtent`. Tak, jeśli kontener nie została wywołana SetExtent, platformę przyjęto założenie, że jeśli jak kontenera czy wywołano go o 100% fizycznych zakres (wartość zwracana z `COleServerItem::GetExtent`). Wyrażony w inny sposób ramach przyjęto założenie, że w kontenerze są wyświetlane 100% (nie więcej, nie mniejszą) elementu.  
-  
- Należy pamiętać, że chociaż `COleServerItem::OnSetExtent` i `COleServerItem::OnGetExtent` mają podobne nazwy ich nie manipulowania tego samego atrybutu element. `OnSetExtent` jest wywoływana, aby umożliwić serwera wiedzieć, ile obiektu jest widoczny w kontenerze (niezależnie od współczynnika powiększenia) i `OnGetExtent` jest wywoływana przez kontener, aby określić rozmiar idealny obiektu.  
-  
- Patrząc na każdy z interfejsów API związanego, możesz uzyskać jaśniejszy obraz:  
-  
-## <a name="coleserveritemongetextent"></a>COleServerItem::OnGetExtent  
- Ta funkcja powinna zwrócić "fizycznych rozmiar" w jednostkach HIMETRIC elementu. Najlepszym sposobem traktować "rozmiar fizyczną" jest definiować go jako rozmiar, który może pojawiać się po wydrukowaniu. Rozmiar zwracane w tym miejscu jest stałe dla zawartości określonego elementu, (podobne jak w przypadku metaplik, który jest stały dla danego elementu). Ten rozmiar nie zmienia się podczas powiększania jest stosowany do elementu. Zazwyczaj nie zmienia się podczas kontener zawiera element więcej lub mniej miejsca przez wywołanie metody `OnSetExtent`. Przykładem zmiany może być prosty edytor tekstowy nie możliwości "margines", który opakowany tekstu opartych na ostatni zakres wysyłane przez kontener. Jeśli serwer ulega zmianie, serwer prawdopodobnie należy ustawić OLEMISC_RECOMPOSEONRESIZE bitu w rejestrze systemu (zobacz dokumentacji zestawu SDK OLE, aby uzyskać więcej informacji na temat tej opcji).  
-  
-## <a name="coleserveritemonsetextent"></a>COleServerItem::OnSetExtent  
- Ta funkcja jest wywoływana, gdy kontener zawiera "bardziej lub mniej" obiektu. Większość kontenerów nie wywoła to wcale. Domyślna implementacja przechowuje ostatnią wartość otrzymanych w kontenerze "m_sizeExtent", który jest używany w `COleServerDoc::GetZoomFactor` podczas obliczania wartości zakresu kontenera opisane powyżej.  
-  
-## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects  
- Ta funkcja jest wywoływana tylko wtedy, gdy dokument jest aktywny w miejscu. Jest ona wywoływana podczas aktualizacji kontenera położenie elementu lub wycinka stosowany do elementu. Pozycja prostokąta, jak wspomniano powyżej, zapewnia licznik Obliczanie współczynnika powiększenia. Serwer może zażądać zmiana położenie elementu przez wywołanie metody `COleServerDoc::RequestPositionChange`. Kontener może lub nie może odpowiedzieć na to żądanie przez wywołanie metody `OnSetItemRects` (w wyniku wywołania `COleServerItem::SetItemRects`).  
-  
-## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw  
- Ważne jest, aby należy pamiętać, że metaplik utworzony przez zastąpienie `COleServerItem::OnDraw` tworzy dokładnie tego samego metaplik, niezależnie od bieżącej współczynnika powiększenia. Kontener skalują metaplik zależnie od potrzeb. Jest to ważna różnica między widoku `OnDraw` elementu serwera i `OnDraw`. Po prostu tworzy uchwytów wyświetlanie, powiększanie, element *którą można powiększać* metaplik pozostawia do kontenera, aby wykonać odpowiednie powiększania.  
-  
- Najlepszy sposób, aby upewnić się, że serwer działa prawidłowo, jest użycie implementacji `COleServerDoc::GetZoomFactor` Jeśli dokument jest aktywny w miejscu.  
-  
-## <a name="mfc-support-for-in-place-resizing"></a>Obsługa MFC do zmiany rozmiaru w miejscu  
- MFC pełni implementuje interfejs zmiany rozmiaru w miejscu, zgodnie z opisem w specyfikacji OLE 2. Interfejs użytkownika jest obsługiwany przez `COleResizeBar` klasy, niestandardowy komunikat WM_SIZECHILD i specjalnej obsługi tego komunikatu w `COleIPFrameWnd`.  
-  
- Można zaimplementować różnych Obsługa tego komunikatu, niż dostarczanych przez platformę. Zgodnie z powyższym opisem platformę pozostawia wyniki do kontenera zmiany rozmiaru w miejscu — serwer odpowiada na Zmiana współczynnika powiększenia. Jeśli kontener reaguje ustawiając zarówno zakres kontenera i pozycja prostokąta podczas przetwarzania jego `COleClientItem::OnChangeItemPosition` (wywołać wyniku wywołania `COleServerDoc::RequestPositionChange`), a następnie zmiany rozmiaru w miejscu spowoduje przedstawiający "bardziej lub mniej" elementu w edycji okno. Jeśli kontener reaguje tylko ustawienie pozycja prostokąta podczas przetwarzania `COleClientItem::OnChangeItemPosition`, zmieni współczynnika powiększenia i elementu zostaną wyświetlone "powiększony przychodzący lub wychodzący."  
-  
- Serwer można kontrolować (w pewnym stopniu), co się dzieje podczas tej negocjacji. Arkusz kalkulacyjny, na przykład może zdecydować się na Pokaż więcej lub mniej komórek, gdy użytkownik zmienia rozmiar okna podczas edycji elementu w miejscu. Word-processor może zdecydować się na zmiany "marginesach strony", są takie same jak okna i zawijany do nowego marginesu. Serwery wdrożyć przez zmianę w zakresie fizycznych (rozmiar zwrócony z `COleServerItem::OnGetExtent`) po zakończeniu zmiany rozmiaru. Spowoduje to pozycja prostokąta jak również w zakresie kontenera, aby zmienić tę samą wartość, co w tym samym współczynnika powiększenia, ale większy lub mniejszy obszar wyświetlania. Ponadto, bardziej lub mniej dokumentu będą widoczne w metaplik generowane przez `OnDraw`. W takim przypadku samego dokumentu jest zmiana, gdy użytkownik zmienia rozmiar elementu, a nie tylko obszaru wyświetlania.  
-  
- Można zaimplementować niestandardowych zmiana rozmiaru i nadal korzystać z interfejsu użytkownika udostępniane przez `COleResizeBar` przez zastąpienie komunikatu WM_SIZECHILD w Twojej `COleIPFrameWnd` klasy. Aby uzyskać więcej informacji na temat WM_SIZECHILD, zobacz [24 Uwaga techniczna](../mfc/tn024-mfc-defined-messages-and-resources.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+>  Ponieważ aktywacji w miejscu ma zastosowanie tylko do elementów, które są osadzone (nie jest połączony), powiększanie ma zastosowanie tylko do obiektów osadzonych. Interfejsy API będą widoczne w obu `COleServerDoc` i `COleServerItem` służące do powiększania. Przyczyną tego dichotomy jest, czy tylko te funkcje, które są prawidłowe dla połączonych i osadzone elementy znajdują się w `COleServerItem` (umożliwia to mają wspólne implementacji) i funkcje, które są prawidłowe tylko w przypadku obiektów osadzonych znajdują się w `COleServerDoc` klasy (z perspektywy serwera jest **dokumentu** który jest osadzony).
+
+Większość obciążeń jest umieszczany na implementujący serwera, serwer musi mieć świadomość współczynnika powiększenia kontenera i zmodyfikować jego edycji interfejs zgodnie z potrzebami. Ale jaki sposób serwer określa współczynnika powiększenia używanej kontenera
+
+## <a name="mfc-support-for-zooming"></a>Obsługa MFC dla powiększania
+
+Można określić bieżące współczynnika powiększenia przez wywołanie metody `COleServerDoc::GetZoomFactor`. To wywołanie, gdy dokument nie jest aktywny w miejscu zawsze spowoduje współczynnik powiększeniu 100% (lub współczynnik 1:1). Jej wywołanie gdy aktywny w miejscu może zwrócić coś innego niż 100%.
+
+Na przykład powiększanie poprawnie zobacz przykładową MFC OLE [HIERSVR](../visual-cpp-samples.md). Powiększanie HIERSVR jest skomplikowane faktem, że wyświetla tekst i tekstu, ogólnie rzecz biorąc, nie działa w sposób liniowy (wskazówek, konwencje związane z typografią, projekt szerokości i wysokości wszystkich skomplikować sprawy). Jednak HIERSVR jest uzasadnione odwołanie do implementowania powiększanie poprawnie, a więc jest to samouczek MFC [BAZGROŁY](../visual-cpp-samples.md) (krok 7).
+
+`COleServerDoc::GetZoomFactor` Określa współczynnika powiększenia, w oparciu o szereg różnych dostępnych metryk z kontenera lub z wdrożenia usługi `COleServerItem` i `COleServerDoc` klasy. Krótko mówiąc bieżący współczynnika powiększenia jest określany za pomocą następującego wzoru:
+
+```
+Position Rectangle (PR) / Container Extent (CE)
+```
+
+Pozycja prostokąta jest określana przez kontener. Jest zwracany do serwera podczas aktywacji w miejscu po `COleClientItem::OnGetItemPosition` nosi nazwę i jest aktualizowany, gdy kontener wywoła serwera `COleServerDoc::OnSetItemRects` (z wywołaniem `COleClientItem::SetItemRects`).
+
+W zakresie kontenera jest nieco bardziej skomplikowane obliczenia. Jeśli kontener została wywołana `COleServerItem::OnSetExtent` (z wywołaniem `COleClientItem::SetExtent`), w zakresie kontenera jest tę wartość, konwertowana na piksele na podstawie liczby pikseli na cal logiczny. Jeśli kontener nie wywołał SetExtent (co zwykle tak jest), a następnie w zakresie kontenera jest rozmiar zwrócony przez `COleServerItem::OnGetExtent`. Tak, jeśli kontener nie wywołał SetExtent, struktura przyjęto założenie, jeśli tak kontenera będzie wywołaniu go w 100% naturalnych zakresu (wartość zwracana z `COleServerItem::GetExtent`). Wyrażam innym sposobem ramach przyjęto założenie, że w kontenerze są wyświetlane 100% (większa, nie mniejszą) elementu.
+
+Ważne jest, aby pamiętać, że chociaż `COleServerItem::OnSetExtent` i `COleServerItem::OnGetExtent` podobnych nazwach mogą nie manipulowania tego samego atrybutu elementu. `OnSetExtent` jest wywoływana, aby umożliwić serwera wiedzieć, ile obiekt jest widoczny w kontenerze (niezależnie od współczynnika powiększenia) i `OnGetExtent` jest wywoływany przez kontener, aby określić rozmiar idealny obiektu.
+
+Patrząc na poszczególnych interfejsów API, które są zaangażowani, można uzyskać lepszy obraz:
+
+## <a name="coleserveritemongetextent"></a>COleServerItem::OnGetExtent
+
+Ta funkcja powinna zwrócić "naturalny rozmiar" w jednostkach HIMETRIC elementu. Najlepiej jest myśleć o "naturalny rozmiar" jest jego wartość jest definiowana jako rozmiar, który może pojawić się po wydrukowaniu. Rozmiar zwrócony w tym miejscu jest stałe dla zawartości elementu (podobnie do metaplik, który jest stałe dla określonego elementu). Ten rozmiar nie zmienia się podczas powiększania jest stosowany do elementu. Zazwyczaj nie zmienia się podczas kontenera zapewnia elementu miejsce więcej lub mniej, wywołując `OnSetExtent`. Przykładem zmiany może być w przypadku prostego edytora tekstów nie możliwości "Marża", który zawiniętego tekstu w oparciu o w zakresie ostatnich wysłana przez kontener. Jeśli serwer ulega zmianie, serwer prawdopodobnie należy ustawić OLEMISC_RECOMPOSEONRESIZE bit w rejestrze systemowym (zobacz w dokumentacji zestawu SDK OLE, aby uzyskać więcej informacji na temat tej opcji).
+
+## <a name="coleserveritemonsetextent"></a>COleServerItem::OnSetExtent
+
+Ta funkcja jest wywoływana, gdy kontener zawiera "więcej lub mniej" obiektu. Większość kontenerów nie wywoła to wcale. Domyślna implementacja przechowuje ostatnią wartość odebranych z kontenera w usłudze "m_sizeExtent", który jest używany w `COleServerDoc::GetZoomFactor` podczas obliczania wartości zakresu kontenera opisanych powyżej.
+
+## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects
+
+Ta funkcja jest wywoływana tylko wtedy, gdy dokument jest aktywny w miejscu. Jest ona wywoływana po zaktualizowaniu kontenera, położenie elementu lub wycinka stosowany do elementu. Pozycja prostokąta, jak wspomniano powyżej, zapewnia licznik Obliczanie współczynnika powiększenia. Serwer może żądać, że położenie elementu można zmienić, wywołując `COleServerDoc::RequestPositionChange`. Kontener może lub nie może odpowiedzieć na to żądanie, wywołując `OnSetItemRects` (z wywołaniem `COleServerItem::SetItemRects`).
+
+## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw
+
+Ważne jest, aby należy pamiętać, że metaplik utworzonych przez zastąpienie `COleServerItem::OnDraw` tworzy dokładnie tych samych metaplik, niezależnie od bieżącej współczynnika powiększenia. Kontener będzie skalowana metaplik zgodnie z potrzebami. Jest to ważna różnica między wyświetlaniem `OnDraw` i element serwera `OnDraw`. Po prostu tworzy powiększania uchwytów widoku elementu *którą można powiększać* metaplik i pozostawi je do kontenera w celu odpowiedniego powiększanie.
+
+Najlepszym sposobem, aby mieć pewność, że serwer działa poprawnie, jest użycie wdrożenia `COleServerDoc::GetZoomFactor` Jeśli Twój dokument jest aktywny w miejscu.
+
+## <a name="mfc-support-for-in-place-resizing"></a>Obsługa MFC dla rozmiaru w miejscu
+
+MFC w pełni implementuje interfejs zmiany rozmiaru w miejscu, jak opisano w specyfikacji OLE 2. Interfejs użytkownika jest obsługiwany przez `COleResizeBar` klasy, niestandardowy komunikat WM_SIZECHILD i specjalnej obsługi tego komunikatu w `COleIPFrameWnd`.
+
+Można zaimplementować obsługę różnych tego komunikatu, niż dostarczanych przez platformę. Zgodnie z powyższym opisem ramach pozostawia wyniki rozmiaru w miejscu do kontenera — serwer odpowiada, aby zmiana współczynnika powiększenia. Jeśli kontener reaguje, ustawiając zarówno zakres kontenera i pozycja prostokąta podczas przetwarzania jego `COleClientItem::OnChangeItemPosition` (nazywane w wyniku wywołania `COleServerDoc::RequestPositionChange`), a następnie zmiany rozmiaru w miejscu spowoduje wyświetlanie "więcej lub mniej" elementu w edycji okno. Jeśli kontener reaguje, ustawienie pozycja prostokąta tylko podczas przetwarzania `COleClientItem::OnChangeItemPosition`zmieni współczynnika powiększenia i elementu zostaną wyświetlone "element wewnątrz lub na zewnątrz."
+
+Serwer można kontrolować (w pewnym stopniu), co się stanie podczas tej negocjacji. Arkusz kalkulacyjny, na przykład może zdecydować się na Pokaż więcej lub mniej komórek po użytkownik zmienia rozmiar okna podczas edycji elementu w miejscu. Word-processor mogą postanowić zmiany "marginesy strony", dlatego są takie same jak okna i zawijany do nowego marginesu. Serwery implementacji, zmieniając zakres fizycznych (rozmiar zwrócony przez `COleServerItem::OnGetExtent`) po zakończeniu zmiany rozmiaru. Spowoduje to KONTENER, w jakim zmiany przez tę samą wartość, co w tym samym współczynnika powiększenia, ale większe lub mniejsze obszaru wyświetlania i pozycja prostokąta. Ponadto, bardziej lub mniej dokumentu będą widoczne w metaplik generowane przez `OnDraw`. W tym przypadku samego dokumentu ulegnie zmianie, gdy użytkownik zmienia rozmiar elementu, a nie tylko z obszaru wyświetlania.
+
+Można zaimplementować niestandardowy zmiana rozmiaru i w dalszym ciągu używać interfejsu użytkownika dostarczonego przez `COleResizeBar` przez zastąpienie komunikatu WM_SIZECHILD w swojej `COleIPFrameWnd` klasy. Aby uzyskać więcej informacji na temat WM_SIZECHILD, zobacz [techniczne 24 Uwaga](../mfc/tn024-mfc-defined-messages-and-resources.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c150360294277653c777e5142cbf1dc57a97b2b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409795"
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>Zastępowanie funkcji wirtualnych (Visual C++)
-Można zastąpić funkcji wirtualnych zdefiniowanych w klasie podstawowej z programu Visual Studio [okna właściwości](/visualstudio/ide/reference/properties-window).  
-  
-### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Aby przesłonić funkcję wirtualną w oknie właściwości  
-  
-1.  W widoku klas kliknij klasy.  
-  
-2.  Kliknij w oknie właściwości **zastępuje** przycisku.  
-  
-    > [!NOTE]
-    >  **Zastępuje** przycisk jest dostępny po wybraniu nazwy klasy w widoku klas lub po kliknięciu w oknie źródła.  
-  
-     Po lewej stronie wymieniono funkcje wirtualne. Jeśli nazwa funkcji wirtualnej jest także wyświetlany w prawej kolumnie, zastąpienia już została zaimplementowana.  
-  
-3.  Jeśli funkcja ma nie zastępuj, następnie kliknij komórkę w prawej kolumnie w oknie właściwości, aby wyświetlić sugerowane nazwy funkcji zastępują jako \<Dodaj >*FuncName*.  
-  
-4.  Kliknij, aby dodać kod klasy zastępczej dla funkcji.  
-  
-5.  Aby edytować zastępowanie funkcji, kliknij dwukrotnie nazwę funkcji w widoku klas i edytować kod w oknie źródła.  
-  
- Aby usunąć zastąpienia, kliknij nazwę funkcji zastąpienia w prawej kolumnie, a następnie wybierz \<usunąć >*FuncName*. Kod funkcji jest oznaczone jako komentarz.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)   
- [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)
+
+Możesz przesłonić funkcji wirtualnych zdefiniowanych w klasie bazowej programu Visual Studio [okno właściwości](/visualstudio/ide/reference/properties-window).
+
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Aby przesłonić funkcji wirtualnej w oknie dialogowym właściwości
+
+1. W widoku klas kliknij klasy.
+
+1. W oknie dialogowym właściwości kliknij **zastępuje** przycisku.
+
+   > [!NOTE]
+   >  **Zastępuje** przycisk jest dostępny po wybraniu nazwy klasy w widoku klas lub po kliknięciu w oknie źródła.
+
+   Kolumna po lewej stronie zawiera funkcje wirtualne. Jeśli nazwa funkcji wirtualnej pojawi się również w prawej kolumnie, zastąpienie już została zaimplementowana.
+
+1. Jeśli funkcja nie ma żadnych override, następnie kliknij komórkę w prawej kolumnie w oknie dialogowym właściwości, aby wyświetlić sugerowane nazwę funkcji zastępują jako \<Dodaj >*FuncName*.
+
+1. Kliknij nazwę sugerowaną można dodać kodu klasy zastępczej dla funkcji.
+
+1. Aby edytować funkcji przez nadrzędne, kliknij dwukrotnie nazwę funkcji w widoku klas i edytowanie kodu w oknie źródła.
+
+Aby usunąć zastąpienia, kliknij nazwę funkcji zastąpienie w prawej kolumnie, a następnie wybierz \<Usuń >*FuncName*. Kod funkcji jest opatrzona komentarzem.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)

@@ -2,7 +2,7 @@
 title: Instalowanie obsługi języka C++ w programie Visual Studio 2017 | Dokumentacja firmy Microsoft
 description: Instalowanie obsługi programu Visual Studio dla języka Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702900"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441945"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
@@ -37,7 +37,7 @@ Aby uzyskać szczegółowe informacje dotyczące miejsca na dysku i wymagania do
 
 ## <a name="visual-studio-2015-installation"></a>Instalacja programu Visual Studio 2015
 
-Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++.
+Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę języka C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Windows Start i typ **Dodaj/Usuń programy**. Otwórz program z listy wyników, a następnie znajdź instalacji programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz **Modyfikuj** i wybierz pozycję Visual C++ składniki do zainstalowania.
 
 Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
 

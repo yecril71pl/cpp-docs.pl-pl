@@ -17,52 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0c47efbf364f5ddacb7ce534b0dfd7853534acb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2da339259efd77ea7992e63e6137a15017fdc31
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127458"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402840"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Porady: definiowanie statycznego konstruktora interfejsu (C++/CLI)
-Interfejs może mieć statycznego konstruktora, który może służyć do zainicjowania statyczne elementy członkowskie danych.  Konstruktor statyczny zostanie wywołana najwyżej jeden raz i będzie wywoływana przed po raz pierwszy uzyskać dostępu do członka statycznego interfejsu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// mcppv2_interface_class2.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-interface struct MyInterface {  
-   static int i;  
-   static void Test() {  
-      Console::WriteLine(i);  
-   }  
-  
-   static MyInterface() {   
-      Console::WriteLine("in MyInterface static constructor");  
-      i = 99;  
-   }  
-};  
-  
-ref class MyClass : public MyInterface {};  
-  
-int main() {  
-   MyInterface::Test();  
-   MyClass::MyInterface::Test();  
-  
-   MyInterface ^ mi = gcnew MyClass;  
-   mi->Test();  
-}  
-```  
-  
-```Output  
-in MyInterface static constructor  
-99  
-99  
-99  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [klasy interfejsu](../windows/interface-class-cpp-component-extensions.md)
+
+Interfejs może mieć statyczny Konstruktor, który może służyć do zainicjowania elementów członkowskich danych statycznych.  Konstruktor statyczny będzie wywoływana co najwyżej jeden raz i zostanie wywołana przed metodą uzyskiwania dostępu do składowej interfejsu statycznego po raz pierwszy.
+
+## <a name="example"></a>Przykład
+
+```
+// mcppv2_interface_class2.cpp
+// compile with: /clr
+using namespace System;
+
+interface struct MyInterface {
+   static int i;
+   static void Test() {
+      Console::WriteLine(i);
+   }
+
+   static MyInterface() {
+      Console::WriteLine("in MyInterface static constructor");
+      i = 99;
+   }
+};
+
+ref class MyClass : public MyInterface {};
+
+int main() {
+   MyInterface::Test();
+   MyClass::MyInterface::Test();
+
+   MyInterface ^ mi = gcnew MyClass;
+   mi->Test();
+}
+```
+
+```Output
+in MyInterface static constructor
+99
+99
+99
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa interfejsu](../windows/interface-class-cpp-component-extensions.md)

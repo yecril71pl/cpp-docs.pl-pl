@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602368"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409874"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>Parametry
 
-*I0*  
+*I0*<br/>
 (Wymagane) Identyfikator interfejsu: 0.
 
-*I1*  
+*I1*<br/>
 (Wymagane) Identyfikator interfejsu: 1.
 
-*I2*  
+*I2*<br/>
 (Opcjonalnie) Identyfikator interfejsu: 2.
 
-*I3*  
+*I3*<br/>
 (Opcjonalnie) Identyfikator interfejsu 3.
 
-*I4*  
+*I4*<br/>
 (Opcjonalnie) Identyfikator interfejsu: 4.
 
-*I5*  
+*I5*<br/>
 (Opcjonalnie) Identyfikator interfejsu 5.
 
-*I6*  
+*I6*<br/>
 (Opcjonalnie) Identyfikator interfejsu 6.
 
-*I7*  
+*I7*<br/>
 (Opcjonalnie) Identyfikator interfejsu 7.
 
-*I8*  
+*I8*<br/>
 (Opcjonalnie) Identyfikator interfejsu 8.
 
-*I9*  
+*I9*<br/>
 (Opcjonalnie) Identyfikator interfejsu: 9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Typ pochodny.
 
-*BaseType*  
+*BaseType*<br/>
 Typ podstawowy typu pochodnego.
 
-*hasImplements*  
+*hasImplements*<br/>
 Wartość logiczna, że jeśli **true**, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.
 
 ## <a name="members"></a>Elementy członkowskie

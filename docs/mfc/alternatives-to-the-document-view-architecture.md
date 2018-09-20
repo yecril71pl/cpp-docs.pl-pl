@@ -1,5 +1,5 @@
 ---
-title: Alternatywy dla architektury dokument widok | Dokumentacja firmy Microsoft
+title: Alternatywy dla architektury dokumentu widoku | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,63 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930290"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403479"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternatywy dla architektury dokument/widok
-Aplikacje MFC używać architektury dokument/widok do zarządzania informacjami, formaty plików i wizualną reprezentację danych dla użytkowników. Dla większości aplikacji klasycznych architektury dokument/widok jest Architektura aplikacji odpowiednie i skuteczne. Taka architektura oddziela danych z przeglądania i w większości przypadków, upraszcza aplikacji i zmniejsza nadmiarowy kod.  
-  
- Jednak architektury dokument/widok nie jest odpowiedni dla niektórych sytuacjach. Należy wziąć pod uwagę następujące przykłady:  
-  
--   Są eksportowanie aplikacji napisanych w C dla systemu Windows, możesz ukończyć portów przed dodaniem obsługi dokument/widok do aplikacji.  
-  
--   Podczas pisania lekkie narzędzie może się okazać, że można wykonać bez architektury dokument/widok.  
-  
--   Jeśli oryginalny kod łączy już danych zarządzania z danymi wyświetlanie, przenoszenie kod, aby model dokument/widok nie jest warto nakład pracy ponieważ muszą być rozdzielone dwa. Warto pozostawić kod jest.  
-  
- Aby utworzyć aplikację, która nie korzysta z architektury dokument/widok, wyczyść **wsparcie dla architektury dokument/widok** pole wyboru w kroku 1 Kreator aplikacji MFC. Zobacz [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) szczegółowe informacje.  
-  
+
+Aplikacje MFC zwykle korzystają architektury dokument/widok do zarządzania informacjami, formaty plików i wizualna reprezentacja danych dla użytkowników. Dla większości aplikacji klasycznych architektury dokument/widok to Architektura aplikacji odpowiednie i efektywne. Ta architektura oddziela dane z przeglądania i w większości przypadków, upraszcza aplikacji i zmniejsza nadmiarowy kod.
+
+Jednak architektury dokument/widok nie jest odpowiednie w niektórych sytuacjach. Należy wziąć pod uwagę te przykłady:
+
+- Czy przenoszenie aplikacji napisanych w języku C dla Windows, można wykonać portów przed dodaniem dokument/widok pomocy technicznej do Twojej aplikacji.
+
+- Jeśli piszesz uproszczone narzędzia możesz znaleźć, co można zrobić bez architektury dokument/widok.
+
+- Jeśli oryginalny kod już napisana zarządzanie danymi przy użyciu danych wyświetlania, przenoszenie kodu do modelu dokumentu/widoku nie jest warte włożonej pracy, ponieważ muszą być rozdzielone dwa. Warto pozostawić kod jest.
+
+Aby utworzyć aplikację, która nie korzysta z architektury dokument/widok, wyczyść **Obsługa architektury dokument/widok** pole wyboru w kroku 1 procedury Kreator aplikacji MFC. Zobacz [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) Aby uzyskać szczegółowe informacje.
+
 > [!NOTE]
->  Okno dialogowe aplikacji utworzonej przez Kreatora aplikacji MFC nie używaj architektury dokument/widok, więc **wsparcie dla architektury dokument/widok** pole wyboru jest wyłączona w przypadku wybrania typu aplikacji w oknie dialogowym.  
-  
- Kreatorów Visual C++, a także edytora źródła i okna dialogowe, współpracować z wygenerowanym aplikacji tak samo, jak z dowolnej generowane przez Kreatora aplikacji. Aplikacja może obsługiwać pasków narzędzi, pasków przewijania i paska stanu i ma **o** pola. Aplikacji nie będą rejestrować wszystkie szablony dokumentów i nie będzie zawierać klasę dokumentu.  
-  
- Należy zauważyć, że wygenerowany aplikacji ma klasę widoku `CChildView`, pochodną `CWnd`. MFC tworzy i umieszcza jedno wystąpienie klasy widoku w ramach okna ramowe utworzone przez aplikację. MFC nadal wymusza przy użyciu okno widoku, ponieważ takie rozwiązanie upraszcza pozycjonowanie i zarządzanie zawartością aplikacji. Można dodać kod rysowania `OnPaint` członkiem tej klasy. Kod należy dodać paski przewijania, do widoku, a nie do ramki.  
-  
- Ponieważ architektury dokument/widok udostępniane przez MFC jest odpowiedzialny za wdrażanie wiele podstawowych funkcji aplikacji, brak w projekcie oznacza, że użytkownik odpowiedzialnych za wdrażanie aplikacji na wiele funkcji:  
-  
--   Dostarczone przez Kreatora aplikacji MFC, menu dla aplikacji zawiera tylko **nowy** i **zakończenia** polecenia w **pliku** menu. ( **Nowy** polecenie jest obsługiwane tylko dla aplikacji MDI, obsługuje nie SDI — aplikacje bez dokument/widok.) Menu wygenerowanego zasobów nie będzie obsługiwał listy MRU (ostatnio używane).  
-  
--   Należy dodać funkcje obsługi oraz implementacji dla żadnych poleceń, które będą obsługiwać aplikacji, w tym **Otwórz** i **zapisać** na **pliku** menu. MFC zwykle zapewnia kodu do obsługi tych funkcji, ale obsługa jest ściśle powiązana z architektury dokument/widok.  
-  
--   Pasek narzędzi dla aplikacji, jeśli jest to wymagane, będzie minimalny.  
-  
- Zdecydowanie zaleca się użyć Kreator aplikacji MFC do tworzenia aplikacji bez architektury dokument/widok, ponieważ Kreator gwarantuje MFC o prawidłowej architekturze. Jednak jeśli należy unikać, za pomocą kreatora, poniżej przedstawiono kilka rozwiązań dla pomijanie architektury dokument/widok w kodzie:  
-  
--   Traktuj dokumentu jako polecenia nieużywane i wdrożenie kodzie danych zarządzania w klasie widoku zgodnie z sugestią podaną powyżej. Obciążenie dokumentu jest stosunkowo niska. Pojedynczy [CDocument](../mfc/reference/cdocument-class.md) obiektu wiąże się z małej ilości obciążenie przez samego siebie, a także małe obciążenie związane z `CDocument`w podstawowej klasy, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) i [CObject](../mfc/reference/cobject-class.md). Oba te ostatnie klas są niewielkie.  
-  
-     Zadeklarowany w `CDocument`:  
-  
-    -   Dwa `CString` obiektów.  
-  
-    -   Trzy **BOOL**s.  
-  
-    -   Jeden `CDocTemplate` wskaźnika.  
-  
-    -   Jeden `CPtrList` obiekt, który zawiera listę widokach dokumentu.  
-  
-     Ponadto dokumentu wymaga ilość czasu, można utworzyć obiektu dokumentu, jego wyświetlanie obiektów okno ramowe i obiektu szablonu dokumentu.  
-  
--   Traktuj dokumentu i widoku jako appendages nieużywane. Umieść zarządzanie danymi, a kod rysowania w oknie ramowym zamiast widoku. Ta metoda jest bliżej modelu programowania w języku C.  
-  
--   Zastąpienie części programu MFC framework, które Tworzenie dokumentu i widok, aby wyeliminować na wszystkich ich tworzenia. Proces tworzenia dokumentu rozpoczyna się od wywołania `CWinApp::AddDocTemplate`. Eliminowanie tego wywołania z klasy aplikacji `InitInstance` elementu członkowskiego działać, a zamiast tego utworzyć okno ramowe w `InitInstance` samodzielnie. Umieść swój kod zarządzania danych w klasie ramki okna. Przedstawia proces tworzenia dokumentu/widoku [tworzenia dokumentu/widoku](../mfc/document-view-creation.md). To jest więcej pracy i wymaga głębsze zrozumienie struktury, ale zwalnia można wyłącznie z obciążenie dokument/widok.  
-  
- Artykuł [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md) zawiera bardziej konkretną przykłady alternatyw dokument/widok w kontekście bazy danych aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Architektura dokument/widok](../mfc/document-view-architecture.md)
+>  Oparta na oknach dialogowych aplikacji utworzone przez Kreatora aplikacji MFC nie należy używać architektury dokument/widok, więc **Obsługa architektury dokument/widok** pole wyboru jest wyłączone, jeśli typ aplikacji okna dialogowego.
+
+Kreatorów Visual C++, a także Edytory źródłowe i okna dialogowego, pracować z wygenerowanej aplikacji, tak samo, jak za pomocą dowolnej generowane przez Kreatora aplikacji. Aplikacja może obsługiwać paski narzędzi, paski przewijania i pasek stanu i ma **o** pole. Aplikacja nie zarejestruje żadnych szablonów dokumentów i nie będzie zawierać klasy dokumentu.
+
+Należy pamiętać, że wygenerowanej aplikacji ma klasę widoku `CChildView`, pochodzącej z `CWnd`. MFC tworzy i umieszcza jedno wystąpienie klasy widoku w ramach okien ramowych tworzone przez testowaną aplikację. MFC nadal wymusza korzystanie z okna widoku, ponieważ upraszcza rozmieszczania i zarządzania zawartością aplikacji. Można dodać kod rysowania `OnPaint` elementu członkowskiego tej klasy. Kod należy dodać paski przewijania, do widoku, a nie do ramki.
+
+Ponieważ architektury dokument/widok dostarczonych przez MFC jest odpowiedzialny za realizację wielu podstawowych funkcji aplikacji, jego nieobecności w projekcie oznacza, że jesteś odpowiedzialny za realizację wielu ważnych funkcji aplikacji:
+
+- Zgodnie z postanowieniami przez Kreatora aplikacji MFC, menu aplikacji zawiera tylko **New** i **zakończenia** polecenia na **pliku** menu. ( **New** polecenie jest obsługiwane tylko dla aplikacji MDI, obsługa nie aplikacje SDI bez dokument/widok.) Resource wygenerowany menu nie obsługuje listy ostatnio używanych elementów (ostatnio używane).
+
+- Należy dodać funkcje obsługi i implementacje dla dowolnego polecenia, które będzie obsługiwać aplikacji, w tym **Otwórz** i **Zapisz** na **pliku** menu. MFC zwykle zapewnia kodu do obsługi tych funkcji, ale obsługa jest ściśle powiązany z architektury dokumentu/widoku.
+
+- Pasek narzędzi dla aplikacji, żądanie będzie minimalny.
+
+Zdecydowanie zaleca się użyć Kreatora aplikacji MFC do tworzenia aplikacji bez architektury dokumentu/widoku, ponieważ kreatora gwarantuje poprawną architektury MFC. Jednak jeśli należy unikać, za pomocą kreatora, poniżej przedstawiono kilka metod dla architektury dokument/widok w kodzie z pominięciem:
+
+- Traktuj dokumentu jako polecenia nieużywane i zaimplementować kod zarządzania danych w klasie widoku, zgodnie z sugestią powyżej. Obciążenie dla dokumentu jest stosunkowo niska. Pojedynczy [CDocument](../mfc/reference/cdocument-class.md) obiektu wiąże się z małej ilości obciążenie przez siebie oraz małe obciążenie związane z `CDocument`firmy klas bazowych, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) i [CObject](../mfc/reference/cobject-class.md). Zarówno klasy te ostatnie są niewielkie.
+
+     Zadeklarowane w `CDocument`:
+
+   - Dwa `CString` obiektów.
+
+   - Trzy **BOOL**s.
+
+   - Jeden `CDocTemplate` wskaźnika.
+
+   - Jeden `CPtrList` obiekt, który zawiera listę widoków dokumentu.
+
+     Ponadto dokument wymaga ilość czasu na tworzenie obiektu dokumentu, jej obiektów widoku, okno ramek i obiektu szablonu dokumentu.
+
+- Dokumentu i widok należy traktować jako appendages nieużywane. Umieść Twoje zarządzania danymi i kod rysowania w okno ramowe zamiast widoku. To podejście jest bliżej modelu programowania w języku C.
+
+- Zastąp fragmenty struktura MFC, które utworzyć dokument i widok, aby wyeliminować, tworzenia ich w ogóle. Proces tworzenia dokumentu zaczyna się od wywołania `CWinApp::AddDocTemplate`. Eliminowanie wywołania od Twojej klasy aplikacji `InitInstance` elementu członkowskiego działać, a zamiast tego utworzyć okno ramowe w `InitInstance` samodzielnie. Umieść kod zarządzania danych w swojej klasie okien ramowych. Przedstawia proces tworzenia dokumentu/widoku [tworzenia dokumentu/widoku](../mfc/document-view-creation.md). Jest więcej pracy i wymaga lepiej zrozumieć Framework, ale uwalnia użytkownika wyłącznie z obciążenie dokument/widok.
+
+Artykuł [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md) zapewnia bardziej konkretne przykłady alternatyw dokument/widok w kontekście aplikacji baz danych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Architektura dokument/widok](../mfc/document-view-architecture.md)
 

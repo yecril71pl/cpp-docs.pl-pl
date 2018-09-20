@@ -20,101 +20,111 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: eee19197c4b171cf669c9458ab722240e431bf70
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338275"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398225"
 ---
 # <a name="cd2drectf-class"></a>Klasa CD2DRectF
-Otoka dla `D2D1_RECT_F`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CD2DRectF : public D2D1_RECT_F;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Przeciążone. Konstruuje `CD2DRectF` obiektu z `D2D1_RECT_F` obiektu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera żadnych prawidłowych danych (NULL).|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DRectF::operator CRect](#operator_crect)|Konwertuje `CD2DRectF` do `CRect` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `D2D1_RECT_F`  
-  
- `CD2DRectF`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxrendertarget.h  
-  
-##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
- Tworzy obiekt CD2DRectF z CRect obiektu.  
-  
-```  
-CD2DRectF(const CRect& rect);  
-CD2DRectF(const D2D1_RECT_F& rect);  
+
+Otoka dla `D2D1_RECT_F`.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CD2DRectF : public D2D1_RECT_F;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Przeciążone. Konstruuje `CD2DRectF` obiektu z `D2D1_RECT_F` obiektu.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DRectF::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera żadnych prawidłowych danych (NULL).|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DRectF::operator CRect](#operator_crect)|Konwertuje `CD2DRectF` do `CRect` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`D2D1_RECT_F`
+
+`CD2DRectF`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxrendertarget.h
+
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
+
+Tworzy obiekt CD2DRectF z CRect obiektu.
+
+```
+CD2DRectF(const CRect& rect);
+CD2DRectF(const D2D1_RECT_F& rect);
   CD2DRectF(const D2D1_RECT_F* rect);
 
- 
+
 CD2DRectF(
-    FLOAT fLeft = 0.,  
-    FLOAT fTop = 0.,  
-    FLOAT fRight = 0.,  
+    FLOAT fLeft = 0.,
+    FLOAT fTop = 0.,
+    FLOAT fRight = 0.,
     FLOAT fBottom = 0.);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Rect*  
- prostokąta źródłowego  
-  
- *fLeft*  
- Współrzędna lewej źródła  
-  
- *fTop*  
- współrzędne źródła  
-  
- *fRight*  
- Źródło bezpośrednio współrzędnych  
-  
- *fBottom*  
- Współrzędna dolnej źródła  
-  
-##  <a name="isnull"></a>  CD2DRectF::IsNull  
- Zwraca wartość logiczną wskazującą, czy wyrażenie nie zawiera żadnych prawidłowych danych (Null).  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli góry prostokąta, po lewej stronie, dolnej i odpowiednie wartości są równe 0; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- Konwertuje CD2DRectF CRect obiektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Rect*<br/>
+prostokąta źródłowego
+
+*fLeft*<br/>
+Współrzędna lewej źródła
+
+*fTop*<br/>
+współrzędne źródła
+
+*fRight*<br/>
+Źródło bezpośrednio współrzędnych
+
+*fBottom*<br/>
+Współrzędna dolnej źródła
+
+##  <a name="isnull"></a>  CD2DRectF::IsNull
+
+Zwraca wartość logiczną wskazującą, czy wyrażenie nie zawiera żadnych prawidłowych danych (Null).
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli góry prostokąta, po lewej stronie, dolnej i odpowiednie wartości są równe 0; w przeciwnym razie wartość FALSE.
+
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
+
+Konwertuje CD2DRectF CRect obiektu.
+
+```
 operator CRect();
-```   
-  
-### <a name="return-value"></a>Wartość zwracana  
- Bieżąca wartość prostokąta D2D.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Bieżąca wartość prostokąta D2D.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

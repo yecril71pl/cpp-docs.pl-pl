@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442347"
 ---
 # <a name="an-example-of-the-comments"></a>Przykład komentarzy
-Częściowa lista klasy `CChildFrame` używa większość standardowych komentarzy przez MFC podczas jej klas do dzielenia elementów członkowskich klasy w sposób są one używane:  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- Te komentarze oznaczyć spójnie sekcje deklaracji klasy, zawierające podobne rodzajów członków klasy. Należy pamiętać, że są one konwencje MFC, nie ustawić reguły.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)   
- [Implementacja — komentarz](../mfc/decrement-implementation-comment.md)   
- [Komentarz / / constructors](../mfc/decrement-constructors-comment.md)   
- [Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)   
- [Komentarz / / Operations](../mfc/decrement-operations-comment.md)   
- [Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
+
+Częściowa lista klas `CChildFrame` wykorzystuje większość standardowych komentarzy, które MFC wykorzystuje w jej klas do dzielenia elementów członkowskich klasy w sposób są one używane:
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+Te komentarze oznaczyć spójnie sekcjach deklaracji klasy, które zawierają podobne rodzaje składowych klasy. Należy pamiętać, że są one Konwencji MFC, nie zestawu reguł.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Komentarz / / Implementation](../mfc/decrement-implementation-comment.md)<br/>
+[Komentarz / / constructors](../mfc/decrement-constructors-comment.md)<br/>
+[Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)<br/>
+[Komentarz / / Operations](../mfc/decrement-operations-comment.md)<br/>
+[Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
 

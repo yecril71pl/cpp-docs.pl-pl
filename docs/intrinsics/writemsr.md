@@ -18,46 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 330e02b4f3b96461bd1dcb0e6bc6765aa41bda3e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705136"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438512"
 ---
 # <a name="writemsr"></a>__writemsr
-**Microsoft Specific**  
-  
- Generuje zapisu, można zarejestrować określonego modelu (`wrmsr`) instrukcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje zapisu, można zarejestrować określonego modelu (`wrmsr`) instrukcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __writemsr( 
+   unsigned long Register, 
+   unsigned __int64 Value 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Zarejestruj się*<br/>
-[in] Rejestr określonego modelu.  
-  
+[in] Rejestr określonego modelu.
+
 *Wartość*<br/>
-[in] Wartość do zapisania.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__writemsr`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Ta funkcja może być używana tylko w trybie jądra, a ta procedura jest dostępna jako funkcja wewnętrzna wyłącznie.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Wartość do zapisania.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__writemsr`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Ta funkcja może być używana tylko w trybie jądra, a ta procedura jest dostępna jako funkcja wewnętrzna wyłącznie.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

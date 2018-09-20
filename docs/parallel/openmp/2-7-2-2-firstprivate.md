@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8e44ca52ba1f76d5b3791a1d08301bf06e7eab
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0d3e6ad966f4cf895da9374798f6c9a4079ccc2f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687403"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400968"
 ---
 # <a name="2722-firstprivate"></a>2.7.2.2 — firstprivate
-**Firstprivate** klauzuli stanowi nadzbiór funkcje udostępniane przez **prywatnej** klauzuli. Składnia **firstprivate** klauzuli wygląda następująco:  
-  
-```  
-firstprivate(variable-list)  
-```  
-  
- Zmienne określone w *zmiennej listy* ma **prywatnej** semantyki klauzuli, zgodnie z opisem w [sekcji 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stronie 25. Inicjowanie lub konstrukcji odbywa się tak, jakby były wykonywane raz na wątek, przed wykonaniem wątku konstrukcji. Aby uzyskać **firstprivate** klauzuli na konstrukcję równoległe, wartość początkowa nowego obiektu prywatnego to wartość oryginalny obiekt, który istnieje bezpośrednio przed równoległych konstrukcja dla wątku, który wykryje on. Aby uzyskać **firstprivate** klauzula w konstrukcji podziału pracy, wartość początkowa nowego obiektu prywatny dla każdego wątku, który wykonuje konstrukcji podziału pracy jest wartością oryginalny obiekt, który istnieje przed punktu w czasie który tym samym wątku napotka konstrukcji podziału pracy. Ponadto dla obiektów C++ nowy obiekt prywatny dla każdego wątku jest kopiowania utworzone na podstawie obiektu oryginalnego.  
-  
- Ograniczenia do **firstprivate** klauzuli są następujące:  
-  
--   Określona w zmiennej **firstprivate** niekompletnego typu lub typ referencyjny nie może mieć klauzuli.  
-  
--   Zmienna typu klasy jest określony jako **firstprivate** musi mieć Konstruktor kopiujący dostępny, jednoznaczne.  
-  
--   Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w **redukcji** klauzuli **równoległych** dyrektywy nie można określić w **firstprivate** klauzula w dyrektywa podziału pracy, która jest powiązana z konstrukcji równoległych.
+
+**Firstprivate** klauzuli stanowi nadzbiór funkcje udostępniane przez **prywatnej** klauzuli. Składnia **firstprivate** klauzula jest w następujący sposób:
+
+```
+firstprivate(variable-list)
+```
+
+Zmienne określone w *liście zmiennych* mają **prywatnej** klauzuli semantykę, zgodnie z opisem w [sekcji 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stronie 25. Inicjowanie lub konstrukcji odbywa się tak, jakby były wykonywane raz na wątek przed wykonanie wątku konstrukcja. Aby uzyskać **firstprivate** klauzuli na konstrukcję równoległych, początkowa wartość nowego obiektu prywatnego jest wartością oryginalny obiekt, który występuje bezpośrednio przed równoległe konstrukcji dla wątku, który je napotka. Aby uzyskać **firstprivate** klauzuli w konstrukcji podziału pracy, początkowa wartość nowy obiekt prywatny dla każdego wątku, który jest wykonywany konstrukcji podziału pracy jest wartością oryginalny obiekt, który istnieje przed punkt w czasie, tym samym wątku napotyka konstrukcji podziału pracy. Ponadto dla obiektów C++, nowy obiekt prywatny dla każdego wątku jest kopia skonstruowany na podstawie oryginalnego obiektu.
+
+Ograniczenia do **firstprivate** klauzuli są następujące:
+
+- Określone w zmiennej **firstprivate** klauzuli nie może mieć typu niekompletnego lub typu odwołania.
+
+- Zmiennej z typu klasy, która jest określona jako **firstprivate** musi mieć konstruktora kopiującego dostępny, jednoznaczną.
+
+- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w **redukcji** klauzuli **równoległe** dyrektywy nie można określić w **firstprivate** klauzuli w dyrektywa podziału pracy, która jest powiązywana z konstrukcja równoległa.

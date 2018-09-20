@@ -1,5 +1,5 @@
 ---
-title: 'Serwery: Implementowanie okien ramowych w miejscu | Dokumentacja firmy Microsoft'
+title: 'Serwery: Implementowanie Windows ramowych w miejscu | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425018"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
-W tym artykule opisano, co należy zrobić, aby zaimplementować okna ramowe w miejscu w visual edytowania aplikacji serwera, jeśli nie używasz Kreatora aplikacji do tworzenia aplikacji serwera. Zamiast zgodnie z procedurą przedstawioną w tym artykule, można użyć istniejącej klasy okien ramowych w miejscu z aplikacją generowane przez Kreatora aplikacji lub próbkę dostarczone z programem Visual C++.  
-  
-#### <a name="to-declare-an-in-place-frame-window-class"></a>Aby zadeklarować klasy okien ramowych w miejscu  
-  
-1.  Klasy okien ramowych w miejscu z pochodzi `COleIPFrameWnd`.  
-  
-    -   Użyj declare_dyncreate — makro w pliku nagłówka klasy.  
-  
-    -   Użyj implement_dyncreate — makro w pliku implementacji (.cpp) klasy. Dzięki temu obiektów tej klasy, które ma zostać utworzony przez platformę.  
-  
-2.  Deklarowanie `COleResizeBar` elementu członkowskiego klasy okien ramowych. Jest to niezbędne, jeśli mają być obsługiwane w aplikacjach server zmiany rozmiaru w miejscu.  
-  
-     Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i Wywołaj `Create` dla Twojej `COleResizeBar` elementu członkowskiego, jeśli go.  
-  
-3.  Jeśli masz paska narzędzi zadeklarować `CToolBar` elementu członkowskiego klasy okien ramowych.  
-  
-     Zastąpienie `OnCreateControlBars` funkcji członkowskiej można utworzyć paska narzędzi, gdy serwer jest aktywny w miejscu. Na przykład:  
-  
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
-  
-     Zawiera omówienie ten kod następujący krok 5.  
-  
-4.  W pliku .cpp głównego, należy umieścić plik nagłówka dla tej klasy okien ramowych w miejscu.  
-  
-5.  W `InitInstance` dla klasy aplikacji, należy wywołać `SetServerInfo` funkcji obiektu szablonu dokumentu do określania zasobów i okno ramowe w miejscu do użycia w otwarte i w miejscu do edycji.  
-  
- Wywołuje szereg funkcji w **Jeśli** instrukcja tworzy pasek narzędzi z zasobów podany serwer. W tym momencie pasek narzędzi jest częścią hierarchii okna kontenera. Ponieważ ten pasek narzędzi jest pochodną `CToolBar`, go przekazuje jego wiadomości do jego właściciel, okno ramowe aplikacji kontenera, chyba że zmienić właściciela. Dlatego wywołanie `SetOwner` jest konieczne. To wywołanie zmienia okna, gdy polecenia są wysyłane jako okno ramowe w miejscu serwera, powodując wiadomości, które mają być przekazane do serwera. Dzięki temu serwer zareagować na operacje na pasku narzędzi, który zapewnia.  
-  
- Identyfikator mapy bitowej narzędzi powinien być taki sam jak inne zasoby w miejscu zdefiniowanych w aplikacji serwera. Zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md) szczegółowe informacje.  
-  
- Aby uzyskać więcej informacji, zobacz [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), i [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) w *informacje dotyczące biblioteki klas*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Serwery](../mfc/servers.md)   
- [Serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md)   
- [Serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)   
- [Serwery: elementy serwera](../mfc/servers-server-items.md)
+
+W tym artykule opisano, co należy zrobić, aby zaimplementować okien ramowych w miejscu w visual edycji aplikacji serwera, jeśli nie używasz Kreatora aplikacji do tworzenia aplikacji serwera. Zamiast zgodnie z procedurą opisaną w tym artykule, można użyć istniejącej klasy okien ramowych w miejscu z aplikacji generowanych przez Kreatora aplikacji lub próbkę dostarczanych z programem Visual C++.
+
+#### <a name="to-declare-an-in-place-frame-window-class"></a>Aby zadeklarować klasy okien ramowych w miejscu
+
+1. Pochodzi z klasy okien ramowych w miejscu z `COleIPFrameWnd`.
+
+   - W pliku nagłówka klasy, należy używać DECLARE_DYNCREATE — makro.
+
+   - Użyj IMPLEMENT_DYNCREATE — makro w pliku implementacji (.cpp) klasy. Dzięki temu obiektów tej klasy, które ma zostać utworzony przez platformę.
+
+1. Zadeklaruj `COleResizeBar` składowej w klasie okien ramowych. Jest to niezbędne, jeśli chcesz obsługiwać zmiany rozmiaru w miejscu aplikacji serwera.
+
+     Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i wywoływać `Create` dla usługi `COleResizeBar` elementu członkowskiego, jeśli jego zdefiniowaniu.
+
+1. Jeśli pasek narzędzi, Zadeklaruj `CToolBar` składowej w klasie okien ramowych.
+
+     Zastąp `OnCreateControlBars` funkcję elementu członkowskiego, aby utworzyć pasek narzędzi, gdy serwer jest aktywny w miejscu. Na przykład:
+
+     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+
+     Zawiera omówienie ten kod po kroku 5.
+
+1. Uwzględnić plik nagłówka dla tej klasy okien ramowych w miejscu, w pliku głównym .cpp.
+
+1. W `InitInstance` klasy aplikacji, można wywołać `SetServerInfo` funkcja obiektu szablonu dokumentu, aby określić zasoby i okno ramowe w miejscu, które ma być używany w otwartych i w miejscu do edycji.
+
+Wywołuje szereg funkcji **Jeśli** instrukcja tworzy pasek narzędzi z zasobów z serwera, pod warunkiem. W tym momencie pasek narzędzi jest częścią hierarchii okno kontenera. Ponieważ ten pasek narzędzi jest tworzony na podstawie `CToolBar`, chyba że zmienił się właścicielem zostaną przetworzone jego wiadomości do jego właściciela aplikacji kontenera ramki okna. Dlatego wywołanie `SetOwner` jest konieczne. To wywołanie zmienia okna, w której polecenia są wysyłane do serwera w miejscu ramki okna co wiadomości, które mają być przekazane do serwera. Dzięki temu serwer reagować na operacje na pasku narzędzi, który zapewnia.
+
+Identyfikator mapy bitowej narzędzi powinna być taka sama, jak inne zasoby w miejscu zdefiniowany w aplikacji serwera. Zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md) Aby uzyskać szczegółowe informacje.
+
+Aby uzyskać więcej informacji, zobacz [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), i [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) w *odwołanie do biblioteki klas*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Serwery](../mfc/servers.md)<br/>
+[Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
+[Serwery: implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)<br/>
+[Serwery: elementy serwera](../mfc/servers-server-items.md)
 

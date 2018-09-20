@@ -12,22 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33666b35f45bb668ab135941a0d15297442408a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b41eaf7012c1d119071281f98177e4a4d841890b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410076"
 ---
 # <a name="openmp-data-types"></a>Typy danych OpenMP
-Zawiera łącza do typów danych używany w interfejsie API OpenMP.  
-  
- Visual C++ stosowania standardowych OpenMP zawiera następujące typy danych.  
-  
-|Typ danych|Opis|  
-|---------------|-----------------|  
-|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|Typ, który zawiera stan blokady, czy jest dostępny blokady lub jeśli wątek jest właścicielem blokady.|  
-|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|Typ, który zawiera jedną z następujących fragmentów informacji na temat blokady: czy blokada jest dostępne, a tożsamość wątku, który jest właścicielem blokady i liczba zagnieżdżenia.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki](../../../parallel/openmp/reference/openmp-library-reference.md)
+
+Zawiera łącza do typów danych używanych w interfejsie API OpenMP.
+
+Implementacja języka Visual C++ OpenMP standardowa obejmuje następujące typy danych.
+
+|Typ danych|Opis|
+|---------------|-----------------|
+|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|Typ, który zawiera stan blokady, czy blokada jest dostępny lub jeśli wątek jest właścicielem blokady.|
+|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|Typ, który zawiera jedną z następujących rodzajów informacji na temat blokady: czy blokada jest dostępny i tożsamość wątku, który jest właścicielem blokady i liczba zagnieżdżenia.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Odwołanie do biblioteki](../../../parallel/openmp/reference/openmp-library-reference.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbf10ef749df0ce5e5984ac773e0d2c00106b82
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81925cfa31c394a1b307a184388fb0d331d31fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465426"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432493"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Wskazówki: używanie nowych formantów powłoki MFC
 
@@ -186,4 +186,4 @@ W tym przewodniku przyjęto założenie, że po skonfigurowaniu programu Visual 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodniki](../mfc/walkthroughs-mfc.md)  
+[Przewodniki](../mfc/walkthroughs-mfc.md)

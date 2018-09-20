@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601460"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432807"
 ---
 # <a name="ftmbase-class"></a>FtmBase — Klasa
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parametry
 
-*usługi git*  
+*usługi git*<br/>
 Gdy ta operacja zostanie ukończone, wskaźnik tabeli interfejsu globalnego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*  
+*dwReserved*<br/>
 Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu aby być organizowany.
 
-*Wa*  
+*Wa*<br/>
 Wskaźnik interfejsu do przekazywania; może mieć wartości NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
 
 Określ co najmniej jednej wartości wyliczenia MSHCTX.
 
 Obecnie unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Flaga wskazująca, czy ma być przesyłane z powrotem do procesu klienta dane, które mają być przekazywane — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów. Określ co najmniej jednej wartości wyliczenia MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Gdy ta operacja zostanie ukończone, wskaźnik do górnej granicy ilości danych do zapisania do organizowania strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu aby być organizowany.
 
-*Wa*  
+*Wa*<br/>
 Wskaźnik do interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
 
 Określ co najmniej jednej wartości wyliczenia MSHCTX.
 
 Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Gdy ta operacja zostanie ukończone, wskaźnik do CLSID, który ma być używany do tworzenia serwera proxy w procesie klienta.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Wskaźnik do strumienia, który ma być używany podczas kierowania.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu aby być organizowany. Ten interfejs musi pochodzić od `IUnknown` interfejsu.
 
-*Wa*  
+*Wa*<br/>
 Wskaźnik do wskaźnika interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
 
 Określ co najmniej jednej wartości wyliczenia MSHCTX.
 
 Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.
 
-*mshlflags*  
+*mshlflags*<br/>
 Określa, czy dane, które mają być przekazywane do być przesyłane z powrotem do procesu klienta — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Wskaźnik do strumienia, który zawiera pakiet danych, które mają zostać zniszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Wskaźnik do strumienia, z którego ma zostać wycofana wskaźnika interfejsu.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu Aby zostać wycofana.
 
-*ppv*  
+*ppv*<br/>
 Po zakończeniu tej operacji, adres zmiennej wskaźnika, który otrzymuje wskaźnik interfejsu w *riid*. Jeśli operacja zakończy się powodzeniem, **ppv* znajduje się wskaźnik interfejsu żądanego interfejsu Aby zostać wycofana.
 
 ### <a name="return-value"></a>Wartość zwracana

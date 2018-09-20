@@ -13,32 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aede6cc0d4bd8e50d8662f301ffdfb7b6179a230
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b48ebdf0bf25399b08f8a1cb1240a857cfad352
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109141"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418466"
 ---
 # <a name="general-language-changes-ccli"></a>Ogólne zmiany w języku (C++/CLI)
-Liczba — funkcje językowe CLR zmieniła się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
-  
- Zmiany opisane w tej sekcji są sortowania miscellany języka. Obejmuje zmiany w obsłudze literałów ciągu, zmiana wiązaniem między wielokropek i `Param` atrybutów, zmiany `typeof` do `typeid`, zmiany w wywołaniu elementu listy inicjatorów konstruktora i wprowadzenie nowej notacji rzutowania z `safe_cast`.  
-  
- [Literał ciągu](../dotnet/string-literal.md)  
- W tym artykule omówiono sposób obsługi literałów ciągów została zmieniona.  
-  
- [Tablica parametrów i wielokropek](../dotnet/param-array-and-ellipsis.md)  
- W tym artykule omówiono sposób `ParamArray` jest teraz pierwszeństwo nad wielokropka (`...`) w celu rozwiązania wywołania funkcji z różną liczbę argumentów.  
-  
- [Operator typeof został zastąpiony operatorem T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
- W tym artykule omówiono sposób `typeof` operator ma zostać supplanted przez `typeid`.  
-  
- [Listy inicjatorów](../dotnet/initializer-lists.md)  
- Zawiera omówienie zmian w kolejności wywoływania listy inicjatorów.  
-  
- [Notacja rzutowania i przedstawienie operacji safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
- Zawiera omówienie zmian do notacji rzutowania, w szczególności wprowadzenia `safe_cast`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)
+
+Liczba funkcji języka środowiska CLR zmieniła się z zarządzanych rozszerzeń dla C++ do Visual C++.
+
+Zmiany opisane w tej sekcji są sortowania miscellany języka. Obejmuje zmiany w obsłudze literałów ciągu zmiany w przeciążeniu rozdzielczości między wielokropek i `Param` atrybutu zmiana `typeof` do `typeid`, zmiana wywołania listy inicjatorów konstruktora i wprowadzenie nowej notacji rzutowania z `safe_cast`.
+
+[Literał ciągu](../dotnet/string-literal.md)<br/>
+W tym artykule omówiono, jak zmiany obsługi literałów ciągu.
+
+[Tablica parametrów i wielokropek](../dotnet/param-array-and-ellipsis.md)<br/>
+W tym artykule omówiono sposób `ParamArray` jest teraz pierwszeństwo wielokropek (`...`) postępowania po otrzymaniu wywołania funkcji z różną liczbę argumentów.
+
+[Operator typeof został zastąpiony operatorem T::typeid](../dotnet/typeof-goes-to-t-typeid.md)<br/>
+W tym artykule omówiono sposób, w jaki `typeof` operator ma zostać supplanted przez `typeid`.
+
+[Listy inicjatorów](../dotnet/initializer-lists.md)<br/>
+W tym artykule omówiono zmiany w kolejności wywołań list inicjatorów.
+
+[Notacja rzutowania i przedstawienie operacji safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)<br/>
+W tym artykule omówiono zmiany do notacji rzutowania, a w szczególności wprowadzenie `safe_cast`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)

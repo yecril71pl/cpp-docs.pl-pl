@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Metody | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Metody | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,41 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b09de5382117b4444eb1bfd90bc0f9d447e537e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 93a8d3f9840afd88a9ce0ae7cbaf661babc13647
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348312"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406051"
 ---
 # <a name="mfc-activex-controls-methods"></a>Kontrolki ActiveX MFC: metody
-Kontrolki ActiveX wyzwala zdarzenia do komunikacji między sobą i jego formantu kontenera. Kontener mogą również komunikować się za pomocą formantu za pomocą metody i właściwości. Metody są również nazywane funkcji.  
-  
- Metody i właściwości Podaj wyeksportowanego interfejsu do użytku przez inne aplikacje, takie jak klienci automatyzacji i kontenery formantów ActiveX. Aby uzyskać więcej informacji na temat właściwości formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).  
-  
- Metody są podobne do używania oraz cel do funkcji Członkowskich klasy C++. Istnieją dwa typy metod formantu można zaimplementować: standardowych i niestandardowych. Podobna do akcji zdarzenia, metod akcji są tych metod, dla którego [colecontrol —](../mfc/reference/colecontrol-class.md) udostępnia implementację. Więcej informacji na temat standardowych metod, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod giełdowych](../mfc/mfc-activex-controls-adding-stock-methods.md). Metod niestandardowych zdefiniowanych przez deweloperów, Zezwalaj na dodatkowe dostosowanie formantu. Aby uzyskać więcej informacji, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md).  
-  
- Biblioteka Microsoft Foundation Class (MFC) implementuje mechanizm umożliwiający formantu do obsługi giełdowych i niestandardowych metod. Pierwsza część jest klasa `COleControl`. Pochodną `CWnd`, `COleControl` funkcje Członkowskie obsługuje standardowych metod, które są wspólne dla wszystkich kontrolek ActiveX. Druga część to mechanizm jest mapy wysyłania. Mapy wysyłania jest podobny do mapy komunikatów; Jednak zamiast mapowania funkcji do systemu Windows Identyfikatora komunikatu, mapy wysyłania mapuje wirtualnych funkcji Członkowskich identyfikatorów IDispatch.  
-  
- Kontrolki do obsługi różnych metod poprawnie jej klasa musi zadeklarować mapy wysyłania. Jest to osiągane przez następujący wiersz kodu znajdujący się w nagłówku klasy formantu (. H) plików:  
-  
- [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]  
-  
- Głównym celem mapy wysyłania jest ustanowienie relacji między nazwami metody używane przez zewnętrzne wywołującego (na przykład kontener) i funkcji elementów członkowskich klasy formantu, które implementują metody. Po zadeklarowaniu mapy wysyłania musi być zdefiniowane w implementacji formantu (. Pliku CPP). Następujące wiersze kodu zdefiniować mapy wysyłania:  
-  
- [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]  
-  
- Jeśli używasz [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) Aby utworzyć projekt, te wiersze zostały dodane automatycznie. Jeśli Kreator formantów MFC ActiveX nie był używany, można ręcznie dodać te wiersze.  
-  
- Metody szczegółowo omówiono w nim następujące artykuły:  
-  
--   [Kontrolki ActiveX MFC: dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md)  
-  
--   [Kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md)  
-  
--   [Kontrolki ActiveX MFC: zwracanie kodów błędów z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+
+Kontrolki ActiveX uruchamia zdarzeń do komunikowania się między sobą i jego kontener formantu. Kontener również mogą komunikować się za pomocą kontrolki za pomocą metod i właściwości. Metody są również nazywane funkcji.
+
+Metody i właściwości, należy podać wyeksportowanego interfejsu do użytku przez inne aplikacje, takie jak klienci automatyzacji i kontenery kontrolek ActiveX. Aby uzyskać więcej informacji na temat właściwości formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).
+
+Metody są podobne w użycie i przeznaczenie funkcji składowych klasy języka C++. Istnieją dwa typy metod kontroli nad można zaimplementować: standardowych i niestandardowych. Podobne do magazynu zdarzeń, akcji metody są tych metod, dla którego [COleControl](../mfc/reference/colecontrol-class.md) dostarcza implementację. Aby uzyskać więcej informacji na temat metody akcji, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod akcji](../mfc/mfc-activex-controls-adding-stock-methods.md). Niestandardowych metod, zdefiniowanych przez dewelopera, Zezwalaj na dodatkowe Dostosowywanie formantu. Aby uzyskać więcej informacji, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md).
+
+Biblioteka Microsoft Foundation Class (MFC) implementuje mechanizm umożliwiający formantu do obsługi zapasów i niestandardowych metod. Pierwsza część jest klasą `COleControl`. Pochodną `CWnd`, `COleControl` funkcji elementów członkowskich obsługuje podstawowe metody, które są wspólne dla wszystkich formantów ActiveX. Druga część ten mechanizm jest mapa wysyłania. Mapa wysyłania jest podobny do mapy komunikatów; Jednak zamiast mapowania funkcji do Identyfikatora wiadomości Windows, mapa wysyłania mapuje funkcji wirtualnych elementów członkowskich IDispatch identyfikatorów.
+
+Kontrolki do obsługi różnych metod prawidłowo swojej klasy należy zadeklarować Mapa wysyłania. Jest to osiągane przez następujący wiersz kodu znajdujące się w nagłówku klasy formantu (. H) plik:
+
+[!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]
+
+Głównym celem Mapa wysyłania jest ustanowienie relacji między nazwami metody używane przez zewnętrzne obiekt wywołujący (np. kontenerze) i funkcje elementów członkowskich klasy kontrolki, które implementują metody. Po zadeklarowaniu mapy wysyłania musi być zdefiniowany w implementacji formantu (. Plik CPP). Następujące wiersze kodu, zdefiniuj Mapa wysyłania:
+
+[!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]
+[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]
+
+Jeśli użyto [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) do tworzenia projektu, te wiersze zostały dodane automatycznie. Jeśli Kreator kontrolek ActiveX MFC nie było używane, należy ręcznie dodać następujące wiersze.
+
+W następujących artykułach omówiono metody szczegółowo:
+
+- [Kontrolki ActiveX MFC: dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md)
+
+- [Kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md)
+
+- [Kontrolki ActiveX MFC: zwracanie kodów błędów z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02d111cfdd4db1d3ce586d65ebbef84fd488fba6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345784"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436172"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Jak struktura wyszukuje mapy komunikatów
-Struktura wyszukuje tabeli mapy komunikatów dla zgodny z wiadomości przychodzących. Po zapisywania wpisu mapy komunikatów dla każdej wiadomości, które chcesz klasy do obsługi i pisania obsług odpowiedniego struktura automatycznie wywołuje programu obsługi. W poniższych tematach opisano, wyszukiwanie mapy komunikatów:  
-  
--   [Gdzie można znaleźć mapy komunikatów](../mfc/where-to-find-message-maps.md)  
-  
--   [Pochodne mapy komunikatów](../mfc/derived-message-maps.md)  
-  
--   [Mapowanie zakresów komunikatów, identyfikatory poleceń lub formantu identyfikatorów do jednej procedury obsługi](../mfc/handlers-for-message-map-ranges.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+Struktura wyszukuje tabeli mapy komunikatów dla dopasowań za pomocą wiadomości przychodzących. Po pisania wpis mapy komunikatów dla każdego komunikatu, który ma klasę do obsługi i pisania procedur obsługi odpowiednich ramach automatycznie wywołuje inne programy obsługi. W poniższych tematach opisano, wyszukiwanie w mapie komunikatów:
+
+- [Gdzie można znaleźć mapy komunikatów](../mfc/where-to-find-message-maps.md)
+
+- [Pochodne mapy komunikatów](../mfc/derived-message-maps.md)
+
+- [Mapowanie zakresów komunikatów, identyfikatory poleceń lub formantu identyfikatorów do jednego programu obsługi](../mfc/handlers-for-message-map-ranges.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
 

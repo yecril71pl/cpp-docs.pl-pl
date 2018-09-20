@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5816c62749c889cdd926ff1551f4849fd039f1f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4f2c4e41b97f8ce8224d656c9ba525d807bfa270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42585267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423887"
 ---
 # <a name="coclass"></a>coclass
 
@@ -153,8 +153,8 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty COM](../windows/com-attributes.md)  
-[Atrybuty klasy](../windows/class-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty COM](../windows/com-attributes.md)<br/>
+[Atrybuty klasy](../windows/class-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](../windows/appobject.md)

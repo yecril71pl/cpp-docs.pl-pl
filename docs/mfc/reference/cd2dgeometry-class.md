@@ -56,505 +56,561 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 50ec35fd568031e7e30ee7412fcf078be1088906
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955105"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397094"
 ---
 # <a name="cd2dgeometry-class"></a>Klasa CD2DGeometry
-Otoka dla ID2D1Geometry.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CD2DGeometry : public CD2DResource;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Tworzy obiekt CD2DGeometry.|  
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Wywoływane, gdy trwa niszczenie obiektu geometrii D2D.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometry::attach](#attach)|Dołącza istniejący interfejs zasobów do obiektu|  
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Łączy tego geometrii z określona Geometria i zapisuje wynik w ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|W tym artykule opisano przecięcia tego geometrii i określona Geometria. Porównanie odbywa się przy użyciu określonej tolerancji spłaszczania.|  
-|[CD2DGeometry::ComputeArea](#computearea)|Oblicza obszaru geometrii po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.|  
-|[CD2DGeometry::ComputeLength](#computelength)|Oblicza długość geometrii tak, jakby każdy z segmentów zostały wycofane w wierszu.|  
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Oblicza wektorowe punktu i tangens w określonej odległości wzdłuż geometrii po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.|  
-|[CD2DGeometry::Destroy](#destroy)|Niszczy obiektu CD2DGeometry. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DGeometry::detach](#detach)|Odłącza interfejsu zasobów z obiektu|  
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Wskazuje, czy obszar wypełniony przez geometrii zawierałoby określonego punktu określonego określonej tolerancji spłaszczania.|  
-|[CD2DGeometry::Get](#get)|Zwraca interfejs ID2D1Geometry|  
-|[CD2DGeometry::GetBounds](#getbounds)||  
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Pobiera granice geometrii po rozszerzeniami przez określony grubość i styl i przekształcenia przez wskazana macierz matrix.|  
-|[CD2DGeometry::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DGeometry::Outline](#outline)|Oblicza konturu geometrii i zapisuje wynik ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::Simplify](#simplify)|Tworzy uproszczonej wersji geometrię, która zawiera tylko linii i krzywych Beziera sześcienny (opcjonalnie) i zapisuje wynik ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Określa, czy obrysu geometrii zawiera określony punkt danej grubość pociągnięć określony, styl i przekształcenia.|  
-|[CD2DGeometry::Tessellate](#tessellate)|Tworzy zestaw trójkąty zawijaniem zegara, które obejmują geometrii po przekształcone, przy użyciu określonej macierzy i spłaszczone przy użyciu określonej tolerancji.|  
-|[CD2DGeometry::Widen](#widen)|Rozszerzenie geometrii przez określony obrysu i zapisuje wynik ID2D1SimplifiedGeometrySink po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Zwraca interfejs ID2D1Geometry|  
-  
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Wskaźnik do ID2D1Geometry.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- `CD2DGeometry`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
- Destruktor. Wywoływane, gdy trwa niszczenie obiektu geometrii D2D.  
-  
-```  
+
+Otoka ID2D1Geometry.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CD2DGeometry : public CD2DResource;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Tworzy obiekt CD2DGeometry.|
+|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt geometrii D2D.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometry::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Łączy to tworzenie geometrii za określona Geometria i zapisuje wynik w ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|W tym artykule opisano wspólną między tym geometrii i określona Geometria. Porównanie jest wykonywane przy użyciu określonej tolerancji spłaszczania.|
+|[CD2DGeometry::ComputeArea](#computearea)|Oblicza obszaru geometrię, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.|
+|[CD2DGeometry::ComputeLength](#computelength)|Oblicza długość geometrię, tak, jakby każdy z segmentów zostały rolki w wierszu.|
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Oblicza wektorowe punktu i tangens w określonej odległości wzdłuż geometrię, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.|
+|[CD2DGeometry::Destroy](#destroy)|Niszczy obiekt CD2DGeometry. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DGeometry::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Wskazuje, czy obszar uzupełnione przez geometrii zawierałoby określonego punktu określonego określonej tolerancji spłaszczania.|
+|[CD2DGeometry::Get](#get)|Zwraca ID2D1Geometry interfejsu|
+|[CD2DGeometry::GetBounds](#getbounds)||
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Pobiera granice geometrii po zostało rozszerzone, styl i grubość określonej i przekształcenia przez określony macierzy.|
+|[CD2DGeometry::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DGeometry::Outline](#outline)|Oblicza Geometria konturu i zapisuje wynik ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::Simplify](#simplify)|Tworzy uproszczoną wersję geometrię, która zawiera tylko linii i krzywych Beziera sześcienny (opcjonalnie) i zapisuje wynik ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Określa, czy obrysu geometrii zawiera określony punkt danej grubość obrysu określonego, styl i przekształcania.|
+|[CD2DGeometry::Tessellate](#tessellate)|Tworzy zestaw trójkąty z ruchem wskazówek zegara rany, które obejmują geometrii po przetransformowaniu, przy użyciu określonej macierzy i spłaszczona za pomocą określonej tolerancji.|
+|[CD2DGeometry::Widen](#widen)|Rozszerza się geometrię, określony obrys i zapisuje wynik w ID2D1SimplifiedGeometrySink, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Zwraca ID2D1Geometry interfejsu|
+
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Wskaźnik do ID2D1Geometry.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+
+`CD2DGeometry`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxrendertarget.h
+
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry
+
+Destruktor. Wywołuje się, kiedy niszczony jest obiekt geometrii D2D.
+
+```
 virtual ~CD2DGeometry();
-```  
-  
-##  <a name="attach"></a>  CD2DGeometry::attach  
- Dołącza istniejący interfejs zasobów do obiektu  
-  
-```  
+```
+
+##  <a name="attach"></a>  CD2DGeometry::attach
+
+Dołącza istniejących zasobów interfejsu do obiektu
+
+```
 void Attach(ID2D1Geometry* pResource);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pResource*  
- Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
-  
-##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
- Tworzy obiekt CD2DGeometry.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pResource*<br/>
+Istniejący interfejs zasobów. Nie może mieć wartości NULL
+
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry
+
+Tworzy obiekt CD2DGeometry.
+
+```
 CD2DGeometry(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Wskaźnik do obiektu docelowego renderowania.  
-  
- *bAutoDestroy*  
- Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
-  
-##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
- Łączy tego geometrii z określona Geometria i zapisuje wynik w ID2D1SimplifiedGeometrySink.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Wskaźnik do elementu docelowego renderowania.
+
+*bAutoDestroy*<br/>
+Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry
+
+Łączy to tworzenie geometrii za określona Geometria i zapisuje wynik w ID2D1SimplifiedGeometrySink.
+
+```
 BOOL CombineWithGeometry(
-    CD2DGeometry& inputGeometry,  
-    D2D1_COMBINE_MODE combineMode,  
-    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *inputGeometry*  
- Geometria do łączenia z tym wystąpieniem.  
-  
- *combineMode*  
- Typ operację łączenia do wykonania.  
-  
- *inputGeometryTransform*  
- Przekształcenie do zastosowania do inputGeometry przed łączenie.  
-  
- *geometrySink*  
- Wynik operacji łączenia.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
- W tym artykule opisano przecięcia tego geometrii i określona Geometria. Porównanie odbywa się przy użyciu określonej tolerancji spłaszczania.  
-  
-```  
+    CD2DGeometry& inputGeometry,
+    D2D1_COMBINE_MODE combineMode,
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*inputGeometry*<br/>
+Geometria połączyć się z tym wystąpieniem.
+
+*trybu combineMode*<br/>
+Typ operacji łączenia do wykonania.
+
+*inputGeometryTransform*<br/>
+Przekształcenie do zastosowania do inputGeometry przed łączenie.
+
+*geometrySink*<br/>
+Wynik operacji łączenia.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry
+
+W tym artykule opisano wspólną między tym geometrii i określona Geometria. Porównanie jest wykonywane przy użyciu określonej tolerancji spłaszczania.
+
+```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
-    CD2DGeometry& inputGeometry,  
-    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *inputGeometry*  
- Geometria do testowania.  
-  
- *inputGeometryTransform*  
- Przekształcenie do zastosowania do inputGeometry.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
- Oblicza obszaru geometrii po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.  
-  
-```  
+    CD2DGeometry& inputGeometry,
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*inputGeometry*<br/>
+Geometria do testowania.
+
+*inputGeometryTransform*<br/>
+Przekształcenie do zastosowania do inputGeometry.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea
+
+Oblicza obszaru geometrię, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.
+
+```
 BOOL ComputeArea(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    FLOAT& area,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Przekształcenie do zastosowania do tego geometrii przed rozpoczęciem przetwarzania jego obszaru.  
-  
- *obszar*  
- Gdy metoda zwróci wartość, zawiera wskaźnik do obszaru przekształcone, spłaszczoną wersję tego geometrii. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
- Oblicza długość geometrii tak, jakby każdy z segmentów zostały wycofane w wierszu.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    FLOAT& area,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do tego geometrii przed jego obszar obliczeń.
+
+*Obszar*<br/>
+Po powrocie z tej metody zawiera wskaźnik do obszaru przekształcone, spłaszczonych wersję tego geometrii. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength
+
+Oblicza długość geometrię, tak, jakby każdy z segmentów zostały rolki w wierszu.
+
+```
 BOOL ComputeLength(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    FLOAT& length,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii przed obliczeniem jego długość.  
-  
- *długość*  
- Gdy metoda zwróci wartość, zawiera wskaźnik do długości geometrii. W przypadku zamkniętego mają geometrię długość obejmuje segmentu niejawne zamknięcia. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
- Oblicza wektorowe punktu i tangens w określonej odległości wzdłuż geometrii po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    FLOAT& length,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do geometrii przed obliczeniem jego długość.
+
+*Długość*<br/>
+Po powrocie z tej metody zawiera wskaźnik do długości geometrii. W przypadku zamknięte geometrii długość obejmuje segmentu niejawne zamknięcia. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength
+
+Oblicza wektorowe punktu i tangens w określonej odległości wzdłuż geometrię, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.
+
+```
 BOOL ComputePointAtLength(
-    FLOAT length,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    CD2DPointF& point,  
-    CD2DPointF& unitTangentVector,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *długość*  
- Odległość wzdłuż geometrii punktu i tangens można znaleźć. Odległość w przypadku mniej następnie 0, ta metoda oblicza pierwszego punktu w geometrii. Jeśli ta odległość jest większa niż długość geometrii, ta metoda oblicza ostatniego punktu w geometrii.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii przed rozpoczęciem obliczanie określony punkt i tangens.  
-  
- *Punkt*  
- Lokalizacja w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusta, ten punkt zawiera NaN jako x i y wartości.  
-  
- *unitTangentVector*  
- Gdy metoda zwróci wartość, zawiera wskaźnik do stycznej wektor w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusta, to wektor zawiera NaN jako x i y wartości. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="destroy"></a>  CD2DGeometry::Destroy  
- Niszczy obiektu CD2DGeometry.  
-  
-```  
+    FLOAT length,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    CD2DPointF& point,
+    CD2DPointF& unitTangentVector,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Długość*<br/>
+Odległość wzdłuż geometrii punktu i tangens można znaleźć. Jeśli jest to mniej następnie 0, ta metoda oblicza pierwszy punkt geometrii. Jeśli to jest większa niż długość geometrię, ta metoda oblicza ostatniego punktu w geometrii.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do geometrii przed obliczeniem określony punkt i tangensa.
+
+*Punkt*<br/>
+Lokalizacja w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusta, ten punkt zawiera NaN w postaci współrzędnych x i y wartości.
+
+*unitTangentVector*<br/>
+Po powrocie z tej metody zawiera wskaźnik do funkcji tangens wektora w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusty, ta wektor zawiera NaN jako współrzędnych x i y wartości. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="destroy"></a>  CD2DGeometry::Destroy
+
+Niszczy obiekt CD2DGeometry.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DGeometry::detach  
- Odłącza interfejsu zasobów z obiektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DGeometry::detach
+
+Odłącza interfejsu zasobów z obiektu
+
+```
 ID2D1Geometry* Detach();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do zasobów odłączyć interfejs.  
-  
-##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
- Wskazuje, czy obszar wypełniony przez geometrii zawierałoby określonego punktu określonego określonej tolerancji spłaszczania.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu odłączyć zasobu.
+
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint
+
+Wskazuje, czy obszar uzupełnione przez geometrii zawierałoby określonego punktu określonego określonej tolerancji spłaszczania.
+
+```
 BOOL FillContainsPoint(
-    CD2DPointF point,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    BOOL* contains,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Punkt*  
- Punkt do testowania.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii przed testowanie pod kątem zawierania.  
-  
- *Zawiera*  
- Po powrocie z tej metody zawiera wartość logiczna, która ma wartość PRAWDA, jeśli obszar wypełniony przez geometrii zawiera punkt; w przeciwnym razie wartość FALSE. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Liczbowa dokładność, z którym dokładne ścieżka geometryczne i przecięcia ścieżki jest obliczana. Brak wypełnienia o mniej niż tolerancja punktów nadal są traktowane jako wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="get"></a>  CD2DGeometry::Get  
- Zwraca interfejs ID2D1Geometry  
-  
-```  
+    CD2DPointF point,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    BOOL* contains,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Punkt*<br/>
+Punkt do testowania.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do geometrii przed testowanie pod kątem zawierania.
+
+*zawiera*<br/>
+Po powrocie z tej metody zawiera wartość logiczna, która ma wartość TRUE, jeśli obszar uzupełnione przez geometrii zawiera punkt; w przeciwnym razie wartość FALSE. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Dokładność liczbowych, za pomocą którego dokładny ścieżki geometrycznej i wspólną ścieżki jest obliczana. Brak wypełnienie przez mniej niż tolerancja punkty są nadal uważane za wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="get"></a>  CD2DGeometry::Get
+
+Zwraca ID2D1Geometry interfejsu
+
+```
 ID2D1Geometry* Get();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1Geometry lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
-  
-```   
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1Geometry lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds
+
+```
 BOOL GetBounds(
-const D2D1_MATRIX_3X2_F& worldTransform,  
-CD2DRectF& bounds) const; 
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- *granice*  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
- Pobiera granice geometrii po rozszerzeniami przez określony grubość i styl i przekształcenia przez wskazana macierz matrix.  
-  
-```  
+const D2D1_MATRIX_3X2_F& worldTransform,
+CD2DRectF& bounds) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+*Granice*
+
+### <a name="return-value"></a>Wartość zwracana
+
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds
+
+Pobiera granice geometrii po zostało rozszerzone, styl i grubość określonej i przekształcenia przez określony macierzy.
+
+```
 BOOL GetWidenedBounds(
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    CD2DRectF& bounds,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *strokeWidth*  
- Wielkość, przez którą chcesz rozszerzyć geometrii przez używana do malowania konturu jej.  
-  
- *strokeStyle*  
- Styl obrysu rozszerzająca geometrii.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii po geometrii jest przekształcana i geometrii zostały malowania.  
-  
- *granice*  
- Po powrocie z tej metody zawiera granice poszerzył geometrii. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
- Sprawdzanie poprawności zasobów  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli zasób jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
- Wskaźnik do ID2D1Geometry.  
-  
-```  
-ID2D1Geometry* m_pGeometry;  
-```  
-  
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *  
- Zwraca interfejs ID2D1Geometry  
-  
-```  
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    CD2DRectF& bounds,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*strokeWidth*<br/>
+Wielkość, przez którą chcesz rozszerzyć geometrii przez stykają konturu jej.
+
+*strokeStyle*<br/>
+Styl obrysu rozszerzająca geometrii.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do geometrii po geometrii jest przekształcane i geometrii zostały malowania.
+
+*Granice*<br/>
+Po powrocie z tej metody zawiera granice poszerzył geometrii. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid
+
+Sprawdzanie zasobów ważności
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.
+
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry
+
+Wskaźnik do ID2D1Geometry.
+
+```
+ID2D1Geometry* m_pGeometry;
+```
+
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *
+
+Zwraca ID2D1Geometry interfejsu
+
+```
 operator ID2D1Geometry*();
-```   
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1Geometry lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="outline"></a>  CD2DGeometry::Outline  
- Oblicza konturu geometrii i zapisuje wynik ID2D1SimplifiedGeometrySink.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1Geometry lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="outline"></a>  CD2DGeometry::Outline
+
+Oblicza Geometria konturu i zapisuje wynik ID2D1SimplifiedGeometrySink.
+
+```
 BOOL Outline(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Przekształcenie do zastosowania do konturu geometrii.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, do którego jest dołączany konspektu przekształcone geometrii.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="simplify"></a>  CD2DGeometry::Simplify  
- Tworzy uproszczonej wersji geometrię, która zawiera tylko linii i krzywych Beziera sześcienny (opcjonalnie) i zapisuje wynik ID2D1SimplifiedGeometrySink.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do konturu geometrii.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, do którego jest dołączany Geometria konturu przekształcone.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="simplify"></a>  CD2DGeometry::Simplify
+
+Tworzy uproszczoną wersję geometrię, która zawiera tylko linii i krzywych Beziera sześcienny (opcjonalnie) i zapisuje wynik ID2D1SimplifiedGeometrySink.
+
+```
 BOOL Simplify(
-    D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *simplificationOption*  
- Wartość, która określa, czy uproszczony geometrii powinien zawierać krzywych.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii uproszczone.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, do którego jest dołączany uproszczony geometrii.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
- Określa, czy obrysu geometrii zawiera określony punkt danej grubość pociągnięć określony, styl i przekształcenia.  
-  
-```  
+    D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*simplificationOption*<br/>
+Wartość, która określa, czy uproszczona geometrii powinien zawierać krzywych.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do uproszczonego geometrii.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, do którego jest dołączany uproszczone geometrii.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint
+
+Określa, czy obrysu geometrii zawiera określony punkt danej grubość obrysu określonego, styl i przekształcania.
+
+```
 BOOL StrokeContainsPoint(
-    CD2DPointF point,  
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    BOOL* contains,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Punkt*  
- Punkt, aby sprawdzić zawieranie.  
-  
- *strokeWidth*  
- Grubość pociągnięć do zastosowania.  
-  
- *strokeStyle*  
- Styl obrysu do zastosowania.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do obrysowane geometrii.  
-  
- *Zawiera*  
- Po powrocie z tej metody zawiera wartość logiczna, która jest ustawiona na wartość TRUE, jeśli obrysu geometrii zawiera określony punkt; w przeciwnym razie wartość FALSE. Należy przydzielić magazynu dla tego parametru.  
-  
- *flatteningTolerance*  
- Liczbowa dokładność, z którym dokładne ścieżka geometryczne i przecięcia ścieżki jest obliczana. Brak pociągnięcia przez mniej niż tolerancja punktów nadal są traktowane jako wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
- Tworzy zestaw trójkąty zawijaniem zegara, które obejmują geometrii po przekształcone, przy użyciu określonej macierzy i spłaszczone przy użyciu określonej tolerancji.  
-  
-```  
+    CD2DPointF point,
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    BOOL* contains,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Punkt*<br/>
+Punkt, aby sprawdzić zawieranie.
+
+*strokeWidth*<br/>
+Grubość obrysu do zastosowania.
+
+*strokeStyle*<br/>
+Styl obrysu do zastosowania.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do obrysowane geometrii.
+
+*zawiera*<br/>
+Po powrocie z tej metody zawiera wartość logiczna, która jest ustawiona na wartość TRUE, jeśli obrysu geometrii zawiera określony punkt; w przeciwnym razie wartość FALSE. Należy przydzielić pamięci masowej dla tego parametru.
+
+*flatteningTolerance*<br/>
+Dokładność liczbowych, za pomocą którego dokładny ścieżki geometrycznej i wspólną ścieżki jest obliczana. Brak pociągnięcia przez mniej niż tolerancja punkty są nadal uważane za wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate
+
+Tworzy zestaw trójkąty z ruchem wskazówek zegara rany, które obejmują geometrii po przetransformowaniu, przy użyciu określonej macierzy i spłaszczona za pomocą określonej tolerancji.
+
+```
 BOOL Tessellate(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1TessellationSink* tessellationSink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Przekształcenie do zastosowania do tego geometry, lub wartość NULL.  
-  
- *tessellationSink*  
- ID2D1TessellationSink, do którego tesselowaną jest dołączony.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="widen"></a>  CD2DGeometry::Widen  
- Rozszerzenie geometrii przez określony obrysu i zapisuje wynik ID2D1SimplifiedGeometrySink po przeprowadzeniu przekształcenia przez wskazana macierz matrix i spłaszczone przy użyciu określonej tolerancji.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1TessellationSink* tessellationSink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do tego geometry, lub wartość NULL.
+
+*tessellationSink*<br/>
+ID2D1TessellationSink, do którego tesselowaną jest dołączany.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="widen"></a>  CD2DGeometry::Widen
+
+Rozszerza się geometrię, określony obrys i zapisuje wynik w ID2D1SimplifiedGeometrySink, po przeprowadzeniu przekształcone w określonej macierzy i spłaszczona za pomocą określonej tolerancji.
+
+```
 BOOL Widen(
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *strokeWidth*  
- Wielkość, o którą należy zwiększyć wartość geometrii.  
-  
- *strokeStyle*  
- Styl obrysu do zastosowania do geometrii, lub wartość NULL.  
-  
- *worldTransform*  
- Przekształcenie do zastosowania do geometrii po jego rozszerzenia.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, do którego jest dołączany poszerzył geometrii.  
-  
- *flatteningTolerance*  
- Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*strokeWidth*<br/>
+Kwota za pomocą którego można poszerzyć geometrii.
+
+*strokeStyle*<br/>
+Styl obrysu mające zastosowanie do geometrii, lub wartość NULL.
+
+*worldTransform*<br/>
+Przekształcenie do zastosowania do geometrii po jego rozszerzenia.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, do którego jest dołączany poszerzył geometrii.
+
+*flatteningTolerance*<br/>
+Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale powodować wolniejsze wykonywania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

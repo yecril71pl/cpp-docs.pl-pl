@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069188"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433221"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation — Klasa
-Ta klasa opisuje wyjątek generowany, gdy `Context::Oversubscribe` metoda jest wywoływana z `_BeginOversubscription` parametr `false` bez uprzedniego wywołania do `Context::Oversubscribe` metody z `_BeginOversubscription` parametr `true`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class invalid_oversubscribe_operation : public std::exception;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[invalid_oversubscribe_operation](#ctor)|Przeciążone. Konstruuje `invalid_oversubscribe_operation` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `invalid_oversubscribe_operation`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> invalid_oversubscribe_operation — 
 
- Konstruuje `invalid_oversubscribe_operation` obiektu.  
-  
-```  
+Ta klasa opisuje wyjątek generowany, gdy `Context::Oversubscribe` metoda jest wywoływana z `_BeginOversubscription` parametr `false` bez uprzedniego wywołania do `Context::Oversubscribe` metody z `_BeginOversubscription` parametr `true`.
+
+## <a name="syntax"></a>Składnia
+
+```
+class invalid_oversubscribe_operation : public std::exception;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[invalid_oversubscribe_operation](#ctor)|Przeciążone. Konstruuje `invalid_oversubscribe_operation` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`invalid_oversubscribe_operation`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> invalid_oversubscribe_operation —
+
+Konstruuje `invalid_oversubscribe_operation` obiektu.
+
+```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
- 
 invalid_oversubscribe_operation() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

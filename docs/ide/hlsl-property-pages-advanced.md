@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725511"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444557"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Strony właściwości HLSL: zaawansowane
-Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **zaawansowane** stronę właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **zaawansowane** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
+
+Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **zaawansowane** stronę właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **zaawansowane** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Pomijaj transparent startowy**
 
-   **Tak (/ nologo)** Pomija wyświetlanie komunikat transparentu i informacje o uruchamiania; w przeciwnym razie **nie**. Domyślna wartość to **tak (/ nologo)**.  
-  
+   **Tak (/ nologo)** Pomija wyświetlanie komunikat transparentu i informacje o uruchamiania; w przeciwnym razie **nie**. Domyślna wartość to **tak (/ nologo)**.
+
 - **Traktuj ostrzeżenia jako błędy**
 
-   **Tak (/WX)** traktować wszystkie ostrzeżenia kompilatora jako błędy; w przeciwnym razie **nie**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Strony właściwości HLSL](../ide/hlsl-property-pages.md)   
- [Strony właściwości HLSL: Ogólne](../ide/hlsl-property-pages-general.md)   
- [Strony właściwości HLSL: pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)
+   **Tak (/WX)** traktować wszystkie ostrzeżenia kompilatora jako błędy; w przeciwnym razie **nie**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Strony właściwości HLSL](../ide/hlsl-property-pages.md)<br>
+[Strony właściwości HLSL: ogólne](../ide/hlsl-property-pages-general.md)<br>
+[Strony właściwości HLSL: pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)

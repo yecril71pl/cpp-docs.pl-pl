@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222384"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427882"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
+
 To przenoszenia analiza przypadku jest przeznaczona do daje wyobrażenie o jakie typowym projekcie przenoszenia jest podobna, jakiego rodzaju problemy mogą wystąpić i pewne ogólne porady i wskazówki dotyczące przenoszenia problemów adresowania. Ma nie należy traktować jako ostateczny przewodnik do przenoszenia, ponieważ środowisko Eksportowanie projektu zależy od bardzo szczegółowe informacje na temat kodu.  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Windows XP nie jest już obsługiwana przez firmę Microsoft, więc mimo, że jego celem jest dozwolony w programie Visual Studio 2015, należy być wycofanie pomocy technicznej dla niego w swoich aplikacjach i zachęcanie użytkowników podczas wdrażania nowej wersji systemu Windows.  
   
- Aby pozbyć się błąd, należy zdefiniować WINVER, aktualizując **właściwości projektu** ustawienie Najniższa wersja systemu Windows, które obecnie ma pod kątem. Znajdź tabelę wartości dla różnych wersji Windows [tutaj](/windows/desktop/WinProg/using-the-windows-headers).  
+Aby pozbyć się błąd, należy zdefiniować WINVER, aktualizując **właściwości projektu** ustawienie Najniższa wersja systemu Windows, które obecnie ma pod kątem. Znajdź tabelę wartości dla różnych wersji Windows [tutaj](/windows/desktop/WinProg/using-the-windows-headers).  
   
 W pliku stdafx.h zawiera niektóre z tych definicji makra.  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 Makro _T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi _T w programie Visual Studio, należy najpierw otworzyć **szybkiego zamieniania** (klawiatura: **Ctrl**+**F**) pole lub **zamienianie w plikach**  (Klawiatura: **Ctrl**+**Shift**+**H**), następnie wybierz **regularne użycia Wyrażenia** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już makro _T niektóre ciągi, tej procedury będzie dodać go ponownie i również znajdzie przypadki, w których nie chcesz _t — na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny** zamiast  **Zamień wszystkie**.  
   
- Tej określonej funkcji [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), faktycznie jest zdefiniowany w nagłówki Windows i dokumentacji, aby zaleca się, że jej nie używane, z powodu przepełnienia buforu możliwe. Nie podano rozmiaru dla `szTmp` buforu, więc nie ma możliwości dla funkcji sprawdzić, czy bufor może zawierać wszystkie dane, które ma zostać zapisana. Zobacz następną sekcję o przenoszenie do bezpiecznego CRT, w którym naprawiony inne podobne problemy. Firma Microsoft zakończył się zastąpienie go za pomocą [_stprintf_s —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
+Tej określonej funkcji [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), faktycznie jest zdefiniowany w nagłówki Windows i dokumentacji, aby zaleca się, że jej nie używane, z powodu przepełnienia buforu możliwe. Nie podano rozmiaru dla `szTmp` buforu, więc nie ma możliwości dla funkcji sprawdzić, czy bufor może zawierać wszystkie dane, które ma zostać zapisana. Zobacz następną sekcję o przenoszenie do bezpiecznego CRT, w którym naprawiony inne podobne problemy. Firma Microsoft zakończył się zastąpienie go za pomocą [_stprintf_s —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
 Innym typowym błędem, będzie widocznych na konwersji do formatu Unicode jest to.  
   
@@ -680,5 +681,5 @@ Przenoszenie programu Spy ++ od oryginalnego kodu Visual C++ 6.0 najnowszą wers
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Przenoszenie i uaktualnianie: przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Poprzednie analiza przypadku: narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)

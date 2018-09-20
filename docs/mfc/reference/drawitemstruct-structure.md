@@ -16,117 +16,122 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff4596a52170d0c6d197a0bda431963b5f0e9344
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 632f1b8b975c73c4f8a708ddb9efd64ce0cae015
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427254"
 ---
 # <a name="drawitemstruct-structure"></a>Struktura DRAWITEMSTRUCT
-`DRAWITEMSTRUCT` Struktury informuje okno właściciela musi mieć do określania, jak namalować elementu menu lub formant rysowanych przez właściciela.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-typedef struct tagDRAWITEMSTRUCT {  
-    UINT CtlType;  
-    UINT CtlID;  
-    UINT itemID;  
-    UINT itemAction;  
-    UINT itemState;  
-    HWND hwndItem;  
-    HDC hDC;  
-    RECT rcItem;  
-    DWORD itemData;  
-} DRAWITEMSTRUCT;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *CtlType*  
- Typ formantu. Wartości dla typów kontroli są następujące:  
-  
-- ODT_BUTTON przycisk rysowanych przez właściciela  
-  
-- Pole kombi rysowanych przez właściciela ODT_COMBOBOX  
-  
-- Pole listy rysowane przez właściciela ODT_LISTBOX  
-  
-- ODT_MENU rysowanych przez właściciela menu  
-  
-- Kontrolka widoku listy ODT_LISTVIEW  
-  
-- ODT_STATIC rysowanych przez właściciela statyczną kontrolkę  
-  
-- Formant karty ODT_TAB  
-  
- *CtlID*  
- Identyfikator formantu dla pola kombi, pole listy lub przycisku. Ten element członkowski nie jest używany do menu.  
-  
- *Identyfikator elementu*  
- Identyfikator elementu menu dla menu lub indeks elementu w polu listy lub pola kombi. Lista jest pusta lub polu kombi, ten element członkowski jest wartością ujemną, dzięki czemu aplikacji do rysowania tylko prostokąt fokusu we współrzędnych określonych przez `rcItem` Członkowskie nawet wtedy, gdy nie ma żadnych towarów w formancie. W związku z tym można pokazać użytkownika czy pole listy lub pole kombi ma fokus wprowadzania. Ustawienie usługi bits w `itemAction` elementu członkowskiego Określa, czy ma być rysowany tak, jakby pole listy lub pole kombi ma wejściowych fokus prostokąta.  
-  
- *itemAction*  
- Definiuje rysowania czynności. Może to mieć co najmniej jeden z następujących bitów:  
-  
-- ODA_DRAWENTIRE ten bit jest ustawiona, gdy potrzebne jest narysowanie całego formantu.  
-  
-- ODA_FOCUS ten bit jest ustawiona, gdy formant uzyska lub utraci fokus wprowadzania. `itemState` Członkowskie powinny być sprawdzane w celu określenia, czy formant ma fokus.  
-  
-- ODA_SELECT ten bit jest ustawiony, gdy zostanie zmieniony stan zaznaczenia. `itemState` Elementu członkowskiego powinien być sprawdzany w celu określenia nowy stan zaznaczenia.  
-  
- *itemState*  
- Określa stanu wizualnego elementu po wystąpieniu rysowania bieżącej akcji. Oznacza to czy element menu ma być nieaktywne, Flaga stanu ODS_GRAYED zostanie ustawiona. Flagi stanu są następujące:  
-  
-- ODS_CHECKED ten bit jest ustawiony, jeśli element menu ma być sprawdzony. Ten bit jest używana tylko w menu.  
-  
-- ODS_DISABLED ten bit jest ustawiona, jeśli element ma być rysowany jako wyłączone.  
-  
-- ODS_FOCUS ten bit jest ustawiona, jeśli element ma wejściowych fokus.  
-  
-- ODS_GRAYED ten bit jest ustawiona, jeśli element znajduje się na wygaszone. Ten bit jest używana tylko w menu.  
-  
-- ODS_SELECTED ten bit jest ustawiony, jeśli stan elementu jest zaznaczone.  
-  
-- ODS_COMBOBOXEDIT rysunek odbywa się w polu Wybór (kontrolki edycji) ownerdrawn pola kombi.  
-  
-- ODS_DEFAULT element jest elementem domyślnym.  
-  
- *hwndItem*  
- Określa uchwytu okna kontrolki pola kombi, pola listy i przycisków. Określa dojście menu (HMENU), który zawiera element menu.  
-  
- *elementu hDC*  
- Identyfikuje kontekst urządzenia. Ten kontekst urządzenia należy użyć podczas wykonywania operacji rysowania w formancie.  
-  
- *rcItem*  
- Prostokąt w kontekście urządzenia określonego przez *elementu hDC* elementu członkowskiego, który definiuje granice formantu do narysowania. System Windows automatycznie klipy coś właściciela rysuje kontekstu urządzenia dla pola kombi, pola listy i przyciski, ale go nie obcina elementów menu. Podczas rysowania elementów menu, właściciel musi nie Rysuj poza obszarem prostokąta zdefiniowane przez `rcItem` elementu członkowskiego.  
-  
- *itemData*  
- Pola kombi lub pola listy tego elementu członkowskiego zawiera wartość, która została przekazana do pola listy przez jedną z następujących czynności:  
-  
-- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
-  
-- [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
-  
-- [CListBox::AddString](../../mfc/reference/clistbox-class.md#addstring)  
-  
-- [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
-  
- Do menu tego elementu członkowskiego zawiera wartość, która została przekazana do menu za pomocą jednej z następujących czynności:  
-  
-- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
-  
-- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
-  
-- [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
-  
-## <a name="remarks"></a>Uwagi  
- Okno właściciela elementu menu lub formant rysowanych przez właściciela otrzymuje wskaźnik tej struktury jako *lParam* parametru WM_DRAWITEM wiadomości.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** winuser.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)
+
+`DRAWITEMSTRUCT` Struktura zawiera informacje, które musi mieć okno właściciela, aby określić, jak namalować elementu menu lub kontrolki rysowane przez właściciela.
+
+## <a name="syntax"></a>Składnia
+
+```
+typedef struct tagDRAWITEMSTRUCT {
+    UINT CtlType;
+    UINT CtlID;
+    UINT itemID;
+    UINT itemAction;
+    UINT itemState;
+    HWND hwndItem;
+    HDC hDC;
+    RECT rcItem;
+    DWORD itemData;
+} DRAWITEMSTRUCT;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*CtlType*<br/>
+Typ formantu. Wartości dla typów formantów są następujące:
+
+- ODT_BUTTON przyciskiem rysowanym przez właściciela
+
+- Pole kombi rysowanych przez właściciela ODT_COMBOBOX
+
+- Pole listy rysowane przez właściciela ODT_LISTBOX
+
+- ODT_MENU rysowanych przez właściciela menu
+
+- Kontrolka widoku listy ODT_LISTVIEW
+
+- ODT_STATIC rysowanych przez właściciela statyczną kontrolkę
+
+- Kontrolka karty ODT_TAB
+
+*CtlID*<br/>
+Identyfikator formantu dla pola kombi, pole listy lub przycisku. Ten element członkowski nie jest używana do menu.
+
+*Identyfikator elementu*<br/>
+Identyfikator elementu menu menu lub indeks elementu w polu listy lub pola kombi. Jeśli lista jest pusta lub polu kombi, ten element członkowski jest wartością ujemną umożliwia aplikacji rysowania tylko prostokąt fokusu we współrzędnych określonych przez `rcItem` nawet wtedy, gdy brak elementów w kontrolce elementu członkowskiego. Użytkownik ten sposób mogą być wyświetlane, czy pole listy lub pola kombi ma fokusa wejścia. Ustawienia usługi bits w `itemAction` elementu członkowskiego Określa, czy ma być rysowany tak, jakby pola listy lub pola kombi ma fokus wejścia prostokąta.
+
+*itemAction*<br/>
+Definiuje rysowania czynności. Może to mieć co najmniej jeden z następujących bitów:
+
+- ODA_DRAWENTIRE ten bit jest ustawiona, gdy kontrolka całego wymaga do narysowania.
+
+- ODA_FOCUS ten bit jest ustawiona, gdy kontrolka zyskuje lub traci fokus wprowadzania. `itemState` Elementu członkowskiego powinny być sprawdzane w celu ustalenia, czy kontrolka ma fokus.
+
+- ODA_SELECT ten bit jest ustawiony, gdy zmieniono tylko stan zaznaczenia. `itemState` Członkowskie powinny być sprawdzane, aby określić nowy stan zaznaczenia.
+
+*itemState*<br/>
+Określa stan wizualny elementu po wystąpieniu bieżącej akcji rysowania. Oznacza to jeśli element menu jest wyszarzony, flagi stanu ODS_GRAYED zostaną ustawione. Flagi stanu są następujące:
+
+- ODS_CHECKED ten bit jest ustawiona, jeśli element menu ma zostać sprawdzony. Ten bit jest używany tylko w menu.
+
+- ODS_DISABLED ten bit jest ustawiona, jeśli element ma być rysowany jako wyłączone.
+
+- ODS_FOCUS ten bit jest ustawiona, jeśli element ma fokus wejścia.
+
+- ODS_GRAYED ten bit jest ustawiona, jeśli element jest wyszarzony. Ten bit jest używany tylko w menu.
+
+- ODS_SELECTED ten bit jest ustawiona, jeśli wybrano opcję stan elementu.
+
+- ODS_COMBOBOXEDIT rysunek odbywa się w polu wyboru (kontrolki edycji) ownerdrawn pola kombi.
+
+- ODS_DEFAULT element to element domyślny.
+
+*hwndItem*<br/>
+Określa uchwyt okna formantu dla pola kombi, pola listy i przyciski. Określa uchwyt menu (HMENU), który zawiera element menu.
+
+*elementu hDC*<br/>
+Identyfikuje kontekst urządzenia. Podczas wykonywania operacji rysowania w kontrolce, należy użyć tego kontekstu urządzenia.
+
+*rcItem*<br/>
+Prostokąt w kontekście urządzenia określone przez *elementu hDC* elementu członkowskiego, który definiuje granice kontrolki do rysowania. Windows automatycznie przycina coś, czego właściciela rysuje w kontekście urządzenia dla pola kombi, pola listy i przyciski, ale go nie obcina elementów menu. Podczas rysowania elementów menu, właściciel nie należy narysować poza obszarem prostokąta zdefiniowanego przez `rcItem` elementu członkowskiego.
+
+*itemData*<br/>
+Pole kombi lub pola listy ten element członkowski zawiera wartość, która została przekazana do pola listy za pomocą jednej z następujących czynności:
+
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)
+
+- [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)
+
+- [CListBox::AddString](../../mfc/reference/clistbox-class.md#addstring)
+
+- [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)
+
+Do menu tego elementu członkowskiego zawiera wartość, która została przekazana do menu za pomocą jednej z następujących czynności:
+
+- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)
+
+- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)
+
+- [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)
+
+## <a name="remarks"></a>Uwagi
+
+Okno właściciela elementu menu lub kontrolki rysowane przez właściciela otrzymuje wskaźnik do tej struktury jako *lParam* parametru WM_DRAWITEM wiadomości.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** winuser.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)
 

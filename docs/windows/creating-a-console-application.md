@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6a05604cfa7ce3571d2bb7d5b421d0568ea84a0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4792464c07872d86c667fbc045610507a18c71c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690284"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441164"
 ---
 # <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli
 
@@ -43,6 +43,6 @@ Najprostszym sposobem tworzenia aplikacji konsolowej Win32 jest użycie **Kreato
 
 ## <a name="see-also"></a>Zobacz też
 
-[Projekty konsoli](/visualstudio/debugger/debugging-preparation-console-projects)  
-[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Projekty konsoli](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../ide/property-pages-visual-cpp.md)  

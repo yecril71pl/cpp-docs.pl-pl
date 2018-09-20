@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849bdade5c6abfad07ebed262fb367487d3e1415
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ae9dbe52dba47208844b73175f20edcc591a3ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047892"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444947"
 ---
 # <a name="ompsetnumthreads"></a>omp_set_num_threads
-Ustawia liczbę wątków w kolejnych regionach równoległych, chyba że zostaną zastąpione [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzuli.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void omp_set_num_threads(  
-   int num_threads  
-);  
-```  
-  
+
+Ustawia liczbę wątków w kolejnych regionach równoległych, chyba że zostaną zastąpione [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzuli.
+
+## <a name="syntax"></a>Składnia
+
+```
+void omp_set_num_threads(
+   int num_threads
+);
+```
+
 ### <a name="parameters"></a>Parametry
-  
+
 *num_threads*<br/>
-Liczba wątków w równoległego regionu.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.1.1 funkcja omp_set_num_threads](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) na przykład za pomocą `omp_set_num_threads`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)
+Liczba wątków w równoległego regionu.
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [3.1.1 funkcja omp_set_num_threads](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) na przykład za pomocą `omp_set_num_threads`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

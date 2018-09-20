@@ -1,5 +1,5 @@
 ---
-title: Klasy Windows Sockets | Dokumentacja firmy Microsoft
+title: Windows Sockets klas | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382131"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439981"
 ---
 # <a name="windows-sockets-classes"></a>Klasy Windows Sockets
-Windows Sockets umożliwiają sieci niezależne od protokołu komunikacji między dwoma komputerami. Gniazda te mogą być synchroniczne (program oczekuje, aż odbywa się komunikacji) lub asynchroniczna (program nadal uruchomiona, gdy trwa komunikacja).  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- Hermetyzuje API systemu Windows Sockets w cienką otoką.  
-  
- [CSocket —](../mfc/reference/csocket-class.md)  
- Pochodne wyższym poziomie abstrakcji `CAsyncSocket`. Działa on tak synchronicznie.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Udostępnia `CFile` interfejs do gniazda systemu Windows.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Windows Sockets umożliwiają sieci niezależne od protokołu do komunikowania się między dwoma komputerami. Gniazda te mogą być synchroniczne (program czeka, aż odbywa się komunikacja) lub asynchroniczną (program będzie nadal działać podczas komunikacji dzieje się).
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+Hermetyzuje interfejsu API Windows Sockets w w otoce alokowania elastycznego.
+
+[CSocket](../mfc/reference/csocket-class.md)<br/>
+Wyższy poziom abstrakcji pochodną `CAsyncSocket`. Działa ona synchronicznie.
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Udostępnia `CFile` interfejs do gniazda Windows.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

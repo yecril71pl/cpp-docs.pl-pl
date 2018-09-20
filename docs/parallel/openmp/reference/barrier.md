@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5b2cd9edf54e58c06e7d2a48529393cd3ced64
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c220106d62bf65505c9c5b48085a9ee3e67fe0cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415034"
 ---
 # <a name="barrier"></a>ograniczenie
-Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymane w bariery, dopóki wszystkie wątki wykonania bariera.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#pragma omp barrier  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `barrier` Dyrektywy obsługuje nie klauzule OpenMP.  
-  
- Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa określająca bariery](../../../parallel/openmp/2-6-3-barrier-directive.md).  
-  
-## <a name="example"></a>Przykład  
- Przykładowe zastosowania `barrier`, zobacz [wzorca](../../../parallel/openmp/reference/master.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy](../../../parallel/openmp/reference/openmp-directives.md)
+
+Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.
+
+## <a name="syntax"></a>Składnia
+
+```
+#pragma omp barrier
+```
+
+## <a name="remarks"></a>Uwagi
+
+`barrier` Dyrektywy nie obsługuje żadnych klauzule OpenMP.
+
+Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa określająca bariery](../../../parallel/openmp/2-6-3-barrier-directive.md).
+
+## <a name="example"></a>Przykład
+
+Przykład sposobu użycia `barrier`, zobacz [wzorca](../../../parallel/openmp/reference/master.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy](../../../parallel/openmp/reference/openmp-directives.md)

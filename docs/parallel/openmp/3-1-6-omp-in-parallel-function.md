@@ -12,19 +12,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b491695d2ae49336d7d8998af64e724f344d87
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ba6c35d42f8497869894bd5ec95b83f0c8793f1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404621"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 Funkcja omp_in_parallel
-**Omp_in_parallel** funkcja zwraca wartość niezerową, jeśli jest to w zakres dynamiczny wykonywania równoległego regionu równolegle; w przeciwnym razie zwraca wartość 0. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-int omp_in_parallel(void);  
-```  
-  
- Ta funkcja zwraca wartość niezerową, gdy jest wywoływany z w regionie wykonywane równolegle, w tym zagnieżdżonych regionów, które są serializowane.
+
+**Omp_in_parallel** funkcja zwraca wartość różną od zera, jeśli jest to w ramach równoległego regionu wykonywanych równolegle zakres dynamiczny; w przeciwnym razie zwraca wartość 0. Format jest następujący:
+
+```
+#include <omp.h>
+int omp_in_parallel(void);
+```
+
+Ta funkcja zwraca wartość różną od zera, gdy wywoływana z w obrębie regionu wykonywanych równolegle, w tym zagnieżdżone regionów, które są serializowane.

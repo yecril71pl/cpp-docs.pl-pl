@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434729"
 ---
 # <a name="implements-structure"></a>Implements — Struktura
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parametry
 
-*I0*  
+*I0*<br/>
 Identyfikator interfejsu zerowego. (Obowiązkowe)
 
-*I1*  
+*I1*<br/>
 Identyfikator pierwszego interfejsu. (opcjonalnie)
 
-*I2*  
+*I2*<br/>
 Identyfikator drugiego interfejsu. (opcjonalnie)
 
-*I3*  
+*I3*<br/>
 Identyfikator trzeciego interfejsu. (opcjonalnie)
 
-*I4*  
+*I4*<br/>
 Identyfikator czwartego interfejsu. (opcjonalnie)
 
-*I5*  
+*I5*<br/>
 Identyfikator piątego interfejsu. (opcjonalnie)
 
-*I6*  
+*I6*<br/>
 Identyfikator szóstego interfejsu. (opcjonalnie)
 
-*I7*  
+*I7*<br/>
 Identyfikator siódmego interfejsu. (opcjonalnie)
 
-*I8*  
+*I8*<br/>
 Identyfikator ósmego interfejsu. (opcjonalnie)
 
-*I9*  
+*I9*<br/>
 Identyfikator dziewiątego interfejsu. (opcjonalnie)
 
-*flagi*  
+*flagi*<br/>
 Flagi konfiguracji dla klasy. Co najmniej jeden [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wyliczenia, które są określone w [runtimeclassflags —](../windows/runtimeclassflags-structure.md) struktury.
 
 ## <a name="remarks"></a>Uwagi
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
-*ppv*  
+*ppv*<br/>
 Jeśli operacja się powiedzie, wskaźnik do interfejsu określonego przez *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.
 
-*IID*  
+*IID*<br/>
 Tablica typu IID.
 
 ### <a name="remarks"></a>Uwagi

@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f480a75efff737356c1477593e182537ae73a8c8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 426ac0a5ff974e486f70eed2965fdc27d5acc941
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419116"
 ---
 # <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 Funkcje omp_unset_lock i omp_unset_nest_lock
-Funkcje te pozwalają zwalniania własność blokady. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-void omp_unset_lock(omp_lock_t *lock);  
-void omp_unset_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Argument każda z tych funkcji musi wskazywać zmiennej zainicjowane blokady należących do wykonywania funkcji wątku. Zachowanie jest niezdefiniowana, jeśli wątek nie jest właścicielem tego blokady.  
-  
- Proste blokady `omp_unset_lock` funkcja zwalnia wątku wykonywania funkcji z własność blokady.  
-  
- Dla blokadą `omp_unset_nest_lock` działanie zmniejsza liczbę zagnieżdżenia i wersjach wątku wykonywania funkcji z własność blokady, jeśli wynikowa liczba wynosi zero.
+
+Te funkcje zapewniają oznacza, że przy zwalnianiu własność blokadę. Format jest następujący:
+
+```
+#include <omp.h>
+void omp_unset_lock(omp_lock_t *lock);
+void omp_unset_nest_lock(omp_nest_lock_t *lock);
+```
+
+Argument do każdej z tych funkcji musi wskazywać na zmienną zainicjowane blokady własnością wątku wykonywania funkcji. Zachowanie jest niezdefiniowane, jeśli wątek nie jest właścicielem tego blokady.
+
+Dla prostą blokadą `omp_unset_lock` funkcja zwolni wątek wykonywania funkcji z na własność blokadę.
+
+Na blokadę zagnieżdżalnych `omp_unset_nest_lock` funkcji zmniejsza liczbę zagnieżdżenia i wersji wątek wykonywania funkcji z na własność blokadę, jeśli wynikowy licznik osiągnie wartość zero.

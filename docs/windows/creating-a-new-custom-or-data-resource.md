@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403946"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>Tworzenie nowej niestandardowej lub zasobów danych (C++)
 
@@ -40,9 +40,9 @@ Można utworzyć nowy zasób niestandardowy lub danych, umieszczając w oddzieln
 
 3. W **dyrektywy czasu kompilacji** wpisz `#include` instrukcję, która zawiera nazwę pliku zawierającego niestandardowego zasobu. Na przykład:
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    Upewnij się, że składnia i pisownię możesz wpisać są poprawne. Zawartość **dyrektywy czasu kompilacji** pola są wstawiane do pliku skryptu zasobu, dokładnie tak, jak został wpisany.
 

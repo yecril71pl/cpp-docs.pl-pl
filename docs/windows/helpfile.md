@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66cd89c28ea01c3a75d0cb25aa6f96a234e379b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221932"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418206"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,7 +38,7 @@ Określa nazwę pliku pomocy dla biblioteki typów.
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*  
+*Nazwa pliku*<br/>
 Nazwa pliku który zawiera tematy Pomocy.
 
 ## <a name="remarks"></a>Uwagi
@@ -64,10 +64,10 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty interfejsu](../windows/interface-attributes.md)  
-[Atrybuty klasy](../windows/class-attributes.md)  
-[Atrybuty metody](../windows/method-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpcontext](../windows/helpcontext.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty interfejsu](../windows/interface-attributes.md)<br/>
+[Atrybuty klasy](../windows/class-attributes.md)<br/>
+[Atrybuty metody](../windows/method-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
 [helpstring](../windows/helpstring.md)  

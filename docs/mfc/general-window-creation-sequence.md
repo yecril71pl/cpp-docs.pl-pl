@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a4b67ccbba97405678985e6412cc56911bd184
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9336e5fa19b373f07c54e758a6f939bbc63e50ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929695"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432792"
 ---
 # <a name="general-window-creation-sequence"></a>Ogólna sekwencja tworzenia okna
-Podczas tworzenia okna oknie użytkownika, takie jak element podrzędny platformę używa znacznie te same czynności, którą opisano w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md).  
-  
- Klasy okien podał zatrudnienia MFC [dwuetapowa konstrukcja](../mfc/one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywołania języka C++ **nowe** operatora, konstruktora przydziela i inicjuje obiekt C++, ale nie powoduje utworzenia odpowiedniego okna systemu Windows. Następnie wykonywane przez wywołanie metody [Utwórz](../mfc/reference/cwnd-class.md#create) funkcji członkowskiej klasy obiektu okna.  
-  
- `Create` Funkcji członkowskiej sprawia, że okno systemu Windows i są przechowywane jego `HWND` w obiekcie C++ publicznego elementu członkowskiego danych [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Pozwala ukończyć elastyczność za pośrednictwem parametry tworzenia. Przed wywołaniem `Create`, można zarejestrować klasy okna za pomocą funkcji globalnej [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) było ustawić styl ikony, jak i klasy ramki.  
-  
- Okna ramowe, można użyć [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej zamiast `Create`. `LoadFrame` powoduje, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu.  
-  
+
+Podczas tworzenia okna swoich potrzeb, takich jak elementu podrzędnego okna, środowisko wykorzystuje znacznie ten sam proces, którą opisano w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md).
+
+Wszystkich klas okien dostarczonych przez MFC stosują [dwuetapowa konstrukcja](../mfc/one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywoływania C++ **nowe** operatora, Konstruktor przydziela i inicjuje obiektu języka C++, ale nie powoduje utworzenia odpowiedniego okna Windows. Zostanie to zrobione później przez wywołanie metody [Utwórz](../mfc/reference/cwnd-class.md#create) funkcji składowej typu obiekt okna.
+
+`Create` Okna Windows sprawia, że funkcja elementu członkowskiego i przechowuje swoje `HWND` w element członkowski danych publicznego obiektu języka C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` zapewnia ukończyć elastyczność za pośrednictwem parametrów do utworzenia. Przed wywołaniem `Create`, możesz chcieć rejestrowanie klasy okna za pomocą funkcji globalnych [afxregisterwndclass —](../mfc/reference/application-information-and-management.md#afxregisterwndclass) aby można było ustawić ikonę i klasa style ramki.
+
+Okna ramowe, można użyć [loadframe —](../mfc/reference/cframewnd-class.md#loadframe) funkcja elementu członkowskiego zamiast `Create`. `LoadFrame` sprawia, że okno Windows przy użyciu mniejszej liczby parametrów. Otrzymuje wiele wartości domyślnych od zasobów, w tym podpis ramki, ikony, tabeli akceleratora i menu.
+
 > [!NOTE]
->  Ikona, w tabeli akceleratora i w zasoby menu musi mieć wspólny identyfikator zasobów, takich jak **IDR_MAINFRAME**, ich być załadowana przez LoadFrame.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Obiekty okna](../mfc/window-objects.md)  
-  
--   [Rejestrowanie klas"okien"](../mfc/registering-window-classes.md)  
-  
--   [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)  
-  
--   [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie okien](../mfc/creating-windows.md)
+>  Twoje ikonę tabeli akceleratora i zasobów menu musi mieć wspólny identyfikator zasobu, takie jak **IDR_MAINFRAME**, musiały być ładowane przez loadframe —.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Obiekty okna](../mfc/window-objects.md)
+
+- [Rejestrowanie klas"okien"](../mfc/registering-window-classes.md)
+
+- [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
+
+- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie okien](../mfc/creating-windows.md)
 

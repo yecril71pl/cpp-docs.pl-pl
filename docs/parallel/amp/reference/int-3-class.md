@@ -82,205 +82,210 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69dd5e5080735c1b347b164887fdfab76aa9b178
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042588"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428399"
 ---
 # <a name="int3-class"></a>int_3 — Klasa
-Reprezentuje krótki Wektor trzech liczb całkowitych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class int_3;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-typedefs"></a>Publiczne definicje typów  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
-|int_3::get_xz||  
-|int_3::get_xzy||  
-|int_3::get_y||  
-|int_3::get_yx||  
-|int_3::get_yxz||  
-|int_3::get_yz||  
-|int_3::get_yzx||  
-|int_3::get_z||  
-|int_3::get_zx||  
-|int_3::get_zxy||  
-|int_3::get_zy||  
-|int_3::get_zyx||  
-|int_3::ref_b||  
-|int_3::ref_g||  
-|int_3::ref_r||  
-|int_3::ref_x||  
-|int_3::ref_y||  
-|int_3::ref_z||  
-|int_3::set_x||  
-|int_3::set_xy||  
-|int_3::set_xyz||  
-|int_3::set_xz||  
-|int_3::set_xzy||  
-|int_3::set_y||  
-|int_3::set_yx||  
-|int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
-|int_3::set_z||  
-|int_3::set_zx||  
-|int_3::set_zxy||  
-|int_3::set_zy||  
-|int_3::set_zyx||  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
-|int_3::operator % =||  
-|int_3::operator&=||  
-|int_3::operator * =||  
-|int_3::operator / =||  
-|int_3::operator^=||  
-|int_3::operator&#124;=||  
-|int_3::operator ~||  
-|int_3::operator ++||  
-|int_3::operator +=||  
-|int_3::operator <\<=||  
-|int_3::operator=||  
-|int_3::operator-=||  
-|int_3::operator >> =||  
-  
-### <a name="public-constants"></a>Publiczne stałe  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[rozmiar — stała](#size)||  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|int_3::b||  
-|int_3::bg||  
-|int_3::bgr||  
-|int_3::br||  
-|int_3::brg||  
-|int_3::g||  
-|int_3::gb||  
-|int_3::gbr||  
-|int_3::gr||  
-|int_3::grb||  
-|int_3::r||  
-|int_3::rb||  
-|int_3::rbg||  
-|int_3::rg||  
-|int_3::rgb||  
-|int_3::x||  
-|int_3::xy||  
-|int_3::xyz||  
-|int_3::xz||  
-|int_3::xzy||  
-|int_3::y||  
-|int_3::yx||  
-|int_3::yxz||  
-|int_3::yz||  
-|int_3::yzx||  
-|int_3::z||  
-|int_3::zx||  
-|int_3::zxy||  
-|int_3::zy||  
-|int_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `int_3`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency::graphics  
 
-## <a name="ctor"></a> int_3 
+Reprezentuje krótki Wektor trzech liczb całkowitych.
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int_3() restrict(amp,cpu);  
-int_3(  
-   int _V0,  
-   int _V1,  
-   int _V2  
-) restrict(amp,cpu);  
-int_3(  
-   int _V  
-) restrict(amp,cpu);  
-int_3(  
-   const int_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const uint_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const float_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const unorm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const norm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const double_3& _Other  
-) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>Parametry  
+## <a name="syntax"></a>Składnia
+
+```
+class int_3;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-typedefs"></a>Publiczne definicje typów
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|int_3::get_x||
+|int_3::get_xy||
+|int_3::get_xyz||
+|int_3::get_xz||
+|int_3::get_xzy||
+|int_3::get_y||
+|int_3::get_yx||
+|int_3::get_yxz||
+|int_3::get_yz||
+|int_3::get_yzx||
+|int_3::get_z||
+|int_3::get_zx||
+|int_3::get_zxy||
+|int_3::get_zy||
+|int_3::get_zyx||
+|int_3::ref_b||
+|int_3::ref_g||
+|int_3::ref_r||
+|int_3::ref_x||
+|int_3::ref_y||
+|int_3::ref_z||
+|int_3::set_x||
+|int_3::set_xy||
+|int_3::set_xyz||
+|int_3::set_xz||
+|int_3::set_xzy||
+|int_3::set_y||
+|int_3::set_yx||
+|int_3::set_yxz||
+|int_3::set_yz||
+|int_3::set_yzx||
+|int_3::set_z||
+|int_3::set_zx||
+|int_3::set_zxy||
+|int_3::set_zy||
+|int_3::set_zyx||
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|int_3::operator-||
+|int_3::operator--||
+|int_3::operator % =||
+|int_3::operator&=||
+|int_3::operator * =||
+|int_3::operator / =||
+|int_3::operator^=||
+|int_3::operator&#124;=||
+|int_3::operator ~||
+|int_3::operator ++||
+|int_3::operator +=||
+|int_3::operator <\<=||
+|int_3::operator=||
+|int_3::operator-=||
+|int_3::operator >> =||
+
+### <a name="public-constants"></a>Publiczne stałe
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[rozmiar — stała](#size)||
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|int_3::b||
+|int_3::bg||
+|int_3::bgr||
+|int_3::br||
+|int_3::brg||
+|int_3::g||
+|int_3::gb||
+|int_3::gbr||
+|int_3::gr||
+|int_3::grb||
+|int_3::r||
+|int_3::rb||
+|int_3::rbg||
+|int_3::rg||
+|int_3::rgb||
+|int_3::x||
+|int_3::xy||
+|int_3::xyz||
+|int_3::xz||
+|int_3::xzy||
+|int_3::y||
+|int_3::yx||
+|int_3::yxz||
+|int_3::yz||
+|int_3::yzx||
+|int_3::z||
+|int_3::zx||
+|int_3::zxy||
+|int_3::zy||
+|int_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`int_3`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** amp_short_vectors.h
+
+**Namespace:** Concurrency::graphics
+
+## <a name="ctor"></a> int_3
+
+Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+
+## <a name="syntax"></a>Składnia
+
+```
+int_3() restrict(amp,cpu);
+int_3(
+   int _V0,
+   int _V1,
+   int _V2
+) restrict(amp,cpu);
+int_3(
+   int _V
+) restrict(amp,cpu);
+int_3(
+   const int_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const uint_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const float_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const unorm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const norm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const double_3& _Other
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Parametry
+
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.  
-  
-*_V1*<br/>
-Wartość do zainicjowania elementu 1.  
-  
-*_V2*<br/>
-Wartość można zainicjować element 2.  
-  
-*_V*<br/>
-Wartość inicjalizacji.  
-  
-*_Inne*<br/>
-Obiekt używany do inicjowania.  
-  
-## <a name="size"></a> Rozmiar 
+Wartość do zainicjowania elementu 0.
 
-## <a name="syntax"></a>Składnia  
-  
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.
+
+*_V2*<br/>
+Wartość można zainicjować element 2.
+
+*_V*<br/>
+Wartość inicjalizacji.
+
+*_Inne*<br/>
+Obiekt używany do inicjowania.
+
+## <a name="size"></a> Rozmiar
+
+## <a name="syntax"></a>Składnia
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

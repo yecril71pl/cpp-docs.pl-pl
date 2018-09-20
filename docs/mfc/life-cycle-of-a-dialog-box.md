@@ -18,46 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf204f05c03e742e0f491fb3991b56d3405ebc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05138040b6283b7af01f6e010bc371490aea495e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440501"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Cykl życiowy okna dialogowego
-Podczas cyklu okno dialogowe użytkownik wywołuje okno dialogowe, zwykle wewnątrz obsługi polecenia, które tworzy i inicjuje obiektu okna dialogowego, użytkownik wchodzi w interakcję z okna dialogowego i zamyka okno dialogowe.  
-  
- Dla modalnych okien dialogowych programu obsługi zbiera wszystkie dane, które użytkownik wprowadził po zamknięciu okna dialogowego. Ponieważ istnieje obiekt okna dialogowego po jego okno dialogowe zostało zamknięte, po prostu umożliwia zmienne Członkowskie klasy okien dialogowych wyodrębnić dane.  
-  
- Niemodalne okna dialogowe, aby uzyskać może często wyodrębniania danych z obiektu okna dialogowego, gdy okno dialogowe jest nadal widoczny. W pewnym momencie zostanie zniszczony obiektu okna dialogowego; w takim przypadku zależy od kodu.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Tworzenie i wyświetlanie okien dialogowych](../mfc/creating-and-displaying-dialog-boxes.md)  
-  
--   [Tworzenie modalnych okien dialogowych](../mfc/creating-modal-dialog-boxes.md)  
-  
--   [Tworzenie niemodalnych okien dialogowych](../mfc/creating-modeless-dialog-boxes.md)  
-  
--   [Używanie szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md)  
-  
--   [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md)  
-  
--   [Inicjowanie okna dialogowego](../mfc/initializing-the-dialog-box.md)  
-  
--   [Obsługa komunikatów systemu Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)  
-  
--   [Pobieranie danych z obiektu okna dialogowego](../mfc/retrieving-data-from-the-dialog-object.md)  
-  
--   [Zamykanie okna dialogowego](../mfc/closing-the-dialog-box.md)  
-  
--   [Niszczenie okna dialogowego](../mfc/destroying-the-dialog-box.md)  
-  
--   [Wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
-  
--   [Okna dialogowe arkusza właściwości](../mfc/property-sheets-and-property-pages-mfc.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)
+
+Podczas cyklu życia okno dialogowe użytkownik wywoła okno dialogowe, zwykle wewnątrz procedury obsługi do polecenia, które tworzy i inicjuje obiekt okna dialogowego, użytkownik wchodzi w interakcję z okna dialogowego i zamyka okno dialogowe.
+
+Modalne okno dialogowe pól programu obsługi zbiera wszystkie dane które użytkownik wprowadził po zamknięciu okna dialogowego. Ponieważ obiektu okna dialogowego istnieje, po jego okno dialogowe zostało zamknięte, możesz po prostu użyć zmienne składowe klasy okien dialogowych do wyodrębnienia danych.
+
+Dla Niemodalne okna dialogowe może być często wyodrębniania danych z obiektu okna dialogowego, gdy okno dialogowe jest jeszcze widoczny. W pewnym momencie obiektu okna dialogowego zostanie zniszczony; w takim przypadku zależy od kodu.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Tworzenie i wyświetlanie okien dialogowych](../mfc/creating-and-displaying-dialog-boxes.md)
+
+- [Tworzenie modalnych okien dialogowych](../mfc/creating-modal-dialog-boxes.md)
+
+- [Tworzenie niemodalnych okien dialogowych](../mfc/creating-modeless-dialog-boxes.md)
+
+- [Używanie szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md)
+
+- [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md)
+
+- [Inicjowanie okna dialogowego](../mfc/initializing-the-dialog-box.md)
+
+- [Obsługa komunikatów Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)
+
+- [Trwa pobieranie danych z obiektu okna dialogowego](../mfc/retrieving-data-from-the-dialog-object.md)
+
+- [Zamykanie okna dialogowego](../mfc/closing-the-dialog-box.md)
+
+- [Niszczenie okna dialogowego](../mfc/destroying-the-dialog-box.md)
+
+- [Wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+
+- [Okna dialogowe arkusza właściwości](../mfc/property-sheets-and-property-pages-mfc.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)
 

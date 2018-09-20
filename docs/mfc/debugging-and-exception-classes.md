@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9adf6a585771336de9fb33abbebdd6bab97383ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7c88c5d12f56318bbb37a825e28c2bfcbc132d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341764"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418180"
 ---
 # <a name="debugging-and-exception-classes"></a>Klasy debugowania i wyjątków
-Te klasy obsługi debugowania dynamicznej alokacji pamięci oraz do przekazywania informacji wyjątek z funkcji, w którym wyjątku funkcji gdzie zostanie przechwycony.  
-  
- Użyj klasy [CDumpContext](../mfc/reference/cdumpcontext-class.md) i [CMemoryState](../mfc/reference/cmemorystate-structure.md) podczas tworzenia, aby umożliwić debugowanie, zgodnie z opisem w [debugowania aplikacji MFC](/visualstudio/debugger/mfc-debugging-techniques). Użyj [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) można określić klasę wszystkich obiektów w czasie wykonywania, zgodnie z opisem w artykule [podczas uzyskiwania dostępu do środowiska wykonawczego informacje o klasie](../mfc/accessing-run-time-class-information.md). Używa w ramach `CRuntimeClass` można dynamicznie utworzyć obiekty określonej klasy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Te klasy zapewniają obsługę dynamicznej alokacji pamięci debugowania i do przekazywania informacji wyjątku przez funkcję, gdzie wyjątek jest zgłaszany do funkcji, gdzie zostanie przechwycony.
+
+Używanie klas [CDumpContext](../mfc/reference/cdumpcontext-class.md) i [CMemoryState](../mfc/reference/cmemorystate-structure.md) podczas programowania, która pomaga w debugowaniu, zgodnie z opisem w [debugowania aplikacji MFC](/visualstudio/debugger/mfc-debugging-techniques). Użyj [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) można określić klasę dowolnego obiektu w czasie wykonywania, zgodnie z opisem w artykule [uzyskiwania dostępu do środowiska wykonawczego informacji o klasie](../mfc/accessing-run-time-class-information.md). Środowisko wykorzystuje `CRuntimeClass` dynamicznie utworzyć obiekty określonej klasy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

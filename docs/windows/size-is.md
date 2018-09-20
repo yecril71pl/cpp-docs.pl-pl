@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 677f28b1ca4a45a3033e1dc6a34bd024bec6e329
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0505fde4ea92c643a6038d64d10ec06cda9cb60d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211505"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392336"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -38,7 +38,7 @@ Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wska
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*  
+*Wyrażenie*<br/>
 Rozmiar pamięci przydzielonej dla wskaźników o rozmiarze.
 
 ## <a name="remarks"></a>Uwagi
@@ -64,10 +64,10 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atrybuty parametru](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[last_is](../windows/last-is.md)  
-[max_is](../windows/max-is.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty parametru](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
 [length_is](../windows/length-is.md)  

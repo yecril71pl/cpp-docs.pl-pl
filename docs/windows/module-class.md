@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ae36838a1375b541951122bb00b522cf320650d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a90a7c82706adead4379152b78d36e4dd4b91673
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599758"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416230"
 ---
 # <a name="module-class"></a>Module — Klasa
 
@@ -43,7 +43,7 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>Parametry
 
-*Typ modułu*  
+*Typ modułu*<br/>
 Kombinacji jednego lub więcej [ModuleType](../windows/moduletype-enumeration.md) wartości wyliczenia.
 
 ## <a name="members"></a>Elementy członkowskie

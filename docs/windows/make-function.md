@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607823"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422405"
 ---
 # <a name="make-function"></a>Make — Funkcja
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasy określonych przez użytkownika, który dziedziczy z `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Typ argumentu 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg2*  
+*TArg2*<br/>
 Typ argumentu 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg3*  
+*TArg3*<br/>
 Typ argumentu 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg4*  
+*TArg4*<br/>
 Typ argumentu 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg5*  
+*TArg5*<br/>
 Typ argumentu 5, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg6*  
+*TArg6*<br/>
 Typ argumentu 6, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg7*  
+*TArg7*<br/>
 Typ argumentu 7, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg8*  
+*TArg8*<br/>
 Typ argumentu 8, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*TArg9*  
+*TArg9*<br/>
 Typ argumentu 9, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg1*  
+*arg1*<br/>
 Argument 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*argument2*  
+*argument2*<br/>
 Argument 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg3*  
+*arg3*<br/>
 Argument 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*Arg4*  
+*Arg4*<br/>
 Argument 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg5*  
+*arg5*<br/>
 Argument 5, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg6*  
+*arg6*<br/>
 Argument 6, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg7*  
+*arg7*<br/>
 Argument 7, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg8*  
+*arg8*<br/>
 Argument 8, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg9*  
+*arg9*<br/>
 Argument 9, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 ## <a name="return-value"></a>Wartość zwracana

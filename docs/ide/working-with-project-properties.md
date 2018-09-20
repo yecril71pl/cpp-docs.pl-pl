@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398667"
 ---
 # <a name="working-with-project-properties"></a>Praca z właściwościami projektu
 
@@ -141,11 +141,11 @@ Makro zdefiniowane przez użytkownika jest przechowywane w arkuszu właściwośc
 
 ##### <a name="to-create-a-user-defined-macro"></a>Aby utworzyć makro zdefiniowane przez użytkownika
 
-1.  W **Menedżer właściwości** okna (na pasku menu wybierz **widoku**, **Menedżer właściwości**), otwórz menu skrótów dla arkusza właściwości (jego nazwa kończy się na .user), a następnie wybierz Właściwości. **Stron właściwości** zostanie otwarte okno dialogowe dla tego arkusza właściwości.
+1. W **Menedżer właściwości** okna (na pasku menu wybierz **widoku**, **Menedżer właściwości**), otwórz menu skrótów dla arkusza właściwości (jego nazwa kończy się na .user), a następnie wybierz Właściwości. **Stron właściwości** zostanie otwarte okno dialogowe dla tego arkusza właściwości.
 
-2.  W lewym okienku okna dialogowego wybierz **makra użytkownika**. W okienku po prawej stronie wybierz **Dodaj makro** przycisk, aby otworzyć **Dodaj makro użytkownika** okno dialogowe.
+1. W lewym okienku okna dialogowego wybierz **makra użytkownika**. W okienku po prawej stronie wybierz **Dodaj makro** przycisk, aby otworzyć **Dodaj makro użytkownika** okno dialogowe.
 
-3.  W oknie dialogowym określ nazwę i wartość dla makra. Opcjonalnie można zaznaczyć **Ustaw to makro jako zmienną środowiskową w środowisku kompilacji** pole wyboru.
+1. W oknie dialogowym określ nazwę i wartość dla makra. Opcjonalnie można zaznaczyć **Ustaw to makro jako zmienną środowiskową w środowisku kompilacji** pole wyboru.
 
 ## <a name="property-editor"></a>Edytor właściwości
 

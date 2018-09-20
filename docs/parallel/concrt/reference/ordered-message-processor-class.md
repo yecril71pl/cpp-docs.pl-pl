@@ -24,167 +24,178 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa27c46db5d23c78d9f433b41f27161f0bc41736
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5d9340da3665135fc05182bdd6aa6d26c4e2cd76
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445883"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor — Klasa
-`ordered_message_processor` Jest `message_processor` umożliwiająca bloki komunikatów do przetwarzania wiadomości w kolejności zostały odebrane.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+`ordered_message_processor` Jest `message_processor` umożliwiająca bloki komunikatów do przetwarzania wiadomości w kolejności zostały odebrane.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template<class T>
 class ordered_message_processor : public message_processor<T>;
-```  
-  
-#### <a name="parameters"></a>Parametry  
-*T*<br/>
-Typ ładunku komunikaty obsługiwane przez procesor.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-typedefs"></a>Publiczne definicje typów  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`type`|Alias typu `T`.|  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[ordered_message_processor](#ctor)|Konstruuje `ordered_message_processor` obiektu.|  
-|[~ordered_message_processor Destructor](#dtor)|Niszczy `ordered_message_processor` obiektu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[async_send](#async_send)|Asynchronicznie ustawia w kolejce komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już. (Przesłania [message_processor::async_send —](message-processor-class.md#async_send).)|  
-|[Inicjowanie](#initialize)|Inicjuje `ordered_message_processor` obiektu przy użyciu funkcji, harmonogram i Zaplanuj grupy odpowiednie wywołania zwrotnego.|  
-|[initialize_batched_processing](#initialize_batched_processing)|Przetwarzanie komunikatów wsadowej inicjowania|  
-|[sync_send](#sync_send)|Synchronicznie kolejki komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już. (Przesłania [message_processor::sync_send —](message-processor-class.md#sync_send).)|  
-|[Czekaj](#wait)|Zaczekaj pokrętła specyficznych dla procesora, upewnij się, że wszystkie zadania przetwarzania asynchronicznego czasu na zakończenie przed niszczenie bloku, umożliwia w destruktorach bloków komunikatów. (Przesłania [message_processor::wait —](message-processor-class.md#wait).)|  
-  
-### <a name="protected-methods"></a>Metody chronione  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|Funkcja przetwarzania, która jest wywoływana asynchronicznie. On dequeues wiadomości i rozpoczyna przetwarzanie je. (Przesłania [message_processor::process_incoming_message —](message-processor-class.md#process_incoming_message).)|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [message_processor](message-processor-class.md)  
-  
- `ordered_message_processor`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** agents.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="async_send"></a> async_send — 
+```
 
- Asynchronicznie ustawia w kolejce komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już.  
-  
+#### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ ładunku komunikaty obsługiwane przez procesor.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-typedefs"></a>Publiczne definicje typów
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`type`|Alias typu `T`.|
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[ordered_message_processor](#ctor)|Konstruuje `ordered_message_processor` obiektu.|
+|[~ordered_message_processor Destructor](#dtor)|Niszczy `ordered_message_processor` obiektu.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[async_send](#async_send)|Asynchronicznie ustawia w kolejce komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już. (Przesłania [message_processor::async_send —](message-processor-class.md#async_send).)|
+|[Inicjowanie](#initialize)|Inicjuje `ordered_message_processor` obiektu przy użyciu funkcji, harmonogram i Zaplanuj grupy odpowiednie wywołania zwrotnego.|
+|[initialize_batched_processing](#initialize_batched_processing)|Przetwarzanie komunikatów wsadowej inicjowania|
+|[sync_send](#sync_send)|Synchronicznie kolejki komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już. (Przesłania [message_processor::sync_send —](message-processor-class.md#sync_send).)|
+|[Czekaj](#wait)|Zaczekaj pokrętła specyficznych dla procesora, upewnij się, że wszystkie zadania przetwarzania asynchronicznego czasu na zakończenie przed niszczenie bloku, umożliwia w destruktorach bloków komunikatów. (Przesłania [message_processor::wait —](message-processor-class.md#wait).)|
+
+### <a name="protected-methods"></a>Metody chronione
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[process_incoming_message](#process_incoming_message)|Funkcja przetwarzania, która jest wywoływana asynchronicznie. On dequeues wiadomości i rozpoczyna przetwarzanie je. (Przesłania [message_processor::process_incoming_message —](message-processor-class.md#process_incoming_message).)|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[message_processor](message-processor-class.md)
+
+`ordered_message_processor`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** agents.h
+
+**Namespace:** współbieżności
+
+##  <a name="async_send"></a> async_send —
+
+Asynchronicznie ustawia w kolejce komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już.
+
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_Msg*<br/>
-Wskaźnik do wiadomości.  
-  
-##  <a name="initialize"></a> Inicjowanie 
+```
 
- Inicjuje `ordered_message_processor` obiektu przy użyciu funkcji, harmonogram i Zaplanuj grupy odpowiednie wywołania zwrotnego.  
-  
+### <a name="parameters"></a>Parametry
+
+*_Msg*<br/>
+Wskaźnik do wiadomości.
+
+##  <a name="initialize"></a> Inicjowanie
+
+Inicjuje `ordered_message_processor` obiektu przy użyciu funkcji, harmonogram i Zaplanuj grupy odpowiednie wywołania zwrotnego.
+
 ```
 void initialize(
     _Inout_opt_ Scheduler* _PScheduler,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup,
     _Handler_method const& _Handler);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_PScheduler*<br/>
-Wskaźnik do harmonogramu, który ma być używany w przypadku planowania zadań lekki.  
-  
-*_PScheduleGroup*<br/>
-Wskaźnik do grupy harmonogramu, który ma być używany w przypadku planowania zadań lekki.  
-  
-*_Handler*<br/>
-Funkcję obsługi wywoływane podczas wywołania zwrotnego.  
-  
-##  <a name="initialize_batched_processing"></a> initialize_batched_processing — 
+```
 
- Przetwarzanie komunikatów wsadowej inicjowania  
-  
+### <a name="parameters"></a>Parametry
+
+*_PScheduler*<br/>
+Wskaźnik do harmonogramu, który ma być używany w przypadku planowania zadań lekki.
+
+*_PScheduleGroup*<br/>
+Wskaźnik do grupy harmonogramu, który ma być używany w przypadku planowania zadań lekki.
+
+*_Handler*<br/>
+Funkcję obsługi wywoływane podczas wywołania zwrotnego.
+
+##  <a name="initialize_batched_processing"></a> initialize_batched_processing —
+
+Przetwarzanie komunikatów wsadowej inicjowania
+
 ```
 virtual void initialize_batched_processing(
     _Handler_method const& _Processor,
     _Propagator_method const& _Propagator);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_Processor*<br/>
-Funkcję procesora wywoływane podczas wywołania zwrotnego.  
-  
-*_Propagator*<br/>
-Funkcję propagator wywoływane podczas wywołania zwrotnego.  
-  
-##  <a name="ctor"></a> ordered_message_processor — 
+```
 
- Konstruuje `ordered_message_processor` obiektu.  
-  
+### <a name="parameters"></a>Parametry
+
+*_Processor*<br/>
+Funkcję procesora wywoływane podczas wywołania zwrotnego.
+
+*_Propagator*<br/>
+Funkcję propagator wywoływane podczas wywołania zwrotnego.
+
+##  <a name="ctor"></a> ordered_message_processor —
+
+Konstruuje `ordered_message_processor` obiektu.
+
 ```
 ordered_message_processor();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- To `ordered_message_processor` nie będą planować asynchronicznego lub synchronicznego obsługi do momentu `initialize` funkcja jest wywoływana.  
-  
-##  <a name="dtor"></a> ~ ordered_message_processor 
+```
 
- Niszczy `ordered_message_processor` obiektu.  
-  
+### <a name="remarks"></a>Uwagi
+
+To `ordered_message_processor` nie będą planować asynchronicznego lub synchronicznego obsługi do momentu `initialize` funkcja jest wywoływana.
+
+##  <a name="dtor"></a> ~ ordered_message_processor
+
+Niszczy `ordered_message_processor` obiektu.
+
 ```
 virtual ~ordered_message_processor();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Czeka na wszystkie oczekujące operacje asynchroniczne przed niszczenie procesora.  
-  
-##  <a name="process_incoming_message"></a> process_incoming_message — 
+```
 
- Funkcja przetwarzania, która jest wywoływana asynchronicznie. On dequeues wiadomości i rozpoczyna przetwarzanie je.  
-  
+### <a name="remarks"></a>Uwagi
+
+Czeka na wszystkie oczekujące operacje asynchroniczne przed niszczenie procesora.
+
+##  <a name="process_incoming_message"></a> process_incoming_message —
+
+Funkcja przetwarzania, która jest wywoływana asynchronicznie. On dequeues wiadomości i rozpoczyna przetwarzanie je.
+
 ```
 virtual void process_incoming_message();
-```  
-  
-##  <a name="sync_send"></a> sync_send — 
+```
 
- Synchronicznie kolejki komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już.  
-  
+##  <a name="sync_send"></a> sync_send —
+
+Synchronicznie kolejki komunikaty i uruchamia zadanie przetwarzania, jeśli nie zostało to zrobione już.
+
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_Msg*<br/>
-Wskaźnik do wiadomości.  
-  
-##  <a name="wait"></a> Czekaj 
+```
 
- Zaczekaj pokrętła specyficznych dla procesora, upewnij się, że wszystkie zadania przetwarzania asynchronicznego czasu na zakończenie przed niszczenie bloku, umożliwia w destruktorach bloków komunikatów.  
-  
+### <a name="parameters"></a>Parametry
+
+*_Msg*<br/>
+Wskaźnik do wiadomości.
+
+##  <a name="wait"></a> Czekaj
+
+Zaczekaj pokrętła specyficznych dla procesora, upewnij się, że wszystkie zadania przetwarzania asynchronicznego czasu na zakończenie przed niszczenie bloku, umożliwia w destruktorach bloków komunikatów.
+
 ```
 virtual void wait();
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

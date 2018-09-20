@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212815"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420507"
 ---
 # <a name="property--c-component-extensions"></a>property (C++ Component Extensions)
 
@@ -33,15 +33,15 @@ Deklaruje *właściwość*, która jest funkcją składową, który zachowuje si
 
 Można zadeklarować jedną z następujących typów właściwości.
 
-*właściwości prostej*  
+*właściwości prostej*<br/>
 Domyślnie tworzy *ustawiająca metoda dostępu* , przypisuje wartość właściwości *pobierająca* , który pobiera wartość właściwości oraz element członkowski danych prywatnych generowanych przez kompilator, który zawiera wartość właściwości.
 
-*Blok właściwości*  
+*Blok właściwości*<br/>
 Umożliwia tworzenie get zdefiniowanych przez użytkownika i/lub ustaw metody dostępu. Właściwość jest odczytu/zapisu, jeśli obie opcje pobierania i metody dostępu set są zdefiniowane, tylko do odczytu, jeśli tylko zdefiniowano metody dostępu get i tylko do zapisu czy tylko metody dostępu set jest zdefiniowana.
 
 Należy jawnie deklarować element członkowski danych zawiera wartość właściwości.
 
-*Właściwość indeksowana*  
+*Właściwość indeksowana*<br/>
 Blok właściwości, który służy do pobierania i ustawiania wartości właściwości, która jest określona przez jednego lub kilku indeksów.
 
 Właściwość indeksowana, który ma uprawnienia można utworzyć nazwy właściwości zdefiniowanych przez użytkownika lub *domyślne* nazwy właściwości. Nazwa domyślnej właściwości indeksu jest nazwa klasy, w którym właściwość jest zdefiniowana. Aby zadeklarować właściwość domyślną, określić **domyślne** słowa kluczowego zamiast nazwy właściwości.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 Typ danych wartości właściwości i samej właściwości.
 
-*Property_Name*  
+*Property_Name*<br/>
 Nazwa właściwości.
 
-*Modyfikator dostępu*  
+*Modyfikator dostępu*<br/>
 Kwalifikator dostępu. Prawidłowy kwalifikatory to **statyczne** i **wirtualnego**.
 
 Get lub metody dostępu set nie muszą uzgodnić **wirtualnego** kwalifikator, ale musisz wyrazić zgodę na **statyczne** kwalifikator.
 
-*Modyfikator dziedziczenia*  
+*Modyfikator dziedziczenia*<br/>
 Kwalifikator dziedziczenia. Prawidłowy kwalifikatory to **abstrakcyjne** i **zapieczętowanego**.
 
-*index_list*  
+*index_list*<br/>
 Rozdzielana przecinkami lista jednego lub kilku indeksów. Każdy indeks zawiera typ indeksu i opcjonalny identyfikator, który może służyć w treści metody właściwości.
 
-*value*  
+*value*<br/>
 Wartość do przypisania do właściwości w operacji zestawu, lub pobrać w ramach operacji get.
 
-*property_body*  
+*property_body*<br/>
 Właściwości treści metody dostępu set lub get. *Property_body* służy *index_list* dostęp podstawowego elementu danych właściwości do lub jako parametry podczas przetwarzania zdefiniowanych przez użytkownika.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-*Modyfikator*  
+*Modyfikator*<br/>
 Modyfikatory, które mogą być używane w deklaracji właściwości lub metody dostępu get/set. Możliwe wartości to **statyczne** i **wirtualnego**.
 
-*Typ*  
+*Typ*<br/>
 Typ wartości, który jest reprezentowany przez właściwość.
 
-*Property_Name*  
+*Property_Name*<br/>
 Parametry metody Zgłoś; musi odpowiadać podpisowi delegata.
 
-*index_list*  
+*index_list*<br/>
 Rozdzielana przecinkami lista jednego lub kilku indeksów, określone w nawiasach kwadratowych (operator indeksu dolnego, ([])). Dla każdego indeksu należy określić typ i opcjonalnie identyfikator, który może służyć w treści metody właściwości.
 
 ### <a name="remarks"></a>Uwagi
