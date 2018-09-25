@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Umieszczanie formantów na paskach narzędzi | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384563"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169752"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
 
@@ -30,11 +30,11 @@ W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawier
 
 Aby dodać formant do paska narzędzi, wykonaj następujące kroki:
 
-1. Zarezerwuj identyfikator zasobu fikcyjnego przycisku w nadrzędnej zasób paska narzędzi. Aby uzyskać więcej informacji o sposobie tworzenia przyciski, za pomocą edytora narzędzi w programie Visual Studio, zobacz [Edytor paska narzędzi](../windows/toolbar-editor.md) tematu.
+1. Zarezerwuj identyfikator zasobu fikcyjnego przycisku w nadrzędnej zasób paska narzędzi. Aby uzyskać więcej informacji o tym, jak utworzyć przyciski, za pomocą **Edytor paska narzędzi** w programie Visual Studio, zobacz [Edytor paska narzędzi](../windows/toolbar-editor.md) tematu.
 
 1. Zarezerwuj obraz paska narzędzi (ikonę przycisku) przycisku w wszystkich map bitowych paska narzędzi nadrzędnej.
 
-1. Program obsługi komunikatów, która przetwarza komunikat AFX_WM_RESETTOOLBAR wykonaj następujące czynności:
+1. Programu obsługi wiadomości, która przetwarza `AFX_WM_RESETTOOLBAR` wiadomości, wykonaj następujące czynności:
 
    1. Utworzyć formant przycisku przy użyciu `CMFCToolbarButton`-klasy pochodnej.
 
@@ -55,22 +55,22 @@ W tej sekcji opisano sposób tworzenia **znaleźć** formant pola kombi, pojawi 
 
 ### <a name="creating-the-find-control"></a>Tworzenie kontrolki wyszukiwania
 
-Najpierw utwórz `Find` formant pola kombi:
+Najpierw utwórz **znaleźć** formant pola kombi:
 
 1. Dodaj przycisk i polecenia do zasobów aplikacji:
 
    1. Zasoby aplikacji, należy dodać nowy przycisk za pomocą `ID_EDIT_FIND` identyfikator polecenia do paska narzędzi aplikacji i mapy bitowe, wszelkie skojarzone z na pasku narzędzi.
 
-   1. Utwórz nowy element menu identyfikatorem id_edit_find — polecenie
+   1. Utwórz nowy element menu przy użyciu `ID_EDIT_FIND` polecenia identyfikatora.
 
-   1. Dodaj nowy ciąg "Wyszukiwanie text\nFind" do tabeli ciągów i przypisz mu `ID_EDIT_FIND_COMBO` polecenia identyfikatora. Ten identyfikator będzie używany jako identyfikator polecenia `Find` przycisk pola kombi.
+   1. Dodaj nowy ciąg "Wyszukiwanie text\nFind" do tabeli ciągów i przypisz mu `ID_EDIT_FIND_COMBO` polecenia identyfikatora. Ten identyfikator będzie używany jako identyfikator polecenia **znaleźć** przycisk pola kombi.
 
         > [!NOTE]
-        >  Ponieważ `ID_EDIT_FIND` jest standardowe polecenie, które są przez nią przetwarzane `CEditView`, nie należy implementować specjalne Obsługa tego polecenia.  Jednak należy zaimplementować funkcję obsługi nowego polecenia `ID_EDIT_FIND_COMBO`.
+        > Ponieważ `ID_EDIT_FIND` jest standardowe polecenie, które są przez nią przetwarzane `CEditView`, nie należy implementować specjalne Obsługa tego polecenia.  Jednak należy zaimplementować funkcję obsługi nowego polecenia `ID_EDIT_FIND_COMBO`.
 
 1. Utwórz nową klasę `CFindComboBox`, pochodzącej z [klasa CComboBox](../mfc/reference/ccombobox-class.md).
 
-1. W `CFindComboBox` klasy, Zastąp `PreTranslateMessage` metodę wirtualną. Ta metoda umożliwi pole kombi, aby przetworzyć [przetłumaczyła](/windows/desktop/inputdev/wm-keydown) wiadomości. Jeśli użytkownik naciśnie klawisz ESC (`VK_ESCAPE`), ponowne Ustawianie fokusa w oknie głównym ramki. Jeśli użytkownik naciśnie klawisz Enter (`VK_ENTER`), Opublikuj ramką głównego okna komunikatów WM_COMMAND, który zawiera `ID_EDIT_FIND_COMBO` polecenia identyfikatora.
+1. W `CFindComboBox` klasy, Zastąp `PreTranslateMessage` metodę wirtualną. Ta metoda umożliwi pole kombi, aby przetworzyć [przetłumaczyła](/windows/desktop/inputdev/wm-keydown) wiadomości. Jeśli użytkownik naciśnie klawisz ESC (`VK_ESCAPE`), ponowne Ustawianie fokusa w oknie głównym ramki. Jeśli użytkownik naciśnie klawisz Enter (`VK_ENTER`), wpis w oknie głównym ramki `WM_COMMAND` wiadomość, która zawiera `ID_EDIT_FIND_COMBO` polecenia identyfikatora.
 
 1. Utwórz klasę dla **znaleźć** przycisk pola kombi, pochodzące z [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). W tym przykładzie jest on nazwany `CFindComboButton`.
 
@@ -88,7 +88,7 @@ Najpierw utwórz `Find` formant pola kombi:
 
 1. Implementowanie `ID_EDIT_FIND_COMBO` obsługi w danym widoku dokumentu. Użyj [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) z `ID_EDIT_FIND_COMBO` pobranie wszystkich **znaleźć** przyciskami pola kombi. Ze względu na dostosowanie może być kilka kopii przycisk za pomocą tego samego Identyfikatora polecenia.
 
-9. Programu obsługi wiadomości id_edit_find — `OnFind`, użyj [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) do określenia, czy polecenie find została wysłana z **znaleźć** przycisk pola kombi. Jeśli tak, Znajdź tekst i dodaj ciąg wyszukiwania do pola kombi.
+1. W `ID_EDIT_FIND` obsługi wiadomości `OnFind`, użyj [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) do określenia, czy polecenie find została wysłana z **znaleźć** przycisk pola kombi. Jeśli tak, Znajdź tekst i dodaj ciąg wyszukiwania do pola kombi.
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Dodawanie kontrolki wyszukiwania do głównego paska narzędzi
 
@@ -97,16 +97,16 @@ Aby dodać przycisk pola kombi na pasku narzędzi, wykonaj następujące kroki:
 1. Implementowanie `AFX_WM_RESETTOOLBAR` obsługi wiadomości `OnToolbarReset` w oknie głównym ramki.
 
     > [!NOTE]
-    >  Struktura wysyła tę wiadomość w oknie głównym ramki, gdy pasek narzędzi jest inicjowany podczas uruchamiania aplikacji lub pasek narzędzi jest resetowany podczas dostosowywania. W obu przypadkach należy zastąpić przycisk na pasku narzędzi Standardowy z niestandardowym **znaleźć** przycisk pola kombi.
+    > Struktura wysyła tę wiadomość w oknie głównym ramki, gdy pasek narzędzi jest inicjowany podczas uruchamiania aplikacji lub pasek narzędzi jest resetowany podczas dostosowywania. W obu przypadkach należy zastąpić przycisk na pasku narzędzi Standardowy z niestandardowym **znaleźć** przycisk pola kombi.
 
 1. W `AFX_WM_RESETTOOLBAR` obsługi, Sprawdź identyfikator narzędzi, to znaczy, *WPARAM* AFX_WM_RESETTOOLBAR wiadomości. Jeśli identyfikator narzędzi jest równa pasek narzędzi, który zawiera **znaleźć** przycisk pola kombi, wywołanie [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) zastąpić **znaleźć** przycisku (oznacza to, przycisk z poleceniem o identyfikatorze `ID_EDIT_FIND)` z `CFindComboButton` obiektu.
 
     > [!NOTE]
-    >  Można skonstruować `CFindComboBox` obiektów na stosie, ponieważ `ReplaceButton` kopiuje obiekt przycisku, a następnie przechowuje kopię.
+    > Można skonstruować `CFindComboBox` obiektów na stosie, ponieważ `ReplaceButton` kopiuje obiekt przycisku, a następnie przechowuje kopię.
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Dodawanie kontrolki wyszukiwania do okna dialogowego Dostosowywanie
 
-W obsłudze dostosowywania `OnViewCustomize`, wywołaj [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) zastąpić **znaleźć** przycisku (oznacza to, że przycisk z poleceniem o identyfikatorze `ID_EDIT_FIND)` z `CFindComboButton` obiektu.
+W obsłudze dostosowywania `OnViewCustomize`, wywołaj [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) zastąpić **znaleźć** przycisku (oznacza to, że przycisk z poleceniem o identyfikatorze `ID_EDIT_FIND`) z `CFindComboButton` obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 

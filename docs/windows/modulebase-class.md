@@ -1,28 +1,36 @@
 ---
 title: Modulebase — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::DecrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::~ModuleBase
 dev_langs:
 - C++
 helpviewer_keywords:
 - ModuleBase class
+- Microsoft::WRL::Details::ModuleBase::DecrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::IncrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
+- Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6d60e5114d189ddede87899bb55fba25a296c57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a87b5d617663e87e8c69596e6b1eedca61996b80
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601474"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169557"
 ---
 # <a name="modulebase-class"></a>ModuleBase — Klasa
 
@@ -42,17 +50,17 @@ Reprezentuje klasę bazową [modułu](../windows/module-class.md) klasy.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[ModuleBase::ModuleBase, konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicjuje wystąpienie `Module` klasy.|
-|[ModuleBase::~ModuleBase, destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinicjuje bieżące wystąpienie `Module` klasy.|
+Nazwa                                         | Opis
+-------------------------------------------- | ---------------------------------------------------------
+[ModuleBase::ModuleBase](#modulebase)        | Inicjuje wystąpienie `Module` klasy.
+[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | Deinicjuje bieżące wystąpienie `Module` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[ModuleBase::DecrementObjectCount, metoda](../windows/modulebase-decrementobjectcount-method.md)|Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.|
-|[ModuleBase::IncrementObjectCount, metoda](../windows/modulebase-incrementobjectcount-method.md)|Po wdrożeniu, zwiększa liczbę obiektów śledzonych przez moduł.|
+Nazwa                                                      | Opis
+--------------------------------------------------------- | -------------------------------------------------------------------------
+[ModuleBase::DecrementObjectCount](#decrementobjectcount) | Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.
+[ModuleBase::IncrementObjectCount](#incrementobjectcount) | Po wdrożeniu, zwiększa liczbę obiektów śledzonych przez moduł.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -64,6 +72,58 @@ Reprezentuje klasę bazową [modułu](../windows/module-class.md) klasy.
 
 **Namespace:** Microsoft::wrl:: details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
 
-[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+virtual ~ModuleBase();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Deinicjuje bieżące wystąpienie `ModuleBase` klasy.
+
+## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+virtual long DecrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Liczba przed wykonaniem operacji dekrementacji.
+
+### <a name="remarks"></a>Uwagi
+
+Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.
+
+## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+virtual long IncrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Liczba przed wykonaniem operacji przyrostu.
+
+### <a name="remarks"></a>Uwagi
+
+Po wdrożeniu, zwiększa liczbę obiektów śledzonych przez moduł.
+
+## <a name="modulebase"></a>ModuleBase::ModuleBase
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+ModuleBase();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Inicjuje wystąpienie `Module` klasy.
