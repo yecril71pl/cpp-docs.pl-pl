@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Tworzenie standardowego programu C++ (C++) | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382638"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029622"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
 
@@ -45,41 +45,48 @@ Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.
 
 1. Utwórz projektu wskazując **New** na **pliku** menu, a następnie klikając polecenie **projektu**.
 
-2. W **Visual C++** okienku typów projektu, kliknij przycisk **pulpitu Windows**, a następnie kliknij przycisk **aplikacji konsoli Windows**.
+1. W **Visual C++** okienku typów projektu, kliknij przycisk **pulpitu Windows**, a następnie kliknij przycisk **aplikacji konsoli Windows**. 
 
-3. Wpisz nazwę dla projektu.
+   > [!NOTE]
+   > W przypadku wersji sprzed 2017, Visual Studio w **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**  >  **Visual C++**, a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **Aplikacja konsoli Win32**. 
+
+   Wpisz nazwę dla projektu.
 
    Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak projektu, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
 
    Kliknij przycisk **OK** do tworzenia projektu.
 
-4. Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.
+   > [!NOTE]
+   > W przypadku wersji sprzed 2017 Visual Studio, należy wykonać **Kreatora aplikacji Win32**. Kliknij przycisk **dalej**, upewnij się, **aplikację Konsolową** jest zaznaczone, a następnie usuń zaznaczenie pola wyboru **prekompilowanych nagłówków** pole. Kliknij przycisk **Zakończ**.
 
-5. Dodaj nowy plik źródłowy do projektu, w następujący sposób.
+1. Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.
+
+1. Dodaj nowy plik źródłowy do projektu, w następujący sposób.
 
    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pliki źródłowe** folderu, wskaż **Dodaj**, a następnie kliknij przycisk **nowy element**.
 
-   2. W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij **Dodaj**.
+   1. W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij **Dodaj**.
 
    Plik CPP pojawia się w **pliki źródłowe** folderu w **Solution Explorer**, a plik jest otwarty w edytorze programu Visual Studio.
 
-6. W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowej biblioteki C++ lub skopiuj jeden z przykładowych programów i wklej go w pliku.
+1. W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowej biblioteki C++ lub skopiuj jeden z przykładowych programów i wklej go w pliku.
 
-7. Zapisz plik.
+1. Zapisz plik.
 
-8. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
 
    **Dane wyjściowe** okna wyświetla informacje o postępie kompilacji, na przykład lokalizacja dziennika kompilacji i komunikat o statusie kompilacji.
 
-9. Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
+1. Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
 
    Jeśli użyto przykładowego programu, okno polecenia jest wyświetlane i pokazuje, czy niektóre liczby całkowite znajdują się w zestawie.
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [konsoli aplikacji w języku Visual C++](../windows/console-applications-in-visual-cpp.md). **Następnie:**[wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+**Poprzedni:** [konsoli aplikacji w języku Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Następnie:** [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
+[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>

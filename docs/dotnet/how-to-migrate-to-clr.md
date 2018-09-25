@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494468"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029661"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 
@@ -85,8 +85,6 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 C++ wymaga również, że funkcje być prototypowane lub w pełni zdefiniowana przed ich odwołania lub wywołany.
 
 Identyfikatory użytą w kodzie C, które należą do słów kluczowych w języku C++ (takie jak `virtual`, `new`, `delete`, `bool`, `true`, `false`, itp.) musi zostać zmieniona. Zazwyczaj można to zrobić przy użyciu prostych operacji wyszukiwania i zamieniania.
-
-Na koniec wywołania COM stylu C wymaga jawne użycie tabeli v i `this` wskaźnika, C++ nie obsługuje:
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

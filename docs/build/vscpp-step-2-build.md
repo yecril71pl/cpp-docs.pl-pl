@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705786"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029596"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Kompilowanie i uruchamianie projektu aplikacji konsoli w języku C++
 
@@ -45,7 +45,7 @@ Jeśli program Visual Studio wygląda tak, możesz przystąpić do kompilowania 
 
    ![Rozpocznij projekt](../build/media/vscpp-start-without-debugging.gif "Rozpocznij projekt")
 
-    Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." daje szansę, aby wyświetlić dane wyjściowe.
+   Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." daje szansę, aby wyświetlić dane wyjściowe.
 
 Gratulacje! Utworzono pierwszej "Hello, world!" Aplikacja konsoli w programie Visual Studio! Naciśnij dowolny klawisz, aby zamknąć okno konsoli i powrócić do programu Visual Studio.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++) | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679208"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029674"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -120,7 +120,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    Aby uzyskać informacje dotyczące parametrów i wartość zwracana przez tę funkcję, zobacz [punktu wejścia WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
    > [!NOTE]
-   > Co to są wszystkich tych dodatkowych słów, takich jak `CALLBACK`, lub `HINSTANCE`, lub `_In_`? Tradycyjne interfejsu Windows API używa definicji typów i makra preprocesora często przeniesienia na poziom abstrakcji natychmiast niektórych szczegółów typów i specyficzne dla platformy kodu, np. Konwencje wywoływania, **__declspec** deklaracje i pragmy kompilatora. W programie Visual Studio, można użyć funkcji IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) funkcję, aby sprawdzić, co zdefiniować definicji typów i makra. Umieść kursor nad wyraz zainteresowaniach, aplikację lub wybierz ją i naciśnij klawisze ctrl-K, ctrl-I-niewielkie okno podręczne, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i zwracane typy często używają *adnotacji SAL* ułatwiające catch błędy programowania. Aby uzyskać więcej informacji, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Co to są wszystkich tych dodatkowych słów, takich jak `CALLBACK`, lub `HINSTANCE`, lub `_In_`? Tradycyjne interfejsu Windows API używa definicji typów i makra preprocesora często przeniesienia na poziom abstrakcji natychmiast niektórych szczegółów typów i specyficzne dla platformy kodu, np. Konwencje wywoływania, **__declspec** deklaracje i pragmy kompilatora. W programie Visual Studio, można użyć funkcji IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) funkcję, aby sprawdzić, co zdefiniować definicji typów i makra. Umieść kursor nad wyraz zainteresowania, lub wybierz ją i naciśnij klawisz **Ctrl**+**K**, **Ctrl**+**I** dla niewielkie okno podręczne, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i zwracane typy często używają *adnotacji SAL* ułatwiające catch błędy programowania. Aby uzyskać więcej informacji, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Programy pulpitu Windows wymagają &lt;windows.h >. &lt;tchar.h > definiuje `TCHAR` makra, która jest rozpoznawana jako ostatecznie do **wchar_t** Jeśli symboli UNICODE jest zdefiniowany w projekcie, w przeciwnym razie jest on rozpoznawany jako **char**.  Zawsze w przypadku tworzenia z użyciem standardu UNICODE włączone, nie potrzebujesz tchar — i może po prostu użyj **wchar_t** bezpośrednio.
 

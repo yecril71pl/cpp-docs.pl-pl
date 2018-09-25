@@ -3,8 +3,7 @@ title: — Sprawdzanie poprawności-charset (Zweryfikuj zgodność znaków) | Do
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - /validate-charset
@@ -18,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 528245bd2b0ef734ce192f266fe73e813078a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 698a221dadf21e6d314f5556210d84b98853757f
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407299"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029531"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-Charset (Zweryfikuj zgodność znaków)
 
