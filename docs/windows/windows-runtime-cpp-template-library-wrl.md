@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401806"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429751"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -50,7 +50,7 @@ Biblioteka szablonów C++ środowiska wykonawczego Windows i C + +/ CX oferują 
 
 Poniżej przedstawiono niektóre zasoby, które mogą pomóc Ci rozpocząć pracę z Biblioteka szablonów C++ środowiska wykonawczego Windows, następnie od razu.
 
-[Biblioteka środowiska uruchomieniowego Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[Biblioteka środowiska uruchomieniowego Windows (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 W tym filmie wideo Channel 9 Dowiedz się więcej o jak Biblioteka szablonów C++ środowiska wykonawczego Windows ułatwia pisanie aplikacji uniwersalnych platformy Windows (UWP) i jak tworzyć i wykorzystywać składniki środowiska uruchomieniowego Windows.
 
 [Porady: uaktywnianie składnika środowiska wykonawczego Windows i korzystanie](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -77,16 +77,16 @@ Pokazuje sposób wykorzystywania niestandardowych składników Windows Runtime z
 [Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Ilustruje sposób używania [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfejsów oraz zadań wysyłać żądania HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej systemu Windows.
 
-[Przykład optymalizatora podróży w mapach Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Przykład optymalizatora podróży w mapach Bing](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Używa `HttpRequest` klasy, która jest zdefiniowana w [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) w kontekście pełnej aplikacji platformy uniwersalnej systemu Windows.
 
-[Tworzenie składnika biblioteki DLL środowiska uruchomieniowego Windows przy użyciu przykładu w języku C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[Tworzenie składnika biblioteki DLL środowiska uruchomieniowego Windows przy użyciu przykładu w języku C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Pokazuje, jak Biblioteka szablonów C++ środowiska wykonawczego Windows umożliwiają tworzenie składnika biblioteki DLL w procesie i używanie go z C + +/ CX, JavaScript i C#.
 
-[Przykładowa gra programu DirectX marmurowy Labirynt](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Przykładowa gra programu DirectX marmurowy Labirynt](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Pokazuje, jak na potrzeby zarządzania okresem istnienia składników COM, takich jak DirectX i platformy Media Foundation w kontekście Zakończenie gry 3-w. Biblioteka szablonów C++ środowiska wykonawczego Windows.
 
-[Wysyłania powiadomień toast z przykładowej aplikacji klasycznych](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[Wysyłania powiadomień toast z przykładowej aplikacji klasycznych](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows do pracy z powiadomieniami toast z aplikacji klasycznej.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego Windows w porównaniu z ATL
