@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169440"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234071"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Wskazówki: dodawanie animacji do projektu MFC
 
@@ -100,11 +100,11 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie programu Visual 
 
 1. W **Kreator klas MFC**, kliknij przycisk **OK**.
 
-1. Zapisz MFCAnimationWalkthroughView.cpp, który jest otwarty w edytorze, ale nie zamykaj.
+1. Zapisać MFCAnimationWalkthroughView.cpp, który jest otwarty w edytorze, ale nie zamykaj ją.
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Aby dodać obiektu do projektu
 
-1. W Eksploratorze rozwiązań kliknij dwukrotnie MFCAnimationWalkthroughView.h, aby otworzyć ją do modyfikacji. Tuż przed definicją `CMFCAnimationWalkthroughView` klasy, Dodaj następujący kod, aby utworzyć kontroler animacji niestandardowej, która będzie obsługiwać planowania powoduje konflikt z obiektem animacji.
+1. W **Eksploratora rozwiązań**, kliknij dwukrotnie MFCAnimationWalkthroughView.h, aby otworzyć ją do modyfikacji. Tuż przed definicją `CMFCAnimationWalkthroughView` klasy, Dodaj następujący kod, aby utworzyć kontroler animacji niestandardowej, która będzie obsługiwać planowania powoduje konflikt z obiektem animacji.
 
     ```cpp
     class CCustomAnimationController : public CAnimationController
