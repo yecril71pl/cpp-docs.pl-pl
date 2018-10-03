@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433065"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234995"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC
 
@@ -56,7 +56,7 @@ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z bibli
 
 1. Dodaj nową klasę tej podklasy `CDialog`.
 
-     Kliknij prawym przyciskiem myszy nazwę projektu i dodać klasę MFC (o nazwie chostforwinform podzieloną) na podklasy `CDialog`. Ponieważ zasobu okna dialogowego pole nie jest potrzebne, można usunąć Identyfikatora zasobu (zaznacz widok zasobu, rozwiń Dialog folder i Usuń zasób IDD_HOSTFORWINFORM.  Następnie usuń wszelkie odwołania do Identyfikatora w kodzie.).
+     Kliknij prawym przyciskiem myszy nazwę projektu i dodać klasę MFC (o nazwie chostforwinform podzieloną) na podklasy `CDialog`. Ponieważ zasobu okna dialogowego pole nie jest potrzebne, można usunąć Identyfikatora zasobu (zaznacz **widok zasobów**, rozwiń węzeł **okna dialogowego** folder i Usuń `IDD_HOSTFORWINFORM` zasobów.  Następnie usuń wszelkie odwołania do Identyfikatora w kodzie.).
 
 1. Zastąp `CDialog` w plikach CHostForWinForm.h i CHostForWinForm.cpp z `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 

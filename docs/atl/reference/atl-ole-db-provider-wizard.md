@@ -1,7 +1,7 @@
 ---
 title: Kreator dostawcy interfejsu OLE DB ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717213"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250357"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
 
 Ten kreator tworzy klas, które tworzą dostawcy OLE DB.
+
+> [!WARNING]
+> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+
 
 ## <a name="remarks"></a>Uwagi
 

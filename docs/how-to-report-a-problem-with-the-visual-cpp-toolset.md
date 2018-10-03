@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465532"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235013"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -370,14 +370,12 @@ Po wybraniu opcji Zgłoś problem najpierw wyszukać społeczności deweloperów
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Użyj stron społeczności deweloperów programu Visual Studio
 
-Strony społeczności deweloperów programu Visual Studio są innego wygodny sposób, aby zgłosić problemy i rozwiązania dla programu Visual Studio, kompilator języka C++, narzędzi i bibliotek. [Visual Studio pytania](https://developercommunity.visualstudio.com/spaces/8/index.html) strona to miejsce zgłosić problemy ze środowiskiem IDE lub instalacji. W przypadku problemów przy użyciu kompilatora, konsolidatora i innych narzędzi i bibliotek C++ [pytania C++](https://developercommunity.visualstudio.com/spaces/62/index.html) strony.
+Strony społeczności deweloperów programu Visual Studio są innego wygodny sposób zgłaszać problemy i rozwiązania dla programu Visual Studio i kompilatora języka C++, narzędzi i bibliotek. Istnieją konkretne strony społeczności deweloperów dla [programu Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [programu Visual Studio dla komputerów Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [ Usługa Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html), i [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Poniżej karty te u góry każdej strony jest pole wyszukiwania, używanej do znalezienia wpisy lub tematów, które zgłaszanie problemów podobnej do Twojej. Może się okazać rozwiązania lub inne przydatne informacje dotyczące tego problemu jest już dostępna. Jeśli ktoś zgłosił ten sam problem, przed, Zagłosuj i komentarza, w tym temacie zamiast tworzyć nowy raport o problemie. Aby dodać komentarz, Zagłosuj lub zgłosić nowy problem, może być konieczne do logowania się na swoje konto programu Visual Studio i zaakceptowanie przypisać społeczność deweloperów aplikacji dostęp do Twojego profilu.
 
-W społeczności deweloperów Baner u góry każdej strony jest pole wyszukiwania, używanej do znalezienia wpisy lub tematów, które zgłaszanie problemów podobnej do Twojej. Może się okazać rozwiązania lub inne przydatne informacje dotyczące tego problemu jest już dostępny w istniejącej tematu. Jeśli ktoś zgłosił ten sam problem, przed, Zagłosuj i komentarza, w tym temacie zamiast tworzyć nowy raport o problemie.
-
-Jeśli problem nie został zgłoszony przed, wybierz opcję **Zgłoś problem** przycisk znajdujący się obok pola wyszukiwania na stronie społeczności deweloperów. Może być konieczne podanie do logowania się na swoje konto programu Visual Studio i zaakceptowanie przypisać społeczność deweloperów aplikacji dostęp do Twojego profilu. Gdy użytkownik jest zalogowany, możesz przejść bezpośrednio do strony gdzie możesz zgłosić problem. Może zawierać kod odtwarzania i wiersza polecenia, zrzuty ekranu, linki do pokrewnych dyskusjami i inne informacje, które Twoim zdaniem są istotne i przydatne.
+W przypadku problemów przy użyciu kompilatora, konsolidatora i innych narzędzi i bibliotek C++ [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) strony. Jeśli wyszukiwanie dla danego problemu, a nie został zgłoszony przed, wybierz opcję **Zgłoś problem** przycisk znajdujący się obok pola wyszukiwania w górnej części strony. Może zawierać kod odtwarzania i wiersza polecenia, zrzuty ekranu, linki do pokrewnych dyskusjami i inne informacje, które Twoim zdaniem są istotne i przydatne.
 
 > [!TIP]
-> Dla innych rodzajów problemy mogą wystąpić w programie Visual Studio, które nie są związane z zestawu narzędzi (na przykład interfejsu użytkownika problemy, uszkodzenie funkcjonalności środowiska IDE lub awarie ogólne), **narzędzia Zgłoś Problem** może być szczególnie przydatne termin choice do jego zrzut ekranu wystąpiły funkcje i możliwości rekordu działania interfejsu użytkownika, które mogą prowadzić do problemu. Te rodzaje błędów mogą być również zgłaszane na [społeczności deweloperów](https://developercommunity.visualstudio.com/) lokacji.
+> Dla innych rodzajów problemy mogą wystąpić w programie Visual Studio, które nie są związane z zestawu narzędzi języka C++ (na przykład problemy z interfejsem użytkownika, uszkodzony funkcji środowiska IDE lub awarie ogólne), użyj **Zgłoś Problem** narzędzia w IDE. Jest to najlepszy wybór, ze względu na jej możliwości zrzut ekranu i możliwość rejestrowania akcji UI, które mogą prowadzić do problemów, wcześniej napotkanych. Te rodzaje błędów można również wyszukiwać [społeczności deweloperów](https://developercommunity.visualstudio.com/) lokacji. Aby uzyskać więcej informacji, zobacz [jak zgłosić problem z programem Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Raporty i ochrona prywatności
 

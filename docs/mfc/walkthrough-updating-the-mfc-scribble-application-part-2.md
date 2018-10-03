@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169687"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235441"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Wskazówki: aktualizowanie aplikacji bazgrołów MFC (część 2)
 
@@ -116,17 +116,17 @@ Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybranie szerokości
 
 1. Kliknij przycisk drugiego pola kombi. Zmiana **podpis** do `Thick Pen`, **identyfikator** do `ID_PEN_THICK_WIDTH`, **typu** do `Drop List`, **danych** do `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, i **tekstu** do `5`.
 
-1. Nowe pola kombi nie odpowiadają wszystkie istniejące elementy menu. W związku z tym należy utworzyć element menu dla każdej opcji pióra.
+1. Nowe pola kombi nie odnoszą się do wszystkie istniejące elementy menu, dlatego należy utworzyć element menu dla każdej opcji pióra.
 
    1. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu.
 
    1. Kliknij przycisk **pióra** aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `Thi&n Pen`.
 
-   1. Kliknij prawym przyciskiem myszy tekst, który po prostu wpisane w celu otwarcia **właściwości** okna, a następnie zmień identyfikator właściwości `ID_PEN_THIN_WIDTH`.
+   1. Kliknij prawym przyciskiem myszy tekst, który został wpisany, aby otworzyć **właściwości** okna, a następnie zmień identyfikator właściwości `ID_PEN_THIN_WIDTH`.
 
-   1. Należy także utworzyć program obsługi zdarzeń dla każdego elementu menu pióra. Kliknij prawym przyciskiem myszy **gr & n pióra** element menu, który właśnie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
+   1. Utwórz procedurę obsługi zdarzeń dla każdego elementu menu pióra. Kliknij prawym przyciskiem myszy **gr & n pióra** element menu, który zostanie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
 
-   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Spowoduje to utworzenie obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThinWidth`.
+   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Polecenie tworzy program obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThinWidth`.
 
    1. Dodaj następujący kod do `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybranie szerokości
 
    1. Kliknij przycisk **pióra** aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `Thic&k Pen`.
 
-   1. Kliknij prawym przyciskiem myszy tekst wpisany tylko do wyświetlania **właściwości** okna. Zmień właściwości Identyfikatora `ID_PEN_THICK_WIDTH`.
+   1. Kliknij prawym przyciskiem myszy tekst wpisany do wyświetlenia **właściwości** okna. Zmień właściwości Identyfikatora `ID_PEN_THICK_WIDTH`.
 
-   1. Kliknij prawym przyciskiem myszy **grubość pióra** element menu, który właśnie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
+   1. Kliknij prawym przyciskiem myszy **grubość pióra** element menu, który zostanie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
 
-   1. W **listy klas** pola kreatora wybierz pozycję **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Spowoduje to utworzenie obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThickWidth`.
+   1. W **listy klas** pola kreatora wybierz pozycję **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Polecenie tworzy program obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThickWidth`.
 
    1. Dodaj następujący kod do `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,7 +190,7 @@ Następnie dodaj [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Aby dodać przycisk koloru do panelu pióra
 
-1. Zanim dodasz przycisk koloru, Utwórz element menu dla niego. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu. Kliknij przycisk **pióra** element menu, aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `&Color`. Kliknij prawym przyciskiem myszy tekst wpisany tylko do wyświetlania **właściwości** okna. Zmień identyfikator, który ma `ID_PEN_COLOR`.
+1. Zanim dodasz przycisk koloru, Utwórz element menu dla niego. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu. Kliknij przycisk **pióra** element menu, aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `&Color`. Kliknij prawym przyciskiem myszy tekst wpisany do wyświetlenia **właściwości** okna. Zmień identyfikator, który ma `ID_PEN_COLOR`.
 
 1. Teraz Dodaj przycisk koloru. Z **przybornika**, przeciągnij **przycisk koloru** do **pióra** panelu.
 
@@ -211,7 +211,7 @@ Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać
    COLORREF m_penColor;
    ```
 
-1. Każdy dokument zawiera listę pociągnięć, że użytkownik ma już rysowania. Każdy obrys jest definiowany przez `CStroke` obiektu. `CStroke` Klasy nie zawiera informacji na temat kolor pióra. W związku z tym należy zmodyfikować klasy. W scribdoc.h w `CStroke` klasy, Dodaj następujące wiersze kodu po definicji `m_nPenWidth` element członkowski danych.
+1. Każdy dokument zawiera listę pociągnięć, że użytkownik ma już rysowania. Każdy obrys jest definiowany przez `CStroke` obiektu. `CStroke` Klasy nie zawiera informacji na temat koloru pióra, więc należy zmodyfikować klasy. W scribdoc.h w `CStroke` klasy, Dodaj następujące wiersze kodu po definicji `m_nPenWidth` element członkowski danych.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać
 
    1. Kliknij prawym przyciskiem myszy **kolor** element menu i kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** pojawia się.
 
-   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować** przycisku. Spowoduje to utworzenie `CScribbleDoc::OnPenColor` szkieletu program obsługi zdarzenia.
+   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować** przycisku. Polecenie tworzy `CScribbleDoc::OnPenColor` szkieletu program obsługi zdarzenia.
 
 1. Zastąp klasy zastępczej dla `CScribbleDoc::OnPenColor` programu obsługi zdarzeń z następującym kodem.
 
@@ -287,7 +287,7 @@ Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać
    }
    ```
 
-1. Zapisz zmiany, a następnie tworzenie i uruchamianie aplikacji. Można nacisnąć przycisk koloru i zmienić kolor pióra.
+1. Zapisz zmiany, a następnie tworzenie i uruchamianie aplikacji. Teraz możesz nacisnąć przycisk koloru i zmiana koloru pióra.
 
 ##  <a name="initpensave"></a> Inicjowanie pióra i preferencji zapisywania
 
@@ -343,7 +343,7 @@ Następnie można zainicjować, kolor i grubość pióra. Na koniec Zapisz i za�
 
 ## <a name="conclusion"></a>Wniosek
 
-Klasa Scribble MFC aplikacji zostały zaktualizowane. Należy użyć w tym przewodniku jako przewodnika podczas modyfikowania istniejących aplikacji.
+Klasa Scribble MFC aplikacji został zaktualizowany. Należy użyć w tym przewodniku jako przewodnika podczas modyfikowania istniejących aplikacji.
 
 ## <a name="see-also"></a>Zobacz też
 

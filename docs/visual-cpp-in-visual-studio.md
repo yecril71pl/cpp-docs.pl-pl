@@ -1,28 +1,25 @@
 ---
 title: Visual C++ w programie Visual Studio | Dokumentacja firmy Microsoft
+description: Visual C++ jest to nazwa dla kompilatora Microsoft C++, Edytor kodu i pokrewnych narzędzi w programie Visual Studio IDE. Visual C++ umożliwia opracowywanie programów dla Windows, Linux, Android i iOS.
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ffcd9ecf292f07d78df75f75c8d1ce77a6cbfb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e8082b734f0ccc2943d8ba9f23b19f152ce42a6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399785"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234940"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -81,11 +78,20 @@ Informacje dotyczące przykładów.
 
 ## <a name="c-development-tools"></a>Narzędzia programistyczne C++
 
-[Środowisko IDE i narzędzia programistyczne](ide/ide-and-tools-for-visual-cpp-development.md).
-Jak używać programu Visual Studio IDE do tworzenia projektów, pracować z plikami kodu źródłowego, łącze do biblioteki, Kompiluj, Debuguj, Utwórz testy jednostkowe, czy analizy statycznej, Wdrażaj i nie tylko.
+[Środowisko IDE i narzędzia programistyczne](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+Jak używać programu Visual Studio IDE do tworzenia projektów, edytowania kodu, łącze do biblioteki, Kompiluj, Debuguj, Utwórz testy jednostkowe, czy analizy statycznej, Wdrażaj i nie tylko.
 
 [Kompilatory i narzędzia do kompilacji](build/building-c-cpp-programs.md)<br/>
-Opcje kompilatora i konsolidatora C++ firmy Microsoft, komunikaty o błędach, przykładach wierszy poleceń, skonfiguruj konfigurować skonfigurować dla różnych platform i tematy referencyjne kompilacji. 
+Opcje kompilatora i konsolidatora C++ firmy Microsoft, komunikaty o błędach, przykładach wierszy poleceń, skonfiguruj konfigurować skonfigurować dla różnych platform i tematy referencyjne kompilacji.
+
+[Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code)<br/>
+Debuger programu Visual Studio za pomocą projektów w języku C++.
+
+[Analiza kodu C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+Adnotacje SAL użycia lub narzędzia do sprawdzania podstawowych wytycznych dotyczących języka C++ do przeprowadzenia analizy statycznej.
+
+[Pisanie testów jednostkowych dla języka C/C++ w programie Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+Tworzenie testów jednostkowych przy użyciu Frameworka testów jednostkowych firmy Microsoft dla języka C++, platformy Google Test, Boost.Test lub narzędzia CTest.
 
 ## <a name="write-applications-in-c"></a>Pisać aplikacje w języku C++
 
@@ -119,11 +125,15 @@ Połączenie z bazami danych przy użyciu ODBC i innych technologii dostępu do 
 [Tekst i ciągi](text/text-and-strings-in-visual-cpp.md)<br/>
 Dowiedz się więcej na temat pracy z innym tekstem i formaty ciągu i kodowanie dla rozwoju lokalnych i międzynarodowych.
 
-## <a name="c-language-reference"></a>Dokumentacja języka C++
+## <a name="languages-reference"></a>Dokumentacja języków
 
-Aby uzyskać informacje na temat języka C++, zobacz [C++ Language Reference](cpp/cpp-language-reference.md).
+[Dokumentacja języka C++](cpp/cpp-language-reference.md)
 
-Aby uzyskać informacje dotyczące preprocesora języka C++, zobacz [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).
+[Dokumentacja preprocesora języka C/C++](preprocessor/c-cpp-preprocessor-reference.md)
+
+[Dokumentacja języka C](c-language/c-language-reference.md)
+
+[Funkcje wewnętrzne kompilatora i język asemblera](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Biblioteki języka C++ w programie Visual Studio
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764296"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234068"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementowanie okna dialogowego
 
@@ -30,7 +30,7 @@ Istnieją dwa sposoby okno dialogowe Dodawanie do projektu ATL: Użyj Kreator ok
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Dodawanie okno dialogowe z Kreator okna dialogowego ATL
 
-W [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md), wybierz obiekt okno dialogowe ATL do okno dialogowe Dodawanie do projektu ATL. Wypełnij Kreator okna dialogowego ATL, zgodnie z potrzebami, a następnie kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodną [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Powoduje ono otwarcie widoku zasobu z **widoku** menu, zlokalizuj okna dialogowego, a następnie go dwukrotnie, aby otworzyć go w edytorze zasobów.
+W [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md), wybierz obiekt okno dialogowe ATL do okno dialogowe Dodawanie do projektu ATL. Wypełnij Kreator okna dialogowego ATL, zgodnie z potrzebami, a następnie kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodną [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Otwórz **widok zasobów** z **widoku** menu, zlokalizuj okna dialogowego, a następnie go dwukrotnie, aby otworzyć go w edytorze zasobów.
 
 > [!NOTE]
 >  Jeśli Twoje okno dialogowe jest tworzony na podstawie `CAxDialogImpl`, może on obsługiwać oba ActiveX i kontrolki Windows. Jeśli nie ma konieczności obsługi formantów ActiveX w klasie okno dialogowe, należy użyć [CSimpleDialog](../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../atl/reference/cdialogimpl-class.md) zamiast tego.

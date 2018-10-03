@@ -1,28 +1,34 @@
 ---
 title: Klasa semaforu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::operator=
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Semaphore
 dev_langs:
 - C++
 helpviewer_keywords:
-- Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore::Lock method
+- Microsoft::WRL::Wrappers::Semaphore::operator= operator
+- Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0b3d5dff91bcb1fb1688c7b1a9314fe7ebf00c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 269b3229a0755e88d55fc4fa5d14b843345ccc44
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598418"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234456"
 ---
 # <a name="semaphore-class"></a>Semaphore — Klasa
 
@@ -38,33 +44,27 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
-|----------|-----------------|
-|`SyncLock`|Synonim dla klasy, która obsługuje synchronicznej blokad.|
+Nazwa       | Opis
+---------- | ------------------------------------------------------
+`SyncLock` | Synonim dla klasy, która obsługuje synchronicznej blokad.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[Semaphore::Semaphore, konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicjuje nowe wystąpienie klasy **semafora** klasy.|
+Nazwa                               | Opis
+---------------------------------- | ----------------------------------------------------
+[Semaphore::Semaphore](#semaphore) | Inicjuje nowe wystąpienie klasy `Semaphore` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.|
-
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
-
-|Nazwa|Opis|
-|----------|-----------------|
-|[Semaphore::Lock, metoda](../windows/semaphore-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określone dojście jest w stanie sygnałowego lub przed upływem określonego limitu czasu.|
+Nazwa                     | Opis
+------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Semaphore::Lock](#lock) | Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określone dojście jest w stanie sygnałowego lub przed upływem określonego limitu czasu.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[Operator Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Przenosi określone dojście z **semafora** obiekt do bieżącego **semafora** obiektu.|
+Nazwa                                     | Opis
+---------------------------------------- | ---------------------------------------------------------------------------------------
+[Semaphore::operator =](#operator-assign) | Przenosi określone dojście z `Semaphore` obiekt do bieżącego `Semaphore` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,6 +76,67 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 
 **Namespace:** Microsoft::wrl:: wrappers
 
-## <a name="see-also"></a>Zobacz też
+## <a name="lock"></a>Semaphore::Lock
 
-[Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)
+Czeka, aż do bieżącego obiektu lub `Semaphore` obiekt skojarzony z określone dojście jest w stanie sygnałowego lub przed upływem określonego limitu czasu.
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*MS*<br/>
+Interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, który oczekuje w nieskończoność.
+
+*h*<br/>
+Dojście do `Semaphore` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+A `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+
+## <a name="operator-assign"></a>Semaphore::operator =
+
+Przenosi określone dojście z `Semaphore` obiekt do bieżącego `Semaphore` obiektu.
+
+```cpp
+Semaphore& operator=(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*<br/>
+Odwołania Rvalue do `Semaphore` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Odwołanie do bieżącego `Semaphore` obiektu.
+
+## <a name="semaphore"></a>Semaphore::Semaphore
+
+Inicjuje nowe wystąpienie klasy `Semaphore` klasy.
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*<br/>
+Dojście lub odwołanie rvalue, aby `Semaphore` obiektu.

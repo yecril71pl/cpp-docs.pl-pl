@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84ca3e752f91a058b0b344b5862f2ea7e45bcf48
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e232364c7c9403bdaafd41466a9999faa4e45953
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064920"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234284"
 ---
 # <a name="unlock"></a>_unlock
 
@@ -58,7 +58,8 @@ void __cdecl _unlock(
 [in] Identyfikator blokady do wydania.
 
 ## <a name="requirements"></a>Wymagania
- **Źródło:** mlock.c
+
+**Źródło:** mlock.c
 
 ## <a name="see-also"></a>Zobacz też
 

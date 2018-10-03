@@ -1,28 +1,32 @@
 ---
 title: Handlenulltraits — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a49a1a1ac4495c7697fc041f8fcf217850f09d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 517e861020c48d08f40c9683822e3df23cbf38a2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609427"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235896"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits — Struktura
 
@@ -38,16 +42,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
-|----------|-----------------|
-|`Type`|Synonim dla dojście.|
+Nazwa   | Opis
+------ | ---------------------
+`Type` | Synonim dla dojście.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[HANDLENullTraits::Close, metoda](../windows/handlenulltraits-close-method.md)|Zamyka określone dojście.|
-|[HANDLENullTraits::GetInvalidValue, metoda](../windows/handlenulltraits-getinvalidvalue-method.md)|Reprezentuje nieprawidłowego dojścia.|
+Nazwa                                                  | Opis
+----------------------------------------------------- | -----------------------------
+[HANDLENullTraits::Close](#close)                     | Zamyka określone dojście.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowego dojścia.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -59,6 +63,33 @@ struct HANDLENullTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Zobacz też
+## <a name="close"></a>HANDLENullTraits::Close
 
-[Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Zamyka określone dojście.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*<br/>
+Dojście do zamknięcia.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli obsługa *h* zamknięta pomyślnie; w przeciwnym razie `false`.
+
+## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+
+Reprezentuje nieprawidłowego dojścia.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zawsze zwraca `nullptr`.

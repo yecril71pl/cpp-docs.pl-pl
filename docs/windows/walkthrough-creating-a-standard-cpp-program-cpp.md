@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029622"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234328"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
 
@@ -32,7 +32,7 @@ Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Vi
 
 Można wpisać swój własny program C++ lub użyć jednego z przykładowych programów. Przykładowy program w tym instruktażu jest aplikacją konsoli. Ta aplikacja używa `set` kontenera w standardowej biblioteki języka C++.
 
-Visual C++, który jest zgodny ze standardem C++ 2003, z tymi wyjątkami: dwuetapowego odnośnik do nazwy, specyfikacja wyjątku i eksport. Ponadto Visual C++ obsługuje kilka C ++ 0 x funkcji, na przykład wyrażenia lambda, auto, static_assert, odwołania rvalue i szablony extern.
+Visual C++ następuje standardem C++ 2003, z tymi wyjątkami: dwuetapowego odnośnik do nazwy, specyfikacja wyjątku i eksport. Ponadto Visual C++ obsługuje kilka C ++ 0 x funkcji, na przykład wyrażenia lambda, auto, static_assert, odwołania rvalue i szablony extern.
 
 > [!NOTE]
 > Jeśli wymagana jest zgodność ze standardem, użyj `/Za` opcję kompilatora, aby wyłączyć rozszerzenia Microsoft do standardu. Aby uzyskać więcej informacji, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md).
@@ -59,7 +59,7 @@ Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.
    > [!NOTE]
    > W przypadku wersji sprzed 2017 Visual Studio, należy wykonać **Kreatora aplikacji Win32**. Kliknij przycisk **dalej**, upewnij się, **aplikację Konsolową** jest zaznaczone, a następnie usuń zaznaczenie pola wyboru **prekompilowanych nagłówków** pole. Kliknij przycisk **Zakończ**.
 
-1. Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.
+1. Jeśli **Eksploratora rozwiązań** nie jest wyświetlana na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.
 
 1. Dodaj nowy plik źródłowy do projektu, w następujący sposób.
 

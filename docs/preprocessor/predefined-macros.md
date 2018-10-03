@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408430"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235649"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowanych makr.
 
 - **&#95;WINRT&#95;DLL** zdefiniowana jako 1 gdy kompilowany jako języka C++, a oba [/ZW (kompilacja środowiska uruchomieniowego Windows)](../build/reference/zw-windows-runtime-compilation.md) i [/LD lub /LDd](../build/reference/md-mt-ld-use-run-time-library.md) opcje kompilatora są ustawione. W przeciwnym razie jest niezdefiniowany.
 
- Makra preprocesora, używany do określenia wersji biblioteki ATL lub MFC nie są wstępnie zdefiniowane przez kompilator. Te makra są zdefiniowane w nagłówki, biblioteki, dzięki czemu są one zdefiniowane w dyrektywy preprocesora, przed wymagany nagłówek jest dołączony.
+Makra preprocesora, używany do określenia wersji biblioteki ATL lub MFC nie są wstępnie zdefiniowane przez kompilator. Te makra są zdefiniowane w nagłówki, biblioteki, dzięki czemu są one zdefiniowane w dyrektywy preprocesora, przed wymagany nagłówek jest dołączony.
 
 - **&#95;ATL&#95;VER** zdefiniowane w \<atldef.h > jako literał liczby całkowitej kodująca ATL numer wersji.
 

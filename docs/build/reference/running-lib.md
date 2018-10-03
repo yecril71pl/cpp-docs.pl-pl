@@ -1,7 +1,7 @@
 ---
 title: Uruchamianie LIB | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894606"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235424"
 ---
 # <a name="running-lib"></a>Uruchamianie LIB
 
@@ -62,25 +62,29 @@ Argumenty wiersza polecenia można przekazać do biblioteki w pliku poleceń, u�
 
 Plik *commandfile* jest plikiem tekstowym. Nie spacji lub tabulatorów jest dozwolone między znakiem (**\@**) i nazwę pliku. Nie ma rozszerzenia domyślną; należy określić pełną nazwę pliku, łącznie z dowolnym rozszerzeniem. Nie można używać symboli wieloznacznych. Można określić ścieżkę bezwzględną lub względną z nazwą pliku.
 
-W pliku poleceń argumenty mogą być oddzielone tabulacji lub spacji, jak w wierszu polecenia; mogą one być również rozdzielone znakami nowego wiersza. Użyj średnika (;), aby oznaczyć komentarz. LIB ignoruje cały tekst z średnik z powrotem do końca wiersza.
+W pliku poleceń argumenty mogą być oddzielone tabulacji lub spacji, jak w wierszu polecenia; mogą one być również rozdzielone znakami nowego wiersza. Użyj średnika (**;**) do oznaczenia komentarza. LIB ignoruje cały tekst z średnik z powrotem do końca wiersza.
 
 Można określić wszystkie lub część wiersza polecenia, które znajdują się w pliku poleceń, a następnie można użyć więcej niż jeden plik polecenia za pomocą polecenia LIB. LIB akceptuje dane wejściowe plik poleceń tak, jakby zostały określone w tej lokalizacji, w wierszu polecenia. Pliki poleceń nie mogą być zagnieżdżone. LIB funkcją zawartość plików poleceń, chyba że używana jest opcja/nologo.
 
 ## <a name="using-lib-options"></a>Za pomocą opcji LIB
 
-Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), następuje nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmować argument, określone po dwukropek (:). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji. Użyj miejsc do magazynowania lub karty do oddzielenia specyfikacje opcji w wierszu polecenia. Opcja nazwy i ich argumenty nazwy pliku lub słowo kluczowe nie są z uwzględnieniem wielkości liter, ale identyfikatory używane jako argumenty jest uwzględniana wielkość liter. LIB przetwarza opcje w kolejności określonej w wierszu polecenia i w plikach poleceń. Jeśli opcja jest powtarzany z różnymi argumentami, pierwszeństwo ma ostatni z nich do przetworzenia.
+Opcja składa się z specyfikator opcji, która jest albo dash (**-**) lub ukośnikiem (**/**), a następnie Nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmują argument, określona po dwukropku (**:**). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji. Użyj miejsc do magazynowania lub karty do oddzielenia specyfikacje opcji w wierszu polecenia. Opcja nazwy i ich argumenty nazwy pliku lub słowo kluczowe nie są z uwzględnieniem wielkości liter, ale identyfikatory używane jako argumenty jest uwzględniana wielkość liter. LIB przetwarza opcje w kolejności określonej w wierszu polecenia i w plikach poleceń. Jeśli opcja jest powtarzany z różnymi argumentami, pierwszeństwo ma ostatni z nich do przetworzenia.
 
 Poniższe opcje są stosowane do wszystkich rodzajów LIB:
 
 > **/ ERRORREPORT** [**NONE** &AMP;#124; **MONITU** &AMP;#124; **KOLEJKI** &AMP;#124; **WYSYŁANIA**]
 
-W przypadku niepowodzenia lib.exe w środowisku uruchomieniowym, można użyć/errorreport do wysyłania informacji do firmy Microsoft dotyczących tych błędów wewnętrznych.
+Lib.exe zakończy się niepowodzeniem w czasie wykonywania, można użyć **/errorreport** do wysyłania informacji do firmy Microsoft dotyczących tych błędów wewnętrznych.
 
-Aby uzyskać więcej informacji na temat/errorreport zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
-Powoduje, że biblioteka ma zostać utworzony przy użyciu Generowanie łączonych kodów czasowych.  Aby uzyskać więcej informacji, zobacz [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md).
+"LTCG" oznacza *Generowanie łączonych kodów czasowych*. Ta funkcja wymaga współpracy między kompilator ([cl.exe](compiler-options.md)), LIB i konsolidator ([łącze](linker-options.md)) w celu optymalizacji kodu poza dowolny składnik możliwościach samodzielnie.
+
+Aby uzyskać LIB **opcję/LTCG** opcja określa, że dane wejściowe z cl.exe obejmują pliki obiektów, które zostały wygenerowane za pomocą [/GL](gl-whole-program-optimization.md) — opcja kompilatora. Jeżeli LIB napotyka takie dane wejściowe i **opcję/LTCG** nie zostanie określony, uruchomi ponownie z opcją/LTCG włączone po wyświetleniu komunikat informacyjny. Innymi słowy nie jest konieczne jawnie ustawić tę opcję, ale zwiększa wydajność kompilacji, aby to zrobić, ponieważ LIB nie uruchamia się ponownie.
+
+W procesie kompilacji dane wyjściowe LIB są wysyłane do łącza. LINK ma swój własny oddzielne **opcję/LTCG** opcję, która jest używana do wykonywania różne optymalizacje, w tym optymalizacji całego programu i instrumentacji profilowana Optymalizacja (PGO). Aby uzyskać więcej informacji na temat opcji LINK zobacz [opcję/LTCG](ltcg-link-time-code-generation.md).
 
 > **/ MACHINE**
 

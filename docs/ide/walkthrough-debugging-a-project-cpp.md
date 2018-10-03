@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fa9761abde1a740a9f5daea4933ac6f8b89af6f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381722"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234327"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Wskazówki: debugowanie projektu (C++)
 
-W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, które wykryte podczas testowania projektu.
+W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, który znaleziony podczas testowania projektu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -43,11 +43,11 @@ W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, kt
 
    Otwórz menu skrótów dla **~Cardgame(void)** destruktora, a następnie wybierz **przejdź do definicji**.
 
-1. Aby zmniejszyć `totalParticipants` po karcianej, Dodaj następujący kod między otwierające i zamykające nawiasy klamrowe z `Cardgame::~Cardgame` destruktora.
+1. Aby zmniejszyć `totalParticipants` po zakończeniu wartość Cardgame, Dodaj następujący kod między otwierające i zamykające nawiasy klamrowe z `Cardgame::~Cardgame` destruktora.
 
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
-1. Plik Cardgame.cpp powinny przypominać po zmianach przypominać:
+1. Plik Cardgame.cpp powinien wyglądać podobnie poniższy kod, po zmianach przypominać:
 
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 

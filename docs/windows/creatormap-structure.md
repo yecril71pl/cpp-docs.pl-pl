@@ -1,29 +1,37 @@
 ---
 title: Creatormap — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap
 - implements/Microsoft::WRL::Details::CreatorMap
+- module/Microsoft::WRL::Details::CreatorMap::activationId
+- module/Microsoft::WRL::Details::CreatorMap::factoryCache
+- module/Microsoft::WRL::Details::CreatorMap::factoryCreator
+- module/Microsoft::WRL::Details::CreatorMap::serverName
 dev_langs:
 - C++
 helpviewer_keywords:
-- CreatorMap structure
+- Microsoft::WRL::Details::CreatorMap structure
+- Microsoft::WRL::Details::CreatorMap::activationId data member
+- Microsoft::WRL::Details::CreatorMap::factoryCache data member
+- Microsoft::WRL::Details::CreatorMap::factoryCreator data member
+- Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0a622eaa40cedfd7bf22259cf81382290f20f3a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7bf4ec2132e19989c5f1ae7c47003056928d0fd
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593737"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234943"
 ---
 # <a name="creatormap-structure"></a>CreatorMap — Struktura
 
@@ -39,7 +47,7 @@ struct CreatorMap;
 
 Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiektów.
 
-**Creatormap —** zawiera następujące informacje:
+`CreatorMap` zawiera następujące informacje:
 
 - Jak zainicjować, rejestrować i wyrejestrowywać obiektów.
 
@@ -51,12 +59,12 @@ Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiek
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[CreatorMap::activationId, składowa danych](../windows/creatormap-activationid-data-member.md)|Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego Windows.|
-|[CreatorMap::factoryCache, składowa danych](../windows/creatormap-factorycache-data-member.md)|Przechowuje wskaźnik do pamięci podręcznej fabryki dla **creatormap —**.|
-|[CreatorMap::factoryCreator, składowa danych](../windows/creatormap-factorycreator-data-member.md)|Tworzy fabrykę dla określonego **creatormap —**.|
-|[CreatorMap::serverName, składowa danych](../windows/creatormap-servername-data-member.md)|Przechowuje nazwę serwera dla **creatormap —**.|
+Nazwa                                          | Opis
+--------------------------------------------- | ------------------------------------------------------------------------------------------------------
+[CreatorMap::activationId](#activationid)     | Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego Windows.
+[CreatorMap::factoryCache](#factorycache)     | Przechowuje wskaźnik do pamięci podręcznej fabryki dla `CreatorMap`.
+[CreatorMap::factoryCreator](#factorycreator) | Tworzy fabrykę dla określonego `CreatorMap`.
+[CreatorMap::serverName](#servername)         | Przechowuje nazwę serwera dla `CreatorMap`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -68,6 +76,83 @@ Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiek
 
 **Namespace:** Microsoft::wrl:: details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="activationid"></a>CreatorMap::activationId
 
-[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+union {
+   const IID* clsid;
+   const wchar_t* (*getRuntimeName)();
+} activationId;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Identyfikator klasy*<br/>
+Identyfikator interfejsu.
+
+*getRuntimeName*<br/>
+Funkcja, która pobiera nazwę środowiska uruchomieniowego Windows obiektu.
+
+### <a name="remarks"></a>Uwagi
+
+Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego Windows.
+
+## <a name="factorycache"></a>CreatorMap::factoryCache
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+FactoryCache* factoryCache;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Przechowuje wskaźnik do pamięci podręcznej fabryki dla `CreatorMap`.
+
+## <a name="factorycreator"></a>CreatorMap::factoryCreator
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+HRESULT (*factoryCreator)(
+   unsigned int* currentflags,
+   const CreatorMap* entry,
+   REFIID iidClassFactory,
+IUnknown** factory);
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentflags*<br/>
+Jedną z [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) modułów wyliczających.
+
+*entry*<br/>
+Creatormap —.
+
+*iidClassFactory*<br/>
+Identyfikator interfejsu fabrykę klas.
+
+*Fabryka*<br/>
+Po zakończeniu tej operacji adres fabrykę klas.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+
+### <a name="remarks"></a>Uwagi
+
+Tworzy fabrykę dla określonego creatormap —.
+
+## <a name="servername"></a>CreatorMap::serverName
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+const wchar_t* serverName;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Przechowuje nazwę serwera dla creatormap —.

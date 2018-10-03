@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029674"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235425"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
 W tym instruktażu przedstawiono sposób tworzenia tradycyjnych aplikacji pulpitu Windows w programie Visual Studio. Przykładowa aplikacja, którą utworzysz użyto interfejsu API Windows, aby wyświetlić "Hello, pulpitu Windows!" w oknie. Można użyć kodu, który tworzysz w tym przewodniku jako wzorca do tworzenia innych aplikacji pulpitu Windows.
 
-Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows Desktop z interfejsu API i klasycznego interfejsu API Windows) jest na podstawie języka C umożliwiająca tworzenie aplikacji Windows. Ona znajdowała się na istnienie od lat 1980 i został użyty do tworzenia aplikacji Windows używana od dziesięcioleci. Bardziej zaawansowane i łatwiejsze w programie struktur utworzone na podstawie tego interfejsu API, takie jak MFC, ATL i platformy .NET. Nawet najbardziej nowoczesnego kodu dla aplikacji platformy uniwersalnej systemu Windows i Store napisanych w języku C + +/ WinRT używa tego interfejsu API poniżej. Aby uzyskać więcej informacji na temat interfejsu API Windows, zobacz [indeks interfejsów API Windows](/windows/desktop/apiindex/windows-api-list). Istnieje wiele sposobów, aby tworzyć aplikacje Windows, ale jest to pierwszy.
+Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows Desktop z interfejsu API i klasycznego interfejsu API Windows) jest opartych na języku C architektura służąca do tworzenia aplikacji Windows. Ona znajdowała się na istnienie od lat 1980 i został użyty do tworzenia aplikacji Windows używana od dziesięcioleci. Bardziej zaawansowane i łatwiejsze w programie struktur utworzone na podstawie interfejsu API Windows, takie jak MFC, ATL i platformy .NET. Nawet najbardziej nowoczesnego kodu dla aplikacji platformy uniwersalnej systemu Windows i Store napisanych w języku C + +/ WinRT za pomocą interfejsu Windows API poniżej. Aby uzyskać więcej informacji na temat interfejsu API Windows, zobacz [indeks interfejsów API Windows](/windows/desktop/apiindex/windows-api-list). Istnieje wiele sposobów, aby tworzyć aplikacje Windows, ale z powyższej procedury wdrożyła jako pierwsza.
 
 > [!IMPORTANT]
 > W celu skrócenia programu niektóre instrukcje kodu zostały pominięte w tekście. [Skompilować kod](#build-the-code) sekcji na końcu tego dokumentu zawiera kompletny kod.
@@ -140,13 +140,13 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    );
    ```
 
-   W tej funkcji możesz pisać kod obsługujący *wiadomości* które aplikacja otrzyma od Windows po *zdarzenia* wystąpić. Na przykład, jeśli użytkownik wybierze przycisk OK w aplikacji, Windows wyśle do Ciebie wiadomość i można napisać kod wewnątrz swojej `WndProc` funkcję, która nie jest pracę. Jest to nazywane *obsługi* zdarzenie. Można obsługiwać zdarzenia, które są istotne dla twojej aplikacji.
+   W tej funkcji możesz pisać kod obsługujący *wiadomości* które aplikacja otrzyma od Windows po *zdarzenia* wystąpić. Na przykład, jeśli użytkownik wybierze przycisk OK w aplikacji, Windows wyśle do Ciebie wiadomość i można napisać kod wewnątrz swojej `WndProc` funkcję, która nie jest pracę. Jest on nazywany *obsługi* zdarzenie. Można obsługiwać zdarzenia, które są istotne dla twojej aplikacji.
 
    Aby uzyskać więcej informacji, zobacz [procedury okna](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Aby dodać funkcje do funkcji WinMain
 
-1. W `WinMain` funkcji, możesz wypełnić struktury typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Ta struktura zawiera informacje dotyczące okna, przykładowo, ikony aplikacji, koloru tła okna, nazwę aby wyświetlić na pasku tytułu i bardzo ważne, wskaźnik funkcji do odpowiedniej procedury okna. W poniższym przykładzie przedstawiono typowe `WNDCLASSEX` struktury.
+1. W `WinMain` funkcji, możesz wypełnić struktury typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Struktura zawiera informacje dotyczące okna, przykładowo, ikony aplikacji, koloru tła okna, nazwę aby wyświetlić na pasku tytułu, a co ważniejsze, wskaźnik funkcji do odpowiedniej procedury okna. W poniższym przykładzie przedstawiono typowe `WNDCLASSEX` struktury.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Aby uzyskać informacje o polach tej struktury, zobacz [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Aby uzyskać informacje o polach powyżej struktury, zobacz [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Musisz się zarejestrować, `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
+1. Zarejestruj `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -232,7 +232,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    UpdateWindow(hWnd);
    ```
 
-   Otwarte okno nie ma dużo zawartości, ponieważ nie zostało jeszcze zaimplementowane `WndProc` funkcji. Innymi słowy aplikacja nie obsługuje jeszcze wiadomości, które Windows jest teraz wysyłanie do niej.
+   Otwarte okno nie ma dużo zawartości, ponieważ jeszcze nie została jeszcze zaimplementowana `WndProc` funkcji. Innymi słowy aplikacja nie jest jeszcze obsługi wiadomości, które Windows jest teraz wysyłanie do niej.
 
 1. Do obsługi wiadomości, możemy najpierw Dodaj pętlę komunikatów do nasłuchiwania wiadomości, które wysyła Windows. Kiedy aplikacja otrzymuje komunikat, ta pętla wysyła go do Twojego `WndProc` funkcji, które mają być obsługiwane. Pętli komunikatów przypomina poniższy kod.
 
@@ -340,9 +340,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
 1. Aby włączyć `WndProc` funkcji obsługi wiadomości otrzymywanych przez aplikację, Wdróż instrukcję przełącznika.
 
-   Co ważne komunikat do obsłużenia to [WM_PAINT](/windows/desktop/gdi/wm-paint) wiadomości. Aplikacja otrzymuje tę wiadomość, gdy część jej wyświetlanego okna musi zostać zaktualizowany. To zdarzenie może wystąpić, gdy użytkownik przesuwa okno przed okna, a następnie przenosi ją natychmiast ponownie. Aplikacja nie wie, po wystąpieniu zdarzenia następująco; tylko Windows zna, więc powiadomi użytkownika o `WM_PAINT`. Po wyświetleniu okna należy zaktualizować wszystkie.
+   Co ważne komunikat do obsłużenia to [WM_PAINT](/windows/desktop/gdi/wm-paint) wiadomości. Aplikacja otrzymuje `WM_PAINT` wiadomości, gdy jest to część jej wyświetlanego okna musi zostać zaktualizowany. Zdarzenie może wystąpić, gdy użytkownik przesuwa okno przed okna, a następnie przenosi ją natychmiast ponownie, a aplikacja nie wiadomo, kiedy te zdarzenia występują. Tylko Windows zna, więc powiadomi użytkownika o `WM_PAINT`. Po wyświetleniu okna należy zaktualizować wszystkie.
 
-   Aby obsłużyć `WM_PAINT` komunikatu, pierwsze wywołanie [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę układu tekstu, przycisków i innych kontrolek w oknie, a następnie wywołaj [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Dla tej aplikacji logika między wywołaniem rozpoczęcia z zakończenia jest wyświetlić napis "Hello, pulpitu Windows!" w oknie. W poniższym kodzie Zauważ, że [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkcja służy do wyświetlenia ciągu.
+   Aby obsłużyć `WM_PAINT` komunikatu, pierwsze wywołanie [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę układu tekstu, przycisków i innych kontrolek w oknie, a następnie wywołaj [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Dla aplikacji logika między wywołaniem rozpoczęcia z zakończenia jest wyświetlić napis "Hello, pulpitu Windows!" w oknie. W poniższym kodzie Zauważ, że [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkcja służy do wyświetlenia ciągu.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-   `HDC` w tym kodzie jest uchwytem do kontekstu urządzenia, która jest strukturą danych, której Windows używa, aby umożliwić aplikacji do komunikowania się z podsystem grafiki. `BeginPaint` i `EndPaint` funkcji upewnij się, że aplikacja zachowuje się jak jest "pełnoprawnym" w dobrej i nie używa kontekstu urządzenia przez dłuższy czas, nie należy go. Pozwala to zagwarantować, że podsystem grafiki jest dostępny do użytku przez inne aplikacje.
+   `HDC` w kodzie jest uchwytem do kontekstu urządzenia, która jest strukturą danych, której Windows używa, aby umożliwić aplikacji do komunikowania się z podsystem grafiki. `BeginPaint` i `EndPaint` funkcje zachowują się jak jest "pełnoprawnym" w dobrej aplikacji i nie używa kontekstu urządzenia przez dłuższy czas, nie należy go. Funkcje pomocy wykonującego podsystem grafiki jest dostępny do użytku przez inne aplikacje.
 
 1. Aplikacja zazwyczaj obsługuje wiele innych wiadomości, na przykład [WM_CREATE](/windows/desktop/winmsg/wm-create) podczas okna i [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawowe lecz ukończenia `WndProc` funkcji.
 

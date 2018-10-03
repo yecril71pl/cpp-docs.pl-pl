@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6ffda62796c9c52ca9bcce8c1b1cd234053800
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: f749a288ac08adfb5df5291ce3dd92b95c2301e8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494377"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234245"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Wskazówki: wdrażanie aplikacji Visual C++ do folderu lokalnego aplikacji
 
 W tym artykule opisano sposób wdrażania aplikacji w języku Visual C++ kopiować pliki do folderu.  
   
-## <a name="prerequisites"></a>Wstępnie wymagane składniki  
+## <a name="prerequisites"></a>Wymagania wstępne  
   
 - Komputer, który jest zainstalowany program Visual Studio.  
   

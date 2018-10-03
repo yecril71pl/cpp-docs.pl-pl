@@ -19,34 +19,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91c6d1d392c792862f3e5e4e1e313770136b70c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d795ea8678c04d5525e726017a2fa3a0760f3a87
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374078"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235922"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Wskazówki: wdrażanie Twojego programu (C++)
 
-Teraz, gdy utworzono aplikację wykonując wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), ostatnim krokiem jest utworzenie Instalatora, tak aby inni użytkownicy mogą Zainstaluj program na swoich komputerach. Aby to zrobić, dodasz nowy projekt do istniejącego rozwiązania. Dane wyjściowe tego nowego projektu to plik setup.exe, który zainstaluje twoją aplikację na innym komputerze.
+Teraz, gdy utworzono aplikację wykonując wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), ostatnim krokiem jest utworzenie Instalatora, tak aby inni użytkownicy mogą Zainstaluj program na swoich komputerach. Dla Instalatora dodasz nowy projekt do istniejącego rozwiązania. Dane wyjściowe tego nowego projektu to plik setup.exe, który zainstaluje twoją aplikację na innym komputerze.
 
-W tym instruktażu przedstawiono sposób wdrażania aplikacji przy użyciu Instalatora Windows. Można również użyć ClickOnce do wdrażania aplikacji. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Aby uzyskać więcej informacji o wdrażaniu ogólnie rzecz biorąc, zobacz [wdrażania aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components).
+Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. Można również użyć ClickOnce do wdrażania aplikacji. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Aby uzyskać więcej informacji o wdrażaniu ogólnie rzecz biorąc, zobacz [wdrażania aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- W tym przewodniku przyjęto założenie, że rozumiesz podstawy języka C++.
+- Przewodnik zakłada, że rozumiesz podstawy języka C++.
 
 - Przyjęto również założenie, że zostały wykonane wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-- Nie można ukończyć tego instruktażu w wersjach Express programu Visual Studio.
+- Nie można ukończyć instruktażu w wersjach Express programu Visual Studio.
 
-- Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie Microsoft projektów Instalatora programu Visual Studio, jak opisano w krokach w dalszej części tego artykułu. Rozszerzenie jest bezpłatna dla deweloperów programu Visual Studio i dodaje funkcje instalacji i wdrażania szablonów projektu do programu Visual Studio.
+- Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie Microsoft projektów Instalatora programu Visual Studio, zgodnie z opisem w dalszych krokach później. Rozszerzenie jest bezpłatna dla deweloperów programu Visual Studio i dodaje funkcje instalacji i wdrażania szablonów projektu do programu Visual Studio.
 
 ### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Aby zainstalować szablonu projektu instalacji i wdrożenia programu Visual Studio
 
-1. Po nawiązaniu połączenia z Internetem, w programie Visual Studio, wybierz **narzędzia** > **rozszerzenia i aktualizacje**.
+1. Po połączeniu się z Internetem, w programie Visual Studio, wybierz **narzędzia** > **rozszerzenia i aktualizacje**.
 
-1. W obszarze **rozszerzenia i aktualizacje**, wybierz opcję **Online** kartę i typ *projektów Instalatora programu Visual Studio Microsoft* w polu wyszukiwania. Trafienia **Enter**, wybierz opcję **programu Microsoft Visual Studio 2017 Instalatora projektów**i kliknij przycisk **Pobierz**.
+1. W obszarze **rozszerzenia i aktualizacje**, wybierz opcję **Online** kartę i typ *projektów Instalatora programu Visual Studio Microsoft* w polu wyszukiwania. Trafienia **Enter**, wybierz opcję **programu Microsoft Visual Studio \<wersji > Projekty Instalatora**i kliknij przycisk **Pobierz**.
 
 1. Wybierz zainstalować rozszerzenie, a następnie uruchom ponownie program Visual Studio.
 
@@ -70,7 +70,7 @@ W tym instruktażu przedstawiono sposób wdrażania aplikacji przy użyciu Insta
 
 1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
 
-1. W **Eksploratora rozwiązań** wybierz **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
+1. W **Eksploratora rozwiązań**, wybierz opcję **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
 
 1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http://www.contoso.com* dla **SupportUrl**.
 

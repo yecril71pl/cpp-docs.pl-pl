@@ -1,7 +1,7 @@
 ---
 title: Kreator użytkownika MFC ODBC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df730c5ee38c41cc6f40ac7000802bbe0bbb30d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23a264c48f0a03888f8b6ac744129de75d8ad757
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400318"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250474"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Kreator konsumenta MFC ODBC
 
-Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.
+> [!WARNING]
+> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
 
 Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych.
 

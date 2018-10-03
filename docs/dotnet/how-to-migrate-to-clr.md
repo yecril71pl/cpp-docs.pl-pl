@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029661"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235454"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 
@@ -118,7 +118,7 @@ Prekompilowane nagłówki są wspierane w ramach **/CLR**. Jednak jeśli tylko k
 
 Najprostszym sposobem, aby skompilować projekt, w której niektóre moduły są kompilowane **/CLR** jest całkowicie wyłączyć wstępnie skompilowanych nagłówków. (W oknie dialogowym strony właściwości projektu, otwórz węzeł C/C++ i wybierz polecenie prekompilowanych nagłówków. Następnie zmień właściwość Utwórz bądź użyj prekompilowanych nagłówków na "Nie przy użyciu wstępnie skompilowane nagłówki").
 
-Szczególnie w przypadku dużych projektów, wstępnie skompilowane nagłówki zapewnia jednak znacznie lepszą szybkość kompilacji tak wyłączeniem tej funkcji nie jest pożądane. W takim przypadku najlepiej skonfigurować **/CLR** i innych niż **/CLR** pliki używane oddzielne wstępnie skompilowanych nagłówków. Można to zrobić w jednym kroku przez zaznaczenie wielu modułów do skompilowania **/CLR** za pomocą Eksploratora rozwiązań, kliknij prawym przyciskiem myszy w grupie i wybierając polecenie Właściwości. Następnie zmienić Utwórz/Użyj PCH za pośrednictwem pliku i Prekompilowanego pliku nagłówkowego właściwości mają zostać użyte inną nazwę pliku, a plik PCH, odpowiednio.
+Szczególnie w przypadku dużych projektów, wstępnie skompilowane nagłówki zapewnia jednak znacznie lepszą szybkość kompilacji tak wyłączeniem tej funkcji nie jest pożądane. W takim przypadku najlepiej skonfigurować **/CLR** i innych niż **/CLR** pliki używane oddzielne wstępnie skompilowanych nagłówków. Można to zrobić w jednym kroku przez zaznaczenie wielu modułów do skompilowania **/CLR** przy użyciu **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy w grupie i wybierając polecenie Właściwości. Następnie zmienić Utwórz/Użyj PCH za pośrednictwem pliku i Prekompilowanego pliku nagłówkowego właściwości mają zostać użyte inną nazwę pliku, a plik PCH, odpowiednio.
 
 ## <a name="fixing-errors"></a>Naprawianie błędów
 

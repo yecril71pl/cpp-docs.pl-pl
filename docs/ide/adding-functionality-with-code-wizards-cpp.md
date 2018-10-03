@@ -1,7 +1,7 @@
 ---
 title: Dodawanie funkcji za pomocą kreatorów kodu (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,16 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d531184b03d06dbe2a395e55638e4457c2c9c0e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 931299a03d0fed91c68338eec41c94b875dc9d01
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441971"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250435"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
 Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodając nowe funkcje Członkowskie i zmienne i Dodawanie metody automatyzacji i właściwości. Kreatorzy kodu są przeznaczone do pozwalają korzystać z tych możliwości.
+
+> [!WARNING]
+> Kilka ATL i MFC kreatorów kodu, są one przestarzałe i zostanie usunięta w przyszłych wersjach programu Visual Studio. Te kreatory są rzadko używane. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tych kreatorów. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
 
 > [!NOTE]
 >  Teraz możesz dodać procedury obsługi komunikatów i mapowanie komunikatów do nich i zastępują funkcje wirtualne MFC przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).

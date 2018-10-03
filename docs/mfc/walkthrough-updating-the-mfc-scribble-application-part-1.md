@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169778"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235512"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -54,7 +54,7 @@ Ta część przewodnika zawiera następujące sekcje:
 
 ##  <a name="replaceclass"></a> Zastąpienie klas bazowych
 
-Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obsługuje wstążki, musi pochodzić klasy narzędzi aplikacji, ramki okna i zaktualizowano klas podstawowych. (Zaleca się, możesz nie modyfikować oryginalnej próbki Bazgroły; zamiast tego należy wyczyścić projektu Bazgroły, skopiuj go do innego katalogu, a następnie zmodyfikuj kopii.)
+Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obsługuje wstążki, musi pochodzić klasy narzędzi aplikacji, ramki okna i zaktualizowano klas podstawowych. (Zaleca się czy nie modyfikują oryginalnej próbki Bazgroły. Zamiast tego należy wyczyścić projektu Bazgroły, skopiuj go do innego katalogu, a następnie zmodyfikuj kopii.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Zastąpienie klas bazowych w aplikacji bazgrołów
 
@@ -117,7 +117,7 @@ Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obs�
 
 Czterech kolejnych krokach w tym przewodniku wymaga zasobów mapy bitowej. Możesz uzyskać odpowiednie map bitowych na różne sposoby:
 
-- Użyj [edytory zasobów](../windows/resource-editors.md) wymyślaniem własne map bitowych. Lub użyj edytory zasobów, aby złożyć map bitowych z obrazów graphics (PNG) sieci przenośnych, które są dołączone do programu Visual Studio i można pobrać z [Biblioteka obrazów programu Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Użyj [edytory zasobów](../windows/resource-editors.md) wymyślaniem własne map bitowych. Lub użyj edytory zasobów, aby złożyć mapy bitowej przy użyciu obrazów graphics (PNG) sieci przenośnych, które są dołączone do programu Visual Studio i można go pobrać ze [Biblioteka obrazów programu Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Jednak **wstążki** interfejsu użytkownika wymaga, że niektóre mapy bitowe obsługują obrazy przezroczyste. Bitmapy przezroczyste użyć 32-bitowych pikseli, gdzie 24 bity Określ składników czerwonego, zielonego i niebieskiego koloru i zdefiniuj 8 bitów *kanał alfa* , który określa Przezroczystość koloru. Bieżący edytory zasobów można wyświetlić, ale nie modyfikować bitmapy z 32-bitowych pikseli. W związku z tym użyj edytora zewnętrznego zamiast edytory zasobów do manipulowania mapy bitowe przezroczysty.
 
@@ -165,7 +165,7 @@ W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [wskazówki: 
 
 ##  <a name="addribbon"></a> Dodawanie zasobu wstążki do projektu
 
-Podczas konwersji aplikacji korzystającej z menu aplikacji korzystającej z wstążki, trzeba usunąć lub wyłączyć istniejące menu. Zamiast tego należy utworzyć zasób wstążki, Dodaj przyciski Wstążki i skojarz nowe przyciski z istniejących elementów menu. Mimo że menu nie są już widoczne, wiadomości na Wstążce są przesyłane za pośrednictwem menu. Ponadto menu, skróty nadal działać.
+Podczas konwersji aplikacji korzystającej z menu aplikacji korzystającej z wstążki, nie trzeba usunąć lub wyłączyć istniejące menu. Po prostu utwórz zasób wstążki, Dodaj przyciski wstążki, a następnie skojarzyć nowe przyciski z istniejących elementów menu. Mimo że menu nie są już widoczne, komunikaty z paska wstążki są przesyłane za pośrednictwem menu i menu skrótów w dalszym ciągu działać.
 
 Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w lewym górnym rogu Wstążki i co najmniej jednej karty kategorii. Każda karta kategoria zawiera jeden lub więcej paneli, które działają jak kontenery dla przycisków Wstążki i kontrolek. Poniższa procedura pokazuje, jak utworzyć zasób wstążki, a następnie dostosować **aplikacji** przycisku.
 
@@ -205,7 +205,7 @@ Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w l
 
    1. Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** Aby dodać inny przycisk. Zmiana **podpis** do `Print Pre&view`, **identyfikator** do `ID_FILE_PRINT_PREVIEW`, **obraz** do `6`, i **duży obraz** do `6`.
 
-   1. Teraz zmodyfikowano **elementy główne**. Kliknij przycisk **Zamknij** aby zakończyć działanie **Edytor elementów**.
+   1. Teraz został zmodyfikowany **elementy główne**. Kliknij przycisk **Zamknij** aby zakończyć działanie **Edytor elementów**.
 
 1. Po dokonaniu zmiany tworzy przycisk Zakończ, który pojawia się w dolnej części **aplikacji** przycisku menu.
 
@@ -221,14 +221,14 @@ Poniższe kroki pokazują jak utworzyć wystąpienie paska wstążki, podczas ur
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Aby utworzyć wystąpienie paska wstążki
 
-1. W pliku mainfrm.h, Dodaj element członkowski danych do sekcji chronionych `CMainFrame`, definicji klasy dla głównej ramki. Ten element członkowski reprezentuje paska wstążki.
+1. W pliku mainfrm.h, Dodaj element członkowski danych do sekcji chronionych `CMainFrame`, definicji klasy dla głównej ramki. Ten element członkowski jest na Wstążce.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. W pliku mainfrm.cpp, Dodaj następujący kod przed końcowym znakiem `return` instrukcji na końcu `CMainFrame::OnCreate` funkcji. Spowoduje to utworzenie wystąpienia paska wstążki.
+2. W pliku mainfrm.cpp, Dodaj następujący kod przed końcowym znakiem `return` instrukcji na końcu `CMainFrame::OnCreate` funkcji. Tworzy wystąpienie paska wstążki.
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ Teraz, po utworzeniu **aplikacji** przycisku, można dodać elementów do wstą�
 
 1. Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt w **przybornika**, kliknij dwukrotnie **kategorii** aby ją dodać i wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **podpis** do `&Home`, **duże obrazy** do `IDB_RIBBON_HOMELARGE`, **małe obrazy** do `IDB_RIBBON_HOMESMALL`.
 
-1. Każda kategoria wstążki jest podzielony na nazwanej paneli. Każdy panel zawiera zestaw kontrolek, które wykonują operacje powiązane. Ta kategoria zawiera jeden panel. Kliknij przycisk **panelu**, a następnie zmień **podpis** do `Edit`.
+1. Każda kategoria wstążki jest podzielony na nazwanej paneli. Każdy panel zawiera zestaw kontrolek tego pełną powiązanych operacji. Ta kategoria zawiera jeden panel. Kliknij przycisk **panelu**, a następnie zmień **podpis** do `Edit`.
 
-1. Aby **Edytuj** panelu, Dodaj przycisk, który jest odpowiedzialny za czyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` zasobu menu. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która rozszerza przycisku. Otwórz **przybornika**, a następnie przeciągnij **przycisk** do **Edytuj** panelu. Kliknij przycisk, a następnie zmień **podpis** do `Clear All`, **identyfikator** do `ID_EDIT_CLEAR_ALL`, **indeks obrazu** do `0`, **duży indeks obrazu**  do `0`.
+1. Aby **Edytuj** panelu, Dodaj przycisk odpowiedzialny za czyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` zasobu menu. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która rozszerza przycisku. Otwórz **przybornika**, a następnie przeciągnij **przycisk** do **Edytuj** panelu. Kliknij przycisk, a następnie zmień **podpis** do `Clear All`, **identyfikator** do `ID_EDIT_CLEAR_ALL`, **indeks obrazu** do `0`, **duży indeks obrazu**  do `0`.
 
 1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. Powinien zostać wyświetlony aplikacji bazgrołów, a powinien mieć paska wstążki w górnej części okna, a nie paska menu. Na Wstążce powinna mieć jedną kategorię **Home**, i **Home** powinien mieć jeden panel **Edytuj**. Przyciski wstążki, które dodano powinna być skojarzona z istniejących programów obsługi zdarzeń i **Otwórz**, **Zamknij**, **Zapisz**, **drukowania**, i **Wyczyść wszystko** przyciski powinny działać zgodnie z oczekiwaniami.
 

@@ -1,28 +1,38 @@
 ---
 title: Chaininterfaces — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces
+- implements/Microsoft::WRL::ChainInterfaces::CanCastTo
+- implements/Microsoft::WRL::ChainInterfaces::CastToUnknown
+- implements/Microsoft::WRL::ChainInterfaces::FillArrayWithIid
+- implements/Microsoft::WRL::ChainInterfaces::IidCount
+- implements/Microsoft::WRL::ChainInterfaces::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces::CanCastTo method
+- Microsoft::WRL::ChainInterfaces::CastToUnknown method
+- Microsoft::WRL::ChainInterfaces::FillArrayWithIid method
+- Microsoft::WRL::ChainInterfaces::IidCount constant
+- Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a80b9afd8f2db895440d12776173c559e41c2cfe
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409874"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234869"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 
@@ -100,24 +110,24 @@ Typ pochodny.
 Typ podstawowy typu pochodnego.
 
 *hasImplements*<br/>
-Wartość logiczna, że jeśli **true**, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.
+Wartość logiczna, że jeśli `true`, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[ChainInterfaces::CanCastTo, metoda](../windows/chaininterfaces-cancastto-method.md)|Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji definicją **ChainInterface** parametry szablonu.|
-|[ChainInterfaces::CastToUnknown, metoda](../windows/chaininterfaces-casttounknown-method.md)|Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* parametr szablonu na wskaźnik do `IUnknown`.|
-|[ChainInterfaces::FillArrayWithIid, metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.|
-|[ChainInterfaces::Verify, metoda](../windows/chaininterfaces-verify-method.md)|Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.|
+Nazwa                                                   | Opis
+------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ChainInterfaces::CanCastTo](#cancastto)               | Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji definicją `ChainInterface` parametry szablonu.
+[ChainInterfaces::CastToUnknown](#casttounknown)       | Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* parametr szablonu na wskaźnik do `IUnknown`.
+[ChainInterfaces::FillArrayWithIid](#fillarraywithiid) | Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.
+[ChainInterfaces::Verify](#verify)                     | Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.
 
 ### <a name="protected-constants"></a>Stałe chronione
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[ChainInterfaces::IidCount, stała](../windows/chaininterfaces-iidcount-constant.md)|Całkowita liczba interfejsu identyfikatory zawarte w interfejsach, określonego przez parametry szablonu *I0* za pośrednictwem *I9*.|
+Nazwa                                   | Opis
+-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
+[ChainInterfaces::IidCount](#iidcount) | Całkowita liczba interfejsu identyfikatory zawarte w interfejsach, określonego przez parametry szablonu *I0* za pośrednictwem *I9*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -131,6 +141,86 @@ Wartość logiczna, że jeśli **true**, oznacza, że nie można użyć [domiesz
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="cancastto"></a>ChainInterfaces::CanCastTo
 
-[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji zdefiniowane przez parametry szablonu innych niż domyślne.
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Parametr riid*<br/>
+Identyfikator interfejsu.
+
+*ppv*<br/>
+Wskaźnik do ostatniego Identyfikatora interfejsu, który został pomyślnie rzutowania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli wszystkie operacje rzutowania zakończyło się pomyślnie; w przeciwnym razie `false`.
+
+## <a name="casttounknown"></a>ChainInterfaces::CastToUnknown
+
+Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* parametr szablonu na wskaźnik do `IUnknown`.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do `IUnknown`.
+
+## <a name="fillarraywithiid"></a>ChainInterfaces::FillArrayWithIid
+
+Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*<br/>
+Wskaźnik do wartości indeksu do *IID* tablicy.
+
+*IID*<br/>
+Tablica identyfikatorów interfejsu.
+
+## <a name="iidcount"></a>ChainInterfaces::IidCount
+
+Całkowita liczba interfejsu identyfikatory zawarte w interfejsach, określonego przez parametry szablonu *I0* za pośrednictwem *I9*.
+
+```cpp
+static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Całkowita liczba identyfikatorów interfejsu.
+
+### <a name="remarks"></a>Uwagi
+
+Parametry szablonu *I0* i *I1* są wymagane i parametry *I2* za pośrednictwem *I9* są opcjonalne. Liczba IID każdego interfejsu, jest zazwyczaj 1.
+
+## <a name="verify"></a>ChainInterfaces::Verify
+
+Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+### <a name="remarks"></a>Uwagi
+
+W przypadku niepowodzenia operacji weryfikacji `static_assert` emituje komunikat o błędzie opisujący błąd.
+
+Parametry szablonu *I0* i *I1* są wymagane i parametry *I2* za pośrednictwem *I9* są opcjonalne.

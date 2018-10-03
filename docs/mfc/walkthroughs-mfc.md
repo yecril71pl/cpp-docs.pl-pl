@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169414"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235662"
 ---
 # <a name="walkthroughs-mfc"></a>Wskazówki (MFC)
 
@@ -28,7 +28,7 @@ Ta sekcja zawiera artykuły, które zawierają wzięte różnych zadaniach zwią
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Przewodnik: używanie nowych kontrolek powłoki MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-W tym instruktażu utworzysz aplikację, podobny Eksploratora plików. Utworzysz okno które zawiera dwa okienka. W okienku po lewej stronie będzie zawierać [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiektów, które będą wyświetlane na pulpicie, w widoku hierarchicznym. W okienku po prawej stronie będzie zawierać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , pokaże pliki w folderze, który wybrano w okienku po lewej stronie.
+W tym instruktażu utworzysz aplikację, podobny Eksploratora plików. Utworzysz okno które zawiera dwa okienka. W okienku po lewej stronie zawiera [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiektów, które będą wyświetlane na pulpicie, w widoku hierarchicznym. W okienku po prawej stronie zawiera [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , pokaże pliki w folderze, który wybrano w okienku po lewej stronie.
 
 [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Nowoczesne pasków narzędzi MFC można hostować formanty innych niż proste przycisk. W tym artykule wyjaśniono, jak to zrobić.

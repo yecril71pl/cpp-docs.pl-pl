@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496971736e1f303d61b83e15b2ba1c03083f8d53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4de24dfac4ccd24e5cb4bda8b60a43b3ec0d0560
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422795"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234583"
 ---
 # <a name="intrinsic"></a>— funkcja
 
@@ -86,7 +86,7 @@ Funkcje zmiennoprzecinkowe wymienione poniżej nie ma wartość true, formularze
 |[ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|[COSH](../c-runtime-library/reference/cosh-coshf-coshl.md)|[Pow](../c-runtime-library/reference/pow-powf-powl.md)|[TANH](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[ASIN](../c-runtime-library/reference/asin-asinf-asinl.md)|[Fmod —](../c-runtime-library/reference/fmod-fmodf.md)|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Funkcje liczb zmiennoprzecinkowych, wymienionych poniżej ma wartość true, formularze wewnętrzne po określeniu [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), i [Fast](../build/reference/fp-specify-floating-point-behavior.md) (lub dowolną opcję, która obejmuje /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)and/O2):
+Funkcje liczb zmiennoprzecinkowych, wymienionych poniżej ma wartość true, formularze wewnętrzne po określeniu [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), i [Fast](../build/reference/fp-specify-floating-point-behavior.md) (lub dowolną opcję, która obejmuje /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)and/O2):
 
 |||||
 |-|-|-|-|

@@ -1,28 +1,40 @@
 ---
 title: Eventtargetarray — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::AddTail
+- event/Microsoft::WRL::Details::EventTargetArray::Begin
+- event/Microsoft::WRL::Details::EventTargetArray::End
+- event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::Length
+- event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray::AddTail method
+- Microsoft::WRL::Details::EventTargetArray::Begin method
+- Microsoft::WRL::Details::EventTargetArray::End method
+- Microsoft::WRL::Details::EventTargetArray::EventTargetArray, constructor
+- Microsoft::WRL::Details::EventTargetArray::Length method
+- Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a02c571f33378ed65fc4b0c4efc7d1a82144279f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575668"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234712"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray — Klasa
 
@@ -38,25 +50,25 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 
 Reprezentuje tablicę procedury obsługi zdarzeń.
 
-Programy obsługi zdarzeń, które są skojarzone z [EventSource](../windows/eventsource-class.md) obiektu są przechowywane w chronionym **EventTargetArray** element członkowski danych.
+Programy obsługi zdarzeń, które są skojarzone z [EventSource](../windows/eventsource-class.md) obiektu są przechowywane w chronionym `EventTargetArray` element członkowski danych.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[EventTargetArray::EventTargetArray, konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicjuje nowe wystąpienie klasy **EventTargetArray** klasy.|
-|[EventTargetArray::~EventTargetArray, destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinicjuje bieżące **EventTargetArray** klasy.|
+Nazwa                                                           | Opis
+-------------------------------------------------------------- | -----------------------------------------------------------
+[EventTargetArray::EventTargetArray](#eventtargetarray)        | Inicjuje nowe wystąpienie klasy `EventTargetArray` klasy.
+[EventTargetArray:: ~ EventTargetArray](#tilde-eventtargetarray) | Deinicjuje bieżące `EventTargetArray` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[EventTargetArray::AddTail, metoda](../windows/eventtargetarray-addtail-method.md)|Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrzne programów obsługi zdarzeń.|
-|[EventTargetArray::Begin, metoda](../windows/eventtargetarray-begin-method.md)|Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|
-|[EventTargetArray::End, metoda](../windows/eventtargetarray-end-method.md)|Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|
-|[EventTargetArray::Length, metoda](../windows/eventtargetarray-length-method.md)|Pobiera aktualną liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.|
+Nazwa                                  | Opis
+------------------------------------- | ---------------------------------------------------------------------------------------
+[EventTargetArray::AddTail](#addtail) | Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrzne programów obsługi zdarzeń.
+[EventTargetArray::Begin](#begin)     | Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+[EventTargetArray::End](#end)         | Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+[EventTargetArray::Length](#length)   | Pobiera aktualną liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -68,6 +80,117 @@ Programy obsługi zdarzeń, które są skojarzone z [EventSource](../windows/eve
 
 **Namespace:** Microsoft::wrl:: details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="tilde-eventtargetarray"></a>EventTargetArray:: ~ EventTargetArray
 
-[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+~EventTargetArray();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Deinicjuje bieżące `EventTargetArray` klasy.
+
+## <a name="addtail"></a>EventTargetArray::AddTail
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Element*<br/>
+Wskaźnik do narzędzia obsługi zdarzeń do dołączenia.
+
+### <a name="remarks"></a>Uwagi
+
+Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrzne programów obsługi zdarzeń.
+
+`AddTail()` może być używany wewnętrznie przez tylko `EventSource` klasy.
+
+## <a name="begin"></a>EventTargetArray::Begin
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Adres do pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+
+### <a name="remarks"></a>Uwagi
+
+Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+
+## <a name="end"></a>EventTargetArray::End
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Adres do ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+
+### <a name="remarks"></a>Uwagi
+
+Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.
+
+## <a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*godz.*<br/>
+Po tej operacji konstruktora parametru *hr* wskazuje, czy przydział tablicy zakończonych powodzeniem lub niepowodzeniem. Na poniższej liście przedstawiono możliwe wartości *hr*.
+
++   S_OK<br/>
+    Operacja zakończyła się pomyślnie.
+
++   E_OUTOFMEMORY<br/>
+    Nie można przydzielić pamięci dla tablicy.
+
++   S_FALSE<br/>
+    Parametr *elementów* jest mniejsza niż zero.
+
+*Elementy*<br/>
+Liczba elementów tablicy można przydzielić.
+
+### <a name="remarks"></a>Uwagi
+
+Inicjuje nowe wystąpienie klasy `EventTargetArray` klasy.
+
+`EventTargetArray` jest używany do przechowywania programu obsługi zdarzeń w tablicy `EventSource` obiektu.
+
+## <a name="length"></a>EventTargetArray::Length
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+size_t Length();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Bieżąca liczba elementów w tablicy wewnętrzne programów obsługi zdarzeń.
+
+### <a name="remarks"></a>Uwagi
+
+Pobiera aktualną liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.

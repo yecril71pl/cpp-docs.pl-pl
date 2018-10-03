@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713222"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250370"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron Active Server ATL
 
 Ten kreator umożliwia wstawienie do projektu składnika strony Active Server Pages (ASP). Microsoft Internet Information Services (IIS) używa składników ASP jako część jego architekturę rozwoju udoskonalone strony sieci Web.
 
 Za pomocą tego kreatora, można określić, że składnik w wielowątkowości, modelu i jego obsługa agregacji. Można również określić obsługę interfejsu informacje o błędzie, punkty połączenia i bezwątkowy szeregowanie.
+
+> [!WARNING]
+> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
 
 ## <a name="remarks"></a>Uwagi
 

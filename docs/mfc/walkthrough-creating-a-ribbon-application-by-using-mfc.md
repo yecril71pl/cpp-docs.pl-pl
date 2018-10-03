@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169583"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236026"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 
@@ -28,7 +28,7 @@ Ten poradnik pokazuje jak używać **Kreator aplikacji MFC** do tworzenia aplika
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **ogólnych ustawieniach projektowych**. Jeśli są używane inne ustawienia, niektóre elementy interfejsu użytkownika, do których odwołują się poniższe instrukcje, mogą nie być wyświetlane.
+Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **ogólnych ustawieniach projektowych**. Jeśli używasz różnych ustawień, niektórych elementów interfejsu użytkownika, do których odwołują się w poniższych instrukcjach mogą nie być wyświetlane.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Tworzenie aplikacji MFC zawierającej wstążkę
 
@@ -81,7 +81,7 @@ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **og�
 
 1. Aby dodać elementy do panelu, który został utworzony w poprzedniej procedurze, przeciągnij formanty z **edytora wstążki** części **przybornika** do panelu w widoku Projekt.
 
-1. Najpierw dodaj **drukowania** przycisku. **Drukowania** przycisk będzie miał podmenu zawierające **szybkie drukowanie** polecenia, które inicjuje drukowanie przy użyciu domyślnej drukarki. Oba te polecenia są już zdefiniowane dla tej aplikacji. Znajdują się w menu aplikacji.
+1. Najpierw dodaj **drukowania** przycisku. **Drukowania** przycisk będzie miał podmenu zawierające **szybkie drukowanie** polecenia, które inicjuje drukowanie przy użyciu domyślnej drukarki. Oba te polecenia są już zdefiniowane dla tej aplikacji. Znajdują się one w menu aplikacji.
 
     Aby utworzyć **drukowania** przycisk, przeciągnij narzędzie przycisk na panel.
 

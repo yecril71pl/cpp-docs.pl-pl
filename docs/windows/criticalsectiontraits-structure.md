@@ -1,28 +1,32 @@
 ---
 title: Criticalsectiontraits — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d15f65ecc2253556a6812cfb90ef78f90c7fb29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 420ab1019dfa2e95e00e366c64509178ad20e685
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594737"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234349"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits — Struktura
 
@@ -38,16 +42,16 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
-|----------|-----------------|
-|`Type`|A **typedef** definiujący wskaźnikiem na sekcję krytyczną. `Type` jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.|
+Nazwa   | Opis
+------ | -----------------------------------------------------------------------------------------------------------------
+`Type` | A `typedef` definiujący wskaźnikiem na sekcję krytyczną. `Type` jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[CriticalSectionTraits::GetInvalidValue, metoda](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Specjalizuje się `CriticalSection` szablonu, aby szablon zawsze jest nieprawidłowy.|
-|[CriticalSectionTraits::Unlock, metoda](../windows/criticalsectiontraits-unlock-method.md)|Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.|
+Nazwa                                                       | Opis
+---------------------------------------------------------- | -----------------
+[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Specjalizuje się `CriticalSection` szablonu, aby szablon zawsze jest nieprawidłowy.
+[CriticalSectionTraits::Unlock](#unlock)                   | Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -59,6 +63,39 @@ struct CriticalSectionTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Zobacz też
+## <a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
 
-[Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Specjalizuje się `CriticalSection` szablonu, aby szablon zawsze jest nieprawidłowy.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zawsze zwraca wskaźnik do Nieprawidłowa sekcja krytycznego.
+
+### <a name="remarks"></a>Uwagi
+
+`Type` Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.
+
+## <a name="unlock"></a>CriticalSectionTraits::Unlock
+
+Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.
+
+```cpp
+inline static void Unlock(
+   _In_ Type cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*CS*<br/>
+Wskaźnik do obiektu sekcję krytyczną.
+
+### <a name="remarks"></a>Uwagi
+
+`Type` Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.
+
+Aby uzyskać więcej informacji, zobacz **funkcja LeaveCriticalSection** w **funkcji synchronizacji** części dokumentacji interfejsu API Windows.

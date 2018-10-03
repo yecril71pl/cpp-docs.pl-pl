@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169466"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234719"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
 
@@ -78,7 +78,7 @@ W większości przypadków można użyć C + +/ CX, aby utworzyć środowiska wy
 
    [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h` nie jest używana w tym przykładzie. Możesz usunąć go z projektu, jeśli chcesz.
+1. `GrayscaleTransform.h` nie jest używany w tym przykładzie. Możesz usunąć go z projektu, jeśli chcesz.
 
 1. Użyj poniższego kodu, aby zastąpić zawartość `GrayscaleTransform.cpp`:
 

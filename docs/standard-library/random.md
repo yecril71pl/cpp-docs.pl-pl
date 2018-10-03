@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b8704d0bc64734a9edd4f3bfca50c2d1b2ecc37b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956508"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235623"
 ---
 # <a name="ltrandomgt"></a>&lt;losowe&gt;
 
@@ -241,34 +241,76 @@ W poniższych sekcjach wymieniono jednolitego generatorów liczb losowych (URNGs
 Utworzenie wystąpienia aparatów i adapterów aparatu. Aby uzyskać więcej informacji, zobacz [aparatów i dystrybucji](#engdist).
 
 - `default_random_engine` Domyślny aparat.
- `typedef mt19937 default_random_engine;`
+
+    ```cpp
+    typedef mt19937 default_random_engine;
+    ```
 
 - `knuth_b` Aparat Knuth.
- `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
+
+    ```cpp
+    typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
+    ```
 
 - `minstd_rand0` 1988 minimalny standardowa aparat (Lewis Goodman i Miller 1969).
- `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
+    ```
 
 - `minstd_rand` Zaktualizowany aparat standard minimalny `minstd_rand0` (Park Miller i Stockmeyer, 1993).
- `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
+    ```
 
 - `mt19937` 32-bitowe aparatu Mersenne twister (Matsumoto i Nishimura-1998).
- `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned int, 32, 624, 397,
+        31, 0x9908b0df,
+        11, 0xffffffff,
+        7, 0x9d2c5680,
+        15, 0xefc60000,
+        18, 1812433253> mt19937;
+    ```
 
 - `mt19937_64` 64-bitowe aparatu Mersenne twister (Matsumoto i Nishimura, 2000).
- `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned long long, 64, 312, 156,
+        31, 0xb5026f5aa96619e9ULL,
+        29, 0x5555555555555555ULL,
+        17, 0x71d67fffeda60000ULL,
+        37, 0xfff7eee000000000ULL,
+        43, 6364136223846793005ULL> mt19937_64;
+    ```
 
 - `ranlux24` Aparat RANLUX 24-bitowego (Martin Lüscher i Fred James, 1994 r.).
- `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
+    ```
 
 - `ranlux24_base` Używane jako podstawa `ranlux24`.
- `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
+    ```
 
 - `ranlux48` Aparat RANLUX 48-bitowego (Martin Lüscher i Fred James, 1994 r.).
- `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
+    ```
 
 - `ranlux48_base` Używane jako podstawa `ranlux48`.
- `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
+    ```
 
 ####  <a name="eng"></a> Aparat szablonów
 

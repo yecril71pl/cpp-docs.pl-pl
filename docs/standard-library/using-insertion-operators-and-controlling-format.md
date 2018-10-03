@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959810"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234602"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 
@@ -99,7 +99,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +107,10 @@ int main( )
 `width` Składowa jest zadeklarowana w \<iostream >. Jeśli używasz `setw` lub innych manipulator z argumentami, musi zawierać \<iomanip >. W danych wyjściowych ciągi są drukowane w zakresie szerokość 6 i liczb całkowitych w polu Szerokość 10:
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 Ani `setw` ani `width` obcina wartości. Jeśli sformatowane dane wyjściowe przekracza szerokość, wyświetla całą wartość, z zastrzeżeniem precyzję strumienia. Zarówno `setw` i `width` mają wpływ na następujące pole. Szerokość pola wraca do swojego zachowania domyślnego (szerokość niezbędne) po wydrukowaniu jedno pole. Jednak inne opcje formatowania strumienia obowiązują do momentu zmienione.

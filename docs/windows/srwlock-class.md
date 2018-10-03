@@ -1,28 +1,42 @@
 ---
 title: Srwlock — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock_
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::~SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared
 dev_langs:
 - C++
 helpviewer_keywords:
-- SRWLock class
+- Microsoft::WRL::Wrappers::SRWLock class
+- Microsoft::WRL::Wrappers::SRWLock::LockExclusive method
+- Microsoft::WRL::Wrappers::SRWLock::LockShared method
+- Microsoft::WRL::Wrappers::SRWLock::SRWLock, constructor
+- Microsoft::WRL::Wrappers::SRWLock::SRWLock_ data member
+- Microsoft::WRL::Wrappers::SRWLock::~SRWLock, destructor
+- Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
+- Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb97a29796c287cfaadddc305f25807de5dcba2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 771a375d46177bb3b9d263f0a5221039bb963bc2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604239"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233973"
 ---
 # <a name="srwlock-class"></a>SRWLock — Klasa
 
@@ -42,32 +56,32 @@ Cienki czytnika/blokadę służy do synchronizowania dostępu w wątkach do obie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|||
-|-|-|
-|`SyncLockExclusive`|Synonim dla **SRWLock** obiekt, który jest uzyskiwany w trybie wyłączności.|
-|`SyncLockShared`|Synonim dla **SRWLock** obiekt, który jest uzyskiwany w trybie udostępniania.|
+Nazwa                | Opis
+------------------- | -------------------------------------------------------------------
+`SyncLockExclusive` | Synonim dla `SRWLock` obiekt, który jest uzyskiwany w trybie wyłączności.
+`SyncLockShared`    | Synonim dla `SRWLock` obiekt, który jest uzyskiwany w trybie udostępniania.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[SRWLock::SRWLock, konstruktor](../windows/srwlock-srwlock-constructor.md)|Inicjuje nowe wystąpienie klasy **SRWLock** klasy.|
-|[SRWLock::~SRWLock, destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Wyłącza wystąpienie **SRWLock** klasy.|
+Nazwa                                     | Opis
+---------------------------------------- | --------------------------------------------------
+[SRWLock::SRWLock](#srwlock-constructor) | Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
+[SRWLock:: ~ SRWLock](#tilde-srwlock)      | Wyłącza wystąpienie `SRWLock` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[SRWLock::LockExclusive, metoda](../windows/srwlock-lockexclusive-method.md)|Uzyskuje **SRWLock** obiektu w trybie wyłączności.|
-|[SRWLock::LockShared, metoda](../windows/srwlock-lockshared-method.md)|Uzyskuje **SRWLock** obiektu w tryb udostępniania.|
-|[SRWLock::TryLockExclusive, metoda](../windows/srwlock-trylockexclusive-method.md)|Próbuje pobrać **SRWLock** obiektu w trybie wyłączności dla bieżącej lub określonej **SRWLock** obiektu.|
-|[SRWLock::TryLockShared, metoda](../windows/srwlock-trylockshared-method.md)|Próbuje pobrać **SRWLock** obiektu w tryb udostępniania dla bieżącej lub określonej **SRWLock** obiektu.|
+Nazwa                                           | Opis
+---------------------------------------------- | -------------------------------------------------------------------------------------------------------
+[SRWLock::LockExclusive](#lockexclusive)       | Uzyskuje `SRWLock` obiektu w trybie wyłączności.
+[SRWLock::LockShared](#lockshared)             | Uzyskuje `SRWLock` obiektu w tryb udostępniania.
+[SRWLock::TryLockExclusive](#trylockexclusive) | Próbuje pobrać `SRWLock` obiektu w trybie wyłączności dla bieżącej lub określonej `SRWLock` obiektu.
+[SRWLock::TryLockShared](#trylockshared)       | Próbuje pobrać `SRWLock` obiektu w tryb udostępniania dla bieżącej lub określonej `SRWLock` obiektu.
 
 ### <a name="protected-data-member"></a>Element członkowski danych chronionych
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[SRWLock::SRWLock_, składowa danych](../windows/srwlock-srwlock-data-member.md)|Zawiera podstawowe zmienną blokady dla bieżącego **SRWLock** obiektu.|
+Nazwa                                      | Opis
+----------------------------------------- | -----------------------------------------------------------------------
+[SRWLock::SRWLock_](#srwlock-data-member) | Zawiera podstawowe zmienną blokady dla bieżącego `SRWLock` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -79,6 +93,109 @@ Cienki czytnika/blokadę służy do synchronizowania dostępu w wątkach do obie
 
 **Namespace:** Microsoft::wrl:: wrappers
 
-## <a name="see-also"></a>Zobacz też
+## <a name="tilde-srwlock"></a>SRWLock:: ~ SRWLock
 
-[Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)
+Wyłącza wystąpienie `SRWLock` klasy.
+
+```cpp
+~SRWLock();
+```
+
+## <a name="lockexclusive"></a>SRWLock::LockExclusive
+
+Uzyskuje `SRWLock` obiektu w trybie wyłączności.
+
+```cpp
+SyncLockExclusive LockExclusive();
+
+static SyncLockExclusive LockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*<br/>
+Wskaźnik do `SRWLock` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`SRWLock` Obiektu w trybie wyłączności.
+
+## <a name="lockshared"></a>SRWLock::LockShared
+
+Uzyskuje `SRWLock` obiektu w tryb udostępniania.
+
+```cpp
+SyncLockShared LockShared();
+
+static SyncLockShared LockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*<br/>
+Wskaźnik do `SRWLock` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`SRWLock` Obiektu w tryb udostępniania.
+
+## <a name="srwlock-constructor"></a>SRWLock::SRWLock
+
+Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
+
+```cpp
+SRWLock();
+```
+
+## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
+
+Zawiera podstawowe zmienną blokady dla bieżącego `SRWLock` obiektu.
+
+```cpp
+SRWLOCK SRWLock_;
+```
+
+## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
+
+Próbuje pobrać `SRWLock` obiektu w trybie wyłączności dla bieżącej lub określonej `SRWLock` obiektu. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność blokadę.
+
+```cpp
+SyncLockExclusive TryLockExclusive();
+
+static SyncLockExclusive TryLockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*<br/>
+Wskaźnik do `SRWLock` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+W przypadku powodzenia `SRWLock` obiektu w trybie wyłączności i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie `SRWLock` obiektu, którego stan jest nieprawidłowy.
+
+## <a name="trylockshared"></a>SRWLock::TryLockShared
+
+Próbuje pobrać `SRWLock` obiektu w tryb udostępniania dla bieżącej lub określonej `SRWLock` obiektu.
+
+```cpp
+WRL_NOTHROW SyncLockShared TryLockShared();
+WRL_NOTHROW static SyncLockShared TryLockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*<br/>
+Wskaźnik do `SRWLock` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+W przypadku powodzenia `SRWLock` obiektu w tryb udostępniania i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie `SRWLock` obiektu, którego stan jest nieprawidłowy.

@@ -1,7 +1,7 @@
 ---
 title: PATH — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725312"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235467"
 ---
 # <a name="path-class"></a>path — klasa
 
-**Ścieżki** klasa przechowuje obiekt typu `string_type`, co jest nazywane `myname` tutaj na potrzeby specyfikacji odpowiedni do użytku jako nazwa ścieżki. `string_type` jest synonimem dla `basic_string<value_type>`, gdzie `value_type` jest synonimem dla **char** w obszarze Windows lub **wchar_t** w modelu Posix.
+**Ścieżki** klasa przechowuje obiekt typu `string_type`, co jest nazywane `myname` tutaj na potrzeby specyfikacji odpowiedni do użytku jako nazwa ścieżki. `string_type` jest synonimem dla `basic_string<value_type>`, gdzie `value_type` jest synonimem dla **wchar_t** na Windows lub **char** w modelu POSIX.
 
 Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 

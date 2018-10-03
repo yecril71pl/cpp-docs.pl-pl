@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169752"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235519"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
 
-W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawiera formant Windows, na pasku narzędzi. W MFC, musi być przycisku paska narzędzi [klasa CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodne klasy, na przykład [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasa CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasa CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [klasa CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
+W tym artykule opisano sposób dodawania przycisku paska narzędzi, który zawiera formant Windows, na pasku narzędzi. W MFC, musi być przycisku paska narzędzi [klasa CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodne klasy, na przykład [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasa CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasa CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [klasa CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Dodawanie formantów na paskach narzędzi
 
 Aby dodać formant do paska narzędzi, wykonaj następujące kroki:
 
-1. Zarezerwuj identyfikator zasobu fikcyjnego przycisku w nadrzędnej zasób paska narzędzi. Aby uzyskać więcej informacji o tym, jak utworzyć przyciski, za pomocą **Edytor paska narzędzi** w programie Visual Studio, zobacz [Edytor paska narzędzi](../windows/toolbar-editor.md) tematu.
+1. Zarezerwuj identyfikator zasobu fikcyjnego przycisku w nadrzędnej zasób paska narzędzi. Aby uzyskać więcej informacji o tym, jak utworzyć przyciski, za pomocą **Edytor paska narzędzi** w programie Visual Studio, zobacz [Edytor paska narzędzi](../windows/toolbar-editor.md) artykułu.
 
 1. Zarezerwuj obraz paska narzędzi (ikonę przycisku) przycisku w wszystkich map bitowych paska narzędzi nadrzędnej.
 

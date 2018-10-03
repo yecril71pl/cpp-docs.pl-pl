@@ -1,28 +1,40 @@
 ---
 title: Interfacetraits — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceTraits
+- implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+- implements/Microsoft::WRL::Details::InterfaceTraits::CastToBase
+- implements/Microsoft::WRL::Details::InterfaceTraits::CastToUnknown
+- implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+- implements/Microsoft::WRL::Details::InterfaceTraits::IidCount
+- implements/Microsoft::WRL::Details::InterfaceTraits::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- InterfaceTraits structure
+- Microsoft::WRL::Details::InterfaceTraits structure
+- Microsoft::WRL::Details::InterfaceTraits::CanCastTo method
+- Microsoft::WRL::Details::InterfaceTraits::CastToBase method
+- Microsoft::WRL::Details::InterfaceTraits::CastToUnknown method
+- Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid method
+- Microsoft::WRL::Details::InterfaceTraits::IidCount constant
+- Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb8eb8fbc4199ccdaf5717e465f202c0e4ec296e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e184d9e5b99cd59d4dde63b06cbe259d328a0e4e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437654"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234687"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits — Struktura
 
@@ -60,25 +72,25 @@ Drugi szablon jest specjalizacją osłonięty interfejsów. Trzeci szablon jest 
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
-|----------|-----------------|
-|`Base`|Synonim dla *I0* parametru szablonu.|
+Nazwa   | Opis
+------ | ------------------------------------------
+`Base` | Synonim dla *I0* parametru szablonu.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[InterfaceTraits::CanCastTo, metoda](../windows/interfacetraits-cancastto-method.md)|Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base`.|
-|[InterfaceTraits::CastToBase, metoda](../windows/interfacetraits-casttobase-method.md)|Rzutuje określony wskaźnik do wskaźnika do `Base`.|
-|[InterfaceTraits::CastToUnknown, metoda](../windows/interfacetraits-casttounknown-method.md)|Rzutuje określony wskaźnik do wskaźnika do `IUnknown`.|
-|[InterfaceTraits::FillArrayWithIid, metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Przypisuje identyfikator interfejsu `Base` do elementu tablicy, określonego przez argument indeksu.|
-|[InterfaceTraits::Verify, metoda](../windows/interfacetraits-verify-method.md)|Sprawdza, czy `Base` wywodzi się poprawnie.|
+Nazwa                                                   | Opis
+------------------------------------------------------ | ----------------------------------------------------------------------------------------
+[InterfaceTraits::CanCastTo](#cancastto)               | Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base`.
+[InterfaceTraits::CastToBase](#casttobase)             | Rzutuje określony wskaźnik do wskaźnika do `Base`.
+[InterfaceTraits::CastToUnknown](#casttounknown)       | Rzutuje określony wskaźnik do wskaźnika do `IUnknown`.
+[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Przypisuje identyfikator interfejsu `Base` do elementu tablicy, określonego przez argument indeksu.
+[InterfaceTraits::Verify](#verify)                     | Sprawdza, czy `Base` wywodzi się poprawnie.
 
 ### <a name="public-constants"></a>Publiczne stałe
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[InterfaceTraits::IidCount, stała](../windows/interfacetraits-iidcount-constant.md)|Przechowuje liczbę interfejsu identyfikatorów skojarzonych z bieżącym **interfacetraits —** obiektu.|
+Nazwa                                   | Opis
+-------------------------------------- | ---------------------------------------------------------------------------------------
+[InterfaceTraits::IidCount](#iidcount) | Przechowuje liczbę interfejsu identyfikatorów skojarzonych z bieżącym `InterfaceTraits` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -90,6 +102,147 @@ Drugi szablon jest specjalizacją osłonięty interfejsów. Trzeci szablon jest 
 
 **Namespace:** Microsoft::wrl:: details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="cancastto"></a>InterfaceTraits::CanCastTo
 
-[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+template<typename T>
+static __forceinline bool CanCastTo(
+   _In_ T* ptr,
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*ptr*<br/>
+Nazwa wskaźnika do typu.
+
+*Parametr riid*<br/>
+Identyfikator interfejsu `Base`.
+
+*ppv*<br/>
+Jeśli operacja zakończy się pomyślnie, *ppv* wskazuje interfejs określony przez `Base`. W przeciwnym razie *ppv* ustawiono `nullptr`.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli operacja zakończy się pomyślnie i *ptr* jest rzutowany na wskaźnik do `Base`; w przeciwnym razie `false` .
+
+### <a name="remarks"></a>Uwagi
+
+Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base`.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz [publiczne definicje typów](#public-typedefs) sekcji.
+
+## <a name="casttobase"></a>InterfaceTraits::CastToBase
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+template<typename T>
+static __forceinline Base* CastToBase(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ parametru *ptr*.
+
+*ptr*<br/>
+Wskaźnik do typu *T*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do `Base`.
+
+### <a name="remarks"></a>Uwagi
+
+Rzutuje określony wskaźnik do wskaźnika do `Base`.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz [publiczne definicje typów](#public-typedefs) sekcji.
+
+## <a name="casttounknown"></a>InterfaceTraits::CastToUnknown
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+template<typename T>
+static __forceinline IUnknown* CastToUnknown(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ parametru *ptr*.
+
+*ptr*<br/>
+Wskaźnik do typu *T*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do IUnknown, z którego `Base` pochodzi.
+
+### <a name="remarks"></a>Uwagi
+
+Rzutuje określony wskaźnik do wskaźnika do `IUnknown`.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz [publiczne definicje typów](#public-typedefs) sekcji.
+
+## <a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*<br/>
+Wskaźnik do pola, które zawiera wartość indeksu zaczynającego się od zera.
+
+*IID*<br/>
+Tablica identyfikatorów interfejsu.
+
+### <a name="remarks"></a>Uwagi
+
+Przypisuje identyfikator interfejsu `Base` do elementu tablicy, określonego przez argument indeksu.
+
+Sprzecznie nazwę tego interfejsu API tylko jedna tablica element zostanie zmodyfikowany; nie macierz w całości.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz [publiczne definicje typów](#public-typedefs) sekcji.
+
+## <a name="iidcount"></a>InterfaceTraits::IidCount
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+static const unsigned long IidCount = 1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Przechowuje liczbę interfejsu identyfikatorów skojarzonych z bieżącym `InterfaceTraits` obiektu.
+
+## <a name="verify"></a>InterfaceTraits::Verify
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+```cpp
+__forceinline static void Verify();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Sprawdza, czy `Base` wywodzi się poprawnie.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz [publiczne definicje typów](#public-typedefs) sekcji.

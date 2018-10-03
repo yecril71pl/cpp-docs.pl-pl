@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117501"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235064"
 ---
 # <a name="string-to-numeric-value-functions"></a>Konwertowanie ciągów na wartości
 
@@ -94,7 +94,7 @@ Jeśli wartość zwracana przez te funkcje spowodowałoby przepełnienie lub nie
 |`_strtoui64`|przepełnienia|**_UI64_MAX**|
 |`_strtoui64`|Brak konwersji|0|
 
- **_I64_MAX**, _**I64_MIN**, i **_UI64_MAX** są zdefiniowane w granicach. H.
+**_I64_MAX**, _**I64_MIN**, i **_UI64_MAX** są zdefiniowane w granicach. H.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, i `_wcstoui64` są wersjami znaków dwubajtowych `strtod`, `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`odpowiednio; wskaźnik do zakończenia z konwersji przez Każda z tych funkcji znaków dwubajtowych argument jest ciągiem znaku dwubajtowego. W przeciwnym wypadku każda z tych funkcji znaków dwubajtowych działa identycznie do jego odpowiednika pojedynczych bajtów znaków.
 

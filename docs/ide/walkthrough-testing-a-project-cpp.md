@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9553e6cbbd4c4fbf8b9b7e1907bd6dea63faa2a5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377438"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235545"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Wskazówki: testowanie projektu (C++)
 
 Jeśli program jest uruchomiony w trybie debugowania, można użyć punktów przerwania, aby zatrzymać program i przeanalizować stan zmiennych i obiektów.
 
-W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i ustalić, dlaczego wartość jest inna niż oczekiwana.
+W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i wywnioskować, dlatego wartość nie jest, czego oczekiwać.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -61,7 +61,7 @@ W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i ustali
 
 1. Otwórz menu skrótów dla `return 0;` instrukcji, a następnie wybierz **Uruchom do kursora**. Żółta strzałka po lewej stronie kodu wskazuje na następną instrukcję do wykonania.
 
-1. `Cardgame::totalParticipants` Kiedy Zmniejsz liczbę `Cardgame` kończy. W tym momencie `Cardgame::totalParticipants` powinna być równa 0, ponieważ wszystkie `Cardgame` wystąpienia zostały usunięte, ale **Czujka 1** okno wskazuje, że `Cardgame::totalparticipants` jest równa **18**. Oznacza to, że jest to błąd w kodzie, w którym można wykryć i naprawić poprzez wypełnienie poniższych wskazówek, [wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. `Cardgame::totalParticipants` Kiedy Zmniejsz liczbę `Cardgame` kończy. W tym momencie `Cardgame::totalParticipants` powinna być równa 0, ponieważ wszystkie `Cardgame` wystąpienia zostały usunięte, ale **Czujka 1** okno wskazuje, że `Cardgame::totalparticipants` jest równa **18**. Różnica wskazuje, że jest to błąd w kodzie, w którym można wykryć i naprawić poprzez wypełnienie poniższych wskazówek, [wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Aby zatrzymać program, na pasku menu, wybierz opcję **debugowania** > **Zatrzymaj debugowanie**, lub wybierz **Shift**+**F5**skróty klawiaturowe.
 

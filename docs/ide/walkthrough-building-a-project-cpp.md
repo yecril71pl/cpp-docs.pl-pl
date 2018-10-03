@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab6a0693ccad032953e9891c9cc9ef67d725b477
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373571"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234128"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
 
@@ -35,17 +35,17 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 ### <a name="to-fix-compilation-errors"></a>Aby naprawić błędy kompilacji
 
-1. W Game.cpp Usuń średnik w ostatnim wierszu, tak, aby go jest podobny do tego:
+1. W Game.cpp Usuń średnik w ostatnim wierszu, tak aby wyglądała jak instrukcji:
 
-     `return 0`
+    `return 0`
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
 
-1. Wiadomości w **lista błędów** okno wskazuje, że wystąpił błąd podczas tworzenia projektu. Opis wygląda następująco:
+1. Wiadomości w **lista błędów** okno wskazuje, że wystąpił błąd podczas tworzenia projektu. Opis wygląda komunikat o błędzie:
 
-     `error C2143: syntax error: missing ';' before '}'`
+    `error C2143: syntax error: missing ';' before '}'`
 
-   Aby wyświetlić Pomoc dotyczącą tego błędu, wyróżnij go w **lista błędów** okna, a następnie wybierz **F1** klucza.
+  Aby wyświetlić Pomoc dotyczącą tego błędu, wyróżnij go w **lista błędów** okna, a następnie wybierz **F1** klucza.
 
 1. Dodać średnik z powrotem do końca wiersza, który zawiera błąd składni:
 
@@ -53,7 +53,7 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
 
-   Wiadomości w **dane wyjściowe** okno wskazuje, że projekt został pomyślnie skompilowany.
+  Wiadomości w **dane wyjściowe** okno wskazuje, że projekt został pomyślnie skompilowany.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

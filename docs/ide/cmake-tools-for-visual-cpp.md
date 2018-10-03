@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake w programie Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 09/26/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc50656a2d429ad80f31f26169f620d1370eacd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390113"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235103"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake w programie Visual C++
 
@@ -403,3 +403,11 @@ Jeśli potrzebujesz więcej informacji na temat stanu pamięci podręcznej narz�
 **Visual Studio 2017 w wersji 15.7 lub nowszej**: Aby utworzyć pojedynczy plik projektu narzędzia CMake, kliknij prawym przyciskiem myszy plik w **Eksploratora rozwiązań** i wybierz polecenie **skompilować**. Można także utworzyć plik który jest obecnie otwarty w edytorze za pomocą menu głównego narzędzia CMake:
 
 ![Narzędzie CMake pojedynczy plik kompilacji](media/cmake-single-file-compile.png)
+
+## <a name="run-cmake-from-the-command-line"></a>Wykonywania CMake z wiersza polecenia
+Po zainstalowaniu narzędzia CMake z Instalatora programu Visual Studio, można uruchomić go z wiersza polecenia, wykonując następujące czynności:
+
+1. Uruchom odpowiedni vsdevcmd.bat — x86/x64 64. Zobacz [tworzenia w wierszu polecenia](../build/building-on-the-command-line.md) Aby uzyskać więcej informacji.
+1. Przejdź do folderu wyjściowego.
+1. Wykonywania CMake kompilacji/skonfigurować aplikację.
+

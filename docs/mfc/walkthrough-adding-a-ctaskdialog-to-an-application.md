@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169726"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235610"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
 
@@ -43,7 +43,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Zastępowanie okno komunikatu Windows za pomocą obiektu CTaskDialog
 
-W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTaskDialog`, który ma zastąpić Windows okno komunikatu. W tym przykładzie zmienia się również ikon skojarzonych z okno dialogowe zadania. Zmiana ikony sprawia, że `CTaskDialog` pojawiają się taka sama jak okno komunikatu Windows.
+W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTaskDialog`, który ma zastąpić Windows okno komunikatu. W tym przykładzie zmienia się również ikon skojarzonych z okno dialogowe zadania. Zmiana ikony sprawia, że `CTaskDialog` pojawiają się na tym samym w oknie komunikatu Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Aby zastąpić okno komunikatu Windows obiektu CTaskDialog
 
@@ -61,7 +61,7 @@ W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTask
     CString emptyString;
     ```
 
-1. Dodaj następujący kod po kodzie z kroku 4. Ten kod gwarantuje, że na komputerze użytkownika obsługuje `CTaskDialog`. Okno dialogowe nie jest obsługiwana, aplikacja wyświetla okno komunikatu, Windows zamiast tego.
+1. Dodaj następujący kod po kodzie z kroku 4. Ten kod gwarantuje, że na komputerze użytkownika obsługuje `CTaskDialog`. Okno dialogowe nie jest obsługiwane, aplikacja wyświetla okno komunikatu, Windows zamiast tego.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -92,7 +92,7 @@ W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTask
     taskDialog.DoModal();
     ```
 
-Krok 7 można pominąć, jeśli nie chcesz `CTaskDialog` do tego samego ikona jest wyświetlana jako okno komunikatu Windows. Jeśli pominiesz ten krok `CTaskDialog` ma żadnej ikony, gdy aplikacja wyświetla je.
+Krok 7 można uniknąć, jeśli nie chcesz `CTaskDialog` do tego samego ikona jest wyświetlana jako okno komunikatu Windows. Jeśli można uniknąć tego kroku `CTaskDialog` ma żadnej ikony, gdy aplikacja wyświetla je.
 
 Skompilować i uruchomić aplikację. Aplikacja wyświetla okno dialogowe zadania po jego uruchomieniu.
 
@@ -197,7 +197,7 @@ Poniższa procedura pokazuje sposób wyświetlania `CTaskDialog` bez tworzenia `
 
 Skompilować i uruchomić aplikację. Aplikacja wyświetla dwa zadania, okno dialogowe. Pierwsze okno dialogowe pochodzi z **do dodawania funkcjonalności do obiektu CTaskDialog** procedura; druga jest okno dialogowe z ostatniej procedury.
 
-Przykłady te pokazują nie wszystkie dostępne opcje `CTaskDialog`, ale powinny pomóc Ci rozpocząć pracę. Zobacz [klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md) pełny opis klasy.
+W tych przykładach nie pokazano wszystkie dostępne opcje `CTaskDialog`, ale powinny pomóc Ci rozpocząć pracę. Zobacz [klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md) pełny opis klasy.
 
 ## <a name="see-also"></a>Zobacz także
 

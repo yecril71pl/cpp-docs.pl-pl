@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b120053a4a9129fea83995aa5be67e50b59e2a2
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: a375f93eaa164657964be7ad1ea2554ebc1986b8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494507"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235402"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Wskazówki: kompilowanie programu C++ przeznaczonego dla CLR w Visual Studio
 
@@ -30,7 +30,7 @@ Można tworzyć programy Visual C++, które używają klas .NET i skompilować j
   
 Do wykonania tej procedury możesz wpisać swój własny program Visual C++ lub użyć jednego z przykładowych programów. Przykładowy program używanego w tej procedurze tworzy plik tekstowy o nazwie textfile.txt i zapisuje go do katalogu projektu.  
   
-## <a name="prerequisites"></a>Wstępnie wymagane składniki  
+## <a name="prerequisites"></a>Wymagania wstępne  
 
 Te tematy założono, że rozumiesz podstawy języka C++.  
   
@@ -45,41 +45,41 @@ Te tematy założono, że rozumiesz podstawy języka C++.
   
 1. Wpisz nazwę projektu.  
   
-     Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.  
+    Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.  
   
-     Kliknij przycisk **OK** Aby utworzyć nowy projekt.  
+    Kliknij przycisk **OK** Aby utworzyć nowy projekt.  
   
 1. Jeśli **Eksploratora rozwiązań** nie jest widoczny, kliknij przycisk **Eksploratora rozwiązań** na **widoku** menu.  
   
 1. Dodaj nowy plik źródłowy do projektu:  
   
-    - Kliknij prawym przyciskiem myszy **pliki źródłowe** folderu w **Eksploratora rozwiązań**, wskaż polecenie **Dodaj** i kliknij przycisk **nowy element**.  
+    - Kliknij prawym przyciskiem myszy **pliki źródłowe** folderu w **Eksploratora rozwiązań**, wskaż polecenie **Dodaj**i kliknij przycisk **nowy element**.  
   
     - Kliknij przycisk **plik C++ (.cpp)** i wpisz nazwę pliku, a następnie kliknij przycisk **Dodaj**.  
   
-     **.Cpp** plik pojawia się w **pliki źródłowe** folderu w **Eksploratora rozwiązań** i zostanie wyświetlone okno z kartami, za pomocą miejscem, gdzie wpisujesz kod ma w tym pliku.  
+    **.Cpp** plik pojawia się w **pliki źródłowe** folderu w **Eksploratora rozwiązań** i zostanie wyświetlone okno z kartami, za pomocą miejscem, gdzie wpisujesz kod ma w tym pliku.  
   
 1. Kliknij nowo utworzoną karcie w programie Visual Studio i wpisz prawidłowy program Visual C++ lub skopiuj i Wklej jeden z przykładowych programów.  
   
-     Na przykład, można użyć [porady: wpisywanie tekstu do pliku (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-text-file-cpp-cli.md) przykładowy program (w **Obsługa plików i we/wy** węzła Programming Guide).  
+    Na przykład, można użyć [porady: wpisywanie tekstu do pliku (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-text-file-cpp-cli.md) przykładowy program (w **Obsługa plików i we/wy** węzła Programming Guide).  
   
-     Jeśli korzystasz z przykładowego program, zwróć uwagę, że używasz `gcnew` słowa kluczowego zamiast `new` podczas tworzenia obiektu platformy .NET, a `gcnew` zwraca uchwyt (`^`) zamiast wskaźnik (`*`):  
+    Jeśli korzystasz z przykładowego program, zwróć uwagę, że używasz `gcnew` słowa kluczowego zamiast `new` podczas tworzenia obiektu platformy .NET, a `gcnew` zwraca uchwyt (`^`) zamiast wskaźnik (`*`):  
   
-     `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
+    `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
   
-     Aby uzyskać więcej informacji na temat nowej składni języka Visual C++, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
+    Aby uzyskać więcej informacji na temat nowej składni języka Visual C++, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
   
 1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     **Dane wyjściowe** okna wyświetla informacje o postępie kompilacji, takie jak lokalizacja dziennika kompilacji i komunikat o statusie kompilacji.  
+    **Dane wyjściowe** okna wyświetla informacje o postępie kompilacji, takie jak lokalizacja dziennika kompilacji i komunikat o statusie kompilacji.  
   
-     Jeśli wprowadzono zmiany i uruchom program bez wykonania tej operacji kompilacji, okno dialogowe może oznaczać, że projekt jest nieaktualny. Zaznacz pole wyboru, w tym oknie dialogowym, zanim klikniesz pozycję **OK** Jeśli chcesz, aby Visual Studio, aby zawsze używać bieżącej wersji plików, zamiast monitowania użytkownika za każdym razem, tworzy on aplikacji.  
+    Jeśli wprowadzono zmiany i uruchom program bez wykonania tej operacji kompilacji, okno dialogowe może oznaczać, że projekt jest nieaktualny. Zaznacz pole wyboru, w tym oknie dialogowym, zanim klikniesz pozycję **OK** Jeśli chcesz, aby Visual Studio, aby zawsze używać bieżącej wersji plików, zamiast monitowania użytkownika za każdym razem, tworzy on aplikacji.  
   
 1. Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.  
   
 1. Jeśli użyto przykładowego programu, po uruchomieniu program zostanie wyświetlone okno polecenia, który wskazuje, że utworzono plik tekstowy.  
   
-     **Textfile.txt** plik tekstowy znajduje się teraz w katalogu projektu. Możesz otworzyć ten plik za pomocą Notatnika.  
+    **Textfile.txt** plik tekstowy znajduje się teraz w katalogu projektu. Możesz otworzyć ten plik za pomocą Notatnika.  
   
     > [!NOTE]
     > Wybieranie CLR pusty szablon projektu automatycznie ustawiony `/clr` — opcja kompilatora. Aby to sprawdzić, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i klikając **właściwości**, a następnie sprawdź, **Obsługa środowiska uruchomieniowego języka wspólnego** opcji  **Ogólne** węźle **właściwości konfiguracji**.  

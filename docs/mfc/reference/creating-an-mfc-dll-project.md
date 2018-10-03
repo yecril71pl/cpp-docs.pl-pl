@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386811"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234570"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Tworzenie projektu MFC DLL
 
@@ -46,7 +46,7 @@ Biblioteki MFC DLL jest plikiem binarnym, który działa jako współdzielona bi
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w **Eksploratora rozwiązań**.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w Eksploratorze rozwiązań. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz też
 
