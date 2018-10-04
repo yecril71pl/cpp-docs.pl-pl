@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599304"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250448"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL — Przestrzeń nazw
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Nazwa|Opis|
 |----------|-----------------|
 |[AsWeak, funkcja](../windows/asweak-function.md)|Pobiera słabe odwołanie do określonego wystąpienia.|
-|[Funkcja wywołania zwrotnego](../windows/callback-function-windows-runtime-cpp-template-library.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
+|[Funkcja wywołania zwrotnego (WRL)](../windows/callback-function-wrl.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
 |[CreateActivationFactory, funkcja](../windows/createactivationfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy, które można uaktywnić przez środowisko wykonawcze Windows.|
 |[CreateClassFactory, funkcja](../windows/createclassfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy.|
 |[Make, funkcja](../windows/make-function.md)|Inicjuje określonej klasy środowiska wykonawczego Windows.|
