@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd65d209bf24fb9285937cc998bd82d5ef3cb4f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418167"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235155"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Wskazówki: praca z projektami i rozwiązaniami (C++)
 
 Oto jak utworzyć projekt C++ w Visual Studio, dodać kod, a następnie skompilować i uruchomić projekt. Projektem w tym instruktażu jest program, który śledzi, ilu graczy gra w różne gry karciane.
 
-W programie Visual Studio praca jest organizowana w projektach i rozwiązaniach. Rozwiązanie może zawierać więcej niż jeden projekt — na przykład bibliotekę DLL i plik wykonywalny, który odwołuje się do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [rozwiązania i projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+W programie Visual Studio praca jest organizowana w projektach i rozwiązaniach. To rozwiązanie może mieć więcej niż jeden projekt — na przykład biblioteki DLL i plik wykonywalny, który odwołuje się do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [rozwiązania i projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
@@ -48,6 +48,9 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 1. Na liście zainstalowanych szablonów w środkowym okienku wybierz **aplikacji konsoli Windows**.
 
+   > [!NOTE]
+   > W poprzednich wersjach programu Visual Studio zainstalowanych szablonu jest wywoływana **Aplikacja konsoli Win32**.
+
 1. Wprowadź nazwę dla projektu w **nazwa** pole. W tym przykładzie wprowadź *gry*.
 
    Można zaakceptować lokalizację domyślną **lokalizacji** listy rozwijanej, wprowadzić inną lokalizację lub wybierz **Przeglądaj** przycisk, aby przejść do katalogu, w którym chcesz zapisać projekt.
@@ -62,11 +65,11 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 Możesz użyć **Eksploratora rozwiązań** do organizowania i zarządzania projektami, plikami i innych zasobów w rozwiązaniu.
 
-W tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu klasy program Visual Studio dodaje odpowiednie pliki .h i .cpp. Można wyświetlić wyniki w **Eksploratora rozwiązań**.
+Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu klasy program Visual Studio dodaje odpowiednie pliki .h i .cpp. Można wyświetlić wyniki w **Eksploratora rozwiązań**.
 
 ### <a name="to-add-a-class-to-a-project"></a>Aby dodać klasę do projektu
 
-1. Jeśli **Eksploratora rozwiązań** okno nie jest wyświetlana w programie Visual Studio, na pasku menu, wybierz polecenie **widoku** > **Eksploratora rozwiązań**.
+1. Jeśli **Eksploratora rozwiązań** okno nie jest wyświetlane w programie Visual Studio, na pasku menu, wybierz polecenie **widoku** > **Eksploratora rozwiązań**.
 
 1. W **Eksploratora rozwiązań**, wybierz opcję **gry** projektu. Na pasku menu wybierz **projektu** > **Dodaj klasę**.
 
@@ -84,11 +87,11 @@ W tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu 
       static int totalParticipants;
       ```
 
-   - Zmodyfikuj domyślnego konstruktora wygenerowanego przez Visual Studio. Po `public:` specyfikatorze dostępu, znajdź wiersz, który wygląda w następujący sposób:
+   - Zmodyfikuj domyślnego konstruktora wygenerowanego przez Visual Studio. Po `public:` specyfikatorze dostępu, znajdź wiersz, który wygląda następująco:
 
       `Cardgame();`
 
-      Zmodyfikuj ten konstruktor, aby pobierał jeden parametr typu `int`o nazwie *graczy*.
+      Zmodyfikuj konstruktora, aby pobierał jeden parametr typu `int`o nazwie *graczy*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->`Cardgame(int players);`
 
@@ -96,7 +99,7 @@ W tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu 
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->`static int GetParticipants() { return totalParticipants; }`
 
-   Plik Cardgame.h powinien po zmianach przypominać:
+   Plik Cardgame.h powinien wyglądać podobnie poniższy kod, po zmianach przypominać:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -112,11 +115,11 @@ W tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu 
    };
    ```
 
-   Wiersz `#pragma once` nakazuje kompilatorowi dołączenie pliku nagłówkowym tylko jeden raz. Aby uzyskać więcej informacji, zobacz [po](../preprocessor/once.md). Aby uzyskać informacje dotyczące innych słów kluczowych języka C++, w tym pliku nagłówkowym, zobacz [klasy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statyczne](../cpp/storage-classes-cpp.md), i [publicznych](../cpp/public-cpp.md).
+   Wiersz `#pragma once` nakazuje kompilatorowi dołączenie pliku nagłówkowym tylko jeden raz. Aby uzyskać więcej informacji, zobacz [po](../preprocessor/once.md). Aby uzyskać informacje dotyczące innych słów kluczowych języka C++, w pliku nagłówkowym powyżej, zobacz [klasy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statyczne](../cpp/storage-classes-cpp.md), i [publicznych](../cpp/public-cpp.md).
 
 1. Wybierz **Cardgame.cpp** kartę w górnej części okienka edycji, aby go otworzyć do edycji.
 
-1. Usuń całą zawartość pliku i zamień ją przez ten kod:
+1. Usuń całą zawartość pliku i Zamień kod:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
@@ -150,7 +153,7 @@ Dodawanie kodu do aplikacji, który umożliwia sprawdzenie, nowych funkcji.
 
 ### <a name="to-add-test-code-to-the-project"></a>Aby dodać kod testu do projektu
 
-1. W **Game.cpp** okna edytora Zastąp istniejący kod w tym:
+1. W **Game.cpp** okna edytora Zastąp istniejący kod składnią:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
@@ -203,7 +206,7 @@ Następnie skompilować projekt i uruchomić aplikację.
 
    Jeśli kompilacja nie powiodła się, porównaj swój kod, aby kod, który jest wyświetlany w poprzednich krokach.
 
-1. Aby uruchomić projekt, na pasku menu, wybierz opcję **debugowania** > **Rozpocznij bez debugowania**. Okno konsoli powinien zostać wyświetlony, a dane wyjściowe powinny wyglądać następująco:
+1. Aby uruchomić projekt, na pasku menu, wybierz opcję **debugowania** > **Rozpocznij bez debugowania**. Okno konsoli powinna zostać wyświetlona, a dane wyjściowe powinny przypominać:
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
