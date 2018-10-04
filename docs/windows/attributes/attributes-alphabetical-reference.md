@@ -1,0 +1,143 @@
+---
+title: Alfabetyczny spis atrybutów | Dokumentacja firmy Microsoft
+ms.custom: index-page
+ms.date: 10/02/2018
+ms.technology:
+- cpp-windows
+ms.topic: conceptual
+f1_keywords:
+- vc.attributes
+dev_langs:
+- C++
+helpviewer_keywords:
+- attributes [C++/CLI]
+ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789793"
+---
+# <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
+
+Następujące atrybuty są dostępne w programie Visual C++.
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|[aggregatable](aggregatable.md)|Wskazuje, że formant może być agregowany przez inny formant.|
+|[aggregates](aggregates.md)|Wskazuje, że formant agreguje klasy docelowej.|
+|[appobject](appobject.md)|Identyfikuje coclass jako obiekt aplikacji, która jest skojarzona z pełnej aplikacji EXE i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tej bibliotece typów.|
+|[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
+|[attribute](attribute.md)|Umożliwia tworzenie atrybutów niestandardowych.|
+|[bindable](bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|
+|[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
+|[przypadek](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
+|[coclass](coclass.md)|Tworzy obiekt COM, które można zaimplementować interfejsu COM.|
+|[com_interface_entry —](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
+|[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
+|[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
+|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[db_accessor](db-accessor.md)|Tworzy powiązanie kolumn w zestawie wierszy i wiąże ich odpowiednich mapowania dostępu.|
+|[db_column](db-column.md)|Wiąże określonej kolumny zestawu wierszy.|
+|[db_command](db-command.md)|Wykonuje polecenie OLE DB.|
+|[db_param](db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrów wejściowych lub wyjściowych.|
+|[db_source](db-source.md)|Tworzy i hermetyzuje połączenie za pośrednictwem dostawcy, ze źródłem danych.|
+|[db_table](db-table.md)|Zostanie otwarty tabeli OLE DB.|
+|[default](default-cpp.md)|Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.|
+|[defaultbind](defaultbind.md)|Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.|
+|[defaultcollelem](defaultcollelem.md)|Używane do optymalizacji kodu języka Visual Basic.|
+|[defaultvalue](defaultvalue.md)|Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.|
+|[defaultvtable](defaultvtable.md)|Definiuje interfejs jako domyślny interfejs vtable kontrolki.|
+|[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
+|[displaybind](displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.|
+|[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
+|[emitidl](emitidl.md)|Określa, czy wszystkie kolejne atrybuty IDL zostanie przetworzone i umieszczony w pliku .idl wygenerowany.|
+|[entry](entry.md)|Określa eksportowanych funkcji lub stałą w module, określając punkt wejścia w DLL.|
+|[event_receiver](event-receiver.md)|Tworzy odbiorca zdarzenia.|
+|[event_source](event-source.md)|Tworzy źródła zdarzenia.|
+|[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
+|[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|
+|[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|
+|[helpfile](helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|
+|[helpstring](helpstring.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
+|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
+|[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[idl_module](idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
+|[idl_quote](idl-quote.md)|Pozwala na używanie atrybutów lub IDL konstrukcji, które nie są obsługiwane w bieżącej wersji programu Visual C++.|
+|[iid_is](iid-is.md)|Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.|
+|[immediatebind](immediatebind.md)|Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.|
+|[Implementuje](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
+|[implements_category](implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|
+|[import](import.md)|Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, w których ma dotyczyć odwołanie z pliku .idl głównego.|
+|[importidl](importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|
+|[importlib](importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
+|[in](in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|
+|[include](include-cpp.md)|Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.|
+|[includelib —](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
+|[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy mają być przekazywane.|
+|[lcid](lcid.md)|Służy do przekazywania identyfikator ustawień regionalnych do funkcji.|
+|[length_is](length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|
+|[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
+|[licensed](licensed.md)|Wskazuje, że klasa coclass, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.|
+|[lokalne](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
+|[Moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[ms_union](ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|
+|[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
+|[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
+|[noncreatable](noncreatable.md)|Definiuje obiekt, który nie może być utworzone samodzielnie.|
+|[nonextensible](nonextensible.md)|Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania.|
+|[object](object-cpp.md)|Określa niestandardowy interfejs; równoznaczny z atrybutu niestandardowego.|
+|[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
+|[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
+|[Opcjonalne](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
+|[out](out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|
+|[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
+|[pragma](pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
+|[progid](progid.md)|Określa identyfikator ProgID dla obiektu COM.|
+|[propget](propget.md)|Określa funkcję właściwość metody dostępu (get).|
+|[propput](propput.md)|Określa funkcję ustawienie właściwości.|
+|[propputref](propputref.md)|Określa funkcję ustawienie właściwości, która używa odwołania, a nie wartość.|
+|[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
+|[public](public-cpp-attributes.md)|Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.|
+|[Zakres](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
+|[rdx](rdx.md)|Tworzy lub modyfikuje klucz rejestru.|
+|[readonly](readonly-cpp.md)|Zabrania przypisania do zmiennej.|
+|[ref](ref-cpp.md)|Określa odwołanie do wskaźnika.|
+|[registration_script](registration-script.md)|Wykonuje skrypt określoną rejestrację.|
+|[requestedit](requestedit.md)|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.|
+|[requires_category](requires-category.md)|Określa wymagany składnik kategorie dla klasy.|
+|[restricted](restricted.md)|Określa, że biblioteka lub członek modułu, interfejs lub dispinterface nie może być wywoływana arbitralnie.|
+|[retval](retval.md)|Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.|
+|[satype](satype.md)|Określa typ danych `SAFEARRAY`.|
+|[size_is](size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|
+|[source](source-cpp.md)|Wskazuje, że jest członkiem klasy, właściwość lub metoda jest źródłem zdarzeń.|
+|[string](string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte`, lub równoważne tablicy lub wskaźnika do takiej tablicy muszą być traktowane jako ciąg.|
+|[support_error_info](support-error-info.md)|Obsługuje raportowanie błędów dla obiektu docelowego.|
+|[switch_is](switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera składowa typu Unii.|
+|[switch_type](switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|
+|[synchronize](synchronize.md)|Synchronizuje dostęp do metody.|
+|[Wątkowość](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
+|[transmit_as](transmit-as.md)|Instruuje kompilator, aby skojarzyć typem prezentowane kompilowania aplikacji, które klient i serwer, z typem przesyłane.|
+|[uidefault](uidefault.md)|Wskazuje, że składowa informacji typu jest domyślny element członkowski do wyświetlania w interfejsie użytkownika.|
+|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[usesgetlasterror](usesgetlasterror.md)|Informuje obiekt wywołujący, że jeśli występuje błąd podczas wywoływania tej funkcji, obiekt wywołujący może wywoływać `GetLastError` można pobrać kod błędu.|
+|[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|
+|[v1_enum](v1-enum.md)|Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowych zamiast domyślnego 16-bitowych.|
+|[vararg](vararg.md)|Określa, że funkcja przyjmuje zmienną liczbę argumentów.|
+|[Wersja](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji interfejsu lub klasy.|
+|[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
+|[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty według grup](attributes-by-group.md)<br/>
+[Atrybuty w zależności od zastosowania](attributes-by-usage.md)

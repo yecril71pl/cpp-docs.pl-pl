@@ -1,7 +1,7 @@
 ---
 title: Zdefiniowane przez użytkownika atrybuty (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600384"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789231"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Atrybuty zdefiniowane przez użytkownika (C++ Component Extensions)
 
@@ -47,7 +47,7 @@ Atrybutów niestandardowych, które umożliwiają rozszerzenie metadanych elemen
 
 ### <a name="remarks"></a>Uwagi
 
-Informacje i składni przedstawione w tym temacie jest przeznaczona do zastąpienia informacje znajdujące się w [atrybutu](../windows/attribute.md).
+Informacje i składni przedstawione w tym temacie jest przeznaczona do zastąpienia informacje znajdujące się w [atrybutu](attributes/attribute.md).
 
 Można zdefiniować atrybut niestandardowy typ definiujący i dokonując <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosowanie <xref:System.AttributeUsageAttribute> atrybutu.
 
@@ -55,9 +55,9 @@ Na przykład Równoważenie obciążenia w Microsoft Transaction Server (MTS) 1.
 
 Aby uzyskać więcej informacji, zobacz,
 
-- [Docelowe atrybuty](../windows/attribute-targets-cpp-component-extensions.md)
+- [Docelowe atrybuty](attribute-targets-cpp-component-extensions.md)
 
-- [Typy parametrów atrybutu](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Typy parametrów atrybutu](attribute-parameter-types-cpp-component-extensions.md)
 
 Instrukcje dotyczące podpisywania zestawów w programie Visual C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 Argumenty atrybutów muszą być stałymi kompilacji; w większości przypadków powinny one być stałe literały.
 
-Zobacz [typeid](../windows/typeid-cpp-component-extensions.md) informacji na temat sposobu zwracania wartości System::Type z bloku atrybutów niestandardowych.
+Zobacz [typeid](typeid-cpp-component-extensions.md) informacji na temat sposobu zwracania wartości System::Type z bloku atrybutów niestandardowych.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platform środowiska uruchomieniowego](component-extensions-for-runtime-platforms.md)

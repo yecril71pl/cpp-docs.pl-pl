@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a10c91f34cd00b8524a047131e9a39b901c83fce
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089362"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788594"
 ---
 # <a name="compiler-error-c3455"></a>Błąd kompilatora C3455
 
 "attribute": żaden z konstruktorów atrybutu odpowiada tym argumentom
 
-Nieprawidłowa wartość został użyty do deklarowania atrybutu.  Zobacz [atrybut](../../windows/attribute.md) Aby uzyskać więcej informacji.
+Nieprawidłowa wartość został użyty do deklarowania atrybutu.  Zobacz [atrybut](../../windows/attributes/attribute.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

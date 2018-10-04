@@ -1,7 +1,7 @@
 ---
 title: Mutex — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597b84bf963957d4dd03c83f64044cb21b9a2607
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 37aaafa636f43671eb18436a49490caa10cf349f
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48239661"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789309"
 ---
 # <a name="mutex-class"></a>Mutex — Klasa
 
@@ -37,7 +37,7 @@ Reprezentuje obiekt synchronizacji, który wyłącznie kontroluje zasobu udostę
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-class Mutex : public HandleT<HandleTraits::MutexTraits>
+class Mutex : public HandleT<HandleTraits::MutexTraits>;
 ```
 
 ## <a name="members"></a>Elementy członkowskie

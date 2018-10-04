@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072228"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789205"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Kompilator ostrzeżenie (poziom 3) C4580
 
 [attribute] jest przestarzały; zamiast niego Określ System::Attribute lub Platform::Metadata jako klasę bazową
 
-[[atrybut](../../windows/attribute.md)] nie jest już preferowana składnia do tworzenia atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md). Dla kodu CLR pochodzić atrybuty z `System::Attribute`. Dla kodu środowiska uruchomieniowego Windows pochodzić atrybuty z `Platform::Metadata`.
+[[atrybut](../../windows/attributes/attribute.md)] nie jest już preferowana składnia do tworzenia atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md). Dla kodu CLR pochodzić atrybuty z `System::Attribute`. Dla kodu środowiska uruchomieniowego Windows pochodzić atrybuty z `Platform::Metadata`.
 
 ## <a name="example"></a>Przykład
 

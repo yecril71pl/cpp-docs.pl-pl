@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4151d712c12cb34785c3f4ab77c76cdd78d4830
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ac866d742734f5b6126315a0b79020c9ec7fb74
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024089"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788399"
 ---
 # <a name="compiler-error-c3749"></a>Błąd kompilatora C3749
 
 "attribute": atrybut niestandardowy nie można używać wewnątrz funkcji
 
-Atrybut niestandardowy nie można używać wewnątrz funkcji. Aby uzyskać więcej informacji na temat atrybutów niestandardowych, zobacz temat [atrybutu](../../windows/attribute.md).
+Atrybut niestandardowy nie można używać wewnątrz funkcji. Aby uzyskać więcej informacji na temat atrybutów niestandardowych, zobacz temat [atrybutu](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Przykład
 

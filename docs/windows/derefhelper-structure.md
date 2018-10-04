@@ -1,7 +1,7 @@
 ---
 title: Derefhelper — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 016f6c5effeb964d5682f0a83ef63a4884b324c6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d9339256d4dfda717d52b11da965b3600a53cd1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388501"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788360"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper — Struktura
 
@@ -31,14 +31,10 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper;
 
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper<T*>;
 ```
 

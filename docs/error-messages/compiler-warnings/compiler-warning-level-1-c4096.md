@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047697"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788703"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Kompilator ostrzeżenie (poziom 1) C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047697"
 
 Definicja interfejsu zamierzony może mieć jako interfejs modelu COM nie został zdefiniowany jako interfejs COM i w związku z tym nie będzie emitowany do pliku IDL.
 
-Zobacz [atrybuty interfejsu](../../windows/interface-attributes.md) atrybuty listy, które wskazują interfejs jest interfejsem COM.
+Zobacz [atrybuty interfejsu](../../windows/attributes/interface-attributes.md) atrybuty listy, które wskazują interfejs jest interfejsem COM.
 
 Poniższy przykład spowoduje wygenerowanie C4096:
 
