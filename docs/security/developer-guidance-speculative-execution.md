@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422671"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821403"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
@@ -73,7 +73,7 @@ Powyższe kroki zawierają z przykładem użycia techniką OPRÓŻNIANIA + Zała
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Może to mieć wpływ jaki scenariusz oprogramowania?
 
-Tworzenie bezpiecznego oprogramowania za pomocą procesu, takich jak [cyklu projektowania zabezpieczeń](https://www.microsoft.com/en-us/sdl/) (SDL) zwykle wymaga deweloperom identyfikowanie granic zaufania, które istnieją w aplikacjach. Istnieje granicy zaufania w miejscach, w których aplikacja może współpracować z danych pochodzących z kontekstu niższym poziomie zaufania, takich jak innego procesu w systemie lub proces trybu użytkownika niebędącego administratorem w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące kanałów po stronie wykonywania spekulacyjnego ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolowania kodu i danych na urządzeniu.
+Tworzenie bezpiecznego oprogramowania za pomocą procesu, takich jak [cyklu projektowania zabezpieczeń](https://www.microsoft.com/sdl/) (SDL) zwykle wymaga deweloperom identyfikowanie granic zaufania, które istnieją w aplikacjach. Istnieje granicy zaufania w miejscach, w których aplikacja może współpracować z danych pochodzących z kontekstu niższym poziomie zaufania, takich jak innego procesu w systemie lub proces trybu użytkownika niebędącego administratorem w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące kanałów po stronie wykonywania spekulacyjnego ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolowania kodu i danych na urządzeniu.
 
 Poniższa tabela zawiera podsumowanie modele zabezpieczeń oprogramowania, których deweloperzy może być konieczne zwracać uwagę na te luki w zabezpieczeniach, występuje:
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Wstawiał barierę przewidywania za pomocą kompilatora czasu Instrumentacji
 
-Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który wstawia automatycznie wstawiał barierę dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie zagrożone schematów kodowania i jako takie deweloperzy nie należy polegać na go jako kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
+Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który wstawia automatycznie wstawiał barierę dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie zagrożone schematów kodowania i jako takie deweloperzy nie należy polegać na go jako kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
 
 ### <a name="masking-array-indices"></a>Indeksy tablicy maskowania
 

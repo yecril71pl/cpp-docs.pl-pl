@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466229"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821438"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS
 
@@ -138,7 +138,7 @@ Uruchom **vcpkg integracji instalacji** skonfigurować Visual Studio Code w syst
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Wyceluj Linux, od Windows za pośrednictwem WSL
 
-Może tworzyć pliki binarne systemu Linux, na komputerze Windows za pomocą podsystemu Windows dla systemu Linux (WSL). Postępuj zgodnie z instrukcjami, aby [Konfigurowanie WSL w systemie Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)i skonfiguruj ją za pomocą [rozszerzenia programu Visual Studio dla systemu Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Można umieścić wszystkie utworzone biblioteki dla systemów Windows i Linux w tym samym folderze, a do niego dostęp z WSL i Windows.
+Może tworzyć pliki binarne systemu Linux, na komputerze Windows za pomocą podsystemu Windows dla systemu Linux (WSL). Postępuj zgodnie z instrukcjami, aby [Konfigurowanie WSL w systemie Windows 10](/windows/wsl/install-win10)i skonfiguruj ją za pomocą [rozszerzenia programu Visual Studio dla systemu Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Można umieścić wszystkie utworzone biblioteki dla systemów Windows i Linux w tym samym folderze, a do niego dostęp z WSL i Windows.
 
 
 ## <a name="export_binaries_per_project"></a> Eksportowanie skompilowane pliki binarne i nagłówki
@@ -243,4 +243,3 @@ Zawartość wystąpienia vcpkg jest:
 |---------|---------|
 |**--trójkę \<t >**|Określ trójkę architektury docelowej. (domyślne: `%VCPKG_DEFAULT_TRIPLET%`, zobacz też **trójkę pomocy vcpkg**)|
 |**--vcpkg-root \<path>**|Określ katalog główny vcpkg (domyślne: `%VCPKG_ROOT%`)|
-

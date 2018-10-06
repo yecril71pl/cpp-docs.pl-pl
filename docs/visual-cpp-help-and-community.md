@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676548"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820682"
 ---
 # <a name="visual-c-help-and-community"></a>Pomoc i społeczność Visual C++
 
@@ -34,7 +34,7 @@ Oto jak do uzyskiwania informacji na temat sposobu pisania C++ kodu i użyć nar
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Zawiera informacje i pojęciach dokumentacja języka Visual c++. W części biblioteki MSDN Library.|
-|[Centrum deweloperów Windows](https://developer.microsoft.com/en-us/windows/)|Zawiera informacje o sposobie używania języka C++ i innych języków do tworzenia aplikacji dla systemu Windows 8. Część Centrum deweloperów Windows; zawartość w języku C++ znajduje się w dokumentacji > dokumentacja języka node.|
+|[Centrum deweloperów Windows](https://developer.microsoft.com/windows/)|Zawiera informacje o sposobie używania języka C++ i innych języków do tworzenia aplikacji dla systemu Windows 8. Część Centrum deweloperów Windows; zawartość w języku C++ znajduje się w dokumentacji > dokumentacja języka node.|
 
 ### <a name="online-and-offline-documentation"></a>Dokumentacja online i Offline
 

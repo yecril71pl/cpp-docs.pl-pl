@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087815"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821169"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): instrukcji switch mogą wprowadzać i Inicjowanie zmiennej, których zakres jest ograniczony do bloku instrukcji switch:
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 Wewnętrzny blok **Przełącz** instrukcji może zawierać definicje z inicjalizacji, tak długo, jak są one dostępne — to znaczy nie są pomijane przez wszystkie możliwe wykonania ścieżki. Nazwy wprowadzone za pomocą tych deklaracji mają zakres lokalny. Na przykład:
@@ -138,35 +138,35 @@ Wewnętrzny blok **Przełącz** instrukcji może zawierać definicje z inicjaliz
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 A **Przełącz** poufności informacji mogą być zagnieżdżone. W takich przypadkach **przypadek** lub **domyślne** etykiety są skojarzone z najbliższą **Przełącz** instrukcji, która je otacza.
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
 Microsoft C nie ogranicza liczby przypadków wartości w **Przełącz** instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w **Przełącz** instrukcji.
 

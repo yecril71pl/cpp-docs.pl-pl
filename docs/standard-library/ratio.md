@@ -41,16 +41,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5ffa7666f9b976312bf1c3115d93204bdd8f8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53f3e618378abd70506e2fed45767c7c856320b0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853755"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821148"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
-Dołącz nagłówek standardowy \<stosunek > Aby zdefiniować stałe i szablony, które są używane do przechowywania i manipulowania liczby wymierne w czasie kompilacji.
+Dołączyć standardowy nagłówek \<współczynnik > do definiowania stałych i szablony, które są używane do przechowywania i przetwarzania liczby wymierne w czasie kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,7 +62,7 @@ Dołącz nagłówek standardowy \<stosunek > Aby zdefiniować stałe i szablony,
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+struct ratio // holds the ratio of Numerator to Denominator
 {
    static constexpr std::intmax_t num;
    static constexpr std::intmax_t den;
@@ -70,15 +70,15 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 }
 ```
 
-Szablon `ratio` definiuje stałe statyczne `num` i `den` tak, aby `num`  /  `den` == licznik / Denominator i `num` i `den` mieć nie typowych czynników. `num` / `den` to wartość, która jest reprezentowana przez klasy szablonu. W związku z tym `type` wyznacza wystąpienia `ratio<num, den>`.
+Szablon `ratio` definiuje stałe statyczne `num` i `den` tak, aby `num`  /  `den` == licznik / mianownik i `num` i `den` mają żadnych wspólnych czynników. `num` / `den` to wartość, która jest reprezentowana przez klasę szablonu. W związku z tym `type` wyznacza utworzyć wystąpienia `ratio<num, den>`.
 
 ### <a name="specializations"></a>Specjalizacje
 
-\<współczynnik > definiuje również specjalizacjach `ratio` mają następującą postać.
+\<współczynnik > definiuje również specjalizacje `ratio` mają następującą postać.
 
 `template <class R1, class R2> struct ratio_specialization`
 
-Każdy specjalizacji przyjmuje dwa parametry szablonu, które muszą być również specjalizacjach `ratio`. Wartość `type` jest określany przez skojarzony operacji logicznej.
+Każda specjalizacja przyjmuje dwa parametry szablonu, które musi być także specjalizacjami `ratio`. Wartość `type` jest określana przez skojarzony operacji logicznej.
 
 |Nazwa|`type` Wartość|
 |----------|------------------|
@@ -95,7 +95,7 @@ Każdy specjalizacji przyjmuje dwa parametry szablonu, które muszą być równi
 
 ### <a name="typedefs"></a>definicje typów
 
-Dla wygody nagłówka definiuje stosunek dla standardowych prefiksów SI:
+Dla wygody nagłówek definiuje współczynniki dla standardowych prefiksów SI:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;

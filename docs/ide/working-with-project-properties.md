@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398667"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821390"
 ---
 # <a name="working-with-project-properties"></a>Praca z właściwościami projektu
 
@@ -250,7 +250,7 @@ W okienku po prawej stronie Zmień **środowiska** lub **Scal środowisko** usta
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Modyfikowanie właściwości i obiektów docelowych bez wprowadzania zmian w pliku projektu
 
-Bez wprowadzania zmian w pliku projektu, można zastąpić właściwości projektu i obiekty docelowe w wierszu polecenia programu MSBuild. Jest to przydatne, gdy użytkownik chce zastosować niektórych właściwości tymczasowo lub od czasu do czasu. Zakłada się pewną wiedzę na temat programu MSBuild. Aby uzyskać więcej informacji, zobacz [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Bez wprowadzania zmian w pliku projektu, można zastąpić właściwości projektu i obiekty docelowe w wierszu polecenia programu MSBuild. Jest to przydatne, gdy użytkownik chce zastosować niektórych właściwości tymczasowo lub od czasu do czasu. Zakłada się pewną wiedzę na temat programu MSBuild. Aby uzyskać więcej informacji, zobacz [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Aby utworzyć plik .props i .targets, można użyć edytora XML w Visual Studio lub dowolnego edytora tekstów. Nie używaj **Menedżer właściwości** w tym scenariuszu, ponieważ dodaje właściwości do pliku projektu.

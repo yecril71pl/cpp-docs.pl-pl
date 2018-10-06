@@ -1,7 +1,7 @@
 ---
 title: 'Przewodnik: Kompilowanie programu C w wierszu polecenia | Dokumentacja firmy Microsoft'
 ms.custom: conceptual
-ms.date: 06/21/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8361890c264e11fbd5817331e07ba9005da17240
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397902"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821377"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu C w wierszu polecenia
 
@@ -36,7 +36,7 @@ Program Visual Studio jest zintegrowanego środowiska projektowego obsługujące
 
 Narzędzia Build Tools dla programu Visual Studio w wersji programu Visual Studio instaluje tylko narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki wymagane do tworzenia programów C i C++. Jest doskonała do laboratoriów kompilacji lub klasą wykonuje i instaluje względnie szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) i uruchom Instalatora.
 
-Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy sprawdzić, czy narzędzia są zainstalowane i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ posiada złożone wymagania dotyczące środowiska wiersza polecenia w celu znalezienia narzędzia, nagłówki i biblioteki, które są używane. **Nie można użyć Visual C++ w oknie wiersza polecenia zwykły** bez pewnych przygotowań. Potrzebujesz *wiersz polecenia dla deweloperów* okno jest oknem regularne wiersza polecenia, które zawiera wszystkie zmienne środowiskowe wymagane Ustaw. Na szczęście Visual C++ instaluje skróty dla Ciebie uruchomić wiersz polecenia dla deweloperów, które środowisko dla kompilacji z wiersza polecenia. Niestety nazwy skróty wiersza polecenia dla deweloperów i gdzie znajdują się różnią się w prawie każdym wersji programu Visual C++ i w innych wersjach systemu Windows. Jest pierwsze zadanie wskazówki można znaleźć odpowiednie skrótu do użycia.
+Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy sprawdzić, czy narzędzia są zainstalowane i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożone wymagania dotyczące środowiska wiersza polecenia można znaleźć narzędzia, nagłówki i biblioteki, które są używane. **Nie można użyć Visual C++ w oknie wiersza polecenia zwykły** bez pewnych przygotowań. Potrzebujesz *wiersz polecenia dla deweloperów* okno jest oknem regularne wiersza polecenia, które zawiera wszystkie zmienne środowiskowe wymagane Ustaw. Na szczęście Visual C++ instaluje skróty dla Ciebie uruchomić wiersz polecenia dla deweloperów, które środowisko dla kompilacji z wiersza polecenia. Niestety nazw skróty wiersza polecenia dla deweloperów i gdzie są przechowywane różnią się w prawie każdym wersji programu Visual C++ i w innych wersjach systemu Windows. Jest pierwsze zadanie wskazówki można znaleźć odpowiednie skrótu do użycia.
 
 > [!NOTE]
 > Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz wszelkie wymagane nagłówki i biblioteki. Niektóre z tych wartości różnią się dla każdej konfiguracji kompilacji. Należy ustawić te wartości środowiskowe samodzielnie, jeśli nie używasz skrótów klawiaturowych. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Ponieważ środowisko kompilacji jest złożone, zdecydowanie zalecamy używasz skrót do wiersza polecenia dla deweloperów, zamiast tworzyć własne.
@@ -49,7 +49,7 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
 
    Jeśli używasz innej wersji programu Visual Studio lub działają innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
 
-2. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
+1. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają mniej więcej tak:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -57,11 +57,9 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
    Copyright (C) Microsoft Corporation.  All rights reserved.
 
    usage: cl [ option... ] filename... [ /link linkoption... ]
-
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>
    ```
 
-   Może to być różnice w bieżącym katalogu lub numerów wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli jest to podobne do wyświetlanych, następnie można przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
+   Może to być różnice w bieżącym katalogu lub numerów wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli powyższe dane wyjściowe będą podobne do zostanie wyświetlony, możesz przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
 
    > [!NOTE]
    > Jeśli wystąpi błąd, takie jak "" cl"nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104 po uruchomieniu **cl** polecenia, a następnie albo nie używasz wiersz polecenia dla deweloperów lub coś jest nie tak z instalacji programu Visual C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
@@ -73,11 +71,11 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Utwórz plik źródłowy C i skompilować go w wierszu polecenia
 
-1. W oknie wiersza polecenia dla deweloperów, wprowadź **cd c:\\**  Aby zmienić bieżący katalog roboczy w folderze głównym dysku C:. Następnie wprowadź **md c:\simple** Utwórz katalog, a następnie wprowadź **cd c:\simple** zmiany do tego katalogu. Jest to katalog, który będzie zawierać pliku źródłowego i skompilowanego programu.
+1. W oknie wiersza polecenia dla deweloperów, wprowadź `cd c:\` Aby zmienić bieżący katalog roboczy w folderze głównym dysku C:. Następnie wprowadź `md c:\simple` Utwórz katalog, a następnie wprowadź `cd c:\simple` zmiany do tego katalogu. Ten katalog będzie przechowywać pliku źródłowego i skompilowanego programu.
 
-2. Wprowadź **simple.c Notatnik** w wierszu polecenia dla deweloperów. W programie Notatnik alertu wyświetlonego oknie dialogowym wybierz **tak** do utworzenia nowego pliku simple.c w katalogu roboczym.
+1. Wprowadź `notepad simple.c` w wierszu polecenia dla deweloperów. W programie Notatnik alertu wyświetlonego oknie dialogowym wybierz **tak** do utworzenia nowego pliku simple.c w katalogu roboczym.
 
-3. W programie Notatnik wprowadź następujące wiersze kodu:
+1. W programie Notatnik wprowadź następujące wiersze kodu:
 
     ```C
     #include <stdio.h>
@@ -89,9 +87,9 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
     }
     ```
 
-4. Na pasku menu Notatnika wybierz **pliku**, **Zapisz** można zapisać simple.c w katalogu roboczym.
+1. Na pasku menu Notatnika wybierz **pliku** > **Zapisz** można zapisać simple.c w katalogu roboczym.
 
-5. Przejdź z powrotem do okna wiersza polecenia dla deweloperów. Wprowadź **dir** w wierszu polecenia, aby wyświetlić listę zawartości katalogu c:\simple. Powinny zostać wyświetlone simple.c pliku źródłowego w listy zawartości katalogu, który wygląda następująco:
+1. Przejdź z powrotem do okna wiersza polecenia dla deweloperów. Wprowadź `dir` w wierszu polecenia, aby wyświetlić listę zawartości katalogu c:\simple. Powinny zostać wyświetlone simple.c plików źródłowych na liście katalogu, który wygląda coś w rodzaju:
 
     ```Output
     C:\simple>dir
@@ -110,7 +108,7 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
 
    Daty i inne szczegóły różnią się na tym komputerze. Jeśli nie widzisz pliku kodu źródłowego, simple.c, upewnij się, że zmiany zostały wprowadzone do katalogu c:\simple, w którym został utworzony i w programie Notatnik, upewnij się, zapisać pliku źródłowego w tym katalogu. Upewnij się również zapisać kodu źródłowego z rozszerzeniem nazwy pliku .c, nie rozszerzenia .txt.
 
-6. Aby skompilować program, należy wprowadzić **cl simple.c** w wierszu polecenia dla deweloperów.
+1. Aby skompilować program, należy wprowadzić `cl simple.c` w wierszu polecenia dla deweloperów.
 
    Można wyświetlić nazwę programu wykonywalnego simple.exe w wierszach danych wyjściowych wyświetlanych przez kompilator:
 
@@ -133,7 +131,7 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
    > [!NOTE]
    > Jeśli wystąpi inny kompilator lub konsolidator błędu lub ostrzeżenia, przejrzyj kod źródłowy, aby poprawić błędy, a następnie zapisz go i ponownie uruchomić kompilator. Aby uzyskać informacje o błędach Użyj pola wyszukiwania w górnej części tej strony do wyszukania numer błędu.
 
-7. Aby uruchomić program, należy wprowadzić **proste** w wierszu polecenia.
+1. Aby uruchomić program, należy wprowadzić `simple` w wierszu polecenia.
 
    Program wyświetla tekst, a następnie kończy działanie:
 
@@ -141,13 +139,13 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
     Hello, World! This is a native C program compiled on the command line.
     ```
 
-   Gratulacje, udało po prostu skompilowane i uruchomić C program przy użyciu wiersza polecenia.
+   Gratulacje, udało skompilowane i uruchomić C program przy użyciu wiersza polecenia.
 
 ## <a name="next-steps"></a>Następne kroki
 
 W tym przykładzie "Hello, World" to około tak proste, jak pobrać C program. Programy rzeczywistych mają pliki nagłówkowe i więcej plików źródłowych, link w bibliotekach i wykonywania użytecznej pracy.
 
-Kroki opisane w tym przewodniku służy do tworzenia własnego kodu języka C, zamiast wpisywać pokazano przykładowy kod. Możesz także tworzyć wiele C przykładowych programów napisanych w których odnaleźć w innym miejscu. Aby skompilować program, który ma wiele plików kodu źródłowego, należy wprowadzić je wszystkie w wierszu polecenia, takie jak to:
+Kroki opisane w tym przewodniku służy do tworzenia własnego kodu języka C, zamiast wpisywać pokazano przykładowy kod. Możesz także tworzyć wiele C przykładowych programów napisanych w których odnaleźć w innym miejscu. Skompilować program, który zawiera pliki kodu źródłowego dodatkowe, wprowadź je wszystkie w wierszu polecenia, takich jak:
 
 `cl file1.c file2.c file3.c`
 
@@ -159,13 +157,13 @@ I aby automatycznie wykryć więcej błędów programowania, zaleca się skompil
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, Debuguj i Analizuj swój kod. Lista szybkich, wprowadź **cl /?** w wierszu polecenia dla deweloperów. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszy kompilacji. Aby uzyskać więcej informacji dotyczących kompilatora i opcje konsolidatora i jego użycia, zobacz [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, Debuguj i Analizuj swój kod. Lista szybkich, wprowadź `cl /?` w wierszu polecenia dla deweloperów. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszy kompilacji. Aby uzyskać więcej informacji dotyczących kompilatora i opcje konsolidatora i jego użycia, zobacz [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
 
 NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i tworzyć bardziej złożone projekty w wierszu polecenia. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [odwołanie NMAKE](../build/nmake-reference.md) i [MSBuild](../build/msbuild-visual-cpp.md).
 
-W językach C i C++ są podobne, ale nie sam. Kompilator języka Visual C++ używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator języka Visual C++ traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików jako C niezależnie od rozszerzenia nazwy pliku, należy użyć [TP](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
+W językach C i C++ są podobne, ale nie sam. Kompilator języka Visual C++ używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator języka Visual C++ traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików jako C nie zależne od rozszerzenia nazwy pliku, należy użyć [TP](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
 
-Kompilator Visual C++, C jest zazwyczaj zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośny kod C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez kompilator Visual C++. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Kompilator Visual C++, C jest zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośny kod C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez kompilator Visual C++. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Zobacz także
 

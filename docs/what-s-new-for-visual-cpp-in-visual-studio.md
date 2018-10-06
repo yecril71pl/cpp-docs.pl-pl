@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07c8b18e8de5caf924cd31a18eb304778634050f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722322"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821464"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co nowego w języku Visual C++ w programie Visual Studio 2017
 
@@ -65,7 +65,7 @@ Dodatkowe ulepszenia diagnostyki w kompilatorze. Aby uzyskać więcej informacji
 
 **Visual Studio 2017 w wersji 15.5**:
 
-Visual C++ runtime wydajności w dalszym ciągu poprawić ze względu na lepszą jakość wygenerowanego kodu. Oznacza to, że można po prostu kompilację kodu, a aplikacja działa szybciej. Niektóre optymalizacje kompilatora są całkiem nowe, takich jak wektoryzację magazynów warunkowych wartości skalarnych, łączenie wywołań `sin(x)` i `cos(x)` w nowym `sincos(x)`i eliminowania nadmiarowe instrukcji od optymalizatora architektury SSA. Inne optymalizacje kompilatora są ulepszeniami istniejących funkcji, takich jak heurystyki Diagnostyka wektoryzowania automatycznego wyrażeń warunkowych, lepszej optymalizacji pętli i generowanie kodu minimalnej/maksymalnej float. Konsolidator ma nowy i szybsze **/OPT: ICF** wdrożenia, co może skutkować 9% link szybsze czasu, a inne poprawki wydajności w łączenie przyrostowe. Aby uzyskać więcej informacji, zobacz [od (optymalizacje)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) i [/incremental (Link przyrostowo)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
+Visual C++ runtime wydajności w dalszym ciągu poprawić ze względu na lepszą jakość wygenerowanego kodu. Oznacza to, że można po prostu kompilację kodu, a aplikacja działa szybciej. Niektóre optymalizacje kompilatora są całkiem nowe, takich jak wektoryzację magazynów warunkowych wartości skalarnych, łączenie wywołań `sin(x)` i `cos(x)` w nowym `sincos(x)`i eliminowania nadmiarowe instrukcji od optymalizatora architektury SSA. Inne optymalizacje kompilatora są ulepszeniami istniejących funkcji, takich jak heurystyki Diagnostyka wektoryzowania automatycznego wyrażeń warunkowych, lepszej optymalizacji pętli i generowanie kodu minimalnej/maksymalnej float. Konsolidator ma nowy i szybsze **/OPT: ICF** wdrożenia, co może skutkować 9% link szybsze czasu, a inne poprawki wydajności w łączenie przyrostowe. Aby uzyskać więcej informacji, zobacz [od (optymalizacje)](build/reference/opt-optimizations.md) i [/incremental (Link przyrostowo)](build/reference/incremental-link-incrementally.md).
 
 Visual C++ obsługuje rozszerzenia AVX-512 firmy Intel, w tym instrukcje dotyczące długości wektora, które udostępniają nowe funkcje w AVX-512 do rejestrach 128 - i 256-bitowy.
 
@@ -439,7 +439,7 @@ Aby uzyskać więcej informacji, zobacz [Boost.Test Unit Testing: Biblioteka dyn
 
 **Visual Studio 2017 w wersji 15.7**:
 
-[Funkcja CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) obsługiwane dodane dla projektów testów jednostkowych C++. Aby uzyskać więcej informacji, zobacz [ogłoszenie CodeLens dla testów jednostkowych C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
+[Funkcja CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) obsługiwane dodane dla projektów testów jednostkowych C++. Aby uzyskać więcej informacji, zobacz [ogłoszenie CodeLens dla testów jednostkowych C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio diagnostyki grafiki
 

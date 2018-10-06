@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394455"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821221"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
@@ -76,11 +76,13 @@ Uwaga: Lista jest wypełniana podczas wpisywania. Nie naciśnij **Enter**.
 
 Aby uzyskać więcej informacji na temat makr i dlaczego należy ich używać zamiast zakodowanych ścieżek, jeśli to możliwe, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Aby uzyskać listę często używanych makr, zobacz [typowe makra dla poleceń i właściwości kompilacji](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Aby uzyskać listę często używanych makr, zobacz [typowe makra dla poleceń i właściwości kompilacji](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Można zdefiniować własne makra na dwa sposoby:
--   Ustawianie zmiennych środowiskowych w wierszu polecenia dla deweloperów. Wszystkie zmienne środowiskowe są traktowane jako makra i właściwości programu MSBuild.
--   Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](working-with-project-properties.md#bkmkPropertiesVersusMacros).
+
+- Ustawianie zmiennych środowiskowych w wierszu polecenia dla deweloperów. Wszystkie zmienne środowiskowe są traktowane jako makra i właściwości programu MSBuild.
+
+- Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
 Aby uzyskać więcej informacji, zobacz te Posty na blogu: [katalogi VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [właściwości dziedziczone i arkusze właściwości](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [Visual Studio 2010 C++ przewodnik aktualizacji projektu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
 

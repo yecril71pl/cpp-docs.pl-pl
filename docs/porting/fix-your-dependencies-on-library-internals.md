@@ -15,34 +15,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70ef59ff43e7a8002ce312bd79702e465f52c74
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18e72e6b5e3fdfdb352d908b2fb9d0609593e7c2
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385875"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820935"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Naprawianie zależności w bibliotece wewnętrznej
 
-Firma Microsoft opublikowała kod źródłowy biblioteki standardowej, większość Biblioteka uruchomieniowa C i inne biblioteki Microsoft wiele wersji programu Visual Studio. Celem jest, aby lepiej zrozumieć zachowanie biblioteki i debugowania kodu. Jeden efekt uboczny publikowania kod źródłowy biblioteki jest czy niektóre wartości wewnętrznych struktur danych i funkcje są widoczne, mimo że nie są one częścią interfejs biblioteki. Zazwyczaj mają nazwy rozpoczynające się z dwoma podkreśleniami lub znakiem podkreślenia następuje litera, nazw, które C++ Standard zastrzega sobie do implementacji. Te wartości, struktur i funkcje są szczegóły implementacji, które mogą ulec zmianie, zgodnie z czasem ewoluować biblioteki, więc zdecydowanie zaleca się wykonanie wszelkich zależności na nich. Jeśli to zrobisz, istnieje ryzyko kod przenośny między i problemy podczas próby migracji kodu do nowej wersji bibliotek.  
+Firma Microsoft opublikowała kod źródłowy biblioteki standardowej, większość Biblioteka uruchomieniowa C i inne biblioteki Microsoft wiele wersji programu Visual Studio. Celem jest, aby lepiej zrozumieć zachowanie biblioteki i debugowania kodu. Jeden efekt uboczny publikowania kod źródłowy biblioteki jest czy niektóre wartości wewnętrznych struktur danych i funkcje są widoczne, mimo że nie są one częścią interfejs biblioteki. Zazwyczaj mają nazwy rozpoczynające się z dwoma podkreśleniami lub znakiem podkreślenia następuje litera, nazw, które C++ Standard zastrzega sobie do implementacji. Te wartości, struktur i funkcje są szczegóły implementacji, które mogą ulec zmianie, zgodnie z czasem ewoluować biblioteki, więc zdecydowanie zaleca się wykonanie wszelkich zależności na nich. Jeśli to zrobisz, istnieje ryzyko kod przenośny między i problemy podczas próby migracji kodu do nowej wersji bibliotek.
 
 W większości przypadków What's New lub dokumentu fundamentalne zmiany w każdej wersji programu Visual Studio nie wspomnieć o zmiany w bibliotece wewnętrznej. Po wszystkich nie są powinien mieć wpływ tych szczegółów implementacji. Jednak czasami stosowania kodu, które widać w bibliotece jest zbyt duża. W tym temacie omówiono zależności na CRT i standardowej biblioteki elementy wewnętrzne, które mogą mieć skorzystała z i zaktualizuj kod w celu usunięcia tych zależności, co pozwala dowolnie bardziej przenośny lub migrację do nowych wersji biblioteki.
 
-## <a name="hashseq"></a>_Hash_seq  
+## <a name="hashseq"></a>_Hash_seq
 
-Funkcja skrótu wewnętrznego `std::_Hash_seq(const unsigned char *, size_t)`, który jest używany do implementowania `std::hash` na niektórych typach parametrów był widoczny w nowszych wersjach standardowej biblioteki. Ta funkcja implementowana [skrótu FNV 1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na sekwencję znaków.  
-  
-Aby usunąć tę zależność, masz kilka opcji.  
+Funkcja skrótu wewnętrznego `std::_Hash_seq(const unsigned char *, size_t)`, który jest używany do implementowania `std::hash` na niektórych typach parametrów był widoczny w nowszych wersjach standardowej biblioteki. Ta funkcja implementowana [skrótu FNV 1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na sekwencję znaków.
 
-- Jeśli zgodne z zamiarami użytkownika polega na umieszczeniu `const char *` sekwencji do nieuporządkowaną kontenera przy użyciu tej samej maszyny kod skrótu jako `basic_string`, możecie przy użyciu `std::hash` przeciążenia szablonu, który przyjmuje `std::string_view`, która zwraca wartość tego skrótu w przenośne sposób. Kod biblioteki ciąg może być lub może nie zależą od stosowania skrótów FNV 1a w przyszłości, więc jest najlepszym sposobem uniknięcia zależności algorytmu mieszania określonego. 
-  
-- Jeśli jest zgodne z zamiarami użytkownika do generowania skrótów FNV 1a za pośrednictwem dowolnego pamięci, wprowadziliśmy kod dostępne w usłudze GitHub w [VCSamples]( https://github.com/Microsoft/vcsamples) repozytorium w pliku nagłówka autonomicznej [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), w obszarze [Licencją MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Dołączono również Kopiuj tutaj dla Twojej wygody. Możesz skopiować ten kod do pliku nagłówka, Dodaj nagłówek do jakiegokolwiek kodu, których dotyczy problem, a następnie znajdź i Zamień `_Hash_seq` przez `fnv1a_hash_bytes`. Otrzymasz identyczne zachowanie wewnętrznej implementacji w `_Hash_seq`. 
+Aby usunąć tę zależność, masz kilka opcji.
 
-```cpp  
+- Jeśli zgodne z zamiarami użytkownika polega na umieszczeniu `const char *` sekwencji do nieuporządkowaną kontenera przy użyciu tej samej maszyny kod skrótu jako `basic_string`, możecie przy użyciu `std::hash` przeciążenia szablonu, który przyjmuje `std::string_view`, która zwraca wartość tego skrótu w przenośne sposób. Kod biblioteki ciąg może być lub może nie zależą od stosowania skrótów FNV 1a w przyszłości, więc jest najlepszym sposobem uniknięcia zależności algorytmu mieszania określonego.
+
+- Jeśli jest zgodne z zamiarami użytkownika do generowania skrótów FNV 1a za pośrednictwem dowolnego pamięci, wprowadziliśmy kod dostępne w usłudze GitHub w [VCSamples]( https://github.com/Microsoft/vcsamples) repozytorium w pliku nagłówka autonomicznej [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), w obszarze [Licencją MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Dołączono również Kopiuj tutaj dla Twojej wygody. Możesz skopiować ten kod do pliku nagłówka, Dodaj nagłówek do jakiegokolwiek kodu, których dotyczy problem, a następnie znajdź i Zamień `_Hash_seq` przez `fnv1a_hash_bytes`. Otrzymasz identyczne zachowanie wewnętrznej implementacji w `_Hash_seq`.
+
+```cpp
 /*
 VCSamples
 Copyright (c) Microsoft Corporation
-All rights reserved. 
+All rights reserved.
 MIT License
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -67,7 +67,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
     static_assert(sizeof(size_t) == 8, "This code is for 64-bit size_t.");
     const size_t fnv_offset_basis = 14695981039346656037ULL;
     const size_t fnv_prime = 1099511628211ULL;
-
 #else /* defined(_WIN64) */
     static_assert(sizeof(size_t) == 4, "This code is for 32-bit size_t.");
     const size_t fnv_offset_basis = 2166136261U;
@@ -76,16 +75,17 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
     size_t result = fnv_offset_basis;
     for (size_t next = 0; next < count; ++next)
-        {   // fold in another byte
+    {
+        // fold in another byte
         result ^= (size_t)first[next];
         result *= fnv_prime;
-        }
+    }
     return (result);
 }
-```  
-  
-## <a name="see-also"></a>Zobacz także  
-  
+```
+
+## <a name="see-also"></a>Zobacz także
+
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Uaktualnienie kodu do Universal CRT](upgrade-your-code-to-the-universal-crt.md)  

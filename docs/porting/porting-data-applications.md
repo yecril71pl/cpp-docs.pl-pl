@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc789cb37b51f89022a83d1ba34bb67ae32a206e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3dcbab39bdf6a9a944b3cd6200302d89a30d163d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391595"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820753"
 ---
 # <a name="porting-data-applications"></a>Przenoszenie aplikacji danych
 W ciągu lat Visual C++ udostępnia kilka metod do pracy z bazami danych. W 2011 r. Firma Microsoft ogłosiła, że jest ona wyrównywanie na ODBC jako preferowaną technologię do uzyskiwania dostępu do produktów SQL Server z kodu natywnego. ODBC jest standardem branżowym, a za jej pomocą uzyskasz uzyskania maksymalnej przenośności kodu na wielu platformach i źródeł danych. Większość produktów bazy danych SQL i wielu produktów NoSQL obsługują ODBC. Można użyć ODBC bezpośrednio, wywołując niskiego poziomu interfejsy API ODBC lub można użyć klasy otoki MFC ODBC lub innej biblioteki otoki języka C++. 
@@ -32,7 +32,7 @@ OLE DB to interfejs API niskiego poziomu, wysokiej wydajności na podstawie spec
 
 Jeśli starszych aplikacji używa mechanizmu OLE DB lub wyższego poziomu interfejs ADO nawiązać połączenia z programem SQL Server, a nie uzyskujesz dostęp do połączonych serwerów, należy rozważyć Migrowanie do ODBC w niedalekiej przyszłości. Jeśli nie potrzebujesz między platformami lub najnowszych funkcji programu SQL Server, prawdopodobnie umożliwia dostawcy Microsoft OLE DB dla ODBC (MSDASQL).  MSDASQL umożliwia aplikacji, które są oparte na OLE DB i ADO (który jest używany wewnętrznie OLEDB) na dostęp do źródła danych za pośrednictwem sterownika ODBC. Podobnie jak w przypadku dowolnej warstwie tłumaczenia MSDASQL może wpłynąć na działanie bazy danych. Należy sprawdzić, czy wpływ jest signifant dla aplikacji. MSDASQL jest dostarczana z systemem operacyjnym Windows i Windows Server 2008 i Windows Vista z dodatkiem SP1 to Windows pierwszego wydania do uwzględnienia z 64-bitową wersją technologii.
 
-Składnik SQL Native Client (SNAC), które pakiety sterowników OLE DB i ODBC w pojedynczego pliku DLL jest przestarzała w przypadku aplikacji ODBC. Wersja programu SQL Server 2012 SNAC (SQLNCLI11. Biblioteka DLL) jest dostarczany z programem SQL Server 2016, ponieważ zależą od niej inne składniki programu SQL Server. Jednakże należy używać nowej aplikacji w języku C++, łączących się z programu SQL Server lub usługi Azure SQL Database za pomocą ODBC [najnowszych sterowników ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server). Aby uzyskać więcej informacji, zobacz [programu SQL Server Native klienta programowania](/sql/relational-databases/native-client/sql-server-native-client-programming)
+Składnik SQL Native Client (SNAC), które pakiety sterowników OLE DB i ODBC w pojedynczego pliku DLL jest przestarzała w przypadku aplikacji ODBC. Wersja programu SQL Server 2012 SNAC (SQLNCLI11. Biblioteka DLL) jest dostarczany z programem SQL Server 2016, ponieważ zależą od niej inne składniki programu SQL Server. Jednakże należy używać nowej aplikacji w języku C++, łączących się z programu SQL Server lub usługi Azure SQL Database za pomocą ODBC [najnowszych sterowników ODBC](/sql/connect/odbc/download-odbc-driver-for-sql-server). Aby uzyskać więcej informacji, zobacz [programu SQL Server Native klienta programowania](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
 Jeśli używasz języka C + +/ CLI, będzie można kontynuować używanie ADO.NET zawsze. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), i [uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
@@ -43,5 +43,5 @@ Aby uzyskać więcej informacji o historii technologii dostępu do danych w prog
 ## <a name="see-also"></a>Zobacz też  
  
 [Dostęp do danych w programie Visual C++](../data/data-access-in-cpp.md)<br/>
-[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
+[Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
 [Mapy drogowej technologii dostępu do danych](https://msdn.microsoft.com/library/ms810810.aspx)  

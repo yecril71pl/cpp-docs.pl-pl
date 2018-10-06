@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447430"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821507"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 
@@ -256,7 +256,7 @@ Jeśli tworzysz `CComboBox` obiektu w oknie dialogowym (za pośrednictwem zasobu
 
 W przypadku osadzenia `CComboBox` obiektu obiektu w innym oknie, nie trzeba go zniszcz. Jeśli tworzysz `CComboBox` obiektów na stosie, zostanie zniszczony automatycznie. Jeśli tworzysz `CComboBox` obiektów na stosie przy użyciu **nowe** funkcji, należy wywołać **Usuń** na obiekt, aby je zniszczyć, kiedy niszczony jest pole kombi Windows.
 
-**Uwaga** Jeśli chcesz obsługiwać przetłumaczyła i WM_CHAR wiadomości, masz do podklasy pola kombi edycji i formanty pola listy, pochodną klasy z `CEdit` i `CListBox`, i Dodaj programy obsługi dla tych komunikatów dla klasy pochodnej. Aby uzyskać więcej informacji, zobacz [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) i [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Uwaga** Jeśli chcesz obsługiwać przetłumaczyła i WM_CHAR wiadomości, masz do podklasy pola kombi edycji i formanty pola listy, pochodną klasy z `CEdit` i `CListBox`, i Dodaj programy obsługi dla tych komunikatów dla klasy pochodnej. Aby uzyskać więcej informacji, zobacz [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) i [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

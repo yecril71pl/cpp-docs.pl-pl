@@ -1,7 +1,7 @@
 ---
 title: Dodawanie właściwości do kontrolki (ALT — samouczek, część 3) | Dokumentacja firmy Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756911"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820474"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 
 `IPolyCtl` interfejs, który zawiera kontrolki niestandardowe metody i właściwości, a właściwość spowoduje dodanie do niego.
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>Aby dodać właściwość przy użyciu Kreatora dodawania właściwości
+### <a name="to-add-the-property-definitions-to-your-project"></a>Aby dodać definicji właściwości do projektu
 
-1. W widoku klas rozwiń gałąź wielokąta.
+1. W **Widok klas**, rozwiń węzeł `Polygon` gałęzi.
 
-2. Kliknij prawym przyciskiem myszy IPolyCtl.
+1. Kliknij prawym przyciskiem myszy `IPolyCtl`.
 
-3. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj właściwość**.
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj właściwość**. **Dodaj właściwość** pojawi się Kreator.
 
-     Pojawi się Kreator dodawania właściwości.
+1. Typ `Sides` jako **nazwa właściwości**.
 
-4. Na liście rozwijanej typów właściwości, wybierz `SHORT`.
+1. Na liście rozwijanej **typ właściwości**, wybierz opcję `short`.
 
-5. Typ *boki* jako **nazwy właściwości.**
+1. Kliknij przycisk **OK** aby zakończyć dodawanie właściwości.
 
-6. Kliknij przycisk **Zakończ** aby zakończyć dodawanie właściwości.
+1. Z **Eksploratora rozwiązań**, otwórz Polygon.idl i Zastąp następujące wiersze na końcu `IPolyCtl : IDispatch` interfejsu:
 
-Jeśli dodasz właściwość do interfejsu MIDL (program, który kompiluje pliki .idl) definiuje `Get` metodę pobierania jej wartość i `Put` metody do ustawiania nowych wartości. Te metody są nazywane przez dołączenie `put_` i `get_` nazwa właściwości.
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-Kreator dodawania właściwości dodaje niezbędne wiersze do pliku .idl. Dodaje także `Get` i `Put` funkcji prototypów do definicji klasy w PolyCtl.h i dodaje implementację pusty PolyCtl.cpp. Można to sprawdzić, otwierając PolyCtl.cpp i szukasz funkcji `get_Sides` i `put_Sides`.
+    with
 
-Mimo, że masz teraz szkielet funkcje do ustawiania i pobierania właściwości, musi ona miejsce do przechowywania. Utworzy zmienną do przechowywania właściwości i w związku z tym aktualizacji funkcji.
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>Aby utworzyć zmienną do przechowywania właściwości i aktualizowanie put i metodom get
+1. Z **Eksploratora rozwiązań**, otwórz PolyCtl.h i dodaj następujące wiersze po definicji `m_clrFillColor`:
 
-1. W Eksploratorze rozwiązań Otwórz PolyCtl.h i Dodaj następujący wiersz po definicji `m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+Mimo, że masz teraz szkielet funkcje do ustawiania i pobierania właściwości i zmienną do przechowywania właściwości, należy zaimplementować funkcje odpowiednio.
 
-2. Ustaw wartość domyślną `m_nSides`. Ustaw jako domyślny, kształt trójkąta przez dodanie wiersza do konstruktora w PolyCtl.h:
+### <a name="to-update-the-get-and-put-methods"></a>Aby zaktualizować get i put metody
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. Ustaw wartość domyślną `m_nSides`. Ustaw jako domyślny, kształt trójkąta przez dodanie wiersza do konstruktora w PolyCtl.h:
 
-3. Implementowanie `Get` i `Put` metody. `get_Sides` i `put_Sides` deklaracje funkcji zostały dodane do PolyCtl.h. Zastąp kod w PolyCtl.cpp dla `get_Sides` i `put_Sides` następującym kodem:
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. Implementowanie `Get` i `Put` metody. `get_Sides` i `put_Sides` deklaracje funkcji zostały dodane do PolyCtl.h. Teraz Dodaj kod dla `get_Sides` i `put_Sides` do PolyCtl.cpp następującym kodem:
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 `get_Sides` Metoda zwraca bieżącą wartość `Sides` właściwości, za pośrednictwem `pVal` wskaźnika. W `put_Sides` użytkownika to ustawienie zapewnia kod metody `Sides` właściwość dozwolonej wartości. Minimalna muszą mieć od 3, a tablica punktów będzie używane dla każdej strony, 100 jest uzasadnione limit maksymalnej wartości.
 
@@ -68,4 +76,3 @@ Masz teraz właściwość o nazwie `Sides`. W następnym kroku zmienisz kod ryso
 ## <a name="see-also"></a>Zobacz też
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)
-

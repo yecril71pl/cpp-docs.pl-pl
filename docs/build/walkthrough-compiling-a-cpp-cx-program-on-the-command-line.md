@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Kompilowanie programu C + +/ CX w wierszu polecenia | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,25 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdde74f1612986fab8f88f4659b006bbcfbd3901
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9e6fa7cb30a14a3c5914e1cb80e22db118df9e
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703777"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821208"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
 
 Można tworzyć programy Visual C++, które przeznaczone dla środowiska uruchomieniowego Windows i utworzyć je w wiersza polecenia. Visual C++ obsługuje rozszerzeniami składnika środowiska Visual C++ (C + +/ CX), który ma dodatkowe typy i podmioty, pod kątem modelu programowania środowiska wykonawczego Windows. Można użyć C + +/ CX, aby tworzyć aplikacje dla Windows platformy Uniwersalnej systemu Windows Phone 8.1 i Windows desktop. Aby uzyskać więcej informacji, zobacz [samouczek c + +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).
 
-W tym przewodniku umożliwia edytora tekstu Utwórz podstawowe języka C + +/ CX program, a następnie skompilować go w wierszu polecenia. (Możesz użyć własnego C + +/ CX programu zamiast wpisywać ten, który jest wyświetlany, lub można użyć w języku C + +/ CX przykładowy kod z innego artykułu pomocy. Ta technika jest przydatna do tworzenia i testowania małych moduły, które zawierają bez elementów interfejsu użytkownika).
+W tym przewodniku umożliwia edytora tekstu Utwórz podstawowe języka C + +/ CX program, a następnie skompilować go w wierszu polecenia. (Możesz użyć własnego C + +/ CX programu zamiast wpisywać ten, który jest wyświetlany, lub można użyć w języku C + +/ CX przykładowy kod z innego artykułu pomocy. Ta technika jest przydatna do tworzenia i testowania małych modułów, które mają bez elementów interfejsu użytkownika).
 
 > [!NOTE]
 > Umożliwia także środowiska IDE programu Visual Studio do kompilowania C + +/ CX programów. IDE zawiera projekt, debugowanie, emulacji i obsługa wdrażania, które nie są dostępne w wierszu polecenia, zaleca się używanie IDE do tworzenia aplikacji uniwersalnych platformy Windows (UWP). Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej systemu Windows w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy rozumieć podstawy języka C++.
+Należy zrozumieć podstawy języka C++.
 
 ## <a name="compiling-a-ccx-program"></a>Kompilowanie programu w języku C + +/ CX programu
 
@@ -55,10 +55,9 @@ Aby włączyć kompilacji w języku C + +/ CX, należy użyć [/ZW](../build/ref
     {
         Platform::Details::Console::WriteLine("This is a C++/CX program.");
     }
-
     ```
 
-1. Na pasku menu wybierz **pliku**, **Zapisz**.
+1. Na pasku menu wybierz **pliku** > **Zapisz**.
 
    Utworzono plik źródłowy języka Visual C++, który używa środowiska wykonawczego Windows [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md) przestrzeni nazw.
 

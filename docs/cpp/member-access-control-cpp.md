@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017563"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821663"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 Dostęp do domyślnej jest **prywatnej** w klasie i **publicznych** w strukturze lub Unii. Specyfikatory dostępu w klasie mogą być używane z dowolną liczbę razy w dowolnej kolejności. Alokacja pamięci dla obiektów typów klasy jest zależy od implementacji, ale elementy członkowskie są gwarantowane przypisanie kolejno adresów pamięci między specyfikatory dostępu.
 
-### <a name="member-access-control"></a>Kontrola dostępu do elementów członkowskich
+## <a name="member-access-control"></a>Kontrola dostępu do elementów członkowskich
 
 |Typ dostępu|Znaczenie|
 |--------------------|-------------|

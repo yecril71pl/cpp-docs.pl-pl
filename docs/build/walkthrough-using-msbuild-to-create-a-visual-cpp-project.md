@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++ | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8a1c45342cf1f5eb178764d6fd723950f52e7e0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609702"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821247"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++
 
-W tym przewodniku pokazano, jak używać programu MSBuild do tworzenia projektu Visual C++ w wierszu polecenia. Dowiesz się jak tworzyć pliki źródłowe C++ i pliku projektu opartego na języku XML dla aplikację konsolową w języku Visual C++. Po utworzeniu projektu dowiesz się, jak dostosować proces kompilacji.
+W tym przewodniku pokazano, jak używać programu MSBuild do tworzenia projektu Visual C++ w wierszu polecenia. Dowiesz się, jak utworzyć pliki źródłowe C++ i pliku projektu opartego na języku XML dla aplikacji konsoli Visual C++. Po utworzeniu projektu dowiesz się, jak dostosować proces kompilacji.
 
 W instruktażu przedstawiono następujące zagadnienia:
 
@@ -59,7 +59,7 @@ W tym instruktażu utworzysz projekt, który zawiera plik źródłowy i plik nag
 
 1. Utwórz katalog dla projektu.
 
-2. Utwórz plik o nazwie main.cpp i Dodaj następujący kod do tego pliku:
+1. Utwórz plik o nazwie main.cpp i Dodaj następujący kod do tego pliku:
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +72,7 @@ W tym instruktażu utworzysz projekt, który zawiera plik źródłowy i plik nag
     }
     ```
 
-3. Utwórz plik o nazwie main.h i Dodaj następujący kod do tego pliku:
+1. Utwórz plik o nazwie main.h i Dodaj następujący kod do tego pliku:
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +81,24 @@ W tym instruktażu utworzysz projekt, który zawiera plik źródłowy i plik nag
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>Tworzenie pliku XML projektu MSBuild
 
-Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny projektu (\<Projekt >). W następującym przykładowym projekcie \<Projekt > element zawiera siedem elementów podrzędnych:
+Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny projektu (`<Project>`). W następującym przykładowym projekcie `<Project>` element zawiera siedem elementów podrzędnych:
 
-- Element trzy znaczniki grupy (\<ItemGroup >) określające konfigurację projektu i platform, nazwa pliku źródłowego i nazwa pliku nagłówkowego.
+- Element trzy znaczniki grupy (`<ItemGroup>`) określające konfigurację projektu i platform, nazwa pliku źródłowego i nazwa pliku nagłówkowego.
 
-- Trzy znaczniki importowania (\<Importuj >) określające położenie ustawień Microsoft Visual C++.
+- Trzy znaczniki importowania (`<Import>`) określające położenie ustawień Microsoft Visual C++.
 
-- Tag grupy właściwości (\<PropertyGroup >), który określa ustawienia projektu.
+- Tag grupy właściwości (`<PropertyGroup>`), który określa ustawienia projektu.
 
 ### <a name="to-create-the-msbuild-project-file"></a>Aby utworzyć plik projektu MSBuild
 
-1. Użyj edytora tekstu, aby utworzyć plik projektu, który nosi nazwę `myproject.vcxproj`, a następnie dodaj następujący katalog główny \<Projekt > element. Wstaw elementy w poniższych krokach procedury między głównym \<Projekt > znaczniki:
+1. Użyj edytora tekstu, aby utworzyć plik projektu, który nosi nazwę `myproject.vcxproj`, a następnie dodaj poniższe głównego `<Project>` elementu. Wstaw elementy w poniższych krokach procedury między głównym `<Project>` tagi:
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. Dodaj dwie poniższe \<ProjectConfiguration > elementy podrzędne w \<ItemGroup > element. Element podrzędny określa debugowania i zwalniania konfiguracji dla 32-bitowym systemie operacyjnym Windows:
+1. Dodaj dwie poniższe `<ProjectConfiguration>` elementy podrzędne w `<ItemGroup>` elementu. Element podrzędny określa debugowania i zwalniania konfiguracji dla 32-bitowym systemie operacyjnym Windows:
 
     ```xml
     <ItemGroup>
@@ -113,13 +113,13 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
     </ItemGroup>
     ```
 
-3. Dodaj następujący kod \<importowania / > element, który określa ścieżkę ustawień domyślnych C++ dla tego projektu:
+1. Dodaj następujący kod `<Import>` element, który określa ścieżkę ustawień domyślnych C++ dla tego projektu:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. Dodaj poniższy element grupy właściwości (\<PropertyGroup >), który określa dwie właściwości projektu:
+1. Dodaj poniższy element grupy właściwości (`<PropertyGroup>`), który określa dwie właściwości projektu:
 
     ```xml
     <PropertyGroup>
@@ -128,13 +128,13 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
     </PropertyGroup>
     ```
 
-5. Dodaj następujący kod \<importowania / > element, który określa ścieżkę aktualnych ustawień C++ dla tego projektu:
+1. Dodaj następujący kod `<Import>` element, który określa ścieżkę aktualnych ustawień C++ dla tego projektu:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. Dodaj następujący kod \<ClCompile > element podrzędny w \<ItemGroup > element. Element podrzędny określa nazwę pliku źródłowego języka C/C++ do skompilowania:
+1. Dodaj następujący kod `<ClCompile>` elementu podrzędnego w `<ItemGroup>` elementu. Element podrzędny określa nazwę pliku źródłowego języka C/C++ do skompilowania:
 
     ```xml
     <ItemGroup>
@@ -143,9 +143,9 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
     ```
 
    > [!NOTE]
-   > \<ClCompile > jest *tworzenia pod kątem* i jest definiowany w **VCTargets** katalogu.
+   > `<ClCompile>` jest *tworzenia pod kątem* i jest definiowany w **VCTargets** katalogu.
 
-7. Dodaj następujący kod \<ClInclude > element podrzędny w \<ItemGroup > element. Element podrzędny określa nazwę pliku nagłówka dla pliku źródłowego języka C/C++:
+1. Dodaj następujący kod `<ClInclude>` elementu podrzędnego w `<ItemGroup>` elementu. Element podrzędny określa nazwę pliku nagłówka dla pliku źródłowego języka C/C++:
 
     ```xml
     <ItemGroup>
@@ -153,7 +153,7 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
     </ItemGroup>
     ```
 
-8. Dodaj następujący kod \<Import > element, który określa ścieżkę do pliku, który definiuje cel dla tego projektu:
+1. Dodaj następujący kod `<Import>` element, który określa ścieżkę do pliku, który definiuje cel dla tego projektu:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +197,7 @@ Wpisz następujące polecenie w wierszu polecenia, aby skompilować aplikację k
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-Program MSBuild tworzy katalog dla plików wyjściowych, a następnie kompiluje i łączy projekt, aby generować Myproject.exe program. Po zakończeniu procesu kompilacji Użyj następującego polecenia, aby uruchomić aplikację:
+Program MSBuild tworzy katalog dla plików wyjściowych, a następnie kompiluje i łączy projekt, aby generować Myproject.exe program. Po zakończeniu procesu kompilacji Użyj następującego polecenia, aby uruchomić aplikację w folderze debugowania:
 
 `myproject`
 
@@ -219,7 +219,7 @@ Program MSBuild umożliwia wykonywanie wstępnie zdefiniowanych celów kompilacj
 
 ### <a name="using-msbuild-with-build-targets"></a>Korzystanie z programu MSBuild z celami kompilacja
 
-A *tworzenia pod kątem* jest zestawem nazwanym poleceń wstępnie zdefiniowanych lub zdefiniowanych przez użytkownika, które mogą być wykonywane podczas kompilacji. Użyj opcji docelowego wiersza polecenia (**/t**) do określania docelowej kompilacji. W przypadku właściwości `myproject` przykładowym projekcie, wstępnie zdefiniowane **czyste** docelowy usuwa wszystkie pliki w folderze debugowania i tworzy nowy plik dziennika.
+A *tworzenia pod kątem* jest zestawem nazwanym poleceń wstępnie zdefiniowanych lub zdefiniowanych przez użytkownika, które mogą być wykonywane podczas kompilacji. Użyj opcji docelowego wiersza polecenia (`/t`) do określania docelowej kompilacji. Dla `myproject` przykładowym projekcie, wstępnie zdefiniowane **czyste** docelowy usuwa wszystkie pliki w folderze debugowania i tworzy nowy plik dziennika.
 
 W wierszu polecenia wpisz następujące polecenie, aby wyczyścić `myproject`.
 
@@ -227,7 +227,7 @@ W wierszu polecenia wpisz następujące polecenie, aby wyczyścić `myproject`.
 
 ### <a name="using-msbuild-with-build-properties"></a>Korzystanie z programu MSBuild z właściwościami kompilacja
 
-Opcja wiersza polecenia właściwości (**/p**) umożliwia zastąpienie właściwości w pliku kompilacji projektu. W `myproject` przykładową konfigurację kompilacji projektu, wydania lub debugowania jest określona przez `Configuration` właściwości. I systemu operacyjnego, który jest przeznaczony do uruchamiania aplikacji jest określona przez `Platform` właściwości.
+Opcja wiersza polecenia właściwości (`/p`) umożliwia zastąpienie właściwości w pliku kompilacji projektu. W `myproject` przykładową konfigurację kompilacji projektu, wydania lub debugowania jest określona przez `Configuration` właściwości. I systemu operacyjnego, który jest przeznaczony do uruchamiania aplikacji jest określona przez `Platform` właściwości.
 
 W wierszu polecenia wpisz następujące polecenie, aby utworzyć kompilację do debugowania `myproject` aplikacji, który jest przeznaczony do uruchamiania na 32-bitowa Windows.
 
@@ -245,7 +245,7 @@ W wierszu polecenia wpisz następujące polecenie, aby utworzyć kompilację wyd
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Korzystanie z programu MSBuild z 64-bitowym kompilatorem i narzędziami
 
-Po zainstalowaniu programu Visual C++ na Windows 64-bitowych, domyślnie x64 64-bitowych natywna i krzyżowa narzędzia są zainstalowane. Można skonfigurować program MSBuild będzie używać 64-bitowym kompilatorem i narzędziami do tworzenia aplikacji przez ustawienie `PreferredToolArchitecture` właściwości. Właściwość ta nie wpływa na właściwości konfiguracji lub platformy projektu. Domyślnie używany jest 32-bitowej wersji narzędzia. Aby określić 64-bitową wersję kompilatora i narzędzi, Dodaj następujący element grupy właściwości do pliku projektu Myproject.vcxproj po `Microsoft.Cpp.default.props` \<importowania / > element:
+Po zainstalowaniu programu Visual C++ na Windows 64-bitowych, domyślnie x64 64-bitowych natywna i krzyżowa narzędzia są zainstalowane. Można skonfigurować program MSBuild będzie używać 64-bitowym kompilatorem i narzędziami do tworzenia aplikacji przez ustawienie `PreferredToolArchitecture` właściwości. Ta właściwość nie ma wpływu na właściwości konfiguracji lub platformy projektu. Domyślnie używany jest 32-bitowej wersji narzędzia. Aby określić 64-bitową wersję kompilatora i narzędzi, Dodaj następujący element grupy właściwości do pliku projektu Myproject.vcxproj po `Microsoft.Cpp.default.props` \<importowania / > element:
 
 ```xml
 <PropertyGroup>
@@ -259,7 +259,7 @@ W wierszu polecenia wpisz następujące polecenie, aby użyć narzędzi 64-bitow
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Korzystanie z programu MSBuild z innym zestawem narzędzi
 
-Jeśli masz zestawy narzędzi i biblioteki dla innych wersji programu Visual C++, zainstalowane, program MSBuild może kompilować aplikacje w bieżącej wersji Visual C++ lub innych zainstalowanych wersji. Na przykład po zainstalowaniu programu Visual Studio 2012, aby określić zestaw narzędzi Visual C++ 11.0 Windows XP, Dodaj następujący element grupy właściwości do pliku projektu myProject.vcxproj za elementem na po pliku Microsoft.Cpp.props `<Import />` elementu:
+Jeśli masz zestawy narzędzi i biblioteki dla innych wersji programu Visual C++, zainstalowane, program MSBuild może kompilować aplikacje w bieżącej wersji Visual C++ lub innych zainstalowanych wersji. Na przykład po zainstalowaniu programu Visual Studio 2012, aby określić zestaw narzędzi Visual C++ 11.0 Windows XP, Dodaj następujący element grupy właściwości do pliku projektu Myproject.vcxproj po `Microsoft.Cpp.props` \<importowania / > element:
 
 ```xml
 <PropertyGroup>
@@ -267,11 +267,9 @@ Jeśli masz zestawy narzędzi i biblioteki dla innych wersji programu Visual C++
 </PropertyGroup>
 ```
 
-Aby odbudować projektu za pomocą narzędzi Visual C++ 11.0 Windows XP, wpisz jedno z następujących poleceń:
+Aby odbudować projektu za pomocą narzędzi Visual C++ 11.0 Windows XP, wpisz następujące polecenia:
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>Dodawanie dostosowań programu MSBuild
 

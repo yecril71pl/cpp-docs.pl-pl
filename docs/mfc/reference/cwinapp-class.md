@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412187"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821520"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -367,7 +367,7 @@ Zobacz [CWinApp: klasa aplikacji](../../mfc/cwinapp-the-application-class.md) Ab
 
 - `CWinApp`dla klucza / / overridables.
 
-`m_hPrevInstance` Element członkowski danych już nie istnieje. Aby uzyskać informacje na temat wykrywania poprzednie wystąpienie `CWinApp`, zobacz artykuł bazy wiedzy Knowledge Base "Jak do identyfikowania poprzedniego wystąpienia z Application" (KB106385) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).
+`m_hPrevInstance` Element członkowski danych już nie istnieje. Aby uzyskać informacje na temat wykrywania poprzednie wystąpienie `CWinApp`, zobacz artykuł bazy wiedzy Knowledge Base "Jak do identyfikowania poprzedniego wystąpienia z Application" (KB106385) na [ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -1073,7 +1073,7 @@ Inicjowanie aplikacji pod względem koncepcyjnym jest podzielona na dwie sekcje:
 Zastąp `InitInstance` zainicjować każde nowe wystąpienie aplikacji uruchomionej w obszarze Windows. Zazwyczaj można zastąpić `InitInstance` do konstruowania obiektu głównego okna i ustaw `CWinThread::m_pMainWnd` element członkowski danych wskaż tego okna. Aby uzyskać więcej informacji w przypadku przesłaniania tej funkcji elementu członkowskiego, zobacz [CWinApp: klasa aplikacji](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ### <a name="example"></a>Przykład
 

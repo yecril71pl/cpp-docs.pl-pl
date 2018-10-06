@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aee04052a0088ff95a41ccb6083abc334287ea2b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031462"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820649"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 
 Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* daje w wyniku wartość różna od zera (lub wartość PRAWDA). Jeśli wartość *wyrażenie* jest różna od zera, *instrukcja1* i wszelkie inne instrukcje w bloku są wykonywane, oraz innego bloku, jeśli jest obecny, jest pomijana. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku if zostanie pominięta i innego bloku, jeśli jest obecny, jest wykonywany. Wyrażenia, które dają różna od zera są
+
 - WARTOŚĆ TRUE
 - wskaźnik zerowy
 - dowolna wartość arytmetyczne różna od zera, lub
@@ -36,7 +37,7 @@ Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wted
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 if ( expression )
 {
    statement1;
@@ -84,7 +85,7 @@ using namespace std;
 class C
 {
     public:
-    void do_somthing(){}
+    void do_something(){}
 };
 void init(C){}
 bool is_true() { return true; }
@@ -101,15 +102,14 @@ int main()
         cout << "b is false!\n";
     }
 
-  // no else statement
+    // no else statement
     if (x == 10)
     {
         x = 0;
     }
-    
 
     C* c;
-  init(c);
+    init(c);
     if (c)
     {
         c->do_something();
@@ -120,13 +120,14 @@ int main()
     }
 }
 ```
+
 ## <a name="if_with_init"></a> Jeśli instrukcja za pomocą inicjatora
 
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Jeśli** instrukcji może również zawierać wyrażenie, które deklaruje i inicjuje zmienną o nazwie. Użyj tego formularza, instrukcji if, gdy zmienna jest wymagana tylko w zakresie bloku if.
 
-```cpp
-## Example
+## <a name="example"></a>Przykład
 
+```cpp
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -180,18 +181,18 @@ We wszystkich rodzajach **Jeśli** instrukcji *wyrażenie*, która może zawiera
 template <class T, class... Rest>
 void f(T&& t, Rest&&... r)
 {
-// handle t
-   do_something(t);
+    // handle t
+    do_something(t);
 
-   // handle r conditionally
-   if constexpr (sizeof...(r))
-   {
-      f(r...);
-   }
-   else
-   {
-       g(r...);
-   }
+    // handle r conditionally
+    if constexpr (sizeof...(r))
+    {
+        f(r...);
+    }
+    else
+    {
+        g(r...);
+    }
 }
 ```
 

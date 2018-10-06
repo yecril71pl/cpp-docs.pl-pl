@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691435"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821246"
 ---
 # <a name="spaceinfo-structure"></a>space_info — Struktura
 
@@ -28,11 +28,12 @@ Przechowuje informacje o woluminie.
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-struct space_info   {
+struct space_info
+{
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
-    };
+};
 ```
 
 ## <a name="members"></a>Elementy członkowskie
@@ -41,9 +42,9 @@ struct space_info   {
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`unsigned long long available`|Reprezentuje liczbę bajtów, które są dostępne do reprezentowania danych w woluminie.|
 |`unsigned long long capacity`|Reprezentuje całkowita liczba bajtów reprezentujących woluminu.|
 |`unsigned long long free`|Reprezentuje liczbę bajtów, które nie są używane do reprezentowania danych w woluminie.|
+|`unsigned long long available`|Reprezentuje liczbę bajtów, które są dostępne do reprezentowania danych w woluminie.|
 
 ## <a name="requirements"></a>Wymagania
 

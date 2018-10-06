@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395519"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820597"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
 
@@ -46,7 +46,7 @@ Następnie możesz określić plik biblioteki typów, opisujący właściwości 
 
 ### <a name="handling-events-in-automation-clients"></a>Obsługa zdarzeń w klientach automatyzacji
 
-Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM. Instrukcje dotyczące sposobu dodawania interfejs obiektu sink w kliencie interfejsy źródła opisanego przez serwery COM MFC, zobacz porady: Utwórz interfejs obiektu Sink w kliencie COM MFC-Based (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM. Instrukcje dotyczące sposobu dodawania interfejs obiektu sink w kliencie interfejsy źródła opisanego przez serwery COM MFC, zobacz porady: Utworzenie interfejsu ujścia w kliencie COM MFC-Based (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
 
 ## <a name="see-also"></a>Zobacz też
 

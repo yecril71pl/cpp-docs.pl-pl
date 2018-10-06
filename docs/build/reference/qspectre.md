@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386960"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821650"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,11 +32,13 @@ Określa Generowanie kompilatora instrukcje eliminowanie luk w zabezpieczeniach 
 
 ## <a name="remarks"></a>Uwagi
 
-**/Qspectre** opcja jest dostępna w programie Visual Studio 2017 w wersji 15.7 lub nowszej. Sprawia, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
+**/Qspectre** opcja jest dostępna w programie Visual Studio 2017, wersja 15.5.5 później i w Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Sprawia, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
 
 **/Qspectre** opcja jest domyślnie wyłączona.
 
-W wersji początkowej **/qspectre** opcja działa tylko w zoptymalizowanym kodzie. Upewnij się skompilować kod za pomocą dowolnej z opcji optymalizacji (na przykład [/O2 lub/O1](o1-o2-minimize-size-maximize-speed.md) , ale nie [/Od](od-disable-debug.md)) się upewnić, że zastosowano środki zaradcze. Podobnie, zbadaj wszelki kod, który używa [#pragma optimize ("stg", wyłącz)](../../preprocessor/optimize.md).
+W wersji początkowej **/qspectre** opcji tylko prace zoptymalizowanego kodu. W programie Visual Studio 2017 wersji 15.7 lub nowszej **/qspectre** opcja jest obsługiwana na wszystkich poziomach optymalizacji. 
+
+Microsoft Visual C++ bibliotek są również dostępne w wersji z krokami zaradczymi dla luki środki zaradcze. W Instalatorze programu Visual Studio można pobrać biblioteki zminimalizować luki Spectre dla programu Visual Studio 2017. Znajdują się one w **poszczególne składniki** karcie **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe**, i mieć "Libs dla luki Spectre" w nazwie. Biblioteki DLL i bibliotek statycznych środowiska uruchomieniowego za pomocą ograniczenia włączone są dostępne dla podzbioru środowiska uruchomieniowego Visual C++: kod startowy VC ++, vcruntime140, msvcp140, concrt140 i vcamp140. Biblioteki DLL są obsługiwane w przypadku wdrożenia lokalnego aplikacji. zawartość 2017 środowiska uruchomieniowego bibliotek pakiet redystrybucyjny Visual C++ nie zostały zmodyfikowane. Można także zainstalować biblioteki zminimalizować luki Spectre dla MFC i ATL, znaleziono w **poszczególne składniki** karcie **zestawów SDK, bibliotek i struktur**.
 
 ### <a name="applicability"></a>Możliwości zastosowania
 
@@ -46,7 +48,7 @@ Jeśli Twój kod działa na danych w granicy zaufania, a następnie zaleca się,
 
 **/Qspectre** opcja jest dostępna w Visual Studio 2017, wersja 15.5.5 i wszystkie aktualizacje Kompilatory języka Microsoft Visual C++ (MSVC) wprowadzone na lub po 23 stycznia 2018 r. Użyj Instalatora programu Visual Studio, aby zaktualizować kompilator i zainstalowanie biblioteki skorygowane z krokami zaradczymi dla luki jako poszczególnych składników. **/Qspectre** opcja jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą poprawek. Aby uzyskać więcej informacji, zobacz [KB 4338871](https://support.microsoft.com/help/4338871).
 
-Wszystkie wersje programu Visual Studio 2017, wersja 15.5 i wszystkich wersji zapoznawczych programu Visual Studio w wersji 15.6 już zawierać nieudokumentowane opcję **/d2guardspecload**, oznacza to odpowiednik początkowe zachowanie   **/qspectre**. Możesz użyć **/d2guardspecload** do zastosowania tych samych środki zaradcze w kodzie w tych wersjach kompilatora. Zaktualizuj kompilacji, aby użyć **/qspectre** w kompilatory, które obsługują opcję; **/qspectre** opcji mogą także obsługiwać nowe środki zaradcze w nowszych wersjach kompilatora.
+Wszystkie wersje programu Visual Studio 2017, wersja 15.5 i wszystkich wersji zapoznawczych programu Visual Studio 2017 w wersji 15.6 zawierać nieudokumentowane opcję **/d2guardspecload**, oznacza to odpowiednik początkowe zachowanie   **/qspectre**. Możesz użyć **/d2guardspecload** do zastosowania tych samych środki zaradcze w kodzie w tych wersjach kompilatora. Zaktualizuj kompilacji, aby użyć **/qspectre** w kompilatory, które obsługują opcję; **/qspectre** opcji mogą także obsługiwać nowe środki zaradcze w nowszych wersjach kompilatora.
 
 ### <a name="effect"></a>Efekt
 
@@ -62,9 +64,9 @@ Gdy wpływ wydajności **/qspectre** został napotkany bez znaczenia w kilku bar
 
 **/Qspectre** kompilator generuje kod, który niejawnie łączy wersje bibliotek środowiska uruchomieniowego, które zostały skompilowane zapewnienie z krokami zaradczymi dla luki spectre. Biblioteki te są opcjonalne składniki, które muszą być zainstalowane za pomocą Instalatora programu Visual Studio:
 
-- VC ++ 2017 w wersji *numer_wersji* Libs dla luki Spectre (x86 i x64)
-- Visual C++ ATL — x86/x64 64 z krokami zaradczymi dla luki Spectre
-- Visual C++ MFC x86/x64 z krokami zaradczymi dla luki Spectre
+- VC ++ 2017 w wersji *version_numbers* Libs luki Spectre dla \[(x86 i x64) | (ARM) | (ARM64)]
+- Visual C++ ATL dla \[— x86/x64 64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
+- Visual C++ MFC dla \[x86/x64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
 
 Jeśli tworzysz swój kod za pomocą **/qspectre** i biblioteki te nie są zainstalowane, raporty systemu kompilacji **ostrzeżenie MSB8038: spectre jest włączona, ale nie można odnaleźć bibliotek łagodzeń Spectre**. W przypadku kodu biblioteki ATL i MFC awarii do tworzenia i konsolidator zgłasza błąd, taki jak **błąd krytyczny LNK1104: nie można otworzyć pliku "oldnames.lib"**, przyczyną może być Brak biblioteki.
 

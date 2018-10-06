@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++) | Dokumentacja firmy Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5175d89925ddc09fdcd552aa57d2967071e750f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376970"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821260"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -40,7 +40,7 @@ W tym przewodniku opisano następujące zadania:
 
 Statycznie połączone biblioteki DLL, takie jak _eksportuje_ zmienne, funkcje i zasoby według nazwy i aplikację _importuje_ te nazwy, aby użyć tych zmiennych, funkcji i zasobów. W odróżnieniu od statycznie połączoną bibliotekę Windows Importy w swojej aplikacji łączy się z eksportu w bibliotece DLL w czasie ładowania lub w czasie wykonywania, a nie połączenie ich w czasie połączenia. Windows wymaga dodatkowych informacji, które nie jest częścią standardowego modelu kompilacji C++, aby nawiązać połączenie. Kompilator języka Visual C++ implementuje niektóre rozszerzenia specyficzne dla firmy Microsoft do C++, aby zapewnić te dodatkowe informacje. Wyjaśnijmy tych rozszerzeń, kursu.
 
-Ten poradnik tworzy dwa rozwiązań programu Visual Studio. taki, który tworzy bibliotekę DLL, a taki, który kompiluje aplikację kliencką. Biblioteki DLL używa konwencji wywoływania C, dzięki czemu można wywołać z aplikacji skompilowanych przy użyciu innych języków, tak długo, jak platformy i wywoływania i łączenie konwencje są zgodne. Ta aplikacja używa klienta _niejawna Konsolidacja_, gdzie Windows łączy aplikację z biblioteki DLL w czasie ładowania. Dzięki temu aplikacja wywoływać funkcje dostarczone przez bibliotekę DLL, podobnie jak funkcje statycznie połączone biblioteki.
+Ten poradnik tworzy dwa rozwiązań programu Visual Studio. taki, który tworzy bibliotekę DLL, a taki, który kompiluje aplikację kliencką. Biblioteki DLL używa konwencji wywoływania C, dzięki czemu można wywołać z aplikacji skompilowanych przy użyciu innych języków, tak długo, jak platformy i wywoływania i łączenie konwencje są zgodne. Ta aplikacja używa klienta _niejawna Konsolidacja_, gdzie Windows łączy aplikację z biblioteki DLL w czasie ładowania. To połączenie umożliwia aplikacji wywoływać funkcje dostarczone przez bibliotekę DLL, podobnie jak funkcje statycznie połączone biblioteki.
 
 Ten przewodnik nie obejmuje niektóre typowe problemy. Korzystanie z bibliotek DLL języka C++ w innych językach programowania nie była widoczna. Go nie pokazuje jak utworzyć bibliotekę DLL tylko do zasobów. Również nie pokazuje użycie jawnego łączenia można załadować biblioteki dll w czasie wykonywania, a nie w czasie ładowania. Zachowaj spokój ducha i Visual C++ można użyć, aby korzystać z tych możliwości. Aby uzyskać linki do szczegółowych informacji o bibliotece dll, zobacz [biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat łączenia niejawne i jawne tworzenie łączy, zobacz [określająca, które łączenie metody użyć](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Aby uzyskać informacji o tworzeniu bibliotek DLL języka C++ do użycia z usługą języki programowania, które używać konwencji powiązania języka C, zobacz [eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Aby uzyskać informacji na temat sposobu tworzenia bibliotek DLL dla języków .NET, zobacz [wywoływanie funkcji DLL z aplikacji Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
 
@@ -64,9 +64,9 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Aby utworzyć projekt DLL w programie Visual Studio 2017 w wersji 15.3 lub nowszej
 
-1. Na pasku menu wybierz **pliku**, **New**, **projektu** otworzyć **nowy projekt** okno dialogowe.
+1. Na pasku menu wybierz **pliku** > **New** > **projektu** otworzyć **nowy projekt** okno dialogowe.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i **Visual C++** Jeśli wymagane, a następnie wybierz **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**. Wprowadź `MathLibrary` w **nazwa** pole, aby określić nazwę dla projektu.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i **Visual C++** Jeśli to konieczne, a następnie wybierz **pulpitu Windows** . W środkowym okienku wybierz **kreatora pulpitu Windows**. Wprowadź `MathLibrary` w **nazwa** pole, aby określić nazwę dla projektu.
 
    ![Nazwij projekt MathLibrary](media/mathlibrary-new-project-name-153.png "nazwij projekt MathLibrary")
 
@@ -83,9 +83,9 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 >
 >1. W **Eksploratora rozwiązań**, jeśli nie został jeszcze wybrany, wybierz opcję **MathLibrary** projekt **rozwiązania "MathLibrary"**.
 >
->1. Na pasku menu wybierz **projektu**, **właściwości**.
+>1. Na pasku menu wybierz **projektu** > **właściwości**.
 >
->1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji**, **C/C++**. Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY&#95;EKSPORTÓW** w **definicje preprocesora** listy, a następnie nie trzeba wprowadzić zmiany. Jeśli widzisz **MathLibrary&#95;EKSPORTÓW** zamiast niego, a następnie kontynuować wykonaj następujące kroki.
+>1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji** > **C/C++**. Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY&#95;EKSPORTÓW** w **definicje preprocesora** listy, a następnie nie trzeba wprowadzić zmiany. Jeśli widzisz **MathLibrary&#95;EKSPORTÓW** zamiast niego, a następnie kontynuować wykonaj następujące kroki.
 >
 >1. W górnej części **stron właściwości** okno dialogowe, zmiana **konfiguracji** menu rozwijane **wszystkie konfiguracje**.
 >
@@ -97,9 +97,9 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 
 ### <a name="to-create-a-dll-project-in-older-versions-of-visual-studio"></a>Aby utworzyć projekt DLL w starszych wersjach programu Visual Studio
 
-1. Na pasku menu wybierz **pliku**, **New**, **projektu**.
+1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane**, **szablony**i wybierz **Visual C++**, a następnie w środku Wybierz opcję **Aplikacja konsoli Win32**. Wprowadź `MathLibrary` w **nazwa** Edytuj pole, aby określić nazwę dla projektu.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**i wybierz **Visual C++**, i następnie w środkowym okienku wybierz **Aplikacja konsoli Win32**. Wprowadź `MathLibrary` w **nazwa** Edytuj pole, aby określić nazwę dla projektu.
 
    ![Nazwij projekt MathLibrary](media/mathlibrary-project-name.png "nazwij projekt MathLibrary")
 
@@ -121,7 +121,7 @@ Po prawej stronie teraz tę bibliotekę DLL nie robi zbyt wielu. Następnie moż
 
 ### <a name="to-add-a-header-file-to-the-dll"></a>Aby dodać plik nagłówkowy biblioteki dll
 
-1. Aby utworzyć plik nagłówka dla funkcji, na pasku menu, wybierz opcję **projektu**, **Dodaj nowy element**.
+1. Aby utworzyć plik nagłówka dla funkcji, na pasku menu, wybierz opcję **projektu** > **Dodaj nowy element**.
 
 1. W **Dodaj nowy element** w okienku po lewej stronie, wybierz w oknie dialogowym **Visual C++**. W środkowym okienku wybierz **plik nagłówka (.h)**. Określ `MathLibrary.h` jako nazwę pliku nagłówka.
 
@@ -241,7 +241,7 @@ Gdy **MATHLIBRARY&#95;EKSPORTÓW** — makro jest zdefiniowany, **MATHLIBRARY&#9
    }
    ```
 
-Aby sprawdzić, czy wszystko działa do tej pory, kompilowanie biblioteki dołączanej dynamicznie. Aby skompilować, wybierz opcję **kompilacji**, **Kompiluj rozwiązanie** na pasku menu. Dane wyjściowe powinny wyglądać następująco:
+Aby sprawdzić, czy wszystko działa do tej pory, kompilowanie biblioteki dołączanej dynamicznie. Aby skompilować, wybierz opcję **kompilacji** > **Kompiluj rozwiązanie** na pasku menu. Dane wyjściowe powinny wyglądać mniej więcej tak:
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -259,15 +259,15 @@ Gratulacje, utworzono biblioteki DLL przy użyciu języka Visual C++! Następnie
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>Utwórz aplikację kliencką, która używa biblioteki DLL
 
-Podczas tworzenia biblioteki DLL należy myśleć o tym, jak używać biblioteki DLL. Aby skompilować kod, który wywołuje funkcji eksportowanych przez DLL, deklaracje muszą być zawarte w kodzie źródłowym klienta. W czasie, gdy te wywołania funkcji biblioteki DLL są rozwiązywane, konsolidator musi mieć *Importuj bibliotekę*, specjalny rodzaj plik biblioteki, która zawiera informacje o Windows o tym, jak można znaleźć funkcji, a nie rzeczywisty kod. I w czasie wykonywania, biblioteki DLL muszą być dostępne dla klienta w lokalizacji, która znajduje się system operacyjny.
+Podczas tworzenia biblioteki DLL należy myśleć o tym, jak używać biblioteki DLL. Aby skompilować kod, który wywołuje funkcji eksportowanych przez DLL, deklaracje muszą być zawarte w kodzie źródłowym klienta. W czasie, gdy te wywołania funkcji biblioteki DLL są rozwiązywane, konsolidator musi mieć *Importuj bibliotekę*, to plik biblioteki specjalne, która zawiera informacje o Windows o tym, jak można znaleźć funkcji, a nie rzeczywisty kod. I w czasie wykonywania, biblioteki DLL muszą być dostępne dla klienta w lokalizacji, która znajduje się system operacyjny.
 
-Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL innych firm, projekt aplikacji klienta musi być w stanie znaleźć nagłówki, które deklarują biblioteki DLL eksportuje biblioteki importu dla konsolidatora i biblioteki DLL, sam. Jednym ze sposobów, w tym celu jest skopiować te pliki do projektu client. Dla bibliotek DLL innych firm, które są raczej nie ulegnie zmianie, gdy klient jest w trakcie opracowywania może to być najlepszym sposobem, aby umożliwić ich używanie. W przypadku tworzenia również biblioteki DLL, zaleca się unikać dublowania. Jeśli wprowadzisz kopię plików DLL, które są w fazie projektowania, może przypadkowo zmienić pliku nagłówka w jednej kopii, ale nie drugiej, lub używana biblioteka nieaktualna. Aby uniknąć tego problemu, zalecane ustawienia ścieżki include w projekcie klienta, aby uwzględnić pliki nagłówkowe biblioteki DLL z projektu DLL. Ponadto można ustawić ścieżki biblioteki w projekcie klienta do uwzględnienia bibliotek importu biblioteki DLL z projektu DLL. A na koniec skopiuj skompilowane biblioteki DLL z projektu DLL do katalogu wyjściowego kompilacji. Daje to gwarancję, że aplikacja klienta używa tego samego kodu biblioteki DLL, które tworzysz.
+Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL innych firm, projekt aplikacji klienta należy znaleźć nagłówki, które deklarują biblioteki DLL eksportuje biblioteki importu dla konsolidatora i biblioteki DLL, sam. Jest jednym ze sposobów, aby skopiować te pliki do projektu client. Dla bibliotek DLL innych firm, które są raczej nie ulegnie zmianie, gdy klient jest w trakcie opracowywania ta metoda może być najlepszym sposobem, aby umożliwić ich używanie. W przypadku tworzenia również biblioteki DLL, zaleca się unikać dublowania. Jeśli wprowadzisz kopię plików DLL, które są w fazie projektowania, może przypadkowo zmienić pliku nagłówka w jednej kopii, ale nie drugiej, lub używana biblioteka nieaktualne. Aby uniknąć tego problemu, zalecane ustawienia ścieżki include w projekcie klienta, aby uwzględnić pliki nagłówkowe biblioteki DLL z projektu DLL. Ponadto można ustawić ścieżki biblioteki w projekcie klienta do uwzględnienia bibliotek importu biblioteki DLL z projektu DLL. A na koniec skopiuj skompilowane biblioteki DLL z projektu DLL do katalogu wyjściowego kompilacji. Ten krok umożliwia aplikację kliencką użyć tego samego kodu biblioteki DLL, które tworzysz.
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017-version-153-or-later"></a>Aby utworzyć aplikację klienta w programie Visual Studio 2017 w wersji 15.3 lub nowszej
 
-1. Aby utworzyć aplikację C++, która korzysta z biblioteki DLL, który został utworzony, na pasku menu wybierz opcję **pliku**, **New**, **projektu**.
+1. Aby utworzyć aplikację C++, która korzysta z biblioteki DLL, który został utworzony, na pasku menu wybierz opcję **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **pulpitu Windows** w obszarze **zainstalowane**, **Visual C++**. W środkowym okienku wybierz **kreatora pulpitu Windows**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
+1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **pulpitu Windows** w obszarze **zainstalowane** > **Visual C++**. W środkowym okienku wybierz **kreatora pulpitu Windows**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
 
    ![Nazwij projekt klienta](media/mathclient-new-project-name-153.png "nazwij projekt klienta")
 
@@ -275,9 +275,9 @@ Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL inn
 
 ### <a name="to-create-a-client-app-in-older-versions-of-visual-studio-2017"></a>Aby utworzyć aplikację kliencką w starszych wersjach programu Visual Studio 2017
 
-1. Aby utworzyć aplikację C++, która korzysta z biblioteki DLL, który został utworzony, na pasku menu wybierz opcję **pliku**, **New**, **projektu**.
+1. Aby utworzyć aplikację C++, która korzysta z biblioteki DLL, który został utworzony, na pasku menu wybierz opcję **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **Win32** w obszarze **zainstalowane**, **szablony**, **językaVisualC++**. W środkowym okienku wybierz **Aplikacja konsoli Win32**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
+1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **Win32** w obszarze **zainstalowane** > **szablony**  >  **Visual C++**. W środkowym okienku wybierz **Aplikacja konsoli Win32**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
 
    ![Nazwij projekt klienta](media/mathclient-project-name.png "nazwij projekt klienta")
 
@@ -289,7 +289,7 @@ Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL inn
 
 Po zakończeniu pracy Kreatora projektu aplikacji konsolowej minimalny zostanie utworzony. Nazwa pliku głównego źródła jest taka sama jak nazwa projektu, wprowadzony wcześniej. W tym przykładzie jest on nazwany **MathClient.cpp**. Jego tworzenia, ale jeszcze nie używa biblioteki DLL.
 
-Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt musi zawierać plik MathLibrary.h. Można skopiować ten plik nagłówka do projekt aplikacji klienta, a następnie dodać go do projektu jako istniejącego elementu. Może to być dobrym wyborem dla bibliotek innych firm. Jednak jeśli użytkownik pracuje nad kodem dla biblioteki DLL w tym samym czasie jako klienta, który może prowadzić do zmiany w pliku nagłówkowym jeden, które nie są odzwierciedlane w innych. Aby uniknąć tego problemu, możesz zmienić **dodatkowe katalogi dołączenia** ścieżki w swoim projekcie zawiera ścieżkę do oryginalnego nagłówka.
+Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt musi zawierać plik MathLibrary.h. Można skopiować ten plik nagłówka do projekt aplikacji klienta, a następnie dodać go do projektu jako istniejącego elementu. Ta metoda może być dobrym wyborem dla bibliotek innych firm. Jednak podczas pracy nad kodem dla biblioteki DLL w tym samym czasie jako klienta, który może prowadzić do zmiany w pliku nagłówkowym jeden, które nie są wyświetlane w innym. Aby uniknąć tego problemu, możesz zmienić **dodatkowe katalogi dołączenia** ścieżki w swoim projekcie zawiera ścieżkę do oryginalnego nagłówka.
 
 ### <a name="to-add-the-dll-header-to-your-include-path"></a>Aby dodać nagłówek DLL do swojej ścieżki dołączania
 
@@ -297,7 +297,7 @@ Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt m
 
 1. W **konfiguracji** listy rozwijanej wybierz pozycję **wszystkie konfiguracje** Jeśli nie została jeszcze wybrana.
 
-1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji**, **C/C++**.
+1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji** > **C/C++**.
 
 1. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe katalogi dołączenia** pole edycji, a następnie wybierz **Edytuj**.
 
@@ -317,7 +317,7 @@ Teraz możesz uwzględnić **MathLibrary.h** pliku i korzystanie z funkcji dekla
 
 ```cpp
 // MathClient.cpp : Client app for MathLibrary DLL.
-#include "stdafx.h"
+#include "pch.h"
 #include <iostream>
 #include "MathLibrary.h"
 
@@ -337,7 +337,7 @@ int main()
 }
 ```
 
-Ten kod można skompilowany, ale nie jest to połączony, ponieważ konsolidator nie może odnaleźć biblioteki importowanej, wymagane do kompilowania aplikacji jeszcze. Konsolidator musi umożliwiać można znaleźć pliku MathLibrary.lib, aby połączyć się pomyślnie. Należy dodać plik MathLibrary.lib do kompilacji przez ustawienie **dodatkowe zależności** właściwości. Jeszcze raz można skopiować pliku biblioteki do projektu aplikacji klienta, ale jeśli zarówno aplikacja kliencka, jak i biblioteki są w fazie projektowania, który może prowadzić zmiany w jednej kopii, które nie są odzwierciedlane w innych. Aby uniknąć tego problemu, możesz zmienić **dodatkowe katalogi bibliotek** ścieżki w projekcie, aby zawrzeć ścieżkę w oryginalnej biblioteki, gdy tworzysz link.
+Ten kod można skompilowany, ale nie jest to połączony, ponieważ konsolidator nie może odnaleźć biblioteki importowanej, wymagane do kompilowania aplikacji jeszcze. Konsolidator musi znaleźć pliku MathLibrary.lib połączyć pomyślnie. Dodaj plik MathLibrary.lib do kompilacji przez ustawienie **dodatkowe zależności** właściwości. Jeszcze raz można skopiować pliku biblioteki do projektu aplikacji klienta, ale jeśli zarówno aplikacja kliencka, jak i biblioteki są w fazie projektowania, który może prowadzić do zmian w jednej kopii, które nie są wyświetlane w innych. Aby uniknąć tego problemu, możesz zmienić **dodatkowe katalogi bibliotek** ścieżki w projekcie, aby zawrzeć ścieżkę w oryginalnej biblioteki, gdy tworzysz link.
 
 ### <a name="to-add-the-dll-import-library-to-your-project"></a>Aby dodać biblioteki importowanej biblioteki DLL do projektu
 
@@ -345,7 +345,7 @@ Ten kod można skompilowany, ale nie jest to połączony, ponieważ konsolidator
 
 1. W **konfiguracji** listy rozwijanej wybierz pozycję **wszystkie konfiguracje** Jeśli nie została jeszcze wybrana.
 
-1. W okienku po lewej stronie wybierz **dane wejściowe** w obszarze **właściwości konfiguracji**, **konsolidatora**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe zależności** pole edycji, a następnie wybierz **Edytuj**.
+1. W okienku po lewej stronie wybierz **dane wejściowe** w obszarze **właściwości konfiguracji** > **konsolidatora**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe zależności** pole edycji, a następnie wybierz **Edytuj**.
 
    ![Edytuj właściwość dodatkowe zależności](media/mathclient-additional-dependencies-property.png "Edytuj właściwość dodatkowe zależności")
 
@@ -355,7 +355,7 @@ Ten kod można skompilowany, ale nie jest to połączony, ponieważ konsolidator
 
 1. Wybierz **OK** aby wrócić do **stron właściwości** okno dialogowe.
 
-1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji**, **konsolidatora**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe katalogi bibliotek** pole edycji, a następnie wybierz **Edytuj**.
+1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji** > **konsolidatora**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe katalogi bibliotek** pole edycji, a następnie wybierz **Edytuj**.
 
    ![Edytuj właściwość dodatkowe katalogi bibliotek](media/mathclient-additional-library-directories-property.png "Edytuj właściwość dodatkowe katalogi biblioteki")
 
@@ -375,7 +375,7 @@ Aplikację kliencką teraz kompilowanie i łączenie pomyślnie, ale nadal nie m
 
 1. W polu listy rozwijanej konfiguracji wybierz **wszystkie konfiguracje** Jeśli nie została jeszcze wybrana.
 
-1. W okienku po lewej stronie wybierz **zdarzenia Postkompilacyjnego** w obszarze **właściwości konfiguracji**, **zdarzenia kompilacji**.
+1. W okienku po lewej stronie wybierz **zdarzenia Postkompilacyjnego** w obszarze **właściwości konfiguracji** > **zdarzenia kompilacji**.
 
 1. W okienku właściwości, wybierz formant edycji w **wiersza polecenia** pola, a następnie wprowadź następujące polecenie:
 
@@ -385,11 +385,11 @@ Aplikację kliencką teraz kompilowanie i łączenie pomyślnie, ale nadal nie m
 
 1. Wybierz **OK** przycisk, aby zapisać zmiany we właściwościach projektu.
 
-Teraz aplikację kliencką ma wszystko, co jest potrzebne do kompilowania i uruchamiania. Kompiluj aplikację, wybierając **kompilacji**, **Kompiluj rozwiązanie** na pasku menu. **Dane wyjściowe** okna w programie Visual Studio powinna zawierać mniej więcej tak:
+Teraz aplikację kliencką ma wszystko, co jest potrzebne do kompilowania i uruchamiania. Kompiluj aplikację, wybierając **kompilacji** > **Kompiluj rozwiązanie** na pasku menu. **Dane wyjściowe** okna w programie Visual Studio powinny mieć mniej więcej tak:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
-1>stdafx.cpp
+1>pch.cpp
 1>MathClient.cpp
 1>MathClient.vcxproj -> C:\Users\username\Source\Repos\MathClient\Debug\MathClient.exe
 1>MathClient.vcxproj -> C:\Users\username\Source\Repos\MathClient\Debug\MathClient.pdb (Partial PDB)
@@ -397,7 +397,7 @@ Teraz aplikację kliencką ma wszystko, co jest potrzebne do kompilowania i uruc
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Gratulacje, utworzono aplikację, która wywołuje funkcje w bibliotece DLL. Teraz można uruchomić aplikacji, aby zobaczyć, jak działa. Na pasku menu wybierz **debugowania**, **Rozpocznij bez debugowania**. Program Visual Studio otwiera okno polecenia do uruchomienia programu. Ostatnia część dane wyjściowe powinny wyglądać następująco:
+Gratulacje, utworzono aplikację, która wywołuje funkcje w bibliotece DLL. Teraz można uruchomić aplikacji, aby zobaczyć, jak działa. Na pasku menu wybierz **debugowania** > **Rozpocznij bez debugowania**. Program Visual Studio otwiera okno polecenia do uruchomienia programu. Ostatnia część dane wyjściowe powinny wyglądać:
 
 ![Uruchom aplikację kliencką bez debugowania](media/mathclient-run-without-debugging.png "Uruchom aplikację kliencką bez debugowania")
 

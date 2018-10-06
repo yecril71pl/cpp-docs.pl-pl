@@ -1,7 +1,7 @@
 ---
-title: / CLRUNMANAGEDCODECHECK (Dodaj atrybut SuppressUnmanagedCodeSecurityAttribute) | Dokumentacja firmy Microsoft
+title: / CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429764"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820928"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (Dodaj atrybut SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)
 
-**/ CLRUNMANAGEDCODECHECK** Określa, czy konsolidator zastosuje <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> do wygenerowanych przez konsolidator `PInvoke` wywołań z kodu zarządzanego do macierzystych bibliotek DLL.
+**/ CLRUNMANAGEDCODECHECK** Określa, że konsolidator nie ma zastosowania <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> do wygenerowanych przez konsolidator `PInvoke` wywołań z kodu zarządzanego do macierzystych bibliotek DLL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429764"
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie konsolidator stosuje **SuppressUnmanagedCodeSecurityAttribute** do wygenerowanych przez konsolidator `PInvoke` wywołania. Gdy **opcji/clrunmanagedcodecheck** – **SuppressUnmanagedCodeSecurityAttribute** nie ma zastosowania.
+Domyślnie konsolidator stosuje **SuppressUnmanagedCodeSecurityAttribute** do wygenerowanych przez konsolidator `PInvoke` wywołania. Gdy **opcji/clrunmanagedcodecheck** – **SuppressUnmanagedCodeSecurityAttribute** zostanie usunięty. Aby zastosować jawnie **SuppressUnmanagedCodeSecurityAttribute** do wygenerowanych przez konsolidator `PInvoke` wywołania, można użyć **/CLRUNMANAGEDCODECHECK:NO**.
 
 Konsolidator dodaje atrybut tylko do obiektów, które są kompilowane przy użyciu **/CLR** lub **/CLR: pure**. Jednak **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 A `PInvoke` wywołanie jest generowany przez konsolidator, gdy konsolidator nie może odnaleźć symboli zarządzanych do zaspokojenia odwołanie z zarządzanego obiektu wywołującego, ale można znaleźć natywnych symboli do spełnienia tego odwołania. Aby uzyskać więcej informacji na temat `PInvoke`, zobacz [podczas wywoływania funkcji natywnych z kodu zarządzanego](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Należy pamiętać, że jeśli używasz <xref:System.Security.AllowPartiallyTrustedCallersAttribute> w kodzie, należy jawnie ustawić **opcji/clrunmanagedcodecheck**. Jeśli obraz zawiera atrybuty SuppressUnmanagedCodeSecurity i AllowPartiallyTrustedCallers występuje potencjalne luki w zabezpieczeniach.
+Należy pamiętać, że jeśli używasz <xref:System.Security.AllowPartiallyTrustedCallersAttribute> w kodzie, należy jawnie ustawić **opcji/clrunmanagedcodecheck** do usunięcia **SuppressUnmanagedCodeSecurity** atrybutu. Jest potencjalne luki w zabezpieczeniach, jeśli obraz zawiera zarówno **SuppressUnmanagedCodeSecurity** i **AllowPartiallyTrustedCallers** atrybutów.
 
 Zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Aby uzyskać więcej informacji na temat implikacji używania **SuppressUnmanagedCodeSecurityAttribute**.
 

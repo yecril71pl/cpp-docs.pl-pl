@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 699a75da7829feb39142a777a34a14fcd85be653
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678960"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821143"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -73,4 +73,4 @@ Zobacz przykłady w [R6035 błąd środowiska uruchomieniowego C](../../error-me
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)
+[Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)

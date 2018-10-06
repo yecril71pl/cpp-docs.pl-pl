@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394923"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821052"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -72,7 +72,7 @@ Aby zapewnić obsługę funkcji IntelliSense dla zdalnych nagłówków, Visual S
 
 Podczas debugowania kodu w systemie zdalnym, ustaw punkt przerwania, wybierz element docelowy narzędzia CMake jako element startowy w menu narzędzi obok ustawienia projektu i wybierz  **&#x23f5; Start** na pasku narzędzi lub naciśnięciu klawisza F5.
 
-Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. To spowoduje otwarcie lub tworzy plik konfiguracji pliku launch.vs.json, który zawiera informacje o programie. Aby określić dodatkowe argumenty, dodaj je w `args` tablicę JSON. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects).
+Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. To spowoduje otwarcie lub tworzy plik konfiguracji pliku launch.vs.json, który zawiera informacje o programie. Aby określić dodatkowe argumenty, dodaj je w `args` tablicę JSON. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](../ide/non-msbuild-projects.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Konfiguruj ustawienia narzędzia CMake dla systemu Linux
 

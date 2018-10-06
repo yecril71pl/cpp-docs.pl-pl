@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc08e0807f1af6859587271ec48d2508b9d4bd6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048672"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821182"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -349,7 +349,9 @@ Aby uzyskać więcej informacji, zobacz [generate_n](../standard-library/algorit
         return [n] { return n + 1; }();
     }
 ```
+
 Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik nie spełnia wymagań `constexpr` funkcji:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -358,6 +360,7 @@ Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik nie spełnia wymagań 
 
     constexpr int response = answer(10);
 ```
+
 Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`, konwersja wskaźnika funkcji tworzy `constexpr` funkcji:
 
 ```cpp

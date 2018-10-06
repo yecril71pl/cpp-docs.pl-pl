@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8222594c6c5ff0891bc9e7ef2a752d63dd7d0c6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02442fab506f867a682a68b49a6c573305075992
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417557"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820519"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 
@@ -49,7 +49,7 @@ unsigned char __vmx_vmresume(
 
 Aplikacja może wykonywać operację wprowadź maszyny Wirtualnej przy użyciu [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) lub `__vmx_vmresume` funkcji. `__vmx_vmlaunch` Funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Clear`i `__vmx_vmresume` funkcji można używać tylko w przypadku VMCS, ma stan uruchomienia `Launched`. W związku z tym, użyj [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkcję, aby ustawić stan uruchomienia VMCS do `Clear`, a następnie użyj `__vmx_vmlaunch` funkcji do pierwszej operacji maszyny Wirtualnej, wprowadź i `__vmx_vmresume` funkcji dla kolejnych wprowadź maszyny Wirtualnej operacje.
 
-`__vmx_vmresume` Funkcji jest odpowiednikiem `VMRESUME` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu PDF "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.
+`__vmx_vmresume` Funkcji jest odpowiednikiem `VMRESUME` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu PDF "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
 
 ## <a name="requirements"></a>Wymagania
 
