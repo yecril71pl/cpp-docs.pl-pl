@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1f7d94dafa34c5ab01dfbcf28e2c429642dbf68
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397319"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821546"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -2966,7 +2966,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="mfc-and-atl"></a>MFC i ATL
 
-- **Programu Visual Studio 2013 tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest bardzo popularny i zastosowanie MBCS jest dużo mniejsze. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli musisz nadal korzystać z biblioteki MFC MBCS, możesz ją pobrać z Centrum pobierania MSDN, w [wielobajtowych MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: biblioteki DLL MBCS znajduje się w C++ składników instalacji programu Visual Studio 2015 lub nowszy).
+- **Programu Visual Studio 2013 tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest bardzo popularny i zastosowanie MBCS jest dużo mniejsze. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli musisz nadal korzystać z biblioteki MFC MBCS, możesz ją pobrać z Centrum pobierania MSDN, w [wielobajtowych MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: biblioteki DLL MBCS znajduje się w C++ składników instalacji programu Visual Studio 2015 lub nowszy).
 
 - Ułatwienia dostępu dla wstążki MFC jest zmieniany.  Zamiast architektury jednego poziomu jest teraz architektura hierarchiczna. Można nadal używać starego zachowania wywołując `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 

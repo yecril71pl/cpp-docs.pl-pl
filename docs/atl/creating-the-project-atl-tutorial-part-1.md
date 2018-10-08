@@ -1,7 +1,7 @@
 ---
 title: Tworzenie projektu (ALT — samouczek, część 1) | Dokumentacja firmy Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,42 +12,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b45ff8c7af8c8aaf7232cefa2bb4f002fc37be
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755621"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821104"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
 Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tworzy obiekt ActiveX, który zawiera wielokąt. Obiekt zawiera opcje umożliwiające użytkownikowi, aby zmienić liczbę boków tworzących wielokąta i kod, aby odświeżyć wyświetlaną.
 
 > [!NOTE]
->  ATL i MFC nie są zazwyczaj obsługiwane w wersjach Express programu Visual Studio.
+> ATL i MFC nie są zazwyczaj obsługiwane w wersjach Express programu Visual Studio.
 
 > [!NOTE]
->  Ten samouczek tworzy ten sam kod źródłowy jako przykładowe wielokąta. Jeśli chcesz uniknąć ręcznego wprowadzania kodu źródłowego, możesz ją pobrać z [wielokąta przykładowy ogólny](../visual-cpp-samples.md). Możesz następnie można się odwoływać do kodu źródłowego wielokąta podczas pracy za pomocą tego samouczka lub używany w celu sprawdzenia błędów w własnego projektu.
+> Ten samouczek tworzy ten sam kod źródłowy jako przykładowe wielokąta. Jeśli chcesz uniknąć ręcznego wprowadzania kodu źródłowego, możesz ją pobrać z [wielokąta przykładowy ogólny](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Możesz następnie można się odwoływać do kodu źródłowego wielokąta podczas pracy za pomocą tego samouczka lub używany w celu sprawdzenia błędów w własnego projektu.
+> Aby skompilować, otwórz stdafx.h i Zastąp:
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0400   
+> #endif
+> ```
+> with
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0500
+> #define _WIN32_WINNT 0x0500
+> #endif
+> ```
+> Kompilator będzie nadal narzekają `regsvr32` nie zamykania poprawnie, ale nadal powinien mieć formantu biblioteki DLL, skompilowane i dostępne do użycia.
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Aby utworzyć początkową Projekt ATL za pomocą Kreatora projektu ATL
 
 1. W środowisku programowania Visual Studio, kliknij przycisk **New** na **pliku** menu, a następnie kliknij przycisk **projektu**.
 
-2. Kliknij przycisk **projekty języka Visual C++** i wybierz polecenie **Projekt ATL**.
+1. Otwórz **Visual C++** kartę, a następnie wybierz pozycję **MFC i ATL**. Wybierz **Projekt ATL**.
 
-3. Typ *wielokąta* jako nazwę projektu.
+1. Typ *wielokąta* jako nazwę projektu.
 
-     My Documents\Visual Studio projekty zazwyczaj domyślnie lokalizacji kodu źródłowego, a nowy folder zostaną utworzone automatycznie.
+    Lokalizację kodu źródłowego zwykle będą domyślnie \Users\\\<username > \source\repos i nowego folderu zostaną utworzone automatycznie.
 
-4. Kliknij przycisk **OK** i zostanie otwarty Kreator projektów ATL.
+1. Kliknij przycisk **OK** i **Projekt ATL** zostanie otwarty Kreator.
 
-5. Kliknij przycisk **ustawienia aplikacji** Aby wyświetlić dostępne opcje.
+1. Kliknij przycisk **ustawienia aplikacji** Aby wyświetlić dostępne opcje.
 
-6. Podczas tworzenia kontrolki i formantu musi być wewnątrz procesowego, pozostaw **typ aplikacji** jako biblioteki DLL.
+1. Podczas tworzenia kontrolki i formantu musi być wewnątrz procesowego, pozostaw **typ aplikacji** jako biblioteki DLL.
 
-7. Dla pozostałych opcji zostaw wartości domyślne, a następnie kliknij przycisk **Zakończ**.
+1. Dla pozostałych opcji zostaw wartości domyślne, a następnie kliknij przycisk **OK**.
 
-Kreator projektu ATL utworzy projekt przez wygenerowanie kilku plików. Pliki te można wyświetlić w Eksploratorze rozwiązań, rozwijając obiektu wielokąta. Pliki są wymienione poniżej.
+**Kreator projektów ATL** utworzy projekt przez wygenerowanie kilku plików. Można wyświetlić te pliki w **Eksploratora rozwiązań** , rozwijając `Polygon` obiektu. Pliki są wymienione poniżej.
 
 |Plik|Opis|
 |----------|-----------------|
@@ -61,13 +75,13 @@ Kreator projektu ATL utworzy projekt przez wygenerowanie kilku plików. Pliki te
 |stdafx.cpp|Plik który będzie `#include` ATL pliki wdrożenia.|
 |stdafx.h|Plik który będzie `#include` plików nagłówkowych ATL.|
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy `Polygon` projektu.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `Polygon` projektu.
 
-2. W menu skrótów kliknij **właściwości**.
+1. W menu skrótów kliknij **właściwości**.
 
-3. Kliknij pozycję **konsolidatora**. Zmiana **na UserRedirection** opcję **tak**.
+1. Kliknij pozycję **konsolidatora**. Zmiana **na UserRedirection** opcję **tak**.
 
-4. Kliknij przycisk **OK**.
+1. Kliknij przycisk **OK**.
 
 W następnym kroku dodasz formant do projektu.
 
