@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107473"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861320"
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)
 
@@ -220,13 +220,13 @@ Uwagi dotyczące `thread_local` specyfikator:
 
 - Dynamicznie zainicjowany zmiennymi lokalnymi wątku w bibliotekach DLL nie może być poprawnie zainicjować we wszystkich wątkach wywoływania. Aby uzyskać więcej informacji, zobacz [wątku](thread.md).
 
--  `thread_local` Specyfikator mogą być łączone z **statyczne** lub **extern**.
+- `thread_local` Specyfikator mogą być łączone z **statyczne** lub **extern**.
 
--  Można zastosować `thread_local` tylko do danych, deklaracje i definicje; `thread_local` nie można używać w deklaracji lub definicji funkcji.
+- Można zastosować `thread_local` tylko do danych, deklaracje i definicje; `thread_local` nie można używać w deklaracji lub definicji funkcji.
 
--  Można określić `thread_local` tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas. Wszelkie zmienna lokalna zadeklarowana `thread_local` jest niejawnie statyczna, jeśli podano inną klasę magazynu; innymi słowy, w zakresie bloku `thread_local` jest odpowiednikiem `thread_local static`.
+- Można określić `thread_local` tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas. Wszelkie zmienna lokalna zadeklarowana `thread_local` jest niejawnie statyczna, jeśli podano inną klasę magazynu; innymi słowy, w zakresie bloku `thread_local` jest odpowiednikiem `thread_local static`.
 
--  Należy określić `thread_local` dla deklaracji i definicji lokalnego obiektu wątku, czy deklaracja i definicja występują w tym samym pliku lub osobnych plików.
+- Należy określić `thread_local` dla deklaracji i definicji lokalnego obiektu wątku, czy deklaracja i definicja występują w tym samym pliku lub osobnych plików.
 
 W Windows `thread_local` jest funkcjonalnym odpowiednikiem [__declspec(thread)](../cpp/thread.md) z tą różnicą, że **__declspec(thread)** może odnosić się do definicji typu i jest prawidłowy w kodzie C. Możliwe, używaj `thread_local` ponieważ jest częścią standardu języka C++ i dlatego jest bardziej przenośny.
 

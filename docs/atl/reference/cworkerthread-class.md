@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040235"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861463"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
 Ta klasa tworzy wątek roboczy lub korzysta z istniejącą grupę, czeka na co najmniej jeden uchwytów obiektu jądra i wykonuje funkcję określonego klienta, gdy jeden z uchwytów, jest sygnalizowane.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *ThreadTraits*<br/>
 Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) lub [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
@@ -84,19 +84,19 @@ Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../
 
 1. Utwórz wystąpienie tej klasy.
 
-2. Wywołaj [CWorkerThread::Initialize](#initialize).
+1. Wywołaj [CWorkerThread::Initialize](#initialize).
 
-3. Wywołaj [CWorkerThread::AddHandle](#addhandle) z dojściem obiektu jądra i wskaźnik do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+1. Wywołaj [CWorkerThread::AddHandle](#addhandle) z dojściem obiektu jądra i wskaźnik do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-     - lub —
+   \- lub —
 
-     Wywołaj [CWorkerThread::AddTimer](#addtimer) za pomocą wskaźnika do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Wywołaj [CWorkerThread::AddTimer](#addtimer) za pomocą wskaźnika do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-4. Implementowanie [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) wykonania określonego działania, gdy zasygnalizowania dojścia lub czasomierza.
+1. Implementowanie [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) wykonania określonego działania, gdy zasygnalizowania dojścia lub czasomierza.
 
-5. Aby usunąć obiekt z listy obiektów oczekujący, należy wywołać [CWorkerThread::RemoveHandle](#removehandle).
+1. Aby usunąć obiekt z listy obiektów oczekujący, należy wywołać [CWorkerThread::RemoveHandle](#removehandle).
 
-6. Aby zakończyć wątek, wywołaj [CWorkerThread::Shutdown](#shutdown).
+1. Aby zakończyć wątek, wywołaj [CWorkerThread::Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Wymagania
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412811"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861864"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Umieszczanie pliku na liście)
 
@@ -87,9 +87,9 @@ Plik listingu o nazwie *filename.extension* znajduje się w określonym *katalog
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-2. Wybierz **właściwości konfiguracji** > **C/C++** > **pliki wyjściowe** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **pliki wyjściowe** stronę właściwości.
 
-3. Modyfikowanie **produkt wyjściowy asemblera** właściwość umożliwiająca ustawienie **/FAC** i **/FAS** opcje asemblera, maszyna i kod źródłowy. Modyfikowanie **Użyj Unicode dla asemblera ofercie** właściwość umożliwiająca ustawienie **/fau** opcji ANSI lub UTF-8 danych wyjściowych. Modyfikowanie **lokalizacja listy ASM** można ustawić **/Fa** opcji do wyświetlania listy nazwę i lokalizację pliku.
+1. Modyfikowanie **produkt wyjściowy asemblera** właściwość umożliwiająca ustawienie **/FAC** i **/FAS** opcje asemblera, maszyna i kod źródłowy. Modyfikowanie **Użyj Unicode dla asemblera ofercie** właściwość umożliwiająca ustawienie **/fau** opcji ANSI lub UTF-8 danych wyjściowych. Modyfikowanie **lokalizacja listy ASM** można ustawić **/Fa** opcji do wyświetlania listy nazwę i lokalizację pliku.
 
 Należy pamiętać, że ustawienie oba **produkt wyjściowy asemblera** i **Użyj Unicode dla asemblera ofercie** właściwości może spowodować, że [wiersza polecenia ostrzeżenie d9025 dla](../../error-messages/tool-errors/command-line-warning-d9025.md). Aby połączyć tych opcji w środowisku IDE, należy użyć **dodatkowe opcje** pole **wiersza polecenia** zamiast stronie właściwości.
 

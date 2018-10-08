@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116714"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861099"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcję C++ Standard Library
 
@@ -57,15 +57,15 @@ Jest to standardowy formularz interfejs kolekcji tylko do odczytu, zaprojektowan
 
 1. Interfejsów kolekcji są zazwyczaj dwa, ponieważ uzyskuje dostęp do klientów automatyzacji `_NewEnum` właściwości, za pośrednictwem `IDispatch::Invoke`. Jednak klienci automatyzacji można uzyskiwać dostęp do pozostałych metod za pośrednictwem vtable, tak podwójna interfejsy są preferowane w porównaniu do dispinterfaces.
 
-2. Jeśli podwójnego interfejsu lub dispinterface nie zostanie rozszerzony w czasie wykonywania (oznacza to, że nie będzie zapewniać dodatkowe metody lub właściwości, za pośrednictwem `IDispatch::Invoke`), należy zastosować **nonextensible** atrybutu do swojej definicji. Ten atrybut umożliwia klientom automatyzacji do przeprowadzenia weryfikacji pełnego kodu w czasie kompilacji. W takim przypadku można rozszerzyć nie interfejsu.
+1. Jeśli podwójnego interfejsu lub dispinterface nie zostanie rozszerzony w czasie wykonywania (oznacza to, że nie będzie zapewniać dodatkowe metody lub właściwości, za pośrednictwem `IDispatch::Invoke`), należy zastosować **nonextensible** atrybutu do swojej definicji. Ten atrybut umożliwia klientom automatyzacji do przeprowadzenia weryfikacji pełnego kodu w czasie kompilacji. W takim przypadku można rozszerzyć nie interfejsu.
 
-3. Prawidłowy identyfikator DISPID jest ważne, jeśli chcesz, aby klienci automatyzacji, aby można było używać tej właściwości. (Zwróć uwagę, że istnieje tylko jeden znak podkreślenia w DISPID_NEWENUM).
+1. Prawidłowy identyfikator DISPID jest ważne, jeśli chcesz, aby klienci automatyzacji, aby można było używać tej właściwości. (Zwróć uwagę, że istnieje tylko jeden znak podkreślenia w DISPID_NEWENUM).
 
-4. Możesz podać dowolną wartość jako identyfikator DISPID z `Item` właściwości. Jednak `Item` zazwyczaj używa się to domyślna właściwość kolekcji DISPID_VALUE. Dzięki temu klienci automatyzacji do odwoływania się do właściwości bez jawnie nadawania mu nazwy.
+1. Możesz podać dowolną wartość jako identyfikator DISPID z `Item` właściwości. Jednak `Item` zazwyczaj używa się to domyślna właściwość kolekcji DISPID_VALUE. Dzięki temu klienci automatyzacji do odwoływania się do właściwości bez jawnie nadawania mu nazwy.
 
-5. Typ danych używany dla wartości zwracanej z `Item` właściwość jest typ elementu, przechowywane w kolekcji, o ile dotyczy to klientów modelu COM. Interfejs zwraca ciągi, więc zaleca się użycie standardowego typu string COM, BSTR. Można przechowywać dane w innym formacie wewnętrznie jako pojawi się wkrótce.
+1. Typ danych używany dla wartości zwracanej z `Item` właściwość jest typ elementu, przechowywane w kolekcji, o ile dotyczy to klientów modelu COM. Interfejs zwraca ciągi, więc zaleca się użycie standardowego typu string COM, BSTR. Można przechowywać dane w innym formacie wewnętrznie jako pojawi się wkrótce.
 
-6. Wartość identyfikator DISPID z `Count` właściwość jest całkowicie dowolnego. Nie ma żadnych standardowych DISPID dla tej właściwości.
+1. Wartość identyfikator DISPID z `Count` właściwość jest całkowicie dowolnego. Nie ma żadnych standardowych DISPID dla tej właściwości.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Tworzenie definicji typów dla magazynu i zagrożeń
 
@@ -114,4 +114,3 @@ Teraz możesz przetestować kod przy użyciu wybranego klienta.
 [Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)<br/>
 [Przykładowe ATLCollections](../visual-cpp-samples.md)<br/>
 [Klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md)
-

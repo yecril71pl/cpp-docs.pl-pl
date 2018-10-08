@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716641"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861389"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -131,9 +131,9 @@ Ten etap jest wykonywane tylko raz, przed rozpoczęciem przetwarzania argumentó
 
 1. Następny General-purpose zarejestrować numer (NGRN) jest równa zero.
 
-2. Dalej SIMD i zmiennopozycyjna zarejestrować numer (NSRN) jest równa zero.
+1. Dalej SIMD i zmiennopozycyjna zarejestrować numer (NSRN) jest równa zero.
 
-3. Adres następnego skumulowany argumentu (NSAA) jest równa bieżąca wartość wskaźnika stosu (SP).
+1. Adres następnego skumulowany argumentu (NSAA) jest równa bieżąca wartość wskaźnika stosu (SP).
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Etap B — wstępne wypełnienie i rozszerzenie argumentów
 
@@ -141,11 +141,11 @@ W każdy argument na liście jest stosowane pierwsza pasująca reguła z poniżs
 
 1. Jeśli typ argumentu jest typu złożonego, którego rozmiar nie można ustalić statycznie przez obiekt wywołujący i obiekt wywoływany, argument jest kopiowany do pamięci, a argument jest zastępowany przez wskaźnik do skopiowania. (Nie ma żadnych takich typów, jak w języku C/C++, ale istnieją one w innych językach lub rozszerzenia językowe).
 
-2. Jeśli typ argumentu jest HFA lub HVA, a następnie jest używany argument zostały zmodyfikowane.
+1. Jeśli typ argumentu jest HFA lub HVA, a następnie jest używany argument zostały zmodyfikowane.
 
-3. Jeśli typ argumentu jest typ złożony, który jest większy niż 16-bajtowy, argument jest kopiowany do pamięci przydzielonej przez obiekt wywołujący i argument jest zastępowany przez wskaźnik do skopiowania.
+1. Jeśli typ argumentu jest typ złożony, który jest większy niż 16-bajtowy, argument jest kopiowany do pamięci przydzielonej przez obiekt wywołujący i argument jest zastępowany przez wskaźnik do skopiowania.
 
-4. Jeśli typ argumentu jest typem złożonym rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
+1. Jeśli typ argumentu jest typem złożonym rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Etap C — przypisanie argumenty do rejestrów i stosu
 
@@ -153,33 +153,33 @@ Dla każdego argumentu na liście następujące reguły są stosowane z kolei, d
 
 1. Jeśli argument jest pół-, jedno-, Double - lub cztery precyzji zmiennoprzecinkowego lub typu krótkiego wektora i NSRN jest mniejsze niż 8, a następnie argument jest przydzielany do najmniej znaczących bitów v rejestru [NSRN]. NSRN jest zwiększany o jeden. Argument została przydzielona.
 
-2. Jeśli argument jest HFA lub HVA są wystarczające nieprzydzielone SIMD i rejestrów zmiennoprzecinkowych (NSRN + liczba elementów członkowskich ≤ 8), argument jest przydzielany SIMD i zmiennopozycyjna rejestruje (za pomocą jednego rejestru poszczególnych członków HFA lub HVA). NSRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
+1. Jeśli argument jest HFA lub HVA są wystarczające nieprzydzielone SIMD i rejestrów zmiennoprzecinkowych (NSRN + liczba elementów członkowskich ≤ 8), argument jest przydzielany SIMD i zmiennopozycyjna rejestruje (za pomocą jednego rejestru poszczególnych członków HFA lub HVA). NSRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
 
-3. Jeśli argument jest HFA lub HVA NSRN jest równa 8, a rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
+1. Jeśli argument jest HFA lub HVA NSRN jest równa 8, a rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
 
-4. Jeśli argument jest HFA HVA cztery precyzji zmiennoprzecinkowego lub krótki wektor wpisz NSAA jest zaokrąglany do większego z 8 lub naturalnego wyrównania składowej typu argumentu.
+1. Jeśli argument jest HFA HVA cztery precyzji zmiennoprzecinkowego lub krótki wektor wpisz NSAA jest zaokrąglany do większego z 8 lub naturalnego wyrównania składowej typu argumentu.
 
-5. Jeśli argument jest typem zmiennoprzecinkowej połowie lub pojedynczej precyzji, rozmiar argumentu jest ustawiony na 8 bajtów. Efekt tak, jakby było argument został skopiowany do najmniej znaczące bity 64-bitowego rejestru i pozostałych bitów wypełnione wartościami nieokreślony.
+1. Jeśli argument jest typem zmiennoprzecinkowej połowie lub pojedynczej precyzji, rozmiar argumentu jest ustawiony na 8 bajtów. Efekt tak, jakby było argument został skopiowany do najmniej znaczące bity 64-bitowego rejestru i pozostałych bitów wypełnione wartościami nieokreślony.
 
-6. Jeśli argument jest HFA, HVA, pół-, jedno-, Double - lub cztery precyzji zmiennoprzecinkowego lub typu krótkiego wektora, a następnie argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Jeśli argument jest HFA, HVA, pół-, jedno-, Double - lub cztery precyzji zmiennoprzecinkowego lub typu krótkiego wektora, a następnie argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
 
-7. Jeśli argument jest całkowitego lub typu wskaźnika, rozmiar argumentu jest większa niż 8 bajtów i NGRN jest mniejsze niż 8, argument jest kopiowany do najmniej znaczących bitów w x [NGRN]. NGRN jest zwiększany o jeden. Argument została przydzielona.
+1. Jeśli argument jest całkowitego lub typu wskaźnika, rozmiar argumentu jest większa niż 8 bajtów i NGRN jest mniejsze niż 8, argument jest kopiowany do najmniej znaczących bitów w x [NGRN]. NGRN jest zwiększany o jeden. Argument została przydzielona.
 
-8. Jeśli argument ma wyrównanie 16 NGRN jest zaokrąglana w górę do najbliższej parzystej liczby.
+1. Jeśli argument ma wyrównanie 16 NGRN jest zaokrąglana w górę do najbliższej parzystej liczby.
 
-9. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16 i NGRN jest mniejszy niż 7, argument jest kopiowany do x [NGRN] i x [NGRN + 1]. x [NGRN] zawiera niższe zaadresowane double — słowo pamięci reprezentacji w postaci argumentu. NGRN jest zwiększany przez dwa. Argument została przydzielona.
+1. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16 i NGRN jest mniejszy niż 7, argument jest kopiowany do x [NGRN] i x [NGRN + 1]. x [NGRN] zawiera niższe zaadresowane double — słowo pamięci reprezentacji w postaci argumentu. NGRN jest zwiększany przez dwa. Argument została przydzielona.
 
-10. Jeśli argument jest typem złożonym i rozmiar w słowa podwójne argumentu nie jest więcej niż 8 minus NGRN, a następnie argument jest kopiowana do kolejnych rejestrów ogólnego przeznaczenia, począwszy od stawki x [NGRN]. Argument jest przekazywany tak, jakby został załadowany do rejestrów z adresu wyrównane do słowa podwójne przy użyciu odpowiedniej sekwencji instrukcji LDR ładowanie kolejnych rejestrów z pamięci (zawartość częściami nieużywanych rejestrów są nieokreślone przez ten standard). NGRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
+1. Jeśli argument jest typem złożonym i rozmiar w słowa podwójne argumentu nie jest więcej niż 8 minus NGRN, a następnie argument jest kopiowana do kolejnych rejestrów ogólnego przeznaczenia, począwszy od stawki x [NGRN]. Argument jest przekazywany tak, jakby został załadowany do rejestrów z adresu wyrównane do słowa podwójne przy użyciu odpowiedniej sekwencji instrukcji LDR ładowanie kolejnych rejestrów z pamięci (zawartość częściami nieużywanych rejestrów są nieokreślone przez ten standard). NGRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
 
-11. NGRN jest ustawiony na 8.
+1. NGRN jest ustawiony na 8.
 
-12. NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu...
+1. NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu...
 
-13. Jeśli argument jest typu złożonego argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Jeśli argument jest typu złożonego argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
 
-14. Jeśli rozmiar argumentu jest mniejsza niż 8 bajtów rozmiar argumentu jest ustawiony na 8 bajtów. Efekt jest tak, jakby argument został skopiowany do najmniej znaczące bity 64-bitowego rejestru i pozostałych bitów wypełnione wartościami nieokreślony.
+1. Jeśli rozmiar argumentu jest mniejsza niż 8 bajtów rozmiar argumentu jest ustawiony na 8 bajtów. Efekt jest tak, jakby argument został skopiowany do najmniej znaczące bity 64-bitowego rejestru i pozostałych bitów wypełnione wartościami nieokreślony.
 
-15. Argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
 
 ### <a name="addendum-variadic-functions"></a>Dodatek: Ze zmienną liczbą argumentów funkcji
 
@@ -187,7 +187,7 @@ Funkcje, które przyjmują zmienną liczbę argumentów są obsługiwane inaczej
 
 1. Wszystkie złożone są traktowane jako konta; nie specjalnego traktowania HFAs lub HVAs.
 
-2. SIMD i rejestruje zmiennopozycyjna nie są używane.
+1. SIMD i rejestruje zmiennopozycyjna nie są używane.
 
 Skutecznie równa to następujące reguły C.12–C.15 przydzielić argumenty urojone stosu, gdzie pierwszy 64 bajtów stosu są ładowane do x0 x7 i wszelkie pozostałe argumenty stosu są umieszczane w zwykły sposób.
 

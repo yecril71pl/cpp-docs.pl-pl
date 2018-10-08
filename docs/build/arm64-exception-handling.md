@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd273afaf5934313067ada55574edbaeee43929b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716565"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861541"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -34,11 +34,11 @@ Konwencje danych z odwijania wyjątek, a ten opis są przeznaczone do:
 
    - Jeśli nie jest w pełni opisane za pomocą kodów unwind odwijanie, następnie w niektórych przypadkach go należy wrócić do dekodowania instrukcji. Zwiększa ogólną złożoności i najlepiej będzie należy unikać.
 
-2. Obsługa odwijania w środku prologu i epilogu pośredniej.
+1. Obsługa odwijania w środku prologu i epilogu pośredniej.
 
    - Odwijanie jest używany w Windows przez więcej niż obsługa wyjątków, więc krytyczne, że będziemy mogli wykonać dokładne unwind nawet środku sekwencji kodu prologu i epilogu.
 
-3. Zająć minimalnej ilości miejsca.
+1. Zająć minimalnej ilości miejsca.
 
    - Kody unwind nie agregacji znacznie zwiększyć rozmiar binarnego.
 
@@ -50,15 +50,15 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 1. Prologs i epilogs zwykle albo innych duplikatów. Przez, korzystając z tego wspólne cechy można znacznie zmniejszyć rozmiar metadane potrzebne do opisania rozwinięcia. W treści funkcji nie ma znaczenia, czy operacje prologu zostaną cofnięte, epilogu operacje są wykonywane w sposób do przodu. Obie powinny być takie same wyniki.
 
-2. Funkcje dla całego zwykle jest stosunkowo mały. Wprowadzono kilka optymalizacji dla miejsca zależy to w celu osiągnięcia najbardziej efektywny sposób pakowania danych.
+1. Funkcje dla całego zwykle jest stosunkowo mały. Wprowadzono kilka optymalizacji dla miejsca zależy to w celu osiągnięcia najbardziej efektywny sposób pakowania danych.
 
-3. Brak warunkowego kodu w epilogs.
+1. Brak warunkowego kodu w epilogs.
 
-4. Rejestr wskaźnika ramki w wersji dedykowanej: zapisanie PS innego rejestru (r29) w prologu, tego rejestru pozostaje bez zmian w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
+1. Rejestr wskaźnika ramki w wersji dedykowanej: zapisanie PS innego rejestru (r29) w prologu, tego rejestru pozostaje bez zmian w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
 
-5. Chyba że PS jest zapisywany w rejestrze innego, wszystkie operacje na wskaźnik stosu występuje wyłącznie w prologu i epilogu.
+1. Chyba że PS jest zapisywany w rejestrze innego, wszystkie operacje na wskaźnik stosu występuje wyłącznie w prologu i epilogu.
 
-6. Układ ramki stosu jest zorganizowana zgodnie z opisem w następnej sekcji.
+1. Układ ramki stosu jest zorganizowana zgodnie z opisem w następnej sekcji.
 
 ## <a name="arm64-stack-frame-layout"></a>Układ ramki stosu ARM64
 
@@ -80,7 +80,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-2. Tworzenie łańcucha #localsz > 512
+1. Tworzenie łańcucha #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -94,7 +94,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
         add    r29,sp, #outsz           // setup r29 points to bottom of local area
     ```
 
-3. Unchained, funkcje liścia (lr niezapisane)
+1. Unchained, funkcje liścia (lr niezapisane)
 
     ```asm
         stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -107,7 +107,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 
    Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29, lr > wskazuje na poprzedniej ramki. Rozmiar ramki < = 512, "Sub-sp,..." może być w celu optymalizacji gdy obszar regs zapisany jest przenoszony do dolnej części stosu. Wadą tego jest nie jest spójna z innymi układów powyżej i zapisane regs brać zakresu dla pary regs i przed i po indeksowanych przesunięcia Tryb adresowania.
 
-4. Funkcje unchained, elementu członkowskiego typu liść (lr został zapisany w obszarze zapisane Int)
+1. Funkcje unchained, elementu członkowskiego typu liść (lr został zapisany w obszarze zapisane Int)
 
     ```asm
         stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
@@ -141,7 +141,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 
    Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29 > wskazuje na poprzedniej ramki.
 
-5. Tworzenie łańcucha #framesz < = 512, #outsz = 0
+1. Tworzenie łańcucha #framesz < = 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -152,7 +152,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 
    Porównanie z prologu #1 powyżej, zaletą jest możliwość wszystkich rejestru Zapisz instrukcje gotowe do wykonania od razu po tylko jeden stosu przydzielanie instrukcji. W związku z tym ma zapobieganie zależności na jest dodatkiem, który uniemożliwia równoległości poziomu instrukcji.
 
-6. Tworzenie łańcucha, rozmiar ramki > 512 (opcjonalnie na potrzeby funkcji, które nie alloca)
+1. Tworzenie łańcucha, rozmiar ramki > 512 (opcjonalnie na potrzeby funkcji, które nie alloca)
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -166,7 +166,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 
    W celu optymalizacji r29 można umieścić w dowolnym miejscu w sieci lokalnej w celu zapewnienia lepszego pokrycia "reg pary" i wstępnie przygotowany/odniesienie-indexed przesunięcie Tryb adresowania. Zmienne lokalne poniżej wskaźników ramek można uzyskać dostęp w oparciu SP.
 
-7. Powiązane, rozmiar ramki > 4K, z lub bez alloca(),
+1. Powiązane, rozmiar ramki > 4K, z lub bez alloca(),
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -237,7 +237,7 @@ Tych danych jest dzielony na cztery sekcje:
 
    g. **Rozszerzony liczba epilogu** i **rozszerzone wyrazów** są odpowiednio pola 16-bitowych i 8-bitowych, które zapewniają więcej miejsca na potrzeby kodowania niezwykle dużą liczbę epilogs lub nietypowo dużej liczby operacji unwind wyrazów. Rozszerzenia programu word, zawierające te pola będzie on wyświetlany, jeśli oba **liczba epilogu** i **wyrazów** pól w pierwszy wyraz nagłówka są ustawione na 0.
 
-2. Po wyjątku Jeśli **liczba epilogu** nie jest równa zero, listę informacji o zakresach epilogu spakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące usługi bits:
+1. Po wyjątku Jeśli **liczba epilogu** nie jest równa zero, listę informacji o zakresach epilogu spakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące usługi bits:
 
    a. **Przesunięcie Start epilogu** jest polem 18-bitowe przesunięcie w bajtach, podzielona przez 4 epilogu względem początku funkcji opisujące
 
@@ -245,9 +245,9 @@ Tych danych jest dzielony na cztery sekcje:
 
    c. **Indeks Start epilogu** jest 10-bitowy (2 bity więcej niż **rozszerzone wyrazów**) pola wskazujący indeks bajtu pierwszego unwind kod, który opisuje to epilogu.
 
-3. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, opisano szczegółowo w dalszej części tego tematu. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
+1. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, opisano szczegółowo w dalszej części tego tematu. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
 
-4. Na koniec, po bajty kodu unwind (i, jeśli **X** bit w nagłówku został ustawiony na wartość 1) zawiera informacje o program obsługi wyjątku. Ten krok składa się z pojedynczej **RVA obsługi wyjątków** podając adres obsługi wyjątków, a następnie natychmiast o zmiennej długości ilość danych wymaganych przez program obsługi wyjątków.
+1. Na koniec, po bajty kodu unwind (i, jeśli **X** bit w nagłówku został ustawiony na wartość 1) zawiera informacje o program obsługi wyjątku. Ten krok składa się z pojedynczej **RVA obsługi wyjątków** podając adres obsługi wyjątków, a następnie natychmiast o zmiennej długości ilość danych wymaganych przez program obsługi wyjątków.
 
 Rekord .xdata powyżej zaprojektowano w taki sposób, że istnieje możliwość pobrania pierwsze 8 bajtów i przy jego użyciu obliczeń w pełnym rozmiarze rekordu (minus długość danych wyjątku o zmiennym rozmiarze, który następuje po). Poniższy fragment kodu oblicza rozmiar rekordu:
 
@@ -287,9 +287,9 @@ Jeśli wyjątki były tylko musi wystąpić w treści funkcji (i nigdy nie przy 
 
 1. Przez liczenie unwind kodów, jest można obliczyć długość prologu i epilogu.
 
-2. Przez liczenie instrukcji po uruchomieniu zakresu epilogu, jest możliwe, aby pominąć równoważną liczbę kodów unwind i wykonania pozostałej części sekwencji, aby ukończyć częściowo wykonywane unwind działał epilogu.
+1. Przez liczenie instrukcji po uruchomieniu zakresu epilogu, jest możliwe, aby pominąć równoważną liczbę kodów unwind i wykonania pozostałej części sekwencji, aby ukończyć częściowo wykonywane unwind działał epilogu.
 
-3. Przez liczenie instrukcji przed zakończeniem prologu, jest możliwe, aby pominąć równoważną liczbę kodów unwind i wykonania pozostałej części sekwencji, aby cofnąć tylko te części prologu, które zostaną ukończone.
+1. Przez liczenie instrukcji przed zakończeniem prologu, jest możliwe, aby pominąć równoważną liczbę kodów unwind i wykonania pozostałej części sekwencji, aby cofnąć tylko te części prologu, które zostaną ukończone.
 
 Kody unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kodów odwinięcia są pojedynczy/podwójny bajt, z wyjątkiem tego, który przydziela dużego stosu. Są całkowicie 21 kodu unwind. Każdy unwind kodu mapy dokładnie jeden instrukcji w prologu/epilogu w celu umożliwienia odwijanie prologs częściowo wykonane i epilogs.
 
@@ -433,9 +433,9 @@ Teraz nie zawsze jest przypadek, który kodów prologu i epilogu dokładnie paso
 
 1. Odwijanie od w treści funkcji, wystarczy rozpocząć wykonywanie skryptu kody unwind pod indeksem 0 i kontynuować do momentu osiągnięcia opcode "koniec".
 
-2. Jeśli odwijanie od w ramach epilogu, należy użyć konkretnego epilogu indeks początkowy wyposażone w zakresie epilogu jako punktu wyjścia. Obliczenia, liczbę bajtów w danym Komputerem jest od początku epilogu. Następnie przejdź do przodu, za pomocą kodów odwijania, pomijanie unwind kodów, dopóki wszystkie instrukcje już wykonywane są rozliczane. Następnie należy wykonać w tym momencie uruchamiania.
+1. Jeśli odwijanie od w ramach epilogu, należy użyć konkretnego epilogu indeks początkowy wyposażone w zakresie epilogu jako punktu wyjścia. Obliczenia, liczbę bajtów w danym Komputerem jest od początku epilogu. Następnie przejdź do przodu, za pomocą kodów odwijania, pomijanie unwind kodów, dopóki wszystkie instrukcje już wykonywane są rozliczane. Następnie należy wykonać w tym momencie uruchamiania.
 
-3. Jeśli odwijanie od w prologu, należy użyć indeksu 0 jako punktu początkowego. Obliczenia długości z sekwencji kodu prologu i należy obliczyć liczbę bajtów w danym Komputerem jest od końca prologu. Następnie przejdź do przodu, za pomocą kodów odwijania, pomijanie unwind kodów, dopóki wszystkie instrukcje nie zostały jeszcze wykonywane są rozliczane. Następnie należy wykonać w tym momencie uruchamiania.
+1. Jeśli odwijanie od w prologu, należy użyć indeksu 0 jako punktu początkowego. Obliczenia długości z sekwencji kodu prologu i należy obliczyć liczbę bajtów w danym Komputerem jest od końca prologu. Następnie przejdź do przodu, za pomocą kodów odwijania, pomijanie unwind kodów, dopóki wszystkie instrukcje nie zostały jeszcze wykonywane są rozliczane. Następnie należy wykonać w tym momencie uruchamiania.
 
 W wyniku tych zasad unwind kodów prologu zawsze musi być pierwszym w tablicy, a także są kody używane na odpoczynek, ogólnie rzecz biorąc, wielkość liter odwijanie od treści. Istnienie sekwencji kodu specyficznego dla epilogu należy stosować bezpośrednio po.
 
@@ -484,13 +484,13 @@ Typowa funkcja fragmentów jest "Kod separacji" przez kompilator może przenieś
 
    Kodów odwinięcia: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-2. Tylko Epilogs (regionie 2: prologu znajduje się w regionie hosta)
+1. Tylko Epilogs (regionie 2: prologu znajduje się w regionie hosta)
 
    Zakłada się, że za pomocą kontroli czasu, przejdziemy do tego obszaru, wszystkie kody prologu zostały wykonane. Częściowe unwind może nastąpić w epilogs samo jak w przypadku normalnej funkcji. Ten typ regionu nie może być reprezentowany przez compact .pdata. W rekordzie pełną xdata mogą być zakodowane przy użyciu "fantomu" prologu otoczone `end_c` i `end` unwind pary kodu.  Wiodące `end_c` wskazuje rozmiar prologu jest równy zero. Indeks epilogu pojedynczej punktami początkowy epilogu `set_fp`.
 
    Kodzie operacji unwind dla regionu 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-3. Brak prologs lub epilogs (region 3: prologs i wszystkie epilogs znajdują się w innych fragmentów):
+1. Brak prologs lub epilogs (region 3: prologs i wszystkie epilogs znajdują się w innych fragmentów):
 
    Format Compact .pdata mogą być stosowane przez ustawienie flagi = 10. Urządzenia z rekordem .xdata pełną, liczba epilogu = 1. Operacja unwind kod jest taki sam, jak te w regionie 2 powyżej, ale również wskazuje indeks Start epilogu `end_c`. Rozwinięcie częściowych nie można zastosować w tym regionie kodu.
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726651"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861723"
 ---
 # <a name="struct-unwindcode"></a>struktura UNWIND_CODE
 
@@ -112,17 +112,17 @@ Ten kod unwind zawsze pojawi się w prologu fikcyjnego z rolą, która faktyczni
 
 1. Adres zwrotny RIP z góry stosu do POP *Temp*
 
-2. Wypychanie SS
+1. Wypychanie SS
 
-3. Stary RSP wypychania
+1. Stary RSP wypychania
 
-4. Wypychanie EFLAGS
+1. Wypychanie EFLAGS
 
-5. CS wypychania
+1. CS wypychania
 
-6. Wypychanie *Temp*
+1. Wypychanie *Temp*
 
-7. Wypychanie kodu błędu (Jeśli informacje o operacji jest równa 1)
+1. Wypychanie kodu błędu (Jeśli informacje o operacji jest równa 1)
 
 Symulowane `UWOP_PUSH_MACHFRAME` operacji zmniejsza RSP przez 40 (op informacji jest równa 0) lub 48 (op informacji jest równa 1).
 

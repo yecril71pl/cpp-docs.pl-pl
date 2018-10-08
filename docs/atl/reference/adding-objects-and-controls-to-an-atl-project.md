@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093964"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861138"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -41,16 +41,16 @@ Można użyć jednego z kreatorów kodu biblioteki ATL, można dodać obiektu lu
 > [!NOTE]
 > Przed dodaniem obiektu ATL do projektu, należy przejrzeć szczegóły i wymagania dotyczące obiektu w jego powiązane tematy Pomocy.
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Aby dodać obiekt lub kontrolki przy użyciu kreator kontrolki ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Aby dodać obiekt lub kontrolki przy użyciu kreator kontrolki ATL
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy węzeł projektu, a następnie kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu i kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
 
    [Dodaj klasę](../../ide/add-class-dialog-box.md) pojawi się okno dialogowe.
 
-2. Z folderu biblioteki ATL, wybranym w okienku kategorii wybierz obiekt do wstawienia w okienku szablonów. Kliknij przycisk **Otwórz**. Zostanie wyświetlony Kreator kod dla wybranego obiektu.
+1. Za pomocą **ATL** folder wybrany w **kategorie** okienku, wybierz obiekt do wstawienia z **szablony** okienka. Kliknij przycisk **Otwórz**. Zostanie wyświetlony Kreator kod dla wybranego obiektu.
 
    > [!NOTE]
-   >  Jeśli chcesz dodać obiekt ATL do projektu MFC, należy dodać obsługę ATL do istniejącego projektu. Można to zrobić, postępując zgodnie z instrukcjami w [Dodawanie obsługi ATL do projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Jeśli chcesz dodać obiekt ATL do projektu MFC, należy dodać obsługę ATL do istniejącego projektu. Można to zrobić, postępując zgodnie z instrukcjami w [Dodawanie obsługi ATL do projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
    Alternatywnie Jeśli spróbujesz dodać obiekt ATL do projektu MFC bez wcześniej Dodawanie obsługi ATL programu Visual Studio wyświetli monit o określenie, czy mają obsługi ATL dodanej do projektu. Kliknij przycisk **tak** Dodaj obsługę ATL do projektu i Otwórz kreatora ATL wybrane.
 
@@ -62,4 +62,3 @@ Można użyć jednego z kreatorów kodu biblioteki ATL, można dodać obiektu lu
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

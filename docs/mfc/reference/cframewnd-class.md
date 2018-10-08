@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374291"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861736"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*nInformacje*|[in] Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br /> -AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|
+|*nInformacje*|[in] Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br />-AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*nStyle*|[in] Określa, czy menu jest domyślnie ukryta, lub jest widoczna i ma fokus. *NStyle* parametr może mieć następujące wartości:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01) —<br />     W menu wyświetlanym przez cały czas i domyślnie nie ma fokusu.<br />-AFX_MBV_DISPLAYONFOCUS (0X02) —<br />     Menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz ALT, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby ukryć menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitowe połączenie (lub)) — menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz F10, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz F10, aby przełączać fokus lub Wyłącz menu. Zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby je ukryć.|
+|*nStyle*|[in] Określa, czy menu jest domyślnie ukryta, lub jest widoczna i ma fokus. *NStyle* parametr może mieć następujące wartości:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01) —<br />     W menu wyświetlanym przez cały czas i domyślnie nie ma fokusu.<br />-AFX_MBV_DISPLAYONFOCUS (0X02) —<br />     Menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz ALT, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby ukryć menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitowe połączenie (lub)) — menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz F10, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz F10, aby przełączać fokus lub Wyłącz menu. Zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby je ukryć.|
 
 ### <a name="remarks"></a>Uwagi
 

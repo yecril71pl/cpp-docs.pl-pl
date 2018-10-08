@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f0b20cbae3036ffecfa63f2e3ee6be8e2153fc8f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099541"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860917"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Tworzenie noncreatable — obiekt ATL
 
 Atrybuty obiektu COM opartych na ATL można zmienić tak, aby klient nie można bezpośrednio utworzyć obiekt. W tym przypadku obiekt będzie można zwracany przez wywołanie metody na innym obiekcie zamiast bezpośrednio tworzone.
 
-### <a name="to-make-an-object-noncreatable"></a>Zapewnienie noncreatable — obiekt
+## <a name="to-make-an-object-noncreatable"></a>Zapewnienie noncreatable — obiekt
 
 1. Usuń [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) dla obiektu. Obiekt noncreatable — ale formant do zarejestrowania, Zamień OBJECT_ENTRY_AUTO z [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).
 
-2. Dodaj [noncreatable —](../../windows/noncreatable.md) atrybutu klasy coclass w pliku .idl. Na przykład:
+1. Dodaj [noncreatable —](../../windows/noncreatable.md) atrybutu klasy coclass w pliku .idl. Na przykład:
 
     ```  
     [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
@@ -52,4 +52,3 @@ Atrybuty obiektu COM opartych na ATL można zmienić tak, aby klient nie można 
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

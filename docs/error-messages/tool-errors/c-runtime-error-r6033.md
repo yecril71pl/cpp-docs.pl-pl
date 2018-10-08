@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64ff3069064b981ca1f4dd7b5c2d9a792cac8f26
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46049803"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861885"
 ---
 # <a name="c-runtime-error-r6033"></a>R6033 błąd środowiska uruchomieniowego języka C
 
 Próba użycia MSIL kod z tego zestawu podczas inicjowania kodu natywnego. Oznacza to usterkę w aplikacji. Jest to najprawdopodobniej wynikiem wywołania skompilowany MSIL (/ clr) — funkcja natywnego konstruktora lub z funkcji DllMain.
 
 > [!NOTE]
->  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Ten błąd może być spowodowany przez usterkę w aplikacji lub usterkę w dodatku lub rozszerzenia, która jest używana.
+> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Ten błąd może być spowodowany przez usterkę w aplikacji lub usterkę w dodatku lub rozszerzenia, która jest używana.
 >
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+> Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
->  -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia, napraw lub ponownie zainstalować wszystkie rozszerzeń lub dodatków.
-> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia, napraw lub ponownie zainstalować wszystkie rozszerzeń lub dodatków.
+> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 

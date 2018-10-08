@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017914"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861034"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
 Tablica jest zbiorem podobnych obiektów. Najprostszym przypadku tablicy jest wektor, który może być zdeklarowany przez poniższą sekwencję:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *Decl-specifier* *identyfikator* **\[** *wyrażenie_stałe* **]**<br/>
+> *Decl-specifier* *identyfikator*  **\[]**<br/>
+> *Decl-specifier* *identyfikator* **\[]\[** *wyrażenie_stałe* **]** . . .<br/>
+> *Decl-specifier* *identyfikator* **\[** *wyrażenie_stałe* **]** **\[** *wyrażenie_stałe* **]** . . .
 
 1. Specyfikator deklaracji:
 
-- Specyfikator klasy magazynowania opcjonalne.
+   - Specyfikator klasy magazynowania opcjonalne.
 
-- Opcjonalnie **const** i/lub **volatile** specyfikatorów.
+   - Opcjonalnie **const** i/lub **volatile** specyfikatorów.
 
-- Nazwa typu elementów tablicy.
+   - Nazwa typu elementów tablicy.
 
-2. Specyfikator:
+1. Specyfikator:
 
-- Identyfikator.
+   - Identyfikator.
 
-- Wyrażenie stałe typu Liczba całkowita ujęte w nawiasy kwadratowe, **[]**. Jeśli wiele wymiarów są deklarowane przy użyciu dodatkowe nawiasy, można pominąć wyrażenie stałe na pierwszy zestaw nawiasów.
+   - Wyrażenie stałe typu Liczba całkowita ujęte w nawiasy kwadratowe,  **\[]**. Jeśli wiele wymiarów są deklarowane przy użyciu dodatkowe nawiasy, można pominąć wyrażenie stałe na pierwszy zestaw nawiasów.
 
-- Opcjonalne dodatkowe nawiasy zamykające stałe wyrażenia.
+   - Opcjonalne dodatkowe nawiasy zamykające stałe wyrażenia.
 
-3. Opcjonalny inicjator.  Zobacz [inicjatory](../cpp/initializers.md).
+1. Opcjonalny inicjator. Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md).
 
-Liczba elementów w tablicy jest podana przez wyrażenie stałe. Pierwszy element w tablicy jest elementem 0, a wartość ostatniego elementu wynosi (*n*-1) elementu, gdzie *n* jest liczba elementów tablicy mogą zawierać. *Wyrażenie_stałe* musi być typu całkowitego i musi być większa niż 0. Tablicą o rozmiarze zero jest legalna tylko wtedy, gdy tablica jest ostatnim polu **struktury** lub **Unii** i jeżeli są włączone rozszerzenia Microsoft (/Ze).
+Liczba elementów w tablicy jest podana przez *wyrażenie_stałe*. Pierwszy element w tablicy jest elementem 0, a wartość ostatniego elementu wynosi (*n*-1) elementu, gdzie *n* jest liczba elementów tablicy mogą zawierać. *Wyrażenie_stałe* musi być typu całkowitego i musi być większa niż 0. Tablicą o rozmiarze zero jest legalna tylko wtedy, gdy tablica jest ostatnim polu **struktury** lub **Unii** i jeżeli są włączone rozszerzenia Microsoft (/Ze).
 
 Poniższy przykład pokazuje, jak zdefiniować tablicę w czasie wykonywania:
 

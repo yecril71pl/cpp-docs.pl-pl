@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209029"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861567"
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 
@@ -58,17 +58,17 @@ Element może być jednym z następujących:
 
 - A *Dopasowywanie wyrażeń* w postaci "[`expr`]", który pasuje do znaku lub elementu sortowania w sekwencji docelowej, który jest również w zestawie, który został zdefiniowany przez wyrażenie `expr`, lub w postaci "[^`expr`]", który Dopasowuje znak lub elementu sortowania w sekwencji docelowej, który nie znajduje się w zestawie, który został zdefiniowany przez wyrażenie `expr`.
 
-     Wyrażenie `expr` może zawierać dowolną kombinację następujących czynników:
+   Wyrażenie `expr` może zawierać dowolną kombinację następujących czynników:
 
-    -   Pojedynczy znak. Dodaje ten znak do zestawu zdefiniowanego przez `expr`.
+   - Pojedynczy znak. Dodaje ten znak do zestawu zdefiniowanego przez `expr`.
 
-    -   A *zakres znaków* w postaci "`ch1`-`ch2`". Dodaje znaki, które są reprezentowane przez wartości w zamkniętym zakresie [`ch1`, `ch2`] do zestawu zdefiniowanego przez `expr`.
+   - A *zakres znaków* w postaci "`ch1`-`ch2`". Dodaje znaki, które są reprezentowane przez wartości w zamkniętym zakresie [`ch1`, `ch2`] do zestawu zdefiniowanego przez `expr`.
 
-    -   A *klasy znaków* w postaci "[:`name`:]". Dodaje znaki w nazwanej klasie do zestawu zdefiniowanego przez `expr`.
+   - A *klasy znaków* w postaci "[:`name`:]". Dodaje znaki w nazwanej klasie do zestawu zdefiniowanego przez `expr`.
 
-    -   *Klasa równoważności* w postaci "[=`elt`=]". Dodaje elementy sortowania, które są równoważne `elt` do zestawu zdefiniowanego przez `expr`.
+   - *Klasa równoważności* w postaci "[=`elt`=]". Dodaje elementy sortowania, które są równoważne `elt` do zestawu zdefiniowanego przez `expr`.
 
-    -   A *symbol sortowania* w postaci "[.`elt`.]". Dodaje element sortowania `elt` do zestawu zdefiniowanego przez `expr`.
+   - A *symbol sortowania* w postaci "[.`elt`.]". Dodaje element sortowania `elt` do zestawu zdefiniowanego przez `expr`.
 
 - *Zakotwiczenia*. Kotwica '^' pasuje do początku sekwencji docelowej; kotwica '$' pasuje do końca sekwencji docelowej.
 
@@ -403,11 +403,11 @@ Zwykły znak to dowolny prawidłowy znak, który nie ma specjalnego znaczenia w 
 
 W `ECMAScript`, następujące znaki mają specjalne znaczenie:
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 W `basic` i `grep`, następujące znaki mają specjalne znaczenie:
 
-- .   [   \
+- .   \[   \
 
 Również w `basic` i `grep`, następujące znaki mają specjalne znaczenie, gdy są one używane w szczególnym kontekście:
 
@@ -419,7 +419,7 @@ Również w `basic` i `grep`, następujące znaki mają specjalne znaczenie, gdy
 
 W `extended`, `egrep`, i `awk`, następujące znaki mają specjalne znaczenie:
 
-- .   [   \   (   \*   +   ?   {   &#124;
+- .   \[   \   (   \*   +   ?   {   &#124;
 
 Również w `extended`, `egrep`, i `awk`, następujące znaki mają specjalne znaczenie, gdy są one używane w szczególnym kontekście.
 

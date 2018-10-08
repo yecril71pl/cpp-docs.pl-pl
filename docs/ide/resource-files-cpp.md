@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417231"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861905"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -31,7 +31,7 @@ Zobacz [pracy z zasobami](../windows/working-with-resource-files.md) Aby uzyska�
 
 |Nazwa pliku|Lokalizacja katalogu|Lokalizacja Eksploratora rozwiązań|Opis|
 |---------------|------------------------|--------------------------------|-----------------|
-|*Projname*.rc|*Projname*|Pliki źródłowe|Plik skryptu zasobu dla projektu. Plik skryptu zasobu zawiera następujące polecenie, w zależności od typu projektu i pomocy technicznej, wybrany dla projektu (na przykład, paski narzędzi, okna dialogowe lub HTML):<br /><br /> -Definicja menu default.<br />— Tabele akceleratora i ciąg.<br />-Domyślnie **o** okno dialogowe.<br />-Innych oknach dialogowych.<br />-Plik ikony (res\\*Projname*.ico).<br />— Informacje o wersji.<br />-Map bitowych.<br />— Pasek narzędzi.<br />— Pliki HTML.<br /><br /> Plik zasobów zawiera standardowe zasoby MFC w pliku Afxres.rc pliku.|
+|*Projname*.rc|*Projname*|Pliki źródłowe|Plik skryptu zasobu dla projektu. Plik skryptu zasobu zawiera następujące polecenie, w zależności od typu projektu i pomocy technicznej, wybrany dla projektu (na przykład, paski narzędzi, okna dialogowe lub HTML):<br /><br />-Definicja menu default.<br />— Tabele akceleratora i ciąg.<br />-Domyślnie **o** okno dialogowe.<br />-Innych oknach dialogowych.<br />-Plik ikony (res\\*Projname*.ico).<br />— Informacje o wersji.<br />-Map bitowych.<br />— Pasek narzędzi.<br />— Pliki HTML.<br /><br /> Plik zasobów zawiera standardowe zasoby MFC w pliku Afxres.rc pliku.|
 |Resource.h|*Projname*|Pliki nagłówkowe|Plik nagłówka zasobów zawiera definicje dla zasobów używanych przez projekt.|
 |*Projname*.rc2|*Projname*\res|Pliki źródłowe|Plik skryptu zawierający dodatkowe zasoby używane przez projekt. Można dołączyć plik .rc2 w pliku .rc projektu.<br /><br /> Plik .rc2 przydaje się, w tym zasoby używane przez kilka różnych projektach. Nie trzeba tworzyć te same zasoby dla różnych projektów, można umieścić je w pliku .rc2 i dołączyć plik .rc2 w pliku .rc głównego.|
 |*Projname*.def|*Projname*|Pliki źródłowe|Plik definicji modułu projektu DLL. W przypadku formantu zawiera nazwę i opis kontrolki, a także rozmiar sterty środowiska wykonawczego.|

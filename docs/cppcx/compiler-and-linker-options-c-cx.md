@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110808"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861840"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opcje kompilatora i konsolidatora (C + +/ CX)
 
@@ -28,7 +28,7 @@ Zmienna środowiskowa % LIBPATH % ścieżka domyślna do wyszukiwania plików wi
 
 |Opcja|Opis|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Włącza rozszerzenia językowe środowiska wykonawczego Windows.<br /><br /> `nostdlib` Parametr zapobiega przy użyciu ścieżki wyszukiwania standardowych, wstępnie zdefiniowanych można znaleźć zestawu i winmd przez kompilator.<br /><br /> **/ZW** — opcja kompilatora niejawnie określa następujące opcje kompilatora:<br /><br /> -   **/Fi** vccorlib.h, co zmusza włączenia vccorlib.h pliku nagłówkowego, który definiuje wiele typów, które są wymagane przez kompilator.<br />-   [/Fu](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, co zmusza włączenia Windows.winmd plik metadanych, które są dostarczane przez system operacyjny, a następnie definiuje wiele typów środowiska wykonawczego Windows.<br />-   **/Fu** Platform.winmd, co zmusza włączenia Platform.winmd pliku metadanych, które są dostarczane przez kompilator, a następnie definiuje większość typów w przestrzeni nazw z rodziny platformy.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Włącza rozszerzenia językowe środowiska wykonawczego Windows.<br /><br /> `nostdlib` Parametr zapobiega przy użyciu ścieżki wyszukiwania standardowych, wstępnie zdefiniowanych można znaleźć zestawu i winmd przez kompilator.<br /><br /> **/ZW** — opcja kompilatora niejawnie określa następujące opcje kompilatora:<br /><br />- **/Fi** vccorlib.h, co zmusza włączenia vccorlib.h pliku nagłówkowego, który definiuje wiele typów, które są wymagane przez kompilator.<br />- [/Fu](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, co zmusza włączenia Windows.winmd plik metadanych, które są dostarczane przez system operacyjny, a następnie definiuje wiele typów środowiska wykonawczego Windows.<br />- **/Fu** Platform.winmd, co zmusza włączenia Platform.winmd pliku metadanych, które są dostarczane przez kompilator, a następnie definiuje większość typów w przestrzeni nazw z rodziny platformy.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Dodaje katalog, który jest określony przez *dir* parametru do ścieżki wyszukiwania, której kompilator używa do wyszukiwania plików zestawu i winmd.|
 |**/Fu***pliku*|Wymusza umieszczenie określonym module lub plik winmd. Oznacza to, nie trzeba określać `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza umieszczenie swój własny plik metadanych Windows Platform.winmd.|
 |/D "WINAPI_FAMILY = 2"|Tworzy definicję, która umożliwia korzystanie z podzestawu Win32 SDK, który jest zgodny ze środowiskiem uruchomieniowym Windows.|

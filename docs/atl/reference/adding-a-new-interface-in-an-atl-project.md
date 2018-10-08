@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039026"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861762"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Dodawanie nowego interfejsu w projekcie ATL
 
@@ -32,23 +32,23 @@ Po dodaniu interfejsu do kontrolki lub obiekt, do tworzenia funkcji poza zastąp
 
 Można dodać nowy interfejs do formantu w jeden z dwóch sposobów: ręcznie lub za pomocą kreatorów kodu, w widoku klas.
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Do użycia kreatorów kodu w widoku klas, aby dodać interfejs do istniejącego obiektu lub kontrolki
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Do użycia kreatorów kodu w widoku klas, aby dodać interfejs do istniejącego obiektu lub kontrolki
 
 1. W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę klasy kontrolki. Na przykład Pełna kontrola lub złożonej kontrolki lub innej klasy formantu, który implementuje makro BEGIN_COM_MAP w pliku nagłówka.
 
-2. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **implementuj interfejs**.
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **implementuj interfejs**.
 
-3. Wybierz interfejsy do implementacji w [Kreator implementacji interfejsu](../../ide/implement-interface-wizard.md). Jeśli interfejs nie istnieje w dowolnym dostępne biblioteki typów, następnie należy go ręcznie dodać do pliku .idl.
+1. Wybierz interfejsy do implementacji w [Kreator implementacji interfejsu](../../ide/implement-interface-wizard.md). Jeśli interfejs nie istnieje w dowolnym dostępne biblioteki typów, następnie należy go ręcznie dodać do pliku .idl.
 
-### <a name="to-add-a-new-interface-manually"></a>Aby ręcznie dodać nowy interfejs
+## <a name="to-add-a-new-interface-manually"></a>Aby ręcznie dodać nowy interfejs
 
 1. Dodaj definicję nowego interfejsu w pliku .idl.
 
-2. Pochodzi z obiektu lub formantu z interfejsu.
+1. Pochodzi z obiektu lub formantu z interfejsu.
 
-3. Utwórz nową [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) interfejsu lub, jeśli projekt jest przypisane, Dodaj `coclass` atrybutu.
+1. Utwórz nową [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) interfejsu lub, jeśli projekt jest przypisane, Dodaj `coclass` atrybutu.
 
-4. Implementować metody interfejsu.
+1. Implementować metody interfejsu.
 
 ## <a name="see-also"></a>Zobacz też
 
@@ -58,4 +58,3 @@ Można dodać nowy interfejs do formantu w jeden z dwóch sposobów: ręcznie lu
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

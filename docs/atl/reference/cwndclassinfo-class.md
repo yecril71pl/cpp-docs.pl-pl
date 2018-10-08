@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097898"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861684"
 ---
 # <a name="cwndclassinfo-class"></a>Klasa CWndClassInfo
 
@@ -81,7 +81,7 @@ Jeśli chcesz utworzyć okno, w oparciu o istniejące klasy okna pochodzi z klas
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-Aby uzyskać więcej informacji na temat klas okien, zobacz [klas okien](https://msdn.microsoft.com/library/windows/desktop/ms632596) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat klas okien, zobacz [klas okien](/windows/desktop/winmsg/window-classes) w zestawie Windows SDK.
 
 Aby uzyskać więcej informacji na temat korzystania z systemu windows w ATL, zobacz artykuł [klas okien ATL](../../atl/atl-window-classes.md).
 

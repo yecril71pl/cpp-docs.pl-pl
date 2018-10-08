@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024115"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861242"
 ---
 # <a name="pointers-c"></a>Wskaźników (C++)
 
 Wskaźniki zadeklarowane za pomocą następującej sekwencji.
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*Specyfikatory klas magazynu*] \[ *kwalifikatory cv*] *specyfikatory typu* \[ *modyfikator ms*]  *deklarator* **;**
 
-gdzie wszelkie deklaratora nieprawidłowy wskaźnik mogą być używane do `declarator`. Składnia deklaratora wskaźnika prostego jest następująca:
+gdzie wszelkie deklaratora nieprawidłowy wskaźnik mogą być używane do *deklaratora*. Składnia deklaratora wskaźnika prostego jest następująca:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*Kwalifikatory CV*] *identyfikator* \[ **=** *wyrażenie*]
 
 1. Specyfikatory deklaracji:
 
-    - Specyfikator klasy magazynowania opcjonalne. Aby uzyskać więcej informacji, zobacz [specyfikatory](../cpp/specifiers.md).
+   - Specyfikator klasy magazynowania opcjonalne. Aby uzyskać więcej informacji, zobacz [specyfikatory](../cpp/specifiers.md).
 
-    - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do typu obiektu, który ma być wskazywany.
+   - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do typu obiektu, który ma być wskazywany.
 
-    - Specyfikator typu: Nazwa typu reprezentujący typ obiektu do będzie wskazywał na.
+   - Specyfikator typu: Nazwa typu reprezentujący typ obiektu do będzie wskazywał na.
 
-2. Specyfikator:
+1. Specyfikator:
 
-    - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Opcjonalny modyfikator właściwy specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - Operator `*`.
+   - __\*__ Operatora.
 
-    - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do wskaźnika jako takiego.
+   - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do wskaźnika jako takiego.
 
-    - Identyfikator.
+   - Identyfikator.
 
-    - Opcjonalny inicjator.
+   - Opcjonalny inicjator.
 
-     Deklaratora dla wskaźnika do funkcji wygląda następująco:
+Deklaratora dla wskaźnika do funkcji wygląda następująco:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *kwalifikatory cv*] *identyfikator* **) (** *listy argumentów* **)** \[ *cv qualifers*] \[ *Specyfikacja wyjątku*] \[ **=** *wyrażenie*] **;**
 
-- W przypadku tablicy wskaźników składnia wygląda następująco:
+W przypadku tablicy wskaźników składnia wygląda następująco:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *Identyfikator* **\[** \[ *wyrażenie_stałe*] **]**
 
-- Wiele deklaratorów i ich inicjatory mogą występować razem w jednej deklaracji w rozdzielana przecinkami lista następujące Specyfikator deklaracji.
+Wiele deklaratorów i ich inicjatory mogą występować razem w jednej deklaracji w rozdzielana przecinkami lista następujące Specyfikator deklaracji.
 
 Prosty przykład deklarację wskaźnika jest:
 

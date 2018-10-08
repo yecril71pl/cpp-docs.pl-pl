@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039377"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861450"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -162,7 +162,7 @@ Wiele operatorów binarnych (omówionych w [wyrażenia z operatorami Dwuargument
 |Jeden z operandów jest typu **typu long double**.|Drugi operand jest konwertowany na typ **typu long double**.|
 |Poprzedza warunek nie jest spełniony i jeden z operandów jest typu **double**.|Drugi operand jest konwertowany na typ **double**.|
 |Poprzedza warunki nie są spełnione i jeden z operandów jest typu **float**.|Drugi operand jest konwertowany na typ **float**.|
-|Powyższe warunki nie są spełnione (żaden z operandów nie jest typu zmiennoprzecinkowego).|Promocje typów całkowitych są wykonywane na operandach w następujący sposób:<br /><br /> — Jeśli jeden z operandów jest typu **unsigned long**, to drugi operand jest konwertowany na typ **unsigned long**.<br />-Jeśli powyższy warunek nie zostały spełnione i jeden z operandów jest typu **długie** i drugą typu **unsigned int**, oba operandy są konwertowane na typ **unsigned long**.<br />-Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **długie**, to drugi operand jest konwertowany na typ **długie**.<br />-Jeśli trzy powyższe warunki nie są spełnione i jeden z operandów jest typu **unsigned int**, to drugi operand jest konwertowany na typ **unsigned int**.<br />— Jeśli żaden z powyższych warunków nie jest spełniony, oba operandy są konwertowane na typ **int**.|
+|Powyższe warunki nie są spełnione (żaden z operandów nie jest typu zmiennoprzecinkowego).|Promocje typów całkowitych są wykonywane na operandach w następujący sposób:<br /><br />— Jeśli jeden z operandów jest typu **unsigned long**, to drugi operand jest konwertowany na typ **unsigned long**.<br />-Jeśli powyższy warunek nie zostały spełnione i jeden z operandów jest typu **długie** i drugą typu **unsigned int**, oba operandy są konwertowane na typ **unsigned long**.<br />-Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **długie**, to drugi operand jest konwertowany na typ **długie**.<br />-Jeśli trzy powyższe warunki nie są spełnione i jeden z operandów jest typu **unsigned int**, to drugi operand jest konwertowany na typ **unsigned int**.<br />— Jeśli żaden z powyższych warunków nie jest spełniony, oba operandy są konwertowane na typ **int**.|
 
 Następujący kod ilustruje reguły konwersji opisane w tabeli:
 

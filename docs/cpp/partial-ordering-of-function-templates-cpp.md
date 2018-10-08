@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087750"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861307"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Częściowe porządkowanie szablonów funkcji (C++)
 
@@ -31,23 +31,23 @@ Użyj następującego procesu w celu określenia, czy jeden z kandydatów szablo
 
 1. Rozważ dwa szablony funkcji T1 i T2.
 
-2. Zastąp parametry w T1 hipotetycznym unikatowym typem X.
+1. Zastąp parametry w T1 hipotetycznym unikatowym typem X.
 
-3. Mając listę parametrów dla T1, zobacz czy T2 jest prawidłowym szablonem dla tej listy parametrów. Zignoruj wszystkie niejawne konwersje.
+1. Mając listę parametrów dla T1, zobacz czy T2 jest prawidłowym szablonem dla tej listy parametrów. Zignoruj wszystkie niejawne konwersje.
 
-4. Powtórz ten sam proces z odwróconymi T1 i T2.
+1. Powtórz ten sam proces z odwróconymi T1 i T2.
 
-5. Jeśli jeden szablon jest prawidłową listą argumentów szablonu dla innego szablonu, ale odwrotnie nie jest to prawdą, wówczas szablon jest uważany za mniej wyspecjalizowany od drugiego szablonu. Jeśli oba szablony używając poprzedniego kroku formularza prawidłowe argumenty dla siebie nawzajem, następnie są wówczas uważane za jednakowo można wyspecjalizować, a wyniki się niejednoznacznego wywołania podczas próby ich używać.
+1. Jeśli jeden szablon jest prawidłową listą argumentów szablonu dla innego szablonu, ale odwrotnie nie jest to prawdą, wówczas szablon jest uważany za mniej wyspecjalizowany od drugiego szablonu. Jeśli oba szablony używając poprzedniego kroku formularza prawidłowe argumenty dla siebie nawzajem, następnie są wówczas uważane za jednakowo można wyspecjalizować, a wyniki się niejednoznacznego wywołania podczas próby ich używać.
 
-6. Przy użyciu tych reguł:
+1. Przy użyciu tych reguł:
 
-     1. Specjalizacja szablonu dla określonego typu jest bardziej wyspecjalizowana niż ta, która przyjmuje argument typu ogólnego.
+   1. Specjalizacja szablonu dla określonego typu jest bardziej wyspecjalizowana niż ta, która przyjmuje argument typu ogólnego.
 
-     2. Szablon tylko __T\*__  jest bardziej wyspecjalizowana niż tylko jeden biorąc __T__, ponieważ możesz wpisać __X\*__  jest prawidłowym argumentem dla __T__ argument szablonu, ale __X__ nie jest prawidłowym argumentem dla __T\*__  argument szablonu.
+   1. Szablon tylko __T\*__  jest bardziej wyspecjalizowana niż tylko jeden biorąc __T__, ponieważ możesz wpisać __X\*__  jest prawidłowym argumentem dla __T__ argument szablonu, ale __X__ nie jest prawidłowym argumentem dla __T\*__  argument szablonu.
 
-     3. __Const T__ jest bardziej wyspecjalizowana niż __T__, ponieważ __const X__ jest prawidłowym argumentem dla __T__ argument szablonu, ale __X__ jest Nieprawidłowy argument dla __const T__ argument szablonu.
+   1. __Const T__ jest bardziej wyspecjalizowana niż __T__, ponieważ __const X__ jest prawidłowym argumentem dla __T__ argument szablonu, ale __X__ jest Nieprawidłowy argument dla __const T__ argument szablonu.
 
-     4. __Const T\*__  jest bardziej wyspecjalizowana niż __T\*__, ponieważ __const X\*__  jest prawidłowym argumentem dla __T\*__  argument szablonu, ale __X\*__  nie jest prawidłowym argumentem dla __const T\*__  argument szablonu.
+   1. __Const T\*__  jest bardziej wyspecjalizowana niż __T\*__, ponieważ __const X\*__  jest prawidłowym argumentem dla __T\*__  argument szablonu, ale __X\*__  nie jest prawidłowym argumentem dla __const T\*__  argument szablonu.
 
 ## <a name="example"></a>Przykład
 

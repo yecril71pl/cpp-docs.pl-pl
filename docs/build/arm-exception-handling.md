@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711233"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861658"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -82,15 +82,15 @@ W poniższej tabeli przedstawiono format elementu .pdata rekord, który ma spako
 |Przesunięcie programu Word|Bity|Cel|
 |-----------------|----------|-------------|
 |0|0-31|*Funkcja Start RVA* jest RVA 32-bitowych uruchomienia funkcji. Jeśli funkcja zawiera kod thumb, należy ustawić niski bitu ten adres.|
-|1|0-1|*Flaga* jest polem 2-bitowy, który ma znaczenie tych:<br /><br /> -00 = upakowaną nie jest używany; dane operacji unwind pozostałych bitów wskazują rekord .xdata.<br />-01 = spakowane dane operacji unwind.<br />-10 = spakowana gdy funkcja jest zakłada się, że nie prologu dane operacji unwind. Jest to przydatne do opisywania fragmenty funkcja, które są nieciągłe z początku funkcji.<br />-11 = zastrzeżone.|
+|1|0-1|*Flaga* jest polem 2-bitowy, który ma znaczenie tych:<br /><br />-00 = upakowaną nie jest używany; dane operacji unwind pozostałych bitów wskazują rekord .xdata.<br />-01 = spakowane dane operacji unwind.<br />-10 = spakowana gdy funkcja jest zakłada się, że nie prologu dane operacji unwind. Jest to przydatne do opisywania fragmenty funkcja, które są nieciągłe z początku funkcji.<br />-11 = zastrzeżone.|
 |1|2-12|*Funkcja długość* jest polem 11-bitowy, zapewniająca długość całej funkcji w bajtach podzielonej przez 2. Funkcja jest większy niż 4 KB, zamiast tego należy użyć rekordu pełną .xdata.|
-|1|13-14|*RET* jest polem 2-bitowy, która wskazuje, jak funkcja zwraca:<br /><br /> -00 = Wróć za pośrednictwem pop {komputera} ( *L* bit flagi musi być równa 1 w tym przypadku).<br />-01 = Wróć za pomocą gałęzi 16-bitowych.<br />-10 = Wróć za pomocą gałęzi 32-bitowych.<br />-11 = nie epilogu wcale. Jest to przydatne do opisywania fragmentu nieciągłe — funkcja, która może zawierać tylko prologu, ale których epilogu znajduje się w innym.|
+|1|13-14|*RET* jest polem 2-bitowy, która wskazuje, jak funkcja zwraca:<br /><br />-00 = Wróć za pośrednictwem pop {komputera} ( *L* bit flagi musi być równa 1 w tym przypadku).<br />-01 = Wróć za pomocą gałęzi 16-bitowych.<br />-10 = Wróć za pomocą gałęzi 32-bitowych.<br />-11 = nie epilogu wcale. Jest to przydatne do opisywania fragmentu nieciągłe — funkcja, która może zawierać tylko prologu, ale których epilogu znajduje się w innym.|
 |1|15|*H* flagi 1-bitowego, która wskazuje, czy funkcja "homes" parametru liczby całkowitej rejestruje (r0 r3) przez wypychanie ich na początku funkcji, a następnie zwalnia 16 bajtów stosu przed zwróceniem. (0 = nie główna rejestrów, 1 = domów rejestrów.)|
 |1|16-18|*Reg* pole 3-bitową, który wskazuje indeks ostatniego zapisaniu register-volatile. Jeśli *R* bit ma wartość 0, a następnie utworzyć tylko liczby całkowitej rejestrów są zapisywane są zakłada się, że w zakresie rN r4, gdzie N jest równa 4 + *Reg*. Jeśli *R* bit ma wartość 1, a następnie utworzyć rejestrów zmiennoprzecinkowych tylko są zapisywane są zakłada się, że w zakresie dN d8, gdzie N jest równa 8 + *Reg*. Specjalne kombinacji *R* = 1 i *Reg* = 7 wskazuje, że brak rejestrów są zapisywane.|
 |1|19|*R* jest flaga 1-bitowego, która wskazuje, czy są zapisane rejestrów trwałej całkowitą rejestruje (0) lub rejestrów zmiennoprzecinkowych (1). Jeśli *R* jest ustawiona na 1 i *Reg* pole jest ustawione na 7, brak rejestrów trwałej zostały przekazane.|
 |1|20|*L* jest flaga 1-bitowego, która wskazuje, czy funkcja zapisuje/Przywracanie LR, wraz z innych rejestrów wskazywanym przez *Reg* pola. (0 = nie zapisać/przywrócić, 1 = czy zapisać/przywrócić.)|
 |1|21|*C* jest flagę 1-bitowego, która wskazuje, czy funkcja zawiera dodatkowe instrukcje dotyczące ustawiania łańcuch ramki dla szybkie przechodzenie po stosie (1) czy nie (0). Jeśli ten bit jest ustawiony, r11 niejawnie jest dodawany do listy rejestrów trwałej całkowitą zapisane. (Zobacz ograniczenia poniższy *C* flaga jest używana.)|
-|1|22-31|*Stack — Dostosuj* jest polem 10-bitowy, który wskazuje liczbę bajtów stosu, które są przydzielane dla tej funkcji, podzielona przez 4. Jednak tylko wartości z zakresu od 0x000 0x3F3 może bezpośrednio zakodowany. Funkcje, które przydzielić więcej niż 4044 bajtów stosu, należy użyć rekordu pełną .xdata. Jeśli *dostosowanie stosu* pole jest 0x3F4 lub większą, a następnie niski 4 bity mają specjalne znaczenie:<br /><br /> -Bitów 0-1 wskazuje liczbę wyrazów dostosowanie stosu (1-4), minus 1.<br />-Bit 2 jest ustawiona na 1, jeśli prologu połączone to dostosowanie do swoich operacji wypychania.<br />-Bit 3 jest ustawiona na 1, jeśli epilogu połączone to dostosowanie do swoich operacji pop.|
+|1|22-31|*Stack — Dostosuj* jest polem 10-bitowy, który wskazuje liczbę bajtów stosu, które są przydzielane dla tej funkcji, podzielona przez 4. Jednak tylko wartości z zakresu od 0x000 0x3F3 może bezpośrednio zakodowany. Funkcje, które przydzielić więcej niż 4044 bajtów stosu, należy użyć rekordu pełną .xdata. Jeśli *dostosowanie stosu* pole jest 0x3F4 lub większą, a następnie niski 4 bity mają specjalne znaczenie:<br /><br />-Bitów 0-1 wskazuje liczbę wyrazów dostosowanie stosu (1-4), minus 1.<br />-Bit 2 jest ustawiona na 1, jeśli prologu połączone to dostosowanie do swoich operacji wypychania.<br />-Bit 3 jest ustawiona na 1, jeśli epilogu połączone to dostosowanie do swoich operacji pop.|
 
 Ze względu na możliwe zwolnień w powyższym kodowania są stosowane następujące ograniczenia:
 
@@ -187,7 +187,7 @@ Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funk
    |1|16-23|*Rozszerzony wyrazów* jest pole 8-bitowych, które udostępnia więcej miejsca do kodowania niezwykle dużą liczbę wyrazów unwind. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
    |1|24-31|Zastrzeżone|
 
-2. Po dane wyjątku (Jeśli *E* bit w nagłówku został ustawiony na 0) znajduje się lista informacji o zakresach epilogu, które są pakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące pola:
+1. Po dane wyjątku (Jeśli *E* bit w nagłówku został ustawiony na 0) znajduje się lista informacji o zakresach epilogu, które są pakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące pola:
 
    |Bity|Cel|
    |----------|-------------|
@@ -196,9 +196,9 @@ Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funk
    |20-23|*Warunek* pole 4-bitowy, zapewniająca warunek, pod którym jest wykonywany epilogu. Dla bezwarunkowe epilogues go powinna być równa 0xE, co oznacza "zawsze". (Epilogu musi być całkowicie warunkowych lub całkowicie bezwarunkowe, i w trybie Thumb-2 epilogu zaczyna się od pierwszej instrukcji po IT opcode).|
    |24-31|*Indeks Start epilogu* jest pole 8-bitowych, które wskazuje indeks bajtu pierwszy kod unwind opisujący tego epilogu.|
 
-3. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, które są szczegółowo opisane w sekcji Unwind kody w tym artykule. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
+1. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, które są szczegółowo opisane w sekcji Unwind kody w tym artykule. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
 
-4. Jeśli *X* polu nagłówka wynosi 1, bajty kodu unwind następują informacje o program obsługi wyjątku. Składa się z jednego *RVA obsługi wyjątków* zawierający adres aparatu obsługi wyjątków, a następnie od razu (zmiennej długości) ilość danych wymaganych przez program obsługi wyjątków.
+1. Jeśli *X* polu nagłówka wynosi 1, bajty kodu unwind następują informacje o program obsługi wyjątku. Składa się z jednego *RVA obsługi wyjątków* zawierający adres aparatu obsługi wyjątków, a następnie od razu (zmiennej długości) ilość danych wymaganych przez program obsługi wyjątków.
 
 Rekord .xdata jest zaprojektowana tak, że istnieje możliwość pobrania pierwsze 8 bajtów i obliczeń w pełnym rozmiarze rekordu, nie wliczając długość dane o zmiennym rozmiarze wyjątku, który następuje po. Ten fragment kodu oblicza rozmiar rekordu:
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423835"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861619"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definicje terminów
 
@@ -43,7 +43,7 @@ W tym dokumencie są używane następujące terminy:
 
    Instrukcje leksykalnie zawartych w *strukturalnego bloku*.
 
--  główny wątek
+- główny wątek
 
    Wątek, który utworzy zespół po *równoległego regionu* wprowadzeniu.
 
@@ -75,7 +75,7 @@ W tym dokumencie są używane następujące terminy:
 
    Blok strukturalny jest instrukcją (pojedyncze lub złożone) zawierający pojedynczy wpis i pojedynczego wyjścia. Oświadczenia jest blok strukturalny w przypadku skok do lub z którymi instrukcja (w tym wywołaniu **longjmp**(3 C) lub korzystanie z **throw**, ale wywołanie **wyjść** jest dozwolona). Instrukcja złożona jest strukturalnego bloku, jeśli jego zawsze zaczyna się od otwarcia **{** i zawsze kończy się zamykającym **}**. Instrukcja wyrażeń, wybór instrukcji, instrukcji iteracji lub **spróbuj** blok jest blok strukturalny uzyskane odpowiedniej instrukcji złożonej, umieszczając go w **{** i **}** będzie strukturalnego bloku. Instrukcja skoku, instrukcja labeled lub instrukcji deklaracji nie jest strukturalnego bloku.
 
--  Zespół
+- Zespół
 
    Jeden lub więcej wątków, współpracujących podczas wykonywania konstrukcji.
 

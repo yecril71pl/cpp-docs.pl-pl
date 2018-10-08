@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721451"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861489"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Przegląd Konwencji ABI ARM32
 
@@ -153,11 +153,11 @@ Inicjalizacja jest wykonywana tylko raz, przed rozpoczęciem przetwarzania argum
 
 1. Dalej Core zarejestrować numer (NCRN) jest ustawiona na r0.
 
-2. Visual FOXPRO rejestrów, które są oznaczone jako nieprzydzielony.
+1. Visual FOXPRO rejestrów, które są oznaczone jako nieprzydzielony.
 
-3. Dalej skumulowany Argument adresu (NSAA) jest ustawiona na bieżącą SP.
+1. Dalej skumulowany Argument adresu (NSAA) jest ustawiona na bieżącą SP.
 
-4. Jeśli zostanie wywołana funkcja, która zwraca wynik w pamięci, adres wynik jest umieszczany w r0 i NCRN jest równa r1.
+1. Jeśli zostanie wywołana funkcja, która zwraca wynik w pamięci, adres wynik jest umieszczany w r0 i NCRN jest równa r1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Etapu B: wstępne wypełnienie i rozszerzenie argumenty
 
@@ -165,9 +165,9 @@ Dla każdego argumentu na liście jest stosowane pierwsza pasująca reguła z na
 
 1. Jeśli argument jest typu złożonego, którego rozmiar nie można ustalić statycznie przez obiekt wywołujący i obiekt wywoływany, argument jest kopiowany do pamięci i zastąpione przez wskaźnik do skopiowania.
 
-2. Jeśli argument jest bajt lub 16-bitowe pół słowo, następnie jest rozszerzony zero lub znak rozszerzony do programu word pełną 32-bitowe i traktowany jako argument 4-bajtowe.
+1. Jeśli argument jest bajt lub 16-bitowe pół słowo, następnie jest rozszerzony zero lub znak rozszerzony do programu word pełną 32-bitowe i traktowany jako argument 4-bajtowe.
 
-3. Jeśli argument jest typu złożonego, jego rozmiar jest zaokrąglana w górę do najbliższej wielokrotności 4.
+1. Jeśli argument jest typu złożonego, jego rozmiar jest zaokrąglana w górę do najbliższej wielokrotności 4.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Etapu C: przypisanie argumentów do rejestrów i stosu
 
@@ -175,17 +175,17 @@ Dla każdego argumentu na liście stosowane są następujące reguły z kolei, d
 
 1. Jeśli argument jest typu Visual FOXPRO i następujących po sobie nieprzydzielone rejestry Visual FOXPRO odpowiedniego typu, argument jest przydzielany do najniższego numerowane sekwencji takich rejestrów.
 
-2. Jeśli argument jest typu Visual FOXPRO, wszystkich pozostałych nieprzydzielonych rejestrów zostaną oznaczone jako czas niedostępności. NSAA jest dostosowywany do góry, dopóki nie jest prawidłowo wyrównany dla typu argumentu, a argument jest kopiowany do stosu na skorygowany NSAA. NSAA jest zwiększana o rozmiar argumentu.
+1. Jeśli argument jest typu Visual FOXPRO, wszystkich pozostałych nieprzydzielonych rejestrów zostaną oznaczone jako czas niedostępności. NSAA jest dostosowywany do góry, dopóki nie jest prawidłowo wyrównany dla typu argumentu, a argument jest kopiowany do stosu na skorygowany NSAA. NSAA jest zwiększana o rozmiar argumentu.
 
-3. Jeśli argument wymaga 8-bajtowe wyrównanie, NCRN jest zaokrąglana w górę do najbliższej liczby nawet rejestru.
+1. Jeśli argument wymaga 8-bajtowe wyrównanie, NCRN jest zaokrąglana w górę do najbliższej liczby nawet rejestru.
 
-4. Jeśli rozmiar argumentu w 32-bitowych słów nie jest więcej niż r4 minus NCRN, argument jest kopiowana do rejestrów core, w NCRN, począwszy od najmniej znaczące bity zajmuje niższych numerach rejestrów. NCRN jest zwiększany przez liczbę rejestry używane.
+1. Jeśli rozmiar argumentu w 32-bitowych słów nie jest więcej niż r4 minus NCRN, argument jest kopiowana do rejestrów core, w NCRN, począwszy od najmniej znaczące bity zajmuje niższych numerach rejestrów. NCRN jest zwiększany przez liczbę rejestry używane.
 
-5. Jeśli NCRN jest mniejsza niż r4 NSAA jest równy PS, argument jest podzielony między rejestrów podstawowych i stosu. Pierwsza część argument jest kopiowana do rejestrów core, począwszy od NCRN, do i łącznie r3. W pozostałej części argument jest kopiowana na stosie, zaczynając od NSAA. NCRN ustawiono r4 a NSAA jest zwiększany o rozmiar argumentu, minus kwota przekazywane w rejestrach.
+1. Jeśli NCRN jest mniejsza niż r4 NSAA jest równy PS, argument jest podzielony między rejestrów podstawowych i stosu. Pierwsza część argument jest kopiowana do rejestrów core, począwszy od NCRN, do i łącznie r3. W pozostałej części argument jest kopiowana na stosie, zaczynając od NSAA. NCRN ustawiono r4 a NSAA jest zwiększany o rozmiar argumentu, minus kwota przekazywane w rejestrach.
 
-6. Jeśli argument wymaga 8-bajtowe wyrównanie, NSAA jest zaokrąglana w górę do następnego adresu wyrównany 8-bajtowych.
+1. Jeśli argument wymaga 8-bajtowe wyrównanie, NSAA jest zaokrąglana w górę do następnego adresu wyrównany 8-bajtowych.
 
-7. Argument jest kopiowana do pamięci na NSAA. NSAA jest zwiększany o rozmiar argumentu.
+1. Argument jest kopiowana do pamięci na NSAA. NSAA jest zwiększany o rozmiar argumentu.
 
 Visual FOXPRO rejestrów, które nie są używane do funkcji ze zmienną liczbą argumentów, a zasady C etap 1 i 2 są ignorowane. Oznacza to, czy funkcji ze zmienną liczbą argumentów można zaczynają się od opcjonalne wypychania {r0 r3} można poprzedzić argumenty Zarejestruj wszelkie dodatkowe argumenty przekazane przez obiekt wywołujący, a następnie przejść do listy argumentów całego bezpośrednio ze stosu.
 

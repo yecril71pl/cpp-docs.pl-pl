@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030429"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861411"
 ---
 # <a name="references-c"></a>Odwołania (C++)
 
@@ -32,41 +32,35 @@ Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w inn
 
 Odwołania może być zadeklarowana przy użyciu następującej składni:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*Specyfikatory klas magazynu*] \[ *kwalifikatory cv*] *specyfikatory typu* \[ *modyfikator ms*]  *deklarator* \[ **=** *wyrażenie*]**;**
 
 Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*Specyfikatory klas magazynu*] \[ *kwalifikatory cv*] *specyfikatory typu* \[ **&** lub **&&**] \[ *kwalifikatory cv*] *identyfikator* \[ **=** *wyrażenie*]**;**
 
 Odwołania są zadeklarowane za pomocą następującej sekwencji:
 
 1. Specyfikatory deklaracji:
 
-- Specyfikator klasy magazynowania opcjonalne.
+   - Specyfikator klasy magazynowania opcjonalne.
 
-- Opcjonalnie **const** i/lub **volatile** kwalifikatorów.
+   - Opcjonalnie **const** i/lub **volatile** kwalifikatorów.
 
-- Specyfikator typu: Nazwa typu.
+   - Specyfikator typu: Nazwa typu.
 
-- 2. Specyfikator:
+1. Specyfikator:
 
-- Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-- & — Operator lub & & — operator.
+   - **&** Operatora lub **&&** operatora.
 
-- Opcjonalnie **const** i/lub **volatile** qualifers.
+   - Opcjonalnie **const** i/lub **volatile** qualifers.
 
-- Identyfikator.
+   - Identyfikator.
 
-3. Opcjonalny inicjator.
+1. Opcjonalny inicjator.
 
-Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji, zobacz [wskaźniki](../cpp/pointers-cpp.md).
+Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji. Aby uzyskać więcej informacji, zobacz [wskaźniki](../cpp/pointers-cpp.md).
 
 Wiele deklaratorów i inicjatory mogą występować w rozdzielana przecinkami lista specyfikator jednej deklaracji. Na przykład:
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.
 
-W następujący program, zwróć uwagę, że nazwa obiektu, `Today`i odwołania do obiektu, `TodayRef`, mogą być używane tak samo w programach:
+W następujący program, zwróć uwagę, że nazwa obiektu, `s`i odwołania do obiektu, `SRef`, mogą być używane tak samo w programach:
 
 ## <a name="example"></a>Przykład
 
@@ -120,4 +114,3 @@ int main() {
 [Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)<br/>
 [Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)<br/>
 [Odwołania do wskaźników](../cpp/references-to-pointers.md)
-

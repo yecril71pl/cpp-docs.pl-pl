@@ -1,7 +1,7 @@
 ---
 title: Spróbuj-except, instrukcja | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031449"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861931"
 ---
 # <a name="try-except-statement"></a>try-except — instrukcja
 
@@ -50,7 +50,14 @@ ms.locfileid: "46031449"
 
 ## <a name="syntax"></a>Składnia
 
-> **__try** {/ / chronionych kodu} **__except** ( *wyrażenie* ) {/ / kod procedury obsługi wyjątków}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;Kod chronionych<br/>
+> }<br/>
+> **__except** ( *wyrażenie* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;Kod obsługi wyjątków<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -67,15 +74,15 @@ Instrukcja złożona po **__try** klauzula jest ciałem sekcji chronionej. Instr
 
 1. Sekcja chroniona jest wykonywana.
 
-2. Jeśli nie wystąpi wyjątek podczas wykonywania sekcji chronionej, wykonywanie jest kontynuowane na instrukcji znajdującej się po **__except** klauzuli.
+1. Jeśli nie wystąpi wyjątek podczas wykonywania sekcji chronionej, wykonywanie jest kontynuowane na instrukcji znajdującej się po **__except** klauzuli.
 
-3. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w dowolnej procedurze, wywołuje sekcję chronioną, **__except** *wyrażenie* (o nazwie *filtru* wyrażenia) jest obliczane i wartość określa sposób obsługi wyjątku. Istnieją trzy wartości:
+1. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w dowolnej procedurze, wywołuje sekcję chronioną, **__except** *wyrażenie* (o nazwie *filtru* wyrażenia) jest obliczane i wartość określa sposób obsługi wyjątku. Istnieją trzy możliwe wartości:
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) wyjątek zostaje odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) wyjątek zostaje odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-   Wyjątek EXCEPTION_CONTINUE_SEARCH (0) nie została rozpoznana. Kontynuuj przeszukiwanie stosu obsługi, najpierw zawierającego wyrażenia **spróbuj — z wyjątkiem** instrukcji, następnie obsługi z następnym największym priorytetem.
+   - Wyjątek EXCEPTION_CONTINUE_SEARCH (0) nie została rozpoznana. Kontynuuj przeszukiwanie stosu obsługi, najpierw zawierającego wyrażenia **spróbuj — z wyjątkiem** instrukcji, następnie obsługi z następnym największym priorytetem.
 
-   EXCEPTION_EXECUTE_HANDLER (1) wyjątek został rozpoznany. Kontrola jest przekazywana do programu obsługi wyjątków przez wykonanie **__except** instrukcja złożona (c), a następnie kontynuuj wykonywanie po **__except** bloku.
+   - EXCEPTION_EXECUTE_HANDLER (1) wyjątek został rozpoznany. Kontrola jest przekazywana do programu obsługi wyjątków przez wykonanie **__except** instrukcja złożona (c), a następnie kontynuuj wykonywanie po **__except** bloku.
 
 Ponieważ **__except** wyrażenie jest obliczane jak wyrażenie C, zatem zostaje ograniczone do pojedynczej wartości, operator wyrażenia warunkowego lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
 
@@ -83,9 +90,7 @@ Każda aplikacja może mieć własną obsługę wyjątków.
 
 Nie jest prawidłową realizowanie **__try** instrukcji, ale dozwolone jest wyjście z niej. Obsługa wyjątków nie jest wywoływana, gdy proces zostanie zakończony w środku wykonywania wyrażenia **spróbuj — z wyjątkiem** instrukcji.
 
-Aby uzyskać więcej informacji, zobacz artykuł z bazy wiedzy Q315937: HOW TO: Trap Stack Overflow in a Visual C++ Application.
-
-## <a name="the-leave-keyword"></a>Słowo kluczowe __leave
+### <a name="the-leave-keyword"></a>Słowo kluczowe __leave
 
 **__Leave** — słowo kluczowe jest prawidłowy tylko wewnątrz sekcji chronionej **spróbuj — z wyjątkiem** instrukcji, a jego efektem jest przeskoczenie do końca sekcji chronionej. Wykonywanie jest kontynuowane po pierwszej instrukcji następującej po programie obsługi wyjątków.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
+### <a name="output"></a>Dane wyjściowe
 
 ```Output
 hello

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220219"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861697"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Nowe ostrzeżenie C4768 jest podany na niektóre nagłówki Windows SDK, które były dostarczane z programem Visual Studio 2017 15.3 lub starszy (na przykład: wersji 10.0.15063.0, znany także jako RS2 SDK). Jednak nowsze wersje zestawu Windows SDK nagłówki (w szczególności ShlObj.h i ShlObj_core.h) została naprawiona, aby generuje to ostrzeżenie. Po wyświetleniu tego ostrzeżenia, pochodzące z zestawu Windows SDK nagłówków, można wykonać następujące akcje:
 
 1. Przełącz się do najnowszy zestaw Windows SDK, dołączony do programu Visual Studio 2017 w wersji 15.5.
-2. Wyłącz ostrzeżenie wokół #include instrukcji nagłówka zestawu Windows SDK:
+
+1. Wyłącz ostrzeżenie wokół #include instrukcji nagłówka zestawu Windows SDK:
 
 ```cpp
    #pragma warning (push)

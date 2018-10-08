@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112996"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861515"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
 
@@ -36,13 +36,13 @@ Active Server Pages składniki są częścią architekturę Internet Information
 
 - Dla aplikacji sieci Web, można użyć możliwości obsługi błędów ASP.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Aby dodać składnik ATL strony ASP do projektu
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Aby dodać składnik ATL strony ASP do projektu
 
 1. W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnik ATL strony ASP.
 
-2. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
-3. W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij w okienku szablonów, w oknie dialogowym **składnik strony Active Server ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [ATL ASP Kreator składników stron](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. W [Dodaj klasę](../../ide/add-class-dialog-box.md) dialogowym **szablony** okienku kliknij **składnik strony Active Server ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [Kreator składników stron Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Zobacz też
 
@@ -52,4 +52,3 @@ Active Server Pages składniki są częścią architekturę Internet Information
 [Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie rodzajowej klasy C++](../../ide/adding-a-generic-cpp-class.md)
-

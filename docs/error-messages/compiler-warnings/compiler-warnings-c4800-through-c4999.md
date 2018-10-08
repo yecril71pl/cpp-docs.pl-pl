@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601616"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861424"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora od C4800 za pośrednictwem C5999
 
@@ -153,6 +153,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 4) C4842|nie gwarantuje wynik makra "offsetof" zastosować do typu używającego wielu dziedziczeń będzie spójny między wydaniami kompilatora|
 |C4843 ostrzeżenia kompilatora|"*type1*": procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego|
 |C4844 ostrzeżenia kompilatora|"Eksportuj modułu *nazwa_modułu*;" jest teraz preferowana składnia do deklarowania interfejsu modułu|
+|[Ostrzeżenie kompilatora (poziom 4) C4866](c4866.md)| Kompilator może nie wymusić kolejności oceny od lewej do prawej dla wywołania *operator_name*|
 |[Ostrzeżenie (błąd) kompilatora C4867](compiler-warning-c4867.md)|"*funkcja*": wywołania funkcji brakuje listy argumentów; Użyj "*wywołania*" Aby utworzyć wskaźnik do składowej|
 |[Ostrzeżenie (poziom 4) kompilatora C4868](compiler-warning-c4868.md)|"_pliku_(*line_number*)" kompilator może nie wymusić kolejności oceny od lewej do prawej w listy inicjowania w nawiasach|
 |Ostrzeżenie kompilatora (poziom 2) C4872|dzielenie liczby zmiennoprzecinkowej przez zero wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each: "*lokalizacji*"|

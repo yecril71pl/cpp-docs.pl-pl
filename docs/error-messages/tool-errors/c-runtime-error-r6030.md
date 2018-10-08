@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63606624e1cbcc5ef2c5ea453ee6d346e3e686a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9d25969a9ecb833c53b93135e65fa27b4f005a0d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038129"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861203"
 ---
 # <a name="c-runtime-error-r6030"></a>R6030 błąd środowiska uruchomieniowego języka C
 
 Nie zainicjowano CRT
 
 > [!NOTE]
->  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Ten problem najczęściej jest spowodowany przez niektóre programy zabezpieczeń lub rzadko, usterki w programie.
+> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Ten problem najczęściej jest spowodowany przez niektóre programy zabezpieczeń lub rzadko, usterki w programie.
 >
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+> Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
->  -   Oprogramowanie zabezpieczające może mieć określone instrukcje łagodzenia ten problem. Sprawdź z dostawcą oprogramowania zabezpieczeń witryny sieci Web, aby uzyskać szczegółowe informacje. Alternatywnie Sprawdź, czy zaktualizowane wersje oprogramowania zabezpieczeń lub spróbuj oprogramowania zabezpieczającego innej.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Oprogramowanie zabezpieczające może mieć określone instrukcje łagodzenia ten problem. Sprawdź z dostawcą oprogramowania zabezpieczeń witryny sieci Web, aby uzyskać szczegółowe informacje. Alternatywnie Sprawdź, czy zaktualizowane wersje oprogramowania zabezpieczeń lub spróbuj oprogramowania zabezpieczającego innej.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 

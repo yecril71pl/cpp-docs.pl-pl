@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020436"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861645"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
@@ -52,7 +52,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
       1. **Wybierz lub wprowadź nazwę serwera:** kliknij menu listy rozwijanej, aby wyświetlić wszystkich danych zarejestrowanych serwerów w sieci, a następnie wybierz jedno.
 
-      2. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
          > [!NOTE]
          > Istnieje problem z zabezpieczeniami, za pomocą funkcji "Zezwalaj na zapisywanie hasła" okno dialogowe właściwości połączenia danych. W polu "Wprowadź informacje do logowania się do serwera" istnieją dwa przyciski radiowe:
@@ -63,7 +63,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
          > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu pola wyboru "Zezwalaj na zapisywanie hasła"); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja jest bezpieczna, ponieważ jego szyfruje hasło.
          > Może to być sytuacje, w których chcesz wybrać "Zezwalaj na zapisywanie hasła." Na przykład jeśli są zwalnianie biblioteki za pomocą rozwiązania prywatnej bazy danych, możesz powinna nie bezpośrednio dostęp do bazy danych, ale zamiast tego użyć aplikacji warstwy środkowej do weryfikacji użytkownika (za pośrednictwem dowolnego schematu uwierzytelniania, możesz wybrać), a następnie ograniczyć sortowanie danych dostępne dla użytkownika.
 
-      3. **Wybierz bazę danych na serwerze:** kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane baz danych na serwerze danych, a następnie wybierz jedno.
+      1. **Wybierz bazę danych na serwerze:** kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane baz danych na serwerze danych, a następnie wybierz jedno.
 
          \- lub —
 
@@ -80,13 +80,13 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
          **Użyj parametrów połączenia:** albo wprowadź parametry połączenia, lub kliknij przycisk już uzyskali **kompilacji** przycisk; **wybierz źródło danych** pojawi się okno dialogowe. Wybierz źródło danych maszyny lub pliku, a następnie kliknij przycisk **OK**.
 
          > [!NOTE]
-         > Parametry połączenia można uzyskać, sprawdzając właściwości istniejącego połączenia w Eksploratorze serwera lub można utworzyć połączenie przez dwukrotne kliknięcie **Dodaj połączenie** w Eksploratorze serwera.
+         > Parametry połączenia można uzyskać, wyświetlając właściwości istniejącego połączenia w **Eksploratora serwera**, lub można utworzyć połączenie przez dwukrotne kliknięcie **Dodaj połączenie** w **serwera Eksplorator**.
 
-      2. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
-      3. Wprowadź początkowy katalog do użycia.
+      1. Wprowadź początkowy katalog do użycia.
 
-      4. Kliknij przycisk **Testuj połączenie**; Jeśli test zakończy się pomyślnie, kliknij przycisk **OK**. W przeciwnym razie sprawdź informacje logowania, spróbuj innej bazy danych lub spróbować innego serwera danych.
+      1. Kliknij przycisk **Testuj połączenie**; Jeśli test zakończy się pomyślnie, kliknij przycisk **OK**. W przeciwnym razie sprawdź informacje logowania, spróbuj innej bazy danych lub spróbować innego serwera danych.
 
    - **Zaawansowane** kartę
 

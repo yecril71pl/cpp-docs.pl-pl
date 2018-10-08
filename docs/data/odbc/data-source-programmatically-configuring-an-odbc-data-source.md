@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030771"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861359"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Źródło danych: programowe konfigurowanie źródła danych ODBC
 
@@ -85,7 +85,7 @@ Opis sterownika. Jest to nazwa przedstawiana użytkownikom, a nie nazwa sterowni
 *lpszAttributes*<br/>
 Lista atrybutów w formie "NazwaKlucza = wartość". Te ciągi są oddzielane przez zerowe znaki kończące z dwoma kolejnymi znakami kończącymi na końcu listy. Te atrybuty są głównie domyślne specyficzne dla sterownika zapisów, które przechodzą do rejestru dla nowego źródła danych. Jednym ważnym kluczem, który nie jest wymieniony w odwołaniu ODBC API dla tej funkcji jest "DSN" ("dane nazwa źródła"), która określa nazwę nowego źródła danych. Pozostałe wpisy są charakterystyczne dla sterownika dla nowego źródła danych. Często nie jest konieczne dostarczanie wszystkich wpisów, ponieważ sterownik monitować użytkownika o oknach dialogowych o nowe wartości. (Ustaw *hwndParent* na wartość NULL, aby to spowodować.) Można jawnie dostarczyć domyślne wartości, dzięki czemu użytkownik nie jest monitowany.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Aby określić opis sterownika dla parametru Lpsdriver z wykorzystaniem Administratora ODBC  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Aby określić opis sterownika dla parametru Lpsdriver z wykorzystaniem Administratora ODBC  
   
 1. Uruchom Administratora ODBC.  
   
@@ -97,23 +97,23 @@ Alternatywnie, można zbadać rejestr (lub dla 16-bitowych, plik Odbcinst.ini), 
   
 Jednym ze sposobów odszukania nazw kluczy i wartości dla *lpszAttributes* parametru jest zbadanie pliku ODBC.ini pod kątem już skonfigurowanego źródła danych (może być taki, który został skonfigurowany przez administratora ODBC).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Aby znaleźć i wartości dla parametru lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Aby znaleźć i wartości dla parametru lpszAttributes  
   
 1. Uruchom Edytor rejestru Windows (lub dla 16-bitowych, otwórz plik Odbc.ini).  
   
 1. Znajdź informacje źródła danych ODBC, przy użyciu jednej z następujących czynności:  
   
-    -   Dla 32-bitowych Znajdź klucz **HKEY_CURRENT_USER\Software\ODBC\ODBC. Źródła danych INI\ODBC** w okienku po lewej stronie.  
+   - Dla 32-bitowych Znajdź klucz **HKEY_CURRENT_USER\Software\ODBC\ODBC. Źródła danych INI\ODBC** w okienku po lewej stronie.  
   
-         W okienku po prawej stronie wyświetla wpisy w postaci: "pub: REG_SZ:*<data source name>*", gdzie *<data source name>* jest źródłem danych, która została już skonfigurowana przy użyciu odpowiednie ustawienia dla sterownika, planowane Aby użyć. Wybierz źródło danych, której potrzebujesz, na przykład SQL Server. Elementy występujące po ciągu "pub:" są w kolejności, klucza i wartości do użycia w Twojej *lpszAttributes* parametru.  
+      W okienku po prawej stronie wyświetla wpisy w postaci: "pub: REG_SZ:*<data source name>*", gdzie *<data source name>* jest źródłem danych, która została już skonfigurowana przy użyciu odpowiednie ustawienia dla sterownika, planowane Aby użyć. Wybierz źródło danych, której potrzebujesz, na przykład SQL Server. Elementy występujące po ciągu "pub:" są w kolejności, klucza i wartości do użycia w Twojej *lpszAttributes* parametru.  
   
-    -   Dla 16-bitowych, Znajdź sekcję w pliku Odbc.ini oznaczone przez [*\<nazwa źródła danych >*].  
+   - Dla 16-bitowych, Znajdź sekcję w pliku Odbc.ini oznaczone przez [*\<nazwa źródła danych >*].  
   
-         Wiersze po tym wierszu mają postać "NazwaKlucza = wartość". Są to wpisy do użycia w Twojej *lpszAttributes* parametru.  
+      Wiersze po tym wierszu mają postać "NazwaKlucza = wartość". Są to wpisy do użycia w Twojej *lpszAttributes* parametru.  
   
 Można też zbadanie dokumentacji dla określonego sterownika, którego chcesz użyć. Przydatne informacje można znaleźć w Pomocy online dla sterownika, który możesz uzyskać dostęp uruchamiając Administratora ODBC. Te pliki pomocy są zwyczajowo umieszczane w katalogu WINDOWS\SYSTEM dla Windows NT, Windows 3.1 lub Windows 95.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Aby uzyskać pomoc online dla sterownika ODBC  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Aby uzyskać pomoc online dla sterownika ODBC  
   
 1. Uruchom Administratora ODBC.  
   

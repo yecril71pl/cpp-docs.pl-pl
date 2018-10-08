@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412369"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861346"
 ---
 # <a name="editing-a-com-interface"></a>Edytowanie interfejsu COM
 
@@ -38,8 +38,8 @@ Następujących kreatorów trzy pomóc dostosować istniejące interfejsy. Są o
 
 |Kreator|Typ projektu|
 |------------|------------------|
-|[Kreator dodawania właściwości](../ide/names-add-property-wizard.md)|Projekty ATL lub MFC, obsługa ATL. Kliknij prawym przyciskiem myszy interfejs, do którego chcesz dodać właściwość.<br /><br /> Visual C++ wykrywa typ projektu i odpowiednio modyfikuje opcje w Kreatorze dodawania właściwości:<br /><br /> – W przypadku dispinterfaces w projekty utworzone za pomocą [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), wywoływanie Kreator dodawania właściwości udostępnia opcje, które określone z MFC.<br />– W przypadku interfejsów kontrolki MFC ActiveX Kreator dodawania właściwości zawiera listę podstawowych metod i właściwości, które mogą używać zgodnie z postanowieniami lub dostosowywanie kontrolki.<br />— Dla wszystkich innych interfejsów kreatory Dodaj właściwość zapewniają przydatne w większości sytuacji opcje.|
-|[Kreator dodawania metody](../ide/add-method-wizard.md)|Projekty ATL lub MFC, obsługa ATL. Kliknij prawym przyciskiem myszy interfejs, do którego chcesz dodać metody.<br /><br /> Visual C++ wykrywa typ projektu i odpowiednio modyfikuje opcje w Kreatorze dodawania metody:<br /><br /> – W przypadku dispinterfaces w projekty utworzone za pomocą [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator dodawania metody wywoływania udostępnia opcje, które określone z MFC.<br />– W przypadku interfejsów kontrolki MFC ActiveX Kreator dodawania metody zawiera listę podstawowych metod i właściwości, które mogą używać zgodnie z postanowieniami lub dostosowywanie kontrolki.<br />— Dla wszystkich innych interfejsów **Dodaj metodę** kreatorów udostępniają opcje przydatne w większości sytuacji.|
+|[Kreator dodawania właściwości](../ide/names-add-property-wizard.md)|Projekty ATL lub MFC, obsługa ATL. Kliknij prawym przyciskiem myszy interfejs, do którego chcesz dodać właściwość.<br /><br />Visual C++ wykrywa typ projektu i odpowiednio modyfikuje opcje w Kreatorze dodawania właściwości:<br /><br />– W przypadku dispinterfaces w projekty utworzone za pomocą [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), wywoływanie Kreator dodawania właściwości udostępnia opcje, które określone z MFC.<br />– W przypadku interfejsów kontrolki MFC ActiveX Kreator dodawania właściwości zawiera listę podstawowych metod i właściwości, które mogą używać zgodnie z postanowieniami lub dostosowywanie kontrolki.<br />— Dla wszystkich innych interfejsów kreatory Dodaj właściwość zapewniają przydatne w większości sytuacji opcje.|
+|[Kreator dodawania metody](../ide/add-method-wizard.md)|Projekty ATL lub MFC, obsługa ATL. Kliknij prawym przyciskiem myszy interfejs, do którego chcesz dodać metody.<br /><br />Visual C++ wykrywa typ projektu i odpowiednio modyfikuje opcje w Kreatorze dodawania metody:<br /><br />– W przypadku dispinterfaces w projekty utworzone za pomocą [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator dodawania metody wywoływania udostępnia opcje, które określone z MFC.<br />– W przypadku interfejsów kontrolki MFC ActiveX Kreator dodawania metody zawiera listę podstawowych metod i właściwości, które mogą używać zgodnie z postanowieniami lub dostosowywanie kontrolki.<br />— Dla wszystkich innych interfejsów **Dodaj metodę** kreatorów udostępniają opcje przydatne w większości sytuacji.|
 
 Ponadto można wdrożyć nowe interfejsy na kontrolki COM, klikając prawym przyciskiem myszy obiekt klasy formantu w widoku klas i klikając [implementować interfejs](../ide/implement-interface-wizard.md).
 

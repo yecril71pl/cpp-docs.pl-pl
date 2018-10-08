@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710024"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861190"
 ---
 # <a name="aggregates-and-unions"></a>Agregacje i unie
 
@@ -29,7 +29,7 @@ Inne typy, takie jak tablice, struktur i Unii, ma bardziej rygorystyczne wymagan
 
    Zawiera grupę uporządkowane obiekty sąsiadujące danych. Każdy obiekt jest nazywany elementu. Wszystkie elementy w tablicy mają ten sam rozmiar i typ danych.
 
--  Struktura
+- Struktura
 
    Zawiera grupę uporządkowane obiektów danych. W odróżnieniu od elementów tablicy obiektów danych w ramach struktury może mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze nosi nazwę członka.
 

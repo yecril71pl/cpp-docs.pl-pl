@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409652"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861892"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -440,11 +440,11 @@ Elementy członkowskie są następujące:
 
    Liczony od zera indeks obrazu przycisku, -1, jeśli brak obrazu dla przycisku.
 
--  `idCommand`
+- `idCommand`
 
    Identyfikator polecenia skojarzone z nim. Ten identyfikator jest wysyłane w komunikatów WM_COMMAND, po wybraniu przycisku. Jeśli `fsStyle` składowa ma wartość TBSTYLE_SEP, ten element członkowski musi mieć wartość zero.
 
--  `fsState`
+- `fsState`
 
    Flagi stanu przycisku. Może być kombinacją wartości wymienione poniżej:
 

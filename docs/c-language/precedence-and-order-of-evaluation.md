@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080769"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861502"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 
@@ -53,7 +53,7 @@ W poniższej tabeli przedstawiono pierwszeństwo i kojarzenie (kolejność, w kt
 
 1. Operatory są wymienione w kolejności malejącej. Jeśli wiele operatorów są wyświetlane w tym samym wierszu lub w grupie, mają równy priorytet.
 
-2. Wszystkie operatory proste i złożone przypisania mają równy priorytet.
+1. Wszystkie operatory proste i złożone przypisania mają równy priorytet.
 
 Wyrażenie może zawierać kilka operatorów o równy priorytet. Gdy tych operatorów pojawią się na tym samym poziomie w wyrażeniu, ocena będzie kontynuowane zgodnie z łączność operatora od prawej do lewej lub od lewej do prawej. Kierunek oceny nie ma wpływu na wyniki wyrażeń, które zawierają więcej niż jeden mnożenia (<strong>\*</strong>), dodanie (**+**), lub dane binarne bitowe (**&**, **&#124;**, lub **^**) — operator na tym samym poziomie. Kolejność operacji nie jest zdefiniowany przez język. Kompilator jest bezpłatny do oceny takiego wyrażenia w dowolnej kolejności, kompilator może zagwarantować spójne wyniki.
 
