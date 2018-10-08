@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387019"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860566"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Cstring — operacje odnoszące się do ciągów stylu C
 
@@ -67,7 +67,7 @@ Czasami może wymagać kopię `CString` dane, aby modyfikować bezpośrednio. U�
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Trzeci argument `strcpy_s` (lub Unicode/MBCS-przenośna `_tcscpy_s`) jest `const wchar_t*` (Unicode) lub `const char*` (ANSI). Przykład powyżej przebiegów `CString` dla tego argumentu. Kompilator języka C++ automatycznie stosuje funkcję konwersji zdefiniowane dla `CString` klasy, która konwertuje `CString` do `LPCTSTR`. Możliwość definiowania operacji rzutowania z jednego typu jest jednym z najbardziej przydatnych funkcjach języka c++.
+> Trzeci argument `strcpy_s` (lub Unicode/MBCS-przenośna `_tcscpy_s`) jest `const wchar_t*` (Unicode) lub `const char*` (ANSI). Przykład powyżej przebiegów `CString` dla tego argumentu. Kompilator języka C++ automatycznie stosuje funkcję konwersji zdefiniowane dla `CString` klasy, która konwertuje `CString` do `LPCTSTR`. Możliwość definiowania operacji rzutowania z jednego typu jest jednym z najbardziej przydatnych funkcjach języka c++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Praca z funkcjami ciąg standardowej biblioteki wykonawczej
 
@@ -83,13 +83,13 @@ Istnieją sytuacje, gdzie sens bezpośrednio modyfikować `CString` zawartości,
 
 `GetBuffer` i `ReleaseBuffer` metody oferują dostęp do buforu wewnętrznego znaków, z `CString` obiektu i można go bezpośrednio modyfikować. Poniższe kroki pokazują sposób używania tych funkcji, w tym celu.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Na potrzeby dostępu do buforu wewnętrznego znaku obiektu CString getbuffer — i ReleaseBuffer
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Na potrzeby dostępu do buforu wewnętrznego znaku obiektu CString getbuffer — i ReleaseBuffer
 
 1. Wywołaj `GetBuffer` dla `CString` obiektu, a także określić długość buforu, potrzebujesz.
 
-2. Użyj wskaźnika zwrócony przez `GetBuffer` do zapisu znaków bezpośrednio do `CString` obiektu.
+1. Użyj wskaźnika zwrócony przez `GetBuffer` do zapisu znaków bezpośrednio do `CString` obiektu.
 
-3. Wywołaj `ReleaseBuffer` dla `CString` obiektu do zaktualizowania wszystkich wewnętrznych `CString` stanu informacji, na przykład długość ciągu. Po zmodyfikowaniu zawartość `CString` obiektu bezpośrednio, należy wywołać `ReleaseBuffer` przed wywołaniem innych `CString` funkcji elementów członkowskich.
+1. Wywołaj `ReleaseBuffer` dla `CString` obiektu do zaktualizowania wszystkich wewnętrznych `CString` stanu informacji, na przykład długość ciągu. Po zmodyfikowaniu zawartość `CString` obiektu bezpośrednio, należy wywołać `ReleaseBuffer` przed wywołaniem innych `CString` funkcji elementów członkowskich.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Funkcje zmiennych argumentów za pomocą cstring — obiekty
 
@@ -113,4 +113,3 @@ Dla większości wyników funkcji, można po prostu zwrócenia `CString` obiekt 
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString — przekazywanie argumentów](../atl-mfc-shared/cstring-argument-passing.md)
-

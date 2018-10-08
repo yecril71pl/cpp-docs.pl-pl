@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069433"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860215"
 ---
 # <a name="specifying-property-pages"></a>Określanie stron właściwości
 
@@ -32,12 +32,12 @@ Aby zaimplementować `ISpecifyPropertyPages` przy użyciu biblioteki ATL, wykona
 
 1. Pochodzi z klasy [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Dodaj wpis dla `ISpecifyPropertyPages` do mapy COM swojej klasy.
+1. Dodaj wpis dla `ISpecifyPropertyPages` do mapy COM swojej klasy.
 
-3. Dodaj [PROP_PAGE](reference/property-map-macros.md#prop_page) wpisu do map właściwości dla każdej strony skojarzonych z Twoją kontrolą.
+1. Dodaj [PROP_PAGE](reference/property-map-macros.md#prop_page) wpisu do map właściwości dla każdej strony skojarzonych z Twoją kontrolą.
 
 > [!NOTE]
->  Podczas generowania, za pomocą formantu standardowego [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md), tylko trzeba będzie dodać wpisy PROP_PAGE map właściwości. Kreator generuje kod wymagane inne czynności.
+> Podczas generowania, za pomocą formantu standardowego [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md), tylko trzeba będzie dodać wpisy PROP_PAGE map właściwości. Kreator generuje kod wymagane inne czynności.
 
 Dobrze działające kontenery będą wyświetlane na stronach właściwości określonego w takiej samej kolejności jak wpisy PROP_PAGE w mapie właściwości. Ogólnie rzecz biorąc należy umieszczać wpisów stron właściwości standardowych po pozycji stron niestandardowego w mapowaniu właściwości, dzięki czemu użytkownicy zobaczą specyficzne dla formantu strony najpierw.
 
@@ -51,4 +51,3 @@ Następujące klasy dla kalendarza kontrolować używa `ISpecifyPropertyPages` i
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykładowe ATLPages](../visual-cpp-samples.md)
-

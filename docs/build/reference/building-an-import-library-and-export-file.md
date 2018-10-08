@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723310"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860397"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 
@@ -52,9 +52,9 @@ Jeśli określono/DEF, pliki wyjściowe LIB tworzy na podstawie specyfikacje eks
 
 1. A **__declspec(dllexport)** definicji w jednym z *objfiles* lub *biblioteki*
 
-2. Specyfikacji/Export:*nazwa* w wierszu polecenia LIB
+1. Specyfikacji/Export:*nazwa* w wierszu polecenia LIB
 
-3. Definicja w **EKSPORTÓW** instrukcji w *deffile*
+1. Definicja w **EKSPORTÓW** instrukcji w *deffile*
 
 Są to te same metody, które służy do określania eksporty podczas łączenia z eksportu programu. Program można używać więcej niż jednej metody. Można określić część polecenia LIB (takich jak wiele *objfiles* lub specyfikacji/Export) w pliku poleceń w poleceniu LIB, podobnie jak wykonywać następujące czynności za pomocą polecenia łącza.
 

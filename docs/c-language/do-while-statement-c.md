@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061479"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860683"
 ---
 # <a name="do-while-statement-c"></a>do-while — instrukcja (C)
 
@@ -30,7 +30,7 @@ ms.locfileid: "46061479"
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji iteracji*: &nbsp; &nbsp; &nbsp; &nbsp; **czy***instrukcji***podczas (** *wyrażenie***);** 
+*instrukcji iteracji*: &nbsp; &nbsp; &nbsp; &nbsp; **czy***instrukcji***podczas (** *wyrażenie***);**
 
 *Wyrażenie* w *czy-podczas* instrukcji jest oceniane, po wykonaniu treść pętli. W związku z tym treść pętli jest zawsze wykonywana co najmniej raz.
 
@@ -38,7 +38,7 @@ ms.locfileid: "46061479"
 
 1. Instrukcja zostaje wykonana.
 
-2. Następnie *wyrażenie* jest oceniany. Jeśli *wyrażenie* ma wartość FAŁSZ, *czy — gdy* kończy się i przekazuje kontrolę do następnej instrukcji w programie. Jeśli *wyrażenie* jest prawdziwe (niezerowe), proces jest powtarzany, zaczynając od kroku 1.
+1. Następnie *wyrażenie* jest oceniany. Jeśli *wyrażenie* ma wartość FAŁSZ, *czy — gdy* kończy się i przekazuje kontrolę do następnej instrukcji w programie. Jeśli *wyrażenie* jest prawdziwe (niezerowe), proces jest powtarzany, zaczynając od kroku 1.
 
 *Czy — podczas* instrukcji można także zakończyć, gdy **podziału**, **goto**, lub **zwracają** instrukcja jest wykonywana w treści instrukcji.
 

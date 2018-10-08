@@ -15,35 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1063b3418df0c9dd45848ea71cdd7717c2dd1427
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032097"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859591"
 ---
 # <a name="creating-the-provider"></a>Tworzenie dostawcy
 
-#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Aby utworzyć dostawcę OLE DB przy użyciu biblioteki ATL OLE DB Provider Kreatora  
-  
-1. Kliknij prawym przyciskiem myszy projekt.  
-  
-1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
-  
-1. W **Dodaj klasę** okno dialogowe, wybierz opcję **ATL OLE DB Provider** ikonę, a następnie kliknij przycisk **Otwórz**.  
-  
-1. ATL OLE DB Provider kreatora, podaj krótką nazwę dostawcy w **krótką nazwę** pole. Poniższe tematy użyć krótkiej nazwy "MyProvider", ale możesz użyć innej nazwy. Pozostałe pola nazw wypełnić według nazwy, które można wprowadzić.  
-  
-1. Edytuj pozostałe pola nazw, jeśli to konieczne. Oprócz obiektowe i plikowe nazwy można edytować następujących czynności:  
-  
-    -   **Klasa coclass**: Nazwa która używa modelu COM w celu utworzenia dostawcy.  
-  
-    -   **Identyfikator progID**: identyfikator programowy, czyli ciąg tekstowy, który można używać zamiast identyfikatora GUID.  
-  
-    -   **Wersja**: używany z ProgID i coclass do generowania identyfikatora programowe zależne od wersji  
-  
-1. Kliknij przycisk **Zakończ**.  
-  
-## <a name="see-also"></a>Zobacz też  
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Aby utworzyć dostawcę OLE DB przy użyciu biblioteki ATL OLE DB Provider Kreatora
+
+1. Kliknij prawym przyciskiem myszy projekt.
+
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
+
+1. W **Dodaj klasę** okno dialogowe, wybierz opcję **ATL OLE DB Provider** ikonę, a następnie kliknij przycisk **Otwórz**.
+
+1. ATL OLE DB Provider kreatora, podaj krótką nazwę dostawcy w **krótką nazwę** pole. Poniższe tematy użyć krótkiej nazwy "MyProvider", ale możesz użyć innej nazwy. Pozostałe pola nazw wypełnić według nazwy, które można wprowadzić.
+
+1. Edytuj pozostałe pola nazw, jeśli to konieczne. Oprócz obiektowe i plikowe nazwy można edytować następujących czynności:
+
+   - **Klasa coclass**: Nazwa która używa modelu COM w celu utworzenia dostawcy.
+
+   - **Identyfikator progID**: identyfikator programowy, czyli ciąg tekstowy, który można używać zamiast identyfikatora GUID.
+
+   - **Wersja**: używany z ProgID i coclass do generowania identyfikatora programowe zależne od wersji
+
+1. Kliknij przycisk **Zakończ**.
+
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

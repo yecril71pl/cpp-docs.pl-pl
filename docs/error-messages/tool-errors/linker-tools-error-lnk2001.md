@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017850"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861580"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Błąd narzędzi konsolidatora LNK2001
 
@@ -73,9 +73,9 @@ Ten błąd może wystąpić, jeśli łączysz się do bibliotek tryb wersji podc
 
 Ten błąd może wystąpić, jeśli kod odwołuje się do określonego symbolu z jednej wersji biblioteki, ale Podaj inną wersję biblioteki do konsolidatora. Ogólnie rzecz biorąc nie można mieszać plików obiektu lub bibliotek, które są tworzone dla różnych wersji kompilatora. Biblioteki, które są dostarczane w nowej wersji mogą zawierać symbole, których nie można znaleźć w bibliotekach dołączone do poprzednich wersji i na odwrót. Aby rozwiązać ten problem, tworzy plików obiektów i bibliotek w tej samej wersji kompilatora przed łącząc je ze sobą.
 
--  Narzędzia &#124; opcje &#124; projektów &#124; katalogi VC ++ okno dialogowe, w obszarze Wybór plików biblioteki umożliwia zmianę kolejności przeszukiwania bibliotek. Folder łączący strony właściwości projektu w oknie dialogowym może również zawierać ścieżek, które mogą być nieaktualne.
+- Narzędzia &#124; opcje &#124; projektów &#124; katalogi VC ++ okno dialogowe, w obszarze Wybór plików biblioteki umożliwia zmianę kolejności przeszukiwania bibliotek. Folder łączący strony właściwości projektu w oknie dialogowym może również zawierać ścieżek, które mogą być nieaktualne.
 
--  Ten problem może występować, gdy nowy zestaw SDK jest zainstalowany (być może do innej lokalizacji), a kolejność wyszukiwania nie jest aktualizowana, aby wskazywał nową lokalizację. Zazwyczaj należy umieścić ścieżki do nowego zestawu SDK obejmują i lib katalogów przed domyślna lokalizacja Visual C++. Ponadto projektu zawierającego ścieżek osadzonych nadal mogą wskazywać na starej ścieżki, które są prawidłowe, ale jest zgodna z nowych funkcji dodanych przez nową wersję, który jest zainstalowany w innej lokalizacji.
+- Ten problem może występować, gdy nowy zestaw SDK jest zainstalowany (być może do innej lokalizacji), a kolejność wyszukiwania nie jest aktualizowana, aby wskazywał nową lokalizację. Zazwyczaj należy umieścić ścieżki do nowego zestawu SDK obejmują i lib katalogów przed domyślna lokalizacja Visual C++. Ponadto projektu zawierającego ścieżek osadzonych nadal mogą wskazywać na starej ścieżki, które są prawidłowe, ale jest zgodna z nowych funkcji dodanych przez nową wersję, który jest zainstalowany w innej lokalizacji.
 
 - Jeśli kompilujesz w wierszu polecenia i w związku z tym zostały utworzone własne zmienne środowiskowe, sprawdź, czy ścieżki do narzędzia, biblioteki i pliki nagłówkowe, przejdź do wersji spójne. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

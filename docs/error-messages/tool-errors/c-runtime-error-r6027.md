@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3694c367c090d0dcc2fb5e4ac72c8f00593fed27
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10f46968876a56706e05bcee55268c1aed99372b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084812"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860605"
 ---
 # <a name="c-runtime-error-r6027"></a>R6027 błąd środowiska uruchomieniowego języka C
 
 Brak wystarczającej ilości miejsca do zainicjowania lowio
 
 > [!NOTE]
->  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane przez warunek bardzo małej ilości pamięci. Może być także spowodowane przez usterkę w aplikacji, uszkodzenie bibliotek Visual C++, których używa lub sterownika.
+> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane przez warunek bardzo małej ilości pamięci. Może być także spowodowane przez usterkę w aplikacji, uszkodzenie bibliotek Visual C++, których używa lub sterownika.
 >
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+> Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
->  -   Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> -   Jeśli aplikacja była praca przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia Nowa aplikacja lub sterownika i spróbuj ponownie aplikację.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie wszystkie kopie Microsoft Visual C++ Redistributable.
-> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> - Jeśli aplikacja była praca przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia Nowa aplikacja lub sterownika i spróbuj ponownie aplikację.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie wszystkie kopie Microsoft Visual C++ Redistributable.
+> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 

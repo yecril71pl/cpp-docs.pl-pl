@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317924"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860449"
 ---
 # <a name="menu-command-properties-c"></a>Właściwości poleceń menu (C++)
 
@@ -28,7 +28,7 @@ Poniższe informacje są organizowane według **Menu** właściwości, które po
 
 |Właściwość|Opis|
 |--------------|-----------------|
-|**BREAK**|Może być jedną z następujących wartości:<br /><br /> -   **Brak** (opcja domyślna): bez przerwy.<br />-   **Kolumna**: statyczne menu, ta wartość umieszcza polecenie menu w nowym wierszu. Ta wartość wyskakujących menu umieszcza polecenia menu w nową kolumnę z nie jednoznaczny kolumn. Ustawienie tej właściwości ma wpływ na wygląd menu tylko w czasie wykonywania, nie Edytor menu.<br />-   **Pasek**: taki sam jak **kolumny** z wyjątkiem sytuacji, menu podręczne tę wartość oddziela nowej kolumny od starego kolumnę z pionowym wierszem. Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w **Menu** edytora.|
+|**BREAK**|Może być jedną z następujących wartości:<br /><br />- **Brak** (opcja domyślna): bez przerwy.<br />- **Kolumna**: statyczne menu, ta wartość umieszcza polecenie menu w nowym wierszu. Ta wartość wyskakujących menu umieszcza polecenia menu w nową kolumnę z nie jednoznaczny kolumn. Ustawienie tej właściwości ma wpływ na wygląd menu tylko w czasie wykonywania, nie Edytor menu.<br />- **Pasek**: taki sam jak **kolumny** z wyjątkiem sytuacji, menu podręczne tę wartość oddziela nowej kolumny od starego kolumnę z pionowym wierszem. Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w **Menu** edytora.|
 |**Podpis**|Tekst etykiety polecenia menu (Nazwa menu). Aby utworzyć kolekcję liter w podpisie menu poleceń klawisz dostępu, należy poprzedzić handlowe "i" (&).|
 |**Zaznaczone**|Jeśli **True**, polecenia menu jest domyślnie zaznaczone. Typ: **Bool**. Wartość domyślna: **False**.|
 |**Włączone**|Jeśli **False**, element menu jest wyłączona.|

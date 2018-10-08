@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725975"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860540"
 ---
 # <a name="base-base-address"></a>/BASE (Adres podstawowy)
 
@@ -78,9 +78,9 @@ Innym sposobem, aby ustawić adres podstawowy jest za pomocą *podstawowy* argum
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
 
-2. Wybierz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
 
-3. Modyfikowanie **adresu podstawowego** właściwości.
+1. Modyfikowanie **adresu podstawowego** właściwości.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

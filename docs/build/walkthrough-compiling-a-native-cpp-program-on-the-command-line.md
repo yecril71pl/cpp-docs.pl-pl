@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821195"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860410"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia
 
@@ -53,7 +53,7 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
 
    Jeśli używasz innej wersji programu Visual Studio lub działają innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
 
-1. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają mniej więcej tak:
+1. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy spraw
    > [!NOTE]
    > Jeśli wystąpi inny kompilator lub konsolidator błędu lub ostrzeżenia, przejrzyj kod źródłowy, aby poprawić błędy, a następnie zapisz go i ponownie uruchomić kompilator. Aby uzyskać informacje o błędach Użyj pola wyszukiwania na tej stronie w witrynie MSDN do wyszukania numer błędu.
 
-7. Aby uruchomić hello.exe program w wierszu polecenia, wprowadź `hello`.
+1. Aby uruchomić hello.exe program w wierszu polecenia, wprowadź `hello`.
 
    Ten program wyświetla ten tekst i kończy działanie:
 

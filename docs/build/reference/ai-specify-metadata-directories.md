@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716595"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859864"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 
@@ -49,9 +49,9 @@ Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedn�
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-2. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
 
-3. Modyfikowanie **dodatkowe # katalogi using** właściwości.
+1. Modyfikowanie **dodatkowe # katalogi using** właściwości.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

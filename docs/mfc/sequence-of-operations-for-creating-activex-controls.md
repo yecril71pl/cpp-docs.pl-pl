@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c79a9cace0cf2eacabdba63f327f86e95959f3fb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377724"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861476"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sekwencja operacji przy tworzeniu kontrolek ActiveX
 
@@ -36,7 +36,7 @@ W poniższej tabeli przedstawiono usługi roli i roli struktury w tworzeniu kont
 |Utwórz platforma kontrolki ActiveX.|Uruchom Kreator kontrolek ActiveX MFC do tworzenia kontrolki. Określ żądane opcje na stronach opcji. Opcje obejmują typ i nazwę formantu w projekcie, licencjonowanie, podklasy oraz metodę o polu.|Kreator kontrolek ActiveX MFC tworzy pliki kontrolki ActiveX z podstawowymi funkcjami, w tym pliki źródłowe dla aplikacji, kontrolki i stronę właściwości lub stron. Plik zasobów; plik projektu; i inne, wszystkie dostosowane do specyfikacji.|
 |Zobacz, Kreator kontrolek ActiveX i kontrolki oferują bez dodawania linię własnym kodem.|Tworzenie formantu ActiveX i przetestować go za pomocą programu Internet Explorer lub [przykładowe TSTCON](../visual-cpp-samples.md).|Uruchamianie kontroli ma możliwość można zmienić rozmiar i przenieść. Ma on także **o polu** metody (Jeśli wybrano), który może być wywoływany.|
 |Implementuje metody i właściwości formantu.|Implementuje właściwości i metody specyficzne dla formantu, dodając funkcje Członkowskie udostępnia interfejs narażonych na danych formantu. Dodaj zmienne Członkowskie do przechowywania struktur danych i umożliwia wyzwolenie zdarzenia po określeniu procedury obsługi zdarzeń.|Struktura został już zdefiniowany mapy w celu obsługi zdarzeń, właściwości i metod, pozostawiając pozwala skupić się na implementacji właściwości i metod formantu. Domyślna strona właściwości jest widoczny, a podano domyślną metodę o polu.|
-|Konstruowania strony właściwości lub strony formantu.|Edytory zasobów Visual C++ umożliwiają wizualne edytowanie interfejs strony właściwości formantu:<br /><br /> — Tworzenie strony właściwości dodatkowych.<br />-Tworzenie i edytowanie map bitowych, ikon i kursorów.<br /><br /> Możesz także testować stron właściwości w edytorze okien dialogowych.|Domyślny plik zasobów tworzone przez Kreatora aplikacji MFC udostępnia wiele zasobów, których potrzebujesz. Visual C++ pozwala edytować istniejące zasoby i dodać nowe zasoby, łatwe i wizualnie.|
+|Konstruowania strony właściwości lub strony formantu.|Edytory zasobów Visual C++ umożliwiają wizualne edytowanie interfejs strony właściwości formantu:<br /><br />— Tworzenie strony właściwości dodatkowych.<br />-Tworzenie i edytowanie map bitowych, ikon i kursorów.<br /><br /> Możesz także testować stron właściwości w edytorze okien dialogowych.|Domyślny plik zasobów tworzone przez Kreatora aplikacji MFC udostępnia wiele zasobów, których potrzebujesz. Visual C++ pozwala edytować istniejące zasoby i dodać nowe zasoby, łatwe i wizualnie.|
 |Przetestuj zdarzenia, metod i właściwości formantu.|Ponownie skompiluj kontrolkę i użyć kontenera testu do testowania, czy inne programy obsługi działają poprawnie.|Można wywołać metody kontroli i modyfikowania jego właściwości, za pośrednictwem interfejsu strony właściwości lub kontener testu. Ponadto należy użyć kontenera testu do śledzenia zdarzeń wyzwalanych z formantu i powiadomienia odbierane przez kontener formantu.|
 
 ## <a name="see-also"></a>Zobacz też

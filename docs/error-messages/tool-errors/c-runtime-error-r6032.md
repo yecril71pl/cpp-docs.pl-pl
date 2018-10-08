@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43155f24411fb5206a03d607f0551c2d34294aeb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7dc68723e07d7ef8c3b9d9f6ad913466b7ff27e4
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024206"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859721"
 ---
 # <a name="c-runtime-error-r6032"></a>R6032 błąd środowiska uruchomieniowego języka C
 
 Brak wystarczającej ilości miejsca dla informacji o ustawieniach regionalnych
 
 > [!NOTE]
->  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci lub usterkę w programie.
+> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci lub usterkę w programie.
 >
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+> Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
->  -   Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722374"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860748"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Opóźnij importowanie ładowania)
 
@@ -46,9 +46,9 @@ Opcja/delayload powoduje, że biblioteka DLL, która jest określona przez `dlln
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-2. W **konsolidatora** folderu, wybierz **dane wejściowe** stronę właściwości.
+1. W **konsolidatora** folderu, wybierz **dane wejściowe** stronę właściwości.
 
-3. Modyfikowanie **bibliotek DLL załadowanych z opóźnieniem** właściwości.
+1. Modyfikowanie **bibliotek DLL załadowanych z opóźnieniem** właściwości.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

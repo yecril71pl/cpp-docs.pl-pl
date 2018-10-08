@@ -21,32 +21,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde08e8ffdb30f9ebf0ae7577bf836e84513a07
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d8f36c48cf654379e9db3a99c2404732dca30f63
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751680"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860325"
 ---
 # <a name="elapsed-time-automation-classes"></a>Upłynęło czasu: Klasy automatyzacji
 
 Ta procedura pokazuje, jak można obliczyć różnicę między dwoma `CTime` obiektów i get `CTimeSpan` wynik.
 
-#### <a name="to-calculate-elapsed-time"></a>Do obliczania upływu czasu
+## <a name="to-calculate-elapsed-time"></a>Do obliczania upływu czasu
 
 1. Utworzyć dwa `COleDateTime` obiektów.
 
-2. Ustawić jeden z `COleDateTime` obiekty do bieżącego czasu.
+1. Ustawić jeden z `COleDateTime` obiekty do bieżącego czasu.
 
-3. Wykonywać pewne bardzo czasochłonnym zadaniem.
+1. Wykonywać pewne bardzo czasochłonnym zadaniem.
 
-4. Ustaw innych `COleDateTime` obiekt do bieżącego czasu.
+1. Ustaw innych `COleDateTime` obiekt do bieżącego czasu.
 
-5. Podjąć różnicę między dwiema wartościami godziny.
+1. Podjąć różnicę między dwiema wartościami godziny.
 
    [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 
 [Data i godzina: obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md)
-

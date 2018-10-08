@@ -15,29 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb69e05ead437ed5f6c1fe2bb19b07c31daf15
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f9e11db0a9752ae7f88c5b1b21b81f0bb4c8a20f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760279"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861229"
 ---
 # <a name="creating-an-aggregated-object"></a>Tworzenie obiektu zagregowanego
 
 Delegaty agregacji `IUnknown` wywołań, podając wskaźnik do obiektu zewnętrznego `IUnknown` do obiektu wewnętrznego.
 
-### <a name="to-create-an-aggregated-object"></a>Do utworzenia obiektu zagregowanego
+## <a name="to-create-an-aggregated-object"></a>Do utworzenia obiektu zagregowanego
 
 1. Dodaj `IUnknown` wskaźnik do klasy obiektu i zainicjować go na wartość NULL w konstruktorze.
 
-2. Zastąp [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) do utworzenia agregacji.
+1. Zastąp [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) do utworzenia agregacji.
 
-3. Użyj `IUnknown` wskaźnika, zdefiniowane w kroku 1, jako drugi parametr dla [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) makra.
+1. Użyj `IUnknown` wskaźnika, zdefiniowane w kroku 1, jako drugi parametr dla [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) makra.
 
-4. Zastąp [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) zwolnić `IUnknown` wskaźnika.
+1. Zastąp [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) zwolnić `IUnknown` wskaźnika.
 
 > [!NOTE]
->  Jeśli używasz i zwolnij interfejs z obiektu zagregowanego podczas `FinalConstruct`, należy dodać [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) makra do definicji obiektu klasy.
+> Jeśli używasz i zwolnij interfejs z obiektu zagregowanego podczas `FinalConstruct`, należy dodać [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) makra do definicji obiektu klasy.
 
 ## <a name="see-also"></a>Zobacz też
 

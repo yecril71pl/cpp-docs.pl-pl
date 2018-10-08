@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057800"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860891"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -48,15 +48,15 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 
 |||||
 |-|-|-|-|
-|**__asm**|**DllImport**2|**__int8**|**"naked"** 2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**Wątek**2|
+|**__asm**|**DllImport**<sup>2</sup>|**__int8**|**"naked"**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**Wątek**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. **__Based** — słowo kluczowe ma ograniczone zastosowanie do 32-bitowych i 64-bitowych docelowej kompilacji.
+<sup>1</sup> **__based** — słowo kluczowe ma ograniczone zastosowanie do 32-bitowych i 64-bitowych docelowej kompilacji.
 
-2. Są to specjalne identyfikatory używane z **__declspec**; ich użycie w innych kontekstach nie jest ograniczona.
+<sup>2</sup> są to specjalne identyfikatory używane z **__declspec**; ich użycie w innych kontekstach nie jest ograniczona.
 
 Rozszerzenia Microsoft są domyślnie włączone. Aby upewnić się, że Twoje programy są w pełni zgodne, możesz wyłączyć rozszerzenia Microsoft określając opcję wiersza polecenia /Za (kompiluj dla zgodności ANSI) podczas kompilacji. Gdy to zrobisz, wyłączane są słowa kluczowe specyficzne dla firmy Microsoft.
 

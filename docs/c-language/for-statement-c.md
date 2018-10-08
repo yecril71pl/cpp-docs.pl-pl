@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084058"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860592"
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C)
 
@@ -34,7 +34,7 @@ Wykonywanie **dla** instrukcji przechodzi w następujący sposób:
 
 1. *Init-expression*, jeśli istnieje, jest obliczane. To ustawienie określa inicjowania dla pętli. Nie ma żadnych ograniczeń typu *init-expression*.
 
-2. *Cond-expression*, jeśli istnieje, jest obliczane. To wyrażenie musi mieć typ arytmetyczny lub wskaźnika. Jest on oceniane przed każdą iteracją. Możliwe są trzy wyniki:
+1. *Cond-expression*, jeśli istnieje, jest obliczane. To wyrażenie musi mieć typ arytmetyczny lub wskaźnika. Jest on oceniane przed każdą iteracją. Możliwe są trzy wyniki:
 
    - Jeśli *cond-expression* jest **true** (niezerowe), *instrukcji* jest wykonywana; następnie *loop-expression*, jeśli istnieje, jest obliczane. *Loop-expression* jest oceniane po każdej iteracji. Nie ma żadnych ograniczeń dla jego typu. Efekty uboczne będzie wykonywany w kolejności. Następnie rozpocznie się proces ponownie z wersją ewaluacyjną usługi *cond-expression*.
 

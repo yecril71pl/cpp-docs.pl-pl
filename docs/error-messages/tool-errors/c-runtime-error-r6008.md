@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 604b54d1c1752c76e28680e3373913ca7e92a9bc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105152"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860436"
 ---
 # <a name="c-runtime-error-r6008"></a>R6008 błąd środowiska uruchomieniowego języka C
 
 Brak wystarczającej ilości miejsca dla argumentów
 
 > [!NOTE]
->  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci, zbyt dużej ilości pamięci, przez zmienne środowiskowe lub usterkę w programie.
+> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci, zbyt dużej ilości pamięci, przez zmienne środowiskowe lub usterkę w programie.
 >
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+> Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
->  -   Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> -   Zmniejsz liczbę i rozmiar argumentów wiersza polecenia do aplikacji.
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
+> - Zmniejsz liczbę i rozmiar argumentów wiersza polecenia do aplikacji.
+> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 

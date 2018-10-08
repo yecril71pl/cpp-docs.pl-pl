@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096811"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860657"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 
@@ -37,7 +37,7 @@ ms.locfileid: "46096811"
 
 1. *Wyrażenie* jest oceniany.
 
-2. Jeśli *wyrażenie* początkowo wartość false, treść `while` nigdy nie zostaje wykonana instrukcja i kontrola przechodzi z `while` instrukcji do następnej instrukcji w programie.
+1. Jeśli *wyrażenie* początkowo wartość false, treść `while` nigdy nie zostaje wykonana instrukcja i kontrola przechodzi z `while` instrukcji do następnej instrukcji w programie.
 
    Jeśli *wyrażenie* jest wartość true (niezerową), zostaje wykonana instrukcji i proces jest powtarzany, zaczynając od kroku 1.
 

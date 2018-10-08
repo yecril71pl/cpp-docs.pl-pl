@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106050"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860345"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Dodawanie okna dialogowego ATL
 
@@ -30,15 +30,15 @@ Aby dodać okno dialogowe ATL do projektu, projekt musi być projektu ATL lub pr
 Domyślnie Kreator okna dialogowego ATL implementuje okno dialogowe pochodną [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Ta klasa zawiera obsługę hostowania kontrolki ActiveX i Windows. Jeśli nie mają obciążenie obsługi formantów ActiveX, gdy kreator został wygenerowany kod, należy zastąpić wszystkie wystąpienia elementu `CAxDialogImpl` z oboma [CSimpleDialog](../../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako klasę bazową .
 
 > [!NOTE]
->  `CSimpleDialog` tworzy tylko modalnych okien dialogowych, które obsługują tylko Windows wspólnych formantów. `CDialogImpl` Tworzy albo w modalnym lub niemodalnym dialogowych.
+> `CSimpleDialog` tworzy tylko modalnych okien dialogowych, które obsługują tylko Windows wspólnych formantów. `CDialogImpl` Tworzy albo w modalnym lub niemodalnym dialogowych.
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Można dodać zasobu okna dialogowego ATL do projektu
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Można dodać zasobu okna dialogowego ATL do projektu
 
 1. Utwórz projekt ATL za pomocą [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md).
 
-2. Z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu i kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
+1. Z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu i kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
 
-3. W okienku szablonów okna [Dodaj klasę](../../ide/add-class-dialog-box.md) okno dialogowe, kliknij przycisk **okno dialogowe ATL**. Kliknij przycisk **Otwórz** do wyświetlenia [Kreator okna dialogowego ATL](../../atl/reference/atl-dialog-wizard.md).
+1. W **szablony** okienku [Dodaj klasę](../../ide/add-class-dialog-box.md) okno dialogowe, kliknij przycisk **okno dialogowe ATL**. Kliknij przycisk **Otwórz** do wyświetlenia [Kreator okna dialogowego ATL](../../atl/reference/atl-dialog-wizard.md).
 
 Aby uzyskać więcej informacji, zobacz [Implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md).
 
@@ -47,4 +47,3 @@ Aby uzyskać więcej informacji, zobacz [Implementowanie okna dialogowego](../..
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Klasy okien](../../atl/atl-window-classes.md)<br/>
 [Mapy komunikatów](../../atl/message-maps-atl.md)
-
