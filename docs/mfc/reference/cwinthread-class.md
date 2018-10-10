@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441359"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890600"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -455,7 +455,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 Ogłoszony komunikat jest mapowany do obsługi właściwego wiadomości za pomocą makra mapy komunikatów ON_THREAD_MESSAGE.
 
 > [!NOTE]
->  Podczas wywoływania Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) funkcję w aplikacji MFC, komunikatów MFC nie są wywoływane programy obsługi. Aby uzyskać więcej informacji zobacz artykuł bazy wiedzy, "PRB: MFC komunikat obsługi nie wywołuje się za pomocą PostThreadMessage()" (Q142415).
+> Gdy wywołujesz [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), komunikat jest umieszczana w kolejce komunikatów dla wątku. Jednak ponieważ komunikaty publikowane w ten sposób nie są skojarzone z oknem, MFC nie wyśle je do obsługi komunikatów lub polecenie. Aby umożliwić obsługę tych komunikatów, należy zastąpić `PreTranslateMessage()` funkcji usługi CWinApp klasy pochodnej klasy, a następnie ręcznie obsługi wiadomości.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

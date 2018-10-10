@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406961"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890221"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Kroki wykonywane w typowej aplikacji klienckiej FTP
 
 Tworzy w typowej aplikacji klienckiej FTP [CInternetSession](../mfc/reference/cinternetsession-class.md) i [CFtpConnection](../mfc/reference/cftpconnection-class.md) obiektu. Należy pamiętać, że tych klas MFC WinInet faktycznie kontroluje ustawienia serwera proxy typu; Wykonuje usług IIS.
-
-Ponadto zobacz następujące artykuły bazy wiedzy:
-
-- PORADY:, FTP przy użyciu serwera Proxy oparte na CERN, za pomocą interfejsu WinInet interfejsu API (identyfikator artykułu: Q166961)
-
-- PRZYKŁAD: FTP za pomocą haseł oparte na CERN chronionego serwera Proxy (identyfikator artykułu: Q216214)
-
-- Menedżer nie powiedzie się, aby wyświetlić zainstalowany serwer Proxy usługi serwisy internetowe (identyfikator artykułu: Q216802)
 
 W poniższej tabeli przedstawiono kroki, które może wykonywać w typowej aplikacji klienckiej FTP.
 

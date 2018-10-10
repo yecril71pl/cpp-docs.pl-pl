@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093756"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890001"
 ---
 # <a name="compiler-error-c2668"></a>Błąd kompilatora C2668
 
@@ -31,15 +31,11 @@ Nie można rozpoznać wywołania określonej przeciążonej funkcji. Można jawn
 
 Ten błąd można także uzyskać za pomocą szablonu. W przypadku, w tej samej klasie funkcja regularny członek i oparte na szablonach składowa o tej samej sygnaturze, oparte na szablonach jeden musi umieszczone jako pierwsze. To ograniczenie bieżąca implementacja języka Visual C++.
 
-Zobacz artykuł bazy wiedzy Q240869 Aby uzyskać więcej informacji na częściowe porządkowanie szablonów funkcji.
-
-Jeśli tworzysz Projekt ATL, zawierający obsługujący obiekt COM `ISupportErrorInfo`, zobacz artykuł bazy wiedzy Q243298.
-
 ## <a name="example"></a>Przykład
 
 Poniższy przykład spowoduje wygenerowanie C2668:
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 Innym sposobem, aby rozwiązać ten problem jest [użycie — deklaracja](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, k
 
 Konwersja na rzutowanie za pomocą stała 0 jest niejednoznaczny, ponieważ int wymaga konwersji zarówno do czasu i typ void *. Aby rozwiązać ten problem, należy rzutować 0, aby dokładnie typ parametru funkcji, który jest używany dla tak, aby konwersji muszą mieć miejsce (ten kod będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET, Visual c++).
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowe i podwójne formularze wszystkich funkcji matematycznych.
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Ten błąd może wystąpić, ponieważ pow (int, int) został usunięty z math.h w CRT.
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 Ten kod zakończy się pomyślnie w programie Visual Studio 2015, ale nie powiedzie się w programie Visual Studio 2017 i nowszym z C2668. W programie Visual Studio 2015 kompilator błędnie traktowane listy Inicjalizacja kopiowania na w taki sam sposób, jak regularne Inicjowanie kopiowania; uznaje się jedynie konwertowanie konstruktory przeciążeń z późnym wiązaniem.
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

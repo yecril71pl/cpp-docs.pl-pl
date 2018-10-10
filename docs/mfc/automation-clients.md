@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820597"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890065"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
 
@@ -46,7 +46,7 @@ Następnie możesz określić plik biblioteki typów, opisujący właściwości 
 
 ### <a name="handling-events-in-automation-clients"></a>Obsługa zdarzeń w klientach automatyzacji
 
-Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM. Instrukcje dotyczące sposobu dodawania interfejs obiektu sink w kliencie interfejsy źródła opisanego przez serwery COM MFC, zobacz porady: Utworzenie interfejsu ujścia w kliencie COM MFC-Based (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
+Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM.
 
 ## <a name="see-also"></a>Zobacz też
 

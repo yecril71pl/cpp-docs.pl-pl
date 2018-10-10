@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701366"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890234"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)
 
@@ -80,8 +80,6 @@ Aby uzyskać więcej informacji na temat biblioteki wykonawczej C i bibliotek, k
 Wszystkie moduły przekazane do danego wywołania konsolidatora muszą być skompilowane przy użyciu tych samych opcji kompilatora biblioteki wykonawczej (**/MD**, **/MT**, **/LD**).
 
 Aby uzyskać więcej informacji o sposobie używania wersji debugowania bibliotek uruchomieniowych, zobacz [odwołanie do biblioteki wykonawczej C](../../c-runtime-library/c-run-time-library-reference.md).
-
-Artykuł bazy wiedzy Knowledge Base Q140584 omawia też, jak wybrać odpowiednią bibliotekę wykonawczą C.
 
 Aby uzyskać więcej informacji o bibliotekach DLL, zobacz [biblioteki dll w programie Visual C++](../../build/dlls-in-visual-cpp.md).
 

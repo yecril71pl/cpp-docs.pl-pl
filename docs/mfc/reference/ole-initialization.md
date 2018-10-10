@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e9c86cbe93fe5eb10145a322a19a26be149b4c
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 65d02bdd5f00e5ffc5d64381b04da38ec0d57d15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820495"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890105"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 
@@ -79,7 +79,7 @@ Wywołaj tę funkcję można zainicjować obsługi OLE dla aplikacji MFC. Gdy ta
 >  Jeśli **afxoleinit —** jest wywoływana z biblioteki MFC DLL wywołanie zakończy się niepowodzeniem. Błąd występuje, ponieważ funkcja zakłada, że jeśli zostanie wywołana z biblioteki DLL, OLE system był poprzednio inicjowany przez aplikacji wywołującej.
 
 > [!NOTE]
->  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+>  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Wymagania
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb8f397243bb6531f33ac5e444914cfa36e5fe1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55b93d1ebd81850982b4f6ceac1ceb008ed1fa49
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022639"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890286"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Kompilator ostrzeżenie (poziom 2) C4275
 
@@ -42,8 +42,6 @@ Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy 
 - Nie metody klasy (niezależnie od wartości inlining) można używać typów, których wystąpienia w pliku EXE i DLL mają różnice statyczne dane.
 
 Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
-
-Aby uzyskać więcej informacji na temat eksportowania szablonów, zobacz [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
 
 C4275 można zignorować w programie Visual C++, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
 

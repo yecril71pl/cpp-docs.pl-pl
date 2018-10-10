@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419557"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890624"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 
@@ -133,11 +133,7 @@ Modalne okno dialogowe zostanie zamknięte automatycznie, gdy użytkownik naciś
 
 Podczas implementowania niemodalnego okna dialogowego zawsze zastępuje `OnCancel` funkcja elementu członkowskiego, a następnie wywołać `DestroyWindow` z znajdujący się w nim. Nie wywołuj klasy bazowej `CDialog::OnCancel`, ponieważ wywołuje `EndDialog`, które spowoduje, że okno dialogowe niewidoczne, ale nie spowoduje zniszczenie. Należy również zastąpić `PostNcDestroy` dla niemodalnych okien dialogowych, aby możliwe było usunięcie **to**, ponieważ Niemodalne okna dialogowe zwykle są przydzielane przy użyciu **nowe**. Zazwyczaj są konstruowane na ramce modalnych okien dialogowych i nie ma potrzeby `PostNcDestroy` oczyszczania.
 
-Aby uzyskać więcej informacji na temat funkcji `CDialog`, zobacz:
-
-- [Okna dialogowe](../../mfc/dialog-boxes.md)
-
-- Artykuł bazy wiedzy Q262954: porady: Tworzenie okna dialogowego Resizeable z pasków przewijania
+Aby uzyskać więcej informacji na temat `CDialog`, zobacz [okna dialogowe](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -281,7 +277,7 @@ Jeśli podczas tworzenia okna nadrzędnego, powinny zostać wyświetlone okno di
 
 Użyj `CWnd::DestroyWindow` funkcję, aby zniszczyć okno dialogowe, utworzone przez `CreateIndirect` funkcji.
 
-Okna dialogowe, które zawierają formanty ActiveX wymagają dodatkowe informacje podane w zasobie DLGINIT. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Q231591, "porady: Użyj szablonu okna dialogowego, aby utworzyć okno dialogowe MFC z formantu ActiveX." Artykuły bazy wiedzy są dostępne pod adresem [ http://support.microsoft.com ](http://support.microsoft.com/).
+Okna dialogowe, które zawierają formanty ActiveX wymagają dodatkowe informacje podane w zasobie DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Wartość różną od zera, jeśli obiektu okna dialogowego zostało utworzone i
 
 Aby utworzyć modalne okno dialogowe pośrednio, przydzielają blok pamięci globalnej i wypełnić ją z szablonu okna dialogowego. Następnie wywołaj pustą `CDialog` konstruktora do konstruowania obiektu okno dialogowe. Następnie wywołaj `InitModalIndirect` przechowywać swoje dojście do szablonu okna dialogowego w pamięci. Okno dialogowe Windows jest utworzony i wyświetlony później, gdy [DoModal](#domodal) funkcja członkowska jest wywoływana.
 
-Okna dialogowe, które zawierają formanty ActiveX wymagają dodatkowe informacje podane w zasobie DLGINIT. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Q231591, "porady: Użyj szablonu okna dialogowego, aby utworzyć okno dialogowe MFC z formantu ActiveX." Artykuły bazy wiedzy są dostępne pod adresem [ http://support.microsoft.com ](http://support.microsoft.com/).
+Okna dialogowe, które zawierają formanty ActiveX wymagają dodatkowe informacje podane w zasobie DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

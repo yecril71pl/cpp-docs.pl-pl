@@ -17,24 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdde0f8d4edc13e8c1e1a53d8f4393dc7c2dac40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372473"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889935"
 ---
 # <a name="redistributing-web-client-applications"></a>Ponowne dystrybuowanie Aplikacji klienta sieci Web
 
 Jeśli aplikacja używa klas MFC, implementacja formant WebBrowser (na przykład `CHtmlView` lub `CHtmlEditView`), Microsoft Internet Explorer w wersji 4.0 lub nowszy co najmniej musi być co najmniej zainstalowany na komputerze docelowym.
 
-Zainstalowanie najnowszej wersji programu Internet Explorer gwarantuje również, że komputer docelowy ma najnowsze pliki wspólnej kontroli.
-
-Informacje o instalowaniu składników programu Internet Explorer minimalny jest dostępna w następującym artykule bazy wiedzy:
-
-- Q185375, porady: Tworzenie instalacji pojedynczy plik EXE programu Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))
-
-Można znaleźć artykuły bazy wiedzy w bibliotece MSDN lub na [ http://support.microsoft.com ](http://support.microsoft.com).
+Zainstalowanie najnowszej wersji programu Internet Explorer gwarantuje również, że komputer docelowy ma najnowsze pliki wspólnej kontroli. Aby uzyskać więcej informacji, zobacz [instalacji i wdrażania programu Internet Explorer 11](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11).
 
 ## <a name="see-also"></a>Zobacz też
 

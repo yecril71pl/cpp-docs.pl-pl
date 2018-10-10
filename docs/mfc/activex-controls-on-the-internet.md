@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432824"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890339"
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 
@@ -170,10 +170,6 @@ Monikery asynchroniczne umożliwiają podczas pobierania danych asynchronicznie 
 Na przykład jeśli tylko 10 bajtów są dostępne i odczytu nosi nazwę asynchronicznej w pliku 1K, odczytu nie są blokowane, ale zwraca aktualnie dostępne 10 bajtów.
 
 Możesz wdrożyć [monikerów asynchronicznych](../mfc/asynchronous-monikers-on-the-internet.md) przy użyciu `CAsyncMonikerFile` klasy. Jednak można użyć kontrolek ActiveX `CDataPathProperty` klasy, która jest pochodną `CAsyncMonikerFile`, pomagających w realizacji właściwości kontrolki asynchronicznego.
-
-Przykładowe ASYNDOWN pokazuje, jak skonfigurować pętlę asynchronicznego odczytywania danych przy użyciu czasomierzy. ASYNDOWN opisano szczegółowo w artykule bazy wiedzy Knowledge Base "Porada: AsyncDown pokazuje asynchronicznego danych Download" (Q177244) i jest dostępny do pobrania firmy Microsoft Download Center. (Aby uzyskać więcej informacji na temat pobierania plików z Microsoft Download Center, zobacz artykuł "Jak do uzyskania pomocy technicznej pliki z usługi Online firmy Microsoft" (Q119591) w bazie wiedzy Microsoft Knowledge Base). Możesz znaleźć artykuły bazy wiedzy w [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-Podstawowa technika używana w ASYNDOWN polega na ustawianie czasomierza **CDataPathProperty::OnDataAvailable** aby wskazać, kiedy dane są dostępne. Po otrzymaniu komunikatu czasomierz aplikacja odczytuje w blokach 128 bajtów danych i wypełnia kontrolkę edycji. Jeśli dane nie są dostępne podczas obsługi komunikatu czasomierza, czasomierz jest wyłączona. `OnDataAvailable` Włącza czasomierza, jeśli później zostanie odebrana większej ilości danych.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Wyświetlanie kontrolki na stronie sieci Web
 

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861892"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890819"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Uwagi
 
 To okno dialogowe umożliwia użytkownikowi dostosowywanie paska narzędzi, dodając i usuwając przycisków. Aby zapewnić obsługę dostosowywania, okno nadrzędne paska narzędzi firmy musi obsługiwać dostosowywania komunikatów powiadomień, zgodnie z opisem w [Obsługa powiadomień dotyczących dostosowania](../../mfc/handling-customization-notifications.md). Paska narzędzi musi również być utworzony ze stylem CCS_ADJUSTABLE zgodnie z opisem w [CToolBarCtrl::Create](#create).
-
-Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Q241850: PRB: wywołanie CToolBarCtrl::Customize nie przechowuje Dostosowywanie okna dialogowego widoczne.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036764"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890119"
 ---
 # <a name="compiler-error-c2872"></a>Błąd kompilatora C2872
 
@@ -31,7 +31,11 @@ Kompilator nie może określić symbol, który odnosi się do. Więcej niż jede
 
 C2872 może wystąpić, jeśli zawiera plik nagłówkowy [użycie dyrektywy](../../cpp/namespaces-cpp.md#using_directives), i znajduje się plik nagłówkowy kolejnych zawierający typ, który jest również w przestrzeni nazw określonej w `using` dyrektywy. Określ `using` dyrektywy dopiero po wszystkie pliki nagłówkowe są określane za pomocą `#include`.
 
-Aby uzyskać więcej informacji na temat C2872, zobacz artykuły bazy wiedzy [PRB: kompilatora błędy podczas można użyć #import przy użyciu kodu XML w Visual C++ .NET](http://support.microsoft.com/kb/316317) i ["C2872 błąd:"Platforma": niejednoznaczny symbol" komunikat o błędzie, gdy używasz Przestrzeń nazw w programie Visual Studio 2013 Windows::Foundation::METADATA](https://support.microsoft.com/kb/2890859).
+C2872 może wystąpić w programie Visual Studio 2013, ze względu na konflikt między `Windows::Foundation::Metadata::Platform` wyliczenia typu i C + +/ CX, zdefiniowane `Platform` przestrzeni nazw. Aby obejść ten problem, wykonaj następujące kroki:
+
+- Usuń klauzulę "za pomocą Windows::Foundation::Metadata przestrzeni nazw" z plików projektu.
+
+- Określ w pełni kwalifikowana nazwa dowolnego typu, który znajduje się w tej przestrzeni nazw.
 
 ## <a name="example"></a>Przykład
 

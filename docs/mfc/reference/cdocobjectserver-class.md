@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381078"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890378"
 ---
 # <a name="cdocobjectserver-class"></a>Klasa CDocObjectServer
 
@@ -74,10 +74,6 @@ Dokument serwera obiektów DocObject może zawierać [CDocObjectServerItem](../.
 Aby dostosować swoje serwera obiektów DocObject, pochodną klasy z `CDocObjectServer` i zastąpić jej przeglądanie ustawień funkcji [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), i [OnSaveViewState ](#onsaveviewstate). Należy podać nowe wystąpienie klasy w odpowiedzi na wywołania framework.
 
 Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołanie MFC*.
-
-Ponadto zawiera następujący artykuł bazy wiedzy:
-
-- Q247382: PRB: etykietki narzędzi dla formantów na serwerze dokumentów ActiveX są ukryte przez kontener dokumentu ActiveX
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

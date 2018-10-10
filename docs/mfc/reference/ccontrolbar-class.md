@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393427"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890534"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar — klasa
 
@@ -118,8 +118,6 @@ Aby uzyskać więcej informacji na temat funkcji `CControlBar`, zobacz:
 - [Paski sterowania](../../mfc/control-bars.md)
 
 - [Uwaga techniczna 31: Paski sterowania](../../mfc/tn031-control-bars.md).
-
-- Artykuł bazy wiedzy Q242577: PRB: Aktualizacja obsługi poleceń interfejsu użytkownika nie działa dla menu dołączonego do okna dialogowego
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

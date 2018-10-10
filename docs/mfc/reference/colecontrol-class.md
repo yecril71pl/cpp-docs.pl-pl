@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435535"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890871"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 
@@ -2158,7 +2158,7 @@ Wartość różną od zera, jeśli formant został zainicjowany; w przeciwnym ra
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja struktury `IDispatch::Invoke` wywołania `IsInvokeAllowed` do określenia, czy daną funkcję (identyfikowane przez `dispid`) mogą być wywoływane. Domyślne zachowanie dla formantu OLE jest umożliwienie automatyzacji metody można wywołać tylko wtedy, gdy kontrolka została zainicjowana; jednak `IsInvokeAllowed` jest funkcją wirtualną i może zostać zastąpiona w razie (na przykład, gdy kontrolka jest on używany jako serwer automatyzacji). Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Q166472, "porady: Korzystanie z kontroli OLE jako serwer automatyzacji." Artykuły bazy wiedzy są dostępne pod adresem [ http://support.microsoft.com ](http://support.microsoft.com/).
+Implementacja struktury `IDispatch::Invoke` wywołania `IsInvokeAllowed` do określenia, czy daną funkcję (identyfikowane przez `dispid`) mogą być wywoływane. Domyślne zachowanie dla formantu OLE jest umożliwienie automatyzacji metody można wywołać tylko wtedy, gdy kontrolka została zainicjowana; jednak `IsInvokeAllowed` jest funkcją wirtualną i może zostać zastąpiona w razie (na przykład, gdy kontrolka jest on używany jako serwer automatyzacji).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

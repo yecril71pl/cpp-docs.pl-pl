@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378192"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890208"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu
 
@@ -98,12 +98,7 @@ Procedury należy użyć następujących nazw i wartości:
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-Ponadto zawiera następujący artykuł bazy wiedzy:
-
-- Q251059: Porada: Podaj własną nazwę klasy okna dla okna dialogowego MFC
-
 ## <a name="see-also"></a>Zobacz też
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Modalne i niemodalne okna dialogowe](../mfc/modal-and-modeless-dialog-boxes.md)
-

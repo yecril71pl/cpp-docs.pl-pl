@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821364"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890637"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -352,7 +352,7 @@ Zdefiniowane przez użytkownika wiadomości są wszystkie komunikaty, które nie
 Powinien istnieć dokładnie jeden ON_MESSAGE — makro instrukcję na mapie komunikatów dla każdej wiadomości zdefiniowanych przez użytkownika, który musi być zamapowany na funkcję obsługi wiadomości.
 
 > [!NOTE]
->  Oprócz wiadomości zdefiniowanych przez użytkownika ON_MESSAGE obsługuje mniej typowych komunikatów Windows. Aby uzyskać więcej informacji, zobacz artykule bazy wiedzy [99848: INFO: Użyj makra ON_MESSAGE() komunikatów mniej znane mapy](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Oprócz wiadomości zdefiniowanych przez użytkownika ON_MESSAGE obsługuje mniej typowych komunikatów Windows. Aby uzyskać więcej informacji, zobacz [mapy komunikatów](../../mfc/tn006-message-maps.md).
 
 Aby uzyskać więcej informacji i przykładów, zobacz [wiadomościami i mapowanie tematów](../../mfc/message-handling-and-mapping.md) i [programy obsługi zdefiniowane przez użytkownika](user-defined-handlers.md)
 

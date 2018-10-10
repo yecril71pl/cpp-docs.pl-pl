@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445142"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890702"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -224,7 +224,7 @@ Jeśli używane w aplikacji ATL:
 `CString`, `CStringA`, i `CStringW` są eksportowane z biblioteki MFC DLL (MFC90. Biblioteka DLL), nigdy nie przed użytkownikiem biblioteki dll. W ten sposób zapobiec `CStringT` z jest zdefiniowany wielokrotnie.
 
 > [!NOTE]
->  Jeśli kod zawiera obejście błędy konsolidatora, które jest opisane w [klasy Linking Errors When You Import CString-Derived "(Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), należy usunąć ten kod. Nie jest już potrzebny.
+>  Jeśli kod zawiera obejście błędy konsolidatora, które jest opisane w [eksportowanie CStringT przy użyciu klas parametrów](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), należy usunąć ten kod. Nie jest już potrzebny.
 
 Dostępne w aplikacjach MFC są następujące typy parametrów:
 

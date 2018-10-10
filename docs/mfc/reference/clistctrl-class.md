@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821572"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890897"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -457,12 +457,6 @@ Kontrolki widoku listy można wyświetlić ich zawartość na cztery różne spo
 - Widok raportu
 
      Każdy element będzie wyświetlany w osobnym wierszu z dodatkowymi informacjami, uporządkowane według kolumny z prawej strony. Skrajnej lewej kolumnie zawiera małe ikony oraz etykiety, a kolejne kolumny zawierają elementy podrzędne, jak określono przez aplikację. Kontrolki nagłówka embedded (klasy [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje te kolumny. Aby uzyskać więcej informacji na temat kontrolka nagłówka i kolumn w widoku raportu, zobacz [za pomocą CListCtrl: Dodawanie kolumn do formantu (widok raportu)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-Zobacz też:
-
-- Artykuł bazy wiedzy Q250614: porady: sortowanie elementów CListCtrl w widoku raportu
-
-- Artykuł bazy wiedzy Q200054: PRB: OnTimer() jest nie wywołuje się wielokrotnie kontrolki listy
 
 Styl formantu bieżący widok listy określa bieżący widok. Aby uzyskać więcej informacji na temat tych stylów i ich użycia, zobacz [za pomocą CListCtrl: Zmienianie stylów kontrolki listy](../../mfc/changing-list-control-styles.md).
 

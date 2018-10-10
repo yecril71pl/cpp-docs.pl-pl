@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c8b18e8de5caf924cd31a18eb304778634050f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821464"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890715"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co nowego w języku Visual C++ w programie Visual Studio 2017
 
@@ -398,7 +398,7 @@ Masz teraz nowe opcje zapisywania i pakowania aplikacji w języku C++ platformy 
 
 Jeśli piszesz nowy kod, możesz teraz używać języka C + +/ WinRT, standardowe rzutowania języka C++ dla Windows implementowanej wyłącznie w plikach nagłówkowych. Ona umożliwia zarówno tworzenie i używanie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami kompilator języka C++. C + +/ WinRT ma na celu zapewnienie programistów C++ przy użyciu najwyższej klasy dostępu do nowoczesnego interfejsu Windows API. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT dostępne w serwisie GitHub](https://moderncpp.com/).
 
-Począwszy od programu [kompilacji 17025 Windows SDK Insider Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C + +/ WinRT znajduje się w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT jest teraz dołączone do zestawu Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Począwszy od tworzenia 17025 Windows SDK Insider Preview, C + +/ WinRT znajduje się w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT jest teraz dołączone do zestawu Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Zestaw narzędzi platformy clang/C2
 

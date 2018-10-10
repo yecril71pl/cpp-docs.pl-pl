@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409574"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890363"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 
@@ -56,7 +56,7 @@ Możesz również dodać optymalizacje, zgodnie z opisem w [kontrolek ActiveX: O
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Kod opakowania do pobrania
 
-Aby uzyskać więcej informacji na ten temat zobacz artykuł bazy wiedzy Knowledge Base "Pakowania MFC formantów dla użycia nad Internetem" (Q167158). Możesz znaleźć artykuły bazy wiedzy w [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Aby uzyskać więcej informacji na ten temat, zobacz [formantów ActiveX pakowania](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>Tag kodu
 
@@ -94,7 +94,7 @@ Pliki cabinet są zalecanym sposobem formantów ActiveX pakietów korzystającyc
 
 ### <a name="creating-cab-files"></a>Tworzenie plików CAB
 
-Plik Cabinet Development Kit można pobrać z artykułu bazy wiedzy [310618: Microsoft pliku Cabinet Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). Ten zestaw zawiera narzędzia niezbędne do utworzenia plików cabinet.
+Narzędzia do tworzenia plików cabinet są teraz częścią [zestawu Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
 
 Plik cabinet wskazywany przez `CODEBASE` powinien zawierać plik ocx kontrolki ActiveX i pliku .inf, aby kontrolować jego instalacji. Tworzenie pliku cabinet, określając nazwę pliku kontroli i plik inf. Nie dołączaj zależne biblioteki dll, które mogą już istnieć w systemie, w tym pliku cabinet. Na przykład biblioteki MFC DLL są spakowane w oddzielnym pliku cabinet i kontrolowanie pliku inf.
 

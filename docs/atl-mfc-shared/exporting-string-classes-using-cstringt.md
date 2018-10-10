@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444208"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889974"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Eksportowanie klas ciągów przy użyciu CStringT
 
@@ -29,7 +29,7 @@ W przeszłości deweloperzy MFC mają pochodną `CString` specjalizacja własnyc
 
 - Przy użyciu nowego `CStringT` klasy szablonu, można dostosować `CString` zachowanie za pomocą parametrów szablonu, określających cech, podobne do szablonów w standardowej biblioteki języka C++.
 
-- Podczas eksportowania klasy ciągu z biblioteki DLL za pomocą `CStringT`, kompilator automatycznie eksportuje `CString` klasy bazowej. Ponieważ `CString` sama jest klasą szablonu, jego mogą być tworzone przez kompilator, gdy jest używana, chyba że kompilator zdaje sobie sprawę, `CString` została zaimportowana z biblioteki DLL. Po przeprowadzeniu migracji projektów z Visual C++ 6.0 do programu Visual C++ .NET, możesz już znać konsolidatora symbol błędy mnożenia zdefiniowanych `CString` ze względu na konflikt z `CString` zaimportowany z biblioteki DLL i wersji lokalnie wystąpień. Poniżej opisano właściwy sposób, aby to zrobić. Aby uzyskać więcej informacji na temat tego problemu, zobacz artykuł bazy wiedzy, "łączenie błędy podczas importowania CString klasy pochodnej klasy" (Q309801) na [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Podczas eksportowania klasy ciągu z biblioteki DLL za pomocą `CStringT`, kompilator automatycznie eksportuje `CString` klasy bazowej. Ponieważ `CString` sama jest klasą szablonu, jego mogą być tworzone przez kompilator, gdy jest używana, chyba że kompilator zdaje sobie sprawę, `CString` została zaimportowana z biblioteki DLL. Po przeprowadzeniu migracji projektów z Visual C++ 6.0 do programu Visual C++ .NET, możesz już znać konsolidatora symbol błędy mnożenia zdefiniowanych `CString` ze względu na konflikt z `CString` zaimportowany z biblioteki DLL i wersji lokalnie wystąpień. Poniżej opisano właściwy sposób, aby to zrobić.
 
 Poniższy scenariusz spowoduje, że konsolidator generuje błędy symboli dla klas definicjami. Przyjęto założenie, że w przypadku eksportowania `CString`-klasy pochodnej (`CMyString`) z biblioteki DLL rozszerzenia MFC:
 

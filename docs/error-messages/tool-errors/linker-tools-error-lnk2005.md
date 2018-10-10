@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028314"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890130"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Błąd narzędzi konsolidatora LNK2005
 
@@ -121,14 +121,3 @@ Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
     ```
 
    Aby rozwiązać ten problem, należy dodać [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) opcje wiersza polecenia konsolidatora i upewnij się, że ten uuid.lib jest pierwszy biblioteki, do których odwołuje się.
-
-## <a name="additional-information"></a>Dodatkowe informacje
-
-Jeśli używasz starszej wersji zestawu narzędzi, zobacz następujące artykuły bazy wiedzy Knowledge Base, aby uzyskać więcej informacji na temat określonej przyczyny tego błędu:
-
-- [Błąd LNK2005 występuje, gdy biblioteka CRT i bibliotek MFC, które są połączone w niewłaściwej kolejności w programie Visual C++](https://support.microsoft.com/kb/148652)
-
-- [Poprawka: Globalnego przeciążona Delete operatora powoduje, że LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Występują błędy LNK2005 podczas kompilowania projektu plik wykonywalny (.exe) w programie Visual C++ ATL](https://support.microsoft.com/kb/184235).
-

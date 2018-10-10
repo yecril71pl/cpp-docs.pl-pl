@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437797"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890547"
 ---
 # <a name="toolbars"></a>Paski narzędzi
 
@@ -38,10 +38,7 @@ Rodziny narzędzi artykułów opisuje pasków narzędzi MFC i jak tworzyć i uż
 
 - [Próbki](../mfc/toolbar-sample-list.md)
 
-Aby uzyskać więcej informacji na temat pasków narzędzi MFC, zobacz artykuł Q232017, "Porady: Dodawanie tekstu do przycisków paska narzędzi," w bazie wiedzy Microsoft Knowledge Base pod http://support.microsoft.com.
-
 ## <a name="see-also"></a>Zobacz też
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

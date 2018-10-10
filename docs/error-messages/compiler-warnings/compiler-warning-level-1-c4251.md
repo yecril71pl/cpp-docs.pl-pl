@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d964c375adf80caef3bb5a6eb06c67ef8e3e7200
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045695"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890052"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Kompilator ostrzeżenie (poziom 1) C4251
 
@@ -39,11 +39,9 @@ Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy 
 
 Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
 
-Aby uzyskać więcej informacji na temat eksportowania szablonów, zobacz [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
-
 C4251 można zignorować, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
 
-```
+```cpp
 // C4251.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 888c753920c4c0a858de8ab5bc72a07ff0696d1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dcbf18656e04e0732dbf377dae960ab0655be82
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429308"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890442"
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
 
@@ -220,8 +220,6 @@ Ta funkcja umożliwia utworzenie podrzędnych windows okna ramki MDI.
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
-
-W tym przykładzie jest fragment artykuł bazy wiedzy Q201045, "porady: Dodawanie wielu typów okna do Non-dokumentu/widoku MDI aplikacji." Artykuły bazy wiedzy są dostępne pod adresem [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup
 

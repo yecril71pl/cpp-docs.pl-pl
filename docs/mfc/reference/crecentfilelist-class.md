@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393311"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890611"
 ---
 # <a name="crecentfilelist-class"></a>Klasa CRecentFileList
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Uwagi
 
 Pliki mogą być dodawane do lub usunięte z listy ostatnio używanych plików, lista plików może być odczytywany lub zapisywane w rejestrze lub. Można zaktualizować pliku INI i menu, wyświetlanie listy ostatnio używanych plików.
-
-Aby uzyskać więcej informacji na temat elementów menu ostatnio używanych elementów Zobacz
-
-- Artykuł bazy wiedzy Q243751: Porada: Dodawanie programy obsługi poleceń do listy ostatnio używanych elementów Menu w aplikacji MFC
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

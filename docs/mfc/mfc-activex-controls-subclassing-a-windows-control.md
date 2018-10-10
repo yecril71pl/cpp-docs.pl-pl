@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407548"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890560"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna
 
@@ -48,10 +48,8 @@ Aby podklasy kontrolki Windows wykonaj następujące zadania:
 
 - [Obsługa komunikaty kontrolki ActiveX (OCM) zostaną uwzględnione do kontrolki](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Znaczną część tej pracy jest wykonywane przez kreatora kontrolek ActiveX po wybraniu kontrolki do odziedziczenia przy użyciu **wybierz klasę okna nadrzędnego** listy rozwijanej na **ustawienia kontroli** strony.
-
-Zobacz artykuł bazy wiedzy Q243454 Aby uzyskać więcej informacji na tworzenie podklasy kontrolki.
+   > [!NOTE]
+   > Znaczną część tej pracy jest wykonywane przez kreatora kontrolek ActiveX po wybraniu kontrolki do odziedziczenia przy użyciu **wybierz klasę okna nadrzędnego** listy rozwijanej na **ustawienia kontroli** strony.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Zastępowanie IsSubclassedControl i precreatewindow —
 

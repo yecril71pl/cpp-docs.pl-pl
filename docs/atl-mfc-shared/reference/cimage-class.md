@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861814"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890663"
 ---
 # <a name="cimage-class"></a>CImage, klasa
 
@@ -320,7 +320,7 @@ Dojście do HBITMAP.
 *eOrientation*<br/>
 Określa orientację mapy bitowej. Może to być jeden z następujących elementów:
 
-- DIBOR_DEFAULT orientację mapy bitowej jest określany przez system operacyjny. Jednak to może nie zawsze być zamierzone wyniki we wszystkich systemach operacyjnych. Aby uzyskać więcej informacji na temat tego, zapoznaj się z następującym artykułem bazy wiedzy Knowledge Base (**Q186586**): PRB: GetObject() zawsze zwraca wartość dodatnią Height dla DIB sekcje.
+- DIBOR_DEFAULT orientację mapy bitowej jest określany przez system operacyjny.
 
 - DIBOR_BOTTOMUP wiersze mapy bitowej są w odwrotnej kolejności. Powoduje to, że [CImage::GetBits](#getbits) aby zwrócić wskaźnik osiągnie koniec buforu mapy bitowej i [CImage::GetPitch](#getpitch) zwracać wartość ujemną.
 

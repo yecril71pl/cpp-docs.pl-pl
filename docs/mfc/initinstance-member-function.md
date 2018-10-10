@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bc9d1d1ff35755a966591e6f46f7742ddfa59e08
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820298"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890026"
 ---
 # <a name="initinstance-member-function"></a>InitInstance — Funkcja członkowska
 
@@ -45,7 +45,7 @@ Standardowa `InitInstance` implementacji tworzone przez Kreatora aplikacji MFC w
 Można dodawać kodu inicjowania lub modyfikować kod napisany przez kreatora.
 
 > [!NOTE]
->  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+>  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
 
 ## <a name="see-also"></a>Zobacz też
 

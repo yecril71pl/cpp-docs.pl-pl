@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713092"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890195"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL — często zadawane pytania
 
@@ -39,7 +39,7 @@ Poniżej są niektóre często zadawane pytania (FAQ), informacje o bibliotekach
 
 ## <a name="mfc_multithreaded_1"></a> Biblioteki MFC DLL, można tworzyć wiele wątków?
 
-Z wyjątkiem podczas inicjowania biblioteki MFC DLL można bezpiecznie tworzenia wielu wątków tak długo, jak używa wątek Win32, w magazynie lokalnym (TLS) funkcje takie jak **TlsAlloc** można przydzielić pamięci lokalnej wątku. Jednakże jeśli korzysta z biblioteki MFC DLL **__declspec(thread)** można przydzielić pamięci lokalnej wątku, aplikacja kliencka musi niejawnie połączona z biblioteki DLL. Jeśli aplikacja kliencka łączy jawnie do biblioteki DLL, wywołanie **LoadLibrary** nie zostanie pomyślnie załadować biblioteki DLL. Aby uzyskać więcej informacji na temat tworzenia wielu wątków wewnątrz biblioteki MFC DLL zobacz artykuł bazy wiedzy, "PRB: wywołanie wywołanie funkcji LoadLibrary() do ładowania biblioteki DLL, ma statyczny TLS" (Q118816). Aby uzyskać więcej informacji na temat zmiennych thread-local w bibliotekach DLL, zobacz [wątku](../cpp/thread.md).
+Z wyjątkiem podczas inicjowania biblioteki MFC DLL można bezpiecznie tworzenia wielu wątków tak długo, jak używa wątek Win32, w magazynie lokalnym (TLS) funkcje takie jak **TlsAlloc** można przydzielić pamięci lokalnej wątku. Jednakże jeśli korzysta z biblioteki MFC DLL **__declspec(thread)** można przydzielić pamięci lokalnej wątku, aplikacja kliencka musi niejawnie połączona z biblioteki DLL. Jeśli aplikacja kliencka łączy jawnie do biblioteki DLL, wywołanie **LoadLibrary** nie zostanie pomyślnie załadować biblioteki DLL. Aby uzyskać więcej informacji na temat zmiennych thread-local w bibliotekach DLL, zobacz [wątku](../cpp/thread.md).
 
 Biblioteki MFC DLL, która tworzy nowy wątek MFC podczas uruchamiania przestanie odpowiadać, gdy jest ładowany przez aplikację. Obejmuje to zawsze wtedy, gdy wątek jest tworzony przez wywołanie `AfxBeginThread` lub `CWinThread::CreateThread` wewnątrz:
 
@@ -49,13 +49,11 @@ Biblioteki MFC DLL, która tworzy nowy wątek MFC podczas uruchamiania przestani
 
 - Podany `DllMain` lub **RawDllMain** funkcji w DLL rozszerzenia MFC.
 
-Aby uzyskać więcej informacji na temat tworzenia wątków podczas inicjowania zobacz artykuł bazy wiedzy, "PRB: nie można utworzyć MFC wątku podczas DLL uruchamianie" (Q142243).
-
 ## <a name="mfc_multithreaded_2"></a> Aplikacji wielowątkowych, ma dostęp do biblioteki MFC DLL w różnych wątkach?
 
 Wielowątkowe aplikacje mogą uzyskiwać dostęp do zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC biblioteki DLL rozszerzeń MFC z różnych wątków. A począwszy od Visual C++ w wersji 4.2, aplikacji mogą uzyskiwać dostęp do zwykłych bibliotekach MFC dll, która statycznie łączy do MFC z wielu wątków, utworzone w aplikacji.
 
-Przed wersji 4.2 tylko jeden wątek zewnętrznych można dołączyć do zwykłej biblioteki MFC DLL, które są połączone statycznie z MFC. Aby uzyskać więcej informacji na temat ograniczeń dotyczących uzyskiwania dostępu do zwykłych bibliotekach MFC dll, która statycznie łączy się z MFC z wielu wątków (przed Visual C++ w wersji 4.2), zobacz artykuł bazy wiedzy, "wielu wątków i MFC _USRDLLs" (Q122676).
+Przed wersji 4.2 tylko jeden wątek zewnętrznych można dołączyć do zwykłej biblioteki MFC DLL, które są połączone statycznie z MFC.
 
 Pamiętaj, że termin USRDLL nie jest już używany w dokumentacji języka Visual C++. Regularne biblioteki DLL MFC, która jest połączone statycznie z MFC ma takie same charakterystyki jak dawny USRDLL.
 

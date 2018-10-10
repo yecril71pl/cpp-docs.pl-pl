@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041990"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890497"
 ---
 # <a name="compiler-error-c2143"></a>Błąd kompilatora C2143
 
 Błąd składniowy: brakuje "token1" przed "token2"
 
 Kompilator oczekuje określonego tokenu (czyli elementów języka innego niż biały znak), a zamiast tego znaleziono inny token.
-
-Aby uzyskać informacje o tym błędzie kiedy wystąpi w przypadku korzystania z blokiem try funkcji, zobacz [artykuł bazy wiedzy 241706](http://support.microsoft.com/kb/241706).
 
 Sprawdź [C++ Language Reference](../../cpp/cpp-language-reference.md) ustalenie, gdy kod jest nieprawidłowy. Ponieważ kompilator może zgłosić ten błąd, po napotkaniu wiersza, który powoduje, że ten problem, sprawdź kilka wierszy kodu, które poprzedzają błędu.
 

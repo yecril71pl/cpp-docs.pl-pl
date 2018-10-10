@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821078"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890169"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Błąd narzędzi konsolidatora LNK1168
 
@@ -38,7 +38,3 @@ Jeśli plik jest zablokowany przez program antywirusowy, można naprawić ten pr
 Jeśli plik jest zablokowany przez usługę indeksowania wyszukiwania, można naprawić ten problem poprzez wykluczenie katalogów danych wyjściowych kompilacji z automatycznego indeksowania. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą usługi indeksowania. Aby zmienić usługę indeksowania wyszukiwania Windows, użyj **opcje indeksowania** w Windows **Panelu sterowania**. Aby uzyskać więcej informacji, zobacz [poprawić Windows wyszukuje przy użyciu indeksu: często zadawane pytania dotyczące](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Jeśli plik wykonywalny nie może zostać zastąpiony przez proces kompilacji, może być zablokowany przez Eksplorator plików. Jeśli **doświadczenie z aplikacji** usługa została wyłączona, Eksplorator plików może nałożyć do blokady dojście do pliku wykonywalnego przez dłuższy czas. Aby rozwiązać ten problem, uruchom **services.msc** , a następnie otwórz **właściwości** okno dialogowe **doświadczenie z aplikacji** usługi. Zmiana **uruchamiana** z **wyłączone** do **ręczne**.
-
-## <a name="see-also"></a>Zobacz też
-
-[Może zostać wyświetlony "Błąd PRJ0008" lub "Fatal error LNK1168" błąd podczas próby tworzenia rozwiązania lub projektu ActiveX w programie Visual C++](http://support.microsoft.com/kb/308358)

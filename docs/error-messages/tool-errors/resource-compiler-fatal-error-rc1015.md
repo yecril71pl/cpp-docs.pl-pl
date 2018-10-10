@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0456845152fb2879d2f58c9c40af2562c7207535
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100769"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890247"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Błąd krytyczny kompilatora zasobów RC1015
 
@@ -32,5 +32,3 @@ Dany dołączanego pliku nie istnieje, nie można otworzyć lub nie został znal
 Upewnij się, że ustawienia środowiska są prawidłowe i czy określono poprawną ścieżkę do pliku. Upewnij się, że wystarczające dojścia do plików są dostępne dla kompilatora zasobów. Jeśli plik znajduje się na dysku sieciowym, upewnij się, że masz uprawnienia do otwierania pliku.
 
 RC1015 może wystąpić, nawet jeśli dołączanego pliku znajduje się w katalogu określony jako dodatkowym katalogiem obejmują we właściwości konfiguracji -> zasobów -> Strona właściwości ogólnych; Określ pełną ścieżkę do pliku dołączania.
-
-Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Q326987: RC1015 błędu podczas przy użyciu zasobów widoku czy ścieżki dołączania jest za długa.

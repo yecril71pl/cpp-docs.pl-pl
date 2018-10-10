@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445181"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890780"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 
@@ -155,7 +155,7 @@ Można utworzyć typu zakładki okna dialogowego o nazwie Kreator, który skład
 
 Aby utworzyć okno dialogowe Typ kreatora, wykonaj te same czynności, które należy wykonać, Utwórz arkusz właściwości standardowych, ale wywołanie [SetWizardMode](#setwizardmode) przed wywołaniem [DoModal](#domodal). Aby włączyć przyciski kreatora, należy wywołać [SetWizardButtons](#setwizardbuttons), aby dostosować wygląd i funkcji przy użyciu flagi. Aby włączyć **Zakończ** przycisk, wywołaj [SetFinishText](#setfinishtext) po użytkownik podjęciu działania na ostatniej stronie kreatora.
 
-Aby uzyskać więcej informacji o sposobie używania `CPropertySheet` obiektów, zobacz artykuł [arkusze właściwości i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md). Zobacz też artykuł bazy wiedzy Q146916: porady: tworzenie CPropertySheet niemodalne przy użyciu standardowych przycisków, a artykuł Q300606: Porada: Projektowanie arkusz właściwości o zmiennym rozmiarze MFC.
+Aby uzyskać więcej informacji o sposobie używania `CPropertySheet` obiektów, zobacz artykuł [arkusze właściwości i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820479"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890260"
 ---
 # <a name="project-build-error-prj0016"></a>Błąd PRJ0016 kompilacji projektu
 
@@ -37,8 +37,4 @@ Aby rozwiązać ten problem, Usuń klucz RestrictRun. Jeśli ten klucz rejestru 
 
 Inną przyczyną tego błędu jest to, że ustawienia zasad nie obejmuje VCSpawn.exe w kluczu rejestru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako program okna dozwolone dla tego konta użytkownika.
 
-Aby uzyskać dodatkowe informacje Zobacz:
-
-- Artykuł bazy wiedzy 324153, która jest dostępna na [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Dostosowanie się do ustawienia zasad systemu](https://msdn.microsoft.com/library/aa372139), sekcję "Uruchom tylko dozwolone aplikacje Windows".
+Aby uzyskać więcej informacji, zobacz [przestrzega ustawienia zasad systemu](https://msdn.microsoft.com/library/aa372139), w sekcji "Uruchom tylko dozwolone aplikacje Windows".
