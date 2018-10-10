@@ -1,32 +1,30 @@
 ---
-title: Pliki projektu | Dokumentacja firmy Microsoft
+title: Przykładowy plik projektu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389037"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072388"
 ---
 # <a name="project-files"></a>Pliki projektu
 
-Plik projektu Visual C++ jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania projektu Visual C++.
+Plik projektu Visual C++ jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania projektu Visual C++. Należy pamiętać, że plik projektu importuje różnych plików projektu, które mają rozszerzenie *.props* lub *.targets*. Te pliki zawierają informacje o dodatkowych kompilacji i może się odnosić się do innych *.props* lub *.targets* plików. Makra w ścieżce do pliku (na przykład `$(VCTargetsPath)`) są zależne od instalacji programu Visual Studio. Aby uzyskać więcej informacji na temat tych makr i *.props* i *.targets* plików, zobacz [VC ++ Directories Property Page](vcpp-directories-property-page.md), [Praca z właściwościami projektu ](working-with-project-properties.md#bkmkPropertiesVersusMacros) i [typowe makra dla poleceń kompilacji oraz właściwości](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Przykład
 
