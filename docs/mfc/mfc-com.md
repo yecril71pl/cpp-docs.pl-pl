@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394747"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890039"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Aktywne technologie obejmują technologie klienta i serwera, w tym następujące
 - Ta sekcja zawiera również informacje na temat składników COM za pomocą MFC, na przykład w [punkty połączenia](../mfc/connection-points.md).
 
 Omówienie nadal tak zwany OLE i co to jest teraz nazywana technologia active, zobacz Tematy w [OLE](../mfc/ole-in-mfc.md).
-
-Zobacz też artykuł bazy wiedzy Q248019: Porada: Zapobiegaj zajęty okna dialogowego pole z pojawiające się podczas długich COM operacji serwera.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

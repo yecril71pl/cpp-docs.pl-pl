@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429750"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890325"
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 **Określonego język C++**  
@@ -185,11 +185,9 @@ Jeśli biblioteka typów zawiera odwołania do typów zdefiniowanych w innych bi
 Nazwa pliku w **#import** komentarza jest pełną ścieżką biblioteki typów odsyłaczy, przechowywane w rejestrze. Jeśli wystąpią błędy, które z powodu braku definicji typu, należy sprawdzić komentarze na czele. Tlh — aby zobaczyć zależne typy bibliotek, należy najpierw zaimportować. Prawdopodobne błędy są błędami składni (na przykład, C2143, C2146, C2321), C2501 (Brak specyfikatorów decl), lub C2433 ("inline" nie jest dozwolone w deklaracji danych) podczas kompilacji. Plik TLI.  
   
 Należy określić, które zależności komentarze nie zostały inaczej dostarczone dla przez nagłówki systemu, a następnie podaj **#import** dyrektywy w pewnym momencie przed **#import** dyrektywy zależnego Wpisz biblioteki, aby naprawić błędy.  
-  
-Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy "metody otoki #import mogą spowodować naruszenie zasad dostępu" (Q242527) lub "błędy kompilatora, korzystając z #import i XML" (Q269194). Można znaleźć artykuły bazy wiedzy na nośnikach biblioteki MSDN lub na [Microsoft Support](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> atrybuty #import  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atrybuty #import
+
 **#import** może opcjonalnie obejmować jeden lub więcej atrybutów. Te atrybuty każą kompilatorowi modyfikować zawartość nagłówków biblioteki typów. Ukośnik odwrotny (**\\**) symbolu można uwzględnić dodatkowe wiersze w jednym **#import** instrukcji. Na przykład:  
   
 ```  
