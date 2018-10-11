@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056394"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084155"
 ---
 # <a name="argument-definitions"></a>Definicje argumentu
 
@@ -45,7 +45,7 @@ Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiers
 Pierwszym argumentem wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) i jeśli korzystasz z pierwszego i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv` **[0]** może nie być plik wykonywalny o nazwie; użyj [Funkcja GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego oraz jego w pełni kwalifikowanej ścieżki.
+>  Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) i jeśli korzystasz z pierwszego i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv` **[0]** może nie być plik wykonywalny o nazwie; użyj [Funkcja GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) można pobrać nazwy pliku wykonywalnego oraz jego w pełni kwalifikowanej ścieżki.
 
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
 

@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e4427eede8efcd492e90597efe9488a89e6d4de
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047398"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082374"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) interfejsu.  
+Udostępnia implementację na potrzeby [IDBCreateSession](/previous-versions/windows/desktop/ms724076) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -80,7 +80,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
+Zobacz [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942) w *OLE DB Podręcznik programisty*.   
   
 ## <a name="see-also"></a>Zobacz też  
 

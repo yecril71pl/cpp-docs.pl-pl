@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057109"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083661"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md) klasa zapewnia obsługę ograniczeń. Po utworzeniu wystąpienia zestaw wierszy schematu, wywołaj [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz.  
   
-Aby określić ograniczenia, zapoznaj się [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumn: TABLE_CATALOG, TABLE_SCHEMA, nazwa_tabeli COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.  
+Aby określić ograniczenia, zapoznaj się [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumn: TABLE_CATALOG, TABLE_SCHEMA, nazwa_tabeli COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.  
   
 Tak, na przykład, jeśli chcesz ograniczyć, nazwę tabeli, należy pamiętać, że nazwa_tabeli trzecia kolumna ograniczenia, a następnie wywołaj `Open`, określając nazwę odpowiednią tabelę jako trzeci parametr ograniczenia, jak pokazano w poniższym przykładzie.  
   
@@ -93,7 +93,7 @@ Tak, na przykład, jeśli chcesz ograniczyć, nazwę tabeli, należy pamiętać,
   
 Dla odwołania do zestawu wierszy schematu klasy typedef podane w szablonach OLE DB (zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
-Aby uzyskać więcej informacji na temat zestawów wierszy schematu OLE DB, w tym kolumny ograniczenia zobacz [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) w OLE DB Podręcznik programisty.  
+Aby uzyskać więcej informacji na temat zestawów wierszy schematu OLE DB, w tym kolumny ograniczenia zobacz [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921) w OLE DB Podręcznik programisty.  
   
 Bardziej złożone przykłady sposobów użycia klasy zestawów wierszy schematu, zobacz [CatDB](https://github.com/Microsoft/VCSamples) i [DBViewer](https://github.com/Microsoft/VCSamples) przykłady.  
   

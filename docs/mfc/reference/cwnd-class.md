@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448613"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084194"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Ponadto `BringWindowToTop` aktywuje okno podręczne, najwyższego poziomu i podrzędne MDI. `BringWindowToTop` Składowa powinna być używana do odkryć dowolne okno, która jest całkowicie lub częściowo zasłonięte przez inne nakładające się okna.
 
-Ta funkcja po prostu wywołuje funkcję Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) funkcji. Wywołaj [SetWindowPos](#setwindowpos) funkcję, aby zmienić położenie okna w porządku osi Z. `BringWindowToTop` Funkcji nie zmienia stylu okna aby stał się oknem najwyższego poziomu. Aby uzyskać więcej informacji, zobacz [jaka jest różnica między HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Ta funkcja po prostu wywołuje funkcję Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) funkcji. Wywołaj [SetWindowPos](#setwindowpos) funkcję, aby zmienić położenie okna w porządku osi Z. `BringWindowToTop` Funkcji nie zmienia stylu okna aby stał się oknem najwyższego poziomu. Aby uzyskać więcej informacji, zobacz [jaka jest różnica między HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Przykład
 

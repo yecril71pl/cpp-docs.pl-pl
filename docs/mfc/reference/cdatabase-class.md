@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb101179cff40d79ab142e55b4fc46cc8941d126
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1e050baf87374b98d5490ef8a760ca13620e240
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399553"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083934"
 ---
 # <a name="cdatabase-class"></a>Klasa CDatabase
 
@@ -202,7 +202,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Uwagi
 
-Pamiętaj, że klasach MFC ODBC nie jest już używać asynchronicznego przetwarzania; do wykonania operacji asynchroniczne, należy bezpośrednio wywołać funkcji interfejsu API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\)). Aby uzyskać więcej informacji, zobacz [wykonanie asynchroniczne](/previous-versions/windows/desktop/ms713563\(v=vs.85\)) w zestawie Windows SDK.
+Pamiętaj, że klasach MFC ODBC nie jest już używać asynchronicznego przetwarzania; do wykonania operacji asynchroniczne, należy bezpośrednio wywołać funkcji interfejsu API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Aby uzyskać więcej informacji, zobacz [wykonanie asynchroniczne](/previous-versions/windows/desktop/ms713563) w zestawie Windows SDK.
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

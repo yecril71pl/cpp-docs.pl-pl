@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d3c66fdb15a27b027be656ab07152e74d848526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086905"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083778"
 ---
 # <a name="retrieving-a-blob"></a>Pobieranie obiektu BLOB
 
-Możesz pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Możesz użyć `DBTYPE_BYTES` można pobrać obiektu BLOB jako sekwencja bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiektów blob oraz obiekty OLE](/previous-versions/windows/desktop/ms711511\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Możesz pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Możesz użyć `DBTYPE_BYTES` można pobrać obiektu BLOB jako sekwencja bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiektów blob oraz obiekty OLE](/previous-versions/windows/desktop/ms711511) w *OLE DB Podręcznik programisty*.  
   
 Poniższy kod przedstawia sposób pobierania obiektu BLOB przy użyciu `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) pozwala określić interfejs i flagi używane do interfejsu. Po otwarciu w tabeli, kod wywołuje `Read` wielokrotnie w `ISequentialStream` do odczytywania bajtów z obiektu BLOB. Kod wywołuje `Release` do rozporządzania wskaźnika interfejsu przed wywołaniem `MoveNext` uzyskać następnego rekordu.  
   

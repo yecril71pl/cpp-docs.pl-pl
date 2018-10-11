@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072085"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082361"
 ---
 # <a name="crestrictions-class"></a>Klasa CRestrictions
 
@@ -103,7 +103,7 @@ Jedna z wartości HRESULT standardowych.
 
 Można określić maksymalnie siedem ograniczeń w zestawie wierszy schematu.  
   
-Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informacji o zdefiniowanych ograniczenia na każdy zestaw wierszy schematu.  
+Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) informacji o zdefiniowanych ograniczenia na każdy zestaw wierszy schematu.  
   
 ## <a name="see-also"></a>Zobacz też  
 

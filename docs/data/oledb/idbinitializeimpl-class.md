@@ -50,16 +50,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b799b0383316c212ff2d2cd12ccac9b2b14dce0b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072423"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082595"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) interfejsu.  
+Udostępnia implementację na potrzeby [IDBInitialize](/previous-versions/windows/desktop/ms713706) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -129,7 +129,7 @@ STDMETHOD(Initialize)(void);
   
 ### <a name="remarks"></a>Uwagi  
 
-Zobacz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Zobacz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
@@ -143,7 +143,7 @@ STDMETHOD(Uninitialize)(void);
   
 ### <a name="remarks"></a>Uwagi  
 
-Zobacz [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648) w *OLE DB Podręcznik programisty*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 

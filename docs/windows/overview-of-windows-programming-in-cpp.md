@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677830"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083089"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -58,7 +58,7 @@ Aby uzyskać więcej informacji na temat wszystkich tych pojęć, zobacz [Przewo
 
 ##  <a name="BK_Native"></a> Aplikacje pulpitu i serwera
 
-Aby uzyskać podstawowe informacje o pisaniu aplikacji klienckich Windows dla komputerów, zobacz [projektowanie aplikacji Windows w języku C++](https://msdn.microsoft.com/vstudio//hh304489) i [wprowadzenie do Windows programowania w języku C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Aby uzyskać podstawowe informacje o pisaniu aplikacji klienckich Windows dla komputerów, zobacz [projektowanie aplikacji Windows w języku C++](https://msdn.microsoft.com/vstudio//hh304489) i [wprowadzenie do Windows programowania w języku C++](https://msdn.microsoft.com/library/windows/desktop/ff381398).
 
 W systemie Windows 10 można użyć Visual C++ do tworzenia wielu rodzajów programów pulpitu:
 

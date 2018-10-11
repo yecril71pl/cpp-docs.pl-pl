@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398121"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083869"
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 
@@ -47,7 +47,7 @@ Dla zmiennych lokalnych funkcji to przejście zakresu występuje, gdy wyjścia f
 
 Gdy obiekt jest zdefiniowany jako zmienna ramki, jego konstruktor jest wywoływana automatycznie w momencie, w którym występuje definicja. Gdy obiekt wykracza poza zakres, jego destruktor jest wywoływana automatycznie, zanim pamięci dla obiektu są odzyskiwane. To automatyczne konstrukcje i zniszczenie ruchu może być bardzo przydatne, ale należy pamiętać, automatyczne wywołań, szczególnie w celu destruktor.
 
-Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.
+Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.
 
 ## <a name="see-also"></a>Zobacz też
 

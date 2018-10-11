@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9cc04c6d9e270e0c3b5c3bd02e05b426ccf4c53
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de27441658c4c0537384447028a0383a0d87756b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060931"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083269"
 ---
 # <a name="ccommand-class"></a>Klasa CCommand
 
@@ -92,7 +92,7 @@ Typ klasy metody dostępu (takich jak `CDynamicParameterAccessor`, `CDynamicStri
 Typ klasy zestawu wierszy (takie jak `CArrayRowset` lub `CNoRowset`) mają polecenie, aby użyć. Wartość domyślna to `CRowset`.  
   
 *TMultiple*<br/>
-Aby użyć polecenia OLE DB, która może zwrócić wiele wyników, należy określić [cmultipleresults —](../../data/oledb/cmultipleresults-class.md). W przeciwnym razie użyj [cnomultipleresults —](../../data/oledb/cnomultipleresults-class.md). Aby uzyskać więcej informacji, zobacz [IMultipleResults](/previous-versions/windows/desktop/ms721289\(v=vs.85\)).  
+Aby użyć polecenia OLE DB, która może zwrócić wiele wyników, należy określić [cmultipleresults —](../../data/oledb/cmultipleresults-class.md). W przeciwnym razie użyj [cnomultipleresults —](../../data/oledb/cnomultipleresults-class.md). Aby uzyskać więcej informacji, zobacz [IMultipleResults](/previous-versions/windows/desktop/ms721289).  
 
 ## <a name="requirements"></a>Wymagania  
 
@@ -224,13 +224,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 [in] Sesji, w którym można wykonać polecenia.  
   
 *wszCommand*<br/>
-[in] Polecenie do wykonania, jest przekazywany jako ciąg Unicode. Może mieć wartości NULL, korzystając z `CAccessor`, w którym to przypadku polecenia zostanie pobrana wartość przekazana do [DEFINE_COMMAND](../../data/oledb/define-command.md) makra. Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać szczegółowe informacje.  
+[in] Polecenie do wykonania, jest przekazywany jako ciąg Unicode. Może mieć wartości NULL, korzystając z `CAccessor`, w którym to przypadku polecenia zostanie pobrana wartość przekazana do [DEFINE_COMMAND](../../data/oledb/define-command.md) makra. Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty* Aby uzyskać szczegółowe informacje.  
   
 *szCommand*<br/>
 [in] Taki sam jak *wszCommand* z tą różnicą, że ten parametr przyjmuje ciąg polecenia ANSI. Czwarty formularz tej metody może potrwać wartość NULL. W dalszej części tego tematu, aby uzyskać szczegółowe informacje, zobacz "Uwagi".  
   
 *pPropSet*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK.  
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696) w *OLE DB Podręcznik programisty* w Windows SDK.  
   
 *pRowsAffected*<br/>
 [/ Ściemnianie] Wskaźnik do pamięci, gdy liczba wierszy, których to dotyczy, za pomocą polecenia jest zwracany. Jeśli  *\*pRowsAffected* ma wartość NULL, jest zwracana żadna liczba wierszy. W przeciwnym razie `Open` ustawia  *\*pRowsAffected* zgodnie z następujących warunków:  
@@ -242,13 +242,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |Polecenie nie powoduje aktualizacji, usunięcia lub wstawianie wierszy|*\*pRowsAffected* jest niezdefiniowana.|  
   
 *guidCommand*<br/>
-[in] Identyfikator GUID, który określa składnię i ogólne zasady dostawcę, który ma być używany podczas analizowania tekstu polecenia. Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) i [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać szczegółowe informacje.  
+[in] Identyfikator GUID, który określa składnię i ogólne zasady dostawcę, który ma być używany podczas analizowania tekstu polecenia. Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) i [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) w *OLE DB Podręcznik programisty* Aby uzyskać szczegółowe informacje.  
   
 *bBind*<br/>
 [in] Określa, czy należy powiązać polecenie automatycznie po wykonywana. Wartość domyślna to **true**, co powoduje, że polecenie, aby powiązać automatycznie. Ustawienie *bBind* do **false** uniemożliwia automatyczne powiązania polecenie tak, aby można powiązać ręcznie. (Ręczne powiązanie to szczególne znaczenie w odniesieniu do użytkowników OLAP).  
   
 *ulPropSets*<br/>
-[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury przekazany *pPropSet* argumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -271,7 +271,7 @@ Użyć formy czwarty `Open` kiedy utworzono już polecenia i chcesz wykonać jed
 
 ## <a name="create"></a> CCommand::Create
 
-Wywołania [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) można utworzyć polecenia dla określonej sesji, następnie wywołuje [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) do określenia tekstu polecenia.  
+Wywołania [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) można utworzyć polecenia dla określonej sesji, następnie wywołuje [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709825) do określenia tekstu polecenia.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -297,7 +297,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 [in] Wskaźnik do tekst ANSI ciągu polecenia.  
   
 *guidCommand*<br/>
-[in] Identyfikator GUID, który określa składnię i ogólne zasady dostawcę, który ma być używany podczas analizowania tekstu polecenia. Aby uzyskać opis dialekty, zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+[in] Identyfikator GUID, który określa składnię i ogólne zasady dostawcę, który ma być używany podczas analizowania tekstu polecenia. Aby uzyskać opis dialekty, zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -344,7 +344,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [ICommandWithParameters::GetParameterInfo](/previous-versions/windows/desktop/ms714917\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [ICommandWithParameters::GetParameterInfo](/previous-versions/windows/desktop/ms714917) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -371,7 +371,7 @@ Standardowa HRESULT.
   
 ### <a name="remarks"></a>Uwagi  
 
-Ta metoda opakowuje metodę OLE DB [ICommandPrepare::Prepare](/previous-versions/windows/desktop/ms718370\(v=vs.85\)).  
+Ta metoda opakowuje metodę OLE DB [ICommandPrepare::Prepare](/previous-versions/windows/desktop/ms718370).  
 
 ## <a name="releasecommand"></a> CCommand::ReleaseCommand
 
@@ -401,7 +401,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -423,7 +423,7 @@ Standardowa HRESULT.
   
 ### <a name="remarks"></a>Uwagi  
 
-Ta metoda opakowuje metodę OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635\(v=vs.85\)). 
+Ta metoda opakowuje metodę OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635). 
   
 ## <a name="see-also"></a>Zobacz też  
 

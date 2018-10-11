@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f5071adcf12bde10a3fc67a5503875dfb264372
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086957"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081607"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl — Klasa
 
@@ -63,11 +63,11 @@ Z klasą pochodną `IOpenRowsetImpl`.
   
 ## <a name="remarks"></a>Uwagi  
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) interfejsu jest obowiązkowa, aby obiekt sesji. Otwiera i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.  
+[IOpenRowset](/previous-versions/windows/desktop/ms716946) interfejsu jest obowiązkowa, aby obiekt sesji. Otwiera i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika. Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty.*  
+Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika. Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) w *OLE DB Podręcznik programisty.*  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -91,7 +91,7 @@ Składowa klasy szablonu reprezentująca klasy zestawów wierszy przez użytkown
 *pRowsetObj*<br/>
 [out] Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale mogą używane, jeśli konieczne jest przeprowadzenie więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest ograniczone przez *ppRowset*.  
   
-Dla innych parametrów, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty.*  
+Dla innych parametrów, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) w *OLE DB Podręcznik programisty.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -111,7 +111,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 

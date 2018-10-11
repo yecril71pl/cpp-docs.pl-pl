@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389580"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083115"
 ---
 # <a name="cdbexception-class"></a>Klasa CDBException
 
@@ -142,7 +142,7 @@ Zawiera ciąg opisujący błąd, który spowodował wyjątek.
 
 Ten ciąg jest formularz "Stan: % s, natywne: % ld źródła: % s", gdzie kody format, w kolejności, zastępuje wartości, które opisują:
 
-- SQLSTATE, ciąg zakończony wartością null zawierający kod błędu pięcioznakowe zwracane w *szSqlState* parametru funkcji ODBC `SQLError`. SQLSTATE wartości wymieniono w załączniku A, [kody błędów ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\))w *odwołania programisty ODBC*. Przykład: "S0022".
+- SQLSTATE, ciąg zakończony wartością null zawierający kod błędu pięcioznakowe zwracane w *szSqlState* parametru funkcji ODBC `SQLError`. SQLSTATE wartości wymieniono w załączniku A, [kody błędów ODBC](/previous-versions/windows/desktop/ms714687)w *odwołania programisty ODBC*. Przykład: "S0022".
 
 - Zwrócony kod błędu macierzystego, specyficzne dla źródła danych w *pfNativeError* parametru `SQLError` funkcji. Przykład: 207.
 
@@ -150,7 +150,7 @@ Ten ciąg jest formularz "Stan: % s, natywne: % ld źródła: % s", gdzie kody f
 
 Framework interpretuje ciąg błędu i umieszcza jej składników `m_strStateNativeOrigin`; Jeśli `m_strStateNativeOrigin` zawiera informacje o więcej niż jeden błąd, błędy są oddzielone tabulacji. Struktura umieszcza tekst błędu alfanumeryczne do `m_strError`.
 
-Aby uzyskać dodatkowe informacje na temat kodów umożliwia tworzą ten ciąg, zobacz [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) działa w programach *odwołania programisty ODBC*.
+Aby uzyskać dodatkowe informacje na temat kodów umożliwia tworzą ten ciąg, zobacz [SQLError](/previous-versions/windows/desktop/ms716312) działa w programach *odwołania programisty ODBC*.
 
 ### <a name="example"></a>Przykład
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423016"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084077"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 
@@ -113,7 +113,7 @@ Dodaj następujący kod do wygenerowanego pliku źródłowego języka C++ (w tym
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Każda metoda najpierw jest przeprowadzane sprawdzanie poprawności, aby upewnić się, że parametry wejściowe nieujemnej wartości. Jeśli wartość wejściowa jest ujemna, metoda zgłasza [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Obsługa błędów została wyjaśniona później w tej sekcji.
+Każda metoda najpierw jest przeprowadzane sprawdzanie poprawności, aby upewnić się, że parametry wejściowe nieujemnej wartości. Jeśli wartość wejściowa jest ujemna, metoda zgłasza [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx). Obsługa błędów została wyjaśniona później w tej sekcji.
 
 Korzystanie z tych metod z aplikacji platformy uniwersalnej systemu Windows, należy użyć programu Visual C# **pusta aplikacja (XAML)** szablon, aby dodać drugi projekt do rozwiązania Visual Studio. W tym przykładzie nazwy projektu `Primes`. Następnie w `Primes` projektu, Dodaj odwołanie do `PrimesLibrary` projektu.
 
@@ -136,7 +136,7 @@ Poniższa ilustracja przedstawia `Primes` aplikacji po każdej opcji została wy
 
 ![Aplikacja Windows Runtime blokad](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Kontrolowanie wątku wykonania
 

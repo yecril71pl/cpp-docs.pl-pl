@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb1ea67a0b89a59ad8ee16ec3a3ee0993a0fdafc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208324"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083284"
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 
-Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje dotyczące magazynu danych nie wiedząc o tym wewnętrzna struktura lub schematu. Na przykład magazyn danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc będzie żaden sposób zapewnić znajomości schematu z wyjątkiem sytuacji, zapoznając się go. (Inny przykład należy pamiętać, że kreatorów Visual C++ Generuj metody dostępu dla użytkownika za pomocą zestawów wierszy schematu.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania `IDBSchemaRowset`.
+Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje dotyczące magazynu danych nie wiedząc o tym wewnętrzna struktura lub schematu. Na przykład magazyn danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc będzie żaden sposób zapewnić znajomości schematu z wyjątkiem sytuacji, zapoznając się go. (Inny przykład należy pamiętać, że kreatorów Visual C++ Generuj metody dostępu dla użytkownika za pomocą zestawów wierszy schematu.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` obsługuje następujące metody:
 
@@ -97,7 +97,7 @@ class CUpdateSessionTRSchemaRowset :
 
 Należy pamiętać, że `CUpdateSession` dziedziczy `IDBSchemaRowsetImpl`, więc posiada wartość ograniczenia obsługi metod. Za pomocą `CSchemaRowsetImpl`, Zadeklaruj trzy klasy podrzędnej (wymienione w powyższej Mapa schematu): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, i `CUpdateSessionPTSchemaRowset`. Każda z tych klas podrzędnych ma `Execute` metoda, która obsługuje jego odpowiedniego zestawu ograniczeń (kryteria wyszukiwania). Każdy `Execute` metoda porównuje wartości `cRestrictions` i `rgRestrictions` parametrów. Zobacz opis tych parametrów w [setrestrictions —](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zapoznaj się z tabeli zestaw wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK.
+Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zapoznaj się z tabeli zestaw wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) w *OLE DB Podręcznik programisty* w Windows SDK.
 
 Na przykład, jeśli użytkownik obsługiwane **nazwa_tabeli** ograniczeń dotyczących `DBSCHEMA_TABLES`, może wykonać następujące czynności:
 

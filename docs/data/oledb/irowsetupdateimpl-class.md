@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f13da3ed0b1f2193ab86e1644d401a6e4fb6b942
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054119"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082865"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 
-Szablony OLE DB implementacji [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interfejsu.  
+Szablony OLE DB implementacji [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -146,7 +146,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
   
 ## <a name="remarks"></a>Uwagi  
 
-Najpierw należy przeczytać i zrozumieć, w dokumentacji dotyczącej [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), ponieważ wszystko, co jest opisane ma również zastosowanie w tym miejscu. Należy również przeczytać Rozdział 6 *OLE DB Podręcznik programisty* na temat ustawiania danych.  
+Najpierw należy przeczytać i zrozumieć, w dokumentacji dotyczącej [IRowsetChange](/previous-versions/windows/desktop/ms715790), ponieważ wszystko, co jest opisane ma również zastosowanie w tym miejscu. Należy również przeczytać Rozdział 6 *OLE DB Podręcznik programisty* na temat ustawiania danych.  
   
 `IRowsetUpdateImpl` implementuje OLE DB `IRowsetUpdate` interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą `IRowsetChange` do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
   
@@ -173,7 +173,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 
@@ -193,7 +193,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
+Zobacz [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) w *OLE DB Podręcznik programisty*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -212,13 +212,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).  
   
-Dla innych parametrów, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Dla innych parametrów, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 
-Aby uzyskać więcej informacji, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Aby uzyskać więcej informacji, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -236,9 +236,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).  
   
-Dla innych parametrów, zobacz [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Dla innych parametrów, zobacz [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -258,15 +258,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *pcRowsUndone*<br/>
-[out] Odnosi się do *pcRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[out] Odnosi się do *pcRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *prgRowsUndone*<br/>
-[in] Odnosi się do *prgRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Odnosi się do *prgRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
-Dla innych parametrów, zobacz [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Dla innych parametrów, zobacz [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -286,13 +286,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).  
   
-Dla innych parametrów, zobacz [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Dla innych parametrów, zobacz [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 
-Zmiany są przesyłane przez wywołanie metody [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Konsument musi wywołać [CRowset::Update](../../data/oledb/crowset-update.md) aby zmiany zaczęły obowiązywać. Ustaw *prgRowstatus* do odpowiedniej wartości zgodnie z opisem w [stany wiersza](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Zmiany są przesyłane przez wywołanie metody [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Konsument musi wywołać [CRowset::Update](../../data/oledb/crowset-update.md) aby zmiany zaczęły obowiązywać. Ustaw *prgRowstatus* do odpowiedniej wartości zgodnie z opisem w [stany wiersza](/previous-versions/windows/desktop/ms722752) w *OLE DB Podręcznik programisty*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -319,7 +319,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
   
 ### <a name="remarks"></a>Uwagi  
 
-Jeśli okaże się, że aktualizacji powinien być dozwolony, zwraca wartość S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, należy również ustawić `DBROWSTATUS` w [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) do odpowiedniej [wiersz stanu](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+Jeśli okaże się, że aktualizacji powinien być dozwolony, zwraca wartość S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, należy również ustawić `DBROWSTATUS` w [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) do odpowiedniej [wiersz stanu](/previous-versions/windows/desktop/ms722752).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 

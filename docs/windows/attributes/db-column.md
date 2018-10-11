@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789747"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083616"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ Numeru porządkowego kolumny (`DBCOLUMNINFO` porządkowe) lub nazwą kolumny (ci
 ```
 
 *Atrybut DbType*<br/>
-(Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) wpisu kolumny.
+(Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251) wpisu kolumny.
 
 *Precyzja*<br/>
-(Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845)
 
 *Skala*<br/>
-(Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-(Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+(Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617) w *OLE DB Podręcznik programisty*.
 
 *Długość*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
 
-**db_column —** wiąże kolumna tabeli określonej w zmiennej w zestawie wierszy. Rozgranicza on dane elementu członkowskiego, które mogą uczestniczyć w OLE DB `IAccessor`— na podstawie powiązania. Ten atrybut ustawia mapy kolumny, zwykle definiowany przy użyciu makr konsumenta OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), i [COLUMN_ENTRY](../../data/oledb/column-entry.md). Te manipulowania OLE DB [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) powiązać określonej kolumny. Każdy element członkowski, oznacz za pomocą **db_column —** atrybut zajmie jedną pozycję w mapowaniu kolumn w formie wpisu kolumny. W związku z tym możesz wywołać ten atrybut gdzie możesz umieścić mapy kolumny, oznacza to, w klasie polecenia lub tabeli.
+**db_column —** wiąże kolumna tabeli określonej w zmiennej w zestawie wierszy. Rozgranicza on dane elementu członkowskiego, które mogą uczestniczyć w OLE DB `IAccessor`— na podstawie powiązania. Ten atrybut ustawia mapy kolumny, zwykle definiowany przy użyciu makr konsumenta OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), i [COLUMN_ENTRY](../../data/oledb/column-entry.md). Te manipulowania OLE DB [struktury DBBINDING](/previous-versions/windows/desktop/ms716845) powiązać określonej kolumny. Każdy element członkowski, oznacz za pomocą **db_column —** atrybut zajmie jedną pozycję w mapowaniu kolumn w formie wpisu kolumny. W związku z tym możesz wywołać ten atrybut gdzie możesz umieścić mapy kolumny, oznacza to, w klasie polecenia lub tabeli.
 
 Użyj **db_column —** w połączeniu z oboma [db_table —](db-table.md) lub [db_command —](db-command.md) atrybutów.
 

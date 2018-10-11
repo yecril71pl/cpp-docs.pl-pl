@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3bafe1aa7197ef037bdd54b7215173866e8c15d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ede88e44c957ae34e9bb9c3f451e0f058310346
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039156"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083557"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 
@@ -63,7 +63,7 @@ Implementuje `IDBSchemaRowset` interfejsu i funkcja szablonowej twórcy `CreateS
 Zostanie otwarty i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu. Obowiązkowego interfejsu dla obiektu sesji.  
   
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-Implementuje OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
+Implementuje OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
   
 [Irowsetcreatorimpl —](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
 Ta klasa dziedziczy [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) i zastępuje [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS` i `DBPROPCANFETCHBACKWARDS`.  
@@ -78,13 +78,13 @@ Udostępnia implementację `IRowset` interfejs, który jest interfejsem podstawo
 Implementuje właściwości zestawu wierszy za pomocą właściwości ustaw mapy zdefiniowany w klasie polecenia. Obowiązkowego interfejsu na zestawów wierszy.  
   
 [Irowsetlocateimpl —](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-Implementuje OLE DB [irowsetlocate —](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy. Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.  
+Implementuje OLE DB [irowsetlocate —](/previous-versions/windows/desktop/ms721190) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy. Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.  
   
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy. Implementowanie odbiorców, którzy obsługi powiadomień [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) i zarejestrować ją w tym punkcie połączenia.  
+Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy. Implementowanie odbiorców, którzy obsługi powiadomień [IRowsetNotify](/previous-versions/windows/desktop/ms712959) i zarejestrować ją w tym punkcie połączenia.  
   
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-Implementuje OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
+Implementuje OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą [IRowsetChange](/previous-versions/windows/desktop/ms715790) do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
   
 ## <a name="command-classes"></a>Klasy poleceń  
 
@@ -120,7 +120,7 @@ Implementuje właściwości dla różnych interfejsów właściwość OLE DB (na
   
 [Ierrorrecordsimpl —](../../data/oledb/ierrorrecordsimpl-class.md)  
   
-Implementuje OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych.  
+Implementuje OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych.  
   
 ## <a name="see-also"></a>Zobacz też  
 

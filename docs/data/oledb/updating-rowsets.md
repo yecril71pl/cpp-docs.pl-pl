@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108355"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083830"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 
 Operacja wykraczającego poza podstawowe bazy danych jest aktualizacji lub zapisywać dane w magazynie danych. W OLE DB, jest prosty mechanizm aktualizacji: aplikacja odbiorcy ustawia wartości składników powiązane dane, a następnie zapisuje te wartości, do zestawu wierszy; następnie konsumenta żądań, czy dostawca zaktualizuj magazyn danych.  
   
-Konsumenci mogą wykonywać następujące rodzaje aktualizacje na zestaw wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywać te operacje klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejs i zastępuje następujące metody interfejsu:  
+Konsumenci mogą wykonywać następujące rodzaje aktualizacje na zestaw wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywać te operacje klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790) interfejs i zastępuje następujące metody interfejsu:  
   
 - [SetData](../../data/oledb/crowset-setdata.md) zmiany kolumny wartości w wierszu zestawu wierszy; jest to równoważne polecenia aktualizacji programu SQL.  
   
@@ -223,4 +223,4 @@ Na koniec głównym celem Odrocz zmian jest aby można było cofnąć ich. Wywo�
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset, klasa](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

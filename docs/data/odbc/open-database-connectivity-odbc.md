@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5282d1944ca789e56ac6890c10f41c15ec59e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28194b44fca4360fc7a0ca1614e9f5685cc0d98
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111280"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082335"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
 Biblioteka Microsoft Foundation Classes (MFC) dostarcza klas do programowania z Open Database Connectivity (ODBC). Począwszy od programu Visual Studio 2015 i ODBC programu SQL Server 2012 jest preferowanym sposobem łączenia ze źródłami danych SQL.
   
-Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK w bibliotece MSDN.  
+Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) zestawu SDK w bibliotece MSDN.  
   
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -69,7 +69,7 @@ Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zob
   
 ## <a name="odbc-database-tasks"></a>Zadania bazy danych ODBC  
 
-Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK.  
+Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) zestawu SDK.  
   
 - [Zainstaluj i Rozpocznij pracę z ODBC](installing-and-getting-started-with-odbc.md)  
   

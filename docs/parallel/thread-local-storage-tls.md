@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744fdd80e16e292399a261e10dc6b974af1dca4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371930"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081874"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 
@@ -114,7 +114,7 @@ Należy przestrzegać następujących wytycznych podczas deklarowania statycznie
 
      C++ nie dopuszcza dynamiczną inicjalizację danych wątku ze względu na możliwe przyszłe rozszerzenia będą miały do infrastruktury magazynu lokalnego wątku.
 
-- W systemach operacyjnych Windows przed Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteka DLL deklaruje żadnych danych ani obiektu jako `__declspec`(wątek), może to spowodować błąd ochrony Jeśli dynamicznie załadowane. Po załadowaniu pliku DLL za pomocą [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175), sprawia, że wystąpił błąd systemu zawsze wtedy, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni na wątek jest przydzielany w czasie wykonywania, rozmiar to miejsce opiera się na obliczanie wymagań aplikacji, a także wymagania wszystkie biblioteki dll, które są statycznie łączone. Kiedy używasz `LoadLibrary`, nie można rozszerzyć tego miejsca, aby umożliwić zadeklarowane za pomocą zmiennych lokalnych wątku `__declspec`(wątek). Używanie interfejsów API protokołu TLS, takiej jak [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), w bibliotece DLL, można przydzielić TLS, jeśli biblioteka DLL jest obciążany `LoadLibrary`.
+- W systemach operacyjnych Windows przed Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteka DLL deklaruje żadnych danych ani obiektu jako `__declspec`(wątek), może to spowodować błąd ochrony Jeśli dynamicznie załadowane. Po załadowaniu pliku DLL za pomocą [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), sprawia, że wystąpił błąd systemu zawsze wtedy, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni na wątek jest przydzielany w czasie wykonywania, rozmiar to miejsce opiera się na obliczanie wymagań aplikacji, a także wymagania wszystkie biblioteki dll, które są statycznie łączone. Kiedy używasz `LoadLibrary`, nie można rozszerzyć tego miejsca, aby umożliwić zadeklarowane za pomocą zmiennych lokalnych wątku `__declspec`(wątek). Używanie interfejsów API protokołu TLS, takiej jak [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), w bibliotece DLL, można przydzielić TLS, jeśli biblioteka DLL jest obciążany `LoadLibrary`.
 
 ## <a name="see-also"></a>Zobacz też
 

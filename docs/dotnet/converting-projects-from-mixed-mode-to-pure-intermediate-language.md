@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222083"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083466"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
 
@@ -84,26 +84,26 @@ Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora Visual C++, 
 
 3. Usuń wszystkie typy niezarządzanwe:
 
-   Wszędzie, gdzie jest to stosowne, Zamień typy niezarządzanwe odwołania do struktury firmy [systemu](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) przestrzeni nazw. Popularne typy zarządzane są wymienione w poniższej tabeli:
+   Wszędzie, gdzie jest to stosowne, Zamień typy niezarządzanwe odwołania do struktury firmy [systemu](/dotnet/api/system) przestrzeni nazw. Popularne typy zarządzane są wymienione w poniższej tabeli:
 
    |Struktura|Opis|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Reprezentuje wartość logiczną.|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Reprezentuje 8-bitowej nieoznaczonej liczby całkowitej.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Reprezentuje znak Unicode.|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Reprezentuje liczbę dziesiętną.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji.|
-   |[Identyfikator GUID](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Reprezentuje unikatowy identyfikator globalny (GUID).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Reprezentuje całkowita 16-bitowych.|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Reprezentuje całkowita 32-bitowych.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Reprezentuje całkowita 64-bitowych.|
-   |[Pola IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Reprezentuje całkowita 8-bitowych.|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Reprezentuje liczbę zmiennoprzecinkową pojedynczej precyzji.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Reprezentuje przedział czasu.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Reprezentuje 16-bitowa liczba całkowita bez znaku.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Reprezentuje 32-bitowa liczba całkowita bez znaku.|
-   |[UInt64 —](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Reprezentuje 64-bitowej nieoznaczonej liczby całkowitej.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
-   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Wskazuje metodę, która nie zwraca wartości; oznacza to, że metoda ma zwracać typ void.|
+   |[Boolean](/dotnet/api/system.boolean)|Reprezentuje wartość logiczną.|
+   |[Byte](/dotnet/api/system.byte)|Reprezentuje 8-bitowej nieoznaczonej liczby całkowitej.|
+   |[Char](/dotnet/api/system.char)|Reprezentuje znak Unicode.|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.|
+   |[Decimal](/dotnet/api/system.decimal)|Reprezentuje liczbę dziesiętną.|
+   |[Double](/dotnet/api/system.double)|Reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji.|
+   |[Identyfikator GUID](/dotnet/api/system.guid)|Reprezentuje unikatowy identyfikator globalny (GUID).|
+   |[Int16](/dotnet/api/system.int16)|Reprezentuje całkowita 16-bitowych.|
+   |[Int32](/dotnet/api/system.int32)|Reprezentuje całkowita 32-bitowych.|
+   |[Int64](/dotnet/api/system.int64)|Reprezentuje całkowita 64-bitowych.|
+   |[Pola IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
+   |[SByte](/dotnet/api/system.byte.aspx)|Reprezentuje całkowita 8-bitowych.|
+   |[Single](/dotnet/api/system.single.aspx)|Reprezentuje liczbę zmiennoprzecinkową pojedynczej precyzji.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Reprezentuje przedział czasu.|
+   |[UInt16](/dotnet/api/system.uint16)|Reprezentuje 16-bitowa liczba całkowita bez znaku.|
+   |[UInt32](/dotnet/api/system.uint32)|Reprezentuje 32-bitowa liczba całkowita bez znaku.|
+   |[UInt64 —](/dotnet/api/system.uint64)|Reprezentuje 64-bitowej nieoznaczonej liczby całkowitej.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
+   |[Void](/dotnet/api/system.void)|Wskazuje metodę, która nie zwraca wartości; oznacza to, że metoda ma zwracać typ void.|

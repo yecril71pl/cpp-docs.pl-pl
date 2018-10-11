@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d4160972f521eeeaee56087c29e18433be87e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440241"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081939"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
 
@@ -69,7 +69,7 @@ W poniższej tabeli przedstawiono relacje między makra używane do obsługi ser
 
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).
+Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Artykuł [Określanie poziomów funkcjonalności](../mfc/specifying-levels-of-functionality.md) opisuje sposób określenia innych poziomach funkcjonalności, w tym informacje o klasie czasu wykonywania, dynamiczne tworzenie obiektów i serializacji.
 

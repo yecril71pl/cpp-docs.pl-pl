@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098919"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082621"
 ---
 # <a name="setting-properties-in-your-provider"></a>Ustawianie właściwości w dostawcy
 
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w *OLE DB Podręcznik programisty*.  
   
 W kodzie dostawcy generowane przez kreatora należy znaleźć map właściwości odpowiadającego grupie właściwości. Nazwa grupy właściwości zazwyczaj odnosi się do nazwy obiektu. Właściwości polecenia i zestawu wierszy można znaleźć w polecenia lub zestaw wierszy; właściwości źródła i Inicjowanie danych można znaleźć w obiektu źródła danych.  
   
@@ -33,7 +33,7 @@ Mapy właściwości, należy dodać [PROPERTY_INFO_ENTRY_EX](../../data/oledb/pr
   
 - Identyfikator właściwości odpowiadający Twojej właściwości. Najpierw siedem znaków ("DBPROP_") należy usunąć z przodu nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS`, przekazać `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, należy przekazać Pełna nazwa identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).  
   
-- Typ wariantu właściwości (w [właściwości OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) w *OLE DB Podręcznik programisty*). Wprowadź VT_ odpowiadającego typowi (lub VT_I2 VT_BOOL.) na typ danych.  
+- Typ wariantu właściwości (w [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w *OLE DB Podręcznik programisty*). Wprowadź VT_ odpowiadającego typowi (lub VT_I2 VT_BOOL.) na typ danych.  
   
 - Flagi, aby wskazać, czy właściwość jest czytelny i zapisywalny i grupy, do której należy. Na przykład poniższy kod wskazuje właściwości odczytu/zapisu, należącego do grupy wierszy:  
   

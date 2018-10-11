@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88272c935c3e610ee633a1e076a2d2d76b5840f2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034854"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082569"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Wczytywanie ciągów do dostawcy OLE DB
 
-`RMyProviderRowset::Execute` Funkcji otwiera plik i odczytuje ciągi. Konsument przekazuje nazwę pliku do dostawcy, wywołując [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej składowej `m_szCommandText`. `Execute` odczytuje nazwę pliku z `m_szCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów jej operacje odczytu, `Execute` tworzy wystąpienie rekord użytkownika (`CAgentMan`) i umieszcza je w tablicy.  
+`RMyProviderRowset::Execute` Funkcji otwiera plik i odczytuje ciągi. Konsument przekazuje nazwę pliku do dostawcy, wywołując [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej składowej `m_szCommandText`. `Execute` odczytuje nazwę pliku z `m_szCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów jej operacje odczytu, `Execute` tworzy wystąpienie rekord użytkownika (`CAgentMan`) i umieszcza je w tablicy.  
   
 Jeśli nie można otworzyć pliku, `Execute` musi zwracać DB_E_NOTABLE. Jeśli zamiast tego zwraca E_FAIL, dostawca nie będzie działać z wielu odbiorców i nie przejdzie OLE DB [testów zgodności](../../data/oledb/testing-your-provider.md).  
   

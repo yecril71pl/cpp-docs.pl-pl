@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713731"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081893"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Przetwarza jawne łączenie do wywołania biblioteki DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) celu uzyskania adresu eksportowanych funkcji w bibliotece DLL. Użyjesz wskaźnika zwróconej funkcji do wywołania funkcji DLL. **GetProcAddress** przyjmuje jako parametry uchwytu modułu DLL (zwrócone przez **LoadLibrary**, `AfxLoadLibrary`, lub **GetModuleHandle**) i przyjmuje nazwę funkcji, którą chcesz do wywołania lub liczbę porządkową eksportu funkcji.
+Przetwarza jawne łączenie do wywołania biblioteki DLL [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) celu uzyskania adresu eksportowanych funkcji w bibliotece DLL. Użyjesz wskaźnika zwróconej funkcji do wywołania funkcji DLL. **GetProcAddress** przyjmuje jako parametry uchwytu modułu DLL (zwrócone przez **LoadLibrary**, `AfxLoadLibrary`, lub **GetModuleHandle**) i przyjmuje nazwę funkcji, którą chcesz do wywołania lub liczbę porządkową eksportu funkcji.
 
 Ponieważ wywołujesz funkcję DLL za pomocą wskaźnika i nie ma żadnych typów w czasie kompilacji sprawdzania, upewnij się, parametry funkcji są poprawne, tak aby nie przekroczyć pamięć umieszczonej na stosie i powodować naruszenie zasad dostępu. Jednym ze sposobów zapewnienia bezpieczeństwa typu jest Spójrz na prototypy funkcji eksportowanych funkcji i tworzenie pasujących definicji typów dla wskaźników funkcji. Na przykład:
 
@@ -73,7 +73,7 @@ Możesz uzyskać tylko Eksport porządkowej Jeśli tworzysz łącze do bibliotek
 
 - [LoadLibrary i AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Eksportowanie z biblioteki DLL przy użyciu plików DEF](../build/exporting-from-a-dll-using-def-files.md)
 

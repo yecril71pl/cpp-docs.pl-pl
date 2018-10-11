@@ -37,16 +37,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113165"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083310"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 
-Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfejsu.  
+Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -98,7 +98,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
@@ -114,7 +114,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki. 
+Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
@@ -129,7 +129,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 

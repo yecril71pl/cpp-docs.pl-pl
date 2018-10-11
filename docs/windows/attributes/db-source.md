@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789602"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081906"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ Tworzy połączenie ze źródłem danych.
 ### <a name="parameters"></a>Parametry
 
 *db_source*<br/>
-Parametry połączenia używane do połączenia ze źródłem danych. Format parametrów połączenia, zobacz [parametrów połączeń i połączeń między danymi](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) w Microsoft Data Access Components (MDAC) zestawu SDK.
+Parametry połączenia używane do połączenia ze źródłem danych. Format parametrów połączenia, zobacz [parametrów połączeń i połączeń między danymi](/previous-versions/windows/desktop/ms718376) w Microsoft Data Access Components (MDAC) zestawu SDK.
 
 *Nazwa*<br/>
 (Opcjonalnie) Kiedy używasz **db_source —** w klasie, *nazwa* jest wystąpieniem obiektu źródła danych, który ma **db_source —** zastosować atrybut (Zobacz przykład 1). Zastosowania **db_source —** bezpośrednio w implementacji metody *nazwa* jest zmienną (lokalna do metody), który może służyć do uzyskania dostępu do danych źródła (Zobacz przykład 2). Możesz przekazać ten *nazwa* do *source_name* parametru `db_command` do skojarzenia ze źródłem danych za pomocą polecenia.

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021580"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082426"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 
@@ -35,7 +35,7 @@ Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony
   
 - Natywne typy danych języka C/C++ do programowania OLE DB.  
   
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms718124).  
   
 Szablony OLE DB obsługuje istniejący model obiektów OLE DB, a nie dodaje nowy model obiektu. Klasy górnej warstwy w OLE DB szablonami konsumentów równoległe składniki zdefiniowane w specyfikacji OLE DB. Projekt szablony OLE DB konsumenta obejmuje zaawansowane funkcje, takie jak wielu metod dostępu w zestawie wierszy. Korzystanie z szablonów i wielokrotne dziedziczenie sprawia, że biblioteka małe i elastyczne.  
   
@@ -71,5 +71,5 @@ Więcej informacji znajduje się w następujących tematach:
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Dostęp do danych](../data-access-in-cpp.md)<br/>
-[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643)

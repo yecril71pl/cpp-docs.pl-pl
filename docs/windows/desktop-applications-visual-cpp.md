@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688262"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083349"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
 A *aplikacja komputerowa* w języku C++ jest natywna aplikacja, które ma dostęp do pełnego zestawu interfejsów API Windows i albo działa w oknie lub w konsoli programu system. Aplikacji klasycznych w języku C++ uruchomić na Windows XP do systemu Windows 10 (chociaż Windows XP nie jest już oficjalnie obsługiwany wiąże się z wielu interfejsów API Windows, które zostały wprowadzone od tego czasu).
 
-Aplikacja komputerowa różni się od aplikacji uniwersalnych platformy Windows (UWP), które mogą być uruchamiane na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, urządzeniu Surface Hub i innych urządzeń. Aby uzyskać więcej informacji na temat klasycznych programu vs. Aplikacje platformy uniwersalnej systemu Windows, zobacz [wybierz swoją technologię](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
+Aplikacja komputerowa różni się od aplikacji uniwersalnych platformy Windows (UWP), które mogą być uruchamiane na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, urządzeniu Surface Hub i innych urządzeń. Aby uzyskać więcej informacji na temat klasycznych programu vs. Aplikacje platformy uniwersalnej systemu Windows, zobacz [wybierz swoją technologię](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 
 ### <a name="desktop-bridge"></a>Desktop Bridge
@@ -35,7 +35,7 @@ W Visual Studio 2017 w wersji 15.4 lub nowszy można utworzyć projekt pakietu a
 
 ### <a name="terminology"></a>Terminologia
 
-- A *Win32* aplikacja jest Windows, aplikacji klasycznych w języku C++, który może zgłaszać korzystać z natywnych [interfejsów API języka C Windows i/lub interfejsów API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT i standardowe biblioteki interfejsów API i 3 bibliotek innych firm. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.
+- A *Win32* aplikacja jest Windows, aplikacji klasycznych w języku C++, który może zgłaszać korzystać z natywnych [interfejsów API języka C Windows i/lub interfejsów API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT i standardowe biblioteki interfejsów API i 3 bibliotek innych firm. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.
 
 - [Component Object Model (COM)](/windows/desktop/com/the-component-object-model) jest specyfikacja, która umożliwia programom napisane w różnych językach, aby komunikować się ze sobą. Windows wiele składników są implementowane jako obiekty COM i postępuj zgodnie z standardowe zasady modelu COM do tworzenia obiektów interfejsu zniszczenie odnajdywania i obiektu.  Obiekty COM z aplikacji klasycznych w języku C++ jest stosunkowo prosta, ale zapisywania obiektu COM jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnicze, które upraszczają programowanie COM.
 

@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085553"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083363"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 
@@ -173,7 +173,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
   
 ## <a name="remarks"></a>Uwagi  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) jest interfejsem podstawowy zestaw wierszy.  
+[IRowset](/previous-versions/windows/desktop/ms720986) jest interfejsem podstawowy zestaw wierszy.  
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988) w *OLE DB Podręcznik programisty*.  
   
 Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Wartość zwracana  
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) flagi dla kolumny. 
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi dla kolumny. 
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametry  
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) flagi, aby określić dla kolumny.  
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi, aby określić dla kolumny.  
   
 *TableRow*<br/>
 Bieżący wiersz.  

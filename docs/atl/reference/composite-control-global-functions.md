@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037362"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084103"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
 
 *lpTemplateName*<br/>
-[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.
+[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) makra w celu utworzenia tej wartości.
 
 *hWndParent*<br/>
 [in] Identyfikuje okna, który jest właścicielem okno dialogowe.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
 
 *lpTemplateName*<br/>
-[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.
+[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) makra w celu utworzenia tej wartości.
 
 *hWndParent*<br/>
 [in] Identyfikuje okna, który jest właścicielem okno dialogowe.

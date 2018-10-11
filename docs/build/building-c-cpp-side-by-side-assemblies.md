@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860943"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083846"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Kompilowanie wykonywanych jednocześnie aplikacji C/C++
 
@@ -30,7 +30,7 @@ Aplikacji Visual C++ może używać jednego lub kilku bibliotek DLL w różnych 
 Domyślnie podczas kompilowania biblioteki DLL za pomocą programu Visual Studio posiada [manifest aplikacji](/windows/desktop/SbsCs/application-manifests) osadzony jako zasób RT_MANIFEST o identyfikatorze równym 2. Podobnie jak w przypadku pliku wykonywalnego tego manifestu w tym artykule opisano zależności dla tej biblioteki DLL innych zestawów. Założono, że biblioteka DLL nie jest częścią zestawu side-by-side i aplikacje, które są zależne od tej biblioteki DLL nie będą używać manifestu aplikacji, można go załadować, ale zamiast polegać na moduł ładujący systemu operacyjnego, aby znaleźć tę bibliotekę DLL na ścieżce systemowej.
 
 > [!NOTE]
-> Jest ważne dla biblioteki DLL, która używa manifest aplikacji, aby mieć manifestu osadzonego jako zasób o identyfikatorze równym 2. Jeśli biblioteka DLL jest dynamicznie ładowany w czasie wykonywania (na przykład za pomocą [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) funkcji), moduł ładujący systemu operacyjnego ładuje zestawów zależnych, określonego w manifeście biblioteki DLL. Manifest aplikacji zewnętrznej dla bibliotek DLL nie jest sprawdzany w trakcie `LoadLibrary` wywołania. Jeśli manifest nie jest zagnieżdżony, moduł ładujący może podejmować prób załadować zestawy zainstalowanie niepoprawnej wersji lub utrata możliwości ich wyszukiwanie i znajdowanie zestawów zależnych.
+> Jest ważne dla biblioteki DLL, która używa manifest aplikacji, aby mieć manifestu osadzonego jako zasób o identyfikatorze równym 2. Jeśli biblioteka DLL jest dynamicznie ładowany w czasie wykonywania (na przykład za pomocą [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) funkcji), moduł ładujący systemu operacyjnego ładuje zestawów zależnych, określonego w manifeście biblioteki DLL. Manifest aplikacji zewnętrznej dla bibliotek DLL nie jest sprawdzany w trakcie `LoadLibrary` wywołania. Jeśli manifest nie jest zagnieżdżony, moduł ładujący może podejmować prób załadować zestawy zainstalowanie niepoprawnej wersji lub utrata możliwości ich wyszukiwanie i znajdowanie zestawów zależnych.
 
 Jeden lub kilka związane z biblioteki dll, może to w ramach zestawu side-by-side z odpowiednią [manifestu zestawu](/windows/desktop/SbsCs/assembly-manifests), która opisuje pliki, które tworzą zestaw, a także zależność zestawu w innych side-by-side zestawy.
 

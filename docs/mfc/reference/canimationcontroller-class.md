@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446351"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083648"
 ---
 # <a name="canimationcontroller-class"></a>Klasa CAnimationController
 
@@ -882,7 +882,7 @@ Powinien zwrócić wartość TRUE, jeśli scenorysu własnością pGroupNew ma p
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_CANCEL. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji o zarządzaniu konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_CANCEL. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji na temat [zarządzanie konfliktami](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ Powinien zwrócić wartość TRUE, jeśli scenorysu własnością pGroupNew ma p
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_COMPRESS. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji o zarządzaniu konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_COMPRESS. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji na temat [zarządzanie konfliktami](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ Powinien zwrócić wartość TRUE, jeśli scenorysu własnością pGroupNew ma p
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_CONCLUDE. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji o zarządzaniu konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_CONCLUDE. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji na temat [zarządzanie konfliktami](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ Powinien zwrócić wartość TRUE, jeśli scenorysu własnością pGroupNew ma p
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_TRIM. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji o zarządzaniu konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Ta metoda jest wywoływana po włączeniu priorytetu zdarzenia porównania, przy użyciu CAnimationController::EnablePriorityComparisonHandler i określ UI_ANIMATION_PHT_TRIM. Może być przesłonięta w klasie pochodnej, aby wykonać akcje specyficzne dla aplikacji. Interfejs API animacji Windows odczytu dokumentacji, aby uzyskać więcej informacji na temat [zarządzanie konfliktami](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

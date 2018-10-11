@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206071"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083570"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ Te funkcje mogą służyć do sprawdzania poprawności, a następnie wypełnij s
 
 - Wartość niższą niż zero, kod biblioteki wykonawczej C obliczeń, czy (czas standardowy) lub czasu jest aktywna.
 
-Biblioteki wykonawczej C określają zachowanie w czasie oszczędność czasu letniego z [TZ](tzset.md) zmiennej środowiskowej. Jeśli **TZ** nie jest ustawiona, wywołanie interfejsu API Win32 [Funkcja GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) jest używany, aby uzyskać informacje dotyczące czasu letniego z systemu operacyjnego. W przypadku niepowodzenia biblioteki przyjęto założenie, że używane są zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie jest ustawiony, jego wartość jest niezdefiniowana, i wartość zwrotną z tych funkcji, będzie nieprzewidywalny. Jeśli *timeptr* wskazuje **tm** struktury zwrócony przez poprzednie wywołanie [asctime —](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), lub [localtime](localtime-localtime32-localtime64.md) (lub wariantów tych funkcji) **tm_isdst** pole zawiera poprawną wartość.
+Biblioteki wykonawczej C określają zachowanie w czasie oszczędność czasu letniego z [TZ](tzset.md) zmiennej środowiskowej. Jeśli **TZ** nie jest ustawiona, wywołanie interfejsu API Win32 [Funkcja GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) jest używany, aby uzyskać informacje dotyczące czasu letniego z systemu operacyjnego. W przypadku niepowodzenia biblioteki przyjęto założenie, że używane są zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie jest ustawiony, jego wartość jest niezdefiniowana, i wartość zwrotną z tych funkcji, będzie nieprzewidywalny. Jeśli *timeptr* wskazuje **tm** struktury zwrócony przez poprzednie wywołanie [asctime —](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), lub [localtime](localtime-localtime32-localtime64.md) (lub wariantów tych funkcji) **tm_isdst** pole zawiera poprawną wartość.
 
 Należy pamiętać, że **gmtime** i **localtime** (i **_gmtime32**, **_gmtime64**, **_localtime32**, i **_localtime64**) pojedynczy bufor dla każdego wątku na użytek konwersji. Jeśli podasz tego buforu do **mktime**, **_mktime32** lub **_mktime64**, poprzednie zawartość zostaje zniszczona.
 
