@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3844c0ad304c1ebd18a707ca1821b72b60e92707
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c3d16cada621232c54176717f9bbdedb71a7e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198022"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083429"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL
 
@@ -38,7 +38,7 @@ W tym dokumencie pokazano, jak na potrzeby tworzenia podstawowego składnika mod
 
    [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. W CalculatorComponent.cpp, zdefiniuj `CalculatorComponent` klasy. `CalculatorComponent` Klasa dziedziczy [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Określa, że klasa jest pochodną [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) i nie [IInspectable](https://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` jest dostępna tylko dla składników aplikacji środowiska wykonawczego Windows.) `CoCreatableClass` tworzy fabrykę dla klasy, które mogą być używane z funkcji takich jak [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+5. W CalculatorComponent.cpp, zdefiniuj `CalculatorComponent` klasy. `CalculatorComponent` Klasa dziedziczy [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Określa, że klasa jest pochodną [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) i nie [IInspectable](https://msdn.microsoft.com/library/br205821). (`IInspectable` jest dostępna tylko dla składników aplikacji środowiska wykonawczego Windows.) `CoCreatableClass` tworzy fabrykę dla klasy, które mogą być używane z funkcji takich jak [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
 
    [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 

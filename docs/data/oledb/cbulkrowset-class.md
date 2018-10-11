@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116766"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082907"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 
@@ -165,7 +165,7 @@ W poniższym przykładzie pokazano użycie `CBulkRowset` klasy.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  
+Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Wartość zwracana  
 
-Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -295,11 +295,11 @@ Standardowa HRESULT.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
+Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) w *OLE DB Podręcznik programisty*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.  
+Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
   

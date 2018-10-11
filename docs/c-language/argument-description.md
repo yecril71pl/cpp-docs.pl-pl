@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b8508b5a14e67092339a456f5b85f78d17906a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061087"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082543"
 ---
 # <a name="argument-description"></a>Opis argumentu
 
@@ -33,7 +33,7 @@ ms.locfileid: "46061087"
 
 `argv` Parametr jest tablicą wskaźników do ciągów znaków zakończony znakiem null, reprezentujący argumenty programu. Każdy element punktów tablicy na ciąg reprezentujący argument przekazany do **głównego** (lub **wmain**). (Aby uzyskać informacje na temat tablic, zobacz [deklaracje tablicy](../c-language/array-declarations.md).) `argv` Parametru może być zadeklarowana jako tablica wskaźników do typu `char` (`char *argv[]`) lub jako wskaźnik do wskaźników do typu `char` (`char **argv`). Aby uzyskać **wmain**, `argv` parametru może być zadeklarowana jako tablica wskaźników do typu `wchar_t` (`wchar_t *argv[]`) lub jako wskaźnik do wskaźników do typu `wchar_t` (`wchar_t **argv`).
 
-Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego.
+Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) można pobrać nazwy pliku wykonywalnego.
 
 Ostatnie wskaźnika (`argv[argc]`) jest **NULL**. (Zobacz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) w *odwołanie do biblioteki wykonawczej* dla alternatywną metodę w celu uzyskania informacji o zmiennej środowiska.)
 

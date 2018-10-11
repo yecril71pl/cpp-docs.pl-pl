@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114660"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082985"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
-Konstruktor. Inicjuje `rgProperties`, `cProperties`, i `guidPropertySet` pola [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury.  
+Konstruktor. Inicjuje `rgProperties`, `cProperties`, i `guidPropertySet` pola [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametry  
 
 *Identyfikator GUID*<br/>
-[in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury.  
+[in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet, klasa](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[Struktura DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367)   
+[Struktura DBPROP](/previous-versions/windows/desktop/ms717970)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374376"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083804"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -591,7 +591,7 @@ Jeśli funkcja się powiedzie, wartość zwracana jest dojścia do modułu. Jeś
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca uchwyt, który może służyć w [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) można pobrać adresu funkcji DLL. `AfxLoadLibrary` można również mapować inne moduły pliku wykonywalnego.
+Zwraca uchwyt, który może służyć w [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) można pobrać adresu funkcji DLL. `AfxLoadLibrary` można również mapować inne moduły pliku wykonywalnego.
 
 Każdy proces przechowuje licznik odwołań dla każdego modułu załadować biblioteki. Ten licznik odwołań rośnie każdorazowo `AfxLoadLibrary` nosi nazwę i jest zmniejszana każdorazowo `AfxFreeLibrary` jest wywoływana. Gdy licznik odwołań osiągnie zero, moduł jest niezamapowany przestrzeni adresowej procesu wywołującego, a uchwyt nie jest już prawidłowy.
 

@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081302"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083908"
 ---
 # <a name="ctable-class"></a>Klasa CTable
 
@@ -106,10 +106,10 @@ HRESULT Open(const CSession& session,
 [in] `DBID` Tabeli, aby otworzyć.  
   
 *pPropSet*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
   
 *ulPropSets*<br/>
-[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury przekazany *pPropSet* argumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -117,7 +117,7 @@ Standardowa HRESULT.
   
 ### <a name="remarks"></a>Uwagi  
 
-Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
 

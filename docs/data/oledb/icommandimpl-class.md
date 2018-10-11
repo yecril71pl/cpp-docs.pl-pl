@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041470"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082816"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
-Udostępnia implementację dla [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) interfejsu.  
+Udostępnia implementację dla [ICommand](/previous-versions/windows/desktop/ms709737) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
   
 ### <a name="remarks"></a>Uwagi  
 
-Zobacz [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -189,7 +189,7 @@ Standardowe wartości HRESULT. Zobacz `ICommand::Execute` listę typowe wartośc
 
 Aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy, wywołania różnych `CreateRowset` z poziomu `Execute`.  
   
-Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) w *OLE DB Podręcznik programisty.*  
+Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty.*  
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -207,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 
@@ -228,7 +228,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobacz [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Zobacz [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
 

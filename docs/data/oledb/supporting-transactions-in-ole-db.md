@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102790"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083700"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
 
@@ -33,11 +33,11 @@ A [transakcji](../../data/transactions-mfc-data-access.md) to sposób grupowania
   
 OLE DB obsługuje transakcji z trzech poniższych metod:  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [Metody ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [Metody ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relacja między sesjami i transakcji  
 
@@ -59,7 +59,7 @@ Wywoływanie `ITransaction::Commit` lub `ITransaction::Abort` kończy się trans
   
 ## <a name="nested-transactions"></a>Transakcje zagnieżdżone  
 
-A [zagnieżdżonych transakcji](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.  
+A [zagnieżdżonych transakcji](/previous-versions/windows/desktop/ms716985) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transakcje rozproszone  
 

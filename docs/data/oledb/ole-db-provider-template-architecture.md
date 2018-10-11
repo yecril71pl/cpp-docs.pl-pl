@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078897"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082998"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
 
@@ -50,7 +50,7 @@ Szablony dostawców OLE DB zapewniają to wstępnie spakowane zestawy implementa
   
 Należy pamiętać, szablony dostawców OLE DB nie należy implementować wiersza i przechowywania obiektów.  
   
-Poniższa tabela zawiera listę obowiązkowych i opcjonalnych interfejsów obiektów wymienione powyżej, zgodnie z opisem w [OLE DB 2.6 dokumentacji zestawu SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Poniższa tabela zawiera listę obowiązkowych i opcjonalnych interfejsów obiektów wymienione powyżej, zgodnie z opisem w [OLE DB 2.6 dokumentacji zestawu SDK](/previous-versions/windows/desktop/ms722784).  
   
 |Składnik|Interface|Komentarz|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ Więcej informacji znajduje się w następujących tematach:
 ## <a name="see-also"></a>Zobacz też  
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB interfejsów](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[OLE DB interfejsów](/previous-versions/windows/desktop/ms709709)

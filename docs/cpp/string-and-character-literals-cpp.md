@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038558"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083323"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Uniwersalne nazwy znaków nie może zakodować wartości w zakresie punkt kodu D800 DFFF zastępczy. Dla pary zastępcze Unicode, należy określić nazwę znaki uniwersalne za pomocą `\UNNNNNNNN`, gdzie NNNNNNNN jest punkt 8 cyfrowym kodem znaku. Kompilator generuje parę zastępczą, jeśli jest to wymagane.
 
-W języku C ++ 03 język tylko podzestaw znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków mogą oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Ten problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno literały znakowe i i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji na temat uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji dotyczących par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+W języku C ++ 03 język tylko podzestaw znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków mogą oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Ten problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno literały znakowe i i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji na temat uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [Unicode](https://msdn.microsoft.com/library/dd374081). Aby uzyskać więcej informacji dotyczących par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Literały ciągu
 
