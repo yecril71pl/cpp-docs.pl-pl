@@ -144,7 +144,7 @@
 ### [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)
 ### [Formatowanie danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Typowe makra dla właściwości i poleceń kompilacji](common-macros-for-build-commands-and-properties.md)
-## [Pliki projektu](project-files.md)
+## [Przykładowy plik projektu](project-files.md)
 ## [Przewodnik: kompilowanie programu C++ przeznaczonego dla CLR w Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Projektowanie aplikacji w języku C++ w środowisku Visual Studio IDE](using-the-visual-studio-ide-for-cpp-desktop-development.md)
 ## [Przewodnik: praca z projektami i rozwiązaniami (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)

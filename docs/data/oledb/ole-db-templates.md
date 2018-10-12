@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60c7e33a0a486bf0880b06a2eb159ba02300dec7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f828f21ebdb841d4eca1bb168f908543f990e94
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118248"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082673"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 
@@ -41,7 +41,7 @@ Zawiera łącza do klas szablonów dostawców OLE DB, wymienionych według użyc
 [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 W tym artykule opisano, co to jest OLE DB, a w tym artykule omówiono Uniwersalny dostęp do danych w OLE DB.  
   
-[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
+[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643)  
 Zawiera łącza do dokumentacji zestawu Windows SDK dla OLE DB.  
   
 [Przykłady szablonów OLE DB](../../visual-cpp-samples.md)<br/>

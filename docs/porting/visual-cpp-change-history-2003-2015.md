@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821546"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083986"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -282,7 +282,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 - **clock**
 
-   W poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja została zaimplementowana za pomocą interfejsu API Windows [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). Ta implementacja clock — funkcja było wrażliwe na czas systemowy i nie jest zatem niekoniecznie monotoniczny. Clock — funkcja ma zostać reimplemented pod względem [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i teraz jest monotoniczny.
+   W poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja została zaimplementowana za pomocą interfejsu API Windows [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). Ta implementacja clock — funkcja było wrażliwe na czas systemowy i nie jest zatem niekoniecznie monotoniczny. Clock — funkcja ma zostać reimplemented pod względem [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i teraz jest monotoniczny.
 
 - **fstat — i _utime**
 
@@ -2545,7 +2545,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Amortyzacja opartego na atrybutach Obsługa kodu biblioteki ATL** (poziom 1 (`/W1`) na domyślnie)
 
-   Poprzednie wersje kompilatora obsługiwane opartego na atrybutach kodu biblioteki ATL. Jako do następnej fazy Rezygnacja z obsługi ATL z atrybutami kod, który [rozpoczął się w programie Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), opartego na atrybutach kodu biblioteki ATL jest przestarzałe. Kompilator generuje teraz C4467, aby ułatwić zidentyfikowanie tego rodzaju przestarzały kod ostrzeżenia kompilatora.
+   Poprzednie wersje kompilatora obsługiwane opartego na atrybutach kodu biblioteki ATL. Jako do następnej fazy Rezygnacja z obsługi ATL z atrybutami kod, który [rozpoczął się w programie Visual Studio 2008](https://msdn.microsoft.com/library/bb384632), opartego na atrybutach kodu biblioteki ATL jest przestarzałe. Kompilator generuje teraz C4467, aby ułatwić zidentyfikowanie tego rodzaju przestarzały kod ostrzeżenia kompilatora.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
