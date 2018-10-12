@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102042"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163702"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator, klasa
 
@@ -156,7 +156,7 @@ VectorViewIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorViewIterator jest równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `VectorViewIterator` jest równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; — Operator
 
@@ -176,11 +176,11 @@ VectorViewIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorViewIterator jest większa niż `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorViewIterator jest większa niż *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= — Operator
 
-Wskazuje, czy bieżący VectorViewIterator jest większa niż lub równa określonej VectorViewIterator.
+Wskazuje, czy bieżący `VectorViewIterator` jest większa niż lub równa określonej `VectorViewIterator`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -196,7 +196,7 @@ VectorViewIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorViewIterator jest większa niż lub równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `VectorViewIterator` jest większa niż lub równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-increment"></a>  VectorViewIterator::operator ++ — Operator
 
@@ -237,7 +237,7 @@ VectorViewIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorViewIterator nie jest równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `VectorViewIterator` nie jest równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; — Operator
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Inny `VectorIterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator jest mniejsza niż `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `VectorIterator` jest mniejsza niż *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= — Operator
 
-Wskazuje, czy bieżący VectorIterator jest mniejsza niż lub równa określonej VectorIterator.
+Wskazuje, czy bieżący `VectorIterator` jest mniejsza lub równa określonej `VectorIterator`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Inny `VectorIterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` czy bieżący VectorIterator jest mniejszy niż lub równe `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `VectorIterator` jest mniejsza niż lub równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-minus"></a>  VectorViewIterator::operator-— Operator
 

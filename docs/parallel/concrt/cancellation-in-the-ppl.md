@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427007"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163806"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 
@@ -91,7 +91,7 @@ Aby zainicjować anulowanie, należy wywołać [concurrency::cancellation_token_
 
 - Aby uzyskać `task` obiekty, używają [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkcji. `cancel_current_task` Anuluje bieżące zadanie i wszystkich jego kontynuacji na podstawie wartości. (Nie powoduje anulowania anulowania *tokenu* która jest skojarzona z zadaniem lub jego kontynuacji.)
 
-- Dla grup zadań i algorytmów równoległych, należy użyć [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkcję, aby wykryć anulowania i jak najszybciej zwrócić z treści zadania, gdy ta funkcja zwraca `true`. (Nie należy wywoływać metody `cancel_current_task` z grupy zadań.)
+- Dla grup zadań i algorytmów równoległych, należy użyć [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkcję, aby wykryć anulowania i jak najszybciej zwrócić z treści zadania, gdy ta funkcja zwraca **true** . (Nie należy wywoływać metody `cancel_current_task` z grupy zadań.)
 
 Poniższy przykład pokazuje pierwszy podstawowy wzorzec anulowania zadania. Treść zadania okresowo sprawdza, czy anulowania wewnątrz pętli.
 
