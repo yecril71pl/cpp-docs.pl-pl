@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386733"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163494"
 ---
 # <a name="sourceblock-class"></a>source_block — Klasa
 
@@ -237,7 +237,7 @@ Metoda zgłasza [invalid_argument](../../../standard-library/invalid-argument-cl
 
 Metoda zgłasza [bad_target —](bad-target-class.md) wyjątek Jeśli parametr `_PTarget` nie reprezentuje element docelowy o nazwie `reserve`.
 
-`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą `true`.
+`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą **true**.
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ Wskaźnik do bloku docelowego, która wywołuje `reserve` metody.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
+**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.
+**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
+Po `reserve` jest wywoływana, jeśli zwróci ona **true**, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

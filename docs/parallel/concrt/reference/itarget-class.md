@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412018"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163715"
 ---
 # <a name="itarget-class"></a>ITarget — Klasa
 
@@ -67,7 +67,7 @@ Typ danych ładunku w wiadomościach zaakceptowane przez blok docelowy.
 |----------|-----------------|
 |[propagate](#propagate)|W przypadku przesłonięcia w klasie pochodnej, asynchronicznie przekazuje komunikat z blok źródłowy do tego bloku docelowego.|
 |[Wyślij](#send)|W przypadku przesłonięcia w klasie pochodnej, synchronicznie przekazuje komunikat do bloku docelowego.|
-|[supports_anonymous_source](#supports_anonymous_source)|Po przesłonięciu w klasie pochodnej zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, który nie jest połączony do niego. Jeśli zwraca przeciążonej `true`, element docelowy nie mogą odkładać komunikat oferowane jako zużycia odroczony komunikat w późniejszym czasie wymaga źródła rozpoznawane w jego sourse łącze rejestru.|
+|[supports_anonymous_source](#supports_anonymous_source)|Po przesłonięciu w klasie pochodnej zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, który nie jest połączony do niego. Jeśli zwraca przeciążonej **true**, element docelowy nie mogą odkładać komunikat oferowane jako zużycia odroczony komunikat w późniejszym czasie wymaga źródła rozpoznawane w jego sourse łącze rejestru.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -174,7 +174,7 @@ Gdy `send` zwraca komunikat albo już zostały zaakceptowane i przesłane do blo
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source —
 
-Po przesłonięciu w klasie pochodnej zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, który nie jest połączony do niego. Jeśli zwraca przeciążonej `true`, element docelowy nie mogą odkładać komunikat oferowane jako zużycia odroczony komunikat w późniejszym czasie wymaga źródła rozpoznawane w jego sourse łącze rejestru.
+Po przesłonięciu w klasie pochodnej zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, który nie jest połączony do niego. Jeśli zwraca przeciążonej **true**, element docelowy nie mogą odkładać komunikat oferowane jako zużycia odroczony komunikat w późniejszym czasie wymaga źródła rozpoznawane w jego sourse łącze rejestru.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli blok może zaakceptować komunikat ze źródła, która nie jest połączona z jej `false` inaczej.
+**wartość true,** Jeśli blok może zaakceptować komunikat ze źródła, która nie jest połączona z jej **false** inaczej.
 
 ##  <a name="unlink_source"></a> unlink_source
 

@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428151"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163351"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 
@@ -118,7 +118,7 @@ Odwołanie do danych do wysłania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został zaakceptowany, zanim metoda zwróciła, `false` inaczej.
+**wartość true,** Jeśli komunikat został zaakceptowany, zanim metoda zwróciła, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli anuluje grupy zadań, która jest aktualnie wykonywana `false` inaczej.
+**wartość true,** Jeśli anuluje grupy zadań, która jest aktualnie wykonywana **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -687,7 +687,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie k
 Wystąpienie alokatora pamięci zgodne standardowej biblioteki języka C++.
 
 *_Func*<br/>
-Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca `true` po spełnieniu oraz `false` Jeśli nie jest spełniony. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji.
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji.
 
 *_Chunk_size*<br/>
 Rozmiar minimalny fragment, zostanie ona podzielona na dwie dla przetwarzania równoległego.
@@ -1217,7 +1217,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w za
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie ma zostać posortowana.
 
 *_Func*<br/>
-Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca `true` po spełnieniu oraz `false` Jeśli nie jest spełniony. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji.
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji.
 
 *_Chunk_size*<br/>
 Rozmiar minimalny fragment, zostanie ona podzielona na dwie dla przetwarzania równoległego.
@@ -1460,7 +1460,7 @@ Odwołanie do danych do wysłania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został zaakceptowany, `false` inaczej.
+**wartość true,** Jeśli komunikat został zaakceptowany, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1613,7 +1613,7 @@ Nazwa dla danego obiektu.
 
 ##  <a name="try_receive"></a>  try_receive —
 
-Ogólny spróbuj i odbierania implementacji, umożliwiając kontekstu, aby wyszukiwać dane z dokładnie jednego źródła i filtrować wartości, które są akceptowane. Jeśli dane nie są gotowe, metoda zwróci wartość false.
+Ogólny spróbuj i odbierania implementacji, umożliwiając kontekstu, aby wyszukiwać dane z dokładnie jednego źródła i filtrować wartości, które są akceptowane. Jeśli dane nie są gotowe, który zwróci metoda **false**.
 
 ```
 template <class T>

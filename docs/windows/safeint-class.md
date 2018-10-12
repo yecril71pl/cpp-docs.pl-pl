@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235818"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163299"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
@@ -194,7 +194,7 @@ Podczas wykonywania logicznych porównania z obiektem SafeInt wynikiem porównan
 
 - `((uint)~0) > -1`
 
-Pierwsza instrukcja jest rozpoznawana jako `true`, ale druga instrukcja jest rozpoznawana jako `false`. Negacja 0 jest 0xFFFFFFFF. W drugiej instrukcji domyślny operatora porównania porównuje 0xFFFFFFFF lub 0xFFFFFFFF i traktuje je równe. Operator porównania dla `SafeInt` klasy zdaje sobie sprawę, że drugi parametr jest ujemna, pierwszy parametr jest niepodpisany. W związku z tym, mimo że reprezentacja bit jest identyczna, `SafeInt` operatora logicznego zdaje sobie sprawę, że liczba całkowita bez znaku jest większy niż -1.
+Pierwsza instrukcja jest rozpoznawana jako **true**, ale druga instrukcja jest rozpoznawana jako `false`. Negacja 0 jest 0xFFFFFFFF. W drugiej instrukcji domyślny operatora porównania porównuje 0xFFFFFFFF lub 0xFFFFFFFF i traktuje je równe. Operator porównania dla `SafeInt` klasy zdaje sobie sprawę, że drugi parametr jest ujemna, pierwszy parametr jest niepodpisany. W związku z tym, mimo że reprezentacja bit jest identyczna, `SafeInt` operatora logicznego zdaje sobie sprawę, że liczba całkowita bez znaku jest większy niż -1.
 
 Należy zachować ostrożność, korzystając z `SafeInt` klasy wraz z `?:` operator trójargumentowy. Należy wziąć pod uwagę następujący wiersz kodu.
 

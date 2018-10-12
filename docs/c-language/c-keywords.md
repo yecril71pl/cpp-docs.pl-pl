@@ -1,7 +1,7 @@
 ---
 title: Słowa kluczowe języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860891"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161908"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -31,7 +31,7 @@ ms.locfileid: "48860891"
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|
 |**break**|**else**|**long**|**switch**|
-|**przypadek**|**enum**|**register**|**Element TypeDef**|
+|**case**|**enum**|**register**|**Element TypeDef**|
 |**char**|**extern**|**return**|**Unia**|
 |**const**|**float**|**short**|**Bez znaku**|
 |**continue**|**for**|**Podpisany**|**void**|
@@ -48,17 +48,19 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 
 |||||
 |-|-|-|-|
-|**__asm**|**DllImport**<sup>2</sup>|**__int8**|**"naked"**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**Wątek**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**DllImport**<sup>2</sup>|**__int8**<sup>3</sup>|**"naked"**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**Wątek**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> **__based** — słowo kluczowe ma ograniczone zastosowanie do 32-bitowych i 64-bitowych docelowej kompilacji.
 
 <sup>2</sup> są to specjalne identyfikatory używane z **__declspec**; ich użycie w innych kontekstach nie jest ograniczona.
 
-Rozszerzenia Microsoft są domyślnie włączone. Aby upewnić się, że Twoje programy są w pełni zgodne, możesz wyłączyć rozszerzenia Microsoft określając opcję wiersza polecenia /Za (kompiluj dla zgodności ANSI) podczas kompilacji. Gdy to zrobisz, wyłączane są słowa kluczowe specyficzne dla firmy Microsoft.
+<sup>3</sup> zgodność z poprzednimi wersjami, te słowa kluczowe są dostępne zarówno z dwoma podkreśleniami wiodącymi i pojedynczego wiodącego podkreślnika po włączeniu rozszerzeń Microsoft.
+
+Rozszerzenia Microsoft są domyślnie włączone. Aby upewnić się, że Twoje programy są w pełni zgodne, można wyłączyć rozszerzenia Microsoft określając [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) opcji podczas kompilacji. Gdy to zrobisz, wyłączane są słowa kluczowe niektóre specyficzne dla firmy Microsoft.
 
 Po włączeniu rozszerzeń Microsoft, możesz używać słów kluczowych wymienionych powyżej w swoich programach. W celu zachowania zgodności z ANSI, większość słów kluczowych jest poprzedzona podwójnym podkreśleniem. Cztery wyjątki **dllexport**, **dllimport**, **"naked"**, i **wątku**, są używane tylko z **__declspec** i w związku z tym nie wymagają wiodącego podwójnego podkreślenia. W celu zapewnienia zgodności z poprzednimi wersjami, wersje z pojedynczym podkreśleniem reszty słów kluczowych są obsługiwane.
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162922"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot — Struktura
 
@@ -111,7 +111,7 @@ Kontekst, który jest aktualnie wysyłane przez ten katalog główny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna. Wartość `true` wskazuje, że serwer proxy wątku zwróciło `Deactivate` metody w odpowiedzi na wywołanie `Activate` metody. Wartość `false` wskazuje, że serwer proxy wątku zwrócona przez metodę w odpowiedzi na zdarzenie otrzymania powiadomienia w usłudze Resource Manager. W trybie użytkownika ustalonych w harmonogramie (UMS) wątku harmonogramu to wskazuje, że elementy pojawiły się na liście uzupełniania harmonogramu i harmonogramu jest wymagana do ich obsługi.
+Wartość logiczna. Wartość **true** wskazuje, że serwer proxy wątku zwróciło `Deactivate` metody w odpowiedzi na wywołanie w celu `Activate` metody. Wartość `false` wskazuje, że serwer proxy wątku zwrócona przez metodę w odpowiedzi na zdarzenie otrzymania powiadomienia w usłudze Resource Manager. W trybie użytkownika ustalonych w harmonogramie (UMS) wątku harmonogramu to wskazuje, że elementy pojawiły się na liście uzupełniania harmonogramu i harmonogramu jest wymagana do ich obsługi.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -119,9 +119,9 @@ Metoda ta jest przydatna do tymczasowego zatrzymania wykonywania procesora wirtu
 
 Dezaktywowane procesora wirtualnego katalogu głównego, mogą wznawiać wywołaniem `Activate` metody z samym argumentem, która została przekazana do `Deactivate` metody. Usługa scheduler jest odpowiedzialny za zapewnienie, który wywołuje w celu `Activate` i `Deactivate` metody są skojarzone, ale nie są wymagane do odebrania w określonej kolejności. Resource Manager może obsługiwać odbieranie wywołanie `Activate` metoda przed otrzyma wywołanie `Deactivate` miał trafić do metody.
 
-Jeśli awakens procesora wirtualnego katalogu głównego i wartość zwrotną z elementu `Deactivate` metody jest wartością `false`, harmonogram powinien zapytania na liście uzupełniania UMS za pośrednictwem `IUMSCompletionList::GetUnblockNotifications` metody działają na te informacje, a następnie następnie wywołaj `Deactivate`ponownie metodą. Powinny to być powtarzane do czasu `Deactivate` metoda zwraca wartość `true`.
+Jeśli awakens procesora wirtualnego katalogu głównego i wartość zwrotną z elementu `Deactivate` metody jest wartością **false**, harmonogram powinien zapytania na liście uzupełniania UMS za pośrednictwem `IUMSCompletionList::GetUnblockNotifications` metody ustawy o te informacje, a następnie następnie wywołaj `Deactivate` ponownie metodą. Powinny to być powtarzane do czasu `Deactivate` metoda zwraca wartość `true`.
 
-`invalid_argument` jest generowany, jeśli argument `pContext` ma wartość `NULL`.
+`invalid_argument` jest generowany, jeśli argument `pContext` ma wartość NULL.
 
 `invalid_operation` jest generowany, jeśli nigdy nie został aktywowany procesora wirtualnego katalogu głównego, lub argument `pContext` nie reprezentuje kontekście wykonania, która została ostatnio wysyłane przez ten procesora wirtualnego katalogu głównego.
 

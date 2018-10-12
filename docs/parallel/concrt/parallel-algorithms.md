@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435002"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163403"
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
 
@@ -284,7 +284,7 @@ W tym przykładzie używa wyrażenia lambda jako funkcji wyznaczania wartości s
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-Funkcja wyznaczania wartości skrótu musi zwracać typ całkowity ([std::is_integral::value](../../standard-library/is-integral-class.md) musi być `true`). Ten typ całkowity musi być konwertowany na typ `size_t`.
+Funkcja wyznaczania wartości skrótu musi zwracać typ całkowity ([std::is_integral::value](../../standard-library/is-integral-class.md) musi być **true**). Ten typ całkowity musi być konwertowany na typ `size_t`.
 
 ###  <a name="choose_sort"></a> Wybieranie algorytmu sortowania
 

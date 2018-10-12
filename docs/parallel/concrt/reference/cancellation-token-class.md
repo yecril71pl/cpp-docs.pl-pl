@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162077"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token — Klasa
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Usuwa wywołanie zwrotne wcześniej zarejestrowane przez `register` metoda oparta na `cancellation_token_registration` obiecie zwróconym w momencie rejestracji.|
 |[is_cancelable](#is_cancelable)|Zwraca wskazanie, czy ten token może być anulowany, czy nie.|
-|[is_canceled](#is_canceled)|Zwraca `true` Jeśli token został anulowany.|
+|[is_canceled](#is_canceled)|Zwraca **true** Jeśli token został anulowany.|
 |[Brak](#none)|Zwraca token anulowania, który nigdy nie może być przedmiotem anulowania.|
 |[register_callback](#register_callback)|Rejestruje funkcję wywołania zwrotnego z tokenem. Jeśli token zostanie anulowany, nastąpi wywołanie zwrotne. Należy pamiętać, że jeśli token jest już anulowany w momencie, gdy ta metoda jest wywoływana, wywołanie zwrotne zostanie wprowadzone natychmiast synchronicznie.|
 
@@ -123,7 +123,7 @@ Wskazanie, czy ten token może być anulowany, czy nie.
 
 ##  <a name="is_canceled"></a> is_canceled —
 
-Zwraca `true` Jeśli token został anulowany.
+Zwraca **true** Jeśli token został anulowany.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość `true` , jeśli token został anulowany; w przeciwnym razie wartość `false`.
+Wartość **true** , jeśli token został anulowany; w przeciwnym razie wartość **false**.
 
 ##  <a name="none"></a> Brak
 

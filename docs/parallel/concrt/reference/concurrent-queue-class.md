@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386590"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162974"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue — Klasa
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli kolejka współbieżna był pusty w tej chwili analizujemy, `false` inaczej.
+**wartość true,** Jeśli kolejka współbieżna był pusty w tej chwili analizujemy, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -229,11 +229,11 @@ Odwołanie do lokalizację do zapisania elementu dequeued.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli element został pomyślnie dequeued `false` inaczej.
+**wartość true,** Jeśli element został pomyślnie dequeued **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli element został pomyślnie dequeued parametru `_Dest` otrzymuje wartość dequeued oryginalnej wartości, które są przechowywane w kolejce jest niszczony, a funkcja zwraca `true`. Jeśli nie było żadnych elementów do usuwania z kolejki, ta funkcja zwraca `false` bez blokowania i zawartość `_Dest` parametru są niezdefiniowane.
+Jeśli element został pomyślnie dequeued parametru `_Dest` otrzymuje wartość dequeued oryginalnej wartości, które są przechowywane w kolejce jest niszczony, a funkcja zwraca **true**. Jeśli nie było żadnych elementów do usuwania z kolejki, ta funkcja zwraca `false` bez blokowania i zawartość `_Dest` parametru są niezdefiniowane.
 
 `try_pop` jest bezpieczna pod względem współbieżności w odniesieniu do wywołania metody `push`, `try_pop`, i `empty`.
 

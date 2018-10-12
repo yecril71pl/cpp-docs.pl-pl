@@ -1,12 +1,14 @@
 ---
 title: Element __restrict | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
+- __restrict
+- _restrict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9245571e21be04cc250347f30ce8ddb464ff9b55
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076440"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163455"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +36,8 @@ Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator 
 - Gdy **element __restrict** jest używany, kompilator nie będzie propagowany właściwość alias nie zmiennej. Oznacza to Jeśli przypiszesz **element __restrict** zmiennej do innej niż**element __restrict** zmiennej, kompilator będzie nadal zezwalają na innych niż-element __restrict zmienną aliasem. To różni się od zachowania **ograniczyć** słowo kluczowe z specyfikacją C99.
 
 Ogólnie rzecz biorąc, jeśli mają wpływ na zachowanie całej funkcji, lepiej jest używać `__declspec ( restrict )` niż słowa kluczowego.
+
+W celu zgodności z poprzednimi wersjami **_restrict** jest synonimem dla **element __restrict** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 W programie Visual Studio 2015 i nowszych **element __restrict** mogą być używane na odwołań w języku C++.
 

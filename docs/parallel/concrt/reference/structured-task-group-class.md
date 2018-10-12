@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446078"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161687"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group — Klasa
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Nazwa|Opis|
 |----------|-----------------|
 |[cancel](#cancel)|Stara podjęto próbę anulowania poddrzewie pracy na tej grupy zadań. Każde zadanie zaplanowane w grupie zadań będzie uzyskać anulowane przechodni, jeśli jest to możliwe.|
-|[is_canceling](#is_canceling)|Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `structured_task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić `true`). Może być tak, `structured_task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `structured_task_group` obiektu `true` zostanie zwrócona, jak również.|
+|[is_canceling](#is_canceling)|Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `structured_task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić **true**). Może być tak, `structured_task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `structured_task_group` obiektu **true** zostanie zwrócona, jak również.|
 |[run](#run)|Przeciążone. Planuje zadanie na `structured_task_group` obiektu. Obiekt wywołujący zarządza czasem istnienia `task_handle` obiekt przekazany w `_Task_handle` parametru. Wersja, która przyjmuje parametr `_Placement` powoduje ukierunkowane wykonywania w lokalizacji określonej przez parametr tego zadania.|
 |[run_and_wait](#run_and_wait)|Przeciążone. Planuje zadania do uruchomienia wbudowanego w kontekście wywoływania przy pomocy `structured_task_group` obiekt do obsługi pełnego anulowania. Jeśli `task_handle` obiekt jest przekazywany jako parametr do `run_and_wait`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu. Funkcja następnie czeka, aż wszystkie pracować nad `structured_task_group` obiektu zostało ukończone lub zostało anulowane.|
 |[Czekaj](#wait)|Czeka, aż wszystkie pracować nad `structured_task_group` zostało zakończone lub zostało anulowane.|
@@ -97,7 +97,7 @@ Aby uzyskać więcej informacji, zobacz [anulowania](../../../parallel/concrt/ex
 
 ##  <a name="is_canceling"></a> is_canceling —
 
-Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `structured_task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić `true`). Może być tak, `structured_task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `structured_task_group` obiektu `true` zostanie zwrócona, jak również.
+Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `structured_task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić **true**). Może być tak, `structured_task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `structured_task_group` obiektu **true** zostanie zwrócona, jak również.
 
 ```
 bool is_canceling();

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163208"
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli zadanie dekoduje `IAsyncInfo` interfejsu, lub czy wywodzi się z takiego zadania `false` inaczej.
+**wartość true,** Jeśli zadanie dekoduje `IAsyncInfo` interfejsu, lub czy wywodzi się z takiego zadania **false** inaczej.
 
 ##  <a name="is_done"></a>  Task::is_done — metoda (współbieżność środowiska wykonawczego)
 
@@ -169,7 +169,7 @@ Zadanie do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli obiekty odnoszą się do różnych zadań podstawowych, a `false` inaczej.
+**wartość true,** Jeśli obiekty odnoszą się do różnych zadań podstawowych, a **false** inaczej.
 
 ##  <a name="operator_eq"></a> operator =
 
@@ -209,7 +209,7 @@ Zadanie do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli obiekty odnoszą się do tego samego zadania podstawowego, a `false` inaczej.
+**wartość true,** Jeśli obiekty odnoszą się do tego samego zadania podstawowego, a **false** inaczej.
 
 ##  <a name="scheduler"></a>  Task::Scheduler — metoda (współbieżność środowiska wykonawczego)
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378224"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163832"
 ---
 # <a name="contexts"></a>Konteksty
 
@@ -67,7 +67,7 @@ W przypadku operacji wymaga dużej mocy obliczeniowej nadsubskrypcji zazwyczaj S
 > [!NOTE]
 >  Włączyć nadsubskrypcję tylko z wątku, który został utworzony w czasie wykonywania współbieżności. Nadsubskrypcja nie obowiązuje, gdy jest wywoływana z wątku, który nie został utworzony w czasie wykonywania (w tym wątku głównego).
 
-Aby włączyć nadsubskrypcję w bieżącym kontekście, należy wywołać [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr `true`. Po włączeniu nadsubskrypcji w wątku, który został utworzony przez środowisko uruchomieniowe współbieżności powoduje środowiska uruchomieniowego utworzyć jeden dodatkowy wątek. Po wszystkich zadań, które wymagają zakończenia nadsubskrypcji wywołania `Context::Oversubscribe` z `_BeginOversubscription` parametr `false`.
+Aby włączyć nadsubskrypcję w bieżącym kontekście, należy wywołać [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr **true**. Po włączeniu nadsubskrypcji w wątku, który został utworzony przez środowisko uruchomieniowe współbieżności powoduje środowiska uruchomieniowego utworzyć jeden dodatkowy wątek. Po wszystkich zadań, które wymagają zakończenia nadsubskrypcji wywołania `Context::Oversubscribe` z `_BeginOversubscription` parametr **false**.
 
 Można włączyć nadsubskrypcję, wiele razy z bieżącego kontekstu, ale należy wyłączyć taką samą liczbę prób ją włączyć. Nadsubskrypcja może być też zagnieżdżona; oznacza to zadanie, które jest tworzony przez inne zadanie, które używa nadsubskrypcja może również nadsubskrybować kontekst. Jednakże jeśli zarówno zagnieżdżone zadanie, a jego elementem nadrzędnym należy na tym samym kontekście wywołanie prowadzące do `Context::Oversubscribe` powoduje utworzenie dodatkowy wątek.
 

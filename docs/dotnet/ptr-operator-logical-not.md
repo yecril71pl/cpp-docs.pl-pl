@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443524"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161674"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli należących do obiektu COM jest nieprawidłowa; `false` inaczej.
+**wartość true,** Jeśli należących do obiektu COM jest nieprawidłowa; **false** inaczej.
 
 ## <a name="remarks"></a>Uwagi
 
-Należących do obiektu COM jest prawidłowa, jeśli nie jest `nullptr`.
+Należących do obiektu COM jest prawidłowa, jeśli nie jest **nullptr**.
 
 ## <a name="example"></a>Przykład
 
 W tym przykładzie implementuje klasę CLR, która używa `com::ptr` opakowywać jej prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu.  `CreateInstance` Funkcja członkowska używa `operator!` Aby ustalić, czy obiekt dokumentu ma już właściciela i tworzy nowe wystąpienie tylko, jeśli obiekt jest nieprawidłowy.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

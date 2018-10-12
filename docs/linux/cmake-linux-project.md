@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
+ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821052"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120567"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -30,7 +30,7 @@ Po zainstalowaniu obciążenia języka Linux C++ dla Visual Studio Obsługa CMak
 W tym temacie założono, że masz podstawowe znajomość Obsługa CMake w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md). Aby uzyskać więcej informacji na temat narzędzia CMake, sama zobacz [kompilacji, testów i pakietów usługi oprogramowania za pomocą narzędzia CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, który obsługuje [widok elementów docelowych narzędzia CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) okienko w programie Visual Studio, pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). Jeśli Menedżer pakietów zapewnia wersji starszej niż CMake 3.8, możesz go obejść przez [tworzenia CMake ze źródła](#build-a-supported-cmake-release-from-source), lub wolisz używać standardowych CMake, możesz ją pobrać, korzystając z oficjalnego [strony pobierania narzędzia CMake](https://cmake.org/download/). 
+> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu dostarczonych przez firmę Microsoft narzędzia CMake pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
 
 ## <a name="open-a-folder"></a>Otwieranie folderu
 
@@ -118,49 +118,10 @@ Dostępne są także niektóre ustawienia opcjonalne, których można użyć, ab
 
 Te opcje umożliwiają uruchamianie poleceń w oknie zdalnego, przed i po kompilacji, a przed generowania narzędzia CMake. Mogą to być wszystkie prawidłowe polecenia w oknie zdalnego. Dane wyjściowe w potoku do programu Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Tworzenie obsługiwanych wersji CMake ze źródła
+## <a name="download-prebuilt-cmake-binaries"></a>Pobierz wstępnie utworzone narzędzia CMake plików binarnych.
 
-Minimalna wersja narzędzia CMake wymagane w sieci w systemie Linux maszyna jest 3.8 i również musi obsługiwać tryb serwera. Aby to sprawdzić, uruchom następujące polecenie:
+Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu dostarczonych przez firmę Microsoft narzędzia CMake pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
 
-```cmd
-cmake --version
-```
-
-Aby sprawdzić, czy jest włączony tryb tego serwera, uruchom polecenie:
-
-```cmd
-cmake -E capabilities
-```
-
-W danych wyjściowych, poszukaj **"serverMode": true**. Należy pamiętać, że nawet podczas kompilacji CMake ze źródła zgodnie z opisem poniżej ma sprawdzać możliwości po zakończeniu. Systemu Linux mogą mieć ograniczenia, które uniemożliwiają włączane w trybie serwera.
-
-Aby rozpocząć tworzenie CMake ze źródła w powłoce systemu Linux, upewnij się, Menedżera pakietów jest aktualny, i czy masz git i dostępne narzędzia cmake.
-
-Najpierw sklonuj źródeł narzędzia CMake z [repozytorium Microsoft CMake](https://github.com/Microsoft/CMake) której firma Microsoft zachowuje rozwidlenia obsługę narzędzia CMake programu Visual Studio:
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-Następnie Aby skompilować i zainstaluj bieżącą wersję cmake do /usr/local/bin, uruchom następujące polecenia:
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-Następnie uruchom następujące polecenie, aby sprawdzić, wersja jest > = 3.8 i ten serwer jest włączony tryb:
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>Zobacz też
 

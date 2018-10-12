@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082420"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162298"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 
@@ -34,17 +34,17 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
 - "Dodawanie obsługi XML do odbiorcy" pokazuje, jak zmodyfikować kod klienta do wysyłania danych odzyskanych wierszy danych XML.  
   
 > [!NOTE]
->  Aplikacji konsumentów, opisane w tej sekcji służy do testowania dostawcy próbki MyProv i dostawcy.  
+> Aplikacji konsumentów, opisane w tej sekcji służy do testowania dostawcy próbki MyProv i dostawcy.  
   
 > [!NOTE]
->  Aby skompilować aplikację konsumenta, aby przetestować MyProv (tego samego dostawcy opisanego w [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musi zawierać Obsługa zakładek, zgodnie z opisem w "Dodawanie Obsługa zakładek do użytkownika."  
+> Aby skompilować aplikację konsumenta, aby przetestować MyProv (tego samego dostawcy opisanego w [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musi zawierać Obsługa zakładek, zgodnie z opisem w "Dodawanie Obsługa zakładek do użytkownika."  
   
 > [!NOTE]
->  Aby skompilować aplikację klienta, aby przetestować dostawcy, opuszczenie Obsługa zakładek, opisane w "Dodawanie zakładki pomocy technicznej do odbiorcy", a następnie przejdź do "Dodawanie XML Support konsumenta."  
+> Aby skompilować aplikację klienta, aby przetestować dostawcy, opuszczenie Obsługa zakładek, opisane w "Dodawanie zakładki pomocy technicznej do odbiorcy", a następnie przejdź do "Dodawanie XML Support konsumenta."  
   
 ## <a name="retrieving-data-with-the-consumer"></a>Trwa pobieranie danych z konsumentem  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Aby zmodyfikować aplikację konsolową używać konsumenta OLE DB  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Aby zmodyfikować aplikację konsolową używać konsumenta OLE DB  
   
 1. W MyCons.cpp Zmień głównego kodu, wstawiając pogrubioną czcionką w następujący sposób:  
   
@@ -94,9 +94,9 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
 - Dane wyjściowe wiersza zakładką, dołączenie jej do końca pliku.  
   
 > [!NOTE]
->  Jeśli używasz tej aplikacji klienta do testowania Przykładowa aplikacja dostawcy dostawcy Opuść Obsługa zakładek, opisane w tej sekcji.  
+> Jeśli używasz tej aplikacji klienta do testowania Przykładowa aplikacja dostawcy dostawcy Opuść Obsługa zakładek, opisane w tej sekcji.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Aby utworzyć wystąpienie zakładki  
+### <a name="to-instantiate-the-bookmark"></a>Aby utworzyć wystąpienie zakładki  
   
 1. Metoda dostępu musi zawierać obiektu typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr określa rozmiar buforu zakładki w bajtach (zwykle 4 dla platform 32-bitowe) i 8 na platformach 64-bitowych. Do elementów członkowskich danych kolumny w klasie rekord użytkownika, należy dodać następującą deklarację:  
   
@@ -111,7 +111,7 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Żądanie kolumnę zakładki z dostawcy  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Żądanie kolumnę zakładki z dostawcy  
   
 1. Dodaj następujący kod w `GetRowsetProperties` metody w klasie rekordu użytkownika:  
   
@@ -125,7 +125,7 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Aby dodać wpis zakładki do mapy kolumny  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Aby dodać wpis zakładki do mapy kolumny  
   
 1. Dodaj następujący wpis do mapy kolumny w klasie rekord użytkownika:  
   
@@ -139,7 +139,7 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Aby użyć zakładki w kodzie głównego  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Aby użyć zakładki w kodzie głównego  
   
 1. W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób. Aby użyć zakładek, trzeba utworzyć swój własny obiektu zakładki głównego kodu (`myBookmark`); jest to zakładki innego niż ten, w metodzie dostępu (`m_bookmark`).  
   
@@ -184,7 +184,7 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakład
 
 Zgodnie z opisem w [uzyskiwania dostępu do danych XML](../../data/oledb/accessing-xml-data.md), istnieją dwa sposoby, aby pobrać dane XML ze źródła danych: za pomocą [cstreamrowset —](../../data/oledb/cstreamrowset-class.md) lub za pomocą [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). W tym przykładzie użyto `CStreamRowset`, który jest bardziej wydajne, ale wymagane jest posiadanie programu SQL Server 2000 uruchomionej na komputerze, w którym są wykonywane tej przykładowej aplikacji.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Aby zmodyfikować klasy polecenia, aby dziedziczyć cstreamrowset —  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Aby zmodyfikować klasy polecenia, aby dziedziczyć cstreamrowset —  
   
 1. W aplikacji konsumentów, została wcześniej utworzona, należy zmienić swoje `CCommand` deklaracji, aby określić `CStreamRowset` jako zestaw wierszy klasy w następujący sposób:  
   
@@ -224,7 +224,7 @@ Zgodnie z opisem w [uzyskiwania dostępu do danych XML](../../data/oledb/accessi
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Aby zmodyfikować głównego kodu do pobierania i zwracania danych XML  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Aby zmodyfikować głównego kodu do pobierania i zwracania danych XML  
   
 1. W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób:  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30efbfa9c7c9b4be0c9b92e4ec5300a9c4313cb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448326"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163637"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry — Klasa
 
@@ -125,7 +125,7 @@ Wskaźnik do bloku, który ma zostać wyszukany w `single_link_registry` obiektu
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli link został znaleziony, `false` inaczej.
+**wartość true,** Jeśli link został znaleziony, **false** inaczej.
 
 ##  <a name="count"></a> Liczba
 
@@ -154,7 +154,7 @@ Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli łącze zostało znalezione i usuwane, `false` inaczej.
+**wartość true,** Jeśli łącze zostało znalezione i usuwane, **false** inaczej.
 
 ##  <a name="ctor"></a> single_link_registry —
 

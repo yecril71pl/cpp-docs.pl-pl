@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162285"
 ---
 # <a name="message-passing-functions"></a>Funkcje przekazywania komunikatów
 
@@ -41,9 +41,9 @@ W tym temacie opisano następujące funkcje przekazywania komunikatów:
 
 [Concurrency::send](reference/concurrency-namespace-functions.md#send) funkcja wysyła komunikat do określonego celu synchronicznie i [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkcja wysyła komunikat do określonego celu asynchronicznie. Zarówno `send` i `asend` funkcje poczekaj na docelowym wskazuje, że go będzie ostatecznie zaakceptować lub odrzucić komunikat.
 
-`send` Funkcja oczekuje na obiekt docelowy zaakceptuje lub odrzuci komunikat to przed zwróceniem. `send` Funkcja zwraca `true` jeżeli zostało dostarczone wiadomości i `false` inaczej. Ponieważ `send` funkcja działa synchronicznie, `send` funkcji czeka, aż element docelowy do odbierania wiadomości, przed jego zwracaniem.
+`send` Funkcja oczekuje na obiekt docelowy zaakceptuje lub odrzuci komunikat to przed zwróceniem. `send` Funkcja zwraca **true** jeżeli zostało dostarczone wiadomości i **false** inaczej. Ponieważ `send` funkcja działa synchronicznie, `send` funkcji czeka, aż element docelowy do odbierania wiadomości, przed jego zwracaniem.
 
-Z drugiej strony `asend` funkcja nie czeka na docelowym zaakceptować lub odrzucić wiadomości, przed jego zwracaniem. Zamiast tego `asend` funkcja zwraca `true` Jeśli element docelowy zaakceptuje wiadomość, a ostatecznie spowoduje przejście. W przeciwnym razie `asend` zwraca `false` aby wskazać, czy element docelowy odrzucenia wiadomości lub odroczone decyzja o tym, czy komunikat o.
+Z drugiej strony `asend` funkcja nie czeka na docelowym zaakceptować lub odrzucić wiadomości, przed jego zwracaniem. Zamiast tego `asend` funkcja zwraca **true** Jeśli element docelowy zaakceptuje wiadomość, a ostatecznie spowoduje przejście. W przeciwnym razie `asend` zwraca **false** aby wskazać, czy element docelowy odrzucenia wiadomości lub odroczone decyzja o tym, czy komunikat o.
 
 [[Górnej](#top)]
 

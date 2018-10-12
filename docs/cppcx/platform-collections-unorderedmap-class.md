@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105838"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162350"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap — Klasa
 
@@ -163,7 +163,7 @@ Klucz, używana do lokalizowania elementu UnorderedMap. Typ *klucz* jest typenam
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+**wartość true,** Jeśli klucz został znaleziony; w przeciwnym razie **false**.
 
 ## <a name="insert"></a>  Unorderedmap::INSERT — metoda
 
@@ -188,7 +188,7 @@ Część wartości pary klucz wartość. Typ *wartość* jest typename *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz istniejącego elementu w bieżącym planie odpowiada *klucz* a część wartości tego elementu jest ustawiona na *wartość*. `false` Jeśli nie istniejącego elementu w mapie bieżący pasuje *klucz* i *klucz* i *wartość* parametry są wykonywane w pary klucz wartość i następnie dodawane do bieżącego UnorderedMap.
+**wartość true,** czy pasuje do klucza istniejącego elementu w bieżącym planie *klucz* a część wartości tego elementu jest ustawiona na *wartość*. **FALSE** Jeśli pasuje żaden istniejący element w bieżącym planie *klucz* i *klucz* i *wartość* parametry są wykonywane w pary klucz wartość, a następnie dodane do Bieżący UnorderedMap.
 
 ## <a name="lookup"></a>  Unorderedmap::LOOKUP — metoda
 

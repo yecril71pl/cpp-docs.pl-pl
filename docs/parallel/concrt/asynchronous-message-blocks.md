@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388488"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163429"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloki komunikatów asynchronicznych
 
@@ -307,7 +307,7 @@ Współbieżność::[timer, klasa](../../parallel/concrt/reference/timer-class.m
 
 `timer` Klasy wysyła komunikat do tylko jednego obiektu docelowego. Jeśli ustawisz `_PTarget` parametr w Konstruktorze w `NULL`, później możesz określić obiektu docelowego przez wywołanie metody [concurrency::ISource::link_target](reference/source-block-class.md#link_target) metody.
 
-A `timer` obiektów, które mogą być powtarzające się lub niepowtarzający. Aby utworzyć powtarzające się czasomierz, należy przekazać `true` dla `_Repeating` parametru podczas wywoływania konstruktora. W przeciwnym razie przekazania `false` dla `_Repeating` parametr w celu utworzenia niepowtarzający czasomierz. Jeśli powtarza czasomierz wysyła tę samą wiadomość do jego element docelowy po każdym interwale.
+A `timer` obiektów, które mogą być powtarzające się lub niepowtarzający. Aby utworzyć powtarzające się czasomierz, należy przekazać **true** dla `_Repeating` parametru podczas wywoływania konstruktora. W przeciwnym razie przekazania **false** dla `_Repeating` parametr w celu utworzenia niepowtarzający czasomierz. Jeśli powtarza czasomierz wysyła tę samą wiadomość do jego element docelowy po każdym interwale.
 
 Tworzy biblioteki agentów `timer` obiekty w stanie-started. Aby rozpocząć obiektu timer, należy wywołać [concurrency::timer::start](reference/timer-class.md#start) metody. Aby zatrzymać `timer` obiektów, zniszczenie obiektu lub wywołanie [concurrency::timer::stop](reference/timer-class.md#stop) metody. Aby wstrzymać czasomierza powtarzające się, należy wywołać [concurrency::timer::pause](reference/timer-class.md#pause) metody.
 

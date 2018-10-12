@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163143"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy — Struktura
 
@@ -124,7 +124,7 @@ Określa, czy subskrypcja bieżący wątek i uwzględnić go podczas alokacji za
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`IExecutionResource` Interfejsu dla bieżącego wątku, jeśli parametr `doSubscribeCurrentThread` ma wartość `true`. Jeśli wartość jest `false`, metoda zwraca `NULL`.
+`IExecutionResource` Interfejsu dla bieżącego wątku, jeśli parametr `doSubscribeCurrentThread` ma wartość **true**. Jeśli wartość jest **false**, metoda zwraca wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -132,7 +132,7 @@ Przed harmonogramu wykonuje żadnych działań, ta metoda powinna korzystać do 
 
 Menedżer zasobów przyznaje zasobów do harmonogramu przez wywołanie metody [ischeduler::addvirtualprocessors —](ischeduler-structure.md#addvirtualprocessors) listę głównych procesorów wirtualnych. Metoda jest wywoływana jako wywołanie zwrotne w ramach harmonogramu zadań, zanim ta metoda zwraca wartość.
 
-Jeśli harmonogram żądane subskrypcji dla bieżącego wątku przez ustawienie dla parametru `doSubscribeCurrentThread` do `true`, metoda zwraca `IExecutionResource` interfejsu. Subskrypcja musi być zakończona w dowolnym momencie za pomocą [iexecutionresource::REMOVE —](iexecutionresource-structure.md#remove) metody.
+Jeśli harmonogram żądane subskrypcji dla bieżącego wątku przez ustawienie dla parametru `doSubscribeCurrentThread` do **true**, metoda zwraca `IExecutionResource` interfejsu. Subskrypcja musi być zakończona w dowolnym momencie za pomocą [iexecutionresource::REMOVE —](iexecutionresource-structure.md#remove) metody.
 
 Podczas określania, które wątków sprzętu są zaznaczone, Menedżer zasobów będzie podejmować próby Optymalizuj dla procesora koligacji węzłów. Jeśli subskrypcja jest wymagany dla bieżącego wątku, jest wskazanie, że bieżący wątek nie chce uczestniczyć w pracach przypisane do tego harmonogramu. W takim przypadku przydzielone procesory wirtualne katalogi główne znajdują się w węźle procesora, do którego bieżący wątek jest wykonywany, jeśli jest to możliwe.
 

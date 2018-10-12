@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163260"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
 
@@ -96,11 +96,11 @@ Wynik, który ma ustawione to zdarzenie z.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Metoda ta zwraca `true` Jeśli pomyślnie ustawiła zdarzenie. Zwraca `false` Jeśli zdarzenie jest już ustawiona.
+Metoda ta zwraca **true** Jeśli pomyślnie ustawiła zdarzenie. Zwraca **false** Jeśli zdarzenie jest już ustawiona.
 
 ### <a name="remarks"></a>Uwagi
 
-Obecności wielu lub współbieżnych wywołań `set`, tylko pierwsze wywołanie zostanie wykonane pomyślnie i jego wynik (jeśli istnieje), które będą przechowywane na zdarzenie zakończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia zakończenia zadania, wszystkie zadania utworzone na podstawie że zdarzenia zostaną natychmiast ukończone, a jego kontynuacje, jeśli istnieje, zostanie zaplanowana. Obiekty ukończenia, które mają zadań `_ResultType` innych niż `void` przekazują wartość do ich kontynuacji.
+Obecności wielu lub współbieżnych wywołań `set`, tylko pierwsze wywołanie zostanie wykonane pomyślnie i jego wynik (jeśli istnieje), które będą przechowywane na zdarzenie zakończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia zakończenia zadania, wszystkie zadania utworzone na podstawie że zdarzenia zostaną natychmiast ukończone, a jego kontynuacje, jeśli istnieje, zostanie zaplanowana. Obiekty ukończenia, które mają zadań `_ResultType` innych niż **void** przekazują wartość do ich kontynuacji.
 
 ##  <a name="set_exception"></a> set_exception
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392971"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163572"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Porady: używanie nadsubskrypcji do przesuwania opóźnienia
 
@@ -30,7 +30,7 @@ Nadsubskrypcja może zwiększyć ogólną wydajność niektórych aplikacji, kt�
 
 W tym przykładzie użyto [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) pobierać pliki z serwerami HTTP. `http_reader` Klasa pochodzi od [concurrency::agent](../../parallel/concrt/reference/agent-class.md) i używa komunikatów przekazywania do asynchronicznego odczytu nazwy adresu URL, których można pobrać.
 
-`http_reader` Klasy używa [concurrency::task_group](reference/task-group-class.md) klasy, które można jednocześnie odczytać każdego pliku. Każde zadanie wywołuje [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr `true` Aby włączyć nadsubskrypcję w bieżącym kontekście. Każde zadanie wykorzystuje następnie Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) i [CHttpFile](../../mfc/reference/chttpfile-class.md) klasy, aby pobrać plik. Na koniec każdego zadania wywołuje `Context::Oversubscribe` z `_BeginOversubscription` parametr `false` wyłączyć nadsubskrypcji.
+`http_reader` Klasy używa [concurrency::task_group](reference/task-group-class.md) klasy, które można jednocześnie odczytać każdego pliku. Każde zadanie wywołuje [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr **true** Aby włączyć nadsubskrypcję w bieżącym kontekście. Każde zadanie wykorzystuje następnie Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) i [CHttpFile](../../mfc/reference/chttpfile-class.md) klasy, aby pobrać plik. Na koniec każdego zadania wywołuje `Context::Oversubscribe` z `_BeginOversubscription` parametr **false** wyłączyć nadsubskrypcji.
 
 Po włączeniu nadsubskrypcji środowisko uruchomieniowe tworzy jeden dodatkowy wątek do uruchamiania zadań. Każdy z tych wątków również oversubscribe bieżącego kontekstu, a tym samym utworzyć dodatkowe wątki. `http_reader` Klasy używa [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu, aby ograniczyć liczbę wątków, z których korzysta aplikacja. Agent inicjuje buforu ze stałą liczbą wartości tokenu. Dla każdej operacji pobierania agenta odczytuje wartość tokenu z buforu, zanim operacja rozpoczyna się, a następnie zapisuje wartości powrót do buforu po zakończeniu operacji. Jeśli bufor jest pusty, agent będzie czekał jednej z operacji pobierania do zapisania wartości z powrotem do buforu.
 
@@ -68,7 +68,7 @@ Przykład mogą działać szybciej po włączeniu nadsubskrypcji, ponieważ doda
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `download-oversubscription.cpp` i następnie uruchom jeden z następujących poleceń w oknie wiersza polecenia programu Visual Studio.
+Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `download-oversubscription.cpp` i następnie uruchom jeden z następujących poleceń w **Visual Studio Command Prompt** okna.
 
 **Cl.exe/ehsc/MD /D "_AFXDLL" download-oversubscription.cpp**
 

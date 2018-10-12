@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161792"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Włącz funkcję _pexit Hook)
 
@@ -43,7 +43,7 @@ Wywołania `_pexit` funkcję na końcu każdej metody lub funkcji.
 Jeśli nie chcesz jawnie wywołać `_pexit`, nie należy podać prototypu. Funkcja musi znajdować się tak, jakby miał poniższy prototyp i musi wypychania zawartości wszystkich rejestrów przy uruchamianiu i pop zawartości bez zmian przy zamykaniu:
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` jest podobny do `_penter`; zobacz [/Gh (Włącz _penter funkcja podłączania)](../../build/reference/gh-enable-penter-hook-function.md) przykładem sposobu pisania `_pexit` funkcji.

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396483"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162207"
 ---
 # <a name="isource-class"></a>ISource — Klasa
 
@@ -158,7 +158,7 @@ Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
 
 ### <a name="remarks"></a>Uwagi
 
-`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą `true`.
+`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą **true**.
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ Wskaźnik do bloku docelowego, która wywołuje `reserve` metody.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
+**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 

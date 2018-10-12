@@ -1,12 +1,13 @@
 ---
 title: __assume | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405700"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163676"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ Jeśli `__assume` instrukcji jest zapisywany jako sprzeczne (wyrażenie, które 
 Użyj `__assume` w [ASERCJA](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) tylko wtedy, gdy asercja nie jest możliwe do odzyskania. Nie używaj `__assume` w assert, do której masz kod odzyskiwania kolejny błąd, ponieważ kompilator może optymalizują kodu obsługi błędu.
 
 `__assume(0)` Instrukcji jest przypadkiem szczególnym. Użyj `__assume(0)` do wskazania ścieżka kodu, która nie można nawiązać połączenia. Poniższy przykład pokazuje, jak używać `__assume(0)` do wskazania, że przypadek domyślny instrukcji switch nie można nawiązać połączenia. Pokazuje to najbardziej typowy użytkowania `__assume(0)`.
+
+W celu zgodności z poprzednimi wersjami **_assume** jest synonimem dla **__assume** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788945"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162220"
 ---
 # <a name="comptrref-class"></a>ComPtrRef — Klasa
 
@@ -176,11 +176,11 @@ Odwołanie do innego `ComPtrRef` obiekt lub wskaźnik do typu anonimowego (`void
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false`.
+Pierwszy plony operator **true** Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **false**.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* jest równa `nullptr`; w przeciwnym razie `false`.
+Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* jest równa **nullptr**; w przeciwnym razie **false**.
 
-Operatory czwarty i piąty uzyskanie `true` Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false`.
+Operatory czwarty i piąty uzyskanie **true** Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -227,11 +227,11 @@ Odwołanie do innego `ComPtrRef` obiekt lub wskaźnik do obiektu anonimowego (`v
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie `false`.
+Pierwszy plony operator **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* nie jest równa `nullptr`; w przeciwnym razie `false`.
+Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* nie jest równa **nullptr**; w przeciwnym razie **false**.
 
-Operatory czwarty i piąty uzyskanie `true` Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie `false`.
+Operatory czwarty i piąty uzyskanie **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

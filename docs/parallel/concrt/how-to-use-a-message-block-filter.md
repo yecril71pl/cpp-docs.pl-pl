@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411080"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162064"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Porady: korzystanie z filtra bloku komunikatów
 
@@ -48,7 +48,7 @@ Ponieważ `transformer` obiekt otrzymuje tylko liczby pierwsze `transformer` sam
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-`transformer` Obiektu przetwarza teraz tylko tych wartości, które są Północnej. W poprzednim przykładzie `transformer` obiektów są przetwarzane wszystkie komunikaty. Dlatego taką samą liczbę wiadomości, które wysyła musi otrzymać bit poprzedniego przykładu. W tym przykładzie użyto wynik [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcję, aby określić, ile komunikatów można otrzymywać `transformer` obiektu. `send` Funkcja zwraca `true` po buforu komunikatu zaakceptuje wiadomość i `false` po buforu komunikatu odrzuca komunikat. W związku z tym ile razy czy buforu komunikatu zaakceptuje wiadomość jest zgodna z liczbą, liczb pierwszych.
+`transformer` Obiektu przetwarza teraz tylko tych wartości, które są Północnej. W poprzednim przykładzie `transformer` obiektów są przetwarzane wszystkie komunikaty. Dlatego taką samą liczbę wiadomości, które wysyła musi otrzymać bit poprzedniego przykładu. W tym przykładzie użyto wynik [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcję, aby określić, ile komunikatów można otrzymywać `transformer` obiektu. `send` Funkcja zwraca **true** po buforu komunikatu zaakceptuje wiadomość i **false** po buforu komunikatu odrzuca komunikat. W związku z tym ile razy czy buforu komunikatu zaakceptuje wiadomość jest zgodna z liczbą, liczb pierwszych.
 
 ## <a name="example"></a>Przykład
 

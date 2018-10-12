@@ -1,7 +1,7 @@
 ---
 title: Funkcje śródwierszowe (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017824"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163598"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
 
@@ -84,7 +88,7 @@ Za pomocą wbudowanych funkcji można szybciej program ponieważ eliminuje obci�
 
 Kompilator traktuje opcje rozszerzenia wbudowane i słów kluczowych jako sugestie. Nie ma żadnej gwarancji, funkcje będą śródwierszowych. Nie można wymusić na kompilatorze wbudowane określonej funkcji, nawet w przypadku **__forceinline** — słowo kluczowe. Podczas kompilowania za pomocą **/CLR**, kompilator będzie niewyrównane funkcji w przypadku atrybutów zabezpieczeń zastosowanych do funkcji.
 
-**Wbudowane** — słowo kluczowe jest dostępne tylko w języku C++. **__Inline** i **__forceinline** słowa kluczowe są dostępne w C i C++. W celu zgodności z poprzednimi wersjami **_inline** jest synonimem dla **__inline**.
+**Wbudowane** — słowo kluczowe jest dostępne tylko w języku C++. **__Inline** i **__forceinline** słowa kluczowe są dostępne w C i C++. W celu zgodności z poprzednimi wersjami **_inline** i **_forceinline** są synonimy **__inline**, i **__forceinline** chyba że — Opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
 
 **Wbudowane** — słowo kluczowe informuje kompilator, że wbudowane rozwijanie jest preferowana. Jednak kompilator może utworzyć osobne wystąpienie funkcji (wystąpienia) i tworzenia standardowych powiązań wywoływania zamiast Wstawianie kod inline. Są dwa przypadki, w których taka sytuacja może wystąpić:
 

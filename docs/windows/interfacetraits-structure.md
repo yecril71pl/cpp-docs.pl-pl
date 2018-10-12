@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a50203f8e709a24293598b29e41b3220d5e9af5a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f140522e3697a427f66c88a2b9f6a53d40f2f8ad
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788730"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162142"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits — Struktura
 
@@ -129,7 +129,7 @@ Jeśli operacja zakończy się pomyślnie, *ppv* wskazuje interfejs określony p
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli operacja zakończy się pomyślnie i *ptr* jest rzutowany na wskaźnik do `Base`; w przeciwnym razie `false` .
+**wartość true,** Jeśli operacja zakończy się pomyślnie i *ptr* jest rzutowany na wskaźnik do `Base`; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

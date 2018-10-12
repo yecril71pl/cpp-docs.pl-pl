@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381676"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162512"
 ---
 # <a name="combinable-class"></a>combinable — Klasa
 
@@ -61,7 +61,7 @@ Typ danych scalonych wynik końcowy. Typ musi mieć Konstruktor kopiujący i dom
 |[Usuń zaznaczenie](#clear)|Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.|
 |[Łączenie](#combine)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.|
 |[combine_each](#combine_each)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.|
-|[lokalne](#local)|Przeciążone. Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.|
+|[local](#local)|Przeciążone. Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parametry
 
 *_Exists*<br/>
-Odwołanie na wartość logiczną. Wartość logiczna, odwołuje się ten argument jest równa `true` Jeśli obliczenie podrzędne już istnieje w tym wątku i ustaw `false` , jakby to była pierwszym obliczeń podrzędnych w tym wątku.
+Odwołanie na wartość logiczną. Wartość logiczna, odwołuje się ten argument jest równa **true** Jeśli obliczenie podrzędne już istnieje w tym wątku i ustaw **false** , jakby to była pierwszym obliczeń podrzędnych w tym wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 

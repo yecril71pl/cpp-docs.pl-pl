@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396938"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163390"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 
@@ -180,7 +180,7 @@ Jeśli to możliwe, nie wykonuj operacji blokowania przed wywołaniem [concurren
 
 Gdy zadanie wykonuje cooperative, blokowanie operacji, środowisko uruchomieniowe może wykonywać inne zadania, gdy pierwsze zadanie czeka na dane. Środowisko uruchomieniowe zmieni ustalony zadanie oczekujące, gdy jej odblokowuje. Środowisko uruchomieniowe zwykle zmienia harmonogram zadań, które były bardziej ostatnio odblokowany przed jej zmienia harmonogram zadań, które były mniejsza, ostatnio odblokowane. W związku z tym środowisko uruchomieniowe można zaplanować niepotrzebne pracy podczas operacji blokowania, co prowadzi do obniżenie wydajności. W związku z tym podczas wykonywania operacji blokowania przed anulowaniu czynności równoległej, blokowanie operacji można opóźnić wywołanie `cancel`. To powoduje, że inne zadania do wykonania pracy niepotrzebne.
 
-Rozważmy następujący przykład, który definiuje `parallel_find_answer` funkcji, która wyszukuje element podana tablica, która spełnia podane funkcji predykatu. Gdy funkcja predykatu zwraca `true`, tworzy równoległy funkcja pracy `Answer` obiektu i anuluje całego zadania.
+Rozważmy następujący przykład, który definiuje `parallel_find_answer` funkcji, która wyszukuje element podana tablica, która spełnia podane funkcji predykatu. Gdy funkcja predykatu zwraca **true**, tworzy równoległy funkcja pracy `Answer` obiektu i anuluje całego zadania.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102554"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162389"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator, klasa
 
@@ -157,7 +157,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator jest równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorIterator jest równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; — Operator
 
@@ -176,7 +176,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator jest większa niż `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorIterator jest większa niż *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;= — Operator
 
@@ -195,7 +195,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator jest większa niż lub równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorIterator jest większa niż lub równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-increment"></a>  VectorIterator::operator ++ — Operator
 
@@ -235,7 +235,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator nie jest równa `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorIterator nie jest równa *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than"></a>  VectorIterator::operator&lt; — Operator
 
@@ -254,7 +254,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący VectorIterator jest mniejsza niż `other`; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące VectorIterator jest mniejsza niż *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;= — Operator
 
@@ -273,7 +273,7 @@ VectorIterator innego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` czy bieżący VectorIterator jest mniejszy niż lub równe `other`; w przeciwnym razie `false`.
+**wartość true,** czy bieżący VectorIterator jest mniejszy niż lub równe *innych*; w przeciwnym razie **false**.
 
 ## <a name="operator-minus"></a>  VectorIterator::operator-— Operator
 

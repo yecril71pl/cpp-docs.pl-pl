@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 68f85794c8d70d642295f9125ac45311df29f16e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494455"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163520"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
 
@@ -112,14 +112,14 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*object*  
+*object*<br/>
 Obiekt, którego funkcja członkowska jest program obsługi zdarzeń.
 
-*— Metoda*  
+*— Metoda*<br/>
 Funkcja elementu członkowskiego parametru *obiektu* oznacza to program obsługi zdarzeń.
 
-*Wydania*  
-Określ `true` umożliwiające wywołanie bazowego [modułu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release) metody; w przeciwnym razie określ `false`.
+*Wydania*<br/>
+Określ **true** umożliwiające wywołanie bazowego [modułu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release) metody; w przeciwnym razie określ **false**.
 
 ## <a name="methodreleasenotifier-object"></a>Module::methodreleasenotifier:: object_ —
 

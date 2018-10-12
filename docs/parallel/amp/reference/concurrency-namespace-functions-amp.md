@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441918"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163416"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeni nazw współbieżności (AMP)
 
@@ -92,7 +92,7 @@ Wartość ma być przechowywany w lokalizacji pamięci określonej w przez `_Des
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli operacja się powiedzie; w przeciwnym razie `false`.
+**wartość true,** Jeśli operacja się powiodła się; w przeciwnym razie **false**.
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange — funkcja (C++ AMP)
 

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acecf3697b793d52079d4f55176717e3f6f2d5c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4d4638bafdf512caf7eeff6b95e53f9f0b1adeea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109930"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163936"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
 
@@ -112,7 +112,7 @@ Klucz, używana do lokalizowania elementu. Typ `key` jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+**wartość true,** Jeśli klucz został znaleziony; w przeciwnym razie **false**.
 
 ## <a name="lookup"></a>  Unorderedmapview::LOOKUP — metoda
 

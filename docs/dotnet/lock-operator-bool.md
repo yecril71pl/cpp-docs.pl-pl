@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424732"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161778"
 ---
 # <a name="lockoperator-bool"></a>lock::operator — wartość logiczna
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli blokada jest używana, `false` inaczej.
+**wartość true,** Jeśli blokada jest używana, **false** inaczej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten operator faktycznie konwertuje `_detail_class::_safe_bool` co jest bezpieczniejszy niż `bool` , ponieważ nie można przekonwertować na typ całkowitoliczbowy.
+Ten operator faktycznie konwertuje `_detail_class::_safe_bool` co jest bezpieczniejszy niż **bool** , ponieważ nie można przekonwertować na typ całkowitoliczbowy.
 
 ## <a name="example"></a>Przykład
 
 W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

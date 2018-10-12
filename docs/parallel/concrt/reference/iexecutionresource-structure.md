@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390269"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162402"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource — Struktura
 
@@ -79,7 +79,7 @@ Bieżący poziom subskrypcji.
 
 Poziom subskrypcji informuje, jak wiele wątków uruchomionych są skojarzone z wątków sprzętu. Obejmuje to tylko wątki, Menedżer zasobów jest znane w formie subskrybowanego wątków i korzeni procesora wirtualnego, wykonywanych aktywnie proxy wątku.
 
-Wywołanie metody [ischedulerproxy::subscribecurrentthread —](ischedulerproxy-structure.md#subscribecurrentthread), lub metody [ischedulerproxy::requestinitialvirtualprocessors —](ischedulerproxy-structure.md#requestinitialvirtualprocessors) z parametrem `doSubscribeCurrentThread` ustawiona na wartość `true`zwiększa poziom subskrypcji wątku sprzętu za pomocą jednej. Zwracają także `IExecutionResource` interfejs reprezentujący subskrypcji. Do odpowiedniego wywołania [iexecutionresource::REMOVE —](#remove) zmniejsza o jeden poziom subskrypcji wątku sprzętu za pomocą jednej.
+Wywołanie metody [ischedulerproxy::subscribecurrentthread —](ischedulerproxy-structure.md#subscribecurrentthread), lub metody [ischedulerproxy::requestinitialvirtualprocessors —](ischedulerproxy-structure.md#requestinitialvirtualprocessors) z parametrem `doSubscribeCurrentThread` ustawiona na wartość **true** zwiększa poziom subskrypcji wątku sprzętu za pomocą jednej. Zwracają także `IExecutionResource` interfejs reprezentujący subskrypcji. Do odpowiedniego wywołania [iexecutionresource::REMOVE —](#remove) zmniejsza o jeden poziom subskrypcji wątku sprzętu za pomocą jednej.
 
 Działanie procesora wirtualnego katalogu głównego przy użyciu metody aktywacji [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) zwiększa poziom subskrypcji wątku sprzętu za pomocą jednej. Metody [ivirtualprocessorroot::Deactivate —](ivirtualprocessorroot-structure.md#deactivate), lub [iexecutionresource::REMOVE —](#remove) zmniejszyć poziom subskrypcji za pomocą jednej po wywołaniu na aktywowanego procesora wirtualnego katalogu głównego.
 

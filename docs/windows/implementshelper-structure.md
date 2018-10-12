@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 574d0dbf6a252f65dd6c15681a243ce0e4086f0e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d734e98d8d7713451be1a16e08e58676f2b0cde4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163689"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper — Struktura
 
@@ -52,7 +52,7 @@ Pola flagi, które określa co najmniej jeden [RuntimeClassType](../windows/runt
 Lista identyfikatorów interfejsu.
 
 *IsDelegateToClass*<br/>
-Określ `true` Jeśli bieżące wystąpienie `Implements` będąca klasą bazową identyfikator pierwszego interfejsu w *IList*; w przeciwnym razie `false`.
+Określ **true** Jeśli bieżące wystąpienie `Implements` będąca klasą bazową identyfikator pierwszego interfejsu w *IList*; w przeciwnym razie **false**.
 
 ## <a name="remarks"></a>Uwagi
 

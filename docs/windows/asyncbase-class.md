@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861957"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162935"
 ---
 # <a name="asyncbase-class"></a>AsyncBase — Klasa
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący stan operacji asynchronicznej jest *pracę*, co oznacza, że operacja powinno być kontynuowane. W przeciwnym razie `false`, co oznacza, że operacja należy wstrzymać.
+**wartość true,** Jeśli bieżący stan operacji asynchronicznej jest *pracę*, co oznacza, że operacja powinno być kontynuowane. W przeciwnym razie **false**, co oznacza, że operacja należy wstrzymać.
 
 ## <a name="currentstatus"></a>Asyncbase::currentStatus —
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli operacja asynchroniczna została ukończona; w przeciwnym razie `false`.
+**wartość true,** Jeśli operacja asynchroniczna została ukończona; w przeciwnym razie **false**.
 
 ## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
 
@@ -547,7 +547,7 @@ Błąd HRESULT.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli stan wewnętrzny błąd został zmieniony; w przeciwnym razie `false`.
+**wartość true,** Jeśli stan wewnętrzny błąd zostało zmienione; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

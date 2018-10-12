@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106417"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162545"
 ---
 # <a name="platformstring-class"></a>Platform::String, klasa
 
@@ -240,7 +240,7 @@ Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `str` jest taki sam jak bieżący obiekt; w przeciwnym razie `false`.
+**wartość true,** Jeśli `str` jest taki sam jak bieżący obiekt; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący obiekt ciągu jest `null` lub pusty ciąg znaków (L""); w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżący `String` obiekt jest **null** lub pusty ciąg znaków (L""); w przeciwnym razie **false**.
 
 ## <a name="isfastpass"></a>  Metoda String::IsFastPass
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli bieżący obiekt ciągu jest fast przeszłości; w przeciwnym razie `false`.
+**wartość true,** Jeśli bieżące `String` obiekt jest w przeszłości fast; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -294,7 +294,7 @@ W wywołaniu funkcji, której obiekt zliczonych odwołań jest parametrem i wywo
 
 ## <a name="length"></a>  Metoda String::length
 
-Pobiera liczbę znaków w bieżącym obiekcie String.
+Pobiera liczbę znaków w bieżącym `String` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków w bieżącym obiekcie String.
+Liczba znaków w bieżącym `String` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -337,7 +337,7 @@ Drugi `String` obiektu, którego zawartość zostanie dołączona do `str1`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `str1` jest równa `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli *str1* jest równa *str2*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg obiekt do porównania.
+Pierwszy `String` obiekt do porównania.
 
 *str2*<br/>
-Obiekt drugi ciąg do porównania.
+Drugi `String` obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli zawartość `str1` są równe `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli zawartość `str1` są równe `str2`; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -371,7 +371,7 @@ Ten operator jest odpowiednikiem [String::CompareOrdinal](#compareordinal).
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-Wskazuje, czy wartość jeden obiekt na ciąg znaków jest większa niż wartość drugiej obiekt ciągu.
+Wskazuje, czy wartość jednego `String` obiekt jest większy niż wartość drugiej `String` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg obiektu.
+Pierwszy `String` obiektu.
 
 *str2*<br/>
-Drugi obiekt ciągu.
+Drugi `String` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wartość `str1` jest większa niż wartość `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli wartość `str1` jest większa niż wartość `str2`; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -397,7 +397,7 @@ Ten operator jest odpowiednikiem jawne wywołanie [String::CompareOrdinal](#comp
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-Wskazuje, czy wartość jeden obiekt na ciąg znaków jest większa lub równa wartości drugiego obiektu String.
+Wskazuje, czy wartość jednego `String` obiektów jest większa niż lub równa wartości drugiego `String` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg obiektu.
+Pierwszy `String` obiektu.
 
 *str2*<br/>
-Drugi obiekt ciągu.
+Drugi `String` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wartość `str1` jest większa niż lub równa wartości `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli wartość `str1` jest większa niż lub równa wartości `str2`; w przeciwnym razie **false**.
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-Wskazuje, czy dwa obiekty ciągu określonego mają różne wartości.
+Wskazuje, czy dwa określona `String` obiekty mają różne wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg obiekt do porównania.
+Pierwszy `String` obiekt do porównania.
 
 *str2*<br/>
-Obiekt drugi ciąg do porównania.
+Drugi `String` obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `str1` nie jest równa `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli `str1` nie jest równa `str2`; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than"></a> String::operator&lt;
 
-Wskazuje, czy wartość jeden obiekt ciągu jest mniejsza niż wartość drugiego obiektu String.
+Wskazuje, czy wartość jednego `String` obiekt jest mniejszy niż wartość drugiej `String` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg obiektu.
+Pierwszy `String` obiektu.
 
 *str2*<br/>
-Drugi obiekt ciągu.
+Drugi `String` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wartość `str1` jest mniejsza niż wartość `str2`; w przeciwnym razie `false`.
+**wartość true,** Jeśli wartość *str1* jest mniejsza niż wartość *str2*; w przeciwnym razie **false**.
 
 ## <a name="ctor"></a> Konstruktor String::String
 
-Inicjuje nowe wystąpienie klasy ciągu przy użyciu kopii danych w ciągu wejściowym.
+Inicjuje nowe wystąpienie klasy `String` klasy przy użyciu kopii danych w ciągu wejściowym.
 
 ### <a name="syntax"></a>Składnia
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::toString
 
-Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.
+Zwraca `String` obiektu, którego wartość jest taka sama jak bieżący ciąg.
 
 ### <a name="syntax"></a>Składnia
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.
+Element `String` obiektu, którego wartość jest taka sama jak bieżący ciąg.
 
 ## <a name="see-also"></a>Zobacz też
 

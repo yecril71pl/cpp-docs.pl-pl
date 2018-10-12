@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e21626b9b69d1c25ca638f659b6d8cc1a850594
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2fe517809db7cecacc7a0190e0dae94ef55c35d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421222"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161193"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator — wartość logiczna
 
@@ -40,15 +40,15 @@ operator bool() const;
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli obiekt opakowany jest prawidłowy; `false` inaczej.
+**wartość true,** Jeśli obiekt opakowany jest prawidłowy; **false** inaczej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten operator faktycznie konwertuje `_detail_class::_safe_bool` co jest bezpieczniejszy niż `bool` , ponieważ nie można przekonwertować na typ całkowitoliczbowy.
+Ten operator faktycznie konwertuje `_detail_class::_safe_bool` co jest bezpieczniejszy niż **bool** , ponieważ nie można przekonwertować na typ całkowitoliczbowy.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // msl_auto_gcroot_operator_bool.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>

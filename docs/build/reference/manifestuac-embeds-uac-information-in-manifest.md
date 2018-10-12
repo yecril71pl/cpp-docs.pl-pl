@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715146"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163533"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Osadza informacje UAC w manifeście)
 
@@ -50,7 +50,7 @@ Ciąg, który zawiera `level` i `uiAccess` wartości. Aby uzyskać więcej infor
 Jedną z *asInvoker*, *highestAvailable*, lub *requireAdministrator*. Wartość domyślna to asInvoker. Aby uzyskać więcej informacji zobacz sekcję Uwagi w dalszej części tego tematu.
 
 *_uiAccess*<br/>
-`true` Jeśli chcesz, aby aplikacja, aby pominąć ochronę UI i dysków danych wejściowych do wyższych uprawnień systemu windows na pulpit. w przeciwnym razie `false`. Wartość domyślna to `false`. Ustaw `true` tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.
+**wartość true,** Jeśli chcesz, aby ją, aby pominąć ochronę UI i dysków danych wejściowych do wyższych uprawnień okien na pulpicie; w przeciwnym razie **false**. Wartość domyślna to **false**. Ustaw **true** tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.
 
 ## <a name="remarks"></a>Uwagi
 

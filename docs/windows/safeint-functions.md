@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235571"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162584"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
@@ -101,7 +101,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli żaden błąd nie wystąpi; `false` w przypadku wystąpienia błędu.
+**wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.
 
 ## <a name="safecast"></a>SafeCast
 
@@ -125,7 +125,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli żaden błąd nie wystąpi; `false` w przypadku wystąpienia błędu.
+**wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.
 
 ## <a name="safedivide"></a>SafeDivide
 
@@ -153,7 +153,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli żaden błąd nie wystąpi; `false` w przypadku wystąpienia błędu.
+**wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.
 
 ## <a name="safeequals"></a>SafeEquals
 
@@ -177,7 +177,7 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* i *u* są równe; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* i *u* są równe; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -205,7 +205,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* jest większa niż *u*; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* jest większa niż *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -233,7 +233,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* jest większa niż lub równa *u*; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* jest większa niż lub równa *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -261,7 +261,7 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* jest mniejsza niż *u*; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* jest mniejsza niż *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -289,7 +289,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* jest mniejsza niż lub równa *u*; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* jest mniejsza niż lub równa *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -321,7 +321,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli żaden błąd nie wystąpi; `false` w przypadku wystąpienia błędu.
+**wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.
 
 ## <a name="safemultiply"></a>SafeMultiply
 
@@ -373,7 +373,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *t* i *u* nie są równe; w przeciwnym razie `false`.
+**wartość true,** Jeśli *t* i *u* nie są równe; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -405,4 +405,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli żaden błąd nie wystąpi; `false` w przypadku wystąpienia błędu.
+**wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.

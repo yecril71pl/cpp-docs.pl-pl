@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437745"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162194"
 ---
 # <a name="event-class"></a>event — Klasa
 
@@ -167,7 +167,7 @@ Tablica zdarzeń oczekiwania. Liczba zdarzeń w tablicy jest wskazywana przez `c
 Liczba zdarzeń w tablicy dostarczana w `_PPEvents` parametru.
 
 *_FWaitAll*<br/>
-Jeśli ustawiona na wartość `true`, parametr określa, że wszystkie zdarzenia w tablicy dostarczanej w `_PPEvents` parametru muszą być sygnalizowane, aby spełniać oczekiwanie. Jeśli ustawiona na wartość `false`, określa, że każde zdarzenie w tablicy dostarczanej w `_PPEvents` parametr, który jest sygnalizowany, będzie spełniać oczekiwania.
+Jeśli ustawiona na wartość **true**, parametr określa, że wszystkie zdarzenia w tablicy dostarczanej w `_PPEvents` parametru muszą być sygnalizowane, aby spełniać oczekiwanie. Jeśli ustawiona na wartość **false**, określa, że każde zdarzenie w tablicy dostarczanej w `_PPEvents` parametr, który jest sygnalizowany, będzie spełniać oczekiwania.
 
 *_Limit czasu*<br/>
 Wskazuje liczbę milisekund przed upływem limitu czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza brak limitu czasu.
@@ -181,7 +181,7 @@ Jeśli czas oczekiwania był zadawalający, indeks w tablicy dostarczany w `_PPE
 Jeśli parametr `_FWaitAll` jest ustawiona na wartość `true` wskazujący, że wszystkie zdarzenia muszą być sygnalizowane, aby zaspokoić oczekiwania, wskaźnik zwracany przez funkcję niesie ze sobą nie specjalnego znaczenie poza tym, że nie jest wartością `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
->  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait_for_multiple` na wątku ASTA, ponieważ to wywołanie może zablokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.
+> W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait_for_multiple` na wątku ASTA, ponieważ to wywołanie może zablokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.
 
 ## <a name="see-also"></a>Zobacz też
 

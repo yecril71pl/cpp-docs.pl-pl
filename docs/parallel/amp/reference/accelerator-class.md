@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375880"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163169"
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Porównuje ten `accelerator` obiekt z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.|
+|[operator!=](#operator_neq)|Porównuje ten `accelerator` obiekt z innym i zwraca **false** jeśli są one takie same; w przeciwnym razie zwraca **true**.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `accelerator` obiektu do wskazanego.|
-|[operator==](#operator_eq_eq)|Porównuje ten `accelerator` obiekt z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.|
+|[operator==](#operator_eq_eq)|Porównuje ten `accelerator` obiekt z innym i zwraca **true** jeśli są one takie same; w przeciwnym razie zwraca **false**.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -125,7 +125,7 @@ class accelerator;
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Wskazuje, czy `accelerator` obsługuje pamięć współużytkowaną.|
 |[supports_double_precision](#supports_double_precision)|Wskazuje, czy akcelerator obsługuje matematykę o podwójnej precyzji.|
 |[supports_limited_double_precision](#supports_limited_double_precision)|Wskazuje, czy akcelerator ma ograniczoną obsługę działań matematycznych podwójnej precyzji.|
-|[Wersja](#version)|Pobiera wersję `accelerator`.|
+|[version](#version)|Pobiera wersję `accelerator`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `accelerator` może zapewniać dane wyjściowe na wyświetlacz; w przeciwnym razie `false`.
+**wartość true,** Jeśli `accelerator` może zapewniać dane wyjściowe na wyświetlacz; w przeciwnym razie **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug —
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `accelerator` ma włączoną warstwę debugowanie dla obszernego raportowania błędów. W przeciwnym razie `false`.
+**wartość true,** Jeśli `accelerator` ma włączoną warstwę debugowanie dla obszernego raportowania błędów. W przeciwnym razie **false**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated —
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `accelerator` jest emulowany. W przeciwnym razie `false`.
+**wartość true,** Jeśli `accelerator` jest emulowany. W przeciwnym razie **false**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli akcelerator obsługuje udostępnione pamięci Procesora; w przeciwnym razie `false`.
+**wartość true,** Jeśli akcelerator obsługuje Procesora udostępniony pamięci; w przeciwnym razie **false**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Zwraca wartość, należy pomnożyć wartość logiczną, wskazującą, czy akcelerator obsługuje matematykę o podwójnej precyzji, w tym zespolone Dodaj (FMA), dzielenie, odwracanie i operację rzutowania pomiędzy `int` i `double`.
+Zwraca wartość, należy pomnożyć wartość logiczną, wskazującą, czy akcelerator obsługuje matematykę o podwójnej precyzji, w tym zespolone Dodaj (FMA), dzielenie, odwracanie i operację rzutowania pomiędzy **int** i **double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli akcelerator obsługuje matematykę o podwójnej precyzji; w przeciwnym razie `false`.
+**wartość true,** Jeśli akcelerator obsługuje matematykę o podwójnej precyzji; w przeciwnym razie **false**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Zwraca wartość logiczną wskazującą, czy akcelerator ma ograniczoną obsługę matematykę o podwójnej precyzji. Jeśli akcelerator obsługuje tylko ograniczone, połączone funkcjami wielokrotnie Dodaj (FMA), dzielenie, odwracanie i operację rzutowania pomiędzy `int` i `double` nie są obsługiwane.
+Zwraca wartość logiczną wskazującą, czy akcelerator ma ograniczoną obsługę matematykę o podwójnej precyzji. Jeśli akcelerator obsługuje tylko ograniczone, połączone funkcjami wielokrotnie Dodaj (FMA), dzielenie, odwracanie i operację rzutowania pomiędzy **int** i **double** nie są obsługiwane.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli akcelerator ma ograniczoną obsługę matematykę o podwójnej precyzji; w przeciwnym razie `false`.
+**wartość true,** Jeśli akcelerator ma ograniczoną obsługę matematykę o podwójnej precyzji; w przeciwnym razie **false**.
 
 ##  <a name="get_version"></a> get_version —
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> operator! =
 
-Porównuje ten `accelerator` obiekt z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.
+Porównuje ten `accelerator` obiekt z innym i zwraca **false** jeśli są one takie same; w przeciwnym razie zwraca **true**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`false` Jeśli dwa `accelerator` obiekty są takie same; w przeciwnym razie `true`.
+**FALSE** Jeśli dwa `accelerator` obiekty są takie same; w przeciwnym razie **true**.
 
 ##  <a name="operator_eq"></a> operator =
 
@@ -503,7 +503,7 @@ Odwołanie do `accelerator` obiektu.
 
 ##  <a name="operator_eq_eq"></a> operator ==
 
-Porównuje ten `accelerator` obiekt z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.
+Porównuje ten `accelerator` obiekt z innym i zwraca **true** jeśli są one takie same; w przeciwnym razie zwraca **false**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli drugi `accelerator` obiekt jest taki sam jak ten `accelerator` obiektu; w przeciwnym razie `false`.
+**wartość true,** Jeśli drugi `accelerator` obiekt jest taki sam jak ten `accelerator` obiektu; w przeciwnym razie **false**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wywołanie powiedzie się i wyznaczy akcelerator domyślny. W przeciwnym razie `false`.
+**wartość true,** Jeśli wywołanie powiedzie się i wyznaczy akcelerator domyślny. W przeciwnym razie **false**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator; w przeciwnym razie `false`.
+**wartość true,** Jeśli środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator; w przeciwnym razie **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug —
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`false` Jeśli dwa obiekty są takie same; w przeciwnym razie `true`.
+**FALSE** Jeśli dwa obiekty są takie same; w przeciwnym razie **true**.
 
 ##  <a name="operator_eq"></a> operator =
 
@@ -758,7 +758,7 @@ Odwołanie do zmodyfikowanego `accelerator_view` obiektu.
 
 ##  <a name="operator_eq_eq"></a> operator ==
 
-Porównuje ten [accelerator_view](accelerator-view-class.md) obiekt z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.
+Porównuje ten [accelerator_view](accelerator-view-class.md) obiekt z innym i zwraca **true** jeśli są one takie same; w przeciwnym razie zwraca **false**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.
+**wartość true,** Jeśli dwa obiekty są takie same; w przeciwnym razie **false**.
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

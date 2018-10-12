@@ -1,12 +1,13 @@
 ---
 title: __asm | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
 dev_langs:
 - C++
@@ -18,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dd279a6324aec6eba50c6c3b7ffe846200d45fe1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693006"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161726"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +60,8 @@ __asm int 3
 nie spowodował, że kod natywny wygenerowany, gdy skompilowano z opcją **/CLR**; kompilator przetłumaczył instrukcje do instrukcji przerwy CLR.
 
 `__asm int 3` teraz powoduje generowanie kodu natywnego dla funkcji. Jeśli chcesz, aby funkcja wywoływała przerwę w kodzie i tę funkcję skompilować do MSIL, należy użyć [__debugbreak](../../intrinsics/debugbreak.md).
+
+W celu zgodności z poprzednimi wersjami **_asm** jest synonimem dla **__asm** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../../build/reference/za-ze-disable-language-extensions.md) jest określony.
 
 ## <a name="example"></a>Przykład
 

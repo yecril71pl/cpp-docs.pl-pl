@@ -1,7 +1,7 @@
 ---
 title: Spróbuj-except, instrukcja | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162038"
 ---
 # <a name="try-except-statement"></a>try-except — instrukcja
 
@@ -89,6 +90,8 @@ Ponieważ **__except** wyrażenie jest obliczane jak wyrażenie C, zatem zostaje
 Każda aplikacja może mieć własną obsługę wyjątków.
 
 Nie jest prawidłową realizowanie **__try** instrukcji, ale dozwolone jest wyjście z niej. Obsługa wyjątków nie jest wywoływana, gdy proces zostanie zakończony w środku wykonywania wyrażenia **spróbuj — z wyjątkiem** instrukcji.
+
+W celu zgodności z poprzednimi wersjami **_try**, **_except**, i **_leave** są synonimy **__try**, **__except** , i **__leave** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
 
 ### <a name="the-leave-keyword"></a>Słowo kluczowe __leave
 

@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70663c43c6d3bc7b661f339ce679d3faf16c9aae
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235866"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162532"
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
 
@@ -199,7 +199,7 @@ Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektu lub 
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *lhs* i *rhs* parametry są równe; w przeciwnym razie `false`.
+**wartość true,** Jeśli *lhs* i *rhs* parametry są równe; w przeciwnym razie **false**.
 
 ## <a name="operator-inequality"></a>HStringReference::operator! =
 
@@ -229,7 +229,7 @@ Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektu lub 
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *lhs* i *rhs* parametry nie są równe; w przeciwnym razie `false`.
+**wartość true,** Jeśli *lhs* i *rhs* parametry nie są równe; w przeciwnym razie **false**.
 
 ## <a name="operator-less-than"></a>HStringReference::operator&lt;
 
@@ -251,4 +251,4 @@ Drugi parametr do porównania.  *RHS* może być odwołaniem do `HStringReferenc
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli *lhs* parametr jest mniejsza niż *rhs* parametru; w przeciwnym razie `false`.
+**wartość true,** Jeśli *lhs* parametr jest mniejsza niż *rhs* parametru; w przeciwnym razie **false**.

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162519"
 ---
 # <a name="agent-class"></a>agent — Klasa
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli agent został anulowany, `false` inaczej. Nie można anulować agenta, jeśli został już uruchomiony, uruchomiony lub został już ukończony.
+**wartość true,** jeśli agent został anulowany, **false** inaczej. Nie można anulować agenta, jeśli został już uruchomiony, uruchomiony lub został już ukończony.
 
 ##  <a name="done"></a> Gotowe
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli agent jest przenoszony do `agent_done` stanu, `false` inaczej. Nie można przenieść agenta, który został anulowany `agent_done` stanu.
+**wartość true,** jeśli agent jest przenoszony do `agent_done` stanu, **false** inaczej. Nie można przenieść agenta, który został anulowany `agent_done` stanu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli agent jest uruchomiony prawidłowo, `false` inaczej. Nie można uruchomić agenta, który został anulowany.
+**wartość true,** jeśli agent jest uruchomiony prawidłowo, **false** inaczej. Nie można uruchomić agenta, który został anulowany.
 
 ##  <a name="status"></a> Stan
 

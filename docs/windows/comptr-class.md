@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236000"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163234"
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 
@@ -539,9 +539,9 @@ Odwołanie do innego `ComPtr` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false`.
+Pierwszy plony operator **true** Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **false**.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* jest równa `nullptr`; w przeciwnym razie `false`.
+Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* jest równa **nullptr**; w przeciwnym razie **false**.
 
 ## <a name="operator-inequality"></a>ComPtr::operator! =
 
@@ -574,9 +574,9 @@ Odwołanie do innego `ComPtr` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie `false`.
+Pierwszy plony operator **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* nie jest równa `nullptr`; w przeciwnym razie `false`.
+Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* nie jest równa **nullptr**; w przeciwnym razie **false**.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr::operator Microsoft::WRL::Details::BoolType
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli interfejs jest skojarzony z tym `ComPtr`, adres [BoolStruct::Member](../windows/boolstruct-member-data-member.md) element członkowski danych; w przeciwnym razie `nullptr`.
+Jeśli interfejs jest skojarzony z tym `ComPtr`, adres [BoolStruct::Member](../windows/boolstruct-member-data-member.md) element członkowski danych; w przeciwnym razie **nullptr**.
 
 ## <a name="ptr"></a>ComPtr::ptr_
 

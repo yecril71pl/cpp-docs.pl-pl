@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396353"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163000"
 ---
 `unbounded_buffer` Blok komunikatów jest ona lokalizacją docelową wielu, wielu źródeł, uporządkowanych `propagator_block` można przechowywać nieograniczoną liczbę komunikatów.
 
@@ -175,7 +175,7 @@ Element do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli element został zaakceptowany, `false` inaczej.
+**wartość true,** Jeśli element został zaakceptowany, **false** inaczej.
 
 ##  <a name="link_target_notification"></a> link_target_notification —
 
@@ -274,11 +274,11 @@ virtual bool reserve_message(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.
+**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
+Po `reserve` jest wywoływana, jeśli zwróci ona **true**, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` ponieważ bloku nie odłożyć dostępne komunikaty.
+**wartość true,** ponieważ bloku nie odłożyć dostępne komunikaty.
 
 ##  <a name="ctor"></a> unbounded_buffer
 

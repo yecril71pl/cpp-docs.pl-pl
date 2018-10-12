@@ -1,12 +1,14 @@
 ---
 title: __declspec | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111326"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163591"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ Spacja oddziela sekwencje modyfikatora deklaracji. Przykłady są zamieszczone w
 Gramatyka atrybutów rozszerzonych obsługuje te atrybuty klasy magazynu specyficzne dla firmy Microsoft: [wyrównać](../cpp/align-cpp.md), [przydzielić](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [przestarzałe](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), ["naked"](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [ograniczyć](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [krokami zaradczymi dla luki](../cpp/spectre.md), i [wątku](../cpp/thread.md). Obsługuje również te atrybuty obiektu COM: [właściwość](../cpp/property-cpp.md) i [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **"naked"**, **noalias**, **nothrow** , **właściwość**, **ograniczyć**, **selectany**, **wątku**, i **uuid**atrybuty klasy magazynu są właściwości tylko dla deklaracji obiektu lub funkcji, do której są stosowane. **Wątku** atrybut ma wpływ na dane i obiekty tylko. **"Naked"** i **krokami zaradczymi dla luki** tylko funkcje mają wpływ na atrybuty. **Dllimport** i **dllexport** atrybuty mają wpływ na funkcje, dane i obiekty. **Właściwość**, **selectany**, i **uuid** atrybuty mają wpływ na obiekty COM.
+
+W celu zgodności z poprzednimi wersjami **_declspec** jest synonimem dla **__declspec** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 **__Declspec** słów kluczowych, powinny być umieszczone na początku zwykłej deklaracji. Kompilator ignoruje, bez ostrzeżenia, wszelkie **__declspec** słowa kluczowe umieszczone po * lub & i przed identyfikatorem zmiennej w deklaracji.
 

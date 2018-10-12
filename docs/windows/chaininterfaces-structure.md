@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789024"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161817"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 
@@ -117,7 +117,7 @@ Typ pochodny.
 Typ podstawowy typu pochodnego.
 
 *hasImplements*<br/>
-Wartość logiczna, że jeśli `true`, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.
+Wartość logiczna, że jeśli **true**, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -169,7 +169,7 @@ Wskaźnik do ostatniego Identyfikatora interfejsu, który został pomyślnie rzu
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wszystkie operacje rzutowania zakończyło się pomyślnie; w przeciwnym razie `false`.
+**wartość true,** Jeśli wszystkie operacje rzutowania zakończyło się pomyślnie; w przeciwnym razie **false**.
 
 ## <a name="casttounknown"></a>ChainInterfaces::CastToUnknown
 

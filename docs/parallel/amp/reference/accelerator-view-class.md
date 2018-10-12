@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399681"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163338"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view — Klasa
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.|
+|[operator!=](#operator_neq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca **false** jeśli są one takie same; w przeciwnym razie zwraca **true**.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `accelerator_view` obiektu do wskazanego.|
-|[operator==](#operator_eq_eq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.|
+|[operator==](#operator_eq_eq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca **true** jeśli są one takie same; w przeciwnym razie zwraca **false**.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -86,7 +86,7 @@ class accelerator_view;
 |[is_auto_selection](#is_auto_selection)|Pobiera wartość logiczną, wskazującą, czy środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator podczas `accelerator_view` obiekt jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[is_debug](#is_debug)|Pobiera wartość logiczną, wskazującą, czy `accelerator_view` obiekt ma włączoną warstwę debugowanie dla obszernego raportowania błędów.|
 |[queuing_mode](#queuing_mode)|Pobiera tryb kolejkowania dla `accelerator_view` obiektu.|
-|[Wersja](#version)|Pobiera wersję akceleratora.|
+|[version](#version)|Pobiera wersję akceleratora.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -183,7 +183,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator; w przeciwnym razie `false`.
+**wartość true,** Jeśli środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator; w przeciwnym razie **false**.
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug —
 
@@ -249,7 +249,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> operator! =
 
-Porównuje ten obiekt accelerator_view, z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.
+Porównuje ten obiekt accelerator_view, z innym i zwraca **false** jeśli są one takie same; w przeciwnym razie zwraca **true**.
 
 ### <a name="syntax"></a>Składnia
 
@@ -264,7 +264,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`false` Jeśli dwa obiekty są takie same; w przeciwnym razie `true`.
+**FALSE** Jeśli dwa obiekty są takie same; w przeciwnym razie **true**.
 
 ## <a name="accelerator_view__operator_eq"></a> operator =
 
@@ -287,7 +287,7 @@ Odwołanie do zmodyfikowanego `accelerator_view` obiektu.
 
 ## <a name="accelerator_view__operator_eq_eq"></a> operator ==
 
-Porównuje ten obiekt accelerator_view, z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.
+Porównuje ten obiekt accelerator_view, z innym i zwraca **true** jeśli są one takie same; w przeciwnym razie zwraca **false**.
 
 ### <a name="syntax"></a>Składnia
 
@@ -302,7 +302,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.
+**wartość true,** Jeśli dwa obiekty są takie same; w przeciwnym razie **false**.
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode
 

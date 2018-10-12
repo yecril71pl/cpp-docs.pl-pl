@@ -1,12 +1,14 @@
 ---
 title: __fastcall | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __fastcall_cpp
+- __fastcall
+- _fastcall
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e3a36c646249fe34791d6703fd0350111b4137
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa181349ab01ea2a375bacbb5e23d073a99f3f11
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099684"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161245"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -62,6 +64,8 @@ jest równoważne temu:
 ```cpp
 void __fastcall CMyClass::mymethod() { return; }
 ```
+
+W celu zgodności z poprzednimi wersjami **_fastcall** jest synonimem dla **__fastcall** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 ## <a name="example"></a>Przykład
 

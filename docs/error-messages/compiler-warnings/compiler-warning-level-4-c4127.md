@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094900"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161284"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Kompilator ostrzeżenie (poziom 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094900"
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie kontrolujące `if` instrukcji lub `while` pętli, daje w wyniku stałej. Ze względu na ich wspólne użycie idiomatyczną, począwszy od programu Visual Studio 2015 update 3, stałe prosta, taką jak 1 lub `true` nie wyzwalają ostrzeżenie, chyba że są one wynik operacji w wyrażeniu.
+Wyrażenie kontrolujące **Jeśli** instrukcji lub **podczas** pętli, daje w wyniku stałej. Ze względu na ich wspólne użycie idiomatyczną, począwszy od programu Visual Studio 2015 update 3, stałe prosta, taką jak 1 lub **true** nie wyzwalają ostrzeżenie, chyba że są one wynik operacji w wyrażeniu.
 
-Jeśli wyrażenie kontrolujące `while` pętli jest stałą, ponieważ pętli kończy działanie w środku, rozważ zastąpienie `while` pętli z `for` pętli. Można pominąć inicjowanie, test zakończenia i pętli z przyrostem `for` pętli, która powoduje, że pętla nieskończony, podobnie jak `while(1)`, i może wyjście z pętli z treści `for` instrukcji.
+Jeśli wyrażenie kontrolujące **podczas** pętli jest stałą, ponieważ pętli kończy działanie w środku, rozważ zastąpienie **podczas** pętli z **dla** pętli. Można pominąć inicjowanie, test zakończenia i pętli z przyrostem **dla** pętli, która powoduje, że pętla nieskończony, podobnie jak `while(1)`, i może wyjście z pętli z treści **dla** Instrukcja.
 
 ## <a name="example"></a>Przykład
 

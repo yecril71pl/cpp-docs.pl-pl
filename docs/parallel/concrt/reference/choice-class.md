@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414579"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163962"
 ---
 # <a name="choice-class"></a>Klasa wyboru
 
@@ -216,7 +216,7 @@ Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
 
 ### <a name="remarks"></a>Uwagi
 
-`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą `true`.
+`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą **true**.
 
 ##  <a name="has_value"></a> has_value —
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli blok otrzymał wartość `false` inaczej.
+**wartość true,** odebranie bloku ma wartość **false** inaczej.
 
 ##  <a name="index"></a> Indeks
 
@@ -315,7 +315,7 @@ Wskaźnik do bloku docelowego, która wywołuje `reserve` metody.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
+**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407599"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162168"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Dodawanie odwołań do projektów Visual C++
 
@@ -84,11 +84,11 @@ Następujące właściwości są dostępne w różnych rodzajach odwołania. Umo
 
 - **Kopiuj lokalne zestawy satelickie**
 
-   Określa, czy ma być automatycznie kopiowany zestawy satelickie przywoływanego zestawu do lokalizacji docelowej podczas kompilacji. Używany tylko, jeśli **Kopiuj lokalnie** jest `true`.
+   Określa, czy ma być automatycznie kopiowany zestawy satelickie przywoływanego zestawu do lokalizacji docelowej podczas kompilacji. Używany tylko, jeśli **Kopiuj lokalnie** jest **true**.
 
 - **Wyjście zestawu odwołania**
 
-   Określa, że ten zestaw jest używany w procesie kompilacji. Jeśli `true`, zestaw jest używany w wierszu polecenia kompilatora podczas kompilacji.
+   Określa, że ten zestaw jest używany w procesie kompilacji. Jeśli **true**, zestaw jest używany w wierszu polecenia kompilatora podczas kompilacji.
 
 ### <a name="project-to-project-reference-properties"></a>Właściwości odwołania projektu do projektu
 

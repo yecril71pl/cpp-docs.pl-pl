@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103882"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162558"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map, klasa
 
@@ -173,7 +173,7 @@ Klucz, używana do lokalizowania elementu mapy. Typ *klucz* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+**wartość true,** Jeśli klucz został znaleziony; w przeciwnym razie **false**.
 
 ## <a name="insert"></a>  Map::INSERT, metoda
 
@@ -195,7 +195,7 @@ Część wartości pary klucz wartość. Typ *wartość* jest typename *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz istniejącego elementu w bieżącym planie odpowiada *klucz* a część wartości tego elementu jest ustawiona na *wartość*. `false` Jeśli nie istniejącego elementu w mapie bieżący pasuje *klucz* i *klucz* i *wartość* parametry są wykonywane w pary klucz wartość, a następnie dodane do bieżącej mapy.
+**wartość true,** czy pasuje do klucza istniejącego elementu w bieżącym planie *klucz* a część wartości tego elementu jest ustawiona na *wartość*. **FALSE** Jeśli pasuje żaden istniejący element w bieżącym planie *klucz* i *klucz* i *wartość* parametry są wykonywane w pary klucz wartość, a następnie dodane do bieżącej mapy.
 
 ## <a name="lookup"></a>  Metoda map::LOOKUP
 

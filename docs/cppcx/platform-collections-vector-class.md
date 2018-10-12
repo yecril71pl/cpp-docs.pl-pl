@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163221"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector, klasa
 
@@ -240,11 +240,11 @@ Element do znalezienia.
 *index*<br/>
 Liczony od zera indeks elementu Jeśli parametr *wartość* jest; w przeciwnym razie 0.
 
-*Indeksu* parametru to 0, jeśli element jest pierwszy element wektora lub element nie został znaleziony. Jeśli wartość zwracana jest `true`, element został odnaleziony i jest pierwszy element; w przeciwnym razie nie znaleziono elementu.
+*Indeksu* parametru to 0, jeśli element jest pierwszy element wektora lub element nie został znaleziony. Jeśli wartość zwracana jest **true**, element został odnaleziony i jest pierwszy element; w przeciwnym razie nie znaleziono elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli określony element zostanie znaleziony; w przeciwnym razie `false`.
+**wartość true,** Jeśli określony element; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

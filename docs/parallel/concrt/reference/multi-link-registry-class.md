@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26144fe1098e932512344550864c0949e5306238
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 174a168d6a22bca54fb00bf302cd7cbbc65cc961
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162337"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry — Klasa
 
@@ -127,7 +127,7 @@ Wskaźnik do bloku, który ma zostać wyszukany w `multi_link_registry` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli określony blok został znaleziony, `false` inaczej.
+**wartość true,** Jeśli określony blok został znaleziony, **false** inaczej.
 
 ##  <a name="count"></a> Liczba
 
@@ -176,7 +176,7 @@ Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli łącze zostało znalezione i usuwane, `false` inaczej.
+**wartość true,** Jeśli łącze zostało znalezione i usuwane, **false** inaczej.
 
 ##  <a name="set_bound"></a> set_bound —
 

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9af03549eec7b62cc34aec2840764c54d2a21e
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161895"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier — Klasa
 
@@ -56,7 +56,7 @@ Nazwa                                                                           
 Nazwa                                                         | Opis
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module::ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | Po wdrożeniu, wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w module.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | Usuwa bieżący `Module::ReleaseNotifier` obiektu, jeśli obiekt został zbudowany z parametrem `true`.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | Usuwa bieżący `Module::ReleaseNotifier` obiektu, jeśli obiekt został zbudowany z parametrem **true**.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -86,7 +86,7 @@ virtual void Invoke() = 0;
 
 ## <a name="releasenotifier-release"></a>Module::ReleaseNotifier::Release
 
-Usuwa bieżący `Module::ReleaseNotifier` obiektu, jeśli obiekt został zbudowany z parametrem `true`.
+Usuwa bieżący `Module::ReleaseNotifier` obiektu, jeśli obiekt został zbudowany z parametrem **true**.
 
 ```cpp
 void Release() throw();

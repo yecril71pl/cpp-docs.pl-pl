@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436926"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162571"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
@@ -151,7 +151,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli współbieżnego wektora po lewej stronie operatora jest równy współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.
+**wartość true,** Jeśli współbieżnego wektora po lewej stronie operatora jest równy współbieżnego wektora po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -189,7 +189,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Współbieżne wektory nie są równe; `false` współbieżnych wektory są równe.
+**wartość true,** współbieżnych wektory nie są równe; **false** współbieżnych wektory są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -227,7 +227,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.
+**wartość true,** Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -265,7 +265,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż lub równe współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.
+**wartość true,** Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż lub równa współbieżnego wektora na prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -303,7 +303,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.
+**wartość true,** Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -341,7 +341,7 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż lub równy współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.
+**wartość true,** Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż lub równa współbieżnego wektora po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 

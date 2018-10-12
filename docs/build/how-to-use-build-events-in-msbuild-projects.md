@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444336"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161271"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
 
@@ -29,7 +29,7 @@ To zdarzenie kompilacji jest polecenia, który program MSBuild wykonuje na okre�
 
 Wszystkich zdarzeń kompilacji trzy jest reprezentowana w grupie definicji elementów przez command element (`<Command>`) które jest wykonywane i message element (`<Message>`) oznacza to wyświetlane, **MSBuild** wykonuje zdarzeń kompilacji. Każdy element jest opcjonalny, a jeśli określisz tego samego elementu wielokrotnie ostatniego wystąpienia ma pierwszeństwo.
 
-Opcjonalny *Użyj kompilacji* — element (`<`*zdarzenia kompilacji*`UseInBuild>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest wykonywany. Wartość zawartości *Użyj kompilacji* jest element `true` lub `false`. Domyślnie to zdarzenie kompilacji jest wykonywane, chyba że odpowiadającymi mu dostawcami *Użyj kompilacji* element jest ustawiony na wartość `false`.
+Opcjonalny *Użyj kompilacji* — element (`<`*zdarzenia kompilacji*`UseInBuild>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest wykonywany. Wartość zawartości *Użyj kompilacji* jest element **true** lub **false**. Domyślnie to zdarzenie kompilacji jest wykonywane, chyba że odpowiadającymi mu dostawcami *Użyj kompilacji* element jest ustawiony na wartość `false`.
 
 Poniższa tabela zawiera listę każdego zdarzenia kompilacji — element XML:
 

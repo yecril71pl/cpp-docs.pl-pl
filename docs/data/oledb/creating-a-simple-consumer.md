@@ -1,7 +1,7 @@
 ---
 title: Tworzenie prostego konsumenta | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860813"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163845"
 ---
 # <a name="creating-a-simple-consumer"></a>Tworzenie prostego konsumenta
 
 Użyj Kreatora projektów ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB.
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Aby utworzyć aplikację konsolową w języku dla konsumenta OLE DB
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Aby utworzyć aplikację konsolową w języku dla konsumenta OLE DB
 
 1. Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.
 
    **Nowy projekt** pojawi się okno dialogowe.
 
-1. W okienku typów projektów, kliknij przycisk **projekty języka Visual C++** folder, a następnie kliknij **projekt systemu Win32** ikonę w okienku szablonów. W **nazwa** wprowadź nazwę projektu, na przykład **MyCons**.
+1. W **typów projektów** okienku kliknij **zainstalowane** > **szablony** > **Visual C++** folderu, i następnie kliknij przycisk **Aplikacja konsoli Win32** ikonę **szablony** okienka. W **nazwa** wprowadź nazwę projektu, na przykład *MyCons*.
 
 1. Kliknij przycisk **OK**.
 
-   Zostanie wyświetlony Kreator projektu Win32.
+   Zostanie wyświetlony Kreator aplikacji Win32.
 
-1. Na **ustawienia aplikacji** wybierz opcję **aplikacji konsolowej programu**, a następnie wybierz pozycję **Dodaj obsługę ATL**.
+1. Na **ustawienia aplikacji** wybierz opcję **aplikacji konsolowej programu**, a następnie wybierz pozycję **Dodaj wspólne nagłówki dla biblioteki ATL**.
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i generowania projektu.
 
 Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE DB.
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Aby utworzyć odbiorcę z OLE DB Kreator konsumenta ATL
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Aby utworzyć odbiorcę z OLE DB Kreator konsumenta ATL
 
-1. W widoku klas kliknij prawym przyciskiem myszy `MyCons` projektu.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MyCons` projektu.
 
-1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **klasy**.
 
    **Dodaj klasę** pojawi się okno dialogowe.
 
-1. W okienku kategorii kliknij **Visual C++**, kliknij przycisk **OLE DB konsumenta ATL** ikonę w okienku szablonów, a następnie kliknij **Otwórz**.
+1. W **kategorie** okienku kliknij **zainstalowane** > **Visual C++** > **ATL**, kliknij przycisk **Konsumenta OLE DB ATL** ikonę **szablony** okienku, a następnie kliknij przycisk **Dodaj**.
 
-   Zostanie wyświetlony Kreator biblioteki ATL OLE DB konsumenta.
+   Zostanie wyświetlony Kreator konsumenta ATL OLE DB.
 
 1. Kliknij przycisk **źródła danych** przycisku.
 
@@ -64,7 +64,7 @@ Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE
 
    - Na **dostawcy** karcie, określ dostawcę OLE DB.
 
-   - Na **połączenia** karcie, określ nazwę serwera, identyfikator logowania i hasło dla źródła danych i bazy danych na serwerze.
+   - Na **połączenia** kartę, należy określić wymagane informacje, takie jak nazwa serwera, identyfikator logowania i hasło dla źródła danych i bazy danych na serwerze.
 
    > [!NOTE]
    > Występuje problem z zabezpieczeniami z **Zezwalaj na zapisywanie hasła** funkcji **właściwości Linku danych** okno dialogowe. W **wprowadź informacje, aby zalogować się do serwera**, istnieją dwa przyciski radiowe: **Użyj Windows NT zintegrowane zabezpieczenia** i **Użyj określonej nazwy użytkownika i hasła**.
@@ -79,7 +79,7 @@ Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE
 
    **Obiektu bazy danych wybierz** pojawi się okno dialogowe.
 
-1. Użyj kontrolki drzewa, aby wybrać tabeli, widoku lub procedury składowanej. Na potrzeby tej procedury należy wybierać tabeli Produkty bazy danych Northwind.
+1. Użyj kontrolki drzewa, aby wybrać tabeli, widoku lub procedury składowanej. Na potrzeby tej procedury wybierz `Products` tabeli `Northwind` bazy danych.
 
 1. Kliknij przycisk **OK**. Nastąpi powrót do ATL OLE DB konsumenta kreatora.
 

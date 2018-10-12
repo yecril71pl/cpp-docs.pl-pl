@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e1dd4aab5912b2f15e8c0b36c7e482001809099d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110860"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163910"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview, klasa
 
@@ -117,11 +117,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
-Klucz, używana do lokalizowania elementu MapView. Typ `key` jest typename *K*.
+Klucz, używana do lokalizowania elementu MapView. Typ *klucz* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+**wartość true,** Jeśli klucz został znaleziony; w przeciwnym razie **false**.
 
 ##  <a name="lookup"></a> Metoda MapView::Lookup
 
