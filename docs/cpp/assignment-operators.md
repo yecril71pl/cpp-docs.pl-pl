@@ -17,14 +17,12 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
 - '&= operator'
-- '&&= operator'
 - ^= operator
 - += operator
 - '>>= operator'
@@ -43,32 +41,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c9efaf8dc5b9f0886a697ad2b872e24264820f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017901"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307922"
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 
 ## <a name="syntax"></a>Składnia
 
-```
-expression assignment-operator expression 
-assignment-operator : one of
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
-```
+*wyrażenie* *operator przypisania* *wyrażenia*
+
+*operator przypisania* : jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * =, / = % =, +=,-= \< \<= >> = & = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją trzy rodzaje operacji przypisania:
+Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją dwa rodzaje operacji przypisania:
 
-1. Przypisanie proste, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand. 1. przydział złożony, w którym operacje arytmetyczne, przesunięcia lub operacji na poziomie bitowym są wykonywane przed zachowaniem wyniku.
-1. Przenieś przypisania (typy klas) zasoby są przenoszone bez kopiowania.
+1. *Przypisanie proste*, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand.
 
+1. *przydział złożony*, w którym operacje arytmetyczne, przesunięcia lub operacji na poziomie bitowym są wykonywane przed zachowaniem wyniku.
 
-Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = operatory są operatorami przypisania złożonego.
+Wszystkie operatory przypisania w tabeli poniżej, z wyjątkiem operatora =, są operatorami przypisania złożonego.
 
 ### <a name="assignment-operators"></a>Operatory przypisania
 
@@ -85,7 +82,6 @@ Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = oper
 |**&=**|Uzyskuje bitowe AND pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
 |**^=**|Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
 |**\|=**|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**&&=**| Operator przypisania przenoszenia (dotyczy tylko typów klasy). Jeśli drugi argument to rvalue, należy przenieść jego zasobów do pierwszego operandu (bez kopiowania ich). Zobacz [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md) Aby uzyskać więcej informacji.|
 
 **Słowa kluczowe operatora**
 
@@ -125,11 +121,11 @@ int main() {
 
 ## <a name="simple-assignment"></a>Przypisanie proste
 
-Prosty operator przypisania (=) powoduje zapisanie wartości drugiego operandu w obiekcie, który jest określony przez pierwszy operand. Jeśli oba obiekty są typami arytmetycznymi, prawy operand jest konwertowany na typ po lewej stronie, przed zachowaniem wartości.
+Prosty operator przypisania (**=**) powoduje, że wartość drugiego operandu w obiekcie określonym przez pierwszy operand. Jeśli oba obiekty są typami arytmetycznymi, prawy operand jest konwertowany na typ po lewej stronie, przed zachowaniem wartości.
 
-Obiekty typu const i volatile mogą być przypisane do l-wartości typów, które są po tylko volatile nie należą ani do typu const ani volatile.
+Obiekty **const** i **volatile** typy mogą być przypisane do l wartości typów, które są po prostu **volatile** lub które nie należą do żadnej **const** ani **volatile**.
 
-Przypisanie do obiektów klasy typów (struct, unia oraz typy klas) jest wykonywane przez funkcję o nazwie operator=. Domyślne zachowanie tej funkcji operatora ma wykonywać kopię bitową; jednak to zachowanie może być modyfikowane przy użyciu przeciążonych operatorów. (Zobacz [przeciążone operatory](../cpp/operator-overloading.md) Aby uzyskać więcej informacji.)
+Przypisanie do obiektów typu klasy (struktury, Unii i typy klas) jest wykonywane przez funkcję o nazwie `operator=`. Domyślne zachowanie tej funkcji operatora ma wykonywać kopię bitową; jednak to zachowanie może być modyfikowane przy użyciu przeciążonych operatorów. Zobacz [przeciążania operatora](../cpp/operator-overloading.md) Aby uzyskać więcej informacji. Ponadto może mieć typu klasy *przypisania kopiowania* i *Przenieś przypisania* operatorów. Aby uzyskać więcej informacji, zobacz [kopiowanie konstruktorów i operatory przypisania kopiowania](copy-constructors-and-copy-assignment-operators-cpp.md) i [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md).
 
 Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy bazowej może być przypisany do obiektu klasy bazowej. Przeciwny warunek nie jest spełniony, ponieważ istnieje niejawna konwersja z klasy pochodnej do klasy bazowej, ale nie z klasy bazowej do klasy pochodnej. Na przykład:
 
@@ -186,7 +182,7 @@ B = A;
 
 może mieć jeden z następujących efektów:
 
-- Wywołanie funkcji operator= dla `UserType2`, dostarczony operator= jest podany z argumentem `UserType1`.
+- Wywołaj funkcję `operator=` dla `UserType2`, podana `operator=` jest dostarczana z `UserType1` argumentu.
 
 - Wywołanie funkcji konwersji jawnej `UserType1::operator UserType2`, jeśli istnieje taka funkcja.
 
@@ -194,13 +190,13 @@ może mieć jeden z następujących efektów:
 
 ## <a name="compound-assignment"></a>Przydział złożony
 
-Złożone operatory przypisania, jak pokazano w tabeli w [operatory przypisania](../cpp/assignment-operators.md), są określone w formie *e1* `op` =  *e2*, gdzie *e1* jest modyfikowalną l wartością nie jest typu const i *e2* jest jednym z następujących czynności:
+Złożone operatory przypisania, jak pokazano w tabeli w [operatory przypisania](#assignment-operators), są określone w formie *e1* *op*= *e2*, gdzie *e1* jest modyfikowalną l wartością nie **const** typu i *e2* jest jednym z następujących czynności:
 
 - Typ arytmetyczny
 
-- Wskaźnik, jeśli `op` jest + lub -
+- Wskaźnik, jeśli *op* jest **+** lub **-**
 
-*E1* `op` =  *e2* formularz, który zachowuje się jak *e1* *= e1* `op` *e2*, ale *e1* jest oceniane tylko raz.
+*E1* *op*= *e2* formularz, który zachowuje się jak *e1* **=** *e1* *op* *e2*, ale *e1* jest oceniane tylko raz.
 
 Przydział złożony, aby Typ wyliczany generuje komunikat o błędzie. Jeśli lewy operand jest typu wskaźnika, prawy operand musi być typem wskaźnika lub musi być wyrażeniem stałym, którego wynikiem jest 0. Jeśli lewy operand jest typu całkowitego, prawy operand nie musi być typu wskaźnika.
 

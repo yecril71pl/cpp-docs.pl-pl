@@ -2,7 +2,7 @@
 title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601395"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307909"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
@@ -41,7 +41,7 @@ Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wir
 
 Innym rozwiązaniem, w systemie Windows 10 jest aktywacja podsystemu Windows dla systemu Linux. Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows 10](/windows/wsl/install-win10).
 
-## <a name="linux-setup"></a>Konfiguracja w systemie Linux
+## <a name="linux-setup-ubuntu"></a>Konfiguracja w systemie Linux: Ubuntu
 
 Komputer docelowy z systemem Linux muszą mieć **openssh-server**, **g ++**, **gdb**, i **serwera gdbserver** zainstalowane i ssh demona musi być uruchomiona. **ZIP** jest wymagany do automatycznej synchronizacji zdalnych nagłówków z komputerze lokalnym, aby uzyskać obsługę technologii Intellisense. Jeśli te aplikacje nie są już obecne, możesz zainstalować je w następujący sposób:
 
@@ -49,10 +49,27 @@ Komputer docelowy z systemem Linux muszą mieć **openssh-server**, **g ++**, **
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   Może zostać wyświetlony o podanie hasła głównego ze względu na polecenia "sudo".  Jeśli tak, wprowadź go i kontynuować.  Po wykonaniu tych czynności, zostanie zainstalowana tych usług i narzędzi.
+   Może zostać wyświetlony o podanie hasła głównego ze względu na polecenia "sudo".  Jeśli tak, wprowadź go i kontynuować. Po wykonaniu tych czynności, wymagane usługi i narzędzia są zainstalowane.
 
 1. Upewnij się, ssh jest uruchomiona na komputerze z systemem Linux, uruchamiając:
 
    `sudo service ssh start`
 
-   Spowoduje to uruchom usługę i uruchom go w tle, gotowy do akceptowania połączeń.
+   Spowoduje to uruchomienie usługi i działa w tle, gotowy do akceptowania połączeń.
+
+## <a name="linux-setup-fedora"></a>Konfiguracja w systemie Linux: Fedora
+
+Używa docelowej maszynie Fedora **dnf** pakiet Instalatora. Aby pobrać **openssh-server**, **g ++**, **gdb**, **serwera gdbserver** i **zip**i uruchom ponownie ssh demon, wykonaj te instrukcje:
+
+1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   Może zostać wyświetlony o podanie hasła głównego ze względu na polecenia "sudo".  Jeśli tak, wprowadź go i kontynuować. Po wykonaniu tych czynności, wymagane usługi i narzędzia są zainstalowane.
+
+1. Upewnij się, ssh jest uruchomiona na komputerze z systemem Linux, uruchamiając:
+
+   `sudo systemctl start sshd`
+
+   Spowoduje to uruchomienie usługi i działa w tle, gotowy do akceptowania połączeń.
+
