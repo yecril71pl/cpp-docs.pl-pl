@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403148"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328613"
 ---
 # <a name="mfc-classes"></a>Klasy MFC
 
@@ -34,7 +34,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Klasa CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Klasa CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implementuje przyspieszenia-spowalniania przejścia.
 
 [Klasa CAnimateCtrl](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -1109,7 +1109,7 @@ Reprezentuje zestaw rekordów wybranych ze źródła danych.
 Widok wyświetlający rekordy bazy danych w kontrolkach.
 
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Podobnie jak Windows [struktura RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Podobnie jak Windows [struktura RECT](rect-structure.md).
 
 [Klasa CRectTracker](../../mfc/reference/crecttracker-class.md)<br/>
 Umożliwia, aby wyświetlany, przenoszone i zmiany rozmiaru w różnych fashions element.

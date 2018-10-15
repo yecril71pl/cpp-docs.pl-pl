@@ -1,7 +1,7 @@
 ---
-title: Boxing (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Konwersja boxing (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316721"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328015"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing (C++ Component Extensions)
+# <a name="boxing--ccli-and-ccx"></a>Konwersja boxing (C + +/ CLI i C + +/ CX)
 
-Kompilator języka Visual C++ można przekonwertować typu wartości do obiektów w procesie nazywanym *pakowania*i konwersji obiektów na typy wartości w procesie nazywanym *Rozpakowywanie*.
+Konwersja typów wartości do obiektów jest nazywany *pakowania*, i nosi nazwę konwersji obiektów na typy wartości *Rozpakowywanie*.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -86,7 +86,7 @@ Aby uzyskać więcej informacji, zobacz [Boxing (C + +/ CX)](https://msdn.micros
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Kompilator języka Visual C++, teraz typów, do wartości pola <xref:System.Object>. Jest to możliwe z powodu konwersji zdefiniowanego przez kompilator do typów wartości do przekonwertowania <xref:System.Object>.
+Typy, do wartości pola kompilatora <xref:System.Object>. Jest to możliwe z powodu konwersji zdefiniowanego przez kompilator do typów wartości do przekonwertowania <xref:System.Object>.
 
 Pakowania, jak i rozpakowania Włącz typy wartości powinien być traktowany jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, mogą być konwertowane do i z typu <xref:System.Object>.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

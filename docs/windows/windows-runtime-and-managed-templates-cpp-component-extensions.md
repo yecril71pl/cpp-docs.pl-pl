@@ -1,7 +1,7 @@
 ---
-title: Środowisko uruchomieniowe Windows i zarządzane szablony (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Środowisko wykonawcze Windows i zarządzane szablony (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591452"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328301"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Środowisko wykonawcze systemu Windows i zarządzane szablony (C++ Component Extensions)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Środowisko wykonawcze Windows i zarządzane szablony (C + +/ CLI i C + +/ CX)
 
 Szablony umożliwiają definiowanie prototyp Windows Runtime lub typ środowiska uruchomieniowego języka wspólnego i, tworzy zmian tego typu za pomocą parametrów typu inny szablon.
 
@@ -50,7 +50,7 @@ Istnieją pewne ograniczenia dotyczące tworzenia szablonów klas z typami zarz�
 
 ### <a name="examples"></a>Przykłady
 
-Istnieje możliwość utworzenia wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia zarządzanego szablonu z parametrem szablonu typu ogólnego. Jest to spowodowane typy ogólne są rozwiązywane w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Istnieje możliwość utworzenia wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia zarządzanego szablonu z parametrem szablonu typu ogólnego. Jest to spowodowane typy ogólne są rozwiązywane w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [typy ogólne i szablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

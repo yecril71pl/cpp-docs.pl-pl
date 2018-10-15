@@ -1,7 +1,7 @@
 ---
-title: New (nowe gniazdo w vtable) (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: New (nowe gniazdo w vtable) (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5dc0f490da43b4a2a2befa22f2902e7bfce51ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48351903b7827f4ad9e6d63824658e4f44e047e0
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420923"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327742"
 ---
-# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nowe gniazdo w vtable) (C++ Component Extensions)
+# <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (nowe gniazdo w vtable) (C + +/ CLI i C + +/ CX)
 
 **Nowe** słowo kluczowe wskazuje, że wirtualny element członkowski otrzyma nowe gniazdo w vtable.
 
@@ -115,5 +115,6 @@ E::f() called
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)<br/>
+
 [Specyfikatory przesłonięć](../windows/override-specifiers-cpp-component-extensions.md)

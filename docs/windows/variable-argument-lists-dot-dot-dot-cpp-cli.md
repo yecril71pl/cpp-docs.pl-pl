@@ -1,7 +1,7 @@
 ---
 title: Listy zmiennych argumentów (...) (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e95f963636e50bdf453835ee920463e6e266a2a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590466"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327807"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listy zmiennych argumentów (...) (C++/CLI)
 
-W tym przykładzie pokazano, jak za pomocą `...` składni w Visual C++ do implementacji funkcji, które mają zmienną liczbę argumentów.
+W tym przykładzie pokazano, jak za pomocą `...` składnię w języku C + +/ interfejsu wiersza polecenia, aby zaimplementować funkcje, które mają zmienną liczbę argumentów.
 
 > [!NOTE]
 > Ten temat dotyczy C + +/ interfejsu wiersza polecenia. Aby uzyskać informacje o korzystaniu z `...` w ISO Standard C++, zobacz [wielokropki i szablony Wariadyczne](../cpp/ellipses-and-variadic-templates.md) i wielokropki i argumenty domyślne w [wyrażenia przyrostków](../cpp/postfix-expressions.md).

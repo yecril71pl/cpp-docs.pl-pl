@@ -1,7 +1,7 @@
 ---
-title: safe_cast (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: safe_cast (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404218"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328483"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (C++ Component Extensions)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI i C + +/ CX)
 
 **Safe_cast** limit czasu operacji zwraca określone wyrażenie jako określony typ, jeśli to się powiedzie; w przeciwnym razie zgłasza `InvalidCastException`.
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404218"
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -132,7 +120,7 @@ Na wyrażenie obliczane do uchwytu odwołania lub typu wartości, typem wartośc
 
 ### <a name="remarks"></a>Uwagi
 
-Wyrażenie `safe_cast<` *identyfikator typu*`>(`*wyrażenie* `)` Konwertuje obiekt identyfikator typu typu wyrażenia argumentu operacji.
+Wyrażenie `safe_cast<` *identyfikator typu*`>(`*wyrażenie* `)` Konwertuje argument *wyrażenie* do obiektu typu *identyfikator typu*.
 
 Kompilator będzie akceptować [static_cast](../cpp/static-cast-operator.md) w większości miejsc, które go obsługują **safe_cast**.  Jednak **safe_cast** jest gwarantowane do produkcji weryfikowalny MSIL, gdzie jako **static_cast** może utworzyć nieweryfikowalnego MSIL.  Zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [Peverify.exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) więcej informacji na temat weryfikowalny kod.
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

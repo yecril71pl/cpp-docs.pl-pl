@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789793"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328405"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
 
-Następujące atrybuty są dostępne w programie Visual C++.
+Następujące atrybuty są dostępne w kompilatorze Microsoft C++:
 
 |Atrybut|Opis|
 |---------------|-----------------|
@@ -37,9 +37,9 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[attribute](attribute.md)|Umożliwia tworzenie atrybutów niestandardowych.|
 |[bindable](bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|
 |[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
-|[przypadek](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
+|[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Tworzy obiekt COM, które można zaimplementować interfejsu COM.|
-|[com_interface_entry —](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
 |[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
 |[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
@@ -73,22 +73,22 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[idl_quote](idl-quote.md)|Pozwala na używanie atrybutów lub IDL konstrukcji, które nie są obsługiwane w bieżącej wersji programu Visual C++.|
 |[iid_is](iid-is.md)|Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.|
 |[immediatebind](immediatebind.md)|Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.|
-|[Implementuje](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
+|[implements](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
 |[implements_category](implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|
 |[import](import.md)|Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, w których ma dotyczyć odwołanie z pliku .idl głównego.|
 |[importidl](importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|
 |[importlib](importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
 |[in](in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|
 |[include](include-cpp.md)|Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.|
-|[includelib —](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
+|[includelib](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
 |[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy mają być przekazywane.|
 |[lcid](lcid.md)|Służy do przekazywania identyfikator ustawień regionalnych do funkcji.|
 |[length_is](length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|
 |[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
 |[licensed](licensed.md)|Wskazuje, że klasa coclass, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.|
-|[lokalne](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
-|[Moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[ms_union](ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|
 |[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
@@ -97,7 +97,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[object](object-cpp.md)|Określa niestandardowy interfejs; równoznaczny z atrybutu niestandardowego.|
 |[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
 |[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
-|[Opcjonalne](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
+|[optional](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
 |[out](out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|
 |[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
 |[pragma](pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
@@ -107,7 +107,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[propputref](propputref.md)|Określa funkcję ustawienie właściwości, która używa odwołania, a nie wartość.|
 |[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
 |[public](public-cpp-attributes.md)|Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.|
-|[Zakres](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
+|[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[rdx](rdx.md)|Tworzy lub modyfikuje klucz rejestru.|
 |[readonly](readonly-cpp.md)|Zabrania przypisania do zmiennej.|
 |[ref](ref-cpp.md)|Określa odwołanie do wskaźnika.|
@@ -124,7 +124,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[switch_is](switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera składowa typu Unii.|
 |[switch_type](switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|
 |[synchronize](synchronize.md)|Synchronizuje dostęp do metody.|
-|[Wątkowość](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
+|[threading](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
 |[transmit_as](transmit-as.md)|Instruuje kompilator, aby skojarzyć typem prezentowane kompilowania aplikacji, które klient i serwer, z typem przesyłane.|
 |[uidefault](uidefault.md)|Wskazuje, że składowa informacji typu jest domyślny element członkowski do wyświetlania w interfejsie użytkownika.|
 |[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
@@ -132,12 +132,12 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|
 |[v1_enum](v1-enum.md)|Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowych zamiast domyślnego 16-bitowych.|
 |[vararg](vararg.md)|Określa, że funkcja przyjmuje zmienną liczbę argumentów.|
-|[Wersja](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji interfejsu lub klasy.|
+|[version](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji interfejsu lub klasy.|
 |[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
 |[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

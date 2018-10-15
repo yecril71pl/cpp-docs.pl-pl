@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821650"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328522"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,7 +32,7 @@ Określa Generowanie kompilatora instrukcje eliminowanie luk w zabezpieczeniach 
 
 ## <a name="remarks"></a>Uwagi
 
-**/Qspectre** opcja jest dostępna w programie Visual Studio 2017, wersja 15.5.5 później i w Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Sprawia, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
+**/Qspectre** opcja jest dostępna w programie Visual Studio 2017, wersja 15.5.5 później i w Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Sprawia, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
 
 **/Qspectre** opcja jest domyślnie wyłączona.
 

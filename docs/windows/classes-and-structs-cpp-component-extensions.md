@@ -1,7 +1,7 @@
 ---
-title: Klasy i struktury (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Klasa ref i ref struct (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448379"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328080"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Klasy i struktury (C++ Component Extensions)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Klasa ref i ref struct (C + +/ CLI i C + +/ CX)
 
-Deklaruje klasie lub strukturze którego *okres istnienia obiektu* są zarządzane automatycznie. Gdy obiekt nie jest już dostępny, lub wykracza poza zakres, Visual C++ powoduje odrzucenie na pamięć, która jest przydzielona do obiektu.
+**Klasy referencyjnej** lub **ref struct** rozszerzenia zadeklarować klasy lub struktury którego *okres istnienia obiektu* są zarządzane automatycznie. Gdy obiekt nie jest już dostępny, lub wykracza poza zakres, pamięć jest zwalniana.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -61,7 +61,7 @@ Nazwa klasy lub struktury.
 *base_type*<br/>
 (Opcjonalnie) Typ podstawowy. Jednak typ wartościowy nie może działać jako typu podstawowego.
 
-Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru w Windows środowiska uruchomieniowego i typowych Runtimesections języka.
+Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru w sekcjach środowiska uruchomieniowego Windows i środowisko uruchomieniowe języka wspólnego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -129,4 +129,4 @@ W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszyst
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

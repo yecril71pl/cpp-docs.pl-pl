@@ -1,7 +1,7 @@
 ---
-title: Zdefiniowane przez użytkownika atrybuty (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Atrybuty zdefiniowane przez użytkownika (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789231"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328444"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Atrybuty zdefiniowane przez użytkownika (C++ Component Extensions)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C + +/ CLI i C + +/ CX)
 
-Atrybutów niestandardowych, które umożliwiają poszerzanie funkcjonalności metadanych interfejsu, klasy lub struktury, metody, parametr lub wyliczenia.
-
-## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
-
-Wszystkie środowiska wykonawcze obsługuje atrybutów niestandardowych.
+C + +/ CLI i C + +/ CX umożliwiają tworzenie atrybuty specyficzne dla platformy, które rozszerzają metadane interfejsu, klasy lub struktury, metody, parametr lub wyliczenia. Te atrybuty różnią się od [standardowe atrybuty C++](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-C + +/ CX atrybuty obsługuje tylko właściwości, ale nie atrybutu konstruktorów i metod.
-
-### <a name="remarks"></a>Uwagi
+Możesz zastosować C + +/ CX atrybuty do właściwości, ale nie do konstruktorów i metod.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -43,17 +37,11 @@ C + +/ CX atrybuty obsługuje tylko właściwości, ale nie atrybutu konstruktor
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Atrybutów niestandardowych, które umożliwiają rozszerzenie metadanych elementu zarządzanego. Aby uzyskać więcej informacji, zobacz [atrybuty](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Uwagi
-
 Informacje i składni przedstawione w tym temacie jest przeznaczona do zastąpienia informacje znajdujące się w [atrybutu](attributes/attribute.md).
 
 Można zdefiniować atrybut niestandardowy typ definiujący i dokonując <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosowanie <xref:System.AttributeUsageAttribute> atrybutu.
 
-Na przykład Równoważenie obciążenia w Microsoft Transaction Server (MTS) 1.0, zachowanie w odniesieniu do transakcji, synchronizacji i itd została określona za pomocą niestandardowych identyfikatorów GUID wstawione do biblioteki typów, przy użyciu atrybutu niestandardowego ODL. Z tego powodu klient serwera MTS można określić jego właściwości, czytając biblioteki typów. W .NET Framework analogowy biblioteki typów jest metadanych, a analogowy atrybutu niestandardowego ODL jest atrybutów niestandardowych. Ponadto odczytywanie biblioteki typów jest analogiczne do typów przy użyciu odbicia.
-
-Aby uzyskać więcej informacji, zobacz,
+Aby uzyskać więcej informacji, zobacz:
 
 - [Docelowe atrybuty](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Przegląd typów ogólnych w Visual C++ | Dokumentacja firmy Microsoft
+title: Przegląd typów ogólnych w języku C + +/ interfejsu wiersza polecenia | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590941"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327859"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Przegląd typów ogólnych w Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Przegląd typów ogólnych w języku C + +/ CLI
 
 Typy ogólne są obsługiwane przez środowisko uruchomieniowe języka wspólnego typami z parametrami. Typ sparametryzowany jest typem, która jest zdefiniowana za pomocą parametru nieznany typ, który jest określony, gdy ogólnego jest używany.
 
 ## <a name="why-generics"></a>Dlaczego ogólne?
 
-Język C++ obsługuje szablony i zarówno i typy ogólne obsługuje sparametryzowanych typów do tworzenia klas typizowaną kolekcją. Jednak Szablony zapewniają parametryzacji w czasie kompilacji. Nie można odwoływać się do zestawu zawierającego definicji szablonu i utworzyć nowe specjalizacje szablonu. Po skompilowaniu wyspecjalizowane szablon wygląda jak inne klasy lub metody. Z kolei typy ogólne są emitowane w kodzie MSIL jako typ sparametryzowany znane przez środowisko uruchomieniowe jako typ sparametryzowany; Kod źródłowy, który odwołuje się do zestawu zawierającego typ ogólny, można utworzyć specjalizacje typu ogólnego. Aby uzyskać więcej informacji na porównaniu z szablonami języka Visual C++ i typami ogólnymi, zobacz [typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Język C++ obsługuje szablony i zarówno i typy ogólne obsługuje sparametryzowanych typów do tworzenia klas typizowaną kolekcją. Jednak Szablony zapewniają parametryzacji w czasie kompilacji. Nie można odwoływać się do zestawu zawierającego definicji szablonu i utworzyć nowe specjalizacje szablonu. Po skompilowaniu wyspecjalizowane szablon wygląda jak inne klasy lub metody. Z kolei typy ogólne są emitowane w kodzie MSIL jako typ sparametryzowany znane przez środowisko uruchomieniowe jako typ sparametryzowany; Kod źródłowy, który odwołuje się do zestawu zawierającego typ ogólny, można utworzyć specjalizacje typu ogólnego. Aby uzyskać więcej informacji na porównaniu standardowych szablonów języka C++ i typami ogólnymi zobacz [typy ogólne i szablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Funkcje ogólne i typów
 

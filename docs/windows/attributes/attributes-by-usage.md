@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789753"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328184"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 
 Ten temat zawiera listę atrybutów zgodnie z elementów języka C++, których dotyczą.
 
-Jeśli atrybut poprzedza element języka Visual C++, który nie znajduje się w zakresie ten atrybut, blok atrybutu jest traktowany jako komentarz.
+Jeśli atrybut poprzedza element, który nie znajduje się w zakresie ten atrybut, blok atrybutu jest traktowany jako komentarz.
 
 |Atrybut|Opis|
 |---------------|-----------------|
@@ -66,7 +66,7 @@ Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interfa
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
-|[lokalne](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[nonextensible](nonextensible.md)|Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójną](dual.md) interfejsu.|
 |[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
 |[object](object-cpp.md)|Określa niestandardowy interfejs.|
@@ -89,6 +89,6 @@ Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej sa
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>
 [Alfabetyczny spis atrybutów](attributes-alphabetical-reference.md)

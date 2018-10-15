@@ -1,7 +1,7 @@
 ---
-title: zamknięte (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: sealed (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439565"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328002"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (C++ Component Extensions)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI i C + +/ CX)
 
 **zapieczętowane** jest słowem kluczowym kontekstowych dla klasy ref, która wskazuje, że wirtualny element członkowski nie może być zastąpiona, lub typu nie można użyć jako typu podstawowego.
 
 > [!NOTE]
-> ISO C ++ 11 standardowy język ma [końcowego](../cpp/final-specifier.md) — słowo kluczowe, która jest obsługiwana w programie Visual Studio. Użyj **końcowego** na standardowych klas i **zapieczętowanego** na klasy ref.
+> ISO C ++ 11 standardowy język wprowadzone [końcowego](../cpp/final-specifier.md) — słowo kluczowe. Użyj **końcowego** na standardowych klas i **zapieczętowanego** na klasy ref.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -53,7 +53,7 @@ Typ, który jest zwracany przez funkcję.
 
 W pierwszym przykładzie składni klasa jest zapieczętowany. W drugim przykładzie funkcją wirtualną jest zapieczętowany.
 
-**Zapieczętowanego** — słowo kluczowe jest prawidłowy dla natywnych obiektów docelowych, a także dla środowiska uruchomieniowego Windows i środowisko uruchomieniowe języka wspólnego (CLR). Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Użyj **zapieczętowanego** — słowo kluczowe ref klas i ich funkcji wirtualnych elementów członkowskich. Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Można wykrywać w czasie kompilacji, czy typ jest zapieczętowany przy użyciu `__is_sealed(type)` cechy typu. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

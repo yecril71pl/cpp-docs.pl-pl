@@ -1,7 +1,7 @@
 ---
-title: Operator odwołania (C++ Component Extensions) śledzenia | Dokumentacja firmy Microsoft
+title: Operator odwołania śledzenia (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604079"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327924"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Operator odwołania śledzenia (C++ Component Extensions)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operator odwołania śledzenia (C + +/ CLI i C + +/ CX)
 
 A *odwołanie śledzenia* (`%`) zachowuje się jak zwykłe odniesienie C++ (`&`) z tą różnicą, że gdy obiekt jest przypisany do odwołania śledzenia, zwiększany jest licznik odwołań obiektu.
 

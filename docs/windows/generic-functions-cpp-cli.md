@@ -1,7 +1,7 @@
 ---
 title: Funkcje ogólne (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398862"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327703"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 
@@ -91,7 +91,7 @@ Treść metody, która może odwoływać się do identyfikatorów parametru typu
 
 Funkcje ogólne są funkcje zadeklarowane za pomocą parametru typu ogólnego. Mogą one zostać metod w funkcjach klasy lub struktury lub autonomiczne. Jednej deklaracji ogólnej niejawnie deklaruje rodzinę funkcji, które różnią się tylko w celu zastąpienia inny typ rzeczywistego parametru typu ogólnego.
 
-W programie Visual C++ Konstruktory klasy lub struktury nie mogą być deklarowane przy użyciu parametrów typu genetycznego.
+Konstruktor klasy lub struktury nie mogą być deklarowane przy użyciu parametrów typu genetycznego.
 
 Gdy zostanie wywołana, parametr typu ogólnego jest zastępowany przez rzeczywisty typ. Rzeczywisty typ może być jawnie określona w nawiasach przy użyciu składni podobnej do wywołania funkcji szablonu. Jeśli wywołana bez parametrów typu, kompilator spróbuje ustalić rzeczywisty typ z parametry podane w wywołaniu funkcji. Jeśli argument zamierzony typu nie można wywnioskować z parametrów użytych, kompilator zgłosi błąd.
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Typy ogólne](../windows/generics-cpp-component-extensions.md)

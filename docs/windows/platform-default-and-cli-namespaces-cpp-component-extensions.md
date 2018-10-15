@@ -1,7 +1,7 @@
 ---
-title: Platformy, domyślna i cli przestrzenie nazw (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Platformy, domyślna i cli przestrzenie nazw (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194652"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328028"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Przestrzeń nazw platformy, domyślna i cli (C++ Component Extensions)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platformy, domyślna i cli przestrzenie nazw (C + +/ CLI i C + +/ CX)
 
 Przestrzeń nazw kwalifikuje nazwy elementów języka, tak aby nazwy nie były sprzeczne z identycznymi nazwami zdefiniowanymi w innych miejscach w kodzie źródłowym. Na przykład kolizja nazwy może uniemożliwić kompilatorowi rozpoznawaniu [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Przestrzenie nazw są używane przez kompilator, ale nie są zachowywane w skompilowanym zestawie.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-Visual C++ zapewnia domyślną przestrzeń nazw dla projektu podczas tworzenia projektu. Można ręcznie zmień nazwę przestrzeni nazw, mimo że środowiska wykonawczego Windows, nazwa pliku winmd musi odpowiadać nazwie głównej przestrzeni nazw.
+Visual Studio zawiera domyślny obszar nazw dla projektu podczas tworzenia projektu. Można ręcznie zmienić nazwę obszaru nazw, chociaż w języku C + +/ CX nazwa pliku winmd musi odpowiadać nazwie głównej przestrzeni nazw.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

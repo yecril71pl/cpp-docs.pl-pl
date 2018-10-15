@@ -1,7 +1,7 @@
 ---
 title: Konsumowanie typów ogólnych (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589859"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327755"
 ---
 # <a name="consuming-generics-ccli"></a>Konsumowanie typów ogólnych (C++/CLI)
 
-Typy ogólne utworzonych w jednym języku .NET mogą być używane w innych językach .NET. W przeciwieństwie do szablonów ogólny w skompilowanym zestawie ciągle ogólnego. W związku z tym jeden może utworzyć wystąpienia typu rodzajowego w innym zestawie, a nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.
+Typy ogólne utworzonych w jednym języku .NET (lub platformy uniwersalnej systemu Windows) mogą być używane w innych językach. W przeciwieństwie do szablonów ogólny w skompilowanym zestawie ciągle ogólnego. W związku z tym jeden może utworzyć wystąpienia typu rodzajowego w innym zestawie, a nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.
 
 ## <a name="example"></a>Przykład
 

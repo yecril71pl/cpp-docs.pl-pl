@@ -1,7 +1,7 @@
 ---
-title: Ciąg (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Ciąg (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408404"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327432"
 ---
-# <a name="string--c-component-extensions"></a>Ciąg (C++ Component Extensions)
-
-Obsługa kompilatora Visual C++ *ciągi*, które są obiektami, które reprezentują tekstu jako sekwencja znaków. Visual C++ obsługuje zmiennych ciągu, którego wartość jest niejawny, i wszystkie literały, którego wartością jest jawne ciągów w cudzysłowach.
-
-## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
+# <a name="string--ccli-and-ccx"></a>Ciąg (C + +/ CLI i C + +/ CX)
 
 Środowisko uruchomieniowe Windows i środowisko uruchomieniowe języka wspólnego reprezentuje ciągi jako obiekty, których ilość przydzielonej pamięci odbywa się automatycznie. Oznacza to nie należy jawnie odrzucić pamięci ciągu, po zakończeniu zacznie zmiennej ciągu poza zakres lub aplikacji. Aby wskazać, że okres istnienia obiektu ciągu ma odbywać się automatycznie, należy zadeklarować typ ciągu z [uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modyfikator.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Architektura Windows Runtime wymaga Visual C++ do implementacji `String` typu danych w `Platform` przestrzeni nazw. Dla Twojej wygody Visual C++ są także `string` typ danych, który jest synonimem `Platform::String`w `default` przestrzeni nazw.
+Architektura Windows Runtime wymaga, aby `String` — typ danych znajduje się w `Platform` przestrzeni nazw. Dla Twojej wygody Visual C++ są także `string` typ danych, który jest synonimem `Platform::String`w `default` przestrzeni nazw.
 
 ### <a name="syntax"></a>Składnia
 
@@ -51,8 +47,6 @@ using namespace default;
 — Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
-
-W tym temacie omówiono, jak kompilator języka Visual C++ przetwarza Literały ciągu, po uruchomieniu przy użyciu `/clr` — opcja kompilatora. Aby użyć `/clr`, należy również użyć środowisko uruchomieniowe języka wspólnego (CLR), C + +/ składnia interfejsu wiersza polecenia i obiektów zarządzanych. Aby uzyskać więcej informacji na temat `/clr`, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 Podczas kompilowania za pomocą `/clr`, kompilator przekonwertuje literałów ciągów typu <xref:System.String>. Aby zachować zgodność z poprzednimi wersjami z istniejącym kodem są dwa wyjątki od tej reguły:
 
@@ -91,9 +85,9 @@ Poniższy przykład kodu demonstruje, łączenie i porównywanie ciągów.
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

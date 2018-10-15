@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413454"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328392"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Wskaźnik do [Prostokąt](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który opisuje (w calach 1/1000 lub mm 1/100) marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
+Wskaźnik do [Prostokąt](rect-structure.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który opisuje (w calach 1/1000 lub mm 1/100) marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
 
 *lpRectMinMargins*<br/>
 Wskaźnik do `RECT` struktury lub `CRect` obiekt, który opisuje (w calach 1/1000 lub mm 1/100), minimalna marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
@@ -351,7 +351,7 @@ Określa komunikat, wskazujący obszarze strony obecnie rysowania. Może to być
 - Obszar WM_PSD_YAFULLPAGERECT dla reprezentacji adres zwrotny. Rozszerza ten obszar do krawędzi obszaru przykładowej strony.
 
 *lprect —*<br/>
-Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) obiekt, który zawiera współrzędne obszaru.
+Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](rect-structure.md) obiekt, który zawiera współrzędne obszaru.
 
 ### <a name="return-value"></a>Wartość zwracana
 

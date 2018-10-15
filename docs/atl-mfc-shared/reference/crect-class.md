@@ -44,16 +44,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0abe16bc12052601f86cb18677b52af9b40ad15
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428502"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328587"
 ---
 # <a name="crect-class"></a>CRect, klasa
 
-Podobnie jak Windows [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.
+Podobnie jak Windows [Prostokąt](../../mfc/reference/rect-structure.md) struktury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -131,7 +131,7 @@ Podczas określania `CRect`, należy uważać, aby jego konstruowania, tak, aby 
 Należy zachować ostrożność podczas manipulacji `CRect` z [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) i [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) funkcji elementów członkowskich. Jeśli tryb mapowania kontekstu wyświetlanie jest taka, że zakres y jest ujemna, podobnie jak w `MM_LOENGLISH`, następnie `CDC::DPtoLP` przekształci `CRect` tak, aby jego górnej jest większa od dołu. Funkcje takie jak `Height` i `Size` będą zwracać wartości ujemnych dla wysokość przekształcony `CRect`, i prostokąt będzie nieznormalizowanego.  
 
 
-Kiedy przy użyciu przeciążony `CRect` operatorów, pierwszy operand musi być `CRect`; drugi może być [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiektu.
+Kiedy przy użyciu przeciążony `CRect` operatorów, pierwszy operand musi być `CRect`; drugi może być [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -260,7 +260,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpSrcRect*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który ma zostać skopiowany.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który ma zostać skopiowany.
 
 ### <a name="example"></a>Przykład
 
@@ -313,7 +313,7 @@ Określa położenie prawo `CRect`.
 Określa dolnej części `CRect`.
 
 *srcRect*  
-Odwołuje się do [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę współrzędne `CRect`.
+Odwołuje się do [Prostokąt](../../mfc/reference/rect-structure.md) strukturę współrzędne `CRect`.
 
 *lpSrcRect*  
 Wskazuje `RECT` strukturę współrzędne `CRect`.
@@ -397,7 +397,7 @@ Określa liczbę jednostek do korygowania górnej i dolnej części `CRect`.
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek do korygowania `CRect`. `cx` Wartość określa liczbę jednostek do korygowania lewej i prawej stronie i `cy` wartość określa liczbę jednostek do korygowania górny i dolny.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` , który określa liczbę jednostek do korygowania każdej stronie.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` , który określa liczbę jednostek do korygowania każdej stronie.
 
 *l*  
 Określa liczbę jednostek do korygowania po lewej stronie `CRect`.
@@ -443,7 +443,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera współrzędne górnego lewego i prawego dolnego rogu prostokąta.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera współrzędne górnego lewego i prawego dolnego rogu prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -528,7 +528,7 @@ Określa liczbę jednostek rozszerzanie górnej i dolnej części `CRect`.
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek rozszerzanie `CRect`. `cx` Wartość określa liczbę jednostek rozszerzanie lewej i prawej stronie i `cy` wartość określa liczbę jednostek, aby zwiększyć górny i dolny.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` , który określa liczbę jednostek po każdej stronie Rozszerzanie.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` , który określa liczbę jednostek po każdej stronie Rozszerzanie.
 
 *l*  
 Określa liczbę jednostek po lewej stronie Rozszerzanie `CRect`.
@@ -569,7 +569,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera prostokąta źródłowego.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera prostokąta źródłowego.
 
 *lpRect2*  
 Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera prostokąta źródłowego.
@@ -810,7 +810,7 @@ Określa, aby przesunąć w lewo lub w prawo. Musi być ujemna na Przenieś w le
 Określa, jak przenieść w górę lub w dół. Musi być ujemna na Przenieś w górę.
 
 *Punkt*  
-Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) określający oba wymiary, według którego ma zostać przeniesiona.
+Zawiera [punktu](../../mfc/reference/point-structure.md) struktury lub [CPoint](cpoint-class.md) określający oba wymiary, według którego ma zostać przeniesiona.
 
 *Rozmiar*  
 Zawiera [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) określający oba wymiary, według którego ma zostać przeniesiona.
@@ -873,7 +873,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *srcRect*  
-Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="example"></a>Przykład
 
@@ -901,7 +901,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Rect*  
-Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -947,7 +947,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Rect*  
-Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Odnosi się do prostokąta źródłowego. Może być [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -994,13 +994,13 @@ void operator+=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *Punkt*  
-A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
+A [punktu](../../mfc/reference/point-structure.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
 *Rozmiar*  
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek po każdej stronie Rozszerzanie `CRect`.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek po każdej stronie Rozszerzanie `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1037,13 +1037,13 @@ void operator-=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *Punkt*  
-A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
+A [punktu](../../mfc/reference/point-structure.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
 *Rozmiar*  
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej strony `CRect`.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej strony `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1078,7 +1078,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parametry
 
 *Rect*  
-Zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Zawiera [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1102,7 +1102,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parametry
 
 *Rect*  
-Zawiera `CRect` lub [Prostokąt](../../mfc/reference/rect-structure1.md).
+Zawiera `CRect` lub [Prostokąt](../../mfc/reference/rect-structure.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1141,13 +1141,13 @@ CRect operator+(SIZE size) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Punkt*  
-A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
+A [punktu](../../mfc/reference/point-structure.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
 *Rozmiar*  
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek rozszerzanie na każdej stronie zwracanej wartości.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek rozszerzanie na każdej stronie zwracanej wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1185,13 +1185,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Punkt*  
-A [punktu](../../mfc/reference/point-structure1.md) struktury lub `CPoint` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
+A [punktu](../../mfc/reference/point-structure.md) struktury lub `CPoint` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
 *Rozmiar*  
 A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub `CSize` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
 *lprect —*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej stronie zwracanej wartości.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej stronie zwracanej wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1227,7 +1227,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>Parametry
 
 *rect2*  
-Zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Zawiera [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1265,7 +1265,7 @@ rect2) const throw();
 ### <a name="parameters"></a>Parametry
 
 *rect2*  
-Zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect`.
+Zawiera [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1307,7 +1307,7 @@ BOOL PtInRect(POINT point) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Punkt*  
-Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiektu.
+Zawiera [punktu](../../mfc/reference/point-structure.md) struktury lub [CPoint](cpoint-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1439,7 +1439,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRectSrc1*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiektu, z którego ma być odjęta prostokąta.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) struktury lub `CRect` obiektu, z którego ma być odjęta prostokąta.
 
 *lpRectSrc2*  
 Wskazuje `RECT` struktury lub `CRect` obiekt, który jest odjęta od prostokąta wskazywany przez *lpRectSrc1* parametru.
@@ -1527,7 +1527,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*  
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) lub `CRect` zawierający prostokąta źródłowego.
+Wskazuje [Prostokąt](../../mfc/reference/rect-structure.md) lub `CRect` zawierający prostokąta źródłowego.
 
 *lpRect2*  
 Wskazuje `RECT` lub `CRect` zawierający prostokąta źródłowego.
@@ -1588,5 +1588,5 @@ int nWid = rect.Width();
 
 [CPoint, klasa](cpoint-class.md)<br/>
 [CSize, klasa](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure1.md)
+[RECT](../../mfc/reference/rect-structure.md)
 

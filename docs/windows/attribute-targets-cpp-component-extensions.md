@@ -1,7 +1,7 @@
 ---
-title: Atrybut docelowe (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Elementy docelowe atrybutu (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589419"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327783"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Docelowe atrybuty (C++ Component Extensions)
+# <a name="attribute-targets-ccli-and-ccx"></a>Elementy docelowe atrybutu (C + +/ CLI i C + +/ CX)
 
 Specyfikatory użycia atrybutu umożliwiają określenie docelowe atrybuty.  Każdy atrybut jest zdefiniowany dotyczą niektóre elementy języka. Na przykład być stosowana tylko do klasy i struktury można zdefiniować atrybut.  Na poniższej liście przedstawiono możliwe elementy składni, w których można użyć atrybutu niestandardowego. Kombinacje tych wartości (przy użyciu logicznych lub) mogą być używane.
 

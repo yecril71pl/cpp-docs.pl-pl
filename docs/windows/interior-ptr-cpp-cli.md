@@ -1,7 +1,7 @@
 ---
 title: pomocą interior_ptr (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7633c1fb695e99e7d653d2afd26014c2ffe9004
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d47539c9d7d8e51a061aba35e6b2f3b8f7049951
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381910"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328054"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -134,4 +134,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

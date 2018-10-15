@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068445"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328262"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -273,7 +273,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje `CRect` obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która będzie odbierać współrzędne klienta aktualizacji, która otacza region aktualizacji.
+Wskazuje `CRect` obiektu lub [Prostokąt](../../mfc/reference/rect-structure.md) strukturę, która będzie odbierać współrzędne klienta aktualizacji, która otacza region aktualizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

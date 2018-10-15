@@ -1,7 +1,7 @@
 ---
-title: Typy ogólne i szablony (Visual C++) | Dokumentacja firmy Microsoft
+title: Typy ogólne i szablony (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591005"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328223"
 ---
-# <a name="generics-and-templates-visual-c"></a>Typy ogólne i szablony (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Typy ogólne i szablony (C + +/ CLI)
 
 Typy ogólne i szablony są obie funkcje językowe, pozwalające na obsługę typów sparametryzowanych. Jednak różnią się i mają różne sposoby zastosowania. W tym temacie omówiono wiele różnic.
 
@@ -61,7 +61,7 @@ Podstawową różnicę w typach ogólnych ma wpływ na tworzenie aplikacji łąc
 
 Poniższy przykład pokazuje prosty przykład ze sobą przy użyciu szablonów i typy ogólne. W tym przykładzie klasa szablonu przekazuje parametr za pomocą typu ogólnego. Odwrotnej nie jest możliwe.
 
-Gdy chcesz skompilować na istniejące ogólnego interfejsu API za pomocą kodu szablonu, który jest lokalny dla zestawu Visual C++ lub w przypadku, gdy trzeba dodać dodatkową warstwę parametryzacji do typu ogólnego, aby móc korzystać z niektórych funkcji szablonów supporte nie można użyć tego idiomu d według typów ogólnych.
+Tego idiomu można użyć, gdy chcesz skompilować na istniejące ogólnego interfejsu API za pomocą kodu szablonu, który jest lokalny dla C + +/ interfejsu wiersza polecenia zestawu, lub jeśli potrzebujesz dodać dodatkową warstwę parametryzacji do typu ogólnego, aby móc korzystać z niektórych funkcji szablonów nie obsługiwane b typy ogólne y.
 
 ### <a name="code"></a>Kod
 

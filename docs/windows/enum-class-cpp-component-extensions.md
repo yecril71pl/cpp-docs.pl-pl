@@ -1,7 +1,7 @@
 ---
-title: Wylicz klasy (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Klasa wyliczenia (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377269"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328145"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
+# <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczenia (C + +/ CLI i C + +/ CX)
 
 Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany przez użytkownika, składających się z szeregu nazwanych stałych zwanych wyliczeniami.
 
@@ -146,13 +146,13 @@ Zarządzane nazwy modułu wyliczającego (*identyfikatory*) nie są wprowadzane 
 
 Moduły wyliczające standardowa wyliczenia silnie są wprowadzane w zasięgu.  Oznacza to jeśli istnieje inny symbol o tej samej nazwie jak moduł wyliczający w zasięgu, kompilator wygeneruje błąd.
 
-W Visual C++ 2002 i Visual C++ 2003 moduły wyliczające słabo zostały dodane (widoczne w zasięgu o ile nie wystąpił inny identyfikator o takiej samej nazwie).
+W Visual Studio 2002 i Visual Studio 2003 moduły wyliczające słabo zostały dodane (widoczne w zasięgu o ile nie wystąpił inny identyfikator o takiej samej nazwie).
 
-Jeśli nie zdefiniowano standard wyliczeniową C++ (bez **klasy** lub **struktury**), kompilowanie za pomocą `/clr` spowoduje, że wyliczenie jest kompilowana jako wyliczenie zarządzane.  Wyliczanie nadal ma semantykę niezarządzane wyliczenia.  Należy pamiętać, kompilator wprowadza atrybutu `Microsoft::VisualC::NativeEnumAttribute`, której kompilator języka Visual C++ rozpoznaje, do identyfikowania intencji programisty dla wyliczenia jako natywnym wyliczeniem.  Inne kompilatory po prostu zostanie wyświetlony standardowy wyliczenia jako wyliczenie zarządzane.
+Jeśli nie zdefiniowano standard wyliczeniową C++ (bez **klasy** lub **struktury**), kompilowanie za pomocą `/clr` spowoduje, że wyliczenie jest kompilowana jako wyliczenie zarządzane.  Wyliczanie nadal ma semantykę niezarządzane wyliczenia.  Należy pamiętać, kompilator wprowadza atrybutu `Microsoft::VisualC::NativeEnumAttribute` do identyfikowania intencji programisty dla wyliczenia jako natywnym wyliczeniem.  Inne kompilatory po prostu zostanie wyświetlony standardowy wyliczenia jako wyliczenie zarządzane.
 
 Element o nazwie, standardowe wyliczenia skompilowany przy użyciu `/clr` będą widoczne w zestawie, jako wyliczenie zarządzane i mogą być używane przez inne zarządzane kompilatora.   Jednak bez nazwy wyliczenia standard nie będą publicznie widoczne z zestawu.
 
-W Visual C++ 2002 i Visual C++ 2003, standard wyliczenia, używany jako typ parametru funkcji:
+W Visual Studio 2002 i Visual Studio 2003, standard wyliczenia, używany jako typ parametru funkcji:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

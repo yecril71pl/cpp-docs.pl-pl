@@ -1,7 +1,7 @@
 ---
-title: Interface class (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Klasa interfejsu (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecc99a5c97f96290932a7d758a959501532c07be
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377074"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328327"
 ---
-# <a name="interface-class--c-component-extensions"></a>interface class (C++ Component Extensions)
+# <a name="interface-class--ccli-and-ccx"></a>Klasa interfejsu (C + +/ CLI i C + +/ CX)
 
 Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczyć [__interface](../cpp/interface.md).
 
@@ -67,7 +67,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Statyczny Konstruktor interfejsu](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Interfejsy ogólne (Visual C++)](../windows/generic-interfaces-visual-cpp.md)
+- [Interfejsy ogólne (C + +/ CLI)](../windows/generic-interfaces-visual-cpp.md)
 
 Aby uzyskać informacji o innych typach CLR, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -230,4 +230,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

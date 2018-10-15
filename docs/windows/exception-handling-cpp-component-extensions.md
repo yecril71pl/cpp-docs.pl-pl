@@ -1,7 +1,7 @@
 ---
-title: Obsługa (C++ Component Extensions) wyjątków | Dokumentacja firmy Microsoft
+title: Obsługa wyjątków (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d070cc223f90f84bd52176ee7e50dbbfa441789
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412331"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328132"
 ---
-# <a name="exception-handling--c-component-extensions"></a>Obsługa wyjątków (C++ Component Extensions)
+# <a name="exception-handling--ccli-and-ccx"></a>Obsługa wyjątków (C + +/ CLI i C + +/ CX)
 
 Aplikacje skompilowane z `/ZW` — opcja kompilatora lub `/clr` kompilator korzystać zarówno *wyjątki* do obsługi nieoczekiwanych błędów podczas wykonywania programu. W poniższych tematach omówiono obsługi wyjątków w dowolnym języku C + +/ CX lub C + +/ interfejsu wiersza polecenia aplikacji.
 
@@ -54,8 +54,8 @@ Pokazuje, jak przechwytywać wszystkie nieobsłużone wyjątki.
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
-W tym artykule opisano obsługę wyjątków w języku C++.
+W tym artykule opisano obsługę wyjątków w standardowego języka C++.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

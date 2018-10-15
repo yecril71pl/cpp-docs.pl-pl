@@ -1,7 +1,7 @@
 ---
-title: Property (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: właściwości (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420507"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328236"
 ---
-# <a name="property--c-component-extensions"></a>property (C++ Component Extensions)
+# <a name="property--ccli-and-ccx"></a>właściwości (C + +/ CLI i C + +/ CX)
 
 Deklaruje *właściwość*, która jest funkcją składową, który zachowuje się i jest dostępny, takich jak element członkowski danych lub element tablicy.
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)
