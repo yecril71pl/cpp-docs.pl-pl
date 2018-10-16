@@ -1,7 +1,7 @@
 ---
-title: Operator uchwytu do obiektu (^) (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Operator uchwytu do obiektu (^) (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410861"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327976"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Operator uchwytu do obiektu (^) (C++ Component Extensions)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operator uchwytu do obiektu (^) (C + +/ CLI i C + +/ CX)
 
 *Deklarator obsługi* (`^`, wymawiane "hat"), modyfikuje typ [specyfikator](../cpp/overview-of-declarators.md) oznacza, że deklarowany obiekt powinien zostać automatycznie usunięty gdy system określi, że obiekt jest nie będą już dostępne.
 
@@ -34,7 +34,7 @@ Zmienna, która jest zadeklarowana za pomocą deklaratora uchwytu, zachowuje si�
 
 Kompilator używa COM *zliczanie odwołań* mechanizm do określenia, czy obiekt jest już używany i czy można je usunąć. Jest to możliwe, ponieważ obiekt, który jest tworzony na podstawie interfejs Windows Runtime jest w rzeczywistości obiektem COM. Licznik odwołań rośnie, gdy obiekt jest utworzony lub skopiowany i zmniejszony, kiedy obiekt jest ustawiony na wartość null lub poza zakresem. Jeśli licznik odwołań zbliża się do zera, obiekt jest automatycznie i bezzwłocznie usuwany.
 
-Zaletą deklaratora uchwytu jest to, że w modelu COM musi jawnie zarządzać licznikiem odwołań do obiektu, który jest procesem żmudnym i podatne. Oznacza to aby zwiększyć i zmniejszyć liczbę odwołań należy wywołać metody AddRef() obiektu i Release() obiektu. Jednak jeśli obiekt został zadeklarowany za pomocą deklaratora uchwytu, kompilator języka Visual C++ generuje kod, który automatycznie dostosowuje licznika odwołań.
+Zaletą deklaratora uchwytu jest to, że w modelu COM musi jawnie zarządzać licznikiem odwołań do obiektu, który jest procesem żmudnym i podatne. Oznacza to aby zwiększyć i zmniejszyć liczbę odwołań należy wywołać metody AddRef() obiektu i Release() obiektu. Jednakże jeśli obiekt został zadeklarowany za pomocą deklaratora uchwytu, kompilator generuje kod, który automatycznie dostosowuje licznika odwołań.
 
 Aby uzyskać informacje na temat sposobu tworzenia wystąpienia obiektu, zobacz [ref nowe](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -47,8 +47,6 @@ Aby uzyskać informacje na temat sposobu tworzenia wystąpienia obiektu, zobacz 
 System używa środowiska CLR *modułu zbierającego elementy bezużyteczne* mechanizm do określenia, czy obiekt jest już używany i czy można je usunąć. Środowisko uruchomieniowe języka wspólnego utrzymuje stertę, do której przydziela obiekty i zastosowań zarządzanych odwołania (zmiennych) w programie wskazujących lokalizację obiektów na stosie. Gdy obiekt nie jest już używany, pamięć, którą zajmował na stercie jest zwalniana. Okresowo moduł odśmiecania pamięci kompaktuje stos w celu lepszego wykorzystania zwolnionej pamięci. Przy kompaktowaniu stosu obiekty można przenosić na stosie, co unieważnia lokalizacje przewidziane przez zarządzane odwołania. Jednak moduł odśmiecania pamięci zna lokalizację wszystkich zarządzanych odwołań i automatycznie aktualizuje je, aby wskazać bieżące położenie obiektów na stosie.
 
 Ponieważ wskaźniki natywne C++ (`*`) i odwołania (`&`) nie są zarządzanymi odniesieniami, moduł odśmiecania pamięci nie może automatycznie zaktualizować adresów, które one wskazują. Aby rozwiązać ten problem, użyj deklaratora uchwytu, aby określić zmienną, która moduł odśmiecania pamięci zna i można będzie automatycznie aktualizować.
-
-W Visual C++ 2002 i Visual C++ 2003 `__gc *` został użyty do deklarowania obiektów na stosie zarządzanym.  `^` Zastępuje `__gc *` w nowej składni.
 
 Aby uzyskać więcej informacji, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -235,5 +233,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md)
