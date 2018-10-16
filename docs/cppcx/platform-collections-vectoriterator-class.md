@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 6be436af0dc6954ff8bab71e598576f463bdcee2
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162389"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336551"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator, klasa
 
@@ -319,7 +319,7 @@ Przesunięcie liczby całkowitej.
 
 Zaktualizowano VectorIterator.
 
-## <a name="operator-plus"></a>  ectorIterator::operator + — Operator
+## <a name="operator-plus"></a>  VectorIterator::operator + — Operator
 
 Zwraca VectorIterator, która odwołuje się do elementu w określonym przemieszczenia VectorIterator określony.
 

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
+ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083089"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347231"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -35,7 +35,7 @@ Istnieje kilka szerokie kategorie aplikacji Windows, które można tworzyć przy
 
 Aplikacje platformy uniwersalnej systemu Windows będą mogli uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na komputerze stacjonarnym, są one mogą być uruchamiane jako okien pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Aplikacje platformy uniwersalnej systemu Windows są uruchamiane od środowiska uruchomieniowego Windows, który zawiera elementy interfejsu użytkownika, usługami i interfejs do różnych urządzeń, które są obsługiwane w programie Windows.
 
-Można napisać aplikacji platformy UWP w języku C + +/ CX, dialekt języka c++, można użyć [C + +/ biblioteki WinRT](https://moderncpp.com/)w niektórych scenariuszach. Aplikacje platformy uniwersalnej systemu Windows skompiluj do kodu natywnego i ma interfejsu użytkownika XAML lub używają DirectX. Składniki środowiska wykonawczego Windows, które są zapisywane w kodzie natywnym, że można korzystać z aplikacji platformy uniwersalnej systemu Windows napisanych w innych językach. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej Windows w języku C++](http://go.microsoft.com/fwlink/?LinkID=534976), [tworzenie pierwszej gry platformy uniwersalnej systemu Windows za pomocą programu DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), i [składniki tworzenia środowiska wykonawczego Windows w języku C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Można napisać aplikacji platformy UWP w języku C + +/ CX, dialekt języka c++, można użyć [C + +/ biblioteki WinRT](https://moderncpp.com/) w niektórych scenariuszach. Aplikacje platformy uniwersalnej systemu Windows skompiluj do kodu natywnego i ma interfejsu użytkownika XAML lub używają DirectX. Składniki środowiska wykonawczego Windows, które są zapisywane w kodzie natywnym, że można korzystać z aplikacji platformy uniwersalnej systemu Windows napisanych w innych językach. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej Windows w języku C++](http://go.microsoft.com/fwlink/?LinkID=534976), [tworzenie pierwszej gry platformy uniwersalnej systemu Windows za pomocą programu DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), i [składniki tworzenia środowiska wykonawczego Windows w języku C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Ta kategoria zawiera również podstawowe składniki i obliczeniową kod w kontekście serwera i programowania w chmurze przy użyciu języka C++. Czasami kod intensywnie w samym sercu serwera lub aplikacji w chmurze są zapisywane w języku C++ w celu zmaksymalizowania wydajności. Można skompilować takiego kodu do biblioteki DLL i używać jej z C# lub Visual Basic.
 
