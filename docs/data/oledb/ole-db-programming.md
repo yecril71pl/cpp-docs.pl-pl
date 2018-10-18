@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083518"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410632"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
 
@@ -40,7 +40,7 @@ Ponadto można użyć atrybutów do zaimplementowania szablony konsumentów OLE 
 |Za pomocą szablonów dostawców OLE DB (tematów pojęciowych)|[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Klasy szablonów OLE DB i makra|[Szablony OLE DB — Kompendium](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atrybuty konsumentów OLE DB|[Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643) (w zestawie Windows SDK)|  
+|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643(v%3dvs.85)) (w zestawie Windows SDK)| 
 |Przykłady szablonów OLE DB|[Przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples)| 
 |Dostęp do danych programowania — Przegląd (Visual C++)|[Programowanie dostępu do danych](../../data/data-access-programming-mfc-atl.md)|  
 |Tematy dotyczące pojęć ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

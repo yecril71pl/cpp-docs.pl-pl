@@ -1,7 +1,7 @@
 ---
 title: Używanie zestawów weryfikowalnych z programem SQL Server (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382222"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410710"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 
@@ -32,9 +32,10 @@ Program SQL Server udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby
 
 - Tryb bez ograniczeń: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.
 
-- Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe.
+- Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe. 
 
-Tryb awaryjny wymaga wykonanych zestawów, które mają być weryfikowalny pod kątem zapewnienia.
+> [!IMPORTANT]
+> Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 nie obsługuje **/CLR: pure** i **/CLR: Safe** tworzenie weryfikowalnych projektów. Jeśli potrzebujesz weryfikowalny kod, zalecamy Przetłumacz swój kod C#.
 
 Aby utworzyć i załadować zestawów weryfikowalnych do programu SQL Server, użyj polecenia języka Transact-SQL, instrukcja CREATE ASSEMBLY i wykonanie polecenia DROP ASSEMBLY w następujący sposób:
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>Zobacz też
 
-[Porady: Migracja do/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

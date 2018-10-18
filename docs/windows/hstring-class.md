@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163123"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410814"
 ---
 # <a name="hstring-class"></a>HString — Klasa
 
-Klasa pomocnicza do zarządzania okresem istnienia HSTRING przy użyciu wzorca RAII.
+Klasa pomocnicza do zarządzania okresem istnienia [HSTRING](/windows/desktop/WinRT/hstring) przy użyciu wzorca RAII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze Windows zapewnia dostęp do ciągów za poprzez dojścia HSTRING. `HString` Klasa oferuje wygodne funkcje i operatory upraszczające korzystanie z dojść HSTRING. Ta klasa może obsługiwać okres istnienia HSTRING, jest ona właścicielem za pośrednictwem wzór RAII.
+Środowisko wykonawcze Windows zapewnia dostęp do ciągów za pomocą [HSTRING](/windows/desktop/WinRT/hstring) uchwyty. `HString` Klasa oferuje wygodne funkcje i operatory upraszczające korzystanie z dojść HSTRING. Ta klasa może obsługiwać okres istnienia HSTRING, jest ona właścicielem za pośrednictwem wzór RAII.
 
 ## <a name="members"></a>Elementy członkowskie
 

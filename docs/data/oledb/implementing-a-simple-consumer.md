@@ -1,7 +1,7 @@
 ---
 title: Implementowanie prostego konsumenta | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162298"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410697"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 
@@ -211,75 +211,6 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     ```  
   
 Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładki są także wyświetlane w [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Dodawanie obsługi XML do konsumenta  
-
-Zgodnie z opisem w [uzyskiwania dostępu do danych XML](../../data/oledb/accessing-xml-data.md), istnieją dwa sposoby, aby pobrać dane XML ze źródła danych: za pomocą [cstreamrowset —](../../data/oledb/cstreamrowset-class.md) lub za pomocą [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). W tym przykładzie użyto `CStreamRowset`, który jest bardziej wydajne, ale wymagane jest posiadanie programu SQL Server 2000 uruchomionej na komputerze, w którym są wykonywane tej przykładowej aplikacji.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Aby zmodyfikować klasy polecenia, aby dziedziczyć cstreamrowset —  
-  
-1. W aplikacji konsumentów, została wcześniej utworzona, należy zmienić swoje `CCommand` deklaracji, aby określić `CStreamRowset` jako zestaw wierszy klasy w następujący sposób:  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Aby zmodyfikować głównego kodu do pobierania i zwracania danych XML  
-  
-1. W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób:  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>Zobacz też  
 

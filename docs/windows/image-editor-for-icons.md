@@ -1,7 +1,7 @@
 ---
 title: Edytor obrazów dla ikon | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379193"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410671"
 ---
 # <a name="image-editor-for-icons"></a>Edytor obrazów dla ikon
 
-Edytor obrazów zawiera obszerny zestaw narzędzi do tworzenia i edycji obrazów, a także funkcje pomagające w tworzeniu map bitowych paska narzędzi. Oprócz map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń w **obraz** menu i narzędzi na **edytora obrazów** paska narzędzi.
+Po kliknięciu pliku obrazu (na przykład .ico, bmp, PNG) w Eksploratorze rozwiązań obraz, który zostanie otwarty w edytorze obrazu w taki sam sposób, który otwartych plików kodu w edytorze kodu. Gdy karta edytora obrazów jest aktywna, zostanie wyświetlony pasków narzędzi za pomocą wielu narzędzi do tworzenia i edycji obrazów. Oprócz map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń w **obraz** menu i narzędzi na **edytora obrazów** paska narzędzi.
 
 Możliwości Edytora obrazów:
 

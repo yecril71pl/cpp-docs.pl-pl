@@ -1,7 +1,7 @@
 ---
 title: Tworzenie konsumenta bez użycia kreatora | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023595"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410736"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
 
@@ -28,7 +28,7 @@ W poniższym przykładzie założono, że dodajesz Obsługa konsumenta OLE DB is
   
 Aby dodać obsługę konsumenta OLE DB bez korzystania z OLE DB Kreator konsumenta ATL:  
   
-- Dołącz następujący ciąg w pliku Stdafx.h `#include` instrukcji:  
+- Dołącz następujący ciąg w pliku pch.h `#include` instrukcji:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ Aby dodać obsługę konsumenta OLE DB bez korzystania z OLE DB Kreator konsumen
   
 Programowo odbiorcy zwykle wykonuje następującą sekwencję czynności:  
   
-- Utwórz klasę rekord użytkownika, która wiąże kolumn do zmiennych lokalnych. W tym przykładzie `CMyTableNameAccessor` jest klasa rekordów użytkowników (zobacz [rekordów użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera kolumny mapy i mapy parametru. Zadeklaruj element członkowski danych w klasie rekordu użytkownika dla każdego pola, którą określisz w mapie kolumny; dla każdej z tych składowych danych należy również zadeklarować element członkowski danych stanu i element członkowski danych długości. Aby uzyskać więcej informacji, zobacz [elementy członkowskie danych stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+1. Utwórz klasę rekord użytkownika, która wiąże kolumn do zmiennych lokalnych. W tym przykładzie `CMyTableNameAccessor` jest klasa rekordów użytkowników (zobacz [rekordów użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera kolumny mapy i mapy parametru. Zadeklaruj element członkowski danych w klasie rekordu użytkownika dla każdego pola, którą określisz w mapie kolumny; dla każdej z tych składowych danych należy również zadeklarować element członkowski danych stanu i element członkowski danych długości. Aby uzyskać więcej informacji, zobacz [elementy członkowskie danych stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Jeśli piszesz własnego klienta, danych zmienne musi występować przed zmienne stanu i długości.  
+    > Jeśli piszesz własnego klienta, danych zmienne musi występować przed zmienne stanu i długości.  
   
 - Utwórz wystąpienie źródła danych i sesji. Zdecyduj, jakiego typu metody dostępu i zestawu wierszy a, tworzy zestaw wierszy przy użyciu [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ Programowo odbiorcy zwykle wykonuje następującą sekwencję czynności:
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Opcjonalnie zestawu wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazywać je jako parametr do `rs.Open`. Aby uzyskać przykład jak to zrobić, zobacz getrowsetproperties — w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Opcjonalnie zestawu wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazywać je jako parametr do `rs.Open`. Aby uzyskać przykład jak to zrobić, zobacz **getrowsetproperties —** w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Można teraz używać zestawu wierszy pobierania/operacje na danych.  
   
@@ -83,7 +83,7 @@ Programowo odbiorcy zwykle wykonuje następującą sekwencję czynności:
   
 - Wywołaj `CoUnInitialize` do uninitialize modelu COM. Zazwyczaj jest to w kodzie głównego.  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   
