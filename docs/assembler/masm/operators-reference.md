@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688179"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459156"
 ---
 # <a name="masm-operators-reference"></a>Odwołanie do operatorów MASM
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688179"
 
 ||||
 |-|-|-|
-|[! (logiczne not środowiska wykonawczego)](operator-logical-not-masm-run-time.md)|[! = (środowisko uruchomieniowe nie jest równe)](operator-not-equal-masm.md)|[&#124;&#124;(środowiska uruchomieniowego logiczny lub)](operator-logical-or.md)|
+|[\! (logiczne not środowiska wykonawczego)](operator-logical-not-masm-run-time.md)|[\!= (środowisko uruchomieniowe nie jest równe)](operator-not-equal-masm.md)|[&#124;&#124;(środowiska uruchomieniowego logiczny lub)](operator-logical-or.md)|
 |[& & (środowisko uruchomieniowe logicznych i)](operator-logical-and-masm-run-time.md)|[< (środowisko uruchomieniowe mniej niż)](operator-less-than-masm-run-time.md)|[\<= (środowisko uruchomieniowe mniejsze lub równe)](operator-less-or-equal-masm-run-time.md)|
 |[== (środowisko uruchomieniowe równe)](operator-equal-masm-run-time.md)|[> (większe niż środowiska wykonawczego)](operator-greater-than-masm-run-time.md)|[> = (środowisko uruchomieniowe większe lub równe)](operator-greater-or-equal-masm-run-time.md)|
 |[& (środowisko uruchomieniowe bitowe i)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688179"
 
 ||||
 |-|-|-|
-|[! (znak literału)](operator-logical-not-masm.md)|[% (traktowanej jako tekst)](operator-percent.md)||
+|[\! (znak literału)](operator-logical-not-masm.md)|[% (traktowanej jako tekst)](operator-percent.md)||
 |[;; (należy traktować jako komentarz)](operator-semicolons.md)|[&lt; &gt; (należy traktować jako jeden literał)](operator-literal.md)|[& & (Zastąp wartość parametru)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Różne
