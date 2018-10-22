@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23b5db965c8b4e29e8d25bad658189e7b37fc929
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097695"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640771"
 ---
 # <a name="c-floating-point-constants"></a>Stałe zmiennoprzecinkowe języka C
 
@@ -32,17 +32,27 @@ ms.locfileid: "46097695"
 
 ## <a name="syntax"></a>Składnia
 
-*Floating point-constant*: &nbsp; &nbsp; *wykładnik części ułamkowych — stała*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks* <sub>zoptymalizowany pod kątem</sub> &nbsp; &nbsp; *sekwencję cyfr części wykładnik liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub>
+*Floating point-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ułamkowe — stała* *część wykładnik*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *część wykładnik* *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub>
 
-*Stała ułamkowe*: &nbsp; &nbsp; *sekwencję cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr* &nbsp; &nbsp; *sekwencję cyfr***.** 
+*Stała ułamkowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr***.**
 
-*wykładnik część*: &nbsp; &nbsp; **e***logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr* &nbsp; &nbsp; **E***logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr* 
+*wykładnik część*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*
 
-*znak* : jeden z &nbsp; &nbsp; **+ -**
+*znak*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*sekwencja cyfr*: &nbsp; &nbsp; *cyfrę* &nbsp; &nbsp; *cyfrę sekwencję cyfr*
+*sekwencja cyfr*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cyfra*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *cyfra*
 
-*sufiks liczb zmiennoprzecinkowych* : jeden z &nbsp; &nbsp; **f, g F, G**
+*sufiks liczb zmiennoprzecinkowych*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**f, g F, G**
 
 Możesz pominąć cyfr przed przecinkiem dziesiętnym (część całkowitą wartość) albo cyfr po punkcie dziesiętnym (część ułamkowa), ale nie oba. Tylko wtedy, gdy zawierają wykładnik, można pozostawić się punktu dziesiętnego. Żadne znaki odstępu, można oddzielić cyfr lub znaków, stałej.
 

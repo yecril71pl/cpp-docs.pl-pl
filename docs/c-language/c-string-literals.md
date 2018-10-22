@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6101c45f30284633c5f10c148be5a15e1e81dde7
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082017"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640738"
 ---
 # <a name="c-string-literals"></a>Literały ciągu języka C
 
@@ -29,11 +29,19 @@ ms.locfileid: "46082017"
 
 ## <a name="syntax"></a>Składnia
 
-*literał ciągu*: &nbsp; &nbsp; &nbsp; &nbsp; **"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**  &nbsp; &nbsp; &nbsp; &nbsp; **L "** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**
+*literał ciągu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**
 
-*s char sekwencji*: &nbsp; &nbsp; &nbsp; &nbsp; *s-char* &nbsp; &nbsp; &nbsp; &nbsp;  *s char sekwencji* *s-char*
+*s char sekwencji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
-*s-char*: &nbsp; &nbsp; &nbsp; &nbsp;dowolny członek znak źródłowy zestawu z wyjątkiem podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza &nbsp; &nbsp; &nbsp; &nbsp; *sekwencja unikowa*
+&nbsp;&nbsp;&nbsp;&nbsp;*s char sekwencji* *s-char*
+
+*s-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;*Sekwencja unikowa*
 
 ## <a name="remarks"></a>Uwagi
 
