@@ -1,7 +1,7 @@
 ---
 title: C relacyjne i operatory równości | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058240"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808956"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatory relacyjne i porównania języka C
 
@@ -31,32 +31,28 @@ Plik binarny relacyjne i operatory równości porównać ich pierwszego operandu
 
 **Składnia**
 
-*wyrażenie relacyjne*: *shift-expression*
+*wyrażenie relacyjne*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **&lt; =** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>=** *shift-expression*<br/>
 
-*wyrażenie relacyjne***\<***shift-expression* 
-
-*wyrażenie relacyjne***>***shift-expression* 
-
-*wyrażenie relacyjne***\<=***shift-expression* 
-
-*wyrażenie relacyjne***>=***shift-expression* 
-
-*wyrażenie równości*: *wyrażenie relacyjne*
-
-*wyrażenie równości***==***wyrażenie relacyjne* 
-
-*wyrażenie równości***! =***wyrażenie relacyjne* 
+*wyrażenie równości*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **==** *wyrażenie relacyjne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **! =** *wyrażenie relacyjne*
 
 Operatory relacyjne i porównania testów się następująco:
 
 |Operator|Relacja przetestowane|
 |--------------|-------------------------|
-|**\<**|Pierwszy operand mniejszy od drugiego operandu|
+|**&lt;**|Pierwszy operand mniejszy od drugiego operandu|
 |**>**|Pierwszy argument operacji, które są większe od drugiego operandu|
-|**\<=**|Pierwszy operand mniejsze niż lub równe do drugiego operandu|
+|**&lt;=**|Pierwszy operand mniejsze niż lub równe do drugiego operandu|
 |**>=**|Pierwszy operand większa lub równa wartości drugiego operandu|
-|`==`|Pierwszy operand równą wartości drugiego operandu|
-|`!=`|Pierwszy argument operacji nie jest równa drugiego operandu|
+|**==**|Pierwszy operand równą wartości drugiego operandu|
+|**\!=**|Pierwszy argument operacji nie jest równa drugiego operandu|
 
 Pierwsze cztery operatory w powyższej listy mają wyższy priorytet niż operatory równości (`==` i `!=`). Zapoznaj się z informacjami pierwszeństwo w tabeli [pierwszeństwo i kojarzenie operatorów C](../c-language/precedence-and-order-of-evaluation.md).
 
@@ -64,7 +60,7 @@ Argumenty operacji może mieć typu całkowitego, zmiennoprzecinkowego lub wska�
 
 - Zarówno argumenty operacji wszelkie relacyjnych lub operator równości, może być wskaźniki do tego samego typu. Dla równości (`==`) i nierówności (`!=`) operatorów, wynikiem porównania wskazuje, czy dwa wskaźniki adresów w tym samym miejscu pamięci. Aby uzyskać inne operatory relacyjne (**\<**, **>**, **\<**=, i **>**=), wynik porównania wskazuje względne położenie adresów pamięci dwóch obiektów wskazywanych. Operatory relacyjne porównać tylko przesunięcia.
 
-     Porównanie wskaźników jest zdefiniowana tylko dla części tego samego obiektu. Jeśli wskaźników odnoszą się do elementów członkowskich w tablicy, wynik porównania jest odpowiednikiem porównania odpowiednich indeksów dolnych. Adres pierwszego elementu tablicy "poniżej" adres po ostatnim elemencie. W przypadku struktur wskaźniki do elementów członkowskich struktury zadeklarowane w dalszej części są "większe niż" wskaźników do elementów członkowskich zadeklarowanych wcześniej w strukturze. Wskaźniki do elementów członkowskich Unii w tym samym są równe.
+   Porównanie wskaźników jest zdefiniowana tylko dla części tego samego obiektu. Jeśli wskaźników odnoszą się do elementów członkowskich w tablicy, wynik porównania jest odpowiednikiem porównania odpowiednich indeksów dolnych. Adres pierwszego elementu tablicy "poniżej" adres po ostatnim elemencie. W przypadku struktur wskaźniki do elementów członkowskich struktury zadeklarowane w dalszej części są "większe niż" wskaźników do elementów członkowskich zadeklarowanych wcześniej w strukturze. Wskaźniki do elementów członkowskich Unii w tym samym są równe.
 
 - Wartość wskaźnika można porównać do wyrażenia wartości stałej 0 dla równości (`==`) i nierówności (`!=`). Wskaźnik o wartości 0 jest nazywany "null" wskaźnika; oznacza to nie wskazuje lokalizacji w pamięci prawidłowe.
 
@@ -74,14 +70,14 @@ Argumenty operacji może mieć typu całkowitego, zmiennoprzecinkowego lub wska�
 
 Poniższe przykłady ilustrują relacyjne i operatory równości.
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 Ponieważ `x` i `y` są równe, wyrażenie w tym przykładzie daje wartość 0.
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 Fragment, w tym przykładzie ustawia każdego elementu `array` ze stałą znaku null.
 
-```
+```C
 enum color { red, white, green } col;
    .
    .

@@ -26,7 +26,6 @@
 ### [Pliki XML strony właściwości](property-page-xml-files.md)
 ### [Struktura plików vcxproj i props](vcxproj-file-structure.md)
 ## [Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](creating-desktop-projects-by-using-application-wizards.md)
-### [Obsługa kreatora dla innych języków](wizard-support-for-other-languages.md)
 ### [Tworzenie projektu pliku reguł programu make](creating-a-makefile-project.md)
 #### [Kreator projektu pliku reguł programu make](makefile-project-wizard.md)
 ##### [Ustawienia aplikacji, Kreator projektu pliku reguł programu make](application-settings-makefile-project-wizard.md)

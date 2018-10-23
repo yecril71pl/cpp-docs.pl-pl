@@ -1,7 +1,7 @@
 ---
 title: CSize, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328548"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808501"
 ---
 # <a name="csize-class"></a>CSize, klasa
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*initCX*  
+*initCX*<br/>
 Zestawy `cx` członka `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Zestawy `cy` członka `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [ROZMIAR](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub `CSize` obiektu użytego do zainicjowania `CSize`.
 
-*initPt*  
+*initPt*<br/>
 [PUNKT](../../mfc/reference/point-structure.md) struktury lub `CPoint` obiektu użytego do zainicjowania `CSize`.
 
-*niezerowego*  
+*niezerowego*<br/>
 DWORD używane do zainicjowania `CSize`. Word niskiego rzędu jest `cx` elementu członkowskiego i word wyższego rzędu jest `cy` elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi

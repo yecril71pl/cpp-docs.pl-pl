@@ -1,7 +1,7 @@
 ---
 title: Wyrażenia podstawowe języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/21/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a9c038cae5f70ef2b92d4e81fc513b6faf74185
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066469"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809034"
 ---
 # <a name="c-primary-expressions"></a>Wyrażenia podstawowe języka C
 
@@ -27,17 +27,15 @@ Argumenty operacji w wyrażeniach są nazywane "wyrażenia podstawowe".
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenia podstawowe*: *identyfikator*
+*wyrażenia podstawowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *wyrażenie* **)**<br/>
 
-*Stałe*
-
-*literał ciągu*
-
-**(***wyrażenie***)** 
-
-*wyrażenie*: *wyrażenia przypisania*
-
-*wyrażenie***,***wyrażenia przypisania* 
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*<br/>
 
 ## <a name="see-also"></a>Zobacz też
 

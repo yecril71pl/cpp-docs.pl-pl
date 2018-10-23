@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8218500fc17efda01b4ecaa11b6ebf12bd76812
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 721c8ba75fc72879a2c4c7de0f21010f51513f50
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436276"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808787"
 ---
 # <a name="mfc-dll-wizard"></a>Kreator biblioteki MFC DLL
 
@@ -56,5 +56,4 @@ Można wykonywać następujące zadania i typy rozszerzeń podstawowy projekt bi
 [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementowanie interfejsu](../../ide/implementing-an-interface-visual-cpp.md)<br/>
-[Obsługa kreatora dla innych języków](../../ide/wizard-support-for-other-languages.md)
 

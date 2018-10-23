@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083661"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808917"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 
@@ -31,13 +31,13 @@ Czasami zachodzi potrzeba uzyskania informacji o dostawcy, zestawu wierszy, tabe
 Szablony OLE DB zapewniają zestaw klas, które można pobrać informacji o schemacie; w ramach tych zajęć, tworzenie zestawów wierszy schematu wstępnie zdefiniowanych i są wymienione w [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Jeśli używasz OLAP, a niektóre z zestawów wierszy nie są obsługiwane przez klasy zestawów wierszy schematu (na przykład możesz mieć różną liczbą kolumn), należy rozważyć użycie `CManualAccessor` lub `CDynamicAccessor`. Możesz przewijać kolumny i umożliwia obsługę typów danych dla każdej kolumny w instrukcji case.  
+> Jeśli używasz OLAP, a niektóre z zestawów wierszy nie są obsługiwane przez klasy zestawów wierszy schematu (na przykład możesz mieć różną liczbą kolumn), należy rozważyć użycie `CManualAccessor` lub `CDynamicAccessor`. Możesz przewijać kolumny i umożliwia obsługę typów danych dla każdej kolumny w instrukcji case.  
   
 ## <a name="catalogschema-model"></a>Model katalogu/schematu  
 
 ANSI SQL definiuje model schematu/katalogu dla magazynów danych; OLE DB używa tego modelu. W tym modelu katalogów (baz danych) zawiera schematy i schematy zawierają tabel.  
   
-- **Wykaz** wykaz jest inną nazwę dla bazy danych. Jest to kolekcja powiązanych schematów. Aby wyświetlić listę katalogów (baz danych) należących do danego źródła danych, należy użyć [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Ponieważ wiele baz danych mają tylko jeden katalog, metadanych czasami nosi nazwę informacji o schemacie.  
+- **Wykaz** wykaz jest inną nazwę dla bazy danych. Jest to kolekcja powiązanych schematów. Aby wyświetlić listę katalogów (baz danych) należących do danego źródła danych, należy użyć [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Ponieważ wiele baz danych mają tylko jeden katalog, metadanych jest czasami nazywane informacji o schemacie.  
   
 - **Schemat** schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Aby wyświetlić listę schematów należących do danego użytkownika, należy użyć [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
@@ -47,7 +47,7 @@ ANSI SQL definiuje model schematu/katalogu dla magazynów danych; OLE DB używa 
   
 ## <a name="restrictions"></a>Ograniczenia  
 
-Po wykonaniu zapytania dotyczącego informacji o schemacie, można użyć ograniczenia, aby określić typ informacji, w którym interesuje Cię. Można potraktować ograniczenia, jak filtr lub kwalifikatora w zapytaniu. Na przykład w zapytaniu:  
+Po wykonaniu zapytania dotyczącego informacji o schemacie, można użyć ograniczenia, aby określić typ informacji, w którym chcesz wziąć. Można potraktować ograniczenia, jak filtr lub kwalifikatora w zapytaniu. Na przykład w zapytaniu:  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -67,7 +67,7 @@ Aby określić ograniczenia, zapoznaj się [zestawów wierszy schematu B: dodatk
   
 Tak, na przykład, jeśli chcesz ograniczyć, nazwę tabeli, należy pamiętać, że nazwa_tabeli trzecia kolumna ograniczenia, a następnie wywołaj `Open`, określając nazwę odpowiednią tabelę jako trzeci parametr ograniczenia, jak pokazano w poniższym przykładzie.  
   
-#### <a name="to-use-schema-rowsets"></a>Aby używać zestawów wierszy schematu  
+### <a name="to-use-schema-rowsets"></a>Aby używać zestawów wierszy schematu  
   
 1. Należy uwzględnić plik nagłówka Atldbsch.h (oczywiście, musisz Atldbcli.h również obsługę klientów).  
   
@@ -89,7 +89,7 @@ Tak, na przykład, jeśli chcesz ograniczyć, nazwę tabeli, należy pamiętać,
     }  
     ```  
   
-1. Do pobierania informacji, na przykład dostęp do elementu członkowskiego odpowiednie dane obiektu zestawu wierszy schematu `ColumnSchemaRowset.m_szColumnName`. Odpowiada to COLUMN_NAME. Aby wyświetlić każdy element członkowski danych odnosi się do kolumny OLE DB, zobacz [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Do pobierania informacji, na przykład dostęp do elementu członkowskiego odpowiednie dane obiektu zestawu wierszy schematu `ColumnSchemaRowset.m_szColumnName`. Ten element członkowski danych odnosi się do COLUMN_NAME. Aby wyświetlić każdy element członkowski danych odnosi się do kolumny OLE DB, zobacz [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Dla odwołania do zestawu wierszy schematu klasy typedef podane w szablonach OLE DB (zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

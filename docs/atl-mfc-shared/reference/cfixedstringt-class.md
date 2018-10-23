@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808254"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT, klasa
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Parametry
 
-*StringType*  
+*StringType*<br/>
 Używane jako klasa bazowa dla obiektu stały ciąg i może być dowolnym `CStringT`— na podstawie typu. Niektóre przykłady `CString`, `CStringA`, i `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 Liczba znaków przechowywanych w buforze.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Ciąg zakończony wartością null do skopiowania do tego `CFixedStringT` obiektu.
 
-*str*  
+*str*<br/>
 Istniejące `CFixedStringT` obiektu do skopiowania do tego `CFixedStringT` obiektu.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Wskaźnik do Menedżera pamięci `CFixedStringT` obiektu. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięci dla `CFixedStringT`, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Ciąg zakończony wartością null do skopiowania do tego `CFixedStringT` obiektu.
 
-*psz*  
+*psz*<br/>
 Istniejące `CFixedStringT` do skopiowania do tego `CFixedStringT` obiektu.
 
 ### <a name="remarks"></a>Uwagi

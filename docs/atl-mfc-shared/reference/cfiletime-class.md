@@ -1,7 +1,7 @@
 ---
 title: CFileTime, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36e71cd975ff138343770b80e60b0287faa32558
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437773"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808826"
 ---
 # <a name="cfiletime-class"></a>CFileTime, klasa
 
@@ -133,10 +133,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.
 
-*nTime*  
+*nTime*<br/>
 Data i godzina wyrażonej w postaci wartości 64-bitowych.
 
 ### <a name="remarks"></a>Uwagi
@@ -246,10 +246,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*  
+*zakres*<br/>
 Element `CFileTimeSpan` obiektu.
 
-*FT*  
+*FT*<br/>
 Element `CFileTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -266,7 +266,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -283,7 +283,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*  
+*zakres*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -300,7 +300,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*  
+*zakres*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -317,7 +317,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -338,7 +338,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -355,7 +355,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 A `CFileTime` obiekt, który zawiera nową wartość czasu i daty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -372,7 +372,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*  
+*zakres*<br/>
 A `CFileTimeSpan` obiekt zawierający wartość względna czasu do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -389,7 +389,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -406,7 +406,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -423,7 +423,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -452,7 +452,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nTime*  
+*nTime*<br/>
 Wartość 64-bitowy, reprezentująca datę i godzinę w lokalnej lub w formacie uniwersalnego czasu koordynowanego (UTC).
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -489,4 +489,3 @@ Zobacz przykład [CFileTime::Millisecond](#millisecond).
 [CFileTimeSpan, klasa](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -1,7 +1,7 @@
 ---
 title: Operatory dodawania języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be460ace4e407a328c0cf23c9e6c9af09d17ca0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 339904e3fe75c712254f3a7802fc76a0e283c8e5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101484"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808358"
 ---
 # <a name="c-additive-operators"></a>Operatory dodawania języka C
 
@@ -31,14 +31,13 @@ Operatory addytywne, przeprowadzić Dodawanie (**+**) i odejmowania (**-**).
 
 ## <a name="syntax"></a>Składnia
 
-*Additive-expression*: *wyrażenia mnożenia*
-
-*Additive-expression***+***wyrażenia mnożenia* 
-
-*Additive-expression***-***wyrażenia mnożenia* 
+*Additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **+** *wyrażenia mnożenia*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **-** *wyrażenia mnożenia*
 
 > [!NOTE]
->  Mimo że składnia *additive-expression* obejmuje *wyrażenia mnożenia*, oznacza to, że wyrażenia mnożenia są wymagane. Zapoznać się ze składnią w [podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md), aby uzyskać *wyrażenia mnożenia*, *wyrażenie cast*, i *jednoargumentowe wyrażenie*.
+> Mimo że składnia *additive-expression* obejmuje *wyrażenia mnożenia*, oznacza to, że wyrażenia mnożenia są wymagane. Zapoznać się ze składnią w [podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md), aby uzyskać *wyrażenia mnożenia*, *wyrażenie cast*, i *jednoargumentowe wyrażenie*.
 
 Argumenty operacji może być typu całkowitego lub zmiennoprzecinkowego wartości. Niektóre operacje dodawania można również przeprowadzić na wartościach wskaźnika, zgodnie z opisem w obszarze dyskusji każdy operator.
 

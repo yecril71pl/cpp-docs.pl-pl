@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163845"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808943"
 ---
 # <a name="creating-a-simple-consumer"></a>Tworzenie prostego konsumenta
 
@@ -32,15 +32,15 @@ Użyj Kreatora projektów ATL i OLE DB Kreator konsumenta ATL do wygenerowania k
 
    **Nowy projekt** pojawi się okno dialogowe.
 
-1. W **typów projektów** okienku kliknij **zainstalowane** > **szablony** > **Visual C++** folderu, i następnie kliknij przycisk **Aplikacja konsoli Win32** ikonę **szablony** okienka. W **nazwa** wprowadź nazwę projektu, na przykład *MyCons*.
+1. W **typów projektów** okienku kliknij **zainstalowane** > **Visual C++** > **pulpitu Windows** folderu a następnie kliknij przycisk **kreatora pulpitu Windows** ikonę **szablony** okienka. W **nazwa** wprowadź nazwę projektu, na przykład *MyCons*.
 
 1. Kliknij przycisk **OK**.
 
-   Zostanie wyświetlony Kreator aplikacji Win32.
+   **Projektu pulpitu Windows** pojawi się Kreator.
 
 1. Na **ustawienia aplikacji** wybierz opcję **aplikacji konsolowej programu**, a następnie wybierz pozycję **Dodaj wspólne nagłówki dla biblioteki ATL**.
 
-1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i generowania projektu.
+1. Kliknij przycisk **OK** aby zamknąć kreatora i generowania projektu.
 
 Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE DB.
 
@@ -48,9 +48,9 @@ Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MyCons` projektu.
 
-1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **klasy**.
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **nowy element**.
 
-   **Dodaj klasę** pojawi się okno dialogowe.
+   **Dodaj nowy element** pojawi się okno dialogowe.
 
 1. W **kategorie** okienku kliknij **zainstalowane** > **Visual C++** > **ATL**, kliknij przycisk **Konsumenta OLE DB ATL** ikonę **szablony** okienku, a następnie kliknij przycisk **Dodaj**.
 

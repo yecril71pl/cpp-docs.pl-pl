@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448431"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809164"
 ---
 # <a name="coledatetime-class"></a>COleDateTime, klasa
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Data*  
+*Data*<br/>
 `COleDateTime` Obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dateSrc*  
+*dateSrc*<br/>
 Istniejące `COleDateTime` obiektu do skopiowania w nowe `COleDateTime` obiektu.
 
-*varSrc*  
+*varSrc*<br/>
 Istniejące `VARIANT` struktury danych (prawdopodobnie `COleVariant` obiektu) można przekonwertować na wartość daty/godziny (VT_DATE) i skopiowane do nowego `COleDateTime` obiektu.
 
-*dtSrc*  
+*dtSrc*<br/>
 Data/Godzina (`DATE`) wartość do skopiowania w nowe `COleDateTime` obiektu.
 
-*timeSrc*  
+*timeSrc*<br/>
 A `time_t` lub `__time64_t` wartość może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 A `SYSTEMTIME` struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 A `FILETIME` struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu. Należy pamiętać, że `FILETIME` korzysta z uniwersalnego czasu koordynowanego (UTC), więc jeśli przekażesz czasu lokalnego w strukturze będą niepoprawne wyniki. Zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
 *nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*  
@@ -234,7 +234,7 @@ Wskazuje wartości daty i godziny do skopiowania w nowe `COleDateTime` obiektu.
 *wDosDate*, *wDosTime*  
 Wartości daty i godziny może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego systemu MS-DOS `COleDateTime` obiektu.
 
-*znacznika dbts*  
+*znacznika dbts*<br/>
 Odwołanie do [Odcisk czasowy](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury zawierającej bieżący czas lokalny.
 
 ### <a name="remarks"></a>Uwagi
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*  
+*Flagidw*<br/>
 Wskazuje, jedną z następujących flag ustawień regionalnych:
 
 - LOCALE_NOUSEROVERRIDE użyć systemu domyślne ustawienia regionalne, zamiast niestandardowych ustawień użytkownika.
@@ -306,10 +306,10 @@ Wskazuje, jedną z następujących flag ustawień regionalnych:
 
 - Ignoruj VAR_DATEVALUEONLY część godzinowa podczas analizowania.
 
-*lcid*  
+*lcid*<br/>
 Określa identyfikator ustawień regionalnych na potrzeby konwersji. Aby uzyskać więcej informacji na temat identyfikatorów języka, zobacz [identyfikatorów języka](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Formatowanie ciągów podobne do `printf` ciąg formatowania. Każdy formatowanie kodu, poprzedzony procent ( `%`) Zaloguj się, jest zastępowany przez odpowiednie `COleDateTime` składnika. Inne znaki do ciągu formatowania są kopiowane bez zmian do zwracanego ciągu. Zobacz opis funkcji wykonawczej [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać więcej informacji. Wartość i znaczenie kody formatowania `Format` są:
 
 - `%H` Godz. w bieżącym dniu
@@ -320,7 +320,7 @@ Formatowanie ciągów podobne do `printf` ciąg formatowania. Każdy formatowani
 
 - `%%` Znak procentu
 
-*nFormatID*  
+*nFormatID*<br/>
 Identyfikator zasobu ciąg formantu formatu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*znacznika dbts*  
+*znacznika dbts*<br/>
 Odwołanie do [Odcisk czasowy](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*systime —*  
+*systime —*<br/>
 Odwołanie do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, aby otrzymać wartość przekonwertowanego daty/godziny z `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*udate*  
+*udate*<br/>
 Odwołanie do `UDATE` struktury, aby otrzymać wartość przekonwertowanego daty/godziny z `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszDate*  
+*lpszDate*<br/>
 Wskaźnik na ciąg zakończony znakiem null, które ma być analizowana. Aby uzyskać więcej informacji zobacz uwagi.
 
-*Flagidw*  
+*Flagidw*<br/>
 Określa flagi dla ustawień regionalnych i analizowanie. Co najmniej jedną z następujących flag:
 
 - LOCALE_NOUSEROVERRIDE używane domyślne ustawienia regionalne systemu, a nie niestandardowych ustawień użytkownika.
@@ -950,7 +950,7 @@ Określa flagi dla ustawień regionalnych i analizowanie. Co najmniej jedną z n
 
 - Ignoruj VAR_DATEVALUEONLY część godzinowa podczas analizowania.
 
-*lcid*  
+*lcid*<br/>
 Określa identyfikator ustawień regionalnych na potrzeby konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*status*  
+*status*<br/>
 Nowa wartość stanu w tym `COleDateTime` obiektu.
 
 ### <a name="remarks"></a>Uwagi

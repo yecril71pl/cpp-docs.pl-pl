@@ -1,7 +1,7 @@
 ---
 title: Uzyskiwanie dostępu do danych XML | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062504"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808722"
 ---
 # <a name="accessing-xml-data"></a>Uzyskiwanie dostępu do danych XML
 
@@ -53,7 +53,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
-Zwykle, gdy zostanie wywołana `CCommand::Open` (określający, na przykład `CRowset` jako `TRowset` klasy), uzyska `IRowset` wskaźnika. `ICommand::Execute` Zwraca `IRowset` wskaźnika, który jest przechowywany w `m_spRowset` członkiem `CRowset` obiektu. Metody takie jak `MoveFirst`, `MoveNext`, i `GetData` za pomocą tego wskaźnika do pobierania danych.  
+Zwykle, gdy zostanie wywołana `CCommand::Open` (określający, na przykład `CRowset` jako `TRowset` klasy), otrzymuje `IRowset` wskaźnika. `ICommand::Execute` Zwraca `IRowset` wskaźnika, który jest przechowywany w `m_spRowset` członkiem `CRowset` obiektu. Metody takie jak `MoveFirst`, `MoveNext`, i `GetData` za pomocą tego wskaźnika do pobierania danych.  
   
 Z drugiej strony, gdy zostanie wywołana `CCommand::Open` (ale Określa `CStreamRowset` jako `TRowset` klasy), `ICommand::Execute` zwraca `ISequentialStream` wskaźnika, który jest przechowywany w `m_spStream` element członkowski danych [cstreamrowset —](../../data/oledb/cstreamrowset-class.md). Następnie użyj `Read` metody do pobierania danych (ciąg Unicode) w formacie XML. Na przykład:  
   
@@ -61,12 +61,12 @@ Z drugiej strony, gdy zostanie wywołana `CCommand::Open` (ale Określa `CStream
 myCmd.m_spStream->Read()  
 ```  
   
-SQL Server 2000 przeprowadza formatowanie, XML i zwraca wszystkie kolumny i wszystkie wiersze z wierszy jako jeden ciąg XML.  
+SQL Server 2000 nie, formatowanie, XML i zwraca wszystkie kolumny i wszystkie wiersze z wierszy jako jeden ciąg XML.  
   
 Aby uzyskać przykłady dotyczące używania `Read` metody, zobacz sekcję "Dodawanie XML pomocy technicznej do odbiorcy" w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Obsługa języka XML przy użyciu `CStreamRowset` projektów w programach SQL Server 2000 tylko i wymaga, aby miał dostawcy OLE DB dla programu SQL Server 2000 (zainstalowaną z programem MDAC).  
+> Obsługa języka XML przy użyciu `CStreamRowset` projektów w programach SQL Server 2000 tylko i wymaga, aby miał dostawcy OLE DB dla programu SQL Server 2000 (zainstalowaną z programem MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Trwa pobieranie danych XML przy użyciu CXMLAccessor  
 

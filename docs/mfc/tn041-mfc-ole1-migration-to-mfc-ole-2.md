@@ -1,7 +1,7 @@
 ---
 title: 'Tn041 migracja z: MFC / Ole1 do MFC / OLE 2 | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377061"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809021"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migracja z MFC/OLE1 do MFC/OLE 2
 
@@ -301,7 +301,7 @@ W tym momencie OCLIENT jest funkcjonalności aplikacji kontenera OLE. Jest możl
 
 Jedną z najbardziej interesujących funkcji OLE jest aktywacja w miejscu (lub "Edycja wizualna"). Ta funkcja umożliwia aplikacji serwera do przejęcia części interfejsu użytkownika kontenera podać więcej edycji interfejs użytkownika. Aby zaimplementować aktywacji w miejscu do OCLIENT, specjalne zasoby, należy dodać oraz dodatkowy kod. Te zasoby i kod zwykle są dostarczane przez AppWizard — w rzeczywistości większość tutaj kod został pobierają bezpośrednio z nowej aplikacji przez kreatora AppWizard z obsługą "Container".
 
-Po pierwsze jest to konieczne, można dodać zasobu menu, który ma być używany, gdy istnieje element, który jest aktywny w miejscu. Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie z wyjątkiem plików i okno wyskakujące okienka, można utworzyć tego zasobu dodatkowe menu w programie Visual C++. Dwa pasków separatorów są wstawiane do plików i okno wyskakujące okienka do wskazania rozdzielenie grup (powinien wyglądać: plik &#124; &#124; okno). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.
+Po pierwsze jest to konieczne, można dodać zasobu menu, który ma być używany, gdy istnieje element, który jest aktywny w miejscu. Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie z wyjątkiem plików i okno wyskakujące okienka, można utworzyć tego zasobu dodatkowe menu w programie Visual C++. Dwa pasków separatorów są wstawiane do plików i okno wyskakujące okienka do wskazania rozdzielenie grup (powinien wyglądać: plik &#124; &#124; okno). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener zobacz [menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md).
 
 Po utworzeniu tych menu utworzone, możesz podać tę informację framework wiedzieć o nich. Jest to realizowane przez wywołanie `CDocTemplate::SetContainerInfo` dla szablonu dokumentu, aby można go dodać do listy szablonów dokumentów w elemencie InitInstance. Nowy kod, aby zarejestrować szablon dokumentu, który wygląda następująco:
 
@@ -618,7 +618,7 @@ Istnieje wiele więcej błędów w svritem.cpp, które nie zostały uwzględnion
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` nie obsługuje już flagi "bIncludeNative". Natywne kopiowane są dane (dane zapisywane przez funkcję serializacja element serwera) zawsze, aby usunąć pierwszy parametr. Ponadto `CopyToClipboard` spowoduje zgłoszenie wyjątku, po wystąpieniu błędu zamiast zwracać wartość FALSE. Zmień kod dla CServerView::OnEditCopy w następujący sposób:
+`COleServerItem::CopyToClipboard` nie obsługuje już `bIncludeNative` flagi. Natywne kopiowane są dane (dane zapisywane przez funkcję serializacja element serwera) zawsze, aby usunąć pierwszy parametr. Ponadto `CopyToClipboard` spowoduje zgłoszenie wyjątku, po wystąpieniu błędu zamiast zwracać wartość FALSE. Zmień kod dla CServerView::OnEditCopy w następujący sposób:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Aby dodać "Edycja wizualna" (lub aktywacji w miejscu) do tej aplikacji, istniej
 
 - Musisz poinformować szablon o tych specjalnych zasobów i klas.
 
-Zasób menu jest łatwo jest tworzyć. Uruchom program Visual C++, Kopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko edytowanie i pomocy menu wyskakujące okienka. Dodaj separatory, dwóch menu Between menu Edycja i pomocy (powinien wyglądać: Edytuj &#124; &#124; pomocy). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak menu serwer i kontener są scalane, zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.
+Zasób menu jest łatwo jest tworzyć. Uruchom program Visual C++, Kopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko edytowanie i pomocy menu wyskakujące okienka. Dodaj separatory, dwóch menu Between menu Edycja i pomocy (powinien wyglądać: Edytuj &#124; &#124; pomocy). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener, zobacz [menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md).
 
 Mapy bitowe dla paska narzędzi podzbioru można łatwo utworzyć przez skopiowanie jednego z nowej aplikacji wygenerowane przez kreatora AppWizard z zaznaczoną opcją "Server". Następnie można zaimportować tej mapy bitowej do Visual C++. Należy podać identyfikator IDR_HIERSVRTYPE_SRVR_IP mapy bitowej.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Zwróć uwagę, odwołanie do *`AfxGetApp()->m_pMainWnd*`. Serwer jest aktywowany w miejscu, ma okno główne i elementu m_pMainWnd jest ustawiona, ale jest zwykle niewidoczne. Ponadto, w tym oknie odnosi się do *głównego* okna aplikacji, Otwórz okno ramek MDI, który jest wyświetlany, gdy serwer jest w pełni lub uruchomić autonomiczną. Nie odwołuje się do okna aktywnej ramki — gdy w miejscu aktywowane czyli ramkę okna pochodzące z `COleIPFrameWnd`. Aby uzyskać poprawny aktywnego okna, nawet wtedy, gdy w miejscu edytowania tej wersji biblioteki MFC dodaje nową funkcję, `AfxGetMainWnd`. Ogólnie rzecz biorąc, należy użyć tej funkcji, zamiast *`AfxGetApp()->m_pMainWnd*`. Ten kod musi zmienić w następujący sposób:
+Zwróć uwagę, odwołanie do `AfxGetApp()->m_pMainWnd`. Serwer jest aktywowany w miejscu, ma okno główne i elementu m_pMainWnd jest ustawiona, ale jest zwykle niewidoczne. Ponadto, w tym oknie odnosi się do *głównego* okna aplikacji, Otwórz okno ramek MDI, który jest wyświetlany, gdy serwer jest w pełni lub uruchomić autonomiczną. Nie odwołuje się do okna aktywnej ramki — gdy w miejscu aktywowane czyli ramkę okna pochodzące z `COleIPFrameWnd`. Aby uzyskać poprawny aktywnego okna, nawet wtedy, gdy w miejscu edytowania tej wersji biblioteki MFC dodaje nową funkcję, `AfxGetMainWnd`. Ogólnie rzecz biorąc, należy użyć tej funkcji, zamiast `AfxGetApp()->m_pMainWnd`. Ten kod musi zmienić w następujący sposób:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

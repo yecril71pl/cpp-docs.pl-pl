@@ -1,7 +1,7 @@
 ---
 title: CStrBufT, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411186"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808995"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT, klasa
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parametry
 
-*TCharType*  
+*TCharType*<br/>
 Typ znaku `CStrBufT` klasy. Może to być jeden z następujących elementów:
 
 - **CHAR** (na ciągi znaków ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Obiekt ciągu skojarzonego z buforu. Zwykle, deweloper będzie używać wstępnie zdefiniowanych definicje typów `CStrBuf` (TCHAR), wariant `CStrBufA` (**char** wariant) i `CStrBufW` (**wchar_t** wariant).
 
-*nMinLength*  
+*nMinLength*<br/>
 Minimalna długość buforu znaków.
 
-*Flagidw*  
+*Flagidw*<br/>
 Określa, jeśli długość ciągu jest ustalany automatycznie. Może to być jeden z następujących elementów:
 
 - Długość ciągu AUTO_LENGTH są automatycznie określane podczas [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) jest wywoływana. Ciąg musi być zakończony znakiem null. Wartość domyślna.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parametry
 
-*nLength*  
+*nLength*<br/>
 Nową długość buforu znaków ciągu obiektu.
 
 > [!NOTE]

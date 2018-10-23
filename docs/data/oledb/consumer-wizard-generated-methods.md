@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056030"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808228"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 
@@ -40,7 +40,7 @@ OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC generuje pewne funkcje, kt
   
 - `CloseAll` Zamyka wszystkie otwarte zestawów wierszy i wersje wszystkich wykonań poleceń.  
   
-- `OpenRowset` jest wywoływana przez openall —, aby otworzyć konsumenta lub zbiory wierszy.  
+- `OpenRowset` jest wywoływana przez `OpenAll` otworzyć konsumenta lub zbiory wierszy.  
   
 - `GetRowsetProperties` pobiera wskaźnik do za pomocą właściwości, które można ustawić właściwość zestawu wierszy.  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Uwagi  
 
-Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenAll` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
+Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenAll` kod ustawia `DBPROP_IRowsetLocate` właściwości; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywoływać `OpenRowset` , chyba że chcesz pracować z wieloma danych źródła/sesje/zestawów wierszy. `OpenRowset` jest zadeklarowana w pliku nagłówkowym klasę polecenia lub tabeli:  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-Atrybuty zaimplementować tę metodę w różny sposób. Ta wersja przyjmuje obiekt sesji i ciąg polecenia, który domyślnie przyjmuje wartość ciągu polecenia określony w db_command —, mimo że można przekazać inny. Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenRowset` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
+Atrybuty zaimplementować tę metodę w różny sposób. Ta wersja przyjmuje obiekt sesji i ciąg polecenia, który domyślnie przyjmuje wartość ciągu polecenia określony w db_command —, mimo że można przekazać inny. Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenRowset` kod ustawia `DBPROP_IRowsetLocate` właściwości; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; za pomocą tego wskaźnika można ustawić właściwości, takie jak DBPROP_IRowsetChange. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
+Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; można użyć tego wskaźnika można ustawić właściwości, takie jak `DBPROP_IRowsetChange`. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

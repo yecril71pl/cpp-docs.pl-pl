@@ -1,51 +1,54 @@
 ---
-title: CMyProviderSession (MyProviderSess.H) | Dokumentacja firmy Microsoft
+title: CCustomSession (CustomSess.H) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidersession
 - myprovidersess.h
+- ccustomsession
+- customsess.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMyProviderSession class in MyProviderSess.H
 - OLE DB providers, wizard-generated files
+- CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d74c79535a97e8864ad55d3b0cfb35f98bb5ba4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f31e3275ea341c2617ef54f88fc591a5400e15e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106099"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807500"
 ---
-# <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
+# <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
-MyProviderSess.H zawiera deklarację i implementację obiektu sesji OLE DB. Obiekt źródła danych tworzy obiekt sesji i reprezentuje konwersacje między: klienta oraz dostawcy. Kilka jednoczesnych sesji może być otwarty dla jednego źródła danych. Na liście dziedziczenia dla `CMyProviderSession` poniżej:  
+*Niestandardowe*Sess.H zawiera deklarację i implementację obiektu sesji OLE DB. Obiekt źródła danych tworzy obiekt sesji i reprezentuje konwersacje między: klienta oraz dostawcy. Kilka jednoczesnych sesji może być otwarty dla jednego źródła danych. Na liście dziedziczenia dla `CCustomSession` poniżej:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
-// CMyProviderSession  
-class ATL_NO_VTABLE CMyProviderSession :   
+// CCustomSession  
+class ATL_NO_VTABLE CCustomSession :   
    public CComObjectRootEx<CComSingleThreadModel>,  
-   public IGetDataSourceImpl<CMyProviderSession>,  
-   public IOpenRowsetImpl<CMyProviderSession>,  
-   public ISessionPropertiesImpl<CMyProviderSession>,  
-   public IObjectWithSiteSessionImpl<CMyProviderSession>,  
-   public IDBSchemaRowsetImpl<CMyProviderSession>,  
-   public IDBCreateCommandImpl<CMyProviderSession, CMyProviderCommand>  
+   public IGetDataSourceImpl<CCustomSession>,  
+   public IOpenRowsetImpl<CCustomSession>,  
+   public ISessionPropertiesImpl<CCustomSession>,  
+   public IObjectWithSiteSessionImpl<CCustomSession>,  
+   public IDBSchemaRowsetImpl<CCustomSession>,  
+   public IDBCreateCommandImpl<CCustomSession, CCustomCommand>  
 ```  
   
 Dziedziczy obiektu session `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, i `IDBCreateCommand`. `IGetDataSource` Interfejs umożliwia sesję, aby pobrać źródła danych, w której został utworzony. Jest to przydatne, jeśli zajdzie potrzeba przywrócenia właściwości źródła danych, który został utworzony lub inne informacje, które źródło danych może zapewnić. `ISessionProperties` Interfejs obsługuje wszystkie właściwości dla tej sesji. `IOpenRowset` i `IDBCreateCommand` interfejsy są używane do wykonania pracy bazy danych. Jeśli dostawca obsługuje poleceń, implementuje `IDBCreateCommand` interfejsu. Służy do tworzenia obiektu polecenia, które można wykonać polecenia. Dostawca zawsze implementuje `IOpenRowset` obiektu. Służy do generowania prosty zestaw wierszy od dostawcy. Jest domyślnego zestawu wierszy (na przykład `"select * from mytable"`) od dostawcy.  
   
-Kreator generuje również trzy klasy sesji: `CMyProviderSessionColSchema`, `CMyProviderSessionPTSchema`, i `CMyProviderSessionTRSchema`. Sesje te są używane do zestawów wierszy schematu. Zestawy wierszy schematu umożliwiają dostawcy w celu zwracania metadanych do użytkownika bez konsumenta o do wykonywania zapytań lub pobierania danych. Pobieranie metadanych może być znacznie szybciej niż wykrywanie możliwości dostawców.  
+Kreator generuje również trzy klasy sesji: `CCustomSessionColSchema`, `CCustomSessionPTSchema`, i `CCustomSessionTRSchema`. Sesje te są używane do zestawów wierszy schematu. Zestawy wierszy schematu umożliwiają dostawcy w celu zwracania metadanych do użytkownika bez konsumenta o do wykonywania zapytań lub pobierania danych. Pobieranie metadanych może być znacznie szybciej niż wykrywanie możliwości dostawców.  
   
 Specyfikacja OLE DB wymaga, aby dostawców Implementowanie `IDBSchemaRowset` typów zestawów wierszy schematu obsługę trzech interfejsu: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES i DBSCHEMA_TABLES. Kreator generuje implementacje dla każdego zestawu wierszy schematu. Każda klasa generowane przez kreatora zawiera `Execute` metody. W tym `Execute` metody mogą zwracać dane do dostawcy o tym, które tabele, kolumny i typy danych obsługują. Te dane, zwykle jest znany w czasie kompilacji.  
   

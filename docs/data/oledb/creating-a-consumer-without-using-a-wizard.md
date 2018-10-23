@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410736"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807800"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
 
@@ -67,7 +67,7 @@ Programowo odbiorcy zwykle wykonuje następującą sekwencję czynności:
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Opcjonalnie zestawu wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazywać je jako parametr do `rs.Open`. Aby uzyskać przykład jak to zrobić, zobacz **getrowsetproperties —** w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Opcjonalnie zestawu wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazywać je jako parametr do `rs.Open`. Aby uzyskać przykład jak to zrobić, zobacz `GetRowsetProperties` w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Można teraz używać zestawu wierszy pobierania/operacje na danych.  
   

@@ -1,7 +1,7 @@
 ---
 title: rename_namespace | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 966c6dda7e5e0bd28e78f37967397c3b64e4e55c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411862"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808475"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**Określonego język C++**  
-  
-Zmienia nazwę przestrzeni nazw, który znajduje się zawartość biblioteki typów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-rename_namespace("NewName")  
-```  
-  
-### <a name="parameters"></a>Parametry  
-*Nowa nazwa*  
-Nowa nazwa przestrzeni nazw.  
-  
-## <a name="remarks"></a>Uwagi  
- 
-Trwa pojedynczy argument *NewName*, która określa nową nazwę dla przestrzeni nazw.  
-  
-Aby usunąć przestrzeń nazw, należy użyć [no_namespace](../preprocessor/no-namespace.md) zamiast tego atrybutu.  
-  
-**KONIEC określonego języka C++**  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+
+**Określonego język C++**
+
+Zmienia nazwę przestrzeni nazw, który znajduje się zawartość biblioteki typów.
+
+## <a name="syntax"></a>Składnia
+
+```
+rename_namespace("NewName")
+```
+
+### <a name="parameters"></a>Parametry
+
+*Nowa nazwa*<br/>
+Nowa nazwa przestrzeni nazw.
+
+## <a name="remarks"></a>Uwagi
+
+Trwa pojedynczy argument *NewName*, która określa nową nazwę dla przestrzeni nazw.
+
+Aby usunąć przestrzeń nazw, należy użyć [no_namespace](../preprocessor/no-namespace.md) zamiast tego atrybutu.
+
+**KONIEC określonego języka C++**
+
+## <a name="see-also"></a>Zobacz też
+
 [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

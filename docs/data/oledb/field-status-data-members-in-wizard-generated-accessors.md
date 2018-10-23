@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c48f4699c0add937c2bcdb13d49bce8cb895c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ce3ad819b6e22bfb5c760849e5f3fdf85bd4f7bc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083967"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809099"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 
@@ -80,13 +80,13 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Jeśli modyfikujesz klasy rekordu użytkownika lub napisać własny konsumenta, zmiennych danych musi występować przed zmienne stanu i długości.  
+> Jeśli modyfikujesz klasy rekordu użytkownika lub napisać własny konsumenta, zmiennych danych musi występować przed zmienne stanu i długości.  
   
 Wartości stanu można użyć na potrzeby debugowania. Jeśli kod wygenerowany przez OLE DB Kreator konsumenta ATL generuje błędy kompilacji, takie jak DB_S_ERRORSOCCURRED lub DB_E_ERRORSOCCURRED, najpierw należy rozważyć bieżących wartości pól elementy członkowskie dotyczące stanu. Te, które mają różną od zera wartości odpowiadają naruszającym kolumn.  
   
 Można również użyć wartości stanu, można ustawić wartości NULL dla określonego pola. Pomoże w przypadkach, w których chcesz rozróżnienie wartości pola jako wartość NULL, a nie wartość zero. Jest podjęcie decyzji o wartości NULL, jest prawidłową wartością lub wartością specjalną, i zdecyduj, jak aplikacja powinna obsługiwać go. OLE DB definiuje DBSTATUS_S_ISNULL jako prawidłowy sposób określania ogólnej wartości NULL. Jeśli odbiorca odczytuje dane i ma wartość null, w polu stanu jest równa DBSTATUS_S_ISNULL. Jeśli użytkownik chce, aby ustawić wartość NULL, użytkownik ustawia wartość stanu DBSTATUS_S_ISNULL przed wywołaniem dostawcy.  
   
-Następnie otwórz Oledb.h i wyszukaj `DBSTATUSENUM`. Następnie można dopasować liczbową wartość różną od zera stanu dla `DBSTATUSENUM` wartości wyliczenia. Jeśli nazwa wyliczenia nie jest wystarczające, aby informujące o tym, czym jest problem, zobacz temat "Status" w sekcji "Powiązanie danych Values" [OLE DB przewodnik](/previous-versions/windows/desktop/ms713643). Ten temat zawiera tabele wartości stanu używany podczas pobierania lub ustawiania danych. Aby uzyskać informacje o wartości długości zobacz temat "Length" w tej samej sekcji.  
+Następnie otwórz Oledb.h i wyszukaj DBSTATUSENUM. Następnie można dopasować liczbową wartość różną od zera stanu dla DBSTATUSENUM wartości wyliczenia. Jeśli nazwa wyliczenia nie jest wystarczające, aby informujące o tym, czym jest problem, zobacz temat "Status" w sekcji "Powiązanie danych Values" [OLE DB przewodnik](/previous-versions/windows/desktop/ms713643). Ten temat zawiera tabele wartości stanu używany podczas pobierania lub ustawiania danych. Aby uzyskać informacje o wartości długości zobacz temat "Length" w tej samej sekcji.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Pobieranie długości lub stan kolumny  
 

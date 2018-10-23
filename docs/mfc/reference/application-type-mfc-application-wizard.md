@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434380"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808774"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Typ aplikacji, kreator aplikacji MFC
 
@@ -58,7 +58,7 @@ Ta strona [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
 
 - **Język zasobów**
 
-   Określa język zasobów. Zostanie wyświetlona lista dostępnych języków w systemie, jak zainstalować program Visual Studio. Jeśli chcesz zaznaczeniu innego języka niż język folderu odpowiedni szablon dla tego języka muszą być zainstalowane. Aby uzyskać więcej informacji o instalowaniu zasobów językowych różni się od wartości domyślne dostępne w **język zasobów** listę, zobacz [Obsługa kreatora dla innych języków](../../ide/wizard-support-for-other-languages.md).
+   Określa język zasobów. Zostanie wyświetlona lista dostępnych języków w systemie, jak zainstalować program Visual Studio. Jeśli chcesz zaznaczeniu innego języka niż język folderu odpowiedni szablon dla tego języka muszą być zainstalowane.
 
    Język, który wybierzesz znajduje odzwierciedlenie w **zlokalizowane ciągi** opcji [ciągi szablonu dokumentu, Kreator aplikacji MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) strony kreatora.
 

@@ -1,7 +1,7 @@
 ---
 title: CStringT, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890702"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809125"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>Parametry
 
-*BaseType*  
+*BaseType*<br/>
 Typ znaku klasa string. Może to być jeden z następujących elementów:
 
 - **CHAR** (na ciągi znaków ANSI).
@@ -124,7 +124,7 @@ Typ znaku klasa string. Może to być jeden z następujących elementów:
 
 - TCHAR (na ciągi znaków ANSI i Unicode).
 
-*StringTraits*  
+*StringTraits*<br/>
 Określa, czy klasa string konieczne Obsługa bibliotek C Run-Time (CRT) i gdzie znajdują się zasoby w postaci ciągów. Może to być jeden z następujących elementów:
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Ciąg formantu formatu.
 
-*nFormatID*  
+*nFormatID*<br/>
 Identyfikatora zasobu ciągu, który zawiera ciąg formantu formatu.
 
-*Argument*  
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Drugi ciąg używana na potrzeby porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Drugi ciąg używana na potrzeby porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Drugi ciąg używana na potrzeby porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Drugi ciąg używana na potrzeby porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parametry
 
-*pch*  
+*pch*<br/>
 Wskaźnik do tablicy znaków o długości *nLength*, nie zakończony znakiem null.
 
-*nLength*  
+*nLength*<br/>
 Liczbę znaków w *pch*.
 
-*ch*  
+*ch*<br/>
 Pojedynczy znak.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ciąg zakończony wartością null do skopiowania do tego `CStringT` obiektu.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Wskaźnik do Menedżera pamięci `CStringT` obiektu. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięci dla `CStringT`, zobacz [zarządzanie pamięcią za pomocą CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*strSrc*  
+*strSrc*<br/>
 Istniejące `CStringT` obiektu do skopiowania do tego `CStringT` obiektu. Aby uzyskać więcej informacji na temat `CThisString` i `CThisSimpleString`, zobacz sekcję Uwagi.
 
-*varSrc*  
+*varSrc*<br/>
 Variant — obiekt ma być skopiowany do tego `CStringT` obiektu.
 
-*BaseType*  
+*BaseType*<br/>
 Typ znaku klasa string. Może to być jeden z następujących elementów:
 
 **CHAR** (na ciągi znaków ANSI).
@@ -569,13 +569,13 @@ Typ znaku klasa string. Może to być jeden z następujących elementów:
 
 TCHAR (na ciągi znaków ANSI i Unicode).
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Wartość logiczna określająca, czy projekt jest biblioteki DLL MFC (TRUE) czy nie (FALSE).
 
-*SystemString*  
+*SystemString*<br/>
 Musi być `System::String`, i projektu muszą być skompilowane z/CLR.
 
-*pString*  
+*pString*<br/>
 Dojście do `CStringT` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Liczony od zera indeks pierwszego znaku w `CStringT` obiektu do usunięcia.
 
-*nCount*  
+*nCount*<br/>
 Liczba znaków, które mają zostać usunięte.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszSub*  
+*pszSub*<br/>
 Ciąg do wyszukania.
 
-*iStart*  
+*iStart*<br/>
 Indeks znaków w ciągu, aby rozpocząć wyszukiwanie z lub 0, aby rozpocząć od samego początku.
 
-*ch*  
+*ch*<br/>
 Pojedynczy znak do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Ciąg zawierający znaki do dopasowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*  
+*nFormatID*<br/>
 Identyfikatora zasobu ciągu, który zawiera ciąg formantu formatu.
 
-*pszFormat*  
+*pszFormat*<br/>
 Ciąg formantu formatu.
 
-*Argument*  
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*  
+*nFormatID*<br/>
 Identyfikator zasobu ciągu zawierający tekst sformatowany komunikat.
 
-*pszFormat*  
+*pszFormat*<br/>
 Wskazuje ciąg formantu formatu. Zostanie ono skanowane pod kątem operacji wstawienia i odpowiednio sformatowane. Ciąg formatu jest podobna do funkcji wykonawczej *printf*-stylu ciągów formatu, z wyjątkiem umożliwia parametry, które ma zostać wstawiony w dowolnej kolejności.
 
-*Argument*  
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Wskazuje ciąg formantu formatu. Zostanie ono skanowane pod kątem operacji wstawienia i odpowiednio sformatowane. Ciąg formatu jest podobna do funkcji wykonawczej `printf`-stylu ciągów formatu, z wyjątkiem umożliwia parametry, które ma zostać wstawiony w dowolnej kolejności.
 
-*pArgList*  
+*pArgList*<br/>
 Wskaźnik do listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Wskazuje ciąg formantu formatu. Zostanie ono skanowane pod kątem operacji wstawienia i odpowiednio sformatowane. Ciąg formatu jest podobna do funkcji wykonawczej `printf`-stylu ciągów formatu, z wyjątkiem umożliwia parametry, które ma zostać wstawiony w dowolnej kolejności.
 
-*argumenty*  
+*argumenty*<br/>
 Wskaźnik do listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>Parametry
 
-*pszVar*  
+*pszVar*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa zmienną środowiskową.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Indeks znaków, przed którym odbędzie się wstawiania.
 
-*psz*  
+*psz*<br/>
 Wskaźnik do podciągu, który ma zostać wstawiony.
 
-*ch*  
+*ch*<br/>
 Znak, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*  
+*nCount*<br/>
 Liczba znaków do wyodrębnienia z tego `CStringT` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 Dojście do wystąpienia modułu.
 
-*nID*  
+*nID*<br/>
 Identyfikator Windows ciągu zasobu.
 
-*wLanguageID*  
+*wLanguageID*<br/>
 Język zasobu ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iFirst*  
+*iFirst*<br/>
 Liczony od zera indeks pierwszego znaku, w tym `CStringT` obiekt, który ma być zawarty w wyodrębnionego ciągu.
 
-*nCount*  
+*nCount*<br/>
 Liczba znaków do wyodrębnienia z tego `CStringT` obiektu. Jeśli ten parametr nie zostanie podany, jest wyodrębniany do końca ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*CH2*  
+*CH2*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*str1*  
+*str1*<br/>
 A `CStringT` do łączenia z ciąg lub znak.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do łączenia z ciąg lub znak.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do łączenia z ciąg lub znak.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik do ciągu do łączenia z ciąg lub znak.
 
 ### <a name="remarks"></a>Uwagi
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 str  
 Odwołanie do `CThisSimpleString` obiektu.
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Wartość logiczna, określając, czy projekt jest biblioteki MFC DLL.
 
-*BaseType*  
+*BaseType*<br/>
 Bazowy typ ciągu.
 
-*var*  
+*var*<br/>
 Variant — obiekt do połączenia tego ciągu.
 
-*ch*  
+*ch*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*pszSrc*  
+*pszSrc*<br/>
 Wskaźnik do oryginalnego ciągu są łączone.
 
-*strSrc*  
+*strSrc*<br/>
 A `CStringT` do łączenia się tego ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI lub Unicode znaków do porównania.
 
-*CH2*  
+*CH2*<br/>
 ANSI lub Unicode znaków do porównania.
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*CH2*  
+*CH2*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 A `CStringT` do porównania.
 
-*str2*  
+*str2*<br/>
 A `CStringT` do porównania.
 
-*psz1*  
+*psz1*<br/>
 Wskaźnik na ciąg do porównania.
 
-*psz2*  
+*psz2*<br/>
 Wskaźnik na ciąg do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parametry
 
-*chRemove*  
+*chRemove*<br/>
 Znak, który ma zostać usunięty z ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>Parametry
 
-*pszOld*  
+*pszOld*<br/>
 Wskaźnik na ciąg zakończony znakiem null, mają zostać zastąpione przez *pszNew*.
 
-*pszNew*  
+*pszNew*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który zastępuje *pszOld*.
 
-*chOld*  
+*chOld*<br/>
 Znak, który ma zostać zastąpione przez *chNew*.
 
-*chNew*  
+*chNew*<br/>
 Zastępowanie znaków *chOld*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*  
+*nCount*<br/>
 Liczba znaków do wyodrębnienia z tego `CStringT` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pbstr*  
+*pbstr*<br/>
 Wskaźnik do ciągu znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Ciąg jest interpretowany jako zbiór znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Ciąg jest interpretowany jako zbiór znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszTokens*  
+*pszTokens*<br/>
 Ciąg zawierający token ograniczników. Kolejność tych ograniczniki nie jest ważna.
 
-*iStart*  
+*iStart*<br/>
 Liczony od zera indeks, aby rozpocząć wyszukiwanie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Znak docelowych można przycięcia.
 
-*pszTargets*  
+*pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowych można przycięcia. Wszystkie wiodące i końcowe wystąpienia znaków w *pszTarget* będą usuwane z `CStringT` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Znak docelowych można przycięcia.
 
-*pszTargets*  
+*pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowych można przycięcia. Wszystkie wystąpienia wiodących znaków *pszTarget* będą usuwane z `CStringT` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Znak docelowych można przycięcia.
 
-*pszTargets*  
+*pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowych można przycięcia. Końcowe wszystkie wystąpienia znaków w *pszTarget* będą usuwane z `CStringT` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana

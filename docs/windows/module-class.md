@@ -1,7 +1,7 @@
 ---
 title: Klasa modułu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494533"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808633"
 ---
 # <a name="module-class"></a>Module — Klasa
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ modułu.
 
-*Wywołanie zwrotne*  
+*Wywołanie zwrotne*<br/>
 Wywołuje się, gdy ostatni obiekt wystąpienia modułu jest zwalniany.
 
-*object*  
+*object*<br/>
 *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po udostępnieniu ostatni obiekt wystąpienia w module.
 
-*— Metoda*  
+*— Metoda*<br/>
 *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po udostępnieniu ostatni obiekt wystąpienia w module.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 IID klasy środowiska uruchomieniowego.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 IActivationFactory dla klasy określonego środowiska uruchomieniowego.
 
-*serverName*  
+*serverName*<br/>
 Nazwa podzbiór fabryki klas w bieżącego modułu. Określ nazwę serwera, używane w [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makro, lub określ `nullptr` można pobrać domyślną nazwę serwera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -253,16 +253,16 @@ Retreives pamięci podręcznej fabryki klas.
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 Identyfikator klasy.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu, który w przypadku żądania.
 
-*ppv*  
+*ppv*<br/>
 Wskaźnik zwracany obiekt.
 
-*serverName*  
+*serverName*<br/>
 Nazwa serwera, który jest określony w jednej `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, lub `ActivatableClass` — makro; lub `nullptr` można pobrać domyślną nazwę serwera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*  
+*serverName*<br/>
 W pełni kwalifikowaną nazwę serwera.
 
-*CLSID*  
+*CLSID*<br/>
 Tablica CLSID do zarejestrowania.
 
-*fabryki*  
+*fabryki*<br/>
 Tablica interfejsów IUnknown typów obiektów klas, których udostępnienie jest on publikowany.
 
-*Pliki cookie*  
+*Pliki cookie*<br/>
 Po zakończeniu operacji, tablicę wskaźników do wartości, które identyfikują klasy obiektów, które zostały zarejestrowane. Wartości te są później używane odwołać rejestracji.
 
-*Liczba*  
+*Liczba*<br/>
 Liczba CLSID do zarejestrowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*Moduł*  
+*module*<br/>
 Tablica obiektów COM i środowiska wykonawczego Windows.
 
-*serverName*  
+*serverName*<br/>
 Nazwa serwera, na którym są tworzone obiekty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -399,21 +399,21 @@ Rejestruje co najmniej jeden obiekt środowiska wykonawczego Windows, dzięki cz
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*  
+*serverName*<br/>
 Nazwa, która określa podzbiór obiektów wpływ tej operacji.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Tablica aktywowalnej CLSID do zarejestrowania.
 
-*Plik cookie*  
+*Plik cookie*<br/>
 Wartość, która identyfikuje obiektów klas, które zostały zarejestrowane. Ta wartość jest używana później, aby można było odwołać rejestracji.
 
-*Liczba*  
+*Liczba*<br/>
 Liczba obiektów do zarejestrowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*  
+*serverName*<br/>
 (Nieużywane)
 
-*Pliki cookie*  
+*Pliki cookie*<br/>
 Tablica wskaźników do wartości, które identyfikują obiektów klasy do wyrejestrowania. Tablica został utworzony przez [registercomobject —](#registercomobject) metody.
 
-*Liczba*  
+*Liczba*<br/>
 Liczba klasy, aby wyrejestrować.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*Moduł*  
+*module*<br/>
 Wskaźnik do modułu.
 
-*serverName*  
+*serverName*<br/>
 Kwalifikującym się nazwa, która określa podzbiór obiektów wpływ tej operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik cookie*  
+*Plik cookie*<br/>
 Wskaźnik do wartość, która identyfikuje obiekt klasy, którego rejestracja ma zostać odwołane.

@@ -1,7 +1,7 @@
 ---
 title: Operatory przesunięcia bitowego | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020124"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808202"
 ---
 # <a name="bitwise-shift-operators"></a>Operatory przesunięcia bitowego
 
-Operatory przesunięcia shift ich pierwszego operandu w lewo (`<<`) lub w prawo (`>>`) przez liczbę pozycji określa drugiego operandu.
+Operatory przesunięcia shift ich pierwszego operandu w lewo (**&lt;&lt;**) lub w prawo (**>>**) przez liczbę pozycji określa drugiego operandu.
 
 ## <a name="syntax"></a>Składnia
 
-*SHIFT-expression*: *additive-expression*
-
-*SHIFT-expression*`<<`*additive-expression shift-expression*`>>`*additive-expression* 
+*SHIFT-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **&lt; &lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
 
 Oba operandy muszą być wartości całkowitych. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem lewego operandu po konwersji.
 
 Dla leftward przesunięcia odpowiednich pozycje opuszczonych bitów są ustawione na 0. Dla rightward przesunięcia pozycje opuszczonych bitów po lewej stronie są wypełnione w zależności od typu pierwszego operandu po konwersji. Jeśli typ jest `unsigned`, są one ustawione na 0. W przeciwnym razie są wypełnione przy użyciu kopii bitu znaku. Dla operatorów przesunięcia w lewo bez przepełnienia, instrukcja
 
-```
+```C
 expr1 << expr2
 ```
 
 jest odpowiednikiem mnożenia przez wartość 2<sup>Wyr2</sup>. Dla operatorów przesunięcia w prawo
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ Wynik operacji przesunięcia jest niezdefiniowana, jeśli drugi argument jest uj
 
 Ponieważ konwersje wykonywane przez shift operatory nie są oferowane dla przepełnienia lub warunków niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji przesunięcia nie może być przedstawiony w typie pierwszego operandu po konwersji.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70c44f0063d8fdb354f2b3b2fd222748d9d1d9bf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70607e0518d13015ee11895270ad3306cd3da24b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048100"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808176"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Przechodzenie testów zgodności z OLE DB
 
@@ -35,7 +35,7 @@ Aby dostawców bardziej spójną, Data Access SDK zawiera zestaw testów zgodno�
 W Visual C++ 6.0 szablony dostawców OLE DB dodano wiele funkcji podłączania pozwala sprawdzić właściwości i wartości. Większość tych funkcji dodanych w odpowiedzi na testów zgodności.  
   
 > [!NOTE]
->  Musisz dodać kilka funkcji sprawdzania poprawności dla dostawcy do przekazania testów zgodności z OLE DB.  
+> Musisz dodać kilka funkcji sprawdzania poprawności dla dostawcy do przekazania testów zgodności z OLE DB.  
   
 Ten dostawca wymaga dwóch procedur weryfikacji. Pierwszy procedury `CRowsetImpl::ValidateCommandID`, jest częścią klasy zestawu wierszy. Wywoływana podczas tworzenia zestawu wierszy za pomocą szablonów dostawcy. W przykładzie użyto tej procedury do Poinformuj klientów, że nie obsługuje indeksów. Pierwsze wywołanie jest `CRowsetImpl::ValidateCommandID` (należy pamiętać, że dostawca używa `_RowsetBaseClass` typedef dodany do mapy interfejsu dla `CMyProviderRowset` w [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md), więc nie trzeba wpisywać tego długi wiersz szablonu argumenty). Następnie zwraca DB_E_NOINDEX, jeśli parametr indeksu nie jest NULL (oznacza to, użytkownik chce użyć indeksu na NAS). Aby uzyskać więcej informacji na temat identyfikatorów poleceń, zobacz specyfikację OLE DB i poszukaj `IOpenRowset::OpenRowset`.  
   
@@ -61,29 +61,9 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
   
 Wywołanie szablony dostawcy `OnPropertyChanged` metody zawsze wtedy, gdy ktoś zmieni się właściwość w `DBPROPSET_ROWSET` grupy. Jeśli chcesz obsługiwać właściwości dla innych grup, możesz dodać je do odpowiedniego obiektu (czyli `DBPROPSET_SESSION` kontroli go w programie `CMyProviderSession` klasy).  
   
-Ten kod najpierw sprawdza, czy właściwość jest połączone z innym. Jeśli ta właściwość jest powiązane, ustawia `DBPROP_BOOKMARKS` właściwości na wartość True. Dodatek C specyfikacji OLE DB zawiera informacje dotyczące właściwości. Te informacje również informuje, czy właściwość jest powiązany inny.  
+Ten kod najpierw sprawdza, czy właściwość jest połączone z innym. Jeśli ta właściwość jest powiązane, ustawia `DBPROP_BOOKMARKS` właściwość `True`. Dodatek C specyfikacji OLE DB zawiera informacje dotyczące właściwości. Te informacje również informuje, czy właściwość jest powiązany inny.  
   
 Można także dodać `IsValidValue` rutynowej w kodzie. Wywołanie szablony `IsValidValue` podczas próby ustawienia właściwości. Czy zastąpić tę metodę, jeśli potrzebujesz dodatkowego przetwarzania podczas ustawiania wartości właściwości. Może mieć jedną z następujących metod dla każdego zestawu właściwości.  
-  
-## <a name="threading-issues"></a>Problemy wielowątkowości  
-
-Domyślnie OLE DB Provider kreatora ATL OLE DB Provider kreatora generuje kod dla dostawcy w celu uruchomienia w modelu typu apartment. Jeśli spróbujesz uruchomić ten kod za pomocą testów zgodności początkowo należy pobrać błędy. To jest ponieważ Ltm.exe, narzędzie używane do uruchamiania testów o zgodności z OLE DB, wartość domyślna to bezpłatne jednowątkowa. Kod domyślnie OLE DB Provider Kreator modelu typu apartment, wydajność i łatwość użycia.  
-  
-Aby rozwiązać ten problem, możesz zmienić LTM lub zmienić dostawcę.  
-  
-#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Aby zmienić LTM do uruchamiania w apartamentu Threading tryb  
-  
-1. W menu głównym LTM kliknij **narzędzia**, a następnie kliknij przycisk **opcje**.  
-  
-1. Na **ogólne** kartę, zmień model wątkowy z **bezpłatne Threading** do **Threading apartamentu**.  
-  
-Aby zmienić dostawcy do pracy w trybie wątków wolne:  
-  
-- W projekcie dostawcy wyszukiwania dla wszystkich wystąpień `CComSingleThreadModel` i zastąp go wartością `CComMultiThreadModel`, powinien być w nagłówkach źródła, sesji i zestawu wierszy danych.  
-  
-- W pliku .rgs zmienić model wątkowy z **apartamentu** do **zarówno**.  
-  
-- Postępuj zgodnie z poprawną programowania reguł programowania za darmo wielowątkowych (czyli blokadę zapisu).  
   
 ## <a name="see-also"></a>Zobacz też  
 

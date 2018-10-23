@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101647"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808930"
 ---
 # <a name="using-manual-accessors"></a>Korzystanie z ręcznych metod dostępu
 
@@ -36,7 +36,7 @@ Istnieją cztery czynności wykonywane podczas obsługi nieznane polecenie:
   
 - Czy istnieją wielu zwracane zestawy wierszy  
   
-Aby to zrobić z szablonami konsumentów DB OLE, należy użyć `CManualAccessor` klasy i wykonaj następujące czynności:  
+W celu obeznani z szablonami konsumentów DB OLE `CManualAccessor` klasy i wykonaj następujące czynności:  
   
 1. Otwórz `CCommand` obiekt z `CManualAccessor` jako parametr szablonu.  
   
@@ -44,7 +44,7 @@ Aby to zrobić z szablonami konsumentów DB OLE, należy użyć `CManualAccessor
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-1. Kwerendy sesji dla `IDBSchemaRowset` interfejs i użyć zestawu wierszy parametrów procedury. Jeśli `IDBSchemaRowset` interfejs nie jest dostępny, wykonanie kwerendy `ICommandWithParameters` interfejsu. Wywołaj `GetParameterInfo` informacji. Jeśli żadna interfejs jest dostępny, można założyć, że nie ma żadnych parametrów.  
+1. Kwerendy sesji dla `IDBSchemaRowset` interfejs i użyć zestawu wierszy parametrów procedury. Jeśli `IDBSchemaRowset` interfejsu nie jest dostępny, wykonanie kwerendy `ICommandWithParameters` interfejsu. Wywołaj `GetParameterInfo` informacji. Jeśli żadna interfejs jest dostępny, można założyć, że nie ma żadnych parametrów.  
   
 1. Dla każdego parametru wywołania `AddParameterEntry` Dodaj parametry i ich ustawiania.  
   

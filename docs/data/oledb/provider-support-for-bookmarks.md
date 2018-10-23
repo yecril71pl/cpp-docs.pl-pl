@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017176"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807526"
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While pętla zawiera kod, aby wywołać `Compare` method in Class metoda `IRowsetLocate` interfejsu. Kod, który masz powinna zawsze przekazać, ponieważ porównujemy dokładnie tych samych zakładek. Ponadto przechowywanie jedną zakładkę w zmiennej tymczasowej, tak, aby można go użyć po while pętla zostanie zakończone, aby wywołać `MoveToBookmark` funkcji w szablonach konsumenta. `MoveToBookmark` Wywołaniach funkcji `GetRowsAt` method in Class metoda `IRowsetLocate`.  
+**Podczas** pętla zawiera kod, aby wywołać `Compare` method in Class metoda `IRowsetLocate` interfejsu. Kod, który masz powinna zawsze przekazać, ponieważ porównujemy dokładnie tych samych zakładek. Ponadto przechowywanie jedną zakładkę w zmiennej tymczasowej, tak, aby użyć go po **podczas** pętla zostanie zakończone, aby wywołać `MoveToBookmark` funkcji w szablonach konsumenta. `MoveToBookmark` Wywołaniach funkcji `GetRowsAt` method in Class metoda `IRowsetLocate`.  
   
 Należy również zaktualizować rekord użytkownika u odbiorcy. Dodaj odpowiedni wpis w klasie w celu obsługi zakładki i do wpisu w `COLUMN_MAP`:  
   

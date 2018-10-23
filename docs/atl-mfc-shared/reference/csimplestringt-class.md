@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434664"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809151"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, klasa
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Parametry
 
-*BaseType*  
+*BaseType*<br/>
 Typ znaku klasa string. Może to być jeden z następujących elementów:
 
 - **CHAR** (na ciągi znaków ANSI).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT` Obiektu do dołączenia.
 
-*pszSrc*  
+*pszSrc*<br/>
 Wskaźnik na ciąg zawierający znaki, które mają być dołączane.
 
-*nLength*  
+*nLength*<br/>
 Liczba znaków do dołączenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak do dołączenia
 
 ### <a name="remarks"></a>Uwagi
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Parametry
 
-*pchDest*  
+*pchDest*<br/>
 Wskaźnik do ciągu znaków.
 
-*pchSrc*  
+*pchSrc*<br/>
 Wskaźnik na ciąg zawierający znaki, które ma być skopiowany.
 
-*nChars*  
+*nChars*<br/>
 Liczba *pchSrc* znaków do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Parametry
 
-*pchDest*  
+*pchDest*<br/>
 Wskaźnik do ciągu znaków.
 
-*pchSrc*  
+*pchSrc*<br/>
 Wskaźnik na ciąg zawierający znaki, które ma być skopiowany.
 
-*nChars*  
+*nChars*<br/>
 Liczba *pchSrc* znaków do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Parametry
 
-*strSrc*  
+*strSrc*<br/>
 Istniejące `CSimpleStringT` obiektu do skopiowania do tego `CSimpleStringT` obiektu.
 
-*pchSrc*  
+*pchSrc*<br/>
 Wskaźnik do tablicy znaków o długości *nLength*, nie zakończenie wartością null.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ciąg zakończony wartością null do skopiowania do tego `CSimpleStringT` obiektu.
 
-*nLength*  
+*nLength*<br/>
 Liczbę znaków w `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Wskaźnik do Menedżera pamięci `CSimpleStringT` obiektu. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięci dla `CSimpleStringT`, zobacz [zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Liczony od zera indeks znaku w `CSimpleStringT` obiektu. *IChar* parametr musi być większa lub równa 0 i mniejsza niż wartość zwrócona przez obiekt [GetLength](#getlength). W przeciwnym razie `GetAt` wygeneruje wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Parametry
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Minimalna liczba znaków, które mogą pomieścić buforu znaków. Ta wartość nie obejmuje miejsca dla terminator o wartości null.
 
 Jeśli *nMinBufferLength* jest większa niż długość bieżącego buforu `GetBuffer` niszczy bieżącego buforu, zastępuje go znakiem bufor żądany rozmiar i resetuje licznik odwołań obiektu od zera. Jeśli wcześniej o nazwie [LockBuffer](#lockbuffer) dla tego buforu utracisz blokady buforu.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nLength*  
+*nLength*<br/>
 Dokładny rozmiar `CSimpleStringT` znak buforu w znakach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Liczony od zera indeks znaku w ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Liczony od zera indeks znaku w ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Wskaźnik na ciąg zakończony znakiem null.
 
-*strSrc*  
+*strSrc*<br/>
 Wskaźnik do istniejącego `CSimpleStringT` obiektu.
 
-*ch*  
+*ch*<br/>
 Znak, który ma zostać dołączona.
 
 ### <a name="remarks"></a>Uwagi
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Wskaźnik na ciąg zakończony znakiem null.
 
-*strSrc*  
+*strSrc*<br/>
 Wskaźnik do istniejącego `CSimpleStringT` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nLength*  
+*nLength*<br/>
 Dokładny rozmiar `CSimpleStringT` znak buforu w znakach.
 
 ### <a name="remarks"></a>Uwagi
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Długość nowego ciągu znaków, nie licząc zamykającego terminator o wartości null. Jeśli ten ciąg ma wartość null, zakończone, ustawia wartość domyślna-1 `CSimpleStringT` rozmiar do bieżącego długość ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Długość ciągu, zostały udostępnione
 
 ### <a name="remarks"></a>Uwagi
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Liczony od zera indeks znaku w `CSimpleStringT` obiektu. *IChar* parametr musi być większa lub równa 0 i mniejsza niż wartość zwrócona przez obiekt [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Znak nowego.
 
 ### <a name="remarks"></a>Uwagi
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Wskaźnik do nowego Menedżera pamięci.
 
 ### <a name="remarks"></a>Uwagi
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Wskaźnik na ciąg zakończony znakiem null.
 
-*nLength*  
+*nLength*<br/>
 Liczbę znaków w *pszSrc*.
 
 ### <a name="remarks"></a>Uwagi
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Wskaźnik na ciąg zakończony znakiem null.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Nowe długość ciągu.
 
 ### <a name="remarks"></a>Uwagi

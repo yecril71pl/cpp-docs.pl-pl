@@ -1,7 +1,7 @@
 ---
 title: Upraszczanie dostępu do danych za pomocą atrybutów bazy danych | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054080"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808020"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Upraszczanie dostępu do danych za pomocą atrybutów bazy danych
 
@@ -52,18 +52,26 @@ Przez porównanie dwóch plików, można zobaczyć, jak łatwiej jest używać a
   
 - `db_table` Wywołania w wersji opartego na atrybutach jest równoważna następującej deklaracji szablonu:  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - `db_column` Wywołań w wersji opartego na atrybutach są równoważne do mapy kolumny (zobacz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) w deklaracji szablonu.  
   
-Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika za Ciebie. Klasa rekord użytkownika jest odpowiednikiem `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli klasa tabeli `CAuthors`, nosi nazwę klasy rekordu użytkownika wprowadzony `CAuthorsAccessor`, i może wyświetlać tylko jego deklaracji w wprowadzonego kodu. Aby uzyskać więcej informacji, zobacz "Klasy rekordów użytkowników Attribute-Injected" w [rekordów użytkowników](../../data/oledb/user-records.md).  
+Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika za Ciebie. Klasa rekord użytkownika jest równa `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli klasa tabeli `CAuthors`, nosi nazwę klasy rekordu użytkownika wprowadzony `CAuthorsAccessor`, i może wyświetlać tylko jego deklaracji w wprowadzonego kodu. Aby uzyskać więcej informacji, zobacz "Klasy rekordów użytkowników Attribute-Injected" w [rekordów użytkowników](../../data/oledb/user-records.md).  
   
-Należy pamiętać, że zarówno w atrybutami i kodu opartego na szablonie, należy ustawić właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty`.  
+Zarówno w atrybutami i kodu opartego na szablonie, należy ustawić właściwości zestawu wierszy za pomocą `CDBPropSet::AddProperty`.  
   
-Aby uzyskać informacje na temat atrybutów omówione w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/ole-db-consumer-attributes.md).  
-  
+Aby uzyskać informacje na temat atrybutów omówione w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/ole-db-consumer-attributes.md).
+
+> [!NOTE]
+> Następujące `include` instrukcje są wymagane do kompilowania w poniższych przykładach:
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Tabela i deklaracja dostępu przy użyciu atrybutów  
 
 Poniższy kod wywoła `db_source` i `db_table` klasy tabeli. `db_source` Określa źródło danych i połączenia ma być używany. `db_table` wprowadza kod odpowiedni szablon, aby zadeklarować klasy tabeli. `db_column` Określ mapę kolumny i wstrzyknąć deklaracji metody dostępu. Atrybuty konsumentów OLE DB można użyć w każdym projekcie, który obsługuje ATL.  
@@ -85,15 +93,15 @@ Poniżej przedstawiono deklaracji metody dostępu i tabeli przy użyciu atrybut�
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  
