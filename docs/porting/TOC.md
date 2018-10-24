@@ -15,6 +15,7 @@
 ### [Naprawianie zależności w bibliotece wewnętrznej](fix-your-dependencies-on-library-internals.md)
 ### [Problemy przy migracji liczb zmiennoprzecinkowych](floating-point-migration-issues.md)
 ### [Używanie natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md)
+### [Funkcje środowiska Visual C++, które nie są już obsługiwane w programie Visual Studio 2019 w wersji zapoznawczej](features-deprecated-in-visual-studio.md)
 ## [Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Eksportowanie z systemu UNIX do Win32](porting-from-unix-to-win32.md)
 ## [Przenoszenie na platformę uniwersalną systemu Windows (C++)](porting-to-the-universal-windows-platform-cpp.md)
