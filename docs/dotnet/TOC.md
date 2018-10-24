@@ -1,4 +1,4 @@
-# [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](dotnet-programming-with-cpp-cli-visual-cpp.md)
+# [Programowanie .NET w języku C++/interfejsie wiersza polecenia](dotnet-programming-with-cpp-cli-visual-cpp.md)
 ## [Zadania C++/CLI](cpp-cli-tasks.md)
 ### [Instrukcje: tworzenie pustych projektów CLR](how-to-create-clr-empty-projects.md)
 ### [Instrukcje: tworzenie aplikacji do konsoli środowiska CLR (C++/CLI)](how-to-create-clr-console-applications-cpp-cli.md)
