@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4630391d9bce319c35af18767d7133bd34a92362
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038746"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990207"
 ---
 # <a name="testing-the-read-only-provider"></a>Testowanie dostawcy tylko do odczytu
 
@@ -31,13 +31,13 @@ Aby przetestować dostawcę, należy użytkownik. Pomaga ono, jeśli można dopa
   
 W przykładzie w tym temacie tworzy domyślną aplikację Kreator aplikacji MFC dla użytkownika testowego. Aplikacja testowa jest proste okno dialogowe z szablonu kod konsumenta OLE DB, dodane.  
   
-### <a name="to-create-the-test-application"></a>Aby utworzyć aplikację testu  
+## <a name="to-create-the-test-application"></a>Aby utworzyć aplikację testu  
   
 1. Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-1. W okienku typów projektów wybierz **projekty języka Visual C++** folderu. W okienku szablonów zaznacz **aplikacji MFC**.  
+1. W **typów projektów** okienku wybierz **projekty języka Visual C++** folderu. W **szablony** okienku wybierz **aplikacji MFC**.  
   
-1. Wprowadź nazwę projektu **TestProv**, a następnie kliknij przycisk **OK**.  
+1. Wprowadź nazwę projektu *TestProv*, a następnie kliknij przycisk **OK**.  
   
      Zostanie wyświetlony Kreator aplikacji MFC.  
   
@@ -46,9 +46,9 @@ W przykładzie w tym temacie tworzy domyślną aplikację Kreator aplikacji MFC 
 1. Na **funkcje zaawansowane** wybierz opcję **automatyzacji**, a następnie kliknij przycisk **Zakończ**.  
   
 > [!NOTE]
->  Aplikacja nie wymaga obsługi automatyzacji, jeśli dodasz **CoInitialize** w **CTestProvApp::InitInstance**.  
+> Aplikacja nie wymaga obsługi automatyzacji, jeśli dodasz `CoInitialize` w `CTestProvApp::InitInstance`.  
   
-Można wyświetlić i edytować okno dialogowe TestProv (IDD_TESTPROV_DIALOG), wybierając go w widoku zasobu. W oknie dialogowym, należy umieścić dwa pola listy, po jednym dla każdego ciągu w zestawie wierszy. Wyłączyć właściwość sortowania dla obu pola listy, naciskając klawisz ALT + Enter, gdy zaznaczono pole listy, klikając **style** kartę, a następnie usuwając zaznaczenie **sortowania** pole wyboru. Ponadto Umieść **Uruchom** przycisku na okno dialogowe, aby pobrać plik. Okno dialogowe zakończone TestProv powinien mieć dwa pola listy, oznaczone jako "W ciągu 1" i "Ciąg 2". ma on także **OK**, **anulować**, i **Uruchom** przycisków.  
+Można wyświetlać i edytować **TestProv** okno dialogowe (IDD_TESTPROV_DIALOG), wybierając je w **widok zasobów**. W oknie dialogowym, należy umieścić dwa pola listy, po jednym dla każdego ciągu w zestawie wierszy. Wyłączyć właściwość sortowania dla obu pola listy, naciskając klawisz **Alt**+**Enter** po wybraniu pola listy, klikając **style** kartę, a następnie usuwając zaznaczenie  **Sortuj** pole wyboru. Ponadto Umieść **Uruchom** przycisku na okno dialogowe, aby pobrać plik. Zakończono **TestProv** okno dialogowe powinna mieć dwa pola listy, odpowiednio oznaczone jako "W ciągu 1" i "2 ciąg"; ma on także **OK**, **anulować**, i **uruchamiania**  przycisków.  
   
 Otwórz plik nagłówkowy klasy okien dialogowych (w tym TestProvDlg.h wielkości liter). Dodaj następujący kod do pliku nagłówka (poza wszelkimi deklaracjami klasy):  
   
@@ -73,7 +73,7 @@ END_COLUMN_MAP()
   
 Kod reprezentuje rekord użytkownika, który definiuje kolumny będą w zestawie wierszy. Kiedy klient wywołuje `IAccessor::CreateAccessor`, aby określić kolumny, które można powiązać używa tych wpisów. Szablony konsumentów OLE DB pozwalają również na dynamiczne powiązanie kolumn. Makra COLUMN_ENTRY są makra PROVIDER_COLUMN_ENTRY w wersji po stronie klienta. Dwa makra COLUMN_ENTRY Określ numer i typ, długość oraz dane elementu członkowskiego dla dwóch ciągów.  
   
-Dodawanie funkcji obsługi dla **Uruchom** przycisku, naciskając klawisz CTRL i klikając dwukrotnie **Uruchom** przycisku. Umieść następujący kod w funkcji:  
+Dodawanie funkcji obsługi dla **Uruchom** przycisku, naciskając klawisz **Ctrl** i dwukrotne kliknięcie **Uruchom** przycisku. Umieść następujący kod w funkcji:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -115,9 +115,9 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
-Wiersze, które można otworzyć każdą z klas tworzenia każdego obiektu modelu COM w dostawcy. Aby zlokalizować dostawcy, użyj identyfikatora ProgID dostawcy. Identyfikator ProgID można uzyskać z rejestru systemowego lub przez wyszukiwanie w pliku MyProvider.rgs (Otwórz katalog i wyszukaj ProgID klucza dostawcy).  
+Wiersze, które można otworzyć każdą z klas tworzenia każdego obiektu modelu COM w dostawcy. Aby zlokalizować dostawcę, należy użyć `ProgID` dostawcy. Możesz uzyskać `ProgID` z rejestru systemowego lub przez wyszukiwanie w pliku MyProvider.rgs (Otwórz katalog dostawcy i wyszukaj `ProgID` klucza).  
   
-Plik MyData.txt jest dołączony do przykładu MyProv. Aby utworzyć plik samodzielnie, należy użyć edytora, a następnie wpisz parzystą liczbę ciągów, naciskając klawisz ENTER między każdego ciągu. Jeśli plik zostanie przeniesiony, należy zmienić nazwę ścieżki.  
+Plik MyData.txt jest dołączany `MyProv` próbki. Aby utworzyć plik samodzielnie, należy użyć edytora, a następnie wpisz parzystą liczbę ciągów, naciskając klawisz ENTER między każdego ciągu. Jeśli plik zostanie przeniesiony, należy zmienić nazwę ścieżki.  
   
 Przekaż w ciągu "c:\\\samples\\\myprov\\\MyData.txt" w `table.Open` wiersza. Jeśli znajdujesz się w `Open` wywołanie, zobaczysz, że ten ciąg jest przekazywany do `SetCommandText` metody w dostawcy. Należy pamiętać, że `ICommandText::Execute` metody używane te parametry.  
   

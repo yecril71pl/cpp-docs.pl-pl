@@ -1,7 +1,7 @@
 ---
 title: Omówienie programowania OLE DB | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec41a0213c621e948a160553c03b17be39e9f2f3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fea82dfd7d3f9cdd64d0eab66e44ac1a486abac
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090714"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989895"
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
 
-OLE DB jest technologią bazy danych o wysokiej wydajności, oparte na modelu COM. Zapewnia popularny sposób dostępu do danych niezależnie od tego, w postaci, w którym są przechowywane. W przypadku typowych godzin pracy ogromna ilość informacji znajduje się poza firmową baz danych. Te informacje znajdują się w systemach plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (np. dostępu), arkuszy kalkulacyjnych (np. Excel), aplikacje planowania projektu (na przykład projekt) i poczty e-mail (np. Outlook). OLE DB pozwala na uzyskiwanie dostępu do dowolnego rodzaju magazynu danych w taki sam sposób, tak długo, jak magazyn danych ma dostawcy OLE DB.
+OLE DB jest technologią bazy danych o wysokiej wydajności, oparte na modelu COM. Zapewnia popularny sposób uzyskania dostępu do danych, niezależnie od postaci, w którym są przechowywane. W przypadku typowych godzin pracy ogromna ilość informacji nie są przechowywane w bazach danych firmowych. Te informacje znajdują się w systemach plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (np. dostępu), arkuszy kalkulacyjnych (np. Excel), aplikacje planowania projektu (na przykład projekt) i poczty e-mail (np. Outlook). OLE DB pozwala na uzyskiwanie dostępu do dowolnego rodzaju magazynu danych w taki sam sposób, tak długo, jak magazyn danych ma dostawcy OLE DB.
   
 OLE DB pozwala tworzyć aplikacje, które uzyskują dostęp do danych z różnych źródeł, czy są one bazami danych, czy nie. OLE DB pozwala uniwersalnych praw dostępu za pomocą interfejsów COM, obsługujące poprawne działanie systemu DBMS dla danego źródła danych. COM zmniejsza niepotrzebne duplikacji usług i zmaksymalizowane współdziałanie nie tylko wśród źródeł danych, ale także wśród innych aplikacji.  
   

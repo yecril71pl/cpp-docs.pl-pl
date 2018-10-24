@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6feb682d364c4c40fd01e4aff33404c4506d9c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c077b5a350d7381adc5412ca4a318713d720ad6
+ms.sourcegitcommit: 1870c342d44b10990fd015e60856225c3026e8c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377264"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963054"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Pominięcie wskaźnika ramki)
 
@@ -40,25 +40,25 @@ Pomija tworzenie wskaźników ramek na stosie wywołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja przyspiesza wywołania funkcji, ponieważ nie trzeba definiować i usuwać żadnych wskaźników ramek. Uwalnia jeden lub więcej rejestrów (EBP w procesorach Intel 386 lub nowszych) do przechowywania często używanych zmiennych i wyrażeń podrzędnych.
+Ta opcja przyspiesza wywołania funkcji, ponieważ nie trzeba definiować i usuwać żadnych wskaźników ramek. Uwalnia jeden lub więcej rejestrów do użytku ogólnego.
 
 **/Oy** umożliwia pominięcie wskaźnika ramki i **/Oy-** wyłącza pominięcie. **/Oy** jest dostępna tylko w x86 kompilatory.
 
-Jeśli kod wymaga adresowanie na podstawie EBP, można określić **/Oy-** po **ox** opcji lub użyj [zoptymalizować](../../preprocessor/optimize.md) z "**y**" i **poza** argumentów, aby uzyskać maksymalną optymalizacji o podstawie EBP adresowania. Kompilator wykrywa większości sytuacji, w których jest wymagane na podstawie EBP adresowania (na przykład z `_alloca` i `setjmp` funkcje i obsługa wyjątków strukturalnych).
+Jeśli kod wymaga adresowania opartego na EBP, możesz określić **/Oy-** po opcji **ox** lub użyć [zoptymalizować](../../preprocessor/optimize.md) za pomocą "**y**" i **poza** argumenty, aby uzyskać maksymalną optymalizację z systemem adresowania opartym na EBP. Kompilator wykrywa większość sytuacji, w których wymagane jest adresowanie oparte na EBP (na przykład z `_alloca` i `setjmp` funkcje i obsługą wyjątków strukturalnych).
 
-[OX (Włącz najbardziej prędkości optymalizacji)](../../build/reference/ox-full-optimization.md) i [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opcji pociąga za sobą **/Oy**. Określanie **/Oy-** po **ox**, **/O1**, lub **/O2** opcji wyłącza **/Oy**, czy jest ono jawne lub domniemanych.
+[OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md) i [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opcje oznaczają **/Oy**. Określanie **/Oy-** po **ox**, **/O1**, lub **/O2** wyłącza opcję **/Oy**, czy jest ono jawnych ani dorozumianych.
 
-**/Oy** sprawia, że opcja kompilatora za pomocą debugera trudniejsza, ponieważ kompilator pomija informacje wskaźnika ramki. Jeśli określono opcję kompilatora debugowania ([/z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), zaleca się, że podajesz **/Oy-** opcji po innych opcji kompilatora optymalizacji.
+**/Oy** kompilatora opcji sprawia, że debuger ma trudniejsze ponieważ kompilator pomija informacje o wskaźnikach ramek. Jeśli określisz kompilatorze opcję debugowania ([/z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), firma Microsoft zaleca, aby określić **/Oy-** opcji po wszelkich innych opcjach optymalizacji w kompilatorze.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
-1. Kliknij przycisk **optymalizacji** strony właściwości.
+1. Kliknij przycisk **optymalizacji** stronę właściwości.
 
-1. Modyfikowanie **Pomiń wskaźniki ramek** właściwości. Ta właściwość dodaje lub usuwa tylko **/Oy** opcji. Jeśli chcesz dodać **/Oy-** kliknij przycisk **wiersza polecenia** i zmodyfikuj **dodatkowe opcje**.
+1. Modyfikowanie **Pomiń wskaźniki ramki** właściwości. Właściwość ta dodaje lub usuwa tylko **/Oy** opcji. Jeśli chcesz dodać **/Oy-** kliknij przycisk **wiersza polecenia** i modyfikować **dodatkowe opcje**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

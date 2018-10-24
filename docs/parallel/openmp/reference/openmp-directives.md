@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809008"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990337"
 ---
 # <a name="openmp-directives"></a>OpenMP, dyrektywy
 
@@ -66,7 +66,7 @@ Visual C++ obsługuje następujące dyrektywy OpenMP:
 [single](#single)                     | Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.
 [threadprivate](#threadprivate)       | Określa, czy zmienna jest prywatnego wątku.
 
-## <a name="atomic"></a>niepodzielne
+## <a name="atomic"></a>Atomic
 
 Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>ograniczenie
+## <a name="barrier"></a>Barrier
 
 Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.
 
@@ -129,7 +129,7 @@ Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa określająca bariery](
 
 Przykład sposobu użycia `barrier`, zobacz [wzorca](#master).
 
-## <a name="critical"></a>krytyczne
+## <a name="critical"></a>Krytyczne
 
 Określa, czy kod jest wykonać tylko w jednym wątku w danym momencie.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>Aby uzyskać (OpenMP)
 
 Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony między wątkami.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>główne
+## <a name="master"></a>Wzorzec
 
 Określa, że główny wątek powinien zostać wykonany części programu.
 
@@ -588,7 +588,7 @@ Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>pojedyncze
+## <a name="single"></a>Pojedynczy
 
 Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

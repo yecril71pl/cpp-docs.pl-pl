@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080886"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990129"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 
 Makra PROVIDER_COLUMN_ENTRY zwykle obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania. Jednak ponieważ konsumenta wybrać korzystanie z zakładek, dostawca musi mieć możliwość zmiany kolumn zwrócone w zależności od tego, czy użytkownik poprosi o podanie zakładki.  
   
-Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` użytkownika rekord w MyProviderRS.h i zastąp go własną definicję `GetColumnInfo` funkcji:  
+Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` rekordu użytkownika w *niestandardowe*RS.h i zastąp go własną definicję `GetColumnInfo` Funkcja:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 Następnie należy zaimplementować `GetColumnInfo` funkcji w MyProviderRS.cpp, jak pokazano w poniższym kodzie.  
   
-`GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Pobrać właściwości, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasę, która utworzony zestaw wierszy, jest to klasa przechowywania map właściwości. `GetColumnInfo` rzutowaniach typu `pThis` wskaźnik do `RMyProviderRowset` wskaźnika.  
+`GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Pobrać właściwości, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasę, która utworzony zestaw wierszy, jest to klasa przechowywania map właściwości. `GetColumnInfo` rzutowaniach typu `pThis` wskaźnik do `RCustomRowset` wskaźnika.  
   
 Pod kątem `DBPROP_BOOKMARKS` właściwości `GetColumnInfo` używa `IRowsetInfo` interfejs, który można uzyskać wywołując `QueryInterface` na `pRowset` interfejsu. Alternatywnie, można użyć ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metody zamiast tego.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ W tym przykładzie użyto tablicy statycznej w celu uwzględnienia informacji o 
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043303"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990324"
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 
@@ -33,7 +33,7 @@ W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego.
 Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.  
   
 > [!NOTE]
->  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Tworzenie aktualizowalnego dostawcy  
 
@@ -47,7 +47,7 @@ Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IR
   
 Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.  
   
-#### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy  
+### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy  
   
 1. W klasie wierszy dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl`. Te klasy oferują interfejsy odpowiednie zmiany do magazynu danych:  
   
@@ -70,7 +70,7 @@ Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl
     ```  
   
     > [!NOTE]
-    >  Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.  
+    > Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.  
   
 1. Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
@@ -109,7 +109,7 @@ Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl
      Można znaleźć wartości użyte w tych wywołań makra, wyszukując w Atldb.h identyfikatory właściwości i wartości (jeśli Atldb.h różni się od dokumentacji online, Atldb.h zastępuje dokumentacji).  
   
     > [!NOTE]
-    >  Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawienia są wymagane przez Szablony OLE DB; specyfikacji OLE DB mówi ich odczytu/zapisu, ale szablony OLE DB może obsługiwać tylko jedną wartość.  
+    > Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawienia są wymagane przez Szablony OLE DB; specyfikacji OLE DB mówi ich odczytu/zapisu, ale szablony OLE DB może obsługiwać tylko jedną wartość.  
   
      **W przypadku zaimplementowania irowsetchangeimpl —**  
   
@@ -142,16 +142,14 @@ Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl
     - `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.  
+        > Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Zapisywanie do źródła danych  
 
 Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).  
 
 ```cpp
-
 FlushData(HROW, HACCESSOR);  
-
 ```
 
 Dojście do wiersza (HROW) i argumenty uchwytu (HACCESSOR) dostępu umożliwiają określenie obszaru do zapisu. Zazwyczaj można napisać jedno pole danych w danym momencie.
@@ -192,7 +190,7 @@ Obsługa wartości NULL.
 
 ### <a name="handling-default-values"></a>Obsługa wartości domyślne.
 
-Aby zaimplementować metodę flushdata —, należy:
+Aby zaimplementować własną `FlushData` metody, należy:
 
 - Przejdź do swojej klasy zestawu wierszy.
 
@@ -207,7 +205,7 @@ Aby zaimplementować metodę flushdata —, należy:
 
 - Udostępnia implementację `FlushData`.
 
-Dobre implementacji flushdata — przechowuje tylko wiersze i kolumny, które rzeczywiście zostały zaktualizowane. Parametry HROW i HACCESSOR służy do określenia bieżącego wiersza i kolumny są przechowywane na potrzeby optymalizacji.
+Dobre implementacji `FlushData` przechowuje tylko wiersze i kolumny, które rzeczywiście zostały zaktualizowane. Parametry HROW i HACCESSOR służy do określenia bieżącego wiersza i kolumny są przechowywane na potrzeby optymalizacji.
 
 Zazwyczaj największe wyzwanie współpracuje z własny magazyn danych w trybie macierzystym. Jeśli to możliwe spróbuj:
 
@@ -219,7 +217,7 @@ Zazwyczaj największe wyzwanie współpracuje z własny magazyn danych w trybie 
 
 Najlepiej, aby zrobić jest rzeczywiste wartości określonej w magazynie danych o wartości NULL i domyślne wartości. Najlepiej umożliwiają ekstrapolację tych danych. Jeśli nie, zalecana jest nie akceptuje wartości NULL i domyślne.
 
-W poniższym przykładzie przedstawiono sposób `FlushData` jest zaimplementowana w klasie RUpdateRowset w przykładzie UpdatePV (patrz Rowset.h w przykładowym kodzie):
+W poniższym przykładzie przedstawiono sposób `FlushData` jest zaimplementowana w `RUpdateRowset` klasy w `UpdatePV` próbki (patrz Rowset.h w przykładowym kodzie):
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -374,16 +372,15 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
   
     return _rgColumns;  
 }  
-
 ```
 
 ### <a name="default-values"></a>Wartości domyślne
 
 Podobnie jak w przypadku danych o wartości NULL, masz odpowiedzialność, aby poradzić sobie ze zmianą wartości domyślne.
 
-Domyślne ustawienie flushdata — i wykonywania jest do zwrócenia S_OK. W związku z tym, jeśli nie zastąpisz tej funkcji, zmiany będą widoczne powiodła się (S_OK zostaną zwrócone), ale nie będą przesyłane do magazynu danych.
+Domyślne ustawienie `FlushData` i `Execute` ma zwrócić S_OK. W związku z tym, jeśli nie zastąpisz tej funkcji, zmiany będą widoczne powiodła się (S_OK zostaną zwrócone), ale nie będą przesyłane do magazynu danych.
 
-W przykładzie UpdatePV (w Rowset.h) `SetDBStatus` obsługiwała wartości domyślne w następujący sposób:
+W `UpdatePV` przykład (w Rowset.h) `SetDBStatus` obsługiwała wartości domyślne w następujący sposób:
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -422,11 +419,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Kolumna flagi
 
-Jeśli są używane wartości domyślne na kolumn należy ustawić go za pomocą metadanych w \<klasa dostawcy\>SchemaRowset klasy. Ustaw `m_bColumnHasDefault` = VARIANT_TRUE.
+Jeśli są używane wartości domyślne na kolumn należy ustawić go za pomocą metadanych w \<klasa dostawcy\>SchemaRowset klasy. Ustaw `m_bColumnHasDefault = VARIANT_TRUE`.
 
 Masz również odpowiedzialny za można ustawić flagi kolumny, które są określone, że za pomocą DBCOLUMNFLAGS Typ wyliczany. Flagi kolumnie opisano charakterystyki kolumny.
 
-Na przykład w `CUpdateSessionColSchemaRowset` klasy UpdatePV (w Session.h), pierwsza kolumna skonfigurowano w ten sposób:
+Na przykład w `CUpdateSessionColSchemaRowset` klasy w `UpdatePV` (Session.h), pierwsza kolumna skonfigurowano w ten sposób:
 
 ```cpp
 // Set up column 1  

@@ -1,7 +1,7 @@
 ---
 title: Szablony konsumentów OLE DB (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9983b9347fb0c39333bba33f1c7b1d9237b407ce
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082426"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990142"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 
@@ -35,7 +35,7 @@ Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony
   
 - Natywne typy danych języka C/C++ do programowania OLE DB.  
   
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms718124).  
+Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms718124).  
   
 Szablony OLE DB obsługuje istniejący model obiektów OLE DB, a nie dodaje nowy model obiektu. Klasy górnej warstwy w OLE DB szablonami konsumentów równoległe składniki zdefiniowane w specyfikacji OLE DB. Projekt szablony OLE DB konsumenta obejmuje zaawansowane funkcje, takie jak wielu metod dostępu w zestawie wierszy. Korzystanie z szablonów i wielokrotne dziedziczenie sprawia, że biblioteka małe i elastyczne.  
   
@@ -71,5 +71,5 @@ Więcej informacji znajduje się w następujących tematach:
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Dostęp do danych](../data-access-in-cpp.md)<br/>
-[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
 [Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643)

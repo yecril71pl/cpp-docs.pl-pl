@@ -1,7 +1,7 @@
 ---
 title: Metody dostępu i zestawy wierszy | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113100"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990181"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 
@@ -77,7 +77,7 @@ Na poniższej ilustracji pokazano typy w zestawie wierszy.
 ![Grafika RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Klasy zestawów wierszy  
   
-[Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego dostęp do informacji dotyczących magazynu danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.  
+[Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego uzyskać dostępu do informacji o magazynie danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz też  
 

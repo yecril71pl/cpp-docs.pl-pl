@@ -1,7 +1,7 @@
 ---
 title: OLE DB konsumenci i dostawcy | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b37a06ec89f0e2e21c4332a480e58c605f0d161f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6290c923b5aa4b54a71bda5f0617d1b3acc8db
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110721"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989869"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Konsumenci i dostawcy OLE DB
 
 Architektura OLE DB używa modelu konsumenci i dostawcy. Konsument wysyła żądania dotyczące danych. Dostawca reaguje na te żądania umieszczenia danych w formacie tabelarycznym i przywróceniem go do użytkownika. Każde wywołanie, który użytkownik może zgłaszać muszą zostać zaimplementowane w dostawcy.  
   
-Z technicznego punktu widzenia zdefiniowane, odbiorcy jest każdy systemu lub aplikacji kod (niekoniecznie składnik OLE DB) uzyskuje dostęp do danych za pośrednictwem interfejsów OLE DB. Interfejsy są implementowane w dostawcy. W związku z tym Dostawca to dowolny składnik oprogramowania, który implementuje interfejsy OLE DB hermetyzują dostęp do danych i udostępnić ją do innych obiektów (oznacza to, że konsumenci).  
+Z technicznego punktu widzenia zdefiniowane, odbiorcy jest każdy systemu lub aplikacji kod (niekoniecznie składnik OLE DB) uzyskuje dostęp do danych za pośrednictwem interfejsów OLE DB. Interfejsy są implementowane w dostawcy. Dostawca więc dowolny składnik oprogramowania, który implementuje interfejsy OLE DB hermetyzują dostęp do danych i udostępnić ją do innych obiektów (oznacza to, że konsumenci).  
   
-Pod względem ról użytkownik wywołuje metody dla OLE DB interfejsów; Dostawca OLE DB implementuje wymagane interfejsy OLE DB.  
+W przypadku ról użytkownik wywołuje metody dla interfejsów OLE DB; Dostawca OLE DB implementuje wymagane interfejsy OLE DB.  
   
 OLE DB pozwala uniknąć warunków klienta i serwera, ponieważ te role nie zawsze mają sensu, szczególnie w sytuacji n warstwowej. Ponieważ użytkownik może być składnik na warstwy, która służy inny składnik, jej wywołania klienta składnika byłoby mylące. Ponadto dostawca czasami funkcjonuje bardziej sterownik bazy danych niż serwer.  
   

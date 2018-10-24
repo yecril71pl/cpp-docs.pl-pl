@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9373c7569ac31b74429e815bd466cd9d5b9aa78
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028548"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990273"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
 
@@ -32,7 +32,7 @@ Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz 
   
 - Obsługujesz elementu, takiego jak zakładki, który dodaje kolumn.  
   
-### <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn  
+## <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn  
   
 1. Usuń wszystkie `PROVIDER_COLUMN_MAP`s w kodzie.  
   

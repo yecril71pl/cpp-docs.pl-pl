@@ -1,7 +1,7 @@
 ---
 title: Tworzenie projektu pliku reguł programu make w języku C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f937c11b2453bd296468c5f153b7c9495eba290
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399486"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990246"
 ---
 # <a name="creating-a-c-makefile-project"></a>Tworzenie projektu pliku reguł programu make w języku C++
 
-A *pliku reguł programu make* to plik tekstowy, który zawiera instrukcje dotyczące sposobu kompilowania i łączenia (lub *kompilacji*) zestaw plików kodu źródłowego języka C++. A *wprowadzić* program odczytuje pliku reguł programu make i wywołuje kompilatora, konsolidatora i ewentualnie inne programy, które się plik wykonywalny. Implementacja firmy Microsoft *wprowadzić* program jest nazywany **NMAKE**. (Program visual Studio domyślnie używa system MSBuild na podstawie plików .vcsproj; jest to, co jest tworzone przez **pliku | Nowe | Projekt**.)
+A *pliku reguł programu make* to plik tekstowy, który zawiera instrukcje dotyczące sposobu kompilowania i łączenia (lub *kompilacji*) zestaw plików kodu źródłowego języka C++. A *wprowadzić* program odczytuje pliku reguł programu make i wywołuje kompilatora, konsolidatora i ewentualnie inne programy, które się plik wykonywalny. Implementacja firmy Microsoft *wprowadzić* program jest nazywany **NMAKE**. (Program visual Studio domyślnie używa systemu MSBuild, w oparciu o pliki.vcxproj; jest to, co jest tworzone przez **pliku | Nowe | Projekt**.)
 
 Jeśli masz istniejący projekt pliku reguł programu make, masz te opcje, aby kod i/lub jej debugowania w środowisku IDE programu Visual Studio:
 
 - Utwórz projekt pliku reguł programu make w programie Visual Studio korzysta z istniejących plików reguł programu make do kompilacji kodu w środowisku IDE. (Nie będziesz mieć wszystkich funkcji środowiska IDE, które otrzymujesz za pomocą natywnego projektu programu MSBuild.) Zobacz [do utworzenia projektu pliku reguł programu make](#create_a_makefile_project) poniżej.
 - Użyj **Utwórz nowy projekt z istniejących plików kodu** kreatora w celu utworzenia natywnego projektu programu MSBuild z kodu źródłowego. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 i nowszym**: Użyj **Otwórz Folder** funkcji można otworzyć pliku reguł programu make. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](non-msbuild-projects.md).
+- **Visual Studio 2017 i nowszym**: Użyj **Otwórz Folder** funkcję, aby otworzyć projekt pliku reguł programu make bez podczas konwertowania go do programu MSBuild. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](non-msbuild-projects.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Aby utworzyć projekt pliku reguł programu make przy użyciu szablonu projektu pliku reguł programu make
 

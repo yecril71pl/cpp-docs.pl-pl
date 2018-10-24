@@ -1,7 +1,7 @@
 ---
 title: OLE DB kwestie projektowania architektonicznego problemów | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f66ff77ef10f45b19a33a286f63f4bf923f639a2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820389"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990026"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Kwestie projektowania architektonicznego OLE DB
 
-Przed uruchomieniem aplikacji OLE DB, należy rozważyć następujące kwestie:  
+Przed uruchomieniem aplikacji OLE DB, należy wziąć pod uwagę następujące kwestie:  
   
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jakie programowania implementacja będzie używać do pisania aplikacji OLE DB?
 
-Firma Microsoft oferuje kilka bibliotek w tym celu: Biblioteka szablonów OLE DB, atrybuty OLE DB i raw interfejsy OLE DB OLE DB zestawu SDK. Ponadto istnieją kreatorów ułatwiające pisanie programu. Te implementacje są opisane w [szablony OLE DB i atrybuty oraz inne implementacje](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+Firma Microsoft oferuje kilka bibliotek, aby wykonać to zadanie: Biblioteka szablonów OLE DB, atrybuty OLE DB i raw interfejsy OLE DB OLE DB zestawu SDK. Ponadto istnieją kreatorów ułatwiające pisanie programu. Te implementacje są opisane w [szablony OLE DB i atrybuty oraz inne implementacje](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
 ## <a name="do-you-need-to-write-your-own-provider"></a>Czy trzeba zapisać własnego dostawcę?
 
-Większość programistów nie potrzebuje napisać własne dostawcy. Firma Microsoft udostępnia kilku dostawców. Zawsze, gdy tworzysz połączenie danych (na przykład Dodaj odbiorcę do projektu przy użyciu OLE DB Kreator konsumenta ATL), **właściwości Linku danych** okno dialogowe wyświetla listę wszystkich dostępnych dostawców zarejestrowanych w systemie. Jeśli jeden z tych dostawców jest odpowiedni dla swojej aplikacji dostęp do danych, jak magazyn i dane, najłatwiejszym jest użyj jednej z nich. Jednakże jeśli magazyn danych nie pasuje do jednej z tych kategorii, należy utworzyć własnego dostawcę. Aby dowiedzieć się, jak tworzenie dostawców, zobacz [szablony OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).
+Większość programistów nie trzeba napisać własne dostawcy. Firma Microsoft udostępnia kilku dostawców. Zawsze, gdy tworzysz połączenie danych (na przykład po dodaniu konsumenta do projektu przy użyciu **OLE DB Kreator konsumenta ATL**), **właściwości Linku danych** okno dialogowe wyświetla listę wszystkich dostępnych dostawców zarejestrowane w systemie. Jeśli jeden z dostawców jest odpowiedni dla swojej aplikacji dostęp do danych, jak magazyn i dane, użyj jednej z tych jest najłatwiejszym. Jednakże jeśli magazyn danych nie mieści się jednej z tych kategorii, należy utworzyć własnego dostawcę. Aby dowiedzieć się, jak tworzenie dostawców, zobacz [szablony OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).
 
 ## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Jaki poziom pomocy technicznej potrzebnych dla konsumentów?
 
-Niektóre konsumentów mogą być bardzo podstawowe; podczas gdy inne mogą być bardzo złożone. Funkcje obiektów OLE DB jest określany przez właściwości. Użycie utworzyć odbiorcę lub Kreatora dostawcy bazy danych, aby utworzyć dostawcę OLE DB Kreator konsumenta ATL, ustawia właściwości odpowiedniego obiektu umożliwiają standardowy zestaw funkcji. Jednak jeśli klasy generowane przez kreatora konsumenta lub dostawca obsługuje wszystko, czego potrzebujesz, jest to, należy do odwoływania się do interfejsów dla tych klas w [OLE DB szablony Biblioteka](../../data/oledb/ole-db-templates.md). Te interfejsy opakować pierwotne interfejsy OLE DB, zapewniając dodatkowe implementacji, aby ułatwić korzystanie z nich należy.
+Niektóre konsumentów mogą być basic. podczas gdy inne mogą być skomplikowane. Funkcje obiektów OLE DB jest określany przez właściwości. Kiedy używać **OLE DB Kreator konsumenta ATL** utworzyć odbiorcę lub **kreatora dostawcy bazy danych** do utworzenia dostawcy, ustawia właściwości odpowiedniego obiektu umożliwiają standardowy zestaw funkcje. Jednak jeśli klasy generowane przez kreatora konsumenta lub dostawca nie obsługuje wszystko, czego potrzebujesz, jest to, należy do odwoływania się do interfejsów dla tych klas w [OLE DB szablony Biblioteka](../../data/oledb/ole-db-templates.md). Te interfejsy opakować pierwotne interfejsy OLE DB, zapewniając dodatkowe implementacji, aby ułatwić korzystanie z nich należy.
 
 Na przykład, jeśli chcesz zaktualizować dane w zestawie wierszy, ale nie pamiętam określić, to podczas tworzenia odbiorcy za pomocą kreatora, możesz można określić funkcji w późniejszym czasie, ustawiając `DBPROP_IRowsetChange` i `DBPROP_UPDATABILITY` właściwości w obiekcie command. Następnie, po utworzeniu zestawu wierszy ma `IRowsetChange` interfejsu.
 
 ## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Czy masz starszego kodu przy użyciu innej technologii dostępu do danych (ADO ODBC i DAO)?
 
-Biorąc pod uwagę możliwe kombinacje technologii (na przykład ze składnikami OLE DB przy użyciu składników ADO i migracja kodu ODBC do OLE DB), obejmujące wszystkich sytuacjach wykracza poza zakres z dokumentacji języka Visual C++. Wiele artykułów obejmujących różne scenariusze są jednak dostępne w następujących witrynach sieci Web firmy Microsoft:
+Biorąc pod uwagę możliwe kombinacje technologii (na przykład ze składnikami OLE DB przy użyciu składników ADO i migracja kodu ODBC do OLE DB), obejmujące wszystkich sytuacjach wykracza poza zakres z dokumentacji języka Visual C++. Wiele artykułów obejmujących różne scenariusze są jednak dostępne w następujących witrynach sieci web firmy Microsoft:
 
-- [I pomocy technicznej firmy Microsoft](https://support.microsoft.com/)
+- [Pomoc i obsługa techniczna firmy Microsoft](https://support.microsoft.com/)
 
 - [Omówienie artykuły techniczne dotyczące dostępu do danych firmy Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
 

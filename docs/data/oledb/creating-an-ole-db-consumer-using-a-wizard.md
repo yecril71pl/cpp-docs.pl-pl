@@ -1,7 +1,7 @@
 ---
 title: Tworzenie konsumenta OLE DB przy użyciu Kreatora | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097902"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990116"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Tworzenie konsumenta OLE DB przy użyciu kreatora
 
-Ta procedura pokazuje, jak można użyć Kreator projektów ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikuj główny kod aplikacji konsoli, aby pobrać i wyświetlić dane z tabeli bazy danych.  
+Ta procedura pokazuje, jak można użyć **Kreator projektów ATL** i **OLE DB Kreator konsumenta ATL* do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikuj główny kod aplikacji konsolowej w celu Pobieranie i wyświetlanie danych z tabeli bazy danych.  
   
 Ostatnie dwie sekcje zawierają opis kodu generowane przez kreatora konsumenta OLE DB.  
   

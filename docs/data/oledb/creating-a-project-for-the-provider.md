@@ -1,7 +1,7 @@
 ---
 title: Tworzenie projektu dla dostawcy | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410879"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990090"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Tworzenie projektu dla dostawcy
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410879"
   
      **Nowy projekt** pojawi się okno dialogowe.  
   
-1. W **typów projektów** okienku kliknij **projekty języka Visual C++** folderu. W **szablony** okienku kliknij **Projekt ATL**.  
+1. W **typów projektów** okienku kliknij **zainstalowane** > **Visual C++** > **MFC i ATL** folderu. W **szablony** okienku kliknij **Projekt ATL**.  
+
+    > [!NOTE]
+    > W poprzednich wersjach programu Visual Studio, Znajdź typ projektu w obszarze **zainstalowane** > **szablony** > **Visual C++**  >  **ATL**.
   
 1. W **nazwa** , wprowadź nazwę dla projektu, a następnie kliknij **OK**.  
   
