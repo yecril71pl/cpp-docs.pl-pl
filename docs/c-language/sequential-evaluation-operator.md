@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095576"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808293"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 
@@ -29,9 +29,9 @@ Operator obliczania sekwencyjnego, nazywany również "operator przecinka," ocen
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie*: *wyrażenia przypisania*
-
-*wyrażenie***,***wyrażenia przypisania*
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
 
 Lewy operand operator obliczania sekwencyjnego zostało ocenione jako `void` wyrażenia. Wynik operacji ma ten sam wartość i typ jako prawy operand. Każdy argument może być dowolnego typu. Operator obliczania sekwencyjnego nie wykonuje konwersje typów swoich argumentów, a nie przekazuje on l wartością. Po pierwszego operandu, co oznacza, że wszystkie efekty uboczne z oceny lewy operand odbywa się przed rozpoczęciem obliczania prawy operand jest punkt sekwencji. Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.
 
