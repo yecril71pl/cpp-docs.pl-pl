@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065593"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
 
@@ -109,19 +109,19 @@ Domyślnie klasy kontrolek ActiveX i narzędzia są instalowane w poniższych po
 
 - **\Common7\Tools**
 
-     Zawiera pliki kontenera testu (TstCon32.exe, a także jej pliki pomocy).
+   Zawiera pliki kontenera testu (TstCon32.exe, a także jej pliki pomocy).
 
 - **\Vc7\atlmfc\include**
 
-     Zawiera pliki nagłówkowe potrzebne do tworzenia kontrolki ActiveX z MFC
+   Zawiera pliki nagłówkowe potrzebne do tworzenia kontrolki ActiveX z MFC
 
 - **\Vc7\atlmfc\src\mfc**
 
-     Zawiera kod źródłowy dla określonej klasy kontrolek ActiveX w MFC
+   Zawiera kod źródłowy dla określonej klasy kontrolek ActiveX w MFC
 
 - **\Vc7\atlmfc\lib**
 
-     Zawiera biblioteki wymagane do rozwoju formantów ActiveX MFC
+   Zawiera biblioteki wymagane do rozwoju formantów ActiveX MFC
 
 Dostępne są także przykłady dla kontrolek MFC ActiveX. Aby uzyskać więcej informacji na temat tych przykładów, zobacz [przykłady formantów: MFC-Based kontrolek ActiveX](../visual-cpp-samples.md)
 

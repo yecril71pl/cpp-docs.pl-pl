@@ -30,70 +30,70 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34fc1304fe4fad1196b5f204e6ba241093e03f32
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066217"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl — Klasa
 
-Wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
-  
+Wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template < class T >  
-class ATL_NO_VTABLE IRowsetCreatorImpl   
-   : public IObjectWithSiteImpl< T >  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template < class T >
+class ATL_NO_VTABLE IRowsetCreatorImpl
+   : public IObjectWithSiteImpl< T >
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa pochodząca z `IRowsetCreator`.  
+Klasa pochodząca z `IRowsetCreator`.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[SetSite](#setsite)|Określa lokację, która zawiera obiektu zestawu wierszy.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-Ta klasa dziedziczy [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) i zastępuje [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Gdy obiekt polecenia lub sesji dostawcy tworzy zestawu wierszy, wywołuje `QueryInterface` obiektu zestawu wierszy, wyszukiwanie `IObjectWithSite` i wywołania `SetSite` przekazanie obiektu zestawu wierszy `IUnkown` interfejs jako interfejs witryny.  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[SetSite](#setsite)|Określa lokację, która zawiera obiektu zestawu wierszy.|
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa dziedziczy [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) i zastępuje [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Gdy obiekt polecenia lub sesji dostawcy tworzy zestawu wierszy, wywołuje `QueryInterface` obiektu zestawu wierszy, wyszukiwanie `IObjectWithSite` i wywołania `SetSite` przekazanie obiektu zestawu wierszy `IUnkown` interfejs jako interfejs witryny.
 
 ## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
 
-Określa lokację, która zawiera obiektu zestawu wierszy. Aby uzyskać więcej informacji, zobacz [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).  
-  
-### <a name="syntax"></a>Składnia  
-  
+Określa lokację, która zawiera obiektu zestawu wierszy. Aby uzyskać więcej informacji, zobacz [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(SetSite )(IUnknown* pCreator);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(SetSite )(IUnknown* pCreator);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pCreator*<br/>
-[in] Wskaźnik do `IUnknown` wskaźnika interfejsu lokacji zarządzania obiektu zestawu wierszy.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Wskaźnik do `IUnknown` wskaźnika interfejsu lokacji zarządzania obiektu zestawu wierszy.
 
-Standardowa HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Ponadto `IRowsetCreatorImpl::SetSite` umożliwia OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` właściwości. 
+Standardowa HRESULT.
 
-## <a name="see-also"></a>Zobacz też  
+### <a name="remarks"></a>Uwagi
+
+Ponadto `IRowsetCreatorImpl::SetSite` umożliwia OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` właściwości.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

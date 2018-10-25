@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 256ceee14f38885259da11453efef8451d34248c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068011"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>Otwieranie zasobów do edycji plików binarnych (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "44316357"
    > [!NOTE]
    > Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
-![Edytor plików binarnych](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![Edytor plików binarnych](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 Dane binarne dla okna dialogowego wyświetlany w edytorze pliku binarnego
 
 Tylko niektóre wartości ASCII są reprezentowane w edytorze binarnym (0x20 za pośrednictwem 0x7E). Rozszerzone znaki są wyświetlane jako okresy w sekcji wartość ASCII w edytorze binarnym (prawy panel). "Drukowalnych" znaki są wartości ASCII 32 za pośrednictwem 126.

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070403"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -36,7 +36,7 @@ Określa Generowanie kompilatora instrukcje eliminowanie luk w zabezpieczeniach 
 
 **/Qspectre** opcja jest domyślnie wyłączona.
 
-W wersji początkowej **/qspectre** opcji tylko prace zoptymalizowanego kodu. W programie Visual Studio 2017 wersji 15.7 lub nowszej **/qspectre** opcja jest obsługiwana na wszystkich poziomach optymalizacji. 
+W wersji początkowej **/qspectre** opcji tylko prace zoptymalizowanego kodu. W programie Visual Studio 2017 wersji 15.7 lub nowszej **/qspectre** opcja jest obsługiwana na wszystkich poziomach optymalizacji.
 
 Microsoft Visual C++ bibliotek są również dostępne w wersji z krokami zaradczymi dla luki środki zaradcze. W Instalatorze programu Visual Studio można pobrać biblioteki zminimalizować luki Spectre dla programu Visual Studio 2017. Znajdują się one w **poszczególne składniki** karcie **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe**, i mieć "Libs dla luki Spectre" w nazwie. Biblioteki DLL i bibliotek statycznych środowiska uruchomieniowego za pomocą ograniczenia włączone są dostępne dla podzbioru środowiska uruchomieniowego Visual C++: kod startowy VC ++, vcruntime140, msvcp140, concrt140 i vcamp140. Biblioteki DLL są obsługiwane w przypadku wdrożenia lokalnego aplikacji. zawartość 2017 środowiska uruchomieniowego bibliotek pakiet redystrybucyjny Visual C++ nie zostały zmodyfikowane. Można także zainstalować biblioteki zminimalizować luki Spectre dla MFC i ATL, znaleziono w **poszczególne składniki** karcie **zestawów SDK, bibliotek i struktur**.
 

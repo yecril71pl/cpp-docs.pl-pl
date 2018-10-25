@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf4bcdd9290817bb77eeb20f1a014bd537d15d8b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 763ee9c6ad165ad06016a730e218d6aa36777997
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789725"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065125"
 ---
 # <a name="libraryblock"></a>library_block
 
@@ -69,4 +69,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)  
+[Oddzielne atrybuty](stand-alone-attributes.md)

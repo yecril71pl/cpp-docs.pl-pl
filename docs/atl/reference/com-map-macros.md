@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028054"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068895"
 ---
 # <a name="com-map-macros"></a>Makra mapy modelu COM
 
@@ -31,7 +31,7 @@ Te makra definiują mapy interfejsu COM.
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Oznacza początek wpisy mapy interfejsu COM.|
-|[END_COM_MAP](#end_com_map)|Oznacza koniec wpisy mapy interfejsu COM.|  
+|[END_COM_MAP](#end_com_map)|Oznacza koniec wpisy mapy interfejsu COM.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>Uwagi
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) zwraca tylko wskaźników dla interfejsów mapy interfejsu COM. Rozpoczynać mapie interfejsu makro BEGIN_COM_MAP, dodać wpisy dla wszystkich interfejsów sieci za pomocą [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) — makro lub jedna z jej wariantów i ukończyć mapy za pomocą [END_COM_MAP](#end_com_map) makra.  
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) zwraca tylko wskaźników dla interfejsów mapy interfejsu COM. Rozpoczynać mapie interfejsu makro BEGIN_COM_MAP, dodać wpisy dla wszystkich interfejsów sieci za pomocą [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) — makro lub jedna z jej wariantów i ukończyć mapy za pomocą [END_COM_MAP](#end_com_map) makra.
 
 ### <a name="example"></a>Przykład
 

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 157bcb8b1b8341e16d7dcb6c3a9d9fc9dc1a4d4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c113ce68cf609970342d69ebc03f700e17c7e2a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064319"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Klasa CMFCDropDownToolbarButton
 
@@ -91,7 +91,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Określa, czy rozwijany pasek narzędzi jest obecnie otwarty.|
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Określa, czy przycisk mogą być wyświetlane w rozszerzonej obramowania. (Przesłania [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Metoda wywoływana przez platformę, by Oblicz rozmiar przycisku dla kontekstu określonego urządzenia i stan dokowania. (Przesłania [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|`CMFCDropDownToolbarButton::OnCancelMode`|Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) wiadomości. (Przesłania `CMCToolBarButton::OnCancelMode`.)|
+|`CMFCDropDownToolbarButton::OnCancelMode`|Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) wiadomości. (Przesłania `CMCToolBarButton::OnCancelMode`).|
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływane przez platformę, gdy przycisk znajduje się nowy pasek narzędzi. (Przesłania [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk myszy. (Przesłania [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy. (Przesłania [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|
@@ -151,7 +151,6 @@ Konstruuje `CMFCDropDownToolbarButton` obiektu.
 
 ```
 CMFCDropDownToolbarButton();
-
 
 CMFCDropDownToolbarButton(
     LPCTSTR lpszName,
@@ -431,7 +430,7 @@ Ta metoda jest rozszerzeniem implementacji klasy podstawowej ( [CMFCToolBarButto
 
 - **Obraz**
 
-- **Tekst**
+- **Text**
 
 - **Obraz i tekst**
 
@@ -557,6 +556,4 @@ Wywołaj tę metodę, aby określić polecenie domyślne, które wykonuje szablo
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d574ebdfb93b78e766b7e9711540af48d4a09e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b52151dba90c0cfd0ed834e2ef351838d598eb90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068805"
 ---
 # <a name="cnotsupportedexception-class"></a>Klasa CNotSupportedException
 
@@ -79,5 +79,4 @@ Nie należy używać tego konstruktora bezpośrednio, ale raczej wywołania funk
 
 [Klasa CException](cexception-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)
-
 

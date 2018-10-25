@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418427"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066113"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: zgłaszanie wyjątków z własnych funkcji
 
@@ -33,19 +33,19 @@ Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymana, a 
 
 1. Użyj jednej z funkcji pomocnika MFC, takich jak `AfxThrowMemoryException`. Te funkcje zgłaszać obiekt przydzielony wstępnie wyjątek odpowiedniego typu.
 
-     W poniższym przykładzie funkcja próbuje przydzielić dwóch bloków pamięci i zgłasza wyjątek, jeśli albo alokacja nie powiedzie się:
+   W poniższym przykładzie funkcja próbuje przydzielić dwóch bloków pamięci i zgłasza wyjątek, jeśli albo alokacja nie powiedzie się:
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     Jeśli pierwsza alokacja nie powiedzie się, można po prostu Zgłoś wyjątek pamięci. Jeśli pierwszy alokacji zakończy się pomyślnie, ale drugi kończy się niepowodzeniem, należy zwolnić pierwszego bloku alokacji przed zostanie zgłoszony wyjątek. Jeśli oba alokacje powiedzie się, możesz przejść normalnie i wolne bloki, podczas zamykania funkcji.
+   Jeśli pierwsza alokacja nie powiedzie się, można po prostu Zgłoś wyjątek pamięci. Jeśli pierwszy alokacji zakończy się pomyślnie, ale drugi kończy się niepowodzeniem, należy zwolnić pierwszego bloku alokacji przed zostanie zgłoszony wyjątek. Jeśli oba alokacje powiedzie się, możesz przejść normalnie i wolne bloki, podczas zamykania funkcji.
 
      - lub —
 
 1. Użyj wyjątków zdefiniowanych przez użytkownika, aby wskazać Warunek problem. Element dowolnego typu, a nawet całą klasę, może zgłosić jako wyjątek.
 
-     Poniższy przykład próbuje odtwarzanie dźwięku za pomocą urządzenia wave i zgłasza wyjątek, jeśli wystąpi awaria.
+   Poniższy przykład próbuje odtwarzanie dźwięku za pomocą urządzenia wave i zgłasza wyjątek, jeśli wystąpi awaria.
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  Biblioteki MFC domyślna obsługa wyjątków, który ma zastosowanie tylko do wskaźników do `CException` obiektów (i obiektów `CException`-klas pochodnych). W powyższym przykładzie pomija mechanizm wyjątków MFC.

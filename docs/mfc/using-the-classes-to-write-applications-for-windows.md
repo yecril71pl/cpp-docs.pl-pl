@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075128"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Używanie klas do pisania aplikacji dla systemu Windows
 
@@ -66,17 +66,17 @@ Inne części ramach obejmują:
 
 - [Zarządzanie pamięcią](../mfc/memory-management.md)
 
-     Oprócz zapewnia korzyści w pisaniu aplikacji dla systemu operacyjnego Windows, MFC sprawia, że jej znacznie łatwiejsze do pisania aplikacji, które w szczególności użyj OLE, łączenie i osadzanie technologii. Możesz przekształcić aplikacji OLE edytowania kontenera i/lub serwerem OLE edycji visual obrazu, i tak, aby inne aplikacje mogą używać obiektów z aplikacji lub nawet dysku zdalnie, można dodać usługi Automation.
+   Oprócz zapewnia korzyści w pisaniu aplikacji dla systemu operacyjnego Windows, MFC sprawia, że jej znacznie łatwiejsze do pisania aplikacji, które w szczególności użyj OLE, łączenie i osadzanie technologii. Możesz przekształcić aplikacji OLE edytowania kontenera i/lub serwerem OLE edycji visual obrazu, i tak, aby inne aplikacje mogą używać obiektów z aplikacji lub nawet dysku zdalnie, można dodać usługi Automation.
 
 - [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-     Kontrolki OLE deweloperski (CDK) jest teraz w pełni zintegrowana z architekturą. Tej rodziny artykułu dostarcza przegląd Tworzenie formantów ActiveX z MFC. (Formantów ActiveX były wcześniej znane jako formantów OLE).
+   Kontrolki OLE deweloperski (CDK) jest teraz w pełni zintegrowana z architekturą. Tej rodziny artykułu dostarcza przegląd Tworzenie formantów ActiveX z MFC. (Formantów ActiveX były wcześniej znane jako formantów OLE).
 
 - [Programowanie bazy danych](../data/data-access-programming-mfc-atl.md)
 
-     MFC dostarcza również dwa zestawy klasy bazy danych, które upraszczają zapis dostęp do danych aplikacji. Używanie klas baz danych ODBC, może nawiązać połączenie z bazami danych za pośrednictwem sterownika Open Database Connectivity (ODBC), wybierz rekordy z tabel i wyświetlania rekordów informacji w formularza na ekranie. Przy użyciu klas dostępu do obiektu DAO (Data), można pracować z bazami danych za pomocą aparatu bazy danych Microsoft Jet lub źródeł danych zewnętrznych (inne niż Jet), w tym źródeł danych ODBC.
+   MFC dostarcza również dwa zestawy klasy bazy danych, które upraszczają zapis dostęp do danych aplikacji. Używanie klas baz danych ODBC, może nawiązać połączenie z bazami danych za pośrednictwem sterownika Open Database Connectivity (ODBC), wybierz rekordy z tabel i wyświetlania rekordów informacji w formularza na ekranie. Przy użyciu klas dostępu do obiektu DAO (Data), można pracować z bazami danych za pomocą aparatu bazy danych Microsoft Jet lub źródeł danych zewnętrznych (inne niż Jet), w tym źródeł danych ODBC.
 
-     Ponadto pełnym włączeniem MFC do tworzenia aplikacji, które używają Unicode i (znaków MBCS) zestawów znaków wielobajtowych, zestawy znaków specjalnie znaków dwubajtowych (DBCS).
+   Ponadto pełnym włączeniem MFC do tworzenia aplikacji, które używają Unicode i (znaków MBCS) zestawów znaków wielobajtowych, zestawy znaków specjalnie znaków dwubajtowych (DBCS).
 
 Ogólne wskazówki dokumentacji MFC, zobacz [tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md).
 

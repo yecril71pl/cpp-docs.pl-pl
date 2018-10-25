@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a996df63430a2d6b1942112122a1f185ba8f13de
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 16bea4bb35a7eeffa1c6986953d7245ff588abd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859604"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075532"
 ---
 # <a name="adding-an-atl-control"></a>Dodawanie kontrolki ATL
 
@@ -47,4 +47,4 @@ Dodatkowo zmniejszyć rozmiar formantu i usuwanie interfejsów, które nie są u
 ## <a name="see-also"></a>Zobacz też
 
 [Dodawanie funkcji do kontrolek złożonych](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)

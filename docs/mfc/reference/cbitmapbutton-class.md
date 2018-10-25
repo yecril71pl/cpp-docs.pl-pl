@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a4cc427459036b4b124573f47c71146eafcb970
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45909e50e56802fd547e6d68964fc3044921092e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066854"
 ---
 # <a name="cbitmapbutton-class"></a>Klasa CBitmapButton
 
@@ -179,7 +179,6 @@ BOOL LoadBitmaps(
     LPCTSTR lpszBitmapResourceFocus = NULL,
     LPCTSTR lpszBitmapResourceDisabled = NULL);
 
-
 BOOL LoadBitmaps(
     UINT nIDBitmapResource,
     UINT nIDBitmapResourceSel = 0,
@@ -190,7 +189,7 @@ BOOL LoadBitmaps(
 ### <a name="parameters"></a>Parametry
 
 *lpszBitmapResource*<br/>
-Wskazuje ciąg zakończony wartością null zawierający nazwę mapy bitowej Normalny przycisk mapy bitowej lub "stan up". Wymagane.
+Wskazuje ciąg zakończony wartością null zawierający nazwę mapy bitowej Normalny przycisk mapy bitowej lub "stan up". Wymagana.
 
 *lpszBitmapResourceSel*<br/>
 Wskazuje ciąg zakończony zerem, który zawiera nazwę mapy bitowej dla wybranych przycisk mapy bitowej lub "stan działa". Może mieć wartości NULL.
@@ -202,7 +201,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera nazwę mapy bitowej dla 
 Wyłączone punkty ciąg zakończony znakiem null, który zawiera nazwę mapy bitowej dla przycisku kontrolki mapy bitowej. Może mieć wartości NULL.
 
 *nIDBitmapResource*<br/>
-Określa identyfikator zasobu zasób mapy bitowej, przycisk mapy bitowej normalny lub "stan up". Wymagane.
+Określa identyfikator zasobu zasób mapy bitowej, przycisk mapy bitowej normalny lub "stan up". Wymagana.
 
 *nIDBitmapResourceSel*<br/>
 Określa identyfikator zasobu zasób mapy bitowej wybranych przycisk mapy bitowej lub "stan działa". Może mieć wartość 0.

@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f4dffd2fe57e38855033d192ddaf9ac9752e201
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1002d0a6bcd8d477aa3af86e72faafa843b7565
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067465"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Klasa CMFCToolBarMenuButton
 
@@ -257,14 +257,13 @@ W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCToolBarMenuBut
 
 ##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith
 
-
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *innych*
+[in] *innych*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -272,14 +271,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -364,7 +362,6 @@ Ta metoda przyjmuje ikony dokumentu i rysuje go przycisku menu, wyśrodkowane w 
 
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize
 
-
 ```
 void EnableQuickCustomize();
 ```
@@ -372,7 +369,6 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton
-
 
 ```
 virtual BOOL HasButton() const;
@@ -384,7 +380,6 @@ virtual BOOL HasButton() const;
 
 ##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder
 
-
 ```
 virtual BOOL HaveHotBorder() const;
 ```
@@ -394,7 +389,6 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder
-
 
 ```
 virtual BOOL IsBorder() const;
@@ -406,7 +400,6 @@ virtual BOOL IsBorder() const;
 
 ##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu
 
-
 ```
 BOOL IsClickedOnMenu() const;
 ```
@@ -416,7 +409,6 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode
-
 
 ```
 BOOL IsQuickMode();
@@ -581,7 +573,6 @@ Gdy ta zmienna członka jest równa TRUE, przycisk zawsze wywołuje [CFrameWndEx
 
 ##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu
 
-
 ```
 virtual void OnAfterCreatePopupMenu();
 ```
@@ -589,7 +580,6 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag
-
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -601,7 +591,6 @@ virtual BOOL OnBeforeDrag() const;
 
 ##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize
 
-
 ```
 virtual SIZE OnCalculateSize(
     CDC* pDC,
@@ -611,15 +600,15 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
-[in] [in] *sizeDefault* [in] *bHorz*
+[in] *podstawowego kontrolera domeny*<br/>
+[in] *sizeDefault*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode
-
 
 ```
 virtual void OnCancelMode();
@@ -629,19 +618,17 @@ virtual void OnCancelMode();
 
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd
 
-
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndParent*
+[in] *pWndParent*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick
-
 
 ```
 virtual BOOL OnClick(
@@ -651,8 +638,8 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-[in] [in] *bDelay*
+[in] *pWnd*<br/>
+[in] *bDelay*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -678,21 +665,19 @@ Aby dostosować przetwarzania elementu menu, należy zastąpić `OnClickMenuItem
 
 ##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp
 
-
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw
-
 
 ```
 virtual void OnDraw(
@@ -708,19 +693,18 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
-[in] [in] *prostokąt*
-*pImages*<br/>
-[in] [in] *bHorz*
-*bCustomizeMode*<br/>
-[in] [in] *bHighlight*
-*bDrawBorder*<br/>
-[in] [in] *bGrayDisabledButtons*
+[in] *podstawowego kontrolera domeny*<br/>
+[in] *rect*<br/>
+[in] *pImages*<br/>
+[in] *bHorz*<br/>
+[in] *bCustomizeMode*<br/>
+[in] *bHighlight*<br/>
+[in] *bDrawBorder*<br/>
+[in] *bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList
-
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -731,8 +715,9 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
-[in] [in] *prostokąt* [in] *bSelected*
+[in] *podstawowego kontrolera domeny*<br/>
+[in] *rect*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -761,7 +746,6 @@ Ta funkcja jest wywoływana przez platformę, gdy użytkownik otwiera menu rozwi
 
 ##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault
 
-
 ```
 virtual void ResetImageToDefault();
 ```
@@ -769,7 +753,6 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState
-
 
 ```
 virtual void SaveBarState();
@@ -781,14 +764,13 @@ Struktura wywołuje tę metodę podczas tworzenia przycisku paska narzędzi w wy
 
 ##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -859,14 +841,13 @@ W trybie palety wszystkie elementy menu są wyświetlane jako wielokolumnowe pal
 
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndMessage*
+[in] *pWndMessage*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

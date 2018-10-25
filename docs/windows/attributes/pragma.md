@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d7f6b371db09fd5eac9d6ef7260df7d790c21df
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ac6b00387669f26bbd6cc02f8dd559199dd6bdd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074179"
 ---
 # <a name="pragma"></a>pragma
 
@@ -76,4 +76,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>
-[pakiet](../../preprocessor/pack.md)  
+[pakiet](../../preprocessor/pack.md)

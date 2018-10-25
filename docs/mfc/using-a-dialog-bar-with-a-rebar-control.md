@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073764"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Używanie paska dialogowego z formantem paska pomocniczego
 
@@ -41,13 +41,13 @@ Poniższe szczegóły procedury kroki niezbędne do osiągnięcia przejrzystośc
 
 1. W nowy program obsługi Zmień istniejący kod do zgodnie z poniższym przykładem:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. Dodaj program obsługi komunikatów WM_MOVE.
 
 1. W nowy program obsługi Zmień istniejący kod do zgodnie z poniższym przykładem:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 Nowe procedury obsługi symulować przezroczystość paska dialogowego przekazywania wiadomości WM_ERASEBKGND do nadrzędnego okna i wymuszanie repaint za każdym razem, gdy obiekt paska dialogowego jest przenoszony.
 

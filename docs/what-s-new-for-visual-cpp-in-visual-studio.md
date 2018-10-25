@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066074"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co nowego w języku Visual C++ w programie Visual Studio 2017
 
@@ -42,11 +42,11 @@ W tej wersji zaktualizowaliśmy standardową bibliotekę i kompilator języka C+
 
 - Program Visual Studio 2017 umożliwia używanie [/SDL](build/reference/sdl-enable-additional-security-checks.md) z [/ await](build/reference/await-enable-coroutine-support.md). Firma Microsoft usunęła [usunęliśmy](build/reference/rtc-run-time-error-checks.md) ograniczenie koprocedur.
 
-   **Visual Studio 2017 w wersji 15.3**:  
+   **Visual Studio 2017 w wersji 15.3**:
+
 - [/ STD: c ++ 14 i/STD: c ++ najnowsze](build/reference/std-specify-language-standard-version.md): te opcje kompilatora umożliwiają wyrazić zgodę na określonych wersji ISO C++ języku programowania w projekcie. Nowy projekt funkcje warstwy standardowa jest chroniony przez większość **/STD: c ++ najnowsze** opcji.
 
 - [/ STD: c ++ 17](build/reference/std-specify-language-standard-version.md) udostępnia zestaw funkcji C ++ 17 implementowane przez kompilator. Ta opcja powoduje wyłączenie kompilatora i biblioteki standardowej obsługi funkcji, które zostały zmienione lub nowych wersjach pracy roboczą i wad aktualizacje C++ Standard po C ++ 17. Aby włączyć te funkcje, użyj **/STD: c ++ najnowsze**.
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Generowanie kodu zabezpieczeń, diagnostyki i przechowywanie wersji
 
@@ -342,9 +342,9 @@ Program Visual Studio 2017 wprowadzono obsługę za pomocą projektów CMake, be
 
   ![Cmake Otwórz folder](media/cmake_cpp.png "CMake Otwórz folder")
 
-**Visual Studio 2017 w wersji 15.3**: Dodano obsługę generatora Ninja narzędzia CMake. 
+**Visual Studio 2017 w wersji 15.3**: Dodano obsługę generatora Ninja narzędzia CMake.
 
-**Visual Studio 2017 w wersji 15.5**: pamięci podręczne mechanizmu dodanego do importowania istniejących narzędzia CMake. 
+**Visual Studio 2017 w wersji 15.5**: pamięci podręczne mechanizmu dodanego do importowania istniejących narzędzia CMake.
 
 **Visual Studio 2017 w wersji 15.7**: dodano dla CMake 3.11 analizy kodu w projektach CMake obsługę jest przeznaczony dla widoku w Eksploratorze rozwiązań kliknij opcje generowania pamięci podręcznej i kompilacji pojedynczego pliku. Aby uzyskać więcej informacji, zobacz [Obsługa CMake w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) i [projektów CMake w programie Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
@@ -416,10 +416,11 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 
 Niektóre numery ostrzeżeń, które można znaleźć w wersji 15.3, nie są już dostępne w wersji 15.5. Ostrzeżenia te zostały zastąpione bardziej szczegółowymi operacjami sprawdzania.
 
-**Visual Studio 2017 w wersji 15.6**:  
-Obsługa dodane do pojedynczego pliku analiz i poprawę wydajności analizy w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [statycznej analizy ulepszenia dla języka C++ dla Visual Studio 2017 15.6 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+**Visual Studio 2017 w wersji 15.6**:
 
-**Visual Studio 2017 w wersji 15.7**:  
+- Obsługa dodane do pojedynczego pliku analiz i poprawę wydajności analizy w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [statycznej analizy ulepszenia dla języka C++ dla Visual Studio 2017 15.6 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+
+**Visual Studio 2017 w wersji 15.7**:
 
 - Dodane do pomocy technicznej [/ analyze: ruleset](build/reference/analyze-code-analysis.md) umożliwia określenie reguł analizy kodu, które można uruchomić.
 - Dodano dodatkowe reguły z podstawowych wytycznych dotyczących języka C++ obsługę.  Aby uzyskać więcej informacji, zobacz [przy użyciu narzędzia do sprawdzania podstawowych wytycznych dotyczących języka C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
@@ -435,7 +436,7 @@ Adapter testowy Google i Boost.Test karty są teraz dostępne jako składniki **
 - Dodano obsługę dynamicznej biblioteki Boost.Test pomocy technicznej.
 - Szablon elementu Boost.Test jest teraz dostępna w środowisku IDE.
 
-Aby uzyskać więcej informacji, zobacz [Boost.Test Unit Testing: Biblioteka dynamiczna obsługa i nowego szablonu elementu](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/). 
+Aby uzyskać więcej informacji, zobacz [Boost.Test Unit Testing: Biblioteka dynamiczna obsługa i nowego szablonu elementu](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/).
 
 **Visual Studio 2017 w wersji 15.7**:
 

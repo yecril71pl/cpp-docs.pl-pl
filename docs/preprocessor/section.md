@@ -18,31 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 06e0356453cfcb8ec2753e3c0a6647729ffad90c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066698"
 ---
 # <a name="section"></a>sekcja
-Tworzy sekcję w pliku .obj.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#pragma section( "section-name" [, attributes] )  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- 
-Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
-  
-Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji. Jednakże, należy użyć [__declspec(allocate)](../cpp/allocate.md) lub nic nie zostanie umieszczona w sekcji.  
-  
-*Nazwa sekcji* jest wymaganym parametrem, który ma być nazwa sekcji. Nazwa nie może powodować konfliktu z nazwami standardowej sekcji. Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
-  
-*atrybuty* jest parametrem opcjonalnym składający się z co najmniej jeden rozdzielonych przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe *atrybuty* są:  
+
+Tworzy sekcję w pliku .obj.
+
+## <a name="syntax"></a>Składnia
+
+```
+#pragma section( "section-name" [, attributes] )
+```
+
+## <a name="remarks"></a>Uwagi
+
+Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.
+
+Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji. Jednakże, należy użyć [__declspec(allocate)](../cpp/allocate.md) lub nic nie zostanie umieszczona w sekcji.
+
+*Nazwa sekcji* jest wymaganym parametrem, który ma być nazwa sekcji. Nazwa nie może powodować konfliktu z nazwami standardowej sekcji. Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.
+
+*atrybuty* jest parametrem opcjonalnym składający się z co najmniej jeden rozdzielonych przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe *atrybuty* są:
 
 |Atrybut|Opis|
 |-|-|
@@ -54,24 +55,24 @@ Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji
 |**nocache**|Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.|
 |**Odrzuć**|Oznacza sekcji discardable; przydatne dla sterowników urządzeń systemu Win32.|
 |**remove**|Oznacza sekcji, co nie rezydentnego; sterowniki urządzeń wirtualnych (V*x*D) tylko.|
-  
-Jeśli nie określisz atrybutów, sekcji będzie po ich przeczytaniu i Zapis atrybutów.  
-  
-## <a name="example"></a>Przykład  
- 
-W poniższym przykładzie pierwsza instrukcja identyfikuje sekcji i jego atrybuty. Liczba całkowita `j` nie są umieszczane w `mysec` , ponieważ nie został zadeklarowany za pomocą `__declspec(allocate)`; `j` przechodzi w sekcji danych. Liczba całkowita `i` konstrukcyjnym `mysec` na jego `__declspec(allocate)` atrybuty klasy magazynu.  
-  
-```cpp  
-// pragma_section.cpp  
-#pragma section("mysec",read,write)  
-int j = 0;  
-  
-__declspec(allocate("mysec"))  
-int i = 0;  
-  
-int main(){}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+
+Jeśli nie określisz atrybutów, sekcji będzie po ich przeczytaniu i Zapis atrybutów.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pierwsza instrukcja identyfikuje sekcji i jego atrybuty. Liczba całkowita `j` nie są umieszczane w `mysec` , ponieważ nie został zadeklarowany za pomocą `__declspec(allocate)`; `j` przechodzi w sekcji danych. Liczba całkowita `i` konstrukcyjnym `mysec` na jego `__declspec(allocate)` atrybuty klasy magazynu.
+
+```cpp
+// pragma_section.cpp
+#pragma section("mysec",read,write)
+int j = 0;
+
+__declspec(allocate("mysec"))
+int i = 0;
+
+int main(){}
+```
+
+## <a name="see-also"></a>Zobacz też
+
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

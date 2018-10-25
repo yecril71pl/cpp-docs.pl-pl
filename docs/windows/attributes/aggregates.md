@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5817267977ea1c8eeca00ef98357f31cb92d5bf4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0729ad2e68929f8fabbfd2d8439e8c8840e67419
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071200"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -56,7 +56,7 @@ Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_prog
 Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Po pierwsze następujący wpis zostanie dodany do mapy COM obiektu docelowego:
 
 ```
-COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
+COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
 ```
 
 Drugi [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) — makro jest także dodawane.
@@ -108,4 +108,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregacja](/windows/desktop/com/aggregation)<br/>
 [Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
-[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  
+[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

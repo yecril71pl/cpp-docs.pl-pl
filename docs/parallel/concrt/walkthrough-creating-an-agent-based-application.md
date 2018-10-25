@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377174"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070598"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
 
@@ -64,7 +64,7 @@ W tej sekcji przedstawiono sposób tworzenia aplikacji konsoli Visual C++, któr
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   Agents.h pliku nagłówka zawiera funkcje [concurrency::agent](../../parallel/concrt/reference/agent-class.md) klasy.
 
 1. Sprawdź, czy aplikacja została pomyślnie utworzona, tworząc i uruchamiając go. Aby skompilować aplikację, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom ją, klikając pozycję **Rozpocznij debugowanie** na **debugowania** menu.
 
@@ -90,19 +90,19 @@ W tej sekcji przedstawiono sposób tworzenia `file_reader` klasy. Środowisko ur
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   `_file_name` Element członkowski jest nazwą pliku, odczytująca agenta. `_target` Element członkowski jest [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) obiektu, że agent zapisuje zawartość pliku. `_error` Elementu członkowskiego zawiera wszelkie błędy występujące w cyklu życia agenta.
 
 1. Dodaj następujący kod do `file_reader` konstruktorów `public` części `file_reader` klasy.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Ustawia każdego przeciążenia konstruktora `file_reader` składowych danych. Przeciążenia konstruktora drugiego i trzeciego umożliwia aplikacji do użycia określonego harmonogramu za pomocą agenta. Pierwsze przeciążenie używa domyślnego harmonogramu z agenta.
 
 1. Dodaj `get_error` metody do sekcji publicznej `file_reader` klasy.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   `get_error` Metoda pobiera wszelkie błędy występujące w cyklu życia agenta.
 
 1. Implementowanie [concurrency::agent::run](reference/agent-class.md#run) method in Class metoda `protected` części swojej klasy.
 
@@ -140,7 +140,7 @@ W tej sekcji pokazano, jak używać `file_reader` klasy, aby odczytać zawartoś
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   To `call` obiektu spowoduje także ustawienie `event` obiektu po odebraniu pusty ciąg do sygnalizowania zakończenia przetwarzania.
 
 1. Tworzenie `file_reader` obiekt, który odczytuje jako plik i zapisuje zawartość tego pliku do `call` obiektu.
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068700"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 
@@ -103,7 +103,6 @@ Ponadto biblioteki wykonawczej C obsługuje również zestaw funkcji diagnostycz
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Pomija ostrzeżeń kompilatora do użytku zaniechanych funkcji MFC.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Pomija ostrzeżeń kompilatora do użytku zaniechanych funkcji MFC.
@@ -113,6 +112,7 @@ Pomija ostrzeżeń kompilatora do użytku zaniechanych funkcji MFC.
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Przykład
 
 Ten przykładowy kod spowodują ostrzeżenia kompilatora, jeśli nie zdefiniowano _AFX_SECURE_NO_WARNINGS.
@@ -309,6 +309,7 @@ Użyj, aby sprawdzić poprawność danych.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [SPRAWDŹ](#verify)
-
 
 ##  <a name="trace"></a>  ŚLEDZENIA
 
@@ -450,7 +450,6 @@ Ta zmienna jest zdefiniowane tylko w wersji debugowania MFC. Aby uzyskać więce
 
 **Nagłówek:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (wewnętrzny)
 
 Funkcja wewnętrznego MFC wykorzystuje do porzucenia stanu obiektu podczas debugowania.
@@ -460,6 +459,7 @@ Funkcja wewnętrznego MFC wykorzystuje do porzucenia stanu obiektu podczas debug
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Skrytka pocztowa*<br/>
@@ -478,8 +478,6 @@ Kodu programu nie powinien wywoływać `AfxDump`, ale zamiast tego należy wywo�
 ### <a name="see-also"></a>Zobacz też
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxmemdf —
 
@@ -597,8 +595,6 @@ Kodu programu nie powinien wywoływać `AfxDump`, ale zamiast tego należy wywo�
 ### <a name="see-also"></a>Zobacz też
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  Afxdumpstack —
 

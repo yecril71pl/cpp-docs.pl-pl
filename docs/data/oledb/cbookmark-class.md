@@ -78,150 +78,150 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058064"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064338"
 ---
 # <a name="cbookmark-class"></a>Klasa CBookmark
 
-Przechowuje wartość zakładki w jego buforu.  
-  
+Przechowuje wartość zakładki w jego buforu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template < DBLENGTH nSize = 0 >  
+template < DBLENGTH nSize = 0 >
 class CBookmark : public CBookmarkBase
-  
-template <>  
-class CBookmark< 0 > : public CBookmarkBase  
-```  
-  
-### <a name="parameters"></a>Parametry  
+
+template <>
+class CBookmark< 0 > : public CBookmarkBase
+```
+
+### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-Rozmiar buforu zakładki w bajtach. Gdy *nSize* wynosi zero, bufor zakładki zostanie dynamicznie utworzony w czasie wykonywania.  
+Rozmiar buforu zakładki w bajtach. Gdy *nSize* wynosi zero, bufor zakładki zostanie dynamicznie utworzony w czasie wykonywania.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[CBookmark](#cbookmark)|Konstruktor|  
-|[Getbuffer —](#getbuffer)|Pobiera wskaźnik do buforu.|  
-|[GetSize](#getsize)|Pobiera rozmiar buforu w bajtach.|  
-|[SetBookmark](#setbookmark)|Ustawia wartość zakładki.|  
-  
-### <a name="operators"></a>Operatory  
-  
-|||  
-|-|-|  
-|[operator =](#operator)|Przypisuje jeden `CBookmark` klasy do innego.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldbcli.h
 
-`CBookmark<0>` jest specjalizacją szablonu `CBookmark`; buforu jest tworzone dynamicznie w czasie wykonywania.  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[CBookmark](#cbookmark)|Konstruktor|
+|[Getbuffer —](#getbuffer)|Pobiera wskaźnik do buforu.|
+|[GetSize](#getsize)|Pobiera rozmiar buforu w bajtach.|
+|[SetBookmark](#setbookmark)|Ustawia wartość zakładki.|
+
+### <a name="operators"></a>Operatory
+
+|||
+|-|-|
+|[operator =](#operator)|Przypisuje jeden `CBookmark` klasy do innego.|
+
+## <a name="remarks"></a>Uwagi
+
+`CBookmark<0>` jest specjalizacją szablonu `CBookmark`; buforu jest tworzone dynamicznie w czasie wykonywania.
 
 ## <a name="cbookmark"></a> CBookmark::CBookmark
 
-Konstruktor.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Konstruktor.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
 CBookmark();
-   
-CBookmark(DBLENGTH nSize);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+ 
+CBookmark(DBLENGTH nSize);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-[in] Rozmiar buforu zakładki w bajtach.  
-  
-### <a name="remarks"></a>Uwagi  
+[in] Rozmiar buforu zakładki w bajtach.
 
-Pierwsza funkcja ustawia bufor o wartości NULL i rozmiar buforu na 0. Druga funkcja ustawia rozmiar buforu *nSize*, a bufor tablicy bajtów *nSize* bajtów.  
-  
+### <a name="remarks"></a>Uwagi
+
+Pierwsza funkcja ustawia bufor o wartości NULL i rozmiar buforu na 0. Druga funkcja ustawia rozmiar buforu *nSize*, a bufor tablicy bajtów *nSize* bajtów.
+
 > [!NOTE]
->  Ta funkcja jest dostępna tylko w `CBookmark<0>`. 
-  
+>  Ta funkcja jest dostępna tylko w `CBookmark<0>`.
+
 ## <a name="getbuffer"></a> CBookmark::GetBuffer
 
-Pobiera wskaźnik do buforu zakładki.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-virtual BYTE* GetBuffer() const throw();  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Pobiera wskaźnik do buforu zakładki.
 
-Wskaźnik do buforu zakładki. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+virtual BYTE* GetBuffer() const throw();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do buforu zakładki.
 
 ## <a name="getsize"></a> CBookmark::GetSize
 
-Pobiera rozmiar buforu zakładki.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-virtual DBLENGTH GetSize() const throw();  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Pobiera rozmiar buforu zakładki.
 
-Rozmiar buforu w bajtach.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+virtual DBLENGTH GetSize() const throw();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Rozmiar buforu w bajtach.
 
 ## <a name="setbookmark"></a> CBookmark::SetBookmark
 
-Kopiuje wartość zakładki odwołuje się *pBuffer* do `CBookmark` buffer i ustawia rozmiar buforu *nSize*.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Kopiuje wartość zakładki odwołuje się *pBuffer* do `CBookmark` buffer i ustawia rozmiar buforu *nSize*.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-[in] Rozmiar buforu zakładki.  
-  
+[in] Rozmiar buforu zakładki.
+
 *pBuffer*<br/>
-[in] Wskaźnik do tablicy typu byte, zawierającego wartość zakładki.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Wskaźnik do tablicy typu byte, zawierającego wartość zakładki.
 
-Standardowa HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja jest dostępna tylko w `CBookmark<0>`. 
+Standardowa HRESULT.
+
+### <a name="remarks"></a>Uwagi
+
+Ta funkcja jest dostępna tylko w `CBookmark<0>`.
 
 ## <a name="operator"></a> CBookmark::operator =
 
-Przypisuje `CBookmark` obiektu do drugiego.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Przypisuje `CBookmark` obiektu do drugiego.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-CBookmark& operator =(const CBookmark& bookmark) throw();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+CBookmark& operator =(const CBookmark& bookmark) throw();
+```
 
-Ten operator jest wymagana tylko w `CBookmark<0>`.   
+### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też  
+Ten operator jest wymagana tylko w `CBookmark<0>`.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

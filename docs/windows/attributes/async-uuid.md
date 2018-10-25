@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 336bbf00edc84335972171aba0e7fc01e206984e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 384e3db9d1c5925d64d066b5a5a3b2e9ac4e68eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789632"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067368"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -73,4 +73,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty interfejsu](interface-attributes.md)  
+[Atrybuty interfejsu](interface-attributes.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072164"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
 
@@ -42,8 +42,6 @@ Aby uzyskać więcej informacji, zobacz [pliki .lib — wejście konsolidatora](
 Inną możliwą przyczyną LNK1181 to, że długiej nazwy pliku ze spacjami nie zostało ujęte w znaki cudzysłowu.  W takiej sytuacji konsolidator będzie rozpoznają nazwę pliku do pierwszą przestrzeń, a następnie przyjęto założenie, rozszerzenie pliku. obiektu  Rozwiązaniem tej sytuacji jest ująć długiej nazwy pliku (ścieżka, a także plik name) w znaki cudzysłowu.
 
 Kompilowanie przy użyciu [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji może spowodować LNK1181, ponieważ ta opcja pomija tworzenie plików .obj.
-
-
 
 ## <a name="see-also"></a>Zobacz też
 

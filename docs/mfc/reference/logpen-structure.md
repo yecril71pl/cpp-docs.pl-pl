@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375676"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064957"
 ---
 # <a name="logpen-structure"></a>Struktura LOGPEN
 
@@ -56,9 +56,9 @@ Określa typ pióra. Ten element członkowski może być jednym z następującyc
 
 - PS_INSIDEFRAME tworzy produkowane przez Pióro, który rysuje wewnątrz ramki kształty zamknięte w GDI dane wyjściowe funkcji, które określają prostokąt otaczający (na przykład `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, i `Chord` elementu członkowskiego funkcje). Gdy ten styl jest używany z użyciem interfejsu GDI dane wyjściowe funkcji, które nie określaj prostokąt otaczający (na przykład `LineTo` składowa), obszaru rysowania pióra nie jest ograniczone przez ramkę.
 
-     Jeśli styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w tabeli kolorów logiczne pióra, pióro jest rysowana szarych kolorem. Styl pióra PS_SOLID, nie może służyć do tworzenia pióra szarych kolorem. Styl PS_INSIDEFRAME jest taka sama jak PS_SOLID, jeśli szerokość pióra jest mniejsza niż lub równa 1.
+   Jeśli styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w tabeli kolorów logiczne pióra, pióro jest rysowana szarych kolorem. Styl pióra PS_SOLID, nie może służyć do tworzenia pióra szarych kolorem. Styl PS_INSIDEFRAME jest taka sama jak PS_SOLID, jeśli szerokość pióra jest mniejsza niż lub równa 1.
 
-     Gdy styl PS_INSIDEFRAME jest używany z obiektami interfejsu GDI produkowane przez funkcje inne niż `Ellipse`, `Rectangle`, i `RoundRect`, wiersz nie może być całkowicie wewnątrz ramki o określonym.
+   Gdy styl PS_INSIDEFRAME jest używany z obiektami interfejsu GDI produkowane przez funkcje inne niż `Ellipse`, `Rectangle`, i `RoundRect`, wiersz nie może być całkowicie wewnątrz ramki o określonym.
 
 *lopnWidth*<br/>
 Określa szerokość pióra w jednostkach logicznych. Jeśli `lopnWidth` elementu członkowskiego wynosi 0, Pióro szerokości na urządzeniach rastrowych niezależnie od tego, w bieżącym trybie mapowanie 1 piksela.

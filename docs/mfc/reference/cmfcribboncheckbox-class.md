@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076259"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 
@@ -66,10 +66,10 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Przesłania [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Przesłania [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
 |[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(Przesłania [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`.)|
+|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`).|
 |[CMFCRibbonCheckBox::OnDraw](#ondraw)|(Przesłania [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
 |[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(Przesłania [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
-|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|(Przesłania `CMFCRibbonButton::OnDrawOnList`.)|
+|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|(Przesłania `CMFCRibbonButton::OnDrawOnList`).|
 |[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(Przesłania [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ## <a name="remarks"></a>Uwagi
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC** wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.
+[in] *Przechwytywania zmian danych&#42;*<br/>
+Wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.
 
 *CRect*<br/>
 [in] A `CRect` określający prostokąta do rysowania obraz menu.

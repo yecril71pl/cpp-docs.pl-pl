@@ -54,118 +54,118 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5b8613372b84423a14fd995d78ca9d4c0dd1c1ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070383"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 
-Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.  
-  
+Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template < class TAccessor >  
-class CArrayRowset : 
-   public CVirtualBuffer <TAccessor>, 
-   protected CBulkRowset <TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template < class TAccessor >
+class CArrayRowset :
+   public CVirtualBuffer <TAccessor>, 
+   protected CBulkRowset <TAccessor>
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Typ metody dostępu klasę zestawu wierszy do użycia.  
+Typ metody dostępu klasę zestawu wierszy do użycia.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[CArrayRowset](#carrayrowset)|Konstruktor.|  
-|[Migawka](#snapshot)|Odczytuje całego zestawu wierszy do pamięci.|  
-  
-### <a name="operators"></a>Operatory  
-  
-|||  
-|-|-|  
-|[Operator&#91;&#93;](#operator)|Uzyskuje dostęp do elementu zestawu wierszy.|  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Liczba wierszy, które znasz.|  
-  
+**Nagłówek:** atldbcli.h
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[CArrayRowset](#carrayrowset)|Konstruktor.|
+|[Migawka](#snapshot)|Odczytuje całego zestawu wierszy do pamięci.|
+
+### <a name="operators"></a>Operatory
+
+|||
+|-|-|
+|[Operator&#91;&#93;](#operator)|Uzyskuje dostęp do elementu zestawu wierszy.|
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Liczba wierszy, które znasz.|
+
 ## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
-Tworzy nową `CArrayRowset` obiektu.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Tworzy nową `CArrayRowset` obiektu.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-CArrayRowset(int nMax = 100000);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CArrayRowset(int nMax = 100000);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nmaks.*<br/>
-[in] Maksymalna liczba wierszy w zestawie wierszy. 
+[in] Maksymalna liczba wierszy w zestawie wierszy.
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
 
-Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT Snapshot() throw();  
-```  
+HRESULT Snapshot() throw();
+```
 
 ## <a name="operator"></a> CArrayRowset::operator
 
-Udostępnia składni tablicy do uzyskiwania dostępu do wierszy w zestawie wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Udostępnia składni tablicy do uzyskiwania dostępu do wierszy w zestawie wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-TAccessor & operator[](int nrow);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+TAccessor & operator[](int nrow);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Oparte na szablonach parametr, który określa typ metody dostępu przechowywane w zestawie wierszy.  
-  
+Oparte na szablonach parametr, który określa typ metody dostępu przechowywane w zestawie wierszy.
+
 *nRow*<br/>
-[in] Numer wiersza (element tablicy), po którym chcesz uzyskać dostęp.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Numer wiersza (element tablicy), po którym chcesz uzyskać dostęp.
 
-Zawartość żądanych wierszy.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Jeśli *nRow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.  
+Zawartość żądanych wierszy.
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli *nRow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.
 
 ## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
-Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-ULONG m_nRowsRead;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
+ULONG m_nRowsRead;
+```
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

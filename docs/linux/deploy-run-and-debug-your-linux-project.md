@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069950"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 
@@ -41,7 +41,7 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
     - W **gdb** dyski debugera programu Visual Studio trybie GDB w systemie zdalnym, co jest bardziej zgodne, jeśli lokalna wersja GDB nie jest zgodny z wersją zainstalowaną na komputerze docelowym. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Jeśli nie można identyfikować punkty przerwania w trybie debugowania gdbserver następuje lokalne, spróbuj trybie gdb. Najpierw należy gdb [zainstalowane](../linux/download-install-and-setup-the-linux-development-workload.md) w zdalnym elemencie docelowym.
 
 2. Wybierz docelową zdalnego przy użyciu standardu **debugowania** narzędzi w programie Visual Studio.
@@ -64,7 +64,7 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
     Jeśli nie ma żadnych błędów, aplikacja zostanie uruchomiona i debuger zostanie wstrzymany w punkcie przerwania.
 
-    ![Trafiony punkt przerwania](media/hit_breakpoint.png)  
+    ![Trafiony punkt przerwania](media/hit_breakpoint.png)
 
     Teraz możesz wchodzić w interakcje z aplikacją w jest bieżący stan, wyświetlanie zmiennych i Przechodź przez kod, naciskając klawisze poleceń takich jak **F10** lub **F11**.
 
@@ -79,7 +79,7 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 ## <a name="configure-other-debugging-options"></a>Skonfiguruj inne opcje debugowania
 
 * Argumenty wiersza polecenia mogą być przekazywane do pliku wykonywalnego przy użyciu **argumenty programu** element w projekcie ma **debugowanie** stronę właściwości.
-  
+
   ![Argumenty programu](media/settings_programarguments.png)
 
 * Opcje debugera określonej mogą być przekazywane do GDB przy użyciu **dodatkowe polecenia debugera** wpisu.  Na przykład można zignorować SIGILL (niedozwolona instrukcja) sygnałów.  Można użyć **obsługi** polecenie, aby to osiągnąć.  dodając następujące polecenie, aby **dodatkowe polecenia debugera** wpisu, jak pokazano powyżej:

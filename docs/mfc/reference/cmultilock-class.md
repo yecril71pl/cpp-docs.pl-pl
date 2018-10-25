@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076363"
 ---
 # <a name="cmultilock-class"></a>Klasa CMultiLock
 
@@ -148,19 +148,19 @@ Jeśli `Lock` nie powiedzie się, zwraca - 1. Jeśli to się powiedzie, zwraca j
 
 - Pomiędzy WAIT_OBJECT_0 i WAIT_OBJECT_0 + (liczba obiektów - 1)
 
-     Jeśli *bWaitForAll* ma wartość TRUE, wszystkie obiekty są sygnalizowane (dostępne). Jeśli *bWaitForAll* ma wartość FALSE, zwracana wartość - WAIT_OBJECT_0 jest indeks w tablicy obiektów, obiektu, który jest sygnalizowane (dostępne).
+   Jeśli *bWaitForAll* ma wartość TRUE, wszystkie obiekty są sygnalizowane (dostępne). Jeśli *bWaitForAll* ma wartość FALSE, zwracana wartość - WAIT_OBJECT_0 jest indeks w tablicy obiektów, obiektu, który jest sygnalizowane (dostępne).
 
 - WAIT_OBJECT_0 + (liczba obiektów)
 
-     Zdarzenie określone w *dwWakeMask* znajduje się w kolejce wejściowej wątku.
+   Zdarzenie określone w *dwWakeMask* znajduje się w kolejce wejściowej wątku.
 
 - Pomiędzy WAIT_ABANDONED_0 i WAIT_ABANDONED_0 + (liczba obiektów - 1)
 
-     Jeśli *bWaitForAll* ma wartość TRUE, wszystkie obiekty są sygnalizowane i co najmniej jeden z obiektów jest obiektem porzuconego elementu mutex. Jeśli *bWaitForAll* ma wartość FALSE, zwracana wartość - WAIT_ABANDONED_0 jest indeks w tablicy obiektów obiektu mutex porzucone, spełniającego oczekiwania.
+   Jeśli *bWaitForAll* ma wartość TRUE, wszystkie obiekty są sygnalizowane i co najmniej jeden z obiektów jest obiektem porzuconego elementu mutex. Jeśli *bWaitForAll* ma wartość FALSE, zwracana wartość - WAIT_ABANDONED_0 jest indeks w tablicy obiektów obiektu mutex porzucone, spełniającego oczekiwania.
 
 - WAIT_TIMEOUT
 
-     Interwał limitu czasu określonego w *dwTimeOut* wygasła bez pomyślnego oczekiwania.
+   Interwał limitu czasu określonego w *dwTimeOut* wygasła bez pomyślnego oczekiwania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -174,7 +174,6 @@ Zwalnia obiekt synchronizacji własnością `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ Pierwszy formularz `Unlock` podejmie próbę odblokowania obiektu synchronizacji
 ## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-
-
 

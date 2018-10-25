@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d14b4598020358de01a7914b369eac2b8f5b016d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076103"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 
@@ -84,7 +84,7 @@ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/
 Wywołaj tę metodę, aby przekonwertować do formatu, który obsługuje automatyczne propagacji wpisy dziedziczne kontroli dostępu (ACE) deskryptora zabezpieczeń i jego listy kontroli dostępu (ACL).
 
 ```
-bool ConvertToAutoInherit(  
+bool ConvertToAutoInherit(
     const CSecurityDesc* pParent,
     GUID* ObjectType,
     bool bIsDirectoryObject,
@@ -142,14 +142,14 @@ Destruktor zwalnia wszystkie przydzielone zasoby i usuwa deskryptora zabezpiecze
 Wywołaj tę metodę, aby przydzielić i zainicjować deskryptora zabezpieczeń autorelacyjnym dla prywatnych obiekt utworzony przez wywołującego usługi resource manager.
 
 ```
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     bool bIsDirectoryObject,
     const CAccessToken& Token,
     PGENERIC_MAPPING GenericMapping) throw();
 
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     GUID* ObjectType,
@@ -203,7 +203,7 @@ Druga metoda zezwala na określanie typu obiektu identyfikator GUID nowego obiek
 Wywołaj tę metodę, aby pobrać informacje z deskryptora zabezpieczeń obiektu prywatnego.
 
 ```
-bool Get(  
+bool Get(
     SECURITY_INFORMATION si,
     CSecurityDesc* pResult) const throw();
 ```
@@ -246,13 +246,13 @@ Zwraca zaktualizowany `CPrivateObjectSecurityDesc` obiektu.
 Wywołaj tę metodę, aby zmodyfikować deskryptora zabezpieczeń obiektu prywatnego.
 
 ```
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     PGENERIC_MAPPING GenericMapping,
     const CAccessToken& Token) throw();
 
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     ULONG AutoInheritFlags,

@@ -48,114 +48,114 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 896c1dd1f1d3a43a3678a086d80e0f95b60b6126
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 616d2cc9919c992212024d25ab11902ffe2eda5e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072151"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor — Klasa
 
-Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do danych z zestawu wierszy modułu wyliczającego.  
-  
+Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do danych z zestawu wierszy modułu wyliczającego.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-class CEnumeratorAccessor  
-```  
+class CEnumeratorAccessor
+```
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[m_bIsParent](#bisparent)|Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.|  
-|[m_nType](#ntype)|Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.|  
-|[m_szDescription](#szdescription)|Opis źródła danych lub modułu wyliczającego.|  
-|[m_szName](#szname)|Nazwa źródła danych lub modułu wyliczającego.|  
-|[m_szParseName](#szparsename)|Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldbcli.h
 
-Ten zestaw wierszy składa się z źródła danych i moduły wyliczające widoczne z bieżącej modułu wyliczającego.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[m_bIsParent](#bisparent)|Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.|
+|[m_nType](#ntype)|Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.|
+|[m_szDescription](#szdescription)|Opis źródła danych lub modułu wyliczającego.|
+|[m_szName](#szname)|Nazwa źródła danych lub modułu wyliczającego.|
+|[m_szParseName](#szparsename)|Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.|
+
+## <a name="remarks"></a>Uwagi
+
+Ten zestaw wierszy składa się z źródła danych i moduły wyliczające widoczne z bieżącej modułu wyliczającego.
+
 ## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
 
-Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-VARIANT_BOOL m_bIsParent;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.
 
-Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+VARIANT_BOOL m_bIsParent;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 
-Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-USHORT m_nType;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+USHORT m_nType;
+```
+
+### <a name="remarks"></a>Uwagi
 
 Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 
-Opis źródła danych lub modułu wyliczającego.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Opis źródła danych lub modułu wyliczającego.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-WCHAR m_szDescription[129];  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+WCHAR m_szDescription[129];
+```
+
+### <a name="remarks"></a>Uwagi
 
 Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
-Nazwa źródła danych lub modułu wyliczającego.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-WCHAR m_szName[129];  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Nazwa źródła danych lub modułu wyliczającego.
 
-Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+WCHAR m_szName[129];
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
-Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-WCHAR m_szParseName[129];  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.
 
-Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
+### <a name="syntax"></a>Składnia
+
+```cpp
+WCHAR m_szParseName[129];
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

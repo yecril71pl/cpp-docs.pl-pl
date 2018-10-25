@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397003"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075115"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 Demonstruje różne operacje na plikach za pomocą programu .NET Framework.
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Odczytywanie pliku tekstowego
 
 Poniższy przykład kodu pokazuje, jak otworzyć i odczytać jeden wiersz pliku tekstowego w czasie, za pomocą <xref:System.IO.StreamReader> klasy, która jest zdefiniowana w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy jest używany do otwierania pliku tekstowego i następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda służy do pobierania każdego wiersza.

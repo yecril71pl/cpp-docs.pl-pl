@@ -46,128 +46,128 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d5ceb07577386f4b3fc9389cf9103fba4036b591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076793"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 
-Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w [irowsetimpl —](../../data/oledb/irowsetimpl-class.md) klasy.  
-  
+Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w [irowsetimpl —](../../data/oledb/irowsetimpl-class.md) klasy.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-class CSimpleRow  
-```  
+class CSimpleRow
+```
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
+**Nagłówek:** atldb.h
 
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addrefrow —](#addrefrow)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|  
-|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|  
-|[CSimpleRow](#csimplerow)|Konstruktor.|  
-|[Releaserow —](#releaserow)|Wersje wierszy.|  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[m_dwRef](#dwref)|Liczba odwołań do istniejących uchwyt wiersza.|  
-|[m_iRowset](#irowset)|Indeks wierszy reprezentujący kursora.|  
-  
-## <a name="remarks"></a>Uwagi  
+## <a name="members"></a>Elementy członkowskie
 
-Dojście do wiersza jest logicznie unikatowych tagów na podstawie wyniku wiersza. `IRowsetImpl` Tworzy nową `CSimpleRow` dla każdego wiersza w wymagane [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` może zostać również zamienione Twojej własnej implementacji dojście do wiersza, ponieważ jest domyślny argument szablonu, aby `IRowsetImpl`. Jedynym wymaganiem, które można zmienić tej klasy jest Klasa zastępcza dostarczyć konstruktora, który przyjmuje jeden parametr typu **długie**.  
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addrefrow —](#addrefrow)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
+|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
+|[CSimpleRow](#csimplerow)|Konstruktor.|
+|[Releaserow —](#releaserow)|Wersje wierszy.|
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[m_dwRef](#dwref)|Liczba odwołań do istniejących uchwyt wiersza.|
+|[m_iRowset](#irowset)|Indeks wierszy reprezentujący kursora.|
+
+## <a name="remarks"></a>Uwagi
+
+Dojście do wiersza jest logicznie unikatowych tagów na podstawie wyniku wiersza. `IRowsetImpl` Tworzy nową `CSimpleRow` dla każdego wiersza w wymagane [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` może zostać również zamienione Twojej własnej implementacji dojście do wiersza, ponieważ jest domyślny argument szablonu, aby `IRowsetImpl`. Jedynym wymaganiem, które można zmienić tej klasy jest Klasa zastępcza dostarczyć konstruktora, który przyjmuje jeden parametr typu **długie**.
 
 ## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
-Dodaje licznik odwołań do istniejących dojściem do wiersza, w sposób bezpieczny dla wątków.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Dodaje licznik odwołań do istniejących dojściem do wiersza, w sposób bezpieczny dla wątków.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-DWORD AddRefRow();  
-```  
+DWORD AddRefRow();
+```
 
 ## <a name="compare"></a> CSimpleRow::Compare
 
-Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT Compare(CSimpleRow* pRow);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Compare(CSimpleRow* pRow);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pRow*<br/>
-Wskaźnik do `CSimpleRow` obiektu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Wskaźnik do `CSimpleRow` obiektu.
 
-Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych. 
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
-Konstruktor.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Konstruktor.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-CSimpleRow(DBCOUNTITEM iRowsetCur);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CSimpleRow(DBCOUNTITEM iRowsetCur);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *iRowsetCur*<br/>
-[in] Indeks bieżącego zestawu wierszy.  
-  
-### <a name="remarks"></a>Uwagi  
+[in] Indeks bieżącego zestawu wierszy.
 
-Zestawy [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) do *iRowsetCur*. 
+### <a name="remarks"></a>Uwagi
+
+Zestawy [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) do *iRowsetCur*.
 
 ## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
-Wersje wierszy w sposób bezpieczny dla wątków.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wersje wierszy w sposób bezpieczny dla wątków.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-DWORD ReleaseRow();  
-```  
+DWORD ReleaseRow();
+```
 
 ## <a name="dwref"></a> CSimpleRow::m_dwRef
 
-Liczba odwołań do istniejących uchwyt wiersza.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Liczba odwołań do istniejących uchwyt wiersza.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-DWORD m_dwRef;  
-```  
+DWORD m_dwRef;
+```
 
 ## <a name="irowset"></a> CSimpleRow::m_iRowset
 
-Indeks wierszy reprezentujący kursora.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Indeks wierszy reprezentujący kursora.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-KeyType m_iRowset;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
+KeyType m_iRowset;
+```
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

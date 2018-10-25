@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073535"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
 Visual C++ można użyć do zapisywania wielu rodzajów programów korzystających z komputera z systemem Windows (x 86, x64 lub ARM) na serwerze Windows w chmurze lub na konsoli Xbox. Dobrze napisane programy ++ mają następujące cechy:
+
 - efektywne w wymagania dotyczące pamięci
-- oszczędne w zużyciu energii 
+- oszczędne w zużyciu energii
 - możliwość umożliwiają pełne wykorzystywanie zalet urządzeń wielordzeniowych i wielordzeniowe
-- możliwość wykonywania obliczeń ogólnego na jednostka przetwarzania grafiki (urządzenia GPGPU)  
+- możliwość wykonywania obliczeń ogólnego na jednostka przetwarzania grafiki (urządzenia GPGPU)
 - można skorzystać z innych najnowsze funkcje w sprzętu.
 
 Istnieje kilka szerokie kategorie aplikacji Windows, które można tworzyć przy użyciu języka Visual C++. Kategorie te mają różne modele programowania i modeli aplikacji, które zostały wprowadzone przez lata. Poszczególne modele używają różnych bibliotek i interfejsów API zapewniają dostęp do platformy i twórz interfejsy użytkownika, takich jak windows i oknach dialogowych. Standardowej biblioteki języka C++, a także bibliotek innych firm może służyć w dowolnym z tych kategorii, z kilkoma ograniczeniami dla platformy uniwersalnej systemu Windows.
@@ -98,7 +99,7 @@ Biblioteki firmy Microsoft obejmują:
 
 - Środowisko uruchomieniowe współbieżności: Biblioteka, która upraszcza pracę przy programowaniu współbieżnym i asynchronicznym dla urządzeń wielordzeniowych. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).
 
-Wiele scenariuszy programowania dla systemu Windows wymaga również Windows SDK, które zawiera pliki nagłówkowe umożliwiające dostęp do składników systemu operacyjnego Windows. Domyślnie program Visual Studio instaluje zestaw Windows SDK jako część obciążenia pulpitu C++ umożliwia tworzenie aplikacji Windows Universal apps. Do tworzenia aplikacji platformy uniwersalnej systemu Windows, należy do zestawu Windows SDK w wersji systemu Windows 10. Aby uzyskać informacje, zobacz [zestawu Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Aby uzyskać więcej informacji na temat zestawów Windows SDK dla wcześniejszych wersji systemu Windows, zobacz [archiwum zestaw Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+Wiele scenariuszy programowania dla systemu Windows wymaga również Windows SDK, które zawiera pliki nagłówkowe umożliwiające dostęp do składników systemu operacyjnego Windows. Domyślnie program Visual Studio instaluje zestaw Windows SDK jako część obciążenia pulpitu C++ umożliwia tworzenie aplikacji Windows Universal apps. Do tworzenia aplikacji platformy uniwersalnej systemu Windows, należy do zestawu Windows SDK w wersji systemu Windows 10. Aby uzyskać informacje, zobacz [zestawu Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Aby uzyskać więcej informacji na temat zestawów Windows SDK dla wcześniejszych wersji systemu Windows, zobacz [archiwum zestaw Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Program \Windows pliki (x86) zestawy** jest domyślną lokalizacją dla wszystkich wersji zestawu Windows SDK, który został zainstalowany.
 

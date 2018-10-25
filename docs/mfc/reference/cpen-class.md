@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440293"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077533"
 ---
 # <a name="cpen-class"></a>Cpen — klasa
 
@@ -92,12 +92,10 @@ Konstruuje `CPen` obiektu.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ Druga wersja `CPen` Konstruktor określa kombinację typu, stylu, zakończenie i
 
 - PS_COSMETIC tworzy kosmetycznych pióra.
 
-     Druga wersja `CPen` Konstruktor dodaje następujące style pióra *nPenStyle*:
+   Druga wersja `CPen` Konstruktor dodaje następujące style pióra *nPenStyle*:
 
 - PS_ALTERNATE tworzy pióra, która ustawia co drugi piksel. (Ten styl jest tylko w przypadku kosmetycznych pióra).
 
 - Tworzy PS_USERSTYLE pióra, który używa tablicy stylu podane przez użytkownika.
 
-     Zakończenie końca może być jednym z następujących wartości:
+   Zakończenie końca może być jednym z następujących wartości:
 
 - PS_ENDCAP_ROUND zakończenia są Rundy.
 
@@ -146,7 +144,7 @@ Druga wersja `CPen` Konstruktor określa kombinację typu, stylu, zakończenie i
 
 - PS_ENDCAP_FLAT zakończenia są prostego.
 
-     Sprzężenia może być jednym z następujących wartości:
+   Sprzężenia może być jednym z następujących wartości:
 
 - Dołącza PS_JOIN_BEVEL są ukośne.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

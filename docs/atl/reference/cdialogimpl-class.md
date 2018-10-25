@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069844"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -115,12 +115,12 @@ Tworzy niemodalne okno dialogowe.
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ To okno dialogowe jest automatycznie dołączany do `CDialogImpl` obiektu. Aby u
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Niszczy niemodalnego okna dialogowego.  
+Niszczy niemodalnego okna dialogowego.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ Zwraca wartość PRAWDA, jeśli okno dialogowe pomyślnie została zniszczona; w
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Ta funkcja statyczna implementuje procedury okno dialogowe.  
+Ta funkcja statyczna implementuje procedury okno dialogowe.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ Można zastąpić `DialogProc` inny mechanizm obsługi wiadomości.
 Tworzy modalne okno dialogowe.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -306,9 +306,9 @@ Wywoływana tylko raz, gdy pierwsza wiadomość zostanie odebrana, przetwarzać 
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08055d748bb61101e80df31b272e847db045164c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2d468ded9db1d21fd19bc553ed2a0c3227725a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075557"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 
@@ -88,12 +88,12 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Zwalnia zasoby używane przez obrazów w okienko paska Outlook.|
 |[CMFCOutlookBarPane::Create](#create)|Tworzy okienko paska Outlook.|
 |`CMFCOutlookBarPane::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|`CMFCOutlookBarPane::Dock`|Metoda wywoływana przez platformę, aby zadokować okienko paska Outlook. (Przesłania `CPane::Dock`.)|
+|`CMFCOutlookBarPane::Dock`|Metoda wywoływana przez platformę, aby zadokować okienko paska Outlook. (Przesłania `CPane::Dock`).|
 |[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Określa, czy strzałek przewijania na okienko paska Outlook rozwijaj listę przycisków przez stronę lub po kliknięciu przycisku.|
 |[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Zwraca kolor zwykłego tekstu (niezaznaczone) okienko paska Outlook.|
 |`CMFCOutlookBarPane::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
 |[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Określa, czy jest załadowany na potrzeby okienko paska Outlook obrazu tła.|
-|`CMFCOutlookBarPane::IsChangeState`|Określa, czy może być zadokowane unoszącego. (Przesłania `CPane::IsChangeState`.)|
+|`CMFCOutlookBarPane::IsChangeState`|Określa, czy może być zadokowane unoszącego. (Przesłania `CPane::IsChangeState`).|
 |[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Określa, czy gdy przycisk zostanie wyróżniona i pojawi się obraz tła przyciemnione obramowania przycisku.|
 |`CMFCOutlookBarPane::OnBeforeFloat`|Wywoływane przez platformę, gdy okienko jest o na typ zmiennoprzecinkowy. (Przesłania [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
 |[CMFCOutlookBarPane::RemoveButton](#removebutton)|Usuwa przycisk, który ma identyfikator określonego polecenia.|
@@ -104,7 +104,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Ustawia liczbę pikseli uzupełnienia używane w całym przycisków w okienko paska Outlook.|
 |[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Ustawia kolorów tekstu, regularne i wyróżnione w okienko paska Outlook.|
 |[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Określa przezroczysty kolor okienko paska Outlook.|
-|`CMFCOutlookBarPane::SmartUpdate`|Używane wewnętrznie, aby zaktualizować pasek programu Outlook. (Przesłania `CMFCToolBar::SmartUpdate`.)|
+|`CMFCOutlookBarPane::SmartUpdate`|Używane wewnętrznie, aby zaktualizować pasek programu Outlook. (Przesłania `CMFCToolBar::SmartUpdate`).|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -159,13 +159,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     UINT uiImage,
     UINT uiLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     LPCTSTR szBmpFileName,
@@ -173,13 +171,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     HBITMAP hBmp,
     LPCTSTR lpszLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     HICON hIcon,

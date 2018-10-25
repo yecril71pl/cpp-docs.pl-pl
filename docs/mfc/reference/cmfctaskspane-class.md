@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a548c50345601dda85d79ec4c40f1632ab316f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065672"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 
@@ -275,7 +275,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::GetTasksIconHorzOffset](#gettasksiconhorzoffset)||
 |[CMFCTasksPane::GetTasksIconVertOffset](#gettasksiconvertoffset)||
 |[CMFCTasksPane::GetVertMargin](#getvertmargin)|Zwraca pionowe odstępy między okienka zadań oraz krawędzi obszaru klienta.|
-|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Przesłania `CDockablePane::IsAccessibilityCompatible`.)|
+|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Przesłania `CDockablePane::IsAccessibilityCompatible`).|
 |[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|Wskazuje, czy animacja jest włączone.|
 |[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|Wskazuje, czy włączono przycisku Wstecz.|
 |[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|Wskazuje, czy włączono przycisku Prześlij dalej.|
@@ -396,7 +396,6 @@ int AddGroup(
     BOOL bSpecial = FALSE,
     HICON hIcon = NULL);
 
-
 int AddGroup(
     LPCTSTR lpszGroupName,
     BOOL bBottomLocation = FALSE,
@@ -506,14 +505,13 @@ Liczony od zera indeks nowej strony.
 
 ##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator
 
-
 ```
 int AddSeparator(int nGroup);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Rozgrupuj*
+[in] *Rozgrupuj*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -601,10 +599,8 @@ CMFCTasksPane();
 
 ##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups
 
-
 ```
 void CollapseAllGroups(BOOL bCollapse = TRUE);
-
 
 void CollapseAllGroups(
     int nPageIdx,
@@ -613,8 +609,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>Parametry
 
-*bCollapse*<br/>
-[in] [in] *nPageIdx*
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -626,7 +622,6 @@ Zwija lub rozwija grupy.
 BOOL CollapseGroup(
     CMFCTasksPaneTaskGroup* pGroup,
     BOOL bCollapse = TRUE);
-
 
 BOOL CollapseGroup(
     int nGroup,
@@ -654,14 +649,13 @@ Zwinięte grupy pokazuje tylko podpis grupy; Lista zadań jest ukryta.
 
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe
 
-
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rectInitial*
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -774,14 +768,13 @@ Domyślnie framework nie są wyświetlane na pasku narzędzi nawigacji. Jeśli p
 
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls
 
-
 ```
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bWłączenie*
+[in] *bWłączenie*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -952,14 +945,13 @@ Domyślny odstęp między okienka zadań i krawędzi obszaru klienckiego to 12 p
 
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages
 
-
 ```
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lstNextPages*
+[in] *lstNextPages*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -999,19 +991,17 @@ Liczba stron w okienku zadań.
 
 ##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages
 
-
 ```
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lstPrevPages*
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl
-
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1019,7 +1009,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nBar*
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1145,7 +1135,6 @@ Przesunięcie w poziomie domyślne zadań to 12 pikseli.
 
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset
 
-
 ```
 int GetTasksIconHorzOffset() const;
 ```
@@ -1155,7 +1144,6 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset
-
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1182,7 +1170,6 @@ Pionowego marginesu między okienka zadań i krawędzi obszaru klienta.
 Pionowego marginesu jest odstęp między okienka zadań oraz krawędzi obszaru klienta. Wartość domyślna pionowego marginesu jest 12 pikseli.
 
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible
-
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1242,7 +1229,6 @@ Przycisk Prześlij dalej umożliwia przeglądania do przodu w historii zadań st
 
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled
 
-
 ```
 BOOL IsGroupCollapseEnabled() const;
 ```
@@ -1276,7 +1262,6 @@ BOOL IsNavigationToolbarEnabled() const;
 Wartość TRUE, jeśli włączono narzędzi nawigacji; w przeciwnym razie wartość FALSE.
 
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox
-
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1312,7 +1297,6 @@ Wartość TRUE, jeśli ciąg zadań opakowaniu; w przeciwnym razie wartość FAL
 
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState
 
-
 ```
 virtual BOOL LoadState(
     LPCTSTR lpszProfileName = NULL,
@@ -1322,8 +1306,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1342,7 +1327,6 @@ virtual void OnActivateTasksPanePage();
 Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd strony w okienku zadań.
 
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel
-
 
 ```
 virtual void OnCancel();
@@ -1383,7 +1367,6 @@ Struktura wywołuje tę metodę, gdy użytkownik kliknie zadania. Domyślnie str
 Należy przesłonić tę metodę w klasie pochodnej, aby wykonać kod niestandardowy, po kliknięciu zadania.
 
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK
-
 
 ```
 virtual void OnOK();
@@ -1435,7 +1418,6 @@ Należy przesłonić tę metodę w klasie pochodnej, aby wykonać kod niestandar
 
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton
 
-
 ```
 virtual void OnPressOtherButton(
     CMFCCaptionMenuButton* pbtn,
@@ -1444,13 +1426,12 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pbtn*<br/>
-[in] [in] *pWndOwner*
+[in] *pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData
-
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1458,14 +1439,13 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1475,13 +1455,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage
-
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1489,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1497,14 +1476,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout
 
-
 ```
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bRedraw*
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1606,7 +1584,6 @@ Wartość TRUE, jeśli funkcja się powiedzie; FAŁSZ Jeśli *Rozgrupuj* lub *nN
 
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState
 
-
 ```
 virtual BOOL SaveState(
     LPCTSTR lpszProfileName = NULL,
@@ -1616,8 +1593,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1625,14 +1603,13 @@ virtual BOOL SaveState(
 
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1905,19 +1882,17 @@ Przesunięcie w poziomie domyślną jest 12 pikseli.
 
 ##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset
 
-
 ```
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset
-
 
 ```
 void SetTasksIconVertOffset(int n = -1);
@@ -1925,7 +1900,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1988,7 +1963,6 @@ BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
 
-
 BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
@@ -2015,14 +1989,13 @@ Wywołaj [CMFCTasksPane::AddWindow](#addwindow) można dodać zadania za pomocą
 
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString
 
-
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uiCmdId*
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

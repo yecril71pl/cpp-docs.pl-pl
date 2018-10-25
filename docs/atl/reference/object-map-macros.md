@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075934"
 ---
 # <a name="object-map-macros"></a>Makra mapy obiektów
 
@@ -31,7 +31,7 @@ Te makra definiują obiekt map i wpisy.
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Można określić opis tekstowy obiektu klasy, której będzie można wprowadzić w mapie obiektu.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Wejścia obiektu ATL na mapie obiektów, zaktualizowanie rejestru i tworzy wystąpienie obiektu.|
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Pozwala określić, że zarejestrowane i zainicjować obiekt, ale nie powinien być zewnętrznie utworzone za pomocą `CoCreateInstance`.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Pozwala określić, że zarejestrowane i zainicjować obiekt, ale nie powinien być zewnętrznie utworzone za pomocą `CoCreateInstance`.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL wejścia na mapie obiektów za pomocą tego opisu [OBJECT_ENTRY_AUTO](#object_entry_auto) makra.
 
-Implementuje DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` funkcji, która służy do zastępowania [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.  
+Implementuje DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` funkcji, która służy do zastępowania [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.
 
 `GetObjectDescription` Funkcja jest wywoływana przez `IComponentRegistrar::GetComponents`. `IComponentRegistrar` to interfejs automatyzacji, która umożliwia rejestrowanie i wyrejestrowywanie poszczególne składniki w bibliotece DLL. Po utworzeniu obiektu rejestratora składników za pomocą Kreatora projektu ATL, Kreator automatycznie wdroży `IComponentRegistrar` interfejsu. `IComponentRegistrar` zwykle jest używana przez program Microsoft Transaction Server.
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 Makra wejść obiektu są umieszczane w zakresie globalnym w projekcie w celu zapewnienia obsługi rejestracji, inicjowanie i tworzenia klasy.
 
-OBJECT_ENTRY_AUTO wprowadza wskaźników funkcji, twórca klasy oraz klasy twórcy fabryki klas `CreateInstance` funkcji dla tego obiektu do mapy obiektu ATL wygenerowany automatycznie. Gdy [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) jest wywoływana, powoduje zaktualizowanie rejestru systemowego dla każdego obiektu na mapie obiektu.  
+OBJECT_ENTRY_AUTO wprowadza wskaźników funkcji, twórca klasy oraz klasy twórcy fabryki klas `CreateInstance` funkcji dla tego obiektu do mapy obiektu ATL wygenerowany automatycznie. Gdy [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) jest wywoływana, powoduje zaktualizowanie rejestru systemowego dla każdego obiektu na mapie obiektu.
 
 W poniższej tabeli opisano sposób uzyskiwania informacji dodany do mapy obiektu z klasy umożliwiającej to makro jako drugi parametr.
 
@@ -94,7 +94,7 @@ W poniższej tabeli opisano sposób uzyskiwania informacji dodany do mapy obiekt
 |Tworzenie fabryki klas|[Makra fabryki klas](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Tworzenie wystąpienia|[Makra agregacji](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Rejestracji kategorii składników|[Makra kategorii](../../atl/reference/category-macros.md)|
-|Poziomie klasy, inicjowanie i oczyszczanie|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|Poziomie klasy, inicjowanie i oczyszczanie|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 

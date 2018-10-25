@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069233"
 ---
 # <a name="template-based-classes"></a>Klasy oparte na szablonach
 
@@ -47,11 +47,11 @@ MFC powoduje wstępne definiowanie dwie kategorie kolekcje oparte na szablonach:
 
 - [Proste array, list i klasy map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Tablic, list i map wskaźniki typizowane](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 Klasy kolekcji proste są uzyskiwane z klasy `CObject`, dlatego dziedziczą serializacji, dynamiczne tworzenie i inne właściwości `CObject`. Klasy kolekcji typizowanych wskaźników wymaga określenia klasy pochodzić od — która musi być jedna z kolekcji wskaźnika nieszablonu wstępnie zdefiniowane przez MFC, takich jak `CPtrList` lub `CPtrArray`. Nowej klasie kolekcji dziedziczy z określonej klasy bazowej, a funkcje składowych klasy nowe zhermetyzowany wywołania do składowych klasy bazowej są używane do wymuszania bezpieczeństwo typów.
 

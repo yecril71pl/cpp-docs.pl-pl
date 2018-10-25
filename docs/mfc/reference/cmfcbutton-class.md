@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8a6689d0ac305a0dc3264b0311a4d7bf2e7d11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441294"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076077"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
@@ -419,8 +419,6 @@ static BOOL IsWindowsThemingEnabled();
 
 Wartość TRUE, jeśli styl obramowania przycisku odnosi się do bieżącego motywu Windows. w przeciwnym razie wartość FALSE.
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 Określa, czy używać kompozycji Windows XP, gdy przycisk.
@@ -446,7 +444,6 @@ Ustaw `m_bDrawFocus` elementu członkowskiego na wartość TRUE, aby określić,
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 W przypadku wartości TRUE umożliwia wyłączony przycisk do rysowania jako nieaktywny.
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +476,6 @@ Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -739,14 +735,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +822,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

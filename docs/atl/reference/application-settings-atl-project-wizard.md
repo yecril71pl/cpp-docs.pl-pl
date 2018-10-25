@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070650"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Ustawienia aplikacji, Kreator projektów ATL
 
@@ -31,15 +31,15 @@ Użyj **ustawienia aplikacji** strony Kreator projektu ATL projektować i dodawa
 
 Wybierz jedną z trzech typów serwerów:
 
-- **Biblioteka dołączana dynamicznie (DLL)**  
+- **Biblioteka dołączana dynamicznie (DLL)**
 
    Zaznacz, aby utworzyć serwer w procesie.
 
-- **Plik wykonywalny (EXE)**  
+- **Plik wykonywalny (EXE)**
 
    Zaznacz, aby utworzyć serwer lokalny poza procesem. Ta opcja nie umożliwia obsługi MFC lub modelu COM + 1.0. Nie zezwala na scalanie kodu klasy zastępczej/serwera proxy.
 
-- **Usługa (EXE)**  
+- **Usługa (EXE)**
 
    Zaznacz, aby utworzyć aplikację Windows, która działa w tle podczas uruchamiania Windows. Ta opcja nie zezwala na obsługę MFC lub modelu COM + 1.0 lub nie zezwala na scalanie kodu klasy zastępczej/serwera proxy.
 
@@ -48,15 +48,15 @@ Wybierz jedną z trzech typów serwerów:
 > [!NOTE]
 > Wszystkie dodatkowe opcje są dostępne biblioteki DLL tylko dla projektów.
 
-- **Zezwalaj na scalanie kodu klasy zastępczej/serwera proxy**  
+- **Zezwalaj na scalanie kodu klasy zastępczej/serwera proxy**
 
    Wybierz **Zezwalaj na scalanie kodu klasy zastępczej/serwera proxy** pole wyboru dla wygody, gdy wymagana jest kierowanie interfejsów. Ta opcja umieszcza kod serwera proxy i klas zastępczych MIDL generowane w tym samym pliku wykonywalnego jako serwer.
 
-- **Obsługa MFC**  
+- **Obsługa MFC**
 
    Zaznacz, aby określić, że obiekt zawiera obsługę MFC. Ta opcja łączy projektu biblioteki MFC, aby dostęp do wszystkich klas i funkcji, które zawierają.
 
-- **Obsługa modelu COM + 1.0**  
+- **Obsługa modelu COM + 1.0**
 
    Zaznacz, aby zmodyfikować ustawienia kompilacji projektu do obsługi składników modelu COM + 1.0. Oprócz standardowych listę bibliotek Kreator dodaje comsvcs.lib biblioteki specyficzne dla składników modelu COM + 1.0
 

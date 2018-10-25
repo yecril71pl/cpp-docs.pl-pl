@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069285"
 ---
 # <a name="ccriticalsection-class"></a>Klasa CCriticalSection
 
@@ -81,7 +81,7 @@ Istnieją dwie metody przy użyciu `CCriticalSection` obiektu: autonomiczne i os
 
 - Autonomiczny metodę, aby używać autonomicznego `CCriticalSection` obiektów, konstruowania `CCriticalSection` obiektu, kiedy jest to konieczne. Po pomyślnym zwrotu z konstruktora, jawnie zablokować dostęp do obiektu z wywołaniem [blokady](#lock). Wywołaj [Unlock](#unlock) po zakończeniu uzyskiwania dostępu do sekcji krytycznych. Ta metoda, podczas przejrzyste komuś czytanie kodu źródłowego, jest bardziej podatne na błędy, ponieważ należy pamiętać zablokować i odblokować sekcję krytyczną, przed i po nim dostępu.
 
-     Bardziej preferowaną metodą jest użycie [CSingleLock](../../mfc/reference/csinglelock-class.md) klasy. Ma on także `Lock` i `Unlock` metody, ale nie musi się martwić o odblokowanie zasobu, jeśli wystąpi wyjątek.
+   Bardziej preferowaną metodą jest użycie [CSingleLock](../../mfc/reference/csinglelock-class.md) klasy. Ma on także `Lock` i `Unlock` metody, ale nie musi się martwić o odblokowanie zasobu, jeśli wystąpi wyjątek.
 
 - Osadzona metoda klasy można także udostępnić w wielu wątkach, dodając `CCriticalSection`— element członkowski danych typu klasy i blokowanie składowej danych, które w razie.
 

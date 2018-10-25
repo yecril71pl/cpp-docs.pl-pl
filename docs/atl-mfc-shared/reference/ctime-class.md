@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2b82d172ec449a48866ee973421da95787bc9858
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070533"
 ---
 # <a name="ctime-class"></a>CTime, klasa
 
@@ -161,7 +161,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 Wskazuje `CTime` obiekt, który już istnieje.
 
 *czas*<br/>
-A **__time64_t —** wartość czasu, która jest to liczba sekund po 1 stycznia 1970 r. UTC. Należy pamiętać, że to zostaną skorygowane czasu lokalnego. Na przykład, jeśli znajdują się w Nowym Jorku i Utwórz `CTime` obiektu przez przekazanie parametru 0, [CTime::GetMonth](#getmonth) zwróci 12.
+A `__time64_t` wartość czasu, która jest to liczba sekund po 1 stycznia 1970 r. UTC. Należy pamiętać, że to zostaną skorygowane czasu lokalnego. Na przykład, jeśli znajdują się w Nowym Jorku i Utwórz `CTime` obiektu przez przekazanie parametru 0, [CTime::GetMonth](#getmonth) zwróci 12.
 
 *nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*<br/>
 Wskazuje wartości daty i godziny do skopiowania w nowe `CTime` obiektu.

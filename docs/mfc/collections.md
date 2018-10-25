@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069909"
 ---
 # <a name="collections"></a>Kolekcje
 
@@ -53,15 +53,15 @@ Każdy z trzech kształtów w określonej kolekcji opisano skrótowo w dalszej c
 
 - Lista
 
-     Klasa listy udostępnia uporządkowana lista nieindeksowanych elementów, zaimplementowane jako podwójnie połączoną listą. Lista "head" i "tail" i jest bardzo szybkie dodawanie lub usuwanie elementów, head lub ogona, lub wstawiania lub usuwania elementów w środku.
+   Klasa listy udostępnia uporządkowana lista nieindeksowanych elementów, zaimplementowane jako podwójnie połączoną listą. Lista "head" i "tail" i jest bardzo szybkie dodawanie lub usuwanie elementów, head lub ogona, lub wstawiania lub usuwania elementów w środku.
 
 - Tablica
 
-     Array — klasa zawiera dynamicznie wielkości, uporządkowane i indeksowane całkowitą Tablica obiektów.
+   Array — klasa zawiera dynamicznie wielkości, uporządkowane i indeksowane całkowitą Tablica obiektów.
 
 - Mapa (Słownik)
 
-     Mapa jest kolekcja, która powoduje skojarzenie klucza obiektu z obiektu wartości.
+   Mapa jest kolekcja, która powoduje skojarzenie klucza obiektu z obiektu wartości.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Klasy kolekcji oparte na szablonach
 

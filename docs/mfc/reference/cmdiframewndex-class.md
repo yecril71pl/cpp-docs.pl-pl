@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069337"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
@@ -230,7 +230,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy okno ramowe ma paska menu.|
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Określa, czy określony punkt znajduje się w pobliżu witryny dokowania.|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Określa, czy okno ramki jest w trybie podglądu wydruku.|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|Tworzy okno ramowe na podstawie informacji o zasobie. (Przesłania `CMDIFrameWnd::LoadFrame`.)|
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Tworzy okno ramowe na podstawie informacji o zasobie. (Przesłania `CMDIFrameWnd::LoadFrame`).|
 |[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Ładuje określony układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Przenosi aktywną kartę z aktualnie aktywne okno z kartami do następnej lub poprzedniej grupy z kartami.|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Tworzy nowe grupy z kartami, która ma jednego okna.|
@@ -251,9 +251,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Wywoływane przez platformę, gdy menu podręczne jest aktywowane.|
 |[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Wywoływane przez platformę, zmieniając rozmiar okna MDI klienta.|
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wywoływane przez platformę, gdy menu z paskiem oderwania jest aktywowane.|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Metoda wywoływana przez platformę, by aktualizowanie menu ramki. (Przesłania `CMDIFrameWnd::OnUpdateFrameMenu`.)|
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Metoda wywoływana przez platformę, by aktualizowanie menu ramki. (Przesłania `CMDIFrameWnd::OnUpdateFrameMenu`).|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko dokowania, który zawiera określony punkt.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`.)|
+|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`).|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Metoda wywoływana przez platformę, by ponownie Oblicz układ ramki okna. (Przesłania [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowuje okienko i usuwa go z Menedżera dokowania.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Zapisuje bieżący układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.|
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,

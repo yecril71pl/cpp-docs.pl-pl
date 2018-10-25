@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067920"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardowe procedury walidacji danych okna dialogowego
 
@@ -47,8 +47,6 @@ Ten temat zawiera procedury sprawdzania poprawności (DDV) danych standardowe ok
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Sprawdza wartość danej kontrolki nie przekracza danego **UINT** zakresu.|
 |[Ddv_minmaxunsigned —](#ddv_minmaxuint)|Sprawdza, czy wartość danej kontrolki mieści się między dwiema określonymi wartościami.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Sprawdza wartość danej kontrolki nie przekracza danego **ULONGLONG** zakresu.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  Ddv_maxchars —
 
@@ -552,6 +550,7 @@ Wywołaj `DDV_MinMaxUnsigned` Aby sprawdzić, czy wartość w formancie skojarzo
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ Aby uzyskać więcej informacji na temat DDV zobacz [wymiana danych okna dialogo
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [Ddx_slider —](#ddx_slider)<br/>
 [Ddx_fieldslider —](#ddx_fieldslider)
-
-
 

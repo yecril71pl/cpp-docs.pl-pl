@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413253"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068830"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 
@@ -119,7 +119,7 @@ Powyższej procedury przydaje się do określania właściwości układ dynamicz
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     Nazwany zasób musi odwoływać się okno dialogowe, które zawiera informacje o układzie w formie **AFX_DIALOG_LAYOUT** wpisu w pliku zasobów, jak w poniższym przykładzie:
+   Nazwany zasób musi odwoływać się okno dialogowe, które zawiera informacje o układzie w formie **AFX_DIALOG_LAYOUT** wpisu w pliku zasobów, jak w poniższym przykładzie:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073542"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funkcje globalne rejestru i elementu TypeLib
 
@@ -60,7 +60,7 @@ Funkcje te kontrolują, który węzeł w rejestrze jest używana do przechowywan
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Pobiera czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
 
 ### <a name="requirements"></a>Wymagania
 
@@ -93,7 +93,7 @@ Przekierowanie nie jest globalne. Dotyczy tylko struktury MFC i ATL przekierowan
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h  
+**Nagłówek:** atlbase.h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ Wskaźnik do `CAtlTransactionManager` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera określonych w pliku Winerror.h.  
+Jeśli funkcja się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera określonych w pliku Winerror.h.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpriv.h  
+**Nagłówek:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ Jeśli funkcja się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli 
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpriv.h  
+**Nagłówek:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ Określa rozszerzenie pliku zarejestrowane przy użyciu tej procedury obsługi.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h   
+**Nagłówek:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ Jeśli funkcja się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli 
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpriv.h  
+**Nagłówek:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Otwiera określony klucz rejestru. 
+Otwiera określony klucz rejestru.
 
 ### <a name="syntax"></a>Składnia
 
@@ -277,7 +277,7 @@ Jeśli funkcja się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli 
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpriv.h  
+**Nagłówek:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ Określa identyfikator CLSID programu obsługi, który ma być wyrejestrowany.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h  
+**Nagłówek:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ S_OK, jeśli metoda zakończy się pomyślnie, w przeciwnym razie błąd HRESULT
 
 Przekierowanie rejestru nie jest włączona domyślnie. Jeśli ta opcja jest włączona, dostęp do rejestru jest przekierowywane do **HKEY_CURRENT_USER\Software\Classes**.
 
-Przekierowanie nie jest globalne. Dotyczy tylko struktury MFC i ATL przekierowanie rejestru.  
+Przekierowanie nie jest globalne. Dotyczy tylko struktury MFC i ATL przekierowanie rejestru.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h  
+**Nagłówek:** atlbase.h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ Ta funkcja jest wywoływana, aby wyrejestrować bibliotekę typów.
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika jest wykorzystywany przez [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) i [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Ta funkcja pomocnika jest wykorzystywany przez [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) i [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -405,7 +405,7 @@ Ta funkcja została zakończona w programie Visual Studio 2013 i został usunię
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Ta funkcja jest wywoływana, aby odczytywać dane z lub zapisywać do rejestru systemowego.  
+Ta funkcja jest wywoływana, aby odczytywać dane z lub zapisywać do rejestru systemowego.
 
 ### <a name="syntax"></a>Składnia
 

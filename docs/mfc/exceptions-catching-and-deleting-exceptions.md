@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074127"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: przechwytywanie i usuwanie wyjątków
 
@@ -36,9 +36,9 @@ Twoje **catch** bloku musi usunąć wyjątek po:
 
 - **Catch** bloku zgłasza nowy wyjątek.
 
-     Nie należy oczywiście usunąć wyjątek, jeśli zgłosić ten sam wyjątek:
+   Nie należy oczywiście usunąć wyjątek, jeśli zgłosić ten sam wyjątek:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Wykonywanie powraca z poziomu **catch** bloku.
 
@@ -49,15 +49,15 @@ Twoje **catch** bloku musi usunąć wyjątek po:
 
 1. Użyj **spróbuj** — słowo kluczowe, aby skonfigurować **spróbuj** bloku. Wykonaj wszelkie instrukcje programu, które mogą zgłosić wyjątek w ramach **spróbuj** bloku.
 
-     Użyj **catch** — słowo kluczowe, aby skonfigurować **catch** bloku. Umieść kod obsługi wyjątków w **catch** bloku. Kod w **catch** blok jest wykonywany tylko wtedy, gdy kod w **spróbuj** bloku zgłasza wyjątek typu określonego w **catch** instrukcji.
+   Użyj **catch** — słowo kluczowe, aby skonfigurować **catch** bloku. Umieść kod obsługi wyjątków w **catch** bloku. Kod w **catch** blok jest wykonywany tylko wtedy, gdy kod w **spróbuj** bloku zgłasza wyjątek typu określonego w **catch** instrukcji.
 
-     Poniższej przedstawiono szkielet jak **spróbuj** i **catch** zwykle ułożone bloków:
+   Poniższej przedstawiono szkielet jak **spróbuj** i **catch** zwykle ułożone bloków:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Gdy wyjątek jest zgłaszany, kontrola przechodzi do pierwszej **catch** bloku, w których deklaracji wyjątku jest zgodny z typem wyjątku. Selektywnie mogą obsługiwać różne rodzaje wyjątków za pomocą sekwencyjne **catch** blokuje wymienione poniżej:
+   Gdy wyjątek jest zgłaszany, kontrola przechodzi do pierwszej **catch** bloku, w których deklaracji wyjątku jest zgodny z typem wyjątku. Selektywnie mogą obsługiwać różne rodzaje wyjątków za pomocą sekwencyjne **catch** blokuje wymienione poniżej:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

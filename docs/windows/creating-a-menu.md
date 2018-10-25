@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065541"
 ---
 # <a name="creating-a-menu-c"></a>Tworzenie Menu (C++)
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316266"
 
 2. Wybierz **nowy element** polu (prostokąt, zawierający "Typ w tym miejscu") na pasku menu.
 
-   ![Pole nowego elementu w edytorze menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Pole nowego elementu
+   ![Pole nowego elementu w edytorze menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Pole nowego elementu
 
 3. Wpisz nazwę nowego menu, na przykład "File".
 
@@ -46,8 +46,8 @@ Pole nowego elementu
 
    Po wyrażono nowe menu nazwę na pasku menu, okno nowy element przenosi się z prawej strony (co pozwala innym menu dodawania), a inny nowy element zostanie otwarte okno poniżej pierwszej menu, polecenia menu można dodać do niego.
 
-   ![Rozwinięty okno nowy element](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Okno nowy element z fokusem przesunięte po wpisaniu nazwy Menu
+   ![Rozwinięty okno nowy element](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Okno nowy element z fokusem przesunięte po wpisaniu nazwy Menu
 
    > [!NOTE]
    > Aby utworzyć pojedynczą pozycją menu na pasku menu, ustaw **okno podręczne** właściwości **False**.

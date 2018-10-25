@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076987"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parametry
 
 *ThreadModel*<br/>
-Klasa, której metody wdrożenia żądany model wątku. Można jawnie wybrać modelu wątkowości, ustawiając *ThreadModel* do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), lub [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Możesz zaakceptować serwera domyślnego wątku modelu, ustawiając *ThreadModel* do [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+Klasa, której metody wdrożenia żądany model wątku. Można jawnie wybrać modelu wątkowości, ustawiając *ThreadModel* do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), lub [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Możesz zaakceptować serwera domyślnego wątku modelu, ustawiając *ThreadModel* do [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -139,9 +139,9 @@ Istnieją zalety łączenia Trwa inicjalizacja w `FinalConstruct` zamiast konstr
 
 - Nie można wywołać funkcji wirtualnych za pośrednictwem mechanizmu funkcji wirtualnej z konstruktora klasy. Wywoływanie funkcji wirtualnej z konstruktora klasy powoduje statycznie rozwiązany wywołanie do funkcji, jak jest zdefiniowany w tym momencie w hierarchii dziedziczenia. Wywołania do czystych funkcji wirtualnych powoduje błędy konsolidatora.
 
-     Klasa nie jest najbardziej pochodnej klasy w hierarchii dziedziczenia — opiera się na klasę pochodną dostarczonych przez ATL, aby zapewnić niektóre swoje funkcje. Istnieje szansa, że inicjalizacji będą musieli używać funkcji oferowanych przez tę klasę (jest to wartość true, bez obaw podczas obiektów klasy należy zagregować innych obiektów), ale Konstruktor w klasie nie ma możliwości uzyskania dostępu do tych funkcji. Kod konstruowania dla klasy jest wykonywany przed najbardziej pochodnej klasy jest w pełni skonstruowany.
+   Klasa nie jest najbardziej pochodnej klasy w hierarchii dziedziczenia — opiera się na klasę pochodną dostarczonych przez ATL, aby zapewnić niektóre swoje funkcje. Istnieje szansa, że inicjalizacji będą musieli używać funkcji oferowanych przez tę klasę (jest to wartość true, bez obaw podczas obiektów klasy należy zagregować innych obiektów), ale Konstruktor w klasie nie ma możliwości uzyskania dostępu do tych funkcji. Kod konstruowania dla klasy jest wykonywany przed najbardziej pochodnej klasy jest w pełni skonstruowany.
 
-     Jednak `FinalConstruct` nazywa się natychmiast po najbardziej pochodnej klasy jest w pełni skonstruowany umożliwiając wywołują funkcje wirtualne i użyć implementacji zliczanie odwołań, dostarczone przez ATL.
+   Jednak `FinalConstruct` nazywa się natychmiast po najbardziej pochodnej klasy jest w pełni skonstruowany umożliwiając wywołują funkcje wirtualne i użyć implementacji zliczanie odwołań, dostarczone przez ATL.
 
 ### <a name="example"></a>Przykład
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Uwagi
 
-Za pomocą `m_pOuterUnknown`, część Unii:  
+Za pomocą `m_pOuterUnknown`, część Unii:
 
 ```
 union {

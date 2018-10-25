@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789610"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072528"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
 
@@ -90,21 +90,21 @@ Ponadto konsolidator Visual C++ zwróci wszystkie informacje związane z IDL atr
 ## <a name="contexts"></a> Konteksty atrybutu
 
 Atrybuty C++ można opisać za pomocą cztery pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecność innych atrybutów ( **Atrybuty wymagane**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w towarzyszącej mu tabeli, w artykule dotyczącym każdego atrybutu. Poniżej opisano każde z tych pól.
-  
+
 ### <a name="applies-to"></a>Dotyczy:
 
 To pole zawiera opis różnych elementów języka C++, które prawne elementów docelowych dla określonego atrybutu. Na przykład jeśli atrybut "class" Określa **dotyczy** pola, oznacza to, że ten atrybut można dotyczą wyłącznie prawne klasy języka C++. Jeśli ten atrybut jest stosowany do funkcji składowej klasy, spowoduje błąd składni.
-  
+
 Aby uzyskać więcej informacji, zobacz [atrybuty w zależności od użycia](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Powtarzalne
 
 To pole określa, czy można wielokrotnie zastosować atrybutu, do tej samej wartości docelowej. Większość atrybutów nie są powtarzalne.
-  
+
 ### <a name="required-attributes"></a>Wymaganych atrybutów
 
 To pole zawiera inne atrybuty, które muszą być obecne (co oznacza, że są stosowane do tej samej wartości docelowej) dla określonego atrybutu działać prawidłowo. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.
-  
+
 ### <a name="invalid-attributes"></a>Nieprawidłowe atrybuty
 
 To pole zawiera atrybuty, które nie są zgodne z określonego atrybutu. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.

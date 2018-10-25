@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411413"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072686"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX
 
@@ -47,15 +47,15 @@ Klasy kontrolek ActiveX zapewniają kilka składników służących do zaimpleme
 
 - [CPictureHolder](../mfc/reference/cpictureholder-class.md) klasy.
 
-     Ta klasa udostępnia łatwy dostęp do obiektu obrazu i funkcje dla elementu wyświetlanego przez niestandardowe właściwości obrazu.
+   Ta klasa udostępnia łatwy dostęp do obiektu obrazu i funkcje dla elementu wyświetlanego przez niestandardowe właściwości obrazu.
 
 - Wsparcie dla właściwości typu **LPPICTUREDISP**, jest implementowane za pomocą funkcji Get/Set.
 
-     Za pomocą widoku klas, które można szybko dodać właściwość niestandardową lub właściwości, która obsługuje typ obrazu. Aby uzyskać więcej informacji na temat dodawania właściwości formantu ActiveX, za pomocą widoku klas, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).
+   Za pomocą widoku klas, które można szybko dodać właściwość niestandardową lub właściwości, która obsługuje typ obrazu. Aby uzyskać więcej informacji na temat dodawania właściwości formantu ActiveX, za pomocą widoku klas, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).
 
 - Strona właściwości, która manipuluje właściwość obrazu lub właściwości formantu.
 
-     Ta strona właściwości jest częścią grupy stron właściwości standardowych dostępna dla kontrolki ActiveX. Aby uzyskać więcej informacji na stronach właściwości kontrolki ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Ta strona właściwości jest częścią grupy stron właściwości standardowych dostępna dla kontrolki ActiveX. Aby uzyskać więcej informacji na stronach właściwości kontrolki ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementowanie właściwości obrazu niestandardowego w kontrolce ActiveX
 
@@ -67,11 +67,11 @@ Aby zaimplementować niestandardowy właściwości obrazu, wykonaj następujące
 
 - [Dodawanie kodu do projektu kontroli](#_core_additions_to_your_control_project).
 
-     Standardowy obraz właściwości identyfikator strony, składowa danych klasy typu `CPictureHolder`i niestandardowe właściwości typu **LPPICTUREDISP** przy użyciu Get/Set implementacja musi zostać dodany.
+   Standardowy obraz właściwości identyfikator strony, składowa danych klasy typu `CPictureHolder`i niestandardowe właściwości typu **LPPICTUREDISP** przy użyciu Get/Set implementacja musi zostać dodany.
 
 - [Zmodyfikuj kilka funkcji w klasie kontrolki](#_core_modifications_to_your_control_project).
 
-     Te modyfikacje zostaną nawiązać kilka funkcji, które są odpowiedzialne za rysunek formantu ActiveX.
+   Te modyfikacje zostaną nawiązać kilka funkcji, które są odpowiedzialne za rysunek formantu ActiveX.
 
 ##  <a name="_core_additions_to_your_control_project"></a> Dodatki do projektu kontroli
 

@@ -17,66 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a338de50ee57df2f25a435f8d9c432956f363cb3
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: e88dcc168df6b6b315f73e2eb595f55668fd2493
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989973"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074868"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odwoływanie się do właściwości w dostawcy
 
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w *OLE DB Podręcznik programisty*.  
-  
-W poniższym przykładzie założono, próby pobrania właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.  
-  
-Tworzenie [cdbpropset —](../../data/oledb/cdbpropset-class.md) przy użyciu grupy właściwości jako parametr do konstruktora. Na przykład:  
-  
-```cpp  
-CDBPropSet propset(DBPROPSET_ROWSET);  
-```  
-  
-Wywołaj [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej identyfikator właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, którego używasz.  
-  
-```cpp  
-CDBPropSet propset(DBPROPSET_ROWSET);  
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w *OLE DB Podręcznik programisty*.
 
-propset.AddProperty(DBPROP_IRowsetChange, true);  
+W poniższym przykładzie założono, próby pobrania właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.
 
-propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
-```  
-  
-Użyj `IRowset` interfejsu do wywołania `GetProperties`. Przekaż właściwość, Ustaw jako parametr. Poniżej przedstawiono końcowy kodu:  
-  
-```cpp  
-CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
-  
-CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;  
-  
-DBPROPIDSET set;  
-set.AddPropertyID(DBPROP_BOOKMARKS);  
+Tworzenie [cdbpropset —](../../data/oledb/cdbpropset-class.md) przy użyciu grupy właściwości jako parametr do konstruktora. Na przykład:
 
-DBPROPSET* pPropSet = NULL;  
-ULONG ulPropSet = 0;  
+```cpp
+CDBPropSet propset(DBPROPSET_ROWSET);
+```
 
-HRESULT hr;  
-  
-if (spRowsetProps)  
-   hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);  
-  
-if (pPropSet)  
-{  
-   CComVariant var = pPropSet->rgProperties[0].vValue;  
-   CoTaskMemFree(pPropSet->rgProperties);  
-   CoTaskMemFree(pPropSet);  
-  
-   if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))  
-   {  
-      ...  // Use property here  
-   }  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
+Wywołaj [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej identyfikator właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, którego używasz.
+
+```cpp
+CDBPropSet propset(DBPROPSET_ROWSET);
+
+propset.AddProperty(DBPROP_IRowsetChange, true);
+
+propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
+```
+
+Użyj `IRowset` interfejsu do wywołania `GetProperties`. Przekaż właściwość, Ustaw jako parametr. Poniżej przedstawiono końcowy kodu:
+
+```cpp
+CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;
+
+CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
+
+DBPROPIDSET set;
+set.AddPropertyID(DBPROP_BOOKMARKS);
+
+DBPROPSET* pPropSet = NULL;
+ULONG ulPropSet = 0;
+
+HRESULT hr;
+
+if (spRowsetProps)
+   hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);
+
+if (pPropSet)
+{
+   CComVariant var = pPropSet->rgProperties[0].vValue;
+   CoTaskMemFree(pPropSet->rgProperties);
+   CoTaskMemFree(pPropSet);
+
+   if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
+   {
+      ...  // Use property here
+   }
+}
+```
+
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

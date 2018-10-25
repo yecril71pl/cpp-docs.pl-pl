@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adaa1da407d9727db74add14eb517e83a5e610c
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b22e903b86ba3de8bcd98aa47f1b6756288f2f78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070981"
 ---
 # <a name="creating-an-atl-project"></a>Tworzenie projektu ATL
 
@@ -48,4 +48,4 @@ Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozw
 ## <a name="see-also"></a>Zobacz też
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Strony właściwości](../../ide/property-pages-visual-cpp.md)   
+[Strony właściwości](../../ide/property-pages-visual-cpp.md)

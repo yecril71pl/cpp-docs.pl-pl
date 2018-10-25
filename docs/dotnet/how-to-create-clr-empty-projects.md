@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e76b1c8be4e180136c4c1ff3de3e4801770bce92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6a915dbe9904a7bbe56e8ba1100631bd954d86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071170"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Porady: tworzenie pustych projektów CLR
 
@@ -34,7 +34,7 @@ Aby utworzyć pusty projekt CLR, użyj **pusty projekt CLR** szablonu, który je
 
 1. Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.
 
-     **Nowy projekt** pojawi się okno dialogowe.
+   **Nowy projekt** pojawi się okno dialogowe.
 
 1. W obszarze **zainstalowane szablony**, kliknij przycisk **Visual C++** węzła; następnie kliknij przycisk **CLR** węzła. Wybierz **pusty projekt CLR** ikony.
 

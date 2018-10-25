@@ -63,287 +63,287 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f13da3ed0b1f2193ab86e1644d401a6e4fb6b942
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 63a2e950927f58c55554aeb97108eeca2fae29e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076506"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 
-Szablony OLE DB implementacji [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interfejsu.  
-  
+Szablony OLE DB implementacji [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <  
-   class T,   
-   class Storage,   
-   class UpdateArray = CAtlArray<Storage>,   
-   class RowClass = CSimpleRow,   
-   class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
->  
+template <
+   class T,
+   class Storage,
+   class UpdateArray = CAtlArray<Storage>,
+   class RowClass = CSimpleRow,
+   class MapClass = CAtlMap <RowClass::KeyType, RowClass*>
+>
 
-class IRowsetUpdateImpl : public IRowsetChangeImpl<  
-   T,   
-   Storage,   
-   IRowsetUpdate,   
-   RowClass,   
-   MapClass>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+class IRowsetUpdateImpl : public IRowsetChangeImpl<
+   T,
+   Storage,
+   IRowsetUpdate,
+   RowClass,
+   MapClass>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa pochodząca z `IRowsetUpdateImpl`.  
-  
+Klasa pochodząca z `IRowsetUpdateImpl`.
+
 *Magazyn*<br/>
-Rekordzie użytkownika.  
-  
+Rekordzie użytkownika.
+
 *UpdateArray*<br/>
-Tablica zawierająca dane w pamięci podręcznej do aktualizowania zestawu wierszy.  
-  
+Tablica zawierająca dane w pamięci podręcznej do aktualizowania zestawu wierszy.
+
 *RowClass*<br/>
-Jednostki magazynu na potrzeby `HROW`.  
-  
+Jednostki magazynu na potrzeby `HROW`.
+
 *MapClass*<br/>
-Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.  
+Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="interface-methods-used-with-irowsetchange"></a>Metody interfejsu (używana w IRowsetChange)  
-  
-|||  
-|-|-|  
-|[SetData](#setdata)|Ustawia wartości danych w co najmniej jedną kolumnę.|  
-  
-### <a name="interface-methods-used-with-irowsetupdate"></a>Metody interfejsu (używana w IRowsetUpdate)  
-  
-|||  
-|-|-|  
-|[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.|  
-|[Getpendingrows —](#getpendingrows)|Zwraca listę wierszy z oczekującymi zmianami.|  
-|[GetRowStatus](#getrowstatus)|Zwraca stan określonych wierszy.|  
-|[Cofnij](#undo)|Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.|  
-|[Aktualizacja](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|  
-  
-### <a name="implementation-methods-callback"></a>Metody wdrażania (wywołanie zwrotne)  
-  
-|||  
-|-|-|  
-|[IsUpdateAllowed](#isupdateallowed)|Użytych do sprawdzenia integralności, bezpieczeństwa i tak dalej przed zezwoleniem na aktualizacje.|  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[m_mapCachedData](#mapcacheddata)|Zawiera oryginalne dane do odroczonego wykonania operacji.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-Najpierw należy przeczytać i zrozumieć, w dokumentacji dotyczącej [IRowsetChange](/previous-versions/windows/desktop/ms715790), ponieważ wszystko, co jest opisane ma również zastosowanie w tym miejscu. Należy również przeczytać Rozdział 6 *OLE DB Podręcznik programisty* na temat ustawiania danych.  
-  
-`IRowsetUpdateImpl` implementuje OLE DB `IRowsetUpdate` interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą `IRowsetChange` do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="interface-methods-used-with-irowsetchange"></a>Metody interfejsu (używana w IRowsetChange)
+
+|||
+|-|-|
+|[SetData](#setdata)|Ustawia wartości danych w co najmniej jedną kolumnę.|
+
+### <a name="interface-methods-used-with-irowsetupdate"></a>Metody interfejsu (używana w IRowsetUpdate)
+
+|||
+|-|-|
+|[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.|
+|[Getpendingrows —](#getpendingrows)|Zwraca listę wierszy z oczekującymi zmianami.|
+|[GetRowStatus](#getrowstatus)|Zwraca stan określonych wierszy.|
+|[Cofnij](#undo)|Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.|
+|[Aktualizacja](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|
+
+### <a name="implementation-methods-callback"></a>Metody wdrażania (wywołanie zwrotne)
+
+|||
+|-|-|
+|[IsUpdateAllowed](#isupdateallowed)|Użytych do sprawdzenia integralności, bezpieczeństwa i tak dalej przed zezwoleniem na aktualizacje.|
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[m_mapCachedData](#mapcacheddata)|Zawiera oryginalne dane do odroczonego wykonania operacji.|
+
+## <a name="remarks"></a>Uwagi
+
+Najpierw należy przeczytać i zrozumieć, w dokumentacji dotyczącej [IRowsetChange](/previous-versions/windows/desktop/ms715790), ponieważ wszystko, co jest opisane ma również zastosowanie w tym miejscu. Należy również przeczytać Rozdział 6 *OLE DB Podręcznik programisty* na temat ustawiania danych.
+
+`IRowsetUpdateImpl` implementuje OLE DB `IRowsetUpdate` interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą `IRowsetChange` do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.
+
 > [!IMPORTANT]
->  Zdecydowanie zaleca się przeczytanie poniższej dokumentacji przed podjęciem próby wdrożenia dostawcy:  
-  
-- [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)  
-  
-- Rozdział 6 *OLE DB Podręcznik programisty*  
-  
-- Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) próbki  
+>  Zdecydowanie zaleca się przeczytanie poniższej dokumentacji przed podjęciem próby wdrożenia dostawcy:
+
+- [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)
+
+- Rozdział 6 *OLE DB Podręcznik programisty*
+
+- Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) próbki
 
 ## <a name="setdata"></a> IRowsetUpdateImpl::SetData
 
-Ustawia wartości danych w co najmniej jedną kolumnę.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD (SetData )(HROW hRow,  
-   HACCESSOR hAccessor,  
-   void* pSrcData);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Ustawia wartości danych w co najmniej jedną kolumnę.
 
-Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD (SetData )(HROW hRow,
+   HACCESSOR hAccessor,
+   void* pSrcData);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
 
 Ta metoda zastępuje [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) ale zawiera buforowania oryginalnych danych jest natychmiastowa lub odroczone przetwarzanie operacji.
 
 ## <a name="getoriginaldata"></a> IRowsetUpdateImpl::GetOriginalData
 
-Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD (GetOriginalData )(HROW hRow,  
-   HACCESSOR hAccessor,  
-   void* pData);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.
 
-Zobacz [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) w *OLE DB Podręcznik programisty*.   
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD (GetOriginalData )(HROW hRow,
+   HACCESSOR hAccessor,
+   void* pData);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) w *OLE DB Podręcznik programisty*.
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
-Zwraca listę wierszy z oczekującymi zmianami.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca listę wierszy z oczekującymi zmianami.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
-   DBPENDINGSTATUS dwRowStatus,  
-   DBCOUNTITEM* pcPendingRows,  
-   HROW** prgPendingRows,  
-   DBPENDINGSTATUS** prgPendingStatus);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
+   DBPENDINGSTATUS dwRowStatus,
+   DBCOUNTITEM* pcPendingRows,
+   HROW** prgPendingRows,
+   DBPENDINGSTATUS** prgPendingStatus);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).  
-  
-Dla innych parametrów, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).
 
-Aby uzyskać więcej informacji, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.  
+Dla innych parametrów, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) w *OLE DB Podręcznik programisty*.
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
-Zwraca stan określonych wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca stan określonych wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
-   DBCOUNTITEM cRows,  
-   const HROW rghRows[],  
-   DBPENDINGSTATUS rgPendingStatus[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
+   DBCOUNTITEM cRows,
+   const HROW rghRows[],
+   DBPENDINGSTATUS rgPendingStatus[]);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).  
-  
-Dla innych parametrów, zobacz [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) w *OLE DB Podręcznik programisty*.  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).
+
+Dla innych parametrów, zobacz [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) w *OLE DB Podręcznik programisty*.
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
-Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
-   DBCOUNTITEM cRows,  
-   const HROW rghRows[ ],  
-   DBCOUNTITEM* pcRowsUndone,  
-   HROW** prgRowsUndone,  
-   DBROWSTATUS** prgRowStatus);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (Undo )(HCHAPTER /* hReserved */,
+   DBCOUNTITEM cRows,
+   const HROW rghRows[ ],
+   DBCOUNTITEM* pcRowsUndone,
+   HROW** prgRowsUndone,
+   DBROWSTATUS** prgRowStatus);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
-  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).
+
 *pcRowsUndone*<br/>
-[out] Odnosi się do *pcRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
-  
+[out] Odnosi się do *pcRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).
+
 *prgRowsUndone*<br/>
-[in] Odnosi się do *prgRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
-  
-Dla innych parametrów, zobacz [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) w *OLE DB Podręcznik programisty*. 
+[in] Odnosi się do *prgRows* parametru w [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).
+
+Dla innych parametrów, zobacz [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) w *OLE DB Podręcznik programisty*.
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
-Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (Update )(HCHAPTER /* hReserved */,  
-   DBCOUNTITEM cRows,  
-   const HROW rghRows[],  
-   DBCOUNTITEM* pcRows,  
-   HROW** prgRows,  
-   DBROWSTATUS** prgRowStatus);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (Update )(HCHAPTER /* hReserved */,
+   DBCOUNTITEM cRows,
+   const HROW rghRows[],
+   DBCOUNTITEM* pcRows,
+   HROW** prgRows,
+   DBROWSTATUS** prgRowStatus);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).  
-  
-Dla innych parametrów, zobacz [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+[in] Odnosi się do *hChapter* parametru w [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).
 
-Zmiany są przesyłane przez wywołanie metody [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Konsument musi wywołać [CRowset::Update](../../data/oledb/crowset-update.md) aby zmiany zaczęły obowiązywać. Ustaw *prgRowstatus* do odpowiedniej wartości zgodnie z opisem w [stany wiersza](/previous-versions/windows/desktop/ms722752) w *OLE DB Podręcznik programisty*. 
-  
+Dla innych parametrów, zobacz [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Zmiany są przesyłane przez wywołanie metody [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Konsument musi wywołać [CRowset::Update](../../data/oledb/crowset-update.md) aby zmiany zaczęły obowiązywać. Ustaw *prgRowstatus* do odpowiedniej wartości zgodnie z opisem w [stany wiersza](/previous-versions/windows/desktop/ms722752) w *OLE DB Podręcznik programisty*.
+
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
-Zastępuje tę metodę pod kątem bezpieczeństwa i integralności i tak dalej przed aktualizacji.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zastępuje tę metodę pod kątem bezpieczeństwa i integralności i tak dalej przed aktualizacji.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,  
-   HROW /* [in] */ /* hRowUpdate */,  
-   DBROWSTATUS* /* [out] */ /* pRowStatus */);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
+   HROW /* [in] */ /* hRowUpdate */,
+   DBROWSTATUS* /* [out] */ /* pRowStatus */);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *status*<br/>
-[in] Stan Oczekujące operacje na wierszach.  
-  
-*hRowUpdate*<br/>
-[in] Dojście do wiersze, które użytkownik chce, aby zaktualizować.  
-  
-*pRowStatus*<br/>
-[out] Zwrócony kod stanu użytkownika.  
-  
-### <a name="remarks"></a>Uwagi  
+[in] Stan Oczekujące operacje na wierszach.
 
-Jeśli okaże się, że aktualizacji powinien być dozwolony, zwraca wartość S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, należy również ustawić `DBROWSTATUS` w [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) do odpowiedniej [wiersz stanu](/previous-versions/windows/desktop/ms722752).  
+*hRowUpdate*<br/>
+[in] Dojście do wiersze, które użytkownik chce, aby zaktualizować.
+
+*pRowStatus*<br/>
+[out] Zwrócony kod stanu użytkownika.
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli okaże się, że aktualizacji powinien być dozwolony, zwraca wartość S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, należy również ustawić `DBROWSTATUS` w [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) do odpowiedniej [wiersz stanu](/previous-versions/windows/desktop/ms722752).
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 
-Mapa zawierającego oryginalne dane do odroczonego wykonania operacji.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Mapa zawierającego oryginalne dane do odroczonego wykonania operacji.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-CAtlMap<   
-   HROW hRow,    
-   Storage* pData   
->   
-m_mapCachedData;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CAtlMap< 
+   HROW hRow,  
+   Storage* pData 
+> 
+m_mapCachedData;
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hRow*<br/>
-Dojście do wierszy danych.  
-  
-*pData*<br/>
-Wskaźnik do danych w pamięci podręcznej. Dane są typu *magazynu* (klasy rekordów użytkowników). Zobacz *magazynu* argumentem szablonu w [irowsetupdateimpl — klasa](../../data/oledb/irowsetupdateimpl-class.md).  
+Dojście do wierszy danych.
 
-## <a name="see-also"></a>Zobacz też  
+*pData*<br/>
+Wskaźnik do danych w pamięci podręcznej. Dane są typu *magazynu* (klasy rekordów użytkowników). Zobacz *magazynu* argumentem szablonu w [irowsetupdateimpl — klasa](../../data/oledb/irowsetupdateimpl-class.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

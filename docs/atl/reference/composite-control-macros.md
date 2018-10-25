@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077357"
 ---
 # <a name="composite-control-macros"></a>Makra kontrolek złożonych
 
@@ -41,7 +41,7 @@ Te makra definiują mapy wychwytywania zdarzeń i zapisy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h  
+**Nagłówek:** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in] Identyfikuje formant.
 
 *IID*<br/>
-[in] Identyfikuje interfejs ekspedycji.  
+[in] Identyfikuje interfejs ekspedycji.
 
 *piid*<br/>
 [in] Wskaźnik do interfejsu wysyłania.
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in] Liczba całkowita bez znaku identyfikacji źródła zdarzenia. Ta wartość musi odpowiadać *nID* parametru szablonu używany w pokrewnym [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy bazowej.
 
 *IID*<br/>
-[in] W przypadku identyfikatora IID, który identyfikuje interfejs ekspedycji.  
+[in] W przypadku identyfikatora IID, który identyfikuje interfejs ekspedycji.
 
 *piid*<br/>
 [in] Wskaźnik do identyfikatora IID, który identyfikuje interfejs ekspedycji.
