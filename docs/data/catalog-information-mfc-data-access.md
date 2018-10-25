@@ -19,20 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2eb66b1068e20f4bfc8936e592afbcb5183974a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de45e534059ce71134ccabf8f5f6f71477b4a046
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110955"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057988"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informacje o katalogu (dostęp do danych MFC)
 
-Informacje o tabelach w źródle danych mogą obejmować nazwy tabel i kolumn w ich uprawnień w tabeli, nazwy główne i obce klucze, informacje o wstępnie zdefiniowanych zapytań lub procedur przechowywanych informacji na temat indeksów w tabelach, a Statystyka tabel.  
-  
-Aby uzyskać więcej informacji, zobacz [źródła danych: określanie schematu źródła danych (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
-  
-  
-## <a name="see-also"></a>Zobacz też  
+Informacje o tabelach w źródle danych mogą obejmować nazwy tabel i kolumn w ich uprawnień w tabeli, nazwy główne i obce klucze, informacje o wstępnie zdefiniowanych zapytań lub procedur przechowywanych informacji na temat indeksów w tabelach, a Statystyka tabel.
+
+Aby uzyskać więcej informacji, zobacz [źródła danych: określanie schematu źródła danych (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

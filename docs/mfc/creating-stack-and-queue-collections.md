@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403789"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056597"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Tworzenie kolekcji stosów i kolejek
 
@@ -40,9 +40,9 @@ Ponieważ kolekcji standardowych listy ma head i ogon, to można łatwo utworzy�
 
 1. Pochodzić nowa klasa listy z jednej z istniejących klas MFC w liście, a następnie dodać więcej funkcji elementów członkowskich do obsługi funkcji operacji stosu.
 
-     Poniższy przykład przedstawia sposób dodawania elementów członkowskich i wypychania elementów do stosu rzut oka na górnego elementu stosu, pop górnego elementu ze stosu:
+   Poniższy przykład przedstawia sposób dodawania elementów członkowskich i wypychania elementów do stosu rzut oka na górnego elementu stosu, pop górnego elementu ze stosu:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Należy pamiętać, że tego podejścia ujawnia podstawowe `CObList` klasy. Użytkownik może wywoływać dowolną `CObList` funkcję członkowską, czy sens dla stosu lub nie.
 
@@ -54,9 +54,9 @@ Ponieważ kolekcji standardowych listy ma head i ogon, również jest łatwo utw
 
 1. Pochodzić nowa klasa listy z jednej ze wstępnie zdefiniowanej listy klas, wyposażone w bibliotece klas Microsoft Foundation, a następnie dodać więcej funkcji elementów członkowskich do obsługi semantykę operacji kolejki.
 
-     Poniższy przykład pokazuje, jak można dołączyć funkcji elementów członkowskich do dodania elementu do końca kolejki i pobrać element z przodu kolejki.
+   Poniższy przykład pokazuje, jak można dołączyć funkcji elementów członkowskich do dodania elementu do końca kolejki i pobrać element z przodu kolejki.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Zobacz też
 

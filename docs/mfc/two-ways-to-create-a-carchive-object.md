@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080588"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dwa sposoby tworzenia obiektu CArchive
 
@@ -66,9 +66,9 @@ Oprócz serializacji dokumentu przez platformę, są inne sytuacje, kiedy może 
 
 1. Przekaż `CFile` obiekt do konstruktora dla `CArchive`, jak pokazano w poniższym przykładzie:
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     Drugi argument `CArchive` Konstruktor jest wyliczany określający czy archiwum będą używane do przechowywania lub podczas ładowania danych do lub z pliku. `Serialize` Funkcja obiektu sprawdza, czy ten stan, wywołując `IsStoring` funkcji dla obiektu archiwum.
+   Drugi argument `CArchive` Konstruktor jest wyliczany określający czy archiwum będą używane do przechowywania lub podczas ładowania danych do lub z pliku. `Serialize` Funkcja obiektu sprawdza, czy ten stan, wywołując `IsStoring` funkcji dla obiektu archiwum.
 
 Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektów, zamknij go. Mimo że `CArchive` (i `CFile`) obiektów zostanie automatycznie zamknięte archiwum (i plik), jest dobrą praktyką, aby jawnie w tym celu, ponieważ ułatwia odzyskiwanie z błędami. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz artykuł [wyjątki: wyjątki połowowe i usuwanie](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +76,7 @@ Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektó
 
 1. Poniższy przykład ilustruje sposób zamknięcia `CArchive` obiektu:
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 

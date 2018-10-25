@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083259"
 ---
 # <a name="openmp-directives"></a>OpenMP, dyrektywy
 
@@ -52,19 +52,19 @@ Zawiera łącza do informacji o dyrektywach używany w interfejsie API OpenMP.
 
 Visual C++ obsługuje następujące dyrektywy OpenMP:
 
-— Dyrektywa                             | Opis
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.
-[barrier](#barrier)                   | Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.
-[critical](#critical)                 | Określa, czy kod jest wykonywane tylko w jednym wątku w danym momencie.
-[flush](#flush-openmp)                | Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.
-[for](#for-openmp)                    | Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony między wątkami.
-[master](#master)                     | Określa, że główny wątek powinien zostać wykonany części programu.
-[Uporządkowane](#ordered-openmp-directives) | Określa, że kod w ramach równoległego `for` pętli ma być wykonany, takich jak pętla Sekwencyjna.
-[parallel](#parallel)                 | Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.
-[Sekcje](#sections-openmp)          | Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
-[single](#single)                     | Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.
-[threadprivate](#threadprivate)       | Określa, czy zmienna jest prywatnego wątku.
+|— Dyrektywa|Opis|
+|---------|-----------|
+|[atomic](#atomic)|Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.|
+|[barrier](#barrier)|Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.|
+|[critical](#critical)|Określa, czy kod jest wykonywane tylko w jednym wątku w danym momencie.|
+|[flush](#flush-openmp)|Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.|
+|[for](#for-openmp)|Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony między wątkami.|
+|[master](#master)|Określa, że główny wątek powinien zostać wykonany części programu.|
+|[Uporządkowane](#ordered-openmp-directives)|Określa, że kod w ramach równoległego `for` pętli ma być wykonany, takich jak pętla Sekwencyjna.|
+|[parallel](#parallel)|Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.|
+|[Sekcje](#sections-openmp)|Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.|
+|[single](#single)|Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.|
+|[threadprivate](#threadprivate)|Określa, czy zmienna jest prywatnego wątku.|
 
 ## <a name="atomic"></a>Atomic
 
@@ -123,7 +123,7 @@ Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierz
 
 `barrier` Dyrektywy nie obsługuje żadnych klauzule OpenMP.
 
-Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa określająca bariery](../../../parallel/openmp/2-6-3-barrier-directive.md).
+Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
 ### <a name="example"></a>Przykład
 
@@ -306,13 +306,13 @@ A `for` pętli. Spowoduje niezdefiniowane zachowanie, jeśli kod użytkownika `f
 
 `for` Dyrektywy obsługuje następujące klauzule OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Uporządkowane](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Jeśli `parallel` również jest określony, `clauses` mogą być klauzuli akceptowane przez `parallel` lub `for` dyrektyw, z wyjątkiem `nowait`.
 
@@ -535,14 +535,14 @@ Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków j
 
 `parallel` Dyrektywy obsługuje następujące klauzule OpenMP:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [Udostępnione](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [Udostępnione](openmp-clauses.md#shared-openmp)
 
 `parallel` można również za pomocą [sekcje](#sections-openmp) i [dla](#for-openmp) dyrektywy.
 
@@ -603,11 +603,11 @@ Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
 
 `sections` Dyrektywy obsługuje następujące klauzule OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Jeśli `parallel` również jest określony, `clauses` mogą być klauzuli akceptowane przez `parallel` lub `sections` dyrektyw, z wyjątkiem `nowait`.
 
@@ -656,10 +656,10 @@ Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, ni
 
 `single` Dyrektywy obsługuje następujące klauzule OpenMP:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [Wzorca](#master) dyrektywy pozwala określić, że część kodu mają zostać wykonane tylko w wątku głównym.
 
@@ -745,4 +745,4 @@ Użytkownicy mają nie kontrolę tego kiedy spowoduje przerwanie działania wąt
 
 ### <a name="example"></a>Przykład
 
-Przykład użycia `threadprivate`, zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md).
+Przykład użycia `threadprivate`, zobacz [prywatnej](openmp-clauses.md#private-openmp).

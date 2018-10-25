@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8c1fb4d82bd1aaeb9f625fea66aa339a0ef4d97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082895"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo — struktura
 
@@ -94,7 +94,6 @@ Wywołaj tę funkcję, aby pobrać liczbę pierwszą stronę do wydrukowania.
 ```
 UINT GetFromPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -111,7 +110,6 @@ Wywołaj tę funkcję, aby pobrać numer ostatniej strony dokumentu.
 
 ```
 UINT GetMaxPage() const;
-
 
 ```
 
@@ -130,7 +128,6 @@ Wywołaj tę funkcję, aby pobrać numer pierwszej strony dokumentu.
 ```
 UINT GetMinPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -148,7 +145,6 @@ Wywołaj tę funkcję, aby pobrać przesunięcie podczas drukowania wielu elemen
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -165,7 +161,6 @@ Wywołaj tę funkcję, aby pobrać numer ostatniej strony do wydrukowania.
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +340,4 @@ Numery stron są zwykle liczone od 1. Ta wartość jest przechowywana w `CPrintD
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-
-
 

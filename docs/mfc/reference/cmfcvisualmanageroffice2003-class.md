@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083532"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Klasa CMFCVisualManagerOffice2003
 
@@ -131,82 +131,82 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Rysuje przycisku polecenia przy użyciu bieżącego motywu Windows XP. (Przesłania [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
 |[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Pobiera kolor podstawowy motywu.|
 |[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Pobiera kolor używany dla elementu menu wyróżnione.|
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tła listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tekstu, listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tła listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`).|
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tekstu, listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`).|
 |[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Zwraca wysokość wszystkich elementów menu. (Przesłania [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|
-|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Ustawia określona grupa podstawowa kolor tła i koloru obramowania. (Przesłania `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|
+|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Ustawia określona grupa podstawowa kolor tła i koloru obramowania. (Przesłania `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`).|
 |[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Pobiera tonowe kolor wyróżnienia. (Przesłania [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|
 |[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Struktura wywołuje tę funkcję, gdy należy pobrać zestaw kolorów dla okno kartę rysunku. (Przesłania [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|
-|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Pobiera na marginesie przycisk Dostosuj pasek narzędzi. (Przesłania `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|
-|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Pobiera kolor wyłączonego paska narzędzi. (Przesłania `CMFCVisualManager::GetToolbarDisabledColor`.)|
+|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Pobiera na marginesie przycisk Dostosuj pasek narzędzi. (Przesłania `CMFCVisualManager::GetToolBarCustomizeButtonMargin`).|
+|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Pobiera kolor wyłączonego paska narzędzi. (Przesłania `CMFCVisualManager::GetToolbarDisabledColor`).|
 |[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Metoda wywoływana przez platformę, by uzyskać informacje. (Przesłania [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|
 |[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Wskazuje, czy Menedżer wizualny używa natywnego kolory motywu Windows XP.|
 |[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Zwraca czy bieżące Menedżera visual rysuje obramowania wokół okienek, które są zadokowane i na kartach. (Przesłania [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|
-|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Wskazuje, czy powinien być wyróżniony karty programu OneNote. (Przesłania `CMFCVisualManager::IsHighlightOneNoteTabs`.)|
-|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Wywoływane przez platformę, gdy przycisk paska narzędzi. (Przesłania `CMFCVisualManager::IsOffsetPressedButton`.)|
+|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Wskazuje, czy powinien być wyróżniony karty programu OneNote. (Przesłania `CMFCVisualManager::IsHighlightOneNoteTabs`).|
+|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Wywoływane przez platformę, gdy przycisk paska narzędzi. (Przesłania `CMFCVisualManager::IsOffsetPressedButton`).|
 |[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Wskazuje, czy pasek stanu, wyglądu Office XP.|
 |[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Wskazuje, czy określony narzędzi ma okrągły kształtu. (Przesłania [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|
 |[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Wskazuje, czy ma być używana motyw globalny Windows XP.|
 |[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Wskazuje, czy motywy Windows jest obsługiwana. (Przesłania [CMFCVisualManager::IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|
 |[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku automatycznego ukrywania. (Przesłania [CMFCVisualManager::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Wywoływane przez platformę, gdy jej rysuje uchwyt paska sterowania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|
-|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Struktura wywołuje tę metodę, gdy jej rysuje przycisk Przeglądaj, aby formant edycji. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
-|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Wywoływane przez platformę, gdy jej rysuje uchwyt paska sterowania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`).|
+|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Struktura wywołuje tę metodę, gdy jej rysuje przycisk Przeglądaj, aby formant edycji. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`).|
+|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`).|
 |[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Struktura wywołuje tę metodę, gdy jej rysuje pola wyboru. (Przesłania [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
-|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Platforma wywołuje tę metodę, gdy jej rysuje przycisk listy [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
+|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Platforma wywołuje tę metodę, gdy jej rysuje przycisk listy [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`).|
 |[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Struktura wywołuje tę metodę podczas jego rysuje obramowania formantu. (Przesłania [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Struktura wywołuje tę metodę, gdy jej rysuje rozwijającego się pola. (Przesłania [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`).|
 |[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Struktura wywołuje tę metodę, gdy jej rysuje podziału paska Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|
 |[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływane przez platformę, gdy go rysuje obramowanie przycisku strony programu Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis dla [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie, okna podręcznego. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Struktura wywołuje tę metodę, gdy go rysuje podpis oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|
+|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis dla [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`).|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie, okna podręcznego. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Struktura wywołuje tę metodę, gdy go rysuje podpis oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`).|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Struktura wywołuje tę metodę, gdy jej rysuje Grupa przycisków na Wstążce. (Przesłania [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Struktura wywołuje tę metodę, gdy jej rysuje pasku podpisu dla kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Struktura wywołuje tę metodę, gdy jej rysuje na karcie kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Struktura wywołuje tę metodę, gdy jej rysuje separatorem w paska narzędzi szybkiego dostępu dla wstążki. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Struktura wywołuje tę metodę, gdy jej rysuje separatorem w paska narzędzi szybkiego dostępu dla wstążki. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`).|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Platforma wywołuje tę metodę, gdy jej rysuje kanału [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Platforma wywołuje tę metodę, gdy jej rysuje uchwytu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Platforma wywołuje tę metodę, gdy jej rysuje przycisków powiększenia dla [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Struktura wywołuje tę metodę, gdy jej rysuje okienko na pasku stanu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|
-|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Struktura wywołuje tę metodę, gdy jej rysuje przyciski przewijania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|
-|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Struktura wywołuje tę metodę, gdy go rysuje separatora. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Struktura wywołuje tę metodę, gdy jej rysuje okienko na pasku stanu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`).|
+|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Struktura wywołuje tę metodę, gdy jej rysuje przyciski przewijania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`).|
+|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Struktura wywołuje tę metodę, gdy go rysuje separatora. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`).|
 |[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Struktura wywołuje tę metodę, gdy jej pobiera wszystkie elementy w menu. (Przesłania [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`).|
 |[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Platforma wywołuje tę metodę, gdy jej rysuje wskaźnika postępu w [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
 |[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Platforma wywołuje tę metodę, gdy go rysuje rozmiar pola [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
-|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Platforma wywołuje tę metodę, gdy jej rysuje karty [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTask`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół grupy w [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|
-|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|
-|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie obszaru karty w oknie kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|
-|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie tekst i ikona przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Platforma wywołuje tę metodę, gdy jej rysuje karty [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`).|
+|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTask`).|
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół grupy w [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`).|
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`).|
+|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`).|
+|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`).|
+|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie obszaru karty w oknie kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`).|
+|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie tekst i ikona przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`).|
 |[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Platforma wywołuje tę metodę, gdy go na partycje powoduje usunięcie ramkę na [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
 |[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła przycisku automatycznego ukrywania. (Przesłania [CMFCVisualManager::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|
-|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [klasa CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
-|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tło przycisku paska narzędzi, który należy do listy poleceń. (Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
+|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [klasa CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`).|
+|[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillButtonInterior`).|
+|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tło przycisku paska narzędzi, który należy do listy poleceń. (Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`).|
 |[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Struktura wywołuje tę metodę po zapełnieniu tła formantu nagłówka. (Przesłania [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|
-|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Struktura wywołuje tę metodę podczas jego wypełniania wyróżnionym obszarze przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|
+|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Struktura wywołuje tę metodę podczas jego wypełniania wyróżnionym obszarze przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`).|
 |[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Struktura wywołuje tę metodę po zapełnieniu tła paska Outlook podpis. (Przesłania [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|
 |[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych przycisk Strona programu Outlook. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
-|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Struktura wywołuje tę metodę podczas jego wypełniania tło okna karty. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTab`.)|
-|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Struktura wywołuje tę metodę podczas jego wypełniania wnętrza [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
+|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`).|
+|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Struktura wywołuje tę metodę podczas jego wypełniania tło okna karty. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTab`).|
+|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Struktura wywołuje tę metodę podczas jego wypełniania wnętrza [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`).|
 |[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
-|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione szybkie — dostosowywanie przycisku menu. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|
-|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione polecenie. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|
-|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Struktura wywołuje tę funkcję, gdy zmieniają się kolory systemowe. (Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|
+|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione szybkie — dostosowywanie przycisku menu. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`).|
+|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione polecenie. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`).|
+|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Struktura wywołuje tę funkcję, gdy zmieniają się kolory systemowe. (Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`).|
 |[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Określa, że powinny być używane motyw globalny Windows XP.|
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Określa, czy Menedżer wizualny używa motyw globalny.|
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
-[in] [in] *prostokąt*
-*pEdit*<br/>
-[in] [in] *stanu* [in] *clrText*
+[in] *podstawowego kontrolera domeny*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *stanu*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1057,8 +1058,9 @@ virtual void OnDrawHeaderCtrlBorder(
 *Rect*<br/>
 [in] Prostokąt, który określa granice formantu nagłówka.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* parametr logiczny, który wskazuje, czy użytkownik naciśnie kontrolkę nagłówka.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Parametr logiczny, który wskazuje, czy użytkownik naciśnie kontrolkę nagłówka.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Kolor początkowy pasek postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.
 
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442087"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080848"
 ---
 # <a name="security-implications-of-customization"></a>Konsekwencje dostosowania związane z zabezpieczeniami
 
@@ -38,7 +38,7 @@ Zaleca się jeden z następujących trzech sposobów zamknąć luk w zabezpiecze
 
 - Store danych w bezpiecznej pliku zamiast w rejestrze.
 
-     Aby wykonać te pierwsze dwa sposoby, należy wyprowadzić klasę z [klasa CSettingsStore](../mfc/reference/csettingsstore-class.md) i zastąp jego metody do zaimplementowania szyfrowanie lub magazyn poza rejestru.
+   Aby wykonać te pierwsze dwa sposoby, należy wyprowadzić klasę z [klasa CSettingsStore](../mfc/reference/csettingsstore-class.md) i zastąp jego metody do zaimplementowania szyfrowanie lub magazyn poza rejestru.
 
 - Można również wyłączyć dostosowań w aplikacji.
 

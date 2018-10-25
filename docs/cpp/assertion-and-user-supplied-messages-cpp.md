@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057883"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)
 
@@ -36,7 +36,7 @@ Okres istnienia aplikacji składa się z fazy przetwarzania wstępnego, fazy kom
 
 - [Static_assert](../cpp/static-assert.md) deklaracji jest aktywna w czasie kompilacji. Sprawdza potwierdzenia oprogramowania, które są reprezentowane przez wyrażenia integralne określone przez użytkownika, które można przekonwertować na wartość logiczną. Jeśli wyrażenie ma wartość zero (false), kompilator generuje komunikat określony przez użytkownika i kompilacja nie powiedzie się z powodu błędu.
 
-     Deklaracja `static_assert` jest szczególnie przydatna podczas debugowania szablonów, ponieważ argumenty szablonu mogą być zawarte w wyrażeniu określonym przez użytkownika.
+   Deklaracja `static_assert` jest szczególnie przydatna podczas debugowania szablonów, ponieważ argumenty szablonu mogą być zawarte w wyrażeniu określonym przez użytkownika.
 
 - [Assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro jest aktywna w czasie wykonywania. Ocenia wyrażenia określone przez użytkownika, a jeśli wynik wynosi zero, system wysyła komunikat diagnostyczny i zamyka aplikację. Wiele innych makr, takich jak[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) i _asserte —, przypominają to makro, ale emitują różne komunikaty diagnostyczne zdefiniowane przez system lub zdefiniowanych przez użytkownika.
 

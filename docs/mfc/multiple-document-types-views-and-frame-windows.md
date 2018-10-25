@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054114"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Wiele typów dokumentów, widoków i okien ramowych
 
@@ -62,15 +62,15 @@ Biblioteka MFC obsługuje trzy wspólnych interfejsów użytkownika wymagającyc
 
 - Pokaż obiekty tej samej klasy, każdy w osobnym oknie ramki dokumentu MDI.
 
-     Możesz chcieć obsługują tworzenie drugiego okna ramki dokumentu. Użytkownik może wybrać polecenie nowe okno, aby otworzyć drugiego ramki pod kątem tego samego dokumentu, a następnie użyć dwóch ramek, aby jednocześnie wyświetlić różne części dokumentu. Platforma obsługuje polecenie nowe okno w menu Okno dla aplikacji MDI, duplikując początkowej ramki okna i widoku dołączony do dokumentu.
+   Możesz chcieć obsługują tworzenie drugiego okna ramki dokumentu. Użytkownik może wybrać polecenie nowe okno, aby otworzyć drugiego ramki pod kątem tego samego dokumentu, a następnie użyć dwóch ramek, aby jednocześnie wyświetlić różne części dokumentu. Platforma obsługuje polecenie nowe okno w menu Okno dla aplikacji MDI, duplikując początkowej ramki okna i widoku dołączony do dokumentu.
 
 - Pokaż obiekty tej samej klasy, w tym samym oknie ramki dokumentu.
 
-     Okna podziału Podziel obszar widoku okna pojedynczego dokumentu na wiele oddzielnych widoków dokumentu. Szablon tworzy wiele obiektów widoku z tej samej klasy widoku. Aby uzyskać więcej informacji, zobacz [Windows rozdzielacz](#_core_splitter_windows).
+   Okna podziału Podziel obszar widoku okna pojedynczego dokumentu na wiele oddzielnych widoków dokumentu. Szablon tworzy wiele obiektów widoku z tej samej klasy widoku. Aby uzyskać więcej informacji, zobacz [Windows rozdzielacz](#_core_splitter_windows).
 
 - Pokaż obiekty różnych klas w jednej ramki okna.
 
-     W tym modelu odmianą okno rozdzielacza wielu widoków udostępnianie jednej ramki okna. Widoki są konstruowane na podstawie różnych klas poszczególnych widokach, podając inny sposób, aby wyświetlić ten sam dokument. Na przykład jeden widok może wyświetlać dokumentu edytora tekstów w trybie normalnym, a w innych widokach pojawia się w tryb konspektu. Formant Splitter — umożliwia użytkownikowi dostosowanie względne rozmiary widoków.
+   W tym modelu odmianą okno rozdzielacza wielu widoków udostępnianie jednej ramki okna. Widoki są konstruowane na podstawie różnych klas poszczególnych widokach, podając inny sposób, aby wyświetlić ten sam dokument. Na przykład jeden widok może wyświetlać dokumentu edytora tekstów w trybie normalnym, a w innych widokach pojawia się w tryb konspektu. Formant Splitter — umożliwia użytkownikowi dostosowanie względne rozmiary widoków.
 
 Poniższy rysunek podzielony na części, b i c, przedstawia trzy modele interfejsu użytkownika w kolejności, przedstawione powyżej.
 

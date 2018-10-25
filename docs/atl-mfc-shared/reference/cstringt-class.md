@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: cf54f03ffd18c9f02920049fa60781a781865cc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809125"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082329"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -105,8 +105,8 @@ Ta klasa reprezentuje `CStringT` obiektu.
 
 ```
 
-template<typename BaseType, class StringTraits>  
-class CStringT :   
+template<typename BaseType, class StringTraits>
+class CStringT :
 public CSimpleStringT<BaseType,
                       _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                       ::c_bIsMFCDLLTraits>
@@ -294,7 +294,7 @@ Ponieważ `CStringT` używa argumentu szablonu, aby zdefiniować typ znaku (albo
 Przydziela ciąg automatyzacji typu BSTR i kopiuje zawartość `CStringT` obiekt, w tym kończącego znaku null.
 
 ```
-BSTR AllocSysString() const;  
+BSTR AllocSysString() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -307,8 +307,7 @@ W programach MFC [klasa CMemoryException](../../mfc/reference/cmemoryexception-c
 
 Najczęściej Jeśli ten ciąg jest przekazywany do funkcji COM jako [in] parametru, a następnie ta wymaga obiekt wywołujący zwolnić ciągu. Można to zrobić za pomocą [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), zgodnie z opisem w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Allocating i zwalnianie pamięci dla BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Aby uzyskać więcej informacji na temat funkcji alokacji OLE w Windows, zobacz [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) w zestawie Windows SDK.  
-
+Aby uzyskać więcej informacji na temat funkcji alokacji OLE w Windows, zobacz [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -411,7 +410,7 @@ Funkcja generic tekst `_tcscoll`, który jest zdefiniowany w TCHAR. Godz., mapuj
 Porównuje dwa ciągi (z uwzględnieniem wielkości liter).
 
 ```
-int Compare(PCXSTR psz) const; 
+int Compare(PCXSTR psz) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -465,75 +464,75 @@ Funkcja generic tekst `_tcsicmp`, który jest zdefiniowany w TCHAR. Godz., mapuj
 Konstruuje `CStringT` obiektu.
 
 ```
-CStringT() throw() :   
+CStringT() throw() :
     CThisSimpleString(StringTraits::GetDefaultManager());
 
-explicit CStringT(IAtlStringMgr* pStringMgr) throw() :   
-    CThisSimpleString( pStringMgr); 
+explicit CStringT(IAtlStringMgr* pStringMgr) throw() :
+    CThisSimpleString( pStringMgr);
 
 CStringT(const VARIANT& varSrc);
 
 CStringT(const VARIANT& varSrc, IAtlStringMgr* pStringMgr);
 
-CStringT(const CStringT& strSrc) :   
+CStringT(const CStringT& strSrc) :
     CThisSimpleString( strSrc);
 
 operator CSimpleStringT<
-                    BaseType, 
+                    BaseType,
                     !_CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                     :: c_bIsMFCDLLTraits> &()
 
-template <bool bMFCDLL>  
-CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :   
+template <bool bMFCDLL>
+CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :
     CThisSimpleString( strSrc);
 
-template <class SystemString>  
-CStringT(SystemString^ pString) :   
+template <class SystemString>
+CStringT(SystemString^ pString) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pszSrc) :   
+CStringT(const XCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :   
+/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :   
+CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength) :   
+CStringT(const XCHAR* pch, int nLength) :
     CThisSimpleString( pch, nLength, StringTraits::GetDefaultManager());
 
-CStringT(const YCHAR* pch, int nLength) :   
+CStringT(const YCHAR* pch, int nLength) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :   
+CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :
     CThisSimpleString( pch, nLength, pStringMgr);
 
-CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :   
+CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 ```
 
@@ -642,11 +641,11 @@ Jeśli *nCount* jest dłuższa niż spowoduje usunięcie parametrów, pozostała
 
 [!code-cpp[NVC_ATLMFC_Utilities#113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]
 
-```Output  
+```Output
 Before: Soccer is best,
-    but hockey is quicker!  
+    but hockey is quicker!
 After: Soccer best,
-    but hockey is quicker!  
+    but hockey is quicker!
 ```
 
 ##  <a name="find"></a>  CStringT::Find
@@ -886,7 +885,7 @@ Długość ciągu zmienione.
 Wyodrębnia najdalej z lewej strony *nCount* znaków z tego `CStringT` obiektu i zwraca kopię wyodrębnionego ciągu.
 
 ```
-CStringT Left(int nCount) const; 
+CStringT Left(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -997,7 +996,7 @@ Zwraca podciąg o długości *nCount* znaków z tego `CStringT` obiektu, zaczyna
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
-CStringT Mid(int iFirst) const; 
+CStringT Mid(int iFirst) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1090,10 +1089,10 @@ Istnieje siedem form przeciążenia `CStringT::operator+` funkcji. Pierwsza wers
 ```
 CStringT& operator+=(const CThisSimpleString& str);
 
-template<bool bMFCDLL>  
+template<bool bMFCDLL>
 CStringT& operator+=(const const CSimpleStringT<BaseType, bMFCDLL>& str);
 
-template<int t_nSize>  
+template<int t_nSize>
 CStringT& operator+=(const CStaticString<XCHAR, t_nSize>& strSrc);
 CStringT& operator+=(PCXSTR pszSrc);
 CStringT& operator+=(PCYSTR pszSrc);
@@ -1105,7 +1104,7 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-str  
+*str*<br/>
 Odwołanie do `CThisSimpleString` obiektu.
 
 *bMFCDLL*<br/>
@@ -1478,7 +1477,7 @@ Funkcja jest podobne do funkcji wykonawczej `strrchr`.
 Wyodrębnianie ostatnich (czyli po prawej stronie) *nCount* znaków z tego `CStringT` obiektu i zwraca kopię wyodrębnionego ciągu.
 
 ```
-CStringT Right(int nCount) const; 
+CStringT Right(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1505,7 +1504,7 @@ Dla znaków wielobajtowych zestawów znaków (MBCS) *nCount* odwołuje się do k
 Przydzieli BSTR wskazywany przez *pbstr* i kopiuje zawartość `CStringT` obiekt, w tym znakiem NULL.
 
 ```
-BSTR SetSysString(BSTR* pbstr) const; 
+BSTR SetSysString(BSTR* pbstr) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1532,7 +1531,7 @@ Ta funkcja jest zwykle używana do zmiany wartości parametrów przekazywany prz
 Wyodrębnia znaki ciągu, począwszy od pierwszego znaku, które nie znajdują się w zestawie znaków identyfikowane przez *pszCharSet*.
 
 ```
-CStringT SpanExcluding(PCXSTR pszCharSet) const; 
+CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1557,7 +1556,7 @@ Podciąg, który zawiera znaki do ciągu, które nie znajdują się w *pszCharSe
 Wyodrębnia znaki ciągu, począwszy od pierwszego znaku, które znajdują się w zestawie znaków identyfikowane przez *pszCharSet*.
 
 ```
-CStringT SpanIncluding(PCXSTR pszCharSet) const; 
+CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1582,7 +1581,7 @@ Jeśli pierwszym znakiem ciągu nie ma w zestawie znaków następnie `SpanInclud
 Znajduje następny token w ciągu docelowym
 
 ```
-CStringT Tokenize(PCXSTR pszTokens, int& iStart) const; 
+CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ```
 
 ### <a name="parameters"></a>Parametry

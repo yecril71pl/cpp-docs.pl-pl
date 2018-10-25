@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 492e5e5c28b50ea8a7a20d654310ebba26d2f701
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067504"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -50,7 +50,7 @@ Określa blok biblioteki w pliku .idl.
 *Nazwa*<br/>
 (Opcjonalnie) Nazwa bloku biblioteki.
 
-*Wersja*<br/>
+*version*<br/>
 (Opcjonalnie) Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.
 
 *uuid*<br/>
@@ -181,4 +181,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[Wersja](version-cpp.md)  
+[version](version-cpp.md)

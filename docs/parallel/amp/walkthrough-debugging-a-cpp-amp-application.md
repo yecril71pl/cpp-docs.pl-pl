@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d198368dd3ed1be9110f08712de646156c98bb63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19e2e7120a73ed7e386b46f32d105376f3fac9b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406779"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069246"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
 
@@ -247,27 +247,27 @@ W tej sekcji pokazano, jak debugowanie kodu GPU, czyli kod zawarty w `sum_kernel
 
 1. Aby otworzyć **wątków GPU** okna, na pasku menu wybierz **debugowania** > **Windows** > **wątków GPU**.
 
-     Możesz sprawdzić stan procesora GPU wątki w **wątków GPU** zostanie wyświetlone okno.
+   Możesz sprawdzić stan procesora GPU wątki w **wątków GPU** zostanie wyświetlone okno.
 
 2. Zadokuj **wątków GPU** okna w dolnej części programu Visual Studio. Wybierz **rozwiń przełącznika wątku** przycisk, aby wyświetlić pola tekstowe fragmentu i wątku. **Wątków GPU** okno całkowita liczba aktywnych i zablokowane wątki GPU pokazuje, jak pokazano na poniższej ilustracji.
 
      ![Okno wątków GPU z 4 aktywnych wątków](../../parallel/amp/media/campc.png "campc") okno wątków GPU
 
-     Istnieją Kafelki 313 przydzielone to obliczenie. Każdy Kafelek zawiera 32 wątków. Ponieważ lokalne debugowanie GPU odbywa się na emulatorze oprogramowania, istnieją cztery Aktywne wątki GPU. Cztery wątki wykonania instrukcji jednocześnie, a następnie przejdź razem do następnej instrukcji.
+   Istnieją Kafelki 313 przydzielone to obliczenie. Każdy Kafelek zawiera 32 wątków. Ponieważ lokalne debugowanie GPU odbywa się na emulatorze oprogramowania, istnieją cztery Aktywne wątki GPU. Cztery wątki wykonania instrukcji jednocześnie, a następnie przejdź razem do następnej instrukcji.
 
-     W **wątków GPU** oknie cztery wątki GPU są aktywne i blokowane wątki GPU 28 [tile_barrier::wait](reference/tile-barrier-class.md#wait) instrukcji zdefiniowany z numerem o wierszu 21 (`t_idx.barrier.wait();`). Wszystkie wątki GPU 32 należą do pierwszego fragmentu `tile[0]`. Strzałka wskazuje na wiersz, który zawiera bieżący wątek. Aby przełączyć się do innego wątku, należy użyć jednej z następujących metod:
+   W **wątków GPU** oknie cztery wątki GPU są aktywne i blokowane wątki GPU 28 [tile_barrier::wait](reference/tile-barrier-class.md#wait) instrukcji zdefiniowany z numerem o wierszu 21 (`t_idx.barrier.wait();`). Wszystkie wątki GPU 32 należą do pierwszego fragmentu `tile[0]`. Strzałka wskazuje na wiersz, który zawiera bieżący wątek. Aby przełączyć się do innego wątku, należy użyć jednej z następujących metod:
 
     - W wierszu dla wątku przełączyć się do w **wątków GPU** okna, otwórz menu skrótów i wybierz polecenie **Przełącz do wątku**. Jeśli wiersz reprezentuje więcej niż jeden wątek, zostanie przełączona w pierwszym wątku, zgodnie z współrzędne wątku.
 
     - Wprowadź wartości fragmentu i wątku wątku w odpowiednich polach tekstowych, a następnie wybierz **wątku przełącznika** przycisku.
 
-     **Stos wywołań** jest wyświetlana w oknie stosu wywołań bieżącego wątku procesora GPU.
+   **Stos wywołań** jest wyświetlana w oknie stosu wywołań bieżącego wątku procesora GPU.
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Aby korzystanie z okna stosów równoległych
 
 1. Aby otworzyć **stosów równoległych** okna, na pasku menu wybierz **debugowania** > **Windows** > **stosów równoległych**.
 
-     Możesz użyć **stosów równoległych** okna, aby sprawdzić jednocześnie ramek stosu wielu wątków GPU.
+   Możesz użyć **stosów równoległych** okna, aby sprawdzić jednocześnie ramek stosu wielu wątków GPU.
 
 2. Zadokuj **stosów równoległych** okna w dolnej części programu Visual Studio.
 
@@ -275,19 +275,19 @@ W tej sekcji pokazano, jak debugowanie kodu GPU, czyli kod zawarty w `sum_kernel
 
      ![Okno stosów równoległych z 4 aktywnych wątków](../../parallel/amp/media/campd.png "campd") okna stosów równoległych
 
-     32 wątków zakończył się z `_kernel_stub` do instrukcji lambda w `parallel_for_each` wywołania funkcji i następnie `sum_kernel_tiled` funkcji, w którym występuje równoległych redukcji. do osiągnięcia postępu 28 poza 32 wątków [tile_barrier::wait](reference/tile-barrier-class.md#wait) instrukcji i zostaną zablokowane w wierszu 22, natomiast inne wątki 4 pozostają aktywne w `sum_kernel_tiled` funkcji w wierszu 30.
+   32 wątków zakończył się z `_kernel_stub` do instrukcji lambda w `parallel_for_each` wywołania funkcji i następnie `sum_kernel_tiled` funkcji, w którym występuje równoległych redukcji. do osiągnięcia postępu 28 poza 32 wątków [tile_barrier::wait](reference/tile-barrier-class.md#wait) instrukcji i zostaną zablokowane w wierszu 22, natomiast inne wątki 4 pozostają aktywne w `sum_kernel_tiled` funkcji w wierszu 30.
 
-     Możesz sprawdzić właściwości wątek GPU, które są dostępne w **wątków GPU** okna w rozbudowane DataTip z **stosów równoległych** okna. Aby to zrobić, Zatrzymaj wskaźnik myszy na ramce stosu **sum_kernel_tiled**. Poniższa ilustracja przedstawia DataTip.
+   Możesz sprawdzić właściwości wątek GPU, które są dostępne w **wątków GPU** okna w rozbudowane DataTip z **stosów równoległych** okna. Aby to zrobić, Zatrzymaj wskaźnik myszy na ramce stosu **sum_kernel_tiled**. Poniższa ilustracja przedstawia DataTip.
 
      ![Etykietki danych dla okna stosów równoległych](../../parallel/amp/media/campe.png "campe") wątek GPU etykietki danych
 
-     Aby uzyskać więcej informacji na temat **stosów równoległych** okna, zobacz [przy użyciu Parallel Stacks Window](/visualstudio/debugger/using-the-parallel-stacks-window).
+   Aby uzyskać więcej informacji na temat **stosów równoległych** okna, zobacz [przy użyciu Parallel Stacks Window](/visualstudio/debugger/using-the-parallel-stacks-window).
 
 ### <a name="to-use-the-parallel-watch-window"></a>Aby korzystanie z okna równoległego wyrażenia kontrolnego
 
 1. Aby otworzyć **równoległego wyrażenia kontrolnego** okna, na pasku menu wybierz **debugowania** > **Windows** > **równoległego wyrażenia kontrolnego**  >  **Równoległe wyrażenie kontrolne 1**.
 
-     Możesz użyć **równoległego wyrażenia kontrolnego** okna, aby sprawdzić wartości wyrażenia w wielu wątkach.
+   Możesz użyć **równoległego wyrażenia kontrolnego** okna, aby sprawdzić wartości wyrażenia w wielu wątkach.
 
 2. Zadokuj **równoległa Czujka 1** okna do dolnej części programu Visual Studio. Istnieją 32 wierszy w tabeli **równoległego wyrażenia kontrolnego** okna. Każdy odpowiada wątek GPU, które pojawiło się w oknie wątków GPU i **stosów równoległych** okna. Teraz możesz wprowadzić wartości, którego ma zostać sprawdzony przez wszystkie wątki GPU 32 wyrażeń.
 
@@ -297,17 +297,17 @@ W tej sekcji pokazano, jak debugowanie kodu GPU, czyli kod zawarty w `sum_kernel
 
 5. Wybierz **Dodaj czujkę** nagłówek kolumny ponownie, typ `localA[localIdx[0]]`, a następnie wybierz **Enter** klucza.
 
-     Można sortować według określonego wyrażenia, wybierając odpowiedni nagłówek kolumny.
+   Można sortować według określonego wyrażenia, wybierając odpowiedni nagłówek kolumny.
 
-     Wybierz **localA [localIdx [0]]** nagłówek kolumny, aby posortować kolumnę. Na poniższej ilustracji przedstawiono wyniki sortowanie według **localA [localIdx [0]]**.
+   Wybierz **localA [localIdx [0]]** nagłówek kolumny, aby posortować kolumnę. Na poniższej ilustracji przedstawiono wyniki sortowanie według **localA [localIdx [0]]**.
 
      ![Równoległe okno czujki z posortowane wyniki](../../parallel/amp/media/campf.png "campf") wyników sortowania
 
-     Możesz wyeksportować zawartość **równoległego wyrażenia kontrolnego** okna programu Excel, wybierając **Excel** przycisk, a następnie wybierając **Otwórz w programie Excel**. Jeśli masz zainstalowany na komputerze deweloperskim w programie Excel, spowoduje to otwarcie arkusza programu Excel, który zawiera zawartość.
+   Możesz wyeksportować zawartość **równoległego wyrażenia kontrolnego** okna programu Excel, wybierając **Excel** przycisk, a następnie wybierając **Otwórz w programie Excel**. Jeśli masz zainstalowany na komputerze deweloperskim w programie Excel, spowoduje to otwarcie arkusza programu Excel, który zawiera zawartość.
 
 6. W prawym górnym rogu **równoległego wyrażenia kontrolnego** okna, jest formant filtru, który służy do filtrowania zawartości za pomocą wyrażeń logicznych. Wprowadź `localA[localIdx[0]] > 20000` w tekście formant filtru pole, a następnie wybierz **Enter** klucza.
 
-     Okno zawiera teraz tylko wątki, w którym `localA[localIdx[0]]` wartość jest większa niż 20000. Zawartość nadal są posortowane według `localA[localIdx[0]]` kolumny, która jest akcja sortowania wcześniej wykonanymi.
+   Okno zawiera teraz tylko wątki, w którym `localA[localIdx[0]]` wartość jest większa niż 20000. Zawartość nadal są posortowane według `localA[localIdx[0]]` kolumny, która jest akcja sortowania wcześniej wykonanymi.
 
 ## <a name="flagging-gpu-threads"></a>Flagowanie wątków GPU
 
@@ -321,20 +321,20 @@ Możesz oznaczyć określone wątki GPU, oznaczając je flagą **wątków GPU** 
 
 3. Wybierz symbol flagi po lewej stronie wiersza, który zawiera cztery wątki, które są już aktywne.
 
-     Na poniższej ilustracji przedstawiono cztery aktywnych wątków oflagowanych w **wątków GPU** okna.
+   Na poniższej ilustracji przedstawiono cztery aktywnych wątków oflagowanych w **wątków GPU** okna.
 
      ![Okno wątków GPU z oflagowane wątki](../../parallel/amp/media/campg.png "campg") aktywnych wątków w okno wątków GPU
 
-     **Równoległego wyrażenia kontrolnego** okna i DataTip z **stosów równoległych** okna zarówno wskazują oflagowane wątki.
+   **Równoległego wyrażenia kontrolnego** okna i DataTip z **stosów równoległych** okna zarówno wskazują oflagowane wątki.
 
 4. Jeśli chcesz skupić się na cztery wątki, które możesz oznaczone, można wybrać do wyświetlenia w **wątków GPU**, **równoległego wyrażenia kontrolnego**, i **stosów równoległych** windows tylko oflagowane wątki.
 
-     Wybierz **Pokaż tylko oflagowane** przycisk na dowolnym systemu windows lub na **Lokalizacja debugowania** paska narzędzi. Poniższa ilustracja przedstawia **Pokaż tylko oflagowane** znajdujący się na **Lokalizacja debugowania** paska narzędzi.
+   Wybierz **Pokaż tylko oflagowane** przycisk na dowolnym systemu windows lub na **Lokalizacja debugowania** paska narzędzi. Poniższa ilustracja przedstawia **Pokaż tylko oflagowane** znajdujący się na **Lokalizacja debugowania** paska narzędzi.
 
      ![Pasek narzędzi lokalizacji z ikoną Pokaż tylko oflagowane debugowania](../../parallel/amp/media/camph.png "camph")
 **Pokaż tylko oflagowane** przycisku
 
-     Teraz **wątków GPU**, **równoległego wyrażenia kontrolnego**, i **stosów równoległych** tylko oflagowane wątki wyświetlania systemu windows.
+   Teraz **wątków GPU**, **równoległego wyrażenia kontrolnego**, i **stosów równoległych** tylko oflagowane wątki wyświetlania systemu windows.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Zawiesza się i odblokowania wątków GPU
 
@@ -348,11 +348,11 @@ Można zablokować (zawieszenie) i Odblokuj wątki procesora GPU (Wznów) albo *
 
 3. Otwórz menu skrótów dla aktywnego wiersza, a następnie wybierz **Freeze**.
 
-     Poniższa ilustracja z **wątków GPU** okno pokazuje, że wszystkie cztery wątki są zablokowane.
+   Poniższa ilustracja z **wątków GPU** okno pokazuje, że wszystkie cztery wątki są zablokowane.
 
      ![Windows wątków GPU przedstawiający zablokowane wątki](../../parallel/amp/media/campk.png "campk") zablokowane wątki **wątków GPU** okna
 
-     Podobnie **równoległego wyrażenia kontrolnego** okno pokazuje, że wszystkie cztery wątki są zablokowane.
+   Podobnie **równoległego wyrażenia kontrolnego** okno pokazuje, że wszystkie cztery wątki są zablokowane.
 
 4. Na pasku menu wybierz **debugowania** > **Kontynuuj** umożliwia czterech kolejnych wątków GPU postępu ostatnie barierę w wierszu 22 i dotarcie do punktu przerwania w wierszu 30. **Wątków GPU** okno zawiera pozostawienie cztery wątki wcześniej zamrożone, zamrożone i znajduje się w stanie aktywnym.
 
@@ -364,7 +364,7 @@ Można zablokować (zawieszenie) i Odblokuj wątki procesora GPU (Wznów) albo *
 
 1. W menu skrótów dla jednej z wątków w **wątków GPU** oknie Wybierz **Group By**, **adres**.
 
-     Wątki w **wątków GPU** okna są pogrupowane według adresu. Adres odnosi się do instrukcji, w którym znajduje się każda grupa wątków dezasemblacji. 24 wątki są w wierszu 22 gdzie [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait) jest wykonywany. 12 wątków znajdują się w instrukcji barierę w wierszu 32. Cztery te wątki są oflagowane. Osiem wątki są w punkcie przerwania w wierszu 30. Cztery te wątki są zablokowane. Na poniższej ilustracji przedstawiono pogrupowanych wątki **wątków GPU** okna.
+   Wątki w **wątków GPU** okna są pogrupowane według adresu. Adres odnosi się do instrukcji, w którym znajduje się każda grupa wątków dezasemblacji. 24 wątki są w wierszu 22 gdzie [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait) jest wykonywany. 12 wątków znajdują się w instrukcji barierę w wierszu 32. Cztery te wątki są oflagowane. Osiem wątki są w punkcie przerwania w wierszu 30. Cztery te wątki są zablokowane. Na poniższej ilustracji przedstawiono pogrupowanych wątki **wątków GPU** okna.
 
      ![Okno wątków GPU z wątkami, pogrupowane według adresu](../../parallel/amp/media/campl.png "campl") pogrupowane w wątki w **wątków GPU** okna
 
@@ -382,7 +382,7 @@ Uruchom wszystkie wątki we fragmencie danego na wiersz zawierający kursor przy
 
 3. W menu skrótów dla **Edytor kodu**, wybierz **Uruchom bieżący Kafelek do kursora**.
 
-     24 wątków, które wcześniej zostały zablokowane w barierę w wierszu 21 osiągnięcia postępu do wiersza 32. Jest to pokazane w **wątków GPU** okna.
+   24 wątków, które wcześniej zostały zablokowane w barierę w wierszu 21 osiągnięcia postępu do wiersza 32. Jest to pokazane w **wątków GPU** okna.
 
 ## <a name="see-also"></a>Zobacz też
 

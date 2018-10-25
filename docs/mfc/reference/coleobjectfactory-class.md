@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079704"
 ---
 # <a name="coleobjectfactory-class"></a>Coleobjectfactory — klasa
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ Zawiera co najmniej jeden z następujących flag:
 
 - `afxRegFreeThreading` Ustawia model wątkowości w rejestrze, aby ThreadingModel = bezpłatna.
 
-     Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](/windows/desktop/com/inprocserver32) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.
+   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](/windows/desktop/com/inprocserver32) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.
 
 *lpszProgID*<br/>
 Wskaźnik do ciągu zawierającego identyfikator programu werbalne, takie jak "Programu Microsoft Excel."
@@ -349,7 +348,7 @@ Krótkie omówienie dwie formy dla tej funkcji należy wykonać:
 
 - **UpdateRegistry (** `bRegister` **)** ten rodzaj funkcji jest możliwym do zastąpienia. Jeśli *bRegister* ma wartość PRAWDA, to rejestrów funkcja kontrolki klasy z rejestru systemowego. W przeciwnym razie wyrejestrowuje klasy.
 
-     Jeśli używasz MFC ActiveX ControlWizard do tworzenia projektu ControlWizard dostarcza zastąpienie tego czystą funkcję wirtualną.
+   Jeśli używasz MFC ActiveX ControlWizard do tworzenia projektu ControlWizard dostarcza zastąpienie tego czystą funkcję wirtualną.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 

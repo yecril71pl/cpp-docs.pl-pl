@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378205"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082713"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Używanie arkuszy właściwości w aplikacji
 
@@ -34,9 +34,9 @@ Aby korzystać z arkusza właściwości w aplikacji, wykonaj następujące czynn
 
 1. Tworzenie zasobu okna dialogowego szablon dla każdej strony właściwości. Należy pamiętać, który może być przełączanie użytkowników z jednej strony do innego, więc układ każdej strony możliwie jak spójnie.
 
-     Szablony okna dialogowego na wszystkich stronach nie trzeba mieć taki sam rozmiar. Środowisko wykorzystuje rozmiar największego strony, aby określić, ile miejsca do przydzielenia w arkuszu właściwości dla stron właściwości.
+   Szablony okna dialogowego na wszystkich stronach nie trzeba mieć taki sam rozmiar. Środowisko wykorzystuje rozmiar największego strony, aby określić, ile miejsca do przydzielenia w arkuszu właściwości dla stron właściwości.
 
-     Podczas tworzenia zasobu szablonu okna dialogowego strony właściwości, należy określić następujące style w arkuszu właściwości okna dialogowego właściwości:
+   Podczas tworzenia zasobu szablonu okna dialogowego strony właściwości, należy określić następujące style w arkuszu właściwości okna dialogowego właściwości:
 
    - Ustaw **podpis** edytować pola na **ogólne** strony w tekście, które mają być wyświetlane na karcie tej strony.
 
@@ -60,9 +60,9 @@ Aby korzystać z arkusza właściwości w aplikacji, wykonaj następujące czynn
 
    - Wywołaj [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) dla każdej strony.
 
-     Zazwyczaj obiekt, który tworzy `CPropertySheet` wzrasta, powstaje `CPropertyPage` obiektów w tym kroku. Jednak w przypadku zaimplementowania `CPropertySheet`-klasy, można osadzić `CPropertyPage` obiekty w `CPropertySheet` obiektu, a następnie wywołać `AddPage` dla każdej strony z `CPropertySheet`— Konstruktor klasy pochodnej. `AddPage` dodaje `CPropertyPage` do listy stron w arkuszu właściwości obiektu, ale nie powoduje utworzenia okno dla tej strony. W związku z tym, nie jest konieczne czekać do momentu utworzenia okna arkusza właściwości, aby wywołać `AddPage`; może wywołać `AddPage` z arkusza właściwości konstruktora.
+   Zazwyczaj obiekt, który tworzy `CPropertySheet` wzrasta, powstaje `CPropertyPage` obiektów w tym kroku. Jednak w przypadku zaimplementowania `CPropertySheet`-klasy, można osadzić `CPropertyPage` obiekty w `CPropertySheet` obiektu, a następnie wywołać `AddPage` dla każdej strony z `CPropertySheet`— Konstruktor klasy pochodnej. `AddPage` dodaje `CPropertyPage` do listy stron w arkuszu właściwości obiektu, ale nie powoduje utworzenia okno dla tej strony. W związku z tym, nie jest konieczne czekać do momentu utworzenia okna arkusza właściwości, aby wywołać `AddPage`; może wywołać `AddPage` z arkusza właściwości konstruktora.
 
-     Domyślnie jeśli arkusz właściwości ma więcej kart niż mieści się w jednym wierszu arkusza właściwości karty będą umieszczane w wielu wierszach. Aby wyłączyć umieszczanie na stosie, należy wywołać [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) z parametrem ustawionym **FALSE**. Należy wywołać `EnableStackedTabs` po utworzeniu arkusza właściwości.
+   Domyślnie jeśli arkusz właściwości ma więcej kart niż mieści się w jednym wierszu arkusza właściwości karty będą umieszczane w wielu wierszach. Aby wyłączyć umieszczanie na stosie, należy wywołać [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) z parametrem ustawionym **FALSE**. Należy wywołać `EnableStackedTabs` po utworzeniu arkusza właściwości.
 
 1. Wywołaj [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) lub [Utwórz](../mfc/reference/cpropertysheet-class.md#create) do wyświetlenia arkusza właściwości. Wywołaj `DoModal` Utwórz arkusz właściwości jako modalne okno dialogowe. Wywołaj **Utwórz** utworzyć arkusz właściwości jako niemodalnego okna dialogowego.
 

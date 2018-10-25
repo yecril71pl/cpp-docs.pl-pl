@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093851"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060901"
 ---
 # <a name="idispeventimpl-class"></a>Klasa IDispEventImpl
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ Klasa używana do zarządzania informacji o typie *T*. Wartość domyślna to kl
 
 `IDispEventImpl` działa w połączeniu z mapą obiekt sink zdarzenia w klasie do kierowanie zdarzeń do funkcji odpowiedni program obsługi. Aby użyć tej klasy:
 
-Dodaj [SINK_ENTRY](composite-control-macros.md#sink_entry) lub [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) makra do mapy obiektu sink zdarzenia dla każdego zdarzenia dla każdego obiektu, który chcesz obsługiwać. Korzystając z `IDispEventImpl` jako klasa bazowa kontrolki złożonej, można wywołać [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) i przerwać połączenie ze źródłami zdarzeń, dla wszystkich wpisów w zdarzeniu ujścia mapy. W innych przypadkach, lub Aby uzyskać większą kontrolę, wywołanie [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) do nawiązywania połączenia między obiektu źródłowego oraz klasy bazowej. Wywołaj [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) aby przerwać połączenie.  
+Dodaj [SINK_ENTRY](composite-control-macros.md#sink_entry) lub [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) makra do mapy obiektu sink zdarzenia dla każdego zdarzenia dla każdego obiektu, który chcesz obsługiwać. Korzystając z `IDispEventImpl` jako klasa bazowa kontrolki złożonej, można wywołać [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) i przerwać połączenie ze źródłami zdarzeń, dla wszystkich wpisów w zdarzeniu ujścia mapy. W innych przypadkach, lub Aby uzyskać większą kontrolę, wywołanie [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) do nawiązywania połączenia między obiektu źródłowego oraz klasy bazowej. Wywołaj [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) aby przerwać połączenie.
 
 Muszą pochodzić od `IDispEventImpl` (przy użyciu unikatową wartość dla *nID*) dla każdego obiektu, dla których potrzebujesz do obsługi zdarzeń. Można ponownie użyć klasy bazowej przez unadvising względem obiektu jednego źródła, następnie wniosku względem obiektu innego źródła, ale maksymalna liczba obiektów źródłowej, które są obsługiwane przez pojedynczy obiekt w tym samym czasie, jest ograniczona przez liczbę `IDispEventImpl` klas bazowych.
 

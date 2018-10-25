@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059847"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 
@@ -100,7 +100,7 @@ Należy przestrzegać następujących wytycznych podczas deklarowania statycznie
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     To ograniczenie nie ma zastosowania w języku C++. Ponieważ C++ pozwala na dynamiczne zainicjowanie wszystkich obiektów, należy zainicjować obiekt, za pomocą wyrażenia, który używa adresu zmiennej lokalnej wątku. Można to osiągnąć, podobnie jak konstrukcji obiektów lokalnych wątku. Na przykład kodu pokazanego wcześniej nie generuje błąd, gdy jest ona kompilowana jako pliku źródłowego języka C++. Należy pamiętać, że adres zmiennej lokalnej wątku prawidłowe tylko tak długo, jak wątek, w którym została wykonana adres nadal istnieje.
+   To ograniczenie nie ma zastosowania w języku C++. Ponieważ C++ pozwala na dynamiczne zainicjowanie wszystkich obiektów, należy zainicjować obiekt, za pomocą wyrażenia, który używa adresu zmiennej lokalnej wątku. Można to osiągnąć, podobnie jak konstrukcji obiektów lokalnych wątku. Na przykład kodu pokazanego wcześniej nie generuje błąd, gdy jest ona kompilowana jako pliku źródłowego języka C++. Należy pamiętać, że adres zmiennej lokalnej wątku prawidłowe tylko tak długo, jak wątek, w którym została wykonana adres nadal istnieje.
 
 - Standard języka C umożliwia inicjowania obiektu lub zmiennej za pomocą wyrażenia zawierającego odwołanie do samego siebie, ale tylko w przypadku obiektów o zakresie niestatycznym. Mimo iż język C++ ogólnie dopuszcza dynamiczną inicjalizację obiektu za pomocą wyrażenia zawierającego odwołanie do samego siebie, tento typ inicializace nie jest dozwolony z obiektów lokalnych wątku. Na przykład:
 
@@ -110,9 +110,9 @@ Należy przestrzegać następujących wytycznych podczas deklarowania statycznie
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Należy pamiętać, że `sizeof` wyrażenie, które zawiera inicjowany obiekt nie reprezentuje odwołanie do samego siebie i jest włączone w C i C++.
+   Należy pamiętać, że `sizeof` wyrażenie, które zawiera inicjowany obiekt nie reprezentuje odwołanie do samego siebie i jest włączone w C i C++.
 
-     C++ nie dopuszcza dynamiczną inicjalizację danych wątku ze względu na możliwe przyszłe rozszerzenia będą miały do infrastruktury magazynu lokalnego wątku.
+   C++ nie dopuszcza dynamiczną inicjalizację danych wątku ze względu na możliwe przyszłe rozszerzenia będą miały do infrastruktury magazynu lokalnego wątku.
 
 - W systemach operacyjnych Windows przed Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteka DLL deklaruje żadnych danych ani obiektu jako `__declspec`(wątek), może to spowodować błąd ochrony Jeśli dynamicznie załadowane. Po załadowaniu pliku DLL za pomocą [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), sprawia, że wystąpił błąd systemu zawsze wtedy, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni na wątek jest przydzielany w czasie wykonywania, rozmiar to miejsce opiera się na obliczanie wymagań aplikacji, a także wymagania wszystkie biblioteki dll, które są statycznie łączone. Kiedy używasz `LoadLibrary`, nie można rozszerzyć tego miejsca, aby umożliwić zadeklarowane za pomocą zmiennych lokalnych wątku `__declspec`(wątek). Używanie interfejsów API protokołu TLS, takiej jak [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), w bibliotece DLL, można przydzielić TLS, jeśli biblioteka DLL jest obciążany `LoadLibrary`.
 

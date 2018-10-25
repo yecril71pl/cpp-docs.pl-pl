@@ -22,36 +22,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f31e3275ea341c2617ef54f88fc591a5400e15e
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 8873247ee54884236ed3472c345fb15b99e97131
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49807500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076688"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
-*Niestandardowe*Sess.H zawiera deklarację i implementację obiektu sesji OLE DB. Obiekt źródła danych tworzy obiekt sesji i reprezentuje konwersacje między: klienta oraz dostawcy. Kilka jednoczesnych sesji może być otwarty dla jednego źródła danych. Na liście dziedziczenia dla `CCustomSession` poniżej:  
-  
+*Niestandardowe*Sess.H zawiera deklarację i implementację obiektu sesji OLE DB. Obiekt źródła danych tworzy obiekt sesji i reprezentuje konwersacje między: klienta oraz dostawcy. Kilka jednoczesnych sesji może być otwarty dla jednego źródła danych. Na liście dziedziczenia dla `CCustomSession` poniżej:
+
 ```cpp
-/////////////////////////////////////////////////////////////////////////  
-// CCustomSession  
-class ATL_NO_VTABLE CCustomSession :   
-   public CComObjectRootEx<CComSingleThreadModel>,  
-   public IGetDataSourceImpl<CCustomSession>,  
-   public IOpenRowsetImpl<CCustomSession>,  
-   public ISessionPropertiesImpl<CCustomSession>,  
-   public IObjectWithSiteSessionImpl<CCustomSession>,  
-   public IDBSchemaRowsetImpl<CCustomSession>,  
-   public IDBCreateCommandImpl<CCustomSession, CCustomCommand>  
-```  
-  
-Dziedziczy obiektu session `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, i `IDBCreateCommand`. `IGetDataSource` Interfejs umożliwia sesję, aby pobrać źródła danych, w której został utworzony. Jest to przydatne, jeśli zajdzie potrzeba przywrócenia właściwości źródła danych, który został utworzony lub inne informacje, które źródło danych może zapewnić. `ISessionProperties` Interfejs obsługuje wszystkie właściwości dla tej sesji. `IOpenRowset` i `IDBCreateCommand` interfejsy są używane do wykonania pracy bazy danych. Jeśli dostawca obsługuje poleceń, implementuje `IDBCreateCommand` interfejsu. Służy do tworzenia obiektu polecenia, które można wykonać polecenia. Dostawca zawsze implementuje `IOpenRowset` obiektu. Służy do generowania prosty zestaw wierszy od dostawcy. Jest domyślnego zestawu wierszy (na przykład `"select * from mytable"`) od dostawcy.  
-  
-Kreator generuje również trzy klasy sesji: `CCustomSessionColSchema`, `CCustomSessionPTSchema`, i `CCustomSessionTRSchema`. Sesje te są używane do zestawów wierszy schematu. Zestawy wierszy schematu umożliwiają dostawcy w celu zwracania metadanych do użytkownika bez konsumenta o do wykonywania zapytań lub pobierania danych. Pobieranie metadanych może być znacznie szybciej niż wykrywanie możliwości dostawców.  
-  
-Specyfikacja OLE DB wymaga, aby dostawców Implementowanie `IDBSchemaRowset` typów zestawów wierszy schematu obsługę trzech interfejsu: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES i DBSCHEMA_TABLES. Kreator generuje implementacje dla każdego zestawu wierszy schematu. Każda klasa generowane przez kreatora zawiera `Execute` metody. W tym `Execute` metody mogą zwracać dane do dostawcy o tym, które tabele, kolumny i typy danych obsługują. Te dane, zwykle jest znany w czasie kompilacji.  
-  
-## <a name="see-also"></a>Zobacz też  
+/////////////////////////////////////////////////////////////////////////
+// CCustomSession
+class ATL_NO_VTABLE CCustomSession :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public IGetDataSourceImpl<CCustomSession>,
+   public IOpenRowsetImpl<CCustomSession>,
+   public ISessionPropertiesImpl<CCustomSession>,
+   public IObjectWithSiteSessionImpl<CCustomSession>,
+   public IDBSchemaRowsetImpl<CCustomSession>,
+   public IDBCreateCommandImpl<CCustomSession, CCustomCommand>
+```
+
+Dziedziczy obiektu session `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, i `IDBCreateCommand`. `IGetDataSource` Interfejs umożliwia sesję, aby pobrać źródła danych, w której został utworzony. Jest to przydatne, jeśli zajdzie potrzeba przywrócenia właściwości źródła danych, który został utworzony lub inne informacje, które źródło danych może zapewnić. `ISessionProperties` Interfejs obsługuje wszystkie właściwości dla tej sesji. `IOpenRowset` i `IDBCreateCommand` interfejsy są używane do wykonania pracy bazy danych. Jeśli dostawca obsługuje poleceń, implementuje `IDBCreateCommand` interfejsu. Służy do tworzenia obiektu polecenia, które można wykonać polecenia. Dostawca zawsze implementuje `IOpenRowset` obiektu. Służy do generowania prosty zestaw wierszy od dostawcy. Jest domyślnego zestawu wierszy (na przykład `"select * from mytable"`) od dostawcy.
+
+Kreator generuje również trzy klasy sesji: `CCustomSessionColSchema`, `CCustomSessionPTSchema`, i `CCustomSessionTRSchema`. Sesje te są używane do zestawów wierszy schematu. Zestawy wierszy schematu umożliwiają dostawcy w celu zwracania metadanych do użytkownika bez konsumenta o do wykonywania zapytań lub pobierania danych. Pobieranie metadanych może być znacznie szybciej niż wykrywanie możliwości dostawców.
+
+Specyfikacja OLE DB wymaga, aby dostawców Implementowanie `IDBSchemaRowset` typów zestawów wierszy schematu obsługę trzech interfejsu: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES i DBSCHEMA_TABLES. Kreator generuje implementacje dla każdego zestawu wierszy schematu. Każda klasa generowane przez kreatora zawiera `Execute` metody. W tym `Execute` metody mogą zwracać dane do dostawcy o tym, które tabele, kolumny i typy danych obsługują. Te dane, zwykle jest znany w czasie kompilacji.
+
+## <a name="see-also"></a>Zobacz też
 
 [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

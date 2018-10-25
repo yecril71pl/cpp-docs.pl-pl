@@ -63,230 +63,230 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 91b273e8bfda6c050fa3d9d6db7aafffbe03d684
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077624"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
-Udostępnia implementację dla [ICommand](/previous-versions/windows/desktop/ms709737) interfejsu.  
-  
+Udostępnia implementację dla [ICommand](/previous-versions/windows/desktop/ms709737) interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class T, class CommandBase = ICommand>   
-class ATL_NO_VTABLE ICommandImpl : public CommandBase  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class CommandBase = ICommand>
+class ATL_NO_VTABLE ICommandImpl : public CommandBase
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `ICommandImpl`.  
-  
+Z klasą pochodną `ICommandImpl`.
+
 *CommandBase*<br/>
-Interfejs polecenia. Wartość domyślna to `ICommand`.  
+Interfejs polecenia. Wartość domyślna to `ICommand`.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Anulowanie](#cancel)|Anuluje bieżące wykonywanie polecenia.|  
-|[CancelExecution](#cancelexecution)|Anuluje bieżące wykonywanie polecenia.|  
-|[Createrowset —](#createrowset)|Tworzy obiekt zestawu wierszy.|  
-|[Execute](#execute)|Wykonuje polecenie.|  
-|[GetDBSession](#getdbsession)|Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.|  
-|[Icommandimpl —](#icommandimpl)|Konstruktor.|  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[m_bCancel](#bcancel)|Wskazuje, czy polecenie ma zostać anulowana.|  
-|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Wskazuje, czy ma być anulowane podczas wykonywania polecenia.|  
-|[m_bIsExecuting](#bisexecuting)|Wskazuje, czy polecenie jest w trakcie wykonywania.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-Obowiązkowego interfejsu dla obiektu polecenia.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Anulowanie](#cancel)|Anuluje bieżące wykonywanie polecenia.|
+|[CancelExecution](#cancelexecution)|Anuluje bieżące wykonywanie polecenia.|
+|[Createrowset —](#createrowset)|Tworzy obiekt zestawu wierszy.|
+|[Execute](#execute)|Wykonuje polecenie.|
+|[GetDBSession](#getdbsession)|Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.|
+|[Icommandimpl —](#icommandimpl)|Konstruktor.|
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[m_bCancel](#bcancel)|Wskazuje, czy polecenie ma zostać anulowana.|
+|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Wskazuje, czy ma być anulowane podczas wykonywania polecenia.|
+|[m_bIsExecuting](#bisexecuting)|Wskazuje, czy polecenie jest w trakcie wykonywania.|
+
+## <a name="remarks"></a>Uwagi
+
+Obowiązkowego interfejsu dla obiektu polecenia.
+
 ## <a name="cancel"></a> ICommandImpl::Cancel
 
-Anuluje bieżące wykonywanie polecenia.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(Cancel)();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Anuluje bieżące wykonywanie polecenia.
 
-Zobacz [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) w *OLE DB Podręcznik programisty*.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(Cancel)();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zobacz [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) w *OLE DB Podręcznik programisty*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
-Anuluje bieżące wykonywanie polecenia.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Anuluje bieżące wykonywanie polecenia.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT CancelExecution();  
-```  
+HRESULT CancelExecution();
+```
 
 ## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
-Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) do utworzenia pojedynczego zestawu wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) do utworzenia pojedynczego zestawu wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-template template <class RowsetClass>  
-HRESULT CreateRowset(IUnknown* pUnkOuter,  
-   REFIID riid,  
-   DBPARAMS* pParams,  
-   DBROWCOUNT* pcRowsAffected,  
-   IUnknown** ppRowset,  
-   RowsetClass*& pRowsetObj);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+template template <class RowsetClass>
+HRESULT CreateRowset(IUnknown* pUnkOuter,
+   REFIID riid,
+   DBPARAMS* pParams,
+   DBROWCOUNT* pcRowsAffected,
+   IUnknown** ppRowset,
+   RowsetClass*& pRowsetObj);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *RowsetClass*<br/>
-Składowa klasy szablonu reprezentująca klasy zestawów wierszy przez użytkownika. Zwykle generowane przez kreatora.  
-  
+Składowa klasy szablonu reprezentująca klasy zestawów wierszy przez użytkownika. Zwykle generowane przez kreatora.
+
 *pUnkOuter*<br/>
-[in] Wskaźnik do kontrolowania `IUnknown` interfejsu, jeśli zestaw wierszy jest tworzony jako część agregacji; w przeciwnym razie ma wartość null.  
-  
+[in] Wskaźnik do kontrolowania `IUnknown` interfejsu, jeśli zestaw wierszy jest tworzony jako część agregacji; w przeciwnym razie ma wartość null.
+
 *Parametr riid*<br/>
-[in] Odnosi się do *riid* w `ICommand::Execute`.  
-  
+[in] Odnosi się do *riid* w `ICommand::Execute`.
+
 *pParams*<br/>
-[/ Ściemnianie] Odnosi się do *pParams* w `ICommand::Execute`.  
-  
+[/ Ściemnianie] Odnosi się do *pParams* w `ICommand::Execute`.
+
 *pcRowsAffected*<br/>
-Odnosi się do *pcRowsAffected* w `ICommand::Execute`.  
-  
+Odnosi się do *pcRowsAffected* w `ICommand::Execute`.
+
 *ppRowset*<br/>
-[/ Ściemnianie] Odnosi się do *ppRowset* w `ICommand::Execute`.  
-  
+[/ Ściemnianie] Odnosi się do *ppRowset* w `ICommand::Execute`.
+
 *pRowsetObj*<br/>
-[out] Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale mogą używane, jeśli konieczne jest przeprowadzenie więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest ograniczone przez *ppRowset*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[out] Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale mogą używane, jeśli konieczne jest przeprowadzenie więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest ograniczone przez *ppRowset*.
 
-Standardowe wartości HRESULT. Zobacz `ICommand::Execute` listę typowe wartości.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy, wywołania różnych `CreateRowset` z poziomu `Execute`.  
-  
-Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty.*  
+Standardowe wartości HRESULT. Zobacz `ICommand::Execute` listę typowe wartości.
+
+### <a name="remarks"></a>Uwagi
+
+Aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy, wywołania różnych `CreateRowset` z poziomu `Execute`.
+
+Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
-Wykonuje polecenie.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wykonuje polecenie.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT Execute(IUnknown* pUnkOuter,  
-   REFIID riid,  
-   DBPARAMS* pParams,  
-   DBROWCOUNT* pcRowsAffected,  
-   IUnknown** ppRowset);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Execute(IUnknown* pUnkOuter,
+   REFIID riid,
+   DBPARAMS* pParams,
+   DBROWCOUNT* pcRowsAffected,
+   IUnknown** ppRowset);
+```
 
-Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Żądany interfejs wychodzących będą interfejs uzyskanych z obiektu zestawu wierszy, który tworzy tę funkcję.  
-  
-`Execute` wywołania [createrowset —](../../data/oledb/icommandimpl-createrowset.md). Musi zostać zastąpiona w implementacji domyślnej, aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy.  
+Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Żądany interfejs wychodzących będą interfejs uzyskanych z obiektu zestawu wierszy, który tworzy tę funkcję.
+
+`Execute` wywołania [createrowset —](../../data/oledb/icommandimpl-createrowset.md). Musi zostać zastąpiona w implementacji domyślnej, aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy.
 
 ## <a name="getdbsession"></a> ICommandImpl::GetDBSession
 
-Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (GetDBSession) (REFIID riid,  
-   IUnknown** ppSession);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (GetDBSession) (REFIID riid,
+   IUnknown** ppSession);
+```
 
-Zobacz [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Przydatne do pobierania właściwości z sesji.  
+Zobacz [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Przydatne do pobierania właściwości z sesji.
 
 ## <a name="icommandimpl"></a> ICommandImpl::ICommandImpl
 
-Konstruktor.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Konstruktor.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-ICommandImpl();  
-```  
+ICommandImpl();
+```
 
 ## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
-Wskazuje, czy polecenie zostało anulowane.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned m_bCancel:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Wskazuje, czy polecenie zostało anulowane.
 
-Możesz pobrać tej zmiennej w `Execute` metody klasy poleceń i Anuluj zgodnie z potrzebami. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned m_bCancel:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Możesz pobrać tej zmiennej w `Execute` metody klasy poleceń i Anuluj zgodnie z potrzebami.
 
 ## <a name="bcancelwhenexecuting"></a> ICommandImpl::m_bCancelWhenExecuting
 
-Wskazuje, czy polecenie może być anulowane podczas wykonywania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned m_bCancelWhenExecuting:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Wskazuje, czy polecenie może być anulowane podczas wykonywania.
 
-Wartość domyślna to **true** (może być anulowany,).  
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned m_bCancelWhenExecuting:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Wartość domyślna to **true** (może być anulowany,).
 
 ## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
 
-Wskazuje, czy polecenie jest w trakcie wykonywania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned m_bIsExecuting:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Wskazuje, czy polecenie jest w trakcie wykonywania.
 
-`Execute` Metody klasy polecenia można ustawić tę zmienną **true**. 
-  
-## <a name="see-also"></a>Zobacz też  
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned m_bIsExecuting:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+`Execute` Metody klasy polecenia można ustawić tę zmienną **true**.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,7 +1,7 @@
 ---
 title: Klasa CMFCOutlookBarTabCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4836a82c829dafee64c74237fa33c6199ace4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19550315f17982e019d1ba6f495dedee6d2f346d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081017"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Klasa CMFCOutlookBarTabCtrl
 
@@ -85,7 +85,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Dodaje formant Windows na nowej karcie w pasek programu Outlook.|
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Wywoływane przez platformę, aby określić wymiary pola edycji, który jest wyświetlany, gdy użytkownik zmienia nazwę karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`.)|
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Wywoływane przez platformę, aby określić wymiary pola edycji, który jest wyświetlany, gdy użytkownik zmienia nazwę karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
 |[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|Wywoływane przez platformę podczas operacji zmiany rozmiaru w celu określenia, czy mogą być wyświetlane mniej przycisków strony karty pasek programu Outlook, nie są obecnie widoczne.|
 |[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|Wywoływane przez platformę podczas operacji zmiany rozmiaru w celu określenia, czy więcej przycisków strony karty pasek programu Outlook mogą być wyświetlane, nie są obecnie widoczne.|
 |[CMFCOutlookBarTabCtrl::Create](#create)|Tworzy formant karty pasek programu Outlook.|
@@ -102,7 +102,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|Określa, czy karta kontrolki paska w trybie, który symuluje programu Microsoft Outlook 2003.|
 |`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Określa, czy punkt znajduje się wewnątrz obszaru karty. (Przesłania [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
 |`CMFCOutlookBarTabCtrl::IsTabDetachable`|Określa, czy karta jest odłączane. (Przesłania [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Wywoływane przez platformę, gdy karta jest wstawiany lub usunięte. (Przesłania `CMFCBaseTabCtrl::OnChangeTabs`.)|
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Wywoływane przez platformę, gdy karta jest wstawiany lub usunięte. (Przesłania `CMFCBaseTabCtrl::OnChangeTabs`).|
 |[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|Metoda wywoływana przez platformę, aby zmniejszyć liczbę przycisków strony karty, które będą widoczne.|
 |[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|Metoda wywoływana przez platformę, aby zwiększyć liczbę przycisków strony karty, które będą widoczne.|
 |[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|Wyświetla **Opcje panelu nawigacji** okna dialogowego.|
@@ -322,7 +322,6 @@ Rozmiar obramowania w pikselach.
 
 ##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons
 
-
 ```
 int GetVisiblePageButtons() const;
 ```
@@ -505,14 +504,13 @@ Ta metoda nie powinna być wywoływana w przypadku nie w trybie Microsoft Office
 
 ##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-
 ```
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nVisiblePageButtons*
+[in] *nVisiblePageButtons*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

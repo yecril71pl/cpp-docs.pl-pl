@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080459"
 ---
 # <a name="memory-management-examples"></a>Zarządzanie pamięcią: przykłady
 
@@ -52,19 +52,19 @@ W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla k
 
 1. Należy zdefiniować tablicę, jak pokazano w następującym kodem. Tablica jest automatycznie usuwana, a swojej pamięci odzyskana, gdy zmienną tablicy kończy działanie w swoim zakresie.
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Aby przydzielić tablicy bajtów (lub dowolnego typu danych pierwotnych) na stosie
 
 1. Użyj **nowe** operator za pomocą składni tablicy w poniższym przykładzie:
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Można cofnąć alokacji tablic ze sterty
 
 1. Użyj **Usuń** operatora w następujący sposób:
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> Alokacja struktury danych
 
@@ -72,15 +72,15 @@ W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla k
 
 1. Zdefiniuj zmiennej struktury w następujący sposób:
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     Pamięć zajęta przez strukturę jest odzyskana, gdy jej zakres kończy działanie.
+   Pamięć zajęta przez strukturę jest odzyskana, gdy jej zakres kończy działanie.
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>Aby przydzielić struktur danych na stosie
 
 1. Użyj **nowe** przydzielić struktur danych na stosie i **Usuń** można cofnąć alokacji, jak pokazano w poniższych przykładach:
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> Alokacja obiektu
 
@@ -88,25 +88,25 @@ W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla k
 
 1. Zadeklaruj obiektu w następujący sposób:
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     Destruktor obiektu automatycznie jest wywoływane, gdy obiekt kończy działanie w swoim zakresie.
+   Destruktor obiektu automatycznie jest wywoływane, gdy obiekt kończy działanie w swoim zakresie.
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>Można przydzielić obiektu na stercie
 
 1. Użyj **nowe** operatora, który zwraca wskaźnik do obiektu, do alokowania obiektów na stosie. Użyj **Usuń** operatora, aby je usunąć.
 
-     W poniższych przykładach sterty i ramki przyjęto założenie, że `CPerson` Konstruktor nie przyjmuje żadnych argumentów.
+   W poniższych przykładach sterty i ramki przyjęto założenie, że `CPerson` Konstruktor nie przyjmuje żadnych argumentów.
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     Jeśli argument `CPerson` Konstruktor jest wskaźnikiem do **char**, zestawienie za Alokacja ramek:
+   Jeśli argument `CPerson` Konstruktor jest wskaźnikiem do **char**, zestawienie za Alokacja ramek:
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     Instrukcja dla alokacji sterty jest:
+   Instrukcja dla alokacji sterty jest:
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 

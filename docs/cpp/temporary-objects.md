@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078798"
 ---
 # <a name="temporary-objects"></a>Obiekty tymczasowe
 
@@ -41,9 +41,9 @@ W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych prze
                     //   value.
     ```
 
-     Ponieważ wartość zwracana nie jest kopiowana do innego obiektu, tworzony jest obiekt tymczasowy. Częstszy przypadek tworzenia obiektów tymczasowych występuje w trakcie obliczania wyrażenia, w którym muszą zostać wywołane funkcje przeciążonego operatora. Takie funkcje przeciążonego operatora zwracają typ zdefiniowany przez użytkownika, który często nie jest kopiowany do innego obiektu.
+   Ponieważ wartość zwracana nie jest kopiowana do innego obiektu, tworzony jest obiekt tymczasowy. Częstszy przypadek tworzenia obiektów tymczasowych występuje w trakcie obliczania wyrażenia, w którym muszą zostać wywołane funkcje przeciążonego operatora. Takie funkcje przeciążonego operatora zwracają typ zdefiniowany przez użytkownika, który często nie jest kopiowany do innego obiektu.
 
-     Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie, wyrażenie *tymczasowe* `+ Complex3` zostało ocenione, a wynik jest kopiowany do `ComplexResult` (zakładając, że operator przypisania nie jest przeciążony).
+   Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie, wyrażenie *tymczasowe* `+ Complex3` zostało ocenione, a wynik jest kopiowany do `ComplexResult` (zakładając, że operator przypisania nie jest przeciążony).
 
 - Aby przechować wynik rzutowania na typ zdefiniowany przez użytkownika. Gdy obiekt danego typu jest jawnie konwertowany na typ zdefiniowany przez użytkownika, nowy obiekt jest konstruowany jako obiekt tymczasowy.
 

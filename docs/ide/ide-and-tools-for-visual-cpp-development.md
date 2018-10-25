@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c639ddbe3d2e5b8a9c4f402df56215ca7efd1e1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070442"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Kompilator narzędzia projektowe Visual C++ i środowisko IDE
 
@@ -30,7 +30,7 @@ Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka na
 
 ## <a name="create-projects"></a>Tworzenie projektów
 
-A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny. 
+A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny.
 
 Program Visual Studio 2015 udostępnia obsługę projektów programu MSBuild. Możesz pobrać rozszerzenia programu Visual Studio dla innych systemów kompilacji, takie jak Qt lub narzędzia CMake.
 
@@ -65,7 +65,7 @@ Aby uzyskać więcej informacji na temat tworzenia interfejsu użytkownika dla a
 
 ## <a name="write-code"></a>Pisanie kodu
 
-Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksploratora rozwiązań** okna. (A *rozwiązania* to logiczny kontener przeznaczony dla jednego lub więcej powiązanych projektów.) Po kliknięciu pliku .h i .cpp w **Eksploratora rozwiązań**, plik zostanie otwarty w edytorze kodu. 
+Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksploratora rozwiązań** okna. (A *rozwiązania* to logiczny kontener przeznaczony dla jednego lub więcej powiązanych projektów.) Po kliknięciu pliku .h i .cpp w **Eksploratora rozwiązań**, plik zostanie otwarty w edytorze kodu.
 
 ![Eksplorator rozwiązań i Edytor kodu](media/vs2017-solution-explorer-code-editor.png "edytora Visual Studio 2017 oknie Solution Explorer i kodu")
 

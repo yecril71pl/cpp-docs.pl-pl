@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080224"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 
@@ -190,7 +190,7 @@ class CPane : public CBasePane
 |[CPane::DockByMouse](#dockbymouse)|Stacje dokujące okienko za pomocą myszy dokowanie metody.|
 |[CPane::DockPane](#dockpane)|Dokowane unoszącego do podstawowej okienka.|
 |[CPane::DockPaneStandard](#dockpanestandard)|Stacje dokujące okienko przy użyciu konspektu dokowanie (standardowa).|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Dokowane dokowalne okienka w ramce. (Przesłania `CBasePane::DockToFrameWindow`.)|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Dokowane dokowalne okienka w ramce. (Przesłania `CBasePane::DockToFrameWindow`).|
 |[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Wskazuje, czy można zadokować innego okienka, w tym samym wierszu, w której jest zadokowany bieżącego okienka.|
 |[CPane::FloatPane](#floatpane)|Liczby zmiennoprzecinkowe okienka.|
 |[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Zwraca czas, w pikselach, którą można rozwinąć okienka.|
@@ -207,7 +207,7 @@ class CPane : public CBasePane
 |[CPane::GetVirtualRect](#getvirtualrect)|Pobiera *wirtualnego prostokąt* okienka.|
 |[CPane::IsChangeState](#ischangestate)|Okienko jest przenoszone, Metoda ta analizuje położenie okienka względem inne okienka zadokować wierszy i okna mini ramki i zwraca odpowiednią wartość AFX_CS_STATUS.|
 |[CPane::IsDragMode](#isdragmode)|Określa, czy przeciągania okienka.|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienka w oknie ramowym wielu okienka. (Przesłania `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienka w oknie ramowym wielu okienka. (Przesłania `CBasePane::IsInFloatingMultiPaneFrameWnd`).|
 |[CPane::IsLeftOf](#isleftof)|Określa, czy okienko zostanie pozostawiony (lub powyżej) określonego prostokąta.|
 |[CPane::IsResizable](#isresizable)|Określa, czy można zmienić rozmiar okienka. (Przesłania [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
 |[CPane::IsTabbed](#istabbed)|Określa, czy kontrolka karty okna z kartami włożono okienka. (Przesłania [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Określa początkowy rozmiar i położenie *pParentWnd* okna na współrzędne klienta.
 
-[in] [out] *pParentWnd* określa okno nadrzędne w tym okienku.
+*pParentWnd*<br/>
+[out w] Określa, w tym okienku okno nadrzędne.
 
 *nID*<br/>
 [in] Określa identyfikator okienka.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Określa styl dla tego okienka. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Określa kontekst Utwórz okienka.
+*pContext*<br/>
+[out w] Określa kontekst Utwórz okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Określa początkowy rozmiar i położenie *pParentWnd* okna na współrzędne klienta.
 
-[in] [out] *pParentWnd* określa okno nadrzędne w tym okienku.
+*pParentWnd*<br/>
+[out w] Określa, w tym okienku okno nadrzędne.
 
 *nID*<br/>
 [in] Określa identyfikator okienka.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Określa styl dla tego okienka. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Określa kontekst Utwórz okienka.
+*pContext*<br/>
+[out w] Określa kontekst Utwórz okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pDockBar* określa okienka podstawowej, aby zadokować w tym okienku, aby.
+*pDockBar*<br/>
+[out w] Określa podstawowy okienko, aby zadokować w tym okienku, aby.
 
 *lprect —*<br/>
 [in] Określa prostokąt na podstawowej okienko, w którym ma być zadokowane, w tym okienku.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pWndOldParent* okienko poprzedniego okna nadrzędnego.
+*pWndOldParent*<br/>
+[out w] W okienku poprzedniego okna nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pWndNewParent* Określa nowe okno nadrzędne.
+*pWndNewParent*<br/>
+[out w] Określa nowe okno nadrzędne.
 
 *bDelay*<br/>
 [in] Wartość TRUE, aby opóźnić globalnego dokowania dostosowania układu; w przeciwnym razie wartość FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *ppDockBar* określa okienko w którym to okienko jest zadokowane do.
+*ppDockBar*<br/>
+[out w] Określa okienko w którym to okienko jest zadokowane do.
 
 *lprect —*<br/>
 [in] Określa prostokąt dokowania.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pClass* określa informacje o klasie czasu wykonywania dla okna mini ramki.
+*pClass*<br/>
+[out w] Określa informacje o klasie czasu wykonywania dla okna mini ramki.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078157"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Porady: tworzenie bezpiecznej kolekcji
 
@@ -45,11 +45,11 @@ Biblioteki klas Microsoft Foundation udostępnia wstępnie zdefiniowane bezpiecz
 
 1. Zadeklaruj zmienną typu klas kolekcji. Na przykład:
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. Wywołaj element członkowski funkcji obiektu kolekcji. Na przykład:
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. Jeśli to konieczne, należy zaimplementować [funkcji pomocnika](../mfc/reference/collection-class-helpers.md) i [serializeelements —](../mfc/reference/collection-class-helpers.md#serializeelements). Aby uzyskać informacji dotyczących implementowania tych funkcji, zobacz [implementowania funkcji pomocnika](#_core_implementing_helper_functions).
 
@@ -85,27 +85,27 @@ Istnieją dwa sposoby tworzenia bezpieczne kolekcje z kolekcjami nieszablonu:
 
 1. Użyj jednej z klas nieszablonu, takich jak `CWordArray`bezpośrednio.
 
-     Na przykład można utworzyć `CWordArray` i dodać do niego wszystkie wartości 32-bitowych, a następnie pobrać jednego z nich. Nie ma nic więcej, aby zrobić. Wystarczy użyć wstępnie zdefiniowanych funkcji.
+   Na przykład można utworzyć `CWordArray` i dodać do niego wszystkie wartości 32-bitowych, a następnie pobrać jednego z nich. Nie ma nic więcej, aby zrobić. Wystarczy użyć wstępnie zdefiniowanych funkcji.
 
-     Umożliwia także wstępnie zdefiniowane kolekcji, takie jak `CObList`, aby pomieścić wszystkie obiekty opracowane na podstawie `CObject`. A `CObList` kolekcja jest zdefiniowana na potrzeby przechowywania wskaźniki do `CObject`. Po pobraniu obiektu z listy może być konieczne Rzutuj wynik metody na właściwy typ. od `CObList` funkcje zwracają wskaźniki do `CObject`. Na przykład, jeśli przechowujesz `CPerson` obiekty w `CObList` kolekcji, należy rzutować pobrany element jako wskaźnik do `CPerson` obiektu. W poniższym przykładzie użyto `CObList` kolekcję zawierającą `CPerson` obiektów:
+   Umożliwia także wstępnie zdefiniowane kolekcji, takie jak `CObList`, aby pomieścić wszystkie obiekty opracowane na podstawie `CObject`. A `CObList` kolekcja jest zdefiniowana na potrzeby przechowywania wskaźniki do `CObject`. Po pobraniu obiektu z listy może być konieczne Rzutuj wynik metody na właściwy typ. od `CObList` funkcje zwracają wskaźniki do `CObject`. Na przykład, jeśli przechowujesz `CPerson` obiekty w `CObList` kolekcji, należy rzutować pobrany element jako wskaźnik do `CPerson` obiektu. W poniższym przykładzie użyto `CObList` kolekcję zawierającą `CPerson` obiektów:
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     Ta technika, za pomocą typu kolekcji wstępnie zdefiniowanych i rzutowania, gdy jest to konieczne może być odpowiednie dla wielu niezbędne do kolekcji. Jeśli potrzebujesz więcej funkcji lub więcej bezpieczeństwa typu użycie na podstawie szablonu klasy lub należy wykonać w następnej procedurze.
+   Ta technika, za pomocą typu kolekcji wstępnie zdefiniowanych i rzutowania, gdy jest to konieczne może być odpowiednie dla wielu niezbędne do kolekcji. Jeśli potrzebujesz więcej funkcji lub więcej bezpieczeństwa typu użycie na podstawie szablonu klasy lub należy wykonać w następnej procedurze.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Pochodzić i rozszerzać nieszablonu bezpiecznej kolekcji
 
 1. Dziedziczyć klasy kolekcji z jednej z klas nieszablonu wstępnie zdefiniowane.
 
-     Po utworzeniu klasy pochodnej klasy, można dodać funkcje otoki bezpieczny, zapewniając interfejs bezpieczny do istniejących funkcji.
+   Po utworzeniu klasy pochodnej klasy, można dodać funkcje otoki bezpieczny, zapewniając interfejs bezpieczny do istniejących funkcji.
 
-     Na przykład, jeśli pochodzi z listy `CObList` do przechowywania `CPerson` obiektów, można dodać funkcje otoki `AddHeadPerson` i `GetHeadPerson`, jak pokazano poniżej.
+   Na przykład, jeśli pochodzi z listy `CObList` do przechowywania `CPerson` obiektów, można dodać funkcje otoki `AddHeadPerson` i `GetHeadPerson`, jak pokazano poniżej.
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     Te funkcje otoki zapewnić bezpieczny sposób Dodawanie i pobieranie `CPerson` obiekty z listy pochodnych. Możesz zobaczyć, że dla `GetHeadPerson` funkcji, po prostu poddajesz enkapsulacji rzutowanie typu.
+   Te funkcje otoki zapewnić bezpieczny sposób Dodawanie i pobieranie `CPerson` obiekty z listy pochodnych. Możesz zobaczyć, że dla `GetHeadPerson` funkcji, po prostu poddajesz enkapsulacji rzutowanie typu.
 
-     Można również dodać nowe funkcje przez definiowanie nowych funkcji, które rozszerzają możliwości kolekcji, a nie zawijanie istniejących funkcji w otoki bezpiecznegop typu. Na przykład artykułu [usuwanie wszystkich obiektów z kolekcji CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) w tym artykule opisano funkcję, aby usunąć wszystkie obiekty zawarte na liście. Tej funkcji może być dodane do klasy pochodnej jako funkcję składową.
+   Można również dodać nowe funkcje przez definiowanie nowych funkcji, które rozszerzają możliwości kolekcji, a nie zawijanie istniejących funkcji w otoki bezpiecznegop typu. Na przykład artykułu [usuwanie wszystkich obiektów z kolekcji CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) w tym artykule opisano funkcję, aby usunąć wszystkie obiekty zawarte na liście. Tej funkcji może być dodane do klasy pochodnej jako funkcję składową.
 
 ## <a name="see-also"></a>Zobacz też
 

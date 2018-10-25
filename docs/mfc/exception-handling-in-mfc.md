@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078963"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
@@ -81,15 +81,15 @@ Trzy kategorie wyników może wystąpić, gdy funkcja jest wywoływana podczas w
 
 - Normalnego wykonywania
 
-     Funkcja może wykonać normalnie i zwracają. Niektóre funkcje zwracają kod wyniku do obiektu wywołującego, co oznacza wynik funkcji. Kody wyników możliwe są ściśle zdefiniowane dla tej funkcji i reprezentują zakres możliwych wartości funkcji. Kod wyniku może wskazywać powodzenie lub niepowodzenie, lub nawet może wskazywać określonego typu awarii, który znajduje się w normalne gamę oczekiwania. Na przykład funkcja stan pliku może zwrócić kod, który wskazuje, że plik nie istnieje. Należy pamiętać, że termin "Kod błędu:" nie jest używana, ponieważ kod wyniku stanowi jeden z wielu oczekiwanych wyników.
+   Funkcja może wykonać normalnie i zwracają. Niektóre funkcje zwracają kod wyniku do obiektu wywołującego, co oznacza wynik funkcji. Kody wyników możliwe są ściśle zdefiniowane dla tej funkcji i reprezentują zakres możliwych wartości funkcji. Kod wyniku może wskazywać powodzenie lub niepowodzenie, lub nawet może wskazywać określonego typu awarii, który znajduje się w normalne gamę oczekiwania. Na przykład funkcja stan pliku może zwrócić kod, który wskazuje, że plik nie istnieje. Należy pamiętać, że termin "Kod błędu:" nie jest używana, ponieważ kod wyniku stanowi jeden z wielu oczekiwanych wyników.
 
 - Błędne wykonywania
 
-     Obiekt wywołujący sprawia, że niektóre pomyłka do przekazywania argumentów do funkcji lub wywołuje funkcję w kontekście nieodpowiednie. Taka sytuacja powoduje błąd i powinny zostać wykryte przy użyciu potwierdzenie podczas tworzenia programu. (Aby uzyskać więcej informacji na temat potwierdzeń, zobacz [potwierdzenia C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   Obiekt wywołujący sprawia, że niektóre pomyłka do przekazywania argumentów do funkcji lub wywołuje funkcję w kontekście nieodpowiednie. Taka sytuacja powoduje błąd i powinny zostać wykryte przy użyciu potwierdzenie podczas tworzenia programu. (Aby uzyskać więcej informacji na temat potwierdzeń, zobacz [potwierdzenia C/C++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Nietypowe wykonanie
 
-     Nietypowe wykonanie dotyczy sytuacji, w którym warunki poza kontrolą programu, takie jak małej ilości pamięci lub błędy We/Wy są wywieranie wpływu na wynik funkcji. Nietypowych sytuacjach powinno zostać obsłużone przez przechwytywanie i zgłaszanie wyjątków.
+   Nietypowe wykonanie dotyczy sytuacji, w którym warunki poza kontrolą programu, takie jak małej ilości pamięci lub błędy We/Wy są wywieranie wpływu na wynik funkcji. Nietypowych sytuacjach powinno zostać obsłużone przez przechwytywanie i zgłaszanie wyjątków.
 
 Używanie wyjątków jest szczególnie przydatne do wykonania nietypowe.
 

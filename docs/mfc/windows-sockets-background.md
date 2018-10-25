@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079665"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: podstawy
 
@@ -69,11 +69,11 @@ Dostępne są dwa typy gniazda:
 
 - Gniazda Stream
 
-     Gniazda Stream zapewnienia przepływu danych, bez rekordów granic: strumień bajtów. Strumienie są gwarantowane dostarczanych i poprawnie sekwencjonowania i unduplicated.
+   Gniazda Stream zapewnienia przepływu danych, bez rekordów granic: strumień bajtów. Strumienie są gwarantowane dostarczanych i poprawnie sekwencjonowania i unduplicated.
 
 - Do przesyłania datagramów
 
-     Datagram sockets rekordu zorientowane na obsługę danych przepływ, który nie jest gwarantowane do dostarczenia i nie może być sekwencjonowania jako wysyłane lub unduplicated.
+   Datagram sockets rekordu zorientowane na obsługę danych przepływ, który nie jest gwarantowane do dostarczenia i nie może być sekwencjonowania jako wysyłane lub unduplicated.
 
 "Sekwencjonowania" oznacza, że pakiety są dostarczane w kolejności wysyłane. "Unduplicated" oznacza, że pobieranie określonego pakietu tylko raz.
 

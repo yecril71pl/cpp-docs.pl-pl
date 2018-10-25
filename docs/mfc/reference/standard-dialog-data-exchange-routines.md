@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433235"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070416"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 
@@ -268,10 +268,11 @@ Tworzy formant .NET dopasowania identyfikator formantu zasobu.
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ Aby uzyskać więcej informacji, zobacz [porady: wykonaj powiązanie danych DDX/
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  Ddx_ipaddress —
 

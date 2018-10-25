@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080926"
 ---
 # <a name="opening-files"></a>Otwieranie plików
 
@@ -41,15 +41,15 @@ W MFC najbardziej popularny sposób, aby otworzyć plik jest procesem dwuetapowy
 
 1. Utwórz obiekt pliku bez określania flagi ścieżki lub uprawnienia.
 
-     Zazwyczaj Tworzenie obiektu pliku przez zadeklarowanie [CFile](../mfc/reference/cfile-class.md) zmiennej na ramce stosu.
+   Zazwyczaj Tworzenie obiektu pliku przez zadeklarowanie [CFile](../mfc/reference/cfile-class.md) zmiennej na ramce stosu.
 
 1. Wywołaj [Otwórz](../mfc/reference/cfile-class.md#open) funkcja elementu członkowskiego dla obiektu pliku dostarczenie flagi ścieżkę i uprawnień.
 
-     Wartość zwracana dla `Open` będzie różna od zera, jeśli plik został pomyślnie otwarty lub równa 0, jeśli nie można otworzyć określonego pliku. `Open` Funkcja członkowska jest prototypowane w następujący sposób:
+   Wartość zwracana dla `Open` będzie różna od zera, jeśli plik został pomyślnie otwarty lub równa 0, jeśli nie można otworzyć określonego pliku. `Open` Funkcja członkowska jest prototypowane w następujący sposób:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Otwórz flagi określić uprawnienia, takie jak tylko do odczytu, ma dla pliku. Możliwe wartości flag są definiowane jako stałych wyliczeniowych w ramach `CFile` klasy, dzięki czemu są one kwalifikowana za pomocą "`CFile::`" jak w `CFile::modeRead`. Użyj `CFile::modeCreate` flagę, jeśli chcesz utworzyć plik.
+   Otwórz flagi określić uprawnienia, takie jak tylko do odczytu, ma dla pliku. Możliwe wartości flag są definiowane jako stałych wyliczeniowych w ramach `CFile` klasy, dzięki czemu są one kwalifikowana za pomocą "`CFile::`" jak w `CFile::modeRead`. Użyj `CFile::modeCreate` flagę, jeśli chcesz utworzyć plik.
 
 Poniższy przykład pokazuje, jak utworzyć nowy plik z uprawnieniami odczytu/zapisu (zastępując dowolnego poprzedniego pliku o takiej samej ścieżce):
 

@@ -14,26 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d22551a9832b18bbb246ea99dafe75dad11c361
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0062b63c839b7f7f5b3b4c16bf3779e44f7c983b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083129"
 ---
 # <a name="container-classend"></a>Kontener Class::end
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
-Zwraca iteratora tego punkty bezpośrednio po zakończeniu sekwencji.
+Zwraca iterator, który wskazuje tuż za koniec sekwencji.
 
 ## <a name="syntax"></a>Składnia
 
 ```
 
     const_iterator end() const;
-
 
 iterator end();
 ```

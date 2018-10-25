@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820948"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068492"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,22 +33,26 @@ ms.locfileid: "48820948"
 ## <a name="syntax"></a>Składnia
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-[w] *`VmcsPhysicalAddress` adresu, gdzie jest przechowywany wskaźnik VMCS.
+*VmcsPhysicalAddress*<br/>
+[in] Adres, gdzie jest przechowywany wskaźnik VMCS.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-0, operacja zakończyła się pomyślnie.
+0<br/>
+Operacja zakończyła się pomyślnie.
 
-1 operacja nie powiodła się ze stanem rozszerzone jest dostępne w `VM-instruction error field` z bieżącym VMCS.
+1<br/>
+Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.
 
-2. Operacja nie powiodła się bez informacji o stanie.
+2<br/>
+Operacja nie powiodła się bez informacji o stanie.
 
 ## <a name="remarks"></a>Uwagi
 

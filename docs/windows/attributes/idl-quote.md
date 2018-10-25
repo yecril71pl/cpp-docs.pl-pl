@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f4050e78e6313b77808c1a1ed790e2b7082122d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 31e06d83ce64675b5b1e8ac9cbb865bfb3eff334
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074166"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -98,4 +98,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)  
+[Oddzielne atrybuty](stand-alone-attributes.md)

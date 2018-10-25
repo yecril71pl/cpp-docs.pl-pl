@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068875"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Klasa CComSingleThreadModel
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Uwagi
 
-`CComSingleThreadModel` udostępnia metody zwiększanie i zmniejszanie wartości zmiennej. W odróżnieniu od [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) i [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), te metody nie są wątkowo.  
+`CComSingleThreadModel` udostępnia metody zwiększanie i zmniejszanie wartości zmiennej. W odróżnieniu od [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) i [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), te metody nie są wątkowo.
 
-Zazwyczaj można użyć `CComSingleThreadModel` za pomocą jednego z dwóch **typedef** nazwy albo [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:  
+Zazwyczaj można użyć `CComSingleThreadModel` za pomocą jednego z dwóch **typedef** nazwy albo [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
 |— klasa typedef|Pojedynczy model wątkowości|Model wątkowości typu apartment|Model wątkowości bezpłatnie|
 |-------------|----------------------------|-------------------------------|--------------------------|

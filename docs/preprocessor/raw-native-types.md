@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067b109757f14e1b76c292bbae5a2ea7d688eae2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4739b8664da21a86caa91398a7956eac77e22f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393630"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072892"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**Określonego język C++**  
-  
-Wyłącza używanie klas obsługi COM w funkcjach otoki wysokiego poziomu, a zamiast tego wymusza stosowanie typów danych niskiego poziomu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-raw_native_types  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- 
-Domyślnie wysokiego poziomu metody obsługi błędów za pomocą klas obsługi COM [_bstr_t](../cpp/bstr-t-class.md) i [_variant_t](../cpp/variant-t-class.md) zamiast `BSTR` i `VARIANT` i typy danych COM surowego interfejsu wskaźników. W ramach tych zajęć hermetyzacji szczegółów alokowanie i dealokowanie pamięci magazynu dla tych typów danych i znacznie upraszczają operacji rzutowania i konwersji typu.  
-  
-**KONIEC określonego języka C++**  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+**Określonego język C++**
+
+Wyłącza używanie klas obsługi COM w funkcjach otoki wysokiego poziomu, a zamiast tego wymusza stosowanie typów danych niskiego poziomu.
+
+## <a name="syntax"></a>Składnia
+
+```
+raw_native_types
+```
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie wysokiego poziomu metody obsługi błędów za pomocą klas obsługi COM [_bstr_t](../cpp/bstr-t-class.md) i [_variant_t](../cpp/variant-t-class.md) zamiast `BSTR` i `VARIANT` i typy danych COM surowego interfejsu wskaźników. W ramach tych zajęć hermetyzacji szczegółów alokowanie i dealokowanie pamięci magazynu dla tych typów danych i znacznie upraszczają operacji rzutowania i konwersji typu.
+
+**KONIEC określonego języka C++**
+
+## <a name="see-also"></a>Zobacz też
+
 [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

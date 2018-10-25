@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080081"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX
 
@@ -34,7 +34,6 @@ W tym artykule omówiono, aby zainstalować programy obsługi zdarzeń dla kontr
 
 >[!IMPORTANT]
 > ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
-
 
 > [!NOTE]
 >  W tym artykule używany jest oparta na oknach dialogowych ActiveX kontroli kontenera projektu o nazwie kontener i osadzonego formantu o nazwie OK przykładowe w procedurach i kodu.
@@ -70,7 +69,7 @@ Aby uzyskać więcej informacji na temat makr ujścia zdarzeń, zobacz [mapy wyc
 
 1. W oknie dialogowym właściwości wybierz identyfikator formantu osadzonego formantu ActiveX. W tym przykładzie użyj `IDC_CIRCCTRL1`.
 
-     Okno właściwości wyświetla listę zdarzeń, które mogą być wywoływane przez osadzonego formantu ActiveX. Żadnej funkcji składowej pogrubione już ma funkcje obsługi do niej przypisany.
+   Okno właściwości wyświetla listę zdarzeń, które mogą być wywoływane przez osadzonego formantu ActiveX. Żadnej funkcji składowej pogrubione już ma funkcje obsługi do niej przypisany.
 
 1. Wybierz zdarzenie ma klasy okien dialogowych, aby obsłużyć. W tym przykładzie wybierz **kliknij**.
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 51e612e889c06b8736e13e3c0fe04baf07b11a9b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078287"
 ---
 # <a name="cstringelementtraits-class"></a>Klasa CStringElementTraits
 
@@ -114,7 +114,7 @@ Drugi ciąg elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne, < 0 Jeśli *str1* jest mniejsza niż *str2*, lub > 0 Jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda służy do przeprowadzania porównania.  
+Zero, jeśli ciągi są identyczne, < 0 Jeśli *str1* jest mniejsza niż *str2*, lub > 0 Jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda służy do przeprowadzania porównania.
 
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
 

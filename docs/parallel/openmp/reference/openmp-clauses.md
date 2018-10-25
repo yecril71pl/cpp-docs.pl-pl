@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809073"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056226"
 ---
 # <a name="openmp-clauses"></a>Klauzule OpenMP
 
@@ -56,21 +56,21 @@ Zawiera łącza do klauzul używany w interfejsie API OpenMP.
 
 Visual C++ obsługuje następujące klauzule OpenMP:
 
-Klauzula                             | Opis
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | Umożliwia wątków, aby uzyskiwać dostęp do wartości głównego wątku dla [threadprivate](openmp-directives.md#threadprivate) zmiennej.
-[copyprivate](#copyprivate)        | Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.
-[default](#default-openmp)         | Określa zachowanie zmiennych niewystępującego w zakresie równoległego regionu.
-[firstprivate](#firstprivate)      | Określa, że każdy wątek ma własne wystąpienie zmiennej i że zmiennej powinna zostać zainicjowana z wartością zmiennej, ponieważ istnieje przed konstrukcja równoległa.
-[if](#if-openmp)                   | Określa, czy pętla powinny być wykonywane równolegle lub w seryjny.
-[lastprivate](#lastprivate)        | Określa, że wersja w otaczającym kontekście zmiennej jest równa wersji prywatnej niezależnie od wątku wykonuje końcowe iteracji (konstrukcji pętli for) lub ostatnia sekcja (#pragma sekcji).
-[nowait](#nowait)                  | Zastępuje barierę niejawne w dyrektywie.
-[num_threads](#num-threads)        | Ustawia liczbę wątków w zespole wątku.
-[Uporządkowane](#ordered-openmp-clauses) | Wymagane na równoległego [dla](openmp-directives.md#for-openmp) instrukcji Jeśli [uporządkowane](openmp-directives.md#ordered-openmp-directives) dyrektywy ma być używana w pętli.
-[private](#private-openmp)         | Określa, że każdy wątek ma własne wystąpienie zmiennej.
-[reduction](#reduction)            | Określa, że jeden lub więcej zmiennych, które są prywatne każdy wątek jest przedmiotem operację redukcji, na końcu równoległego regionu.
-[schedule](#schedule)              | Dotyczy [dla](openmp-directives.md#for-openmp) dyrektywy.
-[Udostępnione](#shared-openmp)           | Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.
+|Klauzula|Opis|
+|------|-----------|
+|[copyin](#copyin)|Umożliwia wątków, aby uzyskiwać dostęp do wartości głównego wątku dla [threadprivate](openmp-directives.md#threadprivate) zmiennej.|
+|[copyprivate](#copyprivate)|Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.|
+|[default](#default-openmp)|Określa zachowanie zmiennych niewystępującego w zakresie równoległego regionu.|
+|[firstprivate](#firstprivate)|Określa, że każdy wątek ma własne wystąpienie zmiennej i że zmiennej powinna zostać zainicjowana z wartością zmiennej, ponieważ istnieje przed konstrukcja równoległa.|
+|[if](#if-openmp)|Określa, czy pętla powinny być wykonywane równolegle lub w seryjny.|
+|[lastprivate](#lastprivate)|Określa, że wersja w otaczającym kontekście zmiennej jest równa wersji prywatnej niezależnie od wątku wykonuje końcowe iteracji (konstrukcji pętli for) lub ostatnia sekcja (#pragma sekcji).|
+|[nowait](#nowait)|Zastępuje barierę niejawne w dyrektywie.|
+|[num_threads](#num-threads)|Ustawia liczbę wątków w zespole wątku.|
+|[Uporządkowane](#ordered-openmp-clauses)|Wymagane na równoległego [dla](openmp-directives.md#for-openmp) instrukcji Jeśli [uporządkowane](openmp-directives.md#ordered-openmp-directives) dyrektywy ma być używana w pętli.|
+|[private](#private-openmp)|Określa, że każdy wątek ma własne wystąpienie zmiennej.|
+|[reduction](#reduction)|Określa, że jeden lub więcej zmiennych, które są prywatne każdy wątek jest przedmiotem operację redukcji, na końcu równoległego regionu.|
+|[schedule](#schedule)|Dotyczy [dla](openmp-directives.md#for-openmp) dyrektywy.|
+|[Udostępnione](#shared-openmp)|Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ Liczba wątków
 
 ### <a name="remarks"></a>Uwagi
 
-`num_threads` Klauzuli ma taką samą funkcjonalność jak [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji.
+`num_threads` Klauzuli ma taką samą funkcjonalność jak [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) funkcji.
 
 `num_threads` mają zastosowanie do następujących dyrektywach:
 

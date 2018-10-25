@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809164"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057404"
 ---
 # <a name="coledatetime-class"></a>COleDateTime, klasa
 
@@ -228,10 +228,10 @@ A `SYSTEMTIME` struktura może zostać przekonwertowana na wartość daty/godzin
 *filetimeSrc*<br/>
 A `FILETIME` struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu. Należy pamiętać, że `FILETIME` korzysta z uniwersalnego czasu koordynowanego (UTC), więc jeśli przekażesz czasu lokalnego w strukturze będą niepoprawne wyniki. Zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
-*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*  
+*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*<br/>
 Wskazuje wartości daty i godziny do skopiowania w nowe `COleDateTime` obiektu.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Wartości daty i godziny może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego systemu MS-DOS `COleDateTime` obiektu.
 
 *znacznika dbts*<br/>
@@ -333,13 +333,13 @@ Jeśli stan to `COleDateTime` obiekt ma wartość null, wartość zwracana jest 
 
 Krótki opis trzy formy dla tej funkcji są następujące:
 
-`Format`( *Flagidw*, *lcid*)  
+`Format`( *Flagidw*, *lcid*)<br/>
 Ten formularz, formatuje wartość przy użyciu specyfikacji języka (identyfikatory ustawień regionalnych) dla daty i godziny. Przy użyciu parametrów domyślnych, ten formularz drukują datę i godzinę, o ile część godzinowa to 0 (północ), w którym to przypadku składała się tylko datę lub część dotycząca daty jest 0 (30 grudnia 1899), w takiej sytuacji zostanie wydrukowany tylko czas. Jeśli wartości daty/godziny to 0 (30 grudnia 1899, północy), ten formularz z parametrami domyślnymi będą drukowane północy.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest przekazywany jako parametr do funkcji. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w odwołaniu biblioteki wykonawczej.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest zasobem. Identyfikator zasobu ciągu jest przekazywany jako parametr. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w *odwołanie do biblioteki wykonawczej*.
 
 ### <a name="example"></a>Przykład
@@ -701,13 +701,13 @@ Zwraca stan to `COleDateTime` wartość. Jeśli wywołasz `GetStatus` na `COleDa
 Wartość zwracana jest definiowany przez `DateTimeStatus` wyliczany typ, który jest zdefiniowany w obrębie `COleDateTime` klasy.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
@@ -930,10 +930,10 @@ Ten operator zwraca `DATE` obiektu, którego wartość jest kopiowany z tym `COl
 Analizuje ciąg, który ma zostać odczytana wartość daty/godziny.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -991,15 +991,15 @@ Aby uzyskać więcej informacji na temat granice i implementację `COleDateTime`
 Ustawia datę to `COleDateTime` obiektu.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nYear*, *nMonth*, *nbłędny dzień*  
+*nYear*, *nMonth*, *nbłędny dzień*<br/>
 Wskazać składniki daty, który ma być skopiowany do tego `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1062,18 +1062,18 @@ Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, z
 Ustawia datę i godzinę, to `COleDateTime` obiektu.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*  
+*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*<br/>
 Wskazać składniki daty i godziny do skopiowania do tego `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1170,15 +1170,15 @@ Zobacz przykład [GetStatus](#getstatus).
 Ustawia czas tego `COleDateTime` obiektu.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ngodzina*, *nMin*, *nSec*  
+*Ngodzina*, *nMin*, *nSec*<br/>
 Wskazać składniki czasu, który ma być skopiowany do tego `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana

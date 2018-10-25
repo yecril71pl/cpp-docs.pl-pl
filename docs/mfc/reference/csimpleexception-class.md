@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f25928243c8086462f4f35b47dee5239a3a240bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ab21338eabe2e432189ccf8a5aae3432005657d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447001"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083220"
 ---
 # <a name="csimpleexception-class"></a>Klasa CSimpleException
 
@@ -132,6 +132,4 @@ Aby uzyskać więcej informacji, zobacz [CException::GetErrorMessage](../../mfc/
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Obsługa wyjątków](../../mfc/exception-handling-in-mfc.md)
-
-
 

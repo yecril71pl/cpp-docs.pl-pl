@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052697"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 
@@ -47,9 +47,9 @@ Poniższe kroki kompilacji prostą stronę sieci Web za pomocą tagów HTML. W t
 
 1. Przełącznik do przeglądarki i z **pliku** menu, wybierz **Otwórz**, lub typu *file://C:/webpages/first.htm* w polu edycji adresu URL w przeglądarce. Powinien zostać wyświetlony pustą stronę z opisem okna "Najpopularniejsze tagi HTML".
 
-     Zwróć uwagę, znaczniki są skojarzone i znajdują się w nawiasy ostre. Tagi nie jest rozróżniana wielkość liter, ale wielkość liter jest często używana, aby wyróżnić tagi.
+   Zwróć uwagę, znaczniki są skojarzone i znajdują się w nawiasy ostre. Tagi nie jest rozróżniana wielkość liter, ale wielkość liter jest często używana, aby wyróżnić tagi.
 
-     Tag \<HTML > uruchamia dokument i tagu \<polecenia > kończy go. Kończenie tagi (nie zawsze wymagane) są takie same jak tag początkowy, ale mają ukośnika (/) przed znacznikiem. Powinna istnieć bez spacji między nawiasu ostrego (<) a początkiem tag.
+   Tag \<HTML > uruchamia dokument i tagu \<polecenia > kończy go. Kończenie tagi (nie zawsze wymagane) są takie same jak tag początkowy, ale mają ukośnika (/) przed znacznikiem. Powinna istnieć bez spacji między nawiasu ostrego (<) a początkiem tag.
 
 1. Przełącz do Notatnika i po  \< /HEAD > wiersz, wpisz:
 
@@ -64,9 +64,9 @@ Poniższe kroki kompilacji prostą stronę sieci Web za pomocą tagów HTML. W t
 
 1. Przejdź z powrotem do przeglądarki, a następnie odśwież stronę.
 
-     Wyrazy pojawi się w klienckim obszarze okna przeglądarki. Należy zauważyć, że powrót karetki jest ignorowana. Jeśli chcesz mieć podział wiersza, należy uwzględnić `<BR>` tagu po pierwszym wierszu.
+   Wyrazy pojawi się w klienckim obszarze okna przeglądarki. Należy zauważyć, że powrót karetki jest ignorowana. Jeśli chcesz mieć podział wiersza, należy uwzględnić `<BR>` tagu po pierwszym wierszu.
 
-     Aby uzyskać instrukcje, które należy wykonać, wstawianie tekstu na dowolnym \<treści > i  \< /BODY > do dodania do treści dokumentu.
+   Aby uzyskać instrukcje, które należy wykonać, wstawianie tekstu na dowolnym \<treści > i  \< /BODY > do dodania do treści dokumentu.
 
 9. Dodaj nagłówek:
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078848"
 ---
 # <a name="concurrency-namespace-enums"></a>wyliczenia przestrzeni nazw współbieżności
 
@@ -44,6 +44,7 @@ Prawidłowe stany `agent`.
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -94,6 +95,7 @@ Typy zdarzeń, które mogą być śledzone za pomocą funkcji śledzenia oferowa
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -119,6 +121,7 @@ Flagi śledzenia typy zdarzeń
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -142,6 +145,7 @@ Typ regionu krytyczny kontekst znajduje się wewnątrz.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -161,6 +165,7 @@ Używane przez `DynamicProgressFeedback` zasady do opisywania, czy zasoby dla ha
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -174,6 +179,7 @@ Typ `join` Blok obsługi wiadomości.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -192,6 +198,7 @@ Prawidłowe odpowiedzi na ofertę `message` obiektu do bloku.
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -212,6 +219,7 @@ Klucze zasad zawierająca opis aspekty zachowania harmonogramu. Każdy element z
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -258,6 +266,7 @@ Używane przez `SchedulingProtocol` zasady do opisywania, który algorytm planow
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -276,6 +285,7 @@ Wykorzystywany w celu określenia stanu w jakim jest wątek serwera proxy, gdy j
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -297,6 +307,7 @@ Opisuje stan wykonania obiektu `task_group` lub `structured_task_group` obiektu.
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|
@@ -316,6 +327,7 @@ Używane przez `WinRTInitialization` zasady do opisywania, czy i jak środowisko
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Wartości
 
 |Nazwa|Opis|

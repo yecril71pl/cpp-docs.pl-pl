@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079938"
 ---
 # <a name="service-map-macros"></a>Makra mapy usługi
 
@@ -33,7 +33,7 @@ Te makra definiują map usług i wpisów.
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Oznacza początek ATL mapy usługi.|
 |[END_SERVICE_MAP](#end_service_map)|Oznacza koniec ATL mapy usługi.|
 |[SERVICE_ENTRY](#service_entry)|Oznacza, że obiekt obsługuje identyfikatora dla określonej usługi.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha określony obiekt.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha określony obiekt.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -115,7 +115,7 @@ Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).
 Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

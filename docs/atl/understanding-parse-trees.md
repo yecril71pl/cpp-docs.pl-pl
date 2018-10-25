@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ab66fa38898c302c180be841d7e06133ee22638
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028093"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078131"
 ---
 # <a name="understanding-parse-trees"></a>Opis drzew analizy
 
@@ -32,10 +32,10 @@ Można zdefiniować co najmniej jeden drzew analizy skryptu rejestratora, gdzie 
 gdzie:
 
 ```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
-    HKEY_LOCAL_MACHINE | HKEY_USERS |  
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |  
+<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
+    HKEY_LOCAL_MACHINE | HKEY_USERS |
+    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
+    HKEY_CURRENT_CONFIG | HKCR | HKCU |
     HKLM | HKU | HKPD | HKDD | HKCC
 <registry expression> ::= <Add Key> | <Delete Key>
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
@@ -54,13 +54,13 @@ Drzewo analizy można dodać wiele kluczy i podkluczy do \<klucz główny >. W t
 
 ```
 HKEY_CLASSES_ROOT
-{  
-    'MyVeryOwnKey'  
-    {  
-        'HasASubKey'  
-        {  
-            'PrettyCool'  
-        }  
+{
+    'MyVeryOwnKey'
+    {
+        'HasASubKey'
+        {
+            'PrettyCool'
+        }
     }
 }
 ```

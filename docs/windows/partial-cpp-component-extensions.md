@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ace57934c741d0a6e7b7ab6fbe5e482540a9bc48
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8694c2fcad85bf3330ed9a5236bd53fa80ee8891
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083272"
 ---
 # <a name="partial--ccli-and-ccx"></a>częściowe (C + +/ CLI i C + +/ CX)
 
@@ -41,12 +41,12 @@ Dla klasy referencyjnej, która ma dwie definicje częściowe **częściowe** �
 
 ```cpp
 partial class-key identifier {
-   /* The first part of the partial class definition. 
+   /* The first part of the partial class definition.
       This is typically auto-generated */
 }
 // ...
 class-key identifier {
-   /* The subsequent part(s) of the class definition. The same 
+   /* The subsequent part(s) of the class definition. The same
       identifier is specified, but the "partial" keyword is omitted. */
 }
 ```

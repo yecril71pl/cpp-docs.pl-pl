@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036218"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075141"
 ---
 # <a name="try-except-statement-c"></a>try-except — instrukcja (C)
 
@@ -49,11 +49,11 @@ Instrukcja złożona po `__try` klauzula jest sekcja chroniona. Złożone wyraż
 
 1. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w dowolnej procedurze, wywołuje sekcję chronioną, `__except` wyrażenie jest obliczane i wartość zwracana określa sposób obsługi wyjątku. Istnieją trzy wartości:
 
-     `EXCEPTION_CONTINUE_SEARCH` Wyjątek nie został rozpoznany. Kontynuuj przeszukiwanie stosu obsługi, najpierw zawierającego wyrażenia **spróbuj — z wyjątkiem** instrukcji, następnie obsługi z następnym największym priorytetem.
+   `EXCEPTION_CONTINUE_SEARCH` Wyjątek nie został rozpoznany. Kontynuuj przeszukiwanie stosu obsługi, najpierw zawierającego wyrażenia **spróbuj — z wyjątkiem** instrukcji, następnie obsługi z następnym największym priorytetem.
 
-     `EXCEPTION_CONTINUE_EXECUTION` Wyjątek został rozpoznany, ale ukryty. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   `EXCEPTION_CONTINUE_EXECUTION` Wyjątek został rozpoznany, ale ukryty. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-     `EXCEPTION_EXECUTE_HANDLER` Wyjątek został rozpoznany. Kontrola jest przekazywana do programu obsługi wyjątków przez wykonanie `__except` instrukcja złożona (c), a następnie kontynuuj wykonywanie w momencie wystąpienia wyjątku.
+   `EXCEPTION_EXECUTE_HANDLER` Wyjątek został rozpoznany. Kontrola jest przekazywana do programu obsługi wyjątków przez wykonanie `__except` instrukcja złożona (c), a następnie kontynuuj wykonywanie w momencie wystąpienia wyjątku.
 
 Ponieważ `__except` wyrażenie jest obliczane jak wyrażenie C, zatem zostaje ograniczone do pojedynczej wartości, operator wyrażenia warunkowego lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
 

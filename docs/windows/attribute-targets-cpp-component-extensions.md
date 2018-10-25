@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3ffa13167de3de14e2338942cc9a41acf84b8aae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327783"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058962"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Elementy docelowe atrybutu (C + +/ CLI i C + +/ CX)
 
@@ -230,8 +230,8 @@ Specyfikatory użycia atrybutu są wymagane w następujących sytuacjach:
 - Aby określić, że atrybut ma zastosowanie do właściwości metody dostępu właściwość nie:
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

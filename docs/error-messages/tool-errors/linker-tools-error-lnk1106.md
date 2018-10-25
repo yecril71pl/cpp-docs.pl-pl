@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110877"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055987"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Błąd narzędzi konsolidatora LNK1106
 
@@ -33,16 +33,16 @@ Narzędzie nie można odczytać lub zapisać `location` w pliku mapowanych na pa
 
 1. Dysk jest zapełniony.
 
-     Zwolnij trochę miejsca i połącz ponownie.
+   Zwolnij trochę miejsca i połącz ponownie.
 
 1. Podjęto próbę połączenia za pośrednictwem sieci.
 
-     Niektóre sieci nie obsługują w pełni pliki mapowane w pamięci używane przez konsolidator. Spróbuj konsolidacji na dysku lokalnym.
+   Niektóre sieci nie obsługują w pełni pliki mapowane w pamięci używane przez konsolidator. Spróbuj konsolidacji na dysku lokalnym.
 
 1. Nieprawidłowy blok na dysku.
 
-     Mimo że system operacyjny i sprzęt dysku powinien mieć wykryte takiego komunikatu o błędzie, możesz uruchomić program sprawdzania dysku.
+   Mimo że system operacyjny i sprzęt dysku powinien mieć wykryte takiego komunikatu o błędzie, możesz uruchomić program sprawdzania dysku.
 
 1. Brak miejsca na stosie.
 
-     Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.
+   Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.

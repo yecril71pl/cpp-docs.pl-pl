@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8b8c9f4460995aaab6a9d415202c2a965a6e9a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e58b6b9d64111e021586fc23a985f31c0edf9de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063773"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Używanie przycisków listy rozwijanej w formancie paska narzędzi
 
@@ -43,19 +43,19 @@ Poniższa procedura ilustruje sposób implementacji przycisk rozwijany pasek nar
 
 1. Gdy Twoja `CToolBarCtrl` obiekt został utworzony, ustaw styl TBSTYLE_EX_DRAWDDARROWS, używając następującego kodu:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
 
 1. Ustaw styl TBSTYLE_DROPDOWN dla każdego nowego ([InsertButton](../mfc/reference/ctoolbarctrl-class.md#insertbutton) lub [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) lub istniejące ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) przyciski, który ma być przycisków listy rozwijanej. W poniższym przykładzie pokazano, modyfikowania istniejących przycisk `CToolBarCtrl` obiektu:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
 
 1. Dodawanie obsługi tbn_dropdown — do klasy nadrzędnej obiektu paska narzędzi.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
 
 1. W obsłudze nowe wyświetlane menu podręczne odpowiednie. Poniższy kod przedstawia jedną z metod:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 

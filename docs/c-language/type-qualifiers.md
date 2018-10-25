@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083246"
 ---
 # <a name="type-qualifiers"></a>Kwalifikatory typów
 
@@ -69,7 +69,7 @@ Poniższa lista opisuje sposób używania **const** i `volatile`.
 
 - Kompilator zakłada, że w dowolnym momencie w programie `volatile` zmiennej może zostać oceniony przez nieznany proces, który używa lub modyfikuje jego wartość. W związku z tym, niezależnie od optymalizacji określone w poleceniu wiersza kodu dla każdego przypisania do lub odwołaj się do elementu `volatile` zmienna musi zostać wygenerowany, nawet jeśli wydaje się mieć żadnego wpływu.
 
-     Jeśli `volatile` jest używana samodzielnie, `int` zakłada, że. `volatile` Specyfikator typu może służyć do zapewnienia niezawodny dostęp do lokalizacji pamięci specjalne. Użyj `volatile` z obiektami danych, które mogą być dostępne lub zmieniane przez procedurach obsługi sygnału, jednocześnie wykonywania programów lub specjalnego sprzętu, takich jak mapowane w pamięci operacji We/Wy rejestry sterowania. Można zadeklarować zmienną jako `volatile` dla jego okres istnienia, lub można rzutować jedno odwołanie do być `volatile`.
+   Jeśli `volatile` jest używana samodzielnie, `int` zakłada, że. `volatile` Specyfikator typu może służyć do zapewnienia niezawodny dostęp do lokalizacji pamięci specjalne. Użyj `volatile` z obiektami danych, które mogą być dostępne lub zmieniane przez procedurach obsługi sygnału, jednocześnie wykonywania programów lub specjalnego sprzętu, takich jak mapowane w pamięci operacji We/Wy rejestry sterowania. Można zadeklarować zmienną jako `volatile` dla jego okres istnienia, lub można rzutować jedno odwołanie do być `volatile`.
 
 - Element może być zarówno **const** i `volatile`, w którym to przypadku nie można zmodyfikować rzeczywiście swój własny program element, ale może być modyfikowane przez niektóre procesu asynchronicznego.
 

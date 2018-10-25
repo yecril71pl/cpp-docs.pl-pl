@@ -1,7 +1,7 @@
 ---
 title: hash_multimap — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235766"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075323"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap — Klasa
 
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -2477,9 +2476,9 @@ Zwraca obiekt funkcji porównywania, korzystającą z hash_multimap celu porząd
 
 ### <a name="remarks"></a>Uwagi
 
-Dla hash_multimap *m*, jeśli dwa elementy *e*1 ( *k*1 *, d*1) i *e*2 ( *k*2 *, d*2) są obiektami typu [value_type](#value_type), gdzie *k*1 i *k*2 są dla nich kluczami typu [key_type](#key_type) i `d`1 i `d`2 są ich dane typu [mapped_type](#mapped_type), następnie *m.*`value_comp`() ( *e*1 *, e*2) jest odpowiednikiem *m.*`key_comp`() ( *k*1 *, k*2). Przechowywany obiekt definiuje funkcję członka
+Aby uzyskać hash_multimap *m*, jeśli dwa elementy *e1* (*k1*, *d1*) i *e2*(*k2* , *d2*) są obiektami typu [value_type](#value_type), gdzie *k1* i *k2* są dla nich kluczami typu [key_type](#key_type) i *d1* i *d2* są ich dane typu [mapped_type](#mapped_type), następnie `m.value_comp()(e1, e2)` jest odpowiednikiem `m.key_comp()(k1, k2)` . Przechowywany obiekt definiuje funkcję członka
 
-**bool — operator**( **value_type &**`left`, **value_type &** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 Zwraca ona **true** Jeśli wartość klucza `left` poprzedza i nie jest równa wartości klucza `right` w porządku sortowania.
 

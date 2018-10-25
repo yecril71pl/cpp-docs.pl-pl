@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069818"
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 
@@ -41,7 +41,7 @@ Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń,
 Następująca składnia opisuje możliwe wyrażenia przyrostkowe:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Po wywołaniu funkcji, wykonywane są następujące zadania:
     Func( 7 );          // Execute function call
     ```
 
-     Koncepcyjne inicjalizacje przed wywołaniem to:
+   Koncepcyjne inicjalizacje przed wywołaniem to:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Należy zauważyć, że inicjalizacja jest wykonywana jakby przy użyciu składni znaku równości zamiast składni nawiasów. Kopia `i` została utworzona przed przekazaniem wartości do funkcji. (Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i [konwersje](../cpp/user-defined-type-conversions-cpp.md)).
+   Należy zauważyć, że inicjalizacja jest wykonywana jakby przy użyciu składni znaku równości zamiast składni nawiasów. Kopia `i` została utworzona przed przekazaniem wartości do funkcji. (Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i [konwersje](../cpp/user-defined-type-conversions-cpp.md)).
 
-     W związku z tym jeśli prototyp funkcji (deklaracja) wymaga argumentu typu **długie**, a jeśli program wywołujący dostarcza rzeczywisty argument typu **int**, rzeczywisty argument jest podnoszony za pomocą Konwersja standardowa typu na typ **długie** (zobacz [konwersje standardowe](../cpp/standard-conversions.md)).
+   W związku z tym jeśli prototyp funkcji (deklaracja) wymaga argumentu typu **długie**, a jeśli program wywołujący dostarcza rzeczywisty argument typu **int**, rzeczywisty argument jest podnoszony za pomocą Konwersja standardowa typu na typ **długie** (zobacz [konwersje standardowe](../cpp/standard-conversions.md)).
 
-     Błędem jest podawanie rzeczywistego argumentu, dla którego nie ma żadnych standardowych lub zdefiniowanych przez użytkownika konwersji do typu argumentu formalnego.
+   Błędem jest podawanie rzeczywistego argumentu, dla którego nie ma żadnych standardowych lub zdefiniowanych przez użytkownika konwersji do typu argumentu formalnego.
 
-     Dla rzeczywistych argumentów typu klasy, argument formalny jest inicjowany przez wywołanie konstruktora klasy. (Zobacz [konstruktory](../cpp/constructors-cpp.md) więcej informacji na temat tych funkcji składowych klas specjalnych.)
+   Dla rzeczywistych argumentów typu klasy, argument formalny jest inicjowany przez wywołanie konstruktora klasy. (Zobacz [konstruktory](../cpp/constructors-cpp.md) więcej informacji na temat tych funkcji składowych klas specjalnych.)
 
 - Wywołanie funkcji jest wykonywane.
 

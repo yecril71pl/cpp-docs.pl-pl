@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083324"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -444,19 +444,19 @@ Kontrolki widoku listy można wyświetlić ich zawartość na cztery różne spo
 
 - Ikona widoku
 
-     Każdy element będzie wyświetlany jako ikona pełny (32 x 32 piksele) z etykietą poniżej. Użytkownik może przeciągać elementy do dowolnej lokalizacji w oknie Widok listy.
+   Każdy element będzie wyświetlany jako ikona pełny (32 x 32 piksele) z etykietą poniżej. Użytkownik może przeciągać elementy do dowolnej lokalizacji w oknie Widok listy.
 
 - Widoku małych ikon
 
-     Każdy element pojawia się jako mała ikona (16 x 16 pikseli) przy użyciu etykiety z prawej strony. Użytkownik może przeciągać elementy do dowolnej lokalizacji w oknie Widok listy.
+   Każdy element pojawia się jako mała ikona (16 x 16 pikseli) przy użyciu etykiety z prawej strony. Użytkownik może przeciągać elementy do dowolnej lokalizacji w oknie Widok listy.
 
 - Widok listy
 
-     Każdy element pojawia się jako mała ikona etykiety z prawej strony. Elementy są uporządkowane w kolumnach i nie można przeciągnąć w dowolne miejsce w oknie Widok listy.
+   Każdy element pojawia się jako mała ikona etykiety z prawej strony. Elementy są uporządkowane w kolumnach i nie można przeciągnąć w dowolne miejsce w oknie Widok listy.
 
 - Widok raportu
 
-     Każdy element będzie wyświetlany w osobnym wierszu z dodatkowymi informacjami, uporządkowane według kolumny z prawej strony. Skrajnej lewej kolumnie zawiera małe ikony oraz etykiety, a kolejne kolumny zawierają elementy podrzędne, jak określono przez aplikację. Kontrolki nagłówka embedded (klasy [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje te kolumny. Aby uzyskać więcej informacji na temat kontrolka nagłówka i kolumn w widoku raportu, zobacz [za pomocą CListCtrl: Dodawanie kolumn do formantu (widok raportu)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Każdy element będzie wyświetlany w osobnym wierszu z dodatkowymi informacjami, uporządkowane według kolumny z prawej strony. Skrajnej lewej kolumnie zawiera małe ikony oraz etykiety, a kolejne kolumny zawierają elementy podrzędne, jak określono przez aplikację. Kontrolki nagłówka embedded (klasy [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje te kolumny. Aby uzyskać więcej informacji na temat kontrolka nagłówka i kolumn w widoku raportu, zobacz [za pomocą CListCtrl: Dodawanie kolumn do formantu (widok raportu)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 Styl formantu bieżący widok listy określa bieżący widok. Aby uzyskać więcej informacji na temat tych stylów i ich użycia, zobacz [za pomocą CListCtrl: Zmienianie stylów kontrolki listy](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Oprócz style listy standardowych klas `CListCtrl` obsługuje duży zestaw rozsz
 
 - Zatrzymaj wskaźnik myszy zaznaczenia
 
-     Po włączeniu umożliwia automatyczne zaznaczenie elementu, gdy kursor jest nad elementem, którego przez pewien czas.
+   Po włączeniu umożliwia automatyczne zaznaczenie elementu, gdy kursor jest nad elementem, którego przez pewien czas.
 
 - Widoki listy wirtualnej
 
-     Po włączeniu umożliwia formant aby obsłużyć maksymalnie elementów typu DWORD. Jest to możliwe, umieszczając związanym z zarządzaniem danych elementów w aplikacji. Z wyjątkiem zaznaczenie elementu i informacji fokus wszystkie informacje o elementach musi być zarządzany przez aplikację. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: wirtualne kontrolki listy](../../mfc/virtual-list-controls.md).
+   Po włączeniu umożliwia formant aby obsłużyć maksymalnie elementów typu DWORD. Jest to możliwe, umieszczając związanym z zarządzaniem danych elementów w aplikacji. Z wyjątkiem zaznaczenie elementu i informacji fokus wszystkie informacje o elementach musi być zarządzany przez aplikację. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: wirtualne kontrolki listy](../../mfc/virtual-list-controls.md).
 
 - Aktywacja jednego i dwa kliknięcia
 
-     Po włączeniu umożliwia aktywne śledzenie (automatyczne wyróżnianie tekstu elementu) i jednego lub dwóch kliknięcia Aktywacja zaznaczony element.
+   Po włączeniu umożliwia aktywne śledzenie (automatyczne wyróżnianie tekstu elementu) i jednego lub dwóch kliknięcia Aktywacja zaznaczony element.
 
 - Przeciąganie i upuszczanie kolejności kolumn
 
-     Po włączeniu umożliwia zmianę kolejności kolumn w kontrolce widok listy przeciągania i upuszczania. Jest to dostępne tylko w widoku raportu.
+   Po włączeniu umożliwia zmianę kolejności kolumn w kontrolce widok listy przeciągania i upuszczania. Jest to dostępne tylko w widoku raportu.
 
 Style rozszerzone informacje o używaniu tych nowych, w temacie [za pomocą CListCtrl: Zmienianie stylów kontrolki listy](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Ikony, obrazy elementu nagłówka i aplikacji — zdefiniowane stany elementy wi
 
 - Duża ikona
 
-     Używane w widoku ikon pełny ikon.
+   Używane w widoku ikon pełny ikon.
 
 - Mała ikona
 
-     Używany podczas mała ikona, listy i widoki raportu dla wersji mniejszej ikon używanych w widoku ikon.
+   Używany podczas mała ikona, listy i widoki raportu dla wersji mniejszej ikon używanych w widoku ikon.
 
 - Stan zdefiniowane przez aplikację
 
-     Zawiera obrazy stanu, które są wyświetlane obok ikony elementu do wskazywania stanu zdefiniowany przez aplikację.
+   Zawiera obrazy stanu, które są wyświetlane obok ikony elementu do wskazywania stanu zdefiniowany przez aplikację.
 
 - Element nagłówka
 
-     Używane w widoku raportu do małych obrazów, które pojawiają się w każdym elemencie kontrolki nagłówka.
+   Używane w widoku raportu do małych obrazów, które pojawiają się w każdym elemencie kontrolki nagłówka.
 
 Domyślnie kontrolka widoku listy niszczy listy obrazów do niej przypisany, kiedy niszczony jest ona; jednak Deweloper można dostosować to zachowanie niszczenie każdej listy obrazów, gdy nie jest już używany, zgodnie z ustaleniami aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: elementy listy oraz listy obrazów](../list-items-and-image-lists.md).
 

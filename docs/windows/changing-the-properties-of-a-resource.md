@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313354"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057273"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>Zmiana właściwości zasobów (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313354"
 
 1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy zasób, o których chcesz edytować, a następnie wybierz **właściwości** z menu skrótów.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
 2. W [okno właściwości](/visualstudio/ide/reference/properties-window), zmiana właściwości zasobu.

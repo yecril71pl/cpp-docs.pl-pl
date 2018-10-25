@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081498"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 
@@ -126,7 +126,6 @@ Poprzedni kod pokazuje przeciążenie funkcji `print` w zakresie pliku.
 Argument domyślny nie jest uważany za część dla typu funkcji. W związku z tym nieużywanych wyborze przeciążonych funkcji. Dwie funkcje, które różnią się tylko w ich argumenty domyślne są traktowane jako wiele definicji zamiast przeciążone funkcje.
 
 Nie można dostarczyć domyślne argumenty dla operatorów przeciążonych.
-
 
 ## <a name="argument-matching"></a>Dopasowywanie argumentów
 
@@ -471,7 +470,7 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
     void Print( PSTR szToPrint );
     ```
 
-     Poprzedni dwie funkcje mają listy argumentów identyczne. `PSTR` jest synonimem typu `char *`. W zakresie członka ten kod generuje błąd.
+   Poprzedni dwie funkcje mają listy argumentów identyczne. `PSTR` jest synonimem typu `char *`. W zakresie członka ten kod generuje błąd.
 
 - Typy wyliczone są różnych typów i może służyć do rozróżnienia przeciążonych funkcji.
 
@@ -482,7 +481,7 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
     void Print( char szToPrint[] );
     ```
 
-     Zwymiarowany mnożenie macierzy drugi i kolejne wszystkie wymiary są traktowane jako część tego typu. W związku z tym są one używane w rozróżniania przeciążonych funkcji:
+   Zwymiarowany mnożenie macierzy drugi i kolejne wszystkie wymiary są traktowane jako część tego typu. W związku z tym są one używane w rozróżniania przeciążonych funkcji:
 
     ```cpp
     void Print( char szToPrint[] );

@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ebcdd54e145ff17dc7c473abf6a3ae37e35e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0895bc1ab6141eaadbeda4a567b8e4cfaad30658
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072281"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
-**Określonego język C++**  
-  
-Ma taką samą funkcjonalność jak [no_namespace](../preprocessor/no-namespace.md) atrybutu, ale jest używana na biblioteki typów, których używasz `#import` dyrektywy z [auto_search —](../preprocessor/auto-search.md) atrybutu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-no_search_namespace  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- 
-**KONIEC określonego języka C++**  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+**Określonego język C++**
+
+Ma taką samą funkcjonalność jak [no_namespace](../preprocessor/no-namespace.md) atrybutu, ale jest używana na biblioteki typów, których używasz `#import` dyrektywy z [auto_search —](../preprocessor/auto-search.md) atrybutu.
+
+## <a name="syntax"></a>Składnia
+
+```
+no_search_namespace
+```
+
+## <a name="remarks"></a>Uwagi
+
+**KONIEC określonego języka C++**
+
+## <a name="see-also"></a>Zobacz też
+
 [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

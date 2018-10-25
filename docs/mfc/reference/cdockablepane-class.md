@@ -1,7 +1,7 @@
 ---
 title: Klasa CDockablePane | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078313"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 
@@ -223,7 +223,7 @@ class CDockablePane : public CPane
 |[CDockablePane::ReplacePane](#replacepane)|Zamienia określony okienko okienka.|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|Struktura wywołuje tę metodę, okienko jest deserializacji, aby przywrócić domyślne separator okienka.|
 |`CDockablePane::SaveState`|Używane wewnętrznie.|
-|`CDockablePane::Serialize`|Serializuje okienka. (Przesłania `CBasePane::Serialize`.)|
+|`CDockablePane::Serialize`|Serializuje okienka. (Przesłania `CBasePane::Serialize`).|
 |[CDockablePane::SetAutoHideMode](#setautohidemode)|Włącza/wyłącza okienko dokowania między widoczne i w trybie autoukrywania.|
 |[CDockablePane::SetAutoHideParents](#setautohideparents)|Określa przycisk Autoukrywanie i narzędzi automatyczne ukrywanie okienka.|
 |`CDockablePane::SetDefaultPaneDivider`|Używane wewnętrznie.|
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pTabControlBarAttachTo* określa okienko docelowy, w którym bieżącego okienka dołącza do. Okienko docelowy musi być zadokowane okienko.
+*pTabControlBarAttachTo*<br/>
+[out w] Określa, w okienku target bieżącego okienka dołączony do. Okienko docelowy musi być zadokowane okienko.
 
 *dockMethod*<br/>
 [in] Określa metodę dokowania.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Określa nazwę okna.
 
-[in] [out] *pParentWnd* określa okna nadrzędnego.
+*pParentWnd*<br/>
+[out w] Określa okna nadrzędnego.
 
 *Rect*<br/>
 [in] Określa rozmiar i położenie okna w współrzędne klienta *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Określa atrybuty stylu dodatkowe.
 
-[in] [out] *pContext* Określa kontekst tworzenia okna.
+*pContext*<br/>
+[out w] Określa kontekst tworzenia okna.
 
 *lpszWindowName*<br/>
 [in] Określa nazwę okna.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Określa nazwę okna.
 
-[in] [out] *pParentWnd* określa okna nadrzędnego.
+*pParentWnd*<br/>
+[out w] Określa okna nadrzędnego.
 
 *Rect*<br/>
 [in] Określa rozmiar i położenie okna w współrzędne klienta *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Określa atrybuty stylu dodatkowe.
 
-[in] [out] *pContext* Określa kontekst tworzenia okna.
+*pContext*<br/>
+[out w] Określa kontekst tworzenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pTargetWindow* określa okienka zadokowane, aby zadokować w tym okienku, aby.
+*pTargetWindow*<br/>
+[out w] Określa okienka zadokowane, aby zadokować w tym okienku, aby.
 
 *dwAlignment*<br/>
 [in] Określa wyrównanie dokujące okienka. Może to być jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM lub CBRS_ALIGN_ANY. (Zdefiniowane w afxres.h).
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Określa wyrównanie okienka autoukrywania do utworzenia.
 
-[in] [out] *pCurrAutoHideBar* wskaźnik do bieżącego narzędzi Autoukrywanie. Może mieć wartości NULL.
+*pCurrAutoHideBar*<br/>
+[out w] Wskaźnik do bieżącego narzędzi Autoukrywanie. Może mieć wartości NULL.
 
 *bUseTimer*<br/>
 [in] Określa, czy efekt autoukrywania należy stosować, gdy użytkownik zmienia okienka w trybie autoukrywania lub ukrywanie okienka natychmiast.

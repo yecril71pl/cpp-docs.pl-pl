@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082687"
 ---
 # <a name="data-access-in-visual-c"></a>Dostęp do danych w programie Visual C++
 
@@ -52,13 +52,13 @@ Połączyć z usługą Azure SQL Database z aplikacji języka C lub C++.
 [Usługa Azure Storage](/azure/storage/storage-introduction) to rozwiązanie magazynu w chmurze dla nowoczesnych aplikacji, które polegają na trwałości, dostępności i skalowalności, aby spełniać potrzeby klientów. Nawiąż połączenie usługi Azure Storage z C++ przy użyciu biblioteki klienta usługi Azure Storage dla języka C++.
 
 [Sterownik ODBC 13.1 dla programu SQL Server — Windows wydana](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Najnowszy sterownik ODBC zapewnia niezawodny dostęp do programu Microsoft SQL Server 2016 Microsoft Azure SQL Database dla języka C/C++, na podstawie aplikacji. Zapewnia obsługę funkcji, w tym z funkcji zawsze zaszyfrowane, usługi Azure Active Directory i zawsze włączonych grup dostępności. Również dostępne w systemach MacOS i Linux.     
- 
+Najnowszy sterownik ODBC zapewnia niezawodny dostęp do programu Microsoft SQL Server 2016 Microsoft Azure SQL Database dla języka C/C++, na podstawie aplikacji. Zapewnia obsługę funkcji, w tym z funkcji zawsze zaszyfrowane, usługi Azure Active Directory i zawsze włączonych grup dostępności. Również dostępne w systemach MacOS i Linux.
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client jest autonomicznym danych dostęp do interfejsu programowania aplikacji (API), używane dla OLE DB i ODBC, który obsługuje program SQL Server 2005 za pomocą programu SQL Server 2014. Nowe aplikacje powinny używać 13.1 sterownika ODBC dla programu SQL Server.
 
 [Centrum deweloperów języka C++ i C platformy Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure ułatwia tworzenie aplikacji w języku C++ z większą elastyczność, skalowalności i niezawodności za pomocą dobrze znanych narzędzi.    
+Azure ułatwia tworzenie aplikacji w języku C++ z większą elastyczność, skalowalności i niezawodności za pomocą dobrze znanych narzędzi.
 
 [Jak używać magazynu obiektów Blob w języku C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Usługa Azure Blob storage to usługa, która przechowuje dane niestrukturalne w chmurze w postaci obiektów blob. Magazyn obiektów blob można przechowywać dowolnego typu dane tekstowe lub binarne, takie jak dokument, plik multimedialny lub Instalator aplikacji. Magazyn obiektów blob jest również określany jako magazyn obiektów.

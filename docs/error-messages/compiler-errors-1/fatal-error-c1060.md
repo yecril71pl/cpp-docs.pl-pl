@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 09d9c0292840daf65effca09775ff85a156b00f8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053919"
 ---
 # <a name="fatal-error-c1060"></a>Błąd krytyczny C1060
 
@@ -33,7 +33,7 @@ System operacyjny lub biblioteki wykonawczej nie można wypełnić żądanie pam
 
 1. Jeśli kompilator generuje również błędy [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) i [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), użyj [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) — opcja kompilatora obniżyć limit alokacji pamięci. Więcej miejsca na stercie jest dostępne dla aplikacji, jeśli obniżyć pozostałych alokacji pamięci.
 
-     Jeśli [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) już ustawiono opcję, spróbuj go usunąć. Mogą się wyczerpać miejsca na stercie, ponieważ limit alokacji pamięci, określonego w opcji jest zbyt duża. Kompilator używa domyślny limit maksymalnej, jeśli usuniesz [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opcji.
+   Jeśli [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) już ustawiono opcję, spróbuj go usunąć. Mogą się wyczerpać miejsca na stercie, ponieważ limit alokacji pamięci, określonego w opcji jest zbyt duża. Kompilator używa domyślny limit maksymalnej, jeśli usuniesz [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opcji.
 
 1. Jeśli kompilujesz na platformie 64-bitowej, należy użyć narzędzi 64-bitowego kompilatora. Aby uzyskać informacje, zobacz [porady: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 

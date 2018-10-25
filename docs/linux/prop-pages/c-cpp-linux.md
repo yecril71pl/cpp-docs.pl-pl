@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061563"
 ---
 # <a name="cc-properties-linux-c"></a>Właściwości języka C/C++ (Linux C++)
 
@@ -85,4 +85,4 @@ Właściwość | Opis | Opcje
 Kompiluj jako | Wybierz opcję języka kompilowania dla plików .c i .cpp.  "Default" wykryje na podstawie rozszerzenia c lub CPP rozszerzenie. (-x c, - x c ++) | **Domyślne** — domyślne.<br/>**Kompiluj jako kod C** — Kompiluj jako kod C.<br/>**Kompiluj jako kod C++** — Kompiluj jako kod C++.<br/>
 Wymuszone pliki dołączane | Co najmniej jeden wymuszony plik dyrektywy include plików (-include [nazwa])
 
-## <a name="additional-options"></a>Dodatkowe opcje 
+## <a name="additional-options"></a>Dodatkowe opcje

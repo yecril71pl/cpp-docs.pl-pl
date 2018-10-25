@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069937"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Porady: kompilowanie kodu MFC i ATL za pomocą opcji /clr
 
@@ -40,7 +40,7 @@ W tym temacie omówiono sposób kompilowania istniejących programów MFC i ATL 
 
 1. W **właściwości projektu** okna dialogowego, rozwiń węzeł obok **właściwości konfiguracji** i wybierz **ogólne**. W okienku po prawej stronie w obszarze **domyślne wartości projektu**ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**.
 
-     Upewnij się, że w tym samym okienku **użycie MFC** ustawiono **Użyj MFC w współdzielonej bibliotece DLL**.
+   Upewnij się, że w tym samym okienku **użycie MFC** ustawiono **Użyj MFC w współdzielonej bibliotece DLL**.
 
 1. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. Upewnij się, że **formatu informacji debugowania** ustawiono **/zi bazy danych programu** (nie **/zi**).
 
@@ -60,7 +60,7 @@ W tym temacie omówiono sposób kompilowania istniejących programów MFC i ATL 
 
 1. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **prekompilowanych nagłówków**. Ustaw **Utwórz/użycie Prekompilowanego nagłówka** do **nie używa prekompilowanych nagłówków**.
 
-     Jako alternatywę w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy Stdafx.cpp, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. Ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
+   Jako alternatywę w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy Stdafx.cpp, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. Ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
 
 1. Dla pliku, który zawiera funkcji DllMain i nic wywoływanych przez nią, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. W okienku po prawej stronie w obszarze **domyślne wartości projektu**ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
 
@@ -84,7 +84,7 @@ W tym temacie omówiono sposób kompilowania istniejących programów MFC i ATL 
 
 1. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **prekompilowanych nagłówków**. Ustaw **Utwórz/użycie Prekompilowanego nagłówka** do **nie używa prekompilowanych nagłówków**.
 
-     Jako alternatywę w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy Stdafx.cpp, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. Ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
+   Jako alternatywę w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy Stdafx.cpp, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. Ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
 
 1. Dla pliku, który zawiera funkcji DllMain i nic wywoływanych przez nią, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. W okienku po prawej stronie w obszarze **domyślne wartości projektu**ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
 

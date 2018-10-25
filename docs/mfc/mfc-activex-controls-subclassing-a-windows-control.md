@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081709"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna
 
@@ -94,12 +94,12 @@ Aby dodać program obsługi komunikatów dla komunikatów odbitych okna ręcznie
 
 - W klasie kontrolki. Plik H deklarowanie funkcji obsługi. Funkcja powinna mieć typ zwracany **LRESULT** i dwa parametry, z typami **WPARAM** i **LPARAM**, odpowiednio. Na przykład:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - W klasie kontrolki. CPP plików, Dodaj odpowiedni wpis ON_MESSAGE mapie komunikatów. Parametry tego wpisu należy identyfikator wiadomości oraz nazwa funkcji programu obsługi. Na przykład:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Również w. Plik CPP zaimplementować `OnOcmCommand` funkcja elementu członkowskiego do przetwarzania komunikatów odbitych. *WParam* i *lParam* parametry są takie same jak oryginalne komunikatów okien.
 

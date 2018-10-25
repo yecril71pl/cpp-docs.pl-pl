@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e99227f32418b994ca0e678ae29dc12e716782
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e0680bb1bed7973071eaabc3535574cb5f470b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057637"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
 
@@ -138,9 +138,9 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Określa, czy zmiana rozmiaru menu jest włączone lub wyłączone.|
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
 |[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Określa, czy pasek boczny jest włączone.|
-|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Przesłania `CMFCRibbonButton::OnAfterChangeRect`.)|
+|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Przesłania `CMFCRibbonButton::OnAfterChangeRect`).|
 |[CMFCRibbonGallery::OnDraw](#ondraw)|(Przesłania [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonGallery::OnEnable](#onenable)|(Przesłania `CMFCRibbonBaseElement::OnEnable`.)|
+|[CMFCRibbonGallery::OnEnable](#onenable)|(Przesłania `CMFCRibbonBaseElement::OnEnable`).|
 |[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Przesłania [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
 |[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Odrysowuje galerii.|
 |[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Usuwa etykietki narzędzi z wszystkich elementów w galerii.|
@@ -189,11 +189,9 @@ void AddGroup(
     UINT uiImagesPaletteResID,
     int cxPaletteImage);
 
-
 void AddGroup(
     LPCTSTR lpszGroupName,
     CMFCToolBarImages& imagesGroup);
-
 
 void AddGroup(
     LPCTSTR lpszGroupName,
@@ -276,7 +274,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     CMFCToolBarImages& imagesPalette);
 
-
 CMFCRibbonGallery (
     UINT nID,
     LPCTSTR lpszText,
@@ -284,7 +281,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     UINT uiImagesPaletteResID=0,
     int cxPaletteImage=0);
-
 
 CMFCRibbonGallery (
     UINT nID,
@@ -371,21 +367,19 @@ Wywołaj tę metodę, aby włączyć lub wyłączyć pasku bocznym stylu XP paki
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
 
-
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
-
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -415,7 +409,6 @@ Nazwa grupy znajduje się w określonym indeksie. Przekazywanie nieprawidłowy i
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset
-
 
 ```
 virtual int GetGroupOffset() const;
@@ -493,21 +486,19 @@ Identyfikator polecenia aktualnie wybranego palety.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem
-
 
 ```
 int GetSelectedItem() const;
@@ -518,7 +509,6 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu
-
 
 ```
 virtual BOOL HasMenu() const;
@@ -558,7 +548,6 @@ Wartość TRUE, jeśli włączono zmianę rozmiaru menu; w przeciwnym razie wart
 
 ##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical
 
-
 ```
 BOOL IsMenuResizeVertical() const;
 ```
@@ -583,19 +572,17 @@ Wartość TRUE, jeśli pasek boczny stylu XP pakietu Office jest rysowana w lewe
 
 ##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect
 
-
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
-
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -603,7 +590,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -643,19 +630,17 @@ Można zastąpić tę metodę w klasie pochodnej, aby dostosować wygląd galeri
 
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
 
-
 ```
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bWłączenie*
+[in] *bWłączenie*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
-
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -663,7 +648,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bIsRTL*
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -691,14 +676,13 @@ void RemoveItemToolTips();
 
 ##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
 
-
 ```
 void SelectItem(int nItemIndex);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nItemIndex*
+[in] *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -806,7 +790,6 @@ Dołącza paletę do galerii wstążki.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
-
 
 void SetPalette(
     UINT uiImagesPaletteResID,

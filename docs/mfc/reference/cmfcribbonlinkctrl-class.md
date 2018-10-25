@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24dc82015e003b3a2ddbbd202dd6cba9176154eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 757bc0e1418b2ff68f3aefce7bf54ca38e8a4687
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440085"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079561"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
 
@@ -72,15 +72,15 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Przesłania `CMFCRibbonButton::CopyFrom`.)|
+|[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Przesłania `CMFCRibbonButton::CopyFrom`).|
 |[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Przesłania [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
 |[CMFCRibbonLinkCtrl::GetLink](#getlink)|Zwraca wartość hiperłącze.|
 |[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Przesłania [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
 |[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Przesłania [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
-|[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`.)|
+|[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`).|
 |[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Przesłania [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
 |[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Przesłania [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
-|[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Przesłania `CMFCRibbonButton::OnMouseMove`.)|
+|[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Przesłania `CMFCRibbonButton::OnMouseMove`).|
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otwiera stronę sieci Web, określone w hiperlink.|
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|Ustawia wartość hiperłącze.|
@@ -129,19 +129,17 @@ Poniższy przykład pokazuje, jak używać konstruktora `CMFCRibbonLinkCtrl` kla
 
 ##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize
-
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -149,7 +147,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -171,21 +169,19 @@ Bieżąca wartość hiperłącze.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText
-
 
 ```
 virtual CString GetToolTipText() const;
@@ -197,21 +193,20 @@ virtual CString GetToolTipText() const;
 
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
 
-
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC** [in] *CRect*
+[in] *Przechwytywania zmian danych&#42;*<br/>
+[in] *CRect*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
-
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -223,19 +218,17 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*
+[in] *podstawowego kontrolera domeny*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
-
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -243,12 +236,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *punktu*
+[in] *punktu*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
-
 
 ```
 virtual void OnSetIcon();

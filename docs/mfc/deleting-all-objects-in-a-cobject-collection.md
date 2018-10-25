@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067192"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 
@@ -68,9 +68,9 @@ Zwróć uwagę na różnicę między usunięcie elementu obiektu i usuwanie same
 
 1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z tablicy, po ich usunięciu.
 
-     Kod do usuwania wszystkich elementów tablicy jest następująca:
+   Kod do usuwania wszystkich elementów tablicy jest następująca:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Zgodnie z powyższym przykładzie listy może wywołać `RemoveAll` można usunąć wszystkich elementów w tablicy lub `RemoveAt` można usunąć pojedynczego elementu.
 
@@ -82,9 +82,9 @@ Zgodnie z powyższym przykładzie listy może wywołać `RemoveAll` można usun�
 
 1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z mapy, po ich usunięciu.
 
-     Usunięcie wszystkich elementów w kodzie `CMap` kolekcja jest w następujący sposób. Każdy element w mapie ma ciąg jako klucz i `CPerson` obiektu (pochodną `CObject`) jako wartość.
+   Usunięcie wszystkich elementów w kodzie `CMap` kolekcja jest w następujący sposób. Każdy element w mapie ma ciąg jako klucz i `CPerson` obiektu (pochodną `CObject`) jako wartość.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Możesz wywołać `RemoveAll` można usunąć wszystkich elementów w mapie lub `RemoveKey` można usunąć pojedynczego elementu z określonym kluczem.
 

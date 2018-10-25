@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c123784af81a534a6d6ff2a0fb3d2108ff6021
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df3a3b17af4ccb55fffccdbe87c1ac8c39eba603
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057497"
 ---
 # <a name="control"></a>— formant
 
@@ -72,4 +72,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

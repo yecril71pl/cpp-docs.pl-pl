@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424679"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079015"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: używanie klasy CAsyncSocket
 
@@ -48,19 +48,19 @@ W tym artykule omówiono:
 
 1. Konstruowania [CAsyncSocket](../mfc/reference/casyncsocket-class.md) obiektu i obiekt używany do tworzenia podstawowych **GNIAZDA** obsługi.
 
-     Tworzenie gniazdo jest zgodny ze wzorcem MFC konstrukcji dwuetapowego.
+   Tworzenie gniazdo jest zgodny ze wzorcem MFC konstrukcji dwuetapowego.
 
-     Na przykład:
+   Na przykład:
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      —lub—
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     Pierwszy Konstruktor powyżej tworzy `CAsyncSocket` obiektów na stosie. Drugi Konstruktor tworzy `CAsyncSocket` na stosie. Pierwszy [Utwórz](../mfc/reference/casyncsocket-class.md#create) wywołanie powyższej używa domyślnych parametrów w celu utworzenia gniazda strumieni. Drugi `Create` wywołanie tworzy gniazdo datagram z określonego portu i adres. (Można użyć dowolnego `Create` wersji za pomocą jednej z metod konstrukcja.)
+   Pierwszy Konstruktor powyżej tworzy `CAsyncSocket` obiektów na stosie. Drugi Konstruktor tworzy `CAsyncSocket` na stosie. Pierwszy [Utwórz](../mfc/reference/casyncsocket-class.md#create) wywołanie powyższej używa domyślnych parametrów w celu utworzenia gniazda strumieni. Drugi `Create` wywołanie tworzy gniazdo datagram z określonego portu i adres. (Można użyć dowolnego `Create` wersji za pomocą jednej z metod konstrukcja.)
 
-     Parametry `Create` są:
+   Parametry `Create` są:
 
    - "port": krótka liczba całkowita.
 
@@ -72,28 +72,28 @@ W tym artykule omówiono:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     Terminy "port" i "adres gniazda" są wyjaśnione w [Windows Sockets: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Terminy "port" i "adres gniazda" są wyjaśnione w [Windows Sockets: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Jeśli klient znajduje się w gniazda, obiekt gniazda nawiązywania połączenia z serwerem gniazda, za pomocą [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
      —lub—
 
-     Jeśli gniazda jest serwerem, należy ustawić gniazda, aby rozpocząć nasłuchiwania (przy użyciu [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) podczas podejmowania prób połączenia od klienta. Po odebraniu żądania połączenia, zaakceptuj je za pomocą [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Jeśli gniazda jest serwerem, należy ustawić gniazda, aby rozpocząć nasłuchiwania (przy użyciu [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) podczas podejmowania prób połączenia od klienta. Po odebraniu żądania połączenia, zaakceptuj je za pomocą [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-     Po zaakceptowaniu połączenia, można wykonywać zadania, takie jak sprawdzanie poprawności hasła.
+   Po zaakceptowaniu połączenia, można wykonywać zadania, takie jak sprawdzanie poprawności hasła.
 
     > [!NOTE]
     >  `Accept` Funkcja elementu członkowskiego przyjmuje odwołanie do nowy, pusty `CSocket` obiekt jako parametr. Należy utworzyć ten obiekt przed wywołaniem `Accept`. Jeśli ten obiekt gniazda wykracza poza zakres, połączenie zostaje zamknięte. Nie wywołuj `Create` dla tego nowego obiektu gniazda. Aby uzyskać przykład, zobacz artykuł [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Przeprowadzać komunikacji z innymi gniazda, wywołując `CAsyncSocket` funkcji elementów członkowskich obiektu, które hermetyzują funkcje interfejsu API programu Windows Sockets.
 
-     Windows Sockets specyfikacji i klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md) w *odwołanie MFC*.
+   Windows Sockets specyfikacji i klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md) w *odwołanie MFC*.
 
 1. Zniszcz `CAsyncSocket` obiektu.
 
-     Jeśli utworzono obiekt gniazda na stosie, jego destruktor jest wywoływana, gdy funkcja zawierającego wykracza poza zakres. Jeśli utworzono obiekt gniazda na stosie, za pomocą **nowe** operatora, użytkownik jest odpowiedzialny za pomocą **Usuń** operatora do zniszczenia obiektu.
+   Jeśli utworzono obiekt gniazda na stosie, jego destruktor jest wywoływana, gdy funkcja zawierającego wykracza poza zakres. Jeśli utworzono obiekt gniazda na stosie, za pomocą **nowe** operatora, użytkownik jest odpowiedzialny za pomocą **Usuń** operatora do zniszczenia obiektu.
 
-     Destruktor wywołuje obiekt [Zamknij](../mfc/reference/casyncsocket-class.md#close) funkcji składowej przed zniszczenia obiektu.
+   Destruktor wywołuje obiekt [Zamknij](../mfc/reference/casyncsocket-class.md#close) funkcji składowej przed zniszczenia obiektu.
 
 Na przykład ta sekwencja w kodzie (faktycznie dla `CSocket` obiektu), zobacz [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).
 

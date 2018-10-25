@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055518"
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 
@@ -67,7 +67,7 @@ Aby poprawić wydajność dla Twoich kontrolek, wykonaj te porady dotyczące zag
 
 - Pobieranie danych w małych blokach.
 
-     Podczas pobierania dużych strumieni, takich jak mapy bitowe lub dane wideo, dostęp do danych kontrolki asynchronicznie we współpracy z kontenera. Pobieranie danych w sposób przyrostowego lub progresywnego pracy wspólnie z innymi formantami, które mogą również pobieranie danych. Kod można również odbywać się pobieranie asynchronicznie.
+   Podczas pobierania dużych strumieni, takich jak mapy bitowe lub dane wideo, dostęp do danych kontrolki asynchronicznie we współpracy z kontenera. Pobieranie danych w sposób przyrostowego lub progresywnego pracy wspólnie z innymi formantami, które mogą również pobieranie danych. Kod można również odbywać się pobieranie asynchronicznie.
 
 - Pobierz kod i właściwości w tle.
 
@@ -75,15 +75,15 @@ Aby poprawić wydajność dla Twoich kontrolek, wykonaj te porady dotyczące zag
 
 - Należy wziąć pod uwagę sposób trwałe dane są przechowywane, zarówno właściwości, jak i dużych ilości danych obiektów blob (takie jak mapy bitowej obraz lub film wideo danych).
 
-     Formanty z znacznej ilości trwałych danych, takich jak duże mapy bitowe lub plikach AVI wymagają uważnego pobieranie metody. Dokumentu lub strony można tak szybko, jak to możliwe staje się widoczny i umożliwia użytkownikowi interakcję ze stroną, podczas kontroli pobierania danych w tle.
+   Formanty z znacznej ilości trwałych danych, takich jak duże mapy bitowe lub plikach AVI wymagają uważnego pobieranie metody. Dokumentu lub strony można tak szybko, jak to możliwe staje się widoczny i umożliwia użytkownikowi interakcję ze stroną, podczas kontroli pobierania danych w tle.
 
 - Napisz efektywne procedury rozmiar kodu i czas wykonywania w dół.
 
-     Małych kontrolek przycisków i etykiet, za pomocą tylko kilku bajtów danych trwałych, są odpowiednie do użycia w środowisku Internet i pracy również wewnątrz przeglądarki.
+   Małych kontrolek przycisków i etykiet, za pomocą tylko kilku bajtów danych trwałych, są odpowiednie do użycia w środowisku Internet i pracy również wewnątrz przeglądarki.
 
 - Należy wziąć pod uwagę, że postęp jest przekazywane do kontenera.
 
-     Powiadom kontenera postępu do pobrania asynchronicznego, takich jak po użytkownik może uruchomić do interakcji ze strony i pobranie zostanie ukończone. Kontener można wyświetlić postęp (takie jak procent ukończenia) dla użytkownika.
+   Powiadom kontenera postępu do pobrania asynchronicznego, takich jak po użytkownik może uruchomić do interakcji ze strony i pobranie zostanie ukończone. Kontener można wyświetlić postęp (takie jak procent ukończenia) dla użytkownika.
 
 - Należy wziąć pod uwagę, jak formanty są rejestrowane na komputerze klienckim.
 
@@ -99,7 +99,7 @@ Podczas tworzenia nowego formantu za pomocą Kreatora aplikacji, można włączy
 
 1. Na **ustawienia kontroli** wybierz opcję **ładuje asynchronicznie właściwości**. Wybranie tej opcji ustawia się właściwości stanu gotowości i zdarzenia zmieniającego stan gotowości za Ciebie.
 
-     Możesz również wybrać inne optymalizacje, takie jak **aktywacji niepowiązanej z oknami**, który jest opisany w [kontrolek ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md).
+   Możesz również wybrać inne optymalizacje, takie jak **aktywacji niepowiązanej z oknami**, który jest opisany w [kontrolek ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md).
 
 1. Wybierz **Zakończ** do tworzenia projektu.
 
@@ -111,15 +111,15 @@ Podczas tworzenia nowego formantu za pomocą Kreatora aplikacji, można włączy
 
 1. W tej klasie zastąpić `OnDataAvailable`. Ta funkcja jest wywoływana zawsze wtedy, gdy dane są dostępne do wyświetlenia. Danych staje się dostępne, może obsłużyć dowolny sposób, który wybierzesz, na przykład przez stopniowe renderowaniem go.
 
-     Poniższy fragment kodu jest prosty przykład stopniowo wyświetlanie danych w formancie edycji. Zwróć uwagę na użycie flagi **BSCF_FIRSTDATANOTIFICATION** Wyczyść kontrolki edycji.
+   Poniższy fragment kodu jest prosty przykład stopniowo wyświetlanie danych w formancie edycji. Zwróć uwagę na użycie flagi **BSCF_FIRSTDATANOTIFICATION** Wyczyść kontrolki edycji.
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     Należy pamiętać, że musi zawierać AFXCMN. H, aby użyć `CListCtrl` klasy.
+   Należy pamiętać, że musi zawierać AFXCMN. H, aby użyć `CListCtrl` klasy.
 
 1. Podczas kontroli nad jego ogólną stan zmieni się (na przykład z ładowanie do zainicjowane lub użytkownika interakcyjnego), wywołanie `COleControl::InternalSetReadyState`. Jeśli formant ma właściwości ścieżki danych tylko jeden, możesz dodać kod na **BSCF_LASTDATANOTIFICATION** powiadomić kontenera o ukończeniu pobierania. Na przykład:
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. Zastąp `OnProgress`. W `OnProgress`, są przekazywane liczbą przedstawiający maksymalną wielkość zakresu i jest liczba pokazujący, jak daleko u bieżącej pobierania. Aby wyświetlić stan, takie jak procent wykonania dla użytkownika, można użyć tych liczb.
 
@@ -135,19 +135,19 @@ Następna procedura dodaje właściwość do kontroli na korzystanie z klasy poc
 
 1. Zadeklaruj zmienną członkowską z Twojej `CDataPathProperty`-klasy pochodnej do klasy kontrolki ActiveX.
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. Implementowanie `Get/Set` metody. Aby uzyskać `Get`, zwróć ciąg. Aby uzyskać `Set`, załaduj właściwości i wywołania `SetModifiedFlag`.
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. W [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), Dodaj następujący wiersz:
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. Zastąp [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) powiadomić właściwości można zresetować do jego kontrolki, dodając ten wiersz:
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Podjęcie decyzji o dziedziczyć CDataPathProperty lub CCachedDataPathProperty
 
@@ -200,8 +200,6 @@ W przypadku dodawania obsługi asynchronicznego właściwości do istniejącego 
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 Spowoduje zaktualizowanie stanu gotowości, jak kod jest pobierany przez wywołanie metody [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Jednym miejscu, można wywołać `InternalSetReadyState` pochodzi z `OnProgress` zastępowania `CDataPathProperty`-klasy pochodnej.
-
-
 
 ## <a name="see-also"></a>Zobacz też
 

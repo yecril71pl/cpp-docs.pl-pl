@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079548"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Klasa CMFCPreviewCtrlImpl
 
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *podstawowego kontrolera domeny*<br/>
 Wskaźnik do kontekstu urządzenia dla malowania.
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 Zestawy danych wejściowych fokus do tego formantu.
@@ -193,6 +192,7 @@ Zestawy danych wejściowych fokus do tego formantu.
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Zwraca dokument podłączone do tego formantu (wersja zapoznawcza).
@@ -226,6 +226,7 @@ Kolor tekstu w oknie podglądu.
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> Czcionka CMFCPreviewCtrlImpl::m_font wykorzystywany do wyświetlania tekstu w oknie podglądu.
 
 ### <a name="syntax"></a>Składnia
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Wskaźnik do dokumentu, w których zawartość jest przeglądany w formancie.
@@ -252,6 +254,7 @@ Zawiera informacje dla tego formantu, aby odświeżyć.
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Metoda wywoływana przez program obsługi (wersja zapoznawcza) można utworzyć relacji między implementacji dokumentu i kontrola wersji zapoznawczej.

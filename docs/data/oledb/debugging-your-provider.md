@@ -18,33 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fc4461bb29bb9b9c706177c4dcd2134d37d697e0
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 59431204ae242ac6fab0d562740f859dc85bcd11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989908"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081800"
 ---
 # <a name="debugging-your-provider"></a>Debugowanie dostawcy
 
-Istnieją dwa sposoby, aby debugować dostawcy:  
-  
-- Ponieważ dostawców są tworzone w procesie, można utworzyć kodu odbiorcy zwykle za pomocą szablony konsumentów OLE DB i Wkrocz do dostawcy.  
-  
-- Można użyć narzędzia ITEST, który jest dostarczany z programem Visual C++.  
-  
-## <a name="to-use-the-itest-utility"></a>Aby korzystać z narzędzia ITEST  
-  
-1. Otwórz projekt dostawcy.  
-  
-1. Na **projektów** menu, kliknij przycisk **ustawienia**.  
-  
-1. W **stron właściwości** okno dialogowe, kliknij przycisk **debugowania** kartę.  
-  
-1. W **plik wykonywalny dla sesji debugowania** wybierz aplikacji ITEST.  
-  
-1. Ustawianie punktów przerwania, a następnie debugować w zwykły sposób.  
-  
-## <a name="see-also"></a>Zobacz też  
+Istnieją dwa sposoby, aby debugować dostawcy:
+
+- Ponieważ dostawców są tworzone w procesie, można utworzyć kodu odbiorcy zwykle za pomocą szablony konsumentów OLE DB i Wkrocz do dostawcy.
+
+- Można użyć narzędzia ITEST, który jest dostarczany z programem Visual C++.
+
+## <a name="to-use-the-itest-utility"></a>Aby korzystać z narzędzia ITEST
+
+1. Otwórz projekt dostawcy.
+
+1. Na **projektów** menu, kliknij przycisk **ustawienia**.
+
+1. W **stron właściwości** okno dialogowe, kliknij przycisk **debugowania** kartę.
+
+1. W **plik wykonywalny dla sesji debugowania** wybierz aplikacji ITEST.
+
+1. Ustawianie punktów przerwania, a następnie debugować w zwykły sposób.
+
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

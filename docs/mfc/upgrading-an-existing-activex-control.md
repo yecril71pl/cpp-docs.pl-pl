@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082934"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 
@@ -213,11 +213,11 @@ Aby użyć licencjonowany formant na stronie HTML na maszynie nonlicensed, nale�
 
 1. Wstaw \<obiektu > tag w przypadku usługi licencjonowany formant po tagu Menedżer licencji.
 
-     Na przykład strona HTML, która wyświetla kontrolkę Edycja maskowana firmy Microsoft znajdują się poniżej. Pierwsza klasa, jest identyfikator kontrolki License Manager, druga klasa, którego identyfikator Edycja maskowana kontrolka. Zmienianie tagów, aby wskazywała ścieżkę względną w pliku Lpk, która została utworzona wcześniej i Dodaj tag obiekt, w tym identyfikator klasy formantu.
+   Na przykład strona HTML, która wyświetla kontrolkę Edycja maskowana firmy Microsoft znajdują się poniżej. Pierwsza klasa, jest identyfikator kontrolki License Manager, druga klasa, którego identyfikator Edycja maskowana kontrolka. Zmienianie tagów, aby wskazywała ścieżkę względną w pliku Lpk, która została utworzona wcześniej i Dodaj tag obiekt, w tym identyfikator klasy formantu.
 
 1. Wstaw \<osadzania > atrybutu dla pliku LPK, jeśli za pomocą wtyczki NCompass ActiveX.
 
-     Kontrolki mogą być wyświetlane na innych aktywnych włączenie przeglądarek — na przykład Netscape przy użyciu wtyczki NCompass ActiveX — należy dodać \<osadzania > składni, jak pokazano poniżej.
+   Kontrolki mogą być wyświetlane na innych aktywnych włączenie przeglądarek — na przykład Netscape przy użyciu wtyczki NCompass ActiveX — należy dodać \<osadzania > składni, jak pokazano poniżej.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

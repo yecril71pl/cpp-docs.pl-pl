@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078534"
 ---
 # <a name="new-and-delete-operators"></a>new i delete — operatory
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 Jeśli żądanie wymaga zero bajtów magazynu, **nowy operator** zwraca wskaźnik do różnego obiektu (czyli wielokrotne wywołania **nowy operator** zwracają różne wskaźniki). Jeśli pamięć jest niewystarczająca dla żądania alokacji **nowy operator** zgłasza wyjątek std::bad_alloc lub zwraca **nullptr** jeśli zostały połączone w niezgłaszające **nowy operator** pomocy technicznej.
 
 Można napisać procedurę, która spróbuje zwolnić pamięć i ponowić próbę alokacji; zobacz [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Aby uzyskać więcej informacji. Aby uzyskać szczegółowe informacje na temat schematu odzyskiwania Zobacz sekcję obsługi niewystarczającej ilości pamięci w tym temacie.
-
 
 Dwa zakresy dla **nowy operator** funkcje są opisane w poniższej tabeli.
 
