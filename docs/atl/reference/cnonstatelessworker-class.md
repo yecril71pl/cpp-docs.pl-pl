@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053620"
 ---
 # <a name="cnonstatelessworker-class"></a>Klasa CNonStatelessWorker
 
@@ -75,7 +75,7 @@ Zaletą tej klasy jest zapewnia wygodny sposób, aby zmienić model stanu dla is
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implementacja [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implementacja [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy wystąpienie *procesu roboczego* klasy na stosie i wywołania [zainicjować](worker-archetype.md#initialize) dla tego obiektu. Jeśli inicjowanie zakończy się pomyślnie, ta metoda wywołuje również [Execute](worker-archetype.md#execute) i [Zakończ](worker-archetype.md#terminate) na tym samym obiekcie.  
+Ta metoda tworzy wystąpienie *procesu roboczego* klasy na stosie i wywołania [zainicjować](worker-archetype.md#initialize) dla tego obiektu. Jeśli inicjowanie zakończy się pomyślnie, ta metoda wywołuje również [Execute](worker-archetype.md#execute) i [Zakończ](worker-archetype.md#terminate) na tym samym obiekcie.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

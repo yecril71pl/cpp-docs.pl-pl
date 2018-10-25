@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060952"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Porady: konwertowanie kolekcji .NET na kontener STL/CLR
 
@@ -31,7 +31,7 @@ W tym temacie przedstawiono sposób konwertowania kolekcji .NET do ich równowa�
 
 1. Aby przekonwertować całą kolekcję, Tworzenie kontenera STL/CLR i przekazać kolekcji do konstruktora.
 
-     W pierwszym przykładzie pokazano tej procedury.
+   W pierwszym przykładzie pokazano tej procedury.
 
 -LUB-
 
@@ -39,7 +39,7 @@ W tym temacie przedstawiono sposób konwertowania kolekcji .NET do ich równowa�
 
 1. Skopiuj zawartość kolekcji .NET do kontenera. Można to zrobić przy użyciu STL/CLR [algorytm](../dotnet/algorithm-stl-clr.md), lub przez Iterowanie przez kolekcję .NET i wstawianie kopię każdy element do kontenera STL/CLR.
 
-     W drugim przykładzie pokazano tej procedury.
+   W drugim przykładzie pokazano tej procedury.
 
 ## <a name="example"></a>Przykład
 

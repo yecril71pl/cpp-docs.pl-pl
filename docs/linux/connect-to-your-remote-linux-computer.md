@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 5e6a5dd4a00bd4d98c36222434d7cd83242905c9
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061291"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Podłącz do komputera zdalnego systemu Linux
 
@@ -29,7 +29,7 @@ Podczas kompilowania projektu systemu Linux w języku C++ w programie Visual Stu
    ![Menedżer połączeń](media/settings_connectionmanager.png)
 
    W dowolnym scenariuszu **nawiązywanie połączenia z systemem zdalnym** zostanie wyświetlone okno.
-   
+
    ![Łączenie z systemem zdalnym](media/connect.png)
 
 1. Wprowadź następujące informacje:

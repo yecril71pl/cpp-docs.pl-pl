@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058339"
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)
 
@@ -35,7 +35,6 @@ A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora ty
 1. [Mutable](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może być uznane za Specyfikator klasy magazynowania. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
 
 1. **Visual C++ 2010 i nowszych wersji:** **automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

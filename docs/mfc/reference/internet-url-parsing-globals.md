@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054712"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet adresu URL funkcje globalne do analizowania i pomocnikami
 
@@ -237,6 +237,7 @@ Funkcja ta globalnej można ustalić typu dojścia internetowego.
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *hQuery*<br/>
@@ -297,6 +298,7 @@ Zgłasza wyjątek Internet.
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *dwContext*<br/>
@@ -321,5 +323,4 @@ Odpowiedzialność za ustalenie jego przyczyny, w oparciu o kod błędu systemu 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [Klasa CInternetException](cinternetexception-class.md)<br/>
 [THROW](#throw)
-
 

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062642"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 
@@ -64,7 +64,7 @@ Każdy element ma być przechowywany w [platform::Collections:: Vector](../cppcx
 
 ## <a name="vectorproxy-elements"></a>Elementy VectorProxy
 
-[Platform::Collections:: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) i [platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) korzystanie z `range for` pętli i algorytmy, takie jak [std::sort](../standard-library/algorithm-functions.md#sort) z [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) kontenera. Ale `IVector` elementy nie są dostępne za pośrednictwem C++ wyłuskanie wskaźnika; są one dostępne tylko za pośrednictwem [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) i [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) metody. Dlatego te Iteratory używać klasy serwera proxy `Platform::Details::VectorProxy<T>` i `Platform::Details::ArrowProxy<T>` zapewniać dostęp do poszczególnych elementów za pomocą `*`, `->`, i `[]` operatorów, zgodnie z wymogami STL. Ściśle rzecz ujmując, biorąc pod uwagę `IVector<Person^> vec`, typ `*begin(vec)` jest `VectorProxy<Person^>`. Obiekt serwera proxy jest jednak prawie zawsze przejrzyste w kodzie. Te obiekty serwera proxy nie zostały zamieszczone, ponieważ są one tylko do użytku wewnętrznego przez Iteratory, ale warto wiedzieć, jak działa mechanizm.
+[Platform::Collections:: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) i [platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) korzystanie z `range for` pętli i algorytmy, takie jak [std::sort](../standard-library/algorithm-functions.md#sort) z [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) kontenera. Ale `IVector` elementy nie są dostępne za pośrednictwem C++ wyłuskanie wskaźnika; są one dostępne tylko za pośrednictwem [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) i [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) metody. Dlatego te Iteratory używać klasy serwera proxy `Platform::Details::VectorProxy<T>` i `Platform::Details::ArrowProxy<T>` zapewniać dostęp do poszczególnych elementów za pomocą __\*__, __->__ i  __\[]__ operatorów, zgodnie z wymogami biblioteki standardowej. Ściśle rzecz ujmując, biorąc pod uwagę `IVector<Person^> vec`, typ `*begin(vec)` jest `VectorProxy<Person^>`. Obiekt serwera proxy jest jednak prawie zawsze przejrzyste w kodzie. Te obiekty serwera proxy nie zostały zamieszczone, ponieważ są one tylko do użytku wewnętrznego przez Iteratory, ale warto wiedzieć, jak działa mechanizm.
 
 Kiedy używasz `range for` pętli `IVector` kontenery, użyj `auto&&` umożliwiające zmienna iteratora, do powiązania poprawnie do `VectorProxy` elementów. Jeśli używasz `auto` lub `auto&`, ostrzeżenia kompilatora, które jest wywoływane C4239 i `VectoryProxy` jest wymieniony w tekst ostrzeżenia.
 
@@ -74,8 +74,7 @@ Poniższa ilustracja przedstawia `range for` pętli `IVector<Person^>`. Należy 
 
 Jeden scenariusz, w którym zostały do kodu wokół obiektu serwera proxy jest, gdy trzeba wykonać `dynamic_cast` od elementów — na przykład podczas szukania dla obiektów określonego typu w XAML `UIElement` kolekcji elementów. W takim przypadku należy najpierw rzutować elementu [Platform::Object](../cppcx/platform-object-class.md)^, a następnie wykonaj rzutowanie dynamicznych:
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -149,7 +148,7 @@ W poniższej tabeli wymieniono dostępne Iteratory i funkcje.
 
 `Vector` i `Map` obsługuje wiązania danych w kolekcjach XAML poprzez implementację zdarzenia występujące po zmianie obiektu kolekcji lub zresetować lub po wstawieniu dowolnego elementu w kolekcji, usunięte lub zmienione. Można napisać własne typy tego wiązania danych pomocy technicznej, mimo że nie może dziedziczyć z `Map` lub `Vector` ponieważ te typy są zamknięte.
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) i [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) delegatów Określ podpisów dla obsługi zdarzeń zbieranie zdarzeń zmiany. [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) klasy publicznym typie wyliczeniowym i `Platform::Collection::Details::MapChangedEventArgs` i `Platform::Collections::Details::VectorChangedEventArgs` klasy ref przechowywania argumenty zdarzeń, aby ustalić, który spowodował zdarzenie. *`EventArgs` Typy są definiowane w `Details` przestrzeni nazw, ponieważ nie trzeba konstrukcja lub używać ich jawnie, gdy używasz `Map` lub `Vector`.
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) i [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) delegatów Określ podpisów dla obsługi zdarzeń zbieranie zdarzeń zmiany. [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) klasy publicznym typie wyliczeniowym i `Platform::Collection::Details::MapChangedEventArgs` i `Platform::Collections::Details::VectorChangedEventArgs` klasy ref przechowywania argumenty zdarzeń, aby ustalić, który spowodował zdarzenie. `*EventArgs` Typy są definiowane w `Details` przestrzeni nazw, ponieważ nie trzeba konstrukcja lub używać ich jawnie, gdy używasz `Map` lub `Vector`.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053659"
 ---
 # <a name="registry-macros"></a>Makra rejestru
 
@@ -41,7 +41,7 @@ Te makra definiują przydatne typu biblioteki i rejestru urządzeń.
 |[DECLARE_REGISTRY](#declare_registry)|Wprowadza lub usuwa obiekt główny wpis w rejestrze systemowym.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Określa informacje wymagane do automatycznego rejestrowania *appid*.|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Umożliwia znalezienie nazwany zasób, a następnie uruchamia skrypt rejestru znajdujący się w nim.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Umożliwia znalezienie zasobu określonego przez identyfikator, a następnie uruchamia skrypt rejestru znajdujący się w nim.|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Umożliwia znalezienie zasobu określonego przez identyfikator, a następnie uruchamia skrypt rejestru znajdujący się w nim.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -96,10 +96,10 @@ Wprowadza rejestracja standardowych klas w rejestrze systemowym lub usuwa je z r
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ Określa informacje wymagane do automatycznego rejestrowania *appid*.
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ Możesz statycznie połączyć za pomocą składnik rejestru Alt (Rejestrator) d
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Jeśli chcesz, aby ATL, aby zastąpić wartości zastępcze w czasie wykonywania, nie należy określać DECLARE_REGISTRY_RESOURCE lub DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, w których każdy wpis zawiera symbol zastępczy zmiennej sparowane z wartością do Zastąp symbol zastępczy w czasie wykonywania. Następnie wywołaj [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zastępowania w `_ATL_REGMAP_ENTRIES` struktury do mapy zastąpienie rejestratora.  
+Jeśli chcesz, aby ATL, aby zastąpić wartości zastępcze w czasie wykonywania, nie należy określać DECLARE_REGISTRY_RESOURCE lub DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, w których każdy wpis zawiera symbol zastępczy zmiennej sparowane z wartością do Zastąp symbol zastępczy w czasie wykonywania. Następnie wywołaj [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zastępowania w `_ATL_REGMAP_ENTRIES` struktury do mapy zastąpienie rejestratora.
 
 Aby uzyskać więcej informacji na temat parametrów zastępowalnych i skryptów, zobacz artykuł [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
 
@@ -198,7 +198,7 @@ Możesz statycznie połączyć za pomocą składnik rejestru Alt (Rejestrator) d
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Jeśli chcesz, aby ATL, aby zastąpić wartości zastępcze w czasie wykonywania, nie należy określać DECLARE_REGISTRY_RESOURCE lub DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, w których każdy wpis zawiera symbol zastępczy zmiennej sparowane z wartością do Zastąp symbol zastępczy w czasie wykonywania. Następnie wywołaj [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zastępowania w `_ATL_REGMAP_ENTRIES` struktury do mapy zastąpienie rejestratora.  
+Jeśli chcesz, aby ATL, aby zastąpić wartości zastępcze w czasie wykonywania, nie należy określać DECLARE_REGISTRY_RESOURCE lub DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, w których każdy wpis zawiera symbol zastępczy zmiennej sparowane z wartością do Zastąp symbol zastępczy w czasie wykonywania. Następnie wywołaj [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zastępowania w `_ATL_REGMAP_ENTRIES` struktury do mapy zastąpienie rejestratora.
 
 Aby uzyskać więcej informacji na temat parametrów zastępowalnych i skryptów, zobacz artykuł [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
 

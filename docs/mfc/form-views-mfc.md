@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052996"
 ---
 # <a name="form-views-mfc"></a>Widoki formularzy (MFC)
 
@@ -40,7 +40,7 @@ Po wstawieniu nowy formularz w swojej aplikacji Visual C++ zapewnia następując
 
 - Tworzy zasobu okna dialogowego z odpowiednie style (lub użyć istniejącego zasobu okna dialogowego, który nie został jeszcze skojarzone z klasą).
 
-     Jeśli wybierzesz istniejącego zasobu okna dialogowego, może być konieczne należy ustawić te style, używając strony właściwości dla okna dialogowego. Style dla okna dialogowego należy uwzględnić:
+   Jeśli wybierzesz istniejącego zasobu okna dialogowego, może być konieczne należy ustawić te style, używając strony właściwości dla okna dialogowego. Style dla okna dialogowego należy uwzględnić:
 
      **WS_CHILD**= włączone
 
@@ -54,17 +54,17 @@ W przypadku aplikacji, w zależności od architektury dokument/widok **nowy form
 
 - Tworzy `CDocument`— na podstawie klasy
 
-     Zamiast nowej klasy, utworzony, można użyć wszystkich istniejących `CDocument`— na podstawie klasy w projekcie.
+   Zamiast nowej klasy, utworzony, można użyć wszystkich istniejących `CDocument`— na podstawie klasy w projekcie.
 
 - Generuje szablonu dokumentu (pochodną `CDocument`) przy użyciu zasobów ciągu, menu i ikony.
 
-     Można również utworzyć nową klasę, na którym ma zostać utworzony szablon.
+   Można również utworzyć nową klasę, na którym ma zostać utworzony szablon.
 
 - Dodaje wywołanie `AddDocumentTemplate` w Twojej aplikacji `InitInstance` kodu.
 
-     Visual C++ dodaje ten kod dla każdego nowego formularza należy utworzyć, który dodaje formularza do listy dostępnych formularzy, gdy użytkownik wybierze **New** polecenia. Ten kod zawiera identyfikator skojarzonego zasobu formularza i nazwy powiązany dokument, widoku i ramki klas, które razem tworzą nowy obiekt formularza.
+   Visual C++ dodaje ten kod dla każdego nowego formularza należy utworzyć, który dodaje formularza do listy dostępnych formularzy, gdy użytkownik wybierze **New** polecenia. Ten kod zawiera identyfikator skojarzonego zasobu formularza i nazwy powiązany dokument, widoku i ramki klas, które razem tworzą nowy obiekt formularza.
 
-     Szablony dokumentów służą jako połączenie między dokumentami, oknami ramek i widokami. Dla pojedynczego dokumentu można utworzyć wiele szablonów.
+   Szablony dokumentów służą jako połączenie między dokumentami, oknami ramek i widokami. Dla pojedynczego dokumentu można utworzyć wiele szablonów.
 
 Aby uzyskać więcej informacji, zobacz:
 

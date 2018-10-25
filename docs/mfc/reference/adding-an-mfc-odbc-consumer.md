@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b073d361fe8dbffb7c92718f5d7522534fc7e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052355"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Dodawanie klienta MFC ODBC
 
@@ -31,7 +31,7 @@ Odbiorca MFC ODBC składa się z ODBC rekordów klasy i powiązania danych konie
 
 1. W folderze Visual C++, kliknij dwukrotnie **konsumenta interfejsu ODBC MFC** ikonę lub wybierz ją i kliknij **Otwórz**.
 
-     Zostanie otwarty Kreator użytkownika interfejsu ODBC MFC.
+   Zostanie otwarty Kreator użytkownika interfejsu ODBC MFC.
 
 1. Zdefiniuj ustawienia, zgodnie z opisem w [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).
 

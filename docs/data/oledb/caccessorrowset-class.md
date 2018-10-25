@@ -41,131 +41,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: adb59e553565d9886cf27b55f2cfffb4cd0e7aa9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060159"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 
-Hermetyzuje zestawu wierszy i skojarzone metody dostępu w jednej klasie.  
-  
+Hermetyzuje zestawu wierszy i skojarzone metody dostępu w jednej klasie.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-   template <typename T> class TRowset = CRowset>  
-class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CNoAccessor,
+   template <typename T> class TRowset = CRowset>
+class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu.  
-  
+Klasa metody dostępu.
+
 *TRowset*<br/>
-Klasy zestawów wierszy.  
+Klasy zestawów wierszy.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Bind](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
-|[CAccessorRowset](#caccessorrowset)|Konstruktor.|  
-|[Zamknij](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|  
-|[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.|  
-|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704).|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldbcli.h
 
-Klasa `TAccessor` zarządza akcesor. Klasa *TRowset* zarządza zestawu wierszy.  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Bind](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset](#caccessorrowset)|Konstruktor.|
+|[Zamknij](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|
+|[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.|
+|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704).|
+
+## <a name="remarks"></a>Uwagi
+
+Klasa `TAccessor` zarządza akcesor. Klasa *TRowset* zarządza zestawu wierszy.
 
 ## <a name="bind"></a> CAccessorRowset::Bind
 
-Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md).  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-HRESULT Bind();  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md).
 
-Standardowa HRESULT.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT Bind();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
 
 ## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
-Inicjuje `CAccessorRowset` obiektu.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Inicjuje `CAccessorRowset` obiektu.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-CAccessorRowset();  
-```  
+CAccessorRowset();
+```
 
 ## <a name="close"></a> CAccessorRowset::Close
 
-Zwalnia wszelkie aktywne metody dostępu i zestawu wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Zwalnia wszelkie aktywne metody dostępu i zestawu wierszy.
 
-Zwalnia wszystkie skojarzone pamięci.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zwalnia wszystkie skojarzone pamięci.
 
 ## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
-Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-void FreeRecordMemory();  
-```  
+void FreeRecordMemory();
+```
 
 ## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
-Pobiera informacje o kolumnach z otwartego zestawu wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Pobiera informacje o kolumnach z otwartego zestawu wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
-   LPOLESTR* ppStrings) const; 
-    
-HRESULT GetColumnInfo(DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,
+   DBCOLUMNINFO** ppColumnInfo,
+   LPOLESTR* ppStrings) const;
 
-Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+HRESULT GetColumnInfo(DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo);
+```
 
-Standardowa HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Użytkownik należy zwolnić informacji zwróconej kolumny i buforu ciągu. Użyj drugą wersję tej metody, gdy używasz [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) i trzeba zastąpić powiązania.  
-  
-Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) w *OLE DB Podręcznik programisty*.  
-  
-## <a name="see-also"></a>Zobacz też  
+Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
+
+### <a name="remarks"></a>Uwagi
+
+Użytkownik należy zwolnić informacji zwróconej kolumny i buforu ciągu. Użyj drugą wersję tej metody, gdy używasz [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) i trzeba zastąpić powiązania.
+
+Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) w *OLE DB Podręcznik programisty*.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

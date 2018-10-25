@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381949"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060523"
 ---
 # <a name="servers-implementing-server-documents"></a>Serwery: implementowanie dokumentów serwera
 
@@ -36,7 +36,7 @@ W tym artykule opisano kroki, które należy wykonać, aby pomyślnie wdrożyć 
 
 1. Implementowanie `OnGetEmbeddedItem` funkcji składowej klasy dokumentu serwera.
 
-     `OnGetEmbeddedItem` jest wywoływana, gdy użytkownik aplikacji kontenera tworzy lub edytuje element osadzony. Powinien zostać zwrócony element reprezentujący całego dokumentu. Powinno to być obiekt usługi `COleServerItem`-klasy pochodnej.
+   `OnGetEmbeddedItem` jest wywoływana, gdy użytkownik aplikacji kontenera tworzy lub edytuje element osadzony. Powinien zostać zwrócony element reprezentujący całego dokumentu. Powinno to być obiekt usługi `COleServerItem`-klasy pochodnej.
 
 1. Zastąp `Serialize` funkcja elementu członkowskiego do serializacji zawartość dokumentu. Nie trzeba do serializacji lista elementów serwera, o ile nie są używane do reprezentowania danych natywnych w dokumencie. Aby uzyskać więcej informacji, zobacz *elementy serwera wdrażania* w artykule [serwery: elementy serwera](../mfc/servers-server-items.md).
 

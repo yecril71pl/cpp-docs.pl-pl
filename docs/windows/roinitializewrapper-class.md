@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8a0eeb4b7da53b5722733ba0b0116cf03dab4a29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788764"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053448"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper — Klasa
 
@@ -74,7 +74,7 @@ Nazwa                                       | Opis
 Pobiera wartość HRESULT produkowane przez ostatnią `RoInitializeWrapper` konstruktora.
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
@@ -82,7 +82,7 @@ operator HRESULT()
 Inicjuje nowe wystąpienie klasy `RoInitializeWrapper` klasy.
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -99,7 +99,7 @@ Jedno z wyliczeń RO_INIT_TYPE, które określa pomoc techniczną świadczoną p
 Deinicjuje środowiska wykonawczego Windows.
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>Uwagi

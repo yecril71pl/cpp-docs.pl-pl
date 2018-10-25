@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062473"
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
 
@@ -68,15 +68,15 @@ Użyj tego szablonu, które chcesz udostępnić domyślne style okna, które bę
 
 ATL zawiera trzy wstępnie zdefiniowane specjalizacje szablonu dla często używanych kombinacji Style okna ramowego:
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Zaprojektowana na potrzeby okna formantu standardowego. Używane są następujące standardowe style: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Nie istnieją żadne rozszerzone style.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.
 

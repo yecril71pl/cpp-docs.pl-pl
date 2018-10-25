@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c079201b92b6eaf3ef372bf04ab4785598c3b2bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053971"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: obsługa podwójnego interfejsu w przypadku serwerów automatyzacji OLE
 
@@ -328,7 +328,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     Spowoduje to utworzenie `HRESULT` specyficzne dla interfejsu, który spowodował wyjątek. Kod błędu jest przesunięty 0x200, aby uniknąć konfliktów z zdefiniowaną przez system `HRESULT`pod kątem standardowe interfejsy OLE.
+   Spowoduje to utworzenie `HRESULT` specyficzne dla interfejsu, który spowodował wyjątek. Kod błędu jest przesunięty 0x200, aby uniknąć konfliktów z zdefiniowaną przez system `HRESULT`pod kątem standardowe interfejsy OLE.
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) — w tym przypadku `E_OUTOFMEMORY` jest zwracana.
 

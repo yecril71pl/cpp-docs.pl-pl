@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063214"
 ---
 # <a name="toolbar-editor-c"></a>Edytor paska narzędzi (C++)
 
@@ -43,8 +43,7 @@ Za pomocą **narzędzi** edytora, możesz:
 
 **Narzędzi** okna edytora wyświetla dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyższe dwa widoki obrazu jest narzędzi podmiotu.
 
-![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Edytor paska narzędzi
+![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") Edytor paska narzędzi
 
 **Narzędzi** edytora jest podobny do **obraz** edytora w działaniu. Elementy menu, Narzędzia grafiki i mapy bitowej siatki są takie same jak w **obraz** edytora. Polecenia menu **obraz** menu, aby możliwe było przełączać się między **narzędzi** edytora i **obraz** edytora. Aby uzyskać więcej informacji na temat korzystania z **grafiki** narzędzi **kolory** palety, lub **obraz** menu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).
 

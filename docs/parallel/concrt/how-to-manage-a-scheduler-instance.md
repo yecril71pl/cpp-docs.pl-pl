@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057468"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Porady: zarządzanie przypadkiem planisty
 
@@ -34,7 +34,7 @@ Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu.
 
 1. Wywołaj [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) metody lub [concurrency::Scheduler::Create](reference/scheduler-class.md#create) metodę w celu utworzenia wystąpienia harmonogramu.
 
-     Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metody, gdy należy skojarzyć harmonogramu przy użyciu bieżącego kontekstu.
+   Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metody, gdy należy skojarzyć harmonogramu przy użyciu bieżącego kontekstu.
 
 1. Wywołaj [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) funkcji, aby utworzyć uchwytu do obiektu zasygnalizowane resetowaniem automatycznym zdarzeń.
 
@@ -44,7 +44,7 @@ Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu.
 
 1. Wywołaj [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metodę, aby odłączyć bieżącego harmonogramu i przywrócić poprzednich harmonogram jako bieżący.
 
-     Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metodę, aby zmniejszyć liczbę odwołań `Scheduler` obiektu.
+   Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metodę, aby zmniejszyć liczbę odwołań `Scheduler` obiektu.
 
 1. Przekaż dojście do zdarzenia w celu [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkcję, aby czekać na harmonogram zamknąć.
 

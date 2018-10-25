@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054608"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: korzystanie z bibliotek typów
 
@@ -54,9 +54,9 @@ Jeśli wybrano automatyzacji podczas tworzenia projektu Visual C++ automatycznie
     > [!NOTE]
     >  Możesz wybrać interfejsy z więcej niż jednej biblioteki typów.
 
-     Wybierz interfejsy, kliknij je dwukrotnie lub kliknij przycisk **Dodaj** przycisku. Jeśli tak zrobisz, nazwy klas wysyłania pojawi się w **wygenerowane klasy** pole. Można edytować nazwy klasy w `Class` pole.
+   Wybierz interfejsy, kliknij je dwukrotnie lub kliknij przycisk **Dodaj** przycisku. Jeśli tak zrobisz, nazwy klas wysyłania pojawi się w **wygenerowane klasy** pole. Można edytować nazwy klasy w `Class` pole.
 
-     **Pliku** wyświetlone pliku, w którym będzie można zadeklarować klasy. (można edytować tej nazwy pliku). Umożliwia także przycisk przeglądania i wybierz inne pliki, jeśli chcesz mieć nagłówkowy i implementacji informacje zapisane w istniejących plików lub w katalogu innym niż katalog projektu.
+   **Pliku** wyświetlone pliku, w którym będzie można zadeklarować klasy. (można edytować tej nazwy pliku). Umożliwia także przycisk przeglądania i wybierz inne pliki, jeśli chcesz mieć nagłówkowy i implementacji informacje zapisane w istniejących plików lub w katalogu innym niż katalog projektu.
 
     > [!NOTE]
     >  Wszystkie klasy wysyłania dla wybranych interfejsów, będą umieszczone w pliku określonego w tym miejscu. Chcąc interfejsów deklaruje się w oddzielnych nagłówków, należy uruchomić tego kreatora dla każdego pliku nagłówka, który chcesz utworzyć.
@@ -66,7 +66,7 @@ Jeśli wybrano automatyzacji podczas tworzenia projektu Visual C++ automatycznie
 
 1. Kliknij przycisk **Zakończ**.
 
-     Kreator zostanie następnie pisanie kodu dla swojej klasy wysyłania, przy użyciu określonej klasy i nazwy plików.
+   Kreator zostanie następnie pisanie kodu dla swojej klasy wysyłania, przy użyciu określonej klasy i nazwy plików.
 
 ## <a name="see-also"></a>Zobacz też
 

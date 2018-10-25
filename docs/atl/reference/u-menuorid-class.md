@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052957"
 ---
 # <a name="umenuorid-class"></a>Klasa _U_MENUorID
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 Ta klasa adaptera argument umożliwia identyfikatorów (UINTs) lub menu dojścia (HMENUs), który zostanie przekazany do funkcji bez konieczności jawnego rzutowania przez obiekt wywołujący.
 
-Ta klasa jest przeznaczona dla implementacji otoki do interfejsu API Windows, szczególnie [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) i [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcje, które akceptują argument HMENU, które mogą być okna podrzędnego Identyfikator (UINT) zamiast uchwyt menu. Na przykład zostanie wyświetlony jako parametr do tej klasy w użyciu [CWindowImpl::Create](cwindowimpl-class.md#create).  
+Ta klasa jest przeznaczona dla implementacji otoki do interfejsu API Windows, szczególnie [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) i [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcje, które akceptują argument HMENU, które mogą być okna podrzędnego Identyfikator (UINT) zamiast uchwyt menu. Na przykład zostanie wyświetlony jako parametr do tej klasy w użyciu [CWindowImpl::Create](cwindowimpl-class.md#create).
 
 Klasa definiuje dwa przeciążenia konstruktora: przyjmuje jeden UINT argument, a druga akceptuje HMENU argument. UINT argument tylko jest rzutowany na HMENU konstruktora i wyników, przechowywane w składowej danych jednego klasy, [m_hMenu](#_u_menuorid__m_hmenu). Argument Pro Konstruktor HMENU są przechowywane bezpośrednio, bez konwersji.
 

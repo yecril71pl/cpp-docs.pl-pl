@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061251"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Tworzenie projektu MFC DLL
 
@@ -53,5 +53,4 @@ Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozw
 [Typy projektów Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../../ide/property-pages-visual-cpp.md)
-
 

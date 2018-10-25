@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055488"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra wymiany danych rejestru
 
@@ -39,7 +39,7 @@ Te makra wykonywanie operacji wymiany danych rejestru.
 |[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu BYTE.|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu CString.|
 |[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu DWORD.|
-|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu TCHAR.|  
+|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu TCHAR.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,10 +80,10 @@ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu cz�
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -114,10 +114,10 @@ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu cz�
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -148,10 +148,10 @@ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu cz�
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -182,10 +182,10 @@ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu cz�
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 

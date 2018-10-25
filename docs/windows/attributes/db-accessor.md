@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60cfe67acb2841c3cf5bf3cc371b0f70c7fcf72b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: aa63ca982f436b49787e542c4789390faa1d16a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789630"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057026"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -91,4 +91,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)  
+[Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

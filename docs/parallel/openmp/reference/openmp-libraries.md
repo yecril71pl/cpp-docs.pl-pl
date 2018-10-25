@@ -1,7 +1,7 @@
 ---
 title: Biblioteki OpenMP | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7620b0ea710a5474fbbbf614691ceeb1e5cc945e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391218"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062005"
 ---
 # <a name="openmp-libraries"></a>Biblioteki OpenMP
 
@@ -36,6 +36,6 @@ Możesz użyć [/nodefaultlib (Ignoruj biblioteki)](../../../build/reference/nod
 
 Biblioteki DLL OpenMP znajdują się w katalogu pakiet redystrybucyjny Visual C++ i muszą być dystrybuowane za pomocą aplikacji, które używają OpenMP.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do biblioteki](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Odwołanie do biblioteki](openmp-library-reference.md)

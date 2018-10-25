@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429213"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055011"
 ---
 # <a name="icommandui-interface"></a>Klasa Icommandui
 
@@ -73,6 +73,7 @@ Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego p
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia stanie odpowiedniej kontroli. Sprawdź, ustaw następujące wartości:
@@ -86,6 +87,7 @@ Informuje mechanizm routingu polecenia nadal routingu do bieżącej wiadomości 
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Jest to funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z programem obsługi ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz techniczne Uwaga TN006: mapy komunikatów.
@@ -96,6 +98,7 @@ Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Tej właściwości Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Włączone, aby należy ustawić wartość TRUE powoduje włączenie elementu wartość FALSE, aby je wyłączyć.
@@ -106,6 +109,7 @@ Pobiera identyfikator obiektu interfejsu użytkownika, które są reprezentowane
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Tej właściwości pobiera identyfikator (uchwyt) elementu menu, przycisk paska narzędzi lub inny obiekt interfejsu użytkownika, reprezentowane przez obiekt ICommandUI.
@@ -116,6 +120,7 @@ Pobiera indeks obiektu interfejsu użytkownika, które są reprezentowane przez 
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Tej właściwości pobiera indeks (uchwyt) elementu menu, przycisk paska narzędzi lub inny obiekt interfejsu użytkownika, reprezentowane przez obiekt ICommandUI.
@@ -126,6 +131,7 @@ Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego p
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia stanie odpowiedniej kontroli. Ustaw opcji na wartość TRUE powoduje włączenie elementu; w przeciwnym razie wartość FALSE.
@@ -136,6 +142,7 @@ Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Uwagi
 
 Ta właściwość określa tekst elementu interfejsu użytkownika dla tego polecenia. Ustaw tekst do uchwytu ciągu tekstowego.

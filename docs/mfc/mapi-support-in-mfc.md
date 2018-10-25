@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053412"
 ---
 # <a name="mapi-support-in-mfc"></a>Obsługa MAPI w MFC
 
@@ -44,11 +44,11 @@ MAPI musi odczytać pliku do wysłania załącznika. Jeśli aplikacja zachowuje 
 
 1. Użyj Edytora menu Visual C++, aby dodać element menu, którego identyfikator polecenia jest ID_FILE_SEND_MAIL.
 
-     Ten identyfikator polecenia są dostarczane przez platformę w AFXRES. H. Polecenia można dodać do dowolnego menu, ale zazwyczaj jest dodawany do **pliku** menu.
+   Ten identyfikator polecenia są dostarczane przez platformę w AFXRES. H. Polecenia można dodać do dowolnego menu, ale zazwyczaj jest dodawany do **pliku** menu.
 
 1. Ręcznie dodaj następujący element do mapy komunikatów w dokumencie:
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Ta mapa komunikatów działa w przypadku dokumentu pochodzące z poziomu `CDocument` lub `COleDocument` — pobierał poprawnej klasie bazowej, w obu przypadkach, nawet jeśli jest mapowanie wiadomości w klasie pochodnej dokumentu.

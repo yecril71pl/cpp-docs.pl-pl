@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 8a87b2ba1e846ce995a987379ae6f30567a39773
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053815"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron Active Server ATL
 
@@ -47,27 +47,27 @@ Jeśli zmienisz **Coclass** nazwę w sekcji COM, zmiana jest odzwierciedlana w *
 
 Zawiera informacje dla klasy języka C++ utworzona dla obiektu.
 
-- **Krótka nazwa**  
+- **Krótka nazwa**
 
    Określa nazwę katalogu głównego dla obiektu. Nazwy, zapewniające Określa `Class` i **Coclass** nazwy, **plik .cpp** i **plik .h klasy** nazwy, **interfejsu**nazwy **typu** nazwy i **ProgID**, chyba że zmienił się tych pól indywidualnie.
 
-- **plik .h**  
+- **plik .h**
 
    Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ** w kreatorze.
 
    Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
-- **Class**  
+- **Class**
 
    Ustawia nazwę klasy, która ma zostać utworzony. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
 
-- **Plik CPP**  
+- **Plik CPP**
 
    Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
 
    Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
-- **Opartego na atrybutach**  
+- **Opartego na atrybutach**
 
    Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
 
@@ -81,19 +81,19 @@ Zawiera informacje dla klasy języka C++ utworzona dla obiektu.
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-- **Klasa coclass**  
+- **Klasa coclass**
 
    Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt. Jeśli projekt lub ten obiekt korzysta z atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.
 
-- **Typ**  
+- **Typ**
 
    Określa opis obiektu, który będzie wyświetlany w rejestrze dla klasy coclass.
 
-- **Interface**  
+- **Interface**
 
    Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera swoje niestandardowe metody.
 
-- **Identyfikator programu**  
+- **Identyfikator programu**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 

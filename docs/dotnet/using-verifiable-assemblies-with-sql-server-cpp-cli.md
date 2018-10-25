@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063409"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ Program SQL Server udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby
 
 - Tryb bez ograniczeń: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.
 
-- Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe. 
+- Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe.
 
 > [!IMPORTANT]
 > Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 nie obsługuje **/CLR: pure** i **/CLR: Safe** tworzenie weryfikowalnych projektów. Jeśli potrzebujesz weryfikowalny kod, zalecamy Przetłumacz swój kod C#.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Zobacz też
-
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

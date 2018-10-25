@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053178"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
 
@@ -49,7 +49,7 @@ Za pomocą `CSocket` obiektu obejmuje tworzenie i kojarzenie ze sobą kilka obie
 
 1. Obiekt używany do tworzenia podstawowych **GNIAZDA** obsługi.
 
-     Dla `CSocket` obiektu klienta, zazwyczaj należy używać parametrów domyślnych do [Utwórz](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebujesz gniazdo datagramu. Aby uzyskać `CSocket` obiektu serwera, należy określić port w `Create` wywołania.
+   Dla `CSocket` obiektu klienta, zazwyczaj należy używać parametrów domyślnych do [Utwórz](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebujesz gniazdo datagramu. Aby uzyskać `CSocket` obiektu serwera, należy określić port w `Create` wywołania.
 
     > [!NOTE]
     >  `CArchive` nie działa z do przesyłania datagramów. Jeśli chcesz używać `CSocket` dla gniazda datagram, należy użyć klasy, jak w przypadku `CAsyncSocket`, to znaczy, bez archiwizacji. Ponieważ nie jest gwarantowane datagramów (nie dotrą do celu i może być powtarzany lub poza sekwencją), nie są zgodne z serializacji, za pomocą archiwum. Możesz oczekiwać na zakończenie niezawodnie i w sekwencji operacji serializacji. Jeśli spróbujesz użyć `CSocket` z `CArchive` obiektu dla datagramu, potwierdzenie MFC nie powiedzie się.
@@ -58,7 +58,7 @@ Za pomocą `CSocket` obiektu obejmuje tworzenie i kojarzenie ze sobą kilka obie
 
      —lub—
 
-     Gniazda w przypadku serwera, wywoływanie [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) umożliwiającą prób nasłuchiwać połączeń z klienta. Po odebraniu żądania połączenia, zaakceptuj je, wywołując [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Gniazda w przypadku serwera, wywoływanie [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) umożliwiającą prób nasłuchiwać połączeń z klienta. Po odebraniu żądania połączenia, zaakceptuj je, wywołując [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  `Accept` Funkcja elementu członkowskiego przyjmuje odwołanie do nowy, pusty `CSocket` obiekt jako parametr. Należy utworzyć ten obiekt przed wywołaniem `Accept`. Jeśli ten obiekt gniazda wykracza poza zakres, połączenie zostaje zamknięte. Nie wywołuj `Create` dla tego nowego obiektu gniazda.
@@ -67,13 +67,13 @@ Za pomocą `CSocket` obiektu obejmuje tworzenie i kojarzenie ze sobą kilka obie
 
 1. Tworzenie [CArchive](../mfc/reference/carchive-class.md) obiektu dla ładowania (odbieranie) lub przechowywanie danych (wysyłającym). Archiwum jest skojarzony z `CSocketFile` obiektu.
 
-     Należy pamiętać, że `CArchive` nie działa z do przesyłania datagramów.
+   Należy pamiętać, że `CArchive` nie działa z do przesyłania datagramów.
 
 1. Użyj `CArchive` obiektu do przekazywania danych między klientem i serwerem gniazda.
 
-     Należy pamiętać, że dany `CArchive` obiektu przenosi dane tylko w jednym kierunku: do ładowania (odbieranie) lub przechowywane (wysyłającym). W niektórych przypadkach użyjesz dwóch `CArchive` obiektów: jeden dla wysyłających dane, druga do odbierania potwierdzenia.
+   Należy pamiętać, że dany `CArchive` obiektu przenosi dane tylko w jednym kierunku: do ładowania (odbieranie) lub przechowywane (wysyłającym). W niektórych przypadkach użyjesz dwóch `CArchive` obiektów: jeden dla wysyłających dane, druga do odbierania potwierdzenia.
 
-     Po zaakceptowania połączenia i konfigurowania archiwum, można wykonywać zadania, takie jak sprawdzanie poprawności hasła.
+   Po zaakceptowania połączenia i konfigurowania archiwum, można wykonywać zadania, takie jak sprawdzanie poprawności hasła.
 
 1. Zniszcz archiwum, gniazda plików i gniazda obiektów.
 

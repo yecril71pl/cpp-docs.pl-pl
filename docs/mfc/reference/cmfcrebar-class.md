@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059886"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
 
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.
+*pBar*<br/>
+[out w] Wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.
 
 *pszText*<br/>
 [in] Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.
 
-[in] [out] *pbmp* określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.
+*pbmp*<br/>
+[out w] Określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.
 
 *dwStyle*<br/>
 [in] Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury w dokumentacji zestawu Windows SDK.
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pParentWnd* wskaźnik do okna nadrzędnego tego formantu paska pomocniczego.
+*pParentWnd*<br/>
+[out w] Wskaźnik do nadrzędnego okna tej kontrolki paska pomocniczego.
 
 *dwCtrlStyle*<br/>
 [in] Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji zestawu Windows SDK.
@@ -186,7 +189,6 @@ Wywołaj tę metodę, aby móc korzystać z funkcji Windows paska pomocniczego w
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwDockStyle*
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] [in] *pTI*
+[in] *punktu*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwAlignment*
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

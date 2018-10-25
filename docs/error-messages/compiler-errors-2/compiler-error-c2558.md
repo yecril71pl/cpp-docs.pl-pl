@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6129bea28b943f8f18e1cf6b1e760e604223bdc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100841"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060939"
 ---
 # <a name="compiler-error-c2558"></a>C2558 błąd kompilatora
 
@@ -33,7 +33,7 @@ Konstruktor kopiujący inicjuje obiekt z innego obiektu tego samego typu. (Tworz
 
 1. Ten problem może wystąpić, gdy podejmowana jest próba skopiowania klasy, której Konstruktor kopiujący jest `private`. W większości przypadków klasy, która ma `private` konstruktora kopiującego nie powinny zostać skopiowane. Powszechnie stosowana technika programowania deklaruje `private` Konstruktor Kopiuj, aby zapobiegać bezpośredniemu wykorzystaniu klasy. Klasa może być bezużyteczna samodzielnie lub wymagać innej klasy, aby działać poprawnie.
 
-     Jeśli stwierdzisz, że jest bezpieczne użycie klasy, która ma `private` Konstruktor kopiujący, pochodzi z nową klasę z klasy, która ma `private` marki i Konstruktor `public` lub `protected` Konstruktor kopiujący jest dostępna w nowej klasie. Użyj klasy pochodnej zamiast oryginalnej.
+   Jeśli stwierdzisz, że jest bezpieczne użycie klasy, która ma `private` Konstruktor kopiujący, pochodzi z nową klasę z klasy, która ma `private` marki i Konstruktor `public` lub `protected` Konstruktor kopiujący jest dostępna w nowej klasie. Użyj klasy pochodnej zamiast oryginalnej.
 
 1. Ten problem może wystąpić, gdy podejmowana jest próba skopiowania klasy, której Konstruktor kopiujący jest jawny. Zadeklarowanie konstruktora kopiującego jako `explicit` zapobiega przekazywaniu/zwracaniu obiektów klasy do/z funkcji. Aby uzyskać więcej informacji dotyczących jawnych konstruktorów, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Safeint — funkcje | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 515bf6793a2b1546bc79998283104b704de7f1ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162584"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057293"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
@@ -55,6 +55,9 @@ Biblioteka SafeInt udostępnia kilka funkcji, których można używać bez tworz
 Te funkcje umożliwiają porównywania albo do wykonywania operacji matematycznych na dwa różne typy parametrów bez konieczności konwertowania ich najpierw do tego samego typu.
 
 Każda z tych funkcji są dostępne dwa typy szablonów: `T` i `U`. Każdy z tych typów może być atrybut typu wartość logiczna, znak lub typu całkowitego. Typy całkowite mogą być podpisane lub niepodpisane i dowolnego rozmiaru, od 8 bitów na 64-bitowy.
+
+> [!NOTE]
+> Najnowszą wersję tej biblioteki znajduje się w [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

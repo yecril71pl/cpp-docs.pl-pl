@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429269"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052759"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Wstawianie formularza do projektu
 
@@ -33,7 +33,7 @@ Formularze zapewniają wygodny kontenera dla formantów. Formularz oparty na bib
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
 
-     Jeśli **nowy formularz** polecenie jest niedostępne, projektu mogą opierać się na Active Template Library (ATL). Aby dodać formularz do projektu ATL, musisz mieć [określić pewne ustawienia](../atl/reference/application-settings-atl-project-wizard.md) tworząc po raz pierwszy projekt.
+   Jeśli **nowy formularz** polecenie jest niedostępne, projektu mogą opierać się na Active Template Library (ATL). Aby dodać formularz do projektu ATL, musisz mieć [określić pewne ustawienia](../atl/reference/application-settings-atl-project-wizard.md) tworząc po raz pierwszy projekt.
 
 1. Z **MFC** folderu, kliknij przycisk **klasy MFC**.
 

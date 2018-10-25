@@ -25,84 +25,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34daf1f1c8624206070c73c9f012192c8b3dec66
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9880da2737ddd58d6521712252906c1431955173
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052905"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
 
-Udostępnia implementację [ISessionProperties](/previous-versions/windows/desktop/ms713721) interfejsu.  
-  
+Udostępnia implementację [ISessionProperties](/previous-versions/windows/desktop/ms713721) interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE ISessionPropertiesImpl :  
-   public ISessionProperties,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE ISessionPropertiesImpl :
+   public ISessionProperties,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `ISessionPropertiesImpl`.  
-  
+Z klasą pochodną `ISessionPropertiesImpl`.
+
 *PropClass*<br/>
-Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.  
+Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="interface-methods"></a>Metody interfejsu  
-  
-|||  
-|-|-|  
-|[Getproperties —](#getproperties)|Zwraca listę właściwości, w grupie właściwości sesji, które obecnie są ustawiane w sesji.|  
-|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-Obowiązkowego interfejsu w ramach sesji. Ta klasa implementuje właściwości sesji przez wywołanie statycznego funkcją zdefiniowaną przez [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md). Mapa zestawu właściwości powinny być określone w swojej klasy sesji.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="interface-methods"></a>Metody interfejsu
+
+|||
+|-|-|
+|[Getproperties —](#getproperties)|Zwraca listę właściwości, w grupie właściwości sesji, które obecnie są ustawiane w sesji.|
+|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|
+
+## <a name="remarks"></a>Uwagi
+
+Obowiązkowego interfejsu w ramach sesji. Ta klasa implementuje właściwości sesji przez wywołanie statycznego funkcją zdefiniowaną przez [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md). Mapa zestawu właściwości powinny być określone w swojej klasy sesji.
+
 ## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
 
-Zwraca listę wszystkich właściwości w `DBPROPSET_SESSION` grupy właściwości, które obecnie są ustawiane w sesji.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Zwraca listę wszystkich właściwości w `DBPROPSET_SESSION` grupy właściwości, które obecnie są ustawiane w sesji.
 
-Zobacz [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643) w *OLE DB Podręcznik programisty*. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(GetProperties)(ULONG cPropertyIDSets, 
+   const DBPROPIDSET rgPropertyIDSets[], 
+   ULONG * pcPropertySets, 
+   DBPROPSET ** prgPropertySets);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643) w *OLE DB Podręcznik programisty*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
-Ustawia właściwości w `DBPROPSET_SESSION` grupy właściwości.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Ustawia właściwości w `DBPROPSET_SESSION` grupy właściwości.
 
-Zobacz [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405) w *OLE DB Podręcznik programisty*.  
-  
-## <a name="see-also"></a>Zobacz też  
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(SetProperties)(ULONG cPropertySets, 
+   DBPROPSET rgPropertySets[]);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405) w *OLE DB Podręcznik programisty*.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

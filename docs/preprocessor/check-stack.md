@@ -19,38 +19,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16a3d87741b8dda3b130c09d74e86a2350cd7be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 211a73fb2af2925f40518f2b0eda3f7bd5b5daf1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057247"
 ---
 # <a name="checkstack"></a>check_stack
-Instruuje kompilator, aby wyłączyć sondy stosu, jeśli `off` (lub `-`) jest określony, lub Włącz sondy stosu, jeśli `on` (lub `+`) jest określony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#pragma check_stack([ {on | off}] )  
-#pragma check_stack{+ | -}  
-```  
-  
-## <a name="remarks"></a>Uwagi 
+Instruuje kompilator, aby wyłączyć sondy stosu, jeśli `off` (lub `-`) jest określony, lub Włącz sondy stosu, jeśli `on` (lub `+`) jest określony.
 
-Jeśli żaden argument nie zostanie podany, sondy stosu są traktowane zgodnie z domyślną. Ta dyrektywa pragma uwzględniona na pierwszej funkcji zdefiniowanych po pragmy jest widoczny. Sondy stosu należą ani makr, ani nie ma funkcji, które są wbudowane wygenerowany.  
-  
-Jeśli nie udzielisz argument **check_stack** pragma, sprawdzeniem stosu powraca do zachowanie określone w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [odwołanie do kompilatora](../build/reference/compiler-options.md). Interakcja `#pragma check_stack` i [/GS](../build/reference/gs-control-stack-checking-calls.md) opcji podsumowanych w poniższej tabeli.  
-  
-### <a name="using-the-checkstack-pragma"></a>Za pomocą check_stack Pragma  
-  
-|Składnia|Skompilowany przy użyciu<br /><br /> Opcja/GS?|Akcja|  
-|------------|------------------------------------|------------|  
-|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Tak|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|  
-|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|  
-|`#pragma check_stack(on)`<br /><br /> lub `#pragma check_stack +`|Tak lub nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|  
-|`#pragma check_stack(off)`<br /><br /> lub `#pragma check_stack -`|Tak lub nie|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="syntax"></a>Składnia
+
+```
+#pragma check_stack([ {on | off}] )
+#pragma check_stack{+ | -}
+```
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli żaden argument nie zostanie podany, sondy stosu są traktowane zgodnie z domyślną. Ta dyrektywa pragma uwzględniona na pierwszej funkcji zdefiniowanych po pragmy jest widoczny. Sondy stosu należą ani makr, ani nie ma funkcji, które są wbudowane wygenerowany.
+
+Jeśli nie udzielisz argument **check_stack** pragma, sprawdzeniem stosu powraca do zachowanie określone w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [odwołanie do kompilatora](../build/reference/compiler-options.md). Interakcja `#pragma check_stack` i [/GS](../build/reference/gs-control-stack-checking-calls.md) opcji podsumowanych w poniższej tabeli.
+
+### <a name="using-the-checkstack-pragma"></a>Za pomocą check_stack Pragma
+
+|Składnia|Skompilowany przy użyciu<br /><br /> Opcja/GS?|Akcja|
+|------------|------------------------------------|------------|
+|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Tak|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|
+|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|
+|`#pragma check_stack(on)`<br /><br /> lub `#pragma check_stack +`|Tak lub nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|
+|`#pragma check_stack(off)`<br /><br /> lub `#pragma check_stack -`|Tak lub nie|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|
+
+## <a name="see-also"></a>Zobacz też
+
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

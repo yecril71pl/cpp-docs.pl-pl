@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092248"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057052"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -123,7 +123,6 @@ Wiele z tych problemów można uniknąć przy użyciu technologii binarnym inter
 Istnieje również możliwość uniknąć niektóre z tych problemów, jeśli wszystkie obrazy w procesie używa dynamicznie załadowane tę samą wersję CRT. Aby upewnić się, że wszystkie składniki używać tej samej wersji biblioteki DLL środowiska CRT, należy utworzyć je przy użyciu **/MD** opcji, a następnie użyć tych samych narzędzi i właściwości ustawień kompilatora.
 
 Niektóre opieki jest potrzebny, jeśli program zakończy się pomyślnie niektórych zasobów CRT (takich jak dojścia do plików i ustawień regionalnych zmienne środowiskowe) poprzek granic DLL, nawet w przypadku korzystania z tej samej wersji środowiska CRT. Więcej informacji na temat zagadnień związanych oraz sposoby ich rozwiązywania, zobacz [potencjalne błędy przekazywania CRT obiektów w pliku DLL granicach](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Zobacz także
 

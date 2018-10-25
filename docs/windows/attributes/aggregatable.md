@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057833"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -95,4 +95,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacja](/windows/desktop/com/aggregation)  
+[Agregacja](/windows/desktop/com/aggregation)

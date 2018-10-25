@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060016"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161661"
 Następująca składnia opisuje **try-finally** instrukcji:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ Kontrola osiąga **__try** oświadczenie proste wykonywania sekwencyjnego (poni�
 
 1. Po zakończeniu działania programu obsługi zakończenia, wykonywanie jest kontynuowane po **__finally** instrukcji. Niezależnie od tego, jak chronionych sekcji kończy się (na przykład za pośrednictwem **goto** z treści chronionych lub **zwracają** instrukcji), program obsługi przerwania jest wykonywany *przed* Przenosi przepływ sterowania poza sekcję chronioną.
 
-     A **__finally** instrukcji nie blokuje wyszukiwanie obsługi odpowiednich wyjątków.
+   A **__finally** instrukcji nie blokuje wyszukiwanie obsługi odpowiednich wyjątków.
 
 Jeśli wystąpi wyjątek w **__try** bloku, system operacyjny musi odnaleźć program obsługi wyjątku lub program zakończy się niepowodzeniem. Jeśli program obsługi zostanie znaleziony, wszystkie **__finally** bloki są wykonywane i wykonanie zostanie wznowione w obsłudze.
 

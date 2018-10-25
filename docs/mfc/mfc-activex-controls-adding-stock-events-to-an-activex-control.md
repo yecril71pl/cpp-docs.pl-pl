@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060562"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń standardowych do kontrolki ActiveX
 
@@ -73,13 +73,13 @@ Zdarzeń standardowych różnią się od zdarzenia niestandardowe, w tym, że s�
 |-----------|---------------------|--------------|
 |Kliknij|**void (fireclick —)**|Wywoływane, gdy kontrolka przechwytuje mysz, wszelkie **BUTTONUP** (lewy, środkowy lub prawy) wiadomość zostaje odebrana i zwolnieniu przycisku kontrolki. Stock MouseDown i MouseUp zdarzeń odbywa się przed tym zdarzeniem.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_click —)**|
 |DblClick|**void (firedblclick —)**|Podobne, a następnie kliknij ale wyzwalane, gdy **BUTTONDBLCLK** wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_dblclick —)**|
-|Błąd|**fireerror — void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Wywoływane, gdy wystąpi błąd w obrębie formant ActiveX poza zakres dostępu metody wywołania lub właściwość.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_errorevent —)**|
-|KeyDown|**firekeydown — void (krótki** `nChar` **, krótkich**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYDOWN` lub `WM_KEYDOWN` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keydown —)**|
-|KeyPress|**firekeypress — void (krótki** <strong>\*</strong> `pnChar` **)** |Wywoływane, gdy `WM_CHAR` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **(EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**firekeyup — void (krótki** `nChar` **, krótkich**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYUP` lub `WM_KEYUP` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keyup —)**|
-|MouseDown|**firemousedown — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, jeśli istnieje **BUTTONDOWN** (po lewej stronie, środka lub do prawej) została odebrana. Przycisk myszy jest przechwytywany bezpośrednio przed wykonaniem to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousedown —)**|
-|MouseMove|**firemousemove — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, gdy WM_MOUSEMOVE wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousemove —)**|
-|MouseUp|**firemouseup — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, jeśli istnieje **BUTTONUP** (po lewej stronie, środka lub do prawej) została odebrana. Przechwytywanie myszy jest zwalniany, zanim to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mouseup —)**|
+|Błąd|**fireerror — void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Wywoływane, gdy wystąpi błąd w obrębie formant ActiveX poza zakres dostępu metody wywołania lub właściwość.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_errorevent —)**|
+|KeyDown|**firekeydown — void (krótki** `nChar` **, krótkich**`nShiftState`**)**|Wywoływane, gdy `WM_SYSKEYDOWN` lub `WM_KEYDOWN` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keydown —)**|
+|KeyPress|**firekeypress — void (krótki** <strong>\*</strong> `pnChar` **)**|Wywoływane, gdy `WM_CHAR` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **(EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**firekeyup — void (krótki** `nChar` **, krótkich**`nShiftState`**)**|Wywoływane, gdy `WM_SYSKEYUP` lub `WM_KEYUP` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keyup —)**|
+|MouseDown|**firemousedown — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)**|Wywoływane, jeśli istnieje **BUTTONDOWN** (po lewej stronie, środka lub do prawej) została odebrana. Przycisk myszy jest przechwytywany bezpośrednio przed wykonaniem to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousedown —)**|
+|MouseMove|**firemousemove — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)**|Wywoływane, gdy WM_MOUSEMOVE wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousemove —)**|
+|MouseUp|**firemouseup — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)**|Wywoływane, jeśli istnieje **BUTTONUP** (po lewej stronie, środka lub do prawej) została odebrana. Przechwytywanie myszy jest zwalniany, zanim to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mouseup —)**|
 |ReadyStateChange|**void (FireReadyStateChange)**|Wywoływane, gdy przejściu kontrolki do następnego stanu gotowości ze względu na ilość danych odebranych.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_readystatechange —)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Dodawanie zdarzeń standardowych przy użyciu Kreator dodawania zdarzenia
@@ -94,7 +94,7 @@ Dodawanie zdarzeń standardowych wymaga mniej pracy niż dodawanie zdarzeń nies
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodawanie zdarzenia**.
 
-     Spowoduje to otwarcie Kreatora dodawania zdarzenia.
+   Spowoduje to otwarcie Kreatora dodawania zdarzenia.
 
 1. W **Nazwa zdarzenia** listy rozwijanej wybierz `KeyPress`.
 

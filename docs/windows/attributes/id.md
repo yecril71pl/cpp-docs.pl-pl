@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a17edd3ec3c35c307ca35a6657c69f3f7fef246a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7ae22069acfa13bcaa71630f919b4ab3fede86a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057689"
 ---
 # <a name="id"></a>identyfikator
 
@@ -67,4 +67,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 [Atrybuty składowych danych](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
-[out](out-cpp.md)  
+[out](out-cpp.md)

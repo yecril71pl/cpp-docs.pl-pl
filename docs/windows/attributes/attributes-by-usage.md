@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328184"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060432"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 
@@ -43,7 +43,7 @@ Jeśli atrybut poprzedza element, który nie znajduje się w zakresie ten atrybu
 
 ## <a name="module-attributes"></a>Atrybuty modułów
 Następujący atrybut będzie stosowany tylko do [modułu](module-cpp.md) atrybutu.
-  
+
 |Atrybut|Opis|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
@@ -85,7 +85,6 @@ Musisz przestrzegać tych reguł określających interfejs:
 - Nie przeciążone metody są dozwolone.
 
 Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
-
 
 ## <a name="see-also"></a>Zobacz też
 

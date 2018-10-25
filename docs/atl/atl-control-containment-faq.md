@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053712"
 ---
 # <a name="atl-control-containment-faq"></a>Zawieranie kontrolek ALT — Często zadawane pytania
 
@@ -37,7 +37,7 @@ Kod hostingu formantu ATL nie wymagają użycia dowolnej klasy ATL; Możesz po p
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Opakowuje **"AtlAxWinLic80"** okna, zapewniając metody do tworzenia okna, tworzenie formantu i/lub dołączanie licencjonowany formant do okna i pobierania wskaźniki interfejsu na obiekt hosta.|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Działa jako klasę bazową dla klasy kontrolek ActiveX w oparciu o zasobu okna dialogowego. Takie kontrolki mogą zawierać inne kontrolki ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Działa jako klasę bazową dla klasy okien dialogowych, w oparciu o zasobu okna dialogowego. Takie okien dialogowych mogą zawierać formantów ActiveX.|
-|[CWindow](../atl/reference/cwindow-class.md)|Udostępnia metodę, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), które zwróci wskaźnika interfejsu sterowanie podany identyfikator hosta okna. Ponadto otoki interfejsu Windows API udostępnianych przez `CWindow` ogólnie ułatwić zarządzanie oknem.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Udostępnia metodę, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), które zwróci wskaźnika interfejsu sterowanie podany identyfikator hosta okna. Ponadto otoki interfejsu Windows API udostępnianych przez `CWindow` ogólnie ułatwić zarządzanie oknem.|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>Co to jest ATL Hosting kontrolki interfejsu API?
 
@@ -62,11 +62,11 @@ ATL użytkownika hosting kontrolki interfejsu API to zestaw funkcji, który umo�
 Wywołaj najpierw siedmiu funkcji [klasy AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) niejawnie.
 
 > [!NOTE]
->  Interfejs API hostingu kontrolek stanowi podstawę ATL obsługę zawierania kontrolek ActiveX. Istnieje jednak zwykle nieco trzeba bezpośrednio wywoływać tych funkcji, jeśli korzystanie z zalet lub wykorzystać ATL klasy otoki. Aby uzyskać więcej informacji, zobacz [której klasy ułatwienia ActiveX zawieranie kontrolek ATL](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  Interfejs API hostingu kontrolek stanowi podstawę ATL obsługę zawierania kontrolek ActiveX. Istnieje jednak zwykle nieco trzeba bezpośrednio wywoływać tych funkcji, jeśli korzystanie z zalet lub wykorzystać ATL klasy otoki. Aby uzyskać więcej informacji, zobacz [której klasy ułatwienia ActiveX zawieranie kontrolek ATL](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>Co to jest klasa AtlAxWin100?
 
-`AtlAxWin100` jest nazwą klasy okna, który zapewnia funkcje hostingu kontrolek ATL. Podczas tworzenia wystąpienia tej klasy procedurę okna automatycznie używać interfejsu API hostingu kontrolek do tworzenia obiektu hosta skojarzony z oknem i ją załadować za pomocą kontrolki, które można określić jako tytuł okna. 
+`AtlAxWin100` jest nazwą klasy okna, który zapewnia funkcje hostingu kontrolek ATL. Podczas tworzenia wystąpienia tej klasy procedurę okna automatycznie używać interfejsu API hostingu kontrolek do tworzenia obiektu hosta skojarzony z oknem i ją załadować za pomocą kontrolki, które można określić jako tytuł okna.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>Kiedy muszę tworzyć wywołanie klasy AtlAxWinInit?
 

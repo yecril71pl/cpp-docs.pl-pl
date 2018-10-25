@@ -21,29 +21,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4be8214ad036d67a02ce4b9c5935d3deb92252c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ab23f62795b952b7b23473c1e687a2187218bbbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061100"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059640"
 ---
 # <a name="connecting-to-a-data-source"></a>Nawiązywanie połączenia ze źródłem danych
 
-Źródła danych ODBC jest określony zbiór danych, informacje wymagane do dostępu do danych i lokalizacja źródła danych, które można opisać za pomocą nazwy źródła danych. Z punktu widzenia programu źródło danych zawiera dane, systemu DBMS, sieci (jeśli istnieje) i ODBC.  
-  
-Dostęp do danych ze źródła danych, program musi najpierw nawiąż połączenie ze źródłem danych. Dostępu do wszystkich danych odbywa się za pośrednictwem tego połączenia.  
-  
-Połączenia źródła danych są hermetyzowane przez klasę [CDatabase](../../mfc/reference/cdatabase-class.md). Gdy `CDatabase` obiekt jest połączony ze źródłem danych, możesz:  
-  
-- Konstruowania [zestawy rekordów](../../mfc/reference/crecordset-class.md), które wybrać rekordy z tabel lub kwerend.  
-  
-- Zarządzanie [transakcji](../../data/odbc/transaction-odbc.md), aktualizacje przetwarzania wsadowego, więc wszystkie zobowiązujemy się do źródła danych tylko raz (lub cała transakcja została wycofana, ponownie, aby źródła danych ulega) — Jeśli źródło danych obsługuje wymaganego poziomu transakcji.  
-  
-- Bezpośrednie wykonywanie [SQL](../../data/odbc/sql.md) instrukcji.  
-  
-Po zakończeniu pracy z połączenia źródła danych, Zamknij `CDatabase` obiektu, a następnie go zniszcz lub użyć go ponownie do nowego połączenia. Aby uzyskać więcej informacji na temat połączeń ze źródłami danych, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
+Źródła danych ODBC jest określony zbiór danych, informacje wymagane do dostępu do danych i lokalizacja źródła danych, które można opisać za pomocą nazwy źródła danych. Z punktu widzenia programu źródło danych zawiera dane, systemu DBMS, sieci (jeśli istnieje) i ODBC.
+
+Dostęp do danych ze źródła danych, program musi najpierw nawiąż połączenie ze źródłem danych. Dostępu do wszystkich danych odbywa się za pośrednictwem tego połączenia.
+
+Połączenia źródła danych są hermetyzowane przez klasę [CDatabase](../../mfc/reference/cdatabase-class.md). Gdy `CDatabase` obiekt jest połączony ze źródłem danych, możesz:
+
+- Konstruowania [zestawy rekordów](../../mfc/reference/crecordset-class.md), które wybrać rekordy z tabel lub kwerend.
+
+- Zarządzanie [transakcji](../../data/odbc/transaction-odbc.md), aktualizacje przetwarzania wsadowego, więc wszystkie zobowiązujemy się do źródła danych tylko raz (lub cała transakcja została wycofana, ponownie, aby źródła danych ulega) — Jeśli źródło danych obsługuje wymaganego poziomu transakcji.
+
+- Bezpośrednie wykonywanie [SQL](../../data/odbc/sql.md) instrukcji.
+
+Po zakończeniu pracy z połączenia źródła danych, Zamknij `CDatabase` obiektu, a następnie go zniszcz lub użyć go ponownie do nowego połączenia. Aby uzyskać więcej informacji na temat połączeń ze źródłami danych, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

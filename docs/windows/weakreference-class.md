@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ff2f2b0e329e30ef73b82a8f1fea969eb7c31f1
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d3682e9b84567a2be77312496a6219238f81625d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48239654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059106"
 ---
 # <a name="weakreference-class"></a>WeakReference — Klasa
 
@@ -137,7 +137,7 @@ Zwiększa liczbę silne odwołanie bieżącego `WeakReference` obiektu.
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
-STDMETHOD(Resolve)  
+STDMETHOD(Resolve)
    (REFIID riid,
    _Deref_out_opt_ IInspectable **ppvObject
 );

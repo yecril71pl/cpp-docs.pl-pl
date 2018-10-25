@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6fbba50e56ae06dc3afb64582d4a131bba75a6c8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055856"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -33,7 +33,6 @@ Włącza sprawdzanie błędów dotyczących wartości rejestru.
 > PRZYJMIJ *dataregister*:*typu* [[, *dataregister*:*typu*]]...<br/>
 > PRZYJMIJ *zarejestrować*: błąd [[, *zarejestrować*: błąd]]...<br/>
 > PRZYJMIJ [[*zarejestrować*:]] nic [[, *zarejestrować*: nie RÓB]]...
-
 
 ## <a name="remarks"></a>Uwagi
 

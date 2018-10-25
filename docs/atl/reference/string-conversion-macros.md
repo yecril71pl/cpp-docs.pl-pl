@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4df562e693a412ca93720748f929d1bbcefc829
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa44449c65dbdfdea93004fa2fe1adffdeba033d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061745"
 ---
 # <a name="string-conversion-macros"></a>Makra konwersji ciągów
 
-Te makra wprowadzić parametry funkcji konwersji.  
+Te makra wprowadzić parametry funkcji konwersji.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL i makr konwersji ciągu MFC
 
@@ -78,7 +78,7 @@ W poniższej tabeli wymieniono `DEVMODE` i `TEXTMETRIC` makra konwersji ciągów
 |DEVMODEA2W|TEXTMETRICA2W|
 |DEVMODEOLE2T|TEXTMETRICOLE2T|
 |DEVMODET2OLE|TEXTMETRICT2OLE|
-|DEVMODEW2A|TEXTMETRICW2A|  
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>Zobacz też
 

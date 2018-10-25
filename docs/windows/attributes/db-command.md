@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789649"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061631"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ Tworzy polecenie OLE DB.
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -258,4 +258,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz także
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)  
+[Oddzielne atrybuty](stand-alone-attributes.md)

@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441931"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059873"
 ---
 # <a name="key-wrl-apis-by-category"></a>Kluczowe interfejsy API biblioteki WRL według kategorii
+
 W poniższej tabeli wymieniono podstawowe klasy, struktury, funkcjami i makrami Biblioteka szablonów C++ środowiska wykonawczego Windows. Konstrukcje w pomocnika przestrzeni nazw i klas są pomijane. Te listy rozszerzyć dokumentacji interfejsu API, które są uporządkowane według przestrzeni nazw.
-  
-### <a name="classes"></a>Klasy
-  
+
+## <a name="classes"></a>Klasy
+
 |Tytuł|Opis|
 |-----------|-----------------|
 |[ActivationFactory, klasa](../windows/activationfactory-class.md)|Umożliwia co najmniej jedną klasę na uaktywnianie przez środowisko wykonawcze Windows.|
@@ -46,18 +47,18 @@ W poniższej tabeli wymieniono podstawowe klasy, struktury, funkcjami i makrami 
 |[SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)|Udostępnia mechanizm podstawowych do utworzenia środowiska uruchomieniowego Windows lub klasycznego modelu COM klasy bazowej.|
 |[SimpleClassFactory, klasa](../windows/simpleclassfactory-class.md)|Zapewnia mechanizm podstawowych, aby utworzyć klasę bazową.|
 |[WeakRef, klasa](../windows/weakref-class.md)|Reprezentuje *słabe odwołanie* mogą służyć tylko Windows środowisko wykonawcze, nie Klasyczny model COM. Słabe odwołanie reprezentuje obiekt, który może być lub może być niedostępny.|
-  
-### <a name="structures"></a>Struktury
-  
+
+## <a name="structures"></a>Struktury
+
 |Tytuł|Opis|
 |-----------|-----------------|
 |[ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)|Określa funkcje weryfikacji i inicjowania, które może odnosić się do zestawu interfejsu identyfikatorów.|
 |[CloakedIid, struktura](../windows/cloakediid-structure.md)|Wskazuje, aby `RuntimeClass`, `Implements` i `ChainInterfaces` określonego interfejsu nie jest dostępny na liście IID szablonów.|
 |[Implements, struktura](../windows/implements-structure.md)|Implementuje `QueryInterface` i `GetIid` dla określonych interfejsów.|
 |[MixIn, struktura](../windows/mixin-structure.md)|Zapewnia, że klasy środowiska uruchomieniowego pochodzi od klasy interfejsów Windows Runtime, jeśli istnieje, a następnie klasycznych interfejsów COM.|
-  
-### <a name="functions"></a>Funkcje
-  
+
+## <a name="functions"></a>Funkcje
+
 |Tytuł|Opis|
 |-----------|-----------------|
 |[ActivateInstance, funkcja](../windows/activateinstance-function.md)|Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.|
@@ -67,14 +68,14 @@ W poniższej tabeli wymieniono podstawowe klasy, struktury, funkcjami i makrami 
 |[CreateClassFactory, funkcja](../windows/createclassfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy.|
 |[GetActivationFactory, funkcja](../windows/getactivationfactory-function.md)|Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.|
 |[Make, funkcja](../windows/make-function.md)|Inicjuje określonej klasy środowiska wykonawczego Windows.|
-  
-### <a name="macros"></a>Makra
-  
+
+## <a name="macros"></a>Makra
+
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Makra ActivatableClass](../windows/activatableclass-macros.md)|Wypełnia wewnętrzną pamięć podręczną zawierającą fabryki, który można utworzyć wystąpienie określonej klasy.|
 |[InspectableClass, makro](../windows/inspectableclass-macro.md)|Ustawia poziom nazwy i zaufania klasy środowiska uruchomieniowego.|
-  
+
 ## <a name="see-also"></a>Zobacz też
 
 [Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

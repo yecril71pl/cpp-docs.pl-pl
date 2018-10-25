@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425018"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055225"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
 
@@ -39,15 +39,15 @@ W tym artykule opisano, co należy zrobić, aby zaimplementować okien ramowych 
 
 1. Zadeklaruj `COleResizeBar` składowej w klasie okien ramowych. Jest to niezbędne, jeśli chcesz obsługiwać zmiany rozmiaru w miejscu aplikacji serwera.
 
-     Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i wywoływać `Create` dla usługi `COleResizeBar` elementu członkowskiego, jeśli jego zdefiniowaniu.
+   Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i wywoływać `Create` dla usługi `COleResizeBar` elementu członkowskiego, jeśli jego zdefiniowaniu.
 
 1. Jeśli pasek narzędzi, Zadeklaruj `CToolBar` składowej w klasie okien ramowych.
 
-     Zastąp `OnCreateControlBars` funkcję elementu członkowskiego, aby utworzyć pasek narzędzi, gdy serwer jest aktywny w miejscu. Na przykład:
+   Zastąp `OnCreateControlBars` funkcję elementu członkowskiego, aby utworzyć pasek narzędzi, gdy serwer jest aktywny w miejscu. Na przykład:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Zawiera omówienie ten kod po kroku 5.
+   Zawiera omówienie ten kod po kroku 5.
 
 1. Uwzględnić plik nagłówka dla tej klasy okien ramowych w miejscu, w pliku głównym .cpp.
 

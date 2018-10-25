@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061576"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Porady: wywoływanie właściwości i metod formantu interfejsu Windows Forms
 
@@ -39,11 +39,11 @@ W tym temacie założono, że została już ukończona [porady: tworzenie kontro
 
 1. Dodaj następujący wiersz do sekcji publicznej zastąpienia `CMFC02View` deklaracji w MFC02View.h klasy.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Dodaj zastąpienie dla OnInitialupdate.
 
-     Wyświetlanie **właściwości** okna (F4). W **Widok klas** (CTRL + SHIFT + C), wybierz klasę CMFC02View. W **właściwości** okna, wybierz ikonę dla zastąpień. Scoll w dół na liście, aby OnInitialUpdate. Kliknij pozycję na liście rozwijanej listy i wybierz przycisk \<Dodaj >. W MFC02View.cpp. Upewnij się, że treści funkcji OnInitialUpdate jest następująca:
+   Wyświetlanie **właściwości** okna (F4). W **Widok klas** (CTRL + SHIFT + C), wybierz klasę CMFC02View. W **właściwości** okna, wybierz ikonę dla zastąpień. Scoll w dół na liście, aby OnInitialUpdate. Kliknij pozycję na liście rozwijanej listy i wybierz przycisk \<Dodaj >. W MFC02View.cpp. Upewnij się, że treści funkcji OnInitialUpdate jest następująca:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ W tym temacie założono, że została już ukończona [porady: tworzenie kontro
 
 1. Skompiluj i uruchom projekt.
 
-     Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+   Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
 
-     Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
+   Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
 
-     Należy zauważyć, że teraz jest inicjowany w polu tekstowym.
+   Należy zauważyć, że teraz jest inicjowany w polu tekstowym.
 
 ## <a name="see-also"></a>Zobacz też
 

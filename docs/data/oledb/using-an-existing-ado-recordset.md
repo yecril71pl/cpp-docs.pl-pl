@@ -17,40 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4dd8c62e376b3e160dcc0b6a5da9e2eb0b28cf8c
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 1433b51a6dfe6f558b98360812e694d42ebfb9f5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989960"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051956"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Korzystanie z istniejącego zestawu rekordów ADO
 
-Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należy użyć ADO można otworzyć zestawu rekordów (odpowiadających dla zestawu wierszy OLE DB konsumenta szablonów). W przypadku zestawu rekordów, wykonaj następujące polecenie, aby nawiązać połączenie z zestawu wierszy OLE DB:  
-  
-1. Wywołaj `QueryInterface` dla `IRowset` i `IAccessor` wskaźników.  
-  
-    ```cpp  
-    IRowset* lpRowset = NULL;  
-    IAccessor* lpAccessor = NULL;  
-    lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
-    lpUnk->QueryInterface(IID_IAccessor, (void**)&lpAccessor);  
-    ```  
-  
+Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należy użyć ADO można otworzyć zestawu rekordów (odpowiadających dla zestawu wierszy OLE DB konsumenta szablonów). W przypadku zestawu rekordów, wykonaj następujące polecenie, aby nawiązać połączenie z zestawu wierszy OLE DB:
+
+1. Wywołaj `QueryInterface` dla `IRowset` i `IAccessor` wskaźników.
+
+    ```cpp
+    IRowset* lpRowset = NULL;
+    IAccessor* lpAccessor = NULL;
+    lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);
+    lpUnk->QueryInterface(IID_IAccessor, (void**)&lpAccessor);
+    ```
+
     > [!NOTE]
-    > *lpUnk* wskazuje `IUnknown` obiekt zestawu rekordów ADO.  
-  
-1. Dołącz metody dostępu i zestawu wierszy do ich odpowiednich klas szablonów konsumentów OLE DB.  
-  
-    ```cpp  
-    CRowset rs;  
-    CAccessor accessor;  
-  
-    accessor.AddAccessorInfo(0ul);      // 0 is the ordinal of an ADO accessor  
-    rs.m_spRowset.Attach(lpRowset);      // use the Attach method of CComPtr<>  
-    rs.SetAccessor(accessor);  
-    ```  
-  
-## <a name="see-also"></a>Zobacz też  
+    > *lpUnk* wskazuje `IUnknown` obiekt zestawu rekordów ADO.
+
+1. Dołącz metody dostępu i zestawu wierszy do ich odpowiednich klas szablonów konsumentów OLE DB.
+
+    ```cpp
+    CRowset rs;
+    CAccessor accessor;
+
+    accessor.AddAccessorInfo(0ul);      // 0 is the ordinal of an ADO accessor
+    rs.m_spRowset.Attach(lpRowset);      // use the Attach method of CComPtr<>
+    rs.SetAccessor(accessor);
+    ```
+
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

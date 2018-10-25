@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc90c58162993cd8d663581e5b19604fcce4c668
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ca5d2da5dc06b1cdf0e999939fcb110608ff3359
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789613"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062694"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -59,4 +59,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Atrybuty parametru](parameter-attributes.md)  
+[Atrybuty parametru](parameter-attributes.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6acec41bcae08f5585eb521dc90ff12d082fd5ad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93fc2b788d450b591ebd20be49f25133c95f22b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418687"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052858"
 ---
 # <a name="cd2dellipse-class"></a>Klasa CD2DEllipse
 
@@ -61,7 +61,6 @@ Tworzy obiekt CD2DEllipse z CD2DRectF obiektu.
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
   CD2DEllipse(const D2D1_ELLIPSE* ellipse);
-
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,

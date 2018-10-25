@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c9553ac6bf1d2e8e8d92745456f1f52d1de1c9ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057046"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C + +/ CLI i C + +/ CX)
 
@@ -84,7 +84,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

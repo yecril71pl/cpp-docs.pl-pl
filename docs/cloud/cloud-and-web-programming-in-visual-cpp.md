@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683368"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052884"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programowanie chmury i sieci Web w programie Visual C++
 
@@ -52,11 +52,11 @@ W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
   - Nawiązuj kontakty Websockets względem usługi zdalnej
   - W pełni asynchroniczne zadanie interfejsu API oparte na PPL, łącznie z wbudowanej puli wątków
 
-   Obsługuje Windows Desktop (7 i nowsze), Windows Server (2012 i nowsze), Universal Windows Platform, systemu Linux, OSX, Android i iOS. 
+   Obsługuje Windows Desktop (7 i nowsze), Windows Server (2012 i nowsze), Universal Windows Platform, systemu Linux, OSX, Android i iOS.
 
 - [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Klasa klienta HTTP środowiska wykonawczego Windows wzorowana na klasę .NET Framework o tej samej nazwie w przestrzeni nazw System.Web. `HttpClient` w pełni obsługuje asynchroniczne przekazywanie i pobieranie przez HTTP oraz filtry potoku, które umożliwiają wstawianie niestandardowych programów obsługi HTTP do potoku. Zestaw Windows SDK zawiera przykładowe filtry dla mierzonych sieci, uwierzytelnianiem OAuth i inne. W przypadku aplikacji, których platformą docelową tylko Universal Windows Platform, zaleca się używanie `Windows::Web:HttpClient` klasy. 
+   Klasa klienta HTTP środowiska wykonawczego Windows wzorowana na klasę .NET Framework o tej samej nazwie w przestrzeni nazw System.Web. `HttpClient` w pełni obsługuje asynchroniczne przekazywanie i pobieranie przez HTTP oraz filtry potoku, które umożliwiają wstawianie niestandardowych programów obsługi HTTP do potoku. Zestaw Windows SDK zawiera przykładowe filtry dla mierzonych sieci, uwierzytelnianiem OAuth i inne. W przypadku aplikacji, których platformą docelową tylko Universal Windows Platform, zaleca się używanie `Windows::Web:HttpClient` klasy.
 
 - [Interfejs IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063760"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -60,4 +60,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[id](id.md)  
+[id](id.md)

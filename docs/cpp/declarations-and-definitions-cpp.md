@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058079"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklaracje i definicje (C++)
 
@@ -35,7 +35,7 @@ Deklaracja wprowadza jedną lub więcej nazw do programu. Deklaracje może wyst�
 
 1. To element członkowski danych statycznych w obrębie deklaracji klasy.
 
-     Ponieważ elementy członkowskie danych statycznych klas są zmiennych dyskretnych współużytkowane przez wszystkie obiekty klasy, muszą być zdefiniowane i zainicjować poza deklaracją klasy. (Aby uzyskać więcej informacji na temat klas i składowych klasy, zobacz [klasy](../cpp/classes-and-structs-cpp.md).)
+   Ponieważ elementy członkowskie danych statycznych klas są zmiennych dyskretnych współużytkowane przez wszystkie obiekty klasy, muszą być zdefiniowane i zainicjować poza deklaracją klasy. (Aby uzyskać więcej informacji na temat klas i składowych klasy, zobacz [klasy](../cpp/classes-and-structs-cpp.md).)
 
 1. Jest deklaracji nazwy klasy nie następujące definicje, takich jak `class T;`.
 

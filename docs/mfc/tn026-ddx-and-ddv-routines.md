@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389742"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063552"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: procedury DDX i DDV
 
@@ -224,21 +224,21 @@ Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
 
    - *promptN*
 
-     Ciąg, który można umieścić powyżej edytowanie elementu (& dla akceleratora).
+      Ciąg, który można umieścić powyżej edytowanie elementu (& dla akceleratora).
 
    - *fmtN*
 
-     Formatem znaku typu arg, jeden z:
+      Formatem znaku typu arg, jeden z:
 
-     |Znak|Typ|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (to znaczy, długi)
-     U | czas bez znaku (czyli DWORD)
-     f | float
-     F | double
-     s | string
+      |Znak|Typ|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (to znaczy, długi)|
+      |U | czas bez znaku (czyli DWORD)|
+      |f | float|
+      |F | double|
+      |s | string|
 
 ## <a name="see-also"></a>Zobacz także
 

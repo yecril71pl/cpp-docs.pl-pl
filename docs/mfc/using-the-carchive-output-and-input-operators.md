@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372460"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061316"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Za pomocą CArchive &lt; &lt; i &gt; &gt; operatorów
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372460"
 
 1. Poniższy przykład pokazuje, jak przechowywać obiekt w pliku za pomocą archiwum:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Próba załadowania obiektu, z wartością wcześniej zapisane w pliku
 
 1. Poniższy przykład pokazuje, jak próba załadowania obiektu, z wartością wcześniej zapisane w pliku:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 Zwykle, przechowywanie i ładowanie danych do i z pliku za pomocą archiwum w `Serialize` funkcji `CObject`-pochodne klasy, które musi mieć zadeklarowany za pomocą makra DECLARE_SERIALIZE. Odwołanie do `CArchive` obiekt jest przekazywany do usługi `Serialize` funkcji. Należy wywołać `IsLoading` funkcji `CArchive` obiektu, aby określić, czy `Serialize` funkcja została wywołana do ładowania danych z pliku ani do przechowywania danych do pliku.
 

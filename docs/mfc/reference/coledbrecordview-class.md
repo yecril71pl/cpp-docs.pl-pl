@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5494cd21f1385bbd9d89a37725998b521e6452
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae0d531930a2cfbb00be5bc0fb9a043a10e7d9f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059067"
 ---
 # <a name="coledbrecordview-class"></a>Coledbrecordview — klasa
 
@@ -175,6 +175,4 @@ Jeśli przenosisz poza ostatni rekord w zestawie, widoku rekordu to jest nadal w
 ## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-
-
 

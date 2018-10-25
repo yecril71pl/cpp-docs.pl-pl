@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055141"
 ---
 # <a name="marshaling-global-functions"></a>Funkcje globalne kierowania
 
@@ -34,7 +34,7 @@ Te funkcje zapewniają obsługę do organizowania i konwersji organizowania dany
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Zwalnia dane organizatora i `IStream` wskaźnika.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Tworzy nowy obiekt strumienia i organizuje określony wskaźnik interfejsu.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Konwertuje dane dotyczące organizowania strumienia na wskaźnik interfejsu.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Konwertuje dane dotyczące organizowania strumienia na wskaźnik interfejsu.|
 
 ## <a name="requirements"></a>Wymagania:
 
@@ -42,7 +42,7 @@ Te funkcje zapewniają obsługę do organizowania i konwersji organizowania dany
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Zwalnia dane organizatora w strumieniu, a następnie zwalnia wskaźnik strumienia.  
+Zwalnia dane organizatora w strumieniu, a następnie zwalnia wskaźnik strumienia.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

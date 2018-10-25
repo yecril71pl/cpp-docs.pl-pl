@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f756da8f553d68e89dcbee737adbab75f256ae8d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053126"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Określanie optymalizacji kompilatora dla projektu ATL
 
@@ -51,7 +51,7 @@ Jeżeli nie zdefiniujesz _ATL_DISABLE_NO_VTABLE, makro ATL_NO_VTABLE rozwija `de
 
 Należy użyć ATL_NO_VTABLE i w związku z tym `declspec(novtable)`, za pomocą tylko klas bazowych, które nie są bezpośrednio możliwe do utworzenia. Nie można używać `declspec(novtable)` najbardziej pochodnego klasą w projekcie, ponieważ ta klasa (zazwyczaj [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), lub [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inicjuje wskaźnika vtable dla Twojego projektu.
 
-Nie należy wywołać funkcji wirtualnych z konstruktora dowolnego obiektu, który używa `declspec(novtable)`. Należy przenieść te wywołania [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) metody.  
+Nie należy wywołać funkcji wirtualnych z konstruktora dowolnego obiektu, który używa `declspec(novtable)`. Należy przenieść te wywołania [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) metody.
 
 Jeśli wiesz, czy należy używać `declspec(novtable)` modyfikator, możesz usunąć makro ATL_NO_VTABLE z dowolnego poziomu definicji klasy lub globalnie można ją wyłączyć, określając
 

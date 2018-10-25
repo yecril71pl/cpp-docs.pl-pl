@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063357"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
@@ -247,7 +247,6 @@ W lattices dziedziczenia wielokrotnego obejmujących wirtualne klasy bazowe Poda
 ![Dostęp wzdłuż ścieżek Wykres dziedziczenia](../cpp/media/vc38v91.gif "vc38V91") wzdłuż ścieżek dostępu wykresu dziedziczenia
 
 Na rysunku, nazwa zadeklarowana w klasie `VBase` zawsze zostanie osiągnięty za pośrednictwem klasy `RightPath`. Właściwym rozwiązaniem jest bardziej dostępny ponieważ `RightPath` deklaruje `VBase` jako publiczne klasy bazowej, natomiast `LeftPath` deklaruje `VBase` jako prywatny.
-
 
 ## <a name="see-also"></a>Zobacz też
 

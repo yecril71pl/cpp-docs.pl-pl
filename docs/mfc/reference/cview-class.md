@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402268"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062239"
 ---
 # <a name="cview-class"></a>Cview — klasa
 
@@ -757,7 +757,7 @@ Należy przesłonić tę funkcję dla każdego z następujących powodów:
 
 - Aby wydruk różnić się od obraz ekranu (to znaczy, jeśli aplikacja nie jest typu WYSIWYG). Zamiast przekazywać kontekst urządzenia do drukarki `OnDraw`, użyj kontekstu urządzenia, by renderować obraz przy użyciu atrybutów, które nie są wyświetlane na ekranie.
 
-     Jeśli potrzebujesz zasobów GDI związane z drukowaniem, który nie jest używany do ekranu, zaznacz je w kontekście urządzenia przed rysowaniem i później usunąć ich zaznaczenie. Te zasoby GDI powinna zostać przydzielona w [onbeginprinting —](#onbeginprinting) i wydawane w [onendprinting —](#onendprinting).
+   Jeśli potrzebujesz zasobów GDI związane z drukowaniem, który nie jest używany do ekranu, zaznacz je w kontekście urządzenia przed rysowaniem i później usunąć ich zaznaczenie. Te zasoby GDI powinna zostać przydzielona w [onbeginprinting —](#onbeginprinting) i wydawane w [onendprinting —](#onendprinting).
 
 - Aby zaimplementować w nagłówkach i stopkach strony. Można nadal używać `OnDraw` celu renderowania przez ograniczenie możliwości wykonywania obszar, który może drukować na.
 

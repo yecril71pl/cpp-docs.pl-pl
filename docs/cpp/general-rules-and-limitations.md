@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2a21de2cade8eb0d8776b340123df3535c36f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0222af4bd53b21750cb6debc477e10c96f9d5594
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061589"
 ---
 # <a name="general-rules-and-limitations"></a>Ograniczenia i reguły ogólne
 
@@ -25,7 +25,7 @@ ms.locfileid: "46034398"
 
 - W przypadku deklarowania funkcji lub obiektu bez **dllimport** lub **dllexport** atrybutu, funkcji lub obiektu nie jest uważany za część interfejsu biblioteki DLL. W związku z tym definicja funkcji lub obiektu musi być obecny, w tym module lub w innym module tego samego programu. Aby funkcji lub obiektu częścią interfejsu biblioteki DLL, należy zadeklarować definicji funkcji lub obiektu w module jako **dllexport**. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
 
-     W przypadku deklarowania funkcji lub obiekt z **dllexport** atrybutu, jego definicja musi znajdować się w niektórych module tego samego programu. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
+   W przypadku deklarowania funkcji lub obiekt z **dllexport** atrybutu, jego definicja musi znajdować się w niektórych module tego samego programu. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
 
 - Jeśli pojedynczy moduł w programie zawiera zarówno **dllimport** i **dllexport** deklaracje dla tej samej funkcji lub obiektu, **dllexport** pierwszeństwo atrybutów za pośrednictwem **dllimport** atrybutu. Jednak kompilator wygeneruje ostrzeżenie. Na przykład:
 
@@ -53,7 +53,7 @@ ms.locfileid: "46034398"
     }
     ```
 
-     Jednak ponieważ program, który zawiera **dllexport** atrybutu w deklaracji obiektu, należy podać definicję dla tego obiektu gdzieś w programie, można zainicjować wskaźnik statycznej funkcji globalnych lub lokalnych za pomocą adres **dllexport** funkcji. Podobnie, można zainicjować wskaźnik globalnych lub lokalnych danych statycznych, adresem **dllexport** obiektu danych. Na przykład poniższy kod generuje błędy w C lub C++:
+   Jednak ponieważ program, który zawiera **dllexport** atrybutu w deklaracji obiektu, należy podać definicję dla tego obiektu gdzieś w programie, można zainicjować wskaźnik statycznej funkcji globalnych lub lokalnych za pomocą adres **dllexport** funkcji. Podobnie, można zainicjować wskaźnik globalnych lub lokalnych danych statycznych, adresem **dllexport** obiektu danych. Na przykład poniższy kod generuje błędy w C lub C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -71,7 +71,7 @@ ms.locfileid: "46034398"
 
 - Jeśli zastosujesz **dllexport** do regularnego klasy, która ma klasę bazową, która nie jest oznaczona jako **dllexport**, kompilator wygeneruje C4275.
 
-     Kompilator generuje ostrzeżenie o tym samym, jeśli klasa bazowa jest specjalizacją szablonu klasy. Aby obejść ten problem, należy oznaczyć klasy podstawowej za pomocą **dllexport**. Problem z specjalizacji szablonu klasy jest gdzie umieścić **__declspec(dllexport)**; oznaczyć szablon klasy jest niedozwolone. Zamiast tego należy jawnie tworzenia wystąpienia szablonu klasy i oznaczyć to jawne utworzenie wystąpienia z **dllexport**. Na przykład:
+   Kompilator generuje ostrzeżenie o tym samym, jeśli klasa bazowa jest specjalizacją szablonu klasy. Aby obejść ten problem, należy oznaczyć klasy podstawowej za pomocą **dllexport**. Problem z specjalizacji szablonu klasy jest gdzie umieścić **__declspec(dllexport)**; oznaczyć szablon klasy jest niedozwolone. Zamiast tego należy jawnie tworzenia wystąpienia szablonu klasy i oznaczyć to jawne utworzenie wystąpienia z **dllexport**. Na przykład:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -79,14 +79,14 @@ ms.locfileid: "46034398"
     // ...
     ```
 
-     To rozwiązanie nie powiedzie się, jeśli argument szablonu jest klasa pochodna. Na przykład:
+   To rozwiązanie nie powiedzie się, jeśli argument szablonu jest klasa pochodna. Na przykład:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-     Ponieważ jest to typowy wzorzec przy użyciu szablonów, kompilator zmienione semantykę **dllexport** po zastosowaniu do klasy, która ma jeden lub więcej klas podstawowych i co najmniej jedna z klas bazowych jest specjalizacją szablonu klasy . W tym przypadku kompilator stosuje niejawnie **dllexport** aby specjalizacje szablonów klas. Można wykonać następujące czynności i nie wyświetlone ostrzeżenie:
+   Ponieważ jest to typowy wzorzec przy użyciu szablonów, kompilator zmienione semantykę **dllexport** po zastosowaniu do klasy, która ma jeden lub więcej klas podstawowych i co najmniej jedna z klas bazowych jest specjalizacją szablonu klasy . W tym przypadku kompilator stosuje niejawnie **dllexport** aby specjalizacje szablonów klas. Można wykonać następujące czynności i nie wyświetlone ostrzeżenie:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
