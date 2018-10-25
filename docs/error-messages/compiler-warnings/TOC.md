@@ -485,7 +485,7 @@
 ## [Ostrzeżenie kompilatora (poziom 1 i 3) C4793](compiler-warning-level-1-and-3-c4793.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4794](compiler-warning-level-1-c4794.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4799](compiler-warning-level-1-c4799.md)
-# [Ostrzeżenia kompilatora od C4800 do C4999](compiler-warnings-c4800-through-c4999.md)
+# [Ostrzeżenia kompilatora od C4800 do C5999](compiler-warnings-c4800-through-c4999.md)
 ## [Ostrzeżenie kompilatora (poziom 3) C4800](compiler-warning-level-3-c4800.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4803](compiler-warning-level-1-c4803.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4804](compiler-warning-level-1-c4804.md)
@@ -560,3 +560,4 @@
 ## [Ostrzeżenie kompilatora (poziom 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Ostrzeżenie kompilatora C5038](c5038.md)
 ## [Ostrzeżenie kompilatora C5045](c5045.md)
+## [Ostrzeżenie kompilatora (poziom 2) C5046](c5046.md)
