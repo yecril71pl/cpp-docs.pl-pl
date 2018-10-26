@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394273"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068843"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
 
@@ -39,31 +39,31 @@ Następujące widoku MFC lub dokumentu i funkcji routing poleceń ma odpowiednik
 
 - Integracja powłoki
 
-     MFC obsługuje dynamiczne dane programu exchange (DDE) polecenia i argumentów wiersza polecenia, używanych przez powłokę, kliknij prawym przyciskiem myszy dokument i wybierz takie czasowniki jako Otwórz, edytować lub drukować. Formularze Windows ma integracja nie powłoki i nie odpowiada na polecenia powłoki.
+   MFC obsługuje dynamiczne dane programu exchange (DDE) polecenia i argumentów wiersza polecenia, używanych przez powłokę, kliknij prawym przyciskiem myszy dokument i wybierz takie czasowniki jako Otwórz, edytować lub drukować. Formularze Windows ma integracja nie powłoki i nie odpowiada na polecenia powłoki.
 
 - Szablony dokumentów
 
-     W MFC szablonów dokumentów skojarzyć widok, w którym znajduje się w oknie ramowym (w trybie MDI, SDI lub MTI), z dokumentu, które zostało otwarte. Formularze Windows nie ma odpowiedników szablonów dokumentów.
+   W MFC szablonów dokumentów skojarzyć widok, w którym znajduje się w oknie ramowym (w trybie MDI, SDI lub MTI), z dokumentu, które zostało otwarte. Formularze Windows nie ma odpowiedników szablonów dokumentów.
 
 - Dokumenty
 
-     MFC, rejestruje typy plików dokumentów i procesów typu dokumentu, dokument jest otwierany z poziomu powłoki. Formularze Windows ma nie obsługuje dokumentów.
+   MFC, rejestruje typy plików dokumentów i procesów typu dokumentu, dokument jest otwierany z poziomu powłoki. Formularze Windows ma nie obsługuje dokumentów.
 
 - Stany dokumentu
 
-     MFC obsługuje zanieczyszczone stanów dla dokumentu. W związku z tym Zamknij aplikację, zamknij ostatni widok, który zawiera aplikację lub zakończenia z Windows MFC wyświetli monit o zapisanie dokumentu. Windows Forms zawiera równoważne obsługi.
+   MFC obsługuje zanieczyszczone stanów dla dokumentu. W związku z tym Zamknij aplikację, zamknij ostatni widok, który zawiera aplikację lub zakończenia z Windows MFC wyświetli monit o zapisanie dokumentu. Windows Forms zawiera równoważne obsługi.
 
 - Polecenia
 
-     MFC korzysta z koncepcji poleceń. Pasek menu, pasek narzędzi i menu kontekstowego wszystkie można wywołać tego samego polecenia, na przykład wycinanie i kopiowanie. W formularzach Windows Forms polecenia są ściśle powiązane zdarzenia z elementem interfejsu użytkownika (na przykład element menu); w związku z tym należy jawnie dołączyć wszystkie zdarzenia polecenia. Może również obsługiwać wielu zdarzeń z jednym programem obsługi w formularzach Windows Forms. Aby uzyskać więcej informacji, zobacz [łączenie wielu zdarzeń do jednego programu obsługi zdarzeń w formularzach Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   MFC korzysta z koncepcji poleceń. Pasek menu, pasek narzędzi i menu kontekstowego wszystkie można wywołać tego samego polecenia, na przykład wycinanie i kopiowanie. W formularzach Windows Forms polecenia są ściśle powiązane zdarzenia z elementem interfejsu użytkownika (na przykład element menu); w związku z tym należy jawnie dołączyć wszystkie zdarzenia polecenia. Może również obsługiwać wielu zdarzeń z jednym programem obsługi w formularzach Windows Forms. Aby uzyskać więcej informacji, zobacz [łączenie wielu zdarzeń do jednego programu obsługi zdarzeń w formularzach Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Routing poleceń
 
-     Routing poleceń MFC umożliwia bieżącym widokiem lub dokumentu do przetwarzania poleceń. Ponieważ to samo polecenie często ma różne znaczenie w różnych widokach (na przykład kopiowania zachowuje się inaczej w widoku do edycji tekstu niż w edytorze grafiki), polecenia, które muszą być obsługiwani przez widok aktywny. Ponieważ Windows Forms, menu i paski narzędzi wiedzę na temat nie związane z bieżącym widokiem, nie może mieć różne procedury obsługi dla każdego typu widoku dla Twojego **MenuItem.Click** zdarzeń bez tworzenia dodatkowego kodu wewnętrznego.
+   Routing poleceń MFC umożliwia bieżącym widokiem lub dokumentu do przetwarzania poleceń. Ponieważ to samo polecenie często ma różne znaczenie w różnych widokach (na przykład kopiowania zachowuje się inaczej w widoku do edycji tekstu niż w edytorze grafiki), polecenia, które muszą być obsługiwani przez widok aktywny. Ponieważ Windows Forms, menu i paski narzędzi wiedzę na temat nie związane z bieżącym widokiem, nie może mieć różne procedury obsługi dla każdego typu widoku dla Twojego **MenuItem.Click** zdarzeń bez tworzenia dodatkowego kodu wewnętrznego.
 
 - Polecenie mechanizmu aktualizacji
 
-     MFC posiada polecenia mechanizmu aktualizacji. W związku z tym widok aktywny lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład, włączanie lub wyłączanie przycisku lub narzędzia elementu menu i sprawdzane stanów). Formularze Windows nie ma odpowiednika polecenia mechanizmu aktualizacji.
+   MFC posiada polecenia mechanizmu aktualizacji. W związku z tym widok aktywny lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład, włączanie lub wyłączanie przycisku lub narzędzia elementu menu i sprawdzane stanów). Formularze Windows nie ma odpowiednika polecenia mechanizmu aktualizacji.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -33,127 +33,127 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f7662fabc53054b7a6712d271d89c2c3451067e
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: fc27506657e1e2eeb7fdb7d0d5ef9147d5442dbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060797"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
 
-Udostępnia implementację na potrzeby `IDBProperties` interfejsu.  
-  
+Udostępnia implementację na potrzeby `IDBProperties` interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class T>   
-class ATL_NO_VTABLE IDBPropertiesImpl   
-   : public IDBProperties, public CUtlProps<T>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T>
+class ATL_NO_VTABLE IDBPropertiesImpl
+   : public IDBProperties, public CUtlProps<T>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IDBPropertiesImpl`.  
+Z klasą pochodną `IDBPropertiesImpl`.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="interface-methods"></a>Metody interfejsu  
-  
-|||  
-|-|-|  
-|[Getproperties —](#getproperties)|Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.|  
-|[GetPropertyInfo](#getpropertyinfo)|Zwraca informacje o wszystkich właściwości obsługiwane przez dostawcę.|  
-|[Setproperties —](#setproperties)|Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](/previous-versions/windows/desktop/ms713706), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="interface-methods"></a>Metody interfejsu
+
+|||
+|-|-|
+|[Getproperties —](#getproperties)|Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.|
+|[GetPropertyInfo](#getpropertyinfo)|Zwraca informacje o wszystkich właściwości obsługiwane przez dostawcę.|
+|[Setproperties —](#setproperties)|Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.|
+
+## <a name="remarks"></a>Uwagi
+
+[IDBProperties](/previous-versions/windows/desktop/ms719607) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](/previous-versions/windows/desktop/ms713706), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
-Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcProperties,   
-   DBPROPSET ** prgProperties);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(GetProperties)(ULONG cPropertySets, 
+   const DBPROPIDSET rgPropertySets[], 
+   ULONG * pcProperties, 
+   DBPROPSET ** prgProperties);
+```
 
-Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) w *OLE DB Podręcznik programisty*.  
-  
-Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetProperties`:  
-  
-|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|  
-|--------------------------------|------------------------------------------------|  
-|*cPropertySets*|*cPropertyIDSets*|  
-|*rgPropertySets*|*rgPropertyIDSets*|  
-|*pcProperties*|*pcPropertySets*|  
-|*prgProperties*|*prgPropertySets*|  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Jeśli dostawca jest inicjowany, ta metoda zwraca wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT właściwości grupy, które są aktualnie ustawiony na obiekt źródła danych. Jeśli dostawca nie został zainicjowany, zwraca tylko właściwości grupy DBPROPSET_DBINIT. 
-  
+Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) w *OLE DB Podręcznik programisty*.
+
+Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetProperties`:
+
+|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|
+|--------------------------------|------------------------------------------------|
+|*cPropertySets*|*cPropertyIDSets*|
+|*rgPropertySets*|*rgPropertyIDSets*|
+|*pcProperties*|*pcPropertySets*|
+|*prgProperties*|*prgPropertySets*|
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli dostawca jest inicjowany, ta metoda zwraca wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT właściwości grupy, które są aktualnie ustawiony na obiekt źródła danych. Jeśli dostawca nie został zainicjowany, zwraca tylko właściwości grupy DBPROPSET_DBINIT.
+
 ## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
 
-Zwraca informacje o właściwościach obsługiwane przez źródło danych.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca informacje o właściwościach obsługiwane przez źródło danych.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcPropertyInfoSets,   
-   DBPROPINFOSET ** prgPropertyInfoSets,   
-   OLECHAR ** ppDescBuffer);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
+   const DBPROPIDSET rgPropertySets[], 
+   ULONG * pcPropertyInfoSets, 
+   DBPROPINFOSET ** prgPropertyInfoSets, 
+   OLECHAR ** ppDescBuffer);
+```
 
-Zobacz [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175) w *OLE DB Podręcznik programisty*.  
-  
-Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetPropertyInfo`:  
-  
-|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|  
-|--------------------------------|------------------------------------------------|  
-|*cPropertySets*|*cPropertyIDSets*|  
-|*rgPropertySets*|*rgPropertyIDSets*|  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Używa [IDBInitializeImpl::m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) do zaimplementowania tej funkcji. 
+Zobacz [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175) w *OLE DB Podręcznik programisty*.
+
+Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetPropertyInfo`:
+
+|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|
+|--------------------------------|------------------------------------------------|
+|*cPropertySets*|*cPropertyIDSets*|
+|*rgPropertySets*|*rgPropertyIDSets*|
+
+### <a name="remarks"></a>Uwagi
+
+Używa [IDBInitializeImpl::m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) do zaimplementowania tej funkcji.
 
 ## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
 
-Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(SetProperties)(ULONG cPropertySets, 
+   DBPROPSET rgPropertySets[]);
+```
 
-Zobacz [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Jeśli dostawca jest inicjowany, ta metoda ustawia wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT grupy właściwości dla obiektu źródła danych. Jeśli dostawca nie został zainicjowany, ustawia DBPROPSET_DBINIT tylko właściwości grupy.  
-  
-## <a name="see-also"></a>Zobacz też  
+Zobacz [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli dostawca jest inicjowany, ta metoda ustawia wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT grupy właściwości dla obiektu źródła danych. Jeśli dostawca nie został zainicjowany, ustawia DBPROPSET_DBINIT tylko właściwości grupy.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

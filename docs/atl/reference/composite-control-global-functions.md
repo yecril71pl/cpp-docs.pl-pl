@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084103"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068648"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
 
@@ -56,11 +56,11 @@ Te funkcje zapewniają obsługę do utworzenia okien dialogowych i tworzenie, ho
 |[AtlSetChildSite](#atlsetchildsite)|Inicjuje `IUnknown` lokacji podrzędnych.|
 |[AtlAxWinInit](#atlaxwininit)|Inicjuje kod hostingu AxWin obiektów.|
 |[AtlAxWinTerm](#atlaxwinterm)|Deinicjuje kod hostingu AxWin obiektów.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Zwraca informacje o domyślnym interfejsie źródła obiektu.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Zwraca informacje o domyślnym interfejsie źródła obiektu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlhost.h  
+**Nagłówek:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +101,7 @@ Jedna z wartości HRESULT standardowych.
 Do użycia `AtlAxDialogBox` z szablonu okna dialogowego, który zawiera formant ActiveX, Określ prawidłowy ciąg identyfikatora CLSID, APPID lub adresu URL jako *tekstu* pole **kontroli** części zasobu okna dialogowego wraz z " AtlAxWin80 "jako *Nazwa klasy* pola w ramach tej samej sekcji. Następujące pokazuje, jakie prawidłową **kontroli** sekcja może wyglądać tak jak:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ Aby utworzyć licencjonowany formant ActiveX, zobacz [AtlAxCreateControlLicEx](#
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.  
+Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ Wartość różną od zera, jeśli inicjowanie kod hostingu formantu powiodła s
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja musi być wywołana przed rozpoczęciem korzystania z formantu ATL, hostowanie interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** klasy okna może służyć w wywołaniach [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) lub [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), zgodnie z opisem w zestawie Windows SDK.  
+Ta funkcja musi być wywołana przed rozpoczęciem korzystania z formantu ATL, hostowanie interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** klasy okna może służyć w wywołaniach [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) lub [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), zgodnie z opisem w zestawie Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

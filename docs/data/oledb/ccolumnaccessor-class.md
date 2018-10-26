@@ -19,50 +19,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1843b6279cb7c86762cc6d975a2a7e67d3d278d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e55d4c15ca5d5a3733c44cf89b788b85c905513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074673"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor — Klasa
 
-Generuje kod wprowadzonego konsumenta.  
-  
+Generuje kod wprowadzonego konsumenta.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-class CColumnAccessor : public CAccessorBase  
-```  
-  
-## <a name="remarks"></a>Uwagi  
+class CColumnAccessor : public CAccessorBase
+```
 
-W wprowadzonego kodu każda kolumna jest powiązany jako osobne metody dostępu. Należy pamiętać, że ta klasa jest używana w wprowadzonego kodu (na przykład, można napotkać go podczas debugowania), ale zwykle nie trzeba używać jej lub jego metod bezpośrednio.  
-  
-`CColumnAccessor` implementuje następujących metod klasy zastępczej, z których każdy odpowiadają w działaniu innych metod klasy dostępu:  
-  
-- `CColumnAccessor` Konstruktor; Tworzy i inicjuje `CColumnAccessor` obiektu.  
-  
-- `CreateAccessor` Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.  
-  
-- `BindColumns` Tworzy powiązanie kolumn z metod dostępu.  
-  
-- `SetParameterBuffer` Przydziela buforów dla parametrów.  
-  
-- `AddParameter` Dodaje wpis parametr do parametru struktury wpisu.  
-  
-- `HasOutputColumns` Określa, czy akcesor ma produkt wyjściowy kolumn  
-  
-- `HasParameters` Określa, czy akcesor ma następujące parametry.  
-  
-- `BindParameters` Wiąże parametry utworzonych kolumn.  
-  
-## <a name="requirements"></a>Wymagania  
+## <a name="remarks"></a>Uwagi
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="see-also"></a>Zobacz też  
+W wprowadzonego kodu każda kolumna jest powiązany jako osobne metody dostępu. Należy pamiętać, że ta klasa jest używana w wprowadzonego kodu (na przykład, można napotkać go podczas debugowania), ale zwykle nie trzeba używać jej lub jego metod bezpośrednio.
+
+`CColumnAccessor` implementuje następujących metod klasy zastępczej, z których każdy odpowiadają w działaniu innych metod klasy dostępu:
+
+- `CColumnAccessor` Konstruktor; Tworzy i inicjuje `CColumnAccessor` obiektu.
+
+- `CreateAccessor` Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.
+
+- `BindColumns` Tworzy powiązanie kolumn z metod dostępu.
+
+- `SetParameterBuffer` Przydziela buforów dla parametrów.
+
+- `AddParameter` Dodaje wpis parametr do parametru struktury wpisu.
+
+- `HasOutputColumns` Określa, czy akcesor ma produkt wyjściowy kolumn
+
+- `HasParameters` Określa, czy akcesor ma następujące parametry.
+
+- `BindParameters` Wiąże parametry utworzonych kolumn.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atldbcli.h
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

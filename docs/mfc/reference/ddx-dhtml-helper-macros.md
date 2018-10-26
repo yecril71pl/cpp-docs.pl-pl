@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383064"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054881"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra pomocnika Ddx_dhtml
 
@@ -58,8 +58,6 @@ Makra pomocnika ddx_dhtml umożliwia łatwy dostęp do często używanych właś
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdh
 
 Ustawia lub pobiera kodu HTML między tagiem początkowym i końcowym bieżącego elementu.
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ Wartość wymianie.
 
 Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLELEMENT_INNERHTML wysyłania identyfikatora.
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 Ustawia lub pobiera tekstu między tagiem początkowym i końcowym bieżącego elementu.
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdh
 
 Ustawia lub pobiera adres URL skojarzony ramki.
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ Wartość wymianie.
 Pobrać właściwości src elementu obrazu za pomocą makra DDX_DHtml_Img_Src, obiekt obrazu programu Internet Explorer będzie zwracać pełni o zmienionym znaczeniu adres URL źródła obrazu. Na przykład jeśli makro DDX_DHtml_Img_Src jest używany do ustawiania właściwości src elementu obrazu do ciągu "niektóre ciekawe obraz", podczas pobierania tej właściwości program Internet Explorer zwróci ciąg "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."
 
 Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLIMGELEMENT_SRC wysyłania identyfikatora.
-
 
 ## <a name="see-also"></a>Zobacz też
 

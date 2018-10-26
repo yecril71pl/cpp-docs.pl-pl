@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808982"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082843"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan, klasa
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 Liczba dni do skopiowania w nowe `COleDateTimeSpan` obiektu.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Wskazuje wartości dnia i godziny, które mają zostać skopiowane do nowego `COleDateTimeSpan` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -217,10 +217,10 @@ Wywołania tych funkcji, aby utworzyć sformatowany reprezentacja wartości zakr
 
 Krótki opis formularzy dla tej funkcji są następujące:
 
-**Format (** *pFormat* **)**  
+**Format (** *pFormat* **)**<br/>
 Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest przekazywany jako parametr do funkcji.
 
-**Format (** *nID* **)**  
+**Format (** *nID* **)**<br/>
 Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest zasobem. Identyfikator zasobu ciągu jest przekazywany jako parametr.
 
 ### <a name="example"></a>Przykład
@@ -388,11 +388,11 @@ Stan to `COleDateTimeSpan` wartość.
 Wartość zwracana jest definiowany przez `DateTimeSpanStatus` wyliczany typ, który jest zdefiniowany w obrębie `COleDateTimeSpan` klasy.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Uwagi
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Wskazuje wartości zakresu dat i przedział czasu, który ma być skopiowany do tego `COleDateTimeSpan` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -739,11 +739,11 @@ Nowa wartość stanu w tym `COleDateTimeSpan` obiektu.
 *Stan* wartość parametru jest definiowana przez `DateTimeSpanStatus` wyliczany typ, który jest zdefiniowany w obrębie `COleDateTimeSpan` klasy.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:

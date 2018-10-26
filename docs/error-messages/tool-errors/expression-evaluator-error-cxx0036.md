@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a94ed846d2d4ebda2e457ee772a9f8bf081d69d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077175"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Błąd CXX0036 programu Expression Evaluator
 
@@ -32,20 +32,20 @@ Ten komunikat może zostać wygenerowany przez dowolnego z kilku błędów w sto
 
 - Składnia operator kontekstu (**{}**) podano niepoprawnie.
 
-     Składnia operator kontekstu jest następująca:
+   Składnia operator kontekstu jest następująca:
 
      {*funkcja*,*modułu*,*dll*}*wyrażenia*
 
-     Określa kontekst *wyrażenie*. Operator kontekstu ma ten sam priorytet i użycia jako rzutowanie typu.
+   Określa kontekst *wyrażenie*. Operator kontekstu ma ten sam priorytet i użycia jako rzutowanie typu.
 
-     Można pominąć końcowe przecinkami. Jeśli dowolny z *funkcja*, *modułu*, lub *dll* zawiera przecinek literału, całą nazwę należy ująć w nawiasy.
+   Można pominąć końcowe przecinkami. Jeśli dowolny z *funkcja*, *modułu*, lub *dll* zawiera przecinek literału, całą nazwę należy ująć w nawiasy.
 
 - Nazwa funkcji został wpisany niepoprawnie lub nie istnieje w określonym module lub biblioteka dołączana dynamicznie.
 
-     Ponieważ C jest rozróżniana wielkość liter języka, *funkcja* musi być podany w dokładne dopasowanie wielkości liter, jak jest zdefiniowany w źródle.
+   Ponieważ C jest rozróżniana wielkość liter języka, *funkcja* musi być podany w dokładne dopasowanie wielkości liter, jak jest zdefiniowany w źródle.
 
 - Nie można odnaleźć modułu lub biblioteki DLL.
 
-     Sprawdź pełną nazwę ścieżki określonego modułu lub biblioteki DLL.
+   Sprawdź pełną nazwę ścieżki określonego modułu lub biblioteki DLL.
 
 Ten błąd jest taka sama jak CAN0036.

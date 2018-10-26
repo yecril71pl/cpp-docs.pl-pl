@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404270"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080653"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 
@@ -74,7 +74,7 @@ W przypadku aplikacji systemu Windows 8.1 Store służy tej procedury, aby przyg
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     Te instrukcje odpowiednio mają zastosowanie do aplikacji platformy UWP, Windows Phone Store aplikacji, zarówno lub żadna (klasycznej Win32 tylko dla komputerów stacjonarnych). Te makra są dostępne tylko w Windows SDK 8.1 i nowszych wersjach, więc jeśli kod musi mieć formę skompilowaną przy użyciu wcześniejszych wersji zestawu Windows SDK lub dla innych platform, oprócz Windows, a następnie należy również rozważyć, tak że żaden z nich są zdefiniowane.
+   Te instrukcje odpowiednio mają zastosowanie do aplikacji platformy UWP, Windows Phone Store aplikacji, zarówno lub żadna (klasycznej Win32 tylko dla komputerów stacjonarnych). Te makra są dostępne tylko w Windows SDK 8.1 i nowszych wersjach, więc jeśli kod musi mieć formę skompilowaną przy użyciu wcześniejszych wersji zestawu Windows SDK lub dla innych platform, oprócz Windows, a następnie należy również rozważyć, tak że żaden z nich są zdefiniowane.
 
 11. Uruchamianie i debugowanie aplikacji na emulator lub urządzenie fizyczne, dla każdego typu urządzenia, którą obsługuje aplikacja. Aby uruchomić emulator, musisz uruchomić program Visual Studio na komputerze fizycznym, a nie maszynę wirtualną.
 
@@ -119,4 +119,4 @@ Jeśli utworzono nowy projekt platformy uniwersalnej systemu Windows przy użyci
 ## <a name="see-also"></a>Zobacz także
 
 [Przewodnik przenoszenia Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[Opracowywanie aplikacji na platformę uniwersalną systemu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Opracowywanie aplikacji na platformę uniwersalną systemu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

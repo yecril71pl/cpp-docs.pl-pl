@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bd1958720b2f4f315513610cb0ed7b285e3233f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1143b1125110084f1deae445030eab8dcdd3cd7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056961"
 ---
 # <a name="odl"></a>odl
 
@@ -76,4 +76,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty interfejsu](interface-attributes.md)  
+[Atrybuty interfejsu](interface-attributes.md)

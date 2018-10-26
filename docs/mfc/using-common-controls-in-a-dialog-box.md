@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054939"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Używanie formantów wspólnych w oknie dialogowym
 
@@ -42,7 +42,7 @@ Formanty standardowe Windows mogą być używane w [okna dialogowe](../mfc/dialo
 
 1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) dla klasy okien dialogowych, ustawić warunków początkowych wspólnej kontroli. Używanie zmiennej składowej, utworzony w poprzednim kroku, należy użyć funkcji elementów członkowskich można ustawić wartość początkową i inne ustawienia. Zobacz poniższe opisy kontrolek, aby uzyskać szczegółowe informacje na temat ustawień.
 
-     Można również użyć [wymiana danych okna dialogowego](../mfc/dialog-data-exchange-and-validation.md) (DDX), aby zainicjować kontrolki w oknie dialogowym.
+   Można również użyć [wymiana danych okna dialogowego](../mfc/dialog-data-exchange-and-validation.md) (DDX), aby zainicjować kontrolki w oknie dialogowym.
 
 1. W procedurach obsługi dla formantów w oknie dialogowym należy użyć zmiennej składowej do manipulowania formantu. Zobacz poniższe opisy kontrolek, aby uzyskać szczegółowe informacje na temat metod.
 

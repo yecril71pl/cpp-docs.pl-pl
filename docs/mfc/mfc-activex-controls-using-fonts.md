@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063487"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 
@@ -64,7 +64,7 @@ Zgodnie z opisem w [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-co
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
-     Spowoduje to otwarcie Kreatora dodawania właściwości.
+   Spowoduje to otwarcie Kreatora dodawania właściwości.
 
 1. W **nazwa właściwości** kliknij **czcionki**.
 
@@ -90,7 +90,7 @@ Podstawowe właściwości podpisu jest przykładem właściwości tekstu, które
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
-     Spowoduje to otwarcie Kreatora dodawania właściwości.
+   Spowoduje to otwarcie Kreatora dodawania właściwości.
 
 1. W **nazwa właściwości** kliknij **podpis**.
 
@@ -132,7 +132,7 @@ Aby zaimplementować właściwości niestandardowej czcionki, należy użyć Kre
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
-     Spowoduje to otwarcie Kreatora dodawania właściwości.
+   Spowoduje to otwarcie Kreatora dodawania właściwości.
 
 1. W **nazwa właściwości** wpisz nazwę właściwości. W tym przykładzie użyj **HeadingFont**.
 
@@ -168,35 +168,35 @@ W pliku implementacji (. CPP), wykonaj następujące czynności:
 
 - Inicjowanie *m_fontHeading* w Konstruktorze kontroli.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Deklarowanie struktury statycznej FONTDESC zawierający domyślne atrybuty czcionki.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - W kontrolce `DoPropExchange` element członkowski funkcji, dodaj wywołanie do `PX_Font` funkcji. Zapewnia to inicjowania i trwałości dla właściwości niestandardowej czcionki.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Zakończenie wykonywania kontroli `GetHeadingFont` funkcja elementu członkowskiego.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Zakończenie wykonywania kontroli `SetHeadingFont` funkcja elementu członkowskiego.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Modyfikowanie kontrolki `OnDraw` funkcja elementu członkowskiego, aby zdefiniować zmienną do przechowywania wcześniej wybranej czcionki.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Modyfikowanie kontrolki `OnDraw` funkcja elementu członkowskiego, aby wybrać niestandardowej czcionki do kontekstu urządzenia przez dodanie następujących wiersza wszędzie tam, gdzie ma być używana czcionka.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Modyfikowanie kontrolki `OnDraw` funkcji elementu członkowskiego, aby wybrać poprzedniego czcionki do kontekstu urządzenia, dodając następujący wiersz, gdy została użyta czcionki.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Po zaimplementowaniu właściwości niestandardowej czcionki standardowej strony właściwości czcionki powinny być zrealizowane, umożliwiając użytkownikom sterowania zmień bieżącą czcionkę formantu. Aby dodać identyfikator strony właściwości dla standardowej strony właściwości czcionki, Wstaw następujący wiersz po BEGIN_PROPPAGEIDS — makro:
 

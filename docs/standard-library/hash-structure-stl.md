@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2e9fdbef911a0160ff42925a9c7984f0211069
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6f00b3c3136a4a2df96667d0f99f195339c60f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056623"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash — Struktura (standardowa biblioteka C++)
 
-Definiuje funkcję elementu członkowskiego, która zwraca wartość, która unikatowo jest określany przez `Val`. Definiuje funkcję elementu członkowskiego [skrótu](../standard-library/hash-class.md) funkcji, które jest odpowiednie dla wartości mapowanie typu `thread::id` dystrybucji wartości indeksu.
+Definiuje funkcja elementu członkowskiego, która zwraca wartość, która jednoznacznie jest określana przez `Val`. Funkcja elementu członkowskiego zdefiniowano [skrótu](../standard-library/hash-class.md) funkcja, która jest odpowiednia do mapowania wartości typu `thread::id` do rozłożenia wartości indeksu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,6 @@ struct hash<thread::id> :
 {
     size_t operator()(thread::id Val) const;
 
-
 };
 ```
 
@@ -42,7 +41,7 @@ struct hash<thread::id> :
 
 **Nagłówek:** \<wątku >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

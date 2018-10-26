@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064800"
 ---
 # <a name="cimage-class"></a>CImage, klasa
 
@@ -172,7 +172,7 @@ Aby ustalić, czy sekcja DIB dołączonych mapy bitowej, należy wywołać [IsDi
 
 ## <a name="example"></a>Przykład
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-Kiedy używasz `CImage` w projekcie MFC, należy pamiętać, funkcje Członkowskie w projekcie oczekuje wskaźnika do [CBitmap](../../mfc/reference/cbitmap-class.md) obiektu. Jeśli chcesz używać `CImage` za pomocą takich funkcji, takich jak [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), użyj [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), przekazać go swoje `CImage` HBITMAP i użyj zwracanego `CBitmap*`.  
+Kiedy używasz `CImage` w projekcie MFC, należy pamiętać, funkcje Członkowskie w projekcie oczekuje wskaźnika do [CBitmap](../../mfc/reference/cbitmap-class.md) obiektu. Jeśli chcesz używać `CImage` za pomocą takich funkcji, takich jak [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), użyj [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), przekazać go swoje `CImage` HBITMAP i użyj zwracanego `CBitmap*`.
 
 ## <a name="example"></a>Przykład
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,8 +203,8 @@ Za pomocą `CImage`, masz dostęp do rzeczywistego bitów sekcji DIB. Możesz u�
 Możesz użyć `CImage` z MFC ani ATL.
 
 > [!NOTE]
-> Po utworzeniu projektu używającego `CImage`, należy zdefiniować `CString` przed wprowadzeniem `atlimage.h`. Jeśli projekt używa ATL bez MFC, Uwzględnij `atlstr.h` przed wprowadzeniem `atlimage.h`. Jeśli projekt używa biblioteki MFC (lub jeśli jest to Projekt ATL z obsługi MFC), Uwzględnij `afxstr.h` przed wprowadzeniem `atlimage.h`.  
->   
+> Po utworzeniu projektu używającego `CImage`, należy zdefiniować `CString` przed wprowadzeniem `atlimage.h`. Jeśli projekt używa ATL bez MFC, Uwzględnij `atlstr.h` przed wprowadzeniem `atlimage.h`. Jeśli projekt używa biblioteki MFC (lub jeśli jest to Projekt ATL z obsługi MFC), Uwzględnij `afxstr.h` przed wprowadzeniem `atlimage.h`.<br/>
+> <br/>
 > Podobnie, należy uwzględnić `atlimage.h` przed wprowadzeniem `atlimpl.cpp`. Aby łatwo to zrobić, należy dołączyć `atlimage.h` w swojej `stdafx.h`.
 
 ## <a name="requirements"></a>Wymagania
@@ -302,7 +302,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 Mapy bitowe mieszania alfa obsługuje mieszania kolorów, na podstawie każdego piksela.
 
-Gdy *bBlendOp* ustawiono domyślną AC_SRC_OVER źródłową mapę bitową znajduje się nad docelową mapę bitową na podstawie wartości alfa źródłowych.  
+Gdy *bBlendOp* ustawiono domyślną AC_SRC_OVER źródłową mapę bitową znajduje się nad docelową mapę bitową na podstawie wartości alfa źródłowych.
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ Wartość TRUE, jeśli to się powiedzie. W przeciwnym razie wartość FALSE.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład tworzy mapę bitową 100 x 100 pikseli, za pomocą 16 bitów do zakodowania każdego piksela. W danym piksela 16-bitowych bitów 0 – 3 kodowanie składnik czerwony, bity 4 – 7 kodowanie zielony i bity 8-11 kodowanie niebieski. Pozostałe 4 bity są nieużywane.  
+Poniższy przykład tworzy mapę bitową 100 x 100 pikseli, za pomocą 16 bitów do zakodowania każdego piksela. W danym piksela 16-bitowych bitów 0 – 3 kodowanie składnik czerwony, bity 4 – 7 kodowanie zielony i bity 8-11 kodowanie niebieski. Pozostałe 4 bity są nieużywane.
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ Tablica identyfikatorów GUID, przy czym każdy element jednego z typów plików
 *pszAllFilesDescription*<br/>
 Jeśli ten parametr nie ma wartość NULL, ciąg filtru musi jeden dodatkowy filtr na początku listy. Ten filtr ma bieżącą wartość *pszAllFilesDescription* jego opis i akceptuje pliki dowolnego rozszerzenia obsługiwane przez inne eksportu, na liście.
 
-Na przykład:  
+Na przykład:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Zestaw flag bitowych, określając typy plików do wykluczenia z listy. Flagi dopuszczalny rozmiar to:
@@ -821,16 +820,15 @@ Tablica identyfikatorów GUID, przy czym każdy element jednego z typów plików
 *pszAllFilesDescription*<br/>
 Jeśli ten parametr nie ma wartość NULL, ciąg filtru musi jeden dodatkowy filtr na początku listy. Ten filtr ma bieżącą wartość *pszAllFilesDescription* jego opis i akceptuje pliki dowolnego rozszerzenia obsługiwane przez inne eksportu, na liście.
 
-Na przykład:  
+Na przykład:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Zestaw flag bitowych, określając typy plików do wykluczenia z listy. Flagi dopuszczalny rozmiar to:
@@ -1360,7 +1358,7 @@ Ustawia czerwony, zielony, niebieski (RGB) koloru wartości zakresu zapisów w p
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ Indeks kolor z palety kolorów.
 Ustawia piksel w lokalizacjach, określonych przez *x* i *y* kolory wskazywanym przez *r*, *g*, i *b*, w czerwony, zielony, niebieski obrazu (RGB).
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ Wartość TRUE, jeśli pomyślnie, w przeciwnym razie wartość FALSE.
 
 `TransparentBlt` jest obsługiwana dla źródła mapy bitowe, 4 bitów na piksel i 8 bitów na piksel. Użyj [CImage::AlphaBlend](#alphablend) do określenia 32 bity na piksel map bitowych o przezroczystości.
 
-### <a name="example"></a>Przykład  
+### <a name="example"></a>Przykład
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

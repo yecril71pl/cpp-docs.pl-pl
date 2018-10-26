@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06377d9fc3f0eff1487c5d920d257d68bece46b2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6ccd3277b5ad627c6956e6f5620ee6aed1640cc5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074010"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -37,7 +37,7 @@ Dodaje wpis interfejsu do mapy COM klasy docelowej.
 
 ### <a name="parameters"></a>Parametry
 
-*com_interface_entry —*<br/>
+*com_interface_entry*<br/>
 Ciąg zawierający tekst wpisu. Aby uzyskać listę możliwych wartości, zobacz [com_interface_entry — makra](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Uwagi
@@ -93,7 +93,7 @@ __interface IMyClass{};
 [ coclass,
   com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),
   com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),
-  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")  
+  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")
 ]
 
 class CMyClass: public IMyClass, public IDebugTest
@@ -104,14 +104,14 @@ class CMyClass: public IMyClass, public IDebugTest
 Wynikowy mapy obiektu COM dla `CMyBaseClass` jest następująca:
 
 ```cpp
-BEGIN_COM_MAP(CMyClass)  
-    COM_INTERFACE_ENTRY (IMyClass)  
-    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
-    COM_INTERFACE_ENTRY(IMyClass)  
-    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)  
-    COM_INTERFACE_ENTRY(IDebugTest)  
-    COM_INTERFACE_ENTRY(IProvideClassInfo)  
-END_COM_MAP()  
+BEGIN_COM_MAP(CMyClass)
+    COM_INTERFACE_ENTRY (IMyClass)
+    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)
+    COM_INTERFACE_ENTRY(IMyClass)
+    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)
+    COM_INTERFACE_ENTRY(IDebugTest)
+    COM_INTERFACE_ENTRY(IProvideClassInfo)
+END_COM_MAP()
 ```
 
 ## <a name="requirements"></a>Wymagania
@@ -131,4 +131,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078469"
 ---
 # <a name="ccomsafearray-class"></a>Klasa CComSafeArray
 
@@ -100,7 +100,7 @@ Typ danych, które mają być przechowywane w tablicy.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Rzutuje wartość `SAFEARRAY` wskaźnika.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Pobiera element z tablicy.|
-|[CComSafeArray::operator =](#operator_eq)|Operator przypisania.|  
+|[CComSafeArray::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 

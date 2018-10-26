@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054868"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializacja: ustawianie klasy jako możliwej do serializacji
 
@@ -67,9 +67,9 @@ Rozważ klasę, która jest pochodną `CObject` i ma dwa nowe zmiennych składow
 
 1. Wstaw lub Wyodrębnij zmienne Członkowskie specyficzne dla swojej klasy.
 
-     Operatory wstawienia i wydobycia wchodzić w interakcje z klasą archiwum do odczytu i zapisu danych. Poniższy przykład pokazuje, jak zaimplementować `Serialize` dla `CPerson` klasy zadeklarowanej powyżej:
+   Operatory wstawienia i wydobycia wchodzić w interakcje z klasą archiwum do odczytu i zapisu danych. Poniższy przykład pokazuje, jak zaimplementować `Serialize` dla `CPerson` klasy zadeklarowanej powyżej:
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 Można również użyć [CArchive::Read](../mfc/reference/carchive-class.md#read) i [CArchive::Write](../mfc/reference/carchive-class.md#write) funkcji elementów członkowskich, aby odczytywać i zapisywać duże ilości danych bez typu.
 

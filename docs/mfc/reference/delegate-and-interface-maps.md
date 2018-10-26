@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065489"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423757"
 |[INTERFACE_PART](#interface_part)|Używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla każdego interfejsu, który jaki obsługiwał będzie obiekt.|
 |[MAKE_DELEGATE](#make_delegate)|Dołącza program obsługi zdarzeń do zarządzanego formantu.|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 Rozpoczyna się mapa delegata.
@@ -44,6 +43,7 @@ Rozpoczyna się mapa delegata.
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *KLASA*<br/>
@@ -70,6 +70,7 @@ Rozpoczyna się definicji podłączony mapy, gdy są używane w pliku implementa
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
@@ -97,6 +98,7 @@ Rejestruje metody wywołania zwrotnego z źródło polecenia.
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -127,6 +129,7 @@ Rejestruje metody wywołania zwrotnego z komunikatem polecenia aktualizacji inte
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -172,7 +175,6 @@ To makro oznacza koniec listy wpisów delegata, które tworzą mapę delegata. A
 
 [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Kończy się mapę interfejsu w pliku implementacji.
@@ -196,7 +198,6 @@ Aby uzyskać więcej informacji na temat mapy interfejsu zobacz [techniczne 38 U
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_MAP](#begin_interface_map)
 
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Tworzy wpis w mapie delegata.
@@ -206,6 +207,7 @@ Tworzy wpis w mapie delegata.
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *ELEMENT CZŁONKOWSKI*<br/>
@@ -242,7 +244,6 @@ END_DELEGATE_MAP()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
 
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla każdego interfejsu, który jaki obsługiwał będzie obiekt.
@@ -252,6 +253,7 @@ Używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla ka�
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
@@ -271,7 +273,6 @@ Aby uzyskać więcej informacji na temat mapy interfejsu, zobacz [techniczne 38 
 
 **Nagłówek:** afxwin.h
 
-
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
 Dołącza program obsługi zdarzeń do zarządzanego formantu.
@@ -281,6 +282,7 @@ Dołącza program obsługi zdarzeń do zarządzanego formantu.
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *DELEGAT*<br/>
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

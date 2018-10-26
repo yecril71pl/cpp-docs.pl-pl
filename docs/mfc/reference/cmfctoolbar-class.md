@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067816"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -471,7 +471,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::ResetAllImages](#resetallimages)|Czyści wszystkie kolekcje obraz paska narzędzi w aplikacji.|
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|Przywraca oryginalny stan paska narzędzi.|
 |[CMFCToolBar::SaveState](#savestate)|Zapisuje informacje o stanie dla paska narzędzi w rejestrze systemu Windows. (Przesłania [CPane::SaveState](../../mfc/reference/cpane-class.md#savestate).)|
-|`CMFCToolBar::Serialize`|(Przesłania `CBasePane::Serialize`.)|
+|`CMFCToolBar::Serialize`|(Przesłania `CBasePane::Serialize`).|
 |[CMFCToolBar::SetBasicCommands](#setbasiccommands)|Ustawia listę poleceń, które są zawsze wyświetlane, gdy użytkownik otwiera menu.|
 |[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Ustawia identyfikator polecenia, stylu i identyfikator obrazu przycisku paska narzędzi.|
 |[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Ustawia styl przycisku na pasku narzędzi pod danym indeksem.|
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ Zwykle nie trzeba używać tej metody. Aby włączyć **Pokaż przyciski w jedny
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2621,7 +2617,6 @@ Wywołaj `LoadBitmapEx` metodę, aby załadować dodatkowe obrazy, po utworzeniu
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
 
-
 ```
 virtual BOOL LoadBitmapEx(
     CMFCToolBarInfo& params,
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>Parametry
 
-*params*<br/>
-[in] [in] *zablokowane*
+[in] *params*<br/>
+[in] *zablokowane*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpszProfileName*
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2804,7 +2798,6 @@ Współczynnik domyślne to 2. Można zmienić tę wartość, aby zwiększyć na
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ Zastępuje tę metodę można przetworzyć powiadomień, że użytkownik wybrał
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2881,7 +2872,6 @@ Zastępuje tę metodę, aby narysować tło niestandardowe w klasach pochodnych.
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
 
-
 ```
 virtual void OnGlobalFontsChanged();
 ```
@@ -2904,14 +2894,13 @@ Domyślna implementacja nic nie robi. Zastąp `OnReset` w klasę pochodną `CMFC
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2969,7 +2958,6 @@ Struktura wywołuje tę metodę, gdy ma być wyświetlany etykietkę narzędzia 
 Zastąp `OnUserToolTip` Dostosowywanie etykietek narzędzi przycisków paska narzędzi. Domyślna implementacja wywołuje [CMFCToolBar::OnUserToolTip](#onusertooltip) uzyskać tekst etykietki narzędzia.
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ Ta metoda usuwa kolekcje obrazów, które są inicjowane przez [CMFCToolBar::Loa
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ Struktura wywołuje tę metodę, gdy użytkownik wybierze **Resetuj wszystko** z
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpszProfileName*
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3431,19 +3416,17 @@ Ta metoda odrysowuje pasku narzędzi po Ustawia wysokość.
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bOn*
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMenuButton*
+[in] *pMenuButton*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3495,14 +3478,13 @@ Aby uzyskać więcej informacji na temat przycisków paska narzędzi z aktywną 
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bDane wartości*
+[in] *bDane wartości*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3557,14 +3539,13 @@ Wywołaj [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) metodę, aby pob
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bMasked*
+[in] *bMasked*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3631,14 +3612,13 @@ Struktura wywołuje [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lstOrigButtons*
+[in] *lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Klasa CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

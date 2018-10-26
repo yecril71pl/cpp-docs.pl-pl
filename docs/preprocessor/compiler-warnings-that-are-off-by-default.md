@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083194"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Ostrzeżenia kompilatora, które są domyślnie wyłączone
 Kompilator zawiera ostrzeżenia, które są domyślnie wyłączone, ponieważ większość programistów nie chce ich widzieć. W niektórych przypadkach ich reprezentuje wybór stylistyczne, są typowe idiomy starszego kodu lub korzystać z rozszerzeń firmy Microsoft dla języka. W innych przypadkach wskazują obszar, w którym programistów często wprowadzać nieprawidłowe wartości domyślne, które mogą prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Niektóre z tych ostrzeżeń mogą być bardzo hałas w nagłówkach biblioteki. Biblioteki środowiska uruchomieniowego C i C++ standardowych bibliotek, które są przeznaczone do emitować nie ostrzeżeń tylko na poziomie ostrzeżenia [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +154,12 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C5042 (poziom 3)|"*funkcja*": deklaracje funkcji w zakresie bloku nie może być określone jako "inline" w standardzie języka C++; Usuń specyfikator "inline" <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilator wstawi krokami zaradczymi dla luki środki zaradcze w przypadku obciążenia pamięci, jeśli zostanie określony przełącznik/qspectre <sup>wersji 15.7</sup>|
 
-<sup>14.1</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2015 Update 1.  
-<sup>14,3</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2015 Update 3.  
-<sup>15.3</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.3.  
-<sup>15.5</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.5.  
-<sup>15.7</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.7.  
-<sup>Jako trwałą</sup> to ostrzeżenie jest wyłączone, chyba że [/ permissive-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.  
+<sup>14.1</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2015 Update 1.<br/>
+<sup>14,3</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.3.<br/>
+<sup>15.5</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.5.<br/>
+<sup>15.7</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.7.<br/>
+<sup>Jako trwałą</sup> to ostrzeżenie jest wyłączone, chyba że [/ permissive-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia wyłączone domyślnie we wcześniejszych wersjach
 

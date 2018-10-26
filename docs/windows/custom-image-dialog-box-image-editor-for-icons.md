@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071683"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Okno dialogowe niestandardowego obrazu (edytor obrazów dla ikon) (C++)
 
@@ -31,19 +31,19 @@ Umożliwia utworzenie nowego obrazu z niestandardowy rozmiar i liczba kolorów.
 - **Szerokość**
 
    Miejsce na wprowadź szerokość obrazu niestandardowego w pikselach (1-512 limit 2048).
-  
+
 - **Wysokość**
 
    Miejsce na Wprowadź wysokość obrazu niestandardowego w pikselach (1-512 limit 2048).
-  
+
 - **Kolory**
 
    Miejsce na wybierz liczbę kolorów dla niestandardowego obrazu: 2, 16 lub 256.
-  
+
 ## <a name="requirements"></a>Wymagania
 
 Brak
-  
+
 ## <a name="see-also"></a>Zobacz też
 
 [Nowe \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>

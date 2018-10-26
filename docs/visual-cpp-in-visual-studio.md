@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067946"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
-> [!NOTE]  
-> Ta dokumentacja dla deweloperów ma zastosowanie do programu Visual Studio 2015 i Visual Studio 2017. 
+> [!NOTE]
+> Ta dokumentacja dla deweloperów ma zastosowanie do programu Visual Studio 2015 i Visual Studio 2017.
 
-> Jeśli szukasz pakietu redystrybucyjnego Visual C++, aby uruchomić program, przejdź do strony [Microsoft Download Center](http://www.microsoft.com/download/) i wprowadź **Visual C++** w polu wyszukiwania.  
-  
+> Jeśli szukasz pakietu redystrybucyjnego Visual C++, aby uruchomić program, przejdź do strony [Microsoft Download Center](http://www.microsoft.com/download/) i wprowadź **Visual C++** w polu wyszukiwania.
+
 
 Microsoft Visual C++, zazwyczaj skrócony do Visual C++ lub MSVC, to nazwa dla narzędzi programistycznych języka C++, C i język asemblera i bibliotek dostępne jako część programu Visual Studio w Windows. Tych narzędzi i bibliotek umożliwiają tworzenie aplikacji uniwersalnych platformy Windows (UWP), Windows desktop i serwerów aplikacji natywnych, bibliotek i platform i aplikacji działających w Windows, Linux, Android i z systemem iOS, a także zarządzanych aplikacji i bibliotek, które przy użyciu zestawu .NET Struktura. Visual C++ można użyć do zapisywania nic z aplikacji konsoli proste najbardziej zaawansowanych i złożonych aplikacji dla Windows desktop z sterowników urządzeń i składników systemu operacyjnego do gry dla wielu platform dla urządzeń przenośnych, a z najmniejszą urządzeń IoT w celu wielu serwerów o wysokiej wydajności obliczeniowej w chmurze platformy Azure.
 
@@ -101,7 +101,7 @@ Znajdź przewodniki i treści referencyjne w Centrum deweloperów systemu Window
 [Aplikacje klasyczne (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Dowiedz się, jak utworzyć tradycyjnych natywnych języka C++ aplikacji komputerowych dla Windows.
 
-[Programowanie .NET w języku C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Programowanie .NET w języku C++/interfejsie wiersza polecenia](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Informacje o sposobie tworzenia bibliotek DLL, które umożliwiają współdziałanie natywne C++ i .NET programy napisane w językach takich jak C# lub Visual Basic.
 
 [Programowanie dla systemu Linux](linux/index.md)<br/>
@@ -160,7 +160,7 @@ Duże równoległe algorytmy, wykonywane przez GPU.
 [Biblioteka szablonów czasu wykonywania Windows (WRL)](windows/windows-runtime-cpp-template-library-wrl.md)<br/>
 Składniki i uniwersalnych aplikacji dla platformy Windows (UWP).
 
-[Programowanie .NET w języku C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Programowanie .NET w języku C++/interfejsie wiersza polecenia](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Programowanie dla wspólnego środowiska czasu wykonywania (common language runtime — CLR).
 
 ## <a name="third-party-open-source-c-libraries"></a>Biblioteki innych firm "open source" języka C++

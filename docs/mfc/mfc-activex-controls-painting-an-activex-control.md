@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056012"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
 
@@ -112,11 +112,11 @@ Po udało Ci się wdrożyć metaplik renderowania dla formantu, należy użyć k
 
 1. W **Wstaw nową kontrolkę** polu, wybierz kontrolkę i kliknij przycisk **OK**.
 
-     Kontrolka pojawi się w kontenerze testowym.
+   Kontrolka pojawi się w kontenerze testowym.
 
 1. Na **kontroli** menu, kliknij przycisk **Rysowanie metaplik**.
 
-     Oddzielne okno pojawia się, w którym jest wyświetlany metaplik. Można zmienić rozmiar tego okna, aby zobaczyć, jak skalowanie wpływa na metaplik formantu. Możesz zamknąć to okno, w dowolnym momencie.
+   Oddzielne okno pojawia się, w którym jest wyświetlany metaplik. Można zmienić rozmiar tego okna, aby zobaczyć, jak skalowanie wpływa na metaplik formantu. Możesz zamknąć to okno, w dowolnym momencie.
 
 ## <a name="see-also"></a>Zobacz też
 

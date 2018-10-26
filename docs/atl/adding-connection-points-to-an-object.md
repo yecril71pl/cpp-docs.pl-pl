@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054218"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Dodawanie punktów połączenia do obiektu
 
@@ -38,15 +38,15 @@ W obu przypadkach kreator implementacji punktu połączenia używa biblioteki ty
 
 1. Zdefiniuj dispinterface w bloku biblioteki pliku .idl. Jeśli włączono obsługę punktów połączenia po utworzeniu kontrolki za pomocą Kreatora formantu biblioteki ATL, dispinterface już być utworzone. Jeśli nie włączono obsługę punktów połączenia po utworzeniu kontrolki, należy ręcznie dodać dispinterface w pliku .idl. Oto przykład dispinterface. Interfejsy wychodzące nie są wymagane jako interfejsach wysyłki, ale wiele języków skryptów, takich jak VBScript i JScript, wymagają, aby w tym przykładzie użyto dwóch dispinterfaces:
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     Wygeneruj identyfikator GUID za pomocą narzędzia uuidgen.exe albo guidgen.exe.
+   Wygeneruj identyfikator GUID za pomocą narzędzia uuidgen.exe albo guidgen.exe.
 
 2. Dodaj dispinterface jako `[default,source]` interfejsu w klasie coclass dla obiektu w pliku .idl projektu. Ponownie, jeśli włączono obsługę punktów połączenia po utworzeniu kontrolki, Kreator kontrolki ATL utworzy `[default,source`] wpisu. Aby ręcznie dodać ten wpis, Dodaj wiersz pogrubioną czcionką:
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     Można znaleźć w pliku .idl w [OK](../visual-cpp-samples.md) próbki ATL, na przykład.
+   Można znaleźć w pliku .idl w [OK](../visual-cpp-samples.md) próbki ATL, na przykład.
 
 3. Widok klas umożliwia dodawanie metod i właściwości interfejsu zdarzenia. Kliknij prawym przyciskiem myszy klasę w widoku klas, wskaż opcję **Dodaj** w menu skrótów, a następnie kliknij przycisk **Dodawanie punktów połączenia**.
 
@@ -56,7 +56,7 @@ W obu przypadkach kreator implementacji punktu połączenia używa biblioteki ty
 
    - Dodawanie wpisu do mapy punktu połączenia.
 
-     Zostanie również wyświetlona lista wszystkich bibliotek typów na komputerze. Należy używać tylko jednej z tych bibliotek typu do zdefiniowania punktu połączenia, jeśli chcesz zaimplementować dokładnie tego samego interfejsu wychodzącego w innej biblioteki typów.
+   Zostanie również wyświetlona lista wszystkich bibliotek typów na komputerze. Należy używać tylko jednej z tych bibliotek typu do zdefiniowania punktu połączenia, jeśli chcesz zaimplementować dokładnie tego samego interfejsu wychodzącego w innej biblioteki typów.
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Aby ponownie użyć interfejsu punktu połączenia zdefiniowane w innej biblioteki typów
 

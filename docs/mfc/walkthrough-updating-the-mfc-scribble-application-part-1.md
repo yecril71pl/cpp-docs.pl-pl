@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082882"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -32,7 +32,7 @@ W tym instruktażu pokazano, jak zmodyfikować istniejącą aplikację MFC przy 
 
 W tym przewodniku modyfikuje klasyczny przykład klasa Scribble MFC 1.0, który pozwala tworzyć rysunki wiersza za pomocą myszy. Tej części instruktażu pokazano, jak zmodyfikować próbki Bazgroły, tak, aby wyświetlał paska wstążki. [Część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) dodaje więcej przycisków do paska wstążki.
 
-## <a name="prerequisites"></a>Wymagania wstępne 
+## <a name="prerequisites"></a>Wymagania wstępne
 
 [Próbki Bazgroły MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017, zobacz [przewodnik przenoszenia: klasa Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [wskazówki: 
    1. Importowanie pliku filesmall.bmp, który zawiera jedenaście 16 x 16 (16 x 176) obrazów. Zmień identyfikator mapy bitowej do `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Ponieważ potrzebujemy tylko obrazy pierwszych osiem 16 x 16 (16 x 128), może opcjonalnie przyciąć szerokość po prawej stronie tę mapę bitową z 176 do 128. 
+   > Ponieważ potrzebujemy tylko obrazy pierwszych osiem 16 x 16 (16 x 128), może opcjonalnie przyciąć szerokość po prawej stronie tę mapę bitową z 176 do 128.
 
    1. Importowanie filelarge.bmp, który zawiera dziewięć 32 x 32 (32 x 288) obrazów. Zmień identyfikator mapy bitowej do `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [wskazówki: 
    1. Importuj panelicons.bmp mapy bitowej, który zawiera osiem 16 x 16 obrazów. W **właściwości** okna **edytora mapy bitowej**, szerokość mapy bitowej do 64 (16 x 64). Zmień identyfikator mapy bitowej do `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Ponieważ potrzebujemy tylko obrazy pierwsze cztery 16 x 16 (16 x 64), może opcjonalnie przyciąć szerokość po prawej stronie tej mapy bitowej od 128-64. 
+   > Ponieważ potrzebujemy tylko obrazy pierwsze cztery 16 x 16 (16 x 64), może opcjonalnie przyciąć szerokość po prawej stronie tej mapy bitowej od 128-64.
 
 ##  <a name="addribbon"></a> Dodawanie zasobu wstążki do projektu
 

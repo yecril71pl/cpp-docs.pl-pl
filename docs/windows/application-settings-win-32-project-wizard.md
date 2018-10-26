@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c8e2294c7aee3634409a01c613d7e31729230a
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080705"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Ustawienia aplikacji, kreator projektów Win 32
 
@@ -62,4 +62,4 @@ Dodano obsługę jednej z bibliotek dostarczane w programie Visual C++.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kreator aplikacji Win32](../windows/win32-application-wizard.md)  
+[Kreator aplikacji Win32](../windows/win32-application-wizard.md)

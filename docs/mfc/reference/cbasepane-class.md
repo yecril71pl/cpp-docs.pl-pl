@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076312"
 ---
 # <a name="cbasepane-class"></a>Klasa CBasePane
 
@@ -332,7 +332,7 @@ Poniższe porady dotyczące dostosowywania odnoszą się do `CBasePane Class` i 
 
     - AFX_CBRS_CLOSE umożliwia okienko zostanie zamknięty (ukryta).
 
-     Są to flagi, które można połączyć za pomocą operacji bitowej OR.
+   Są to flagi, które można połączyć za pomocą operacji bitowej OR.
 
 `CBasePane` implementuje następujące metody logiczna wirtualnego, aby odzwierciedlić te flagi: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Można je zastąpić w klasach pochodnych, aby dostosować jego zachowanie.
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPaneDivider\**  nieużywane.
+*CPaneDivider\**<br/>
+[in] Nie jest używany.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

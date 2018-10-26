@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: de27208562a235f11e47e3fd5c1600c5fad4c3ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103256"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072086"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -183,7 +183,6 @@ Wyodrębnia urojone części liczby zespolonej.
 
 ```cpp
 T imag() const;
-
 
 T imag(const T& right);
 ```
@@ -715,7 +714,6 @@ Pobiera lub ustawia rzeczywisty składnik liczby zespolonej.
 
 ```cpp
 constexpr T real() const;
-
 
 T real(const T& right);
 ```

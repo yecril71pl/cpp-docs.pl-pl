@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402879"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058957"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapowanie komunikatów na funkcje
 
@@ -42,7 +42,7 @@ Podczas tworzenia nowej klasy pochodzącej od jednej z klas framework za pomocą
     > [!NOTE]
     >  **Wiadomości** przycisk jest dostępny po wybraniu nazwy klasy w widoku klas lub po kliknięciu w oknie źródła.
 
-     Jeżeli projekt zawiera program obsługi wiadomości, nazwę programu obsługi, który pojawia się w prawej kolumnie obok komunikatu.
+   Jeżeli projekt zawiera program obsługi wiadomości, nazwę programu obsługi, który pojawia się w prawej kolumnie obok komunikatu.
 
 1. Jeśli żadna procedura obsługi wiadomości, kliknij komórkę w prawej kolumnie w oknie dialogowym właściwości, aby wyświetlić sugerowane nazwę procedury obsługi jako \<Dodaj >*HandlerName*. (Na przykład, program obsługi komunikatów WM_TIMER sugeruje \<Dodaj >`OnTimer`).
 

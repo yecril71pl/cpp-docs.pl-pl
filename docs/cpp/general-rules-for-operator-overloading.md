@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059548"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 
@@ -48,7 +48,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
     }
     ```
 
-     Poprzedni przykład kodu deklaruje operator „mniejszy niż” jako funkcję członkowską; jednakże operatory dodawania są zadeklarowane jako funkcje globalne, które mają dostęp zaprzyjaźniony. Należy zauważyć, że więcej niż jedna implementacja może być dostarczona dla danego operatora. W przypadku poprzedniego operatora dodawania, dwie implementacje są dostarczane w celu ułatwienia przemienności. Jest po prostu jako prawdopodobnie tego operatory, które dodają `Point` do `Point`, **int** do `Point`i tak dalej, mogą zostać zaimplementowane.
+   Poprzedni przykład kodu deklaruje operator „mniejszy niż” jako funkcję członkowską; jednakże operatory dodawania są zadeklarowane jako funkcje globalne, które mają dostęp zaprzyjaźniony. Należy zauważyć, że więcej niż jedna implementacja może być dostarczona dla danego operatora. W przypadku poprzedniego operatora dodawania, dwie implementacje są dostarczane w celu ułatwienia przemienności. Jest po prostu jako prawdopodobnie tego operatory, które dodają `Point` do `Point`, **int** do `Point`i tak dalej, mogą zostać zaimplementowane.
 
 - Operatory przestrzegają zasad pierwszeństwa, grupowania i liczby operandów podyktowanej ich typowym zastosowaniem w typach wbudowanych. W związku z tym, nie istnieje żaden sposób, aby zapisać koncepcję "dodanie 2 i 3 do obiektu typu `Point`," Oczekiwano 2, które mają zostać dodane do *x* współrzędnych i 3, które mają zostać dodane do *y* koordynacji.
 

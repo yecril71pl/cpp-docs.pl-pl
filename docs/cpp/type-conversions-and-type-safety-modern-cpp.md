@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136162"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059093"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Konwersje i bezpieczeństwo typów (Modern C++)
 
@@ -70,7 +70,7 @@ Typ całkowity ze znakiem i jego odpowiednik bez znaku są zawsze tej samej wiel
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Aby uzyskać więcej informacji, zobacz [static_cast](../cpp/static-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, dla bezpiecznych, sprawdzanych w czasie wykonywania rzutowań wskaźnik do podstawowego do wskaźnika do pochodnego. A **dynamic_cast** jest bezpieczniejszy niż **static_cast** dla rzutowań, ale środowisko uruchomieniowe wyboru powoduje pewne nadmiarowe obciążenie.
 
@@ -151,7 +151,7 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     //Output: d3 is null;
     ```
 
-     Aby uzyskać więcej informacji, zobacz [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **Operator const_cast**dla rzutowanie **const**- ness zmiennej lub konwertowania bez -**const** zmienną **const**. Rzutowanie **const**-ness za pomocą tego operatora jest po prostu tak podatne na błędy jak rzutowanie, chyba że przy użyciu stylu języka C **rzutowania elementu const** trudniej wykonać przypadkowo. Czasami trzeba oddać **const**-ness zmiennej, na przykład, aby przekazać **const** zmienną do funkcji, która przyjmuje innej niż**const** parametru. W przykładzie poniżej pokazano, jak to zrobić.
 
@@ -164,14 +164,14 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     }
     ```
 
-     Aby uzyskać więcej informacji, zobacz [const_cast](../cpp/const-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**dla rzutowań między niepowiązanymi z sobą typami takich jak **wskaźnik** do **int**.
 
     > [!NOTE]
     >  Tego operatora rzutowania używa się rzadziej niż innych. Nie ma też gwarancji, że będzie działał w innych kompilatorach.
 
-     Poniższy przykład ilustruje sposób **reinterpret_cast** różni się od **static_cast**.
+   Poniższy przykład ilustruje sposób **reinterpret_cast** różni się od **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
                                        // However, it is not 64-bit safe.
     ```
 
-     Aby uzyskać więcej informacji, zobacz [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Zobacz także
 

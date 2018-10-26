@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235545"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070143"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Wskazówki: testowanie projektu (C++)
 
@@ -41,7 +41,7 @@ W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i wywnio
 
 1. Wybierz ten wiersz kodu:
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Aby ustawić punkt przerwania w danym wierszu, na pasku menu wybierz **debugowania** > **Przełącz punkt przerwania**, lub wybierz **F9** klucza. Czerwony okrąg pojawia się na lewo od linii; oznacza to, że punkt przerwania jest ustawiony. Aby usunąć punkt przerwania, możesz wybrać polecenie menu lub **F9** klucza ponownie.
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409197"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073776"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 
@@ -127,7 +127,6 @@ Wartość zwracaną funkcji obsługi przerwania jest różna od zera, jeśli zad
 ### <a name="remarks"></a>Uwagi
 
 Rzeczywista nazwa musi być eksportowany zgodnie z opisem w sekcji uwag [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076064"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Porady: tworzenie aplikacji do konsoli środowiska CLR (C++/CLI)
 
@@ -67,7 +67,7 @@ Gdy używasz szablonu aplikacji konsoli, aby utworzyć projekt, jego automatyczn
 
 1. W **nazwa** wprowadź unikatową nazwę aplikacji.
 
-     Można określić inne ustawienia projektu i rozwiązania, ale nie są wymagane.
+   Można określić inne ustawienia projektu i rozwiązania, ale nie są wymagane.
 
 1. Wybierz **OK** przycisku.
 

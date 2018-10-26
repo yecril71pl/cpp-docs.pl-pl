@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059080"
 ---
 # <a name="window-class-macros"></a>Makra klasy okna
 
@@ -32,7 +32,7 @@ Te makra definiują narzędzia klasy okna.
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Pozwala określić nazwę nowej klasy okna.|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Pozwala określić nazwę nowej klasy okna i otaczającej klasy procedurę okna, którego będzie używać nowej klasy.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Pozwala określić nazwę istniejącej klasy okna, na którym będzie opierać się nową klasę okna.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umożliwia określanie parametrów klasy.|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umożliwia określanie parametrów klasy.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS określa następujące style dla nowego okna:
 
 DECLARE_WND_CLASS określa również kolor tła okna domyślne. Użyj [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) makra, aby podać własne style i kolor tła.
 
-[CWindowImpl](cwindowimpl-class.md) używa makro DECLARE_WND_CLASS można utworzyć okna, w oparciu o nowe klasy okna. Aby zmienić to zachowanie, użyj [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) makro, albo podać własną implementację [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkcji.  
+[CWindowImpl](cwindowimpl-class.md) używa makro DECLARE_WND_CLASS można utworzyć okna, w oparciu o nowe klasy okna. Aby zmienić to zachowanie, użyj [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) makro, albo podać własną implementację [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkcji.
 
-Aby uzyskać więcej informacji na temat korzystania z systemu windows w ATL, zobacz artykuł [klas okien ATL](../../atl/atl-window-classes.md).  
+Aby uzyskać więcej informacji na temat korzystania z systemu windows w ATL, zobacz artykuł [klas okien ATL](../../atl/atl-window-classes.md).
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>Parametry
 
 *WndClassName*<br/>
-[in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna. 
+[in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna.
 
 *EnclosingClass*<br/>
 [in] Nazwa klasy okna, który zawiera nową klasę okna. Nie może mieć wartości NULL.
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS implementuje statyczne następującą funkcję:
 
 Domyślnie [CWindowImpl](cwindowimpl-class.md) używa [DECLARE_WND_CLASS](#declare_wnd_class) makra można utworzyć okna oparte na nową klasę okna. Określając makro DECLARE_WND_SUPERCLASS w `CWindowImpl`-klasy, klasy okna będzie zależeć od istniejącej klasy, ale będzie używać Twojej procedurę okna. Ta metoda jest wywoływana superclassing.
 
-Oprócz za pomocą makra DECLARE_WND_CLASS i DECLARE_WND_SUPERCLASS, można zastąpić [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkcji z Twojej własnej implementacji.  
+Oprócz za pomocą makra DECLARE_WND_CLASS i DECLARE_WND_SUPERCLASS, można zastąpić [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkcji z Twojej własnej implementacji.
 
 Aby uzyskać więcej informacji na temat korzystania z systemu windows w ATL, zobacz artykuł [klas okien ATL](../../atl/atl-window-classes.md).
 

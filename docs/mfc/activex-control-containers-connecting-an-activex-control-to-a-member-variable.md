@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e6fed56e21f2b5d97b9b89596630cd63f544148
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433858"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078690"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską
 
@@ -45,7 +45,7 @@ Jest najprostszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kon
 
 1. W **nazwa zmiennej** wprowadź nazwę.
 
-     Na przykład *m_circctl*.
+   Na przykład *m_circctl*.
 
 1. Kliknij przycisk **Zakończ** aby zaakceptować wybór i zamknąć okno Dodaj kreatora zmiennej elementu członkowskiego.
 

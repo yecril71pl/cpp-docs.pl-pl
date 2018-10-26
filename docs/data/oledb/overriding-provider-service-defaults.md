@@ -16,32 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 77ea251b91e55d3a3f01b6591828beffaaa9272d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 4cd51eaa06c8e9600b80d4a3cf6e192443105e65
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072190"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
 
-Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) inicjowania właściwości obiektu źródła danych.  
-  
-Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.  
-  
-|Włączone usługi domyślne|Wartość właściwości DBPROP_INIT_OLEDBSERVICES|Wartość w parametrach połączenia|  
-|------------------------------|------------------------------------------------|--------------------------------|  
-|Wszystkie usługi (ustawienie domyślne)|`DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = -1;"|  
-|Wszystkie regiony z wyjątkiem puli i AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Usług OLE DB = -4;"|  
-|Wszystkie regiony z wyjątkiem kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -5;"|  
-|Wszystkie z wyjątkiem buforowanie AutoEnlistment i kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -7;"|  
-|Brak usług|`~DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = 0;"|  
-  
-Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.  
-  
-## <a name="see-also"></a>Zobacz też  
+Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) inicjowania właściwości obiektu źródła danych.
 
-[Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655)   
-[Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907)   
-[Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906)   
-[Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.
+
+|Włączone usługi domyślne|Wartość właściwości DBPROP_INIT_OLEDBSERVICES|Wartość w parametrach połączenia|
+|------------------------------|------------------------------------------------|--------------------------------|
+|Wszystkie usługi (ustawienie domyślne)|`DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = -1;"|
+|Wszystkie regiony z wyjątkiem puli i AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Usług OLE DB = -4;"|
+|Wszystkie regiony z wyjątkiem kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -5;"|
+|Wszystkie z wyjątkiem buforowanie AutoEnlistment i kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -7;"|
+|Brak usług|`~DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = 0;"|
+
+Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655)<br/>
+[Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907)<br/>
+[Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906)<br/>
+[Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

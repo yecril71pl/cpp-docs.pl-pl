@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062850"
 ---
 # <a name="stand-alone-attributes"></a>Oddzielne atrybuty
+
 Autonomicznego atrybutu nie będzie działać na słowo kluczowe języka C++, ale jest kilka dodatkowych wiersza kodu. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.
-  
+
+## <a name="stand-alone-attribute-list"></a>Lista atrybutów autonomiczny
+
 |Atrybut|Opis|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
@@ -38,12 +41,12 @@ Autonomicznego atrybutu nie będzie działać na słowo kluczowe języka C++, al
 |[importidl](importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany|
 |[importlib](importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
 |[include](include-cpp.md)|Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.|
-|[includelib —](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
+|[includelib](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
 |[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
-|[Moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
 |[pragma](pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
-  
+
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427683"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081420"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets w MFC
 
@@ -42,11 +42,11 @@ Dwa gniazda Windows MFC modeli programowania są obsługiwane przez następując
 
 - `CAsyncSocket`
 
-     Ta klasa hermetyzuje interfejs API Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dla programistów, którzy znać programowanie dla sieci i elastyczność programowania bezpośrednio do gniazda interfejsu API, ale również wygodne funkcje wywołania zwrotnego dla powiadomień o zdarzeniach w sieci. Inne niż pakowania gniazda w postaci zorientowane obiektowo, do użytku w języku C++, jedynymi dodatkowymi abstrakcji, który dostarcza tej klasy jest konwersji niektóre komunikaty dotyczące gniazd Windows do wywołania zwrotne. Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).
+   Ta klasa hermetyzuje interfejs API Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dla programistów, którzy znać programowanie dla sieci i elastyczność programowania bezpośrednio do gniazda interfejsu API, ale również wygodne funkcje wywołania zwrotnego dla powiadomień o zdarzeniach w sieci. Inne niż pakowania gniazda w postaci zorientowane obiektowo, do użytku w języku C++, jedynymi dodatkowymi abstrakcji, który dostarcza tej klasy jest konwersji niektóre komunikaty dotyczące gniazd Windows do wywołania zwrotne. Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).
 
 - `CSocket`
 
-     Ta klasa jest pochodną `CAsyncSocket`, dostarcza wyższe poziomu abstrakcji do pracy z gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. Przy użyciu gniazdo archiwum znacznie przypomina przy użyciu protokołu serializacji pliku MCF. To sprawia, że łatwiej niż korzystanie z `CAsyncSocket` modelu. [CSocket](../mfc/reference/csocket-class.md) dziedziczy wiele funkcji elementów członkowskich z `CAsyncSocket` które hermetyzują Windows Sockets API; trzeba będzie korzystać z niektórych z tych funkcji i zrozumieć ogólnie programowania gniazd. Ale `CSocket` zarządza wieloma aspektami komunikacji, który będzie trzeba samodzielnie przy użyciu surowego interfejsu API lub klasy `CAsyncSocket`. Co najważniejsze `CSocket` umożliwia blokowanie (z przetwarzania w tle komunikatów Windows), co jest niezbędne dla operacji synchronicznych `CArchive`.
+   Ta klasa jest pochodną `CAsyncSocket`, dostarcza wyższe poziomu abstrakcji do pracy z gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. Przy użyciu gniazdo archiwum znacznie przypomina przy użyciu protokołu serializacji pliku MCF. To sprawia, że łatwiej niż korzystanie z `CAsyncSocket` modelu. [CSocket](../mfc/reference/csocket-class.md) dziedziczy wiele funkcji elementów członkowskich z `CAsyncSocket` które hermetyzują Windows Sockets API; trzeba będzie korzystać z niektórych z tych funkcji i zrozumieć ogólnie programowania gniazd. Ale `CSocket` zarządza wieloma aspektami komunikacji, który będzie trzeba samodzielnie przy użyciu surowego interfejsu API lub klasy `CAsyncSocket`. Co najważniejsze `CSocket` umożliwia blokowanie (z przetwarzania w tle komunikatów Windows), co jest niezbędne dla operacji synchronicznych `CArchive`.
 
 Tworzenie i używanie `CSocket` i `CAsyncSocket` obiektów jest opisana w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md) i [Windows Sockets: przy użyciu klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).
 

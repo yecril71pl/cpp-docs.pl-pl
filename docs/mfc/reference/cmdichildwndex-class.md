@@ -1,7 +1,7 @@
 ---
 title: Klasa CMDIChildWndEx | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073867"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 
 `CMDIChildWndEx` Klasa oferuje funkcje Windows okna podrzędnego interfejsu (MDI) w usłudze wielu dokumentów. Rozszerza funkcjonalność [klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Struktura wymaga tej klasy, gdy aplikacja MDI używa niektórych klas MFC.
 
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -191,7 +190,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Wywoływane przez platformę, gdy miniaturę karcie zadań powinien przetworzyć komunikat WM_ACTIVATE.|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Wywoływane przez platformę, gdy miniaturę karcie zadań powinien przetworzyć komunikat WM_MOUSEACTIVATE.|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Wywoływane przez platformę, kiedy zachodzi potrzeba stretch mapę bitową Windows 7 zadań kartę miniatury podgląd elementu podrzędnego MDI.|
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki. (Przesłania `CMDIChildWnd::OnUpdateFrameTitle`.)|
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki. (Przesłania `CMDIChildWnd::OnUpdateFrameTitle`).|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko, który zawiera danego punktu.|
 |`CMDIChildWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Ponownie oblicza układ okna.|
@@ -283,7 +282,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in] Dojście do struktury położenie okna odroczone.
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +409,6 @@ Wywołaj tę metodę, aby umożliwić wyrównywanie dokowania do głównej ramki
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 Wskaźnik do okienka, jeśli znaleziono, w przeciwnym razie wartość NULL.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Parametry
 
-*pBar*<br/>
-[in] [in] *bShow*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bShow*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

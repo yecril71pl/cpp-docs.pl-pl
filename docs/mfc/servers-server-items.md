@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082908"
 ---
 # <a name="servers-server-items"></a>Serwery: elementy serwera
 
@@ -43,7 +43,7 @@ Użyj Kreatora aplikacji, aby utworzyć "starter" kod aplikacji, co należy zrob
 
 1. W klasie pochodnej, należy zastąpić `OnDraw` funkcja elementu członkowskiego.
 
-     Struktura wywołuje `OnDraw` aby renderować element OLE w metaplik. Aplikacja kontenera używa tego metaplik do renderowania elementu. Klasa widoku aplikacji ma również `OnDraw` funkcja elementu członkowskiego, który jest używany do renderowania elementu, gdy aplikacja serwera jest aktywny.
+   Struktura wywołuje `OnDraw` aby renderować element OLE w metaplik. Aplikacja kontenera używa tego metaplik do renderowania elementu. Klasa widoku aplikacji ma również `OnDraw` funkcja elementu członkowskiego, który jest używany do renderowania elementu, gdy aplikacja serwera jest aktywny.
 
 1. Implementowanie nadpisanie `OnGetEmbeddedItem` dla swojej klasy dokumentu na serwerze. Aby uzyskać więcej informacji, zobacz artykuł [serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md) przykład MFC OLE i [HIERSVR](../visual-cpp-samples.md).
 

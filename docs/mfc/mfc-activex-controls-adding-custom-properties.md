@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079444"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
 
@@ -36,19 +36,19 @@ Właściwości niestandardowe są dostępne w cztery różne typy wdrożenia: zm
 
 - Implementacja zmiennej elementu członkowskiego
 
-     Ta implementacja reprezentuje stan właściwości jako zmienną elementu członkowskiego w klasie kontrolki. Jeśli nie jest to ważne, aby wiedzieć, kiedy ulega zmianie wartość właściwości, należy użyć zmiennej elementu członkowskiego implementacji. Z trzech typów ta implementacja tworzy najmniejszą ilością kod pomocy technicznej dla właściwości. Makro wpis mapy wysyłania dla implementacji zmiennej elementu członkowskiego jest [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+   Ta implementacja reprezentuje stan właściwości jako zmienną elementu członkowskiego w klasie kontrolki. Jeśli nie jest to ważne, aby wiedzieć, kiedy ulega zmianie wartość właściwości, należy użyć zmiennej elementu członkowskiego implementacji. Z trzech typów ta implementacja tworzy najmniejszą ilością kod pomocy technicznej dla właściwości. Makro wpis mapy wysyłania dla implementacji zmiennej elementu członkowskiego jest [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
 
 - Zmiennej składowej z implementacją powiadomień
 
-     Ta implementacja składa się z zmienną członkowską i funkcję powiadomień, utworzony za pomocą Dodaj Kreatora właściwości. Funkcja powiadomień automatycznie jest wywoływane przez platformę po zmianie wartości właściwości. Użyj zmiennej elementu członkowskiego z implementacją powiadomień gdy potrzebujesz otrzymać powiadomienie po zmianie wartości właściwości. Ta implementacja wymaga więcej czasu, ponieważ wymaga wywołania funkcji. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+   Ta implementacja składa się z zmienną członkowską i funkcję powiadomień, utworzony za pomocą Dodaj Kreatora właściwości. Funkcja powiadomień automatycznie jest wywoływane przez platformę po zmianie wartości właściwości. Użyj zmiennej elementu członkowskiego z implementacją powiadomień gdy potrzebujesz otrzymać powiadomienie po zmianie wartości właściwości. Ta implementacja wymaga więcej czasu, ponieważ wymaga wywołania funkcji. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
 
 - Implementacja metody GET/Set
 
-     Ta implementacja składa się z dwóch funkcji składowych w klasie kontrolki. Implementacja metody Get/Set automatycznie wywołuje członka Get funkcja bieżąca wartość właściwości żądanie formantu użytkownika i funkcja elementu członkowskiego zestawu po użytkownik formantu zażąda, można zmienić właściwości. Użyj tej implementacji, gdy to konieczne do obliczenia wartości właściwości w czasie wykonywania, sprawdzania poprawności wartości przekazane przez użytkownika kontrolki przed zmianą właściwości rzeczywiste, oraz implementowanie typu właściwości lub zapisu — tylko do odczytu. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). Poniższej sekcji [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property), używa niestandardowej właściwości CircleOffset aby zademonstrować tę implementację.
+   Ta implementacja składa się z dwóch funkcji składowych w klasie kontrolki. Implementacja metody Get/Set automatycznie wywołuje członka Get funkcja bieżąca wartość właściwości żądanie formantu użytkownika i funkcja elementu członkowskiego zestawu po użytkownik formantu zażąda, można zmienić właściwości. Użyj tej implementacji, gdy to konieczne do obliczenia wartości właściwości w czasie wykonywania, sprawdzania poprawności wartości przekazane przez użytkownika kontrolki przed zmianą właściwości rzeczywiste, oraz implementowanie typu właściwości lub zapisu — tylko do odczytu. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). Poniższej sekcji [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property), używa niestandardowej właściwości CircleOffset aby zademonstrować tę implementację.
 
 - Implementacja sparametryzowane
 
-     Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Właściwości sparametryzowane (czasami nazywany tablicy właściwości) może służyć dostęp do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makra wpis mapy wysyłania dla tej implementacji jest DISP_PROPERTY_PARAM. Aby uzyskać więcej informacji dotyczących implementowania tego typu, zobacz [Implementowanie właściwości sparametryzowane](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Tematy zaawansowane.
+   Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Właściwości sparametryzowane (czasami nazywany tablicy właściwości) może służyć dostęp do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makra wpis mapy wysyłania dla tej implementacji jest DISP_PROPERTY_PARAM. Aby uzyskać więcej informacji dotyczących implementowania tego typu, zobacz [Implementowanie właściwości sparametryzowane](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Tematy zaawansowane.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Za pomocą Dodaj Kreatora właściwości, aby dodać właściwość niestandardową
 
@@ -66,7 +66,7 @@ Tę samą procedurę można również inne właściwości niestandardowe, które
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
-     Spowoduje to otwarcie [Kreator dodawania właściwości](../ide/names-add-property-wizard.md).
+   Spowoduje to otwarcie [Kreator dodawania właściwości](../ide/names-add-property-wizard.md).
 
 1. W **nazwa właściwości** wpisz *CircleOffset*.
 

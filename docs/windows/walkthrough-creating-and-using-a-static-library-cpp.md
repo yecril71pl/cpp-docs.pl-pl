@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080757"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Wskazówki: tworzenie i używanie biblioteki statycznej (C++)
 
@@ -97,7 +97,7 @@ Po zrozumieniu podstaw języka C++.
 
 1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **Visual C++**, a następnie wybierz pozycję **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**. 
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **Visual C++**, a następnie wybierz pozycję **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**.
 
    > [!NOTE]
    > W przypadku wersji sprzed 2017, Visual Studio w **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**  >  **Visual C++**, a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **Aplikacja konsoli Win32**.

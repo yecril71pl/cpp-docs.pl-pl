@@ -17,139 +17,139 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: f6dd2467ab7e7e731fec8a2375453a00267df5b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073605"
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 
-Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zaktualizować (zapisu) do magazynu danych. W tym temacie omówiono sposób tworzenia aktualizowalni dostawcy za pomocą szablonów OLE DB.  
-  
-W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego. Istnieją dwa kroki, aby tworzenie aktualizowalnego dostawcy. Należy najpierw zdecyduj, jak dostawca wprowadzi zmiany w przechowalni danych; ściślej mówiąc czy zmiany mają być wykonywane od razu lub odroczone do czasu wydano polecenie aktualizacji. Sekcja "[tworzenie aktualizowalnego dostawcy](#vchowmakingprovidersupdatable)" opisano zmiany i ustawienia, które należy wykonać w kodzie dostawcy.  
-  
-Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.  
-  
+Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zaktualizować (zapisu) do magazynu danych. W tym temacie omówiono sposób tworzenia aktualizowalni dostawcy za pomocą szablonów OLE DB.
+
+W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego. Istnieją dwa kroki, aby tworzenie aktualizowalnego dostawcy. Należy najpierw zdecyduj, jak dostawca wprowadzi zmiany w przechowalni danych; ściślej mówiąc czy zmiany mają być wykonywane od razu lub odroczone do czasu wydano polecenie aktualizacji. Sekcja "[tworzenie aktualizowalnego dostawcy](#vchowmakingprovidersupdatable)" opisano zmiany i ustawienia, które należy wykonać w kodzie dostawcy.
+
+Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.
+
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.  
-  
-##  <a name="vchowmakingprovidersupdatable"></a> Tworzenie aktualizowalnego dostawcy  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.
 
-Klucz w tworzenie aktualizowalnego dostawcy jest zrozumienie, jakie operacje ma dostawcy do wykonania w magazynie danych oraz sposób dostawcy w celu przeprowadzania tych operacji. W szczególności poważnym problemem jest, czy aktualizacje do magazynu danych mają być wykonywane od razu lub odroczone (wsadowe) do momentu wydano polecenie aktualizacji.  
-  
-Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w swojej klasy zestawu wierszy. W zależności od tego, który z nich wybierzesz do zaimplementowania, będzie mieć wpływ na funkcjonalność z trzech metod: `SetData`, `InsertRows`, i `DeleteRows`.  
-  
-- Jeśli dziedziczą z [irowsetchangeimpl —](../../data/oledb/irowsetchangeimpl-class.md), wywoływanie tych trzech metod natychmiast zmienia się z magazynem danych.  
-  
-- Jeśli dziedziczą z [irowsetupdateimpl —](../../data/oledb/irowsetupdateimpl-class.md), metody Odrocz zmiany w magazynie danych, dopóki nie zostanie wywołana `Update`, `GetOriginalData`, lub `Undo`. Jeśli aktualizacja obejmuje kilka zmian, są wykonywane w trybie wsadowym (Zauważ, że przetwarzanie wsadowe zmiany można dodać pamięć znaczne obciążenie).  
-  
-Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.  
-  
-### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy  
-  
-1. W klasie wierszy dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl`. Te klasy oferują interfejsy odpowiednie zmiany do magazynu danych:  
-  
-     **Dodawanie IRowsetChange**  
-  
-     Dodaj `IRowsetChangeImpl` na swój łańcuch dziedziczenia, za pomocą tego formularza:  
-  
-    ```cpp  
-    IRowsetChangeImpl< rowset-name, storage-name >  
-    ```  
-  
-     Również dodać `COM_INTERFACE_ENTRY(IRowsetChange)` do `BEGIN_COM_MAP` sekcji klasy zestawu wierszy.  
-  
-     **Dodawanie IRowsetUpdate**  
-  
-     Dodaj `IRowsetUpdate` na swój łańcuch dziedziczenia, za pomocą tego formularza:  
-  
-    ```cpp  
-    IRowsetUpdateImpl< rowset-name, storage>  
-    ```  
-  
+##  <a name="vchowmakingprovidersupdatable"></a> Tworzenie aktualizowalnego dostawcy
+
+Klucz w tworzenie aktualizowalnego dostawcy jest zrozumienie, jakie operacje ma dostawcy do wykonania w magazynie danych oraz sposób dostawcy w celu przeprowadzania tych operacji. W szczególności poważnym problemem jest, czy aktualizacje do magazynu danych mają być wykonywane od razu lub odroczone (wsadowe) do momentu wydano polecenie aktualizacji.
+
+Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w swojej klasy zestawu wierszy. W zależności od tego, który z nich wybierzesz do zaimplementowania, będzie mieć wpływ na funkcjonalność z trzech metod: `SetData`, `InsertRows`, i `DeleteRows`.
+
+- Jeśli dziedziczą z [irowsetchangeimpl —](../../data/oledb/irowsetchangeimpl-class.md), wywoływanie tych trzech metod natychmiast zmienia się z magazynem danych.
+
+- Jeśli dziedziczą z [irowsetupdateimpl —](../../data/oledb/irowsetupdateimpl-class.md), metody Odrocz zmiany w magazynie danych, dopóki nie zostanie wywołana `Update`, `GetOriginalData`, lub `Undo`. Jeśli aktualizacja obejmuje kilka zmian, są wykonywane w trybie wsadowym (Zauważ, że przetwarzanie wsadowe zmiany można dodać pamięć znaczne obciążenie).
+
+Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.
+
+### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy
+
+1. W klasie wierszy dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl`. Te klasy oferują interfejsy odpowiednie zmiany do magazynu danych:
+
+     **Dodawanie IRowsetChange**
+
+   Dodaj `IRowsetChangeImpl` na swój łańcuch dziedziczenia, za pomocą tego formularza:
+
+    ```cpp
+    IRowsetChangeImpl< rowset-name, storage-name >
+    ```
+
+   Również dodać `COM_INTERFACE_ENTRY(IRowsetChange)` do `BEGIN_COM_MAP` sekcji klasy zestawu wierszy.
+
+     **Dodawanie IRowsetUpdate**
+
+   Dodaj `IRowsetUpdate` na swój łańcuch dziedziczenia, za pomocą tego formularza:
+
+    ```cpp
+    IRowsetUpdateImpl< rowset-name, storage>
+    ```
+
     > [!NOTE]
-    > Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.  
-  
-1. Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
-  
-    |W przypadku zastosowania|Dodaj do mapy COM|  
-    |----------------------|--------------------|  
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
-  
-1. W poleceniu, Dodaj następujący element do mapy zestaw właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
-  
-    |W przypadku zastosowania|Dodaj do mapy zestaw właściwości|  
-    |----------------------|-----------------------------|  
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
-  
-1. Na mapie zestaw właściwości należy także uwzględnić wszystkie z następujących ustawień, w jakiej występują poniżej:  
-  
-    ```cpp  
-    PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
-      DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
-    PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  
-    PROPERTY_INFO_ENTRY_VALUE(IMMOBILEROWS, VARIANT_TRUE)  
-  
-    PROPERTY_INFO_ENTRY_EX(OWNINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OWNUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OTHERINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OTHERUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(REMOVEDELETED, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_FALSE, 0)  
-    ```  
-  
-     Można znaleźć wartości użyte w tych wywołań makra, wyszukując w Atldb.h identyfikatory właściwości i wartości (jeśli Atldb.h różni się od dokumentacji online, Atldb.h zastępuje dokumentacji).  
-  
+    > Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.
+
+1. Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):
+
+    |W przypadku zastosowania|Dodaj do mapy COM|
+    |----------------------|--------------------|
+    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
+    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+
+1. W poleceniu, Dodaj następujący element do mapy zestaw właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
+
+    |W przypadku zastosowania|Dodaj do mapy zestaw właściwości|
+    |----------------------|-----------------------------|
+    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
+    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+
+1. Na mapie zestaw właściwości należy także uwzględnić wszystkie z następujących ustawień, w jakiej występują poniżej:
+
+    ```cpp
+    PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
+      DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)
+    PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)
+    PROPERTY_INFO_ENTRY_VALUE(IMMOBILEROWS, VARIANT_TRUE)
+
+    PROPERTY_INFO_ENTRY_EX(OWNINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OWNUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OTHERINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OTHERUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(REMOVEDELETED, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_FALSE, 0)
+    ```
+
+   Można znaleźć wartości użyte w tych wywołań makra, wyszukując w Atldb.h identyfikatory właściwości i wartości (jeśli Atldb.h różni się od dokumentacji online, Atldb.h zastępuje dokumentacji).
+
     > [!NOTE]
-    > Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawienia są wymagane przez Szablony OLE DB; specyfikacji OLE DB mówi ich odczytu/zapisu, ale szablony OLE DB może obsługiwać tylko jedną wartość.  
-  
-     **W przypadku zaimplementowania irowsetchangeimpl —**  
-  
-     W przypadku zaimplementowania `IRowsetChangeImpl`, należy ustawić następujące właściwości w dostawcy usługi. Te właściwości są używane głównie do żądania interfejsów za pośrednictwem `ICommandProperties::SetProperties`.  
-  
-    - `DBPROP_IRowsetChange`: Ustawienie tym automatycznie ustawia `DBPROP_IRowsetChange`.  
-  
-    - `DBPROP_UPDATABILITY`: Maska bitowa określenie obsługiwanych metod na `IRowsetChange`: `SetData`, `DeleteRows`, lub `InsertRow`.  
-  
-    - `DBPROP_CHANGEINSERTEDROWS`: Konsument może wywołać `IRowsetChange::DeleteRows` lub `SetData` dla nowo wstawione wiersze.  
-  
-    - `DBPROP_IMMOBILEROWS`: Zestaw wierszy nie mogli zmienić kolejności wstawionych lub zaktualizowanych wierszy.  
-  
-     **W przypadku zaimplementowania irowsetupdateimpl —**  
-  
-     W przypadku zaimplementowania `IRowsetUpdateImpl`, należy ustawić następujące właściwości w dostawcy usługi dodatkowo z ustawieniem dla wszystkich właściwości `IRowsetChangeImpl` wymienionych powyżej:  
-  
-    - `DBPROP_IRowsetUpdate`.  
-  
-    - `DBPROP_OWNINSERT`: Musi być READ_ONLY i VARIANT_TRUE.  
-  
-    - `DBPROP_OWNUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.  
-  
-    - `DBPROP_OTHERINSERT`: Musi być READ_ONLY i VARIANT_TRUE.  
-  
-    - `DBPROP_OTHERUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.  
-  
-    - `DBPROP_REMOVEDELETED`: Musi być READ_ONLY i VARIANT_TRUE.  
-  
-    - `DBPROP_MAXPENDINGROWS`.  
-  
+    > Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawienia są wymagane przez Szablony OLE DB; specyfikacji OLE DB mówi ich odczytu/zapisu, ale szablony OLE DB może obsługiwać tylko jedną wartość.
+
+     **W przypadku zaimplementowania irowsetchangeimpl —**
+
+   W przypadku zaimplementowania `IRowsetChangeImpl`, należy ustawić następujące właściwości w dostawcy usługi. Te właściwości są używane głównie do żądania interfejsów za pośrednictwem `ICommandProperties::SetProperties`.
+
+    - `DBPROP_IRowsetChange`: Ustawienie tym automatycznie ustawia `DBPROP_IRowsetChange`.
+
+    - `DBPROP_UPDATABILITY`: Maska bitowa określenie obsługiwanych metod na `IRowsetChange`: `SetData`, `DeleteRows`, lub `InsertRow`.
+
+    - `DBPROP_CHANGEINSERTEDROWS`: Konsument może wywołać `IRowsetChange::DeleteRows` lub `SetData` dla nowo wstawione wiersze.
+
+    - `DBPROP_IMMOBILEROWS`: Zestaw wierszy nie mogli zmienić kolejności wstawionych lub zaktualizowanych wierszy.
+
+     **W przypadku zaimplementowania irowsetupdateimpl —**
+
+   W przypadku zaimplementowania `IRowsetUpdateImpl`, należy ustawić następujące właściwości w dostawcy usługi dodatkowo z ustawieniem dla wszystkich właściwości `IRowsetChangeImpl` wymienionych powyżej:
+
+    - `DBPROP_IRowsetUpdate`.
+
+    - `DBPROP_OWNINSERT`: Musi być READ_ONLY i VARIANT_TRUE.
+
+    - `DBPROP_OWNUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.
+
+    - `DBPROP_OTHERINSERT`: Musi być READ_ONLY i VARIANT_TRUE.
+
+    - `DBPROP_OTHERUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.
+
+    - `DBPROP_REMOVEDELETED`: Musi być READ_ONLY i VARIANT_TRUE.
+
+    - `DBPROP_MAXPENDINGROWS`.
+
         > [!NOTE]
-        > Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.  
-  
-##  <a name="vchowwritingtothedatasource"></a> Zapisywanie do źródła danych  
+        > Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.
 
-Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).  
+##  <a name="vchowwritingtothedatasource"></a> Zapisywanie do źródła danych
+
+Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).
 
 ```cpp
-FlushData(HROW, HACCESSOR);  
+FlushData(HROW, HACCESSOR);
 ```
 
 Dojście do wiersza (HROW) i argumenty uchwytu (HACCESSOR) dostępu umożliwiają określenie obszaru do zapisu. Zazwyczaj można napisać jedno pole danych w danym momencie.
@@ -197,10 +197,10 @@ Aby zaimplementować własną `FlushData` metody, należy:
 - W zestawie wierszy klasy umieść deklaracji:
 
    ```cpp
-   HRESULT FlushData(HROW, HACCESSOR)  
-   {  
-      // Insert your implementation here and return an HRESULT.  
-   }  
+   HRESULT FlushData(HROW, HACCESSOR)
+   {
+      // Insert your implementation here and return an HRESULT.
+   }
    ```
 
 - Udostępnia implementację `FlushData`.
@@ -220,83 +220,83 @@ Najlepiej, aby zrobić jest rzeczywiste wartości określonej w magazynie danych
 W poniższym przykładzie przedstawiono sposób `FlushData` jest zaimplementowana w `RUpdateRowset` klasy w `UpdatePV` próbki (patrz Rowset.h w przykładowym kodzie):
 
 ```cpp
-///////////////////////////////////////////////////////////////////////////  
-// class RUpdateRowset (in rowset.h)  
-...  
-HRESULT FlushData(HROW, HACCESSOR)  
-{  
-    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");  
-  
-    USES_CONVERSION;  
-    enum {  
-        sizeOfString = 256,  
-        sizeOfFileName = MAX_PATH  
-    };  
-    FILE*    pFile = NULL;  
-    TCHAR    szString[sizeOfString];  
-    TCHAR    szFile[sizeOfFileName];  
-    errcode  err = 0;  
-  
-    ObjectLock lock(this);  
-  
-    // From a filename, passed in as a command text,   
-    // scan the file placing data in the data array.  
-    if (m_strCommandText == (BSTR)NULL)  
-    {  
-        ATLTRACE( "RRowsetUpdate::FlushData -- "  
-                  "No filename specified\n");  
-        return E_FAIL;  
-    }  
-  
-    // Open the file  
-    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));  
-    if ((szFile[0] == _T('\0')) ||   
-        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))  
-    {  
-        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");  
-        return DB_E_NOTABLE;  
-    }  
-  
-    // Iterate through the row data and store it.  
-    for (long l=0; l<m_rgRowData.GetSize(); l++)  
-    {  
-        CAgentMan am = m_rgRowData[l];  
-  
-        _putw((int)am.dwFixed, pFile);  
-  
-        if (_tcscmp(&am.szCommand[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szText[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szText);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szText2[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-    }  
-  
-    if (fflush(pFile) == EOF || fclose(pFile) == EOF)  
-    {  
-        ATLTRACE("RRowsetUpdate::FlushData -- "  
-                 "Couldn't flush or close file\n");  
-    }  
-  
-    return S_OK;  
-}  
+///////////////////////////////////////////////////////////////////////////
+// class RUpdateRowset (in rowset.h)
+...
+HRESULT FlushData(HROW, HACCESSOR)
+{
+    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");
+
+    USES_CONVERSION;
+    enum {
+        sizeOfString = 256,
+        sizeOfFileName = MAX_PATH
+    };
+    FILE*    pFile = NULL;
+    TCHAR    szString[sizeOfString];
+    TCHAR    szFile[sizeOfFileName];
+    errcode  err = 0;
+
+    ObjectLock lock(this);
+
+    // From a filename, passed in as a command text,
+    // scan the file placing data in the data array.
+    if (m_strCommandText == (BSTR)NULL)
+    {
+        ATLTRACE( "RRowsetUpdate::FlushData -- "
+                  "No filename specified\n");
+        return E_FAIL;
+    }
+
+    // Open the file
+    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));
+    if ((szFile[0] == _T('\0')) ||
+        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))
+    {
+        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");
+        return DB_E_NOTABLE;
+    }
+
+    // Iterate through the row data and store it.
+    for (long l=0; l<m_rgRowData.GetSize(); l++)
+    {
+        CAgentMan am = m_rgRowData[l];
+
+        _putw((int)am.dwFixed, pFile);
+
+        if (_tcscmp(&am.szCommand[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szText[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szText2[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+    }
+
+    if (fflush(pFile) == EOF || fclose(pFile) == EOF)
+    {
+        ATLTRACE("RRowsetUpdate::FlushData -- "
+                 "Couldn't flush or close file\n");
+    }
+
+    return S_OK;
+}
 ```
 
 ### <a name="handling-changes"></a>Obsługa zmiany
@@ -322,56 +322,56 @@ W implementacji szablonów OLE DB do oznaczania kolumny jako dopuszczającego wa
 W poniższym przykładzie pokazano sposób, w jaki `CommonGetColInfo` funkcja jest zaimplementowana w CUpdateCommand (patrz UpProvRS.cpp) w UpdatePV. Należy zauważyć, jak kolumny to DBCOLUMNFLAGS_ISNULLABLE dla kolumny dopuszczające wartość null.
 
 ```cpp
-/////////////////////////////////////////////////////////////////////////////  
-// CUpdateCommand (in UpProvRS.cpp)  
-  
-ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)  
-{  
-    static ATLCOLUMNINFO _rgColumns[6];  
-    ULONG ulCols = 0;  
-  
-    if (bBookmark)  
-    {  
-        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,  
-                            sizeof(DWORD), DBTYPE_BYTES,  
-                            0, 0, GUID_NULL, CAgentMan, dwBookmark,  
-                            DBCOLUMNFLAGS_ISBOOKMARK)  
-        ulCols++;  
-    }  
-  
-    // Next set the other columns up.  
-    // Add a fixed length entry for OLE DB conformance testing purposes  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,  
-                        10, 255, GUID_NULL, CAgentMan, dwFixed,   
-                        DBCOLUMNFLAGS_WRITE |   
-                        DBCOLUMNFLAGS_ISFIXEDLENGTH)  
-    ulCols++;  
-  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szCommand,  
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,   
-                        255, 255, GUID_NULL, CAgentMan, szText,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szCommand2,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szText2,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-  
-    if (pcCols != NULL)  
-    {  
-        *pcCols = ulCols;  
-    }  
-  
-    return _rgColumns;  
-}  
+/////////////////////////////////////////////////////////////////////////////
+// CUpdateCommand (in UpProvRS.cpp)
+
+ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)
+{
+    static ATLCOLUMNINFO _rgColumns[6];
+    ULONG ulCols = 0;
+
+    if (bBookmark)
+    {
+        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,
+                            sizeof(DWORD), DBTYPE_BYTES,
+                            0, 0, GUID_NULL, CAgentMan, dwBookmark,
+                            DBCOLUMNFLAGS_ISBOOKMARK)
+        ulCols++;
+    }
+
+    // Next set the other columns up.
+    // Add a fixed length entry for OLE DB conformance testing purposes
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,
+                        10, 255, GUID_NULL, CAgentMan, dwFixed,
+                        DBCOLUMNFLAGS_WRITE |
+                        DBCOLUMNFLAGS_ISFIXEDLENGTH)
+    ulCols++;
+
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szCommand,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szText,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szCommand2,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szText2,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+
+    if (pcCols != NULL)
+    {
+        *pcCols = ulCols;
+    }
+
+    return _rgColumns;
+}
 ```
 
 ### <a name="default-values"></a>Wartości domyślne
@@ -383,38 +383,38 @@ Domyślne ustawienie `FlushData` i `Execute` ma zwrócić S_OK. W związku z tym
 W `UpdatePV` przykład (w Rowset.h) `SetDBStatus` obsługiwała wartości domyślne w następujący sposób:
 
 ```cpp
-virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
-                            ATLCOLUMNINFO* pColInfo)  
-{  
-    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);  
-  
-    void* pData = NULL;  
-    char* pDefaultData = NULL;  
-    DWORD* pFixedData = NULL;  
-  
-    switch (*pdbStatus)  
-    {  
-        case DBSTATUS_S_DEFAULT:  
-            pData = (void*)&m_rgRowData[pRow->m_iRowset];  
-            if (pColInfo->wType == DBTYPE_STR)  
-            {  
-                pDefaultData = (char*)pData + pColInfo->cbOffset;  
-                strcpy_s(pDefaultData, "Default");  
-            }  
-            else  
-            {  
-                pFixedData = (DWORD*)((BYTE*)pData +   
-                                          pColInfo->cbOffset);  
-                *pFixedData = 0;  
-                return S_OK;  
-            }  
-            break;  
-        case DBSTATUS_S_ISNULL:  
-        default:  
-            break;  
-    }  
-    return S_OK;  
-}  
+virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
+                            ATLCOLUMNINFO* pColInfo)
+{
+    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);
+
+    void* pData = NULL;
+    char* pDefaultData = NULL;
+    DWORD* pFixedData = NULL;
+
+    switch (*pdbStatus)
+    {
+        case DBSTATUS_S_DEFAULT:
+            pData = (void*)&m_rgRowData[pRow->m_iRowset];
+            if (pColInfo->wType == DBTYPE_STR)
+            {
+                pDefaultData = (char*)pData + pColInfo->cbOffset;
+                strcpy_s(pDefaultData, "Default");
+            }
+            else
+            {
+                pFixedData = (DWORD*)((BYTE*)pData +
+                                          pColInfo->cbOffset);
+                *pFixedData = 0;
+                return S_OK;
+            }
+            break;
+        case DBSTATUS_S_ISNULL:
+        default:
+            break;
+    }
+    return S_OK;
+}
 ```
 
 ### <a name="column-flags"></a>Kolumna flagi
@@ -426,16 +426,16 @@ Masz również odpowiedzialny za można ustawić flagi kolumny, które są okre�
 Na przykład w `CUpdateSessionColSchemaRowset` klasy w `UpdatePV` (Session.h), pierwsza kolumna skonfigurowano w ten sposób:
 
 ```cpp
-// Set up column 1  
-trData[0].m_ulOrdinalPosition = 1;  
-trData[0].m_bIsNullable = VARIANT_FALSE;  
-trData[0].m_bColumnHasDefault = VARIANT_TRUE;  
-trData[0].m_nDataType = DBTYPE_UI4;  
-trData[0].m_nNumericPrecision = 10;  
-trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
-                            DBCOLUMNFLAGS_ISFIXEDLENGTH;  
-lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
-m_rgRowData.Add(trData[0]);  
+// Set up column 1
+trData[0].m_ulOrdinalPosition = 1;
+trData[0].m_bIsNullable = VARIANT_FALSE;
+trData[0].m_bColumnHasDefault = VARIANT_TRUE;
+trData[0].m_nDataType = DBTYPE_UI4;
+trData[0].m_nNumericPrecision = 10;
+trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |
+                            DBCOLUMNFLAGS_ISFIXEDLENGTH;
+lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
+m_rgRowData.Add(trData[0]);
 ```
 
 Ten kod określa, między innymi, że kolumna obsługuje wartości domyślnej 0, że jest zapisywalny, i że wszystkie dane w kolumnie mają tę samą długość. Jeśli chcesz, aby dane w kolumnie o zmiennej długości, nie ustawi tę flagę.

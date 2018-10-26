@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053100"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Ustawianie stanu dnia formantu kalendarza miesięcznego
 
@@ -51,9 +51,9 @@ Aby poprawnie obsłużyć ten komunikat, należy określić liczbę miesięcy s�
 
 1. W treści procedury obsługi Dodaj następujący kod:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     Przykład konwertuje *pNMHDR* wskaźnik do odpowiedniego typu, określa liczbę miesięcy informacje są żądane (`pDayState->cDayState`). W każdym miesiącu, a bieżąca bitfield (`pDayState->prgDayState[i]`) jest ustawiana na zero, a następnie wymagane daty są ustawione (w tym przypadku 15 dnia każdego miesiąca).
+   Przykład konwertuje *pNMHDR* wskaźnik do odpowiedniego typu, określa liczbę miesięcy informacje są żądane (`pDayState->cDayState`). W każdym miesiącu, a bieżąca bitfield (`pDayState->prgDayState[i]`) jest ustawiana na zero, a następnie wymagane daty są ustawione (w tym przypadku 15 dnia każdego miesiąca).
 
 ## <a name="see-also"></a>Zobacz też
 

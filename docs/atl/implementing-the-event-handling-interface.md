@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078625"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementowanie interfejsu obsługi zdarzeń
 
@@ -37,7 +37,7 @@ Najbardziej typowych sposobów implementowania interfejsu przy użyciu bibliotek
 
 - Wyprowadzanie z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) dla dispinterfaces nie opisano w bibliotece typów, lub jeśli chcesz zwiększyć wydajność przez nie trwa ładowanie informacji o typie w czasie wykonywania.
 
-W przypadku wdrażania niestandardowego lub podwójnego interfejsu źródła zdarzeń należy poinformować, wywołując [AtlAdvise](reference/connection-point-global-functions.md#atladvise) lub [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Należy do śledzenia zwracany przez wywołanie pliku cookie. Wywołaj [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) aby przerwać połączenie.  
+W przypadku wdrażania niestandardowego lub podwójnego interfejsu źródła zdarzeń należy poinformować, wywołując [AtlAdvise](reference/connection-point-global-functions.md#atladvise) lub [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Należy do śledzenia zwracany przez wywołanie pliku cookie. Wywołaj [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) aby przerwać połączenie.
 
 W przypadku wdrażania przy użyciu dispinterface `IDispEventImpl` lub `IDispEventSimpleImpl`, źródła zdarzeń należy poinformować, wywołując [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Wywołaj [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) aby przerwać połączenie.
 
@@ -48,4 +48,3 @@ Jeśli używasz `IDispEventImpl` jako klasa bazowa kontrolki złożonej wymienio
 ## <a name="see-also"></a>Zobacz też
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)
-

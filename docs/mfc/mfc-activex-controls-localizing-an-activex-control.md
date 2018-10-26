@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053282"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Kontrolki ActiveX MFC: lokalizowanie kontrolki ActiveX
 
@@ -68,7 +68,7 @@ Aby utworzyć wiele bibliotek typów zlokalizowane można dodać zlokalizowane. 
 
 1. Za pomocą projektu kontroli otwarty na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.
 
-     **Dodaj istniejący element** pojawi się okno dialogowe.
+   **Dodaj istniejący element** pojawi się okno dialogowe.
 
 1. Jeśli to konieczne, należy wybrać dysk i katalog, aby wyświetlić.
 

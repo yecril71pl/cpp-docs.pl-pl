@@ -55,204 +55,204 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd5b08ed22c715a91a1f9fd97749fa6293fa75bb
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 19daacae764d3cb5e6b6b24a8cae0516ff7fe352
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066581"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo — Klasa
 
-Zapewnia obsługę OLE DB wystąpił błąd podczas przetwarzania przy użyciu OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) interfejsu.  
-  
+Zapewnia obsługę OLE DB wystąpił błąd podczas przetwarzania przy użyciu OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-class CDBErrorInfo  
-``` 
+class CDBErrorInfo
+```
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h 
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Getallerrorinfo —](#getallerrorinfo)|Zwraca wszystkie zawarte w rekord błędu informacje o błędzie.|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Wywołania [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) do zwrócenia podstawowe informacje dotyczące określonego błędu.|  
-|[GetCustomErrorObject](#getcustomerrorobject)|Wywołania [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) aby zwrócić wskaźnik do interfejsu na obiekt błędu niestandardowego.|  
-|[GetErrorInfo](#geterrorinfo)|Wywołania [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) do zwrócenia `IErrorInfo` wskaźnik interfejsu do określonego rekordu.|  
-|[Geterrorparameters —](#geterrorparameters)|Wywołania [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) zwracać parametry błędów.|  
-|[Geterrorrecords —](#geterrorrecords)|Pobiera rekordy błędów dla określonego obiektu.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldbcli.h
 
-Ten interfejs rekordy co najmniej jeden błąd użytkownikowi. Wywołaj [CDBErrorInfo::GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) pierwszy, aby uzyskać liczbę rekordów błędów. A następnie wywołania jednej dostępu funkcje, takie jak [CDBErrorInfo::GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), aby pobrać informacje o błędzie dla każdego rekordu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Getallerrorinfo —](#getallerrorinfo)|Zwraca wszystkie zawarte w rekord błędu informacje o błędzie.|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Wywołania [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) do zwrócenia podstawowe informacje dotyczące określonego błędu.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Wywołania [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) aby zwrócić wskaźnik do interfejsu na obiekt błędu niestandardowego.|
+|[GetErrorInfo](#geterrorinfo)|Wywołania [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) do zwrócenia `IErrorInfo` wskaźnik interfejsu do określonego rekordu.|
+|[Geterrorparameters —](#geterrorparameters)|Wywołania [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) zwracać parametry błędów.|
+|[Geterrorrecords —](#geterrorrecords)|Pobiera rekordy błędów dla określonego obiektu.|
+
+## <a name="remarks"></a>Uwagi
+
+Ten interfejs rekordy co najmniej jeden błąd użytkownikowi. Wywołaj [CDBErrorInfo::GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) pierwszy, aby uzyskać liczbę rekordów błędów. A następnie wywołania jednej dostępu funkcje, takie jak [CDBErrorInfo::GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), aby pobrać informacje o błędzie dla każdego rekordu.
+
 ## <a name="getallerrorinfo"></a> CDBErrorInfo::GetAllErrorInfo
 
-Zwraca wszystkie typy informacji o błędach zawarte w rekord błędu.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca wszystkie typy informacji o błędach zawarte w rekord błędu.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetAllErrorInfo(ULONG ulRecordNum,  
-   LCID lcid,  BSTR* pbstrDescription,  
-   BSTR* pbstrSource = NULL,  
-   GUID* pguid = NULL,  
-   DWORD* pdwHelpContext = NULL,  
-   BSTR* pbstrHelpFile = NULL) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetAllErrorInfo(ULONG ulRecordNum,
+   LCID lcid,  BSTR* pbstrDescription,
+   BSTR* pbstrSource = NULL,
+   GUID* pguid = NULL,
+   DWORD* pdwHelpContext = NULL,
+   BSTR* pbstrHelpFile = NULL) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *ulRecordNum*<br/>
-[in] Liczony od zera liczba rekordów, dla której ma zostać zwrócone informacje o błędzie.  
-  
+[in] Liczony od zera liczba rekordów, dla której ma zostać zwrócone informacje o błędzie.
+
 *lcid*<br/>
-[in] Identyfikator ustawień regionalnych dla informacji o błędzie do zwrócenia.  
-  
+[in] Identyfikator ustawień regionalnych dla informacji o błędzie do zwrócenia.
+
 *pbstrDescription*<br/>
-[out] Wskaźnik do tekst opisu błędu lub wartość NULL, jeśli ustawienia regionalne nie jest obsługiwana. Zobacz uwagi.  
-  
+[out] Wskaźnik do tekst opisu błędu lub wartość NULL, jeśli ustawienia regionalne nie jest obsługiwana. Zobacz uwagi.
+
 *pbstrSource*<br/>
-[out] Wskaźnik do ciągu zawierającego nazwę składnika, który wygenerował błąd.  
-  
+[out] Wskaźnik do ciągu zawierającego nazwę składnika, który wygenerował błąd.
+
 *pguid*<br/>
-[out] Wskaźnik do identyfikatora GUID interfejsu, który zdefiniowany błędu.  
-  
+[out] Wskaźnik do identyfikatora GUID interfejsu, który zdefiniowany błędu.
+
 *pdwHelpContext*<br/>
-[out] Wskaźnik do identyfikator kontekstu pomocy dla błędu.  
-  
+[out] Wskaźnik do identyfikator kontekstu pomocy dla błędu.
+
 *pbstrHelpFile*<br/>
-[out] Wskaźnik do ciągu zawierającą ścieżkę do pliku pomocy, który opisuje błąd.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[out] Wskaźnik do ciągu zawierającą ścieżkę do pliku pomocy, który opisuje błąd.
 
-S_OK w przypadku powodzenia. Zobacz [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) w *OLE DB Podręcznik programisty* dla innych wartości zwracanych.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość danych wyjściowych *pbstrDescription* uzyskuje się wewnętrznie przez wywołanie metody `IErrorInfo::GetDescription`, która ustawia wartość null Jeśli ustawienia regionalne nie jest obsługiwany lub jeśli są spełnione oba poniższe warunki:  
-  
-1. wartość *lcid* nie jest w Stanach Zjednoczonych Język angielski i  
-  
-1. wartość *lcid* jest nie jest równa wartości zwracanej przez GetUserDefaultLCID. 
+S_OK w przypadku powodzenia. Zobacz [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) w *OLE DB Podręcznik programisty* dla innych wartości zwracanych.
+
+### <a name="remarks"></a>Uwagi
+
+Wartość danych wyjściowych *pbstrDescription* uzyskuje się wewnętrznie przez wywołanie metody `IErrorInfo::GetDescription`, która ustawia wartość null Jeśli ustawienia regionalne nie jest obsługiwany lub jeśli są spełnione oba poniższe warunki:
+
+1. wartość *lcid* nie jest w Stanach Zjednoczonych Język angielski i
+
+1. wartość *lcid* jest nie jest równa wartości zwracanej przez GetUserDefaultLCID.
 
 ## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
 
-Wywołania [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) do zwrócenia podstawowe informacje o błędzie, np. kod powrotny i numer błędu specyficznego dla dostawcy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywołania [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) do zwrócenia podstawowe informacje o błędzie, np. kod powrotny i numer błędu specyficznego dla dostawcy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetBasicErrorInfo(ULONG ulRecordNum,   
-   ERRORINFO* pErrorInfo) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetBasicErrorInfo(ULONG ulRecordNum, 
+   ERRORINFO* pErrorInfo) const throw();
+```
 
-Zobacz [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+#### <a name="parameters"></a>Parametry
 
-Standardowa HRESULT.  
+Zobacz [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
 
 ## <a name="getcustomerrorobject"></a> CDBErrorInfo::GetCustomErrorObject
 
-Wywołania [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) aby zwrócić wskaźnik do interfejsu na obiekt błędu niestandardowego.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywołania [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) aby zwrócić wskaźnik do interfejsu na obiekt błędu niestandardowego.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetCustomErrorObject(ULONG ulRecordNum,   
-   REFIID riid,IUnknown** ppObject) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetCustomErrorObject(ULONG ulRecordNum, 
+   REFIID riid,IUnknown** ppObject) const throw();
+```
 
-Zobacz [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+#### <a name="parameters"></a>Parametry
 
-Standardowa HRESULT.  
+Zobacz [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
 
 ## <a name="geterrorinfo"></a> CDBErrorInfo::GetErrorInfo
 
-Wywołania [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) do zwrócenia [IErrorInfo](/previous-versions/windows/desktop/ms718112) wskaźnik interfejsu do określonego rekordu.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywołania [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) do zwrócenia [IErrorInfo](/previous-versions/windows/desktop/ms718112) wskaźnik interfejsu do określonego rekordu.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetErrorInfo(ULONG ulRecordNum,   
-   LCID lcid,IErrorInfo** ppErrorInfo) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetErrorInfo(ULONG ulRecordNum, 
+   LCID lcid,IErrorInfo** ppErrorInfo) const throw();
+```
 
-Zobacz [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+#### <a name="parameters"></a>Parametry
 
-Standardowa HRESULT.  
+Zobacz [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
 
 ## <a name="geterrorparameters"></a> CDBErrorInfo::GetErrorParameters
 
-Wywołania [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) zwracać parametry błędów.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywołania [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) zwracać parametry błędów.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT GetErrorParameters(ULONG ulRecordNum,   
-   DISPPARAMS* pdispparams) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetErrorParameters(ULONG ulRecordNum, 
+   DISPPARAMS* pdispparams) const throw();
+```
 
-Zobacz [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+#### <a name="parameters"></a>Parametry
 
-Standardowa HRESULT.  
+Zobacz [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowa HRESULT.
 
 ## <a name="geterrorrecords"></a> CDBErrorInfo::GetErrorRecords
 
-Pobiera rekordy błędów dla określonego obiektu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-HRESULT GetErrorRecords(IUnknown* pUnk,   
-   const IID& iid,   
-   ULONG* pcRecords) throw();  
+Pobiera rekordy błędów dla określonego obiektu.
 
-HRESULT GetErrorRecords(ULONG* pcRecords) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT GetErrorRecords(IUnknown* pUnk, 
+   const IID& iid, 
+   ULONG* pcRecords) throw();
+
+HRESULT GetErrorRecords(ULONG* pcRecords) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Interfejs do obiektu, dla którego należy pobrać rekordów błędów.  
-  
+[in] Interfejs do obiektu, dla którego należy pobrać rekordów błędów.
+
 *IID*<br/>
-[in] Identyfikator IID interfejsu skojarzonego z powodu błędu.  
-  
+[in] Identyfikator IID interfejsu skojarzonego z powodu błędu.
+
 *pcRecords*<br/>
-[out] Wskaźnik do rekordów błędów liczba (w oparciu o jeden).  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[out] Wskaźnik do rekordów błędów liczba (w oparciu o jeden).
 
-Standardowa HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy formularz tej funkcji należy użyć, jeśli chcesz sprawdzić, który interfejs, aby uzyskać informacje o błędzie z. W przeciwnym razie użyj drugiego formularza.  
-  
-## <a name="see-also"></a>Zobacz też  
+Standardowa HRESULT.
+
+### <a name="remarks"></a>Uwagi
+
+Pierwszy formularz tej funkcji należy użyć, jeśli chcesz sprawdzić, który interfejs, aby uzyskać informacje o błędzie z. W przeciwnym razie użyj drugiego formularza.
+
+## <a name="see-also"></a>Zobacz też
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

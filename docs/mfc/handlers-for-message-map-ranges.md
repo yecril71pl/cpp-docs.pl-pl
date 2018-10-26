@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403584"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073100"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 
@@ -81,7 +81,7 @@ Wpis mapy komunikatów składa się z następujących elementów:
 
 - Parametry do makra:
 
-     Pierwsze dwa makra nie przyjmują trzy parametry:
+   Pierwsze dwa makra nie przyjmują trzy parametry:
 
    - Identyfikator polecenia, który rozpoczyna zakres
 
@@ -89,9 +89,9 @@ Wpis mapy komunikatów składa się z następujących elementów:
 
    - Nazwa funkcji obsługi wiadomości
 
-     Zakres identyfikatorów poleceń muszą być ciągłe.
+   Zakres identyfikatorów poleceń muszą być ciągłe.
 
-     Trzeci makro `ON_CONTROL_RANGE`, zajmuje dodatkowy parametr pierwszy: komunikat powiadamianie kontrolki, takie jak **EN_CHANGE**.
+   Trzeci makro `ON_CONTROL_RANGE`, zajmuje dodatkowy parametr pierwszy: komunikat powiadamianie kontrolki, takie jak **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Deklarowanie funkcji obsługi
 
@@ -113,11 +113,11 @@ Podczas zapisywania wpisu mapy komunikatów, należy określić:
 
 - Dwa identyfikatory poleceń, rozpoczęcia i zakończenia ciągły zakres.
 
-     Poniżej przedstawiono **ID_VIEW_ZOOM25** i **ID_VIEW_ZOOM300**.
+   Poniżej przedstawiono **ID_VIEW_ZOOM25** i **ID_VIEW_ZOOM300**.
 
 - Nazwa funkcji obsługi dla poleceń.
 
-     W tym miejscu ma `OnZoom`.
+   W tym miejscu ma `OnZoom`.
 
 Deklaracja funkcji będzie wyglądać następująco:
 
@@ -137,15 +137,15 @@ Podczas wpisywania `ON_CONTROL_RANGE` makro w mapie komunikatów, które można 
 
 - Komunikat określonego powiadamianie kontrolki.
 
-     W tym miejscu ma **BN_CLICKED**.
+   W tym miejscu ma **BN_CLICKED**.
 
 - Wartości Identyfikatora kontrolki skojarzone z ciągły zakres formantów.
 
-     W tym miejscu są **IDC_BUTTON1** i **IDC_BUTTON10**.
+   W tym miejscu są **IDC_BUTTON1** i **IDC_BUTTON10**.
 
 - Nazwa funkcji obsługi wiadomości.
 
-     W tym miejscu ma `OnButtonClicked`.
+   W tym miejscu ma `OnButtonClicked`.
 
 Podczas pisania funkcji obsługi Określ nadmiarowe **UINT** parametru, jak pokazano poniżej:
 

@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082583"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 
 Implementuje panel, który zawiera zbiór elementów wstążki. Podczas rysowania panelu Wyświetla tyle elementów, jak to możliwe, uwzględniając rozmiar panelu.
 
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -540,7 +539,6 @@ Nazwa panelu wstążki.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Wskaźnik do kategorii wstążki, która zawiera tego panelu wstążki.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ Na panelu głównego wstążki jest wyświetlane, gdy użytkownik wybierze przyc
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Określa liczony od zera indeks elementu do zamiany.
 
-[in] [out] *pElem* prawidłowego wskaźnika do elementu, który zastępuje oryginalny element.
+*pElem*<br/>
+[out w] Nieprawidłowy wskaźnik do elementu, który zastępuje oryginalny element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Określa polecenie identyfikator elementu w celu zastąpienia.
 
-[in] [out] *pElem* prawidłowego wskaźnika do elementu, który spowoduje zastąpienie oryginalnego elementu.
+*pElem*<br/>
+[out w] Nieprawidłowy wskaźnik do elementu, który spowoduje zastąpienie oryginalnego elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Określa liczony od zera indeks elementu wstążki do dodania.
 
-[in] [out] *pRTC* wskaźnik do informacji o klasie czasu wykonywania dla elementu wstążki, który jest dodawany do panelu wstążki.
+*pRTC*<br/>
+[out w] Wskaźnik do informacji o klasie czasu wykonywania dla elementu wstążki, który jest dodawany do panelu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Określa identyfikator polecenia elementu wstążki do dodania.
 
-[in] [out] *pRTC* wskaźnik do informacji o klasie czasu wykonywania, które zostały skojarzone z elementem wstążki, który jest dodawany do panelu wstążki.
+*pRTC*<br/>
+[out w] Wskaźnik do informacji o klasie czasu wykonywania, które zostały skojarzone z elementem wstążki, który jest dodawany do panelu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

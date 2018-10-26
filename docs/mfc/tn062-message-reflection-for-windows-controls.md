@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055401"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: odbicie komunikatu dla formantów systemu Windows
 
@@ -126,7 +126,7 @@ Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit
 
 1. Tworzenie nowego okna dialogowego w istniejącej aplikacji. Aby uzyskać więcej informacji, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematu.
 
-     Musi korzystać z aplikacji, w której do tworzenia kontrolki do ponownego użycia. Jeśli nie masz istniejącej aplikacji do użycia, należy utworzyć aplikację oparta na oknach dialogowych za pomocą Kreatora AppWizard.
+   Musi korzystać z aplikacji, w której do tworzenia kontrolki do ponownego użycia. Jeśli nie masz istniejącej aplikacji do użycia, należy utworzyć aplikację oparta na oknach dialogowych za pomocą Kreatora AppWizard.
 
 2. Za pomocą projektu załadowane do Visual C++, użyj ClassWizard, aby utworzyć nową klasę o nazwie `CYellowEdit` na podstawie `CEdit`.
 
@@ -145,7 +145,7 @@ Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit
 
 5. Przy użyciu ClassWizard, Dodaj program obsługi dla komunikatów odbitych wm_ctlcolor —, aby Twoje `CYellowEdit` klasy. Należy pamiętać, znak równości przed nazwą wiadomości na liście komunikatów, które można obsługiwać wskazuje, czy komunikat jest widoczny. Jest to opisane w [Definiowanie obsługi komunikatów dla komunikatów odzwierciedlone](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     ClassWizard dodaje następującą funkcję makro i szkielet mapy komunikatów dla Ciebie:
+   ClassWizard dodaje następującą funkcję makro i szkielet mapy komunikatów dla Ciebie:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

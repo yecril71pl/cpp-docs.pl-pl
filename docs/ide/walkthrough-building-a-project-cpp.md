@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079326"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
 
@@ -49,7 +49,7 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 1. Dodać średnik z powrotem do końca wiersza, który zawiera błąd składni:
 
-     `return 0;`
+   `return 0;`
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
 

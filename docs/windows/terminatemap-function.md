@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc5aec34177572552d119df967c9d25571b6cb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438070"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066035"
 ---
 # <a name="terminatemap-function"></a>TerminateMap — Funkcja
 
@@ -34,12 +34,12 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 inline bool TerminateMap(
    _In_ ModuleBase *module,
    _In_opt_z_ const wchar_t *serverName,
-    bool forceTerminate) throw()  
+    bool forceTerminate) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Moduł*<br/>
+*module*<br/>
 A [modułu](../windows/module-class.md).
 
 *serverName*<br/>

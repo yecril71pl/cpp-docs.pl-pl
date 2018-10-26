@@ -1,7 +1,7 @@
 ---
 title: Używanie wielu metod dostępu w zestawie wierszy | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808462"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071049"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 
@@ -37,7 +37,7 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
 
 - **Wydajność.** W tym scenariuszu co najmniej jedna kolumna ma dużą ilość danych, na przykład grafiki, dźwięku lub wideo pliki. Za każdym razem, gdy przeniesiesz się do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużych ilości danych, ponieważ wykonanie tej tak może spowolnić wydajność aplikacji.
 
-   Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; pierwszy metody dostępu jest akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie zawierających duże ilości danych, ale go nie pobierać dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.
+   Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; pierwszy metody dostępu jest akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie przechowywania dużych ilości danych, ale go nie pobierać dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.
 
    - Akcesor 0 jest automatyczne akcesora; pobiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych.
 
@@ -45,7 +45,7 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
 
    Argument automatycznego umożliwia określenie, czy akcesor jest akcesora automatycznie.
 
-- **Wiele kolumn ISequentialStream.** W tym scenariuszu użytkownik ma więcej niż jeden zawierający kolumny `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdego mających jeden `ISequentialStream` wskaźnika.
+- **Wiele kolumn ISequentialStream.** W tym scenariuszu masz więcej niż jedną kolumnę gospodarstwa `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdego mających jeden `ISequentialStream` wskaźnika.
 
 Zwykle tworzy się przy użyciu metod dostępu [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Można również użyć [db_accessor —](../../windows/db-accessor.md) atrybutu. (Metody dostępu są dokładniejszym opisem zawartym w [rekordów użytkowników](../../data/oledb/user-records.md).) Makra lub atrybutu należy określić, czy metoda dostępu jest automatyczne czy akcesor nie automatyczne:
 

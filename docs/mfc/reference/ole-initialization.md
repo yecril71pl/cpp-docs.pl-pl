@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d02bdd5f00e5ffc5d64381b04da38ec0d57d15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: df0187364a44c84a2d0f7f38e968e0ea17df1fb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890105"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064163"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 
@@ -34,7 +34,6 @@ Zanim aplikacja może użyć usługi systemowe OLE, musi zainicjować OLE system
 |-|-|
 |[Afxoleinit —](#afxoleinit)|Inicjuje bibliotek OLE.|
 |[Afxenablecontrolcontainer —](#afxenablecontrolcontainer)|Wywołaj tę funkcję w obiekt aplikacji `InitInstance` funkcję, aby włączyć obsługę zawierania formantów OLE.|
-
 
 ## <a name="afxenablecontrolcontainer"></a> Afxenablecontrolcontainer —
 
@@ -53,7 +52,6 @@ Aby uzyskać więcej informacji na temat formantów OLE (obecnie nazywanego form
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxdisp.h
-
 
 ##  <a name="afxoleinit"></a>  Afxoleinit —
 

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410814"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063864"
 ---
 # <a name="hstring-class"></a>HString — Klasa
 
@@ -115,7 +115,7 @@ Nazwa                                         | Opis
 Likwiduje bieżące wystąpienie `HString` klasy.
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>HString::Attach
@@ -125,7 +125,7 @@ Kojarzy określonego `HString` obiekt z bieżącego `HString` obiektu.
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -157,7 +157,7 @@ Ta metoda wywołuje [WindowsDuplicateString](https://msdn.microsoft.com/library/
 Powoduje usunięcie określonego `HString` obiekt z jego podstawową wartość.
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -169,7 +169,7 @@ Podstawowe `HString` wartość przed wykonaniem operacji odłączania pracę.
 Pobiera wartość podstawowego dojścia HSTRING.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -181,7 +181,7 @@ Wartość podstawowego dojścia HSTRING
 Pobiera wskaźnik do podstawowego dojścia HSTRING.
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -220,7 +220,7 @@ Drugi Konstruktor inicjuje nowe `HString` obiektu do wartości istniejących *in
 Wskazuje, czy bieżący `HString` obiekt jest pusty lub nie.
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -262,7 +262,7 @@ Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parame
 Przenosi wartość innego `HString` obiekt do bieżącego `HString` obiektu.
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -352,7 +352,7 @@ Wskazuje, czy pierwszy parametr jest mniejszy od drugiego parametru.
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -372,7 +372,7 @@ Drugi parametr do porównania. *RHS* może być odwołaniem do `HString`.
 Usuwa wartość ciągu i aktywuje bieżący `HString` obiektu na wartość pustą.
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>HString::Set

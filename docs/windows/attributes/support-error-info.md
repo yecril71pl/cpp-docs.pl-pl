@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c6bb07071efa162b5b33ae5f1dfe72ac7ea02e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0d86b31823ec31461f953c7cfc16a5774f215fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789614"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067166"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -85,4 +85,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
-[Atrybuty klasy](class-attributes.md)  
+[Atrybuty klasy](class-attributes.md)

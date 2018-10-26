@@ -16,19 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f6143249871384d89227d63fe1900814ae5077fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055245"
 ---
 # <a name="compiler-error-c2842"></a>Błąd kompilatora C2842
 
 "class": zarządzanej lub typu WinRT nie musi definiować własnego "operator new" ani "operator delete"
 
 Definiowanie swoich własnych ** nowy operator lub **operatora delete** Zarządzanie alokacji pamięci na natywnej stercie. Odwołanie do klasy nie można jednak zdefiniować te operatory, ponieważ są przydzielane tylko na stosie zarządzanym.
-
 
 Aby uzyskać więcej informacji, zobacz [operatory zdefiniowane przez użytkownika (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 

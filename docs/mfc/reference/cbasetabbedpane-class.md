@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067323"
 ---
 # <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pNewBar* wskaźnik do okienka, aby dodać. This, wskaźnik może stać się nieprawidłowe po wywołaniu tej metody. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
+*pNewBar*<br/>
+[out w] Wskaźnik do okienka, aby dodać. This, wskaźnik może stać się nieprawidłowe po wywołaniu tej metody. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
 
 *bVisible*<br/>
 [in] Wartość TRUE, aby uwidocznić karcie; w przeciwnym razie wartość FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* wskaźnik do okienka na typ zmiennoprzecinkowy.
+*pBar*<br/>
+[out w] Wskaźnik do okienka na typ zmiennoprzecinkowy.
 
 *nTabID*<br/>
 [in] Określa liczony od zera indeks karty na typ zmiennoprzecinkowy.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* wskaźnik do okienka, aby usunąć z okienka z zakładkami.
+*pBar*<br/>
+[out w] Wskaźnik do okienka, aby usunąć z okienka z zakładkami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Określa wyrównanie okienko automatycznego ukrywania, w którym ma zostać utworzony. Aby uzyskać listę możliwych wartości, zobacz [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* wskaźnik do bieżącego automatyczne ukrywanie paska narzędzi. Może mieć wartości NULL.
+*pCurrAutoHideBar*<br/>
+[out w] Wskaźnik do bieżącego automatyczne ukrywanie paska narzędzi. Może mieć wartości NULL.
 
 *bUseTimer*<br/>
 [in] Określa, czy gdy użytkownik zmienia okienka tryb automatycznego ukrywania za pomocą automatyczne ukrywanie efektu lub ukrywanie okienka natychmiast.

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081394"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizowanie tekstu w okienku paska stanu
 
@@ -40,17 +40,17 @@ Załóżmy, że ma jedno okienko `ID_INDICATOR_PAGE` jako jego identyfikator pol
 
 1. Zdefiniuj identyfikator okienka polecenia.
 
-     Na **widoku** menu, kliknij przycisk **widok zasobów**. Kliknij prawym przyciskiem myszy zasób projektu, a następnie kliknij przycisk **symboli zasobów**. W oknie dialogowym symboli zasobów kliknij pozycję `New`. Wpisz nazwę Identyfikatora polecenia: na przykład `ID_INDICATOR_PAGE`. Określ wartość dla Identyfikatora, lub zaakceptuj wartość zaproponowana przez okno dialogowe symboli zasobów. Na przykład w przypadku `ID_INDICATOR_PAGE`, zaakceptuj wartość domyślną. Zamknij okno dialogowe symboli zasobów.
+   Na **widoku** menu, kliknij przycisk **widok zasobów**. Kliknij prawym przyciskiem myszy zasób projektu, a następnie kliknij przycisk **symboli zasobów**. W oknie dialogowym symboli zasobów kliknij pozycję `New`. Wpisz nazwę Identyfikatora polecenia: na przykład `ID_INDICATOR_PAGE`. Określ wartość dla Identyfikatora, lub zaakceptuj wartość zaproponowana przez okno dialogowe symboli zasobów. Na przykład w przypadku `ID_INDICATOR_PAGE`, zaakceptuj wartość domyślną. Zamknij okno dialogowe symboli zasobów.
 
 1. Zdefiniuj domyślny ciąg do wyświetlenia w okienku.
 
-     Otwórz widok zasobów, kliknij dwukrotnie **tabeli ciągów** w oknie, które wyświetla listę typów zasobów dla aplikacji. Za pomocą **tabeli ciągów** edytor jest otwarty, wybierz **nowy ciąg** z **Wstaw** menu. W oknie dialogowym właściwości ciągu wybierz identyfikator polecenia tego okienka (na przykład `ID_INDICATOR_PAGE`) i wpisz wartość domyślną ciągu, takich jak "Page". Zamknij edytor ciągów. (Należy domyślny ciąg, aby uniknąć błąd kompilatora).
+   Otwórz widok zasobów, kliknij dwukrotnie **tabeli ciągów** w oknie, które wyświetla listę typów zasobów dla aplikacji. Za pomocą **tabeli ciągów** edytor jest otwarty, wybierz **nowy ciąg** z **Wstaw** menu. W oknie dialogowym właściwości ciągu wybierz identyfikator polecenia tego okienka (na przykład `ID_INDICATOR_PAGE`) i wpisz wartość domyślną ciągu, takich jak "Page". Zamknij edytor ciągów. (Należy domyślny ciąg, aby uniknąć błąd kompilatora).
 
 1. Okienko Aby dodać *wskaźniki* tablicy.
 
-     W pliku MAINFRM. CPP, zlokalizuj *wskaźniki* tablicy. Ta tablica zawiera listę identyfikatorów poleceń dla wszystkich wskaźników pasek stanu, w kolejności od lewej do prawej. We właściwym punkcie w tablicy, wprowadź identyfikator polecenia dla tego okienka, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE`:
+   W pliku MAINFRM. CPP, zlokalizuj *wskaźniki* tablicy. Ta tablica zawiera listę identyfikatorów poleceń dla wszystkich wskaźników pasek stanu, w kolejności od lewej do prawej. We właściwym punkcie w tablicy, wprowadź identyfikator polecenia dla tego okienka, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 Zalecanym sposobem wyświetlania tekstu w okienku jest wywołanie `SetText` funkcji składowej klasy typu `CCmdUI` w funkcji procedury obsługi aktualizacji dla tego okienka. Na przykład możesz chcieć skonfigurować zmienną całkowitoliczbową *m_nPage* zawiera numer bieżącej strony i użyj `SetText` ustawić tekst z okienka parametry wersją tej liczby.
 
@@ -63,19 +63,19 @@ Poniższa procedura pokazuje, jak używać funkcji obsługi aktualizacji do wyś
 
 1. Dodaj program obsługi aktualizacji poleceń dla polecenia.
 
-     Ręcznie Dodaj prototyp obsługi, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. GODZ.):
+   Ręcznie Dodaj prototyp obsługi, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. GODZ.):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. W odpowiedniej. CPP Dodaj program obsługi definicji, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Trzy ostatnie wiersze tej procedury obsługi są kod, który wyświetla tekst.
+   Trzy ostatnie wiersze tej procedury obsługi są kod, który wyświetla tekst.
 
 1. Na mapie odpowiedni komunikat i Dodaj ON_UPDATE_COMMAND_UI — makro, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Po zdefiniowaniu wartość *m_nPage* zmienną członkowską (klasy `CMainFrame`), ta metoda powoduje, że numer strony, aby w okienku są wyświetlane podczas przetwarzania bezczynności w taki sam sposób, że aplikacja aktualizuje inne wskaźniki. Jeśli *m_nPage* zmian, zmiany wyświetlania podczas następnego wykonywania pętli bezczynności.
 

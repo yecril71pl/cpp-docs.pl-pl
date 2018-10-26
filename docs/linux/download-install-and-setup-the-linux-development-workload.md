@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 4b96fca0bee594ffa441bff6b352b89ffed196f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068096"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
@@ -30,10 +30,9 @@ Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania proje
 
    ![Visual C++ dla obciążenia programowanie dla systemu Linux](media/linuxworkload.png)
 
-1. Jeśli używasz narzędzia CMake lub są przeznaczone dla platformy osadzonych i IoT, przejdź do strony **szczegółowe informacje dotyczące instalacji** w okienku po prawej stronie w obszarze **programowanie dla systemu Linux przy użyciu języka C++**, rozwiń węzeł **składniki opcjonalne** i wybierz potrzebne składniki. 
+1. Jeśli używasz narzędzia CMake lub są przeznaczone dla platformy osadzonych i IoT, przejdź do strony **szczegółowe informacje dotyczące instalacji** w okienku po prawej stronie w obszarze **programowanie dla systemu Linux przy użyciu języka C++**, rozwiń węzeł **składniki opcjonalne** i wybierz potrzebne składniki.
 
 1. Kliknij przycisk **Modyfikuj** do kontynuowania instalacji.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opcje tworzenia środowiska systemu Linux
 

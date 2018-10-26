@@ -15,43 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c3fdededa6e107e15a8c0999d65ba4e0c5cf47f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e10f082a4f0bac5d97c3352e88a075412ce98811
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062538"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Wymiana pól rekordów: używanie RFX
 
-W tym temacie opisano, co zrobić, aby użyć RFX względem działanie platformę.  
-  
+W tym temacie opisano, co zrobić, aby użyć RFX względem działanie platformę.
+
 > [!NOTE]
->  Ten temat dotyczy klasy pochodne [CRecordset](../../mfc/reference/crecordset-class.md) w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
-  
-Informacje pokrewne można znaleźć w następujących tematach:  
-  
-- [Wymiana pól rekordów: Praca z kodem kreatora](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) wprowadza główne składniki RFX oraz wyjaśniono kod, Kreator aplikacji MFC i **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zapisu do obsługi RFX i jak możesz chcieć zmodyfikować kod kreatora.  
-  
-- [Wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) wyjaśnia pisania wywołania funkcji RFX w swojej `DoFieldExchange` zastąpienia.  
-  
-W poniższej tabeli przedstawiono Twoja rola względem struktura jest dla Ciebie.  
-  
-### <a name="using-rfx-you-and-the-framework"></a>Używanie RFX: Możesz i struktury  
-  
-|Można|Struktura|  
-|---------|-------------------|  
+>  Ten temat dotyczy klasy pochodne [CRecordset](../../mfc/reference/crecordset-class.md) w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-| Deklarowanie klas zestawu rekordów za pomocą kreatora. Określanie nazwy i typy danych elementów członkowskich danych pola. | Kreator pochodzi `CRecordset` klasy i zapisy [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) zastąpienia dla Ciebie, łącznie z RFX wywołania funkcji dla każdego elementu członkowskiego danych pola. |  
-| (Opcjonalnie) Ręcznie Dodaj żadnych składowych danych wymaganego parametru do klasy. Ręcznie dodaj wywołanie funkcji RFX `DoFieldExchange` dla każdego elementu członkowskiego danych parametru Dodaj wywołanie [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) grupy parametrów i określ łączna liczba parametrów w [m_nparams — ](../../mfc/reference/crecordset-class.md#m_nparams). Zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). ||  
-| (Opcjonalnie) Ręcznie powiązać dodatkowe kolumny elementy członkowskie danych pola. Ręcznie zwiększyć [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields). Zobacz [zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||  
+Informacje pokrewne można znaleźć w następujących tematach:
 
-| Skonstruuj obiekt klasy zestawu rekordów. Przed rozpoczęciem korzystania z obiektu, ustaw wartości tego parametru składowych danych ewentualne. | W celu zwiększenia wydajności w ramach prebinds parametrów, przy użyciu interfejsu ODBC. Jeśli przekazujesz wartości parametrów, struktura przekazuje je do źródła danych. Tylko wartości parametrów są wysyłane requeries, chyba że zmieniono ciągi sortowania i/lub filtru. |  
-| Otwórz obiekt zestawu rekordów przy użyciu [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Wykonuje zapytanie w zestawie rekordów, wiąże kolumny elementy członkowskie danych pola zestawu rekordów i wywołania `DoFieldExchange` wymianę danych między pierwszym wybranego rekordu i elementy członkowskie danych pola w zestawie rekordów. |  
-| Przewiń w zestawie rekordów za pomocą [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) lub polecenie menu lub paska narzędzi. | Wywołania `DoFieldExchange` na przesyłanie danych do elementy członkowskie danych pola z bieżącego rekordu. |  
-| Dodawanie, aktualizowanie i usuwanie rekordów. | Wywołania `DoFieldExchange` na przesyłanie danych do źródła danych. |  
-  
-## <a name="see-also"></a>Zobacz też  
+- [Wymiana pól rekordów: Praca z kodem kreatora](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) wprowadza główne składniki RFX oraz wyjaśniono kod, Kreator aplikacji MFC i **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zapisu do obsługi RFX i jak możesz chcieć zmodyfikować kod kreatora.
+
+- [Wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) wyjaśnia pisania wywołania funkcji RFX w swojej `DoFieldExchange` zastąpienia.
+
+W poniższej tabeli przedstawiono Twoja rola względem struktura jest dla Ciebie.
+
+### <a name="using-rfx-you-and-the-framework"></a>Używanie RFX: Możesz i struktury
+
+|Można|Struktura|
+|---------|-------------------|
+
+| Deklarowanie klas zestawu rekordów za pomocą kreatora. Określanie nazwy i typy danych elementów członkowskich danych pola. | Kreator pochodzi `CRecordset` klasy i zapisy [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) zastąpienia dla Ciebie, łącznie z RFX wywołania funkcji dla każdego elementu członkowskiego danych pola. | | () Opcjonalnie) ręcznie dodać dowolne wymagane elementy członkowskie danych parametru do klasy. Ręcznie dodaj wywołanie funkcji RFX `DoFieldExchange` dla każdego elementu członkowskiego danych parametru Dodaj wywołanie [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) grupy parametrów i określ łączna liczba parametrów w [m_nparams — ](../../mfc/reference/crecordset-class.md#m_nparams). Zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). || | () Opcjonalnie) samodzielnie ręcznie powiązali dodatkowe kolumny, aby elementy członkowskie danych pola. Ręcznie zwiększyć [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields). Zobacz [zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||
+
+| Skonstruuj obiekt klasy zestawu rekordów. Przed rozpoczęciem korzystania z obiektu, ustaw wartości tego parametru składowych danych ewentualne. | W celu zwiększenia wydajności w ramach prebinds parametrów, przy użyciu interfejsu ODBC. Jeśli przekazujesz wartości parametrów, struktura przekazuje je do źródła danych. Tylko wartości parametrów są wysyłane requeries, chyba że zmieniono ciągi sortowania i/lub filtru. | | Otwórz obiekt zestawu rekordów przy użyciu [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Wykonuje zapytanie w zestawie rekordów, wiąże kolumny elementy członkowskie danych pola zestawu rekordów i wywołania `DoFieldExchange` wymianę danych między pierwszym wybranego rekordu i elementy członkowskie danych pola w zestawie rekordów. | | Przewiń w zestawie rekordów za pomocą [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) lub polecenie menu lub paska narzędzi. | Wywołania `DoFieldExchange` na przesyłanie danych do elementy członkowskie danych pola z bieżącego rekordu. | | Dodawanie, aktualizowanie i usuwanie rekordów. | Wywołania `DoFieldExchange` na przesyłanie danych do źródła danych. |
+
+## <a name="see-also"></a>Zobacz też
 
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>

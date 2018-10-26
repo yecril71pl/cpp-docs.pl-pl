@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061706"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Edytowanie ciągu w zasobach informacji o wersji (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445031"
 
 1. Kliknij element, jeden raz, następnie ponownie wybierz go, aby rozpocząć jego edycji. Wprowadź zmiany bezpośrednio w **informacje o wersji** tabeli lub [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Podczas edytowania `FILEFLAGS` w **informacje o wersji** edytora, zauważysz, nie można ustawić **debugowania**, **kompilacja prywatna**, lub **specjalne Tworzenie** właściwości (w **właściwości** okna) plików .rc:
 
    - **Informacje o wersji** zestawy edytora **debugowania** właściwość o `#ifdef` w skrypcie zasobów na podstawie `_DEBUG` kompilacji flagi.

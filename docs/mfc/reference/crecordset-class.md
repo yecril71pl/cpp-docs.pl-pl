@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423133"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076402"
 ---
 # <a name="crecordset-class"></a>Klasa CRecordset
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Pobiera informacje o polach w zestawie rekordów.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Zaakceptuj wartość domyślną, AFX_DB_USE_DEFAULT_TYPE lub użyj jednego z nas
 
 - `CRecordset::forwardOnly` Tylko do odczytu rekordów przy użyciu tylko do przodu przewijania.
 
-     Aby uzyskać `CRecordset`, wartość domyślna to `CRecordset::snapshot`. Mechanizm wartość domyślną pozwala kreatorów Visual C++, aby korzystać z obu ODBC `CRecordset` i DAO `CDaoRecordset`, które mają różne ustawienia domyślne.
+   Aby uzyskać `CRecordset`, wartość domyślna to `CRecordset::snapshot`. Mechanizm wartość domyślną pozwala kreatorów Visual C++, aby korzystać z obu ODBC `CRecordset` i DAO `CDaoRecordset`, które mają różne ustawienia domyślne.
 
 Aby uzyskać więcej informacji o tych typach rekordów, zobacz artykuł [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać powiązane informacje zobacz artykuł "Za pomocą bloku i przewijany kursorów" w zestawie Windows SDK.
 
@@ -1613,7 +1609,7 @@ Gdy wywołujesz `Open`, zapytania, zwykle SQL **wybierz** instrukcji, wybiera re
 
 Procedura zwykle służy do przekazywania wartości NULL, aby `Open`; w takim przypadku `Open` wywołania [GetDefaultSQL](#getdefaultsql). Jeśli używasz pochodnej `CRecordset` klasy `GetDefaultSQL` zapewnia nazwy tabel określone w ClassWizard. Zamiast tego możesz określić inne informacje w `lpszSQL` parametru.
 
-Niezależnie od przekazania, `Open` tworzy ostatni ciąg SQL dla zapytania (ciąg może zawierać SQL **gdzie** i **ORDER BY** klauzule dołączany do `lpszSQL` ciągów, które przekazałeś), a następnie wykonuje Zapytanie. Zbudowany ciągu można sprawdzić przez wywołanie metody [GetSQL](#getsql) po wywołaniu *`Open`. Aby uzyskać więcej informacji o tworzy instrukcji SQL zestawu rekordów i wybiera rekordy, zobacz artykuł [zestaw rekordów: jak zestawy rekordów wybierz rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Niezależnie od przekazania, `Open` tworzy ostatni ciąg SQL dla zapytania (ciąg może zawierać SQL **gdzie** i **ORDER BY** klauzule dołączany do `lpszSQL` ciągów, które przekazałeś), a następnie wykonuje Zapytanie. Zbudowany ciągu można sprawdzić przez wywołanie metody [GetSQL](#getsql) po wywołaniu `Open`. Aby uzyskać więcej informacji o tworzy instrukcji SQL zestawu rekordów i wybiera rekordy, zobacz artykuł [zestaw rekordów: jak zestawy rekordów wybierz rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Elementy członkowskie danych pola klasy zestawu rekordów, które są powiązane kolumny wybranych danych. Jeśli zwracane są wszystkie rekordy, pierwszy rekord staje się bieżącym rekordem.
 

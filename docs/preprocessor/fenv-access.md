@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081472"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Wyłącza (**na**) lub włącza (**poza**) optymalizacje, które można zmienić środowisko zmiennoprzecinkowych Flaga testy i zmiany trybu.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma fenv_access (** { **na** | **poza** } **)**  
+> **#pragma fenv_access (** { **na** | **poza** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **fenv_access** jest **poza**. Jeśli kompilator można założyć, że Twój kod dostępu lub nie manipulowania zmiennoprzecinkowych środowiska, a następnie można wykonywać wiele optymalizacje kodu zmiennoprzecinkowego. Ustaw **fenv_access** do **na** poinformować kompilator, że Twój kod uzyskuje dostęp do środowiska zmiennoprzecinkowych, aby przetestować flagi stanu, wyjątki, lub można ustawić flagi trybu kontroli. Kompilator wyłącza Optymalizacje te tak, aby kodu mogą uzyskiwać dostęp do środowiska zmiennoprzecinkowych spójne. 
+Domyślnie **fenv_access** jest **poza**. Jeśli kompilator można założyć, że Twój kod dostępu lub nie manipulowania zmiennoprzecinkowych środowiska, a następnie można wykonywać wiele optymalizacje kodu zmiennoprzecinkowego. Ustaw **fenv_access** do **na** poinformować kompilator, że Twój kod uzyskuje dostęp do środowiska zmiennoprzecinkowych, aby przetestować flagi stanu, wyjątki, lub można ustawić flagi trybu kontroli. Kompilator wyłącza Optymalizacje te tak, aby kodu mogą uzyskiwać dostęp do środowiska zmiennoprzecinkowych spójne.
 
 Aby uzyskać więcej informacji na temat zachowanie liczb zmiennopozycyjnych, zobacz [/FP (określenie zachowania zmiennopozycyjna)](../build/reference/fp-specify-floating-point-behavior.md).
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 147b46a3081f842b247ac7a2227bd07bb75d8fe6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0ea1c6c3d0e8f0458b54f5794824c4b25c3dcd60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789593"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059380"
 ---
 # <a name="propputref"></a>propputref
 
@@ -60,4 +60,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [propget](propget.md)<br/>
-[propput](propput.md)  
+[propput](propput.md)

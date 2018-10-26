@@ -36,129 +36,129 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e62c4242513c5147dcfd84ee5d69ec51a4816d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086840"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053334"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
 
-Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej klasy. `CAccessorBase` Umożliwia jeden zestaw wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla kolumny wyjściowe i parametry.  
-  
+Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej klasy. `CAccessorBase` Umożliwia jeden zestaw wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla kolumny wyjściowe i parametry.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-// Replace with syntax  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Zamknij](#close)|Zamyka metod dostępu.|  
-|[GetHAccessor](#geth)|Pobiera dojście metody dostępu.|  
-|[Getnumaccessors —](#getnum)|Pobiera liczbę metod dostępu tworzone przez klasę.|  
-|[IsAutoAccessor](#isauto)|Sprawdza, czy określonej metody dostępu jest autoaccessor.|  
-|[Releaseaccessors —](#release)|Udostępnia metody dostępu.|  
+// Replace with syntax
+```
 
-## <a name="requirements"></a>Wymagania  
+## <a name="members"></a>Elementy członkowskie
 
-**Nagłówek:** atldbcli.h  
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Zamknij](#close)|Zamyka metod dostępu.|
+|[GetHAccessor](#geth)|Pobiera dojście metody dostępu.|
+|[Getnumaccessors —](#getnum)|Pobiera liczbę metod dostępu tworzone przez klasę.|
+|[IsAutoAccessor](#isauto)|Sprawdza, czy określonej metody dostępu jest autoaccessor.|
+|[Releaseaccessors —](#release)|Udostępnia metody dostępu.|
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atldbcli.h
 
 ## <a name="close"></a> CAccessorBase::Close
 
-Zamyka metod dostępu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Zamyka metod dostępu.
 
-Należy wywołać [releaseaccessors —](../../data/oledb/caccessorbase-releaseaccessors.md) pierwszy.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Należy wywołać [releaseaccessors —](../../data/oledb/caccessorbase-releaseaccessors.md) pierwszy.
 
 ## <a name="geth"></a> CAccessorBase::GetHAccessor
 
-Pobiera dojście metody dostępu określonej metody dostępu.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Pobiera dojście metody dostępu określonej metody dostępu.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HACCESSOR GetHAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer przesunięcie zero akcesor.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Numer przesunięcie zero akcesor.
 
-Dojście metody dostępu.  
+### <a name="return-value"></a>Wartość zwracana
+
+Dojście metody dostępu.
 
 ## <a name="getnum"></a> CAccessorBase::GetNumAccessors
 
-Pobiera liczbę metod dostępu tworzone przez klasę.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-ULONG GetNumAccessors() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Pobiera liczbę metod dostępu tworzone przez klasę.
 
-Liczba metod dostępu tworzone przez klasę.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+ULONG GetNumAccessors() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Liczba metod dostępu tworzone przez klasę.
 
 ## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
 
-Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-bool IsAutoAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool IsAutoAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer przesunięcie zero akcesor.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Numer przesunięcie zero akcesor.
 
-Zwraca **true** autoaccessor przypadku akcesor. W przeciwnym razie zwraca **false**.  
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca **true** autoaccessor przypadku akcesor. W przeciwnym razie zwraca **false**.
 
 ## <a name="release"></a> CAccessorBase::ReleaseAccessors
 
-Udostępnia metody dostępu tworzone przez klasę.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Udostępnia metody dostępu tworzone przez klasę.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT ReleaseAccessors(IUnknown* pUnk);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT ReleaseAccessors(IUnknown* pUnk);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Wskaźnik do `IUnknown` interfejs dla obiektu COM, dla którego utworzono metody dostępu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Wskaźnik do `IUnknown` interfejs dla obiektu COM, dla którego utworzono metody dostępu.
 
-Standardowa HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Wywoływane z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
-  
-## <a name="see-also"></a>Zobacz też  
+Standardowa HRESULT.
+
+### <a name="remarks"></a>Uwagi
+
+Wywoływane z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

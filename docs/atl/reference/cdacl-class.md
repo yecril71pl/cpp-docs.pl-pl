@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3d0b817fc080ff81e11e1789387f50cb3e871e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036141"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076012"
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
 
@@ -93,12 +93,12 @@ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/
 Dodaje dozwolonych ACE (wpis kontroli dostępu) do `CDacl` obiektu.
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +138,7 @@ Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) opis różn
 Dodaje odmowy ACE (wpis kontroli dostępu) do `CDacl` obiektu.
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

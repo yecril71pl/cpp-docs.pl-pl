@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074543"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Kontrolki ActiveX MFC: tworzenie serwera automatyzacji
 
@@ -43,17 +43,17 @@ Kontrolki MFC ActiveX można tworzyć jako serwer automatyzacji na potrzeby prog
 
 1. Na początku `InitInstance` funkcji, Dodaj następujący wiersz:
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. W widoku klas kliknij prawym przyciskiem myszy węzeł projektu, a następnie wybierz **dodawania klasy z typelib** do importowania biblioteki typów.
 
-     Spowoduje to dodanie plików .cpp i .h rozszerzenia nazwy pliku do projektu.
+   Spowoduje to dodanie plików .cpp i .h rozszerzenia nazwy pliku do projektu.
 
 1. W pliku nagłówkowym klasy, gdzie będzie wywoływać co najmniej jednej metody w formancie ActiveX, Dodaj następujący wiersz: `#include filename.h`, gdzie nazwa pliku to nazwa pliku nagłówkowego, który został utworzony podczas importowania biblioteki typów.
 
 1. W funkcji, w którym nastąpi wywołanie do metody w formancie ActiveX Dodaj kod, który tworzy obiekt klasy otoki kontrolki i Utwórz obiekt ActiveX. Na przykład, poniższy kod MFC tworzy `CCirc` formant, który pobiera właściwości podpisu i wyświetla wynik, po kliknięciu przycisku OK w oknie dialogowym:
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 Jeśli dodasz metody do formantu ActiveX, zostanie użyta w aplikacji, możesz rozpocząć korzystanie z najnowszej wersji kontroli w aplikacji, usuwając pliki, które zostały utworzone podczas importowania biblioteki typów. Następnie ponownie zaimportuj bibliotekę typów.
 

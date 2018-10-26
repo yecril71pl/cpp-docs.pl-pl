@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073412"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregacji i makra fabryki klas
 
@@ -51,7 +51,7 @@ Te makra umożliwiają kontrolowanie agregacji i fabryki klas deklarowanie.
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Deklaruje, obiekt musi być agregowane.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Sprawdza, czy wartość nieznany zewnętrzne i deklaruje obiektu się agregowaniu lub nie się agregowaniu, odpowiednio.|
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Chroni obiektu zewnętrznego przed usunięciem podczas konstruowania obiektu wewnętrznego.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Określa stan flagi do kontenera.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Określa stan flagi do kontenera.|
 
 ## <a name="requirements"></a>Wymagania
 

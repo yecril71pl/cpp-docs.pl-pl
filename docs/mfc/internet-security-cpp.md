@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055414"
 ---
 # <a name="internet-security-c"></a>Zabezpieczenia internetowe (C++)
 
@@ -37,7 +37,6 @@ Kod bezpieczeństwa jest poważnym problemem dla programistów i użytkowników 
 Istnieją dwa podstawowe podejścia do zabezpieczeń podczas tworzenia dla Internetu. Pierwszy jest nazywany "piaskownicy". W tym podejściu aplikacji jest ograniczony do określonego zestawu interfejsów API i wykluczone z potencjalnie niebezpiecznych usług, na przykład plik we/wy, których program może spowodować utratę danych na komputerze użytkownika. Drugim jest implementowany przy użyciu podpisów cyfrowych. To podejście jest określane jako "shrinkwrap" do korzystania z Internetu. Kod jest weryfikowany i podpisany przy użyciu prywatnego klucza/public kluczowych technologii. Przed uruchomieniem kodu podpis cyfrowy jest weryfikowany aby upewnić się, że kod jest ze znanego źródła uwierzytelnionego i że kod nie została zmieniona, ponieważ jest on podpisany.
 
 W pierwszym przypadku ufasz, że aplikacja nie będzie żadnych szkód i zaufania punkt początkowy aplikacji. W drugim podpisy cyfrowe są używane w celu sprawdzenia autentyczności. Cyfrowe podpisywanie jest standardem branżowym, który umożliwia identyfikowanie i zawierają szczegółowe informacje o wydawcy kodu. Technologie jest oparta na standardach, w tym RSA i X.509. Przeglądarki zwykle zezwala użytkownikom na wybór, czy chce pobierać i uruchamiać kodem nieznanego pochodzenia.
-
 
 ## <a name="see-also"></a>Zobacz też
 

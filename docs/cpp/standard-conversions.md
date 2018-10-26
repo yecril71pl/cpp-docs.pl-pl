@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070588"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -81,11 +81,11 @@ Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj gen
 
 - Argument operacji **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, lub **>=**
 
-     Operatory te opierają się na znaku w celu określenia wyniku. W związku z tym, zachowujące wartość i znak promocje generują różne wyniki w razie zastosowania do tych operandów.
+   Operatory te opierają się na znaku w celu określenia wyniku. W związku z tym, zachowujące wartość i znak promocje generują różne wyniki w razie zastosowania do tych operandów.
 
 - Lewy operand **>>** lub **>>=**
 
-     Podczas wykonywania operacji przesunięcia, operatory inaczej traktują ilości oznaczone i nieznaczone. W przypadku ilości oznaczonych, przesunięcie liczby w prawo powoduje propagację bitu znaku na pozycje opuszczonych bitów. W przypadku ilości nieznaczonych, opuszczone pozycje bitowe są wypełniane zerami.
+   Podczas wykonywania operacji przesunięcia, operatory inaczej traktują ilości oznaczone i nieznaczone. W przypadku ilości oznaczonych, przesunięcie liczby w prawo powoduje propagację bitu znaku na pozycje opuszczonych bitów. W przypadku ilości nieznaczonych, opuszczone pozycje bitowe są wypełniane zerami.
 
 - Argument do przeciążonej funkcji lub operand przeciążonego operatora, który zależy od tego, czy typ określa znak tego operandu dla dopasowywania argumentów. (Zobacz [przeciążone operatory](../cpp/operator-overloading.md) więcej informacji na temat definiowania przeciążonych operatorów.)
 

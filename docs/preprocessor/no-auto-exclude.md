@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d077ca620661ffda2e8664b2a4fb9ef5ea7168
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0673a7216bc00fb13cb0c99e0f9b74accabe33b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074982"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**Określonego język C++**  
-  
-Wyłącza automatyczne wykluczenia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-no_auto_exclude  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- 
-Biblioteki typów mogą obejmować definicje elementy zdefiniowane w nagłówkach systemu lub inne biblioteki typów. `#import` próbuje uniknąć wiele błędów definicji wykluczając automatycznie takie elementy. Po zakończeniu tej operacji [ostrzeżenie kompilatora (poziom 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) będą wystawiane dla każdego elementu, które mają być wykluczone. To wykluczenie automatycznego można wyłączyć za pomocą tego atrybutu.  
-  
-**KONIEC określonego języka C++**  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+**Określonego język C++**
+
+Wyłącza automatyczne wykluczenia.
+
+## <a name="syntax"></a>Składnia
+
+```
+no_auto_exclude
+```
+
+## <a name="remarks"></a>Uwagi
+
+Biblioteki typów mogą obejmować definicje elementy zdefiniowane w nagłówkach systemu lub inne biblioteki typów. `#import` próbuje uniknąć wiele błędów definicji wykluczając automatycznie takie elementy. Po zakończeniu tej operacji [ostrzeżenie kompilatora (poziom 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) będą wystawiane dla każdego elementu, które mają być wykluczone. To wykluczenie automatycznego można wyłączyć za pomocą tego atrybutu.
+
+**KONIEC określonego języka C++**
+
+## <a name="see-also"></a>Zobacz też
+
 [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

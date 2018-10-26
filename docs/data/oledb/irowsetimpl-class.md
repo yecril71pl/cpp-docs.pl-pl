@@ -102,360 +102,360 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 7f3a31b2df0e781cb707d8d2a20c725b28be5404
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077156"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 
-Udostępnia implementację `IRowset` interfejsu.  
-  
+Udostępnia implementację `IRowset` interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <  
-   class T,   
-   class RowsetInterface,  
-   class RowClass = CSimpleRow,  
-   class MapClass = CAtlMap <  
-      RowClass::KeyType,  
-      RowClass*>>  
-class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <
+   class T, 
+   class RowsetInterface,
+   class RowClass = CSimpleRow,
+   class MapClass = CAtlMap <
+      RowClass::KeyType,
+      RowClass*>>
+class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IRowsetImpl`.  
-  
+Z klasą pochodną `IRowsetImpl`.
+
 *RowsetInterface*<br/>
-Klasa pochodząca z `IRowsetImpl`.  
-  
+Klasa pochodząca z `IRowsetImpl`.
+
 *RowClass*<br/>
-Jednostki magazynu na potrzeby `HROW`.  
-  
+Jednostki magazynu na potrzeby `HROW`.
+
 *MapClass*<br/>
-Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.  
+Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addrefrows —](#addrefrows)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|  
-|[Createrow —](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|  
-|[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|  
-|[Getdbstatus —](#getdbstatus)|Zwraca stan dla określonego pola.|  
-|[Getnextrows —](#getnextrows)|Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.|  
-|[Irowsetimpl —](#irowsetimpl)|Konstruktor. Nie jest wywoływana bezpośrednio przez użytkownika.|  
-|[Refrows —](#refrows)|Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md). Nie jest wywoływana bezpośrednio przez użytkownika.|  
-|[Releaserows —](#releaserows)|Wersje wierszy.|  
-|[Operacja restartposition wykonywana](#restartposition)|Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.|  
-|[Setdbstatus —](#setdbstatus)|Ustawia flagi stanu dla określonego pola.|  
-  
-### <a name="data-members"></a>Elementy członkowskie danych  
-  
-|||  
-|-|-|  
-|[m_bCanFetchBack](#bcanfetchback)|Wskazuje, czy dostawca obsługuje pobieranie z poprzednimi wersjami.|  
-|[m_bCanScrollBack](#bcanscrollback)|Wskazuje, czy dostawca może mieć wstecz jego przewijania kursora.|  
-|[m_bReset](#breset)|Wskazuje, czy dostawca został zresetowany jego pozycja kursora. Ma specjalne znaczenie, gdy przewijanie do tyłu lub pobieranie wstecz w [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md).|  
-|[m_iRowset](#irowset)|Indeks wierszy, reprezentujący kursora.|  
-|[m_rgRowHandles](#rgrowhandles)|Lista dojść do wierszy.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** atldb.h
 
-[IRowset](/previous-versions/windows/desktop/ms720986) jest interfejsem podstawowy zestaw wierszy.  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addrefrows —](#addrefrows)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
+|[Createrow —](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
+|[Getdbstatus —](#getdbstatus)|Zwraca stan dla określonego pola.|
+|[Getnextrows —](#getnextrows)|Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.|
+|[Irowsetimpl —](#irowsetimpl)|Konstruktor. Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[Refrows —](#refrows)|Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md). Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[Releaserows —](#releaserows)|Wersje wierszy.|
+|[Operacja restartposition wykonywana](#restartposition)|Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.|
+|[Setdbstatus —](#setdbstatus)|Ustawia flagi stanu dla określonego pola.|
+
+### <a name="data-members"></a>Elementy członkowskie danych
+
+|||
+|-|-|
+|[m_bCanFetchBack](#bcanfetchback)|Wskazuje, czy dostawca obsługuje pobieranie z poprzednimi wersjami.|
+|[m_bCanScrollBack](#bcanscrollback)|Wskazuje, czy dostawca może mieć wstecz jego przewijania kursora.|
+|[m_bReset](#breset)|Wskazuje, czy dostawca został zresetowany jego pozycja kursora. Ma specjalne znaczenie, gdy przewijanie do tyłu lub pobieranie wstecz w [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md).|
+|[m_iRowset](#irowset)|Indeks wierszy, reprezentujący kursora.|
+|[m_rgRowHandles](#rgrowhandles)|Lista dojść do wierszy.|
+
+## <a name="remarks"></a>Uwagi
+
+[IRowset](/previous-versions/windows/desktop/ms720986) jest interfejsem podstawowy zestaw wierszy.
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
-Dodaje licznik odwołań do istniejących uchwyt wiersza.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
-   const HROW rghRows[],  
-   DBREFCOUNT rgRefCounts[],  
-   DBROWSTATUS rgRowStatus[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Dodaje licznik odwołań do istniejących uchwyt wiersza.
 
-Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
+   const HROW rghRows[],
+   DBREFCOUNT rgRefCounts[],
+   DBROWSTATUS rgRowStatus[]);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
-Wywoływane przez metody pomocnika [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywoływane przez metody pomocnika [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-   DBCOUNTITEM& cRowsObtained,  
-   HROW* rgRows);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT CreateRow(DBROWOFFSET lRowsOffset,
+   DBCOUNTITEM& cRowsObtained,
+   HROW* rgRows);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *lRowsOffset*<br/>
-Pozycja kursora wiersza tworzona.  
-  
-*cRowsObtained*<br/>
-Odwołanie przekazywany z powrotem do użytkownika, określającą liczbę wierszy, utworzony.  
-  
-*rgRows*<br/>
-Tablica `HROW`s zwracane do obiektu wywołującego za pomocą dojścia do nowo utworzonego wierszy.  
-  
-### <a name="remarks"></a>Uwagi  
+Pozycja kursora wiersza tworzona.
 
-Jeśli wiersz istnieje, ta metoda wywołuje [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i zwraca. W przeciwnym razie przydziela nowe wystąpienie klasy zmiennej szablonu RowClass i dodaje go do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
-  
+*cRowsObtained*<br/>
+Odwołanie przekazywany z powrotem do użytkownika, określającą liczbę wierszy, utworzony.
+
+*rgRows*<br/>
+Tablica `HROW`s zwracane do obiektu wywołującego za pomocą dojścia do nowo utworzonego wierszy.
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli wiersz istnieje, ta metoda wywołuje [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i zwraca. W przeciwnym razie przydziela nowe wystąpienie klasy zmiennej szablonu RowClass i dodaje go do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
+
 ## <a name="getdata"></a> IRowsetImpl::GetData
 
-Pobiera dane z zestawu wierszy kopię wiersza.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Pobiera dane z zestawu wierszy kopię wiersza.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(GetData )(HROW hRow,  
-   HACCESSOR hAccessor,  
-   void* pDstData);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(GetData )(HROW hRow,
+   HACCESSOR hAccessor,
+   void* pDstData);
+```
 
-Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988) w *OLE DB Podręcznik programisty*.  
-  
-Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IRowset::GetData`:  
-  
-|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|  
-|--------------------------------|------------------------------------------------|  
-|*pDstData*|*pData*|  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Obsługuje także konwersja danych za pomocą konwersji danych OLE DB biblioteki DLL. 
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988) w *OLE DB Podręcznik programisty*.
+
+Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IRowset::GetData`:
+
+|Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|
+|--------------------------------|------------------------------------------------|
+|*pDstData*|*pData*|
+
+### <a name="remarks"></a>Uwagi
+
+Obsługuje także konwersja danych za pomocą konwersji danych OLE DB biblioteki DLL.
 
 ## <a name="getdbstatus"></a> IRowsetImpl::GetDBStatus
 
-Zwraca stan DBSTATUS flagi dla określonego pola.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca stan DBSTATUS flagi dla określonego pola.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
-   ATLCOLUMNINFO* columnNames);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,
+   ATLCOLUMNINFO* columnNames);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *TableRow*<br/>
-[in] Bieżący wiersz.  
-  
-*columnNames*<br/>
-[in] Kolumna, dla którego wnioskuje się stan.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+[in] Bieżący wiersz.
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi dla kolumny. 
+*columnNames*<br/>
+[in] Kolumna, dla którego wnioskuje się stan.
+
+### <a name="return-value"></a>Wartość zwracana
+
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi dla kolumny.
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
-Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
-   DBROWOFFSET lRowsOffset,  
-   DBROWCOUNT cRows,  
-   DBCOUNTITEM* pcRowsObtained,  
-   HROW** prghRows);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.
 
-Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827) w *OLE DB Podręcznik programisty*. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,
+   DBROWOFFSET lRowsOffset,
+   DBROWCOUNT cRows,
+   DBCOUNTITEM* pcRowsObtained,
+   HROW** prghRows);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827) w *OLE DB Podręcznik programisty*.
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
-Konstruktor.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-IRowsetImpl();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Konstruktor.
 
-Zazwyczaj nie trzeba bezpośrednio wywołać tę metodę.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+IRowsetImpl();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zazwyczaj nie trzeba bezpośrednio wywołać tę metodę.
 
 ## <a name="refrows"></a> IRowsetImpl::RefRows
 
-Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md) Zwiększ lub wersji licznika odwołań do istniejących uchwyt wiersza.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md) Zwiększ lub wersji licznika odwołań do istniejących uchwyt wiersza.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-HRESULT RefRows(DBCOUNTITEM cRows,  
-   const HROWrghRows[],  
-   DBREFCOUNT rgRefCounts[],  
-   DBROWSTATUS rgRowStatus[],  
-   BOOL bAdd);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT RefRows(DBCOUNTITEM cRows,
+   const HROWrghRows[],
+   DBREFCOUNT rgRefCounts[],
+   DBROWSTATUS rgRowStatus[],
+   BOOL bAdd);
+```
 
-Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+#### <a name="parameters"></a>Parametry
 
-Standardowe wartości HRESULT.  
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) w *OLE DB Podręcznik programisty*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Standardowe wartości HRESULT.
 
 ## <a name="releaserows"></a> IRowsetImpl::ReleaseRows
 
-Wersje wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
-   const HROW rghRows[],  
-   DBROWOPTIONS rgRowOptions[],  
-   DBREFCOUNT rgRefCounts[],  
-   DBROWSTATUS rgRowStatus[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Wersje wierszy.
 
-Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) w *OLE DB Podręcznik programisty*.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
+   const HROW rghRows[],
+   DBROWOPTIONS rgRowOptions[],
+   DBREFCOUNT rgRefCounts[],
+   DBROWSTATUS rgRowStatus[]);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) w *OLE DB Podręcznik programisty*.
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
-Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
+```
 
-Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Pozycja zestawu wierszy jest niezdefiniowane, aż do `GetNextRow` jest wywoływana. Możesz przenosić Wstecz w rowet przez wywołanie metody `RestartPosition` i pobieranie lub przewijanie do tyłu.  
+Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Pozycja zestawu wierszy jest niezdefiniowane, aż do `GetNextRow` jest wywoływana. Możesz przenosić Wstecz w rowet przez wywołanie metody `RestartPosition` i pobieranie lub przewijanie do tyłu.
 
 ## <a name="setdbstatus"></a> IRowsetImpl::SetDBStatus
 
-Ustawia flagi stanu DBSTATUS dla określonego pola.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Ustawia flagi stanu DBSTATUS dla określonego pola.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
-   RowClass* currentRow,  
-   ATLCOLUMNINFO* columnInfo);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
+   RowClass* currentRow,
+   ATLCOLUMNINFO* columnInfo);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi, aby określić dla kolumny.  
-  
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) flagi, aby określić dla kolumny.
+
 *TableRow*<br/>
-Bieżący wiersz.  
-  
+Bieżący wiersz.
+
 *columnInfo*<br/>
-Kolumna, dla którego stan jest ustawiony.  
-  
-### <a name="return-value"></a>Wartość zwracana  
+Kolumna, dla którego stan jest ustawiony.
 
-Standardowe wartości HRESULT.  
-  
-### <a name="remarks"></a>Uwagi  
+### <a name="return-value"></a>Wartość zwracana
 
-Dostawca zastępuje tę funkcję, aby zapewnić przetwarzana w specjalny DBSTATUS_S_ISNULL i DBSTATUS_S_DEFAULT. 
+Standardowe wartości HRESULT.
+
+### <a name="remarks"></a>Uwagi
+
+Dostawca zastępuje tę funkcję, aby zapewnić przetwarzana w specjalny DBSTATUS_S_ISNULL i DBSTATUS_S_DEFAULT.
 
 ## <a name="bcanfetchback"></a> IRowsetImpl::m_bCanFetchBack
 
-Wskazuje, czy dostawca obsługuje pobieranie z poprzednimi wersjami.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned m_bCanFetchBack:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Wskazuje, czy dostawca obsługuje pobieranie z poprzednimi wersjami.
 
-Połączone `DBPROP_CANFETCHBACKWARDS` właściwość `DBPROPSET_ROWSET` grupy. Dostawca musi obsługiwać `DBPROP_CANFETCHBACKWARDS` dla `m_bCanFetchBackwards` jako **true**.  
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned m_bCanFetchBack:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Połączone `DBPROP_CANFETCHBACKWARDS` właściwość `DBPROPSET_ROWSET` grupy. Dostawca musi obsługiwać `DBPROP_CANFETCHBACKWARDS` dla `m_bCanFetchBackwards` jako **true**.
 
 ## <a name="bcanscrollback"></a> IRowsetImpl::m_bCanScrollBack
 
-Wskazuje, czy dostawca może mieć wstecz jego przewijania kursora.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned  m_bCanScrollBack:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Wskazuje, czy dostawca może mieć wstecz jego przewijania kursora.
 
-Połączone `DBPROP_CANSCROLLBACKWARDS` właściwość `DBPROPSET_ROWSET` grupy. Dostawca musi obsługiwać `DBPROP_CANSCROLLBACKWARDS` dla `m_bCanFetchBackwards` jako **true**. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned  m_bCanScrollBack:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Połączone `DBPROP_CANSCROLLBACKWARDS` właściwość `DBPROPSET_ROWSET` grupy. Dostawca musi obsługiwać `DBPROP_CANSCROLLBACKWARDS` dla `m_bCanFetchBackwards` jako **true**.
 
 ## <a name="breset"></a> IRowsetImpl::m_bReset
 
-Flagi bitowe używane do określania, jeśli pozycja kursora jest zdefiniowany w zestawie wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-unsigned m_bReset:1;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+Flagi bitowe używane do określania, jeśli pozycja kursora jest zdefiniowany w zestawie wierszy.
 
-Jeśli użytkownik wywołuje [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) przy użyciu ujemnych `lOffset` lub *cRows* i `m_bReset` ma wartość true, `GetNextRows` przenosi koniec zestawu wierszy. Jeśli `m_bReset` ma wartość FAŁSZ, użytkownik otrzymuje zwróciło kod błędu zgodnie ze specyfikacją OLE DB. `m_bReset` Flaga jest ustawiona na **true** po pierwszym utworzeniu zestawu wierszy, a kiedy użytkownik wywołuje [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Pobiera równa **false** podczas wywoływania `GetNextRows`. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+unsigned m_bReset:1;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli użytkownik wywołuje [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) przy użyciu ujemnych `lOffset` lub *cRows* i `m_bReset` ma wartość true, `GetNextRows` przenosi koniec zestawu wierszy. Jeśli `m_bReset` ma wartość FAŁSZ, użytkownik otrzymuje zwróciło kod błędu zgodnie ze specyfikacją OLE DB. `m_bReset` Flaga jest ustawiona na **true** po pierwszym utworzeniu zestawu wierszy, a kiedy użytkownik wywołuje [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Pobiera równa **false** podczas wywoływania `GetNextRows`.
 
 ## <a name="irowset"></a> IRowsetImpl::m_iRowset
 
-Indeks wierszy, reprezentujący kursora.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Indeks wierszy, reprezentujący kursora.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-DBROWOFFSET m_iRowset;  
-```  
+DBROWOFFSET m_iRowset;
+```
 
 ## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
 
-Mapy uchwytów wierszy, które aktualnie znajdujących się przez dostawcę w odpowiedzi na `GetNextRows`.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Mapy uchwytów wierszy, które aktualnie znajdujących się przez dostawcę w odpowiedzi na `GetNextRows`.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-MapClass m_rgRowHandles;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
+MapClass m_rgRowHandles;
+```
 
-Dojść do wierszy są usuwane przez wywołanie metody `ReleaseRows`. Zobacz [irowsetimpl — omówienie](../../data/oledb/irowsetimpl-class.md) dla definicji *MapClass*.  
+### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też  
+Dojść do wierszy są usuwane przez wywołanie metody `ReleaseRows`. Zobacz [irowsetimpl — omówienie](../../data/oledb/irowsetimpl-class.md) dla definicji *MapClass*.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

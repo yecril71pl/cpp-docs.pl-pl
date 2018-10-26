@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e61a69661034fb582039c744c3483f461405581
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399823"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056974"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Porady: tworzenie kontrolki użytkownika i hostowanie widoku MDI
 
@@ -38,23 +38,23 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
 
 1. Utwórz projekt aplikacji MFC.
 
-     Na **pliku** menu, wybierz opcję **New**, a następnie kliknij przycisk **projektu**. W **Visual C++** folderu, wybierz **aplikacji MFC**.
+   Na **pliku** menu, wybierz opcję **New**, a następnie kliknij przycisk **projektu**. W **Visual C++** folderu, wybierz **aplikacji MFC**.
 
-     W **nazwa** wprowadź `MFC02` i zmień **rozwiązania** ustawienie **Dodaj do rozwiązania**. Kliknij przycisk **OK**.
+   W **nazwa** wprowadź `MFC02` i zmień **rozwiązania** ustawienie **Dodaj do rozwiązania**. Kliknij przycisk **OK**.
 
-     W **Kreator aplikacji MFC**Zaakceptuj wszystkie ustawienia domyślne, a następnie kliknij przycisk **Zakończ**. Tworzy to aplikację MFC z interfejsem wielu dokumentów.
+   W **Kreator aplikacji MFC**Zaakceptuj wszystkie ustawienia domyślne, a następnie kliknij przycisk **Zakończ**. Tworzy to aplikację MFC z interfejsem wielu dokumentów.
 
 1. Konfigurowanie projektu dla obsługi środowiska uruchomieniowego języka wspólnego (CLR).
 
-     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MFC01` węzła projektu, a następnie wybierz **właściwości** z menu kontekstowego. **Stron właściwości** pojawi się okno dialogowe.
+   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MFC01` węzła projektu, a następnie wybierz **właściwości** z menu kontekstowego. **Stron właściwości** pojawi się okno dialogowe.
 
-     W obszarze **właściwości konfiguracji**, wybierz opcję **ogólne**. W obszarze **domyślne wartości projektu** sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**.
+   W obszarze **właściwości konfiguracji**, wybierz opcję **ogólne**. W obszarze **domyślne wartości projektu** sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**.
 
-     W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** i kliknij przycisk **ogólne** węzła. Ustaw **Format informacji o debugowaniu** do **(/Zi) baza danych programu**.
+   W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** i kliknij przycisk **ogólne** węzła. Ustaw **Format informacji o debugowaniu** do **(/Zi) baza danych programu**.
 
-     Kliknij przycisk **generowania kodu** węzła. Ustaw **Włącz minimalną ponowną kompilację** do **nr (/ Gm-)**. Również ustawić **podstawowe sprawdzenia środowiska uruchomieniowego** do **domyślne**.
+   Kliknij przycisk **generowania kodu** węzła. Ustaw **Włącz minimalną ponowną kompilację** do **nr (/ Gm-)**. Również ustawić **podstawowe sprawdzenia środowiska uruchomieniowego** do **domyślne**.
 
-     Kliknij przycisk **OK** Aby zastosować zmiany.
+   Kliknij przycisk **OK** Aby zastosować zmiany.
 
 1. W pliku stdafx.h należy dodać następujący wiersz:
 
@@ -64,7 +64,7 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
 
 1. Dodaj odwołanie do formantu .NET.
 
-     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MFC02` węzeł projektu i wybierz pozycję **Dodaj**, **odwołania**. W **strona właściwości**, kliknij przycisk **Dodaj nowe odwołanie**, zaznacz pozycję WindowsFormsControlLibrary1 (w obszarze **projektów** karty) i kliknij przycisk **OK** . Dodaje to odwołanie w formie [/FU](../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora tak, aby program został skompilowany; kopiuje również WindowsFormsControlLibrary1.dll do `MFC02` katalogu projektu, dzięki czemu program będzie uruchamiany.
+   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `MFC02` węzeł projektu i wybierz pozycję **Dodaj**, **odwołania**. W **strona właściwości**, kliknij przycisk **Dodaj nowe odwołanie**, zaznacz pozycję WindowsFormsControlLibrary1 (w obszarze **projektów** karty) i kliknij przycisk **OK** . Dodaje to odwołanie w formie [/FU](../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora tak, aby program został skompilowany; kopiuje również WindowsFormsControlLibrary1.dll do `MFC02` katalogu projektu, dzięki czemu program będzie uruchamiany.
 
 1. W pliku stdafx.h Znajdź ten wiersz:
 
@@ -72,7 +72,7 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-     Dodaj następujące wiersze powyżej:
+   Dodaj następujące wiersze powyżej:
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
@@ -80,7 +80,7 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
 
 1. Zmodyfikuj widok klasy, tak aby dziedziczył z [CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-     W MFC02View.h, Zastąp [CView](../mfc/reference/cview-class.md) z [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kod wygląda następująco:
+   W MFC02View.h, Zastąp [CView](../mfc/reference/cview-class.md) z [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kod wygląda następująco:
 
     ```
     class CMFC02View : public CWinFormsView
@@ -88,7 +88,7 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
     };
     ```
 
-     Jeśli chcesz dodać dodatkowe widoki do aplikacji MDI, trzeba będzie wywołać [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) dla każdego widoku tworzonego.
+   Jeśli chcesz dodać dodatkowe widoki do aplikacji MDI, trzeba będzie wywołać [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) dla każdego widoku tworzonego.
 
 1. Zmodyfikuj plik MFC02View.cpp, aby zmienić element CView na CWinFormsView w makrze IMPLEMENT_DYNCREATE i mapy komunikatów i Zastąp istniejący pusty konstruktor konstruktorem pokazanym poniżej:
 
@@ -105,11 +105,11 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
 
 1. Skompiluj i uruchom projekt.
 
-     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy pozycję MFC02 i wybierz **Ustaw jako projekt startowy**.
+   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy pozycję MFC02 i wybierz **Ustaw jako projekt startowy**.
 
-     Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+   Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
 
-     Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
+   Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
 
 ## <a name="see-also"></a>Zobacz też
 

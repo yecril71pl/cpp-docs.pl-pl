@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a4d5cccd608abe5aefb0fe9a38839a6bc56a6bc
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8dc31a65b53f29a4e4f00d5c580baf89059493ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056116"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -75,4 +75,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty metody](method-attributes.md)  
+[Atrybuty metody](method-attributes.md)

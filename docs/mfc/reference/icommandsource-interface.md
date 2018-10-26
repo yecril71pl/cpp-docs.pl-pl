@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377966"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060679"
 ---
 # <a name="icommandsource-interface"></a>Klasa Icommandsource
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ Publikuje komunikat bez oczekiwania na przetworzenie.
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Polecenie*<br/>
@@ -170,13 +174,13 @@ Identyfikator polecenia wiadomość do opublikowania.
 
 Ta metoda asynchronicznie publikuje komunikat zamapowane na identyfikator określony przez polecenie. Jego wywołuje CWnd::PostMessage można umieścić komunikatu w kolejce komunikatów okna i zwraca bez oczekiwania na odpowiednie okno przetworzyć komunikatu.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Usuwa procedurę obsługi poleceń z obiektu źródła polecenia.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ Identyfikator polecenia.
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda usuwa mapowane na cmdID z obiektu źródła polecenia program obsługi poleceń.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ Usuwa obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Polecenie*<br/>

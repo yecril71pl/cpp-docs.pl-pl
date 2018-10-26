@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055067"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Dodawanie strony właściwości (ALT — Samouczek, część 6)
 
@@ -45,7 +45,7 @@ Aby dodać stronę właściwości do kontrolki, należy użyć szablonu strony w
 
 1. Kliknij przycisk **ciągi** otworzyć **ciągi** stronie, a następnie wprowadź **& wielokąta** jako **tytuł**.
 
-     **Tytuł** właściwości strony jest ciąg, który pojawia się w karcie tej strony. **Ciąg dokumentu** znajduje się opis używającej ramka właściwości do umieszczenia w etykietce stan wiersza lub narzędzia. Pamiętaj, że ramka właściwości standardowych obecnie nie używać ten ciąg, dzięki czemu możesz pozostawić wartość domyślną. Nie wygeneruje **plik Pomocy** w chwili, więc Usuń wpis, w tym polu tekstowym.
+   **Tytuł** właściwości strony jest ciąg, który pojawia się w karcie tej strony. **Ciąg dokumentu** znajduje się opis używającej ramka właściwości do umieszczenia w etykietce stan wiersza lub narzędzia. Pamiętaj, że ramka właściwości standardowych obecnie nie używać ten ciąg, dzięki czemu możesz pozostawić wartość domyślną. Nie wygeneruje **plik Pomocy** w chwili, więc Usuń wpis, w tym polu tekstowym.
 
 1. Kliknij przycisk **Zakończ**, i zostanie utworzony obiekt strony właściwości.
 

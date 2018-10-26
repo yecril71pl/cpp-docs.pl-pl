@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077522"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
 A *aplikacja komputerowa* w języku C++ jest natywna aplikacja, które ma dostęp do pełnego zestawu interfejsów API Windows i albo działa w oknie lub w konsoli programu system. Aplikacji klasycznych w języku C++ uruchomić na Windows XP do systemu Windows 10 (chociaż Windows XP nie jest już oficjalnie obsługiwany wiąże się z wielu interfejsów API Windows, które zostały wprowadzone od tego czasu).
 
 Aplikacja komputerowa różni się od aplikacji uniwersalnych platformy Windows (UWP), które mogą być uruchamiane na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, urządzeniu Surface Hub i innych urządzeń. Aby uzyskać więcej informacji na temat klasycznych programu vs. Aplikacje platformy uniwersalnej systemu Windows, zobacz [wybierz swoją technologię](https://msdn.microsoft.com/library/windows/desktop/dn614993).
-
 
 ### <a name="desktop-bridge"></a>Desktop Bridge
 

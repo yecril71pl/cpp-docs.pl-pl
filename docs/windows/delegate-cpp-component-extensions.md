@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: fd0f63aebaa6dd742e1ce701e42cf8238fb6033f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068102"
 ---
 # <a name="delegate--ccli-and-ccx"></a>Delegowanie (C + +/ CLI i C + +/ CX)
 
@@ -52,7 +52,7 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -131,7 +131,7 @@ Aby uzyskać więcej informacji na temat obiektów delegowanych zobacz
 
 - [Instrukcje: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Delegaty ogólne (C + +/ CLI)](../windows/generic-delegates-visual-cpp.md)
+- [Delegaty ogólne (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -171,14 +171,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

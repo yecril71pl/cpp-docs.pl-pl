@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068778"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 
@@ -84,15 +84,15 @@ Te funkcje elementów członkowskich są następujące:
 
 - [Verifyuserlicense —](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Sprawdza, czy kontrolka zezwala na użycie w czasie projektowania, sprawdzając systemu pod kątem obecności pliku licencji formantu. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::GetLicInfo` i `IClassFactory::CreateInstanceLic`.
+   Sprawdza, czy kontrolka zezwala na użycie w czasie projektowania, sprawdzając systemu pod kątem obecności pliku licencji formantu. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::GetLicInfo` i `IClassFactory::CreateInstanceLic`.
 
 - [Getlicensekey —](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Żąda Unikatowy klucz z formantu biblioteki DLL. Ten klucz jest osadzony w aplikacji kontenera i później używany w połączeniu z `VerifyLicenseKey`, aby utworzyć wystąpienie kontrolki. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::RequestLicKey`.
+   Żąda Unikatowy klucz z formantu biblioteki DLL. Ten klucz jest osadzony w aplikacji kontenera i później używany w połączeniu z `VerifyLicenseKey`, aby utworzyć wystąpienie kontrolki. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::RequestLicKey`.
 
 - [Verifylicensekey —](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Sprawdza, czy osadzony klucz i unikatowy klucz formantu są takie same. Umożliwia to kontener, aby utworzyć wystąpienie kontrolki w ramach jego użycia. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::CreateInstanceLic` i może zostać zastąpiona w celu zapewniają dostosowane weryfikację klucza licencji. Domyślna implementacja wykonuje porównanie ciągu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Licencjonowanie kontrolki ActiveX](#_core_customizing_the_licensing_of_an_activex_control), w dalszej części tego artykułu.
+   Sprawdza, czy osadzony klucz i unikatowy klucz formantu są takie same. Umożliwia to kontener, aby utworzyć wystąpienie kontrolki w ramach jego użycia. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::CreateInstanceLic` i może zostać zastąpiona w celu zapewniają dostosowane weryfikację klucza licencji. Domyślna implementacja wykonuje porównanie ciągu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Licencjonowanie kontrolki ActiveX](#_core_customizing_the_licensing_of_an_activex_control), w dalszej części tego artykułu.
 
 ###  <a name="_core_header_file_modifications"></a> Modyfikacje plików nagłówka
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95faae4de2e9fa756a4f69f231839e19019e08fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee8a4bb3f80d9776aec4fd7a6af0d1523c60064d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066087"
 ---
 # <a name="icommandtarget-interface"></a>Klasa Icommandtarget
 
@@ -78,6 +78,4 @@ Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z cmdSource obiektu �
 
 [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Klasa ICommandSource](../../mfc/reference/icommandsource-interface.md)
-
-
 

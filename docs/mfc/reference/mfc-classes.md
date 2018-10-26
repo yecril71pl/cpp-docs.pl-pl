@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1eea2e3158d980c77863640d0342f8b074bf7849
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328613"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080250"
 ---
 # <a name="mfc-classes"></a>Klasy MFC
 
@@ -1316,6 +1316,4 @@ Obsługuje macierze 16-bitowych słów.
 
 [Aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md)<br/>
 Zawiera łącza do tematów dotyczących klas, globalne funkcje, zmienne globalne i makra, które tworzą biblioteki MFC.
-
-
 

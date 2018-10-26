@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059002"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -37,7 +37,7 @@ Identyfikuje określoną wersję spośród wielu wersji klasy.
 
 ### <a name="parameters"></a>Parametry
 
-*Wersja*<br/>
+*version*<br/>
 Numer wersji `coclass`. Jeśli nie zostanie określony, 1.0 zostanie umieszczona w pliku .idl.
 
 ## <a name="remarks"></a>Uwagi
@@ -64,4 +64,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
-[Atrybuty klasy](class-attributes.md)  
+[Atrybuty klasy](class-attributes.md)

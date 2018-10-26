@@ -14,25 +14,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d19e7016120d66ceb59b8d1c77620121fc569b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5417b8579097c51e7586198525ffdafa4ea2cca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079795"
 ---
 # <a name="container-classrbegin"></a>Kontener Class::rbegin
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
-Zwraca odwrotnej iteratora wskazujące bezpośrednio po zakończeniu kontrolowanej sekwencji wyznaczenie początku odwrotnej kolejności.
+Zwraca odwrotnej iterator, który wskazuje tuż za koniec kontrolowanej sekwencji wyznaczanie początku odwrotnej kolejności.
 
 ## <a name="syntax"></a>Składnia
 
 ```cpp
 const_reverse_iterator rbegin() const;
-
 
 reverse_iterator rbegin();
 ```

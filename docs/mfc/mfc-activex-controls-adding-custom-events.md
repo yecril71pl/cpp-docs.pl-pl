@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384419"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076038"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
 
@@ -48,7 +48,7 @@ Poniższa procedura dodaje określone zdarzenie niestandardowe clickin —. Ta p
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodawanie zdarzenia**.
 
-     Spowoduje to otwarcie Kreatora dodawania zdarzenia.
+   Spowoduje to otwarcie Kreatora dodawania zdarzenia.
 
 1. W **Nazwa zdarzenia** pole, najpierw wybierz dowolne zdarzenie, istniejące, a następnie kliknij pozycję **niestandardowe** radio przycisk, a następnie wpisz *clickin —*.
 
@@ -94,7 +94,7 @@ Teraz, że dodano clickin — zdarzenie niestandardowe za pomocą Kreatora dodaw
 
 1. W oknie dialogowym właściwości kliknij **wiadomości** przycisku.
 
-     Okno właściwości wyświetla listę komunikatów, które są obsługiwane przez kontrolkę ActiveX. Każdy komunikat pogrubione już ma funkcję obsługi do niej przypisany.
+   Okno właściwości wyświetla listę komunikatów, które są obsługiwane przez kontrolkę ActiveX. Każdy komunikat pogrubione już ma funkcję obsługi do niej przypisany.
 
 1. W oknie właściwości wybierz wiadomość, którą chcesz obsługiwać. W tym przykładzie wybierz WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ Poniższa procedura dodaje niestandardowy kliknij zdarzenie.
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodawanie zdarzenia**.
 
-     Spowoduje to otwarcie Kreatora dodawania zdarzenia.
+   Spowoduje to otwarcie Kreatora dodawania zdarzenia.
 
 1. W **Nazwa zdarzenia** listę rozwijaną, wybierz nazwę zdarzenie na liście. W tym przykładzie wybierz **kliknij**.
 

@@ -37,105 +37,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ac05cdb93ff87e40c41a59ce466d81aa7bcb5e92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083310"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053477"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 
-Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interfejsu.  
-  
+Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interfejsu.
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE IRowsetInfoImpl :
+   public IRowsetInfo,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IRowsetInfoImpl`.  
-  
+Z klasą pochodną `IRowsetInfoImpl`.
+
 *PropClass*<br/>
-Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*. 
+Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.
 
-## <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** altdb.h   
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="interface-methods"></a>Metody interfejsu  
-  
-|||  
-|-|-|  
-|[Getproperties —](#getproperties)|Zwraca bieżące ustawienia właściwości wszystkich obsługiwanych przez zestaw wierszy.|  
-|[Getreferencedrowset —](#getreferencedrowset)|Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.|  
-|[Getspecification —](#getspecification)|Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.|  
-  
-## <a name="remarks"></a>Uwagi  
+**Nagłówek:** altdb.h
 
-Interfejs obowiązkowy zestawów wierszy. Ta klasa implementuje właściwości zestawu wierszy przy użyciu [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md) zdefiniowany w klasie polecenia. Mimo że klasy zestawu wierszy jest wyświetlane, można za pomocą właściwości klasy poleceń zestawy, zestaw wierszy jest dostarczany ze swoją własną kopią właściwości czasu wykonywania, po utworzeniu obiektu sesji lub polecenie.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="interface-methods"></a>Metody interfejsu
+
+|||
+|-|-|
+|[Getproperties —](#getproperties)|Zwraca bieżące ustawienia właściwości wszystkich obsługiwanych przez zestaw wierszy.|
+|[Getreferencedrowset —](#getreferencedrowset)|Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.|
+|[Getspecification —](#getspecification)|Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.|
+
+## <a name="remarks"></a>Uwagi
+
+Interfejs obowiązkowy zestawów wierszy. Ta klasa implementuje właściwości zestawu wierszy przy użyciu [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md) zdefiniowany w klasie polecenia. Mimo że klasy zestawu wierszy jest wyświetlane, można za pomocą właściwości klasy poleceń zestawy, zestaw wierszy jest dostarczany ze swoją własną kopią właściwości czasu wykonywania, po utworzeniu obiektu sesji lub polecenie.
+
 ## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
-Zwraca bieżące ustawienia właściwości w `DBPROPSET_ROWSET` grupy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
-   const DBPROPIDSET rgPropertyIDSets[],  
-   ULONG* pcPropertySets,  
-   DBPROPSET** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Zwraca bieżące ustawienia właściwości w `DBPROPSET_ROWSET` grupy.
 
-Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) w *OLE DB Podręcznik programisty*. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG* pcPropertySets,
+   DBPROPSET** prgPropertySets);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) w *OLE DB Podręcznik programisty*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
-Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp
-STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
-   REFIID riid,  
-   IUnknown** ppReferencedRowset);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.
 
-Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki. 
+### <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
+   REFIID riid,
+   IUnknown** ppReferencedRowset);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
-Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.  
-  
-### <a name="syntax"></a>Składnia  
-  
+Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.
+
+### <a name="syntax"></a>Składnia
+
 ```cpp
-STDMETHOD (GetSpecification )(REFIID riid,  
-   IUnknown** ppSpecification);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (GetSpecification )(REFIID riid,
+   IUnknown** ppSpecification);
+```
 
-Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) w *OLE DB Podręcznik programisty*.  
-  
-### <a name="remarks"></a>Uwagi  
+#### <a name="parameters"></a>Parametry
 
-Użyj tej metody za pomocą [igetdatasourceimpl —](../../data/oledb/igetdatasourceimpl-class.md) można pobrać właściwości z obiektu źródła danych.  
-  
-## <a name="see-also"></a>Zobacz też  
+Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) w *OLE DB Podręcznik programisty*.
+
+### <a name="remarks"></a>Uwagi
+
+Użyj tej metody za pomocą [igetdatasourceimpl —](../../data/oledb/igetdatasourceimpl-class.md) można pobrać właściwości z obiektu źródła danych.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

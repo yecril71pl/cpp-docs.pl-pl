@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062616"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
@@ -63,13 +63,13 @@ Możliwe jest tworzenie powiązanych z danymi właściwości podstawowych, mimo 
 
 1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki.
 
-     Spowoduje to otwarcie menu skrótów.
+   Spowoduje to otwarcie menu skrótów.
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
 1. Wybierz jeden z wpisów z **nazwa właściwości** listy rozwijanej. Na przykład, możesz wybrać **tekstu**.
 
-     Ponieważ **tekstu** jest właściwością podstawowe **możliwej do wiązania** i **requestedit —** atrybuty już są sprawdzane.
+   Ponieważ **tekstu** jest właściwością podstawowe **możliwej do wiązania** i **requestedit —** atrybuty już są sprawdzane.
 
 1. Wybierz następujące pola wyboru z **atrybuty IDL** kartę: **displaybind —** i **defaultbind —** można dodawać atrybuty do definicji właściwości w projekcie. Plik IDL. Te atrybuty upewnij kontrolki widoczne dla użytkowników oraz właściwości podstawowych domyślnej właściwości możliwej do wiązania.
 
@@ -96,7 +96,7 @@ Oprócz danych powiązanych z metodą get/set, można również utworzyć [możl
 
 1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki.
 
-     Spowoduje to otwarcie menu skrótów.
+   Spowoduje to otwarcie menu skrótów.
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
 
@@ -112,33 +112,33 @@ Oprócz danych powiązanych z metodą get/set, można również utworzyć [możl
 
 11. Modyfikowanie treści `SetMyProp` funkcji tak, aby zawierała następujący kod:
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. Parametr przekazany do `BoundPropertyChanged` i `BoundPropertyRequestEdit` functions to identyfikator dispid, właściwości, która jest parametr przekazywany do atrybutu id() dla właściwości w. Plik IDL.
 
 13. Modyfikowanie [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) działać, dlatego zawiera następujący kod:
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. Modyfikowanie `OnDraw` funkcji tak, aby zawierała następujący kod:
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. Do sekcji publicznej pliku nagłówka pliku nagłówkowego klasy kontrolki Dodaj następujące definicje zmiennych składowych (konstruktory):
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. Wprowadź następujący wiersz w ostatnim wierszu `DoPropExchange` funkcji:
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. Modyfikowanie `OnResetState` funkcji tak, aby zawierała następujący kod:
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. Modyfikowanie `GetMyProp` funkcji tak, aby zawierała następujący kod:
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 Można teraz tworzyć projektu, które będą rejestrować się kontrolka. Po wstawieniu kontrolki w oknie dialogowym **pola danych** i **źródła danych** będzie dodawać właściwości i można teraz wybrać źródło danych i pola do wyświetlenia w kontrolce.
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067803"
 ---
 # <a name="idl-attributes"></a>atrybuty IDL
 
@@ -47,7 +47,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
 |[bindable](bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|
 |[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
-|[przypadek](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
+|[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Umieszcza klasy definicji do pliku .idl jako klasy coclass.|
 |[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
@@ -75,15 +75,15 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[importlib](importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
 |[import](import.md)|Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, w których ma dotyczyć odwołanie z pliku .idl głównego.|
 |[include](include-cpp.md)|Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.|
-|[includelib —](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
+|[includelib](includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
 |[in](in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|
 |[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy mają być przekazywane.|
 |[lcid](lcid.md)|Służy do przekazywania identyfikator ustawień regionalnych do funkcji.|
 |[length_is](length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|
 |[licensed](licensed.md)|Wskazuje, że klasa coclass, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.|
-|[lokalne](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
-|[Moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[ms_union](ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|
 |[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
@@ -92,7 +92,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[object](object-cpp.md)|Określa niestandardowy interfejs; równoznaczny z atrybutu niestandardowego.|
 |[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
 |[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
-|[Opcjonalne](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
+|[optional](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
 |[out](out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|
 |[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
 |[pragma](pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
@@ -102,7 +102,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[propput](propput.md)|Określa funkcję ustawienie właściwości.|
 |[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
 |[public](public-cpp-attributes.md)|Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.|
-|[Zakres](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
+|[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[readonly](readonly-cpp.md)|Zabrania przypisania do zmiennej.|
 |[ref](ref-cpp.md)|Określa odwołanie do wskaźnika.|
 |[requestedit](requestedit.md)|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.|
@@ -125,4 +125,4 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty według grup](attributes-by-group.md)  
+[Atrybuty według grup](attributes-by-group.md)

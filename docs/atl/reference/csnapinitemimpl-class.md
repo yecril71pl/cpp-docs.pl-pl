@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059821"
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 
@@ -119,7 +119,7 @@ Wartość TRUE, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie 
 Ta metoda implementuje funkcję Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 Ta metoda implementuje funkcję Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 Wywołaj tę funkcję do modyfikowania flag wstawiania menu, określony przez *pInsertionAllowed*, dla obiektu przystawki.
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ Nie należy próbować ustawić bity *pInsertionAllowed* który początkowo zost
 Wywołaj tę funkcję, aby zmodyfikować style do przycisku paska narzędzi, obiektu przystawki, przed utworzeniem paska narzędzi.
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 Wywołaj tę funkcję, aby zmodyfikować element menu, zanim zostanie wstawiony do menu kontekstowego obiektu przystawki.
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

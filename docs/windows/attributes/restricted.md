@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dfaed296242d2a0fc341c2ff5f137a08d753e71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb13132c651323fcdffef2c06215314ad193c91d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071105"
 ---
 # <a name="restricted"></a>restricted
 
@@ -89,4 +89,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
-[Atrybuty metody](method-attributes.md)  
+[Atrybuty metody](method-attributes.md)

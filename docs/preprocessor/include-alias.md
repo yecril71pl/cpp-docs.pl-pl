@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065177"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ Określa, że *short_filename* ma być używany jako alias *long_filename*.
 
 ## <a name="syntax"></a>Składnia
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Uwagi
@@ -59,7 +59,7 @@ Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak
 ```
 
 aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowego nie są dokładnie zgodne. Ponadto nazwy plików nagłówkowych używane jako argumenty `/Yu` i `/Yc` opcje kompilatora lub `hdrstop` pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ Należy również zauważyć, że przechodniość nie jest obsługiwana. Biorąc
 #include "one.h"
 ```
 
-kompilator wyszuka plik TWO.H zamiast THREE.H.  
+kompilator wyszuka plik TWO.H zamiast THREE.H.
 
 ## <a name="see-also"></a>Zobacz też
 

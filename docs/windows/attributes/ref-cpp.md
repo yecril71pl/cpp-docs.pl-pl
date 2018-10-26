@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e67e6687a133ae636bbe9c3912ae4ff5288b762f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 67e448b11daea3058eb7df63f914f64c98d57594
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789792"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057260"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -71,4 +71,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Atrybuty parametru](parameter-attributes.md)  
+[Atrybuty parametru](parameter-attributes.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387838"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078196"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
 
@@ -138,15 +138,15 @@ Domyślnie przez wspólne okno dialogowe właściwości obiektu OLE ma trzy stro
 
 - Ogólne
 
-     Ta strona zawiera informacje o systemie dla pliku, reprezentowane przez element wybrany dokument. Na tej stronie użytkownika można przekonwertować wybrany element do innego typu.
+   Ta strona zawiera informacje o systemie dla pliku, reprezentowane przez element wybrany dokument. Na tej stronie użytkownika można przekonwertować wybrany element do innego typu.
 
 - Widok
 
-     Ta strona zawiera opcje wyświetlania elementu, Zmiana ikony i zmienianie skalowania obrazu.
+   Ta strona zawiera opcje wyświetlania elementu, Zmiana ikony i zmienianie skalowania obrazu.
 
 - Łącze
 
-     Ta strona zawiera opcje dotyczące zmiany lokalizacji połączony element i aktualizowanie połączonego elementu. Z tej strony użytkownik może przerwać łącze wybranego elementu.
+   Ta strona zawiera opcje dotyczące zmiany lokalizacji połączony element i aktualizowanie połączonego elementu. Z tej strony użytkownik może przerwać łącze wybranego elementu.
 
 Aby dodać strony poza tymi, które domyślnie dostępne, należy zmodyfikować [m_psh](#m_psh) zmiennej składowej przed opuszczeniem konstruktora obiektu usługi `COlePropertiesDialog`-klasy pochodnej. Jest to zaawansowana implementacja `COlePropertiesDialog` konstruktora.
 

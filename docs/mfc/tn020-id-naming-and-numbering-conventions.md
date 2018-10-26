@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19d79b7946e3f2b4fda0b2651ce8d2099373d93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b66fa88a98f800c77e2b6b0a731bbd40df9eb9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054634"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: konwencje nazewnictwa i numerowania identyfikatorów
 
@@ -105,7 +105,7 @@ Przyczyny te limity zakres:
 
    - 16000 za pośrednictwem 18000 (zobacz afxribbonres.h)
 
-     Te zakresy mogą ulec zmianie w przyszłości implementacji MFC.
+   Te zakresy mogą ulec zmianie w przyszłości implementacji MFC.
 
 - Kilka poleceń systemu Windows użyj zakresu 0xF000 0xffff.
 

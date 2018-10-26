@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056064"
 ---
 # <a name="run-time-type-information"></a>Informacje o typie uzyskiwanym w czasie rzeczywistym
 
@@ -35,15 +35,15 @@ Istnieją trzy główne elementy języka C++ do informacje typu run-time:
 
 - [Dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.
 
-     Używany na potrzeby konwersji typów polimorficznych.
+   Używany na potrzeby konwersji typów polimorficznych.
 
 - [Typeid](../cpp/typeid-operator.md) operatora.
 
-     Umożliwia identyfikowanie dokładnego typu obiektu.
+   Umożliwia identyfikowanie dokładnego typu obiektu.
 
 - [Type_info](../cpp/type-info-class.md) klasy.
 
-     Używane do przechowywania informacji o typie zwrócony przez **typeid** operatora.
+   Używane do przechowywania informacji o typie zwrócony przez **typeid** operatora.
 
 ## <a name="see-also"></a>Zobacz także
 

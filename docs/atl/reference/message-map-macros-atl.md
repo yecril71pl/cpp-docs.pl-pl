@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024920"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054479"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 
@@ -93,11 +93,11 @@ Te makra definiują mapy komunikatów i wpisów.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje komunikatów odbitych WM_NOTIFY funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapuje komunikatów odbitych WM_NOTIFY funkcji obsługi, na podstawie identyfikatora kontroli.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapuje komunikatów odbitych WM_NOTIFY funkcji obsługi, na podstawie kodu powiadomienia i ciągły zakres identyfikatorów kontroli.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje komunikatów odbitych WM_NOTIFY funkcji obsługi, na podstawie ciągłego zakresu identyfikatorów kontroli.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje komunikatów odbitych WM_NOTIFY funkcji obsługi, na podstawie ciągłego zakresu identyfikatorów kontroli.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ W kolejnym przykładzie pokazano dwa mapy komunikatów alternatywne. Mapy komuni
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h   
+**Nagłówek:** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Uwagi
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) przetwarza mapę komunikatów w domyślnej procesu komunikaty wysyłane do okna. Mapy komunikatów kieruje komunikaty do funkcji odpowiedni program obsługi lub innej mapy wiadomości.  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) przetwarza mapę komunikatów w domyślnej procesu komunikaty wysyłane do okna. Mapy komunikatów kieruje komunikaty do funkcji odpowiedni program obsługi lub innej mapy wiadomości.
 
 Następujące makra mapowania wiadomości do funkcji programu obsługi. Ta funkcja musi być zdefiniowany w *theClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Uwagi
 
-CHAIN_MSG_MAP_DYNAMIC kieruje komunikaty, w czasie wykonywania, do domyślnego mapy wiadomości w innym obiekcie. Obiekt i jego mapy wiadomości, które są skojarzone z *dynaChainID*, która jest definiowana za pomocą [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Muszą pochodzić z klasy `CDynamicChain` aby można było używać CHAIN_MSG_MAP_DYNAMIC. Aby uzyskać przykład, zobacz [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Przegląd.  
+CHAIN_MSG_MAP_DYNAMIC kieruje komunikaty, w czasie wykonywania, do domyślnego mapy wiadomości w innym obiekcie. Obiekt i jego mapy wiadomości, które są skojarzone z *dynaChainID*, która jest definiowana za pomocą [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Muszą pochodzić z klasy `CDynamicChain` aby można było używać CHAIN_MSG_MAP_DYNAMIC. Aby uzyskać przykład, zobacz [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Przegląd.
 
 > [!NOTE]
 >  Zawsze zaczynają się mapy komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować mapy kolejnych komunikatów alternatywny z ALT_MSG_MAP. [END_MSG_MAP](#end_msg_map) — makro oznacza koniec mapie komunikatów. Mapy komunikatów, co musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in] Kod powiadomienia.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in] Kod powiadomienia.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in] Kod powiadomienia.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in] Kod powiadomienia.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in] Kod powiadomienia.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
 *FUNC*<br/>
-[in] Nazwa funkcji obsługi wiadomości.  
+[in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h  
+**Nagłówek:** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

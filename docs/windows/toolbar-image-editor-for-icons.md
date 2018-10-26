@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063851"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Pasek narzędzi (C++ edytor obrazów dla ikon)
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391907"
 > [!NOTE]
 > Wszystkie narzędzia dostępne na **edytora obrazów** narzędzi są także dostępne z **obraz** menu (w obszarze **narzędzia** polecenie).
 
-![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Pasek narzędzi edytora obrazów
+![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") paska narzędzi edytora obrazów
 
 Aby użyć **edytora obrazów** narzędzi i **opcji** selektor, kliknij narzędzie lub opcji, które mają.
 
@@ -46,8 +45,7 @@ Aby użyć **edytora obrazów** narzędzi i **opcji** selektor, kliknij narzędz
 
 Za pomocą **opcji** selektor można określić szerokość linii, ślad pędzla itp. Ikony na **opcji** selektor przycisk zmiany, w zależności od narzędzie, które zostały wybrane.
 
-![Rysowanie&#45;selektor kształt na pasku narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Selektor opcji na pasku narzędzi edytora obrazów
+![Rysowanie&#45;selektor kształt na pasku narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") Selektor opcji na pasku narzędzi edytora obrazów
 
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 

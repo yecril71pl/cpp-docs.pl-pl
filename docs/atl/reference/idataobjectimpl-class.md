@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7444cfe152d964318ea9786f4e4f7718e11d71cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7d36d07dd8fb1882e9458b11d947b92e6772d017
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069810"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068520"
 ---
 # <a name="idataobjectimpl-class"></a>Klasa IDataObjectImpl
 
@@ -146,7 +146,7 @@ Zobacz [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobj
 Tworzy moduł wyliczający do iterowania po `FORMATETC` konstrukcje obsługiwane przez obiekt danych.
 
 ```
-HRESULT EnumFormatEtc(  
+HRESULT EnumFormatEtc(
     DWORD dwDirection,
     IEnumFORMATETC** ppenumFormatEtc);
 ```

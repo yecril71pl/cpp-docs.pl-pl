@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9835b8cadb5a24aea130b1e32d919ebb49d20293
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045253"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065699"
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 
@@ -280,6 +280,7 @@ Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStrin
 ```
 typedef ATL::CPathT<CStringW> CPathW;
 ```
+
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlpath.h

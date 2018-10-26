@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440059"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078209"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości
 
@@ -65,7 +65,7 @@ Aby uzyskać więcej informacji na temat używania stron właściwości w kontro
 
 1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
 
-     Spowoduje to otwarcie [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe.
+   Spowoduje to otwarcie [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe.
 
 1. Kliknij dwukrotnie **klasy MFC** szablonu.
 
@@ -95,25 +95,25 @@ Następny krok polega na utworzenie dwóch nowych zasobów ciągów, które zape
 
 1. Kliknij dwukrotnie **tabeli ciągów** folder, a następnie kliknij dwukrotnie istniejących parametrów tabeli zasobów, do której chcesz dodać ciąg.
 
-     Spowoduje to otwarcie tabeli ciągów w oknie.
+   Spowoduje to otwarcie tabeli ciągów w oknie.
 
 1. Wybierz pusty wiersz na końcu tabeli ciągów i typu text lub caption ciągu: na przykład "dodatkowe właściwości Page."
 
-     Spowoduje to otwarcie **właściwości ciągu** przedstawiający stronę **podpis** i **identyfikator** pola. **Podpis** pole zawiera ciąg wpisany.
+   Spowoduje to otwarcie **właściwości ciągu** przedstawiający stronę **podpis** i **identyfikator** pola. **Podpis** pole zawiera ciąg wpisany.
 
 1. W **identyfikator** wybierz lub wpisz identyfikator ciągu. Po zakończeniu naciśnij klawisz Enter.
 
-     W tym przykładzie użyto **IDS_SAMPLE_ADDPAGE** dla nazwy typu nowej strony właściwości.
+   W tym przykładzie użyto **IDS_SAMPLE_ADDPAGE** dla nazwy typu nowej strony właściwości.
 
 1. Powtórz kroki 3 i 4 używające funkcji **IDS_SAMPLE_ADDPPG_CAPTION** dla Identyfikatora i "Dodatkowe właściwości Page" podpisu.
 
 1. W. Plik CPP nowej klasy strony właściwości (w tym przykładzie `CAddtlPropPage`) zmodyfikuj `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby IDS_SAMPLE_ADDPAGE jest przekazywany przez [afxoleregisterpropertypageclass —](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jak w poniższym przykładzie:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Zmodyfikuj konstruktora `CAddtlPropPage` tak, aby IDS_SAMPLE_ADDPPG_CAPTION jest przekazywany do `COlePropertyPage` konstruktora, w następujący sposób:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Po dokonaniu niezbędnych modyfikacji ponownie skompiluj projekt i użyj kontener testu, aby przetestować nową stronę właściwości. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 

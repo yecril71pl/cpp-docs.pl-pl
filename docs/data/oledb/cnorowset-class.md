@@ -21,54 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f14ad79e1cbd2207b4eb1582cb80e0107d68ec39
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074841"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064241"
 ---
 # <a name="cnorowset-class"></a>CNoRowset — Klasa
 
-Może służyć jako argument szablonu (`TRowset`) dla [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md).  
-  
+Może służyć jako argument szablonu (`TRowset`) dla [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md).
+
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CNoRowset  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CAccessorBase>
+class CNoRowset
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.  
-  
-## <a name="remarks"></a>Uwagi  
+Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
 
-Użyj `CNoRowset` jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.  
-  
-`CNoRowset` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:  
-  
-- `BindFinished` — Wskazuje, kiedy powiązania jest ukończone (zwraca `S_OK`).  
-  
-- `Close` -Zwalnia wierszy i bieżącego interfejsu IRowset.  
-  
-- `GetIID` -Pobiera identyfikator interfejsu punktu połączenia.  
-  
-- `GetInterface` -Pobiera interfejs.  
-  
-- `GetInterfacePtr` -Pobiera wskaźnik zhermetyzowany interfejsu.  
-  
-- `SetAccessor` -Ustawia wskaźnik akcesor.  
-  
-- `SetupOptionalRowsetInterfaces` -Konfiguruje interfejsy opcjonalne dla zestawu wierszy.  
-  
-## <a name="requirements"></a>Wymagania  
+## <a name="remarks"></a>Uwagi
 
-**Nagłówek:** atldbcli.h  
-  
-## <a name="see-also"></a>Zobacz też  
+Użyj `CNoRowset` jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.
+
+`CNoRowset` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:
+
+- `BindFinished` — Wskazuje, kiedy powiązania jest ukończone (zwraca `S_OK`).
+
+- `Close` -Zwalnia wierszy i bieżącego interfejsu IRowset.
+
+- `GetIID` -Pobiera identyfikator interfejsu punktu połączenia.
+
+- `GetInterface` -Pobiera interfejs.
+
+- `GetInterfacePtr` -Pobiera wskaźnik zhermetyzowany interfejsu.
+
+- `SetAccessor` -Ustawia wskaźnik akcesor.
+
+- `SetupOptionalRowsetInterfaces` -Konfiguruje interfejsy opcjonalne dla zestawu wierszy.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atldbcli.h
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

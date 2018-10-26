@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f217c0dad3bf74ab930cf1f66392fe22d9df832
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 789c9179b2ba48f5c3796f709931728bc756aaaa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075037"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Określonego język C++**  
-  
-Pomija generację funkcje otoki obsługi błędów i [właściwość](../cpp/property-cpp.md) deklaracji, korzystających z tych funkcji otoki.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-raw_interfaces_only  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- 
-**Raw_interfaces_only —** atrybut również powoduje, że domyślny prefiks używany w nazwach funkcji inną niż właściwość, które mają zostać usunięte. Zazwyczaj jest prefiks **raw_**. Jeśli ten atrybut jest określony, nazwy funkcji są bezpośrednio z biblioteki typów.  
-  
-Ten atrybut umożliwia uwidocznienie niskiego poziomu zawartość biblioteki typów.  
-  
-**KONIEC określonego języka C++**  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+**Określonego język C++**
+
+Pomija generację funkcje otoki obsługi błędów i [właściwość](../cpp/property-cpp.md) deklaracji, korzystających z tych funkcji otoki.
+
+## <a name="syntax"></a>Składnia
+
+```
+raw_interfaces_only
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Raw_interfaces_only —** atrybut również powoduje, że domyślny prefiks używany w nazwach funkcji inną niż właściwość, które mają zostać usunięte. Zazwyczaj jest prefiks **raw_**. Jeśli ten atrybut jest określony, nazwy funkcji są bezpośrednio z biblioteki typów.
+
+Ten atrybut umożliwia uwidocznienie niskiego poziomu zawartość biblioteki typów.
+
+**KONIEC określonego języka C++**
+
+## <a name="see-also"></a>Zobacz też
+
 [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

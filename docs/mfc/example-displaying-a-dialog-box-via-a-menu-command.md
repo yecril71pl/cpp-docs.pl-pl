@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890208"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060419"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu
 
@@ -56,15 +56,15 @@ Procedury należy użyć następujących nazw i wartości:
 
 1. W **Widok klas**, wybierz klasę dokumentu (CDisplayDialogDoc). W **właściwości** okna, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie identyfikator polecenia menu (ID_VIEW_TEST) w lewym okienku **właściwości** okna, a następnie wybierz pozycję **polecenia**. W okienku po prawej stronie, kliknij strzałkę w dół i wybierz pozycję  **\<Dodaj > OnViewTest**.
 
-     Jeśli polecenie menu jest dodawany do komputera mainframe aplikacji MDI, należy wybrać klasę aplikacji (CDisplayDialogApp).
+   Jeśli polecenie menu jest dodawany do komputera mainframe aplikacji MDI, należy wybrać klasę aplikacji (CDisplayDialogApp).
 
 1. Dodaj następujące dołączania instrukcji CDisplayDialogDoc.cpp (lub CDisplayDialogApp.cpp) po istniejącej instrukcji #include:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
 
 1. Dodaj następujący kod do `OnViewTest` do zaimplementowania funkcji:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Aby wyświetlić niemodalnego okna dialogowego
 

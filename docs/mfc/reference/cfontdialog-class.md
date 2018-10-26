@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2360e257fa6af343a7df689c48c8de93d967bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fb03a63b922a2718c1b17fdb4970f80da3b8b5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413976"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054842"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 
@@ -407,6 +407,4 @@ Po konstruowanie `CFontDialog` obiektu, możesz użyć `m_cf` do modyfikowania r
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-
-
 

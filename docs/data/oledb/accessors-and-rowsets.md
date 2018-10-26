@@ -28,57 +28,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 3632a99e09104cba2916b3da7230dd2769b78b42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066755"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 
-Do ustawiania i pobierania danych, szablony OLE DB użyj metody dostępu i zestawu wierszy za pomocą [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) klasy. Ta klasa może obsłużyć wielu metod dostępu w różnych typów.  
-  
-## <a name="accessor-types"></a>Typy metod dostępu  
+Do ustawiania i pobierania danych, szablony OLE DB użyj metody dostępu i zestawu wierszy za pomocą [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) klasy. Ta klasa może obsłużyć wielu metod dostępu w różnych typów.
 
-Wszystkie metody dostępu pochodzi od [caccessorbase —](../../data/oledb/caccessorbase-class.md). `CAccessorBase` udostępnia zarówno parametr, jak i powiązanie kolumny.  
-  
-Na poniższej ilustracji przedstawiono typy metod dostępu.  
-  
-![Typy metod dostępu](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
-Metoda dostępu do klasy  
-  
-- [CAccessor](../../data/oledb/caccessor-class.md) Użyj tej metody dostępu, gdy wiesz struktury źródłowej bazy danych w czasie projektowania. `CAccessor` statycznie wiąże rekordu bazy danych, który zawiera buforu, źródła danych.  
-  
-- [Cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) Użyj tej metody dostępu, jeśli nie znasz struktury bazy danych w czasie projektowania. `CDynamicAccessor` wywołania `IColumnsInfo::GetColumnInfo` można pobrać informacji o kolumnie bazy danych. Tworzy i zarządza metody dostępu i buforu.  
-  
-- [Cdynamicparameteraccessor —](../../data/oledb/cdynamicparameteraccessor-class.md) Użyj tej metody dostępu, aby obsłużyć nieznane polecenie typów. Podczas przygotowywania poleceń, `CDynamicParameterAccessor` można uzyskać informacje o parametrach z `ICommandWithParameters` interfejsu, jeśli dostawca obsługuje `ICommandWithParameters`.  
-  
-- [Cdynamicstringaccessor —](../../data/oledb/cdynamicstringaccessor-class.md), [cdynamicstringaccessora —](../../data/oledb/cdynamicstringaccessora-class.md), i [cdynamicstringaccessorw —](../../data/oledb/cdynamicstringaccessorw-class.md) korzystając z tych klas, gdy masz nie znajomości schematu bazy danych. `CDynamicStringAccessorA` pobiera dane jako ciągów ANSI; `CDynamicStringAccessorW` pobiera dane jako ciąg Unicode.  
-  
-- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) za pomocą tej klasy, można użyć dowolnych typów danych, jeśli dostawca można przekonwertować typu. Obsługuje on kolumny wyników i parametry polecenia.  
-  
-Poniższa tabela zawiera podsumowanie obsługi w typy metod dostępu szablonów OLE DB.  
-  
-|Typ metody dostępu|Dynamiczne|Obsługuje params|Bufor|Wielu metod dostępu|  
-|-------------------|-------------|--------------------|------------|------------------------|  
-|`CAccessor`|Nie|Tak|Użytkownik|Tak|  
-|`CDynamicAccessor`|Tak|Nie|Szablony OLE DB|Nie|  
-|`CDynamicParameterAccessor`|Tak|Tak|Szablony OLE DB|Nie|  
-|`CDynamicStringAccessor[A,W]`|Tak|Nie|Szablony OLE DB|Nie|  
-|`CManualAccessor`|Tak|Tak|Użytkownik|Tak|  
-  
-## <a name="rowset-types"></a>Typy zestawów wierszy  
+## <a name="accessor-types"></a>Typy metod dostępu
 
-Szablony OLE DB obsługuje trzy rodzaje zestawów wierszy (patrz rysunek poprzedniego): pojedyncze zestawy wierszy (implementowany przez [CRowset](../../data/oledb/crowset-class.md)), zbiorcze zestawy wierszy (implementowany przez [cbulkrowset —](../../data/oledb/cbulkrowset-class.md)) i zestawy wierszy (zaimplementowano tablicy przez [carrayrowset —](../../data/oledb/carrayrowset-class.md)). Pobieranie pojedyncze zestawy wierszy w pojedynczy wiersz obsługi, kiedy `MoveNext` jest wywoływana. Zbiorcze zestawy wierszy można pobrać dojścia do wielu wierszy. Zestawy wierszy tablicy są zestawy wierszy, który jest możliwy za pomocą składni tablicy.  
-  
-Na poniższej ilustracji pokazano typy w zestawie wierszy.  
-  
-![Grafika RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
-Klasy zestawów wierszy  
-  
-[Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego uzyskać dostępu do informacji o magazynie danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.  
-  
-## <a name="see-also"></a>Zobacz też  
+Wszystkie metody dostępu pochodzi od [caccessorbase —](../../data/oledb/caccessorbase-class.md). `CAccessorBase` udostępnia zarówno parametr, jak i powiązanie kolumny.
+
+Na poniższej ilustracji przedstawiono typy metod dostępu.
+
+![Typy metod dostępu](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+Metoda dostępu do klasy
+
+- [CAccessor](../../data/oledb/caccessor-class.md) Użyj tej metody dostępu, gdy wiesz struktury źródłowej bazy danych w czasie projektowania. `CAccessor` statycznie wiąże rekordu bazy danych, który zawiera buforu, źródła danych.
+
+- [Cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) Użyj tej metody dostępu, jeśli nie znasz struktury bazy danych w czasie projektowania. `CDynamicAccessor` wywołania `IColumnsInfo::GetColumnInfo` można pobrać informacji o kolumnie bazy danych. Tworzy i zarządza metody dostępu i buforu.
+
+- [Cdynamicparameteraccessor —](../../data/oledb/cdynamicparameteraccessor-class.md) Użyj tej metody dostępu, aby obsłużyć nieznane polecenie typów. Podczas przygotowywania poleceń, `CDynamicParameterAccessor` można uzyskać informacje o parametrach z `ICommandWithParameters` interfejsu, jeśli dostawca obsługuje `ICommandWithParameters`.
+
+- [Cdynamicstringaccessor —](../../data/oledb/cdynamicstringaccessor-class.md), [cdynamicstringaccessora —](../../data/oledb/cdynamicstringaccessora-class.md), i [cdynamicstringaccessorw —](../../data/oledb/cdynamicstringaccessorw-class.md) korzystając z tych klas, gdy masz nie znajomości schematu bazy danych. `CDynamicStringAccessorA` pobiera dane jako ciągów ANSI; `CDynamicStringAccessorW` pobiera dane jako ciąg Unicode.
+
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) za pomocą tej klasy, można użyć dowolnych typów danych, jeśli dostawca można przekonwertować typu. Obsługuje on kolumny wyników i parametry polecenia.
+
+Poniższa tabela zawiera podsumowanie obsługi w typy metod dostępu szablonów OLE DB.
+
+|Typ metody dostępu|Dynamiczne|Obsługuje params|Bufor|Wielu metod dostępu|
+|-------------------|-------------|--------------------|------------|------------------------|
+|`CAccessor`|Nie|Tak|Użytkownik|Tak|
+|`CDynamicAccessor`|Tak|Nie|Szablony OLE DB|Nie|
+|`CDynamicParameterAccessor`|Tak|Tak|Szablony OLE DB|Nie|
+|`CDynamicStringAccessor[A,W]`|Tak|Nie|Szablony OLE DB|Nie|
+|`CManualAccessor`|Tak|Tak|Użytkownik|Tak|
+
+## <a name="rowset-types"></a>Typy zestawów wierszy
+
+Szablony OLE DB obsługuje trzy rodzaje zestawów wierszy (patrz rysunek poprzedniego): pojedyncze zestawy wierszy (implementowany przez [CRowset](../../data/oledb/crowset-class.md)), zbiorcze zestawy wierszy (implementowany przez [cbulkrowset —](../../data/oledb/cbulkrowset-class.md)) i zestawy wierszy (zaimplementowano tablicy przez [carrayrowset —](../../data/oledb/carrayrowset-class.md)). Pobieranie pojedyncze zestawy wierszy w pojedynczy wiersz obsługi, kiedy `MoveNext` jest wywoływana. Zbiorcze zestawy wierszy można pobrać dojścia do wielu wierszy. Zestawy wierszy tablicy są zestawy wierszy, który jest możliwy za pomocą składni tablicy.
+
+Na poniższej ilustracji pokazano typy w zestawie wierszy.
+
+![Grafika RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+Klasy zestawów wierszy
+
+[Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego uzyskać dostępu do informacji o magazynie danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.
+
+## <a name="see-also"></a>Zobacz też
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062122"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -381,7 +381,7 @@ W przypadku problemów przy użyciu kompilatora, konsolidatora i innych narzędz
 
 Domyślnie **wszystkie informacje w raportach i wszelkie komentarze i odpowiedzi są publicznie widoczne**. Zazwyczaj jest to korzyść, ponieważ zezwala ona na całej społeczności, aby wyświetlić problemy, rozwiązania i rozwiązania, które znaleziono innym użytkownikom. Jednak jeśli interesujące Cię ujawnianie Twoje dane lub tożsamość, dla prywatności lub z przyczyn własności intelektualnej, dostępne opcje.
 
-Jeśli masz obawy przedstawiania swoją tożsamość, [Utwórz nowe konto Microsoft](https://signup.live.com/) nie ujawnia żadnych informacji o Tobie. Aby utworzyć raport, należy użyć tego konta. 
+Jeśli masz obawy przedstawiania swoją tożsamość, [Utwórz nowe konto Microsoft](https://signup.live.com/) nie ujawnia żadnych informacji o Tobie. Aby utworzyć raport, należy użyć tego konta.
 
 **Nie umieszczaj coś, co chcesz przechowywać prywatne w ramach tytułu lub zawartości elementu początkowego raportu, który nie jest publiczny.** Zamiast tego należy pamiętać, że szczegółów będzie wysyłać prywatnie w komentarzu do oddzielnych. Aby upewnić się, że raport jest kierowany do odpowiednich osób, obejmują **cppcompiler** w temacie Lista raport o problemie. Po utworzeniu raport o problemie, jest teraz możliwość określenia, kto może wyświetlać odpowiedzi i załączników.
 

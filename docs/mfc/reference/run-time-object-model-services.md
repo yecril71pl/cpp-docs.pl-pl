@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064567"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 
@@ -39,8 +39,6 @@ Aby uzyskać więcej informacji na temat tych obiektów czasu wykonywania usług
 
 ### <a name="run-time-object-model-services-macros"></a>Makra usługi modelu obiektów czasu wykonywania
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Umożliwia dostęp do informacji o klasie czasu wykonywania (muszą być używane w deklaracji klasy).|
@@ -51,19 +49,11 @@ Aby uzyskać więcej informacji na temat tych obiektów czasu wykonywania usług
 |[IMPLEMENT_SERIAL](#implement_serial)|Zezwala na serializacji i dostęp do informacji o klasie czasu wykonywania (muszą być używane w implementacji klasy).|
 |[RUNTIME_CLASS](#runtime_class)|Zwraca `CRuntimeClass` strukturę, która odnosi się do nazwanej klasie.|
 
-
 OLE wymaga często dynamiczne tworzenie obiektów w czasie wykonywania. Aplikacja serwera OLE musi być na przykład, możesz tworzyć elementy OLE dynamicznie w odpowiedzi na żądanie od klienta. Podobnie serwer automatyzacji musi mieć możliwość tworzenia elementów w odpowiedzi na żądania od klientów automatyzacji.
 
 Bibliotekę Microsoft Foundation Class zapewnia dwa makra określonych OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Dynamiczne tworzenie obiektów OLE
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Określa, czy biblioteki formantów wspólnych implementuje określony interfejs
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Procedura*<br/>
@@ -112,6 +103,7 @@ Określa, czy biblioteki formantów wspólnych implementuje określony interfejs
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Procedura*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Izolacja biblioteki formantów wspólnych MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ Zobacz przykład [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Nagłówek:** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Deklaruje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontrolki.
@@ -207,6 +196,7 @@ Deklaruje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontro
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
@@ -224,7 +214,6 @@ Nazwa klasy kontrolki.
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Deklaruje, że formant OLE zawiera listę stron właściwości, aby wyświetlić jego właściwości.
@@ -234,6 +223,7 @@ Deklaruje, że formant OLE zawiera listę stron właściwości, aby wyświetlić
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
@@ -408,7 +399,6 @@ Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowego dla obiektu
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [Identyfikator CLSID klucza](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementuje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontrolki.
@@ -418,6 +408,7 @@ Implementuje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kon
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>

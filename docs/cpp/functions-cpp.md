@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053802"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -101,7 +101,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
     ```
 
-     Aby uzyskać więcej informacji, zobacz [Program i połączenie](../cpp/program-and-linkage-cpp.md).
+   Aby uzyskać więcej informacji, zobacz [Program i połączenie](../cpp/program-and-linkage-cpp.md).
 
 1. **wbudowane**, które nakazuje kompilatorowi Zastąp każde wywołanie funkcji sam kod funkcji. wbudowanie umożliwia poprawę wydajności w scenariuszach, gdzie funkcja wykonuje szybko i jest wywoływany kilkakrotnie w wydajność krytycznych części kodu.
 
@@ -112,7 +112,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
     }
     ```
 
-     Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](../cpp/inline-functions-cpp.md).
+   Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](../cpp/inline-functions-cpp.md).
 
 1. A `noexcept` wyrażenie, które określa, czy funkcja może zgłosić wyjątek. W poniższym przykładzie funkcja nie zgłasza wyjątku Jeśli `is_pod` wyrażenie daje w wyniku **true**.
 
@@ -123,7 +123,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Aby uzyskać więcej informacji, zobacz [noexcept](../cpp/noexcept-cpp.md).
+   Aby uzyskać więcej informacji, zobacz [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Tylko w przypadku funkcji elementów członkowskich) Kwalifikatory cv, które określają, czy funkcja jest **const** lub **volatile**.
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Gdy **automatycznie** jest używany w połączeniu z końcowym typem zwracanym, po prostu służy jako symbol zastępczy dla dowolnego wyrażenia decltype tworzy i sam nie powoduje wykonania wnioskowanie typu.
-
 
 ## <a name="function-local-variables"></a>Zmienne lokalne — funkcja
 

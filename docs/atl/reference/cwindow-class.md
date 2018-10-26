@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054674"
 ---
 # <a name="cwindow-class"></a>Klasa CWindow
 
@@ -499,7 +499,7 @@ Zobacz [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutton) 
 Sprawdza, czy przycisk radiowy określony.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ Inicjuje [m_hWnd](#m_hwnd) członka do *hWnd*, która domyślnie ma wartość NU
 Aktualizuje określonej struktury wiele okien pozycji dla określonego okna.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ HWND skojarzone z `CWindow` obiektu.
 Wypełnia pole listy z nazwami wszystkich plików zgodnych z określonej ścieżki lub nazwy pliku.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ Zobacz [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) w Windo
 Wypełnia pole kombi przy użyciu nazwy wszystkich plików zgodnych z określonej ścieżki lub nazwy pliku.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ Zobacz [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlistco
 Pobiera bieżące zaznaczenie w polu listy.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ Zobacz [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectexa)
 Pobiera bieżące zaznaczenie z pola kombi.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ Uchwyt okna elementu podrzędnego.
 Wywołaj tę funkcję, aby uzyskać wskaźnik do interfejsu z formantu ActiveX, który jest hostowany przez kontrolki złożonej lub hosting kontrolki okna dialogowego.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ Zobacz [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) w Wi
 Pobiera wskaźnik do interfejsu do formantu biblioteki ATL, hostingu kontenera.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ Zobacz [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) w Window
 Tłumaczy tekst kontrolki do liczby całkowitej.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ Zobacz [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint) w 
 Pobiera tekst kontrolki.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ Zobacz [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) w Wi
 Pobiera zakres paska przewijania.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ Zobacz [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) w Windows 
 Wyróżnia lub usuwa zaznaczenie elementu menu najwyższego poziomu.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 Konwertuje zestaw punktów z okna przestrzeni współrzędnych współrzędnych innego okna.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](http
 Wyświetla okno komunikatu.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ Zobacz [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) w Window
 Style okna modyfikuje `CWindow` obiektu.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ Aby zmodyfikować w oknie, użytkownika rozszerzone style, wywołania [ModifySty
 Modyfikuje rozszerzone Style okna z `CWindow` obiektu.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ Aby zmodyfikować systemu windows za pomocą regularnego okna style, wywołania 
 Zmienia rozmiar i położenie okna.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 Umieszczenie komunikatu w kolejce komunikatów skojarzony wątek, który utworzył okna.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 Aktualizuje określony prostokąt lub regionu, w obszarze klienta.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ Zobacz [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) w Windows 
 Zmienia rozmiar okna rozmiaru obszaru określonego klienta.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](http
 Przewija obszaru określonego klienta.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ Zobacz [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) w Wi
 Przewija obszaru określonego klienta oraz dodatkowe funkcje.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ Zobacz [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) 
 Wysyła komunikat do formantu.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ Zobacz [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgitemm
 Wysyła wiadomość do okna i nie może zwracać do momentu procedurę okna przetworzeniu komunikatu.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ Zobacz [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950
 Wysyła określoną wiadomość do wszystkich bezpośrednie elementy podrzędne `CWindow` obiektu.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ Jeśli *bDeep* ma wartość PRAWDA, dodatkowo wysłania komunikatu do wszystkich
 Wysyła wiadomość do okna.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ W przypadku powodzenia poprzedniej identyfikator oknie. w przeciwnym razie 0.
 Zmiany tekstu kontrolki na ciąg reprezentujący wartość całkowitą.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ Wywołaj `SetRedraw` do umożliwienia wprowadzania zmian do narysowania lub unie
 Ustawia parametry paska przewijania.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ Zobacz [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo) w 
 Zmienia położenie suwaka.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ Zobacz [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) w Wi
 Zmienia zakres paska przewijania.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ Zobacz [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrange) 
 Tworzy zdarzenie czasomierza.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ Zobacz [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/m
 Ustawia rozmiar, położenie i porządek osi Z.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ Zobacz [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) w Wind
 Uruchamia Windows pomocy.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

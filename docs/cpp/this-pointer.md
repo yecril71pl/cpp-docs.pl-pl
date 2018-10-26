@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070590"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077338"
 ---
 # <a name="this-pointer"></a>this — wskaźnik
 
@@ -32,7 +32,7 @@ ms.locfileid: "46070590"
 ## <a name="syntax"></a>Składnia
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 Typ **to** w składowej funkcji opisano przy użyciu następującej składni, gdzie *cv kwalifikator listy* jest określana na podstawie deklaratora funkcji elementu członkowskiego i może być **const**lub **volatile** (lub obie), a *typu klasy* jest nazwa klasy:
 
-*Typ klasy [cv kwalifikator list]* **\* stała tym**
+*Typ klasy [cv kwalifikator list]* **&#42; stała tym**
 
 Innymi słowy **to** jest zawsze wskaźnika elementu const; nie może zostać przypisany.  **Const** lub **volatile** kwalifikatory użyty w deklaracji funkcji elementu członkowskiego dotyczy wskazywany przez wystąpienie klasy **to** w zakresie tej funkcji.
 

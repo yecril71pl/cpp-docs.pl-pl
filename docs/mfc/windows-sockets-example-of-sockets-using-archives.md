@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062232"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
 
@@ -40,11 +40,11 @@ Wysyłanie, aby uzyskać przykład funkcja w pętli określoną liczbę razy, za
 
 - "header", który określa rodzaj danych (w tym przypadku wartość *bDane wartości* zmienną i będą wysyłane liczbę kopii).
 
-     Oba elementy są generowane losowo w tym przykładzie.
+   Oba elementy są generowane losowo w tym przykładzie.
 
 - Określona liczba kopii danych.
 
-     Wewnętrzny **dla** pętla wysyła *bDane wartości* określoną liczbę razy.
+   Wewnętrzny **dla** pętla wysyła *bDane wartości* określoną liczbę razy.
 
 - Ciąg o nazwie *strText* wyświetlającą odbiornika z użytkownikiem.
 

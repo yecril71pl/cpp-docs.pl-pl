@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069155"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debugowanie i funkcje globalne raportowanie błędów
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlHresultFromLastError` wywołania `GetLastError` uzyskać ostatnim błędem i zwraca błąd podczas konwertowania go na błąd HRESULT, użycie makra HRESULT_FROM_WIN32.  
+`AtlHresultFromLastError` wywołania `GetLastError` uzyskać ostatnim błędem i zwraca błąd podczas konwertowania go na błąd HRESULT, użycie makra HRESULT_FROM_WIN32.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcomcli.h  
+**Nagłówek:** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ Wartość błędu do przekonwertowania.
 Konwertuje kod błędu Win32 na HRESULT, użycie makra HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Zamiast używania `HRESULT_FROM_WIN32(GetLastError())`, należy użyć funkcji [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Zamiast używania `HRESULT_FROM_WIN32(GetLastError())`, należy użyć funkcji [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcomcli.h  
+**Nagłówek:** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ Ciąg *lpszDesc* służy jako opis błędu. Gdy klient odbierze *parametrem typu
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Nie używaj `AtlReportError` catch — Obsługa w języku C++. Zastąpienia, niektóre z tych funkcji korzystanie z makr konwersji ciągu ATL, który z kolei użyj `_alloca` funkcji wewnętrznie. Za pomocą `AtlReportError` w bloku catch języka C++ program obsługi może spowodować wyjątki obsługi catch języka C++.  
+>  Nie używaj `AtlReportError` catch — Obsługa w języku C++. Zastąpienia, niektóre z tych funkcji korzystanie z makr konwersji ciągu ATL, który z kolei użyj `_alloca` funkcji wewnętrznie. Za pomocą `AtlReportError` w bloku catch języka C++ program obsługi może spowodować wyjątki obsługi catch języka C++.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -203,11 +203,11 @@ W przypadku projektów ATL jest możliwe podanie własnej implementacji tej funk
 
 ### <a name="example"></a>Przykład
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldef.h  
+**Nagłówek:** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ Jeśli _ATL_NO_EXCEPTIONS nie jest zdefiniowana w projekcie MFC, ta funkcja zgł
 
 Jeśli _ATL_NO_EXCEPTIONS nie jest zdefiniowana w projekcie ATL, funkcja zgłasza [CAtlException](../../atl/reference/catlexception-class.md).
 
-Jeśli nie zdefiniowano _ATL_NO_EXCEPTIONS, funkcja powoduje błąd potwierdzenia zamiast zgłaszać wyjątek.  
+Jeśli nie zdefiniowano _ATL_NO_EXCEPTIONS, funkcja powoduje błąd potwierdzenia zamiast zgłaszać wyjątek.
 
 ## <a name="requirements"></a>Wymagania
 

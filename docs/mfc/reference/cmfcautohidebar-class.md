@@ -1,7 +1,7 @@
 ---
 title: Klasa CMFCAutoHideBar | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0a029bb2e2cd231d4a1c19bfcc5c7981cfd7f39b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821465"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054972"
 ---
 # <a name="cmfcautohidebar-class"></a>Klasa CMFCAutoHideBar
 
@@ -80,7 +80,7 @@ class CMFCAutoHideBar : public CPane
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||
-|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Przesłania `CPane::AllowShowOnPaneMenu`.)|
+|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Przesłania `CPane::AllowShowOnPaneMenu`).|
 |[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CMFCAutoHideBar::Create](#create)|Tworzy pasek sterowania i dołącza je do [CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania [CPane::Create](../../mfc/reference/cpane-class.md#create).)|
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||
@@ -184,8 +184,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -282,7 +283,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 

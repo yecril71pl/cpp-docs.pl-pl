@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062564"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Cstring — operacje odnoszące się do ciągów stylu C
 
@@ -54,9 +54,9 @@ A [CString](../atl-mfc-shared/using-cstring.md) obiekt zawiera dane ciągu znak�
 
 Aby użyć `CString` obiektu jako ciąg stylu C, wykonaj rzutowanie obiektu LPCTSTR. W poniższym przykładzie `CString` zwraca wskaźnik do tylko do odczytu stylu C zakończony zerem ciągu. `strcpy` Funkcja umieszcza kopię ciąg stylu C w zmiennej `myString`.
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 

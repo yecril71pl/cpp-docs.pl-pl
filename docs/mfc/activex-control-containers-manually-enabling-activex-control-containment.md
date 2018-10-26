@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 010e5f58f1d72a33cbab44438f085b52e8fe4be8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f684bbb287213ad0cbe6d490c1bef869f5ffc9db
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077780"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX
 
@@ -37,12 +37,12 @@ Aby zapewnić obsługę formantów ActiveX, należy dodać jeden wiersz kodu do 
 
 - Modyfikowanie w głównym oknie dialogowym `InitInstance` — funkcja (znajduje się w KONTENERZE. CPP) przez Kreatora aplikacji MFC, wywołuje element [afxenablecontrolcontainer —](reference/ole-initialization.md#afxenablecontrolcontainer), jak w poniższym przykładzie:
 
-     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+   [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
 
 - Dodaj następujący kod do STDAFX projektu. Plik nagłówka H:
 
-     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+   [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
 
 Po wykonaniu tych czynności ponownie skompiluj projekt, klikając **kompilacji** na **kompilacji** menu.
 

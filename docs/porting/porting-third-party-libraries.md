@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074998"
 ---
 # <a name="porting-third-party-libraries"></a>Przenoszenie bibliotek innych firm
 
-Po uaktualnieniu projektu do bieżącej wersji programu Visual C++, należy uaktualnić wszystkie biblioteki, które używa projekt, tak, aby biblioteki, a projekt są tworzone za pomocą tę samą wersję i wersja kompilatora. (Aby uzyskać więcej informacji, zobacz [omówienie potencjalnych problemów z uaktualnieniem](overview-of-potential-upgrade-issues-visual-cpp.md)). 
+Po uaktualnieniu projektu do bieżącej wersji programu Visual C++, należy uaktualnić wszystkie biblioteki, które używa projekt, tak, aby biblioteki, a projekt są tworzone za pomocą tę samą wersję i wersja kompilatora. (Aby uzyskać więcej informacji, zobacz [omówienie potencjalnych problemów z uaktualnieniem](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
 ## <a name="introducing-vcpkg"></a>Wprowadzenie do vcpkg
 
@@ -35,7 +35,7 @@ W przeszłości Znajdowanie i uaktualnianie 3rd bibliotek innych firm był czasa
 Jeśli biblioteka nie jest obecny w **vcpkg** katalogu, można otworzyć zgłoszenie na [repozytorium GitHub](https://github.com/Microsoft/vcpkg/issues) gdzie społeczności i zespołu Visual C++ może go wyświetlać i potencjalnie tworzenia pliku port dla tej biblioteki.
 
 Aby uzyskać zastrzeżonej 3rd bibliotek innych firm (inne niż Otwórz źródło) firma Microsoft zaleca, skontaktuj się z dostawcą biblioteki. Jednak Dbamy o dowolnym własności libs jest używany i nie można zablokować, Daj nam znać, który z nich, na których polegasz (skontaktuj się z nami pod adresem vcupgrade@microsoft.com).
-  
-## <a name="see-also"></a>Zobacz też  
+
+## <a name="see-also"></a>Zobacz też
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-porting-and-upgrading-guide.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 150179fc0fd97450ba805d6957f5282bfaf8345c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071261"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -95,7 +95,6 @@ Następujące reguły mają zastosowanie do **constexpr** funkcji w programie Vi
 - Może ona zawierać deklaracje zmiennych lokalnych, ale zmienna musi zostać zainicjowany, musi być typem literału i nie może być statyczne lub lokalnej wątku. Zmienna zadeklarowana lokalnie nie musi być wartością stałą i może mutować.
 
 - Funkcja constexpr niestatycznego elementu członkowskiego nie musi być niejawnie const.
-
 
 ```cpp
 constexpr float exp(float x, int n)

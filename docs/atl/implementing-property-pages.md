@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062408"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
@@ -43,11 +43,11 @@ Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
 
 - Opcjonalnie zastąpić `IPropertyPageImpl` metod, korzystając z poniższych wskazówek.
 
-   |Metoda IPropertyPageImpl|Zastąp, jeśli chcesz...|Uwagi|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Wykonaj podstawowe wykonuje testów liczbę obiektów, które były przekazywane do strony swojego i interfejsy, które obsługują.|Wykonaj swój kod przed wywołaniem implementacji klasy podstawowej. Jeśli obiekty ustawiania nie odpowiada Twoim oczekiwaniom, wywołanie powinno nie tak szybko, jak to możliwe.|  
-   |[Aktywuj](../atl/reference/ipropertypageimpl-class.md#activate)|Zainicjuj na stronie interfejsu użytkownika (na przykład ustawić formanty okna dialogowego za pomocą bieżące wartości właściwości z obiektów, dynamicznie utworzyć formanty lub wykonać inne inicjalizacje).|Wywołania implementacji klasy podstawowej zanim kod tak, aby klasa bazowa ma możliwość tworzenia okna dialogowego i wszystkich kontrolek, przed podjęciem próby je zaktualizować.|  
-   |[Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply)|Sprawdź poprawność ustawień właściwości i zaktualizować obiektów.|Nie ma potrzeby wywoływały implementację klasy podstawowej, ponieważ nie robi nic, oprócz śledzenia wywołania.|  
+   |Metoda IPropertyPageImpl|Zastąp, jeśli chcesz...|Uwagi|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Wykonaj podstawowe wykonuje testów liczbę obiektów, które były przekazywane do strony swojego i interfejsy, które obsługują.|Wykonaj swój kod przed wywołaniem implementacji klasy podstawowej. Jeśli obiekty ustawiania nie odpowiada Twoim oczekiwaniom, wywołanie powinno nie tak szybko, jak to możliwe.|
+   |[Aktywuj](../atl/reference/ipropertypageimpl-class.md#activate)|Zainicjuj na stronie interfejsu użytkownika (na przykład ustawić formanty okna dialogowego za pomocą bieżące wartości właściwości z obiektów, dynamicznie utworzyć formanty lub wykonać inne inicjalizacje).|Wywołania implementacji klasy podstawowej zanim kod tak, aby klasa bazowa ma możliwość tworzenia okna dialogowego i wszystkich kontrolek, przed podjęciem próby je zaktualizować.|
+   |[Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply)|Sprawdź poprawność ustawień właściwości i zaktualizować obiektów.|Nie ma potrzeby wywoływały implementację klasy podstawowej, ponieważ nie robi nic, oprócz śledzenia wywołania.|
    |[Dezaktywuj](../atl/reference/ipropertypageimpl-class.md#deactivate)|Wyczyść elementy związane z okna.|Implementacja klasy bazowej niszczy okno dialogowe reprezentujący stronę właściwości. Jeśli musisz wyczyścić przed jest niszczony, okno dialogowe, należy dodać kod przed wywołaniem klasy bazowej.|
 
 Przykładem implementacji strony właściwości, można zobaczyć [przykład: Implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).

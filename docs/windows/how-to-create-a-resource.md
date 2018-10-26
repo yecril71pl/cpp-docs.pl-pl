@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071975"
 ---
 # <a name="how-to-create-a-resource"></a>Porady: tworzenie zasobu
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438642"
 
 1. Fokus jest ustawiony w pliku .rc w [widok zasobów](../windows/resource-view-window.md), kliknij przycisk **Edytuj** menu i wybierz polecenie **Dodaj zasób** (lub kliknij prawym przyciskiem myszy plik .rc w **widok zasobów** i wybierz polecenie **Dodaj zasób** z menu skrótów).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
 2. W [Dodaj zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz typ zasobu, które chcesz dodać do projektu.
