@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052567"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definiowanie obsługi komunikatów dla komunikatów odbitych
 
@@ -53,7 +53,7 @@ Aby utworzyć [formantu ActiveX](../../mfc/activex-controls-on-the-internet.md) 
 
 1. Kliknij przycisk sugerowanej nazwy, aby zaakceptować. Program obsługi jest dodawany do projektu.
 
-     W prawej kolumnie w oknie komunikaty odbite są wyświetlane nazwy programów obsługi komunikatów, które zostały dodane.
+   W prawej kolumnie w oknie komunikaty odbite są wyświetlane nazwy programów obsługi komunikatów, które zostały dodane.
 
 9. Aby edytować lub usunąć program obsługi komunikatów, powtórz kroki od 4 do 7. Kliknij komórkę zawierającą nazwę programu obsługi w taki sposób, aby edytować lub usunąć i kliknij odpowiednie zadanie.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053048"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternatywy dla architektury dokument/widok
 
@@ -56,7 +56,7 @@ Zdecydowanie zaleca się użyć Kreatora aplikacji MFC do tworzenia aplikacji be
 
 - Traktuj dokumentu jako polecenia nieużywane i zaimplementować kod zarządzania danych w klasie widoku, zgodnie z sugestią powyżej. Obciążenie dla dokumentu jest stosunkowo niska. Pojedynczy [CDocument](../mfc/reference/cdocument-class.md) obiektu wiąże się z małej ilości obciążenie przez siebie oraz małe obciążenie związane z `CDocument`firmy klas bazowych, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) i [CObject](../mfc/reference/cobject-class.md). Zarówno klasy te ostatnie są niewielkie.
 
-     Zadeklarowane w `CDocument`:
+   Zadeklarowane w `CDocument`:
 
    - Dwa `CString` obiektów.
 
@@ -66,7 +66,7 @@ Zdecydowanie zaleca się użyć Kreatora aplikacji MFC do tworzenia aplikacji be
 
    - Jeden `CPtrList` obiekt, który zawiera listę widoków dokumentu.
 
-     Ponadto dokument wymaga ilość czasu na tworzenie obiektu dokumentu, jej obiektów widoku, okno ramek i obiektu szablonu dokumentu.
+   Ponadto dokument wymaga ilość czasu na tworzenie obiektu dokumentu, jej obiektów widoku, okno ramek i obiektu szablonu dokumentu.
 
 - Dokumentu i widok należy traktować jako appendages nieużywane. Umieść Twoje zarządzania danymi i kod rysowania w okno ramowe zamiast widoku. To podejście jest bliżej modelu programowania w języku C.
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052816"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
 
@@ -57,9 +57,9 @@ Najprostszy i najbardziej zalecany sposób tworzenia aplikacji kontenera dokumen
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting`, który jest domyślne przygotowanie drukowania.
+   `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting`, który jest domyślne przygotowanie drukowania.
 
-     Zawieranie dokumentów aktywnych zapewnia udoskonalony schemat drukowania:
+   Zawieranie dokumentów aktywnych zapewnia udoskonalony schemat drukowania:
 
    - Można wywołać aktywnego dokumentu za pośrednictwem jego `IPrint` interfejs i poinformuj go, aby wydrukował sam siebie. To różni się od poprzedniej zawierania OLE, kontener było renderować obraz zamkniętego elementu do drukarki `CDC` obiektu.
 
@@ -67,7 +67,7 @@ Najprostszy i najbardziej zalecany sposób tworzenia aplikacji kontenera dokumen
 
    - W przypadku niepowodzenia należy własne renderowania elementu.
 
-     Statyczne funkcje Członkowskie `COleDocObjectItem::OnPrint` i `COleDocObjectItem::OnPreparePrinting`, zaimplementowanego w poprzednim kodzie obsługi tego udoskonalony schemat drukowania.
+   Statyczne funkcje Członkowskie `COleDocObjectItem::OnPrint` i `COleDocObjectItem::OnPreparePrinting`, zaimplementowanego w poprzednim kodzie obsługi tego udoskonalony schemat drukowania.
 
 11. Dodaj własny implementacji i skompilować aplikację.
 

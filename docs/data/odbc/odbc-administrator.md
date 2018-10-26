@@ -22,46 +22,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0a0c0cc8817d40b325ceb7a96769dfe971b60c8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c00527b5378805e0aa81c74c23175edd39bd144
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052580"
 ---
 # <a name="odbc-administrator"></a>Administrator ODBC
 
-ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/data-source-odbc.md) dostępne lokalnie lub w sieci. Kreatory korzystają informacje podane przez administratora ODBC do pisania kodu w aplikacjach, które łączy się użytkowników ze źródłami danych.  
-  
-Aby skonfigurować źródła danych ODBC do użytku z klas MFC ODBC lub klas MFC obiekt DAO (Data Access), najpierw musisz zarejestrować i konfigurowanie źródła danych. Dodawanie i usuwanie źródeł danych, należy użyć konta administratora ODBC. W zależności od sterownik ODBC można również utworzyć nowe źródła danych.  
-  
-ODBC Administrator jest instalowana podczas instalacji. Jeśli została wybrana opcja **niestandardowe** instalacji i nie wybrano wszystkie sterowniki ODBC w **opcje bazy danych** okno dialogowe, musisz uruchomić ponownie Instalatora, aby zainstalować wymagane pliki.  
-  
-Podczas instalacji możesz wybrać sterowników ODBC, który chcesz zainstalować. Później można zainstalować dodatkowe sterowniki, które są dostarczane z programem Visual C++ przy użyciu Instalatora programu Visual C++.  
-  
-Jeśli chcesz zainstalować sterowniki ODBC, które nie są dostarczane z programem Visual C++, należy uruchomić program instalacyjny, który towarzyszy sterownika.  
-  
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Aby zainstalować sterowniki ODBC, które są dostarczane z programem Visual C++  
-  
-1. Uruchom Instalatora z dysku CD dystrybucji Visual C++.  
-  
-     Otwieranie wydaje się okno dialogowe programu instalacyjnego.  
-  
-1. Kliknij przycisk **dalej** dotyczące każdego okna dialogowego aż **opcje instalacji** okno dialogowe. Wybierz **niestandardowe**, a następnie kliknij przycisk **dalej**.  
-  
-1. Usuń zaznaczenie wszystkich pól wyboru w **Instalator programu Microsoft Visual C++** okno dialogowe z wyjątkiem **opcje bazy danych** pole wyboru, a następnie kliknij przycisk **szczegóły** do wyświetlenia **Opcje bazy danych** okno dialogowe.  
-  
-1. Wyczyść **Microsoft Data Access Objects** pole wyboru, wybierz opcję **sterowniki ODBC firmy Microsoft** pole wyboru, a następnie kliknij przycisk **szczegóły**.  
-  
-     **Sterowniki ODBC firmy Microsoft** pojawi się okno dialogowe.  
-  
-1. Wybierz sterowniki, należy zainstalować, a następnie kliknij przycisk **OK** dwa razy.  
-  
-1. Kliknij przycisk **dalej** w pozostałych oknach dialogowych, aby rozpocząć instalację. Instalator powiadamia o zakończeniu instalacji.  
-  
-Jeśli sterowniki zostały zainstalowane, można skonfigurować źródło danych przy użyciu Administratora ODBC. Ikona ODBC znajdzie się w Panelu sterowania.  
-  
-## <a name="see-also"></a>Zobacz też  
+ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/data-source-odbc.md) dostępne lokalnie lub w sieci. Kreatory korzystają informacje podane przez administratora ODBC do pisania kodu w aplikacjach, które łączy się użytkowników ze źródłami danych.
+
+Aby skonfigurować źródła danych ODBC do użytku z klas MFC ODBC lub klas MFC obiekt DAO (Data Access), najpierw musisz zarejestrować i konfigurowanie źródła danych. Dodawanie i usuwanie źródeł danych, należy użyć konta administratora ODBC. W zależności od sterownik ODBC można również utworzyć nowe źródła danych.
+
+ODBC Administrator jest instalowana podczas instalacji. Jeśli została wybrana opcja **niestandardowe** instalacji i nie wybrano wszystkie sterowniki ODBC w **opcje bazy danych** okno dialogowe, musisz uruchomić ponownie Instalatora, aby zainstalować wymagane pliki.
+
+Podczas instalacji możesz wybrać sterowników ODBC, który chcesz zainstalować. Później można zainstalować dodatkowe sterowniki, które są dostarczane z programem Visual C++ przy użyciu Instalatora programu Visual C++.
+
+Jeśli chcesz zainstalować sterowniki ODBC, które nie są dostarczane z programem Visual C++, należy uruchomić program instalacyjny, który towarzyszy sterownika.
+
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Aby zainstalować sterowniki ODBC, które są dostarczane z programem Visual C++
+
+1. Uruchom Instalatora z dysku CD dystrybucji Visual C++.
+
+   Otwieranie wydaje się okno dialogowe programu instalacyjnego.
+
+1. Kliknij przycisk **dalej** dotyczące każdego okna dialogowego aż **opcje instalacji** okno dialogowe. Wybierz **niestandardowe**, a następnie kliknij przycisk **dalej**.
+
+1. Usuń zaznaczenie wszystkich pól wyboru w **Instalator programu Microsoft Visual C++** okno dialogowe z wyjątkiem **opcje bazy danych** pole wyboru, a następnie kliknij przycisk **szczegóły** do wyświetlenia **Opcje bazy danych** okno dialogowe.
+
+1. Wyczyść **Microsoft Data Access Objects** pole wyboru, wybierz opcję **sterowniki ODBC firmy Microsoft** pole wyboru, a następnie kliknij przycisk **szczegóły**.
+
+   **Sterowniki ODBC firmy Microsoft** pojawi się okno dialogowe.
+
+1. Wybierz sterowniki, należy zainstalować, a następnie kliknij przycisk **OK** dwa razy.
+
+1. Kliknij przycisk **dalej** w pozostałych oknach dialogowych, aby rozpocząć instalację. Instalator powiadamia o zakończeniu instalacji.
+
+Jeśli sterowniki zostały zainstalowane, można skonfigurować źródło danych przy użyciu Administratora ODBC. Ikona ODBC znajdzie się w Panelu sterowania.
+
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)
