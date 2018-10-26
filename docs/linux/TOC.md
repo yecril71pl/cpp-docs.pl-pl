@@ -1,7 +1,7 @@
 # [Pobieranie, instalowanie i konfigurowanie obciążenia Projektowanie systemu Linux](download-install-and-setup-the-linux-development-workload.md)
-# [Tworzenie nowego projektu systemu Linux](create-a-new-linux-project.md)
 # [Konfigurowanie projektu systemu Linux](configure-a-linux-project.md)
 # [Konfigurowanie projektu CMake systemu Linux](cmake-linux-project.md)
+# [Tworzenie nowego projektu systemu Linux](create-a-new-linux-project.md)
 # [Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](connect-to-your-remote-linux-computer.md)
 # [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)
 # [Dokumentacja strony właściwości projektu systemu Linux](prop-pages-linux.md)

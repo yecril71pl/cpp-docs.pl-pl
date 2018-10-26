@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake w programie Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235103"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143734"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake w programie Visual C++
 
@@ -89,7 +89,7 @@ Nie wszystkie elementy w pamięci podręcznej jest importowany.  Właściwości,
 Aby skompilować projekt CMake, masz następujące opcje:
 
 1. Wybierz element docelowy w **debugowania** listy rozwijanej i naciśnij klawisz **F5**, lub kliknij przycisk **Uruchom** przycisku (zielony trójkąt). Automatycznie kompilacje projektu po pierwsze, podobnie jak rozwiązanie programu Visual Studio.
-1. Kliknij prawym przyciskiem myszy pliku CMakeLists.txt i wybierz pozycję **kompilacji** z menu kontekstowego. Jeśli masz wiele elementów docelowych w strukturze folderów, użytkownik może tworzyć wszystkie lub tylko jeden określony element docelowy, lub
+1. Kliknij prawym przyciskiem myszy pliku CMakeLists.txt i wybierz pozycję **kompilacji** z menu kontekstowego. Jeśli masz wiele elementów docelowych w strukturze folderów, można tworzyć wszystkie lub tylko jeden określony element docelowy.
 1. W menu głównym wybierz **kompilacji | Tworzenie rozwiązania** (**F7** lub **Ctrl + Shift + B**). Upewnij się, czy docelowych narzędzia CMake została już wybrana w **element startowy** liście rozwijanej **ogólne** paska narzędzi.
 
 ![Polecenia menu kompilacji CMake](media/cmake-build-menu.png "menu poleceń kompilacji CMake")
@@ -215,7 +215,7 @@ Aby określić generator programu Visual Studio, otwórz pliku CMakeSettings.jso
 
 1. **wybrany element buildRoot**: mapuje **-DCMAKE_BINARY_DIR** Przełącz i określa, w którym zostanie utworzona pamięci podręcznej narzędzia CMake. Jeśli folder nie istnieje, zostanie utworzony.
 
-1. **zmienne**: zawiera pary nazwa wartość, zmienne narzędzia CMake, które będą przekazywane jako **-D**_nazwa_**=**_wartość_ do narzędzia CMake. Instrukcje kompilacji projektu narzędzia CMake określić dodanie wszelkie zmienne bezpośrednio do pliku pamięci podręcznej narzędzia CMake, zaleca się dodanie ich w tym miejscu zamiast tego. Poniższy przykład pokazuje, jak określić pary nazwa wartość:
+1. **zmienne**: zawiera pary nazwa wartość, zmienne narzędzia CMake, które będą przekazywane jako **-D** *_nazwa_=_wartość_* do narzędzia CMake. Instrukcje kompilacji projektu narzędzia CMake określić dodanie wszelkie zmienne bezpośrednio do pliku pamięci podręcznej narzędzia CMake, zaleca się dodanie ich w tym miejscu zamiast tego. Poniższy przykład pokazuje, jak określić pary nazwa wartość:
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json obsługuje teraz dziedziczonych środowisk. Ta funkcja umożl
 
 W powyższym przykładzie jest taka sama jak działa **wiersz polecenia programisty dla programu VS 2017** z **-arch = amd64-host_arch = amd64** argumentów.
 
-W poniższej tabeli przedstawiono domyślne wartości i ich odpowiedniki wiersza polecenia:
+W poniższej tabeli przedstawiono wartości domyślne:
 
 |Nazwa kontekstu|Opis|
 |-----------|-----------------|

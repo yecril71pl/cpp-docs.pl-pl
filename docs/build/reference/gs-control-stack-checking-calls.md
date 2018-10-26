@@ -1,7 +1,7 @@
 ---
 title: -Gs (Kontroluj wywołania sprawdzania stosu) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/25/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,52 +22,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f6b2d31552127807af6fa731574b04770b2a7fe
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719280"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143676"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Kontroluj wywołania sprawdzania stosu)
 
-Kontroluje sondy stosu.
+Określa próg sondy stosu.
 
 ## <a name="syntax"></a>Składnia
 
-```
-/Gs[size]
-```
+> **/ GS**[*rozmiar*]
 
 ## <a name="arguments"></a>Argumenty
 
 *Rozmiar*<br/>
-(Opcjonalnie) Liczba bajtów, które zmienne lokalne mogą zajmować przed sondy stosu jest inicjowana. Jeśli **/GS** opcja jest określona bez `size` argument, jest taka sama, jak określenie **/Gs0**,
+(Opcjonalnie) Liczba bajtów, które zmienne lokalne mogą zajmować przed sondy stosu jest inicjowana. Nie może być spacji między **/GS** i *rozmiar*.
 
 ## <a name="remarks"></a>Uwagi
 
-Sondy stosu jest sekwencją kodu, który kompilator wstawia w każdym wywołaniu funkcji. Po zainicjowaniu sondy stosu osiągnie benignly do pamięci przez ilość miejsca wymaganego do przechowywania zmiennych lokalnych funkcji.
+A *sondy stosu* jest sekwencją kod, który kompilator wstawia na początku wywołania funkcji. Po zainicjowaniu sondy stosu osiągnie benignly do pamięci przez ilość miejsca wymaganego do przechowywania zmiennych lokalnych funkcji. To powoduje, że przezroczysty strony w pamięci stosu dodatkowe, jeśli jest to wymagane, przed uruchomieniem pozostałych funkcji systemu operacyjnego.
 
-Jeśli funkcja wymaga więcej niż `size` bajtów stosu miejsca dla zmiennych lokalnych, jego sondy stosu jest inicjowana. Domyślnie kompilator generuje kod, który inicjuje sondy stosu, gdy funkcja wymaga więcej niż jedną stronę obszar stosu. Jest to równoważne opcji kompilatora **/Gs4096** x86, x64 i platform ARM. Ta wartość umożliwia aplikacji i Windows, Menedżer pamięci zwiększyć ilość pamięci przydzielonej do stosu program dynamicznie w czasie wykonywania.
+Domyślnie kompilator generuje kod, który inicjuje sondy stosu, gdy funkcja wymaga więcej niż jedną stronę obszar stosu. Jest to równoważne opcji kompilatora **/Gs4096** dla x86 x 64, ARM, ARM64 platformy i. Ta wartość umożliwia aplikacji i Windows, Menedżer pamięci zwiększyć ilość pamięci przydzielonej do stosu program dynamicznie w czasie wykonywania.
 
 > [!NOTE]
->  Wartość domyślna **/Gs4096** umożliwia stosu program aplikacji dla Windows poprawnie rośnie w czasie wykonywania. Zaleca się, że należy zmieniać wartością domyślną, chyba że wiesz, że dokładnie Dlaczego trzeba go zmienić.
+> Wartość domyślna **/Gs4096** umożliwia stosu program aplikacji dla Windows poprawnie rośnie w czasie wykonywania. Zaleca się, że należy zmieniać wartością domyślną, chyba że wiesz, że dokładnie Dlaczego trzeba go zmienić.
 
-Niektóre programy — na przykład sterowniki urządzeń wirtualnych — ten mechanizm wzrostu stosu domyślnego nie jest wymagana. W takich przypadkach sondy stosu nie są konieczne, i można zatrzymać kompilator generuje je, ustawiając `size` wartości, który jest większy niż dowolnej funkcji, będzie wymagać dla zmiennej lokalnej w pamięci masowej. Nie może być spacji między **/GS** i `size`.
+Niektóre programy — na przykład sterowniki urządzeń wirtualnych — ten mechanizm wzrostu stosu domyślnego nie jest wymagana. W takich przypadkach sondy stosu nie są konieczne, i można zatrzymać kompilator generuje je, ustawiając *rozmiar* wartości, który jest większy niż dowolnej funkcji, będzie wymagać dla zmiennej lokalnej w pamięci masowej.
 
-**/ Gs0** uaktywnia sondy stosu za każde wywołanie funkcji, wymagająca magazynu dla zmiennych lokalnych. Może to mieć negatywny wpływ na wydajność.
+**/ Gs0** inicjuje stosu sondy za każde wywołanie funkcji, wymagająca magazynu dla zmiennych lokalnych. Może to mieć negatywny wpływ na wydajność.
 
-Możesz włączyć sondy stosu lub wyłączyć za pomocą [check_stack](../../preprocessor/check-stack.md). **/ GS** i `check_stack` pragma nie mają wpływu na standardowe procedury biblioteki C; wpływają na funkcje kompilacji.
+X64 jest przeznaczony dla, jeśli **/GS** opcja jest określona bez *rozmiar* argument, jest taka sama jak **/Gs0**. Jeśli *rozmiar* argument ma wartość 1 do 9, ostrzeżenie D9014 jest emitowane i efekt jest taki sam jak określanie **/Gs0**.
+
+Dla x86, ARM, ARM64 cele i **/GS** opcji bez *rozmiar* argument jest taka sama jak **/Gs4096**. Jeśli *rozmiar* argument ma wartość 1 do 9, ostrzeżenie D9014 jest emitowane i efekt jest taki sam jak określanie **/Gs4096**.
+
+Dla wszystkich obiektów docelowych *rozmiar* argument od 10 do 2147485647 ustawiające próg na wartość na określoną wartość. A *rozmiar* 2147485648 lub nowszej przyczyny błędu krytyczny C1049.
+
+Możesz włączyć sondy stosu lub wyłączyć za pomocą [check_stack](../../preprocessor/check-stack.md) dyrektywy. **/ GS** i `check_stack` pragma nie mają wpływu na standardowe procedury biblioteki C; wpływają na funkcje kompilacji.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **C/C++** folderu.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
-
-1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+1. Wprowadź **/GS** — opcja kompilatora i opcjonalny rozmiar w **dodatkowe opcje**. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

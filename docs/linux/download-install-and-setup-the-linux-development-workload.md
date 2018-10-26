@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 4b96fca0bee594ffa441bff6b352b89ffed196f3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068096"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143695"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
@@ -26,7 +26,8 @@ Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania proje
 
 ## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
-1. Wpisz "Instalator programu Visual Studio" w menu wyszukiwania Windows; Wyszukaj go w folderze **aplikacje** wyniki, a następnie kliknij go dwukrotnie. Po otwarciu Instalatora wybierz **Modyfikuj**, a następnie kliknij polecenie **obciążeń** kartę. Przewiń w dół do **inne zestawy narzędzi** i wybierz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia.
+1. W polu wyszukiwania Windows wpisz "Instalator programu Visual Studio": ![Windows pole wyszukiwania](media/visual-studio-installer-search.png)
+2. Wyszukaj Instalatora w obszarze **aplikacje** wyniki, a następnie kliknij go dwukrotnie. Po otwarciu Instalatora wybierz **Modyfikuj**, a następnie kliknij polecenie **obciążeń** kartę. Przewiń w dół do **inne zestawy narzędzi** i wybierz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia.
 
    ![Visual C++ dla obciążenia programowanie dla systemu Linux](media/linuxworkload.png)
 
