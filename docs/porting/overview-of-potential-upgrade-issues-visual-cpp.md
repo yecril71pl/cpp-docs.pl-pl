@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393779"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075765"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 
 W ciągu lat kompilator Microsoft Visual C++ przeszła wiele zmian, wraz ze zmianami w sam język C++, standardowa biblioteka C++, C runtime (CRT) i inne biblioteki, takie jak MFC i ATL. W rezultacie podczas uaktualniania aplikacji ze starszej wersji programu Visual Studio, mogą wystąpić kompilatora i konsolidatora błędów i ostrzeżeń w kodzie, który wcześniej skompilowany nie pozostawia żadnych śladów. Starsze oryginalny kod podstawowy, tym większe ryzyko takie błędy. Ten przegląd zawiera podsumowanie najbardziej typowych klas problemów, prawdopodobnie wystąpi, i zawiera łącza do bardziej szczegółowych informacji.
 
-> [!NOTE] 
+> [!NOTE]
 > W przeszłości zalecamy mają uaktualnień, które rozciągają się różne wersje programu Visual Studio powinien być wykonywane przyrostowe jednej wersji w danym momencie. Nie zalecamy tego podejścia. Znaleźliśmy się, że prawie zawsze jest prostsza do uaktualnienia do najnowszej wersji programu Visual Studio, niezależnie od tego, ile lat bazy kodu.
 
 Pytania lub komentarze na temat procesu uaktualniania, które mogą być wysyłane do vcupgrade@microsoft.com.
@@ -161,7 +161,7 @@ Aby dowiedzieć się więcej o bieżącym interfejsie API zestawu i minimalne ob
 
 ### <a name="windows-version"></a>Wersja Windows
 
-Podczas uaktualniania program, który używa interfejsu API Windows, bezpośrednio lub pośrednio, należy określić minimalną wersję Windows w celu obsługi. W większości przypadków Windows 7 jest dobrym wyborem. Aby uzyskać więcej informacji, zobacz [problemy pliku nagłówka](porting-guide-spy-increment.md#header_file_problems). `WINVER` — Makro definiuje najstarszą wersję systemu Windows, który program jest przeznaczony do uruchamiania na. Jeśli MFC program ustawia WINVER 0x0501 (Windows XP) otrzymasz ostrzeżenie ponieważ MFC nie obsługuje już XP, mimo że kompilator sam trybem XP.  
+Podczas uaktualniania program, który używa interfejsu API Windows, bezpośrednio lub pośrednio, należy określić minimalną wersję Windows w celu obsługi. W większości przypadków Windows 7 jest dobrym wyborem. Aby uzyskać więcej informacji, zobacz [problemy pliku nagłówka](porting-guide-spy-increment.md#header_file_problems). `WINVER` — Makro definiuje najstarszą wersję systemu Windows, który program jest przeznaczony do uruchamiania na. Jeśli MFC program ustawia WINVER 0x0501 (Windows XP) otrzymasz ostrzeżenie ponieważ MFC nie obsługuje już XP, mimo że kompilator sam trybem XP.
 
 Aby uzyskać więcej informacji, zobacz [aktualizowanie docelową wersję Windows](porting-guide-spy-increment.md#updating_winver) i [bardziej nieaktualne pliki nagłówkowe](porting-guide-spy-increment.md#outdated_header_files).
 
@@ -188,4 +188,4 @@ Aby uzyskać więcej informacji, zobacz [przenoszenie z MBCS na Unicode](porting
 ## <a name="see-also"></a>Zobacz także
 
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)

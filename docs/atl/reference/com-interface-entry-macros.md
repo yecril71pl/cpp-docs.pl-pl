@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080120"
 ---
-# <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra  
+# <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra
 
-Te makra wejść interfejsy obiektu w jego mapy interfejsu COM tak, aby może zostać oceniony przez `QueryInterface`. Kolejność wpisy mapy interfejsu COM jest interfejsów kolejność będzie sprawdzana dopasowania identyfikatora IID podczas `QueryInterface`.  
+Te makra wejść interfejsy obiektu w jego mapy interfejsu COM tak, aby może zostać oceniony przez `QueryInterface`. Kolejność wpisy mapy interfejsu COM jest interfejsów kolejność będzie sprawdzana dopasowania identyfikatora IID podczas `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Te makra wejść interfejsy obiektu w jego mapy interfejsu COM tak, aby może zo
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Przetwarza mapę COM klasy bazowej, gdy przetwarzanie osiągnie ten wpis w mapie com.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Ogólny mechanizm przechwytywanie do ATL `QueryInterface` logiki.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Taki sam jak [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), z tą różnicą, że wykonywanie zapytań dotyczących dowolnej IID powoduje wywołanie *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Zwraca E_NOINTERFACE i kończy się COM mapy przetwarzania, gdy zostaje przesłane zapytanie określonego interfejsu.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Zwraca E_NOINTERFACE i kończy się COM mapy przetwarzania, gdy zostaje przesłane zapytanie określonego interfejsu.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,6 +70,7 @@ Wprowadza interfejsów w mapie interfejsu COM.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcom.h
@@ -406,4 +408,3 @@ Aby zapobiec używany w przypadku określonego interfejsu, można użyć tego ma
 
 Interfejsu IID, zostanie wykonane przez dołączenie *x* do `IID_`. Na przykład jeśli *x* jest `IPersistStorage`, będzie identyfikatora IID `IID_IPersistStorage`.
 
-  

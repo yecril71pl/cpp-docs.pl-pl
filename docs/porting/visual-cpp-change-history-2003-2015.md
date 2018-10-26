@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083986"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068076"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -37,7 +37,6 @@ Aby uniknąć błędów czasu wykonywania, które są trudne do wykrycia i zdiag
 Zalecamy też, aby nigdy nie pisać kodu, który zależy od określonego układu dla obiektu niebędącego interfejsem COM lub obiektem POD. Jeśli jednak piszesz taki kod, upewnij się, że działa po uaktualnieniu. Aby uzyskać więcej informacji, zobacz [przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompilator rozpoznaje istniejącego kodu źródłowego. W takim przypadku mogą wystąpić błędy innym, podczas kompilacji lub różnice w zachowaniu nawet w kodzie, który wcześniej utworzone i sprawiał by działała poprawnie. Mimo że są one nie przełomowe zmiany, jak w powyższym omówionych w tym dokumencie, zmiany kodu źródłowego mogą być wymagane, aby rozwiązać te problemy:
-
 
 - [Istotne zmiany w Biblioteka środowiska uruchomieniowego (CRT)](#BK_CRT)
 
@@ -183,7 +182,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    Stary algorytmów analizy zakwalifikowany tylko do 17 cyfr znaczących w ciągu wejściowym i czy odrzucić pozostałe cyfry. Jest to wystarczające do generowania bardzo bliskie zbliżenia wartość reprezentowany przez ciąg, a wynik jest zazwyczaj bardzo blisko poprawnie zaokrąglony wynik. Nowa implementacja uwzględnia wszystkie cyfry obecne i daje wynik poprawnie zaokrąglone wszystkich danych wejściowych (maksymalnie 768 znaków długości). Ponadto te funkcje teraz respektują trybu zaokrąglania (sterowane za pośrednictwem fesetround).  Jest to istotne potencjalnie zmienić zachowanie, ponieważ te funkcje mogą danych wyjściowych różne wyniki. Nowe wyniki są zawsze prawidłowe niż stare wyniki.
@@ -652,7 +651,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
    Załóżmy, że Twój kod określa zarówno **umieszczania nowych** i **delete umieszczania**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1743,7 +1742,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     }
     ```
 
-   - lub -
+   \- lub —
 
     ```cpp
     class base;  // as above
@@ -1919,7 +1918,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Przywracanie ostrzeżenia instrukcji switch**
 
-   Poprzednia wersję kompilatora usunięte uprzednio istniejące ostrzeżenia dotyczące **Przełącz** instrukcji; te ostrzeżenia zostały przywrócone. Kompilator generuje teraz przywróconej ostrzeżenia, a związane z określonych przypadków (w tym przypadku domyślnym) są teraz wyświetlane ostrzeżenia w wierszu zawierającym naruszającym przypadek, a nie w ostatnim wierszu instrukcji switch. W rezultacie teraz wystawiających tych ostrzeżeń w różnych wierszach niż w przeszłości, ostrzeżeń wcześniej pominięty przy użyciu `#pragma warning(disable:####)` nie będzie można pominąć zgodnie z oczekiwaniami. Aby pominąć te ostrzeżenia, zgodnie z oczekiwaniami, może być konieczne przeniesienie `#pragma warning(disable:####)` dyrektywę wiersz powyżej pierwszym przypadku potencjalnie naruszeń. Poniżej przedstawiono przywróconej ostrzeżenia.
+   Poprzedniej wersji kompilatora usunięte uprzednio istniejące ostrzeżenia dotyczące **Przełącz** instrukcji; te ostrzeżenia zostały przywrócone. Kompilator generuje teraz przywróconej ostrzeżenia, a związane z określonych przypadków (w tym przypadku domyślnym) są teraz wyświetlane ostrzeżenia w wierszu zawierającym naruszającym przypadek, a nie w ostatnim wierszu instrukcji switch. W rezultacie teraz wystawiających tych ostrzeżeń w różnych wierszach niż w przeszłości, ostrzeżeń wcześniej pominięty przy użyciu `#pragma warning(disable:####)` nie będzie można pominąć zgodnie z oczekiwaniami. Aby pominąć te ostrzeżenia, zgodnie z oczekiwaniami, może być konieczne przeniesienie `#pragma warning(disable:####)` dyrektywę wiersz powyżej pierwszym przypadku potencjalnie naruszeń. Poniżej przedstawiono przywróconej ostrzeżenia.
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels

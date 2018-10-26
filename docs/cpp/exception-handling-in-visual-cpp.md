@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869cc0404b19dd9cd6cd49dda9702445f420965e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b168bf95e44a41973d92230f559246b03f275601
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016978"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073087"
 ---
 # <a name="exception-handling-in-visual-c"></a>Obsługa wyjątków w języku Visual C++
 
@@ -31,15 +31,15 @@ Visual C++ wspiera trzy rodzaje obsługi wyjątków:
 
 - [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
 
-     W większości programów, należy używać obsługę wyjątków C++, co jest bezpieczne względem typu i zapewnia wywołanie destruktorów obiektów podczas wykonywania operacji odwijania stosu.
+   W większości programów, należy używać obsługę wyjątków C++, co jest bezpieczne względem typu i zapewnia wywołanie destruktorów obiektów podczas wykonywania operacji odwijania stosu.
 
 - [Obsługa wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)
 
-     System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. SEH należy używać tylko w programach innych niż MFC c.
+   System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. SEH należy używać tylko w programach innych niż MFC c.
 
 - [Wyjątki MFC](../mfc/exception-handling-in-mfc.md)
 
-     Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas wstępnego przetwarzania, makra szacują do słów kluczowych obsługi wyjątków zdefiniowanych w implementacji Visual C++ języka C++ od Visual C++ w wersji 2.0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków.
+   Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas wstępnego przetwarzania, makra szacują do słów kluczowych obsługi wyjątków zdefiniowanych w implementacji Visual C++ języka C++ od Visual C++ w wersji 2.0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków.
 
 Użyj [/EH](../build/reference/eh-exception-handling-model.md) opcję kompilatora, aby określić typ obsługi wyjątku do użycia w projekcie; Obsługa wyjątków języka C++ jest ustawieniem domyślnym. Nie należy mieszać mechanizmów; obsługi błędów na przykład nie należy używać wyjątków języka C++ z obsługi wyjątków strukturalnych. Przy użyciu obsługi wyjątków C++ sprawia, że Twój kod bardziej przenośny i pozwala obsługiwać wyjątki dowolnego typu. Aby uzyskać więcej informacji na temat wad strukturalna Obsługa wyjątków, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać porady na temat mieszania makr MFC i wyjątków języka C++, zobacz [wyjątki: wykorzystanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 

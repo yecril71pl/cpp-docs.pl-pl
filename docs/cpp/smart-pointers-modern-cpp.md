@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58591309faaa107756739a52173ceea2f1f7b188
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425631"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069883"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 
@@ -76,11 +76,14 @@ Poniższa sekcja podsumowuje różne rodzaje inteligentnych wskaźników, które
 
 Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji wskaźników jako zwykłych starych obiektów C++ (Plain Old C++ Objects — POCO).
 
-- `unique_ptr` Zezwala na dokładnie jednego właściciela podstawowego wskaźnika. Użyj jako domyślnego wyboru dla POCO, chyba że wiesz, w przypadku niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj `boost::scoped_ptr`. `unique_ptr` jest mały i wydajny; rozmiar to jeden wskaźnik i obsługuje odwołania rvalue dla ostatniego wstawienia i wydobycia z kolekcji standardowej biblioteki języka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
+- `unique_ptr`<br/>
+   Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Użyj jako domyślnego wyboru dla POCO, chyba że wiesz, w przypadku niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj `boost::scoped_ptr`. `unique_ptr` jest mały i wydajny; rozmiar to jeden wskaźnik i obsługuje odwołania rvalue dla ostatniego wstawienia i wydobycia z kolekcji standardowej biblioteki języka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
 
-- `shared_ptr` Dokumentacja inteligentny wskaźnik zliczonych. Użyj, jeżeli chcesz przypisać jeden surowy wskaźnik wielu właścicielom, na przykład, kiedy zwracasz kopię wskaźnika z kontenera, ale chcesz zatrzymać oryginał. Surowy wskaźnik nie jest usuwana, dopóki wszystkie `shared_ptr` właściciele zniknie z zakresu lub w inny sposób zrezygnują własności. Rozmiar to dwa wskaźniki; jeden dla obiektu i jeden dla współdzielonego bloku kontroli, który zawiera licznik odwołań. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień shared_ptr i korzystanie](../cpp/how-to-create-and-use-shared-ptr-instances.md) i [shared_ptr — klasa](../standard-library/shared-ptr-class.md).
+- `shared_ptr`<br/>
+   Inteligentny wskaźnik zliczonych odwołań. Użyj, jeżeli chcesz przypisać jeden surowy wskaźnik wielu właścicielom, na przykład, kiedy zwracasz kopię wskaźnika z kontenera, ale chcesz zatrzymać oryginał. Surowy wskaźnik nie jest usuwana, dopóki wszystkie `shared_ptr` właściciele zniknie z zakresu lub w inny sposób zrezygnują własności. Rozmiar to dwa wskaźniki; jeden dla obiektu i jeden dla współdzielonego bloku kontroli, który zawiera licznik odwołań. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień shared_ptr i korzystanie](../cpp/how-to-create-and-use-shared-ptr-instances.md) i [shared_ptr — klasa](../standard-library/shared-ptr-class.md).
 
-- `weak_ptr` Szczególny inteligentny wskaźnik używany w połączeniu z `shared_ptr`. A `weak_ptr` zapewnia dostęp do obiektu, który jest własnością jednego lub więcej `shared_ptr` wystąpienia, ale nie uczestniczy w zliczaniu odwołań. Używaj, jeżeli chcesz obserwować obiekt, ale nie wymagasz, aby pozostał aktywny. Wymagane w niektórych przypadkach, aby złamać odwołania cykliczne między `shared_ptr` wystąpień. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień weak_ptr i korzystanie](../cpp/how-to-create-and-use-weak-ptr-instances.md) i [weak_ptr, klasa](../standard-library/weak-ptr-class.md).
+- `weak_ptr`<br/>
+    Szczególny inteligentny wskaźnik używany w połączeniu z `shared_ptr`. A `weak_ptr` zapewnia dostęp do obiektu, który jest własnością jednego lub więcej `shared_ptr` wystąpienia, ale nie uczestniczy w zliczaniu odwołań. Używaj, jeżeli chcesz obserwować obiekt, ale nie wymagasz, aby pozostał aktywny. Wymagane w niektórych przypadkach, aby złamać odwołania cykliczne między `shared_ptr` wystąpień. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień weak_ptr i korzystanie](../cpp/how-to-create-and-use-weak-ptr-instances.md) i [weak_ptr, klasa](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>{1&gt;Inteligentne wskaźniki dla obiektów COM (klasyczne programowanie Windows)&lt;1}
 

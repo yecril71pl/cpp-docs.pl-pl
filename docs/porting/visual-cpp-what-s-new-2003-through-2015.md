@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: b4e5e30b533837eabb71ca8f27a646794d9a654c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083001"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -128,7 +128,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
    Załóżmy, że Twój kod określa zarówno **umieszczania nowych** i **delete umieszczania**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    Powyższy kod generuje następujący błąd w programie Visual Studio 2015:
@@ -834,7 +834,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)
 
-     Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
+   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykład (przed):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykład (po)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Użyj nowej struktury testowej jednostki C++ w programie Visual Studio do pisani
 
 #### <a name="architecture-dependency-graphs"></a>Wykresy zależności architektury
 
-Aby lepiej zrozumieć swój kod, można wygenerować wykresy zależności dla binarnego, klasy, przestrzeni nazw i Dołącz pliki w rozwiązaniu. Na pasku menu wybierz **architektury** > **Generuj wykres zależności**, a następnie **dla rozwiązania** lub **dla załącz plik**do wygenerowania wykresu zależności. Po zakończeniu generowania wykresu można Dowiedz się więcej, rozwijając każdego węzła, Dowiedz się relacji zależności, przenosząc je między węzłami i przeglądania kodu źródłowego, wybierając **Wyświetl zawartość** menu skrótów dla węzła. Aby wygenerować wykres zależności dla plików dołączanych, w menu skrótów dla pliku z kodem źródłowym *.cpp lub plik nagłówkowy *.h, wybierz **generowania wykresu z pliki dołączane**.
+Aby lepiej zrozumieć swój kod, można wygenerować wykresy zależności dla binarnego, klasy, przestrzeni nazw i Dołącz pliki w rozwiązaniu. Na pasku menu wybierz **architektury** > **Generuj wykres zależności**, a następnie **dla rozwiązania** lub **dla załącz plik**do wygenerowania wykresu zależności. Po zakończeniu generowania wykresu można Dowiedz się więcej, rozwijając każdego węzła, Dowiedz się relacji zależności, przenosząc je między węzłami i przeglądania kodu źródłowego, wybierając **Wyświetl zawartość** menu skrótów dla węzła. Aby wygenerować wykres zależności dla plików dołączanych, w menu skrótów dla \*pliku kodu źródłowego .cpp lub \*.h nagłówka pliku, wybierz polecenie **generowania wykresu z pliki dołączane**.
 
 #### <a name="architecture-explorer"></a>Eksplorator architektury
 

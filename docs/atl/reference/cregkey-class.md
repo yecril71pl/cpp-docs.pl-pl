@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071183"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -177,7 +177,7 @@ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie zwraca warto�
 Wywołaj tę metodę, aby utworzyć określony klucz, jeśli nie istnieje jako podklucz *hKeyParent*.
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ HKEY skojarzone z `CRegKey` obiektu.
 Wywołaj tę metodę można wyliczyć podkluczy klucza rejestru Otwórz.
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ Aby uzyskać więcej informacji, zobacz [RegEnumFlush](/windows/desktop/api/winr
 Wywołaj tę metodę, aby pobrać kopię deskryptora zabezpieczeń, ochrony otworzyć klucza rejestru.
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 Ta metoda powiadamia obiekt wywołujący o zmianach wprowadzonych do atrybutów lub zawartość otworzyć klucza rejestru.
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ Aby uzyskać więcej informacji i przykładowy program, zobacz [wywołanie funkc
 Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) obsługiwać tego klucza.
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ Ten operator odłącza *klucz* z jej bieżącego obiektu i przypisuje go do `CRe
 Wywołaj tę metodę w celu pobrania danych binarnych dla nazwy określonej wartości.
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny 
 Wywołaj tę metodę, aby pobrać dane typu DWORD nazwę określoną wartość.
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny 
 Wywołaj tę metodę w celu pobrania danych identyfikatora GUID dla nazwy określonej wartości.
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfik
 Wywołaj tę metodę w celu pobrania danych wielociągu nazwę określoną wartość.
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny 
 Wywołaj tę metodę w celu pobrania danych QWORD nazwę określoną wartość.
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny 
 Wywołaj tę metodę, aby pobrać dane ciągu dla nazwy określonej wartości.
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny 
 Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ Jeśli klucz ma podklucze, należy wywołać tę metodę w celu usunięcia klucz
 Wywołaj tę metodę, aby ustawić wartość binarną klucza rejestru.
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje ciąg za pomocą ide
 Wywołaj tę metodę, aby przechowywać dane w polu określoną wartość z określonym kluczem.
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetval
 Wywołaj tę metodę, aby ustawić wartość ciągu klucza rejestru.
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetval
 Wywołanie tej metody do przechowywania danych w polu określoną wartość [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,
