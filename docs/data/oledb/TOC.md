@@ -66,7 +66,7 @@
 ###### [Wczytywanie ciągów do dostawcy OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Przechowywanie ciągów w dostawcy OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Udoskonalanie prostego dostawcy tylko do odczytu](enhancing-the-simple-read-only-provider.md)
-###### [Modyfikowanie dziedziczenia obiektu RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Modyfikowanie dziedziczenia obiektu RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Dynamicznie określanie kolumn zwracanych do konsumenta](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Testowanie dostawcy tylko do odczytu](testing-the-read-only-provider.md)
 #### [Tworzenie aktualizowalnego dostawcy](creating-an-updatable-provider.md)
