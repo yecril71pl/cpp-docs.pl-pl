@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136175"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -60,7 +60,7 @@ Możesz użyć [komentarz](../../preprocessor/comment-c-cpp.md) pragma może okr
 |[/ CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Ustawia typ (IJW, czysty lub bezpieczny) obrazu CLR.|
 |[/ CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Zachowuje kod ostatniego błędu funkcji, które są wywoływane za pośrednictwem mechanizmu P/Invoke.|
 |[/ CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Określa atrybut wątków do zastosowania do punktu wejścia programu CLR.|
-|[/ CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Określa, czy konsolidator zastosuje atrybut SuppressUnmanagedCodeSecurity do wygenerowanych przez konsolidator odcinków kodu PInvoke, które wywołują z kodu zarządzanego do macierzystych bibliotek DLL.|
+|[/ CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Określa, czy konsolidator zastosuje atrybut SuppressUnmanagedCodeSecurity do wygenerowanych przez konsolidator odcinków kodu PInvoke, które wywołują z kodu zarządzanego do macierzystych bibliotek DLL.|
 |[/ DEBUG](../../build/reference/debug-generate-debug-info.md)|Tworzenie informacji debugowania.|
 |[/ DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Określa, które dane do dołączenia informacji o debugowaniu.|
 |[/ DEF](../../build/reference/def-specify-module-definition-file.md)|Przekazuje plik definicji modułu (.def) do konsolidatora.|

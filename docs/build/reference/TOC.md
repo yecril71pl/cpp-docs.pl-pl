@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE (Określenie typu obrazu CLR)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (Zachowaj kod ostatniego błędu dla wywołań PInvoke)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE (Ustaw atrybut wątku CLR)](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)
 ### [/DEBUG (Generowanie informacji o debugowaniu)](debug-generate-debug-info.md)
 ### [/DEBUGTYPE (Opcje informacji debugowania)](debugtype-debug-info-options.md)
 ### [/DEF (Określ plik definicji modułu)](def-specify-module-definition-file.md)

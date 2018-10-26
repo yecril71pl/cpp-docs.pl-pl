@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d57ea870d6d1332b8d14f0dc7376961c40d829
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cd85aa6ce1cfee3416d04291d484a7bad6359ea4
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065710"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136188"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
 
@@ -45,7 +45,7 @@ Podczas tworzenia nowo przekonwertowanego projektu, jedną z pierwszych czynnoś
 
 Jeden z plików, których nie można znaleźć w programie Spy ++ był verstamp.h. Z wyszukiwania w Internecie Ustaliliśmy, to pochodzą z zestawu SDK DAO technologia przestarzałe dane. Chcemy dowiedzieć się, jakie symbole zostały użyte z tego pliku nagłówka, aby zobaczyć, czy ten plik był naprawdę potrzebne, czy te symbole zostały zdefiniowane w innym miejscu, dzięki czemu możemy komentarzami deklaracji pliku nagłówka i ponownie kompilowana. Okazuje się tylko jeden symbol, który jest potrzebny w VER_FILEFLAGSMASK.
 
-```
+```Output
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
@@ -73,7 +73,7 @@ Następny błąd wskazuje, że wersja WINVER nie jest już obsługiwana w MFC. P
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.
 ```
 
-Windows XP nie jest już obsługiwana przez firmę Microsoft, więc mimo, że jego celem jest dozwolony w programie Visual Studio 2015, należy być wycofanie pomocy technicznej dla niego w swoich aplikacjach i zachęcanie użytkowników podczas wdrażania nowej wersji systemu Windows.
+Windows XP nie jest już obsługiwana przez firmę Microsoft, więc mimo, że jego celem jest dozwolony w programie Visual Studio, należy być wycofanie pomocy technicznej dla niego w swoich aplikacjach i zachęcanie użytkowników podczas wdrażania nowej wersji systemu Windows.
 
 Aby pozbyć się błąd, należy zdefiniować WINVER, aktualizując **właściwości projektu** ustawienie Najniższa wersja systemu Windows, które obecnie ma pod kątem. Znajdź tabelę wartości dla różnych wersji Windows [tutaj](/windows/desktop/WinProg/using-the-windows-headers).
 
@@ -95,7 +95,7 @@ Polecenie WINVER firma Microsoft ustawi Windows 7. Jest łatwiejsza do odczytani
 
 Za pomocą tych zmian kompilacji projektu SpyHk (DLL), ale powoduje błąd konsolidatora.
 
-```
+```Output
 LINK : warning LNK4216: Exported entry point _DLLEntryPoint@12
 ```
 
@@ -120,7 +120,9 @@ Biorąc pod uwagę projekt o wiele błędów kompilacji, które są stopniowo wy
 
 Następny błąd jest powszechne starego kodu C++, który używa iostream.
 
-mstream.h(40): błąd krytyczny C1083: nie może zawierać Otwórz plik: "iostream.h": nie ma takiego pliku lub katalogu
+```Output
+mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+```
 
 Problem jest, że stary biblioteki iostreams został usunięty i zastąpiony. Mamy zastąp stare iostreams nowszej standardy.
 
@@ -195,7 +197,7 @@ MOUT << _T(" chUser:'") << chUser
 << _T("' (") << (INT)(UCHAR)chUser << _T(')');
 ```
 
-Makra MOUT jest rozpoznawana jako \*g_pmout, który jest obiektem typu `mstream`. `mstream` Klasa pochodzi od klasy ciąg standardowego wyjścia, `std::basic_ostream<TCHAR>.` jednak za pomocą _T wokół literału ciągu, na którym umieściliśmy w ramach przygotowania do konwersji na format Unicode, rozdzielczość przeciążenia dla **operator <<** kończy się niepowodzeniem z następujący komunikat o błędzie:
+Makra MOUT jest rozpoznawana jako `*g_pmout` czyli obiektu typu `mstream`. `mstream` Klasa pochodzi od klasy ciąg standardowego wyjścia `std::basic_ostream<TCHAR>`. Jednak za pomocą \_T wokół literału ciągu, na którym umieściliśmy w ramach przygotowania do konwersji na format Unicode, rozdzielczość przeciążenia dla **operator <<** kończy się niepowodzeniem z następujący komunikat o błędzie:
 
 ```Output
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
@@ -266,7 +268,7 @@ Ten typ konwersji był dozwolony w obszarze kompilatora starsze, mniej rygorysty
 
 Możemy również otrzymać wiele błędów, jak pokazano poniżej:
 
-```
+```Output
 error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::* )(CPoint)' to 'LRESULT (__thiscall CWnd::* )(CPoint)'
 ```
 
@@ -526,7 +528,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 Teraz Daj nam faktycznie aktualizować stary kod zestawu znaków wielobajtowych (MBCS) na Unicode. Ponieważ jest to aplikacja Windows, ściśle powiązane na platformę Windows desktop, firma Microsoft będzie portu na Unicode UTF-16, który korzysta z Windows. Jeśli piszesz kod dla wielu platform lub przenoszenie aplikacji Windows, do innej platformy, należy wziąć pod uwagę przenoszenie UTF-8, która jest powszechnie używana w innych systemach operacyjnych.
 
-Przenoszenie Unicode UTF-16, firma Microsoft należy zdecydować, czy nadal chcemy możliwość kompilowania do MBCS, czy nie.  Jeśli chcemy mieć możliwość obsługi MBCS powinniśmy skorzystać — makro tchar — jako typ znaku, który jest rozpoznawany jako celu **char** lub **wchar_t**, w zależności od tego, czy _MBCS lub _UNICODE zdefiniowano podczas Kompilacja. Przełączanie do TCHAR i TCHAR wersje różnych interfejsów API, zamiast **wchar_t** i jego skojarzone interfejsy API oznacza, że możesz wrócić do MBCS wersję kodu poprzez definiowanie makro _MBCS zamiast _UNICODE. Oprócz TCHAR istnieje wiele wersji tchar — takich jak definicje powszechnie używanych typów, makra i funkcje. Na przykład LPCTSTR zamiast LPCSTR i tak dalej. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** sekcji, zmień **zestaw znaków** właściwość **Użyj MBCS Zestaw znaków** do **Użyj kodowania Unicode**. To ustawienie ma wpływ na wstępnie zdefiniowane makra, które podczas kompilacji. Brak makro _UNICODE i makra UNICODE. Właściwość projektu ma wpływ na oba spójne. Nagłówki Windows używaj UNICODE w przypadku, gdy nagłówki Visual C++, takie jak MFC Użyj _UNICODE, ale jest zdefiniowana, drugi zawsze jest definiowany.
+Przenoszenie Unicode UTF-16, firma Microsoft należy zdecydować, czy nadal chcemy możliwość kompilowania do MBCS, czy nie.  Jeśli chcemy mieć możliwość obsługi MBCS powinniśmy skorzystać — makro tchar — jako typ znaku, który jest rozpoznawany jako celu **char** lub **wchar_t**, w zależności od tego, czy \_MBCS lub \_UNICODE jest definiowany podczas kompilacji. Przełączanie do TCHAR i TCHAR wersje różnych interfejsów API, zamiast **wchar_t** i jego skojarzone interfejsy API oznacza, że możesz wrócić do MBCS wersję kodu poprzez definiowanie \_makro MBCS zamiast \_ UNICODE. Oprócz TCHAR istnieje wiele wersji tchar — takich jak definicje powszechnie używanych typów, makra i funkcje. Na przykład LPCTSTR zamiast LPCSTR i tak dalej. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** sekcji, zmień **zestaw znaków** właściwość **Użyj MBCS Zestaw znaków** do **Użyj kodowania Unicode**. To ustawienie ma wpływ na wstępnie zdefiniowane makra, które podczas kompilacji. Jest makrem UNICODE i \_makro UNICODE. Właściwość projektu ma wpływ na oba spójne. Używaj UNICODE, gdzie Użyj nagłówków Visual C++, takie jak MFC w nagłówki Windows \_UNICODE, ale jeśli jest zdefiniowana, drugi zawsze jest definiowany.
 
 Jest dobrą [przewodnik](https://msdn.microsoft.com/library/cc194801.aspx) przenoszenie z MBCS na Unicode UTF-16 za pomocą TCHAR istnieje. Wybraliśmy tę trasę. Po pierwsze zmienimy **zestaw znaków** właściwości **zestaw znaków Unicode, użyj** i skompiluj ponownie projekt.
 
@@ -544,13 +546,13 @@ Poniżej przedstawiono przykładowy kod, który produkuje to:
 wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 ```
 
-Umieściliśmy _T wokół ciąg literału, aby usunąć ten błąd.
+Umieściliśmy \_T wokół literału ciągu, aby usunąć ten błąd.
 
 ```cpp
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-Makro _T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi _T w programie Visual Studio, należy najpierw otworzyć **szybkiego zamieniania** (klawiatura: **Ctrl**+**F**) pole lub **zamienianie w plikach**  (Klawiatura: **Ctrl**+**Shift**+**H**), następnie wybierz **regularne użycia Wyrażenia** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już makro _T niektóre ciągi, tej procedury będzie dodać go ponownie i również znajdzie przypadki, w których nie chcesz _t — na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny** zamiast  **Zamień wszystkie**.
+\_Makro T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi zawierające \_T w programie Visual Studio, najpierw otwórz **szybkiego zamieniania** (klawiatura: **Ctrl**+**F**) pole lub  **Zamienianie w plikach** (klawiatura: **Ctrl**+**Shift**+**H**), następnie wybierz **użycia Wyrażenia regularne** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już \_makro T niektóre ciągi, tej procedurze zostanie dodane ponownie, a także znajdzie przypadki, w których nie chcesz, \_T, na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny**zamiast **Zamień wszystkie**.
 
 Tej określonej funkcji [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), faktycznie jest zdefiniowany w nagłówki Windows i dokumentacji, aby zaleca się, że jej nie używane, z powodu przepełnienia buforu możliwe. Nie podano rozmiaru dla `szTmp` buforu, więc nie ma możliwości dla funkcji sprawdzić, czy bufor może zawierać wszystkie dane, które ma zostać zapisana. Zobacz następną sekcję o przenoszenie do bezpiecznego CRT, w którym naprawiony inne podobne problemy. Firma Microsoft zakończył się zastąpienie go za pomocą [_stprintf_s —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -578,7 +580,7 @@ Podobnie zmieniliśmy LPSTR (Long wskaźnik do ciągu) i LPCSTR (Long wskaźnik 
 
 W niektórych przypadkach firma Microsoft było zastąpienie typu do korzystania z wersji, który jest rozpoznawany jako poprawnie (WNDCLASS zamiast WNDCLASSA, na przykład).
 
-W wielu przypadkach mieliśmy do używania wersji ogólnych (makro) interfejsu API Win32, takich jak `GetClassName` (zamiast `GetClassNameA`). W instrukcji switch procedury obsługi komunikatów, niektóre komunikaty dotyczą MBCS lub Unicode, w tych przypadkach, mieliśmy zmienić kod, aby jawnie wywołać wersji MBCS, ponieważ zastąpiliśmy objęty nazwane funkcje z **A** i **W** określonych funkcji i dodaje makro dla nazwy ogólnej, który jest rozpoznawany jako poprawny **A** lub **W** nazwę opartą na czy UNICODE jest zdefiniowana.  W wielu części kodu, gdy przeszliśmy do definiowania _UNICODE, wersji W jest teraz wybrane nawet wtedy, gdy **A** wersja to, co chcę teraz.
+W wielu przypadkach mieliśmy do używania wersji ogólnych (makro) interfejsu API Win32, takich jak `GetClassName` (zamiast `GetClassNameA`). W instrukcji switch procedury obsługi komunikatów, niektóre komunikaty dotyczą MBCS lub Unicode, w tych przypadkach, mieliśmy zmienić kod, aby jawnie wywołać wersji MBCS, ponieważ zastąpiliśmy objęty nazwane funkcje z **A** i **W** określonych funkcji i dodaje makro dla nazwy ogólnej, który jest rozpoznawany jako poprawny **A** lub **W** nazwę opartą na czy UNICODE jest zdefiniowana.  W wielu częściach kodu, gdy przeszliśmy do definiowania \_UNICODE, wersja W jest teraz wybrane nawet wtedy, gdy **A** wersja to, co chcę teraz.
 
 Istnieje kilka miejsc, gdy miały stosowanie specjalnych działań do wykonania. Jakiekolwiek wykorzystanie `WideCharToMultiByte` lub `MultiByteToWideChar` mogą wymagać bliżej. Poniżej przedstawiono przykładowy gdzie `WideCharToMultiByte` było ono używane.
 

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441372"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136123"
 ---
 # <a name="extract-function"></a>Wyodrębnij funkcję
 **Co:** pozwala włączyć fragment kodu do jego własnej funkcji.
@@ -41,7 +41,7 @@ ms.locfileid: "46441372"
 
 1. W **Wyodrębnij funkcję/metodę (funkcja eksperymentalna)** , wprowadź nową nazwę funkcji, wybierz, gdzie kod do umieszczenia, a kliknij **OK** przycisku.
 
-   ![Wyodrębnij funkcję — funkcja](images/extractfunction_dialog.png)
+   ![Wyodrębnij funkcję okna dialogowego](images/extractfunction_dialog.png)
 
 1. Zostanie utworzona nowa funkcja w przypadku, gdy został określony, prototypu funkcji w odpowiedni plik nagłówkowy i oryginalny kod zostanie zmieniona tak, aby wywołać tę funkcję.
 
