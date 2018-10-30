@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441439"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204655"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 
@@ -108,7 +108,7 @@ Wspólne okna dialogowe drukowania zapewniają prosty sposób implementacji okna
 > [!NOTE]
 >  `CPrintDialogEx` Klasa hermetyzuje usługi świadczone przez arkusz własności drukowania Windows. Aby uzyskać więcej informacji, zobacz [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Przegląd.
 
-`CPrintDialog`w funkcji jest zastąpione przez [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), który jest przeznaczony do przedstawienia wspólne okno dialogowe dla obu konfiguracji drukowania i ustawienia strony.
+`CPrintDialog`w funkcji zostało zastąpione przez z [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), który jest przeznaczony do przedstawienia wspólne okno dialogowe dla obu konfiguracji drukowania i ustawienia strony.
 
 Możesz polegać na platformę, by obsłużyć wiele aspektów proces drukowania dla danej aplikacji. W tym przypadku ramach automatycznie wyświetla Windows wspólne okno dialogowe drukowania. Można również obsłużył framework drukowania dla aplikacji, ale zastąp wspólne okno dialogowe drukowania własne okna dialogowego drukowania. Aby uzyskać więcej informacji o używaniu platformę do obsługi zadań drukowania, zobacz artykuł [drukowania](../../mfc/printing.md).
 

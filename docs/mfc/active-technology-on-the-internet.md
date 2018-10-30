@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30aef153dc99c0cbdc4de537496e42ab2bb0459f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395127"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204512"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologia Active w Internecie
 
 Technologia Active jest otwarta platforma, która pozwala deweloperom na tworzenie atrakcyjnych, dynamicznej zawartości, jak i aplikacje globalne internetowe lub sieci wewnętrznej firmy, nazywane w sieci intranet. Poniżej opisano główne technologie obsługiwane przez firmę Microsoft do programowania Internet.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 ## <a name="activex-controls"></a>Kontrolki ActiveX
 

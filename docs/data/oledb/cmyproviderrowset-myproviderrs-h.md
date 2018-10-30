@@ -22,26 +22,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077000"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216360"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
 Kreator generuje wpis dla obiektu zestawu wierszy. W tym przypadku jest to `CCustomRowset`. `CCustomRowset` Klasa dziedziczy z klasy dostawcy OLE DB o nazwie `CRowsetImpl`, który implementuje wszystkie niezbędne interfejsy obiektu zestawu wierszy. Poniższy kod pokazuje łańcuch dziedziczenia dla `CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` używa również `IAccessor` i `IColumnsInfo` interfejsów. Te interfejsy używa dla pól danych wyjściowych w tabelach. Ta klasa oferuje również implementację `IRowsetIdentity`, co pozwala, aby sprawdzić, czy dwa wiersze są identyczne. `IRowsetInfo` Interfejsu implementuje właściwości dla obiektu zestawu wierszy. `IConvertType` Interfejs umożliwia dostawcą rozwiązać różnice między typami danych żądanego przez klienta i używanych przez dostawcę.
+`CRowsetImpl` używa również `IAccessor` i `IColumnsInfo` interfejsów. Te interfejsy używa dla pól danych wyjściowych w tabelach. Ta klasa oferuje również implementację `IRowsetIdentity`, co pozwala, aby sprawdzić, czy dwa wiersze są takie same. `IRowsetInfo` Interfejsu implementuje właściwości dla obiektu zestawu wierszy. `IConvertType` Interfejs umożliwia dostawcą rozwiązać różnice między typami danych żądanego przez klienta i używanych przez dostawcę.
 
 `IRowset` Interfejsu faktycznie obsługuje pobieranie danych. Konsument najpierw wywołuje metodę o nazwie `GetNextRows` do zwrócenia dojście do wiersza, znane jako `HROW`. Następnie wywołuje konsumenta `IRowset::GetData` z tym `HROW` można pobrać żądanych danych.
 
@@ -51,4 +51,4 @@ class CMyRowsetImpl:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)
+[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)<br/>

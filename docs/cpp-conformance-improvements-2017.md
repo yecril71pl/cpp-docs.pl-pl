@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054452"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204746"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -121,7 +121,7 @@ We wcześniejszych wersjach programu Visual Studio, kompilator zawsze udostępni
 
 ### <a name="deprecating-vestigial-library-parts"></a>Wycofano przestarzały biblioteki części
 
-[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) kilka funkcji standardowej bibliotece C++ została zastąpiona przez nowsze funkcje w ciągu lat; w przeciwnym razie zostały znalezione nie może być bardzo przydatne lub być problematyczne. Te funkcje oficjalnie zostały zaniechane w C ++ 17.
+[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) kilka funkcji standardowej bibliotece C++ zostały zastąpione przez nowsze funkcje w ciągu lat; w przeciwnym razie zostały znalezione nie może być bardzo przydatne lub być problematyczne. Te funkcje oficjalnie zostały zaniechane w C ++ 17.
 
 ### <a name="removing-allocator-support-in-stdfunction"></a>Usuwanie obsługi alokatora w std::function
 

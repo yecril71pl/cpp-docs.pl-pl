@@ -1,7 +1,7 @@
 ---
 title: Szablony dostawców OLE DB (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080068"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216412"
 ---
 # <a name="ole-db-provider-templates-c"></a>Szablony dostawców OLE DB (C++)
 
@@ -43,9 +43,9 @@ Każdy obiekt COM, zawiera kilka interfejsów, niektóre z nich są wymagane, a 
 
 ## <a name="ole-db-specification-level-support"></a>Obsługa poziomu specyfikacji OLE DB
 
-Szablony dostawców OLE DB obsługuje specyfikację wersji 2.7 OLE DB. Szablony dostawców OLE DB można zaimplementować dostawcę zgodne poziom 0. Przykład dostawcy, na przykład używa szablonów do wdrożenia serwera non-MS-DOS polecenia, który wykonuje polecenie DOS DIR do wykonywania zapytań w systemie plików. Przykład dostawcy zwraca informacje katalogu w zestawie wierszy, czyli standardowego mechanizmu OLE DB dla zwracania danych tabelarycznych.
+Szablony dostawców OLE DB obsługuje specyfikację wersji 2.7 OLE DB. Szablony dostawców OLE DB można zaimplementować dostawcę zgodne poziom 0. `Provider` Próbki, na przykład używa szablonów do wdrożenia serwera non-MS-DOS polecenia, który wykonuje polecenie DOS DIR do wykonywania zapytań w systemie plików. `Provider` Przykładowe zwraca informacje o katalogu w zestawie wierszy, czyli standardowego mechanizmu OLE DB dla zwracania danych tabelarycznych.
 
-Najprostszy typ dostawcy obsługiwanego przez Szablony OLE DB jest dostawcy tylko do odczytu, za pomocą nie poleceń. Dostawcy za pomocą poleceń są również obsługiwane, jakie są możliwości zakładek i odczytu/zapisu. Aby zaimplementować dostawcę odczytu/zapisu, tworzenia dodatkowego kodu. Dynamiczne zestawy wierszy i transakcje nie są obsługiwane przez bieżącą wersję, ale można je dodać.
+Najprostszy typ dostawcy obsługiwanego przez Szablony OLE DB jest dostawcy tylko do odczytu, za pomocą nie poleceń. Dostawcy za pomocą poleceń są również obsługiwane, są funkcje zakładek i odczytu/zapisu. Aby zaimplementować dostawcę odczytu/zapisu, tworzenia dodatkowego kodu. Dynamiczne zestawy wierszy i transakcje nie są obsługiwane przez bieżącą wersję, ale można je dodać.
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Kiedy należy utworzyć dostawcy OLE DB?
 
@@ -53,11 +53,11 @@ Nie zawsze należy utworzyć własnego dostawcę; Firma Microsoft udostępnia ki
 
 - Uzyskiwanie dostępu do danych za pomocą dowolnego języka, takich jak C++, Basic i Visual Basic Scripting Edition. Umożliwia ona różnych ekspertów w programowaniu w Twojej organizacji uzyskiwanie dostępu do tych samych danych w taki sam sposób niezależnie od tego, jakiego języka korzystają.
 
-- Udostępnianie danych z innymi danymi źródeł, takich jak SQL Server, programu Excel i Access. Może to być bardzo przydatne, jeśli chcesz przesyłać dane między różne formaty.
+- Otwórz dane do innych źródeł danych, takich jak SQL Server, programu Excel i Access. Może to być przydatne, jeśli chcesz przesyłać dane między różne formaty.
 
-- Uczestniczy w operacjach źródła danych dla wielu (heterogenicznych). Może to być bardzo skuteczny sposób magazynowania danych. Za pomocą dostawcy OLE DB, możesz przechowywać dane w formacie natywnym i nadal mogli uzyskać do niego dostęp przy użyciu prostych operacji.
+- Uczestniczy w operacjach źródła danych dla wielu (heterogenicznych). Może to być skutecznym sposobem magazynowania danych. Za pomocą dostawcy OLE DB, możesz przechowywać dane w formacie natywnym i nadal mogli uzyskać do niego dostęp przy użyciu prostych operacji.
 
-- Dodawanie dodatkowych możliwości na dane, takie jak przetwarzanie zapytań.
+- Dodawanie dodatkowych funkcji do usługi danych, takich jak przetwarzanie zapytań.
 
 - Zwiększa wydajność dostępu do danych przez kontrolowanie sposobu jest przetwarzany.
 
@@ -81,5 +81,5 @@ Aby uzyskać więcej informacji, zobacz:
 ## <a name="see-also"></a>Zobacz też
 
 [Dostęp do danych](../data-access-in-cpp.md)<br/>
-[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784)
-[OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643)
+[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
+[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643)<br/>

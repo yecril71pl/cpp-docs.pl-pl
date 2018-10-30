@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056012"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204538"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
 
 W tym artykule opisano proces malowanie kontrolki ActiveX i jak może zmienić kod malowania, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontrolki](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysowania przez nie formantów indywidualnie Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkich formantów, kontener automatycznie przywrócić oryginalnych obiektów.)
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 Przykłady w tym artykule pochodzą z kontrolki utworzone przez kreatora kontrolek ActiveX MFC przy użyciu ustawień domyślnych. Aby uzyskać więcej informacji na temat tworzenia aplikacji szkielet kontrolek przy użyciu Kreatora kontrolek ActiveX MFC, zobacz artykuł [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).
 

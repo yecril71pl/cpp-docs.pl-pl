@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37119934a70f8a68d32ed83699fa6deb012d8879
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc12be2b7d3e25059333d4f22bd2d8eb458b959c
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404439"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204395"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Tworzenie kontenera kontrolek ActiveX MFC
 
 Kontener formantu ActiveX jest programu nadrzędnego, który dostarcza środowisko dla formantu ActiveX (dawniej OLE) uruchomić. Można utworzyć aplikację może zawierać kontrolki ActiveX z lub bez MFC, ale jest znacznie łatwiejsze wykonać za pomocą MFC.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](../activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](../activex-controls.md).
 
 Tworzenie MFC kontenera programu za pomocą [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md) umożliwia dostęp do funkcji wielu formantów ActiveX i automatyzacji, które są implementowane przez klasy MFC i ActiveX. Te funkcje obejmują edycja wizualna, Automation, tworzenie złożonych plików oraz obsługę formantów. Kreator aplikacji MFC visual edycji obsługujących program nadrzędnego dostępne są następujące opcje tworzenia kontenera, mini serwer, pełny serwer i program, który zarówno kontenera, jak i serwera.
 

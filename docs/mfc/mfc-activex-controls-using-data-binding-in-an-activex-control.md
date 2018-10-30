@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062616"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204590"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
 Jest jednym z zastosowań bardziej zaawansowanych kontrolek ActiveX powiązania danych, co pozwala z właściwością kontrolki, które można powiązać z konkretnym polem w bazie danych. Gdy użytkownik zmodyfikuje danych w tej właściwości powiązanej, formant powiadamia bazy danych i żądaniami zaktualizowania pola rekordu. Baza danych następnie powiadamia użytkownika, formantu powodzenie lub Niepowodzenie żądania.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 W tym artykule opisano strony kontroli zadania. Implementowanie danych wiązaniu interakcji z bazą danych jest obowiązkiem kontener formantu. W jaki sposób zarządzasz interakcji bazy danych w kontenerze wykracza poza zakres tej dokumentacji. Jak przygotować kontroli dla powiązania danych zostało wyjaśnione w dalszej części tego artykułu.
 

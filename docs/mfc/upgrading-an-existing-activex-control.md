@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48fee88dc991ff58bfb9178e370134ad3cdb11d8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082934"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204629"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 
 Kontrolki ActiveX istniejących (dawniej kontrolka OLE) może służyć w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność.
 
 > [!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 Korzystając z kontrolki na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki obsługi muszą znajdować się na komputerze docelowym lub można pobrać przez Internet. To sprawia, że rozmiar kodu i pobierania czasu ważną kwestią. W pliku .cab podpisanych można spakować pliki do pobrania. Możesz oznaczyć obsługi skryptów, jak i bezpiecznie zainicjować formant.
 

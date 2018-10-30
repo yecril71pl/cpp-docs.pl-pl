@@ -1,7 +1,7 @@
 ---
 title: Implementowanie prostego dostawcy tylko do odczytu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 834370ef6af5cd3db15789a1637ad3aaf8707d10
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 517020762fa4baf45fc4ff0477e2a561ef353b39
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060118"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216425"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementowanie prostego dostawcy tylko do odczytu
 
@@ -32,4 +32,4 @@ Przykład rozszerzonej, w tym temacie pokazano, jak edytować pliki tworzone prz
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)
+[Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

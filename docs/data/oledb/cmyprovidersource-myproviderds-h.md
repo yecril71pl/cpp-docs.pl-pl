@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bcabecde8f299e878ec6498dada503a894c406b4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3ad9a2c9ac2d7371cc1fb357e2ce6a9e35701607
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081134"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216386"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -37,6 +37,27 @@ Klasy dostawców używają wielokrotnego dziedziczenia. Poniższy kod pokazuje �
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
 class ATL_NO_VTABLE CCustomSource :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public CComCoClass<CCustomSource, &CLSID_Custom>,
+   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
+   public IDBInitializeImpl<CCustomSource>,
+   public IDBPropertiesImpl<CCustomSource>,
+   public IPersistImpl<CCustomSource>,
+   public IInternalConnectionImpl<CCustomSource>
+```
+
+Wszystkie składniki modelu COM pochodzi od `CComObjectRootEx` i `CComCoClass`. `CComObjectRootEx` zawiera wszystkie wdrożenia dla `IUnknown` interfejsu. Może obsługiwać żadnych modelu wątkowości. `CComCoClass` obsługuje każdy rodzaj pomocy technicznej błąd wymagane. Jeśli chcesz wysłać bogatsze informacje o błędzie do klienta, możesz użyć niektórych błędów interfejsów API w `CComCoClass`.
+
+Obiekt źródła danych dziedziczy także kilka klas "Impl". Każda klasa zawiera implementację interfejsu. Źródła danych, obiekt implementuje `IPersist`, `IDBProperties`, `IDBInitialize`, i `IDBCreateSession` interfejsów. Każdy interfejs jest wymagany przez OLE DB implementacji obiektu źródła danych. Istnieje możliwość obsługi lub nie obsługuje określonej funkcji poprzez dziedziczenie lub nie dziedziczy z jednej z tych klas "Impl". Jeśli chcesz obsługiwać `IDBDataSourceAdmin` interfejsu, dziedziczą z `IDBDataSourceAdminImpl` klasy, aby uzyskać funkcje wymagane.
+
+## <a name="com-map"></a>Mapy interfejsu COM
+
+Zawsze, gdy klient wywołuje `QueryInterface` interfejsu w źródle danych, przechodzi on przez następujące mapy interfejsu COM:
+
+```cpp
+/////////////////////////////////////////////////////////////////////////
+// CCustomSource
+class ATL_NO_VTABLE CCustomSource : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -68,7 +89,7 @@ Makra com_interface_entry — z ATL i wykonania `QueryInterface` w `CComObjectRo
 
 ## <a name="property-map"></a>Mapy właściwości
 
-Mapy właściwości określa wszystkie właściwości, które są oznaczone przez dostawcę:
+Mapy właściwości określa wszystkie właściwości, które są przypisane przez dostawcę:
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -140,7 +161,7 @@ END_PROPSET_MAP()
 
 Właściwości w OLE DB są zgrupowane. Obiekt źródła danych ma dwie grupy właściwości: jeden dla DBPROPSET_DATASOURCEINFO zestawu i jeden dla DBPROPSET_DBINIT, które zostały zestawu. Zestaw DBPROPSET_DATASOURCEINFO odnosi się do właściwości o dostawcy i źródła danych. Zestaw DBPROPSET_DBINIT odnosi się do właściwości używanych podczas inicjowania. Szablony OLE DB Provider obsługiwać te zestawy z makrami PROPERTY_SET. Makra Tworzenie bloku, który zawiera szereg właściwości. Zawsze, gdy klient wywołuje `IDBProperties` interfejsu dostawcę używa mapy właściwości.
 
-Nie trzeba do zaimplementowania dla każdej właściwości w specyfikacji. Jednak musi obsługiwać wymagane właściwości; zobacz specyfikację zgodności poziomu 0, aby uzyskać więcej informacji. Jeśli nie obsługuje właściwości, możesz go usunąć z mapy. Jeśli chcesz obsługiwać właściwość, dodać go do mapy, przy użyciu PROPERTY_INFO_ENTRY — makro. Makro odnosi się do `UPROPINFO` struktury, jak pokazano w poniższym kodzie:
+Nie trzeba zaimplementować dla każdej właściwości w specyfikacji. Jednak musi obsługiwać wymagane właściwości; zobacz specyfikację zgodności poziomu 0, aby uzyskać więcej informacji. Jeśli nie chcesz obsługiwać właściwości, możesz go usunąć z mapy. Jeśli chcesz obsługiwać właściwość, dodać go do mapy, przy użyciu PROPERTY_INFO_ENTRY — makro. Makro odnosi się do `UPROPINFO` struktury, jak pokazano w poniższym kodzie:
 
 ```cpp
 struct UPROPINFO
@@ -162,13 +183,13 @@ Każdy element w strukturze reprezentuje informacje w celu obsługi właściwoś
 
 Jeśli chcesz zmienić wartość domyślną właściwości (Uwaga konsument może zmienić wartość właściwości z możliwością zapisu w dowolnym momencie), można użyć makra PROPERTY_INFO_ENTRY_VALUE albo PROPERTY_INFO_ENTRY_EX. Te makra umożliwiają określenie wartości dla odpowiednich właściwości. PROPERTY_INFO_ENTRY_VALUE — makro jest skróconą notacją, która pozwala na zmianę wartości. PROPERTY_INFO_ENTRY_VALUE — makro wywołuje PROPERTY_INFO_ENTRY_EX — makro. Umożliwia to makro, możesz dodać lub zmienić wszystkie atrybuty w `UPROPINFO` struktury.
 
-Jeśli chcesz zdefiniować własny zestaw właściwości, można dodać jeden, wprowadzając dodatkowe kombinacji BEGIN_PROPSET_MAP/END_PROPSET_MAP. Należy określić identyfikator GUID dla zestawu właściwości, a następnie zdefiniować własne właściwości. W przypadku właściwości specyficzne dla dostawcy, należy je dodać nową właściwość, ustaw zamiast przy użyciu istniejącego. Umożliwia to uniknięcie problemów w nowszych wersjach OLE DB.
+Jeśli chcesz zdefiniować własny zestaw właściwości, można dodać jeden, wprowadzając dodatkowe kombinacji BEGIN_PROPSET_MAP/END_PROPSET_MAP. Zdefiniuj identyfikator GUID dla zestawu właściwości, a następnie zdefiniować własne właściwości. W przypadku właściwości specyficzne dla dostawcy, należy je dodać nową właściwość, ustaw zamiast przy użyciu istniejącego. Umożliwia to uniknięcie problemów w nowszych wersjach OLE DB.
 
 ## <a name="user-defined-property-sets"></a>Zestawy właściwości zdefiniowanych przez użytkownika
 
 Visual C++ obsługuje zestawów zdefiniowanych przez użytkownika właściwości. Nie trzeba zastąpić `GetProperties` lub `GetPropertyInfo`. Zamiast tego szablony wykryć każdy zestaw zdefiniowanych przez użytkownika właściwości i dodać go do odpowiedniego obiektu.
 
-Jeśli masz zestaw właściwości zdefiniowanych przez użytkownika, które muszą być dostępne w czasie inicjowania (oznacza to, zanim użytkownik wywołuje `IDBInitialize::Initialize`), należy to określić za pomocą flagi UPROPSET_USERINIT w połączeniu z BEGIN_PROPERTY_SET_EX — makro. Musi mieć ustawioną właściwość obiektu źródła danych, w tym pracę (wymaga specyfikacji OLE DB). Na przykład:
+Jeśli masz zestaw właściwości zdefiniowanych przez użytkownika, które muszą być dostępne w czasie inicjowania (oznacza to, zanim użytkownik wywołuje `IDBInitialize::Initialize`), należy to określić za pomocą flagi UPROPSET_USERINIT wraz z BEGIN_PROPERTY_SET_EX — makro. Musi mieć ustawioną właściwość obiektu źródła danych, w tym pracę (wymaga specyfikacji OLE DB). Na przykład:
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -178,4 +199,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)
+[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)<br/>

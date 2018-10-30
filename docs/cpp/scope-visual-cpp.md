@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080444"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204564"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
@@ -41,7 +41,7 @@ Istnieje sześć rodzaje zakresów:
 
 - **Zakres lokalny** nazwy zadeklarowane wewnątrz funkcji lub lambda, łącznie z nazwami parametr mają zakres lokalny. Są one często nazywane "lokalne". Tylko są one widoczne z ich punktu deklarację na końcu treści funkcji lub lambda. Zakres lokalny jest rodzajem zakresu bloku, co zostało omówione w dalszej części tego artykułu.
 
-- **Zakres klasy** nazwy składowych klasy mają zakres klasy, która rozszerza w definicji klasy, niezależnie od tego, punkt deklaracji. Ułatwienia dostępu członków klasy jest kontrolowane przez kolejne **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Publiczne lub chronione elementy członkowskie jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub **->**) lub operatory wskaźników do elementów członkowskich (**.** <strong>\*</strong> lub **->** <strong>\*</strong>).
+- **Zakres klasy** nazwy składowych klasy mają zakres klasy, która rozszerza w definicji klasy, niezależnie od tego, punkt deklaracji. Dostępność składowej klasy dalsze jest kontrolowana przez **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Publiczne lub chronione elementy członkowskie jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub **->**) lub operatory wskaźników do elementów członkowskich (**.** <strong>\*</strong> lub **->** <strong>\*</strong>).
 
 - **Oświadczenie zakresu** nazwy zadeklarowane w **dla**, **Jeśli**, **podczas**, lub **Przełącz** poufności informacji są widoczne do czasu zakończenia blok instrukcji.
 
