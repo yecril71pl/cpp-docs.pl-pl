@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054140"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204893"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operator uchwytu do obiektu (^) (C + +/ CLI i C + +/ CX)
 
@@ -44,7 +44,7 @@ Aby uzyskać informacje na temat sposobu tworzenia wystąpienia obiektu, zobacz 
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-System używa środowiska CLR *modułu zbierającego elementy bezużyteczne* mechanizm do określenia, czy obiekt jest już używany i czy można je usunąć. Środowisko uruchomieniowe języka wspólnego utrzymuje stertę, do której przydziela obiekty i zastosowań zarządzanych odwołania (zmiennych) w programie wskazujących lokalizację obiektów na stosie. Gdy obiekt nie jest już używany, pamięć, którą zajmował na stercie jest zwalniana. Okresowo moduł odśmiecania pamięci kompaktuje stos w celu lepszego wykorzystania zwolnionej pamięci. Przy kompaktowaniu stosu obiekty można przenosić na stosie, co unieważnia lokalizacje przewidziane przez zarządzane odwołania. Jednak moduł odśmiecania pamięci zna lokalizację wszystkich zarządzanych odwołań i automatycznie aktualizuje je, aby wskazać bieżące położenie obiektów na stosie.
+System używa środowiska CLR *modułu zbierającego elementy bezużyteczne* mechanizm do określenia, czy obiekt jest już używany i czy można je usunąć. Środowisko uruchomieniowe języka wspólnego utrzymuje stertę, do której przydziela obiekty i zastosowań zarządzanych odwołania (zmiennych) w programie wskazujących lokalizację obiektów na stosie. Gdy obiekt nie jest już używany, pamięć, którą zajmował na stercie jest zwalniana. Okresowo moduł odśmiecania pamięci kompaktuje stos w celu lepszego wykorzystania zwolnionej pamięci. Przy kompaktowaniu stosu obiekty można przenosić na stosie, co unieważnia lokalizacje określone przez zarządzane odwołania. Jednak moduł odśmiecania pamięci zna lokalizację wszystkich zarządzanych odwołań i automatycznie aktualizuje je, aby wskazać bieżące położenie obiektów na stosie.
 
 Ponieważ wskaźniki natywne C++ (`*`) i odwołania (`&`) nie są zarządzanymi odniesieniami, moduł odśmiecania pamięci nie może automatycznie zaktualizować adresów, które one wskazują. Aby rozwiązać ten problem, użyj deklaratora uchwytu, aby określić zmienną, która moduł odśmiecania pamięci zna i można będzie automatycznie aktualizować.
 

@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429751"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204616"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
 Zestaw Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL) to Biblioteka szablonów, która zapewnia niskopoziomowy sposób tworzenia i używania składników środowiska wykonawczego Windows.
 
 > [!NOTE]
-> WRL jest teraz zastąpione przez C + +/ WinRT, standard C ++ 17 języka rzutowanie dla interfejsów API środowiska wykonawczego Windows. C + +/ WinRT jest dostępna w Windows 10 SDK z wersji 1803 wartości. C + +/ WinRT jest zaimplementowana w całości w plikach nagłówkowych i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu Windows API.
+> WRL teraz zostało zastąpione przez C + +/ WinRT, standard C ++ 17 języka rzutowanie dla interfejsów API środowiska wykonawczego Windows. C + +/ WinRT jest dostępna w Windows 10 SDK z wersji 1803 wartości. C + +/ WinRT jest zaimplementowana w całości w plikach nagłówkowych i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu Windows API.
 
 > Za pomocą C + +/ WinRT, można używać lub Tworzenie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami języka C ++ 17 kompilatora. C + +/ WinRT zazwyczaj działa lepiej i generuje mniejsze pliki binarne niż innych opcji języka dla środowiska wykonawczego Windows. Firma Microsoft będzie obsługiwać C + +/ CX i WRL, ale zdecydowanie zalecamy, aby użyć nowych aplikacji C + +/ WinRT. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 

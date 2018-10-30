@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b14359fa6bb602240f4cba173c41660c6863f939
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434430"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204331"
 ---
 # <a name="containers-for-activex-controls"></a>Kontenery dla kontrolek ActiveX
 
 Można użyć kontrolek ActiveX opracowane w programie Visual C++ w innych aplikacjach, tak długo, jak obsługują zawierania kontrolek ActiveX. Liczba aplikacji firmy Microsoft, począwszy od wersji na liście, obsługuje zawierania kontrolek ActiveX.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 > [!NOTE]
 >  Poniższa lista nie jest pełną listę aplikacji, które obsługuje formanty ActiveX, ale reprezentuje zestaw najczęściej używane do testowania:
