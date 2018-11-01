@@ -1,12 +1,6 @@
 ---
-title: Pliki nagłówkowe C++ standardowej biblioteki | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Pliki nagłówkowe standardowej biblioteki języka C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -15,20 +9,16 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f177ebceff77aa9776ce2943ff5cb6176440ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496359"
 ---
 # <a name="c-standard-library-header-files"></a>Pliki nagłówkowe standardowej biblioteki języka C++
 
-Pliki nagłówkowe standardowej biblioteki C++ i rozszerzeń, według kategorii.
+Pliki nagłówkowe dla standardowej biblioteki języka C++ i rozszerzeń, według kategorii.
 
 ## <a name="headers-by-category"></a>Nagłówki według kategorii
 
@@ -37,17 +27,17 @@ Pliki nagłówkowe standardowej biblioteki C++ i rozszerzeń, według kategorii.
 |[Algorytmy](../cpp/algorithms-modern-cpp.md)|[\<Algorytm >](../standard-library/algorithm.md)|
 |Otoki biblioteki C|[\<cassert>](../standard-library/cassert.md), [\<cctype>](../standard-library/cctype.md), [\<cerrno>](../standard-library/cerrno.md), [\<cfenv>](../standard-library/cfenv.md), [\<cfloat>](../standard-library/cfloat.md), [\<cinttypes>](../standard-library/cinttypes.md), [\<ciso646>](../standard-library/ciso646.md), [\<climits>](../standard-library/climits.md), [\<clocale>](../standard-library/clocale.md), [\<cmath>](../standard-library/cmath.md), [\<csetjmp>](../standard-library/csetjmp.md), [\<csignal>](../standard-library/csignal.md), [\<cstdarg>](../standard-library/cstdarg.md), [\<cstdbool>](../standard-library/cstdbool.md), [\<cstddef>](../standard-library/cstddef.md), [\<cstdint>](../standard-library/cstdint.md), [\<cstdio>](../standard-library/cstdio.md), [\<cstdlib>](../standard-library/cstdlib.md), [\<cstring>](../standard-library/cstring.md), [\<ctgmath>](../standard-library/ctgmath.md), [\<ctime>](../standard-library/ctime.md), [\<cwchar>](../standard-library/cwchar.md), [\<cwctype>](../standard-library/cwctype.md)|
 |[Kontenery](../cpp/containers-modern-cpp.md)||
-|Kontenery sekwencji|[\<Tablica >](../standard-library/array.md), [ \<deque — >](../standard-library/deque.md), [< forward_list — >](../standard-library/forward-list.md), [ \<listy >](../standard-library/list.md), [ \< Wektor >](../standard-library/vector.md)|
-|Uporządkowane asocjacyjnej kontenerów| [\<Mapa >](../standard-library/map.md), [ \<ustawić >](../standard-library/set.md)|
-|Kontenery asocjacyjnej nieuporządkowaną|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
-|Kontenery karty|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
-|[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<wyjątek >](../standard-library/exception.md), [ \<stdexcept — >](../standard-library/stdexcept.md), [< system_error — >](../standard-library/system-error.md)|
-|[We/Wy i formatowanie](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
+|Kontenery sekwencji|[\<Tablica >](../standard-library/array.md), [ \<deque >](../standard-library/deque.md), [< forward_list >](../standard-library/forward-list.md), [ \<listy >](../standard-library/list.md), [ \< Wektor >](../standard-library/vector.md)|
+|Uporządkowane kontenery asocjacyjne| [\<Mapa >](../standard-library/map.md), [ \<Ustaw >](../standard-library/set.md)|
+|Nieuporządkowane kontenery asocjacyjne|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
+|Łącznik kontenerów|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
+|[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<wyjątek >](../standard-library/exception.md), [ \<stdexcept >](../standard-library/stdexcept.md), [< system_error >](../standard-library/system-error.md)|
+|[Formatowanie i operacji We/Wy](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
 |Iteratory|[\<iterator>](../standard-library/iterator.md)|
-|Lokalizacja|[\<codecvt — >](../standard-library/codecvt.md), [ \<cvt/wbuffer — >](../standard-library/cvt-wbuffer.md), [ \<cvt/wstring >](../standard-library/cvt-wstring.md), [ \<ustawień regionalnych >](../standard-library/locale.md)|
-|Matematyczne i numeryczne|[\<złożone >](../standard-library/complex.md), [ \<limity >](../standard-library/limits.md), [ \<liczbowych >](../standard-library/numeric.md), [ \<losowe >](../standard-library/random.md), [ \<stosunek >](../standard-library/ratio.md), [ \<valarray — >](../standard-library/valarray.md)|
+|Lokalizacja|[\<codecvt — >](../standard-library/codecvt.md), [ \<cvt/wbuffer — >](../standard-library/cvt-wbuffer.md), [ \<cvt/wstring — >](../standard-library/cvt-wstring.md), [ \<ustawień regionalnych >](../standard-library/locale.md)|
+|Matematyczne i numeryczne|[\<złożone >](../standard-library/complex.md), [ \<limity >](../standard-library/limits.md), [ \<liczbowych >](../standard-library/numeric.md), [ \<losowy >](../standard-library/random.md), [ \<współczynnik >](../standard-library/ratio.md), [ \<valarray >](../standard-library/valarray.md)|
 |[Zarządzanie pamięcią](../cpp/smart-pointers-modern-cpp.md)|[\<allocators — >](../standard-library/allocators-header.md), [ \<pamięci >](../standard-library/memory.md), [ \<nowy >](../standard-library/new.md), [< scoped_allocator >](../standard-library/scoped-allocator.md)|
-|Wielowątkowość|[\<niepodzielne >](../standard-library/atomic.md), [< condition_variable — >](../standard-library/condition-variable.md), [ \<przyszłych >](../standard-library/future.md), [ \<obiektu mutex >](../standard-library/mutex.md), [< shared_ mutex >](../standard-library/shared-mutex.md), [ \<wątku >](../standard-library/thread.md)|
+|Wielowątkowość|[\<niepodzielne >](../standard-library/atomic.md), [< condition_variable >](../standard-library/condition-variable.md), [ \<przyszłych >](../standard-library/future.md), [ \<mutex >](../standard-library/mutex.md), [< shared_ mutex >](../standard-library/shared-mutex.md), [ \<wątku >](../standard-library/thread.md)|
 |Inne narzędzia|[\<bitset>](../standard-library/bitset.md), [\<chrono>](../standard-library/chrono.md), [\<functional>](../standard-library/functional.md), [<initializer_list>](../standard-library/initializer-list.md), [\<tuple>](../standard-library/tuple.md), [<type_traits>](../standard-library/type-traits.md), [\<typeinfo>](../standard-library/typeinfo.md), [\<typeindex>](../standard-library/typeindex.md), [\<utility>](../standard-library/utility.md)|
 |Ciągi i dane znakowe|[\<wyrażenie regularne >](../standard-library/regex.md), [ \<ciąg >](../standard-library/string.md)
 
