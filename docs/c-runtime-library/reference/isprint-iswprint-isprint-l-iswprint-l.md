@@ -1,10 +1,6 @@
 ---
-title: isprint —, iswprint —, _isprint_l —, _iswprint_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -27,8 +23,6 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7cd775c22d4d34d7a6512938a0f612c3708940
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556406"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
-Określa, czy liczba całkowita reprezentuje znaków drukowalnych.
+Określa, czy liczba całkowita reprezentuje znak drukowalny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,30 +66,30 @@ int _iswprint_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego obiektu znaków drukowalnych. **isprint —** zwraca wartość niezerową, jeśli *c* jest znaków drukowalnych — dotyczy to również znak spacji (0x20 - 0x7E). **iswprint —** zwraca wartość niezerową, jeśli *c* jest drukowalnych znaków dwubajtowych — dotyczy to również miejsce szerokość znaku. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku drukowalnego. **isprint** zwraca wartość różną od zera, jeśli *c* jest znakiem drukowalnym — obejmuje to znak spacji (0x20 — 0x7E). **iswprint —** zwraca wartość różną od zera, jeśli *c* jest drukowalnym znakiem dwubajtowym — w tym miejsca szerokość znaków. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wynik warunku dla tych funkcji zależy od **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają **_l** sufiks użyciem bieżących ustawień regionalnych wszystkie działania zależne od ustawień regionalnych; wersje, które mają **_l** sufiks są identyczne z tą różnicą, że używają one Ustawienia regionalne jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wynik warunku testowego dla tych funkcji zależy od **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają **_l** sufiks Użyj bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; wersje, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają one Ustawienia regionalne, który jest przekazywany zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **isprint —** i **_isprint_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **isprint** i **_isprint_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_unicode — definicja|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_unicode zdefiniowany|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istprint —**|**isprint —**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint —**|
+|**_** **istprint —**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isprint —**|\<ctype.h>|
+|**isprint**|\<ctype.h>|
 |**iswprint —**|\<CType.h > lub \<wchar.h >|
 |**_isprint_l**|\<ctype.h>|
 |**_iswprint_l**|\<CType.h > lub \<wchar.h >|

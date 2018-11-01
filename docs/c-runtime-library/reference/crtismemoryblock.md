@@ -1,10 +1,6 @@
 ---
-title: _Crtismemoryblock — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555769"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
-Sprawdza, czy blok pamięci określony w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe (tylko wersja do debugowania).
+Sprawdza, czy blok pamięci określonej znajduje się w lokalnej sterty i czy ma ona identyfikator typu bloku sterty debugowania prawidłowy (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,39 +47,39 @@ int _CrtIsMemoryBlock(
 
 ### <a name="parameters"></a>Parametry
 
-*Danych użytkownika*<br/>
+*danych użytkownika*<br/>
 Wskaźnik na początku bloku pamięci, aby sprawdzić.
 
 *Rozmiar*<br/>
-Rozmiar określonego bloku (w bajtach).
+Rozmiar określony blok (w bajtach).
 
 *requestNumber*<br/>
-Wskaźnik do numer alokacji bloku lub **NULL**.
+Wskaźnik z liczbą alokacji bloku lub **NULL**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który żądanego bloku lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał bloku lub **NULL**.
 
 *numer wiersza*<br/>
 Wskaźnik do numeru wiersza w pliku źródłowym lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_Crtismemoryblock —** zwraca **TRUE** Jeśli blok pamięci określony znajduje się w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe; w przeciwnym razie funkcja zwraca **FALSE**.
+**_Crtismemoryblock —** zwraca **TRUE** Jeśli blok pamięci określonej znajduje się w obrębie lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowy; w przeciwnym razie funkcja zwraca **FALSE**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtismemoryblock —** funkcja weryfikuje, czy blok pamięci określony znajduje się w lokalnej pamięci oraz ma identyfikator typu bloku prawidłowe. Tej funkcji można również uzyskać numer zamówienia obiekt alokacji i numer Nazwa/wiersza pliku źródłowego których alokacji blok pamięci był pierwotnie żądany. Przekazywanie z systemem innym niż**NULL** wartości *requestNumber*, *filename*, lub *numer wiersza* powoduje, że parametry **_ Crtismemoryblock —** można ustawić parametry te wartości w nagłówku debugowania blok pamięci, w przypadku odnalezienia bloku w lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtismemoryblock —** są usuwane podczas przetwarzania wstępnego.
+**_Crtismemoryblock —** funkcja sprawdza, czy blok pamięci określonej znajduje się w obrębie aplikacji lokalnej sterty i ma identyfikator typu nieprawidłowy blok. Tej funkcji można również uzyskać numerem porządkowym obiektu alokacji i numer nazwy/wiersza pliku źródłowego, w którym pierwotnie żądaną alokacji bloku pamięci. Przekazywanie non -**NULL** wartości *requestNumber*, *filename*, lub *linenumber* powoduje, że parametry **_ Crtismemoryblock —** Aby ustawić te parametry do wartości w nagłówku bloku pamięci debugowania, jeśli znajdzie bloku w lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_crtismemoryblock —** są usuwane podczas przetwarzania wstępnego.
 
-Jeśli **_crtismemoryblock —** nie powiedzie się, zwraca **FALSE** i parametry wyjściowe są inicjowane wartości domyślne: *requestNumber* i **numer wiersza**  są ustawione na 0 i *filename* ustawiono **NULL**.
+Jeśli **_crtismemoryblock —** nie powiedzie się, zwraca **FALSE** i parametry wyjściowe są inicjowane na wartości domyślne: *requestNumber* i **numer wiersza**  są ustawione na 0 i *filename* ustawiono **NULL**.
 
-Ponieważ ta funkcja zwraca **TRUE** lub **FALSE**, mogą być przekazywane do jednego z [_ASSERT](assert-asserte-assert-expr-macros.md) makra, aby utworzyć prosty błąd debugowania mechanizmu obsługi. Poniższy przykład powoduje błąd potwierdzenia, jeśli określony adres nie znajduje się w lokalnej sterty:
+Ponieważ ta funkcja zwraca **TRUE** lub **FALSE**, mogą być przekazywane do jednego z [_ASSERT](assert-asserte-assert-expr-macros.md) makra, aby utworzyć prosty błąd debugowania mechanizm obsługi. Poniższy przykład powoduje błąd potwierdzenia, jeśli określony adres nie znajduje się w obrębie lokalnej sterty:
 
 ```C
 _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Aby uzyskać więcej informacji o tym, jak **_crtismemoryblock —** może być używany z innymi funkcje debugowania i makra, zobacz [makra dla raportowania](/visualstudio/debugger/macros-for-reporting). Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o tym, jak **_crtismemoryblock —** mogą być używane z innych funkcji debugowania i makr, zobacz [makra dla raportowania](/visualstudio/debugger/macros-for-reporting). Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -97,11 +87,11 @@ Aby uzyskać więcej informacji o tym, jak **_crtismemoryblock —** może być 
 |-------------|---------------------|
 |**_CrtIsMemoryBlock**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="example"></a>Przykład
 

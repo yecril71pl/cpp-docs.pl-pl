@@ -1,27 +1,17 @@
 ---
-title: Identyfikatory poleceń standardowych i okien | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Identyfikatory poleceń standardowych i okien
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2106312bd83edc4a37c904e2ee87ce78acb82904
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28279931c5d644ef333c03fd799c5f2fbf68ec52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647983"
 ---
 # <a name="standard-command-and-window-ids"></a>Identyfikatory poleceń standardowych i okien
 

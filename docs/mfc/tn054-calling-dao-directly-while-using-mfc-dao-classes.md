@@ -1,14 +1,8 @@
 ---
-title: 'TN054: Wywoływanie obiektów DAO bezpośrednio podczas używania klas MFC DAO | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'TN054: wywoływanie obiektów DAO bezpośrednio podczas używania klas MFC DAO'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dao
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, DAO and
 - passwords [MFC], calling DAO
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b53eaa618f06ab7644edf454e097286a3ce3cc71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 938381f55b598911b69bb25bf7af576dfdfb2e4f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505745"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: wywoływanie obiektów DAO bezpośrednio podczas używania klas MFC DAO
 

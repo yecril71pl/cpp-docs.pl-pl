@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg, _wfullpath_dbg | Microsoft Docs
-ms.custom: ''
+title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488013"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Wersje [_fullpath —, _wfullpath —](fullpath-wfullpath.md) korzystające z wersji do debugowania **— funkcja malloc** można przydzielić pamięci.
+Wersje [_fullpath —, _wfullpath —](fullpath-wfullpath.md) które korzystają z wersji debugowania **— funkcja malloc** można przydzielić pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,32 +64,32 @@ wchar_t *_wfullpath_dbg(
 ### <a name="parameters"></a>Parametry
 
 *absPath*<br/>
-Wskaźnik do bufor zawierający nazwę ścieżki bezwzględnej lub pełnego lub **NULL**.
+Wskaźnik do buforu, zawierające nazwę ścieżki bezwzględnej lub pełnego lub **NULL**.
 
 *relPath*<br/>
 Nazwa ścieżki względnej.
 
 *Element maxLength*<br/>
-Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). Jest to długość w bajtach dla **_fullpath —** , ale w znaki dwubajtowe (**wchar_t**) dla **_wfullpath —**.
+Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). To długość jest w bajtach dla **_fullpath —** , ale w znaków dwubajtowych (**wchar_t**) dla **_wfullpath —**.
 
 *blockType*<br/>
-Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
+Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który żądanej operacji alokacji lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **NULL**.
+Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wskaźnik do buforu, zawierający nazwę ścieżki bezwzględnej (*absPath*). Jeśli błąd (na przykład, jeśli wartość przekazano *relPath* zawiera literę dysku, który jest nieprawidłowy lub nie można znaleźć, lub jeśli długość nazwy utworzonego ścieżkę bezwzględną (*absPath*) jest większa niż *maxLength*) funkcja zwraca **NULL**.
+Każda funkcja zwraca wskaźnik do buforu, zawierający nazwę ścieżkę bezwzględną (*absPath*). Jeśli wystąpi błąd (na przykład, jeśli wartość przekazywana w *relPath* zawiera literę dysku, który jest nieprawidłowy lub nie można odnaleźć, lub jeśli długość nazwy utworzona ścieżka bezwzględna (*absPath*) jest większa niż *maxLength*) funkcja zwraca **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fullpath_dbg —** i **_wfullpath_dbg —** funkcje są takie same jak **_fullpath —** i **_wfullpath —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc**, **_malloc_dbg —**, można przydzielić pamięci, jeśli **NULL** jest przekazywany jako pierwszego parametru. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
+**_Fullpath_dbg —** i **_wfullpath_dbg —** funkcje są takie same jak **_fullpath —** i **_wfullpath —** z tą różnicą, że gdy **_DEBUG** jest zdefiniowany, te funkcje używają wersji debugowania **— funkcja malloc**, **_malloc_dbg**, można przydzielić pamięci, jeśli **NULL** jest przekazywany jako pierwszy parametr. Instrukcje dotyczące debugowania funkcji **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można zdefiniować **_crtdbg_map_alloc —** flagi. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_fullpath —** i **_wfullpath —** są mapowane ponownie do **_fullpath_dbg —** i **_wfullpath_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego możesz zdefiniować **_CRTDBG_MAP_ALLOC** flagi. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_fullpath —** i **_wfullpath —** są mapowane ponownie do **_fullpath_dbg —** i **_wfullpath_dbg —**, odpowiednio, z *blockType* równa **_NORMAL_BLOCK**. Dzięki temu, nie trzeba jawnie wywołać te funkcje, chyba że chcesz oznaczyć bloki stosu jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -114,10 +104,10 @@ Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego 
 |**_fullpath_dbg**|\<crtdbg.h>|
 |**_wfullpath_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
-[Wersja debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

@@ -1,38 +1,28 @@
 ---
-title: Strumienie | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Strumienie wejściowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3dff2e0bb0ee070b8b90ca3896d7bf8114ca918
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845573"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504770"
 ---
 # <a name="input-streams"></a>Strumienie wejściowe
 
-Obiekt strumień wejściowy jest źródłem bajtów. Są trzy najważniejsze klasy strumień wejściowy [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), i [istringstream](../standard-library/basic-istringstream-class.md).
+Obiekt strumienia wejściowego jest źródłem bajtów. Są trzy najważniejsze klasy strumień wejściowy [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), i [istringstream](../standard-library/basic-istringstream-class.md).
 
-`istream` Klasy najlepiej nadaje się do danych wejściowych sekwencyjnych tekstowej. Można skonfigurować obiektów klasy `istream` buforowane lub Niebuforowane operacji. Wszystkie funkcje klasy podstawowej, `ios`, znajduje się w `istream`. Rzadko utworzy obiekty z klasy `istream`. Zamiast tego zazwyczaj użyje wstępnie zdefiniowane `cin` obiektu, który jest rzeczywiście obiekt klasy [ostream](../standard-library/basic-ostream-class.md). W niektórych przypadkach można przypisać `cin` do innych obiektów strumienia po uruchomieniu programu.
+`istream` Klasy najlepiej nadaje się do trybu sekwencyjnego tekstu w danych wejściowych. Można skonfigurować obiektów klasy `istream` buforowane lub Niebuforowane operacji. Wszystkie funkcje klasy bazowej, `ios`, znajduje się w `istream`. Konstruujesz rzadko obiektów z klasy `istream`. Zamiast tego zazwyczaj użyje wstępnie zdefiniowanego `cin` obiektu, który jest faktycznie obiekt klasy [ostream](../standard-library/basic-ostream-class.md). W niektórych przypadkach można przypisać `cin` do innych obiektów strumień po uruchomieniu programu.
 
-`ifstream` Klasa obsługuje wejście dysku. Jeśli potrzebujesz tylko wejściowym na dysku, utworzenia obiektu klasy `ifstream`. Można określić danych binarnych lub tekstowej. Jeśli w Konstruktorze określono nazwę pliku, plik jest otwarty automatycznie, podczas konstruowania obiektu. W przeciwnym razie można użyć `open` funkcja po wywołaniu konstruktora domyślnego. Wiele funkcji formatowania opcje i element członkowski dotyczą `ifstream` obiektów. Wszystkie funkcje klasy podstawowe `ios` i `istream` znajduje się w `ifstream`.
+`ifstream` Klasa obsługuje dysku pliku wejściowego. Jeśli potrzebujesz tylko szyfrowanie plików na dysku, utworzyć obiekt klasy `ifstream`. Można określić dane binarne lub tekstowej. Jeśli określisz parametr filename w konstruktorze, plik jest automatycznie otwierany, gdy obiekt jest konstruowany. W przeciwnym razie można użyć `open` funkcji po wywołaniu konstruktora domyślnego. Wiele funkcji formatowania opcje i elementów członkowskich dotyczą `ifstream` obiektów. Wszystkie funkcje klasy bazowe `ios` i `istream` znajduje się w `ifstream`.
 
-Funkcja biblioteki, takich jak `sscanf_s`, `istringstream` klasa obsługuje dane wejściowe z ciągów w pamięci. Aby wyodrębnić dane z tablicy znaków, które ma terminatorem null, alokacji i inicjuje ciąg, a następnie utworzyć obiekt klasy `istringstream`.
+Funkcja biblioteki, takie jak `sscanf_s`, `istringstream` klasa obsługuje dane wejściowe z ciągów w pamięci. Aby wyodrębnić dane z tablicy znaków, który ma terminator o wartości null, przydzielanie i inicjuje ciąg, a następnie utworzyć obiekt klasy `istringstream`.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

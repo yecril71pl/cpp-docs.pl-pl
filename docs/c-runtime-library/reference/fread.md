@@ -1,10 +1,6 @@
 ---
-title: fread — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400931"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468838"
 ---
 # <a name="fread"></a>fread
 
@@ -59,28 +49,28 @@ size_t fread(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu danych.
+Lokalizacja magazynowa danych.
 
 *Rozmiar*<br/>
 Rozmiar elementu w bajtach.
 
 *Liczba*<br/>
-Maksymalna liczba elementów do odczytu.
+Maksymalna liczba elementów, które mają być odczytywane.
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread —** zwraca liczbę elementów pełne faktycznie odczytu, które może być mniejsza niż *liczba* Jeśli wystąpi błąd lub napotkano koniec pliku przed osiągnięciem *liczba*. Użyj **feof —** lub **ferror —** funkcja odróżnienia błąd odczytu warunek końca pliku. Jeśli *rozmiar* lub *liczba* ma wartość 0, **fread —** zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli *strumienia* lub *buforu* wskaźnika o wartości null, jest **fread —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca wartość 0.
+**fread —** zwraca liczbę elementów pełną odczytane, które mogą być mniej niż *liczba* Jeśli wystąpi błąd lub napotkano koniec pliku przed osiągnięciem *liczba*. Użyj **feof** lub **ferror** funkcję, aby odróżnić błąd odczytu z warunkiem końca pliku. Jeśli *rozmiar* lub *liczba* ma wartość 0, **fread —** zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli *strumienia* lub *buforu* jest pustym wskaźnikiem, **fread —** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fread —** funkcja odczytuje do *liczba* elementów *rozmiar* bajtów z danych wejściowych *strumienia* i zapisuje je w *buforu* . Wskaźnika pliku skojarzone z *strumienia* (jeśli istnieje) jest zwiększana o liczba bajtów odczytanych w rzeczywistości. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza powrotu karetki są zastępowane wysuwu wiersza pojedynczy znaki. Zastąpienie nie ma wpływu na wskaźnika pliku lub wartości zwracanej. Położenie pliku wskaźnika jest nieokreślony, jeśli wystąpi błąd. Nie można określić wartość elementu częściowo odczytu.
+**Fread —** funkcja odczytuje maksymalnie *liczba* elementy *rozmiar* bajtów z danych wejściowych *strumienia* i zapisuje je w *buforu* . Skojarzony wskaźnik pliku *strumienia* (jeśli istnieje) jest zwiększana o liczbę faktycznie odczytanych bajtów. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza powrotu karetki są zastępowane przez znaki wysuwu pojedynczego wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślony, jeśli wystąpi błąd. Nie można określić wartość elementu częściowo odczytu.
 
-Ta funkcja blokuje inne wątki. Wersja — blokowanie, należy użyć **_fread_nolock —**.
+Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji bez blokady, użyj **_fread_nolock —**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -142,6 +132,6 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

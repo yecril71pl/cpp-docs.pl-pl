@@ -1,10 +1,6 @@
 ---
-title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 328e6fba2854e2cee82bdb9b7ccfe2e62e7c1ddc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402650"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658461"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
-Formatuje drukuje do konsoli i obsługuje parametrów pozycyjnych w ciągu formatu.
+Formatuje i drukuje do konsoli oraz obsługuje parametry pozycyjne w ciągu formatu.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -103,20 +93,20 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znakom lub wartość ujemną, jeśli wystąpi błąd.
+Liczba znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje formatowania i drukowania serii znaków i wartości bezpośrednio z konsoli programu przy użyciu **_putch —** i **_putwch —** funkcje, które mają dane wyjściowe znaków. Każdy *argument* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. Format ma takie same tworzą i działać jako *format* parametr [printf_p —](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkcji. Różnica między **_cprintf_p —** i **cprintf_s —** jest to, że **_cprintf_p —** parametrów pozycyjnych obsługuje, co umożliwia określenie kolejności, w którym znajdują się argumenty używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Te funkcje formatują i drukują szeregi znaków i wartości bezpośrednio do konsoli, za pomocą **_putch** i **_putwch** funkcji do znaków danych wyjściowych. Każdy *argument* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. Format ma taką samą formę i funkcjonuje jako *format* parametr [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkcji. Różnica między **_cprintf_p —** i **cprintf_s —** jest fakt, że **_cprintf_p —** wspiera parametry pozycyjne, które umożliwiają określenie kolejności, w której argumenty są: używany w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-W odróżnieniu od **fprintf_p —**, **printf_p —**, i **sprintf_p —** funkcji ani **_cprintf_p —** ani **_cwprintf_p —** tłumaczy znaki wysuwu wiersza na kombinacji powrotu wiersza kanału informacyjnego (CR LF) karetki podczas drukowania. Jest to ważna różnica **_cwprintf_p —** Wyświetla znaków Unicode, gdy jest używany w systemie Windows NT. W odróżnieniu od **_cprintf_p —**, **_cwprintf_p —** używa bieżących ustawień regionalnych konsoli.
+W odróżnieniu od **fprintf_p —**, **printf_p**, i **sprintf_p —** funkcji ani **_cprintf_p —** ani **_cwprintf_p —** tłumaczy znaków wysuwu wiersza na powrotu karetki, kombinacje kanał wiersza powrotu (CR-LF) podczas drukowania. Jest to ważna różnica **_cwprintf_p —** Wyświetla znaki Unicode, gdy są używane w Windows NT. W odróżnieniu od **_cprintf_p —**, **_cwprintf_p —** używa bieżących ustawień regionalnych konsoli.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika.
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
-Ponadto, takich jak **_cprintf_s —** i **_cwprintf_s —**, ich weryfikacji wskaźnika wejścia i ciąg formatu. Jeśli *format* lub *argument* są **NULL**, lub w formacie ciąg zawiera nieprawidłowe znaki formatowania, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, jako opisany w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Ponadto, podobnie jak **_cprintf_s** i **_cwprintf_s —**, walidują one wskaźnik danych wejściowych i ciąg formatu. Jeśli *format* lub *argument* są **NULL**, lub ciąg formatu zawiera nieprawidłowe znaki formatowania, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, jako opisane w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -132,7 +122,7 @@ Ponadto, takich jak **_cprintf_s —** i **_cwprintf_s —**, ich weryfikacji ws
 |**_cprintf_p —**, **_cprintf_p_l —**|\<conio.h>|
 |**_cwprintf_p —**, **_cwprintf_p_l —**|\<conio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

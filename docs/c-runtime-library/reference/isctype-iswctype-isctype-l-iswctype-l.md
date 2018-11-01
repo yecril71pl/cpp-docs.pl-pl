@@ -1,10 +1,6 @@
 ---
-title: _isctype —, iswctype —, _isctype_l —, _iswctype_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402555"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563166"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Testy *c* dla określonego przez właściwość ctype *desc* argumentu. Dla każdego prawidłowa wartość *desc*, brak procedury klasyfikacji znaków dwubajtowych równoważne.
+Testy *c* dla określona przez właściwość ctype *desc* argumentu. Dla każdej prawidłowej wartości *desc*, istnieje równoważna znaków dwubajtowych procedura klasyfikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,19 +75,19 @@ int _iswctype_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *desc*<br/>
-Właściwość do sprawdzenia. To jest zwykle pobrany przy użyciu ctype lub [wctype —](wctype.md).
+Właściwość do badania. Jest zwykle pobierane za pomocą ctype lub [wctype](wctype.md).
 
 *Ustawienia regionalne*<br/>
-Ustawienia regionalne dla żadnych testów zależnych od ustawień regionalnych.
+Ustawienia regionalne dla wszelkich badań zależne od ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_isctype —** i **iswctype —** zwrócić wartość niezerową, jeśli *c* została określona przez właściwość *desc* w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_isctype —** i **iswctype** zwraca wartość różną od zera, jeśli *c* ma właściwość określoną przez *desc* w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -111,15 +101,15 @@ Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowana, jeśli *c
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
-|**iswctype —**|\<CType.h > lub \<wchar.h >|
+|**iswctype**|\<CType.h > lub \<wchar.h >|
 |**_isctype_l**|\<ctype.h>|
 |**_iswctype_l —**|\<CType.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

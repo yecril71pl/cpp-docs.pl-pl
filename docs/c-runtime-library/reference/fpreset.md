@@ -1,10 +1,6 @@
 ---
-title: _fpreset — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592623"
 ---
 # <a name="fpreset"></a>_fpreset
 
-Resetuje zmiennoprzecinkowe pakietu.
+Resetuje pakiet zmiennoprzecinkowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,9 +43,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fpreset —** funkcja ponownie inicjuje zmiennoprzecinkowej matematyczny pakietu. **_fpreset —** jest zwykle używany z **sygnału**, **systemu**, lub **_exec —** lub **_spawn** funkcji. Jeśli program traps sygnały błąd liczb zmiennoprzecinkowych (**sigfpe —**) z **sygnału**, bezpiecznie można odzyskać z błędów zmiennoprzecinkowych wywołując **_fpreset —** i przy użyciu **longjmp**.
+**_Fpreset —** funkcja zainicjowaniu pakiecie zmiennoprzecinkowym zapisu matematycznego. **_fpreset —** jest zwykle używany z **sygnału**, **systemu**, lub **_exec** lub **_spawn** funkcji. Jeśli program traps sygnalizuje błąd wartości zmiennoprzecinkowej (**SIGFPE**) za pomocą **sygnału**, jego można bezpiecznie dokonać przywrócenia błędy zmiennoprzecinkowych, wywołując **_fpreset —** i przy użyciu **longjmp**.
 
-Ta funkcja jest przestarzała podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.
+Ta funkcja jest przestarzała, podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -63,7 +53,7 @@ Ta funkcja jest przestarzała podczas kompilowania za pomocą [/CLR (kompilacja 
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

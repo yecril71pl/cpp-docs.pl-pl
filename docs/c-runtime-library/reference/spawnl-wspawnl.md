@@ -1,10 +1,6 @@
 ---
-title: _spawnl —, _wspawnl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _spawnl, _wspawnl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnl
 - _spawnl
@@ -26,8 +22,6 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcd276e59edd78942f14211845c615d7e4f7eb6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518082"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
-Tworzy i wykonuje nowego procesu.
+Tworzy i uruchamia nowy proces.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,40 +75,40 @@ Tryb wykonywania dla procesu wywołującego.
 Ścieżka pliku do wykonania.
 
 *arg0*, *arg1*,... *argn*<br/>
-Lista wskaźników do argumentów. *Arg0* argument jest zwykle wskaźnik do *cmdname*. Argumenty *arg1* za pośrednictwem *argn* są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Po *argn*, musi istnieć **NULL** wskaźnik do znaku na końcu listy argumentów.
+Lista wskaźników do argumentów. *Arg0* argument jest zazwyczaj wskaźnikiem do *cmdname*. Argumenty *arg1* za pośrednictwem *argn* są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Następujące *argn*, musi istnieć **NULL** wskaźnik, aby zaznaczyć koniec listy argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwrócona przez synchronicznego **_spawnl —** lub **_wspawnl —** (**_p_wait —** określona dla *tryb*) jest stan zakończenia nowego procesu. Wartość zwrócona przez asynchronicznego **_spawnl —** lub **_wspawnl —** (**_p_nowait —** lub **_p_nowaito —** określona dla *tryb* ) jest uchwytu procesu. Stan zakończenia to 0, jeśli proces zakończony normalnie. Stan zakończenia można ustawić na wartość niezerową działania zduplikowanego procesu w szczególności wywołuje **zakończyć** rutynowych z argumentem różną od zera. Jeśli nowy proces nie zostanie jawnie ustawiona stanu zakończenia dodatnią, stan zakończenia dodatnią wskazuje nietypowe wyjście z przerwania lub przerwania. Zwracana wartość -1 wskazuje błąd (nie jest zainicjowany nowy proces). W takim przypadku **errno** ustawiono na jedną z następujących wartości.
+Wartość zwracana przez synchroniczny **_spawnl** lub **_wspawnl —** (**_P_WAIT** określony dla *tryb*) jest stanem wyjścia nowego procesu. Wartość zwracana przez synchroniczny **_spawnl** lub **_wspawnl —** (**_P_NOWAIT** lub **_P_NOWAITO** określony dla *tryb* ) jest dojściem do procesu. Stanem wyjścia wynosi 0, jeżeli proces zakończył się normalnie. Możesz ustawić stan wyjścia na wartość różną od zera, jeśli procesu rozmnożonego w szczególności wywołuje **wyjść** rutynę z argumentem wartość różną od zera. Jeśli nowy proces nie ustawi jawnie stanu wyjścia, stan wyjścia wskazuje nietypowe wyjście z porzuceniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
 
 |||
 |-|-|
-**E2BIG —**|Lista argumentów przekracza 1024 bajty.
-**EINVAL —**|*tryb* argument jest nieprawidłowy.
-**ENOENT —**|Nie znaleziono pliku lub ścieżki.
-**ENOEXEC —**|Określony plik nie jest wykonywalne lub ma nieprawidłowy format pliku wykonywalnego.
-**ENOMEM —**|Za mało pamięci jest dostępna do wykonania w nowym procesie.
+**E2BIG**|Argument w postaci listy przekracza 1024 bajty.
+**EINVAL**|*tryb* argument jest nieprawidłowy.
+**ENOENT**|Nie znaleziono pliku lub ścieżki.
+**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.
+**ENOMEM**|Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu.
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* jest ciągiem pustym lub wskaźnika o wartości null, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Nie nowego procesu jest zduplikowany.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest pustym ciągiem lub wskaźnikiem typu null, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL**i zwracają wartość -1. Żaden nowy proces nie jest rozprzestrzeniony.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji tworzy i wykonuje nowy proces, przekazywanie jako osobny parametr każdy argument wiersza polecenia.
+Każda z tych funkcji tworzy i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnl —**|\<process.h >|
+|**_spawnl**|\<process.h >|
 |**_wspawnl —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
+Zobacz przykład w [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

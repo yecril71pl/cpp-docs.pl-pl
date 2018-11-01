@@ -1,23 +1,13 @@
 ---
-title: Operatory środowiska wykonawczego | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Operatory środowiska wykonawczego
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ac73d2db-ffc6-4eab-b37b-bc51488a7d2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8bacc7f86500d96e64db392dc26486c497a425b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 49ec0763c752196f989ac46e70fae86425cad57c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43675981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512852"
 ---
 # <a name="run-time-operators"></a>Operatory środowiska wykonawczego
 

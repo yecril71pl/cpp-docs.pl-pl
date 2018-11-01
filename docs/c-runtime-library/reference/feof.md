@@ -1,10 +1,6 @@
 ---
-title: feof — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580703"
 ---
 # <a name="feof"></a>feof
 
-Testy na końcu pliku dla strumienia.
+Testuje pod kątem koniec pliku dla strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,20 +43,20 @@ int feof(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Feof —** funkcja zwraca wartość niezerową, jeśli operacja odczytu została próba odczytu poza końcem pliku; w przeciwnym razie zwraca 0. W przypadku strumienia wskaźnika **NULL**, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i **feof —** zwraca wartość 0.
+**Feof** funkcja zwraca wartość różną od zera, jeśli operacja odczytu podjął próbę odczytu poza końcem pliku; w przeciwnym razie zwraca 0. Jeśli wskaźnik strumienia **NULL**, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i **feof** zwraca wartość 0.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feof —** procedura (zaimplementowano funkcji oraz w makrze) określa, czy koniec *strumienia* został przekazany. Po upływie na końcu pliku do odczytu operacji zwracać wskaźnik końca pliku, dopóki strumień jest zamknięty lub do czasu [rewind](rewind.md), **fsetpos —**, [fseek](fseek-fseeki64.md), lub  **clearerr —** nazywa się przed nim.
+**Feof** procedura (implementowana jako funkcja i jak makra) określa czy koniec *strumienia* został przekazany. Po upływie na końcu pliku odczytać operacje zwracają wskaźnik końca pliku, dopóki strumień jest zamknięty lub do momentu [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), lub  **clearerr —** nazywa się przed nim.
 
-Na przykład, jeśli plik zawiera 10 bajtów odczytanych bajtów 10 z pliku **feof —** zwróci 0, ponieważ mimo że wskaźnika pliku znajduje się na końcu pliku, nie podjęto próbę odczytu poza końcem. Tylko podczas próby odczytu 11 bajtów zostanie **feof —** zwrócić wartość niezerową.
+Na przykład, jeśli plik zawiera 10 bajtów i odczytu 10 bajtów z pliku **feof** zwróci 0, ponieważ mimo że wskaźnik pliku znajduje się na końcu pliku, nie podjęto próbę odczytu poza końcem. Tylko po użytkownik próbuje odczytać 11 bajtów będą **feof** zwracają wartość różną od zera.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -132,7 +122,7 @@ Number of bytes read = 19
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [ferror](ferror.md)<br/>

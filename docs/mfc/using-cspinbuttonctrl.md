@@ -1,30 +1,20 @@
 ---
-title: Korzystanie z CSpinButtonCtrl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Korzystanie z CSpinButtonCtrl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CSpinButtonCtrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - up-down controls [MFC], spin button control
 - up-down controls
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0dfffa5a7ec315c0bc8af93a7cf825c62494bd02
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d3fe77c4d6d6b7bbea6e2b5f28954df4eec454d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545876"
 ---
 # <a name="using-cspinbuttonctrl"></a>Korzystanie z CSpinButtonCtrl
 

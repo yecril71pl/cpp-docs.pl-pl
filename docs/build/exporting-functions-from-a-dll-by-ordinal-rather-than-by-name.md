@@ -1,30 +1,20 @@
 ---
-title: Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - NONAME
-dev_langs:
-- C++
 helpviewer_keywords:
 - exporting functions [C++], ordinal values
 - ordinal exports [C++]
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d894df971dd0c50556a420eafa2909474ee6912
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6a5ac13fdc85b3cb1626aefa28b92866a8c856c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503420"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 

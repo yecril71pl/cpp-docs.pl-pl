@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: mbsrtowcs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs_s
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8885d11c7fca10c63077464020a8bbab2b6f3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a935b5181078f3b08ba5f2f89c581ed8cce8ded5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588831"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
-Konwertowanie ciągu znaków wielobajtowych w bieżących ustawień regionalnych reprezentacji ciągu znaków dwubajtowych. Wersja [mbsrtowcs —](mbsrtowcs.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertowanie ciągu znaków wielobajtowych przy bieżących ustawieniach regionalnych na jego reprezentację ciągu znaków dwubajtowych. Wersja [mbsrtowcs —](mbsrtowcs.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,70 +56,70 @@ errno_t mbsrtowcs_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Liczba znaków konwersji.
+Liczba znaków, konwersji.
 
 *wcstr*<br/>
-Adres buforu do przechowywania powstałe w ten sposób konwersji ciągu znaków dwubajtowych.
+Adres bufor do przechowywania wynikowy przekonwertować ciąg znaku dwubajtowego.
 
 *sizeInWords*<br/>
-Rozmiar *wcstr* słownie (znaki dwubajtowe).
+Rozmiar *wcstr* w słowach (znaki dwubajtowe).
 
 *mbstr*<br/>
-Pośredni wskaźnik do lokalizacji ciąg znaków wielobajtowych do skonwertowania.
+Pośredni wskaźnik do lokalizacji ciąg znaków wielobajtowych do konwersji.
 
 *Liczba*<br/>
-Maksymalna liczba znaki dwubajtowe, które mają być przechowywane w *wcstr* buforu Trwa przerywanie działania wartość null, z wyłączeniem lub [_truncate —](../../c-runtime-library/truncate.md).
+Maksymalna liczba znaków dwubajtowych do przechowywania w *wcstr* buforu, nie wliczając końcowej wartości null lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Wskaźnik do **mbstate_t** konwersji stanu obiektu. Jeśli ta wartość jest wskaźnika o wartości null, jest używany obiekt stanu statyczne wewnętrzne konwersji. Ponieważ wewnętrznej **mbstate_t** obiekt nie jest bezpieczne wątkowo, zaleca się, że należy zawsze przekazuj własne *mbstate* parametru.
+Wskaźnik do **mbstate_t** konwersji stan obiektu. Jeśli ta wartość jest wskaźnikiem typu null, jest używany obiekt stanu konwersji statycznej wewnętrznego. Ponieważ wewnętrzny **mbstate_t** obiekt nie jest metodą o bezpiecznych wątkach, zaleca się, że należy zawsze przekazuj parametr własne *mbstate* parametru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli konwersja zakończy się pomyślnie, lub błąd o kodzie błędu.
+Zero, jeśli konwersja zakończy się pomyślnie, lub kod błędu.
 
-|Warunek błędu|Wartość zwracana i **errno**|
+|Warunek błędu|Zwraca wartość i **errno**|
 |---------------------|------------------------------|
-|*wcstr* wskaźnik null i *sizeInWords* > 0.|**EINVAL —**|
-|*mbstr* jest wskaźnika o wartości null|**EINVAL —**|
-|Ciąg pośrednio wskazywana przez *mbstr* zawiera sekwencję wielobajtowe, która jest nieprawidłowa dla bieżącego ustawienia regionalne.|**EILSEQ —**|
-|Bufor docelowy jest zbyt mały, aby pomieścił skonwertowany ciąg (chyba że *liczba* jest **_truncate —**; Aby uzyskać więcej informacji, zobacz Uwagi)|**ERANGE —**|
+|*wcstr* jest pustym wskaźnikiem i *sizeInWords* > 0|**EINVAL**|
+|*mbstr* jest wskaźnikiem wartości null|**EINVAL**|
+|Ciąg pośrednio wskazywany przez *mbstr* zawiera wielobajtowy sekwencję, która nie jest prawidłowa dla bieżących ustawień regionalnych.|**EILSEQ**|
+|Bufora docelowego jest zbyt mała, aby zawierać ciąg przekonwertowany (chyba że *liczba* jest **_TRUNCATE**; Aby uzyskać więcej informacji, zobacz Uwagi)|**ERANGE**|
 
-Jeśli występuje jeden z tych warunków, nieprawidłowy parametr wyjątek jest wywoływany zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja zwraca błąd o kodzie i ustawia **errno** wymienione w tabeli.
+Jeśli występuje jeden z tych warunków, wyjątek nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja zwraca kod błędu i ustawia **errno** jak wskazano w tabeli.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mbsrtowcs_s —** funkcja konwertuje ciąg znaków wielobajtowych pośrednio wskazywana przez *mbstr* w znaki dwubajtowe są przechowywane w buforze wskazywana przez *wcstr*, przez za pomocą konwersji stanie zawartymi w *mbstate*. Konwersja będzie kontynuowane dla każdego znaku, dopóki spełniony jest jeden z następujących warunków:
+**Mbsrtowcs_s —** funkcji konwertuje ciąg znaków wielobajtowych pośrednio wskazywany przez *mbstr* do znaków szerokich przechowywanych w bufor wskazywany przez *wcstr*, za pomocą stan konwersji, zawarte w *mbstate*. Konwersja będą nadal dla każdego znaku, dopóki nie jest spełniony jeden z następujących warunków:
 
-- Napotkano znak null wielobajtowe
+- Wielobajtowy znak null zostanie osiągnięty.
 
-- Napotkano nieprawidłowy znaków wielobajtowych
+- Napotkano nieprawidłowy znak wielobajtowy
 
-- Liczba znaki dwubajtowe są przechowywane w *wcstr* buforu equals *liczba*.
+- Liczba znaków szerokich przechowywanych w *wcstr* buforu equals *liczba*.
 
-Ciąg docelowego *wcstr* jest zawsze zerem, nawet w przypadku błędu, chyba że *wcstr* jest wskaźnika o wartości null.
+Ciąg docelowy *wcstr* zawsze jest zakończony znakiem null, nawet w przypadku błędu, chyba że *wcstr* jest wskaźnikiem wartości null.
 
-Jeśli *liczba* jest specjalna wartość [_truncate —](../../c-runtime-library/truncate.md), **mbsrtowcs_s —** konwertuje tyle ciągu jako spowoduje mieści się w bufor docelowy, pozostawiając nadal miejsca na wartość null terminator.
+Jeśli *liczba* jest specjalna wartość [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s —** konwertuje tyle ciągu jako będą dopasowania do buforu docelowego pozostawiając nadal miejsca na wartość null Element przerywający.
 
-Jeśli **mbsrtowcs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza w znaki dwubajtowe skonwertowany ciąg i terminatorem null do rozmiaru  *&#42;pReturnValue*, podany  *pReturnValue* nie jest wskaźnika o wartości null. Dzieje się tak nawet wtedy, gdy *wcstr* argument jest pusty wskaźnik i umożliwia określenie wymagany rozmiar buforu. Należy pamiętać, że jeśli *wcstr* wskaźnika o wartości null, jest *liczba* jest ignorowana.
+Jeśli **mbsrtowcs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza rozmiar w znaki dwubajtowe przekonwertowanego ciągu i terminator o wartości null do  *&#42;pReturnValue*, podana  *pReturnValue* nie jest wskaźnikiem typu null. Dzieje się tak nawet wtedy, gdy *wcstr* argument jest wskaźnikiem typu null i umożliwia określenie wymagany rozmiar buforu. Należy pamiętać, że jeśli *wcstr* jest pustym wskaźnikiem, *liczba* jest ignorowana.
 
-Jeśli *wcstr* wskaźnika o wartości null, nie jest obiekt wskaźnika wskazywana przez *mbstr* jest przypisany wskaźnika o wartości null, jeśli konwersja została zatrzymana, ponieważ osiągnięto znak końcowy null. W przeciwnym razie wartość przypisano adres przeszłości tylko ostatnich znaków wielobajtowych przekonwertowany, jeśli istnieje. Umożliwia wywołanie funkcji kolejne ponowne uruchomienie konwersji, gdzie to wywołanie jest zatrzymana.
+Jeśli *wcstr* nie jest wskaźnikiem typu null, obiekt wskaźnika wskazywany przez *mbstr* przypisano wskaźnikiem typu null, jeśli konwersja została zatrzymana, ponieważ osiągnięto kończącego znaku null. W przeciwnym razie jest przypisany adres przeszłości tylko ostatni znak wielobajtowy jest konwertowany, jeśli istnieje. Dzięki temu wywołania funkcji późniejszego ponownego uruchomienia konwersji, w którym to wywołanie jest zatrzymana.
 
-Jeśli *mbstate* jest pustego wskaźnika wewnętrznego biblioteki **mbstate_t** obiektu statycznego stan konwersji jest używany. Ten wewnętrzny obiekt statycznych nie jest bezpieczne wątkowo, dlatego zaleca się że przekazujesz własne *mbstate* wartości.
+Jeśli *mbstate* jest pustym wskaźnikiem, wewnętrznej biblioteki **mbstate_t** obiektu statycznego stan konwersji jest używany. Ponieważ tego wewnętrznego obiektu statycznego nie jest metodą o bezpiecznych wątkach, firma Microsoft zaleca, aby były przekazywane własne *mbstate* wartości.
 
-Jeśli **mbsrtowcs_s —** napotka znaków wielobajtowych, który nie jest prawidłowa w bieżących ustawień regionalnych, umieszcza -1 w  *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* ciąg pusty, ustawia **errno** do **eilseq —** i zwraca **eilseq —**.
+Jeśli **mbsrtowcs_s —** napotka znaku wielobajtowego, który nie jest prawidłowa w bieżących ustawień regionalnych, umieszcza -1 w  *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* pusty ciąg, ustawia **errno** do **EILSEQ**i zwraca **EILSEQ**.
 
-Jeśli sekwencje wskazywana przez *mbstr* i *wcstr* nakładają się zachowanie **mbsrtowcs_s —** jest niezdefiniowana. **mbsrtowcs_s —** dotyczy kategorii LC_TYPE bieżące ustawienia regionalne.
+Jeśli sekwencji wskazywany przez *mbstr* i *wcstr* zachodziły na siebie, zachowanie **mbsrtowcs_s —** jest niezdefiniowana. **mbsrtowcs_s —** jest zależna od kategorii LC_TYPE bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie pokrywają oraz że *liczba* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
+> Upewnij się, że *wcstr* i *mbstr* nie zachodziły na siebie oraz że *liczba* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
 
-**Mbsrtowcs_s —** funkcja różni się od [mbstowcs_s —, _mbstowcs_s_l —](mbstowcs-s-mbstowcs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład, aplikacja, należy użyć **mbsrlen** zamiast **mbslen —**, jeśli kolejne wywołanie **mbsrtowcs_s —** jest używany zamiast **mbstowcs_s —**.
+**Mbsrtowcs_s —** funkcja różni się od [mbstowcs_s —, _mbstowcs_s_l —](mbstowcs-s-mbstowcs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań tej samej lub innych funkcji ponownego uruchamiania. Podczas korzystania z funkcji ponownego uruchamiania i nonrestartable mieszania, wyniki są niezdefiniowane. Na przykład, aplikacja powinna używać **mbsrlen** zamiast **mbslen —**, jeśli kolejne wywołanie **mbsrtowcs_s —** jest używana zamiast **mbstowcs_s —**.
 
-W języku C++ za pomocą tej funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (eliminując konieczność określić argument rozmiar) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje za pomocą ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ za pomocą tej funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) oraz te mogą automatycznie zastąpić starsze, niezabezpieczone funkcje przy użyciu ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-**Mbsrtowcs_s —** funkcji jest bezpieczne wielowątkowe, jeśli brak funkcji w bieżącym wywołania wątku **setlocale** tak długo, jak ta funkcja jest wykonywany i *mbstate* argument jest pustego wskaźnika.
+**Mbsrtowcs_s —** — funkcja jest bezpieczna wielowątkowych, jeśli żadna funkcja w bieżący wątek wywoła **setlocale** tak długo, jak ta funkcja jest wykonywany i *mbstate* argument jest Pusty wskaźnik.
 
 ## <a name="requirements"></a>Wymagania
 
