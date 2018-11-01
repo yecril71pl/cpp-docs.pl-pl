@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488117"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
-Tworzy plik tymczasowy. Jest to wersja z [tmpfile —](tmpfile.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Tworzy plik tymczasowy. Jest to wersja programu [tmpfile —](tmpfile.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,23 +49,23 @@ Adres wskaźnika do przechowywania adres wygenerowanego wskaźnika do strumienia
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli to się powiedzie, kod błędu w przypadku awarii.
+Zwraca wartość 0, jeśli to się powiedzie, kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*pFilePtr*|**Wartość zwracana**|**Zawartość***pFilePtr* |
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL —**|nie został zmieniony|
+|**NULL**|**EINVAL**|nie zmienione|
 
-Jeśli wystąpi błąd sprawdzania poprawności parametru powyżej, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i jest zwracana wartość **einval —**.
+Jeśli powyższe parametr wystąpienia błędu sprawdzania poprawności, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i wartość zwracana jest **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Tmpfile_s —** funkcja powoduje utworzenie pliku tymczasowego i umieszcza wskaźnik do tego strumienia w *pFilePtr* argumentu. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć pliku tymczasowego w katalogu innym niż katalog główny, użyj [tmpnam_s —](tmpnam-s-wtmpnam-s.md) lub [tempnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen —](fopen-wfopen.md).
+**Tmpfile_s —** funkcji utworzy plik tymczasowy i umieszcza wskaźnik do tego strumienia w *pFilePtr* argumentu. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć pliku tymczasowego w katalogu innym niż katalog główny, użyj [tmpnam_s —](tmpnam-s-wtmpnam-s.md) lub [tempnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen —](fopen-wfopen.md).
 
-Jeśli nie można otworzyć pliku, **tmpfile_s —** zapisuje **NULL** do *pFilePtr* parametru. Plik tymczasowy jest automatycznie usuwana, gdy plik jest zamknięty, gdy program zakończenie zwykle lub **_rmtmp —** jest wywoływana przy założeniu, że bieżący katalog roboczy nie ulega zmianie. Plik tymczasowy jest otwarty w **w + b** trybu (binarne odczytu/zapisu).
+Jeśli nie można otworzyć pliku, **tmpfile_s —** zapisuje **NULL** do *pFilePtr* parametru. Plik tymczasowy jest automatycznie usuwany po pliku jest zamykane, gdy program zakończy się normalnie lub **_rmtmp —** jest wywoływana przy założeniu, że nie zmienia bieżącego katalogu roboczego. Plik tymczasowy jest otwarty w **w + b** trybu (binarne odczyt/zapis).
 
-Błąd może wystąpić przy próbie więcej niż **TMP_MAX_S** (zobacz stdio —. H) wywołania z **tmpfile_s —**.
+Błąd może wystąpić, jeśli użytkownik podejmie więcej niż **TMP_MAX_S** (zobacz stdio —. H) wywołań w przypadku **tmpfile_s —**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -88,7 +78,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 ## <a name="example"></a>Przykład
 
 > [!NOTE]
-> W tym przykładzie może wymagać uprawnień administracyjnych dla systemu Windows.
+> W tym przykładzie może wymagać uprawnień administracyjnych, systemem Windows.
 
 ```C
 // crt_tmpfile_s.c
@@ -129,6 +119,6 @@ Temporary file 3 was created
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

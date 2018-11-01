@@ -1,10 +1,6 @@
 ---
-title: _getcwd —, _wgetcwd — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10f242569579680c8e388b84bdcaca235a142a34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520243"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -70,26 +60,26 @@ wchar_t *_wgetcwd(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla ścieżki.
+Lokalizacja przechowywania dla ścieżki.
 
 *maxlen*<br/>
 Maksymalna długość ścieżki w znakach: **char** dla **_getcwd —** i **wchar_t** dla **_wgetcwd —**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do *buforu*. A **NULL** zwracana wartość wskazuje błąd i **errno** ma ustawioną opcję **enomem —**, wskazujące, że jest za mało pamięci do przydzielenia *maxlen* bajtów (gdy **NULL** argument jest podawana jako *buforu*), lub do **erange —**, wskazujący, że ścieżka jest dłuższa niż *maxlen*  znaków. Jeśli *maxlen* jest mniejsza lub równa zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+Zwraca wskaźnik do *buforu*. A **NULL** zwracana wartość wskazuje błąd, i **errno** ustawiono opcję **ENOMEM**, wskazujący, że jest za mało pamięci do przydzielenia *maxlen* bajtów (gdy **o wartości NULL** argument jest podawana jako *buforu*), lub **ERANGE**, wskazującą, czy ścieżka jest dłuższa niż *maxlen*  znaków. Jeśli *maxlen* jest mniejszy niż lub równy zero, funkcja wywoła nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getcwd —** funkcja pobiera pełną ścieżkę bieżącego katalogu roboczego na domyślnym dysku i zapisuje go w *buforu*. Argument całkowitą *maxlen* określa maksymalną długość ścieżki. Błąd występuje, gdy przekracza długość ścieżki (w tym znak końcowy null) *maxlen*. *Buforu* argument może być **NULL**; bufor o rozmiarze co najmniej *maxlen* (więcej tylko wtedy, gdy jest to konieczne) jest automatycznie przydzielone, za pomocą **— funkcja malloc**, aby przechowywać ścieżkę. Bufor później może zostać zwolniony przez wywołanie metody **wolnego** i przekazanie jej **_getcwd —** zwrócić wartość (wskaźnik do przydzielonego buforu).
+**_Getcwd —** funkcja pobiera pełną ścieżkę bieżącego katalogu roboczego na domyślnym dysku i zapisuje go w *buforu*. Argument liczby całkowitej *maxlen* określa maksymalną długość ścieżki. Błąd występuje, jeśli długość ścieżki (w tym kończącego znaku null) przekracza *maxlen*. *Buforu* argument może być **NULL**; bufor o rozmiarze co najmniej *maxlen* (więcej tylko wtedy, gdy jest to konieczne) jest przydzielany automatycznie, przy użyciu **— funkcja malloc**w celu przechowywania ścieżki. Ten bufor później może zostać uwolniony przez wywołanie metody **bezpłatne** i przekazanie do niej **_getcwd —** zwracają wartość (wskaźnik do przydzielonego buforu).
 
-**_getcwd —** zwraca ciąg reprezentujący ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalogiem głównym, ciąg kończy się znakiem kreski ułamkowej odwróconej ( **\\** ). Jeśli bieżący katalog roboczy jest katalogiem innego niż root, ciąg kończy się nazwą katalogu i nie kreski ułamkowej odwróconej.
+**_getcwd —** zwraca ciąg, który reprezentuje ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalog główny, ciąg kończy się znakiem kreski ułamkowej odwróconej ( **\\** ). Jeśli bieżący katalog roboczy na katalog inny niż katalog główny, ciąg kończy się nazwą katalogu, a nie znakiem kreski ułamkowej odwróconej.
 
-**_wgetcwd —** jest wersja znaków dwubajtowych **_getcwd —**; *buforu* argumentów i wartości **_wgetcwd —** są ciągami znaków dwubajtowych. **_wgetcwd —** i **_getcwd —** zachowują się tak samo w przeciwnym razie wartość.
+**_wgetcwd —** to wersja znaku dwubajtowego **_getcwd —**; *buforu* argument i wartość zwracana przez **_wgetcwd —** są ciągami znaków dwubajtowych. **_wgetcwd —** i **_getcwd —** zachowują się identycznie.
 
-Gdy **_DEBUG** i **_crtdbg_map_alloc —** są zdefiniowane, wywołań **_getcwd —** i **_wgetcwd —** zastępuje wywołań **_ getcwd_dbg —** i **_wgetcwd_dbg —** umożliwiające profilowanie przydziału pamięci. Aby uzyskać więcej informacji, zobacz [_getcwd_dbg —, _wgetcwd_dbg —](getcwd-dbg-wgetcwd-dbg.md).
+Gdy **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wzywa do **_getcwd —** i **_wgetcwd —** są zastępowane przez wywołania **_ getcwd_dbg —** i **_wgetcwd_dbg —** aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz [_getcwd_dbg —, _wgetcwd_dbg —](getcwd-dbg-wgetcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -104,7 +94,7 @@ Gdy **_DEBUG** i **_crtdbg_map_alloc —** są zdefiniowane, wywołań **_getcwd
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<Direct.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

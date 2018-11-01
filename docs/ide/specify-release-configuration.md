@@ -1,25 +1,15 @@
 ---
-title: Nowy projekt z istniejącego kodu wersji konfiguracji | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Nowy projekt z istniejących konfiguracji wydania kodu
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.releasesettings
-dev_langs:
-- C++
 ms.assetid: 3e2fc73c-bdbd-4790-b2bd-d31731f0cece
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 414d50ad15ad9eb85760aac470421df39e250ad0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10dec5e36531c9c0bf549b37bbfa892a624d0bf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511829"
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Określ ustawienia konfiguracji wydania, Kreator Utwórz nowy projekt z istniejących plików z kodem
 

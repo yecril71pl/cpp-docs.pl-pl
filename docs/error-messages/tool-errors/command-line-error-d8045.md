@@ -1,27 +1,17 @@
 ---
-title: Błąd d8045 wiersza polecenia | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd D8045 wiersza polecenia
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D8045
-dev_langs:
-- C++
 helpviewer_keywords:
 - D8045
 ms.assetid: 01c8808c-bac1-4b4d-8a90-b595f95e9318
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6838202178e8012df61d17e2434461d6f4858bf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7964c2539b5358d2d946e530c4ee75110857446d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490598"
 ---
 # <a name="command-line-error-d8045"></a>Błąd D8045 wiersza polecenia
 

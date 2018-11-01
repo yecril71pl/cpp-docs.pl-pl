@@ -1,29 +1,19 @@
 ---
-title: '@ (Określ plik odpowiedzi kompilatora) | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '@ (Określ plik odpowiedzi kompilatora)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '@'
-dev_langs:
-- C++
 helpviewer_keywords:
 - response files, C/C++ compiler
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 90dcadbb47cdc7eb4fa1ff039f5074a3141eac83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491315"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Określ plik odpowiedzi kompilatora)
 

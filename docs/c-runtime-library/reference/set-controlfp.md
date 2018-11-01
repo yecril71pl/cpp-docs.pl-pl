@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499044"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
-Ustawia słowa formantu zmiennoprzecinkowych.
+Ustawia słowo sterujące zmiennoprzecinkowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,10 +47,10 @@ void __cdecl _set_controlfp(
 ### <a name="parameters"></a>Parametry
 
 *newControl*<br/>
-Nowe wartości bitowe słowa formantu.
+Nowe wartości bitowe słowa sterującego.
 
 *Maska*<br/>
-Maska nowe bity słowa formantu można ustawić.
+Maska dla nowych bitów słowa kontrolującego do ustawienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -68,9 +58,9 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Set_controlfp —** funkcja przypomina **_control87 —**, ale określa tylko słowa formantu zmiennoprzecinkowe *newControl*. Bity w wartości wskazują stan formantu zmiennoprzecinkowych. Stan kontrolki zmiennoprzecinkowe pozwala programowi na zmienić dokładność, zaokrąglania i tryby infinity w pakiecie zmiennoprzecinkowej matematyczny. Możesz też zamaskować i anulować maskowanie wyjątki zmiennoprzecinkowe przy użyciu **_set_controlfp —**. Aby uzyskać więcej informacji, zobacz [_control87 —, _controlfp —, \__control87_2](control87-controlfp-control87-2.md).
+**_Set_controlfp —** funkcji jest podobne do **_control87 —**, ale tylko ustawia słowo sterujące zmiennoprzecinkowe *newControl*. Bity w wartości wskazują stan sterowania zmiennoprzecinkowego. Stan sterowania zmiennoprzecinkowego umożliwia program do zmiany precyzji, zaokrąglania oraz trybu nieskończoności w pakiecie zmiennoprzecinkowym zapisu matematycznego. Można również zamaskowania lub usunięcia wyjątki zmiennoprzecinkowe przy użyciu **_set_controlfp —**. Aby uzyskać więcej informacji, zobacz [_control87 —, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Ta funkcja jest przestarzała podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.
+Ta funkcja jest przestarzała, podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -78,7 +68,7 @@ Ta funkcja jest przestarzała podczas kompilowania za pomocą [/CLR (kompilacja 
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|x86 tylko procesora|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

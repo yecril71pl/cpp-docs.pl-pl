@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3284 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3284
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3824
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3284
 ms.assetid: e582f316-e9db-4d27-9c70-fdfa737a9d5f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c6be84043d7c475cbd023d870e524f7bf9e6190
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e79de18e277de9ee79945d319640fa906dea622
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511634"
 ---
 # <a name="compiler-error-c3284"></a>Błąd kompilatora C3284
 

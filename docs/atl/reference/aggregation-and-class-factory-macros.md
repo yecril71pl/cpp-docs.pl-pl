@@ -1,10 +1,6 @@
 ---
-title: Agregacji i makra fabryki klas | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Agregacji i makra fabryki klas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
 - atlcom/ATL::DECLARE_CLASSFACTORY
@@ -17,22 +13,16 @@ f1_keywords:
 - atlcom/ATL::DECLARE_POLY_AGGREGATABLE
 - atlcom/ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - atlcom/ATL::DECLARE_VIEW_STATUS
-dev_langs:
-- C++
 helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497193"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregacji i makra fabryki klas
 

@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3888 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3888
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3888
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9292f54fee467a5f8d01202b6ed7ca991b52d43
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 067412e59041cb98b68cb373c4671c243ab8a0ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479069"
 ---
 # <a name="compiler-error-c3888"></a>Błąd kompilatora C3888
 

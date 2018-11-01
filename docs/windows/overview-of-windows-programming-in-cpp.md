@@ -1,24 +1,13 @@
 ---
-title: Omówienie programowania Windows w języku C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 04/06/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6ec12428b090d2317a6f2e5cc493d1e4f9392ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494409"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 

@@ -1,24 +1,14 @@
 ---
-title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
+title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux w języku C++ w programie Visual Studio
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu zdalnego docelową z wewnątrz projektu języka Linux C++ w programie Visual Studio.
-ms.custom: ''
 ms.date: 09/12/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 685299f777f12abbd5534f58b13b3ba16d1cbe70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501520"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 

@@ -1,10 +1,6 @@
 ---
-title: strnset —, wcsnset — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strnset, wcsnset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strnset
 - wcsnset
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - wcsnset
 - strnset
-dev_langs:
-- C++
 helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e4332c92faf6a5e357b868feb2a6837b69f434b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e325237cdd8e1ff597bf0fbbe59be741bc9ef18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492319"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 
-Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [_strnset —, _strnset_l —, _wcsnset —, _wcsnset_l —, _mbsnset —, _mbsnset_l —](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) lub zwiększonych zabezpieczeń [_strnset_s —, _strnset_s_l —, _wcsnset_s —, _wcsnset_s_l, _mbsnset_s —, _mbsnset_s_l —](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)zamiast tego.
+Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [_strnset —, _strnset_l —, _wcsnset —, _wcsnset_l —, _mbsnset —, _mbsnset_l —](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) lub zwiększenia bezpieczeństwa [_strnset_s —, _strnset_s_l —, _wcsnset_s —, _wcsnset_s_l, _mbsnset_s —, _mbsnset_s_l —](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)zamiast tego.

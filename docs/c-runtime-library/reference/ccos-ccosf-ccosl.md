@@ -1,11 +1,6 @@
 ---
-title: ccos, ccosf, ccosl | Microsoft Docs
-ms.custom: ''
+title: ccos, ccosf, ccosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccos
 - ccosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ccos
 - complex/ccosf
 - complex/ccosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccos function
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4345926f3eebb6c65c8f70f65cd37f1add956ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489690"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 
-Pobiera cosinus liczby złożonej.
+Pobiera cosinus liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,7 +64,7 @@ _Lcomplex ccosl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej, który reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -83,15 +72,15 @@ Cosinus *z*, w radianach.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ccos** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **ccos** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ccos** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **ccos** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**ccos**, **ccosf**, **ccosl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
