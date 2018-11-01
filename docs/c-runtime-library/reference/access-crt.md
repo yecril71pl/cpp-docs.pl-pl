@@ -1,10 +1,6 @@
 ---
-title: dostęp (CRT) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: dostęp (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - access
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - access
-dev_langs:
-- C++
 helpviewer_keywords:
 - access function
 ms.assetid: 65197793-bd0a-41c3-9c29-18de2d95d9a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d07ff05495ce880c6fea1a358c17200527ad158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a12acb91852d97596c956834c2b2dc0a2412194e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471386"
 ---
 # <a name="access-crt"></a>dostęp (CRT)
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_access —](access-waccess.md) lub zwiększonych zabezpieczeń [_access_s —](access-s-waccess-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_access](access-waccess.md) lub zwiększenia bezpieczeństwa [_access_s —](access-s-waccess-s.md) zamiast tego.

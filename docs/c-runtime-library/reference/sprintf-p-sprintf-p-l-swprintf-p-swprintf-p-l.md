@@ -1,10 +1,6 @@
 ---
-title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -31,8 +27,6 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579605"
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
-Sformatowane dane do ciągu zapisu umożliwia określenie kolejności, że parametry są używane w ciągu formatu.
+Wpisz sformatowane dane do ciągu za pomocą możliwość określenia kolejność, że parametry są używane w ciągu formatu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -97,7 +87,7 @@ int _swprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla danych wyjściowych
+Lokalizacja magazynowa danych wyjściowych
 
 *sizeOfBuffer*<br/>
 Maksymalna liczba znaków do zapisania.
@@ -111,23 +101,23 @@ Opcjonalne argumenty ciągu formatu.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków zapisywane lub -1, jeśli wystąpił błąd.
+Liczba znaków zapisanych, lub -1, jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Sprintf_p —** funkcji formatuje i przechowuje serii znaków i wartościami w *buforu*. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak null jest dołączany za ostatni znak zapisywane. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p —** i **sprintf_s —** jest to, że **_sprintf_p —** parametrów pozycyjnych obsługuje, co umożliwia określenie kolejności, w którym znajdują się argumenty używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+**_Sprintf_p —** funkcja formatuje i przechowuje serie znaków i wartości w *buforu*. Każdy argument *argument_list* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. *Format* używa argumentu [formatowanie składni Specyfikacja funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak null jest dołączany po ostatnim napisanym znaku. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p —** i **sprintf_s —** jest fakt, że **_sprintf_p —** wspiera parametry pozycyjne, które umożliwiają określenie kolejności, w której argumenty są: używany w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p —** jest wersja znaków dwubajtowych **_sprintf_p —**; argumenty wskaźnika **_swprintf_p —** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania **_swprintf_p —** może się różnić od w **_sprintf_p —**. **_swprintf_p —** i **fwprintf_p —** zachowują się tak samo, z wyjątkiem **_swprintf_p —** zapisuje dane wyjściowe z ciągiem, a nie do miejsca docelowego typu **pliku**, i **_swprintf_p —** wymaga *liczba* parametr, aby określić maksymalną liczbę znaków do zapisania. Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+**_swprintf_p —** to wersja znaku dwubajtowego **_sprintf_p —**; argumenty wskaźnika do **_swprintf_p —** są ciągami znaków dwubajtowych. Wykrywanie kodowania błędów w **_swprintf_p —** mogą się różnić od tego w **_sprintf_p —**. **_swprintf_p —** i **fwprintf_p —** zachowują się identycznie, chyba że **_swprintf_p —** zapisuje dane wyjściowe do ciągu, a nie do miejsca docelowego typu **pliku**, i **_swprintf_p —** wymaga *liczba* parametru, aby określić maksymalną liczbę znaków, które mają być zapisywane. Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
-**_sprintf_p —** zwraca liczbę bajtów przechowywanych w *buforu*, bez uwzględnienia znak końcowy null. **_swprintf_p —** zwraca liczbę przechowywanych w znaki dwubajtowe *buforu*, bez uwzględnienia zakończenia null znaków dwubajtowych. Jeśli *buforu* lub *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru ](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+**_sprintf_p —** zwraca liczbę bajtów przechowywanych w *buforu*, nie licząc zamykającego kończącego znaku null. **_swprintf_p —** zwraca liczbę znaków szerokich przechowywanych w *buforu*, nie licząc zamykającego znaku pustego. Jeśli *buforu* lub *format* jest wskaźnikiem typu null lub jeżeli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Walidacja parametru ](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf_p —**|**_sprintf_p**|**_sprintf_p**|**_swprintf_p**|
 |**_stprintf_p_l —**|**_sprintf_p_l**|**_sprintf_p_l**|**_swprintf_p_l**|
@@ -218,7 +208,7 @@ Wrote -1 characters
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

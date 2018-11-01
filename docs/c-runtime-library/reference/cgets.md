@@ -1,10 +1,6 @@
 ---
-title: cgets — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: cgets
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cgets
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - cgets
-dev_langs:
-- C++
 helpviewer_keywords:
 - cgets function
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53a7b7b4327e7372c3f07b6ab0065ad76a225386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22af15eca963f9c136cf41bf9737ef94aae187ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486037"
 ---
 # <a name="cgets"></a>cgets
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_cgets —](../../c-runtime-library/cgets-cgetws.md) lub zwiększonych zabezpieczeń [_cgets_s —](cgets-s-cgetws-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_cgets](../../c-runtime-library/cgets-cgetws.md) lub zwiększenia bezpieczeństwa [_cgets_s](cgets-s-cgetws-s.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

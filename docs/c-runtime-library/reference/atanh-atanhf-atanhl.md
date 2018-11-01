@@ -1,10 +1,6 @@
 ---
-title: ATANH atanhf —, atanhl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,27 +22,21 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435364"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
-Oblicza tangens hiperboliczny.
+Oblicza arcus tangens hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,20 +58,20 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Atanh** hyberbolic odwrotny tangens (arcus tangens hiperboliczny) zwracają *x*. Jeśli *x* jest większa niż 1 lub mniejsza niż -1, **errno** ustawiono **edom —** i quiet NaN. Jeśli *x* jest równy 1 albo -1, dodatnie lub ujemne wartości infinity jest zwracany, odpowiednio, i **errno** ustawiono **erange —**.
+**Atanh** funkcje zwracają Zwraca arcus tangens (arcus tangens hiperboliczny) *x*. Jeśli *x* jest większa niż 1 lub mniejsza niż -1, **errno** ustawiono **EDOM** i wynikiem jest dyskretne NaN. Jeśli *x* jest równy 1 albo -1, nieskończoność dodatnia lub ujemna jest zwracana, odpowiednio, i **errno** ustawiono **ERANGE**.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**Matherr** wyjątku|
 |-----------|-------------------|-------------------------|
-|GRANICACH QNAN, IND|brak|brak|
+|GRANICACH QNAN, ZNAJDŹ|brak|brak|
 |*X* ≥ 1; *x* ≤ -1|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **atanh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **atanh** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **atanh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **atanh** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**ATANH**, **atanhf —**, **atanhl —**|\<math.h>|\<cmath > lub \<math.h >|
 

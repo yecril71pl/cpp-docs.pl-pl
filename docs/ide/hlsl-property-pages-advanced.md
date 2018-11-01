@@ -1,26 +1,16 @@
 ---
-title: 'Strony właściwości HLSL: Zaawansowane | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Strony właściwości HLSL: zaawansowane'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.FXCompilerTool.SuppressStartupBanner
 - VC.Project.FXCompilerTool.TreatWarningAsError
-dev_langs:
-- C++
 ms.assetid: a4f05aed-2c0e-4e7d-b7a4-bc2f228112c5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d78a214ab1125d42e2ec67d2291d69afda207498
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465588"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Strony właściwości HLSL: zaawansowane
 

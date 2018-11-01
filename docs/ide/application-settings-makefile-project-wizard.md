@@ -1,27 +1,17 @@
 ---
-title: Ustawienia aplikacji, Kreator projektu pliku reguł programu make | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ustawienia aplikacji, Kreator projektu pliku reguł dla programu make
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.makefile.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dc8d33f0d7c1ac88d2681779b523473e84d5384
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a57b3343064494c16b140e4bd4a9127350e022ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540039"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Ustawienia aplikacji, Kreator projektu pliku reguł dla programu make
 

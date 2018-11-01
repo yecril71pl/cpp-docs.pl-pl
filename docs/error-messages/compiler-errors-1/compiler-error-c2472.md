@@ -1,41 +1,31 @@
 ---
-title: C2472 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2472
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2472
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704863"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632742"
 ---
-# <a name="compiler-error-c2472"></a>C2472 błąd kompilatora
+# <a name="compiler-error-c2472"></a>Błąd kompilatora C2472
 
 > "*funkcja*" nie można wygenerować w zarządzanym kodzie: "*komunikat*"; skompiluj z/CLR aby wygenerować mieszany obraz
 
 ## <a name="remarks"></a>Uwagi
 
-Ten błąd wystąpi, gdy typy nie są obsługiwane przez kod zarządzany są używane w środowisku czystego środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego. Kompiluj z użyciem **/CLR** Aby rozwiązać problem.
+Ten błąd wystąpi, jeśli typy nie są obsługiwane przez kod zarządzany używanych w ramach czystego środowiska uruchomieniowego języka wspólnego (CLR). Kompiluj przy użyciu **/CLR** Aby naprawić błąd.
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2472.
+Poniższy przykład spowoduje wygenerowanie C2472.
 
 ```cpp
 // C2472.cpp

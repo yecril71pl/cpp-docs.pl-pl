@@ -1,10 +1,6 @@
 ---
-title: _locking — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523818"
 ---
 # <a name="locking"></a>_locking
 
-Umożliwia zablokowanie lub odblokowanie pliku w bajtach.
+Blokuje albo odblokowuje plik w bajtach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,42 +49,42 @@ int _locking(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora.
+Deskryptor pliku.
 
 *Tryb*<br/>
-Blokowanie akcję do wykonania.
+Blokowanie Akcja do wykonania.
 
 *nbytes*<br/>
 Liczba bajtów do zablokowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_locking —** zwraca wartość 0, jeśli to się powiedzie. Zwracana wartość -1 wskazuje błąd, w którym to przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono na jedną z następujących wartości.
+**_locking —** zwraca wartość 0, jeśli kończy się pomyślnie. Zwracana wartość-1 wskazuje błąd, w którym to przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest ustawiony na jedną z następujących wartości.
 
 |errno wartość|Warunek|
 |-|-|
 **EACCES**|Blokowanie naruszenie (plik już zablokowana, czy odblokowana).
-**EBADF —**|Nieprawidłowy plik deskryptora.
-**EDEADLOCK —**|Naruszenie zasad blokowania. Zwracane, jeśli **_lk_lock —** lub **_lk_rlck —** określono flagę i pliku nie może być zablokowany po 10 próbach.
-**EINVAL —**|Podano nieprawidłowy argument do **_locking —**.
+**EBADF**|Nieprawidłowego deskryptora pliku.
+**EDEADLOCK**|Naruszenie zasad blokowania. Zwracane, jeśli **_LK_LOCK** lub **_LK_RLCK** flaga zostanie określona, plik nie może być zablokowany po 10 próbach.
+**EINVAL**|Podano nieprawidłowy argument do **_locking —**.
 
-Jeśli niepowodzenie jest spowodowane zły parametr, takich jak deskryptora nieprawidłowy plik program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+W przypadku awarii ze względu na nieprawidłowe parametry, takie jak nieprawidłowego deskryptora pliku, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Locking —** funkcji powoduje zablokowanie lub odblokowanie *nbytes* bajtów pliku określonego przez *fd*. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Wszystkie blokowania i odblokowywania rozpoczyna się w bieżącym położeniu wskaźnika pliku i przechodzi do następnego *nbytes* bajtów. Umożliwia blokowanie bajtów poza końcem pliku.
+**_Locking —** funkcja blokuje albo odblokowuje *nbytes* bajtów w pliku określonym przez *fd*. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Wszystkie blokowania i odblokowywania rozpoczyna się w bieżącym położeniu wskaźnika pliku, a przechodzi przez następne *nbytes* bajtów. Umożliwia blokowanie bajtów poza końcem pliku.
 
 *tryb* musi mieć jedną z następujących stałych manifestu, które są zdefiniowane w Locking.h.
 
 |*tryb* wartość|Efekt|
 |-|-|
-**_LK_LOCK —**|Umożliwia zablokowanie określonych bajtów. Jeśli bajtów nie może być zablokowany, program natychmiast podejmie próbę 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, stała zwraca błąd.
-**_LK_NBLCK —**|Umożliwia zablokowanie określonych bajtów. Jeśli bajtów nie może być zablokowany, stała zwraca błąd.
-**_LK_NBRLCK —**|Taki sam jak **_lk_nblck —**.
-**_LK_RLCK —**|Taki sam jak **_lk_lock —**.
-**_LK_UNLCK —**|Umożliwia odblokowanie określonych bajtów, które należy wcześniej zablokowane.
+**_LK_LOCK**|Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, program natychmiast próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, stała zwraca błąd.
+**_LK_NBLCK**|Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, stała zwraca błąd.
+**_LK_NBRLCK**|Taki sam jak **_LK_NBLCK**.
+**_LK_RLCK**|Taki sam jak **_LK_LOCK**.
+**_LK_UNLCK**|Odblokowuje określonych bajtów, które musisz wcześniej zablokowane.
 
-Można zablokować pliku wielu regionach, które nie nakładają się. Trwa odblokowywanie region musi zostały wcześniej zablokowane. **_locking —** nie scalania sąsiadujących ze sobą regionów; Jeśli dwóch regionach zablokowanym sąsiadujących ze sobą, każdy region musi być odblokowany oddzielnie. Regiony ma zostać zablokowana krótko i powinien zostać odblokowany przed zamknięciem pliku lub zakończenia programu.
+Można zablokować pliku wielu regionów, które nie nakładają się. Region trwa musi mieć wcześniej zablokowane. **_locking —** nie regionów sąsiadujących scalania; Jeśli sąsiadujących ze sobą dwa regiony zablokowane każdego regionu, musi być odblokowany oddzielnie. Regiony powinny być zablokowane krótko i powinien zostać odblokowany przed zamknięciem pliku lub zakończenia programu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,11 +92,11 @@ Można zablokować pliku wielu regionach, które nie nakładają się. Trwa odbl
 |-------------|---------------------|---------------------|
 |**_locking**|\<IO.h > i \<sys/locking.h >|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

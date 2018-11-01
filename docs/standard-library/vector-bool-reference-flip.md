@@ -1,31 +1,21 @@
 ---
-title: 'Wektor&lt;bool&gt;:: reference::flip | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Wektor&lt;bool&gt;:: reference::flip'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector/std::vector<bool>::reference::flip
-dev_langs:
-- C++
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97695b31d79814ec8cf08396295b02b1b7bbd1d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d212aef70228454917b2a5df9cd5165df9be35b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543779"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>Wektor&lt;bool&gt;:: reference::flip
 
-Odwraca wartość logiczną odwoływany [wektor\<bool >](../standard-library/vector-bool-class.md) elementu.
+Odwraca wartość logiczną odnośnego [wektor\<bool >](../standard-library/vector-bool-class.md) elementu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,9 +69,9 @@ The vector with first element flipped is:
 
 **Nagłówek:** \<wektor >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wektor\<bool >:: klasę referencyjną](../standard-library/vector-bool-reference-class.md)<br/>
+[Wektor\<bool >:: reference — klasa](../standard-library/vector-bool-reference-class.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

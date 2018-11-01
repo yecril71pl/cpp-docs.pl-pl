@@ -1,35 +1,25 @@
 ---
-title: C2429 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2429
 ms.date: 11/16/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2429
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2429
 ms.assetid: 57ff6df9-5cf1-49f3-8bd8-4e550dfd65a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 032df433b28e83f720fe76952a541b59bda889f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 972ec6591132443ef4d1297598d6de7216f59663
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586696"
 ---
-# <a name="compiler-error-c2429"></a>C2429 błąd kompilatora
+# <a name="compiler-error-c2429"></a>Błąd kompilatora C2429
 
-> "*funkcji języka*"wymaga flagi kompilatora"*— opcja kompilatora*"
+> "*funkcja językowa*"wymaga flagi kompilatora"*— opcja kompilatora*"
 
-Funkcja języka wymaga opcji kompilatora określonych dla pomocy technicznej.
+Funkcja języka wymaga określonych kompilator pomocy technicznej.
 
-Błąd **C2429: funkcja języka "zagnieżdżone namespace-definition" wymaga flagi kompilatora "/ std:c ++ 17'** jest generowany, gdy użytkownik próbuje określić *złożone przestrzeni nazw*, przestrzeni nazw, która zawiera jeden lub więcej nazwy zagnieżdżone w zakresie przestrzeni nazw w programie Visual Studio 2015 Update 5. (W programie Visual Studio 2017 wersji 15 ustęp 3, **/std:c ++ najnowsze** przełącznika jest wymagane.) Złożone przestrzeni nazw, definicje nie są dozwolone w języku C++ przed C ++ 17. Kompilator obsługuje definicje złożone przestrzeń nazw podczas [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję kompilatora:
+Błąd **C2429: funkcji języka "zagnieżdżone namespace-definition" wymaga flagi kompilatora "/ STD: c ++ 17"** jest generowany, jeśli zostanie podjęta próba zdefiniować *złożone przestrzeni nazw*, obszar nazw, który zawiera jeden lub więcej nazwy zagnieżdżonej zakresu przestrzeni nazw, począwszy od programu Visual Studio 2015 Update 5. (W programie Visual Studio 2017 w wersji 15.3, **/STD: c ++ najnowsze** przełącznika jest wymagane.) Złożone przestrzeni nazw, których definicje nie są dozwolone w języku C++ przed C ++ 17. Definicje nazw złożonego obsługiwanych przez kompilator podczas [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję kompilatora:
 
 ```cpp
 // C2429a.cpp

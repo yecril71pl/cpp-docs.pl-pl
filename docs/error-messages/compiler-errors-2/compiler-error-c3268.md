@@ -1,41 +1,31 @@
 ---
-title: C3268 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3268
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3268
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480538"
 ---
-# <a name="compiler-error-c3268"></a>C3268 błąd kompilatora
+# <a name="compiler-error-c3268"></a>Błąd kompilatora C3268
 
-> "*funkcja*": funkcja generyczna lub funkcja członkowska klasy generycznej nie może mieć zmiennej listy parametrów
+> "*funkcja*": funkcja ogólna lub funkcji składowej klasy ogólnej nie może mieć zmiennej listy parametrów
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 Zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3268.
+Poniższy przykład spowoduje wygenerowanie C3268.
 
 ```cpp
 // C3268.cpp

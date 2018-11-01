@@ -1,10 +1,6 @@
 ---
-title: _fputchar —, _fputwchar — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477977"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
-Zapisuje znaku **stdout**.
+Zapisuje znak do **stdout**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,28 +62,28 @@ Znak do zapisania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać **_fputchar —**, zwracana wartość **EOF** wskazuje błąd. Aby uzyskać **_fputwchar —**, zwracana wartość **weof —** wskazuje błąd. Jeśli jest c **NULL**, te funkcje wygeneruje wyjątek nieprawidłowy parametr, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **EOF** (lub **weof —**) i ustawić **errno** do **einval —**.
+Każda z tych funkcji zwraca znak napisany. Aby uzyskać **_fputchar**, zwracana wartość wynosząca **EOF** wskazuje na błąd. Aby uzyskać **_fputwchar —**, zwracana wartość wynosząca **WEOF** wskazuje na błąd. Jeśli c wynosi **NULL**, te funkcje tworzą wyjątek nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają one **EOF** (lub **WEOF**) i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Obie te funkcje zapisuje pojedynczy znak *c* do **stdout** i przesuwa wskaźnik zależnie od potrzeb. **_fputchar —** jest odpowiednikiem `fputc( stdout )`. Również jest odpowiednikiem **putchar —**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. W odróżnieniu od **fputc —** i **putchar —**, te funkcje nie są zgodne ze standardem ANSI.
+Obu tych funkcji pisze pojedynczy znak *c* do **stdout** i przesuwa wskaźnik zgodnie z potrzebami. **_fputchar** jest odpowiednikiem `fputc( stdout )`. Jest również równoważne **putchar**, ale realizowane tylko jako funkcja, a nie jako funkcja i makra. W odróżnieniu od **fputc** i **putchar**, te funkcje nie są zgodne ze standardem ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_fputtchar —**|**_fputchar —**|**_fputchar —**|**_fputwchar —**|
+|**_fputtchar —**|**_fputchar**|**_fputchar**|**_fputwchar —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fputchar —**|\<stdio.h>|
+|**_fputchar**|\<stdio.h>|
 |**_fputwchar —**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą —**stdin**, **stdout**, i **stderr**— muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -122,6 +112,6 @@ This is a test of _fputchar!!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

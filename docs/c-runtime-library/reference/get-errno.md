@@ -1,10 +1,6 @@
 ---
-title: _get_errno | Microsoft Docs
-ms.custom: ''
+title: _get_errno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_errno
 apilocation:
@@ -22,48 +18,42 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _get_errno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fec59334ff6585e2385295c58c284df7e602ca1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ffb76bb31fe1633af78ee73423bb06857e0b893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535723"
 ---
 # <a name="geterrno"></a>_get_errno
 
-Pobiera bieżącą wartość zmiennej globalnej numer błędu.
+Pobiera bieżącą wartość errno — zmienna globalna.
 
 ## <a name="syntax"></a>Składnia
 
 ```C
-errno_t _get_errno( 
-   int * pValue 
+errno_t _get_errno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pValue*<br/>
-Wskaźnik do wartości całkowitej, należy podać bieżącą wartość **errno** zmiennej.
+Wskaźnik do liczby całkowitej trzeba napełniać bieżącą wartość **errno** zmiennej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli *pValue* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Zwraca wartość zero, jeśli to się powiedzie; Kod błędu. Jeśli *pValue* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Możliwe wartości **errno** są definiowane w Errno.h. Zobacz też [errno — stałe](../../c-runtime-library/errno-constants.md).
+Możliwe wartości **errno** są zdefiniowane w Errno.h. Zobacz też [errno — stałe](../../c-runtime-library/errno-constants.md).
 
 ## <a name="example"></a>Przykład
 
@@ -97,7 +87,7 @@ fyi, ENOENT = 2
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

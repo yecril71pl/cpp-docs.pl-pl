@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2797 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2797
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2797
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 701ec194c968b9f1d17269573b33e78d69fbb256
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ae8c4b8755e6f9c89c0706b0644f220761bd9c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616245"
 ---
 # <a name="compiler-error-c2797"></a>Błąd kompilatora C2797
 

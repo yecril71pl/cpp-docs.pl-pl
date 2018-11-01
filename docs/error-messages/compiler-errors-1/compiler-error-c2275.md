@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2275 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2275
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2275
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2275
 ms.assetid: c1eafa71-48de-46e0-82f3-b575538ef205
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: deedbf10edd3d9fd870dfbb1a896e504bfe9d877
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: debf8779014badab69ffca13f3795f7e004b292a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601616"
 ---
 # <a name="compiler-error-c2275"></a>Błąd kompilatora C2275
 

@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union i struct — atrybuty (C++ COM) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: TypeDef, Enum, Union i struct — atrybuty (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631065"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atrybuty Typedef, Enum, Union oraz Struct
 
@@ -31,7 +20,7 @@ Następujące atrybuty dotyczą [typedef](../../cpp/aliases-and-typedefs-cpp.md)
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[przypadek](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w **Unii**.|
+|[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w **Unii**.|
 |[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
 |[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|
@@ -85,7 +74,7 @@ Następujące atrybuty dotyczą [typedef](../../cpp/aliases-and-typedefs-cpp.md)
 |[aggregates](aggregates.md)|Wskazuje, że formant agreguje klasy docelowej.|
 |[appobject](appobject.md)|Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełną .exe i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tej bibliotece typów.|
 |[coclass](coclass.md)|Tworzy formant ActiveX.|
-|[com_interface_entry —](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
 |[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[db_column](db-column.md)|Wiąże określonej kolumny zestawu wierszy.|
@@ -107,10 +96,10 @@ Następujące atrybuty dotyczą [typedef](../../cpp/aliases-and-typedefs-cpp.md)
 |[requires_category](requires-category.md)|Określa kategorie wymaganego składnika klasy docelowej.|
 |[size_is](size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|
 |[source](source-cpp.md)|W klasie określa interfejsy źródła obiektu COM dla punktów połączenia. W właściwości lub metody oznacza, że elementu członkowskiego zwraca obiekt lub wariant, który jest źródłem zdarzeń.|
-|[Wątkowość](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
+|[threading](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
 |[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|
-|[Wersja](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|
+|[version](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|
 |[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
 
 ## <a name="see-also"></a>Zobacz też

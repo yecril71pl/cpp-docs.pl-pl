@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,25 +19,19 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551115"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
-Próbuje wyczyścić flagi zmiennoprzecinkowych wyjątków argumentu.
+Podejmuje próbę wyczyszczenia flagi wyjątków zmiennoprzecinkowych, określonego przez argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,30 +44,30 @@ int feclearexcept(
 ### <a name="parameters"></a>Parametry
 
 *z wyjątkiem*<br/>
-Flagi stanu wyjątek wyczyścić.
+Flagi stanu wyjątku do wyczyszczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli *z wyjątkiem* wynosi zero, lub jeśli określone wyjątki pomyślnie zostały wyczyszczone. W przeciwnym razie zwraca wartość różną od zera.
+Zwraca zero, jeśli *z wyjątkiem* wynosi zero, czy określone wyjątki zostały pomyślnie wyczyszczone. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feclearexcept** funkcja próbuje wyczyścić wartość zmiennoprzecinkowa punkt wyjątek flagi stanu określonego przez *z wyjątkiem*. Funkcja obsługuje makrach wyjątków zdefiniowane w fenv.h:
+**Feclearexcept** próbuje funkcja wyczyść wartość zmiennoprzecinkowa punkt flagi stanu wyjątku określonego przez *z wyjątkiem*. Funkcja obsługuje te makra wyjątków, zdefiniowane w fenv.h:
 
 |Makra wyjątków|Opis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w wcześniej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
-|FE_INEXACT|Funkcja wymuszono zaokrąglona wyniku przechowywanego wcześniej operacji zmiennoprzecinkowej.|
-|FE_INVALID|Wystąpił błąd domeny w wcześniej operacji zmiennoprzecinkowej.|
-|FE_OVERFLOW|Wystąpił błąd zakresu; wcześniej wynik operacji zmiennoprzecinkowej jest zbyt duży, może być reprezentowana.|
-|FE_UNDERFLOW|Wynik operacji zmiennoprzecinkowej wcześniej był za mały na pełne precyzji; wartość została utworzona.|
-|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w starszej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
+|FE_INEXACT|Wymuszono funkcji round przechowywanych wynikiem wcześniejszych operacji zmiennoprzecinkowej.|
+|FE_INVALID|Wystąpił błąd domeny w starszej operacji zmiennoprzecinkowej.|
+|FE_OVERFLOW|Wystąpił błąd zakresu; wynik operacji zmiennoprzecinkowej wcześniej była zbyt duża, aby mogły być reprezentowane.|
+|FE_UNDERFLOW|Wcześniej wyniku operacji zmiennoprzecinkowej był za mały, aby mogły być reprezentowane w o pełnej dokładności; wartość została utworzona.|
+|FE_ALL_EXCEPT|Bitowe OR wszystkich obsługiwane wyjątki zmiennoprzecinkowe.|
 
-*z wyjątkiem* argument może być zero lub wartość logiczną lub co najmniej jednego z makr wyjątków obsługiwanych. Wynik dowolna inna wartość argumentu jest niezdefiniowany.
+*z wyjątkiem* argument może być zero lub logiczną lub co najmniej jednego z makr wyjątków obsługiwanych. Wynik jakakolwiek inna wartość argumentu jest niezdefiniowane.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h>|\<cfenv>|
 

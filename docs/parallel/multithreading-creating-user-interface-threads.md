@@ -1,15 +1,9 @@
 ---
-title: 'Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC'
 ms.date: 08/27/2018
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
-dev_langs:
-- C++
 helpviewer_keywords:
 - multithreading [C++], user interface threads
 - threading [C++], creating threads
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06158f50364320c96223d5627386a059761baa77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566832"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC
 
@@ -43,7 +33,7 @@ Pierwszą rzeczą, którą należy wykonać podczas tworzenia wątku interfejsu 
 |[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Wykonaj przetwarzanie w czasie bezczynności właściwe dla wątków. Nie zawsze zastąpiony.|
 |[Pretranslatemessage —](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrowanie komunikatów przed ich wysłaniem do `TranslateMessage` i `DispatchMessage`. Nie zawsze zastąpiony.|
 |[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Przechwycić nieobsługiwane wyjątki rzucane przez wątek wiadomości i procedury obsługi poleceń. Nie zawsze zastąpiony.|
-|[Run](../mfc/reference/cwinthread-class.md#run)|Funkcje kontroli wątku. Zawiera "pompy komunikatów". Rzadko zastąpiona.|
+|[Uruchom](../mfc/reference/cwinthread-class.md#run)|Funkcje kontroli wątku. Zawiera "pompy komunikatów". Rzadko zastąpiona.|
 
 Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeciążenia: jedną, która tworzy tylko wątki robocze i taki, który można utworzyć wątki interfejsu użytkownika lub wątków roboczych. Aby uruchomić wątek interfejsu użytkownika, należy wywołać drugie przeciążenie [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:
 

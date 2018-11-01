@@ -1,10 +1,6 @@
 ---
-title: _stricoll —, _wcsicoll —, _mbsicoll —, _stricoll_l —, _wcsicoll_l, _mbsicoll_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579673"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
-Porównanie ciągów za pomocą informacje specyficzne dla ustawień regionalnych.
+Porównuje ciągi przy użyciu informacji specyficznych dla ustawień regionalnych.
 
 > [!IMPORTANT]
-> **_mbsicoll —** i **_mbsicoll_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll —** i **_mbsicoll_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -110,35 +100,35 @@ int _mbsicoll_l(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończone wartością null do porównania.
+Ciągi zakończony wartością null do porównania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość wskazującą relacji z *ciąg1* do *ciąg2*, wykonując następujące czynności.
+Każda z tych funkcji zwraca wartość wskazującą związek *ciąg1* do *ciąg2*, wykonując następujące czynności.
 
 |Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
 |< 0|*ciąg1* mniej niż *ciąg2*|
-|0|*ciąg1* taki sam jak *ciąg2*|
-|> 0|*ciąg1* większe *ciąg2*|
+|0|*ciąg1* taka sama jak *ciąg2*|
+|> 0|*ciąg1* większa *ciąg2*|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
-Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, zawiera \<string.h > lub \<mbstring.h >. **_wcsicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsicoll —** ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll —**.
+Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, zawierać albo \<string.h > lub \<mbstring.h >. **_wcsicoll —** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsicoll —** mogą ustawiać **errno** do **EINVAL**. Aby sprawdzić, czy błąd w wywołaniu **_wcsicoll —** ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll —**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wykonuje porównania bez uwzględniania wielkości liter *ciąg1* i *ciąg2* zgodnie z aktualnie używanej strony kodowej. Można używać tych funkcji, tylko wtedy, gdy istnieje następująca różnica między znak Ustaw kolejność i kolejność lexicographic znak w bieżącej stronie kodowej i ta różnica polega na istotnych dla porównania ciągów.
+Każda z tych funkcji wykonuje porównania bez uwzględniania wielkości *ciąg1* i *ciąg2* zgodnie z aktualnie używaną stroną kodową. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy znak zestawu kolejności i kolejnością znaków leksykograficznych w bieżącej stronie kodowej, a różnica ta ma znaczenie dla porównania ciągu.
 
-**_stricmp —** różni się od **_stricoll —** w tym **_stricmp —** dotyczy porównanie **lc_ctype —**, podczas gdy **_stricoll —** porównania jest zgodne z **lc_ctype —** i **lc_collate —** kategorii ustawień regionalnych. Aby uzyskać więcej informacji na temat **lc_collate —** kategorii, zobacz [setlocale](setlocale-wsetlocale.md) i [kategorie regionalne](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez **_l** sufiks Użyj bieżących ustawień regionalnych; wersji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast tego ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_stricmp —** różni się od **_stricoll —** , **_stricmp —** porównania jest zależna od **LC_CTYPE**, podczas gdy **_stricoll —** porównania, zgodnie z **LC_CTYPE** i **LC_COLLATE** kategorie ustawień regionalnych. Aby uzyskać więcej informacji na temat **LC_COLLATE** kategorii, zobacz [setlocale](setlocale-wsetlocale.md) i [kategorie ustawień regionalnych](../../c-runtime-library/locale-categories.md). Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ciąg2* są **NULL** wskaźniki, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **einval —**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* są **NULL** wskaźników, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicoll —**|**_stricoll**|**_mbsicoll —**|**_wcsicoll**|
 

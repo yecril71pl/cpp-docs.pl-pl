@@ -1,10 +1,6 @@
 ---
-title: _strdup_dbg, _wcsdup_dbg | Microsoft Docs
-ms.custom: ''
+title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup_dbg
 - _wcsdup_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - strdup_dbg
 - _strdup_dbg
 - wcsdup_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsdup_dbg function
 - stdup_dbg function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531161"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Wersje [_strdup — i _wcsdup —](strdup-wcsdup-mbsdup.md) korzystające z wersji do debugowania **— funkcja malloc**.
+Wersje [_strdup — i _wcsdup —](strdup-wcsdup-mbsdup.md) które korzystają z wersji debugowania **— funkcja malloc**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,30 +62,30 @@ wchar_t *_wcsdup_dbg(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 *blockType*<br/>
-Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
+Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który żądanej operacji alokacji lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **NULL**.
+Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do lokalizacji magazynu dla skopiowanego ciągu lub **NULL** Jeśli nie można przydzielić pamięci masowej.
+Każda z tych funkcji zwraca wskaźnik do lokalizacji przechowywania skopiowany ciąg lub **NULL** Jeśli nie można przydzielić pamięci masowej.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strdup_dbg —** i **_wcsdup_dbg —** funkcje są takie same jak **_strdup —** i **_wcsdup —** z wyjątkiem tego, kiedy **_ DEBUGOWANIE** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc**, **_malloc_dbg —**, można przydzielić pamięci dla zduplikowane parametry. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
+**_Strdup_dbg —** i **_wcsdup_dbg —** funkcje są takie same jak **_strdup —** i **_wcsdup —** z tą różnicą, że gdy **_ DEBUGOWANIE** jest zdefiniowany, te funkcje używają wersji debugowania **— funkcja malloc**, **_malloc_dbg**, można przydzielić pamięci dla zduplikowane parametry. Instrukcje dotyczące debugowania funkcji **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_strdup —** i **_wcsdup —** są mapowane ponownie do **_strdup_dbg —** i **_ wcsdup_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego można określić flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_strdup —** i **_wcsdup —** są mapowane ponownie do **_strdup_dbg —** i **_ wcsdup_dbg —**, odpowiednio, z *blockType* równa **_NORMAL_BLOCK**. Dzięki temu, nie trzeba jawnie wywołać te funkcje, chyba że chcesz oznaczyć bloki stosu jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup_dbg**|**_strdup_dbg**|**_mbsdup —**|**_wcsdup_dbg**|
 
@@ -109,10 +99,10 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Debuguj wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdup, _wcsdup, _mbsdup](strdup-wcsdup-mbsdup.md)<br/>
-[Wersja debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

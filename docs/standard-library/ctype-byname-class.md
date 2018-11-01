@@ -1,31 +1,21 @@
 ---
-title: ctype_byname — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ctype_byname — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7ebfb2d5bc4543665054208e37e1f993270e5f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d998747045ece765269ddb013b525b8c06fcdf8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517744"
 ---
 # <a name="ctypebyname-class"></a>ctype_byname — Klasa
 
-Klasy pochodne szablonu opisano obiekt, który może służyć jako zestaw reguł ctype danego ustawień regionalnych, włączenie klasyfikacji znaków i konwersja znaków między przypadku i natywnego oraz ustawień regionalnych określonych zestawów znaków.
+Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł ctype danych ustawień regionalnych, umożliwiając klasyfikację znaków i konwersję znaków między przypadek i natywnego i ustawienia regionalne określone zestawy znaków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,13 +40,13 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określany przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [ctype](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) lub jej odpowiedniku dla klasy podstawowej `ctype<char>`.
+Jego zachowanie jest określana przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego podstawowego obiektu z [ctype](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) lub odpowiednik dla klasy podstawowej `ctype<char>`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: _przeczytaj | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658448"
 ---
 # <a name="read"></a>_read
 
@@ -60,29 +50,29 @@ int _read(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora odwołujących się do otwartego pliku.
+Deskryptor pliku odnoszące się do otwartego pliku.
 
 *buffer*<br/>
-Lokalizacja magazynu danych.
+Lokalizacja magazynowa danych.
 
 *Liczba*<br/>
 Maksymalna liczba bajtów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_przeczytaj** zwraca liczbę bajtów odczytanych, który może być mniejsza niż *liczba* Jeśli jest dostępnych mniej niż *liczba* pozostałych bajtów w pliku lub jeśli plik został otwarty w trybie tekstowym, w takim przypadku każdy karetki LF pary "\r\n" jest zastępowany wysuwu wiersza pojedynczy znak "\n". Tylko znak pojedynczego wysuwu wiersza jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnika pliku.
+**_przeczytaj** zwraca liczbę bajtów odczytanych, który może być mniejsza niż *liczba* w przypadku mniej niż *liczba* bajtów pozostałych w pliku, lub jeśli plik został otwarty w trybie tekstowym, w takim przypadku każdy powrót karetki LF pary "\r\n" jest zastępowany znaku wysuwu wiersza pojedynczego '\n'. Tylko znak wysuwu wiersza pojedynczego jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnik pliku.
 
-Jeśli funkcja próbuje odczytać na końcu pliku, zwraca wartość 0. Jeśli *fd* jest nieprawidłowy, plik nie jest otwarty do odczytu, lub plik jest zablokowany, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość -1 i zestawy **errno** do **ebadf —**.
+Jeśli funkcja próbuje odczytać na końcu pliku, zwraca wartość 0. Jeśli *fd* jest nieprawidłowa, plik nie jest otwarty do odczytu, lub plik jest zablokowany, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EBADF**.
 
-Jeśli *buforu* jest **NULL**, program obsługi nieprawidłowych parametrów jest wywoływany. Jeśli wykonanie może kontynuować, funkcja zwraca wartość -1 i **errno** ustawiono **einval —**.
+Jeśli *buforu* jest **NULL**, zostanie wywołany nieprawidłowy parametr uchwytu. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i **errno** ustawiono **EINVAL**.
 
-Aby uzyskać więcej informacji dotyczących tego i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Przeczytaj** funkcja odczytuje maksymalnie *liczba* bajtów do *buforu* z pliku skojarzone z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzone z danym pliku. Po wykonaniu operacji odczytu wskaźnika pliku wskazuje na następny znak nieprzeczytana.
+**_Przeczytaj** funkcja odczytuje maksymalnie *liczba* bajtów do *buforu* z pliku skojarzone z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzone z danym pliku. Po zakończeniu operacji odczytu wskaźnik pliku wskazuje na następny znak jako nieprzeczytane.
 
-Jeśli plik został otwarty w trybie tekstowym, Odczyt kończy kiedy **_przeczytaj** napotka CTRL + Z znak, który jest traktowany jako plik końcowy wskaźnika. Użyj [_lseek —](lseek-lseeki64.md) wyczyść wskaźnik końca pliku.
+Jeśli plik został otwarty w trybie tekstowym, odczytu skończy się, gdy **_przeczytaj** napotka znaku CTRL + Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek —](lseek-lseeki64.md) wyczyść wskaźnik końca pliku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -90,11 +80,11 @@ Jeśli plik został otwarty w trybie tekstowym, Odczyt kończy kiedy **_przeczyt
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -151,7 +141,7 @@ Read 19 bytes from file
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fread](fread.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

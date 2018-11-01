@@ -1,10 +1,6 @@
 ---
-title: isalpha —, iswalpha —, _isalpha_l —, _iswalpha_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591755"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
-Określa, czy liczba całkowita reprezentuje znakiem alfabetycznym.
+Określa, czy liczba całkowita reprezentuje znak alfabetyczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,22 +71,22 @@ int _iswalpha_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *Ustawienia regionalne*<br/>
-Ustawienia regionalne do użycia zamiast bieżących ustawień regionalnych.
+Ustawienia regionalne, zamiast bieżących ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego obiektu znakiem alfabetycznym. **isalpha —** zwraca wartość niezerową, jeśli *c* jest z zakresu A - Z lub a - z. **iswalpha —** zwraca wartość różną od zera tylko znaki dwubajtowe, dla którego [iswupper —](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower —** jest różna od zera; oznacza to, że dla dowolnego całej znak oznacza to jednego zestawu zdefiniowane w implementacji które żadna **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfabetycznego. **isalpha** zwraca wartość różną od zera, jeśli *c* jest z zakresu A - Z lub a - z. **iswalpha —** zwraca wartość różną od zera dla znaków dwubajtowych, dla których [iswupper —](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower —** jest różna od zera; tj dla dowolnego znaku dwubajtowego oznacza to jeden z zestawów zdefiniowanych w implementacji dla których żadna z **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wersje tych funkcji, które mają **_l** sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **isalpha —** i **_isalpha_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **isalpha** i **_isalpha_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalpha —**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l —**|**_isalpha_l —**|**_ismbcalpha_l —**|**_iswalpha_l —**|

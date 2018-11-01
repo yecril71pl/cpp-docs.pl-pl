@@ -1,27 +1,17 @@
 ---
-title: '&lt;cfenv&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b1003d3037765ef501748a1a9ff6590bf072fc9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0eb54b0fc86e7b205559b243eac6d64da74b2f98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839910"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487948"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<fenv.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<fenv.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +22,7 @@ Zawiera nagłówek biblioteki standardowe C \<fenv.h > i dodaje skojarzone nazwy
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

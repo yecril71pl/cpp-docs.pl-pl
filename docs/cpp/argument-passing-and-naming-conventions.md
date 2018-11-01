@@ -1,12 +1,6 @@
 ---
-title: Przekazywanie argumentów i konwencje nazewnictwa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Przekazywanie argumentów i konwencje nazewnictwa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e050fa16c1a6f239d17cbda64ae4edcf531cb5b5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473297"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Przekazywanie argumentów i konwencje nazewnictwa
 

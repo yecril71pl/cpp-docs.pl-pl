@@ -1,33 +1,23 @@
 ---
-title: / CLRIMAGETYPE (określenie typu obrazu CLR) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /CLRIMAGETYPE (Określenie typu obrazu CLR)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRIMAGETYPE
 - VC.Project.VCLinkerTool.CLRImageType
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5efb2e73e854591be7134753cec21a708fff3e5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c4cdb9a9ac3376762d6aa40fd4c13abbdc7b5487
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461636"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Określenie typu obrazu CLR)
 
-Ustaw typ obrazu CLR w połączonego obrazu.
+Ustaw typ obrazu CLR w obraz połączony.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,21 +25,21 @@ Ustaw typ obrazu CLR w połączonego obrazu.
 
 ## <a name="remarks"></a>Uwagi
 
-Konsolidator akceptuje obiektów macierzystych i również MSIL obiekty, które są kompilowane przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 r. Gdy mieszanych obiektów w tej samej kompilacji są przekazywane, możliwość weryfikacji wynikowego pliku wyjściowego jest, domyślnie równa najniższa możliwość wprowadzania modułów weryfikacji. Na przykład w przypadku przekazania obrazu macierzystego i obraz trybu mieszanego (skompilowana przy użyciu **/CLR**), obraz wynikowy będzie obrazu w trybie mieszanym.
+Program łączący akceptuje obiekty rodzime i również instrukcje obiektów MSIL, które są kompilowane przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora zostały zaniechane w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017. Jeśli przekazano mieszane obiekty w samej kompilacji, możliwość weryfikacji wynikowej pliku wyjściowego jest domyślnie równa najniższego poziomu możliwość weryfikacji modułów wejściowych. Na przykład, jeśli przekażesz obraz macierzysty i obraz w trybie mieszanym (skompilowany przy użyciu **/CLR**), obraz wynikowy będzie obrazem w trybie mieszanym.
 
-Można użyć **clrimagetype** do określenia niższej możliwość weryfikacji, jeżeli jest to, co jest potrzebne.
+Możesz użyć **/clrimagetype** do określenia niższego poziomu możliwość weryfikacji, jeśli jest to, czego potrzebujesz.
 
-Aby uzyskać informacje o tym, jak można ustalić typu obrazu CLR pliku, zobacz [/CLRHEADER](../../build/reference/clrheader.md).
+Aby uzyskać informacji dotyczących sposobu ustalenia typu obrazu CLR pliku, zobacz [/CLRHEADER](../../build/reference/clrheader.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Rozwiń węzeł **właściwości konfiguracji** węzła.
+1. Rozwiń **właściwości konfiguracji** węzła.
 
-1. Rozwiń węzeł **konsolidatora** węzła.
+1. Rozwiń **konsolidatora** węzła.
 
-1. Wybierz **zaawansowane** strony właściwości.
+1. Wybierz **zaawansowane** stronę właściwości.
 
 1. Modyfikowanie **typu obrazu CLR** właściwości.
 
