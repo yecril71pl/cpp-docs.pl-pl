@@ -1,12 +1,6 @@
 ---
-title: Powszechnie zastępowane funkcje Członkowskie | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Powszechnie zastępowane funkcje członkowskie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aabc88db4fcb2a484ca44feea8fcdf7727e23a16
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163da1ee6e98e974af0fd1a6b27e1b2df85e9ce0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439593"
 ---
 # <a name="commonly-overridden-member-functions"></a>Powszechnie zastępowane funkcje członkowskie
 

@@ -1,10 +1,6 @@
 ---
-title: execv — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: execv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - execv
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - execv
-dev_langs:
-- C++
 helpviewer_keywords:
 - execv function
 ms.assetid: b097d606-9384-427a-9a1d-707dc4ce03ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c885c5e6ca54d4bab8af6269adcebfbf05e5ba90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44e7d3c67a1fc1411f9cb907176ab65081dd5b1b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523152"
 ---
 # <a name="execv"></a>execv
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_execv —](execv-wexecv.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_execv](execv-wexecv.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

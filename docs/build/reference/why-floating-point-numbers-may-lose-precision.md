@@ -1,27 +1,17 @@
 ---
-title: Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - DBL_EPSILON constant
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de54610676ade49f7ce41e00ed0049b20e46709c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e6f758e7a683a28189123b03252223476ac732a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442669"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 

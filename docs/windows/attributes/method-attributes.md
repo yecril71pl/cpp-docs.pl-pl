@@ -1,27 +1,16 @@
 ---
-title: Atrybuty metody (C++ COM) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Atrybuty metody (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667925"
 ---
 # <a name="method-attributes"></a>Atrybuty metody
 
@@ -49,13 +38,13 @@ Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.
 |[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[immediatebind](immediatebind.md)|Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.|
 |[in](in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|
-|[lokalne](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
 |[propget](propget.md)|Określa funkcję metody dostępu właściwości.|
 |[propput](propput.md)|Określa funkcję ustawienie właściwości.|
 |[propputref](propputref.md)|Określa funkcję ustawienie właściwości, która używa odwołania, a nie wartość.|
 |[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
-|[Zakres](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
+|[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[requestedit](requestedit.md)|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.|
 |[restricted](restricted.md)|Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być wywoływana arbitralnie.|
 |[satype](satype.md)|Określa typ danych `SAFEARRAY` struktury.|

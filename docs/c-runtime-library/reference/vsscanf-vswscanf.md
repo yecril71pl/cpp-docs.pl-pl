@@ -1,10 +1,6 @@
 ---
-title: vsscanf —, vswscanf — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: vsscanf, vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,26 +20,20 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478588"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
-Odczyty sformatowane dane z ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md).
+Odczyty sformatowanych danych z ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,34 +53,34 @@ int vswscanf(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Przechowywanych danych
+Przechowywane dane
 
 *Format*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *arglist*<br/>
-Listy zmiennych argumentów.
+Lista zmiennych argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji.
+Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji.
 
-Jeśli *buforu* lub *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* lub *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Vsscanf —** funkcja odczytywać dane z *buforu* w lokalizacjach, które są podane przez każdy argument *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnik do zmiennej, która ma typ, który odpowiada specyfikatorowi typu w *format*. *Format* formanty argument interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako *format* argument dla **scanf** funkcji. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+**Vsscanf —** funkcja odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej, która ma typ odpowiadający specyfikatorowi typu w parametrze *format*. *Format* formantów argument interpretacji danych wejściowych pola i ma taką samą formę i funkcjonuje jako *format* argument dla **scanf** funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Jeśli używasz **vsscanf —** odczytać ciągu, należy zawsze określić szerokość **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie niepoprawnie sformatowany danych wejściowych może spowodować przepełnienie buforu.
+> Kiedy używasz **vsscanf —** do odczytywania ciągu, należy zawsze określać szerokość dla **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie niepoprawnie sformatowane dane wejściowe mogą spowodować przepełnienie buforu.
 
-**vswscanf —** jest wersja znaków dwubajtowych **vsscanf —**; argumenty **vswscanf —** są ciągami znaków dwubajtowych. **vsscanf —** nie obsługuje wielobajtowe znaków szesnastkowych. **vswscanf —** nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie **vswscanf —** i **vsscanf —** zachowują się tak samo.
+**vswscanf —** to wersja znaku dwubajtowego **vsscanf —**; argumenty **vswscanf —** są ciągami znaków dwubajtowych. **vsscanf —** nie obsługuje wielobajtowych znaków szesnastkowych. **vswscanf —** nie obsługuje znaków "strefa zgodności" ani szesnastkowych pełnej szerokości Unicode. W przeciwnym razie **vswscanf —** i **vsscanf —** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf**|**vsscanf —**|**vsscanf —**|**vswscanf —**|
 
@@ -156,7 +146,7 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

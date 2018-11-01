@@ -1,23 +1,13 @@
 ---
-title: 'Instrukcje: Limity w instrukcjach przełącznika | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Instrukcje: limity w instrukcjach przełącznika'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: d327ef3f-2b11-4bd6-abfe-539697fd21a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5e95a8c84c8d705c6f140358de842313d0ac936
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 27b378f8ad744cbb204332f8e8d5696140dea327
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106125"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586996"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Instrukcje: limity w instrukcjach przełącznika
 

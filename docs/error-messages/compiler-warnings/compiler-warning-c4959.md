@@ -1,45 +1,35 @@
 ---
-title: C4959 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie kompilatora C4959
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4959
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473661"
 ---
-# <a name="compiler-warning-c4959"></a>C4959 ostrzeżenia kompilatora
+# <a name="compiler-warning-c4959"></a>Ostrzeżenie kompilatora C4959
 
-> Nie można zdefiniować niezarządzanego struct "*typu*" w/CLR: Safe, ponieważ dostęp do jego elementów członkowskich implikuje kod niemożliwy do zweryfikowania
+> Nie można zdefiniować niezarządzanego struct "*typu*" w/CLR: Safe, ponieważ dostęp do jego składowych daje nieweryfikowalny kod
 
 ## <a name="remarks"></a>Uwagi
 
-Uzyskiwanie dostępu do elementu członkowskiego typu niezarządzanego utworzy obrazie niemożliwy (peverify.exe).
+Dostęp do składowej typu niezarządzanego dadzą obrazu nieweryfikowalnego (peverify.exe).
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: Safe** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-To ostrzeżenie jest wystawione jako błąd i może być wyłączone z [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4959:
+Poniższy przykład spowoduje wygenerowanie C4959:
 
 ```cpp
 // C4959.cpp

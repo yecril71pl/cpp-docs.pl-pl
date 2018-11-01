@@ -1,28 +1,17 @@
 ---
-title: 'Porady: zmiana języka lub warunku zasobu podczas kopiowania (C++) | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Porady: zmiana języka lub warunku zasobu podczas kopiowania (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Language property [C++]
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 42d8fb36dcbd243b0a99f2dbc597bdf352f47266
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642523"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Porady: zmiana języka lub warunku zasobu podczas kopiowania (C++)
 

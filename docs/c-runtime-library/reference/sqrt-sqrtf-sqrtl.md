@@ -1,10 +1,6 @@
 ---
-title: SQRT sqrtf —, sqrtl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560579"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -78,25 +68,25 @@ Wartość zmiennoprzecinkowa nieujemną.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **sqrt** które trwają **float** lub **długi** **podwójne** typów. W programie C **sqrt** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sqrt** o **float** lub **długie** **double** typów. W programie C **sqrt** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Sqrt** zwracają pierwiastek kwadratowy liczby *x*. Domyślnie jeśli *x* jest ujemna, **sqrt** zwraca nieograniczonego NaN.
+**Sqrt** funkcje zwracają pierwiastek kwadratowy liczby *x*. Domyślnie jeśli *x* jest ujemna, **sqrt** zwraca NaN nieokreślony.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
 |-----------|-------------------|--------------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
 |- ∞|brak|_DOMAIN|
 |x<0|brak|_DOMAIN|
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**SQRT**, **sqrtf —**, **sqrtl —**|\<math.h>|\<cmath >|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
