@@ -1,10 +1,6 @@
 ---
-title: _fcvt — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662062"
 ---
 # <a name="fcvt"></a>_fcvt
 
-Konwertuje liczba zmiennoprzecinkowa na ciąg. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_fcvt_s —](fcvt-s.md).
+Konwertuje liczbę zmiennoprzecinkową na ciąg. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [_fcvt_s —](fcvt-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,34 +50,34 @@ char *_fcvt(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Numer do skonwertowania.
+Numer ma zostać przekonwertowany.
 
 *Liczba*<br/>
 Liczba cyfr po punkcie dziesiętnym.
 
-*DEC*<br/>
-Wskaźnik do składowanej położenie punktu dziesiętnego.
+*Gru*<br/>
+Wskaźnik do przechowywanej położenie punktu dziesiętnego.
 
 *sign*<br/>
-Wskaźnik do wskaźnika logowania przechowywanej.
+Wskaźnik do wskaźnika przechowywanych logowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fcvt —** zwraca wskaźnik do ciągu znaków, **NULL** na błąd.
+**_fcvt —** zwraca wskaźnik do ciągu znaków, **NULL** w przypadku błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fcvt —** funkcja konwertuje liczba zmiennoprzecinkowa na ciąg znaków zakończony znakiem null. *Wartość* parametr jest liczbie zmiennoprzecinkowej do skonwertowania. **_fcvt —** przechowuje cyfry *wartość* jako ciąg i dołącza znak null ('\0'). *Liczba* parametr określa liczbę cyfr po punkcie dziesiętnym przechowywania. Nadmiarowe cyfry są zaokrąglane do *liczba* miejsca. Jeśli jest dostępnych mniej niż *liczba* cyfr precyzji, ten ciąg jest uzupełniana zerami z.
+**_Fcvt —** funkcja konwertuje liczbę zmiennoprzecinkową ciąg znaków zakończony znakiem null. *Wartość* parametr jest liczba zmiennoprzecinkowa, która ma zostać przekonwertowany. **_fcvt —** przechowuje cyfry *wartość* jako ciąg i dołącza znak null ('\0'). *Liczba* parametr określa liczbę cyfr, które mają być przechowywane po punkcie dziesiętnym. Nadmiarowe cyfry są zaokrąglane do *liczba* miejsc. W przypadku mniej niż *liczba* cyfr precyzji, ciąg jest dopełniana zerami.
 
-Całkowita liczba cyfr zwrócony przez **_fcvt —** nie przekroczy **_CVTBUFSIZE**.
+Całkowita liczba cyfr, zwracany przez **_fcvt —** nie przekroczy **_CVTBUFSIZE**.
 
-Tylko cyfry są przechowywane w ciągu. Położenie punktu dziesiętnego i znak *wartość* można uzyskać od *gru* i zalogować się po wywołaniu. *Gru* parametr wskazuje na wartość całkowitą; daje to wartość całkowita położenie punktu dziesiętnego względem początku ciąg. Wartość zero lub wartość ujemną całkowitą wskazuje dziesiętnego znajduje się na lewo od pierwszą. Parametr *znak* wskazuje na liczbę całkowitą określającą znak *wartość*. Liczba całkowita jest ustawiony na 0, jeśli *wartość* jest dodatnia i ma ustawioną wartość różna od zera, jeśli liczba *wartość* jest ujemna.
+Tylko cyfry są przechowywane w ciągu. Pozycja punkt dziesiętny i znak *wartość* można otrzymać od *gru* i logowania po wywołaniu. *Gru* parametr wskazuje na wartość całkowitą; tej wartości liczby całkowitej zapewnia położenie punktu dziesiętnego w odniesieniu do początku ciągu. Zero lub wartość ujemną liczbę całkowitą wskazuje punkt dziesiętny znajduje się po lewej stronie pierwsza cyfra. Parametr *logowania* wskazuje na liczbę całkowitą określającą znak *wartość*. Liczba całkowita jest ustawiona na 0, jeśli *wartość* jest dodatnia i jest ustawiona na wartość różną od zera jeśli liczba *wartość* jest ujemna.
 
-Różnica między **_ecvt —** i **_fcvt —** jest interpretacji *liczba* parametru. **_ecvt —** interpretuje *liczba* jako liczba cyfr w ciągu wyjściowego, natomiast **_fcvt —** interpretuje *liczby* jako liczbę cyfr po separatorem dziesiętnym.
+Różnica między **_ecvt —** i **_fcvt —** znajduje się w interpretacji *liczba* parametru. **_ecvt —** interpretuje *liczba* jako łączna liczba cyfr w ciągu wyjściowego, natomiast **_fcvt —** interpretuje *liczba* jako liczbę cyfr po punkt dziesiętny.
 
-**_ecvt —** i **_fcvt —** do konwersji użyj pojedynczego statycznie przydzielonego buforu. Każde wywołanie do jednej z tych procedur niszczy wyniki poprzedniego wywołania.
+**_ecvt —** i **_fcvt —** pojedynczy bufor statycznie przydzielanego na użytek konwersji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* jest **NULL**, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i **NULL** jest zwracany.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *logowania* jest **NULL**, lub *liczba* wynosi 0, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i **NULL** jest zwracana.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -95,7 +85,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* jest **NULL**, l
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

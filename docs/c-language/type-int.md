@@ -1,28 +1,18 @@
 ---
-title: Int — typ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Typ int
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - int data type
 - type int
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da73fc26bb6afa6455ac569148ab06370a728948
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6391e167ad214bb793b8d6b3b62637a113039afc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437196"
 ---
 # <a name="type-int"></a>Typ int
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbclower —, _ismbclower_l —, _ismbcupper —, _ismbcupper_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431866"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
-Sprawdza, czy znaków wielobajtowych małe lub wielkie litery.
+Sprawdza, czy znak wielobajtowy jest wielką czy małą literą.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,27 +68,27 @@ int _ismbcupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do sprawdzenia.
+Znak do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli *c*< = 255 i ma odpowiadającego **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest zwracana wartość odpowiadającego **_ismbb —** procedury.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli nie jest. Jeśli *c*< = 255 i istnieje odpowiedni **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest wartością zwracaną odpowiadającego **_ismbb —** procedury.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.
+Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-|Procedura|Stan testu|Przykład kodu strony 932|
+|Procedura|Testowanie warunku|Przykład strony kodu 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Małe litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy *c* odzwierciedla jednobajtowe małe litery angielskie ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Małe litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy *c* odzwierciedla jednobajtowe małe litery angielskie ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbcupper —**|Wielkie litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy *c* odzwierciedla jednobajtowe wielkiej litery angielskie ASCII: 0x41 < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Wielkie litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy *c* odzwierciedla jednobajtowe wielkiej litery angielskie ASCII: 0x41 < =*c*< = 0x5A.|
+|**_ismbclower**|Małe litery alfabetycznie|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego małe litery angielskiej ASCII: 0x61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Małe litery alfabetycznie|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego małe litery angielskiej ASCII: 0x61 < =*c*< = 0x7A.|
+|**_ismbcupper —**|Wielkie litery alfabetycznie|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego wielkie litery angielskiej ASCII: 0x41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Wielkie litery alfabetycznie|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego wielkie litery angielskiej ASCII: 0x41 < =*c*< = 0x5A.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -109,7 +99,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były
 |**_ismbcupper —**|\<mbstring.h>|
 |**_ismbcupper_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

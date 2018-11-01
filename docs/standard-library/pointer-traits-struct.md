@@ -1,10 +1,6 @@
 ---
-title: pointer_traits — struktura | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: pointer_traits — struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
 - memory/std::pointer_traits::pointer
@@ -17,23 +13,17 @@ f1_keywords:
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
-dev_langs:
-- C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1485441dbea92f534314dafd9d86ab0ef8a4e69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b661d4b36ce48a08faba6638c5114f3f4e6981a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434791"
 ---
 # <a name="pointertraits-struct"></a>pointer_traits — struktura
 
-Dostarcza informacje, które są wymagane przez obiekt klasy szablonu `allocator_traits` do opisywania alokatora z typu wskaźnika `Ptr`.
+Dostarcza informacje, które są wymagane przez obiekt klasy szablonu `allocator_traits` do opisania alokatora z typem wskaźnika `Ptr`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,7 +34,7 @@ struct pointer_traits;
 
 ## <a name="remarks"></a>Uwagi
 
-PTR można raw wskaźnika typu `Ty *` lub klasie z następujących właściwości.
+PTR można surowego wskaźnika typu `Ty *` lub klasie z atrybutem następujące właściwości.
 
 ```cpp
 struct Ptr
@@ -63,31 +53,31 @@ struct Ptr
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`typedef T2 difference_type`|Typ `T2` jest `Ptr::difference_type` Jeśli istnieje tego typu, w przeciwnym razie `ptrdiff_t`. Jeśli `Ptr` raw wskaźnik jest typu `ptrdiff_t`.|
-|`typedef T1 element_type`|Typ `T1` jest `Ptr::element_type` Jeśli istnieje tego typu, w przeciwnym razie `Ty`. Jeśli `Ptr` raw wskaźnik jest typu `Ty`.|
+|`typedef T2 difference_type`|Typ `T2` jest `Ptr::difference_type` istnienia tego typu, w przeciwnym razie `ptrdiff_t`. Jeśli `Ptr` jest surowy wskaźnik jest typu `ptrdiff_t`.|
+|`typedef T1 element_type`|Typ `T1` jest `Ptr::element_type` istnienia tego typu, w przeciwnym razie `Ty`. Jeśli `Ptr` jest surowy wskaźnik jest typu `Ty`.|
 |`typedef Ptr pointer`|Typ jest `Ptr`.|
 
 ### <a name="structs"></a>Struktury
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`pointer_traits::rebind`|Typ próbuje przekonwertować podstawowy wskaźnik do określonego typu.|
+|`pointer_traits::rebind`|Próbuje przekonwertować podstawowego wskaźnika typu do określonego typu.|
 
 ### <a name="methods"></a>Metody
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[pointer_to](#pointer_to)|Konwertuje dowolną odwołaniem do obiektu klasy `Ptr`.|
+|[pointer_to](#pointer_to)|Konwertuje dowolnego odwołania do obiektu klasy `Ptr`.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<pamięci >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="pointer_to"></a>  pointer_to
 
-Statyczna metoda, która zwraca `Ptr::pointer_to(obj)`, jeśli istnieje tej funkcji. W przeciwnym razie nie jest możliwe do przekonwertowania dowolną odwołaniem do obiektu klasy `Ptr`. Jeśli `Ptr` jest wskaźnik raw, ta metoda zwraca `addressof(obj)`.
+Metoda statyczna zwraca `Ptr::pointer_to(obj)`, jeśli istnieje w tej funkcji. W przeciwnym razie nie jest możliwe do przekonwertowania dowolnego odwołania do obiektu klasy `Ptr`. Jeśli `Ptr` jest surowy wskaźnik, Metoda ta zwraca `addressof(obj)`.
 
 ```cpp
 static pointer pointer_to(element_type& obj);

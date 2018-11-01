@@ -1,29 +1,19 @@
 ---
-title: Typ sprawdzania (CRT) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Sprawdzać typ (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.types
-dev_langs:
-- C++
 helpviewer_keywords:
 - checking type
 - variable argument functions
 - type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29cc7366385c187b1324f4d7e6b896a19ac86074
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fd892426bb7301acad7ce2a93430e52f25e7c9b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626111"
 ---
 # <a name="type-checking-crt"></a>Sprawdzać typ (CRT)
 

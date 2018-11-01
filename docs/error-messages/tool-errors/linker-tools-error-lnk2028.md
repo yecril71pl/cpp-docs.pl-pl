@@ -1,27 +1,17 @@
 ---
-title: Błąd narzędzi konsolidatora LNK2028 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd narzędzi konsolidatora LNK2028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2028
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704157"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643680"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Błąd narzędzi konsolidatora LNK2028
 
@@ -29,13 +19,13 @@ ms.locfileid: "34704157"
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas próby importowanie funkcji macierzystej czysty obraz, należy pamiętać, że niejawne konwencji wywoływania różnią się w kompilacjach kodu natywnego i czysty.
+Podczas próby zaimportowania funkcji natywnej do czystego obrazu, należy pamiętać, że niejawne konwencji wywoływania różnią się macierzystych i czystych kompilacji.
 
-**/CLR: pure** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Ten przykładowy kod generuje składnika z funkcją wyeksportowany, natywnego, których Konwencja wywoływania jest niejawnie [__cdecl](../../cpp/cdecl.md).
+Ten przykładowy kod generuje składnika za pomocą funkcji eksportowanych, natywnego, którego Konwencja wywołania jest niejawnie [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp
@@ -47,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie tworzone czysty klienta, który używa funkcji macierzystej. Jednak Konwencja wywoływania w obszarze **/CLR: pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład generuje LNK2028.
+Poniższy przykład tworzy czystego klienta, który używa funkcji macierzystej. Jednak konwencji wywoływania, w obszarze **/CLR: pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład spowoduje wygenerowanie LNK2028.
 
 ```cpp
 // LNK2028_b.cpp

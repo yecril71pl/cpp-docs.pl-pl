@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal —, _ismbclegal_l —, _ismbcsymbol —, _ismbcsymbol_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454577"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
-Sprawdza, czy znaków wielobajtowych prawnych lub znak symbolu.
+Sprawdza, czy znak wielobajtowy jest prawnym czy symbolem znaków.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,32 +78,32 @@ int _ismbcsymbol_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do sprawdzenia.
+Znak do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli *c*< = 255 i ma odpowiadającego **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest zwracana wartość odpowiadającego **_ismbb —** procedury.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli nie jest. Jeśli *c*< = 255 i istnieje odpowiedni **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest wartością zwracaną odpowiadającego **_ismbb —** procedury.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.
+Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-|Procedura|Stan testu|Przykład kodu strony 932|
+|Procedura|Testowanie warunku|Przykład strony kodu 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Nieprawidłowa wielobajtowe|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy pierwszy bajt *c* jest w zakresie 0x81-0x9F lub wartość 0xE0 - 0xFC, gdy drugi bajt znajduje się w zakresie 0x40-0x7E lub 0x80 - FC.|
-|**_ismbcsymbol**|Symbol wielobajtowe|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy 0x8141 < =*c*< = 0x81AC.|
+|**_ismbclegal**|Prawidłowe wielobajtowe|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy pierwszy bajt *c* znajduje się w zakresach 0x81-0x9F lub wartość 0xE0 — 0xFC, podczas gdy drugi bajt jest w zakresach 0x40-0x7E lub 0x80 - FC.|
+|**_ismbcsymbol**|Symbol wielobajtowy|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy 0x8141 < =*c*< = 0x81AC.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlegal —**|Zawsze zwraca wartość false|**_ismbclegal**|Zawsze zwraca wartość false.|
-|**_istlegal_l —**|Zawsze zwraca wartość false|**_ismbclegal_l**|Zawsze zwraca wartość false.|
+|**_istlegal —**|Zawsze zwraca wartość false|**_ismbclegal**|zawsze zwraca wartość false.|
+|**_istlegal_l —**|Zawsze zwraca wartość false|**_ismbclegal_l**|zawsze zwraca wartość false.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -122,7 +112,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były
 |**_ismbclegal —**, **_ismbclegal_l —**|\<mbstring.h>|
 |**_ismbcsymbol —**, **_ismbcsymbol_l —**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

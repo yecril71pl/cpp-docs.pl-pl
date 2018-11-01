@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft Docs
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,20 +28,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430865"
 ---
 # <a name="gcvt"></a>_gcvt
 
-Konwertuje wartość zmiennoprzecinkowa ciągu, są przechowywane w buforze. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_gcvt_s —](gcvt-s.md).
+Konwertuje wartość zmiennoprzecinkowa na ciąg, który przechowuje w buforze. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [_gcvt_s —](gcvt-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,9 +52,9 @@ char *_gcvt(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość do skonwertowania.
+Wartość do przekonwertowania.
 
-*cyfr*<br/>
+*cyfry*<br/>
 Liczba cyfr znaczących przechowywane.
 
 *buffer*<br/>
@@ -72,15 +62,15 @@ Lokalizacja magazynu dla wyniku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_gcvt —** zwraca wskaźnik do ciąg cyfr.
+**_gcvt —** zwraca wskaźnik do ciągu znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Gcvt —** funkcja konwertuje zmiennoprzecinkowe *wartość* na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w *buforu*. *Buforu* powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Jeśli rozmiar buforu *cyfr* + 1 jest używany, funkcja zastępuje koniec buforu. Jest to spowodowane skonwertowany ciąg zawiera punktu dziesiętnego i może zawierać znaku i wykładnika. Przewidują przepełnienie nie istnieje. **_gcvt —** próbuje utworzyć *cyfr* cyfr w formacie dziesiętnym. Jeśli nie, tworzy *cyfr* cyfr w notacji wykładniczej. Końcowe zera może pominąć w konwersji.
+**_Gcvt —** funkcja konwertuje liczb zmiennoprzecinkowych *wartość* na ciąg znaków, (która zawiera przecinek dziesiętny i bajtów możliwe logowania) i zapisuje ciąg w *buforu*. *Buforu* powinien być wystarczająco duży, aby pomieścić przekonwertowana wartości, a także kończący znak null, która jest dołączana automatycznie. Jeśli rozmiar buforu *cyfr* + 1 jest używany, funkcja zastępuje koniec buforu. Jest to spowodowane przekonwertowany ciąg zawiera przecinek dziesiętny i może zawierać znaku i wykładnika. Nie istnieje żadne postanowienie dla przepełnienia. **_gcvt —** próbuje utworzyć *cyfr* cyfr w formacie dziesiętnym. Jeśli jest ona nieosiągalna, tworzy *cyfr* cyfr w notacji wykładniczej. Końcowe zera może być pominięty podczas konwersji.
 
-A *buforu* o długości **_CVTBUFSIZE** jest wystarczająca dla dowolnej liczby zmiennoprzecinkowe wartości.
+A *buforu* o długości **_CVTBUFSIZE** jest wystarczająca dla dowolnego zmiennoprzecinkowe wartości.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *buforu* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *buforu* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -88,7 +78,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *buforu* jest **NULL**, program o
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

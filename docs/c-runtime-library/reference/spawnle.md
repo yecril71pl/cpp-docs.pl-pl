@@ -1,10 +1,6 @@
 ---
-title: spawnle — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: spawnle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - spawnle
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - spawnle
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnle function
 ms.assetid: 7c90cfdd-dcee-4ea6-b709-cd0f7598b0fe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8fdf2325c489b71a0671839407eb2f7b08eacb58
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a2ca7cab8d717bddccee0b01294d4eb897661d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677568"
 ---
 # <a name="spawnle"></a>spawnle
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_spawnle —](spawnle-wspawnle.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_spawnel](spawnle-wspawnle.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

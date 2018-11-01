@@ -1,12 +1,6 @@
 ---
-title: Wdrażanie natywnych aplikacji komputerowych (Visual C++) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Wdrażanie natywnych aplikacji komputerowych (Visual C++)
 ms.date: 05/11/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
@@ -15,28 +9,24 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ca3949c0cc2a505148da2a1edb8f07eaf1b6a1f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34259247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662686"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Wdrażanie natywnych aplikacji komputerowych (Visual C++)
 
-Wdrażanie to proces, za pomocą którego można dystrybuować Zakończono aplikację lub składnik można zainstalować na innych komputerach. Planowanie wdrożenia zostanie uruchomiony po utworzeniu aplikacji na komputerze dewelopera. Wdrożenie kończy się, gdy aplikacja jest zainstalowana i gotowa do uruchomienia na komputerze użytkownika.
+Wdrażanie to proces, za pomocą którego można dystrybuować ukończonej aplikacji lub składnika można zainstalować na innych komputerach. Planowanie wdrożenia zostanie uruchomiony po utworzeniu aplikacji na komputerze dewelopera. Wdrożenie kończy się, gdy aplikacja jest zainstalowana i gotowa do uruchomienia na komputerze użytkownika.
 
-Program Visual Studio oferuje różne technologie wdrażania aplikacji systemu Windows. Obejmują one wdrażania ClickOnce i wdrożenia Instalatora Windows.
+Visual Studio zawiera różne technologie wdrażania aplikacji Windows. Obejmują one wdrażania ClickOnce i wdrażanie za pomocą Instalatora Windows.
 
-- ClickOnce może służyć do wdrażania aplikacji C++, których miejscem docelowym jest środowisko uruchomieniowe języka wspólnego (CLR) — zestawów mieszanych, czystych i weryfikowalnych. Mimo że Instalatora Windows można użyć do wdrożenia aplikacji zarządzanej, zaleca się użycie technologii ClickOnce, ponieważ korzysta z funkcji zabezpieczeń .NET Framework, takich jak podpisywanie manifestu. ClickOnce nie obsługuje wdrażanie natywnych aplikacji C++. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- ClickOnce może służyć do wdrażania aplikacji w języku C++, których platformą docelową środowisko uruchomieniowe języka wspólnego (CLR) — zestawów mieszanych, czystych i weryfikowalnych. Mimo, że Instalator Windows umożliwia wdrażanie aplikacji zarządzanej, zaleca się użycie technologii ClickOnce, ponieważ wykorzystuje platformę .NET Framework funkcje zabezpieczeń, takie jak podpisywanie manifestu. ClickOnce nie obsługuje wdrażanie natywnych aplikacji w języku C++. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
-- Technologii Instalatora systemu Windows może służyć do wdrożenia natywnych aplikacji C++ lub aplikacje w języku C++ kierowanych środowiska CLR.
+- Technologia Instalatora Windows może służyć do wdrożenia natywnych aplikacji w języku C++ lub aplikacji w języku C++, których celem jest CLR.
 
-Artykuły w tej sekcji dokumentacji omówiono sposób upewnić się, że natywnych aplikacji Visual C++ działa na dowolnym komputerze, który zawiera pliki, które należy uwzględnić w pakietu instalacyjnego i zalecane sposoby platformy docelowej, Ponowna dystrybucja składników, które zależy od aplikacji.
+Artykuły w tej sekcji dokumentacji omówiono sposób zapewnienia, że natywnych aplikacji Visual C++ jest uruchamiana na dowolnym komputerze, który zawiera pliki, które należy uwzględnić w pakiecie instalacyjnym i zalecane sposoby za pomocą platformy docelowej Ponowna dystrybucja składników, od których zależy aplikacja.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -60,7 +50,7 @@ Artykuły w tej sekcji dokumentacji omówiono sposób upewnić się, że natywny
 
 - [Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Uruchomiona C++/CLR aplikacji na poprzedniej wersji środowiska uruchomieniowego](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Uruchomione c + +/ CLR aplikacji na poprzedniej wersji środowiska uruchomieniowego](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

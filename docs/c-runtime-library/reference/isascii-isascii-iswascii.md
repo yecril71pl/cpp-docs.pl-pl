@@ -1,10 +1,6 @@
 ---
-title: isascii —, __isascii —, iswascii — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isascii —, __isascii —, iswascii —
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433662"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii —, __isascii —, iswascii —
 
-Określa, czy określonego znaku jest znakiem ASCII.
+Określa, czy określony znak jest znakiem ASCII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,17 +61,17 @@ int iswascii(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli **c** jest reprezentację określonego obiektu znaków ASCII. **__isascii —** zwraca wartość niezerową, jeśli **c** jest znakiem ASCII (w zakresie 0x00 - 0x7F). **iswascii —** zwraca wartość niezerową, jeśli **c** odzwierciedla znaków dwubajtowych znaków ASCII. Każdy z tych procedur zwraca 0, jeśli **c** nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli **c** jest szczególną reprezentacją znaku ASCII. **__isascii —** zwraca wartość różną od zera, jeśli **c** jest znak ASCII (z zakresu od 0x00 - 0x7F). **iswascii —** zwraca wartość różną od zera, jeśli **c** jest reprezentacją znaku dwubajtowego znaku ASCII. Każda z tych procedur zwraca 0, jeśli **c** nie spełnia warunku testowego.
 
 ## <a name="remarks"></a>Uwagi
 
-Zarówno **__isascii —** i **iswascii —** są zaimplementowane jako makra, chyba że jest zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora.
+Zarówno **__isascii —** i **iswascii —** są implementowane jako makra, chyba że _CTYPE_DISABLE_MACROS makro preprocesora jest zdefiniowana.
 
-W celu zapewnienia zgodności z poprzednimi wersjami **isascii —** jest zaimplementowany jako makro tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie jest niezdefiniowany.
+W celu zapewnienia zgodności z poprzednimi wersjami **isascii —** jest implementowany jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowana jako 0; w przeciwnym razie jest niezdefiniowany.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -96,7 +86,7 @@ W celu zapewnienia zgodności z poprzednimi wersjami **isascii —** jest zaimpl
 |**isascii —**, **__isascii —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 |**iswascii**|C: \<wctype.h >, \<ctype.h >, lub \<wchar.h ><br /><br /> C++: \<cwctype — >, \<cctype — >, \<wctype.h >, \<ctype.h >, lub \<wchar.h >|
 
-**Isascii —**, **__isascii —** i **iswascii —** funkcje są określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**Isascii —**, **__isascii —** i **iswascii —** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

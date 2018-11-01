@@ -1,20 +1,16 @@
 ---
-title: '&lt;system_error —&gt; operatory | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;system_error —&gt; operatorów'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
-dev_langs:
-- C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d5c8f49c4a38862d62b7fe8212d98c87949fecfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653377"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error —&gt; operatorów
 

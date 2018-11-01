@@ -1,10 +1,6 @@
 ---
-title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
-ms.custom: ''
+title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452250"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -83,32 +73,32 @@ int _wtoi_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg do przekonwertowania.
+Ciąg, który ma zostać przekonwertowany.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca **int** wartość utworzonego przez interpretowanie znaków wejściowy jako liczby. Wartość zwracana jest 0 dla **atoi —** i **_wtoi —**, jeśli dane wejściowe nie można przekonwertować wartości tego typu.
+Każda funkcja zwraca **int** wartość generowana przez zinterpretowanie wprowadzonych znaków jako liczby. Wartość zwracana to 0 dla **atoi —** i **_wtoi —**, jeśli dane wejściowe nie można przekonwertować na wartość tego typu.
 
-W przypadku przepełnienia o dużych wartościach całkowitych ujemnych **long_min —** jest zwracany. **atoi —** i **_wtoi —** zwracać **int_max —** i **int_min —** tych warunków. We wszystkich przypadkach out-of-range **errno** ustawiono **erange —**. Jeśli parametr przekazano **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwraca 0.
+W przypadku przepełnienia o dużych ujemnych wartościach całkowitych **LONG_MIN** jest zwracana. **atoi —** i **_wtoi —** zwracają **INT_MAX** i **INT_MIN** na te warunki. We wszystkich przypadkach spoza zakresu **errno** ustawiono **ERANGE**. Jeśli parametr przekazany w **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje przekonwertować ciągu znaków na wartość całkowitą (**atoi —** i **_wtoi —**). Ciąg wejściowy jest sekwencji znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja zatrzymuje odczytywania ciąg wejściowy pierwszego znaku, który nie jest rozpoznawana jako część liczby. Ten znak może być znak null ('\0' lub L '\0') zakończenie ciągu.
+Te funkcje konwertują ciąg znaków na wartość całkowitą (**atoi —** i **_wtoi —**). Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, który nie może rozpoznać jako elementu liczby. Ten znak może być znakiem null ('\0' lub L '\0') zakończenie ciągu.
 
-*Str* argument **atoi —** i **_wtoi —** ma następujący format:
+*Str* argument **atoi —** i **_wtoi —** ma następującą postać:
 
-> [*odstępem*] [*znak*] [*cyfr*]]
+> [*odstępu*] [*logowania*] [*cyfr*]]
 
-A *odstępem* zawiera spację lub tabulator znaki, które są ignorowane. *znak* jest plus (+) lub minus (-); i *cyfr* są co najmniej jedną cyfrę.
+A *odstępu* składa się ze znaków spacji lub tabulatorów, które są ignorowane. *logowania* jest plus (+) lub minus (-); i *cyfr* to jedna lub więcej cyfr.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstoi —**|**atoi**|**atoi**|**_wtoi**|
 |**_ttoi —**|**atoi**|**atoi**|**_wtoi**|
@@ -122,7 +112,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 
 ## <a name="example"></a>Przykład
 
-Ten program pokazuje, jak liczby przechowywane jako ciąg można przekonwertować wartości liczbowych za pomocą **atoi —** funkcji.
+Ten program ilustruje, jak liczb przechowywanych jako ciągi można przekonwertować wartości liczbowych przy użyciu **atoi —** funkcji.
 
 ```C
 // crt_atoi.c

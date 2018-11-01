@@ -1,25 +1,15 @@
 ---
-title: Komentarze w pliku reguł programu make | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Komentarze w pliku reguł programu Make
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bff732a0e9becc9b6c829c70a1bc6701e6031bf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 91fb9001378973c86ffaaf7fd841e3c679444ef9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625852"
 ---
 # <a name="comments-in-a-makefile"></a>Komentarze w pliku reguł programu Make
 

@@ -1,10 +1,6 @@
 ---
-title: _mbclen —, mblen —, _mblen_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _mbclen, mblen, _mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,23 +36,19 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434389"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
-Pobiera długość i ważność znaków wielobajtowych określa.
+Pobiera długość i określa ważność znaków wielobajtowych.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,34 +70,34 @@ int _mblen_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znaków wielobajtowych.
+Znak wielobajtowy.
 
 *mbstr*<br/>
-Adres sekwencja znaków wielobajtowych bajtów.
+Adres sekwencji bajtów znaków wielobajtowych.
 
 *Liczba*<br/>
-Liczba bajtów do sprawdzenia.
+Liczba bajtów do wyboru.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbclen —** zwraca 1 lub 2, zgodnie z czy znaków wielobajtowych *c* jest 1 lub 2 bajty. Nie było błędu zwracany dla **_mbclen —**. Jeśli *mbstr* nie jest **NULL**, **mblen —** zwraca długość w bajtach znaków wielobajtowych. Jeśli *mbstr* jest **NULL** lub wskazuje na znak null znaków dwubajtowych **mblen —** zwraca wartość 0. Jeśli obiekt który *mbstr* punktów nie stanowi prawidłowy znaków wielobajtowych w pierwszym *liczba* znaków, **mblen —** zwraca wartość -1.
+**_mbclen —** zwraca wartość 1 lub 2, zgodnie z czy znak wielobajtowy *c* to 1 lub 2 bajtów. Błąd nie jest zwracana dla **_mbclen —**. Jeśli *mbstr* nie **NULL**, **mblen —** zwraca długość w bajtach, znaku wielobajtowego. Jeśli *mbstr* jest **NULL** lub wskazuje znak null znaków dwubajtowych, **mblen —** zwraca wartość 0. Jeśli obiekt, *mbstr* wskazuje nie tworzą prawidłowy znak wielobajtowy w obrębie pierwszych *liczba* znaków, **mblen —** zwraca wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbclen —** funkcja zwraca długość w bajtach znaków wielobajtowych *c*. Jeśli *c* nie wskazuje bajtu znaków wielobajtowych określone przez wywołanie niejawne **_ismbblead —**, wynik **_mbclen —** będzie nieprzewidywalny.
+**_Mbclen —** funkcja zwraca długość w bajtach, znaku wielobajtowego *c*. Jeśli *c* nie wskazuje bajtu wiodącego znaku wielobajtowego jak ustalono przez wywołanie niejawne **_ismbblead**, wynikiem **_mbclen —** jest nieprzewidywalne.
 
-**mblen —** zwraca długość w bajtach *mbstr* Jeśli jest prawidłowy znaków wielobajtowych i określa ważności znaków wielobajtowych skojarzony ze stroną kodową. **mblen —** sprawdza *liczba* lub mniejszą liczbę bajtów zawartych w *mbstr*, ale nie więcej niż **mb_cur_max —** bajtów.
+**mblen —** zwraca długość w bajtach *mbstr* prawidłowy znak wielobajtowy i określa ważność znaków wielobajtowych skojarzonych ze stroną kodową. **mblen —** sprawdza *liczba* lub mniejsza liczba bajtów zawartych w *mbstr*, ale nie więcej niż **MB_CUR_MAX** bajtów.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tclen —**|Map — makro lub wewnętrznej funkcji|**_mbclen**|Map — makro lub wewnętrznej funkcji|
+|**_tclen —**|Mapy i makro lub funkcja śródwierszowa|**_mbclen**|Mapy i makro lub funkcja śródwierszowa|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -117,7 +107,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |**mblen —**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

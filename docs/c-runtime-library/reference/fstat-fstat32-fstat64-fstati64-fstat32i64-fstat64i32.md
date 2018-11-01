@@ -1,10 +1,6 @@
 ---
-title: _fstat —, _fstat32 —, _fstat64 —, _fstati64 —, _fstat32i64 —, _fstat64i32 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677789"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -102,43 +92,43 @@ int _fstat64i32(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Deskryptorów plików otwartych plików.
+Deskryptor pliku otwartego pliku.
 
 *buffer*<br/>
 Wskaźnik do struktury do przechowywania wyników.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli są uzyskiwane z informacji o stanie pliku. Zwracana wartość -1 wskazuje błąd. Jeśli deskryptorów plików jest nieprawidłowy lub *buforu* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **ebadf —**, w przypadku deskryptora nieprawidłowy plik lub do **einval —**, jeśli *buforu* jest **NULL**.
+Zwraca wartość 0, jeżeli uzyskano informacje o stanie pliku. Zwracana wartość-1 wskazuje błąd. Jeżeli deskryptor pliku jest nieprawidłowa lub *buforu* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EBADF**, w przypadku nieprawidłowego deskryptora pliku lub do **EINVAL**, jeśli *buforu* jest **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fstat —** funkcja uzyskuje informacje o otwartego pliku skojarzone z *fd* i zapisuje go w strukturze wskazywana przez *buforu*. **_Stat** struktury zdefiniowane w SYS\Stat.h, zawiera następujące pola.
+**_Fstat** funkcja uzyskuje informacje o otwartego pliku, które są skojarzone z *fd* i zapisuje go w strukturze wskazywany przez *buforu*. **_Stat** struktury, zdefiniowanego w SYS\Stat.h, zawiera następujące pola.
 
 |Pole|Znaczenie|
 |-|-|
-**st_atime**|Czas ostatniego dostępu do pliku.
+**st_atime**|Czas ostatniego dostępu do plików.
 **st_ctime**|Godzina utworzenia pliku.
-**st_dev**|Jeśli urządzenie, *fd*; w przeciwnym razie wartość 0.
-**st_mode**|Maska bitowa dla informacji o trybie pliku. **_S_ifchr —** Jeśli ustawiono bit *fd* odwołuje się do urządzenia. **_S_ifreg —** Jeśli ustawiono bit *fd* odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. **_S_ifchr —** i inne stałe są zdefiniowane w SYS\Stat.h.
+**st_dev**|Jeśli urządzenie, *fd*; w przeciwnym razie 0.
+**st_mode**|Maska bitów informacji tryb pliku. **_S_IFCHR** Jeśli ustawiono bit *fd* odwołuje się do urządzenia. **_S_IFREG** Jeśli ustawiono bit *fd* odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. **_S_IFCHR** i inne stałe są definiowane w SYS\Stat.h.
 **st_mtime**|Czas ostatniej modyfikacji pliku.
-**st_nlink**|Zawsze 1 w systemach plików z systemem innym niż NTFS.
-**st_rdev**|Jeśli urządzenie, *fd*; w przeciwnym razie wartość 0.
+**st_nlink**|Zawsze 1 w systemach plików niż NTFS.
+**st_rdev**|Jeśli urządzenie, *fd*; w przeciwnym razie 0.
 **st_size**|Rozmiar pliku w bajtach.
 
 Jeśli *fd* odwołuje się do urządzenia, **st_atime**, **st_ctime**, **st_mtime**, i **st_size** pola są nie ma istotnego znaczenia.
 
-Ponieważ używa Stat.h [_dev_t —](../../c-runtime-library/standard-types.md) typu, który jest zdefiniowany w Types.h, musi zawierać Types.h przed Stat.h w kodzie.
+Ponieważ używa Stat.h [_dev_t](../../c-runtime-library/standard-types.md) typ, który jest zdefiniowany w Types.h, musi zawierać Types.h przed Stat.h w kodzie.
 
-**_fstat64 —**, który korzysta z **__stat64 —** struktury, umożliwia tworzenie plików daty wyrażane się za pośrednictwem 23:59:59 31 grudnia 3000 UTC; inne funkcje tylko stanowią dat za pośrednictwem 23:59:59 18 stycznia 2038 R., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.
+**_fstat64**, który używa **__stat64 —** struktury, umożliwia tworzenie pliku daty do za pośrednictwem 23:59:59, 31 grudnia 3000, UTC, podczas gdy inne funkcje przedstawia tylko daty do 23:59:59 18 stycznia 2038 R. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla tych funkcji.
 
-Zmiany tych funkcji obsługuje typy czasu 32-bitowy lub 64-bitowe i 32-bitowy lub 64-bitowego pliku długości. Pierwszy liczbowego sufiksu (**32** lub **64**) wskazuje rozmiar czasu używany typ; jest drugi sufiks **i32** lub **komputerach 64**, wskazującą, czy rozmiar pliku jest reprezentowany jako 32-bitowy lub 64-bitowej liczby całkowitej.
+Różnice te funkcje obsługują typy czasu 32-bitową lub 64-bitowe i 32-bitową lub 64-bitowego pliku długości. Pierwszy liczbowego sufiksu (**32** lub **64**) wskazuje rozmiar czasu używany typ; drugi sufiks jest **i32** lub **i64**, wskazująca, czy rozmiar pliku jest reprezentowany jako 32-bitowy lub 64-bitową liczbę całkowitą.
 
-**_fstat —** jest odpowiednikiem **_fstat64i32 —**, i **struktury** **_stat** zawiera czas 64-bitowych. Jest to wartość true, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany w takim przypadku stare zachowanie jest włączona; **_fstat —** używany czas 32-bitowych, i **struktury** **_stat** zawiera czas 32-bitowych. Dotyczy to także **_fstati64 —**.
+**_fstat** jest odpowiednikiem **_fstat64i32 —**, i **struktury** **_stat** zawiera godzinę 64-bitowych. Jest to wartość true, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w którym to przypadku stare zachowanie obowiązuje; **_fstat** korzysta z danym 32-bitowe i **struktury** **_stat** zawiera godzinę 32-bitowych. Dotyczy to także **_fstati64**.
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Typ czasu i zmian typu długość pliku _stat
 
-|Funkcje|_USE_32BIT_TIME_T zdefiniowane?|Typu czasu|Typ długość pliku|
+|Funkcje|_USE_32BIT_TIME_T zdefiniowane?|Typ czasu|Typ długość pliku|
 |---------------|------------------------------------|---------------|----------------------|
 |**_fstat**|Nie zdefiniowano|64-bitowy|32-bitowa|
 |**_fstat**|Definicja|32-bitowa|32-bitowa|
@@ -160,7 +150,7 @@ Zmiany tych funkcji obsługuje typy czasu 32-bitowy lub 64-bitowe i 32-bitowy lu
 |**_fstat32i64**|\<sys/stat.h > i \<sys/types.h >|
 |**_fstat64i32**|\<sys/stat.h > i \<sys/types.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

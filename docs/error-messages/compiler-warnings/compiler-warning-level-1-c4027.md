@@ -1,27 +1,17 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4027 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilatora (poziom 1) ostrzeżenie C4027
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4027
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4027
 ms.assetid: f30d57b9-20c4-4284-8686-566d9f0ca7fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b919eeece5529d1914fadf5724088e3e64e73db9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e11b898d30f2832a31b36b571b771bdd92fc28f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089518"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554430"
 ---
 # <a name="compiler-warning-level-1-c4027"></a>Kompilatora (poziom 1) ostrzeżenie C4027
 

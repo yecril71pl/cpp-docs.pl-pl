@@ -1,10 +1,6 @@
 ---
-title: _matherr — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445724"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -52,21 +42,21 @@ int _matherr( struct _exception * except );
 ### <a name="parameters"></a>Parametry
 
 *Z wyjątkiem*<br/>
-Wskaźnik do struktury zawierający informacje o błędzie.
+Wskaźnik do struktury, zawierający informacje o błędzie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_matherr —** zwraca wartość 0, aby wskazać błąd lub wartość niezerową, informując o powodzeniu. Jeśli **_matherr —** zwraca wartość 0, komunikat o błędzie mogą być wyświetlane i **errno** ma ustawioną wartość odpowiednią błędu. Jeśli **_matherr —** zwraca wartość różną od zera, żaden komunikat o błędzie jest wyświetlany i **errno** pozostaje niezmieniona.
+**_matherr** zwraca 0, aby wskazać błąd lub wartość różną od zera, informując o powodzeniu. Jeśli **_matherr** zwraca wartość 0, komunikat o błędzie mogą być wyświetlane i **errno** jest ustawiona na wartość odpowiedni komunikat o błędzie. Jeśli **_matherr** zwraca wartość różną od zera, bez komunikatu o błędzie jest wyświetlany i **errno** pozostaje bez zmian.
 
-Aby uzyskać więcej informacji na temat kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Matherr —** funkcja przetwarza błędy generowane przez funkcje liczb zmiennoprzecinkowych biblioteki matematyczne. Wywołanie funkcji **_matherr —** gdy zostaje wykryty błąd.
+**_Matherr** funkcja przetwarza błędów generowanych przez funkcje zmiennoprzecinkowe biblioteka funkcji matematycznych. Wywołania tych funkcji **_matherr** po wykryciu błędu.
 
-Do obsługi błędów specjalne, możesz podać inną definicję **_matherr —**. Jeśli używasz wersji połączone dynamicznie biblioteki wykonawcze języka C (CRT), można zastąpić domyślną **_matherr —** rutynowych w kliencie pliku wykonywalnego z wersją zdefiniowane przez użytkownika. Jednak nie można zastąpić domyślną **_matherr —** rutynowych w kliencie biblioteki DLL CRT biblioteki dll.
+Do obsługi błędów specjalne, możesz podać inną definicję **_matherr**. Jeśli używasz wersji połączone dynamicznie biblioteki wykonawczej języka C (CRT), można zastąpić domyślną **_matherr** rutynowej w kliencie pliku wykonywalnego przy użyciu wersji zdefiniowany przez użytkownika. Jednak nie można zastąpić domyślną **_matherr** rutynowej w kliencie biblioteki DLL biblioteki CRT.
 
-Po wystąpieniu błędu w procedury matematyczne **_matherr —** jest wywoływana za pomocą wskaźnika do **_exception —** wpisz struktury (zdefiniowany w \<math.h >) jako argumentu. **_Exception —** struktura zawiera następujące elementy.
+Po wystąpieniu błędu w procedurze matematyczne **_matherr** jest wywoływana za pomocą wskaźnika do **_wyjątków** typ struktury (zdefiniowane w \<math.h >) jako argument. **_Wyjątków** struktura zawiera następujące elementy.
 
 ```C
 struct _exception
@@ -79,20 +69,20 @@ struct _exception
 };
 ```
 
-**Typu** elementu członkowskiego Określa typ błędu matematycznych. Jest to jeden z następujących wartości zdefiniowane w \<math.h >:
+**Typu** elementu członkowskiego Określa typ błędu matematyczne. Jest to jeden z następujących wartości, zdefiniowane w \<math.h >:
 
 |Macro|Znaczenie|
 |-|-|
-**_DOMAIN —**|Błąd domeny argumentu
-**—**|Argument singularity
-**_OVERFLOW —**|Błąd przepełnienia zakresu
-**_PLOSS —**|Częściowo utraciła istotności.
-**_TLOSS —**|Całkowitej utraty istotności.
-**_UNDERFLOW —**|Wynik jest za mały, aby mogła być przedstawiana. (Ten warunek nie jest obecnie obsługiwana.)
+**_DOMENY**|Argument domeny błędów
+**_SING**|Argument singularity
+**_OVERFLOW**|Błąd w zakresie przepełnienia
+**_PLOSS**|Częściowo utraciła istotności.
+**_TLOSS**|Całkowita utrata znaczenia
+**_UNDERFLOW**|Wynik jest za mały, aby mogły być reprezentowane. (Ten warunek nie jest obecnie obsługiwane.)
 
-Element członkowski struktury **nazwa** jest wskaźnikiem do zerem ciąg zawierający nazwę funkcji, który spowodował błąd. Elementy członkowskie struktury **arg1** i **arg2** określić wartości, które spowodowały błąd. Jeśli tylko jeden argument zostanie określony, dane są przechowywane w **arg1**.
+Element członkowski struktury **nazwa** jest wskaźnikiem do ciąg zakończony wartością null zawierający nazwę funkcji, które spowodowały błąd. Elementy członkowskie struktury **arg1** i **argument2** wpisz wartości, które spowodowały błąd. Jeśli tylko jeden argument zostanie podany, jest on przechowywany w **arg1**.
 
-Wartość domyślna zwracana wartość dla danego błędu to **retval**. Jeśli zmienisz wartość zwrotną, należy określić, czy rzeczywiście wystąpił błąd.
+Domyślnie zwraca wartość danego błędu jest **retval**. Jeśli zmienisz wartość zwracaną, należy określić, czy rzeczywiście wystąpił błąd.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -100,7 +90,7 @@ Wartość domyślna zwracana wartość dla danego błędu to **retval**. Jeśli 
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,15 +1,9 @@
 ---
-title: '/ Zc: strictstrings (Wyłączanie konwersji typów literału ciągu) | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: /Zc:strictStrings (Wyłączanie konwersji typów literału ciągu)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:strictStrings
 - strictStrings
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:strictStrings
 - -Zc compiler options (C++)
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5055d7d1e7804512fa8f1a72bbdb27c483d6fdd3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0fe7a7aa956ebc7662754b039389983d75ff590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668718"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Wyłączanie konwersji typów literału ciągu)
 
