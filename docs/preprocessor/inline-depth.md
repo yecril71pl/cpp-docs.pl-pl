@@ -1,29 +1,19 @@
 ---
-title: inline_depth | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: inline_depth
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - inline_depth_CPP
 - vc-pragma.inline_depth
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 672ea8c36b794683dca0ab50af0bda75d73f9a68
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b08578406fab4fe3a025d502f71cfd90f8dca75b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471369"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Określa algorytm heurystyczny wbudowane wyszukiwanie głębi, taki sposób, że żadna funkcja nie będzie śródwierszowych, jeśli jest na głębokości (w wykresu wywołań) większy niż *n*.

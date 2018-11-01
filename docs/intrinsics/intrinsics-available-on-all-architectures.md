@@ -1,35 +1,25 @@
 ---
-title: Funkcje wewnętrzne dostępne na wszystkich architektury | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Funkcje wewnętrzne dostępne we wszystkich architekturach
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473284"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne na wszystkich architektury
+# <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne we wszystkich architekturach
 
-Kompilator Microsoft C/C++ i uniwersalnych biblioteka C Runtime Library (UCRT) udostępnia pewne funkcje wewnętrzne na wszystkich architektury.
+Kompilator Microsoft C/C++ i uniwersalnej biblioteki środowiska uruchomieniowego języka C (UCRT) należy niektóre funkcje wewnętrzne dostępne we wszystkich architekturach.
 
 ## <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
-Następujące funkcje wewnętrzne są dostępne w przypadku x86, AMD64 i architektury ARM:
+Następujące funkcje wewnętrzne są dostępne w usłudze x86, AMD64 i architektur ARM:
 
-|— Wewnętrzne|nagłówek|
+|Wewnętrzne|nagłówek|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -97,11 +87,11 @@ Następujące funkcje wewnętrzne są dostępne w przypadku x86, AMD64 i archite
 |[__umulh](../intrinsics/umulh.md)|intrin.h|
 |[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
-## <a name="ucrt-intrinsics"></a>Biblioteka UCRT funkcje wewnętrzne
+## <a name="ucrt-intrinsics"></a>Funkcje wewnętrzne UCRT
 
-Następujące funkcje Biblioteka UCRT są wewnętrzne formularze na wszystkich architektury:
+Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architekturach:
 
-|— Wewnętrzne|nagłówek|
+|Wewnętrzne|nagłówek|
 |---------------|------------|
 |[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -121,7 +111,7 @@ Następujące funkcje Biblioteka UCRT są wewnętrzne formularze na wszystkich a
 |[_byteswap_uint64](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ulong](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ushort](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
-|[ceil](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
+|[Ceil —](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[COS](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
@@ -138,10 +128,10 @@ Następujące funkcje Biblioteka UCRT są wewnętrzne formularze na wszystkich a
 |[FLOOR](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
 |[floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
 |[floorl —](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
-|[fmod —](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
+|[Fmod —](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[fmodf](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
-|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
+|[Warsztaty](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[llabs —](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
@@ -181,7 +171,7 @@ Następujące funkcje Biblioteka UCRT są wewnętrzne formularze na wszystkich a
 |[TANH](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanhf](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
-|[tanl —](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
+|[tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
 |[wcscat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|string.h|
 |[wcscmp —](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|string.h|
 |[wcscpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|string.h|

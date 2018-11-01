@@ -1,30 +1,20 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (Link do zasobów .NET Framework) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /ASSEMBLYLINKRESOURCE (Łącze do Zasobów .NET Framework)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ASSEMBLYLINKRESOURCE
 - VC.Project.VCLinkerTool.AssemblyLinkResource
-dev_langs:
-- C++
 helpviewer_keywords:
 - -ASSEMBLYLINKRESOURCE linker option
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36f8f6adcfe5d67b3d27b8557627725ba7295829
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473908"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Łącze do Zasobów .NET Framework)
 

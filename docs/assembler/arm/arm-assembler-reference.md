@@ -1,23 +1,13 @@
 ---
-title: Dokumentacja asemblera ARM | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Odwołanie do asemblera ARM
 ms.date: 08/28/2017
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6be0dcb9333c3381c48dc72c31742bfe902bb02b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 698bbae8e3ed48ff89c851baba380d7d9de7432a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474195"
 ---
 # <a name="arm-assembler-reference"></a>Odwołanie do asemblera ARM
 

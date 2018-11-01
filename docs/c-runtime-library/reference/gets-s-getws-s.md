@@ -1,10 +1,6 @@
 ---
-title: gets_s —, _getws_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: gets_s, _getws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getws_s
 - gets_s
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3a5047871937d96288798768e17618ab791c75e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482904"
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 
-Pobiera wiersza ze **stdin** strumienia. Te wersje programu [pobiera _getws —](../../c-runtime-library/gets-getws.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera wiersz ze **stdin** strumienia. Te wersje [pobiera _getws —](../../c-runtime-library/gets-getws.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,30 +66,30 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla ciągu wejściowego.
+Lokalizacja magazynowa ciągu wejściowego.
 
 *sizeInCharacters*<br/>
 Rozmiar buforu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *buforu* w przypadku powodzenia. A **NULL** wskaźnik wskazuje błąd lub końca pliku. Użyj [ferror —](ferror.md) lub [feof —](feof.md) ustalenie, który wystąpił.
+Zwraca *buforu* w przypadku powodzenia. A **NULL** wskaźnik wskazuje warunek błędu lub końca pliku. Użyj [ferror](ferror.md) lub [feof](feof.md) do określenia, które z nich ma wystąpić.
 
 ## <a name="remarks"></a>Uwagi
 
-**Gets_s —** funkcja odczytuje wiersz z Standardowy strumień wejściowy **stdin** i przechowuje ją w *buforu*. Wiersz składa się z wszystkich znaków, w tym pierwszym znakiem nowego wiersza ("\n"). **gets_s —** zastąpi znaku nowego wiersza ze znakiem null ('\0') przed powrotem z wiersza. Z kolei **fgets_s** funkcja zachowuje znaku nowego wiersza.
+**Gets_s —** funkcja odczytuje wiersz ze standardowego strumienia wejściowego **stdin** i zapisuje go w *buforu*. Linia składa się z wszystkich znaków, w tym pierwszego znaku nowego wiersza (\n). **gets_s —** następnie zastępuje znak nowego wiersza znakiem null (\0) przed zwróceniem linii. Z kolei **fgets_s** funkcji zachowuje znak nowego wiersza.
 
-Jeśli pierwszym znakiem odczytać znaki końca pliku, znak null znajduje się na początku *buforu* i **NULL** jest zwracany.
+Jeśli pierwszym znakiem odczytu jest znak końca pliku, znak null znajduje się na początku *buforu* i **NULL** jest zwracana.
 
-**_getws_s —** jest wersja znaków dwubajtowych **gets_s —**; jego argumentów i wartości zwracanej są ciągami znaków dwubajtowych.
+**_getws_s —** to wersja znaku dwubajtowego **gets_s —**; jej argument i wartość zwracana to ciągi znaków dwubajtowych.
 
-Jeśli *buforu* jest **NULL** lub *sizeInCharacters* jest mniejsza niż lub równa zero, lub jeśli bufor jest zbyt mały, aby pomieścił wierszu danych wejściowych i terminatorem null, wywołanie funkcji Program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **NULL** ustawiono errno **erange —**.
+Jeśli *buforu* jest **NULL** lub *sizeInCharacters* jest mniejsza niż zero, lub jeśli bufor jest za mały, aby zawierać wiersz danych wejściowych i terminator o wartości null, funkcje te wywołują Nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustawiają mechanizm errno jako **ERANGE**.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
 
@@ -110,7 +100,7 @@ W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążeni
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -139,7 +129,7 @@ The line entered was: Hello there!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>

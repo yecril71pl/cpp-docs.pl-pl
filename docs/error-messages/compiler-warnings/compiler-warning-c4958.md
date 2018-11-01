@@ -1,45 +1,35 @@
 ---
-title: C4958 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie kompilatora C4958
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4958
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e32acc4ec45275976e7fb56f993b10ba8a2a855
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7d4ac6f21cfcfe0f37eb17ff81eabd3e6341a7d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477405"
 ---
-# <a name="compiler-warning-c4958"></a>C4958 ostrzeżenia kompilatora
+# <a name="compiler-warning-c4958"></a>Ostrzeżenie kompilatora C4958
 
 > "*operacji*": arytmetyka wskaźnika nie jest możliwe do zweryfikowania
 
 ## <a name="remarks"></a>Uwagi
 
-Przy użyciu arytmetyki wskaźnika utworzy obrazie niemożliwy.
+Za pomocą arytmetyki wskaźnika dadzą nieweryfikowalnego obrazu.
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: Safe** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-To ostrzeżenie jest wystawione jako błąd i może być wyłączone z [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4958:
+Poniższy przykład spowoduje wygenerowanie C4958:
 
 ```cpp
 // C4958.cpp
@@ -54,9 +44,9 @@ int main( ) {
 }
 ```
 
-Kompilator implementuje operacji tablicy z arytmetyka wskaźnika. W związku z tym natywnego tablice nie są możliwe do zweryfikowania; w zamian użyj tablicy CLR. Aby uzyskać więcej informacji, zobacz [tablicy](../../windows/arrays-cpp-component-extensions.md).
+Kompilator implementuje operacje arytmetyka wskaźnika tablicy. W związku z tym tablice natywnego nie są możliwe do zweryfikowania; Zamiast tego użyj tablicy CLR. Aby uzyskać więcej informacji, zobacz [tablicy](../../windows/arrays-cpp-component-extensions.md).
 
-Poniższy przykład generuje C4958:
+Poniższy przykład spowoduje wygenerowanie C4958:
 
 ```cpp
 // C4958b.cpp

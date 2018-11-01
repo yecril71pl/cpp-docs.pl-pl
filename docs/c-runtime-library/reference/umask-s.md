@@ -1,10 +1,6 @@
 ---
-title: _umask_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414483"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480674"
 ---
 # <a name="umasks"></a>_umask_s
 
-Ustawia domyślną maskę uprawnień do pliku. Wersja [_umask —](umask.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ustawia domyślną maskę uprawnień do pliku. Wersja [_umask —](umask.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,32 +57,32 @@ Poprzedniej wartości ustawienia uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca kod błędu, jeśli *tryb* nie określa prawidłowego trybu lub *pOldMode* wskaźnika jest **NULL**.
+Zwraca kod błędu, jeśli *tryb* nie określa prawidłowego trybu lub *pOldMode* wskaźnik jest **NULL**.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*Tryb*|*pOldMode*|Wartość zwracana|Zawartość *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|wszystkie|**NULL**|**EINVAL —**|Nie zmodyfikowano|
-|Nieprawidłowy tryb|wszystkie|**EINVAL —**|Nie zmodyfikowano|
+|Wszystkie|**NULL**|**EINVAL**|Nie zmodyfikowano|
+|Nieprawidłowy element mode|Wszystkie|**EINVAL**|Nie zmodyfikowano|
 
-Jeśli wystąpi jedno z powyższych warunków, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_umask_s —** zwraca **einval —** i ustawia **errno** do **einval —**.
+Jeśli wystąpi jedno z powyższych warunków, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_umask_s —** zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Umask_s —** funkcja ustawia maski uprawnienia pliku bieżącego procesu do trybu określonego przez *tryb*. Maska uprawnienia pliku Modyfikuje ustawienia uprawnień nowych plików utworzonych przez **_creat —**, **_otwórz**, lub **_sopen —**. Jeśli bit maski to 1, odpowiadający mu bit pliku żądane uprawnienie wartość jest równa 0 (niedopuszczalne). Jeśli bit maski to 0, odpowiadający mu bit pozostanie bez zmian. Ustawienie uprawnień dla nowego pliku nie jest ustawiona, dopóki ten plik będzie zamknięty po raz pierwszy.
+**_Umask_s —** funkcja Ustawia maskę uprawnień pliku bieżącego procesu przekładają się na określonej przez *tryb*. Maskę uprawnień pliku Modyfikuje ustawienia uprawnień dla nowych plików utworzonych przez **_creat —**, **_otwórz**, lub **_sopen**. Jeśli bit maski to 1, odpowiadający mu bit w pliku żądane uprawnienie wartość jest równa 0 (niedozwolone). Jeśli bit maski to 0, odpowiadający mu bit pozostanie bez zmian. Ustawienie uprawnienia dla nowego pliku nie jest ustawiona, dopóki ten plik będzie zamknięty po raz pierwszy.
 
-Wyrażenie całkowite *pmode* zawiera co najmniej jednej z następujących stałych manifestu, zdefiniowane w SYS\STAT. H:
+Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba z następujących stałych manifestu, określonych w SYS\STAT. GODZ.:
 
 |*pmode*||
 |-|-|
-|**_S_IWRITE —**|Zapisywanie dozwolone.|
-|**_S_IREAD —**|Odczytywanie dozwolone.|
-|**_S_IREAD —** \| **_S_IWRITE —**|Odczytywanie i zapisywanie dozwolone.|
+|**_S_IWRITE**|Zapisywanie jest dozwolone.|
+|**_S_IREAD**|Odczytywanie dozwolone.|
+|**_S_IREAD** \| **_S_IWRITE**|Odczyt i zapis dozwolone.|
 
-Gdy zarówno stałe są podane, są połączone z operator Alternatywy ( **|** ). Jeśli *tryb* argument jest **_s_iread —**, odczytu jest niedozwolony (plik jest tylko do zapisu). Jeśli *tryb* argument jest **_s_iwrite —**, zapis nie jest dozwolone. (plik jest tylko do odczytu). Na przykład jeśli ustawiono bit zapisu maski, nowe pliki będą tylko do odczytu. Pamiętaj, że wszystkie pliki z systemu MS-DOS i systemów operacyjnych Windows, jest do odczytu; nie jest możliwe nadaj uprawnienia tylko do zapisu. W związku z tym ustawienie odczytu bit z **_umask_s —** nie ma wpływu na tryby pliku.
+Gdy oba stałe są podane, są połączone za pomocą operatora bitowego OR ( **|** ). Jeśli *tryb* argument jest **_S_IREAD**, odczytu, nie jest dozwolona (plik jest tylko do zapisu). Jeśli *tryb* argument jest **_S_IWRITE**, nie jest dozwolone zapisywanie (plik jest tylko do odczytu). Na przykład jeśli maska jest ustawiony bit zapisu, nowe pliki będą tylko do odczytu. Należy zauważyć, że MS-DOS i systemów operacyjnych Windows, wszystkie pliki do odczytu; nie jest możliwe przyznać uprawnienia tylko do zapisu. W związku z tym, ustawienie odczytu bit z **_umask_s —** nie ma wpływu na tryby plików.
 
-Jeśli *pmode* nie jest kombinacją jednego z manifestu stałe lub zawiera inny zestaw stałych, funkcja będzie ignorować te.
+Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub inny zestaw zawiera stałych, funkcja będzie ignorować te.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -139,7 +129,7 @@ Oldmask = 0x0000
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

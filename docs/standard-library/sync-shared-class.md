@@ -1,33 +1,23 @@
 ---
-title: sync_shared — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: sync_shared — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_shared
 - allocators/stdext::sync_shared::allocate
 - allocators/stdext::sync_shared::deallocate
 - allocators/stdext::sync_shared::equals
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::sync_shared
 - stdext::sync_shared [C++], allocate
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483385"
 ---
 # <a name="syncshared-class"></a>sync_shared — Klasa
 
@@ -44,7 +34,7 @@ class sync_shared
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Cache*|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Pamięć podręczna*|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
@@ -113,7 +103,7 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Cache*|Typ pamięci podręcznej skojarzone z filtrem synchronizacji.|
+|*Pamięć podręczna*|Typ pamięci podręcznej skojarzone z filtrem synchronizacji.|
 |*Inne*|Pamięć podręczna do porównania dla równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
