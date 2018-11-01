@@ -1,11 +1,6 @@
 ---
-title: nearbyint —, nearbyintf —, nearbyintl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - nearbyint
 - nearbyintf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/nearbyint
 - math/narbyintf
 - math/narbyintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - nearbyint function
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2362a68bf73a370f2fdf8eaa5ecb18b0a08bfaad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a36bddb28db9fb4c5809432dfaef9ca3ece4328
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668315"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
-Zaokrągla określona wartość zmiennoprzecinkowa na liczbę całkowitą i zwraca tę wartość w formacie liczb zmiennoprzecinkowych.
+Zaokrągla określoną wartość zmiennoprzecinkowa do liczby całkowitej i zwraca tę wartość w formacie zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,31 +57,31 @@ long double nearbyint( long double x ); //C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-wartość do zaokrąglenia.
+Wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca *x*, zaokrąglona do najbliższej liczby całkowitej, przy użyciu bieżącego formatu zaokrąglania zgłoszonych przez [fegetround](fegetround-fesetround2.md). W przeciwnym razie funkcja może zwracać jedną z następujących wartości:
+Jeśli operacja się powiedzie, zwraca *x*, zaokrąglony do najbliższej liczby całkowitej, przy użyciu bieżącego formatu zaokrąglania zgłoszonej przez [fegetround](fegetround-fesetround2.md). W przeciwnym razie funkcja może zwracać jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Wróć|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY nie mają być modyfikowane|
-|*x* = ±0|±0, nie mają być modyfikowane|
+|*x* = ±INFINITY|±INFINITY w niezmienionej postaci|
+|*x* = ±0|±0 w niezmienionej postaci|
 |*x* = NaN|NaN|
 
-Błędy nie są zgłaszane przez [_matherr —](matherr.md); ściślej mówiąc, ta funkcja nie raportuje żadnego **FE_INEXACT** wyjątków.
+Błędy nie są raportowane za pośrednictwem [_matherr](matherr.md); ściślej mówiąc, ta funkcja nie zgłasza dowolne **FE_INEXACT** wyjątków.
 
 ## <a name="remarks"></a>Uwagi
 
-Główną różnicą między tej funkcji i [drukowanie](rint-rintf-rintl.md) jest ta funkcja nie zgłaszał niedokładnymi zmiennoprzecinkowych wyjątków punktu.
+Główną różnicą między tej funkcji i [rukuj](rint-rintf-rintl.md) jest ta funkcja nie zgłaszała niedokładny wyjątek punktu zmiennoprzecinkowego.
 
-Ponieważ maksymalne wartości zmiennoprzecinkowe są dokładne liczb całkowitych, ta funkcja nigdy nie będzie przepełnienie siebie. dane wyjściowe mogą zamiast przepełnienie zwracanej wartości, w zależności od instalowanej wersji funkcji używasz.
+Ponieważ maksymalnej wartości zmiennoprzecinkowe są dokładne liczb całkowitych, ta funkcja nigdy nie będzie overflow siebie. przeciwnie dane wyjściowe możliwe przepełnienie zwracanej wartości, w zależności od instalowanej wersji funkcji używasz.
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **nearbyint —** który przyjmować i zwracać **float** lub **długi** **podwójne** parametrów. W programie C **nearbyint —** zawsze ma dwie wartości double i zwraca wartość typu double.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **nearbyint —** przyjmujące i zwracające **float** lub **długie** **double** parametrów. W programie C **nearbyint —** zawsze przyjmuje dwie wartości double i zwraca wartość typu double.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**nearbyint —**, **nearbyintf —**, **nearbyintl**|\<math.h>|\<cmath > lub \<math.h >|
 

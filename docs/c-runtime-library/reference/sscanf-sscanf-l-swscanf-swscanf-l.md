@@ -1,10 +1,6 @@
 ---
-title: sscanf —, _sscanf_l —, swscanf —, _swscanf_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac67b27564f694631977fd21c96922132b633e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661971"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
-Odczyt sformatowane dane z ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Odczyt sformatowanych danych z ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -91,39 +81,39 @@ int _swscanf_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Przechowywanych danych
+Przechowywane dane
 
 *Format*<br/>
-Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *Argument*<br/>
-Argumenty opcjonalne
+Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji.
+Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji.
 
-Jeśli *buforu* lub *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* lub *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Sscanf —** funkcja odczytywać dane z *buforu* w lokalizacji określonej przez każdą *argument*. Każdy *argument* musi być wskaźnikiem do zmienna typu, który odpowiada specyfikatorowi typu w *format*. *Format* formanty argument interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako *format* argument dla **scanf** funkcji. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+**Sscanf —** funkcja odczytuje dane z *buforu* w lokalizacji określonej przez każdą *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. *Format* formantów argument interpretacji danych wejściowych pola i ma taką samą formę i funkcjonuje jako *format* argument dla **scanf** funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Podczas odczytywania ciągu z **sscanf —**, zawsze określić szerokość **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie , wprowadzania niewłaściwie sformatowany łatwo może spowodować przepełnienie buforu.
+> Podczas odczytywania ciągu za pomocą **sscanf —**, należy zawsze określać szerokość dla **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie , nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu.
 
-**swscanf —** jest wersja znaków dwubajtowych **sscanf —**; argumenty **swscanf —** są ciągami znaków dwubajtowych. **sscanf —** nie obsługuje wielobajtowe znaków szesnastkowych. **swscanf —** nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie **swscanf —** i **sscanf —** zachowują się tak samo.
+**swscanf —** to wersja znaku dwubajtowego **sscanf —**; argumenty **swscanf —** są ciągami znaków dwubajtowych. **sscanf —** nie obsługuje wielobajtowych znaków szesnastkowych. **swscanf —** nie obsługuje znaków "strefa zgodności" ani szesnastkowych pełnej szerokości Unicode. W przeciwnym razie **swscanf —** i **sscanf —** zachowują się identycznie.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stscanf —**|**sscanf**|**sscanf**|**swscanf**|
 |**_stscanf_l —**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
@@ -180,7 +170,7 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

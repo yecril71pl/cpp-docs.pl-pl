@@ -1,10 +1,6 @@
 ---
-title: ROUND, roundf — roundl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,27 +22,21 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591780"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
-Zaokrągla wartość zmiennoprzecinkowa do najbliższej liczby całkowitej.
+Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,19 +61,19 @@ long double roundl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa zostać zaokrąglona.
+Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Zaokrąglona** zwracają wartość zmiennoprzecinkowa, która reprezentuje najbliższej liczby całkowitej w celu *x*. W połowie wartości są zaokrąglane w kierunku od zera, bez względu na ustawienie trybu zaokrąglania liczb zmiennoprzecinkowych. Nie ma żadnych zwracany błąd.
+**Zaokrąglanie** funkcje zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższa liczby całkowitej *x*. Wartości połowiczne są zaokrąglane dalej od zera, bez względu na ustawienie trybu zaokrąglania zmiennoprzecinkowych. Nie będzie zwrotu błędu.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **IND**|brak|**_DOMAIN —**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **zaokrąglona** który przyjmować i zwracać **float** i **długi** **podwójne** wartości. W programie C **zaokrąglona** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **zaokrąglanie** przyjmujące i zwracające **float** i **długie** **double** wartości. W programie C **zaokrąglanie** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 

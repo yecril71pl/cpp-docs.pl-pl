@@ -1,10 +1,6 @@
 ---
-title: _getch —, _getwch — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getch, _getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666313"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
-Pobiera znak z konsoli bez echo.
+Pobiera znak z konsoli bez echa.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,13 +52,13 @@ wint_t _getwch( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak do odczytu. Nie ma żadnych zwracany błąd.
+Zwraca znak odczytywany. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getch —** i **_getwch —** funkcji odczytu pojedynczy znak z konsoli bez wyświetlania znaków. Żadna z tych funkcji można odczytać klawiszy CTRL + C. Podczas odczytywania klucza funkcji lub klawisz strzałki, każda funkcja musi być wywołana dwukrotnie; Zwraca pierwsze wywołanie 0 lub wartość 0xE0, natomiast drugie wywołanie rzeczywisty kod klucza.
+**_Getch** i **_getwch —** funkcje odczytują pojedynczy znak z konsoli bez wyświetlania znaków. Żadna z tych funkcji może służyć do odczytu klawiszy CTRL + C. Podczas czytania klawisza funkcyjnego lub klawisza strzałki, każda funkcja musi być wywołana dwukrotnie; Pierwsza zwraca wywołanie 0 lub wartość 0xE0, a druga zwraca wywołanie rzeczywistego klucza kodu.
 
-Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Blokowania wersje można znaleźć [_getch_nolock —, _getwch_nolock —](getch-nolock-getwch-nolock.md).
+Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getch_nolock —, _getwch_nolock —](getch-nolock-getwch-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -83,7 +73,7 @@ Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Blokowa
 |**_getch**|\<conio.h>|
 |**_getwch**|\<conio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

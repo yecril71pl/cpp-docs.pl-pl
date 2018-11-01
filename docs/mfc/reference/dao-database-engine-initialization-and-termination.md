@@ -1,28 +1,18 @@
 ---
-title: Inicjowanie aparatu bazy danych DAO i kończenie działania | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Inicjowanie i kończenie działania aparatu bazy danych DAO
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cf54992896559f1b143247746ef9f9e0e8d8979
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ff924f0e0d599d447ef7dea0039de788d388d759
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589634"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicjowanie i kończenie działania aparatu bazy danych DAO
 

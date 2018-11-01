@@ -1,23 +1,13 @@
 ---
-title: Rozpoznawanie nazw dla lokalnie zadeklarowanych nazw | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Rozpoznawanie nazwy dla lokalnie zadeklarowanych nazw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a250a6a357cf0c8a8b3d01e241b6286f69b842b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 91ed065a6c8aca6c7f740f0236cb13c8133fc96f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021002"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602556"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Rozpoznawanie nazwy dla lokalnie zadeklarowanych nazw
 

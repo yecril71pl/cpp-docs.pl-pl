@@ -1,10 +1,6 @@
 ---
-title: ASINH asinhf —, asinhl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,27 +22,21 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662959"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
-Oblicza sinus hiperboliczny.
+Oblicza arcus sinus hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,19 +58,19 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Asinh** hyberbolic odwrotny sinus (arcus sinus hiperboliczny) zwracają *x*. Ta funkcja jest prawidłowa w zmiennoprzecinkowe domenie. Jeśli *x* jest NaN quiet — nieokreślony, lub nieskończoności, jest zwracana przez tę samą wartość.
+**Asinh** funkcje zwracają Zwraca arcus sinus (arcus sinus hiperboliczny) *x*. Ta funkcja jest prawidłowa w domenie zmiennoprzecinkowych. Jeśli *x* jest dyskretne NaN nieokreślony, lub w nieskończoność, jest zwracana przez tę samą wartość.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
 |-----------|-------------------|--------------------------|
-|INF QNAN, IND GRANICACH|brak|brak|
+|GRANICACH QNAN, ZNAJDŹ INF|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z języka C++, można wywoływać przeciążenia **asinh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **asinh** zawsze przyjmuje i zwraca **podwójne**.
+Korzystając z języka C++, można wywoływać przeciążenia **asinh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **asinh** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
+|Funkcja|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |--------------|--------------|------------------|
 |**ASINH**, **asinhf —**, **asinhl**|\<math.h>|\<cmath > lub \<math.h <|
 
