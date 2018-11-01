@@ -1,10 +1,6 @@
 ---
-title: i | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: and
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,25 +17,19 @@ f1_keywords:
 - And
 - std.and
 - std::and
-dev_langs:
-- C++
 helpviewer_keywords:
 - and macro
 ms.assetid: 2644ab57-8e1b-48f0-9021-cafe3e26bdc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f32aba356acade280d86da685024c68f63e9968e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20f490a38ca8f92eadedf02396d1165b301e9e25
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429985"
 ---
 # <a name="and"></a>and
 
-Zamiast & & — operator.
+Alternatywa dla & & — operator.
 
 ## <a name="syntax"></a>Składnia
 

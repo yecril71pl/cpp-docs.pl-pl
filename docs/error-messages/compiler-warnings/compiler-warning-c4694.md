@@ -1,40 +1,31 @@
 ---
-title: C4694 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4694
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4694
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33852b76f23e007625f86969119a22ee81305187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6eaaa4c1f16e2ac2c5029511430a145fd9b943e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428345"
 ---
-# <a name="compiler-warning-c4694"></a>C4694 ostrzeżenia kompilatora
+# <a name="compiler-warning-c4694"></a>Ostrzeżenie kompilatora C4694
 
-> "*klasy*": zapieczętowana klasa abstrakcyjna nie może mieć klasy podstawowej*base_class*"
+> "*klasy*": zapieczętowana klasa abstrakcyjna nie może mieć klasy bazowej*element $base_class*"
 
-Klasy abstrakcyjne i zapieczętowane nie może dziedziczyć z typu referencyjnego; Klasa zapieczętowany i abstrakcyjny nie można zaimplementować funkcje klasy podstawowej ani mógł służyć jako klasę podstawową.
+Klasy abstrakcyjne i zapieczętowane nie może dziedziczyć z typu referencyjnego; Klasa zapieczętowany i abstrakcyjny nie można zaimplementować funkcje klasy bazowej ani mógł służyć jako klasę bazową.
 
-Aby uzyskać więcej informacji, zobacz [abstrakcyjny](../../windows/abstract-cpp-component-extensions.md), [zapieczętowanego](../../windows/sealed-cpp-component-extensions.md), i [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [abstrakcyjne](../../windows/abstract-cpp-component-extensions.md), [zapieczętowanego](../../windows/sealed-cpp-component-extensions.md), i [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md).
 
-To ostrzeżenie zostanie automatycznie podwyższony do wystąpił błąd. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md).
+To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4694.
+Poniższy przykład spowoduje wygenerowanie C4694.
 
 ```cpp
 // C4694.cpp

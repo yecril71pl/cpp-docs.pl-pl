@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,25 +20,19 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405734"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429018"
 ---
 # <a name="quickexit"></a>quick_exit
 
-Powoduje, że Kończenie działania programu normalne występuje.
+Powoduje zakończenie normalne programu występuje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,15 +49,15 @@ Kod stanu, aby powrócić do środowiska hosta.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Quick_exit** funkcji nie można wrócić do swojego obiektu wywołującego.
+**Quick_exit** funkcja nie może zwracać do obiektu wywołującego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Quick_exit** funkcja powoduje zakończenie normalne programu. Wywołuje żadnych funkcji w zarejestrowany przez **atexit —**, **_onexit —** lub sygnału obsługi zarejestrowanych przez **sygnału** funkcji. Zachowanie jest niezdefiniowana, jeśli **quick_exit** jest wywoływana więcej niż po lub jeśli **zakończyć** funkcja jest również nazywany.
+**Quick_exit** funkcja powoduje zakończenie normalne programu. Wywoływanych przez nią żadne funkcje nie zarejestrowane przez **atexit**, **_onexit** lub zarejestrowany przez programy obsługi sygnału **sygnału** funkcji. Zachowanie jest niezdefiniowane, jeżeli **quick_exit** jest wywoływana więcej niż po lub w przypadku **wyjść** funkcja jest również nazywany.
 
-**Quick_exit** funkcji wywołań w ostatniej w kolejności wytworzenia, funkcje zarejestrowane przez **at_quick_exit**, z wyjątkiem tych funkcji już wywoływane, gdy funkcja została zarejestrowana.  Zachowanie jest niezdefiniowana, jeśli [longjmp](longjmp.md) wywołanie podczas wywoływania zarejestrowanej funkcji, który może obsłużyć wywołania funkcji.
+**Quick_exit** wywołań w ostatni na wejściu, kolejność FIFO (LIFO), funkcje zarejestrowany przez funkcję **at_quick_exit**, z wyjątkiem tych funkcji, które już wywoływana, gdy funkcja została zarejestrowana.  Zachowanie jest niezdefiniowane, jeżeli [longjmp](longjmp.md) podczas wywoływania zarejestrowanych funkcja, która zakończy się wywołanie funkcji zostanie nawiązane połączenie.
 
-Po wywołaniu funkcji zarejestrowanych **quick_exit** wywołuje **_exit —** za pomocą *stan* wartość zwracana kontroli w środowisku hosta.
+Po wywołaniu funkcji zarejestrowanych **quick_exit** wywołuje **_Exit** przy użyciu *stan* wartość do zwrócenia kontroli dla środowiska hosta.
 
 ## <a name="requirements"></a>Wymagania
 

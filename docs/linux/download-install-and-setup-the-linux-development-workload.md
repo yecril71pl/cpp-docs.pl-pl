@@ -1,24 +1,14 @@
 ---
-title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
+title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
-ms.custom: ''
 ms.date: 10/12/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143695"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441928"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 

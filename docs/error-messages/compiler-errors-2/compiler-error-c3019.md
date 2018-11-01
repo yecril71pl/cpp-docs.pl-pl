@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3019 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3019
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3019
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e71f6741ba499855a4ac06ed578bd1f713e700dc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bba90917614cbc8facb182659c288f9823d8ab45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432558"
 ---
 # <a name="compiler-error-c3019"></a>Błąd kompilatora C3019
 

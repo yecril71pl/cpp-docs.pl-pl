@@ -1,32 +1,22 @@
 ---
-title: forward_iterator_tag — struktura | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: forward_iterator_tag — Struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xutility/std::forward_iterator_tag
-dev_langs:
-- C++
 helpviewer_keywords:
 - forward_iterator_tag struct
 - forward_iterator_tag class
 ms.assetid: 68b633ac-b135-4e9e-837d-14248a262ec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c0a618524fae49d8a5bfdb9ad945285e877d7cc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04d526e7778dc219a8d9a49db40751b4418cc82d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434258"
 ---
 # <a name="forwarditeratortag-struct"></a>forward_iterator_tag — Struktura
 
-Klasa, która zawiera typ zwracany dla **iterator_category** funkcja, która reprezentuje iteratora do przodu.
+Klasa udostępniająca typ zwracany dla **iterator_category** funkcja, która reprezentuje iterator do przodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +26,19 @@ struct forward_iterator_tag    : public input_iterator_tag {};
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy tag kategorii są używane jako kompilacji znaczników dla algorytmu zaznaczenia. Funkcja szablonu należy dowiedzieć się, co to jest najbardziej określonej kategorii argumentu iteratora tak, aby najbardziej efektywny algorytm może użyć w czasie kompilacji. Dla każdego iteratora typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category** musi być zdefiniowany jako najbardziej konkretny tag kategorii, który określa zachowanie iteratora.
+Klasy tagów kategorii są używane, jak skompilować tagów dla algorytm wybór. Funkcja szablonu wymaga dowiedzieć się, co to jest najbardziej specyficzną kategorię jej argument iteratora, tak, aby możliwe było użycie algorytmu najbardziej wydajne w czasie kompilacji. Dla każdego iteratora typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category** muszą być zdefiniowane bardziej konkretny od pozostałych tag kategorii, który określa zachowanie iteratora.
 
-Typ jest taki sam jak **iterator** \< **Iter**> **:: iterator_category** podczas **Iter** opisuje obiekt, który może służyć jako iterator do przodu.
+Typ jest taki sam jak **iteratora** \< **Iter**> **:: iterator_category** podczas **Iter** opisuje obiekt, który może służyć jako iterator do przodu.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [iterator_traits](../standard-library/iterator-traits-struct.md) lub [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) przykład sposobu użycia **iterator_tag**s.
+Zobacz [iterator_traits —](../standard-library/iterator-traits-struct.md) lub [random_access_iterator_tag —](../standard-library/random-access-iterator-tag-struct.md) przykład sposobu użycia **iterator_tag**s.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

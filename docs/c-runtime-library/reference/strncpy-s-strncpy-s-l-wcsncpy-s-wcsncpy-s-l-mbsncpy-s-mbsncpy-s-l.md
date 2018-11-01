@@ -1,10 +1,6 @@
 ---
-title: strncpy_s —, _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430072"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
-Znaki kopie jednego ciągu na inny.  Te wersje programu [strncpy —, _strncpy_l —, wcsncpy —, _wcsncpy_l —, _mbsncpy —, _mbsncpy_l —](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Znaki kopie jednego ciągu do innego.  Te wersje [strncpy —, _strncpy_l —, wcsncpy —, _wcsncpy_l —, _mbsncpy —, _mbsncpy_l —](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** i **_mbsncpy_s_l** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** i **_mbsncpy_s_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -155,38 +145,38 @@ errno_t _mbsncpy_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Ciąg docelowego.
+Ciąg docelowy.
 
 *numberOfElements*<br/>
 Rozmiar ciągu docelowego w znakach.
 
 *strSource*<br/>
-Ciąg źródła.
+Ciąg źródłowy.
 
 *Liczba*<br/>
-Liczba znaków, które ma zostać skopiowany lub [_truncate —](../../c-runtime-library/truncate.md).
+Liczba znaków do skopiowania, lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, **struncate —** Jeśli obcięcie wystąpił, w przeciwnym razie kod błędu.
+Zero, jeśli operacja się powiedzie, **STRUNCATE** Jeśli nastąpiło obcięcie, w przeciwnym razie kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*strDest*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|wszystkie|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|wszystkie|**NULL**|**EINVAL —**|*strDest*zestawu [0] 0|
-|wszystkie|0|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|Nie **wartości NULL**|za mały|wszystkie|**ERANGE —**|*strDest*zestawu [0] 0|
+|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|Wszystkie|**NULL**|**EINVAL**|*strDest*[0] ustawiony na 0|
+|Wszystkie|0|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Nie **o wartości NULL**|za mały|Wszystkie|**ERANGE**|*strDest*[0] ustawiony na 0|
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje spróbuj skopiować pierwszy *D* znaków *strSource* do *strDest*, gdzie *D* jest mniejszy z *liczby*  i długość *strSource*. Jeśli te *D* znaków zmieści się w *strDest* (której rozmiar jest podawana jako *numberOfElements*) i nadal zostaw miejsce na terminatorem null, a następnie te znaki są kopiowane i jest dołączany zakończenia null; w przeciwnym razie *strDest*[0] jest ustawiony na znak null i nieprawidłowy parametr program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+Te funkcje, spróbuj skopiować pierwszy *D* znaków *strSource* do *strDest*, gdzie *D* jest mniejsza od *liczba*  i długość *strSource*. Jeśli te *D* znaków zmieści się w obrębie *strDest* (której rozmiar jest podawana jako *numberOfElements*) i nadal zostaw miejsce na terminatorem null, a następnie te znaki są kopiowane. i kończącą wartość null jest dołączany; w przeciwnym razie *strDest*[0] jest ustawiony do znaku null, a parametr nieprawidłowy program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Brak wyjątek akapitu powyżej. Jeśli *liczba* jest **_truncate —**, następnie tyle *strSource* jako mieści się w *strDest* jest kopiowana, pozostawiając nadal miejsca dla Trwa przerywanie wykonywania wartość null, która jest zawsze dołączany.
+Brak wyjątek od powyższego akapitu. Jeśli *liczba* jest **_TRUNCATE**, następnie tak dużo *strSource* jako zmieści się w *strDest* są kopiowane, pozostawiając nadal miejsca dla Trwa przerywanie wykonywania o wartości null, które są zawsze dołączane.
 
 Na przykład
 
@@ -195,45 +185,45 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-oznacza, że prosimy **strncpy_s —** do skopiowania pięć znaków w buforze pięć bajtów; to mogłoby spowodować nie miejsca dla terminatorem null, dlatego **strncpy_s —** wyzerowania ciągu i wywołuje nieprawidłowego Obsługa parametrów.
+oznacza to, że prosimy **strncpy_s —** do skopiowania pięć znaków do buforu pięć bajtów; to spowoduje, że ma miejsca na terminatorem null, dlatego **strncpy_s —** wyzerowania ciągu, a następnie wywołuje się nieprawidłowa Procedura obsługi nieprawidłowego parametru.
 
-Jeśli wymagane jest zachowanie obcięcie, użyj **_truncate —** lub (*rozmiar* - 1):
+Jeśli wymagane jest zachowanie obcinania, należy użyć **_TRUNCATE** lub (*rozmiar* - 1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Należy pamiętać, że w przeciwieństwie do **strncpy —**, jeśli *liczba* jest większa niż długość *strSource*, ciąg docelowy nie jest wypełniane znaki null do długości *liczba*.
+Należy pamiętać, że w przeciwieństwie do **strncpy —**, jeśli *liczba* jest większa niż długość *strSource*, ciąg docelowy nie jest uzupełniana ze znakami null do długości *liczba*.
 
-Zachowanie **strncpy_s —** zdefiniowano nakładania się ciągów źródłowych i docelowych.
+Zachowanie **strncpy_s —** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
-Jeśli *strDest* lub *strSource* jest **NULL**, lub *numberOfElements* wynosi 0, program obsługi nieprawidłowych parametrów jest wywoływany. Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **einval —** i ustawia **errno** do **einval —**.
+Jeśli *strDest* lub *strSource* jest **NULL**, lub *numberOfElements* wynosi 0, zostanie wywołany nieprawidłowy parametr uchwytu. Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
 
-**wcsncpy_s —** i **_mbsncpy_s** znaków dwubajtowych i znaków wielobajtowych wersji **strncpy_s —**. Argumenty i zwracana wartość **wcsncpy_s —** i **mbsncpy_s —** odpowiednio różnią się. Funkcje te sześć zachowują się tak samo w przeciwnym razie wartość.
+**wcsncpy_s —** i **_mbsncpy_s** są wersjami znaków dwubajtowych i znaków wielobajtowych **strncpy_s —**. Argumenty i wartość zwracana przez **wcsncpy_s —** i **mbsncpy_s —** różnią się odpowiednio. Te funkcje sześć zachowują się identycznie.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncpy_s —**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
+|**_tcsncpy_s**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
 |**_tcsncpy_s_l —**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l —**, **_wcsncpy_s_l —** i **_mbsncpy_s_l** mieć nie zależność od ustawień regionalnych i są dostępne tylko dla **_tcsncpy_s_l —** i nie mają być wywołać bezpośrednio.
+> **_strncpy_s_l —**, **_wcsncpy_s_l —** i **_mbsncpy_s_l** ma zależność od nie ustawień regionalnych i są dostępne tylko dla **_tcsncpy_s_l —** i nie powinny być wywoływana bezpośrednio.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strncpy_s —**, **_strncpy_s_l —**|\<string.h>|
-|**wcsncpy_s —**, **_wcsncpy_s_l —**|\<String.h > lub \<wchar.h >|
+|**wcsncpy_s —**, **_wcsncpy_s_l —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

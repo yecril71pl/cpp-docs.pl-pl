@@ -1,29 +1,19 @@
 ---
-title: 'Porady: przeprowadzanie Marshalingu struktur za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+title: 'Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 32c77838b8ce88069eb7b9e1a866ffb82b31bfad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429114"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
 
