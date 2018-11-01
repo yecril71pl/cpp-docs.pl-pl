@@ -1,10 +1,6 @@
 ---
-title: _itoa_s —, _itow_s — funkcje | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _itoa_s —, _itow_s — funkcje
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _itoa_s
 - _ltoa_s
@@ -60,8 +56,6 @@ f1_keywords:
 - ultot_s
 - i64tot_s
 - ui64tot_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -81,20 +75,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441708"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa —, funkcje _itow —](itoa-itow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa —, funkcje _itow —](itoa-itow.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -142,43 +132,43 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Numer do skonwertowania.
+Numer ma zostać przekonwertowany.
 
 *buffer*<br/>
-Bufor wyjściowy przechowujący wynik konwersji.
+Bufor wyjściowy, który zawiera wynik konwersji.
 
 *Rozmiar*<br/>
-Rozmiar *buforu* znaków lub znaki dwubajtowe.
+Rozmiar *buforu* znaków lub znaków dwubajtowych.
 
 *radix*<br/>
-Podstawa lub liczbowego base do konwersji *wartość*, która musi być w zakresie od 2 36.
+Podstawy lub base liczbowych do konwersji *wartość*, które muszą być z zakresu od 2 do 36.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli dowolny z następujących warunków ma zastosowanie funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+Zero, jeśli to się powiedzie; Kod błędu. Jeśli dowolny z poniższych warunków ma zastosowanie, funkcja wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|value|Bufor|size|radix|Zwraca|
+|value|Bufor|size|radix|Wróć|
 |-----------|------------|----------------------|-----------|------------|
-|wszystkie|**NULL**|wszystkie|wszystkie|**EINVAL —**|
-|wszystkie|wszystkie|<=0|wszystkie|**EINVAL —**|
-|wszystkie|wszystkie|< = długość ciągu wynik wymagane|wszystkie|**EINVAL —**|
-|wszystkie|wszystkie|wszystkie|*Podstawa* < 2 lub *radix* > 36|**EINVAL —**|
+|Wszystkie|**NULL**|Wszystkie|Wszystkie|**EINVAL**|
+|Wszystkie|Wszystkie|<=0|Wszystkie|**EINVAL**|
+|Wszystkie|Wszystkie|< = długość ciągu wynikowego wymagane|Wszystkie|**EINVAL**|
+|Wszystkie|Wszystkie|Wszystkie|*podstawy* < 2 lub *podstawy* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Funkcje te mogą generować naruszenia zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**, lub jeśli długość buforu nie jest wystarczająco długi pomieścić ciąg wyniku.
+Te funkcje można wygenerować naruszenie zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**, lub jeśli długość buforu nie jest wystarczająco długi pomieścić ciąg wynikowy.
 
 ## <a name="remarks"></a>Uwagi
 
-Z wyjątkiem tych parametrów i zwracanych wartości **_itoa_s —** i **_itow_s —** rodziny funkcji ma takie samo zachowanie jako odpowiadającego mniej bezpieczne **_itoa —** i **_itow —** wersji.
+Z wyjątkiem tych parametrów i zwracanej wartości **_itoa_s —** i **_itow_s —** rodziny funkcji mają takie samo zachowanie jako odpowiadający mniej bezpieczna opcja **_itoa —** i **_itow —** wersji.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje biblioteki debugowania tych funkcji najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
-CRT obejmuje wygodny makra, aby zdefiniować rozmiar buforu wymaganych do przekonwertowania najdłuższym możliwa wartość każdego typu Liczba całkowita, włącznie z terminatorem null i zaloguj się znak, dla kilku wspólnej bazy. Aby uzyskać informacje, zobacz [makra Liczba konwersji maksymalnie](itoa-itow.md#maximum-conversion-count-macros).
+CRT obejmuje wygodny makra, aby zdefiniować rozmiar buforu wymaganych do przekonwertowania najdłuższy możliwa wartość każdego typu Liczba całkowita, łącznie z terminatorem null i podpisać znaków dla kilku wspólnej bazy. Aby uzyskać informacje, zobacz [makra Liczba konwersji maksymalnie](itoa-itow.md#maximum-conversion-count-macros).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -197,11 +187,11 @@ CRT obejmuje wygodny makra, aby zdefiniować rozmiar buforu wymaganych do przeko
 |**_itoa_s —**, **_ltoa_s —**, **_ultoa_s —**, **_i64toa_s —**, **_ui64toa_s —**|\<stdlib.h>|
 |**_itow_s —**, **_ltow_s —**, **_ultow_s —**, **_i64tow_s —**, **_ui64tow_s —**|\<stdlib.h > lub \<wchar.h >|
 
-Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W przykładzie pokazano użycie kilku funkcji konwersja liczby całkowitej. Należy pamiętać, że [_countof —](countof-macro.md) makro działa tylko do określenia rozmiaru buforu, gdy deklaracja tablicy jest widoczny w kompilatorze, a nie parametry, które mają zbutwiałe do wskaźników.
+Niniejszy przykład pokazuje użycie kilku funkcji konwersji liczby całkowitej. Należy pamiętać, że [_countof](countof-macro.md) — makro działa tylko w celu ustalenia rozmiaru buforu, kiedy deklaracją tablicy jest widoczne w kompilatorze, a nie parametry, które mają zbutwiałe do wskaźników.
 
 ```C
 // crt_itoa_s.c

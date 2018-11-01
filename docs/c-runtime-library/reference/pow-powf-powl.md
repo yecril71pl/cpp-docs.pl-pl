@@ -1,10 +1,6 @@
 ---
-title: Pow, powf — powl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: pow, powf, powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452021"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Oblicza *x* podniesionej do potęgi równej *y*.
+Oblicza *x* podniesione do potęgi równej *y*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,31 +66,31 @@ long double pow( long double x, int y );  // C++ only
 Podstawa.
 
 *y*<br/>
-Wykładnik.
+Wykładnik potęgi.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość *x*<sup>*y*</sup>. Żaden komunikat o błędzie jest wydrukowany przepełnienie lub niedomiar.
+Zwraca wartość *x*<sup>*y*</sup>. Bez komunikatu o błędzie są drukowane na przepełnienie lub niedopełnienie.
 
-|Wartości x i y|Wartość zwracana pow|
+|Wartości x i y|Wartość zwracana przez pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 i *y* == 0.0|1|
+|*x* ! = 0.0 i *y* == 0.0|1|
 |*x* == 0.0 i *y* == 0.0|1|
 |*x* == 0.0 i *y* < 0|INF|
 
 ## <a name="remarks"></a>Uwagi
 
-**Pow** nie rozpoznaje wartości całkowitych wartości zmiennoprzecinkowych większej niż 2<sup>64</sup> (na przykład 1.0E100).
+**Pow** nie rozpoznaje większej niż 2 wartości zmiennoprzecinkowych całkowitych<sup>64</sup> (na przykład 1.0E100).
 
-**Pow** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
+**Pow** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
 
-Ponieważ C++ pozwala przeładowanie, można wywołać żadnego z różnych przeciążeń **pow**. W programie C **pow** zawsze ma dwa **podwójne** wartości i zwraca **podwójne** wartość.
+Ponieważ C++ pozwala na przeciążenie, można wywołać dowolną z różnych przeciążenia **pow**. W programie C **pow** zawsze przyjmuje dwa **double** wartości i zwraca **double** wartość.
 
-`pow(int, int)` Przeciążenia nie jest już dostępny. Jeśli używasz tego przeciążenia, kompilator może emitować [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Aby uniknąć tego problemu, należy rzutować pierwszy parametr **podwójne**, **float**, lub **długi** **podwójne**.
+`pow(int, int)` Przeciążenia nie jest już dostępna. Jeśli używasz tego przeciążenia, kompilator może emitować [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Aby uniknąć tego problemu, należy rzutować pierwszy parametr **double**, **float**, lub **długie** **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
 |**Pow**, **powf —**, **powl —**|\<math.h>|\<Math.h > lub \<cmath >|
 

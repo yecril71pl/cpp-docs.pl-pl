@@ -1,20 +1,13 @@
 ---
-title: Przestrzenie nazw i widoczność typów (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Przestrzenie nazw i widoczność typów (C + +/ CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440524"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Przestrzenie nazw i widoczność typów (C + +/ CX)
 

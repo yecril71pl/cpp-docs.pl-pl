@@ -1,10 +1,6 @@
 ---
-title: TANH tanhf —, tanhl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: TANH, tanhf —, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,18 +30,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432398"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH tanhf —, tanhl —
+# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf —, tanhl
 
 Oblicza tangens hiperboliczny.
 
@@ -71,21 +61,21 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Tanh** zwracają tangens hiperboliczny liczby *x*. Nie ma żadnych zwracany błąd.
+**Tanh** funkcje zwracają hiperbolicznego tangensa *x*. Nie będzie zwrotu błędu.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**Matherr** wyjątku|
 |-----------|-------------------|-------------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **tanh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **tanh** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **tanh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **tanh** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf —**, **tanhl —**|\<math.h>|\<cmath > lub \<math.h >|
+|**TANH**, **tanhf —**, **tanhl**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
