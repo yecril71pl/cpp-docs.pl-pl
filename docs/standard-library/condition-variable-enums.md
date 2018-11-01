@@ -1,19 +1,17 @@
 ---
-title: '&lt;condition_variable —&gt; wyliczenia | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;condition_variable&gt; Typy wyliczeniowe'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - condition_variable/std::cv_status
 ms.assetid: f261ad79-e25b-4afa-9f8a-909ce697e0d8
-ms.openlocfilehash: 72522903c837b33481c1614c8ecbce67821cb3f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7da337aa69ee769d471b9b99dcc0aad097910920
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548177"
 ---
-# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable —&gt; wyliczenia
+# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt; Typy wyliczeniowe
 
 ||
 |-|
@@ -21,9 +19,9 @@ ms.locfileid: "33841572"
 
 ## <a name="cv_status"></a>  cv_status — wyliczenie
 
-Dostarcza nazw symbolicznych dla wartości zwracanych metody klasy szablonu [condition_variable —](../standard-library/condition-variable-class.md).
+Dostarcza nazw symbolicznych dla wartości zwracanych metod szablonu klasy [condition_variable](../standard-library/condition-variable-class.md).
 
-cv_status — klasa {limit czasu no_timeout};
+cv_status — klasa {no_timeout timeout};
 
 ## <a name="see-also"></a>Zobacz także
 

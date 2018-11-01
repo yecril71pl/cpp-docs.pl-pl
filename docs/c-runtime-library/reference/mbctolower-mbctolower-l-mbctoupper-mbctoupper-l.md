@@ -1,10 +1,6 @@
 ---
-title: _mbctolower —, _mbctolower_l —, _mbctoupper —, _mbctoupper_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403664"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539691"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
-Testy i konwertuje znaków wielobajtowych wielkość liter.
+Testuje i konwertuje przypadek znaków wielobajtowych.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,7 +78,7 @@ unsigned int _mbctoupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znaków wielobajtowych do konwersji.
+Znak wielobajtowy do przekonwertowania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
@@ -99,16 +89,16 @@ Każda z tych funkcji zwraca znak przekonwertowany *c*, jeśli to możliwe. W pr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje testowania znak *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
+Testowanie funkcji znaku *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
 
 |Procedury|Konwertuje|
 |--------------|--------------|
-|**_mbctolower —**, **_mbctolower_l —**|Wielką literę na małe znaków.|
-|**_mbctoupper —**, **_mbctoupper_l —**|Małą literę na wielkie litery znaków.|
+|**_mbctolower —**, **_mbctolower_l —**|Wielkiej litery na małe litery, znaku.|
+|**_mbctoupper —**, **_mbctoupper_l —**|Małe znak wielkiej litery.|
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja tej funkcji bez **_l** sufiks używa bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersja z **_l** sufiks jest identyczny z tą różnicą, że parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja tej funkcji, bez **_l** sufiks używa bieżących ustawień regionalnych dla wszelkich zachowań; wersja, która **_l** sufiks jest identyczny, z tą różnicą, że użyto parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W poprzednich wersjach **_mbctolower —** wywołano **jtolower**, i **_mbctoupper —** wywołano **jtoupper**. Dla nowego kodu należy używać nowej nazwy.
+W poprzednich wersjach **_mbctolower —** wywołano **jtolower**, i **_mbctoupper —** wywołano **jtoupper**. Dla nowego kodu Użyj nowych nazw.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -126,7 +116,7 @@ W poprzednich wersjach **_mbctolower —** wywołano **jtolower**, i **_mbctoupp
 |**_mbctolower —**, **_mbctolower_l —**|\<mbstring.h>|
 |**_mbctoupper —**, **_mbctoupper_l —**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
