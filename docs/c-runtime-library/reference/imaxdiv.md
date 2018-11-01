@@ -1,10 +1,6 @@
 ---
-title: imaxdiv — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434461"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
-Oblicza iloraz i pozostałej części dwóch wartości całkowite o dowolnym rozmiarze jako jedna operacja.
+Oblicza iloraz i resztę dwóch liczb całkowitych o dowolnym rozmiarze jako pojedyncza operacja.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,15 +47,15 @@ imaxdiv_t imaxdiv(
 Licznik.
 
 *denom*<br/>
-Denominator.
+Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**imaxdiv —** wywołana z argumentami typu [intmax_t](../../c-runtime-library/standard-types.md) zwraca struktura typu [imaxdiv_t](../../c-runtime-library/standard-types.md) który obejmuje iloraz, a reszta.
+**imaxdiv** wywołana z argumentami typu [intmax_t](../../c-runtime-library/standard-types.md) zwraca strukturę typu [imaxdiv_t](../../c-runtime-library/standard-types.md) który obejmuje iloraz i resztę.
 
 ## <a name="remarks"></a>Uwagi
 
-**Imaxdiv —** funkcji bez reszty *numer* przez *denom* i tym samym oblicza iloraz, a reszta. **Imaxdiv_t** struktura zawiera iloraz, **intmax_t** **quot**, a reszta, **intmax_t** **rem**. Znak iloraz jest taka sama jak iloraz matematycznych. Największa liczba całkowita, która jest mniejsza niż wartość bezwzględną liczby matematyczne iloraz ma jego wartość bezwzględna. Jeżeli dzielnik wynosi 0, program zakończy się z komunikatem o błędzie.
+**Imaxdiv** funkcja dzieli *numer* przez *denom* a tym samym oblicza iloraz i resztę. **Imaxdiv_t** struktura zawiera iloraz, **intmax_t** **quot**, jak i resztę, **intmax_t** **rem**. Znak iloraz jest tożsamy z ilorazem matematycznych. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeżeli mianownik wynosi 0, program kończy się komunikat o błędzie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,7 +93,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Gdy wbudowane i następnie wywołana z parametrów wiersza polecenia `9460730470000000 8766`, kod generuje te dane wyjściowe:
+Po skompilowaniu i następnie wywołaniu za pomocą parametrów wiersza polecenia `9460730470000000 8766`, kod generuje te dane wyjściowe:
 
 ```Output
 The call to imaxdiv(9460730470000000, 8766)

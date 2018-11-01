@@ -1,29 +1,19 @@
 ---
-title: __FUNC__ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: __FUNC__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438587"
 ---
 # <a name="func"></a>__FUNC__
 
-**(C ++ 11)**  Wstępnie zdefiniowanego identyfikatora &#95; &#95;func&#95; &#95; jest niejawnie zdefiniowany jako ciąg znaków zawierający nazwę niekwalifikowaną i unadorned funkcji otaczającej. &#95;&#95;FUNC&#95; &#95; jest upoważnieni przez C++ standard i nie jest rozszerzeniem firmy Microsoft.
+**(C ++ 11)**  Predefiniowany identyfikator &#95; &#95;func&#95; &#95; jest niejawnie definiowany jako ciąg zawierający niekwalifikowaną i unadorned nazwę funkcji otaczającej. &#95;&#95;FUNC&#95; &#95; jest wymagane na podstawie stosownych C++ standard, a nie jest rozszerzeniem firmy Microsoft.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zakończonym znakiem null const char tablicy znaków zawierający nazwę funkcji.
+Zwraca zakończony znakiem null const char tablicę znaków zawierający nazwę funkcji.
 
 ## <a name="example"></a>Przykład
 

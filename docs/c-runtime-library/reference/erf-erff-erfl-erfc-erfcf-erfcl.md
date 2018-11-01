@@ -1,10 +1,6 @@
 ---
-title: ERF, erff —, erfl —, erfc, erfcf —, erfcl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,27 +22,21 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450067"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
-Oblicza funkcji błąd lub uzupełniające błąd wartości.
+Oblicza funkcję błędu lub komplementarną funkcję błędu wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,17 +80,17 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Erf** zwracają gausach funkcji błąd *x*. **Erfc** zwracają gausach uzupełniające funkcję błąd *x*.
+**Erf** funkcje zwracają Gaussa funkcję błędu *x*. **Erfc** funkcje zwracają Gaussa uzupełniającą funkcję błędu *x*.
 
 ## <a name="remarks"></a>Uwagi
 
-**Erf** funkcje obliczania funkcji błąd gausach *x*, która została zdefiniowana jako:
+**Erf** funkcje obliczają wartość funkcji błędu Gaussa z *x*, która została zdefiniowana jako:
 
-![Funkcja błędu x](media/crt_erf_formula.PNG "CRT_erf_formula")
+![Funkcję błędu x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-Uzupełniające funkcji błędu gausach jest zdefiniowany jako 1 - erf(x). **Erf** zwracają wartość z zakresu od -1,0 do 1,0. Nie ma żadnych zwracany błąd. **Erfc** zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest za duża dla **erfc**, **errno** zmienna jest ustawiona na **erange —**.
+Uzupełniająca funkcja błędu Gaussa jest zdefiniowana jako 1 – erf(x). **Erf** funkcje zwracają wartość z zakresu od – 1,0 do 1,0. Nie będzie zwrotu błędu. **Erfc** funkcje zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **erfc**, **errno** zmienna jest ustawiona na **ERANGE**.
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **erf** i **erfc** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **erf** i **erfc** zawsze przyjmować i zwracać **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **erf** i **erfc** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **erf** i **erfc** zawsze przyjmują i zwracają **double**.
 
 ## <a name="requirements"></a>Wymagania
 

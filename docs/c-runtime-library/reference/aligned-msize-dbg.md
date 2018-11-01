@@ -1,10 +1,6 @@
 ---
-title: _aligned_msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_msize_dbg
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _aligned_msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c16fd1292f78c8c3f6b3133050e27046fb003343
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451301"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
-Zwraca rozmiar bloku pamięci przydzielić w stercie (tylko wersja do debugowania).
+Zwraca rozmiar bloku pamięci przydzielony w stercie (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,13 +58,13 @@ Zwraca rozmiar (w bajtach) jako liczbę całkowitą bez znaku.
 
 ## <a name="remarks"></a>Uwagi
 
-*Wyrównanie* i *przesunięcie* wartości musi być taka sama jak wartości przekazane do funkcji, która przydzielony blok.
+*Wyrównanie* i *przesunięcie* wartości muszą być takie same jak wartość przekazana do funkcji, która przydzielona bloku.
 
-**_aligned_msize_dbg** jest wersja debugowania [_aligned_msize —](aligned-msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie **_aligned_msize_dbg** zostanie zmniejszona do wywołania **_aligned_msize —**. Zarówno **_aligned_msize —** i **_aligned_msize_dbg** Oblicz rozmiar bloku pamięci w stosie podstawowej, ale **_aligned_msize_dbg** dodaje funkcję debugowania: zawiera zwrócony rozmiar bloku buforów po obu stronach użytkownika część pamięci.
+**_aligned_msize_dbg** jest wersją debugowania [_aligned_msize —](aligned-msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_msize_dbg** jest ograniczone do wywołania **_aligned_msize —**. Zarówno **_aligned_msize —** i **_aligned_msize_dbg** Oblicz rozmiar bloku pamięci w stosie podstawowym, ale **_aligned_msize_dbg** dodaje funkcję debugowania: obejmuje buforów po obu stronach pamięci część użytkownika bloku rozmiaru zwróconego.
 
-Ta funkcja weryfikuje jej parametr. Jeśli *memblock* jest wskaźnika o wartości null lub *wyrównanie* nie jest potęgą liczby 2, **_msize —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru ](../../c-runtime-library/parameter-validation.md). Jeśli ten błąd jest obsługiwane, funkcja ustawia **errno** do **einval —** i zwraca wartość -1.
+Ta funkcja sprawdza poprawność swojego parametru. Jeśli *memblock* jest pustym wskaźnikiem lub *wyrównanie* nie jest potęgą liczby 2, **_msize —** wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Walidacja parametru ](../../c-runtime-library/parameter-validation.md). Jeśli obsługiwany jest błąd, funkcja ustawia **errno** do **EINVAL** i zwraca wartość -1.
 
-Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacji na temat różnic między wywołaniem funkcji sterty standard oraz jego wersję debugowania do kompilacji debugowanej aplikacji, zobacz [Debuguj wersje z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -82,11 +72,11 @@ Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarząd
 |-------------|---------------------|
 |**_aligned_msize_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

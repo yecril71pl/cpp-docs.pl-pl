@@ -1,29 +1,19 @@
 ---
-title: '&lt;obejmują&gt; (Visual C++) | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;obejmują&gt; (Visual C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - include
 - <include>
-dev_langs:
-- C++
 helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d03ee6e327eb95e63cec16f3886d616c909c3df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451977"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;obejmują&gt; (Visual C++)
 

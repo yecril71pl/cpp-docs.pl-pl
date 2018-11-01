@@ -1,10 +1,6 @@
 ---
-title: _recalloc — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _recalloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _recalloc
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - _recalloc
 - recalloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c4ae06fbd3d10f1014fe1c879b482f30302a4f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436520"
 ---
 # <a name="recalloc"></a>_recalloc
 
-Kombinację **realloc** i **calloc —**. Przydziela ponownie tablicy w pamięci i inicjuje swoich elementów na 0.
+Kombinacji **realloc** i **calloc**. Przydzieli tablicy w pamięci i inicjuje jego elementy na 0.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,7 +47,7 @@ void *_recalloc(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Wskaźnik do bloku wcześniej alokacji pamięci.
+Wskaźnik do bloku pamięci uprzednio przydzielony.
 
 *Numer*<br/>
 Liczba elementów.
@@ -67,33 +57,33 @@ Długość w bajtach każdego elementu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_recalloc —** zwraca **void** wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia).
+**_recalloc —** zwraca **void** wskaźnik do bloku pamięci ponownie przydzielane (i ewentualnie przenoszenia).
 
-Jeśli nie jest za mało dostępnej pamięci, aby rozwinąć blok na dany rozmiar, oryginalnego bloku pozostanie niezmieniona, i **NULL** jest zwracany.
+Jeśli nie jest za mało dostępnej pamięci, aby rozwinąć blok na dany rozmiar, oryginalnym bloku pozostanie niezmieniona, a **NULL** jest zwracana.
 
-Jeśli żądany rozmiar wynosi zero, a następnie bloku wskazywana przez *memblock* zostanie zwolniona; jest zwracana wartość **NULL**, i *memblock* pozostanie wskazującego zwolnionych blok.
+Jeśli żądany rozmiar jest równy zero, a następnie blok wskazywany przez *memblock* jest zwalniana; wartość zwracana jest **NULL**, i *memblock* pozostanie wskazującego zwolnione blok.
 
-Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby otrzymywać wskaźnik do typu innego niż **void**, użyj typu rzutowania wartości zwracanej.
+Zwracana wartość wskazuje miejsce do magazynowania, który gwarantuje bycia odpowiednio wyrównaną do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, użyj typu rzutowanego na wartość zwracaną.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Recalloc —** funkcja zmienia rozmiar bloku alokacji pamięci. *Memblock* argument wskazuje na początku bloku pamięci. Jeśli *memblock* jest **NULL**, **_recalloc —** działa tak samo jak [calloc —](calloc.md) i przydziela nowy blok *numer*  *  *rozmiar* bajtów. Każdy element jest ustawiana na 0. Jeśli *memblock* nie jest **NULL**, należy go wskaźnik zwrócony przez poprzednie wywołanie **calloc —**, [— funkcja malloc](malloc.md), lub [realloc ](realloc.md).
+**_Recalloc —** funkcja zmieni rozmiar bloku ilość przydzielonej pamięci. *Memblock* argument wskazuje na początku bloku pamięci. Jeśli *memblock* jest **NULL**, **_recalloc —** działa tak samo jak [calloc](calloc.md) i przydziela blok nowe *numer*  *  *rozmiar* bajtów. Każdy element jest inicjowana wartością 0. Jeśli *memblock* nie jest **NULL**, wskaźnik zwracany przez poprzednie wywołanie powinno być **calloc**, [— funkcja malloc](malloc.md), lub [realloc ](realloc.md).
 
-Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwrócony przez **_recalloc —** nie musi być wskaźnikiem przekazywane *memblock* argumentu.
+Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwracany przez **_recalloc —** nie musi zostać przekazany przez wskaźnik myszy *memblock* argumentu.
 
-**_recalloc —** ustawia **errno** do **enomem —** czy alokacja pamięci nie powiedzie się, czy ilość pamięci żądana przekracza **_heap_maxreq —**. Aby uzyskać informacje na ten temat oraz innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc —** ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiedzie się lub Jeśli żądana ilość pamięci, przekracza **_heap_maxreq —**. Aby uzyskać informacje na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc —** wywołania **realloc** aby można było używać języka C++ [_set_new_mode —](set-new-mode.md) funkcji, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, **realloc** jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](set-new-handler.md). Domyślnie **realloc** nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy **_recalloc —** nie może przydzielić pamięci, **realloc** wywołuje nowe procedury obsługi w taki sam jak robi **nowe** — operator nie w przypadku awarii tego samego powodu. Aby zastąpić domyślną, należy wywołać
+**recalloc —** wywołania **realloc** aby można było używać języka C++ [_set_new_mode](set-new-mode.md) funkcję, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, **realloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **realloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne, aby, gdy **_recalloc —** nie może przydzielić pamięci, **realloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** — operator Nie, gdy zakończy się niepowodzeniem z tego samego powodu. Aby zastąpić domyślne, należy wywołać
 
 ```C
 _set_new_mode(1);
 ```
 
-wczesne w programie lub Połącz z biblioteką NEWMODE.OBJ.
+wcześniej program, lub Połącz z NEWMODE.OBJ.
 
-Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, **_recalloc —** jest rozpoznawana jako [_recalloc_dbg —](recalloc-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C, **_recalloc —** jest rozpoznawana jako [_recalloc_dbg —](recalloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stosem podczas debugowania, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**_recalloc —** jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana nie do modyfikowania zmiennych globalnych i czy zwrócony wskaźnik nie jest używane z aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**_recalloc —** jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Wymagania
 

@@ -1,10 +1,6 @@
 ---
-title: fputc —, fputwc — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fputc, fputwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -25,8 +21,6 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -34,20 +28,16 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af93e0c42002dc557f691daadd2fc003dced0247
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447180"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
-Zapisuje znak w strumieniu.
+Zapisuje znak do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,44 +57,44 @@ wint_t fputwc(
 *c*<br/>
 Znak do zapisania.
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać **fputc —**, zwracana wartość **EOF** wskazuje błąd. Aby uzyskać **fputwc —**, zwracana wartość **weof —** wskazuje błąd. Jeśli *strumienia* jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **EOF** i ustaw **errno** do **einval —**.
+Każda z tych funkcji zwraca znak napisany. Aby uzyskać **fputc**, zwracana wartość wynosząca **EOF** wskazuje na błąd. Aby uzyskać **fputwc —**, zwracana wartość wynosząca **WEOF** wskazuje na błąd. Jeśli *strumienia* jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają one **EOF** i ustaw **errno** do **EINVAL**.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji zapisuje pojedynczy znak *c* do pliku w pozycji wskazywana przez wskaźnik położenia skojarzony plik (jeśli jest zdefiniowana) i przesuwa wskaźnik zależnie od potrzeb. W przypadku liczby **fputc —** i **fputwc —**, plik jest skojarzony z *strumienia*. Jeśli plik nie może obsłużyć żądań pozycjonowania lub został otwarty w trybie append, znak jest dołączany do końca strumienia.
+Każda z tych funkcji pisze pojedynczy znak *c* do pliku w miejscu wskazywanym przez wskaźnik położenia skojarzonego pliku (Jeżeli zdefiniowano) i przesuwa wskaźnik zgodnie z potrzebami. W przypadku właściwości **fputc** i **fputwc —**, plik jest skojarzony z *strumienia*. Jeśli plik nie może obsłużyć żądania pozycjonowania lub został otwarty w trybie dołączania, znak jest dołączany na końcu strumienia.
 
-Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **fputc —** nie obsługuje obecnie dane wyjściowe do strumienia UNICODE.
+Te dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **fputc** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz[_fputc_nolock —, _fputwc_nolock —](fputc-nolock-fputwc-nolock.md).
+Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Aby uzyskać więcej informacji, zobacz[_fputc_nolock, _fputwc_nolock —](fputc-nolock-fputwc-nolock.md).
 
-Uwagi dotyczące procedury należy wykonać.
+Wykonaj rutynowe specyficzne uwagi.
 
 |Procedura|Uwagi|
 |-------------|-------------|
-|**fputc —**|Odpowiednikiem **putc —**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra.|
-|**fputwc —**|Wersja znaków dwubajtowych **fputc —**. Zapisuje *c* jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy *strumienia* jest otwarty w trybie tekst lub binarny.|
+|**fputc**|Odpowiednikiem **putc**, ale realizowane tylko jako funkcja, a nie jako funkcja i makra.|
+|**fputwc —**|Wersja znaków dwubajtowych **fputc**. Zapisuje *c* jako znak wielobajtowy lub znak dwubajtowy ze czy *strumienia* jest otwarty w trybie tekstu lub w trybie binarnym.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputtc —**|**fputc —**|**fputc —**|**fputwc —**|
+|**_fputtc —**|**fputc**|**fputc**|**fputwc —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fputc —**|\<stdio.h>|
+|**fputc**|\<stdio.h>|
 |**fputwc —**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą —**stdin**, **stdout**, i **stderr**— muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -133,6 +123,6 @@ This is a test of fputc!!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>
