@@ -1,31 +1,21 @@
 ---
-title: '&lt;csignal —&gt; | Dokumenty Microsoft'
-ms.custom: ''
+title: '&lt;csignal&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <csignal>
-dev_langs:
-- C++
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69a5655aeeea2e3918be520fdd41899f237ebfb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86953611200f3811b914a649cefa3e6e6cffcb50
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486921"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<signal.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<sygnale > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +26,7 @@ Zawiera nagłówek biblioteki standardowe C \<signal.h > i dodaje skojarzone naz
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,29 +1,18 @@
 ---
-title: Używanie wielu metod dostępu w zestawie wierszy | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Używanie wielu metod dostępu w zestawie wierszy
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro
 - BEGIN_ACCESSOR macro, multiple accessors
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071049"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483294"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 

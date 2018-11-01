@@ -1,10 +1,6 @@
 ---
-title: _Crtsetbreakalloc — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487831"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
-Ustawia określony obiekt numer zamówienia alokacji (tylko wersja do debugowania) punkt przerwania.
+Ustawia punkt przerwania na określony obiekt alokacji numer zamówienia (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,19 +44,19 @@ long _CrtSetBreakAlloc(
 ### <a name="parameters"></a>Parametry
 
 *lBreakAlloc*<br/>
-Numer zamówienia alokacji, dla którego można ustawić punktu przerwania.
+Numer zamówienia alokacji, do których chcesz ustawić punkt przerwania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt alokacji kolejności poprzednich mająca ustawić punkt przerwania.
+Zwraca wartość poprzedniego numerem porządkowym obiektu alokacji zawierającego punkt przerwania.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtsetbreakalloc —** temu aplikacja może wykonać wykrywanie przecieków pamięci podziału w określonym punkcie przydziału pamięci i śledzenie Wstecz, aby pochodzenia żądania. Funkcja używa o liczbie porządkowej alokacji obiektu sekwencyjne przypisane do blok pamięci, gdy została przydzielona w stosie. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtsetbreakalloc —** są usuwane podczas przetwarzania wstępnego.
+**_CrtSetBreakAlloc** pozwala wykonać wykrywania przecieków pamięci za istotne w określonym punkcie alokacji pamięci i śledzenie wstecz do początku żądania aplikacji. Funkcja używa sekwencyjne numerem porządkowym obiektu alokacji przypisane do bloku pamięci, gdy został przydzielony w stercie. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtSetBreakAlloc** są usuwane podczas przetwarzania wstępnego.
 
-Numer zamówienia alokacji obiekt jest przechowywany w *lRequest* pole **_crtmemblockheader —** struktury zdefiniowane w Crtdbg.h. Gdy informacje o blok pamięci został zgłoszony przez jedną z funkcji zrzutu debugowania, ta liczba jest ujęta w nawiasy klamrowe, takich jak {36}.
+Numerem porządkowym obiektu alokacji znajduje się w *lRequest* pole **_CrtMemBlockHeader** struktury, zdefiniowanego w Crtdbg.h. Gdy informacje o bloku pamięci są raportowane przez jedną z funkcji zrzutu debugowania, ta liczba jest ujęte w nawiasy klamrowe, takich jak {36}.
 
-Aby uzyskać więcej informacji o tym, jak **_crtsetbreakalloc —** może być używany z innymi funkcje zarządzania pamięcią, zobacz [Śledzenie żądań alokacji sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji dotyczących sposobu bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o tym, jak **_CrtSetBreakAlloc** może być używany z innymi funkcjami zarządzania pamięcią, zobacz [Śledzenie żądań alokacji sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji na temat sposobu bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -74,11 +64,11 @@ Aby uzyskać więcej informacji o tym, jak **_crtsetbreakalloc —** może być 
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="example"></a>Przykład
 

@@ -1,31 +1,21 @@
 ---
-title: Omówienie Marshalingu w języku C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Omówienie marshalingu w języku C++
 ms.date: 06/28/2018
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
 - marshalling
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, marshaling
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 60706a7922d9bea68e2ef4a27afa1401a1cd6920
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486284"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Omówienie marshalingu w języku C++
 

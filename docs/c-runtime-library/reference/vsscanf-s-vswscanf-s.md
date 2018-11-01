@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s, vswscanf_s | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,23 +20,17 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417106"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477171"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 
-Odczyty sformatowane dane z ciągu. Te wersje programu [vsscanf —, vswscanf —](vsscanf-vswscanf.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczyty sformatowanych danych z ciągu. Te wersje [vsscanf —, vswscanf —](vsscanf-vswscanf.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,40 +50,40 @@ int vswscanf_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Przechowywanych danych
+Przechowywane dane
 
 *Format*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *arglist*<br/>
-Listy zmiennych argumentów.
+Lista zmiennych argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji.
+Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji.
 
-Jeśli *buforu* lub *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* lub *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Vsscanf_s** funkcja odczytywać dane z *buforu* w lokalizacjach, które są podane przez każdy argument *lista_argumentów* listy argumentów. Argumenty w liście argumentów określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *format*. W przeciwieństwie do wersji mniej bezpieczne **vsscanf —**, parametr rozmiaru buforu jest wymagany, gdy używasz znaki pola typu **c**, **C**, **s**, **S**, lub ciągu sterowania zestawów, które są ujęte w **[]**. Rozmiar buforu w znaki muszą zostać dostarczone jako dodatkowy parametr natychmiast po każdego parametru buforu, który wymaga.
+**Vsscanf_s** funkcja odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument *lista_argumentów* listy argumentów. Argumenty na liście argumentów określają wskaźniki do zmiennych, które mają typ odpowiadający specyfikatorowi typu w parametrze *format*. W przeciwieństwie do mniej bezpiecznej wersji **vsscanf —**, parametr rozmiaru buforu jest wymagany, gdy używasz znaki pola typu **c**, **C**, **s**, **S**, lub zestawów kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach musi zostać dostarczony jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga.
 
-Rozmiar buforu obejmuje zakończenia wartości null. Pola specyfikacji szerokość może służyć do zapewnienia, że token, który jest odczytywany w zmieści się w buforze. Jeśli żadne pole Specyfikacja szerokości jest używany, a token odczytu w jest zbyt duży, aby zmieścić się w buforze, nic nie są zapisywane w tym buforu.
+Rozmiar buforu obejmuje kończącą wartość null. Pole określania szerokości może służyć do zapewnienia, że token, który jest wczytywany w zmieści się w buforze. Jeśli jest używane nie pole specyfikacji szerokości, a odczyt tokenu jest zbyt duży, aby zmieścić się w buforze, nic nie jest zapisywane do tego buforu.
 
-Aby uzyskać więcej informacji, zobacz [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [scanf — znaki pola typu](../../c-runtime-library/scanf-type-field-characters.md).
+Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [scanf — znaki pola typu](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr rozmiaru jest typu **niepodpisane**, a nie **size_t**.
+> Parametr rozmiaru ma typ **niepodpisane**, a nie **size_t**.
 
-*Format* formanty argument interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako *format* argument **scanf_s —** funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+*Format* formantów argument interpretacji danych wejściowych pola i ma taką samą formę i funkcjonuje jako *format* argument **scanf_s** funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-**vswscanf_s** jest wersja znaków dwubajtowych **vsscanf_s**; argumenty **vswscanf_s** są ciągami znaków dwubajtowych. **vsscanf_s** nie obsługuje wielobajtowe znaków szesnastkowych. **vswscanf_s** nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie **vswscanf_s** i **vsscanf_s** zachowują się tak samo.
+**vswscanf_s** to wersja znaku dwubajtowego **vsscanf_s**; argumenty **vswscanf_s** są ciągami znaków dwubajtowych. **vsscanf_s** nie obsługuje wielobajtowych znaków szesnastkowych. **vswscanf_s** nie obsługuje znaków "strefa zgodności" ani szesnastkowych pełnej szerokości Unicode. W przeciwnym razie **vswscanf_s** i **vsscanf_s** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
@@ -160,7 +150,7 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>

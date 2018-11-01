@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2549 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2549
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2549
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2549
 ms.assetid: 29310094-54a3-4605-bc6d-a312a68daf5d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e32baf420a0bba66966b418b05642c6bcf96f180
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1aebe5a2e9e9f4e3ac290876b271806bbf65789b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475663"
 ---
 # <a name="compiler-error-c2549"></a>Błąd kompilatora C2549
 
