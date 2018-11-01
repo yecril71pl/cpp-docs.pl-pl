@@ -1,10 +1,6 @@
 ---
-title: frexp —, frexpf —, frexpl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: frexp —, frexpf —, frexpl —
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563844"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp —, frexpf —, frexpl —
 
-Pobiera mantysa i wykładnik liczby zmiennoprzecinkowej.
+Pobiera mantysę i wykładnik liczba zmiennoprzecinkowa.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,17 +69,17 @@ long double frexp(
 Wartość zmiennoprzecinkowa.
 
 *expptr*<br/>
-Wskaźnik do wykładnik przechowywane liczby całkowitej.
+Wskaźnik do wykładnik przechowywanych liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**frexp —** zwraca mantysa. Jeśli *x* wynosi 0, funkcja zwraca wartość 0 dla mantysa i wykładnik. Jeśli *expptr* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca wartość 0.
+**frexp —** zwraca mantysa. Jeśli *x* wynosi 0, funkcja zwraca wartość 0 dla mantysy i wykładnika. Jeśli *expptr* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Frexp —** funkcja dzieli wartości zmiennoprzecinkowych (*x*) do mantysy (*m*) i wykładnik (*n*), w taki sposób, że bezwzględne wartość *m* jest większa niż lub równa 0,5 i mniejszą niż 1,0 i *x* = *m* * 2<sup>*n*</sup>. Wykładnik całkowitą *n* są przechowywane w lokalizacji wskazywanej przez *expptr*.
+**Frexp —** funkcja dzieli wartość zmiennoprzecinkowa (*x*) do mantysy (*m*) i wykładnik (*n*), w taki sposób, że bezwzględne wartość *m* jest większa niż lub równa 0,5 i mniejszą niż 1,0 i *x* = *m* * 2<sup>*n*</sup>. Wykładnik potęgi liczby całkowitej *n* jest przechowywany w lokalizacji wskazywanej przez *expptr*.
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze ma **podwójne** i **int** wskaźnik i zwraca **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze ma **double** i **int** wskaźnik i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 

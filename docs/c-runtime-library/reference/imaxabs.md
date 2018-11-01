@@ -1,10 +1,6 @@
 ---
-title: imaxabs — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666254"
 ---
 # <a name="imaxabs"></a>imaxabs
 
-Oblicza wartość bezwzględna liczby całkowitej o dowolnym rozmiarze.
+Oblicza wartość bezwzględną liczby całkowitej o dowolnym rozmiarze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,14 +43,14 @@ intmax_t imaxabs(
 ### <a name="parameters"></a>Parametry
 
 *N*<br/>
-Wartość całkowita.
+Wartość liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Imaxabs —** funkcja zwraca wartość bezwzględną liczby argumentów. Nie ma żadnych zwracany błąd.
+**Imaxabs —** funkcja zwraca wartość bezwzględną argumentu. Nie będzie zwrotu błędu.
 
 > [!NOTE]
-> Ponieważ zakres liczb całkowitych ujemna, które mogą być reprezentowane przy użyciu **intmax_t** jest większy niż zakres dodatnie liczby całkowite, które mogą być przedstawiane jest możliwe argument **imaxabs —** Nie można przekonwertować który. Jeśli wartość bezwzględna argumentu nie może być reprezentowany przez zwracany typ, zachowanie **imaxabs —** jest niezdefiniowana.
+> Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą **intmax_t** jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane, jest możliwe, aby podać argument do **imaxabs —** który nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ, zachowanie **imaxabs —** jest niezdefiniowana.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,7 +62,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

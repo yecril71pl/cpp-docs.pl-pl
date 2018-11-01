@@ -1,10 +1,6 @@
 ---
-title: floorf — piętro, floorl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: floor, floorf, floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,28 +23,22 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647739"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Oblicza Zaokrąglenie w dół o wartości.
+Oblicza Zaokrąglenie w dół wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,17 +67,17 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Floor** zwracają wartość zmiennoprzecinkowa, która reprezentuje największa liczba całkowita, która jest mniejsza lub równa *x*. Nie ma żadnych zwracany błąd.
+**Floor** funkcje zwracają wartość zmiennoprzecinkową, która reprezentuje największa liczba całkowita, która jest mniejsza niż lub równa *x*. Nie będzie zwrotu błędu.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
 
-**FLOOR** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
+**FLOOR** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Uwagi
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **floor** który przyjmować i zwracać **float** i **długi** **podwójne** wartości. W programie C **floor** zawsze przyjmuje i zwraca **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **floor** przyjmujące i zwracające **float** i **długie** **double** wartości. W programie C **floor** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 

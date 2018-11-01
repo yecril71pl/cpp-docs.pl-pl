@@ -1,10 +1,6 @@
 ---
-title: _getmbcp — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getmbcp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getmbcp
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - _getmbcp
 - getmbcp
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, determining current
 - _getmbcp function
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15086f5f433a485e59f9cf697b49913e8840cf6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cea84fc771a1d847814d002294391256efae57b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395503"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620457"
 ---
 # <a name="getmbcp"></a>_getmbcp
 
-Pobiera bieżącą stronę.
+Pobiera bieżącej stronie kodowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,7 +43,7 @@ int _getmbcp( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżącej strony kodowe wielobajtowe. Wartość zwracana 0 wskazuje, że strona kodowa pojedynczy bajt jest używany.
+Zwraca bieżącej strony kodowe wielobajtowe. Zwracana wartość wynosząca 0 wskazuje, że strona kodowa pojedynczych bajtów jest używany.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -61,7 +51,7 @@ Zwraca bieżącej strony kodowe wielobajtowe. Wartość zwracana 0 wskazuje, że
 |-------------|---------------------|
 |**_getmbcp**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

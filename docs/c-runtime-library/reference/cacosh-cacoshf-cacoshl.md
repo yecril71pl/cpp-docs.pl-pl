@@ -1,11 +1,6 @@
 ---
-title: cacosh cacoshf, cacoshl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: cacosh cacoshf, cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668198"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh cacoshf, cacoshl
 
-Pobiera odwrotny cosinus hiperboliczny dla liczby złożonej z gałęzi Wytnij w mniej niż 1 osi, do rzeczywistych wartości. .
+Pobiera cosinus hiperboliczny liczby zespolonej z gałęzią Wytnij mniej niż 1 osi rzeczywistych wartości. .
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex cacoshl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Odwrotny cosinus hiperboliczny dla *z*, w radianach. Wynik jest niepowiązany i nieujemna rzeczywistych osi, a w interwale [-iπ, + iπ] urojony osi.
+Arcus cosinus hiperboliczny *z*, w radianach. Wynik jest nieograniczona i wartość nieujemną wzdłuż osi prawdziwe, a w interwale [-iπ, + iπ] urojone osi.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cacosh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **cacosh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cacosh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cacosh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**cacosh**, **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

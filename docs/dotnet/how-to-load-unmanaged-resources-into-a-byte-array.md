@@ -1,28 +1,18 @@
 ---
-title: 'Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte | Dokumentacja firmy Microsoft'
+title: 'Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - native resources, loading into Byte array
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 142957755c04babd9a3587c47325c63820ba7c0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7d35af462a2d598995f222221a4023d09c73ff3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579888"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte
 

@@ -1,5 +1,5 @@
 ---
-title: /I (Dodatkowe katalogi dołączenia)
+title: /I (dodatkowe katalogi dołączenia)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
@@ -14,24 +14,22 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: b922a4472246bb13bfed4022f2f85061c5d1217b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
+ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563868"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750395"
 ---
-# <a name="i-additional-include-directories"></a>/I (Dodatkowe katalogi dołączenia)
+# <a name="i-additional-include-directories"></a>/I (dodatkowe katalogi dołączenia)
 
 Dodaje katalog do listy katalogi przeszukiwane w poszukiwaniu plików dołączanych.
 
 ## <a name="syntax"></a>Składnia
 
-```
-/I[ ]directory
-```
+> **/I**[*katalogu*
 
-## <a name="arguments"></a>Argumenty
+### <a name="arguments"></a>Argumenty
 
 *Katalog*<br/>
 Katalog, który ma zostać dodany do listy katalogów wyszukiwane dołączane pliki.
@@ -40,13 +38,13 @@ Katalog, który ma zostać dodany do listy katalogów wyszukiwane dołączane pl
 
 Aby dodać więcej niż jeden katalog, użyj tej opcji więcej niż jeden raz. Przeszukiwane są katalogi, aż zostanie znaleziony określonegop dołączanego pliku.
 
-Za pomocą tej opcji Ignore Standard Include Paths ([/X (Ignoruj standardowe ścieżki dołączanych plików)](../../build/reference/x-ignore-standard-include-paths.md)) opcji.
+Można użyć tej opcji z ([/X (Ignoruj standardowe ścieżki dołączanych plików)](../../build/reference/x-ignore-standard-include-paths.md)) opcji.
 
-Kompilator wyszukuje katalogi, w następującej kolejności:
+Kompilator przeszukuje katalogi w następującej kolejności:
 
-1. Katalogi zawierające pliku źródłowego.
+1. Jeśli zostanie określony, przy użyciu [# dyrektywy include](../../preprocessor/hash-include-directive-c-cpp.md) w formie podwójnego cudzysłowu, najpierw przeszukuje katalogi lokalne. Wyszukiwanie rozpoczyna się w tym samym katalogu co plik, który zawiera **#include** instrukcji. W przypadku niepowodzenia można znaleźć pliku wyszukiwania w wszelkich aktualnie otwartych katalogów Dołącz pliki, w odwrotnej kolejności, w jakiej zostały otwarte. Wyszukiwanie rozpoczyna się w katalogu nadrzędnego dołączyć plik i jest kontynuowane w górę przez katalogi stojących dołączyć pliki.
 
-1. Katalogi określone za pomocą **/I** opcji, w kolejności CL napotka je.
+1. Jeśli zostanie określony, przy użyciu **#include** dyrektywy w kąt Dopasowywanie formularza lub jeśli wyszukiwania w katalogu lokalnym zakończyło się niepowodzeniem, przeszukuje katalogi określone za pomocą **/I** opcji, w kolejności CL napotka je w wierszu polecenia.
 
 1. Katalogi określone w **INCLUDE** zmiennej środowiskowej.
 
@@ -54,9 +52,7 @@ Kompilator wyszukuje katalogi, w następującej kolejności:
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
-
-1. Kliknij przycisk **ogólne** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
 
 1. Modyfikowanie **dodatkowe katalogi dołączenia** właściwości.
 
@@ -66,7 +62,7 @@ Kompilator wyszukuje katalogi, w następującej kolejności:
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie szuka plików dołączanych, żądane przez MAIN.c w następującej kolejności: pierwsza na katalog zawierający MAIN.c, następnie w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i na koniec w katalogach przypisane do DOŁĄCZENIA zmiennej środowiskowej.
+Następujące polecenie szuka plików dołączanych, żądane przez MAIN.c w następującej kolejności: po pierwsze, jeśli określony, przy użyciu podwójnych cudzysłowów, pliki lokalne są przeszukiwane. Następnie wyszukiwanie jest kontynuowane w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i na koniec w katalogach przypisany do zmiennej środowiskowej INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

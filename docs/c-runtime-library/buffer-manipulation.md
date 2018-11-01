@@ -1,47 +1,37 @@
 ---
-title: Bufor manipulowania | Dokumenty Microsoft
-ms.custom: ''
+title: Manipulowanie buforem
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.memory
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a7544dfa80ce0c7481846383dd812ce30b78290
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590505"
 ---
 # <a name="buffer-manipulation"></a>Manipulowanie buforem
 
-Użyj tych procedur do pracy z obszary pamięci na podstawie po bicie.
+Użyj tych procedur, aby pracować z obszary pamięci na podstawie bajt po bajcie.
 
 ## <a name="buffer-manipulation-routines"></a>Manipulowanie buforem procedury
 
 |Procedura|Zastosowanie|
 |-------------|---------|
-|[_memccpy](../c-runtime-library/reference/memccpy.md)|Kopiowanie znaków z buforu do innego dopóki podany znak lub został skopiowany podana liczba znaków|
-|[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Zwraca wskaźnik do pierwszego wystąpienia, w ciągu określonej liczby znaków, z podany znak w buforze|
-|[memcmp, wmemcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|Porównanie określoną liczbę znaków z dwóch buforów|
-|[memcpy, wmemcpy —](../c-runtime-library/reference/memcpy-wmemcpy.md), [memcpy_s —, wmemcpy_s —](../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)|Skopiuj określoną liczbę znaków z buforu na inny|
-|[_memicmp, _memicmp_l](../c-runtime-library/reference/memicmp-memicmp-l.md)|Porównanie określoną liczbę znaków z dwóch buforów bez uwzględniania wielkości liter|
-|[memmove —, wmemmove —](../c-runtime-library/reference/memmove-wmemmove.md),[memmove_s —, wmemmove_s —](../c-runtime-library/reference/memmove-s-wmemmove-s.md)|Skopiuj określoną liczbę znaków z buforu na inny|
-|[memset, wmemset](../c-runtime-library/reference/memset-wmemset.md)|Użyj danego znaku zainicjować określoną liczbę bajtów w buforze|
-|[_swab](../c-runtime-library/reference/swab.md)|Wymiana bajtów danych i zapisywania ich w określonej lokalizacji|
+|[_memccpy](../c-runtime-library/reference/memccpy.md)|Kopiowanie znaków z buforu na inny do momentu danego znaku lub daną liczbę znaków, które zostały skopiowane|
+|[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Zwraca wskaźnik do pierwszego wystąpienia w ciągu określonej liczby znaków, z danego znaku w buforze|
+|[memcmp, wmemcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|Porównaj określoną liczbę znaków z dwóch buforów|
+|[memcpy, wmemcpy —](../c-runtime-library/reference/memcpy-wmemcpy.md), [memcpy_s —, wmemcpy_s —](../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)|Kopiuj określoną liczbę znaków z buforu na inny|
+|[_memicmp, _memicmp_l](../c-runtime-library/reference/memicmp-memicmp-l.md)|Porównaj określoną liczbę znaków z dwóch buforów bez uwzględniania wielkości liter|
+|[memmove, wmemmove —](../c-runtime-library/reference/memmove-wmemmove.md),[memmove_s —, wmemmove_s —](../c-runtime-library/reference/memmove-s-wmemmove-s.md)|Kopiuj określoną liczbę znaków z buforu na inny|
+|[memset, wmemset](../c-runtime-library/reference/memset-wmemset.md)|Użycie danego znaku, aby zainicjować określoną liczbę bajtów w buforze|
+|[_swab](../c-runtime-library/reference/swab.md)|Wymiana bajtów danych i przechowywać je w określonej lokalizacji|
 
-Gdy obszary źródłowe i docelowe nakładają się, tylko **memmove —** może skopiować pełną źródła poprawnie.
+Gdy obszary źródłowe i docelowe nakładają się, tylko **memmove** jest gwarantowane, skopiować pełną źródła poprawnie.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: clearerr_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665026"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
-Resetuje wskaźnik błędów dla strumienia. To jest wersja [clearerr —](clearerr.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Resetuje wskaźnik błędu dla strumienia. To jest wersja [clearerr —](clearerr.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,18 +44,18 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
-Wskaźnik do **pliku** — struktura
+*Stream*<br/>
+Wskaźnik do **pliku** struktury
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; **Einval —** Jeśli *strumienia* jest **NULL**.
+Zero, jeśli to się powiedzie; **EINVAL** Jeśli *strumienia* jest **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Clearerr_s —** funkcja resetuje wskaźnik błędów i wskaźnik plik końcowy *strumienia*. Wskaźniki błędów nie są automatycznie usuwane; Po ustawieniu wskaźnik błędów dla określonego strumienia operacji na strumieniu w dalszym ciągu zwracają wartość błąd do **clearerr_s —**, **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos —**, lub [rewind](rewind.md) jest wywoływana.
+**Clearerr_s —** funkcja resetuje wskaźnik błędów i wskaźnik końca pliku *strumienia*. Wskaźniki błędów nie zostaną automatycznie wyczyszczone; Po ustawieniu wskaźnika błędu dla określonego strumienia operacje na strumieniu w dalszym ciągu zwraca wartości błędu do czasu **clearerr_s —**, **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos**, lub [rewind](rewind.md) jest wywoływana.
 
-Jeśli *strumienia* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -132,7 +122,7 @@ Will input cause an error? n
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>

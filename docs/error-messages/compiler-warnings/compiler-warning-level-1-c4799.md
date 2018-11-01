@@ -1,27 +1,17 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4799 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4799
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4799
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4799
 ms.assetid: 8ecbd06f-c778-4371-a2fb-c690b6743ec8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3d83917289e5ad76a874587894a66e163fed90a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 475451b47d461e7ea1428eb715a876fb023694d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552259"
 ---
 # <a name="compiler-warning-level-1-c4799"></a>Kompilator ostrzeżenie (poziom 1) C4799
 

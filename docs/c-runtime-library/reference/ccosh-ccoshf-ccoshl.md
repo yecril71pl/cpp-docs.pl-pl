@@ -1,11 +1,6 @@
 ---
-title: ccosh, ccoshf, ccoshl | Microsoft Docs
-ms.custom: ''
+title: ccosh, ccoshf, ccoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccosh
 - ccoshf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a883869b830efbba08822b77c97fd6a156358dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676840"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
-Pobiera cosinus hiperboliczny dla liczby złożonej.
+Pobiera cosinus hiperboliczny liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex ccoshl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej, który reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus hiperboliczny *z*, w radianach.
+Cosinus hiperboliczny liczby *z*, w radianach.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ccosh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **ccosh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ccosh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **ccosh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

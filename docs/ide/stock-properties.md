@@ -1,26 +1,16 @@
 ---
-title: Podstawowy właściwości | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Właściwości podstawowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 201e6f0591d446dc0e6b036cfd7ac6f3028eb812
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d1067045fb237c4d557509a80770bb384165a80
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598488"
 ---
 # <a name="stock-properties"></a>Właściwości podstawowe
 
@@ -37,7 +27,7 @@ Jeśli chcesz dodać właściwość do dispinterface MFC przy użyciu [Kreator d
 |`ForeColor`|Zwraca lub ustawia formantu otoczenia `ForeColor` właściwości.|
 |**hWnd**|Zwraca lub ustawia formantu **hWnd** właściwości. **hWnd** nie ma przypisanego **zmiennej składowej** typ implementacji.|
 |**ReadyState**|Zwraca lub ustawia formantu **ReadyState** właściwości. Formant może być niezainicjowanej, zainicjowane, ładowanie, interakcyjnego lub pełne. Zobacz [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) w *Internet SDK* Aby uzyskać więcej informacji.|
-|**Tekst**|Zwraca lub ustawia tekst zawarty w kontrolce. **Tekst** nie ma przypisanego **zmiennej składowej** typ implementacji.|
+|**Text**|Zwraca lub ustawia tekst zawarty w kontrolce. **Tekst** nie ma przypisanego **zmiennej składowej** typ implementacji.|
 
 ## <a name="see-also"></a>Zobacz też
 

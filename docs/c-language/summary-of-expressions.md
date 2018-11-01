@@ -1,157 +1,114 @@
 ---
-title: Podsumowanie wyrażeń | Dokumentacja firmy Microsoft
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: Podsumowanie wyrażeń
+ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 456a9b98c260107f07c302174e4d9f95d6a62aa6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543497"
 ---
 # <a name="summary-of-expressions"></a>Podsumowanie wyrażeń
-*wyrażenia podstawowe*:  
- *Identyfikator*  
-  
- *Stała*  
-  
- *literał ciągu*  
-  
- **(***wyrażenie***)**   
-  
- *wyrażenie*:  
- *assignment-expression*  
-  
- *wyrażenie***,***wyrażenia przypisania*   
-  
- *wyrażenia*:  
- *Wyrażenia warunkowego*  
-  
- *wyrażenia warunkowego*:  
- *wyrażenie logiczne OR*  
-  
- *wyrażenia logicznego lub***?**   *wyrażenie***:***wyrażenia warunkowego*   
-  
- *wyrażenia przypisania*:  
- *Wyrażenia warunkowego*  
-  
- *wyrażenie jednoargumentowe operator przypisania z wyrażenia przypisania*  
-  
- *Operatory przyrostka wyrażenie*:  
- *wyrażenia podstawowe*  
-  
- *Operatory przyrostka wyrażenie***[***wyrażenie***]**   
-  
- *wyrażenie przyrostek***(***lista wyrażeń argument* opt **)**   
-  
- *Operatory przyrostka wyrażenie***.**   *Identyfikator*  
-  
- *Operatory przyrostka wyrażenie***->***identyfikator*   
-  
- *Operatory przyrostka wyrażenia*  **++**  
-  
- *Operatory przyrostka wyrażenia*  **--**  
-  
- *Lista wyrażeń argument*:  
- *assignment-expression*  
-  
- *Lista wyrażeń argument***,***wyrażenia przypisania*   
-  
- *wyrażenie jednoargumentowe*:  
- *Operatory przyrostka wyrażenia*  
-  
- **++**  *wyrażenie jednoargumentowe*  
-  
- **--**  *wyrażenie jednoargumentowe*  
-  
- *operator jednoargumentowy*  
-  
- *cast-expression*  
-  
- **sizeof***wyrażenie jednoargumentowe*   
-  
- **sizeof (***nazwy typu***)**   
-  
- *operator jednoargumentowy*: jeden z  
- **& \* + - ~ !**  
-  
- *wyrażenie CAST*:  
- *wyrażenie jednoargumentowe*  
-  
- **(***nazwy typu***)***wyrażenie cast*  
-  
- *wyrażenia mnożenia*:  
- *cast-expression*  
-  
- *wyrażenia mnożenia***\****wyrażenie cast*   
-  
- *wyrażenia mnożenia***/***wyrażenie cast*   
-  
- *wyrażenia mnożenia***%***wyrażenie cast*   
-  
- *wyrażenie dodatku*:  
- *wyrażenia mnożenia*  
-  
- *wyrażenie dodatku***+***wyrażenia mnożenia*   
-  
- *wyrażenie dodatku***-***wyrażenia mnożenia*   
-  
- *wyrażenie SHIFT*:  
- *wyrażenie dodatku*  
-  
- *wyrażenie SHIFT***<\<***wyrażenie dodatku*   
-  
- *wyrażenie SHIFT***>>***wyrażenie dodatku*   
-  
- *wyrażenie relacyjne*:  
- *SHIFT — wyrażenie*  
-  
- *wyrażenie relacyjne***\<***shift wyrażenie*   
-  
- *wyrażenie relacyjne***>***wyrażenie relacyjne wyrażenia przesunięcia* **\< =** *shift wyrażenie*   
-  
- *wyrażenie relacyjne***>=***shift wyrażenie*   
-  
- *wyrażenie równości*:  
- *wyrażenie relacyjne*  
-  
- *wyrażenie równości***==***wyrażenie relacyjne*   
-  
- *wyrażenie równości***! =***wyrażenie relacyjne*   
-  
- *I wyrażenia*:  
- *wyrażenie równości*  
-  
- *Wyrażenia AND***&***wyrażenie równości*   
-  
- *wyrażenie OR-wyłącznie*:  
- *Wyrażenia AND*  
-  
- *wyrażenie OR-wyłącznie***^***i wyrażenia*   
-  
- *wraz z wartościami granicznymi wyrażenie OR*:  
- *wyrażenie OR-na wyłączność*  
-  
- *wraz z wartościami granicznymi wyrażenie OR***&#124;***wyłącznie OR-wyrażenie*   
-  
- *i wyrażenie logiczne*:  
- *wraz z wartościami granicznymi wyrażenie OR*  
-  
- *i wyrażenie logiczne***&&***włącznie wyrażenie OR*   
-  
- *wyrażenia logicznego lub*:  
- *i wyrażenie logiczne*  
-  
- *wyrażenia logicznego lub***&#124;&#124;***-i wyrażenie logiczne*   
-  
-## <a name="see-also"></a>Zobacz też  
- [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)
+
+*wyrażenia podstawowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(***wyrażenie***)** 
+
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie***,***wyrażenia przypisania* 
+
+*wyrażenie stałe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia warunkowego*
+
+*wyrażenia warunkowego*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**   *wyrażenie***:***wyrażenia warunkowego*
+
+*wyrażenia przypisania*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia warunkowego*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe* *operator przypisania* *wyrażenia przypisania*
+
+*wyrażeniem przyrostkowym*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia podstawowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***[***wyrażenie***]** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***(***argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***.**  *Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***->***identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **--**
+
+*argument-expression-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list***,***wyrażenia przypisania* 
+
+*wyrażenie jednoargumentowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**++**  *wyrażenie jednoargumentowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**--**  *wyrażenie jednoargumentowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*operator jednoargumentowy*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie CAST*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof***jednoargumentowe wyrażenie* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof (***nazwy typu***)** 
+
+*operator jednoargumentowy*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;****+** **-** **~** **!**
+
+*wyrażenie CAST*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(***nazwy typu***)***wyrażenie cast*
+
+*wyrażenie mnożenia*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie CAST*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia***&#42;***wyrażenie cast* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia***/***wyrażenie cast* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia***%***wyrażenie cast* 
+
+*Additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression***+***wyrażenia mnożenia* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression***-***wyrażenia mnożenia* 
+
+*SHIFT-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression***\<\<***additive-expression* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression***>>***additive-expression* 
+
+*wyrażenie relacyjne*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***\<***shift-expression* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***>***shift-expression* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***\<=***shift-expression* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***>=***shift-expression* 
+
+*wyrażenie równości*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości***==***wyrażenie relacyjne* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości***! =***wyrażenie relacyjne* 
+
+*I wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia i***&***wyrażenie równości* 
+
+*wyłączny OR wyrażenia*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia AND*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyłączny OR wyrażenia***^***wyrażenia AND* 
+
+*wyrażenie włączny OR*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyłączny OR wyrażenia*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączny OR***&#124;***wyłączny OR wyrażenia* 
+
+*i wyrażenie logiczne*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączny OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*i wyrażenie logiczne***&&***włącznie wyrażenie OR* 
+
+*wyrażenie logiczne OR*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*i wyrażenie logiczne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***&#124;&#124;***-i wyrażenie logiczne* 
+
+## <a name="see-also"></a>Zobacz także
+
+- [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)

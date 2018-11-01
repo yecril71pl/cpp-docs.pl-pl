@@ -1,10 +1,6 @@
 ---
-title: _cputs —, _cputws — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601178"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
-Zapisuje ciąg w konsoli.
+Umieszcza ciąg do konsoli.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,17 +58,17 @@ int _cputws(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg w danych wyjściowych.
+Ciąg wyjściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_cputs —** zwraca wartość 0. W przypadku niepowodzenia funkcja zwraca wartość różną od zera.
+W przypadku powodzenia **_cputs —** zwraca wartość 0. Jeśli funkcja zawiedzie, zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cputs —** funkcja zapisuje zerem ciągu, która jest wskazywana przez *str* bezpośrednio do konsoli. Kombinacja powrotu wiersza kanału informacyjnego (CR LF) karetki nie jest automatycznie dołączane do ciągu.
+**_Cputs —** funkcja zapisuje ciąg zakończony znakiem null, który jest wskazywany przez *str* bezpośrednio do konsoli. Powrót karetki kombinacji kanał wiersza powrotu (CR-LF) nie jest automatycznie dołączany do ciągu.
 
-Ta funkcja weryfikuje jej parametr. Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i jest zwracana wartość -1.
+Ta funkcja sprawdza poprawność swojego parametru. Jeśli *str* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i zwracana jest wartość -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -93,11 +83,11 @@ Ta funkcja weryfikuje jej parametr. Jeśli *str* jest **NULL**, program obsługi
 |**_cputs —**|\<conio.h>|\<errno.h>|
 |**_cputws —**|\<conio.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

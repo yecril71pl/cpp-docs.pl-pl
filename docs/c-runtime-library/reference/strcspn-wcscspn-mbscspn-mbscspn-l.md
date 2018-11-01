@@ -1,10 +1,6 @@
 ---
-title: strcspn —, wcscspn —, _mbscspn —, _mbscspn_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415177"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446452"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
-Zwraca indeks pierwszego wystąpienia w ciągu znaku, który należy do zestawu znaków.
+Zwraca indeks pierwszego wystąpienia w ciągu znaków, który należy do zestawu znaków.
 
 > [!IMPORTANT]
-> **_mbschr —** i **_mbschr_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr —** i **_mbschr_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,7 +78,7 @@ size_t _mbscspn_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg przeszukane zerem.
+Zakończony znakiem null przeszukiwanego ciągu.
 
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
@@ -98,21 +88,21 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje Zwróć indeks pierwszego znaku w *str* w *strCharSet*. Jeśli żadna z znaków w *str* znajduje się w *strCharSet*, a następnie długość jest zwracana wartość *str*.
+Funkcje te zwracają indeks pierwszego znaku w *str* w *strCharSet*. Jeśli żaden ze znaków w *str* znajduje się w *strCharSet*, wówczas wartość zwracana jest długością *str*.
 
-Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**wcscspn —** i **_mbscspn —** znaków dwubajtowych i znaków wielobajtowych wersji **strcspn —**. Argumenty **wcscspn —** są znaków dwubajtowych ciągi; tych **_mbscspn —** są ciągami znaków wielobajtowych.
+**wcscspn —** i **_mbscspn —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strcspn**. Argumenty **wcscspn —** są znakami dwubajtowymi ciągów; te z **_mbscspn —** są ciągami znaków wielobajtowych.
 
-**_mbscspn —** sprawdza poprawność parametrów. Jeśli dowolny *str* lub *strCharSet* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość 0 i zestawy **errno** do **einval —**. **strcspn —** i **wcscspn —** nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**_mbscspn —** sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca 0 i ustawia **errno** do **EINVAL**. **strcspn** i **wcscspn —** nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn —**|**strcspn**|**_mbscspn**|**wcscspn**|
 |n/d|n/d|**_mbscspn_l**|n/d|
@@ -122,7 +112,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
-|**wcscspn**|\<String.h > lub \<wchar.h >|
+|**wcscspn**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbscspn —**, **_mbscspn_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

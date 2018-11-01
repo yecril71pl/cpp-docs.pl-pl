@@ -1,10 +1,6 @@
 ---
-title: _lsearch_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _lsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,20 +28,16 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12315350b62673abb0a838f9d30830354c58da73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677009"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
-Wykonuje wyszukiwanie liniowe dla wartości. Wersja [_lsearch —](lsearch.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wykonuje wyszukiwanie liniowe dla wartości. Wersja [_lsearch —](lsearch.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,42 +58,42 @@ void *_lsearch_s(
 Obiekt do wyszukania.
 
 *base*<br/>
-Wskaźnik do podstawy tablicy do wyszukania.
+Wskaźnik do podstawowego tablicy ma być przeszukiwany.
 
 *Numer*<br/>
 Liczba elementów.
 
 *Rozmiar*<br/>
-Rozmiar każdy element tablicy bajtów.
+Rozmiar każdego elementu tablicy, w bajtach.
 
-*Porównaj*<br/>
-Wskaźnik do procedury porównania. Drugi parametr jest wskaźnik do klucza dla wyszukiwania. Trzeci parametr jest wskaźnik do elementu tablicy ma zostać porównane z kluczem.
+*Porównanie*<br/>
+Wskaźnik do procedury porównania. Drugi parametr jest wskaźnikiem do klucza dla wyszukiwania. Trzeci parametr jest wskaźnik do elementu tablicy, który można porównać z kluczem.
 
 *Kontekst*<br/>
-Wskaźnik do obiektu, który mogą być używane w funkcji porównania.
+Wskaźnik do obiektu, który może być uzyskiwany w funkcji porównywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli *klucza* zostanie znaleziony, **_lsearch_s —** zwraca wskaźnik do elementu tablicy w *podstawowej* odpowiadającego *klucza*. Jeśli *klucza* nie zostanie znaleziony, **_lsearch_s —** zwraca wskaźnik do nowo dodany element na końcu tablicy.
+Jeśli *klucz* zostanie znaleziony, **_lsearch_s —** zwraca wskaźnik do elementu tablicy, od *podstawowy* odpowiadający *klucz*. Jeśli *klucz* nie zostanie znaleziony, **_lsearch_s —** zwraca wskaźnik do elementu nowo dodanym na końcu tablicy.
 
-Jeśli nieprawidłowe parametry są przekazywane do funkcji, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, następnie **errno** ustawiono **einval —** i funkcja zwraca **NULL**. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli nieprawidłowe parametry są przekazywane do funkcji, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, następnie **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*Klucz*|*base*|*Porównaj*|*Numer*|*Rozmiar*|**errno**|
+|*Klucz*|*base*|*Porównanie*|*Numer*|*Rozmiar*|**numer błędu**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**NULL**|wszystkie|wszystkie|wszystkie|wszystkie|**EINVAL —**|
-|wszystkie|**NULL**|wszystkie|!= 0|wszystkie|**EINVAL —**|
-|wszystkie|wszystkie|wszystkie|wszystkie|zero|**EINVAL —**|
-|wszystkie|wszystkie|**NULL**|Wystąpił|wszystkie|**EINVAL —**|
+|**NULL**|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|
+|Wszystkie|**NULL**|Wszystkie|!= 0|Wszystkie|**EINVAL**|
+|Wszystkie|Wszystkie|Wszystkie|Wszystkie|zero|**EINVAL**|
+|Wszystkie|Wszystkie|**NULL**|Usługi|Wszystkie|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lsearch_s —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucza* w tablicy *numer* z elementów *szerokość* bajtów. W odróżnieniu od **bsearch_s —**, **_lsearch_s —** nie wymaga tablicy ma zostać posortowana. Jeśli *klucza* nie zostanie znaleziony, następnie **_lsearch_s —** dodaje go do końca tablicy i zwiększa *numer*.
+**_Lsearch_s —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucz* tablicę *numer* elementów, z których każdy z *szerokość* bajtów. W odróżnieniu od **bsearch_s —**, **_lsearch_s —** nie wymaga tablicy, która ma zostać posortowana. Jeśli *klucz* nie zostanie znaleziony, następnie **_lsearch_s —** dodaje go do końca tablicy i zwiększa *numer*.
 
-*Porównania* funkcji jest wskaźnikiem do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. *Porównania* funkcja przyjmuje również wskaźnik do kontekstu jako pierwszego argumentu. **_lsearch_s —** wywołania *porównania* jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. *Porównaj* należy porównać elementy, a następnie wróć albo różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).
+*Porównania* funkcji jest wskaźnikiem do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relacje. *Porównania* funkcja również przyjmuje wskaźnik do kontekstu, który jako pierwszy argument. **_lsearch_s —** wywołania *porównania* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy przy każdym wywołaniu. *Porównaj* należy porównać elementów, a następnie wróć albo wartość różną od zera (tzn. elementy są różnych) lub od 0 (co oznacza, że elementy są identyczne).
 
-*Kontekstu* wskaźnika może być przydatna, jeśli struktura przeszukane danych jest częścią obiektu i *porównania* funkcji ma dostęp do elementów członkowskich obiektu. Na przykład kodu w *porównania* funkcji można rzutować wskaźnika void do odpowiedniego obiektu członków typu i dostępu do tego obiektu. Dodanie *kontekstu* sprawia, że wskaźnik **_lsearch_s —** bardziej bezpieczne, ponieważ dodatkowy kontekst mogą zostać użyte w celu uniknięcia ponownego rozpoczęcia błędów związanych z użyciem zmienne statyczne, aby udostępnić dane *porównania* funkcji.
+*Kontekstu* wskaźnik może być przydatne, jeśli struktura wyszukiwanych danych jest częścią obiektu i *porównania* funkcji ma dostęp do elementów członkowskich obiektu. Na przykład, możesz pisać kod w *porównania* funkcji można rzutować wskaźnika void do odpowiedniego obiektu typu i dostęp do elementów członkowskich tego obiektu. Dodanie *kontekstu* sprawia, że wskaźnik **_lsearch_s —** bezpieczniejsze, ponieważ dodatkowy kontekst można uniknąć błędów współużytkowania wątkowości, związanych z użyciem statyczne zmienne, aby udostępnić dane *porównania* funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -111,7 +101,7 @@ Jeśli nieprawidłowe parametry są przekazywane do funkcji, program obsługi ni
 |-------------|---------------------|
 |**_lsearch_s**|\<Search.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,18 +1,15 @@
 ---
 layout: HubPage
-ms.topic: conceptual
-title: Dokumentacji języka Visual C++ | Dokumentacja firmy Microsoft
+title: Dokumentacji języka Visual C++
 description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a64fd3c15f589fdd677354c43c9a5bb9a3484aa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677867"
 ---
 <div id="main" class="v2">
     <div class="container">

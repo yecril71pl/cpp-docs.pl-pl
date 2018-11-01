@@ -1,10 +1,6 @@
 ---
-title: strtoimax, _strtoimax_l —, wcstoimax —, _wcstoimax_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstoimax
 - _wcstoimax_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _wcstoimax_l
 - _strtoimax_l
 - _tcstoimax_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtoimax funciton
 - conversion functions
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58ee8f4cbceaa2972de9a40a4192b1175b25488d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578155"
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
-Konwertuje ciąg na wartość całkowitą typu największy obsługiwanych liczbę całkowitą ze znakiem.
+Konwertuje ciąg na wartość całkowitą typu największa oznaczona obsługiwana liczba całkowita.
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,47 +74,47 @@ intmax_t _wcstoimax_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Zerem ciąg do konwersji.
+Ciąg zakończony wartością null do konwersji.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowania.
+Wskaźnik znaku zatrzymującego skanowanie.
 
 *base*<br/>
-Podstawowy numer do użycia.
+Numer podstawowy do użycia.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtoimax** zwraca wartość, która jest reprezentowana w ciągu *strSource*, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku zwraca **INTMAX_MAX** lub **INTMAX_MIN**, i **errno** ustawiono **erange —**. Funkcja zwraca wartość 0, jeśli konwersja nie jest możliwe. **wcstoimax —** zwraca wartości analogously do **strtoimax**.
+**strtoimax** zwraca wartość, która jest reprezentowana w ciągu *strSource*, z wyjątkiem sytuacji, gdy ta reprezentacja spowodowałoby przepełnienie — w takiej sytuacji zwraca **INTMAX_MAX** lub **INTMAX_MIN**, i **errno** ustawiono **ERANGE**. Funkcja zwraca 0, jeśli nie można wykonać konwersji. **wcstoimax —** zwraca wartości analogicznie do **strtoimax**.
 
 **INTMAX_MAX** i **INTMAX_MIN** są zdefiniowane w stdint.h.
 
-Jeśli *strSource* jest **NULL** lub *podstawowej* jest różna od zera i mniejszym niż 2 lub większą niż 36 **errno** ustawiono **einval —** .
+Jeśli *strSource* jest **NULL** lub *podstawowy* jest różna od zera i albo mniejszy niż 2 albo większy niż 36, atrybut **errno** ustawiono **EINVAL** .
 
-Aby uzyskać więcej informacji na temat kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Strtoimax** funkcji konwertuje *strSource* do **intmax_t**. Wersja znaków dwubajtowych **strtoimax** jest **wcstoimax —**; *strSource* argument jest ciąg znaków dwubajtowych. W przeciwnym razie funkcje te działają tak samo. Zatrzymaj funkcjami odczytywania ciąg *strSource* pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub być może jest ona pierwszego znaku liczbowego, który jest większa niż lub równa *podstawowej*.
+**Strtoimax** funkcji konwertuje *strSource* do **intmax_t**. Wersja znaków dwubajtowych **strtoimax** jest **wcstoimax —**; jej *strSource* argumentu jest ciągiem znaku dwubajtowego. W przeciwnym wypadku te funkcje zachowują się identycznie. Obie funkcje przestają odczytywać ciąg *strSource* przy pierwszym znaku, ich nie może rozpoznać jako elementu liczby. Może to być kończący znak null lub pierwszy znak numeryczny, który jest większy niż lub równa może być *podstawowy*.
 
-Ustawienia regionalne **lc_numeric —** ustawienie kategorii określa rozpoznawania po znaku radix *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md). Funkcje, które nie mają **_l** sufiks Użyj bieżących ustawień regionalnych; **_strtoimax_l —** i **_wcstoimax_l —** są takie same jak odpowiednie funkcje, które nie mają **_l** sufiks z tą różnicą, że zamiast tego użyć ustawienia regionalne to jest Przekazano. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych; **_strtoimax_l —** i **_wcstoimax_l —** są identyczne z odpowiednimi funkcjami, które nie mają **_l** sufiks z tą różnicą, że używają w zamian ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie jest **NULL**, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji, która jest wskazywana przez *endptr*. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość *strSource* są przechowywane w lokalizacji, która jest wskazywana przez *endptr*.
+Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji, która jest wskazywany przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* znajduje się w lokalizacji, która jest wskazywany przez *endptr*.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
 |**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
 
-**strtoimax** oczekuje *strSource* wskaż ciąg następującą postać:
+**strtoimax** oczekuje *strSource* do wskaże ciąg o następującej postaci:
 
-> [*odstępem*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
+> [*odstępu*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
 
-A *odstępem* może zawierać znaków miejsca i karty, które są ignorowane. *cyfr* są co najmniej jeden cyfr dziesiętnych; *litery* to jeden lub więcej litery "" do "z" (lub "A" do "Z"). Pierwszy znak należący do tego formularza zatrzymuje skanowania. Jeśli *podstawowej* jest od 2 do 36, zostanie użyty jako podstawa liczby. Jeśli *podstawowej* ma wartość 0, znaków ciągu wskazywana przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem "0" i nie jest znak "x" lub "X", ciąg jest interpretowany jako ósemkową liczby całkowitej. Jeśli pierwszym znakiem jest "0" i jest znak "x" lub "X", ciąg jest interpretowany jako szesnastkową liczby całkowitej. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętną liczbą całkowitą. Litery "" do "z" (lub "" do "Z") mają przypisane wartości 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowej* są dozwolone. Pierwszy znak poza zakresem podstawy zatrzymuje skanowania. Na przykład jeśli *podstawowej* wynosi 0 i pierwszy znak skanowane to "0", zakłada, że całkowitą ósemkowe i się od znaku "8" lub "9" spowoduje zatrzymanie skanowania.
+A *odstępu* może składać się ze znaków spacji lub tabulatora, które są ignorowane. *cyfr* są co najmniej jedna cyfra dziesiętna; *litery* są co najmniej liter "" do "z" (lub "A" do "Z"). Pierwszy znak, który nie mieści się tym formularzu zatrzymuje skanowanie. Jeśli *podstawowy* jest między 2 a 36, zostanie użyty jako podstawa numeru. Jeśli *podstawowy* ma wartość 0, początkowe znaki ciągu wskazywany przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest "0", a drugim znakiem nie jest,, x"lub,, X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszym znakiem jest "0", a drugim znakiem jest,, x"lub,, X", ciąg jest interpretowany jako szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest,, 1 "do,, 9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "" do "z" (lub "" – "Z") są przypisane wartości od 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowy* są dozwolone. Pierwszy znak spoza zakresu podstawy zatrzymuje skanowanie. Na przykład jeśli *podstawowy* wynosi 0 i pierwszy znak skanowany to "0", zakłada, że ósemkowa liczba całkowitej i "8" lub "9" zatrzymałoby skanowania.
 
 ## <a name="requirements"></a>Wymagania
 
