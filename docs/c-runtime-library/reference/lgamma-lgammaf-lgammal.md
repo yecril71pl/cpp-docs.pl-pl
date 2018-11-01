@@ -1,11 +1,6 @@
 ---
-title: lgamma —, lgammaf —, lgammal | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533487"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
-Określa wartość bezwzględną liczby funkcji gamma określonej wartości logarytmu naturalnego.
+Określa wartość bezwzględną liczby funkcja gamma od określonej wartości logarytmu naturalnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,28 +61,28 @@ Wartość do obliczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca logarytm naturalny wartości bezwzględne funkcji gamma *x*.
+Jeśli to się powiedzie, zwraca logarytm naturalny wartości bezwzględnej funkcja gamma *x*.
 
-|Problem|Zwraca|
+|Problem|Wróć|
 |-----------|------------|
 |*x* = NaN|NaN|
 |*x* = ±0|+ INFINITY|
-|*x*= ujemnej liczby całkowitej|+ INFINITY|
+|*x*= ujemną liczbę całkowitą|+ INFINITY|
 |±INFINITY|+ INFINITY|
-|Błąd Bieguna|+ Huge_val — + HUGE_VALF, lub + HUGE_VALL|
-|Błąd przepełnienia zakresu|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd Bieguna|+ HUGE_VAL + HUGE_VALF, lub + HUGE_VALL|
+|Błąd w zakresie przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
 
-Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+Błędy są zgłaszane określonej [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **lgamma —** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **lgamma —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **lgamma —** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **lgamma —** zawsze przyjmuje i zwraca **double**.
 
-Jeśli x to liczba wymierna, funkcja zwraca logarytm silni (x - 1).
+Gdy wartość x jest Liczba wymierna, ta funkcja zwraca logarytm silnię (x - 1).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**lgamma —**, **lgammaf —**, **lgammal**|\<math.h>|\<cmath >|
 

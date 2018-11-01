@@ -1,10 +1,6 @@
 ---
-title: COS cosf —, cosl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: COS cosf —, cosl —
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519908"
 ---
 # <a name="cos-cosf-cosl"></a>COS cosf —, cosl —
 
@@ -72,20 +62,20 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus *x*. Jeśli *x* jest większa niż lub równa 263 lub mniejsza niż lub równa -263 dojdzie do utraty znaczenie w wyniku.
+Cosinus *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub równy -263, wystąpi utrata znaczenia w wyniku.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, IND|brak|**_DOMAIN —**|
-|GRANICACH INF|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|GRANICACH QNAN, ZNAJDŹ|brak|**_DOMENY**|
+|GRANICACH INF|**NIEPRAWIDŁOWY**|**_DOMENY**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cos** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **cos** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cos** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **cos** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |-------------|---------------------|-|
 |**COS**, **cosh**, **cosf —**|\<math.h>|\<cmath > lub \<math.h >|
 
@@ -93,7 +83,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [sin, sinf — sinl —](sin-sinf-sinl.md).
+Zobacz przykład w [sin, sinf — sinl —](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,20 +1,13 @@
 ---
-title: Tablica i WriteOnlyArray (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Tablica i WriteOnlyArray (C + +/ CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4423616a9a05268a68e6eff095a2503c3a1d0590
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530198"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C + +/ CX)
 

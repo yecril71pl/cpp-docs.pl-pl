@@ -1,11 +1,6 @@
 ---
-title: casin casinf, casinl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: casin casinf, casinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c977430528d8fa5834d3959cbf0645bf68165f0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539623"
 ---
 # <a name="casin-casinf-casinl"></a>casin casinf, casinl
 
-Pobiera arcus sinus liczby złożone z części gałąź poza przedział [-1, + 1] na rzeczywistych osi.
+Pobiera arcus sinus liczby zespolonej, cenowe gałąź poza interwał [-1, + 1] na rzeczywistych osi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex casinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus sinus liczby *z*, w radianach. Wynik jest niepowiązany osi urojony, a w interwale [-π/2 + π/2] rzeczywistych osi.
+Arcus sinus *z*, w radianach. Wynik jest nieograniczona, wzdłuż osi urojone, a w interwale [-π/2 + π/2] na rzeczywistych osi.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **casin** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **casin** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **casin** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **casin** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

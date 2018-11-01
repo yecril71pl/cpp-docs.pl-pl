@@ -1,12 +1,6 @@
 ---
-title: Domeny aplikacji i programu Visual C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Domeny aplikacji i program Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], application domains
 - application domains [C++], C++
@@ -14,21 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539272"
 ---
 # <a name="application-domains-and-visual-c"></a>Domeny aplikacji i programu Visual C++
 
-Jeśli masz `__clrcall` funkcji wirtualnej vtable będzie dla domeny aplikacji (appdomain). Jeśli obiekt jest tworzony w jednej domenie aplikacji, można wywołać tylko funkcji wirtualnej z wewnątrz tego elementu appdomain. W trybie mieszanym (**/CLR**) trzeba tablic metod wirtualnych na proces, jeśli nie ma typu `__clrcall` funkcji wirtualnych. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+Jeśli masz `__clrcall` funkcję wirtualną dla domeny aplikacji (appdomain) będzie vtable. Jeśli obiekt jest tworzony w jednej domenie aplikacji, może wywołać tylko funkcję wirtualną z w ramach tego elementu appdomain. W trybie mieszanym (**/CLR**) będą mieć na proces tablic metod wirtualnych, jeśli nie ma typu `__clrcall` funkcji wirtualnych. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 Aby uzyskać więcej informacji, zobacz:
 

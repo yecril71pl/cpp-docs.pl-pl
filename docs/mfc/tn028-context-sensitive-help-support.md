@@ -1,29 +1,19 @@
 ---
-title: 'TN028: Obsługa pomocy kontekstowej | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'TN028: obsługa pomocy kontekstowej'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.help
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive Help [MFC], MFC applications
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2bc7b3db974a34022089facb2536cf12c49b48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394169"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533422"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: obsługa pomocy kontekstowej
 
@@ -135,7 +125,7 @@ LOWORD(lParam) zawiera współrzędne urządzenia osi x, gdzie kliknięcia myszy
 HIWORD(lParam) zawiera współrzędną y.
 
 *wParam*<br/>
-nie jest używana i będzie mieć wartość zero. Jeśli wartość zwracana jest wartość różną od zera, WinHelp jest wywoływana z tego kontekstu. Jeśli wartość zwracana wynosi zero, okno nadrzędne jest wysyłane zapytanie w celu uzyskania pomocy.
+Nie jest używana i będzie mieć wartość zero. Jeśli wartość zwracana jest wartość różną od zera, WinHelp jest wywoływana z tego kontekstu. Jeśli wartość zwracana wynosi zero, okno nadrzędne jest wysyłane zapytanie w celu uzyskania pomocy.
 
 W wielu przypadkach można skorzystać z testowania trafień kodu, który może już istnieć. Zobaczyć wdrożenia `CToolBar::OnHelpHitTest` przykładem obsługi komunikatu WM_HELPHITTEST (kod wykorzystuje kod testowania trafienia używany dla przycisków i etykietek narzędzi w `CControlBar`).
 
