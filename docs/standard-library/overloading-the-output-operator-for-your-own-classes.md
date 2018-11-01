@@ -1,34 +1,24 @@
 ---
-title: Przeciążanie &lt; &lt; operatora dla własnych klas | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Przeciążanie &lt; &lt; Operator dla własnych klas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5f5129be6ebf7cac336373f00c7f9e989c23489
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 290491f7afb22873d60abb6662b470d8e7abefc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486934"
 ---
-# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Przeciążanie &lt; &lt; operatora dla własnych klas
+# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Przeciążanie &lt; &lt; Operator dla własnych klas
 
-Strumienie wyjściowe użyć wstawiania (`<<`) operatora dla standardowych typów. Można także przeciążać `<<` operatora dla własnych klas.
+Strumienie wyjściowe użyć wstawiania (`<<`) operator dla standardowych typów. Możesz także przeciążać `<<` operator dla własnych klas.
 
 ## <a name="example"></a>Przykład
 
-`write` Funkcja przykładzie pokazano użycie `Date` struktury. Data jest idealny kandydatem do klasy C++, w którym elementy członkowskie danych (miesiąc, dzień i rok) są ukrywane. Strumień wyjściowy jest wyświetlanie takie struktury logicznej miejsca docelowego. Ten kod wyświetla data using `cout` obiektu:
+`write` Funkcja przykładzie pokazano użycie `Date` struktury. Data jest idealnym rozwiązaniem Release candidate dla klasy języka C++, w której elementy członkowskie danych (miesiąc, dzień i rok) są ukryte w widoku. Strumień wyjściowy jest logiczne miejsce docelowe do wyświetlania takiej struktury. Ten kod wyświetla datę przy użyciu `cout` obiektu:
 
 ```cpp
 Date dt(1, 2, 92);
@@ -36,7 +26,7 @@ Date dt(1, 2, 92);
 cout <<dt;
 ```
 
-Aby uzyskać `cout` do akceptowania `Date` obiektu po operatorze wstawiania, przeciążenia operatora wstawiania, aby rozpoznać `ostream` obiektu po lewej stronie i `Date` po prawej stronie. Przeciążone `<<` funkcji operatora następnie musi być zadeklarowany jako przyjaciel klasy `Date` , można uzyskać dostępu do danych prywatnych w `Date` obiektu.
+Aby uzyskać `cout` do akceptowania `Date` obiektu po operatorze wstawiania, przeciążanie operatora wstawiania, rozpoznawał `ostream` obiektu po lewej stronie i `Date` po prawej stronie. Przeciążone `<<` funkcji operatora następnie musi być zadeklarowana jako zaprzyjaźniona klasy `Date` aby mogą uzyskiwać dostęp do prywatnych danych w ramach `Date` obiektu.
 
 ```cpp
 // overload_date.cpp
@@ -74,7 +64,7 @@ int main()
 
 ## <a name="remarks"></a>Uwagi
 
-Przeciążony operator zwraca odwołanie do oryginalnej `ostream` obiektu, co oznacza, że można łączyć wstawienia:
+Przeciążony operator zwraca odwołanie do oryginalnego `ostream` obiektu, co oznacza, że można łączyć wstawienia:
 
 ```cpp
 cout <<"The date is" <<dt <<flush;

@@ -1,10 +1,6 @@
 ---
-title: _creat —, _wcreat — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _creat, _wcreat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _creat
 - _wcreat
@@ -27,8 +23,6 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451852"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494994"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -72,25 +62,25 @@ int _wcreat(
 Nazwa nowego pliku.
 
 *pmode*<br/>
-Ustawienie uprawnień.
+Ustawienie uprawnienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te, w przypadku powodzenia zwracają deskryptorów plików do utworzonego pliku. W przeciwnym przypadku Zwróć -1, funkcje i ustaw **errno** zgodnie z poniższą tabelą.
+Tych funkcji, jeśli to się powiedzie, przywrócenie deskryptora pliku utworzonego pliku. W przeciwnym wypadku te funkcje zwracają wartość -1 i ustaw **errno** jak pokazano w poniższej tabeli.
 
 |**errno** ustawienie|Opis|
 |---------------------|-----------------|
-|**EACCES**|*Nazwa pliku* Określa istniejący plik tylko do odczytu lub określa katalog, nie plikiem.|
-|**EMFILE —**|Nie więcej deskryptorów plików są dostępne.|
-|**ENOENT —**|Nie można odnaleźć określonego pliku.|
+|**EACCES**|*Nazwa pliku* Określa istniejący plik tylko do odczytu lub określa katalog, a nie plikiem.|
+|**EMFILE**|Więcej deskryptorów plików nie są dostępne.|
+|**ENOENT**|Nie można odnaleźć określonego pliku.|
 
-Jeśli *filename* jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
+Jeśli *filename* jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Creat —** funkcji lub tworzy nowy plik otwiera i obcina już istniejący. **_wcreat —** jest wersja znaków dwubajtowych **_creat —**; *filename* argument **_wcreat —** jest ciągiem znaków dwubajtowych. **_wcreat —** i **_creat —** zachowują się tak samo w przeciwnym razie wartość.
+**_Creat —** — funkcja lub tworzy nowy plik zostanie otwarty i obcina istniejącą grupę. **_wcreat —** to wersja znaku dwubajtowego **_creat —**; *filename* argument **_wcreat —** jest ciągiem znaku dwubajtowego. **_wcreat —** i **_creat —** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -98,17 +88,17 @@ Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_do
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat —**|**_creat**|**_creat**|**_wcreat**|
 
-Jeśli plik określony przez *filename* nie istnieje, plik jest tworzony przy użyciu ustawienia dane uprawnienie i jest otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnień umożliwia zapisywanie, **_creat —** obcina plik ma długość 0, niszczenie zawartość poprzedniego i otwarcie go do zapisu. Ustawienie uprawnień *pmode*, dotyczy tylko nowo utworzone pliki. Nowy plik odbiera ustawienia określonego uprawnienia po jego zamknięciu po raz pierwszy. Wyrażenie całkowite *pmode* zawiera jeden lub oba manifestu stałe **_s_iwrite —** i **_s_iread —** zdefiniowanej w SYS\Stat.h. Gdy zarówno stałe są podane, są połączone z bitowego or — operator ( **&#124;** ). *Pmode* parametr jest ustawiony na jedną z następujących wartości.
+Jeśli plik określony przez *filename* nie istnieje, nowy plik zostanie utworzony przy użyciu ustawienia dane uprawnienie i jest otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnienia umożliwia zapisywanie, **_creat —** obcina pliku długość 0, niszczenie poprzednią zawartość i otwiera go do zapisu. Ustawienie uprawnienia *pmode*, dotyczy tylko dla nowo tworzonych plików. Nowy plik odbiera ustawienia określone uprawnienie jest zamknięte po raz pierwszy. Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba stałe manifestu **_S_IWRITE** i **_S_IREAD**zdefiniowaną w SYS\Stat.h. Gdy oba stałe są podane, są połączone przy użyciu bitowego operatora or — operator ( **&#124;** ). *Pmode* parametr jest ustawiony na jedną z następujących wartości.
 
 |Wartość|Definicja|
 |-----------|----------------|
-|**_S_IWRITE —**|Zapisywanie dozwolone.|
-|**_S_IREAD —**|Odczytywanie dozwolone.|
-|**_S_IREAD —** &AMP;#124; **_S_IWRITE —**|Odczytywanie i zapisywanie dozwolone.|
+|**_S_IWRITE**|Zapisywanie jest dozwolone.|
+|**_S_IREAD**|Odczytywanie dozwolone.|
+|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Odczyt i zapis dozwolone.|
 
-Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. Wszystkie pliki są zawsze do odczytu; Nie można udzielić uprawnienia tylko do zapisu. Tryby **_s_iwrite —** i **_s_iread —** | **_s_iwrite —** następnie są równoważne. Pliki otwierane przy użyciu **_creat —** są zawsze otwierane w trybie zgodności (zobacz [_sopen —](sopen-wsopen.md)) z **_sh_denyno —**.
+Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. Wszystkie pliki są zawsze czytelny; nie jest możliwe przyznać uprawnienia tylko do zapisu. Tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** następnie są równoważne. Pliki otwierane przy użyciu **_creat —** zawsze są otwarte w trybie zgodności (zobacz [_sopen](sopen-wsopen.md)) za pomocą **_SH_DENYNO**.
 
-**_creat —** stosuje bieżącą maskę pliku uprawnień do *pmode* przed ustawieniem uprawnienia (zobacz [_umask —](umask.md)). **_creat —** głównie w celu zachowania zgodności z poprzedniej biblioteki. Wywołanie **_otwórz** z **_o_creat —** i **_o_trunc —** w *oflag* parametru jest odpowiednikiem **_creat —** lub za nowy kod.
+**_creat —** stosuje bieżące maskę uprawnień do pliku, aby *pmode* przed ustawieniem uprawnienia (zobacz [_umask —](umask.md)). **_creat —** głównie w celu zachowania zgodności z poprzedniej biblioteki. Wywołanie **_otwórz** z **_O_CREAT** i **_O_TRUNC** w *oflag* parametr jest równoważny **_creat —** i jest preferowane dla nowego kodu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -117,7 +107,7 @@ Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. Ws
 |**_creat**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 |**_wcreat**|\<IO.h > lub \<wchar.h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -156,7 +146,7 @@ Created data file.
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_chsize](chsize.md)<br/>
 [_close](close.md)<br/>

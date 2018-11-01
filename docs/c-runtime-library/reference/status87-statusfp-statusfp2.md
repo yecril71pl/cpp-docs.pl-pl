@@ -1,10 +1,6 @@
 ---
-title: _status87 —, _statusfp —, _statusfp2 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _status87, _statusfp, _statusfp2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -29,8 +25,6 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69297d7ff1e3ec40cfe4fc22dec86c356d1697d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597530"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
-Pobiera słowa stanu zmiennoprzecinkowych.
+Pobiera wyrazy stanu zmiennoprzecinkowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,24 +60,24 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 ### <a name="parameters"></a>Parametry
 
 *px86*<br/>
-Ten adres jest wypełniony słowa stanu dla x87 zmiennoprzecinkowe jednostki.
+Ten adres jest wypełniony wyrazami stanu dla x87 jednostki zmiennoprzecinkowej.
 
 *pSSE2*<br/>
-Ten adres jest wypełniony słowa stanu jednostki zmiennoprzecinkowe SSE2.
+Ten adres jest wypełniony wyrazami stanu dla jednostki zmiennoprzecinkowej SSE2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Aby uzyskać **_status87 —** i **_statusfp —**, bity wartość, która jest zwracana wskazują stan zmiennoprzecinkowy. Zobacz FLOAT. H Uwzględnij plik dla definicji usługi bits, które są zwracane przez **_statusfp —**. Wiele funkcji biblioteki matematyczne zmodyfikować programu word zmiennoprzecinkowy stan może mieć nieprzewidywalne skutki. Optymalizacja można zmienić kolejność, łączenie i wyeliminować operacji zmiennoprzecinkowych wokół wywołań **_status87 —**, **_statusfp —** i powiązane funkcje. Użyj [/Od (Wyłącz (Debuguj))](../../build/reference/od-disable-debug.md) — opcja kompilatora lub [fenv_access](../../preprocessor/fenv-access.md) dyrektywa pragma, aby zapobiec funkcje optymalizacji, które zmienić kolejność operacji zmiennoprzecinkowych. Wartości zwracanych z **_clearfp —** i **_statusfp —**, a także parametrów zwracanych z **_statusfp2 —**, są bardziej niezawodne, jeśli wykonywane są operacje mniejszej liczby zmiennoprzecinkowe między znane stanami słowa stanu zmiennoprzecinkowych.
+Aby uzyskać **_status87 —** i **_statusfp —**, bity w wartości zwracanej wskazują status sterowania zmiennoprzecinkowego. Zobacz wartość ZMIENNOPRZECINKOWA. H dołączyć plik, aby uzyskać pełną definicję bitów, które są zwracane przez **_statusfp —**. Wiele funkcji bibliotek matematycznych zmodyfikować słowa stanu zmiennoprzecinkowego, za pomocą nieprzewidywalne rezultaty. Optymalizacja można zmienić kolejność, łączenie i wyeliminować operacji zmiennoprzecinkowych wokół wywołania **_status87 —**, **_statusfp —** i pokrewnych funkcji. Użyj [/Od (Wyłącz (Debuguj))](../../build/reference/od-disable-debug.md) — opcja kompilatora lub [fenv_access](../../preprocessor/fenv-access.md) dyrektywa pragmy, aby zapobiec optymalizacje, które zmieniać kolejność operacji zmiennoprzecinkowych. Zwracane wartości **_clearfp —** i **_statusfp —** i również zwracany parametry **_statusfp2 —**, są bardziej wiarygodne, gdy mniej operacji zmiennoprzecinkowych jest wykonywane między znanymi stanami statusu słowa zmiennoprzecinkowego.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Statusfp —** funkcja pobiera słowa stanu zmiennoprzecinkowych. Pobieranie słowa stanu jest kombinacją stanu procesora zmiennoprzecinkowych i innych warunków wykrytych przez program obsługi wyjątku zmiennoprzecinkowe — na przykład przepełnienie stosu zmiennoprzecinkowych i niedopełnienie. Zamaskowana wyjątki są sprawdzane pod kątem przed zawartość słowa stanu są zwracane. Oznacza to, wywołujący informowanie o oczekujących wyjątków. Na x86 platform, **_statusfp —** zwraca kombinację x87 i stan zmiennoprzecinkowy SSE2. Na x64 platform, stan, który jest zwracany jest na podstawie SSE MXCSR stanu. Na platformach ARM **_statusfp —** zwraca stan z rejestru FPSCR.
+**_Statusfp —** funkcja pobiera zmiennoprzecinkowe wyrazy stanu. Wyrazy stanu jest kombinacją stanu zmiennoprzecinkowego procesora i innych warunków wykrytych przez program obsługi wyjątków zmiennoprzecinkowych — na przykład przepełnienie stosu zmiennoprzecinkowego i niedomiaru. Zaznaczona wyjątki są sprawdzane zanim zawartości wyrazów stanu są zwracane. Oznacza to, że obiekt wywołujący jest informowany o oczekujących wyjątkach. Na x86 platformach **_statusfp —** zwraca połączenie x87 i stan zmiennoprzecinkowego SSE2. Na x64 platform, stan, który jest zwracany jest oparty na stanie SSE MXCSR. Na platformach ARM **_statusfp —** zwraca stan z rejestru fpscr.
 
-**_statusfp —** jest niezależne od platformy, przenośne wersja **_status87 —**. Jest on identyczny **_status87 —** na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. W celu zapewnienia przenośne do wszystkich architektury zmiennoprzecinkowe kodu, użyj **_statusfp —**. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej **_status87 —** lub **_statusfp —**.
+**_statusfp —** jest niezależny od platformy, przenośną wersją **_status87 —**. Jest on identyczny **_status87 —** na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Aby upewnić się, że kod zmiennoprzecinkowy jest przenośny do wszystkich architektur, należy użyć **_statusfp —**. Jeśli są przeznaczone tylko dla x86 platform, można użyć dowolnego **_status87 —** lub **_statusfp —**.
 
-Firma Microsoft zaleca **_statusfp2 —** dla mikroukłady (na przykład Pentium IV), które x87 i SSE2 procesora zmiennoprzecinkowych. Aby uzyskać **_statusfp2 —**, adresy są wypełniane przy użyciu słowa stanu zmiennoprzecinkowe x87 lub procesor zmiennoprzecinkowe SSE2. Mikroukładu obsługującego x87 i procesorów zmiennoprzecinkowe SSE2, EM_AMBIGUOUS jest ustawiona na 1, gdy **_statusfp —** lub **_controlfp —** jest używany i akcji jest niejednoznaczne, ponieważ on można odwoływać się do x87 lub SSE2 Pobieranie słowa stanu zmiennoprzecinkowych. **_Statusfp2 —** funkcja jest obsługiwana tylko na x86 platform.
+Firma Microsoft zaleca **_statusfp2 —** na czipy (na przykład Pentium IV), które mają zarówno x87, jak i procesora zmiennoprzecinkowego SSE2. Aby uzyskać **_statusfp2 —**, adresy są wypełnione przy użyciu słowa stanu zmiennoprzecinkowego dla obu x87 lub procesora zmiennoprzecinkowego SSE2. Przypadku chipa, który obsługuje x87 i procesory zmiennoprzecinkowe SSE2, obiekt EM_AMBIGUOUS jest ustawiony na 1, gdy **_statusfp —** lub **_controlfp** jest używany i czynność była niejednoznaczna, ponieważ mogła się odwołać do x87 lub SSE2 słowa stanu zmiennoprzecinkowego. **_Statusfp2 —** funkcja jest obsługiwana tylko na x86 platform.
 
-Te funkcje nie są przydatne w przypadku [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego (CLR) obsługuje tylko domyślna dokładność zmiennoprzecinkowych.
+Te funkcje nie są przydatne w przypadku [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego (CLR) obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
 ## <a name="requirements"></a>Wymagania
 

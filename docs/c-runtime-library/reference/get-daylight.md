@@ -1,10 +1,6 @@
 ---
-title: _get_daylight — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,27 +20,21 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444645"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
-Pobiera przesunięcie czasu letniego w godzinach.
+Pobiera przesunięcie czasu w godzinach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,20 +44,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametry
 
-*Godziny*<br/>
-Przesunięcie w godzinach czasu letniego.
+*godz.*<br/>
+Przesunięcie w godzinach okresu obowiązywania czasu letniego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zera w razie powodzenia lub **errno** wartość, gdy wystąpi błąd.
+Zero, jeśli kończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_daylight —** funkcja pobiera liczbę godzin w czasu letniego jako liczba całkowita. Jeśli obowiązuje czas letni, przesunięcie domyślny to jedna godzina (chociaż kilka regionów obserwować przesunięcie dwóch godzin).
+**_Get_daylight —** funkcja pobiera liczbę godzin w czasu letniego jako liczba całkowita. Jeśli obowiązuje czas letni, przesunięcie domyślny to jedna godzina (chociaż kilku regionach obserwować przesunięcie dwóch godzin).
 
-Jeśli *godziny* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Jeśli *godzin* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
 
-Firma Microsoft zaleca, aby użyć tej funkcji zamiast makra **_daylight** lub przestarzałych funkcji **__daylight**.
+Firma Microsoft zaleca, aby użyć tej funkcji zamiast makro **_daylight** lub zaniechanej funkcji **__daylight**.
 
 ## <a name="requirements"></a>Wymagania
 

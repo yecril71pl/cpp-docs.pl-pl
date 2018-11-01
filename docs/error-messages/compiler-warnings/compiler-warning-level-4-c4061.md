@@ -1,39 +1,29 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4061 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 4) C4061
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4061
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d0086ea5e590c7183024bc4dcc93e2f2522f483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453277"
 ---
-# <a name="compiler-warning-level-4-c4061"></a>Kompilator C4061 ostrzegawcze (poziom 4)
+# <a name="compiler-warning-level-4-c4061"></a>Kompilator ostrzeżenie (poziom 4) C4061
 
-> Moduł wyliczający "*identyfikator*"w switch wyliczenia"*wyliczenie*" nie jest jawnie obsługiwany przez etykietę case
+> Moduł wyliczający "*identyfikator*'w przełączniku Enum'*wyliczenie*" nie jest jawnie obsługiwany przez etykietę case
 
 Moduł wyliczający nie ma żadnych skojarzony program obsługi w `switch` instrukcji.
 
-To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4061; Dodawanie przypadku dla brakujących modułu wyliczającego ustalenie:
+Poniższy przykład spowoduje wygenerowanie C4061; Dodaj przypadek dla brakuje typu wyliczeniowego rozwiązać problem:
 
 ```cpp
 // C4061.cpp

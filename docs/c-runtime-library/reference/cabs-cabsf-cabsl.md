@@ -1,11 +1,6 @@
 ---
-title: pliki cab, cabsf, cabsl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: pliki cab, cabsf, cabsl —
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623968"
 ---
 # <a name="cabs-cabsf-cabsl"></a>pliki cab, cabsf, cabsl —
 
-Pobiera wartość bezwzględna liczby złożonej.
+Pobiera wartość bezwzględną liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,7 +64,7 @@ long double cabsl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych.
+Liczbą.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -83,20 +72,20 @@ Wartość bezwzględna *z*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cabs** które trwają **_Fcomplex** lub **_Lcomplex** wartości i wróć **float** lub **długi** **podwójne** wartości. W programie C **cabs** zawsze ma **_Dcomplex** wartości i zwraca **podwójne** wartość.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cabs** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float** lub **długie** **double** wartości. W programie C **cabs** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**pliki cab**, **cabsf**, **cabsl —**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[normy normf, norml](norm-normf-norml1.md)<br/>
+[norm normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

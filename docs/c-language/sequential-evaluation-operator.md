@@ -1,27 +1,17 @@
 ---
-title: Operator obliczania sekwencyjnego | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Operator obliczania sekwencyjnego
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], sequential-evaluation
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527195"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 

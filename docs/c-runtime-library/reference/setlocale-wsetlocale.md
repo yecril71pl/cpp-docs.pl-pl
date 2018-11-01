@@ -1,10 +1,6 @@
 ---
-title: setLocale, _wsetlocale — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: setlocale, _wsetlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsetlocale
 - setlocale
@@ -25,8 +21,6 @@ f1_keywords:
 - _wsetlocale
 - _tsetlocale
 - setlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - wsetlocale function
 - setlocale function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548542"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -74,7 +64,7 @@ Specyfikator ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli jest to prawidłowy *ustawień regionalnych* i *kategorii* podano, zwraca wskaźnik do ciągu skojarzonego z określonym *ustawień regionalnych* i *kategorii*. Jeśli *ustawień regionalnych* lub *kategorii* jest nieprawidłowy, zwraca wskaźnik null i bieżące ustawienia regionalne programu nie są zmieniane.
+Jeśli jest to prawidłowy *ustawień regionalnych* i *kategorii* są podane, zwraca wskaźnik do ciągu skojarzonego z określonym *ustawień regionalnych* i *kategorii*. Jeśli *ustawień regionalnych* lub *kategorii* jest nieprawidłowe, zwraca pusty wskaźnik, a bieżące ustawienia regionalne programu nie są zmieniane.
 
 Na przykład, wywołanie
 
@@ -88,42 +78,42 @@ ustawia wszystkie kategorie, zwracając tylko ciąg
 en-US
 ```
 
-Możesz skopiować długość ciągu zwróconego przez **setlocale** Aby przywrócić tę część informacji o ustawieniach regionalnych programu. Magazyn lokalny globalny lub wątku jest używana do ciągu zwróconego przez **setlocale**. Później wywołań **setlocale** zastąpić ciąg, co spowoduje unieważnienie wskaźniki ciąg zwrócony przez wcześniejszą wywołania.
+Można skopiować ciąg zwracany przez **setlocale** Aby przywrócić tę część informacji o ustawieniach regionalnych programu. Magazyn lokalny globalny lub wątku jest używana dla ciągu zwracanego przez **setlocale**. Późniejsze wywołania **setlocale** zastępują ten ciąg, co unieważnia wskaźniki ciągu zwracane przez poprzednie wywołania.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj **setlocale** funkcji, aby ustawić, zmienianie lub zapytania niektórych lub wszystkich aktualnych informacji ustawień regionalnych program określony przez *ustawień regionalnych* i *kategorii*. *Ustawienia regionalne* odwołuje się do tej lokalizacji (kraj/region i język), dla którego można dostosować niektórych aspektów programu. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych. Jeśli ustawisz *ustawień regionalnych* do domyślnego ciągu dla języka, który ma wiele formularzy obsługiwane na komputerze, należy sprawdzić **setlocale** zwrócić wartość języka, w którym znajduje się w celu. Na przykład jeśli ustawisz *ustawień regionalnych* na "chiński" zwracana wartość może być "chiński uproszczony" lub "chiński tradycyjny".
+Użyj **setlocale** funkcję, aby ustawić, zmienić lub sprawdzić niektóre lub wszystkie bieżące informacje o ustawieniach regionalnych programu określony przez *ustawień regionalnych* i *kategorii*. *Ustawienia regionalne* odwołuje się do tej lokalizacji (kraj/region i język), dla którego można dostosować niektóre aspekty programu. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych. Jeśli ustawisz *ustawień regionalnych* na domyślny ciąg języka, który ma wiele form obsługiwanych na komputerze, należy sprawdzić **setlocale** wartości zwracanej, aby zobaczyć, jaki język jest aktywna. Na przykład jeśli ustawisz *ustawień regionalnych* na "chiński", zwracana wartość może być "chiński uproszczony" lub "chiński tradycyjny".
 
-**_wsetlocale —** jest wersja znaków dwubajtowych **setlocale**; *ustawień regionalnych* argumentów i wartości **_wsetlocale —** są ciągami znaków dwubajtowych. **_wsetlocale —** i **setlocale** zachowują się tak samo w przeciwnym razie wartość.
+**_wsetlocale** to wersja znaku dwubajtowego **setlocale**; *ustawień regionalnych* argument i wartość zwracana przez **_wsetlocale** są ciągami znaków dwubajtowych. **_wsetlocale** i **setlocale** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale —**|**setlocale**|**setlocale**|**_wsetlocale —**|
+|**_tsetlocale —**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-*Kategorii* argument określa części informacji o ustawieniach regionalnych programu, których dotyczy problem. Makra używane dla *kategorii* i części programu wpływają na są następujące:
+*Kategorii* argument określa części informacji o ustawieniach regionalnych programu, których to dotyczy. Makra używane do *kategorii* i części programu, które wpływają, są następujące:
 
 |*Kategoria* flagi|Dotyczy|
 |-|-|
-**LC_ALL —**|Wszystkie kategorie, wymienione poniżej.
-**LC_COLLATE —**|**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji.
-**LC_CTYPE —**|Funkcje obsługi znaków (z wyjątkiem **isdigit —**, **isxdigit —**, **mbstowcs —**, i **mbtowc —**, którego dotyczy to).
-**LC_MONETARY —**|Formatowanie walutowa informacje zwracane przez **localeconv —** funkcji.
-**LC_NUMERIC —**|Dziesiętnego znak dla procedury sformatowane dane wyjściowe (takich jak **printf**) dla procedury konwersji danych i -pieniężnego formatowania informacje zwracane przez **localeconv —**. Oprócz znaku dziesiętnego **lc_numeric —** ciągu zwróconego przez kontrolę separator tysięcy zestawów i grupowanie [localeconv —](localeconv.md).
-**LC_TIME —**|**Strftime —** i **wcsftime —** funkcji.
+**LC_ALL**|Wszystkie kategorie, wymienione poniżej.
+**LC_COLLATE**|**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji.
+**LC_CTYPE**|Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian).
+**LC_MONETARY**|Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji.
+**LC_NUMERIC**|Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md).
+**LC_TIME**|**Strftime** i **wcsftime** funkcji.
 
-Ta funkcja sprawdza poprawność parametru kategorii. Jeśli parametr kategorii nie jest jedną z wartości podane w poprzedniej tabeli, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia **errno** do **einval —** i zwraca **NULL**.
+Ta funkcja sprawdza poprawność parametru kategorii. Jeśli parametr kategorii nie jest jedną z wartości podanych w powyższej tabeli, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** do **EINVAL** i zwraca **NULL**.
 
-*Ustawień regionalnych* argument jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Informacje o formacie *ustawień regionalnych* argumentu, zobacz [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Jeśli *ustawień regionalnych* punktów na pusty ciąg, ustawienia regionalne są zdefiniowane w implementacji środowiska macierzystego. Wartość **C** określa minimalne środowisko zgodnych ANSI C tłumaczenia. **C** ustawień regionalnych przy założeniu, że wszystkie **char** typy danych są 1 bajt i ich wartość jest zawsze mniej niż 256.
+*Ustawień regionalnych* argument jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Aby uzyskać informacje o formacie parametru *ustawień regionalnych* argumentów, zobacz [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Jeśli *ustawień regionalnych* wskazuje na pusty ciąg, ustawienia regionalne są natywnym środowiskiem zdefiniowanych w implementacji. Wartość **C** określa minimalne środowisko odpowiadające ANSI dla translacji C. **C** ustawień regionalnych zakładają, że wszystkie **char** 1 bajt są typy danych i ich wartość jest zawsze mniejsza niż 256.
 
 W momencie uruchamiania programu wykonywany jest odpowiednik następującej instrukcji:
 
 `setlocale( LC_ALL, "C" );`
 
-*Ustawień regionalnych* argument może zająć Nazwa ustawień regionalnych, ciąg języka ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i strony kodowej. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie te opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak, takich jak UTF-7 lub UTF-8. Jeśli podasz strony kodowej, UTF-7 lub UTF-8, **setlocale** zakończy się niepowodzeniem, zwracając **NULL**. Zestaw nazw ustawień regionalnych obsługiwane przez **setlocale** opisanym w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Ciągi kraj/region i język obsługiwany przez zestaw **setlocale** są wymienione w [ciągi języka](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
+*Ustawień regionalnych* argument może przyjąć nazwy ustawień regionalnych, ciąg języka, ciąg języka i kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie te opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak, takich jak UTF-7 lub UTF-8. Jeśli podasz wartość strony kodowej UTF-7 lub UTF-8, **setlocale** zakończy się niepowodzeniem, zwracając **NULL**. Zestaw nazw ustawień regionalnych obsługiwanych przez **setlocale** są opisane w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu, obsługiwany przez **setlocale** są wymienione w [Language Strings](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
 
-Pustego wskaźnika, który jest przekazywany jako *ustawień regionalnych* argument nakazuje **setlocale** do badania zamiast można ustawić międzynarodowe środowiska. Jeśli *ustawień regionalnych* argument jest pusty wskaźnik, bieżących ustawień regionalnych programu nie zostanie zmieniona. Zamiast tego **setlocale** zwraca wskaźnik na ciąg, z którym skojarzony jest *kategorii* o bieżące ustawienia regionalne wątku. Jeśli *kategorii* argument jest **lc_all —**, funkcja zwraca ciąg, który wskazuje bieżące ustawienie każdej kategorii, oddzielając je średnikami. Na przykład, sekwencja wywołań
+Pusty wskaźnik, który jest przekazywany jako *ustawień regionalnych* argument nakazuje **setlocale** kwerendy zamiast ustawić środowisko międzynarodowe. Jeśli *ustawień regionalnych* argument jest wskaźnikiem typu null, bieżących ustawień regionalnych programu nie jest zmieniany. Zamiast tego **setlocale** zwraca wskaźnik do ciągu, który jest skojarzony z *kategorii* bieżących ustawień regionalnych dla wątku. Jeśli *kategorii* argument jest **LC_ALL**, funkcja zwraca ciąg, wskazujący bieżące ustawienie każdej kategorii, oddzielając je średnikami. Na przykład, sekwencja wywołań
 
 ```C
 // Set all categories and return "en-US"
@@ -139,9 +129,9 @@ zwraca
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-czyli ciąg, z którym skojarzony jest **lc_all —** kategorii.
+który jest ciągiem, który jest skojarzony z **LC_ALL** kategorii.
 
-Poniższe przykłady dotyczą **lc_all —** kategorii. Zamiast numeru strony kodowej można użyć jednego z ciągów „.OCP” lub „.ACP”, aby określić odpowiednio domyślną stronę kodową OEM użytkownika i domyślną stronę kodową ANSI użytkownika.
+Następujące przykłady odnoszą się do **LC_ALL** kategorii. Zamiast numeru strony kodowej można użyć jednego z ciągów „.OCP” lub „.ACP”, aby określić odpowiednio domyślną stronę kodową OEM użytkownika i domyślną stronę kodową ANSI użytkownika.
 
 - `setlocale( LC_ALL, "" );`
 
@@ -157,15 +147,15 @@ Poniższe przykłady dotyczą **lc_all —** kategorii. Zamiast numeru strony ko
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Ustawia ustawienia regionalne Nazwa ustawień regionalnych, które jest określane przez  *\<localename >*.
+   Ustawia ustawienia regionalne nazwy ustawień regionalnych, który jest wskazywany przez  *\<localename >*.
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Ustawia ustawień regionalnych na język i kraj/region wskazywanym przez  *\<języka >* i  *\<kraju >*, wraz z domyślną stronę kodową uzyskany z hosta System operacyjny.
+   Ustawia ustawienia regionalne na język i kraj/region, wskazane przez  *\<języka >* i  *\<kraju >*, wraz z domyślną stroną kodową uzyskany z hosta System operacyjny.
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Ustawia wskazuje ustawienia regionalne do języka, kraju/regionu i strona kodowa  *\<języka >*,  *\<kraju >*, i  *\<code_page >* ciągów. Można użyć różnych kombinacji języka, kraju/regionu i strony kodowej. Na przykład, to wywołanie ustawia ustawienia regionalne na francuski-Kanada ze stroną kodową 1252:
+   Ustawia ustawienia regionalne na język, kraj/region i stronę kodową wskazane przez  *\<języka >*,  *\<kraju >*, i  *\<code_page >* ciągów. Można użyć różnych kombinacji języka, kraju/regionu i strony kodowej. Na przykład, to wywołanie ustawia ustawienia regionalne na francuski-Kanada ze stroną kodową 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -179,7 +169,7 @@ Poniższe przykłady dotyczą **lc_all —** kategorii. Zamiast numeru strony ko
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Ustawia ustawień regionalnych na język, w którym jest określane przez  *\<języka >* i używa domyślnego kraju/regionu, dla określonego języka i ANSI użytkownika domyślna strona kodowa w danym kraju/regionie uzyskany z hosta System operacyjny. Na przykład następujące wywołań **setlocale** działają tak samo:
+   Ustawia ustawienia regionalne na język, który jest wskazywany przez  *\<języka >* i używa domyślnego kraju/regionu dla określonego języka i ANSI użytkownika domyślnej strony kodowej dla kraju/regionu uzyskany z hosta System operacyjny. Na przykład, następujące wywołania **setlocale** są funkcjonalnie równoważne:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -191,24 +181,24 @@ Poniższe przykłady dotyczą **lc_all —** kategorii. Zamiast numeru strony ko
 
 - `setlocale( LC_ALL, ".<code_page>" );`
 
-   Ustawia wartość wskazywana przez stronę kodową *< code_page >*, jak również domyślny kraj/region i język (zgodnie z definicją według systemu operacyjnego hosta) dla określonej strony kodowej.
+   Ustawia stronę kodową na wartość wskazaną przez *< code_page >*, wraz z domyślnym krajem/regionem i językiem (zdefiniowanym przez system operacyjny hosta) dla określonej strony kodowej.
 
-Kategoria musi być równa albo **lc_all —** lub **lc_ctype —** dokonanie zmiany strony kodowej. Na przykład jeśli domyślny kraj/region i język systemu operacyjnego hosta "Stanów Zjednoczonych" i "Angielski", dwa wywołań **setlocale** działają tak samo:
+Kategoria musi być albo **LC_ALL** lub **LC_CTYPE** aby strony kodowej. Na przykład, jeśli domyślny kraj/region i język systemu operacyjnego hosta "United States" i "English", następujące dwa wywołania **setlocale** są funkcjonalnie równoważne:
 
 `setlocale( LC_ALL, ".1252" );`
 
 `setlocale( LC_ALL, "English_United States.1252");`
 
-Aby uzyskać więcej informacji, zobacz [setlocale](../../preprocessor/setlocale.md) dyrektywa pragma w [odwołania preprocesora języka C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
+Aby uzyskać więcej informacji, zobacz [setlocale](../../preprocessor/setlocale.md) dyrektywa pragmy w [C/C++ Preprocessor Reference](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-Funkcja [_configthreadlocale —](configthreadlocale.md) służy do sterowania czy **setlocale** wpływa na ustawieniach regionalnych wszystkie wątki w programie lub tylko ustawienia regionalne wątku.
+Funkcja [_configthreadlocale](configthreadlocale.md) służy do sterowania czy **setlocale** wpływa na ustawienia regionalne wszystkich wątków w programie, czy tylko wątku wywołującego.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
-|**_wsetlocale —**|\<Locale.h > lub \<wchar.h >|
+|**_wsetlocale**|\<Locale.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

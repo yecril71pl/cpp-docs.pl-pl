@@ -1,31 +1,21 @@
 ---
-title: '&lt;forward_list —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;forward_list —&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <forward_list>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a23fef80dd55e6c532df10cf64871849beda9bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597694"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list —&gt;
 
-Definiuje forward_list kontenera szablonu klasy — i kilka szablonów pomocniczych.
+Definiuje forward_list klasy szablonu kontenera i kilka szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,24 +27,24 @@ Definiuje forward_list kontenera szablonu klasy — i kilka szablonów pomocnicz
 
 |Operator|Opis|
 |-|-|
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora jest taki sam jak obiekt do przodu liście po prawej stronie.|
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora nie jest taki sam jak obiekt do przodu liście po prawej stronie.|
-|[Operator <](../standard-library/forward-list-operators.md#op_lt)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora jest mniejsza niż obiekt do przodu liście po prawej stronie.|
-|[Operator < =](../standard-library/forward-list-operators.md#op_lt_eq)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora jest mniejsza niż lub równe obiekt do przodu liście po prawej stronie.|
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora jest większy niż obiekt do przodu liście po prawej stronie.|
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Testy, jeśli obiekt do przodu listy po lewej stronie operatora jest większa niż lub równa obiekt do przodu liście po prawej stronie.|
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Sprawdza, czy obiekt listy do przodu po lewej stronie operatora jest równy obiektowi do przodu listy po prawej stronie.|
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Sprawdza, czy obiekt listy do przodu po lewej stronie operatora nie jest taki sam jak obiekt do przodu listy po prawej stronie.|
+|[Operator <](../standard-library/forward-list-operators.md#op_lt)|Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest mniejszy niż obiekt listy do przodu, po prawej stronie.|
+|[Operator < =](../standard-library/forward-list-operators.md#op_lt_eq)|Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest mniejszy niż lub równy obiektowi do przodu listy po prawej stronie.|
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest większy niż obiekt listy do przodu, po prawej stronie.|
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Sprawdza, czy obiekt listy do przodu po lewej stronie operatora jest większy lub równy obiektowi do przodu listy po prawej stronie.|
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[swap](../standard-library/forward-list-functions.md#swap)|Zamienia elementy dwie listy do przodu.|
+|[swap](../standard-library/forward-list-functions.md#swap)|Zamienia elementy z dwóch list do przodu.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[forward_list —](../standard-library/forward-list-class.md)|Opis obiektu, który określa sekwencję zróżnicowanych długość elementów. Sekwencja jest przechowywany jako listy pojedynczo połączonych elementów, każdy z nich zawierający element członkowski typu `Type`.|
+|[forward_list —](../standard-library/forward-list-class.md)|Opisuje obiekt, który kontroluje różnej długości sekwencje elementów. Sekwencja jest przechowywany jako pojedynczo połączoną listę elementów, każdy z nich zawierający składowej typu `Type`.|
 
 ## <a name="see-also"></a>Zobacz także
 

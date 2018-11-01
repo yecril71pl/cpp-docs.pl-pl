@@ -1,10 +1,6 @@
 ---
-title: memcpy_s —, wmemcpy_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,26 +20,20 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607158"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
-Kopie bajty pomiędzy buforów. Są to wersje [memcpy, wmemcpy —](memcpy-wmemcpy.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopiuje bajtów między buforów. Są to wersje [memcpy, wmemcpy —](memcpy-wmemcpy.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,7 +58,7 @@ errno_t wmemcpy_s(
 Bufor nowego.
 
 *destSize*<br/>
-Rozmiar buforu docelowego dla memcpy_s — i znaki dwubajtowe (wchar_t) dla wmemcpy_s — wyrażony w bajtach.
+Rozmiar buforu miejsca docelowego, w bajtach dla memcpy_s — a znaków dwubajtowych (wchar_t) dla wmemcpy_s —.
 
 *src*<br/>
 Bufor do skopiowania.
@@ -78,22 +68,22 @@ Liczba znaków do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; błąd o kodzie błędu.
+Zero, jeśli to się powiedzie; Kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*dest*|*destSize*|*src*|*Liczba*|Wartość zwracana|Zawartość *docelowy*|
+|*dest*|*destSize*|*src*|*Liczba*|Wartość zwracana|Zawartość *miejsca docelowego*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|wszystkie|wszystkie|wszystkie|0|0|Nie zmodyfikowano|
-|**NULL**|wszystkie|wszystkie|non-zero|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|wszystkie|**NULL**|non-zero|**EINVAL —**|*docelowy* powoduje|
-|wszystkie|< *Liczba*|wszystkie|non-zero|**ERANGE —**|*docelowy* powoduje|
+|Wszystkie|Wszystkie|Wszystkie|0|0|Nie zmodyfikowano|
+|**NULL**|Wszystkie|Wszystkie|non-zero|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|Wszystkie|**NULL**|non-zero|**EINVAL**|*dest* jest zerowany|
+|Wszystkie|< *Liczba*|Wszystkie|non-zero|**ERANGE**|*dest* jest zerowany|
 
 ## <a name="remarks"></a>Uwagi
 
-**memcpy_s —** kopie *liczba* bajtów z *src* do *dest*; **wmemcpy_s —** kopie *liczba* znaki dwubajtowe (dwa bajty). Jeśli na źródłowym i docelowym nakładają się, zachowanie **memcpy_s —** jest niezdefiniowana. Użyj **memmove_s —** do obsługi pokrywających się obszarów.
+**memcpy_s —** kopie *liczba* bajtów z *src* do *dest*; **wmemcpy_s —** kopie *liczba* znaków dwubajtowych (dwa bajty). Jeśli źródłowe i docelowe nakładają się, zachowanie **memcpy_s —** jest niezdefiniowana. Użyj **memmove_s —** do obsługi nakładających się regionów.
 
-Te funkcje walidację ich parametrów. Jeśli *liczba* jest różna od zera i *dest* lub *src* jest wskaźnika o wartości null, lub *destSize* jest mniejszy niż *liczba*, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **einval —** lub **erange —** i ustaw **errno** do wartości zwracanej.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *liczba* jest różna od zera i *dest* lub *src* jest wskaźnikiem wartości null lub *destSize* jest mniejszy niż *liczba*, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** lub **ERANGE** i ustaw **errno** na wartość zwracaną.
 
 ## <a name="requirements"></a>Wymagania
 

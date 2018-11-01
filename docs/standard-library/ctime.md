@@ -1,32 +1,22 @@
 ---
-title: '&lt;ctime —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;ctime —&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ctime>
 - std::<ctime>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09ff596ef6b719e65ff38b40214a0c4f35744321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56c9e7a8b654d386cf9ad4aa491939dedcfab92a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650357"
 ---
 # <a name="ltctimegt"></a>&lt;ctime —&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<time.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<time.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +27,7 @@ Zawiera nagłówek biblioteki standardowe C \<time.h > i dodaje skojarzone nazwy
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

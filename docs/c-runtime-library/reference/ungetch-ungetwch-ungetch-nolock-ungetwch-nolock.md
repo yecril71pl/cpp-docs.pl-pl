@@ -1,10 +1,6 @@
 ---
-title: _ungetch —, _ungetwch —, _ungetch_nolock —, _ungetwch_nolock — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,23 +44,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430306"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
-Wypycha wstecz ostatni znak, który jest do odczytu z konsoli.
+Przesuwa ostatni znak, który jest odczytywany z konsoli.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,21 +78,21 @@ wint_t _ungetwch_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do zostać przeniesiony.
+Znak do wypchnięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie funkcje zwracają znak *c* w przypadku powodzenia. Jeśli występuje błąd, **_ungetch —** zwraca wartość **EOF** i **_ungetwch —** zwraca **weof —**.
+Obie funkcje zwracają znak *c* w przypadku powodzenia. Jeśli wystąpił błąd **_ungetch** zwraca wartość **EOF** i **_ungetwch —** zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje push znak *c* do konsoli programu powoduje *c* jako następny znak odczytywane przez **_getch —** lub **_getche —** (lub **_getwch —** lub **_getwche —**). **_ungetch —** i **_ungetwch —** się niepowodzeniem, jeśli są one nazywane więcej niż raz przed następnym odczytu. *c* argument nie może być **EOF** (lub **weof —**).
+Te funkcje wpychają znak *c* do konsoli, powoduje *c* się następnym znakiem odczytanym przez **_getch** lub **_getche** (lub **_getwch —** lub **_getwche —**). **_ungetch** i **_ungetwch —** się nie powieść, jeśli są one wezwane więcej niż jeden raz przed następnym odczytem. *c* argument nie może być **EOF** (lub **WEOF**).
 
-Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch —**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock —**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -111,7 +101,7 @@ Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chr
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ungetch —**, **_ungetch_nolock —**|\<conio.h>|
+|**_ungetch**, **_ungetch_nolock —**|\<conio.h>|
 |**_ungetwch —**, **_ungetwch_nolock —**|\<conio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

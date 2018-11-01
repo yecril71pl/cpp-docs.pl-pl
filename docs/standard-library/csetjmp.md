@@ -1,31 +1,21 @@
 ---
-title: '&lt;csetjmp —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;csetjmp —&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <csetjmp>
-dev_langs:
-- C++
 helpviewer_keywords:
 - csetjmp header
 ms.assetid: 8f21fddd-5e9b-4219-a848-581cdd3569d9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 00b55d261c29bbb9fc6f1fa5d5d2b1a1b54a092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9d5ae02b29e8e8cc34e767b174c0986321dfc14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636244"
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp —&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<setjmp.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<setjmp.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +26,7 @@ Zawiera nagłówek biblioteki standardowe C \<setjmp.h > i dodaje skojarzone naz
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

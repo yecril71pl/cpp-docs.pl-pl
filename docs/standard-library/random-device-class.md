@@ -1,18 +1,12 @@
 ---
-title: random_device — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: random_device — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -20,20 +14,16 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac22e146ac305be92d0b4be214465e64e8b6873
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580651"
 ---
 # <a name="randomdevice-class"></a>random_device — Klasa
 
-Generuje losowe sekwencji z zewnętrznego urządzenia.
+Generuje losową sekwencję z zewnętrznego urządzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,17 +58,17 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje źródła liczb losowych i jest dozwolone, ale nie musi być deterministyczna lub kryptograficznie bezpieczny standard C++ ISO. W programie Visual Studio implementacji wartości tworzone są deterministyczna i zabezpieczone kryptograficznie, ale działa wolniej niż utworzone na podstawie aparaty i adapterów aparat generatory (takich jak [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md), wysokiej jakości i szybki aparat wyboru dla większości aplikacji).
+Klasa opisuje źródła liczb losowych i jest dozwolone, ale nie muszą być niedeterministyczne i kryptograficznie bezpieczne według standardu ISO C++. W programie Visual Studio implementacji wartości utworzone są niedeterministyczne i kryptograficznie bezpieczne, ale działa wolniej niż generatorów utworzone na podstawie aparatów i adapterów aparatu (takie jak [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md), wysokiej jakości i szybkie aparatu wybór w przypadku większości aplikacji).
 
-`random_device` wyniki mogą być równomiernie rozłożone w zakresie zamknięte [ `0, 2` <sup>32</sup>).
+`random_device` wyniki są równomiernie rozłożone w zamkniętym zakresie [ `0, 2` <sup>32</sup>).
 
-`random_device` nie jest gwarantowana spowodować nieblokujące wywołania.
+`random_device` nie ma żadnej gwarancji spowodować wywołanie bez blokowania.
 
-Ogólnie rzecz biorąc `random_device` jest używany do generowania innych generatory utworzone za pomocą aparatów lub adapterów aparatu. Aby uzyskać więcej informacji, zobacz [ \<losowe >](../standard-library/random.md).
+Ogólnie rzecz biorąc `random_device` jest używany do generowania innych generatorów utworzone za pomocą aparatów lub adapterów aparatu. Aby uzyskać więcej informacji, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia podstawowe funkcje to klasa i przykładowe wyniki. Z powodu deterministyczna rodzaj `random_device`, losowych wartości widoczne w **dane wyjściowe** sekcji będzie niezgodna z wyników. Jest to normalne i oczekiwana.
+Poniższy kod przedstawia podstawowe funkcje tej klasy i przykłady wyników. Ze względu na charakter niedeterministyczne `random_device`, losowych wartości widocznych na **dane wyjściowe** sekcji nie będą zgodne wyniki. Jest to normalne i oczekiwane.
 
 ```cpp
 // random_device_engine.cpp
@@ -110,13 +100,13 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-W tym przykładzie jest simplistic i nie reprezentatywny dla ogólnych przypadek użycia dla tego generatora. Aby bardziej reprezentatywny przykład kodu, zobacz [ \<losowe >](../standard-library/random.md).
+W tym przykładzie jest uproszczony i nie językiem ogólne przypadek użycia dla tego generatora. Dla bardziej reprezentatywny przykładu kodu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="random_device"></a>  random_device::random_device
 
@@ -128,11 +118,11 @@ random_device(const std::string& = "");
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor inicjuje generatora zgodnie z potrzebami, ignorowanie parametr ciągu. Zwraca wartość typu zdefiniowane w implementacji pochodzące z [wyjątek](../standard-library/exception-class.md) Jeśli `random_device` nie można zainicjować obiektu.
+Konstruktor inicjuje generator, stosownie do potrzeb, ignorując parametr typu ciąg. Zwraca wartość typu zdefiniowanego w implementacji pochodną [wyjątek](../standard-library/exception-class.md) Jeśli `random_device` nie można zainicjować.
 
 ## <a name="entropy"></a>  random_device::Entropy
 
-Szacuje losowości źródła.
+Oszacowuje losowość źródła.
 
 ```cpp
 double entropy() const noexcept;
@@ -140,11 +130,11 @@ double entropy() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca szacunkową losowości źródła, mierzony w bitach.
+Element członkowski funkcji zwraca oszacowanie losowości źródła, mierzone w bitach.
 
 ## <a name="op_call"></a>  random_device::operator()
 
-Zwraca wartość losowa.
+Zwraca wartość losową.
 
 ```cpp
 result_type operator()();
@@ -152,8 +142,8 @@ result_type operator()();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartości równomiernie w interwale zamknięte [ `min, max`] zgodnie z ustaleniami funkcji Członkowskich `min()` i `max()`. Zwraca wartość typu zdefiniowane w implementacji pochodzące z [wyjątek](../standard-library/exception-class.md) Jeśli nie można uzyskać liczbę losową.
+Zwraca wartości równomiernie rozłożone w zamkniętym przedziale [ `min, max`] zgodnie z ustaleniami funkcji elementów członkowskich `min()` i `max()`. Zwraca wartość typu zdefiniowanego w implementacji pochodną [wyjątek](../standard-library/exception-class.md) Jeśli nie można uzyskać liczbę losową.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

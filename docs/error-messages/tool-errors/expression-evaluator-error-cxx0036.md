@@ -1,28 +1,18 @@
 ---
-title: Błąd ewaluatora wyrażeń CXX0036 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd CXX0036 programu Expression Evaluator
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - CXX0036
-dev_langs:
-- C++
 helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a94ed846d2d4ebda2e457ee772a9f8bf081d69d6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576826"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Błąd CXX0036 programu Expression Evaluator
 

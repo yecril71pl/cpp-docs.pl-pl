@@ -1,10 +1,6 @@
 ---
-title: _getmaxstdio | Microsoft Docs
-ms.custom: ''
+title: _getmaxstdio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getmaxstdio
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], number open
 - _getmaxstdio function
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2030937806eedbf1abe671032da75c531fdd5ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea8e516b4c0806230376ea52e399c9fa1f9a858a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618347"
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
 
-Zwraca liczbę równocześnie otwarte pliki w poziomie we/wy strumienia.
+Zwraca liczbę jednocześnie otwartych plików, w poziomie operacje We/Wy strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,11 +44,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę reprezentującą liczbę jednocześnie otwartych plików, w obecnie dozwolone **stdio —** poziom.
+Zwraca liczbę reprezentującą liczbę jednocześnie otwartych plików, które obecnie dozwolone **stdio —** poziom.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj [_setmaxstdio —](setmaxstdio.md) Aby skonfigurować liczbę równocześnie otwarte pliki w **stdio —** poziom.
+Użyj [_setmaxstdio —](setmaxstdio.md) Aby skonfigurować liczbę jednocześnie otwartych plików, dozwolone **stdio —** poziom.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -66,7 +56,7 @@ Użyj [_setmaxstdio —](setmaxstdio.md) Aby skonfigurować liczbę równocześn
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -95,4 +85,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>

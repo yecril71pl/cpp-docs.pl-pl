@@ -1,31 +1,21 @@
 ---
-title: '&lt;Mapa&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;Mapy&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <map>
-dev_langs:
-- C++
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac523342cc175721b9c1ef33a3d8ac4cad83033b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 727938b09ae60fd72a2421c2b800d8910f82934e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659852"
 ---
-# <a name="ltmapgt"></a>&lt;mapy&gt;
+# <a name="ltmapgt"></a>&lt;Mapy&gt;
 
-Definiuje mapowania klasy szablonu kontenera i multimap i ich obsługi szablonów.
+Definiuje mapę klasy szablonu kontenera i multimap i ich szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,26 +30,26 @@ Definiuje mapowania klasy szablonu kontenera i multimap i ich obsługi szablonó
 
 |Mapy wersji|Multimap — wersja|Opis|
 |-----------------|----------------------|-----------------|
-|[Operator! = (map)](../standard-library/map-operators.md#op_neq)|[Operator! = (multimap)](../standard-library/map-operators.md#op_neq)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora nie jest taki sam jak obiekt mapy lub multimap po prawej stronie.|
-|[Operator < (map)](../standard-library/map-operators.md#op_eq_eq)|[Operator < (multimap)](../standard-library/map-operators.md#op_eq_eq)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora jest mniejsza niż obiekt mapy lub multimap po prawej stronie.|
-|[Operator < = (map)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimap)](../standard-library/map-operators.md#op_lt)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora jest mniejsza lub równa mapy lub multimap — obiektu po prawej stronie.|
-|[operator== (map)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora jest taki sam jak obiekt mapy lub multimap po prawej stronie.|
-|[operator > (map)](../standard-library/map-operators.md#op_gt)|[operator > (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora jest większy niż mapa lub multimap obiekt po prawej stronie.|
-|[operator > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator > = (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testy, jeśli obiekt mapy lub multimap po lewej stronie operatora jest większa niż lub równa obiektu mapy lub multimap po prawej stronie.|
+|[Operator! = (map)](../standard-library/map-operators.md#op_neq)|[Operator! = (multimap)](../standard-library/map-operators.md#op_neq)|Sprawdza, czy obiekt mapy lub multimap po lewej stronie operatora nie jest równy obiektowi mapa lub multimap po prawej stronie.|
+|[Operator < (map)](../standard-library/map-operators.md#op_eq_eq)|[Operator < (multimap)](../standard-library/map-operators.md#op_eq_eq)|Sprawdza, czy obiekt mapy lub multimap po lewej stronie operatora jest mniejszy niż obiekt mapy lub multimap po prawej stronie.|
+|[Operator < = (map)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimap)](../standard-library/map-operators.md#op_lt)|Sprawdza, czy mapa lub multimap obiektu po lewej stronie operatora jest mniejszy niż lub równe mapa lub multimap obiektu po prawej stronie.|
+|[operator== (map)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Sprawdza, czy obiekt mapy lub multimap po lewej stronie operatora jest równy obiektowi mapa lub multimap po prawej stronie.|
+|[operator > (map)](../standard-library/map-operators.md#op_gt)|[operator > (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Sprawdza, czy obiekt mapy lub multimap po lewej stronie operatora jest większy niż mapa lub multimap obiektu po prawej stronie.|
+|[operator > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator > = (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Sprawdza, czy obiekt mapy lub multimap po lewej stronie operatora jest większy niż lub równy obiektowi mapa lub multimap po prawej stronie.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
 |Mapy wersji|Multimap — wersja|Opis|
 |-----------------|----------------------|-----------------|
-|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Zamienia elementy dwóch map lub multimaps.|
+|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Zamienia elementy z dwóch map lub multimaps.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[value_compare, klasa](../standard-library/value-compare-class-map.md)|Udostępnia obiekt funkcji, który można porównać elementów mapy porównując wartości ich kluczy, aby określić ich kolejność względne w planie.|
-|[map, klasa](../standard-library/map-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma unikatowy klucz, z którym automatycznie porządkowania danych.|
-|[multimap, klasa](../standard-library/multimap-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma klucz, w którym automatycznie porządkowania danych i kluczy nie muszą mieć unikatowe wartości.|
+|[value_compare, klasa](../standard-library/value-compare-class-map.md)|Dostarcza obiekt funkcji, która może porównać elementy mapy przez porównanie wartości ich kluczy, aby określić ich względną kolejność w mapie.|
+|[map, klasa](../standard-library/map-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma unikatowy klucz za pomocą którego dane są automatycznie porządkowane.|
+|[multimap, klasa](../standard-library/multimap-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma klucz za pomocą którego dane są automatycznie porządkowane i klucze nie muszą mieć unikatowe wartości.|
 
 ## <a name="see-also"></a>Zobacz także
 

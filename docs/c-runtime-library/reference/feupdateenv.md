@@ -1,11 +1,6 @@
 ---
-title: feupdateenv | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: feupdateenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feupdateenv
 apilocation:
@@ -23,25 +18,19 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d88284717aec7a19c936d7ed8d87da96006d7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605120"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
-Zapisuje obecnie zgłoszono wyjątki zmiennoprzecinkowe, przywraca stan określonego środowiska liczb zmiennoprzecinkowych, a następnie wywołuje zapisane wyjątki zmiennoprzecinkowe.
+Zapisuje obecnie zostaje zgłoszone wyjątki zmiennoprzecinkowe, przywraca stan określonego środowiska zmiennoprzecinkowych, a następnie zgłasza wyjątki zmiennoprzecinkowe zapisane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,21 +43,21 @@ int feupdateenv(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Wskaźnik do **fenv_t** obiekt, który zawiera zmiennoprzecinkowe środowiska zgodnie z ustaleniami przez wywołanie do [fegetenv](fegetenv1.md) lub [feholdexcept](feholdexcept2.md). Można również określić domyślnego środowiska zmiennoprzecinkowe uruchamiania za pomocą makra FE_DFL_ENV.
+Wskaźnik do **fenv_t** obiekt, który zawiera zmiennoprzecinkowych środowiska według stawki ustalonej przez wywołanie [fegetenv](fegetenv1.md) lub [feholdexcept](feholdexcept2.md). Można również określić domyślne środowisko zmiennoprzecinkowych uruchamiania, za pomocą makra FE_DFL_ENV.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli wszystkie działania ukończone pomyślnie. W przeciwnym razie zwraca wartość różną od zera.
+Zwraca wartość 0, jeśli wszystkie akcje wykonane pomyślnie. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feupdateenv** funkcja wykonuje wiele operacji. Po pierwsze przechowuje bieżące flagi stanu zgłoszono wyjątek zmiennoprzecinkowy, którego w magazynie automatycznego. Następnie, ustawia bieżącego środowiska zmiennoprzecinkowe z wartości przechowywanej w **fenv_t** obiekt wskazywany przez *penv*. Jeśli *penv* nie jest **FE_DFL_ENV** lub nie wskazuje na prawidłową **fenv_t** obiekt, kolejne zachowanie jest niezdefiniowany. Na koniec **feupdateenv** zgłasza wyjątki zmiennoprzecinkowe przechowywane lokalnie.
+**Feupdateenv** funkcja wykonuje wiele operacji. Po pierwsze przechowuje bieżące flagi stanu podjętym wyjątkiem zmiennoprzecinkowym w automatycznego przechowywania. Następnie ustawia bieżące środowisko zmiennoprzecinkową z wartością przechowywaną w **fenv_t** obiekt wskazywany przez *penv*. Jeśli *penv* nie **FE_DFL_ENV** lub nie wskazuje prawidłowego **fenv_t** obiekt, kolejne zachowanie jest niezdefiniowane. Na koniec **feupdateenv** zgłasza wyjątki zmiennoprzecinkowe przechowywane lokalnie.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**feupdateenv**|\<fenv.h>|\<cfenv>|
 

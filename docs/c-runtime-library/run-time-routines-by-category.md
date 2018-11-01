@@ -1,38 +1,28 @@
 ---
-title: Universal C procedury czasu wykonywania według kategorii | Dokumenty Microsoft
-ms.custom: ''
+title: Procedury czasu wykonywania języka Universal C według kategorii
 ms.date: 04/06/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd18cf5cfdd2583e866045000ddcc992a573b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499586"
 ---
-# <a name="universal-c-runtime-routines-by-category"></a>Universal C procedury czasu wykonywania według kategorii
+# <a name="universal-c-runtime-routines-by-category"></a>Procedury czasu wykonywania języka Universal C według kategorii
 
-W tej sekcji wymieniono i opisano procedury biblioteki Universal C runtime (Biblioteka UCRT) według kategorii. Dla wygody odwołanie niektóre procedury są wyświetlane w więcej niż jedną kategorię. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są zgrupowane z partnerami znaków, jeśli takie istnieją.
+W tej sekcji wymieniono i opisano procedury biblioteki (UCRT) czasu wykonywania języka Universal C według kategorii. Dla wygody odniesienia niektóre procedury są wymienione w więcej niż jednej kategorii. Procedury znaków dwubajtowych i znaków wielobajtowych są grupowane z odpowiednikami znaków jednobajtowych, jeśli takie istnieją.
 
-## <a name="ucrt-library-routine-categories"></a>Biblioteka UCRT biblioteki rutynowych kategorii
+## <a name="ucrt-library-routine-categories"></a>Kategorie rutynowych Biblioteka UCRT
 
-Dostępne są następujące główne kategorie Biblioteka UCRT procedury biblioteki:
+Główne kategorie UCRT biblioteki procedur są:
 
 |||
 |-|-|

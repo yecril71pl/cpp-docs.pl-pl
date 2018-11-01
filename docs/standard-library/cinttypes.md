@@ -1,27 +1,17 @@
 ---
-title: '&lt;cinttypes&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;cinttypes&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 18eb738c-aa74-4ed3-9cdd-049ef4c64b80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bae3765e5d403f57c806c898d058a0e19b0d05d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1f3401e4d1e21c6d2ca644509de09c9855e206e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594895"
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<inttypes.h >. W tym ten nagłówek zawiera również \<cstdint >.
+Dołącza nagłówek biblioteki standardowej C \<inttypes.h >. Dołączenie tego pliku nagłówkowego obejmuje również \<cstdint >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +22,7 @@ Zawiera nagłówek biblioteki standardowe C \<inttypes.h >. W tym ten nagłówek
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowany za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

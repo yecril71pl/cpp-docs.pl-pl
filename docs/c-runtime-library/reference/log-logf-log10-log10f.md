@@ -1,10 +1,6 @@
 ---
-title: Dziennik, logf —, logl, log10 log10f —, log10l | Dokumenty Microsoft
-ms.custom: ''
+title: Dziennik, logf —, logl, log10 log10f —, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543302"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>Dziennik, logf —, logl, log10 log10f —, log10l
 
@@ -86,19 +76,19 @@ Wartość, której logarytm ma zostać znaleziona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Dziennika** funkcje Zwraca logarytm naturalny (podstawowy *e*) z *x* w przypadku powodzenia. **Log10** zwracają logarytmu base-10. Jeśli *x* jest ujemna, te funkcje zwracają nieograniczonego (IND), domyślnie. Jeśli *x* wynosi 0, zwracają infinity (INF).
+**Dziennika** funkcji Zwraca logarytm naturalny (podstawowy *e*) z *x* w przypadku powodzenia. **Log10** funkcje zwracają logarytm base 10. Jeśli *x* jest ujemna, te funkcje zwracają nieokreślony (Znajdź), domyślnie. Jeśli *x* wynosi 0, zwracają one infinity (INF).
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
-|± 0|ZERODIVIDE|—|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
 |*x* < 0|NIEPRAWIDŁOWY|_DOMAIN|
 
-**Dziennik** i **log10** implementacją, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](set-sse2-enable.md) informacje i ograniczenia dotyczące używania implementacji SSE2.
+**Dziennik** i **log10** mają implementacji, który używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](set-sse2-enable.md) informacje i ograniczenia dotyczące przy użyciu implementacji SSE2.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **dziennika** i **log10** który przyjmować i zwracać **float** lub **podwójnej długości** wartości. W programie C **dziennika** i **log10** zawsze przyjmować i zwracać **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **dziennika** i **log10** przyjmujące i zwracające **float** lub **typu long double** wartości. W programie C **dziennika** i **log10** zawsze przyjmują i zwracają **double**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -137,7 +127,7 @@ log( 9000.00 ) = 9.104980
 log10( 9000.00 ) = 3.954243
 ```
 
-Aby wygenerować logarytmów dla innych typów podstawowych, użyj matematyczne relacji: dziennika podstawowego b == logarytm naturalny () / fizycznych logowania (b).
+Aby wygenerować logarytmów dla innych podstaw, użyj matematyczne relacji: dziennika podstawowego b == logarytmu naturalnego () / fizyczne dziennika (b).
 
 ```cpp
 // logbase.cpp

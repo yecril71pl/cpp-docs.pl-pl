@@ -1,10 +1,6 @@
 ---
-title: _ismbblead —, _ismbblead_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452549"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
-Testy znaku do określenia, czy jest bajtu znaków wielobajtowych.
+Testuje znak, aby ustalić, czy jest ono bajt znaku wielobajtowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,20 +58,20 @@ int _ismbblead_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita ma zostać przetestowana.
+Liczba całkowita do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość niezerową, jeśli liczba całkowita *c* jest pierwszy bajt znaków wielobajtowych.
+Zwraca wartość różną od zera, jeśli liczba całkowita *c* jest pierwszym bajtem znaku wielobajtowego.
 
 ## <a name="remarks"></a>Uwagi
 
-Znaki wielobajtowe składają się z bajtu następuje końcowego bajtu. Będąc w zakresie określonego zestawu znaków danego różnią się prowadzić bajtów. Na przykład w bajtach tylko, prowadzić strona 932 kodu należeć do zakresu od 0x81-0x9F i wartość 0xE0 - 0xFC.
+Znaki wielobajtowe składają się z bajtu wiodącego, po którym następuje bajt. Bajty wiodące są odróżniane przez występowanie w określonym zakresie dla danego zestawu znaków. Na przykład w kodzie strony 932 tylko, bajty wiodące dostosować w zakresie 0x81-0x9F i 0xE0 — 0xFC.
 
-**_ismbblead —** używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. **_ismbblead_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbblead** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. **_ismbblead_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -96,9 +86,9 @@ Znaki wielobajtowe składają się z bajtu następuje końcowego bajtu. Będąc 
 |**_ismbblead**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 |**_ismbblead_l**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\* Dla manifestu stałe warunki testu.
+\* Dla stałych manifestu do warunków badania.
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

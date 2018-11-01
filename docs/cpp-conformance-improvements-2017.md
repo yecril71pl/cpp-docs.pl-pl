@@ -1,23 +1,19 @@
 ---
-title: Ulepszenia zgodności języka C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
-ms.date: 08/15/2018
+title: Ulepszenia zgodności języka C++
+ms.date: 10/31/2018
 ms.technology:
 - cpp-language
-ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 18e4185f1cbd8b37e0e3cc7b11abc24505980b7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562165"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
 Dzięki obsłudze uogólnionego wyrażenia constexpr i NSDMI dla wartości zagregowanych kompilator Microsoft Visual C++ jest teraz ukończona funkcje dodane w Standard C ++ 14. Należy zauważyć, że w kompilatorze nadal brakuje kilku funkcji ze standardowych języków C++11 i C++98. Zobacz [Visual zgodność języka C++](visual-cpp-language-conformance.md) dla tabeli, która pokazuje bieżący stan kompilatora.
 
@@ -341,7 +337,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) zmieni się na `std::traits_type` elementów członkowskich `length`, `compare`, i `find` przed `std::string_view` można używać w wyrażeniach stałych. (W programie Visual Studio 2017 w wersji 15.6 obsługę Clang/LLVM tylko. W wersji 15.7 w wersji zapoznawczej 2, pomocy technicznej jest niemal należy wykonać ClXX także.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Poprawki błędów w wersjach programu Visual Studio 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), i [15.8](#update_158)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Poprawki błędów w wersjach programu Visual Studio 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158), i [15.9](#update_159)
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -1832,6 +1828,158 @@ struct X : Base<T>
         Base<T>::template foo<int>();
     }
 };
+```
+## <a name="update_159"></a> Poprawki i zmiany zachowania w programie Visual Studio 2017 w wersji 15.9
+
+### <a name="identifiers-in-member-alias-templates"></a>Identyfikatory w szablonach aliasów elementu członkowskiego
+Identyfikator używany w składowej aliasu definicji szablonu musi być zadeklarowana przed użyciem. 
+
+W poprzedniej wersji kompilatora mógł następujący kod:
+
+```cpp
+template <typename... Ts>
+struct A
+{
+  public:
+    template <typename U>
+    using from_template_t = decltype(from_template(A<U>{}));
+
+  private:
+    template <template <typename...> typename Type, typename... Args>
+    static constexpr A<Args...> from_template(A<Type<Args...>>);
+
+};
+
+A<>::from_template_t<A<int>> a;
+
+```
+
+W programie Visual Studio 2017 w wersji 15.9 w **/ permissive-** tryb, wywołuje kompilatora C3861: *"from_template": nie odnaleziono identyfikatora*.d
+
+Aby naprawić błąd, należy zadeklarować `a` przed `A`.
+
+### <a name="modules-changes"></a>Zmiany modułów
+
+W programie Visual Studio 2017 w wersji 15.9, kompilator generuje C5050 zawsze wtedy, gdy opcje wiersza polecenia dla modułów nie są spójne Tworzenie modułu i stronach użycie modułu. W poniższym przykładzie istnieją dwa problemy:
+
+- po stronie zużycie (main.cpp) opcja **/ehsc** nie zostanie określony.
+- wersja języka C++ jest **/STD: c ++ 17** na stronie tworzenia i **/STD: c ++ 14** stronie zużycia. 
+
+```cmd
+cl /EHsc /std:c++17 m.ixx /experimental:module
+cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
+```
+
+Kompilator generuje C5050 dla obu tych przypadkach: *ostrzeżenie C5050: jestem możliwe niezgodne środowisko podczas importowania modułu ": niezgodność wersji języka C++.  Bieżąca wersja "201402" module "201703"*.
+
+Ponadto kompilator wywołuje C7536 zawsze wtedy, gdy plik .ifc zostały naruszone. Nagłówek interfejsu modułu zawiera algorytmu SHA2 skrót zawartości poniżej. Przy imporcie plik .ifc jest skrótu w taki sam sposób i następnie porównywany wyznaczania wartości skrótu, podany w nagłówku; Jeśli nie są one zgodne C7536 jest zgłaszany błąd: *ifc sprawdzania integralności nie powiodło się.  Oczekiwano algorytmu SHA2: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"*.
+
+### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Częściowe szeregowania obejmujące aliasów i konteksty — ustalona
+
+Częściowe reguły sortowania obejmujące aliasów w kontekstach — ustalona jest implementacja rozbieżności. W poniższym przykładzie, GCC i kompilator C++ firmy Microsoft (w **/ permissive-** tryb) zgłosić błąd, podczas gdy Clang akceptuje kodu. 
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <class T, class Alloc>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+```
+
+Poprzedni przykład wywołuje C2668:
+
+```Output
+partial_alias.cpp(32): error C2668: 'f': ambiguous call to overloaded function
+partial_alias.cpp(18): note: could be 'int f<Alloc,void>(A<void> &,const AlignedBuffer<10,4> &)'
+partial_alias.cpp(12): note: or       'int f<Alloc,A<void>>(Alloc &,const AlignedBuffer<10,4> &)'
+        with
+        [
+            Alloc=A<void>
+        ]
+partial_alias.cpp(32): note: while trying to match the argument list '(A<void>, AlignedBuffer<10,4>)'
+```
+
+Rozbieżności implementacja jest wynika z regresji w standardowych treść, gdzie rozwiązanie do kluczową kwestię 2235 usunięte jakiś tekst, które pozwoliłoby te przeciążenia do zamówienia. Bieżący standard C++ nie zapewnia mechanizm częściowo kolejność tych funkcji, dzięki czemu są one traktowane jako niejednoznaczny.
+
+Jako obejście zaleca się, że nie zależą od częściowe porządkowanie, aby rozwiązać ten problem, a zamiast tego użyj SFINAE, aby usunąć określonego przeciążenia. W poniższym przykładzie użyto klasę pomocy `IsA` do usunięcia pierwszego przeciążenia, kiedy `Alloc` jest specjalizacją `A`:
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <typename T> struct IsA : std::false_type {};
+template <typename T> struct IsA<A<T>> : std::true_type {};
+
+template <class T, class Alloc, typename = std::enable_if_t<!IsA<Alloc>::value>>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
 ```
 
 ## <a name="see-also"></a>Zobacz także
