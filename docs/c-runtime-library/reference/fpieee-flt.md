@@ -1,10 +1,6 @@
 ---
-title: _fpieee_flt — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fpieee_flt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpieee_flt
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412eef6e3999c18901792643fa7a57ce18d19520
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458620"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
-Wywołuje program obsługi pułapki zdefiniowane przez użytkownika wyjątki zmiennoprzecinkowe IEEE.
+Wywołuje program obsługi wyjątków zmiennoprzecinkowych IEEE pułapki zdefiniowanej przez użytkownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,29 +52,29 @@ int _fpieee_flt(
 Kod wyjątku.
 
 *excInfo*<br/>
-Wskaźnik do struktury informacji wyjątek systemu Windows NT.
+Wskaźnik do struktury informacji o wyjątku Windows NT.
 
 *Program obsługi*<br/>
-Wskaźnik do procedury obsługi pułapki IEEE użytkownika.
+Wskaźnik do procedury uchwytu pułapki IEEE użytkownika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana **_fpieee_flt —** jest wartość zwrócona przez *obsługi*. W efekcie procedury filtru IEEE mogą być używane w z wyjątkiem klauzuli strukturalne (SEH) mechanizm obsługi wyjątków.
+Wartość zwracana przez **_fpieee_flt** jest wartość zwrócona przez obiekt *obsługi*. W efekcie procedury filtru IEEE mogą być używane w z wyjątkiem klauzuli ze strukturą mechanizm obsługi wyjątków (SEH).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fpieee_flt —** funkcja wywołuje program obsługi pułapki zdefiniowane przez użytkownika wyjątki zmiennoprzecinkowe IEEE i zapewnia wszystkie informacje. Ta procedura służy jako filtru wyjątków SEH mechanizmu, który wywołuje własne IEEE obsługi wyjątków, gdy jest to konieczne.
+**_Fpieee_flt** funkcja wywołuje program obsługi wyjątków zmiennoprzecinkowych IEEE pułapki zdefiniowanej przez użytkownika i zapewnia wszystkie istotne informacje. Ta procedura służy jako filtru wyjątków w mechanizm strukturalnej obsługi wyjątków, które wywołuje własne IEEE obsługi wyjątków, gdy jest to konieczne.
 
-**_Fpieee_record —** struktury zdefiniowane w Fpieee.h, zawiera informacje dotyczące IEEE zmiennoprzecinkowych wyjątków. Ta struktura jest przekazywane do programu obsługi zdefiniowane przez użytkownika pułapki przez **_fpieee_flt —**.
+**_Fpieee_record —** struktury, zdefiniowanego w Fpieee.h, zawiera informacje dotyczące wyjątku zmiennopozycyjnego IEEE. Ta struktura jest przekazywany do uchwytu pułapki zdefiniowanej przez użytkownika, które przez **_fpieee_flt**.
 
-|_Fpieee_record — pola|Opis|
+|_Fpieee_record — pole|Opis|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**dokładność**|Te **niepodpisane** **int** pola zawierają informacje o środowisku liczb zmiennoprzecinkowych w czasie Wystąpił wyjątek.|
-|**Operacja**|To **niepodpisane** **int** pole wskazuje typ operacji, który spowodował pułapki. Jeśli typ znajduje się porównanie (**_FpCodeCompare**), możesz podać jeden specjalną **_FPIEEE_COMPARE_RESULT** wartości (zgodnie z definicją w Fpieee.h) w **Result.Value** pola. Typ konwersji (**_FpCodeConvert**) wskazuje, że pułapki wystąpił podczas operacji Konwersja typów zmiennoprzecinkowych. Można przyjrzeć się **Operand1** i **wynik** typy, można określić typu próby konwersji.|
-|**operand1**<br/>**operand2**<br/>**wynik**|Te **_FPIEEE_VALUE** struktury wskazuje typy oraz wartości proponowanych wynik i argumentów operacji. Każda struktura zawiera następujące pola:<br /><br /> **OperandValid** — flagę wskazującą, czy wartość odpowiada jest prawidłowa.<br />**Format** — typ danych w odpowiadającej jej wartości. Może być zwrócony typ formatu, nawet jeśli odpowiadającej jej wartości nie jest prawidłowy.<br />**Wartość** -wynik lub argument wartości danych.|
-|**Przyczyna**<br/>**Włączenie**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS** zawiera pole o jeden bit według typu zmiennoprzecinkowych wyjątków punktu. Brak zgodności między tych pól i argumenty używane do maskować wyjątki dostarczony do [_controlfp —](control87-controlfp-control87-2.md). Dokładne znaczenie każdy bit jest zależna od kontekstu:<br /><br /> **Przyczyna** — każdy zestaw bit wskazuje określonego wyjątku, który został zgłoszony.<br />**Włącz** — każdy zestaw bit wskazuje, że określonego wyjątku jest obecnie zaznaczona.<br />**Stan** — każdy zestaw bit wskazuje, że określonego wyjątku jest aktualnie oczekujący. Dotyczy to również wyjątki, które nie mają został zgłoszony, ponieważ zostały one zamaskować **_controlfp —**.|
+|**RoundingMode**<br/>**Precyzja**|Te **niepodpisane** **int** pola zawierają informacje na temat zmiennoprzecinkowych środowiska w momencie wystąpienia wyjątku.|
+|**Operacja**|To **niepodpisane** **int** pole wskazuje typ operacji, która spowodowała pułapki. Jeśli typ jest porównanie (**_FpCodeCompare**), można dostarczyć jeden specjalny **_FPIEEE_COMPARE_RESULT** wartości (zgodnie z definicją w Fpieee.h) w **Result.Value** pola. Typ konwersji (**_FpCodeConvert**) wskazuje, że pułapki wystąpił podczas operacji konwersji zmiennoprzecinkowej. Można przyjrzeć się **Operand1** i **wynik** typów można ustalić typu próba konwersji.|
+|**Operand1**<br/>**Operand2**<br/>**wynik**|Te **_FPIEEE_VALUE** struktury wskazują, typy i wartości proponowane wynik i argumentów operacji. Każda struktura zawiera następujące pola:<br /><br /> **OperandValid** — flagę wskazującą, czy odpowiada wartość jest prawidłowa.<br />**Format** — typ danych odpowiadająca wartość. Typ formatu może zostać zwrócona, nawet jeśli odpowiadająca wartość nie jest prawidłowy.<br />**Wartość** — wynik lub operand wartości danych.|
+|**Przyczyna**<br/>**Enable**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS** zawiera pole o jeden bit na typ wyjątku punktu zmiennoprzecinkowego. Brak zgodności między te pola i argumenty używane do maskować wyjątki, przekazana do [_controlfp](control87-controlfp-control87-2.md). Dokładne znaczenie każdy bit zależy od kontekstu:<br /><br /> **Przyczyna** — każdy ustawionego bitu wskazuje określony wyjątek, który został zgłoszony.<br />**Włącz** — każdy ustawionego bitu. wskazuje, że określony wyjątek jest obecnie pozbawiony maskowania.<br />**Stan** — każdy ustawionego bitu. wskazuje, że określony wyjątek jest obecnie w stanie oczekiwania. W tym wyjątków, które nie mają zostało wywołane, ponieważ zostały zamaskować **_controlfp**.|
 
-Oczekujące wyjątki, które są wyłączone są wywoływane, gdy zostanie włączona. Może to spowodować niezdefiniowane zachowanie przy użyciu **_fpieee_flt —** jako filtru wyjątków. Wywoływanie zawsze [_clearfp —](clear87-clearfp.md) przed włączeniem wyjątki zmiennoprzecinkowe.
+Oczekujących wyjątkach, które są wyłączone są wywoływane, gdy je włączyć. To może spowodować niezdefiniowane zachowanie, korzystając z **_fpieee_flt** jako filtru wyjątków. Zawsze wywołuj [_clearfp —](clear87-clearfp.md) przed włączeniem wyjątki zmiennoprzecinkowe.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -92,7 +82,7 @@ Oczekujące wyjątki, które są wyłączone są wywoływane, gdy zostanie włą
 |--------------|---------------------|
 |**_fpieee_flt**|\<fpieee.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

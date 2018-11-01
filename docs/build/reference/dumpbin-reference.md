@@ -1,14 +1,8 @@
 ---
-title: Dumpbin — dokumentacja | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Odwołanie DUMPBIN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - dumpbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary data, binary file dumper
 - DUMPBIN program
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b9299be5e5b998d9fd8e779e4804a1ac681ad6f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d13ec31de79e15cf4fefce7bb954f488ff8fccb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451210"
 ---
 # <a name="dumpbin-reference"></a>Odwołanie DUMPBIN
 

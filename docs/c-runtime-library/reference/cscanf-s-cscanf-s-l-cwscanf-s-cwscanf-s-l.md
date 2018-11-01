@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463703"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
-Odczyty sformatowanych danych z konsoli. Wersje tych bezpieczniejsze [_cscanf —, _cscanf_l —, _cwscanf —, _cwscanf_l —](cscanf-cscanf-l-cwscanf-cwscanf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczyty sformatowanych danych z konsoli. Te bardziej bezpieczne wersje [_cscanf, _cscanf_l —, _cwscanf —, _cwscanf_l —](cscanf-cscanf-l-cwscanf-cwscanf-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -108,20 +98,20 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba pól, które zostały pomyślnie przekonwertowany i przypisane. Wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana jest **EOF** dla próba odczytu na końcu pliku. Taka sytuacja może wystąpić, gdy wprowadzanie z klawiatury jest przekierowywany na poziomie wiersza polecenia systemu operacyjnego. Zwracane wartości 0 oznacza, że nie ma pól zostały przypisane.
+Liczbę pól pomyślnie przekonwertowanych i przypisanych. Zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Wartość zwracana jest **EOF** dla próba odczytu na końcu pliku. Taka sytuacja może wystąpić, gdy dane wejściowe z klawiatury są przekierowywane na poziomie wiersza polecenia systemu operacyjnego. Zwracana wartość wynosząca 0 oznacza, że nie przydzielono żadnych pól.
 
-Te funkcje walidację ich parametrów. Jeśli *format* jest wskaźnika o wartości null, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i **errno** ustawiono **einval —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *format* jest pustym wskaźnikiem, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i **errno** ustawiono **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cscanf_s —** funkcja odczytuje dane bezpośrednio z poziomu konsoli do lokalizacji podanej przez *argument*. [_Getche —](getch-getwch.md) funkcji umożliwia odczytywanie znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmienna typu, który odpowiada specyfikatorowi typu w *format*. Formanty format interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako *format* parametr [scanf_s —](scanf-scanf-l-wscanf-wscanf-l.md) funkcji. Gdy **_cscanf_s —** zwykle echa znak wejściowy nie ma, jeśli została ostatnim wywołaniu do **_ungetch —**.
+**_Cscanf_s —** funkcja odczytuje dane bezpośrednio z konsoli w miejscach podanych przez *argument*. [_Getche](getch-getwch.md) funkcja jest używana do odczytu znaków. Każdy parametr opcjonalny musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Format kontroluje interpretację danych wejściowych pola i ma taką samą formę i funkcjonuje jako *format* parametr [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) funkcji. Gdy **_cscanf_s —** zwykle funkcją wprowadzanych znaków nie są tak Jeśli ostatnie wywołanie było do **_ungetch**.
 
-Inne wersje bezpiecznego funkcji, takich jak **scanf** rodziny, **_cscanf_s —** i **_cswscanf_s** wymaga argumentów rozmiar dla znaki pola typu **c** , **C**, **s**, **S**, i **[**. Aby uzyskać więcej informacji, zobacz [scanf — specyfikacje szerokości](../../c-runtime-library/scanf-width-specification.md).
+Podobnie jak inne bezpieczne wersje funkcji w **scanf** rodziny **_cscanf_s —** i **_cswscanf_s** wymagają argumentów rozmiaru dla znaków pola typu **c** , **C**, **s**, **S**, i **[**. Aby uzyskać więcej informacji, zobacz [scanf — specyfikacje szerokości](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Parametr rozmiaru jest typu **niepodpisane**, a nie **size_t**.
+> Parametr rozmiaru ma typ **niepodpisane**, a nie **size_t**.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -137,11 +127,11 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**_cscanf_s —**, **_cscanf_s_l —**|\<conio.h>|
 |**_cwscanf_s —**, **_cwscanf_s_l —**|\<conio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

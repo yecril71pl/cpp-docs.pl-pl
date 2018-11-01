@@ -1,11 +1,6 @@
 ---
-title: cexp cexpf, cexpl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462936"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
-Obliczenia bazy danych base e wykładniczej z liczbą.
+Obliczenia eksponentę liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,23 +57,23 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje wykładnik.
+Liczby zespolonej, który reprezentuje wykładnik potęgi.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość **e** podniesionej do potęgi równej *z*.
+Wartość **e** podniesione do potęgi równej *z*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cexp** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **cexp** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cexp** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cexp** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**cexp**, **cexpf**, **cexpl**|\<complex.h>|\<complex.h>|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
