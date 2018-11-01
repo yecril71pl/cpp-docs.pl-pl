@@ -1,10 +1,6 @@
 ---
-title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs
-ms.custom: ''
+title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - copysignf
 - copysignl
@@ -32,8 +28,6 @@ f1_keywords:
 - _copysign
 - copysignl
 - _copysignf
-dev_langs:
-- C++
 helpviewer_keywords:
 - copysignl function
 - _copysignl function
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f54b45e0b4488e76c501f67b1e98de071157ad7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662816"
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
-Zwraca wartość, która ma wielkość jednego argumentu i logowania innego.
+Zwraca wartość, która ma wielkość jednego z argumentów i znak innego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,20 +83,20 @@ long double _copysignl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa jest zwracana jako wartość wyniku.
+Wartość zmiennoprzecinkowa jest zwracana jako wielkość wyniku.
 
 *y*<br/>
 Wartość zmiennoprzecinkowa jest zwracana jako znak wyniku.
 
-[Obsługa liczb zmiennoprzecinkowych procedury](../../c-runtime-library/floating-point-support.md)
+[Procedury obsługi wartości zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Copysign —** zwracają wartość zmiennoprzecinkową łączącą wielkości *x* i *y*. Nie ma żadnych zwracany błąd.
+**Copysign —** funkcje zwracają wartość zmiennoprzecinkową, która łączy wielkość *x* i znak *y*. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **copysign —** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **copysign —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **copysign —** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **copysign —** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -115,7 +105,7 @@ Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **copysi
 |**_copysign**|\<float.h>|
 |**copysign —**, **copysignf —**, **copysignl —**, **_copysignf —**, **_copysignl —**|\<math.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,27 +1,17 @@
 ---
-title: Makra (C/C++) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Makra (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf97e61e68cd02891c738db5de8820924957fc56
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656303"
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Wstępne przetwarzanie rozszerza makra we wszystkich wierszach, które nie są dyrektywami preprocesora (wiersze, które nie mają **#** jako pierwszy znak inny niż biały) w części niektórych dyrektyw, które nie są pomijane jako część kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.

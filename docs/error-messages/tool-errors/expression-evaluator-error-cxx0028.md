@@ -1,28 +1,18 @@
 ---
-title: Błąd ewaluatora wyrażeń CXX0028 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd CXX0028 programu Expression Evaluator
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - CXX0028
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAN0028
 - CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 33440c0b594bfd710156ab4a77afd59575f7b6fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650344"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>Błąd CXX0028 programu Expression Evaluator
 
