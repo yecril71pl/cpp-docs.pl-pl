@@ -1,45 +1,35 @@
 ---
-title: C2441 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2441
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2441
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551258"
 ---
-# <a name="compiler-error-c2441"></a>C2441 błąd kompilatora
+# <a name="compiler-error-c2441"></a>Błąd kompilatora C2441
 
 > "*zmiennej*": symbol zadeklarowany z __declspec(proces) musi być stały w/CLR: pure tryb czysty
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-Domyślnie zmienne są właściwe dla domeny aplikacji w obszarze **/CLR: pure**. Oznaczone jako zmienną `__declspec(process)` w obszarze **/CLR: pure** jest podatne na błędy, jeśli zmodyfikowany w domenie jedną aplikację, a następnie odczytywane w innym.
+Domyślnie są zmienne dla domeny aplikacji, w obszarze **/CLR: pure**. Oznaczone jako zmienną `__declspec(process)` w obszarze **/CLR: pure** jest podatne na błędy, jeśli w jednej aplikacji domeny modyfikowane i odczytywane w innym.
 
-W związku z tym kompilator wymusza na proces zmienne są `const` w obszarze **/CLR: pure**, wprowadzania je odczytać tylko we wszystkich domenach aplikacji.
+W związku z tym, kompilator wymusza na proces zmienne być `const` w obszarze **/CLR: pure**, podejmowanie je odczytać tylko we wszystkich domenach aplikacji.
 
 Aby uzyskać więcej informacji, zobacz [procesu](../../cpp/process.md) i [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2441.
+Poniższy przykład spowoduje wygenerowanie C2441.
 
 ```cpp
 // C2441.cpp

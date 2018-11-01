@@ -1,25 +1,23 @@
 ---
-title: '&lt;Atomic&gt; wyliczenia | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;Atomic&gt; Typy wyliczeniowe'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - atomic/std::memory_order
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: c30e7ca78533b0b4c2a4eb49bd99bd13483d2b8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03247f6abd01b00fbbed3b33016cd4a12d8a13f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543755"
 ---
-# <a name="ltatomicgt-enums"></a>&lt;Atomic&gt; wyliczenia
+# <a name="ltatomicgt-enums"></a>&lt;Atomic&gt; Typy wyliczeniowe
 
 ## <a name="memory_order_enum"></a>  memory_order wyliczenia
 
-Dostarcza nazw symbolicznych dla operacji synchronizacji w lokalizacji pamięci. Te operacje mają wpływ na sposób przydziały w jeden wątek stają się widoczne w innym.
+Dostarcza symbolicznych nazw dla operacji synchronizacji w lokalizacji pamięci. Operacje te wpływają na jak przydziały w jednym wątku stają się widoczne w innym.
 
 ```cpp
 typedef enum memory_order {
@@ -36,12 +34,12 @@ typedef enum memory_order {
 
 |||
 |-|-|
-|`memory_order_relaxed`|Kolejność nie wymagane.|
-|`memory_order_consume`|Operacja obciążenia działa jako operacją consume w lokalizacji pamięci.|
-|`memory_order_acquire`|Operacja obciążenia działa jako operację pobierania w lokalizacji pamięci.|
-|`memory_order_release`|Operacja magazynu działa jako operacja wersji w lokalizacji pamięci.|
+|`memory_order_relaxed`|Kolejność nie wymagana.|
+|`memory_order_consume`|Operacja ładowania działa jako operacja zużywania w lokalizacji pamięci.|
+|`memory_order_acquire`|Operacja ładowania działa jako operacja nabywania w lokalizacji pamięci.|
+|`memory_order_release`|Operacja magazynowania działa jako operacja zwalniania w lokalizacji pamięci.|
 |`memory_order_acq_rel`|Łączy `memory_order_acquire` i `memory_order_release`.|
-|`memory_order_seq_cst`|Łączy `memory_order_acquire` i `memory_order_release`. Uzyskuje dostęp do pamięci, które są oznaczone jako `memory_order_seq_cst` musi być spójna sekwencyjnie.|
+|`memory_order_seq_cst`|Łączy `memory_order_acquire` i `memory_order_release`. Dostępy do pamięci, które są oznaczone jako `memory_order_seq_cst` muszą być kolejno spójne.|
 
 ## <a name="see-also"></a>Zobacz także
 

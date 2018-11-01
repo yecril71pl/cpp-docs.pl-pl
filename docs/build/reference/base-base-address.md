@@ -1,15 +1,9 @@
 ---
-title: -BASE (adres podstawowy) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /BASE (Adres podstawowy)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /base
 - VC.Project.VCLinkerTool.BaseAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - base addresses [C++]
 - programs [C++], preventing relocation
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551713"
 ---
 # <a name="base-base-address"></a>/BASE (Adres podstawowy)
 
@@ -56,7 +46,7 @@ Konsolidator generuje błąd, jeśli *adres* nie jest wielokrotnością 64 KB. O
 
 W wierszu polecenia innym sposobem określenia adres podstawowy jest przy użyciu pliku odpowiedzi z adresu podstawowego. Adres podstawowy plik odpowiedzi jest plik tekstowy, który zawiera adres podstawowy i opcjonalnie rozmiarów wszystkie biblioteki dll będzie używać programu i klucz unikatowy tekst dla każdego adresu podstawowego. Aby określić adres bazowy przy użyciu pliku odpowiedzi, należy użyć znakiem (**\@**) i nazwa pliku odpowiedzi *filename*, a następnie przecinek, a następnie *klucz*wartość dla podstawowego adresu do użycia w pliku. Konsolidator szuka *filename* w obu określonej ścieżce, lub jeśli ścieżka nie zostanie określona w katalogach określonych w zmiennej środowiskowej LIB. Każdy wiersz w *filename* reprezentuje jedną bibliotekę DLL, a ma następującą składnię:
 
-> *klucz* *adres* [*rozmiar*] **;** *komentarz*
+> *klucz* *adres* [*rozmiar*] **;** *komentarz*
 
 *Klucz* ciąg znaków alfanumerycznych i nie jest uwzględniana wielkość liter. Zazwyczaj jest to nazwa biblioteki dll, ale nie muszą być. *Klucz* następuje podstawowej *adres* w notacji języka C, szesnastkowym lub dziesiętną i opcjonalnie maksymalnie *rozmiar*. Wszystkie trzy argumenty są oddzielone tabulacji lub spacji. Konsolidator generuje ostrzeżenie, jeśli określony *rozmiar* jest mniejsza niż wirtualnej przestrzeni adresowej wymagane przez program. A *komentarz* określono za pomocą średnika (**;**) i może być na tym samym lub w osobnym wierszu. Konsolidator ignoruje cały tekst z średnik z powrotem do końca wiersza. W tym przykładzie przedstawiono część tego pliku:
 

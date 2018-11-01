@@ -1,10 +1,6 @@
 ---
-title: _execl —, _wexecl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _execl, _wexecl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execl
 - _wexecl
@@ -25,31 +21,25 @@ f1_keywords:
 - _execl
 - _wexecl
 - wexecl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execl function
 - wexecl function
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32ec50c83a29f3c517955979c2df0de5203dc9a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530315"
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
 
-Ładuje i wykonuje nowych procesów podrzędnych.
+Ładuje i uruchamia procesy podrzędne.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,23 +68,23 @@ Lista wskaźników do parametrów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia tych funkcji nie powróci do procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** ustawiono zmiennej globalnej.
+W przypadku powodzenia, te funkcje nie zwracają procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** zmienna globalna jest ustawiona.
 
 |errno wartość|Opis|
 |-----------------|-----------------|
-|**E2BIG —**|Miejsce wymagane do argumentów i ustawienia środowiska przekracza 32 KB.|
-|**EACCES**|Określony plik ma blokowania lub udostępniania naruszenie.|
-|**EINVAL —**|Nieprawidłowy parametr (co najmniej jeden z parametrów jest wskaźnika o wartości null lub pusty ciąg).|
-|**EMFILE —**|Za dużo plików Otwórz (czy jest pliku wykonywalnego musi można otworzyć określonego pliku).|
-|**ENOENT —**|Nie znaleziono pliku lub ścieżki.|
-|**ENOEXEC —**|Określony plik nie jest wykonywalne lub ma nieprawidłowy format pliku wykonywalnego.|
-|**ENOMEM —**|Za mało pamięci jest dostępna do wykonania w nowym procesie; dostępna pamięć jest uszkodzona; lub istnieje nieprawidłowy blok, wskazujący, że proces wywołujący nie został poprawnie przydzielony.|
+|**E2BIG**|Miejsce wymagane dla argumentów i ustawień środowiska przekracza 32 KB.|
+|**EACCES**|Określony plik ma naruszenie zasad współużytkowania lub blokowania.|
+|**EINVAL**|Nieprawidłowy parametr (jeden lub więcej parametrów było wskaźnikiem typu null lub pusty ciąg znaków).|
+|**EMFILE**|Za dużo plików otwartych (do ustalenia, czy jest wykonywalny musi można otworzyć określonego pliku).|
+|**ENOENT**|Nie znaleziono pliku lub ścieżki.|
+|**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.|
+|**ENOMEM**|Jest dostępna do wykonania nowego procesu; nie ma wystarczającej ilości pamięci dostępna pamięć jest uszkodzona; lub istnieje nieprawidłowy blok, wskazujący, że proces wywołujący nie został poprawnie przydzielony.|
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji ładuje i wykonuje nowy proces, przekazywanie jako osobny parametr każdy argument wiersza polecenia. Pierwszy argument jest polecenia lub nazwa pliku wykonywalnego, a drugi argument powinna być taka sama jak pierwsza. Staje się on `argv[0]` wykonanie procesu. Trzeci argument jest pierwszy argument `argv[1]`, wykonywana procesu.
+Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr. Pierwszy argument jest poleceniem lub nazwą pliku wykonywalnego, a drugi argument funkcji powinna być taka sama, jak pierwsza. Staje się `argv[0]` w procesie wykonanym. Trzeci argument jest pierwszym argumentem, `argv[1]`, proces jest wykonywany.
 
-**_Execl —** funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* wskaźnika o wartości null lub pusty ciąg, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) Jeśli wykonywania będzie mógł kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Żaden nowy proces jest wykonywany.
+**_Execl** funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest wskaźnikiem typu null lub pustym ciągiem, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) Jeśli wykonywania może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1. Żaden nowy proces jest wykonywany.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,11 +93,11 @@ Każda z tych funkcji ładuje i wykonuje nowy proces, przekazywanie jako osobny 
 |**_execl**|\<process.h >|\<errno.h>|
 |**_wexecl**|\<process.h > lub \<wchar.h >|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md).
+Zobacz przykład w [_exec, _wexec — funkcje](../../c-runtime-library/exec-wexec-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

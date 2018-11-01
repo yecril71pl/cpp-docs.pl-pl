@@ -1,10 +1,6 @@
 ---
-title: ATAN, atanf —, atanl —, atan2, atan2f —, atan2l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541729"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Oblicza tangens **x** (**atan**, **atanf —**, i **atanl —**) lub arcus tangens **y** / **x** (**atan2**, **atan2f —**, i **atan2l —**).
+Oblicza arcus tangens **x** (**atan**, **atanf —**, i **atanl —**) lub arcus tangens **y** / **x** (**atan2**, **atan2f —**, i **atan2l —**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,29 +72,29 @@ long double atan2( long double y, long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Dowolne liczby.
+Wszystkie liczby.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**ATAN** Zwraca arcus tangens *x* w zakresie - π/2 na radiany π/2. **ATAN2** Zwraca arcus tangens *y*/*x* w zakresie - π na radiany π. Jeśli *x* ma wartość 0, **atan** zwraca wartość 0. Jeśli oba parametry **atan2** 0, funkcja zwraca wartość 0. Wszystkie wyniki są wyświetlane w radianach.
+**ATAN** Zwraca arcus tangens *x* w zakresie - π/2 do π/2 radianów. **ATAN2** Zwraca arcus tangens *y*/*x* w zakresie - π na radiany π. Jeśli *x* ma wartość 0, **atan** zwraca wartość 0. Jeśli oba parametry **atan2** to 0, funkcja zwraca 0. Wszystkie wyniki znajdują się w radianach.
 
-**ATAN2** używa oznaki oba parametry w celu określenia wiązania kwadrantu zwracanej wartości.
+**ATAN2** używa oznaki oba parametry w celu ustalenia quadrant zwracanej wartości.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **IND**|brak|**_DOMAIN —**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
 
 ## <a name="remarks"></a>Uwagi
 
-**Atan** funkcja oblicza tangens (odwrotna funkcja tangens) *x*. **ATAN2** oblicza tangens *y*/*x* (Jeśli *x* jest równe 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia, jeśli - π/2 *y* jest wartość ujemną lub 0, jeśli *y* ma wartość 0.)
+**Atan** funkcja oblicza tangens (odwrotność funkcji tangens) *x*. **ATAN2** oblicza arcus tangens *y*/*x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia, - π/2 if *y* będzie ujemna lub 0, jeśli *y* wynosi 0.)
 
-**ATAN** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
+**ATAN** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **atan** i **atan2** które trwają **float** lub **długi** **podwójne**  argumentów. W programie C **atan** i **atan2** zawsze pobierają **podwójne** argumentów i zwracane **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **atan** i **atan2** o **float** lub **długie** **double**  argumentów. W programie C **atan** i **atan2** zawsze pobierają **double** argumentów i zwracać **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**ATAN**, **atan2**, **atanf —**, **atan2f —**, **atanl —**, **atan2l —**|\<math.h>|\<cmath > lub \<math.h >|
 

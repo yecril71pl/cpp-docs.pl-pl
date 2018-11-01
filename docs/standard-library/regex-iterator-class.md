@@ -1,10 +1,6 @@
 ---
-title: regex_iterator — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: regex_iterator — Klasa
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_iterator
 - regex/std::regex_iterator::operator==
@@ -12,8 +8,6 @@ f1_keywords:
 - regex/std::regex_iterator::operator*
 - regex/std::regex_iterator::operator->
 - regex/std::regex_iterator::operator++
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_iterator
 - std::regex_iterator::operator==
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b723294c0ecdbdf585acecc257174251b13d56ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482631"
 ---
 # <a name="regexiterator-class"></a>regex_iterator — Klasa
 
