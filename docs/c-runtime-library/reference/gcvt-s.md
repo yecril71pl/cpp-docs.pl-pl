@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554968"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
-Konwertuje wartość zmiennoprzecinkowa na ciąg. To jest wersja [_gcvt —](gcvt.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje wartość zmiennoprzecinkowa do ciągu. To jest wersja [_gcvt —](gcvt.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,34 +66,34 @@ Bufor do przechowywania wynik konwersji.
 Rozmiar buforu.
 
 *value*<br/>
-Wartość do skonwertowania.
+Wartość do przekonwertowania.
 
-*cyfr*<br/>
+*cyfry*<br/>
 Liczba cyfr znaczących przechowywane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. Jeśli wystąpi błąd z powodu nieprawidłowego parametru (patrz poniższa tabela nieprawidłowe wartości), program obsługi nieprawidłowych parametrów jest wywoływany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, zostanie zwrócony kod błędu. Kody błędów są definiowane w Errno.h. Aby uzyskać listę tych błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zero, jeśli to się powiedzie. Jeśli wystąpi błąd z powodu nieprawidłowy parametr (zobacz w poniższej tabeli nieprawidłowe wartości), zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracany jest kod błędu. Kody błędów są definiowane w Errno.h. Aby uzyskać listę tych błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*sizeInBytes*|*value*|*cyfr*|Zwraca|Wartość w *buforu*|
+|*buffer*|*sizeInBytes*|*value*|*cyfry*|Wróć|Wartość w *buforu*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|wszystkie|wszystkie|wszystkie|**EINVAL —**|Nie modyfikować.|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|zero|wszystkie|wszystkie|**EINVAL —**|Nie modyfikować.|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|wszystkie|wszystkie|>= *sizeInBytes*|**EINVAL —**|Nie modyfikować.|
+|**NULL**|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
+|Nie **NULL** (wskazuje prawidłowy pamięci)|zero|Wszystkie|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
+|Nie **NULL** (wskazuje prawidłowy pamięci)|Wszystkie|Wszystkie|>= *sizeInBytes*|**EINVAL**|Nie jest modyfikowany.|
 
 **Problemy dotyczące zabezpieczeń**
 
-**_gcvt_s —** mogą generować naruszenia zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**.
+**_gcvt_s —** może generować naruszenie zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Gcvt_s —** funkcja konwertuje zmiennoprzecinkowe *wartość* na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w *buforu* . *Bufor* powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Bufor o długości **_CVTBUFSIZE** jest wystarczająca dla dowolnej liczby zmiennoprzecinkowe wartości. Jeśli rozmiar buforu *cyfr* + 1 jest używany, funkcja nie zastąpi końcu buforu, dlatego należy podać wystarczające buforu dla tej operacji. **_gcvt_s —** próbuje utworzyć *cyfr* cyfr w formacie dziesiętnym. Jeśli nie, tworzy *cyfr* cyfr w notacji wykładniczej. Końcowe zera można pominąć w konwersji.
+**_Gcvt_s —** funkcja konwertuje liczb zmiennoprzecinkowych *wartość* na ciąg znaków, (która zawiera przecinek dziesiętny i bajtów możliwe logowania) i zapisuje ciąg w *buforu* . *Bufor* powinien być wystarczająco duży, aby pomieścić przekonwertowana wartości, a także kończący znak null, która jest dołączana automatycznie. Bufor o długości **_CVTBUFSIZE** jest wystarczająca dla dowolnego zmiennoprzecinkowe wartości. Jeśli rozmiar buforu *cyfr* + 1 jest używany, funkcja nie zastąpi koniec buforu, dlatego należy podać wystarczające buforu dla tej operacji. **_gcvt_s —** próbuje utworzyć *cyfr* cyfr w formacie dziesiętnym. Jeśli jest ona nieosiągalna, tworzy *cyfr* cyfr w notacji wykładniczej. Końcowe zera można pominąć w konwersji.
 
-W języku C++ za pomocą tej funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążenie można wnioskować o długości buforu automatycznie, eliminując konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ za pomocą tej funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersja do debugowania tej funkcji po raz pierwszy wypełnia bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Ta funkcja w wersji debugowania wypełnia najpierw bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -111,7 +101,7 @@ Wersja do debugowania tej funkcji po raz pierwszy wypełnia bufor 0xFD. Aby wył
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

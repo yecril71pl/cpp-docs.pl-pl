@@ -1,11 +1,6 @@
 ---
-title: log1p —, log1pf —, log1pl2 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: log1p —, log1pf —, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524998"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p —, log1pf —, log1pl
 
@@ -82,34 +73,34 @@ Argument zmiennoprzecinkowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca fizyczna (podstawowa -*e*) logowania z (*x* + 1).
+Jeśli się powiedzie, zwraca fizyczna (podstawowy -*e*) dziennika systemu (*x* + 1).
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Dane wejściowe|Wynik|Wyjątek SEH|errno|
+|Dane wejściowe|Wynik|Wyjątek SEH|numer błędu|
 |-----------|------------|-------------------|-----------|
 |+ inf|+ inf|||
-|Denormals|Taki sam jak wejście|NIEDOPEŁNIENIE||
-|±0|Taki sam jak wejście|||
-|-1|-inf|DIVBYZERO|ERANGE —|
-|< -1|NaN|NIEPRAWIDŁOWY|EDOM —|
-|-inf|NaN|NIEPRAWIDŁOWY|EDOM —|
-|±SNaN|Taki sam jak wejście|NIEPRAWIDŁOWY||
-|±QNaN nieograniczonego|Taki sam jak wejście|||
+|Denormals|Takie same jak dane wejściowe|NIEDOPEŁNIENIE||
+|±0|Takie same jak dane wejściowe|||
+|-1|-inf|DIVBYZERO|ERANGE|
+|< -1|NaN|NIEPRAWIDŁOWY|EDOM|
+|-inf|NaN|NIEPRAWIDŁOWY|EDOM|
+|±SNaN|Takie same jak dane wejściowe|NIEPRAWIDŁOWY||
+|±QNaN czas nieokreślony|Takie same jak dane wejściowe|||
 
-**Errno** wartość jest równa erange — Jeśli *x* = -1. **Errno** ma wartość **edom —** Jeśli *x* < -1.
+**Errno** wartość jest równa ERANGE, jeśli *x* = -1. **Errno** wartość jest równa **EDOM** Jeśli *x* < wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-**Log1p —** funkcje mogą być bardziej dokładne niż przy użyciu `log(x + 1)` podczas *x* znajduje się w pobliżu 0.
+**Log1p —** funkcje mogą być bardziej precyzyjne niż przy użyciu `log(x + 1)` podczas *x* znajduje się w pobliżu 0.
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **log1p —** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **log1p —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **log1p —** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **log1p —** zawsze przyjmuje i zwraca **double**.
 
-Jeśli *x* jest liczbą naturalnego, funkcja zwraca logarytm silni (*x* - 1).
+Jeśli *x* to numer naturalnym, ta funkcja zwraca logarytm silni (*x* - 1).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**log1p —**, **log1pf —**, **log1pl**|\<math.h>|\<cmath >|
 

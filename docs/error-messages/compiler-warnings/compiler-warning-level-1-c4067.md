@@ -1,35 +1,25 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4067 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541193"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>Kompilator C4067 ostrzegawcze (poziom 1)
+# <a name="compiler-warning-level-1-c4067"></a>Kompilator ostrzeżenie (poziom 1) C4067
 
-> nieoczekiwane tokeny dyrektywie preprocesora - oczekiwano nowego wiersza
+> nieoczekiwane tokeny po dyrektywie preprocesora - oczekiwano nowego wiersza
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator znalezione i zignorowane dodatkowe znaki po dyrektywie preprocesora. Może to być spowodowane znaków nieoczekiwany że typową przyczyną jest stray średnika po zakończeniu dyrektywy. Komentarze nie powoduje to ostrzeżenie. **/Za** — opcja kompilatora umożliwia to ostrzeżenie, aby uzyskać więcej dyrektywy preprocesora niż domyślne ustawienie.
+Kompilator znalezione i zignorowane dodatkowe znaki następujące dyrektywy preprocesora. Może to być spowodowane przez wszelkie nieoczekiwane znaki, że typową przyczyną jest zabłąkany średnik, po zakończeniu dyrektywy. Komentarze nie powoduje to ostrzeżenie. **/Za** — opcja kompilatora umożliwia to ostrzeżenie, aby uzyskać więcej dyrektywy preprocesora niż domyślne ustawienie.
 
 ## <a name="example"></a>Przykład
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-Aby usunąć to ostrzeżenie, usuń znaki stray, lub przenieś je do blok komentarza. Określone ostrzeżenia C4067 mogą być wyłączone przez usunięcie **/Za** — opcja kompilatora.
+Aby rozwiązać to ostrzeżenie, usuń znaki zabłąkany lub przenieść je do blok komentarza. Niektórych ostrzeżeń C4067 mogą być wyłączone przez usunięcie **/Za** — opcja kompilatora.
 
 ```cpp
 // C4067b.cpp

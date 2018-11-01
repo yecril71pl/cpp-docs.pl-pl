@@ -1,10 +1,6 @@
 ---
-title: _Rtc_seterrorfunc — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
-dev_langs:
-- C++
 helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514741"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
-Określa funkcję jako program obsługi raportowania sprawdzanie błędów czasu wykonywania (RTCs). Ta funkcja jest przestarzała; Użyj **_rtc_seterrorfuncw —** zamiast tego.
+Określa funkcję jako program obsługi raportowania sprawdzanie błędów czasu wykonywania (RTCs). Ta funkcja jest przestarzała; Użyj **_RTC_SetErrorFuncW** zamiast tego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,16 +43,16 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkcja*<br/>
+*— Funkcja*<br/>
 Adres funkcji, która będzie obsługiwać sprawdzanie błędów czasu wykonywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja wcześniej zdefiniowanego błędu. Jeśli nie ma żadnej wcześniej określonych funkcji, zwraca **NULL**.
+Funkcję wcześniej zdefiniowaną błędu. Jeśli nie ma zdefiniowanej wcześniej funkcji, zwraca **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Nie używaj tej funkcji; Zamiast tego należy użyć **_rtc_seterrorfuncw —**. Zachowywane tylko dla zgodności z poprzednimi wersjami.
+Nie należy używać tej funkcji; Zamiast tego należy użyć **_RTC_SetErrorFuncW**. Zachowywane tylko w przypadku zgodności z poprzednimi wersjami.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -74,7 +64,7 @@ Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/com
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

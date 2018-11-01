@@ -1,11 +1,6 @@
 ---
-title: ilogb —, ilogbf —, ilogbl2 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ilogb —, ilogbf —, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,20 +30,16 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551986"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
-Pobiera liczbę całkowitą reprezentującą nieobciążonej wykładnik base-2 określonej wartości.
+Pobiera całkowitą reprezentującą nieobciążonej wykładnik base 2 określoną wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,26 +73,26 @@ Określona wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wykładnik base-2 *x* jako zalogowany **int** wartość.
+Jeśli to się powiedzie, zwróć wykładnik base 2 *x* jako zalogowany **int** wartość.
 
-W przeciwnym razie zwraca jedną z następujących wartości zdefiniowane w \<math.h >:
+W przeciwnym razie zwraca jedną z następujących wartości, zdefiniowane w \<math.h >:
 
 |Dane wejściowe|Wynik|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf, ±nan nieograniczonego|FP_ILOGBNAN|
+|±inf, ±nan czas nieokreślony|FP_ILOGBNAN|
 
-Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+Błędy są zgłaszane określonej [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ilogb —** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **ilogb —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ilogb —** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **ilogb —** zawsze przyjmuje i zwraca **double**.
 
-Wywołanie tej funkcji jest podobny do wywoływania odpowiednikiem **logb —** funkcji, a następnie Rzutowanie wartości zwracanej do **int**.
+Wywołanie tej funkcji jest podobne do wywoływania odpowiednik **logb —** funkcji, a następnie rzutowanie zwracanej wartości **int**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**ilogb —**, **ilogbf —**, **ilogbl**|\<math.h>|\<cmath >|
 

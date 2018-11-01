@@ -1,11 +1,6 @@
 ---
-title: csinh, csinhf, csinhl | Microsoft Docs
-ms.custom: ''
+title: csinh, csinhf, csinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csinh
 - csinhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/csinh
 - complex/csinhf
 - complex/csinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csinh function
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f620bdddb7bb86494b7981c84e12573a3ad89fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552012"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
-Pobiera sinus hiperboliczny liczby złożonej.
+Pobiera sinus hiperboliczny liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex csinhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Sinus hiperboliczny *z*, w radianach.
+Sinus hiperboliczny liczby *z*, w radianach.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **csinh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **csinh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **csinh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **csinh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**csinh**, **csinhf**, **csinhl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3028 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3028
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6cf01abf7e8351052af87c0d6b0746a3b98e228d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531994"
 ---
 # <a name="compiler-error-c3028"></a>Błąd kompilatora C3028
 

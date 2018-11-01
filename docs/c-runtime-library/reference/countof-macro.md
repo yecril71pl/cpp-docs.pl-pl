@@ -1,10 +1,6 @@
 ---
-title: _countof — makro | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _countof — Makro
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,26 +16,20 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536139"
 ---
 # <a name="countof-macro"></a>_countof — Makro
 
-Oblicza liczbę elementów w tablicy statycznie przydzielone.
+Oblicza liczbę elementów w tablicy statycznie przydzielonych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,13 +44,13 @@ Nazwa tablicy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w tablicy, wyrażony jako **size_t**.
+Liczba elementów w tablicy, wyrażone jako **size_t**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_countof —** jest zaimplementowany jako preprocesor makra przypominającej funkcji. Wersja języka C++ ma dodatkowy szablon maszyny do wykrywania w czasie kompilacji, jeśli wskaźnik jest przekazywany zamiast statycznie zadeklarowanych tablicy.
+**_countof** jest implementowany jako funkcyjne makro preprocesora. Wersja języka C++ ma dodatkowy szablon maszyny do wykrywania w czasie kompilacji, jeśli wskaźnik jest przekazywany zamiast statycznie zadeklarowanych tablicy.
 
-Upewnij się, że *tablicy* jest rzeczywiście tablicy, nie wskaźnik. W języku C **_countof —** tworzy błędne wyniki, jeśli *tablicy* wskaźnik. W języku C++ **_countof —** kompilacji Jeśli *tablicy* wskaźnik.  Tablica przekazany jako parametr do funkcji *decays do wskaźnika*, co oznacza, że w funkcji, nie można użyć **_countof —** do ustalenia zakresu tablicy.
+Upewnij się, że *tablicy* jest faktycznie tablicy, nie wskaźnik. W języku C **_countof** daje błędne wyniki, jeśli *tablicy* jest wskaźnikiem. W języku C++ **_countof** nie zostanie skompilowany, jeśli *tablicy* jest wskaźnikiem.  Tablica jest przekazywany jako parametr do funkcji *decays ze wskaźnikiem*, co oznacza, że w obrębie funkcji, nie można użyć **_countof** Aby określić rozmiar tablicy.
 
 ## <a name="requirements"></a>Wymagania
 

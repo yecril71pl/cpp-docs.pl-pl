@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,29 +19,23 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406498"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502313"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-Modyfikuje **__error_mode** do określenia lokalizacji innych niż domyślne, gdzie C runtime zapisuje komunikat o błędzie dla błędu, który może zakończyć program.
+Modyfikuje **__error_mode** do określenia lokalizacji innej niż domyślna, w którym środowisko wykonawcze C zapisuje komunikat o błędzie Wystąpił błąd może się to zakończyć program.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,20 +56,20 @@ Zwraca stare ustawienia lub wartość -1, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Określa ujście danych wyjściowych błędu, ustawiając wartość **__error_mode**. Na przykład Przekieruj dane wyjściowe do standardowego błędu lub użyj **MessageBox** interfejsu API.
+Kontroluje ujścia danych wyjściowych błędu, ustawiając wartość **__error_mode**. Na przykład, Przekieruj dane wyjściowe do błędu standardowego lub użyj **MessageBox** interfejsu API.
 
-*Mode_val* parametru może należeć do jednej z następujących wartości.
+*Mode_val* parametr może być ustawiony na jedną z następujących wartości.
 
 |Parametr|Opis|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Błąd zbiornika jest określany przez **__app_type**.|
-|**_OUT_TO_STDERR**|Błąd zbiornika jest błąd standardowy.|
-|**_OUT_TO_MSGBOX**|Błąd zbiornika jest okno komunikatu.|
-|**_REPORT_ERRMODE**|Bieżący raport **__error_mode** wartości.|
+|**_OUT_TO_DEFAULT**|Błąd ujścia jest określana przez **__app_type**.|
+|**_OUT_TO_STDERR**|Błąd ujścia jest błąd standardowy.|
+|**_OUT_TO_MSGBOX**|Błąd obiektu sink to okno komunikatu.|
+|**_REPORT_ERRMODE**|Zgłoś bieżącą **__error_mode** wartości.|
 
-Jeśli przekazano wartość inną niż wymienione program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_set_error_mode —** ustawia **errno** do **einval —** i zwraca wartość -1.
+Jeśli przekazanym wartość inna niż te wymienione procedurę obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_set_error_mode —** ustawia **errno** do **EINVAL** i zwraca wartość -1.
 
-Gdy jest używana z [assert](assert-macro-assert-wassert.md), **_set_error_mode —** wyświetla instrukcji nie powiodło się w oknie dialogowym i umożliwia wybór **Ignoruj** przycisk Tak, aby można było Kontynuuj uruchomić program.
+Gdy jest używany z [asercja](assert-macro-assert-wassert.md), **_set_error_mode —** wyświetla instrukcji nie powiodło się w oknie dialogowym i zapewnia wybór **Ignoruj** przycisk, aby można było Kontynuuj uruchomić program.
 
 ## <a name="requirements"></a>Wymagania
 

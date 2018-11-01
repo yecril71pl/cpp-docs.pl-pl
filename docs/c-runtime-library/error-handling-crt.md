@@ -1,48 +1,38 @@
 ---
-title: Obsługa błędów (CRT) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Obsługa błędów (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.errors
-dev_langs:
-- C++
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551222"
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 
-Użyj tych procedur obsługi błędów programu.
+Użyj tych procedur, aby obsługiwać błędy programu.
 
 ## <a name="error-handling-routines"></a>Procedury obsługi błędów
 
 |Procedura|Zastosowanie|
 |-------------|---------|
-|[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Testowanie programowania błędy logiczne; dostępne w wersji i debugowania wersja biblioteki wykonawczej.|
-|[_ASSERT, _asserte —](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak **assert**, ale są dostępne tylko w wersjach debugowania biblioteki czasu wykonywania.|
-|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetowanie wskaźnika błędów. Wywoływanie **rewind** lub zamykania strumienia również resetuje wskaźnik błędów.|
-|[_eof](../c-runtime-library/reference/eof.md)|Sprawdź, czy koniec pliku w we/wy niskiego poziomu.|
+|[asercja](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Test dla programowania błędy logiczne; dostępne w wersji wydania i debugowe wersji biblioteki wykonawczej.|
+|[_ASSERT, _asserte —](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak **asercja**, ale jest dostępna tylko w wersji debugowania bibliotek wykonawczych.|
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetowanie wskaźnika błędów. Wywoływanie **rewind** lub zamyka strumień również resetuje wskaźnik błędu.|
+|[_eof](../c-runtime-library/reference/eof.md)|Sprawdź, czy koniec pliku operacji We/Wy niskiego poziomu.|
 |[feof](../c-runtime-library/reference/feof.md)|Test na końcu pliku. Koniec pliku jest również wskazane, gdy **_przeczytaj** zwraca wartość 0.|
 |[ferror](../c-runtime-library/reference/ferror.md)|Sprawdź błędy We/Wy strumienia.|
-|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Generowanie raportu, podobnie jak **printf**, ale są dostępne tylko w wersjach debugowania biblioteki czasu wykonywania.|
-|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje **__error_mode** do określenia lokalizacji innych niż domyślne, gdzie C, czas wykonywania zapisuje komunikat o błędzie dla błędu, który prawdopodobnie będzie zakończyć program.|
-|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia wywołanie czystej funkcji wirtualnej programu obsługi.|
+|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Generowanie raportu, podobnie jak **printf**, ale jest dostępna tylko w wersji debugowania bibliotek wykonawczych.|
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje **__error_mode** do określenia lokalizacji innej niż domyślna, w którym C, czas wykonywania zapisuje komunikat o błędzie Wystąpił błąd prawdopodobnie zakończy się program.|
+|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia element obsługujący dla wywołania czystą funkcję wirtualną.|
 
 ## <a name="see-also"></a>Zobacz także
 
