@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2940 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2940
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2940
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2940
 ms.assetid: af6bf2bf-8de6-4cfd-bbf0-4c6b32a30edf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6bc44d9c8286b14e091381cecfec537fae86b55
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5445b7083d11f1439d3e171d35c3ca39411310d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528794"
 ---
 # <a name="compiler-error-c2940"></a>Błąd kompilatora C2940
 

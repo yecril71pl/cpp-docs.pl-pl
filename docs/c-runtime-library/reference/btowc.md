@@ -1,10 +1,6 @@
 ---
-title: btowc — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: btowc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - btowc
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - btowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d0e56649218e6249550638af4e198cbd1284bc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514685"
 ---
 # <a name="btowc"></a>btowc
 
-Określanie, czy liczba całkowita reprezentuje prawidłową znaków jednobajtowych w stanie początkowego przesunięcia.
+Określanie, czy liczba całkowita reprezentuje prawidłowy znak Jednobajtowy w stanie przesunięcia początkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,11 +43,11 @@ wint_t btowc(
 ### <a name="parameters"></a>Parametry
 
 *Znak*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca reprezentację znaków dwubajtowych znaku, jeśli całkowitej reprezentuje prawidłową znaków jednobajtowych w stanie początkowego przesunięcia. Zwraca weof — Jeśli ta liczba całkowita jest EOF lub nie jest prawidłowym znakiem jednobajtowe w stanie początkowego przesunięcia. Dane wyjściowe z tej funkcji zależy od bieżącego **LC_TYPE** ustawień regionalnych.
+Zwraca reprezentację znaków dwubajtowych znaków, jeśli liczba całkowita reprezentuje znak Jednobajtowy prawidłowy stan przesunięcia początkowego. Zwraca WEOF, jeśli liczba całkowita jest EOF lub nie jest prawidłowy znak Jednobajtowy w stanie przesunięcia początkowego. Danymi wyjściowymi tej funkcji jest zależna od bieżącego **LC_TYPE** ustawień regionalnych.
 
 ## <a name="requirements"></a>Wymagania
 

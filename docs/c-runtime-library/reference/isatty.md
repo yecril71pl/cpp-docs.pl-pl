@@ -1,10 +1,6 @@
 ---
-title: _isatty — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545590"
 ---
 # <a name="isatty"></a>_isatty
 
-Określa, czy deskryptorów plików jest skojarzone z urządzeniem znaków.
+Określa, czy deskryptor pliku jest skojarzony z urządzeniem znaku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,17 +44,17 @@ int _isatty( int fd );
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Deskryptorów plików, która odwołuje się do urządzenia, które ma zostać przetestowana.
+Deskryptor pliku, który odwołuje się do urządzenia, które ma zostać przetestowana.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_isatty —** zwraca wartość niezerową, jeśli skojarzone z urządzeniem znak deskryptora. W przeciwnym razie **_isatty —** zwraca wartość 0.
+**_isatty —** zwraca wartość różną od zera, jeśli deskryptor jest skojarzony z urządzeniem znaku. W przeciwnym razie **_isatty —** zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Isatty —** funkcji określa, czy *fd* jest skojarzony z urządzenia znakowego (terminal, konsoli, drukarki lub portu szeregowego).
+**_Isatty —** funkcja sprawdza, czy *fd* jest skojarzony z urządzeniem znaku (terminal, konsola, drukarka lub port szeregowy).
 
-Ta funkcja weryfikuje *fd* parametru. Jeśli *fd* wskaźnik nieprawidłowego pliku, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość 0 i zestawy **errno** do **ebadf —**.
+Ta funkcja sprawdza poprawność *fd* parametru. Jeśli *fd* jest złym wskaźnikiem pliku, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca 0 i ustawia **errno** do **EBADF**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,11 +62,11 @@ Ta funkcja weryfikuje *fd* parametru. Jeśli *fd* wskaźnik nieprawidłowego pli
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

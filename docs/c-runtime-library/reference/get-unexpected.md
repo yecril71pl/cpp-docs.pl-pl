@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,23 +19,17 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519408"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
@@ -53,7 +43,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do funkcji zarejestrowany przez [set_unexpected —](set-unexpected-crt.md). Jeśli nie ustawiono żadnej funkcji, zwracana wartość może służyć do przywrócić domyślne zachowanie; Ta wartość może być **NULL**.
+Zwraca wskaźnik do funkcji zarejestrowane przez [set_unexpected](set-unexpected-crt.md). Jeśli żadna funkcja nie została ustawiona, wartość zwracana mogą służyć do przywracania domyślne zachowanie; Ta wartość może być **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,6 +57,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
 [abort](abort.md)<br/>
-[set_terminate —](set-terminate-crt.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
 [Zakończenie](terminate-crt.md)<br/>
 [Nieoczekiwany](unexpected-crt.md)<br/>

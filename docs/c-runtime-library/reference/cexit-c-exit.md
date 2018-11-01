@@ -1,10 +1,6 @@
 ---
-title: _cexit, _c_exit | Microsoft Docs
-ms.custom: ''
+title: _cexit, _c_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _c_exit
 - _cexit
@@ -26,8 +22,6 @@ f1_keywords:
 - c_exit
 - _c_exit
 - cexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - cleanup operations during processes
 - cexit function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b0840ccec85d46a13984b65ebe99e53b968bedeb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495137"
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 
-Wykonuje operacje oczyszczania i zwraca bez Trwa kończenie procesu.
+Wykonuje operacje oczyszczania i zwraca bez zakończenie debugowanego procesu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,16 +49,16 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cexit —** funkcji wywołań w ostatniej w kolejności wytworzenia, funkcje zarejestrowane przez **atexit —** i **_onexit —**. Następnie **_cexit —** opróżnia wszystkie bufory We/Wy i zamknięcie wszystkich otwartych strumieni przed zwróceniem. **_c_exit —** jest taka sama jak **_exit —** , ale zwraca do wywoływania procesu bez jej przetwarzania **atexit —** lub **_onexit —** lub opróżnianie buforów strumienia. Zachowanie **zakończyć**, **_exit —**, **_cexit —**, i **_c_exit —** przedstawiono w poniższej tabeli.
+**_Cexit —** wywołań w ostatni na wejściu, kolejność FIFO (LIFO), funkcje zarejestrowany przez funkcję **atexit** i **_onexit**. Następnie **_cexit —** opróżnia wszystkie bufory We/Wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit —** jest taka sama jak **_exit** , ale powraca do wywoływania proces bez przetwarzania **atexit** lub **_onexit** lub opróżniania buforów strumieni. Zachowanie **wyjść**, **_exit**, **_cexit —**, i **_c_exit —** zostały przedstawione w poniższej tabeli.
 
 |Funkcja|Zachowanie|
 |--------------|--------------|
-|**Zakończ**|Wykonuje pełne procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|
-|**_exit —**|Wykonuje szybkie procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|
-|**_cexit**|Wykonuje pełne procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|
-|**_c_exit**|Wykonuje szybkie procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|
+|**Zakończ**|Wykonuje kompletne procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
+|**_exit**|Wykonuje szybkie procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
+|**_cexit**|Wykonuje kompletne procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
+|**_c_exit**|Wykonuje szybkie procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
 
-Podczas wywoływania **_cexit —** lub **_c_exit —** funkcje, destruktory dla tymczasowych lub automatyczne obiektów, które istnieją w momencie wywołania nie są wywoływane. Automatyczne obiekt jest obiekt, który jest zdefiniowany w funkcji, której obiekt nie jest zadeklarowany jako statyczny. Tymczasowy obiekt to obiekt utworzony przez kompilator. Aby zniszczyć automatyczne obiekt przed wywołaniem **_cexit —** lub **_c_exit —**, jawnie Wywołaj destruktor dla obiektu, w następujący sposób:
+Gdy wywołujesz **_cexit —** lub **_c_exit —** funkcje, destruktory tymczasowego lub automatycznego obiektu, który istnieje w momencie zgłoszenia wywołania nie są wywoływane. Obiekt automatyczny jest obiektem, który jest zdefiniowany w funkcji, gdzie obiekt nie został zadeklarowany jako statyczny. Obiekt tymczasowy jest obiektem, który został utworzony przez kompilator. Aby zniszczyć obiekt automatyczny przed wywołaniem **_cexit —** lub **_c_exit —**, należy jawnie wywołać destruktor obiektu w następujący sposób:
 
 ```cpp
 myObject.myClass::~myClass( );
@@ -81,7 +71,7 @@ myObject.myClass::~myClass( );
 |**_cexit**|\<process.h >|
 |**_c_exit**|\<process.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

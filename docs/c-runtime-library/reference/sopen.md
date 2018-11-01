@@ -1,10 +1,6 @@
 ---
-title: sopen — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: sopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sopen
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - sopen
-dev_langs:
-- C++
 helpviewer_keywords:
 - sopen function
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5456d3c1e0f63fdc536a6c9fb17798f03282a080
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 160e30e22c1adbf6d3c7cd311e1c20723017f0bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510911"
 ---
 # <a name="sopen"></a>sopen
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_sopen —](sopen-wsopen.md) lub zwiększonych zabezpieczeń [_sopen_s —](sopen-s-wsopen-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_sopen](sopen-wsopen.md) lub zwiększenia bezpieczeństwa [_sopen_s —](sopen-s-wsopen-s.md) zamiast tego.

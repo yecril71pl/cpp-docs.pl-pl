@@ -1,10 +1,6 @@
 ---
-title: _spawnlpe —, _wspawnlpe — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _spawnlpe, _wspawnlpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _spawnlpe
 - _wspawnlpe
@@ -26,8 +22,6 @@ f1_keywords:
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wspawnlpe function
 - wspawnlpe function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be8e86ddb6405c39f877bd9065a931b66238c2b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 079841800befcb7196c6428eb58a943410b13987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525128"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
-Tworzy i wykonuje nowego procesu.
+Tworzy i uruchamia nowy proces.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,30 +77,30 @@ Tryb wykonywania dla procesu wywołującego.
 Ścieżka pliku do wykonania.
 
 *arg0*, *arg1*,... *argn*<br/>
-Lista wskaźników do argumentów. *Arg0* argument jest zwykle wskaźnik do *cmdname*. Argumenty *arg1* za pośrednictwem *argn* są wskaźnikami do ciągów znaków, które tworzą nowe listy argumentów. Po *argn*, musi istnieć **NULL** wskaźnik do znaku na końcu listy argumentów.
+Lista wskaźników do argumentów. *Arg0* argument jest zazwyczaj wskaźnikiem do *cmdname*. Argumenty *arg1* za pośrednictwem *argn* są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Następujące *argn*, musi istnieć **NULL** wskaźnik, aby zaznaczyć koniec listy argumentów.
 
-*envp —*<br/>
-Tablicy wskaźników do ustawienia środowiska.
+*envp*<br/>
+Tablica wskaźników do ustawienia środowiska.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwrócona przez synchronicznego **_spawnlpe —** lub **_wspawnlpe —** (**_p_wait —** określona dla *tryb*) jest nowy stan zakończenia proces. Wartość zwrócona przez asynchronicznego **_spawnlpe —** lub **_wspawnlpe —** (**_p_nowait —** lub **_p_nowaito —** określona dla  *tryb*) jest uchwytu procesu. Stan zakończenia to 0, jeśli proces zakończony normalnie. Jeśli działania zduplikowanego procesu używa w szczególności argument różną od zera do wywołania, można ustawić stanu zakończenia na wartość niezerową **zakończyć** procedury. Jeśli nowy proces nie zostanie jawnie ustawiona stanu zakończenia dodatnią, stan zakończenia dodatnią wskazuje nietypowe wyjście spowodowane przerwaniem lub przerwania. Zwracana wartość -1 wskazuje błąd (nie jest zainicjowany nowy proces). W takim przypadku **errno** ustawiono na jedną z następujących wartości.
+Wartość zwracana przez synchroniczny **_spawnlpe —** lub **_wspawnlpe —** (**_P_WAIT** określony dla *tryb*) jest stanem wyjścia nowego proces. Wartość zwracana przez synchroniczny **_spawnlpe —** lub **_wspawnlpe —** (**_P_NOWAIT** lub **_P_NOWAITO** określony dla  *tryb*) jest dojściem do procesu. Stanem wyjścia wynosi 0, jeżeli proces zakończył się normalnie. Możesz ustawić stan wyjścia na wartość różną od zera, jeśli procesu rozmnożonego specjalnie używa argumentu wartość różną od zera do wywołania **wyjść** procedury. Jeśli nowy proces nie ustawi jawnie stanu wyjścia, stan wyjścia wskazuje nietypowe wyjście spowodowane porzuceniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
 
 |||
 |-|-|
-**E2BIG —**|Lista argumentów przekracza 1024 bajty.
-**EINVAL —**|*tryb* argument jest nieprawidłowy.
-**ENOENT —**|Nie znaleziono pliku lub ścieżki.
-**ENOEXEC —**|Określony plik nie jest wykonywalne lub ma nieprawidłowy format pliku wykonywalnego.
-**ENOMEM —**|Za mało pamięci jest dostępna do wykonania w nowym procesie.
+**E2BIG**|Argument w postaci listy przekracza 1024 bajty.
+**EINVAL**|*tryb* argument jest nieprawidłowy.
+**ENOENT**|Nie znaleziono pliku lub ścieżki.
+**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.
+**ENOMEM**|Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu.
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji tworzy nowy proces jest wykonywany, przekazuje każdy argument wiersza polecenia jako osobny parametr i przekazuje tablicy wskaźników do ustawienia środowiska. Użyj tych funkcji **ścieżki** zmiennej środowiskowej można znaleźć pliku do wykonania.
+Każda z tych funkcji tworzy i uruchamia nowy proces, przekazuje każdy argument wiersza polecenia jako oddzielny parametr i przekazuje tablicę wskaźników do ustawienia środowiska. Te funkcje używają **ścieżki** zmiennej środowiskowej, aby znaleźć plik do wykonania.
 
-Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* jest ciągiem pustym lub wskaźnika o wartości null, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Nie nowego procesu jest zduplikowany.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest pustym ciągiem lub wskaźnikiem typu null, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL**i zwracają wartość -1. Żaden nowy proces nie jest rozprzestrzeniony.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -119,11 +109,11 @@ Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* jest 
 |**_spawnlpe**|\<process.h >|
 |**_wspawnlpe**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
+Zobacz przykład w [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: _rmtmp — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _rmtmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rmtmp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - rmtmp
 - _rmtmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - removing temporary files
 - _rmtmp function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 050f1c93fc38b9fdf722682c9688336098a3da45
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405968"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508891"
 ---
 # <a name="rmtmp"></a>_rmtmp
 
-Usuwa pliki tymczasowe.
+Powoduje usunięcie plików tymczasowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,11 +47,11 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_rmtmp —** zwraca liczbę plików tymczasowych zamknięty i usunięty.
+**_rmtmp —** zwraca liczbę plików tymczasowych, zamknięte, a następnie usuwane.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Rmtmp —** funkcja czyści wszystkie pliki tymczasowe w bieżącym katalogu. Funkcja usuwa tylko te pliki, które zostały utworzone przez **tmpfile —**; go używać tylko w tym samym katalogu, w którym zostały utworzone pliki tymczasowe.
+**_Rmtmp —** funkcja czyści wszystkie pliki tymczasowe w bieżącym katalogu. Funkcja usuwa tylko pliki tworzone przez **tmpfile —**; go używać tylko w tym samym katalogu, w którym zostały utworzone pliki tymczasowe.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -69,11 +59,11 @@ int _rmtmp( void );
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -81,7 +71,7 @@ Zobacz przykład [tmpfile —](tmpfile.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>
 [tmpfile](tmpfile.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

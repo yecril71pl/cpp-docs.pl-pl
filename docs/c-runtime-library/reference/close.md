@@ -1,10 +1,6 @@
 ---
-title: _zamknij | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528027"
 ---
 # <a name="close"></a>_close
 
@@ -55,19 +45,19 @@ int _close(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora odwołujących się do otwartego pliku.
+Deskryptor pliku odnoszące się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_zamknij** zwraca wartość 0, jeśli plik został zamknięty pomyślnie. Zwracana wartość -1 wskazuje błąd.
+**_zamknij** zwraca wartość 0, jeśli plik został pomyślnie zamknięty. Zwracana wartość-1 wskazuje błąd.
 
 ## <a name="remarks"></a>Uwagi
 
 **_Zamknij** funkcja zamyka plik skojarzony z *fd*.
 
-Deskryptorów plików i dojście do pliku podstawowego systemu operacyjnego są zamknięte. W związku z tym nie jest konieczne do wywołania **CloseHandle** Jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 **CreateFile** i przekonwertować deskryptora pliku przy użyciu **_open_osfhandle —**.
+Deskryptor pliku i dojście do pliku podstawowego systemu operacyjnego są zamknięte. W związku z tym, nie jest konieczne do wywołania **funkcja CloseHandle** Jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 **CreateFile** i przekonwertowane na deskryptor pliku przy użyciu **_open_osfhandle —**.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *fd* deskryptor nieprawidłowego pliku, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, funkcje, zwraca -1 i **errno** ustawiono **ebadf —**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *fd* deskryptor pliku uszkodzonych jest wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwraca wartość -1 i **errno** ustawiono **EBADF**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,7 +65,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *fd* deskryptor nieprawidłowego 
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -83,7 +73,7 @@ Zobacz przykład [_otwórz](open-wopen.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_dup, _dup2](dup-dup2.md)<br/>

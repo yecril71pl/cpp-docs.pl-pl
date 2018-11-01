@@ -1,10 +1,6 @@
 ---
-title: operator&lt;= (&lt;przykładowy kontener&gt;) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: operator&lt;= (&lt;przykładowy kontener&gt;)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std::<=
 - std.operator<=
@@ -12,29 +8,23 @@ f1_keywords:
 - std.<=
 - std::operator<=
 - <=
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator<=
 - operator <=
 - <= operator, with specific objects
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d29849a83eb90b38d98dab3ea3d093ccb69a68c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7461246b7dd610dc0043a242bd8010e9077fad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506122"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;przykładowy kontener&gt;)
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Overloads **operator < =** do porównywania dwóch obiektów klasy szablonu [kontenera](../standard-library/sample-container-class.md).
 

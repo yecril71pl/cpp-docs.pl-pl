@@ -1,27 +1,17 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4402 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4402
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4402
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4402
 ms.assetid: 2aaecfae-1e79-4787-87e8-0973f7ec0efe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 395fe8a9621923bbb4e4667921bce2540bfef8b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d76c108213776d8502ce9152433df22cf6925c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518559"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>Kompilator ostrzeżenie (poziom 1) C4402
 

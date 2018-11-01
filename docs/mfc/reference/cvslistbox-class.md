@@ -1,10 +1,6 @@
 ---
-title: Klasa CVSListBox | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Klasa CVSListBox
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXVSLISTBOX/CVSListBox::SelectItem
 - AFXVSLISTBOX/CVSListBox::SetItemData
 - AFXVSLISTBOX/CVSListBox::GetListHwnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CVSListBox [MFC], CVSListBox
 - CVSListBox [MFC], AddItem
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d4bb676685a05ee9cedd9074f6d04ba357c5085
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407754"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513766"
 ---
 # <a name="cvslistbox-class"></a>Klasa CVSListBox
 
@@ -68,16 +58,16 @@ class CVSListBox : public CVSListBoxBase
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CVSListBox::AddItem](#additem)|Dodaje ciąg do kontrolki listy. (Przesłania `CVSListBoxBase::AddItem`.)|
-|[CVSListBox::EditItem](#edititem)|Rozpoczyna operację edycji tekstu element formantu listy. (Przesłania `CVSListBoxBase::EditItem`.)|
-|[CVSListBox::GetCount](#getcount)|Pobiera liczbę ciągów w formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetCount`.)|
-|[CVSListBox::GetItemData](#getitemdata)|Pobiera wartość 32-bitowych specyficzne dla aplikacji, który jest skojarzony z elementem formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetItemData`.)|
-|[CVSListBox::GetItemText](#getitemtext)|Pobiera tekst elementu formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetItemText`.)|
-|[CVSListBox::GetSelItem](#getselitem)|Pobiera liczony od zera Indeks aktualnie wybranego elementu w formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetSelItem`.)|
-|`CVSListBox::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. Aby uzyskać więcej informacji i składnia metody, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CVSListBoxBase::PreTranslateMessage`.)|
-|[CVSListBox::RemoveItem](#removeitem)|Usuwa element z formant edytowalnej listy. (Przesłania `CVSListBoxBase::RemoveItem`.)|
-|[CVSListBox::SelectItem](#selectitem)|Wybiera ciągiem formant edytowalnej listy. (Przesłania `CVSListBoxBase::SelectItem`.)|
-|[CVSListBox::SetItemData](#setitemdata)|Kojarzy specyficzne dla aplikacji 32-bitową wartość za pomocą elementu formant edytowalnej listy. (Przesłania `CVSListBoxBase::SetItemData`.)|
+|[CVSListBox::AddItem](#additem)|Dodaje ciąg do kontrolki listy. (Przesłania `CVSListBoxBase::AddItem`).|
+|[CVSListBox::EditItem](#edititem)|Rozpoczyna operację edycji tekstu element formantu listy. (Przesłania `CVSListBoxBase::EditItem`).|
+|[CVSListBox::GetCount](#getcount)|Pobiera liczbę ciągów w formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetCount`).|
+|[CVSListBox::GetItemData](#getitemdata)|Pobiera wartość 32-bitowych specyficzne dla aplikacji, który jest skojarzony z elementem formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetItemData`).|
+|[CVSListBox::GetItemText](#getitemtext)|Pobiera tekst elementu formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetItemText`).|
+|[CVSListBox::GetSelItem](#getselitem)|Pobiera liczony od zera Indeks aktualnie wybranego elementu w formant edytowalnej listy. (Przesłania `CVSListBoxBase::GetSelItem`).|
+|`CVSListBox::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. Aby uzyskać więcej informacji i składnia metody, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CVSListBoxBase::PreTranslateMessage`).|
+|[CVSListBox::RemoveItem](#removeitem)|Usuwa element z formant edytowalnej listy. (Przesłania `CVSListBoxBase::RemoveItem`).|
+|[CVSListBox::SelectItem](#selectitem)|Wybiera ciągiem formant edytowalnej listy. (Przesłania `CVSListBoxBase::SelectItem`).|
+|[CVSListBox::SetItemData](#setitemdata)|Kojarzy specyficzne dla aplikacji 32-bitową wartość za pomocą elementu formant edytowalnej listy. (Przesłania `CVSListBoxBase::SetItemData`).|
 
 ### <a name="protected-methods"></a>Metody chronione
 
