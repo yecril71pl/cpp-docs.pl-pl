@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p —, _fprintf_p_l —, _fwprintf_p —, _fwprintf_p_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,20 +41,16 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462780"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
-Drukowanie sformatowanych danych do strumienia.
+Drukuje sformatowane dane do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -91,7 +81,7 @@ int _fwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -105,20 +95,20 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fprintf_p —** i **_fwprintf_p —** zwraca liczbę znaków zapisywane lub zwraca wartość ujemną po wystąpieniu błędu w danych wyjściowych.
+**_fprintf_p —** i **_fwprintf_p —** zwracają liczbę znaków napisanych, lub zwróć wartość ujemną, gdy wystąpi błąd danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_fprintf_p —** formatuje i wyświetla serii znaków i wartościami danych wyjściowych *strumienia*. Każda funkcja *argument* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. Aby uzyskać **_fprintf_p —**, *format* argument ma tej samej składni i użycia, które ma w **_printf_p —**. Te funkcje obsługi parametrów pozycyjnych, co oznacza, że można zmienić kolejność parametry używane przez ciąg formatu. Aby uzyskać więcej informacji na temat parametrów pozycyjnych, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p —** formatuje i drukuje serie znaków i wartości w danych wyjściowych *strumienia*. Każda funkcja *argument* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. Aby uzyskać **_fprintf_p —**, *format* argument ma tej samej składni i użycia, które ma w **_printf_p —**. Te funkcje obsługuje parametry pozycyjne, co oznacza, że można zmienić kolejność parametrów użytych w ciągu formatu. Aby uzyskać więcej informacji na temat parametry pozycyjne, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_fwprintf_p —** jest wersja znaków dwubajtowych **_fprintf_p —**; na liście **_fwprintf_p —**, *format* jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **_fprintf_p —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**_fwprintf_p —** to wersja znaku dwubajtowego **_fprintf_p —**; w **_fwprintf_p —**, *format* jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **_fprintf_p —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika.
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
-Wersje niezabezpieczone, takich jak (zobacz [fprintf —, _fprintf_l —, fwprintf —, _fwprintf_l —](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), te funkcje walidację ich parametrów i Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), jeśli dowolny *strumienia* lub *format* jest wskaźnika o wartości null lub jeśli ma żadnych specyfikatorów formatowania nieznany lub źle sformułowane. Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+Podobnie jak niezabezpieczone wersje (patrz [fprintf, _fprintf_l —, fwprintf —, _fwprintf_l —](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), te funkcje sprawdzają poprawność swoich parametrów i wywołują nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md), jeśli *strumienia* lub *format* jest pustym wskaźnikiem lub w przypadku wszelkich nieznanych lub źle sformułowanych specyfikatorów formatowania. Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -127,7 +117,7 @@ Wersje niezabezpieczone, takich jak (zobacz [fprintf —, _fprintf_l —, fwprin
 |**_ftprintf_p —**|**_fprintf_p**|**_fprintf_p**|**_fwprintf_p**|
 |**_ftprintf_p_l —**|**_fprintf_p_l**|**_fprintf_p_l**|**_fwprintf_p_l**|
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -136,7 +126,7 @@ Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-l
 |**_fprintf_p —**, **_fprintf_p_l —**|\<stdio.h>|
 |**_fwprintf_p —**, **_fwprintf_p_l —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -184,7 +174,7 @@ this is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
