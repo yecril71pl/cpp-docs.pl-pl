@@ -1,32 +1,22 @@
 ---
-title: Błąd narzędzi konsolidatora LNK1000 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd narzędzi konsolidatora LNK1000
 ms.date: 06/18/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1000
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a01db36200995813ec4b6862e9ddd04c6f069ba
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 8e53dc898addb4adeec63027c358b42a6a836b50
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501728"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Błąd narzędzi konsolidatora LNK1000
 
-> Nieznany błąd; zobacz dokumentację, aby uzyskać informacje o opcjach pomocy technicznej
+> Nieznany błąd; można znaleźć w dokumentacji dostępne opcje pomocy technicznej
 
-Należy zwrócić uwagę okoliczności błędu, a następnie spróbuj ustalić przyczynę problemu i Utwórz przypadek testowy odtworzenia. Aby uzyskać informacje na temat zbadania i raportuje te błędy, zobacz [jak zgłosić problem z zestawu narzędzi Visual C++ lub dokumentacją](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Należy pamiętać, okoliczności wystąpienia błędu, a następnie spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia. Aby uzyskać informacje na temat sposobu badania i zgłoszenie tych błędów, zobacz [Zgłaszanie problemu z zestawu narzędzi Visual C++ lub dokumentacji](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
-Błąd ten może wystąpić, jeśli mieszać plików standardowy nagłówek (na przykład Windows.h) i pliki. Prekompilowanego nagłówka, należy uwzględnić, jeśli dowolne, najpierw, a następnie standardowych nagłówków, a następnie pliki nagłówka.
+Błąd ten może wystąpić po przemieszaniu pliki nagłówkowe standard (na przykład Windows.h) i we własnych plikach. Obejmują prekompilowanego nagłówka, jeśli dowolny, pierwszy, a następnie standardowych nagłówków, a następnie pliki nagłówkowe.

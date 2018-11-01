@@ -1,9 +1,6 @@
 ---
-title: Microsoft::WRL Namespace | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Microsoft::WRL — Przestrzeń nazw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -14,22 +11,15 @@ f1_keywords:
 - ftm/Microsoft::WRL
 - client/Microsoft::WRL
 - corewrappers/Microsoft::WRL
-dev_langs:
-- C++
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a615e77c96901f2cdf211b9646b2b7b0512b99de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487454"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL — Przestrzeń nazw
 
@@ -89,7 +79,7 @@ namespace Microsoft::WRL;
 |Nazwa|Opis|
 |----------|-----------------|
 |[AsWeak, funkcja](../windows/asweak-function.md)|Pobiera słabe odwołanie do określonego wystąpienia.|
-|[Funkcja wywołania zwrotnego (WRL)](../windows/callback-function-wrl.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
+|[Callback — Funkcja (WRL)](../windows/callback-function-wrl.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
 |[CreateActivationFactory, funkcja](../windows/createactivationfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy, które można uaktywnić przez środowisko wykonawcze Windows.|
 |[CreateClassFactory, funkcja](../windows/createclassfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy.|
 |[Make, funkcja](../windows/make-function.md)|Inicjuje określonej klasy środowiska wykonawczego Windows.|

@@ -1,27 +1,17 @@
 ---
-title: Błąd krytyczny C1001 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd krytyczny C1001
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1001
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6363694dbd7f1a7ebfcd58cad030dfecf7f38397
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee0796260ac17613568912f0de235e9a1fd0702e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513896"
 ---
 # <a name="fatal-error-c1001"></a>Błąd krytyczny C1001
 

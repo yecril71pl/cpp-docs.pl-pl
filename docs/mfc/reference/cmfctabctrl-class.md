@@ -1,10 +1,6 @@
 ---
-title: Klasa CMFCTabCtrl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Klasa CMFCTabCtrl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -57,8 +53,6 @@ f1_keywords:
 - AFXTABCTRL/CMFCTabCtrl::StopResize
 - AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
 - AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCTabCtrl [MFC], ActivateMDITab
 - CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
@@ -110,16 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36203486fbc7337ffc3d93278554b830bbc792ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505130"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
@@ -147,7 +137,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Wyświetla określoną kartę kontrolą bieżącą kartę i ustawia fokus na tej karcie.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Określa, czy struktura ma rozmiar obszaru klienckiego wszystkich okien kontroli kartę, gdy element interfejsu użytkownika karty formantu zmieni.|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Deflates rozmiar obszaru określonej karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`.)|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Deflates rozmiar obszaru określonej karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
 |[CMFCTabCtrl::Create](#create)|Tworzy formant karty i dołącza je do `CMFCTabCtrl` obiektu.|
 |`CMFCTabCtrl::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Pokazuje lub ukrywa przycisk Zamknij ( **X**) na karcie aktywne.|

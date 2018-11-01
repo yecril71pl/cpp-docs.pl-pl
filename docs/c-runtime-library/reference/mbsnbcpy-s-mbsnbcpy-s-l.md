@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s —, _mbsnbcpy_s_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493499"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
-Kopie **n** bajtów ciągu do ciągu docelowego. Te wersje programu [_mbsnbcpy —, _mbsnbcpy_l —](mbsnbcpy-mbsnbcpy-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopiuje **n** bajty ciągu do ciągu docelowego. Te wersje [_mbsnbcpy —, _mbsnbcpy_l —](mbsnbcpy-mbsnbcpy-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,10 +83,10 @@ errno_t _mbsnbcpy_s_l(
 Miejsce docelowe dla ciągu znaków do skopiowania.
 
 *sizeInBytes*<br/>
-Rozmiar buforu docelowego.
+Rozmiar buforu miejsca docelowego.
 
 *strSource*<br/>
-Ciąg znaków ma zostać skopiowany.
+Ciąg znaków do skopiowania.
 
 *Liczba*<br/>
 Liczba bajtów do skopiowania.
@@ -106,26 +96,26 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; **Einval —** Jeśli przekazano zły parametr.
+Zero, jeśli to się powiedzie; **EINVAL** Jeśli przekazano zły parametr.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbcpy_s —** funkcji kopie *liczba* bajtów z *strSource* do *strDest*. Jeśli *liczba* przekracza rozmiar *strDest*, albo ciągów wejściowych jest wskaźnika o wartości null, lub *sizeInBytes* lub *liczba* ma wartość 0, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **einval —**. Jeśli nakłada ciągów źródłowych i docelowych, zachowanie **_mbsnbcpy_s —** jest niezdefiniowana.
+**_Mbsnbcpy_s —** funkcja kopiuje *liczba* bajtów z *strSource* do *strDest*. Jeśli *liczba* przekracza rozmiar okna *strDest*, każdy z ciągów wejściowych jest wskaźnikiem typu null lub *sizeInBytes* lub *liczba* ma wartość 0, funkcja wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL**. Jeżeli ciągi źródłowe i docelowe nakładają się, zachowanie **_mbsnbcpy_s —** jest niezdefiniowana.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> W odróżnieniu od niezabezpieczonego wersja tej funkcji **_mbsnbcpy_s —** nie wszelkie uzupełnienia null i nie zawsze wartość null kończy ciąg.
+> W odróżnieniu od od niezabezpieczonej wersji tej funkcji **_mbsnbcpy_s —** nie żadnego dopełnienia zerowego i zawsze wartość null kończy ciąg.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncpy_s —**|**_strncpy_s**|**_mbsnbcpy_s**|**_wcsncpy_s**|
+|**_tcsncpy_s**|**_strncpy_s**|**_mbsnbcpy_s**|**_wcsncpy_s**|
 |**_tcsncpy_s_l —**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 ## <a name="requirements"></a>Wymagania
@@ -135,7 +125,7 @@ Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłącz
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
