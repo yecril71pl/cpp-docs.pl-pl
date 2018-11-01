@@ -1,10 +1,6 @@
 ---
-title: isalnum —, iswalnum —, _isalnum_l —, _iswalnum_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456631"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -69,22 +59,22 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego obiektu znak alfanumeryczny. **isalnum —** zwraca wartość niezerową, jeśli dowolny **isalpha —** lub **isdigit —** jest różna od zera dla *c*, oznacza to, że jeśli *c* znajduje się w zakresu A - Z, - z lub 0 - 9. **iswalnum —** zwraca wartość niezerową, jeśli dowolny **iswalpha —** lub **iswdigit —** jest różna od zera dla *c*. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfanumerycznego. **isalnum** zwraca wartość różną od zera, jeśli **isalpha** lub **isdigit** jest różna od zera dla *c*, to znaczy, jeśli *c* znajduje się w zakresu A - Z, - z lub 0 - 9. **iswalnum —** zwraca wartość różną od zera, jeśli **iswalpha —** lub **iswdigit —** jest różna od zera dla *c*. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wersje tych funkcji, które mają **_l** sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **isalnum —** i **_isalnum_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **isalnum** i **_isalnum_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalnum —**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l —**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|

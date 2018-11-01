@@ -1,10 +1,6 @@
 ---
-title: _getdrive — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getdrive
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrive
 apilocation:
@@ -23,31 +19,25 @@ apitype: DLLExport
 f1_keywords:
 - _getdrive
 - getdrive
-dev_langs:
-- C++
 helpviewer_keywords:
 - current disk drive
 - getdrive function
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e99b95da8bec73475dcd1cbd71f6f5165a45d004
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399855"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470684"
 ---
 # <a name="getdrive"></a>_getdrive
 
-Pobiera bieżącego dysku.
+Pobiera bieżący napęd dysku.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,7 +47,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżący dysk (ustawienie domyślne) (1 = A, 2 = B i tak dalej). Nie ma żadnych zwracany błąd.
+Zwraca bieżący dysk (ustawienie domyślne) (1 = A, 2 = B i tak dalej). Nie będzie zwrotu błędu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -65,7 +55,7 @@ Zwraca bieżący dysk (ustawienie domyślne) (1 = A, 2 = B i tak dalej). Nie ma 
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

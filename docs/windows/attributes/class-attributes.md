@@ -1,26 +1,15 @@
 ---
-title: Klasy atrybutów (C++ COM) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Atrybuty klasy (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448870"
 ---
 # <a name="class-attributes"></a>Atrybuty klasy
 
@@ -31,9 +20,9 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[aggregatable](aggregatable.md)|Wskazuje, że klasa obsługuje agregację.|
 |[aggregates](aggregates.md)|Wskazuje, że formant agreguje klasy docelowej.|
 |[appobject](appobject.md)|Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełną .exe i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tej bibliotece typów.|
-|[przypadek](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
+|[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Tworzy formant ActiveX.|
-|[com_interface_entry —](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
 |[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[db_command](db-command.md)|Tworzy polecenie OLE DB.|
@@ -49,18 +38,18 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
 |[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
-|[Implementuje](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
+|[implements](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
 |[implements_category](implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|
-|[Moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[noncreatable](noncreatable.md)|Definiuje obiekt, który nie może być utworzone samodzielnie.|
 |[progid](progid.md)|Określa identyfikator ProgID kontrolki.|
 |[registration_script](registration-script.md)|Wykonuje skrypt określoną rejestrację.|
 |[requestedit](requestedit.md)|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.|
 |[source](source-cpp.md)|Określa interfejsy źródła kontrolki punktów połączenia w klasie. Właściwość lub metodę `source` atrybut wskazuje, że elementu członkowskiego zwraca obiekt lub `VARIANT` oznacza to źródło zdarzenia.|
 |[support_error_info](support-error-info.md)|Obsługuje raportowanie błędów dla obiektu docelowego.|
-|[Wątkowość](threading-cpp.md)|Określa model wątkowości dla formantu.|
+|[threading](threading-cpp.md)|Określa model wątkowości dla formantu.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|
-|[Wersja](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|
+|[version](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|
 |[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
 
 ## <a name="see-also"></a>Zobacz też

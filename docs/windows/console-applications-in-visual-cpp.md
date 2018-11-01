@@ -1,24 +1,13 @@
 ---
-title: Aplikacje w programie Visual C++ konsoli | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Aplikacje konsoli w programie Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3071307f-af0d-489a-8e20-02acded7fc66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f769f782c96f6a0143d98b2e2039ce915b2640f8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 20b203ffabd1403160141b27dab43b41a6c55db0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459140"
 ---
 # <a name="console-applications-in-visual-c"></a>Aplikacje konsoli w programie Visual C++
 Aplikacja konsoli akceptuje dane wejściowe i wysyła dane wyjściowe do konsoli, na którym jest także znana jako wiersz polecenia. Możesz tworzyć aplikacje konsoli, podstawowe lub bardzo rozbudowane zadania. Umożliwia także aplikacji konsoli jako weryfikacji koncepcji demonstracji funkcjonalności, którą chcesz później dołączyć do aplikacji pulpitu Windows lub aplikacji uniwersalnych platformy Windows. Aplikacje konsoli mogą komunikować się z innymi aplikacjami za pomocą potoków lub innych mechanizmów RPC.

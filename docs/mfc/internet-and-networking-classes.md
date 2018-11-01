@@ -1,28 +1,18 @@
 ---
-title: Klasy internetowe i sieciowe | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Klasy internetowe i sieciowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.net
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet classes [MFC]
 - networking classes [MFC]
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcce5cc8265140c8f939c17389aef1ffc82404ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba094bec4302bdcd92840e481392fa9d8b21410f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440485"
 ---
 # <a name="internet-and-networking-classes"></a>Klasy internetowe i sieciowe
 

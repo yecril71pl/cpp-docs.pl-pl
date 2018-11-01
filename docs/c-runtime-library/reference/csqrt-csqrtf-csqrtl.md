@@ -1,11 +1,6 @@
 ---
-title: csqrt, csqrtf, csqrtl | Microsoft Docs
-ms.custom: ''
+title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396313"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449884"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
-Pobiera pierwiastek kwadratowy z liczby złożonej, oddział Wytnij rzeczywistych osi ujemna.
+Pobiera pierwiastek kwadratowy liczby zespolonej z gałęzią Wytnij rzeczywistych osi ujemna.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,28 +64,28 @@ _Lcomplex csqrtl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych.
+Liczbą.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Pierwiastek kwadratowy liczby *z*. Wynik jest prawo płaszczyźnie półrocza.
+Pierwiastek kwadratowy liczby *z*. W wyniku powstaje w prawej połowie płaszczyzny.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
 |-----------|-------------------|--------------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
 |- ∞|brak|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **csqrt** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **csqrt** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **csqrt** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **csqrt** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,34 +1,24 @@
 ---
-title: Przegląd biblioteki C++ Standard | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Standardowa biblioteka C++ — Przegląd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444996"
 ---
 # <a name="c-standard-library-overview"></a>Standardowa biblioteka C++ — Przegląd
 
-Wszystkie obiekty biblioteki C++ są zadeklarowane lub zdefiniowane w co najmniej jeden nagłówek standardowy. Ta implementacja obejmuje dwóch dodatkowych nagłówków, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ Standard. Aby uzyskać pełną listę nagłówków, obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
+Wszystkie jednostki biblioteki języka C++ są zadeklarowane lub zdefiniowane w co najmniej jeden standardowy nagłówek. Ta implementacja zawiera dwa dodatkowe nagłówki, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ Standard. Aby uzyskać pełną listę nagłówków obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
 
-Niezależnych implementacja biblioteka języka C++ zawiera tylko podzbiór tych nagłówków:
+Autonomicznej implementacji bibliotekę języka C++ udostępnia tylko podzbiór tych nagłówków:
 
 |||
 |-|-|
@@ -36,11 +26,11 @@ Niezależnych implementacja biblioteka języka C++ zawiera tylko podzbiór tych 
 |[\<wyjątku >](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
 |[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
 
-Nagłówków biblioteki C++ ma dwa szerszych podziałów podrzędnych:
+Nagłówków biblioteki C++ ma dwa podziałów szersze:
 
 - [iostream](../standard-library/iostreams-conventions.md) Konwencji.
 
-- [Odwołanie do standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md) Konwencji.
+- [Odwołanie do biblioteki Standard C++](../standard-library/cpp-standard-library-reference.md) Konwencji.
 
 Ta sekcja zawiera następujące sekcje:
 
@@ -66,7 +56,7 @@ Ta sekcja zawiera następujące sekcje:
 
 - [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)
 
-Aby uzyskać więcej informacji na temat biblioteki wykonawcze języka Visual C++, zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md).
+Aby uzyskać więcej informacji na temat biblioteki wykonawczej języka Visual C++, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

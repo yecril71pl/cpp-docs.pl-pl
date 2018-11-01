@@ -1,31 +1,21 @@
 ---
-title: out_of_range — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: out_of_range — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::out_of_range
-dev_langs:
-- C++
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aeb29538dc73ddbefe2ee443cf7f8bfa660eb528
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449091"
 ---
 # <a name="outofrange-class"></a>out_of_range — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania argument, który jest poza prawidłowym zakresem.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania argument, który jest poza prawidłowym zakresem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -75,9 +65,9 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

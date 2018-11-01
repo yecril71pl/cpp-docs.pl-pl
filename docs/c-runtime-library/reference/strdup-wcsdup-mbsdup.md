@@ -1,10 +1,6 @@
 ---
-title: _strdup —, _wcsdup —, _mbsdup — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461519"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Ciągi duplikaty.
 
 > [!IMPORTANT]
-> **_mbsdup —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,34 +73,34 @@ unsigned char *_mbsdup(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do lokalizacji magazynu dla skopiowanego ciągu lub **NULL** Jeśli nie można przydzielić pamięci masowej.
+Każda z tych funkcji zwraca wskaźnik do lokalizacji przechowywania skopiowany ciąg lub **NULL** Jeśli nie można przydzielić pamięci masowej.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strdup —** wywołania funkcji [— funkcja malloc](malloc.md) przydzielić miejsca do magazynowania dla kopię *strSource* , a następnie kopiuje *strSource* do Przydzielone miejsce.
+**_Strdup —** wywołaniach funkcji [— funkcja malloc](malloc.md) przydzielić miejsce do magazynowania dla kopię *strSource* , a następnie kopiuje *strSource* do Przydzielone miejsce.
 
-**_wcsdup —** i **_mbsdup —** znaków dwubajtowych i znaków wielobajtowych wersji **_strdup —**. Argumenty i zwracana wartość **_wcsdup —** są znaków dwubajtowych ciągi; tych **_mbsdup —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**_wcsdup —** i **_mbsdup —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_strdup —**. Argumenty i wartość zwracana przez **_wcsdup —** są znakami dwubajtowymi ciągów; te z **_mbsdup —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup —**|**_strdup**|**_mbsdup —**|**_wcsdup**|
 
-Ponieważ **_strdup —** wywołania **— funkcja malloc** do przydzielenia miejsca w magazynie kopii *strSource*, jest dobrym rozwiązaniem zawsze wersji tej pamięci przez wywołanie metody [wolnego](free.md) rutynowych na wskaźniku, który jest zwracany przez wywołanie **_strdup —**.
+Ponieważ **_strdup —** wywołania **— funkcja malloc** do przydzielenia miejsca do magazynowania kopii *strSource*, jest dobrym rozwiązaniem zawsze wydania tej pamięci przez wywołanie metody [bezpłatne](free.md) rutynowych we wskaźniku, który jest zwracany przez wywołanie metody **_strdup —**.
 
-Jeśli **_DEBUG** i **_crtdbg_map_alloc —** są zdefiniowane **_strdup —** i **_wcsdup —** zastępuje wywołań **_strdup_dbg —**  i **_wcsdup_dbg —** umożliwiające profilowanie przydziału pamięci. Aby uzyskać więcej informacji, zobacz [_strdup_dbg —, _wcsdup_dbg —](strdup-dbg-wcsdup-dbg.md).
+Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, **_strdup —** i **_wcsdup —** są zastępowane przez wywołania **_strdup_dbg —**  i **_wcsdup_dbg —** aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz [_strdup_dbg —, _wcsdup_dbg —](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
-|**_wcsdup**|\<String.h > lub \<wchar.h >|
+|**_wcsdup**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsdup —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

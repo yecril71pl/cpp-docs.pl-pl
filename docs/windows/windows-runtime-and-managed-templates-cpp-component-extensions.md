@@ -1,26 +1,16 @@
 ---
-title: Środowisko wykonawcze Windows i zarządzane szablony (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Środowisko wykonawcze Windows i zarządzane szablony (C + +/ CLI i C + +/ CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: cbd66f3ddf41602f7ed9a73f3a334bb86f1f3705
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471477"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Środowisko wykonawcze Windows i zarządzane szablony (C + +/ CLI i C + +/ CX)
 
@@ -142,4 +132,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

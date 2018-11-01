@@ -1,43 +1,33 @@
 ---
-title: C4956 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie kompilatora C4956
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4956
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4956
 ms.assetid: 9154f2d1-d49f-4e07-90d2-0e9bc028011a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be92eb948e31a0a5367f92f5c2ed59baac2bd39b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c15de8b22f56a2555cc763a45153139b1df01a31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449104"
 ---
-# <a name="compiler-warning-c4956"></a>C4956 ostrzeżenia kompilatora
+# <a name="compiler-warning-c4956"></a>Ostrzeżenie kompilatora C4956
 
 > "*typu*": ten typ nie jest możliwe do zweryfikowania
 
 ## <a name="remarks"></a>Uwagi
 
-To ostrzeżenie jest generowany po [/CLR: Safe](../../build/reference/clr-common-language-runtime-compilation.md) określono i kod zawiera typ, który nie jest możliwe do zweryfikowania. **/CLR: Safe** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+To ostrzeżenie jest generowana podczas [/CLR: Safe](../../build/reference/clr-common-language-runtime-compilation.md) jest określony, a kod zawiera typ, który nie jest możliwe do zweryfikowania. **/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-To ostrzeżenie jest wystawione jako błąd i może być wyłączone z [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4956:
+Poniższy przykład spowoduje wygenerowanie C4956:
 
 ```cpp
 // C4956.cpp
