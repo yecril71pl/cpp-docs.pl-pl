@@ -1,12 +1,6 @@
 ---
-title: Konwencje biblioteki C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Konwencje biblioteki C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, conventions
 - classes [C++]
@@ -17,46 +11,42 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1140c5421f6b39498fa69199c4d7ff7ccdc2476
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524790"
 ---
 # <a name="c-library-conventions"></a>Konwencje biblioteki C++
 
-Biblioteka języka C++ przestrzega znacznie tej samej Konwencji jako standardowa biblioteka języka C, a także kilka kolejnych opisana w tym temacie.
+Biblioteka języka C++ przestrzegają wiele tych samych konwencji jako standardowej biblioteki C, a także kilka innych opisana w tym temacie.
 
-Implementacja ma niektórych szerokości geograficznej w sposób deklaruje typy i funkcje w bibliotece C++:
+Implementacja ma niektórych szerokości, w jaki relacja ta stwierdza, typy i funkcje w bibliotece C++:
 
-- Może mieć nazwy funkcje biblioteki standardowe C, extern #"C++" lub powiązania "C" extern. Dołącz odpowiedni nagłówek Standard C zamiast zadeklarować wbudowanego jednostki biblioteki.
+- Nazwy funkcje biblioteki standardowej C może być zewnętrzny #"C++" lub extern "C" powiązania. Dołącz odpowiedni nagłówek standardowy C, zamiast deklarowania wbudowanej jednostki biblioteki.
 
-- Nazwy funkcji Członkowskich w klasie biblioteki może mieć sygnatur dodatkowych funkcji za pośrednictwem wymienione w tym dokumencie. Można mieć pewność, że wywołanie funkcji opisanych w tym miejscu działa zgodnie z oczekiwaniami, ale niezawodnie nie można przyjąć adresu funkcji członkowskiej biblioteki. (Typ może nie być oczekiwań.)
+- Nazwy funkcji składowej w klasie biblioteki mogą mieć sygnatur dodatkowych funkcji za pośrednictwem tych wymienionych w niniejszym dokumencie. Można mieć pewność, że wywołanie funkcji, opisane w tym miejscu zachowuje się zgodnie z oczekiwaniami, ale niezawodnie nie można przyjąć adresu funkcji składowej biblioteki. (Typ może nie być oczekiwań).
 
-- Klasy biblioteki może mieć klas podstawowych nieudokumentowanej (niewirtualne). Klasa udokumentowane, która pochodzi z innej klasy w rzeczywistości może pochodzić z tej klasy przy użyciu innych klas nieudokumentowanej.
+- Klasa biblioteki może mieć klas bazowych nieudokumentowane (niewirtualne). Klasa udokumentowane, która pochodzi z innej klasy w rzeczywistości może pochodzić od tej klasy przy użyciu innych klas nieudokumentowane.
 
-- Typ zdefiniowany jako synonim dla niektórych typu Liczba całkowita może być taki sam jak jeden z kilku różnymi typami.
+- Typ zdefiniowany jako synonim dla pewnego typu Liczba całkowita może być taki sam jak jeden z kilku różnymi typami całkowitymi.
 
-- Typ maski można zaimplementować jako typu integer lub wyliczenia. W obu przypadkach można wykonywać operacje bitowe (takie jak `AND` i `OR`) dla wartości typu maski. Elementy `A` i `B` typu maski są niezerowe wartości tak, aby `A`  &  `B` wynosi zero.
+- Typem maski bitów można zaimplementować jako typ liczby całkowitej lub wyliczenia. W obu przypadkach można wykonać operacje bitowe (takie jak `AND` i `OR`) dla wartości typu maski bitów. Elementy `A` i `B` typu maski bitów jest niezerowe wartości tak, aby `A`  &  `B` wynosi zero.
 
-- Funkcji biblioteki, która ma Brak specyfikacji wyjątku może zgłosić wyjątek dowolnego, chyba że jego definicji wyraźnie ogranicza taką możliwość.
+- Funkcja biblioteki, która ma bez określenia wyjątków może zgłosić wyjątek dowolnego, chyba że jego definicja wyraźnie ogranicza taką możliwość.
 
 Z drugiej strony istnieją pewne ograniczenia:
 
-- Standardowa biblioteka języka C nie używa żadnych makr maskowania. Tylko określonych funkcji, podpisy są zarezerwowane, nie do nazw same funkcje.
+- Standardowej biblioteki C używa makra nie maskowania. Tylko określonych funkcji, której podpisy są zarezerwowane, nie nazw same funkcje.
 
-- Nazwa funkcji biblioteki poza klasą nie będzie miał sygnatury funkcji dodatkowych, nieudokumentowanej. Adres niezawodnie może potrwać.
+- Nazwa funkcji biblioteki poza klasą nie będzie miał sygnatur funkcji dodatkowych, nieudokumentowane. Możesz niezawodnie korzystać z adresu.
 
-- Klasy podstawowe i funkcje Członkowskie opisanego jako wirtualne są assuredly wirtualnego podczas są opisane jako niewirtualne assuredly niewirtualna.
+- Klasy podstawowe i określana jako wirtualnych elementów członkowskich są assuredly wirtualnego podczas są opisane jako niewirtualne assuredly niewirtualne.
 
-- Dwa typy zdefiniowane w bibliotece C++ różnią się zawsze chyba, że ten dokument jawnie sugestią, w przeciwnym razie wartość.
+- Dwa typy zdefiniowane przez bibliotekę języka C++ zawsze są różne, chyba że w tym dokumencie jawnie sugeruje, w przeciwnym razie.
 
-- Funkcje dostarczonych przez bibliotekę wersji domyślnej funkcji replaceable może zgłosić *co najwyżej* tych wyjątków na liście wszystkie Specyfikacja wyjątku. Nie destruktory dostarczonych przez bibliotekę zgłaszają wyjątki. Funkcje standardowej biblioteki C może propagowanie wyjątku, gdy `qsort` wywołania porównanie funkcji, która zgłasza wyjątek, ale ich nie inaczej zgłaszają wyjątki.
+- Funkcje dostarczone przez bibliotekę, w tym domyślne wersje funkcji wymienne, może zgłosić *co najwyżej* tych wyjątków wymienionych w dowolnym Specyfikacja wyjątku. Żadne destruktory dostarczonych przez bibliotekę zgłaszać wyjątki. Funkcje w standardowej biblioteki C może propagować wyjątek, gdy `qsort` wywołania porównanie funkcji, która zgłasza wyjątek, ale nie w przeciwnym razie zgłaszają wyjątki.
 
 ## <a name="see-also"></a>Zobacz także
 
