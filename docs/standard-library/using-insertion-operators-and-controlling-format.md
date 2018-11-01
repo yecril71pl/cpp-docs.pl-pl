@@ -1,25 +1,15 @@
 ---
-title: Korzystanie z operatorów wstawiania i formatu kontrolującego | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Korzystanie z operatorów wstawiania i formatu kontrolującego
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 8c04cc6d5deeaf5dfea65a7f8e92a8569084c077
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565415"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 

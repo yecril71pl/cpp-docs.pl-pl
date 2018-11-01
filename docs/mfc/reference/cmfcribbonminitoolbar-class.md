@@ -1,10 +1,6 @@
 ---
-title: Klasa CMFCRibbonMiniToolBar | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Klasa CMFCRibbonMiniToolBar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], IsContextMenuMode
 - CMFCRibbonMiniToolBar [MFC], IsRibbonMiniToolBar
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 738327ac44f7d2e28250c19eecdd64e8b761a361
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573384"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
 
@@ -59,7 +49,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |`CMFCRibbonMiniToolBar::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Przesłania `CMFCPopupMenu::IsRibbonMiniToolBar`.)|
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Przesłania `CMFCPopupMenu::IsRibbonMiniToolBar`).|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.|
 |[CMFCRibbonMiniToolBar::Show](#show)|Wyświetla podręczny pasek narzędzi na współrzędne ekranu.|
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Wyświetla podręczny pasek narzędzi wraz z menu kontekstowego.|

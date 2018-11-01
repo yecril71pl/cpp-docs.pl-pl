@@ -1,10 +1,6 @@
 ---
-title: _ismbbpunct —, _ismbbpunct_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbbpunct, _ismbbpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbpunct
 - _ismbbpunct_l
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbpunct_l
 - _ismbbpunct_l
 - _ismbbpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbpunct function
 - _ismbbpunct function
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7881461b7468d27ac376ab942d35683928cc1651
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acf23cf9da34ba50693aea7772cdbcfaeb146f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562998"
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 
-Określa, czy znak interpunkcyjny określonego znaku.
+Określa, czy określony znak jest znakiem interpunkcyjnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,14 +54,14 @@ int _ismbbpunct_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita ma zostać przetestowana.
+Liczba całkowita do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbpunct —** zwraca wartość niezerową, jeśli liczba całkowita *c* to symbol interpunkcyjny spoza zestawu ASCII. **_ismbbpunct —** używa bieżące ustawienia regionalne dla ustawienia znak zależnych od ustawień regionalnych. **_ismbbpunct_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych, który jest przekazywany w. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbbpunct —** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem interpunkcji spoza zestawu ASCII. **_ismbbpunct —** używa bieżących ustawień regionalnych dla wszelkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbpunct_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,7 +70,7 @@ Ustawienia regionalne do użycia.
 |**_ismbbpunct**|\<mbctype.h>|
 |**_ismbbpunct_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

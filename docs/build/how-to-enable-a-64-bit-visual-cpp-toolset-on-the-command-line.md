@@ -1,12 +1,6 @@
 ---
-title: 'Porady: Włączanie 64-bitowych Visual C++ narzędzi wiersza polecenia | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Porady: włączanie 64-bitowego zestawu narzędzi języka Visual C++ w wierszu polecenia'
 ms.date: 03/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - x64 [C++]
 - 64-bit compiler [C++], command line usage
@@ -18,35 +12,31 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22290cdf9418299cbba51ab1d893d60cb790e2e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c5fe144fe81fcc0fb1194c57dec7fa7556101f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572370"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>Porady: Włączanie 64-bitowego, x64 hostowany zestaw narzędzi Visual C++ w wierszu polecenia
 
-Visual C++ obejmuje kompilatory, linkery i innych narzędzi, które umożliwia tworzenie aplikacji uruchamianych w systemach operacyjnych Windows 32-bitowych, 64-bitowe lub oparte na usłudze ARM wersji specyficzne dla platformy. Inne opcjonalne obciążenia programu Visual Studio umożliwiają używanie narzędzia C++ pod kątem innych platform, na przykład iOS, Android i Linux. Architektura kompilacji domyślne korzysta 32-bitowy, hostowana x86 narzędzia w celu skompilowania 32-bitowy, x86 natywnego kodu systemu Windows. Jednak prawdopodobnie 64-bitowym komputerze. Możliwość korzystania z procesora i pamięci miejsca do kodu 64-bitowego przy użyciu zestawu narzędzi 64-bitowe, hostowana x64 podczas kompilowania kodu x86, x64 lub procesorów ARM.
+Visual C++ obejmuje kompilatory, wiązania i inne narzędzia, które służy do tworzenia wersji specyficzne dla platformy aplikacji, które można uruchomić w 32-bitowych, 64-bitowe lub oparte na ARM systemów operacyjnych Windows. Inne opcjonalne obciążenia programu Visual Studio pozwalają na innych platformach, takich jak iOS, Android i Linux przy użyciu narzędzi języka C++. Architektura kompilacji domyślne korzysta z 32-bitowe, obsługiwane x86 narzędzi do kompilowania kodu Windows 32-bitowy, macierzysty x86. Jednak prawdopodobnie masz komputer 64-bitowych. Korzystać z zalet procesora i pamięci miejsce dostępne dla kodu 64-bitowego, przy użyciu zestawu narzędzi 64-bitowe, obsługiwane x64 podczas kompilowania kodu x86, x64 lub procesorów ARM.
 
 > [!NOTE]
-> Aby uzyskać informacje o określone narzędzia, które są dołączone do każdej wersji programu Visual C++, zobacz [narzędzia Visual C++ i funkcji w programie Visual Studio wersje](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Aby uzyskać informacje o określonych narzędziach, które są dołączone do każdej wersji programu Visual C++, zobacz [Visual C++ Tools i funkcje w wersji programu Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
-> Informacje o używaniu środowiska IDE programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [jak: Konfigurowanie projekty Visual C++ do docelowego 64-bitowej, x64 platformy](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+> Aby uzyskać informacje o tym, jak używać programu Visual Studio IDE do tworzenia aplikacji 64-bitowych, zobacz [jak: Konfigurowanie projektów Visual C++ do docelowego 64-bitowej, x64 platform](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 
-Po zainstalowaniu obciążenia C++ w Instalatorze programu Visual Studio, zawsze powoduje zainstalowanie 32-bitowy, hostowana x86, natywne i Międzyplatformowe kompilatora narzędzia umożliwiające tworzenie x86 i x64 kodu. Jeśli obciążenie platformy uniwersalnej systemu Windows, instaluje również hostowanej x86 krzyżowego kompilatora narzędzia do kompilowania kodu ARM. Jeśli musisz zainstalować te obciążenia na systemem x64 64-bitowy, procesora, także uzyskać native 64-bitowe i między kompilatora narzędzia do tworzenia x86 x 64 i ARM kodu. 32-bitowe i 64-bitowe narzędzia generowania kodu identyczne, ale narzędzia 64-bitowy obsługę większej ilości pamięci prekompilowanego nagłówka, symbole i całej optymalizacji programu ([/GL](../build/reference/gl-whole-program-optimization.md) i [opcję/LTCG](../build/reference/ltcg-link-time-code-generation.md)) opcje. Jeśli napotkasz limity pamięci podczas korzystania z narzędzi 32-bitowy, spróbuj narzędzia 64-bitowy.
+Po zainstalowaniu obciążenia języka C++ w Instalatorze programu Visual Studio zawsze powoduje zainstalowanie 32-bitowe, obsługiwane x86, natywnej i cross kompilator narzędzia do kompilowania kodu x86 i x64. Jeśli dodasz obciążenia Universal Windows Platform, instaluje też hostowanych x86 kompilatorem krzyżowym narzędzia do kompilowania kodu ARM. Jeśli musisz zainstalować te obciążenia na systemem x64 64-bitowy procesor, możesz również uzyskać natywne 64-bitowe i wieloplatformowych narzędzi kompilatora się x86 x 64, ARM kodu. 32-bitowych i 64-bitowego narzędzia generują identyczny kod, ale narzędzia 64-bitowe obsługują więcej pamięci dla symboli nagłówków prekompilowanych i optymalizacji całego programu ([/GL](../build/reference/gl-whole-program-optimization.md) i [opcję/LTCG](../build/reference/ltcg-link-time-code-generation.md)) opcji. Jeśli napotkasz limity pamięci podczas korzystania z narzędzi 32-bitowych, spróbuj narzędzi 64-bitowych.
 
-## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Użyj skrótu wiersza polecenia dewelopera hostowanej 64-bitowych
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Użyj skrót do wiersza polecenia dewelopera hostowanej 64-bitowych
 
-Po zainstalowaniu programu Visual Studio na 64-bitowym systemie operacyjnym Windows, skrótów wiersza polecenia dewelopera dodatkowe dla 64-bitowych, hostowana x64 natywnego i Międzyplatformowe kompilatory są dostępne. Dostępu do tych wierszy poleceń w systemie Windows 10 na **Start** menu, otwórz folder dla używanej wersji programu Visual Studio, na przykład **programu Visual Studio 2017**, a następnie wybierz jedną z x64 lokalny lub cross narzędzie Wiersz polecenia dla deweloperów. Aby uzyskać dostęp do tych wierszy poleceń w systemie Windows 8 na **Start** ekranu, otwórz **wszystkie aplikacje**. Pod nagłówkiem dla zainstalowanej wersji programu Visual Studio Otwórz **programu Visual Studio** folder (w starszych wersjach programu Visual Studio może nosić **programu Visual Studio Tools**). We wcześniejszych wersjach systemu Windows, wybierz **Start**, rozwiń węzeł **wszystkie programy**, folder dla używanej wersji programu **programu Visual Studio** (i starszych wersji programu Visual Studio  **Narzędzia Visual Studio**). Aby uzyskać więcej informacji, zobacz [skrótów wiersza polecenia dewelopera](../build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+Po zainstalowaniu programu Visual Studio na 64-bitowym systemie operacyjnym Windows dostępne są skróty wiersza polecenia dewelopera dodatkowe natywnych 64-bitowe, obsługiwane x64 i kompilatorów skrośnych. Dostęp do tych wierszy poleceń w systemie Windows 10 w **Start** menu, otwórz folder dla używanej wersji programu Visual Studio, na przykład **programu Visual Studio 2017**, a następnie wybierz jedno z x64 natywnej lub cross-tool Wiersz polecenia dla deweloperów. Dostęp do tych wierszy poleceń w systemie Windows 8 w **Start** otwartym ekranem **wszystkie aplikacje**. Pod nagłówkiem dla zainstalowanej wersji programu Visual Studio, otwórz **programu Visual Studio** folder (w starszych wersjach programu Visual Studio może nosić **Visual Studio Tools**). We wcześniejszych wersjach systemu Windows, wybierz **Start**, rozwiń węzeł **wszystkie programy**, folder dla używanej wersji programu **programu Visual Studio** (i starszych wersji programu Visual Studio  **Narzędzia programu Visual Studio**). Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](../build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Użyj Vcvarsall.bat, aby ustawić Architektura 64-bitowych hostowanej kompilacji
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Vcvarsall.bat umożliwia ustawianie architekturę 64-bitowych hostowanej kompilacji
 
-Plik żadnego natywnego lub granic można konfiguracje kompilacji w wierszu polecenia, uruchamiając vcvarsall.bat narzędzia kompilatora poleceń. Ten plik polecenia konfiguruje ścieżki i zmiennych środowiskowych, które umożliwiają określonego kompilacji architektury w istniejących okno wiersza polecenia. Aby uzyskać szczegółowe instrukcje, zobacz [pliki poleceń deweloperów i lokalizacje](../build/building-on-the-command-line.md#developer-command-files-and-locations).
+Plik wszystkie macierzyste lub cross kompilator narzędzia, konfiguracje kompilacji mogą być używane w wierszu polecenia, uruchamiając vcvarsall.bat poleceń. Ten plik polecenia konfiguruje ścieżki i zmiennych środowiskowych, które umożliwiają określonego tworzenie architektury w istniejącym oknie wiersza polecenia. Aby uzyskać szczegółowe instrukcje, zobacz [pliki polecenia dla deweloperów i lokalizacje](../build/building-on-the-command-line.md#developer-command-files-and-locations).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: _get_dstbias — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _get_dstbias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_dstbias
 - __dstbias
@@ -25,28 +21,22 @@ f1_keywords:
 - __dstbias
 - _get_dstbias
 - get_dstbias
-dev_langs:
-- C++
 helpviewer_keywords:
 - __dstbias
 - daylight saving time offset
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82e334c6fcb282bebb003992219f6cf215ab7437
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579113"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
-Pobiera przesunięcie czasu letniego, w sekundach.
+Pobiera przesunięcie czasu letniego w ciągu kilku sekund.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,20 +46,20 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
-Przesunięcie w sekundach czas letni.
+*sekundy*<br/>
+Przesunięcie w ciągu kilku sekund czasu letniego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zera w razie powodzenia lub **errno** wartość, gdy wystąpi błąd.
+Zero, jeśli kończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_dstbias —** funkcja pobiera liczbę sekund czasu letniego jako liczba całkowita. Jeśli obowiązuje czas letni, przesunięcie domyślny jest 3600 sekund, czyli liczbę sekund w ciągu jednej godziny (chociaż kilka regionów obserwować przesunięcie dwóch godzin).
+**_Get_dstbias —** funkcja pobiera liczbę sekund czasu letniego jako liczba całkowita. Jeśli zmiany czasu jest włączone, przesunięcie domyślne wynosi 3600 sekund, czyli liczbę sekund w ciągu jednej godziny (chociaż kilku regionach obserwować przesunięcie dwóch godzin).
 
-Jeśli *sekund* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Jeśli *sekund* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
 
-Firma Microsoft zaleca, aby użyć tej funkcji zamiast makra **_dstbias** lub przestarzałych funkcji **__dstbias**.
+Firma Microsoft zaleca, aby użyć tej funkcji zamiast makro **_dstbias** lub zaniechanej funkcji **__dstbias**.
 
 ## <a name="requirements"></a>Wymagania
 

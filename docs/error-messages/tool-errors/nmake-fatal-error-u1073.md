@@ -1,27 +1,17 @@
 ---
-title: Błąd krytyczny NMAKE U1073 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd krytyczny NMAKE U1073
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - U1073
-dev_langs:
-- C++
 helpviewer_keywords:
 - U1073
 ms.assetid: d46bf2dd-400a-4802-9db2-f832e1c97f02
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c309ed94cd1c984406e0d21f0139e35c6e41d7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2aa02fd86906bd545373a313fa5e6e409ffb3cf9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582276"
 ---
 # <a name="nmake-fatal-error-u1073"></a>Błąd krytyczny NMAKE U1073
 

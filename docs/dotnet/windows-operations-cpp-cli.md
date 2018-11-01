@@ -1,12 +1,6 @@
 ---
-title: Operacje Windows (C + +/ CLI) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Operacje związane z systemem Windows (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows [C++], Windows-specific tasks
 - .NET Framework [C++], Windows operations
@@ -49,17 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 7b4b83bf9173458eefaee2f15a9b2a0abd44ec12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508397"
 ---
 # <a name="windows-operations-ccli"></a>Operacje związane z systemem Windows (C++/CLI)
 

@@ -1,10 +1,6 @@
 ---
-title: TAN, tanf — tanl — | Dokumenty Microsoft
-ms.custom: ''
+title: TAN, tanf —, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,18 +32,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564030"
 ---
-# <a name="tan-tanf-tanl"></a>tan tanf —, tanl —
+# <a name="tan-tanf-tanl"></a>TAN, tanf —, tanl
 
 Oblicza tangens.
 
@@ -73,22 +63,22 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Tan** funkcje tangensa *x*. Jeśli *x* jest większa niż lub równa 263 lub mniejsza niż lub równa -263 dojdzie do utraty znaczenie w wyniku.
+**Tan** funkcje zwracają tangensa *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub równy -263, wystąpi utrata znaczenia w wyniku.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**Matherr** wyjątku|
 |-----------|-------------------|-------------------------|
-|GRANICACH QNAN, IND|brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
 |GRANICACH INF|**NIEPRAWIDŁOWY**|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **tan** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **tan** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **tan** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **tan** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf —**, **tanl —**|\<math.h>|\<cmath > lub \<math.h >|
+|**tan**, **tanf —**, **tanl**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

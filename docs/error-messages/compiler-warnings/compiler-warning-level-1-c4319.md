@@ -1,37 +1,27 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4319 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4319
 ms.date: 1/18/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4319
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1b5fe896ae7d8f43708b60ee4dda486ef08f428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599449"
 ---
-# <a name="compiler-warning-level-1-c4319"></a>Kompilator C4319 ostrzegawcze (poziom 1)
+# <a name="compiler-warning-level-1-c4319"></a>Kompilator ostrzeżenie (poziom 1) C4319
 
-> "~": zero rozszerzanie "*type1*"do"*type2*" większego rozmiaru
+> "~": zero rozszerzanie "*type1*"to"*type2*' o większym rozmiarze
 
-Wynik **~** — operator (dopełnienia bitowego) jest bez znaku, a następnie rozszerzony zero konwertowania na typ większy.
+Wynik **~** — operator (dopełnienia bitowego) jest niepodpisany i następnie rozszerzone zero, gdy jest konwertowany na typ większe.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie `~(a - 1)` jest traktowane jako 32-bitowych wyrażenie długa bez znaku, a następnie konwertowana do 64-bitowy przez rozszerzenie zero. Może to prowadzić do operacji nieoczekiwane wyniki.
+W poniższym przykładzie `~(a - 1)` jest oceniane jako 32-bitowych unsigned wyrażenie długie i następnie konwertowany na 64-bitowy, zerowego rozszerzenia. Może to prowadzić do operacji nieoczekiwane wyniki.
 
 ```cpp
 // C4319.cpp

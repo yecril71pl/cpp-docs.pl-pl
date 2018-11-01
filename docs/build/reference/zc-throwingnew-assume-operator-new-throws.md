@@ -1,15 +1,9 @@
 ---
-title: /Zc:throwingNew (zgłasza nowy operator Przyjmij) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /Zc:throwingNew (przyjmowanie zgłasza nowy operator)
 ms.date: 03/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - throwingNew
 - /Zc:throwingNew
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - throwingNew
@@ -17,20 +11,16 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f446e5c71e88be86c31e5a83ca7d23f611683af4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561229"
 ---
-# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Przyjmij zgłasza nowy operator)
+# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (przyjmowanie zgłasza nowy operator)
 
-Gdy **/Zc:throwingNew** zostanie określona opcja, kompilator optymalizuje wywołań `operator new` pomijania sprawdzania dla wskaźnika o wartości null zwracane. Ta opcja nakazuje kompilatorowi założono, że wszystkie połączone implementacje `operator new` i niestandardowych allocators — są zgodne ze standardem C++ i zgłosić na błąd alokacji. Domyślnie w programie Visual Studio, kompilator generuje pessimistically sprawdzenia wartości null (**/Zc:throwingNew-**) dla tych wywołuje, ponieważ użytkownicy można połączyć z systemem innym niż zgłaszanie implementacji `operator new` lub zapisu alokatora niestandardowe procedury wskaźniki o wartości null, które zwracają.
+Gdy **/Zc:throwingNew** opcja zostanie określona, kompilator optymalizuje wywołania `operator new` do pominięcia sprawdza, czy zwracany wskaźnik o wartości null. Ta opcja informuje kompilator, aby założył, że wszystkie połączone implementacje `operator new` i niestandardowych alokatorów są zgodne ze standardem C++ i po niepowodzeniu alokacji. Domyślnie w programie Visual Studio, kompilator generuje pessimistically sprawdzanie wartości null (**/Zc:throwingNew-**) dla tych wywołań, ponieważ użytkownicy mogą tworzyć połączenia z implementacją niezgłaszające z `operator new` lub napisać niestandardowy alokator procedury które zwracają wskaźników o wartości null.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,29 +28,29 @@ Gdy **/Zc:throwingNew** zostanie określona opcja, kompilator optymalizuje wywo�
 
 ## <a name="remarks"></a>Uwagi
 
-Od ISO języka C ++ 98 standardowego została określona, która domyślnie [nowy operator](../../standard-library/new-operators.md#op_new) zgłasza `std::bad_alloc` Jeśli alokacja pamięci nie powiodło się. Wersje Visual C++ do programu Visual Studio 6.0 zwrócił wskaźnika o wartości null na błąd alokacji. W programie Visual Studio 2002 `operator new` zgodne ze standardem i zgłoszenie błędu. Do obsługi kodu, który używa starszej stylu alokacji, Visual Studio udostępnia implementację możliwym `operator new` w nothrownew.obj, która zwraca wskaźnika o wartości null w przypadku awarii. Domyślnie kompilator generuje obrony sprawdzenia wartości null, aby zapobiec tych starszych allocators — powoduje natychmiastowe awarii w przypadku awarii. **/Zc:throwingNew** opcja nakazuje kompilatorowi Opuść te sprawdzenia wartości null, przy założeniu, że wszystkie połączone pamięci allocators — jest zgodna ze standardem. Nie dotyczy to jawne z systemem innym niż wyrzucające `operator new` przeciążenia, które są zadeklarowane za pomocą dodatkowy parametr typu `std::nothrow_t` i mieć jawnego `noexcept` specyfikacji.
+Od czasu ISO C ++ 98 standard została określona, domyślnie [nowy operator](../../standard-library/new-operators.md#op_new) zgłasza `std::bad_alloc` Jeśli alokacja pamięci nie powiedzie się. Wystąpił błąd alokacji wersji programu Visual C++ do Visual Studio 6.0 zwrócona wskaźnikiem typu null. Począwszy od programu Visual Studio 2002, `operator new` jest zgodny ze standardem i zgłoszenie błędu. Do obsługi kodu, który używa starszego stylu alokacji, program Visual Studio udostępnia możliwym implementacji `operator new` w nothrownew.obj, która zwraca wskaźnik o wartości null w przypadku niepowodzenia. Domyślnie kompilator generuje obrony sprawdzanie wartości null, aby uniemożliwić powoduje natychmiastowe awarii w przypadku niepowodzenia tych buforów starszym stylu. **/Zc:throwingNew** opcji informuje kompilator, aby pozostawić te kontrole wartości null, przy założeniu, że wszystkie połączone pamięci puli buforów jest zgodna ze standardem. Dotyczy to jawne niezgłaszające `operator new` przeciążeń, które są zadeklarowane za pomocą dodatkowy parametr typu `std::nothrow_t` i mieć jawnego `noexcept` specyfikacji.
 
-Koncepcyjnie, do utworzenia obiektu w magazynie bezpłatne, kompilator generuje kod, aby przydzielić pamięci, a następnie wywołać jej konstruktora w celu zainicjowania pamięć. Ponieważ kompilatora Visual C++ zwykle nie wiadomo, ten kod będzie połączona z alokatora niezgodnych, zgłaszanie, domyślnie generowany jest również sprawdzania wartości null przed wywołaniem konstruktora. Zapobiega to pustego wskaźnika wyłuskania w wywołaniu konstruktora, jeśli alokację zgłaszanie nie powiedzie się. W większości przypadków te testy są zbędne, ponieważ domyślny `operator new` allocators — throw zamiast zwracać wskaźniki o wartości null. Kontrole ma także niefortunne efekty uboczne. One wybrzuszanie rozmiar kodu, ich wypełniania predykcyjne gałęzi i ich wstrzymywania inne optymalizacje kompilatora przydatne, takie jak devirtualization lub const propagacji poza zainicjowanego obiektu. Sprawdza obecność tylko do obsługi kodu, który stanowi łącze do *nothrownew.obj* lub ma niestandardowy niezgodnych `operator new` implementacji. Jeśli nie używasz niezgodnych `operator new`, zalecane jest użycie **/Zc:throwingNew** optymalizacji kodu.
+Model do utworzenia obiektu w wolnym magazynie, kompilator generuje kod, aby przydzielić pamięci a następnie wywołać jej konstruktora można zainicjować pamięci. Ponieważ kompilator języka Visual C++ normalnie nie wiadomo, ten kod będzie połączona z alokatora niezgodnych, niezgłaszające, domyślnie generuje również sprawdzanie wartości null, przed wywołaniem konstruktora. Zapobiega to pustego wskaźnika cofnięcia odwołania w wywołaniu konstruktora, jeśli niezgłaszające alokacja nie powiedzie się. W większości przypadków te testy są zbędne, ponieważ wartość domyślna `operator new` buforów throw zamiast zwracać wskaźników o wartości null. Kontrole również mieć niefortunne efekty uboczne. One wybrzuszanie rozmiar kodu, ich zalać predykcyjne gałęzi i ich wstrzymywania inne optymalizacje kompilatora użyteczne, takie jak devirtualization lub const propagacji poza zainicjowanego obiektu. Sprawdza obecność tylko do obsługi kodu, który stanowi łącze do *nothrownew.obj* lub niestandardowe niezgodnych `operator new` implementacji. Jeśli nie używasz niezgodnych `operator new`, zalecamy użycie **/Zc:throwingNew** optymalizacji kodu.
 
-**/Zc:throwingNew** opcja jest domyślnie wyłączona i nie ma wpływu na [/ ograniczająca-](permissive-standards-conformance.md) opcji.
+**/Zc:throwingNew** opcja jest domyślnie wyłączona i nie ma wpływu [/ permissive-](permissive-standards-conformance.md) opcji.
 
-Jeśli kompilacja przy użyciu Generowanie łączonych kodów czasowych (LTCG), nie trzeba określić **/Zc:throwingNew**. Podczas kompilowania kodu za pomocą LTCG kompilator może wykryć, czy wartość domyślna zgodnych `operator new` implementacji jest używany. Jeśli tak, kompilator powoduje, że sprawdzenia wartości null automatycznie. Wyszukuje konsolidator **/ThrowingNew** flagę, aby sprawdzić, czy wdrożenia `operator new` jest zgodny. Ta flaga do konsolidatora można określić przez dołączenie tej dyrektywy w źródle implementacji nowego operatora niestandardowego:
+Jeśli kompilujesz przy użyciu generowanie kodu w czasie konsolidowania (LTCG), nie należy określić **/Zc:throwingNew**. Gdy kod jest kompilowany przy użyciu LTCG, kompilator może wykryć, jeśli wartość domyślna zgodnych `operator new` implementacja jest używana. Jeśli tak, kompilator powoduje, że sprawdzenia wartości null automatycznie. Konsolidator szuka **/ThrowingNew** flagę, aby sprawdzić, jeśli implementacja `operator new` jest zgodny. Należy określić tej flagi konsolidatora, umieszczając tej dyrektywy w źródle, implementacji nowych niestandardowy operator:
 
 ```cpp
 #pragma comment(linker, "/ThrowingNew")
 ```
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Z **konfiguracji** rozwijane menu, wybierz **wszystkie konfiguracje**.
+1. Z **konfiguracji** menu rozwijanym, wybierz polecenie **wszystkie konfiguracje**.
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc:throwingNew** lub **/Zc:throwingNew-** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc:throwingNew** lub **/Zc:throwingNew-** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -69,4 +59,4 @@ Aby uzyskać więcej informacji na temat problemów zgodności w programie Visua
 [/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Specyfikacje wyjątków (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[Zakończenie (wyjątek)](../../standard-library/exception-functions.md#terminate)<br/>
+[Zakończenie (wyjątku)](../../standard-library/exception-functions.md#terminate)<br/>

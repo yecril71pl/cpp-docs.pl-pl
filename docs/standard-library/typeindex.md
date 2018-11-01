@@ -1,29 +1,19 @@
 ---
-title: '&lt;typeindex&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;typeindex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <typeindex>
-dev_langs:
-- C++
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 189fb7cd3757a3f71a50badc682b7b4db611b4e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e22ce63c01185112ed512217156470e6f2948cd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566624"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
-Dołącz nagłówek standardowy \<typeindex > do definiowania klas i funkcji, która obsługuje indeksowanie obiektów klasy [type_info —](../cpp/type-info-class.md).
+Dołączyć standardowy nagłówek \<typeindex > do definiowania klas i funkcji, która obsługuje indeksowanie obiektów klasy [type_info](../cpp/type-info-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,9 +23,9 @@ Dołącz nagłówek standardowy \<typeindex > do definiowania klas i funkcji, kt
 
 ## <a name="remarks"></a>Uwagi
 
-[Hash — struktura](../standard-library/hash-structure.md) definiuje `hash function` jest ona odpowiednia dla wartości typu mapowania [type_index —](../standard-library/type-index-class.md) dystrybucji wartości indeksu.
+[Hash, struktura](../standard-library/hash-structure.md) definiuje `hash function` który nadaje się do mapowania wartości typu [type_index](../standard-library/type-index-class.md) do rozłożenia wartości indeksu.
 
-`type_index` Klasy opakowuje wskaźnik do `type_info` obiektu ułatwiających indeksowania.
+`type_index` Klasy otacza wskaźnik do `type_info` obiektu, aby pomóc w indeksowaniu.
 
 ## <a name="see-also"></a>Zobacz także
 

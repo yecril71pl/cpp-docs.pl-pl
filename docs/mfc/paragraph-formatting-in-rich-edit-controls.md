@@ -1,28 +1,18 @@
 ---
-title: Formatowanie akapitu w formantach edycji wzbogaconej | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Formatowanie akapitu w formantach edycji wzbogaconej
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - rich edit controls [MFC], paragraph formatting in
 - paragraph formatting in CRichEditCtrl [MFC]
 - CRichEditCtrl class [MFC], paragraph formatting in
 - formatting [MFC], paragraphs
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3192f53ae60f5249cd57fdd23c810b5590e394ab
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f79d9a97554e2f73b42746c9e9094b07a37513d8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581977"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Formatowanie akapitu w formantach edycji wzbogaconej
 

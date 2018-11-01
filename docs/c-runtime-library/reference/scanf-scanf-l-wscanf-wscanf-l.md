@@ -1,10 +1,6 @@
 ---
-title: scanf, _scanf_l —, wscanf —, _wscanf_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32d414685237e8d55e1c8acd5df74ea6922e222b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544771"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
-Odczyty sformatowanych danych z Standardowy strumień wejściowy. Bezpieczniejsza wersje tych funkcji są dostępne; zobacz [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+Odczyty sformatowanych danych ze standardowego strumienia wejściowego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,7 +77,7 @@ int _wscanf_l(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Ciąg formatu w kontroli.
+Ciąg formantu formatu.
 
 *Argument*<br/>
 Argumenty opcjonalne.
@@ -97,40 +87,40 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane.
+Zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól.
 
-Jeśli *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Jeśli *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Scanf** funkcja odczytuje dane z Standardowy strumień wejściowy **stdin** i zapisuje dane do lokalizacji określonej przez *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w *format*. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+**Scanf** funkcja odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje je w lokalizacji określonej przez *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Podczas odczytywania ciągu z **scanf**, zawsze określić szerokość **%s** format (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie dane wejściowe niewłaściwie sformatowany łatwo może spowodować przepełnienie buforu. Alternatywnie, należy rozważyć użycie [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) lub [fgets —](fgets-fgetws.md).
+> Podczas odczytywania ciągu za pomocą **scanf**, należy zawsze określać szerokość dla **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Alternatywnie należy rozważyć użycie [scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) lub [fgets](fgets-fgetws.md).
 
-**wscanf —** jest wersja znaków dwubajtowych **scanf**; *format* argument **wscanf —** jest ciągiem znaków dwubajtowych. **wscanf —** i **scanf** zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **scanf —** nie obsługuje obecnie danych wejściowych z strumienia UNICODE.
+**wscanf** to wersja znaku dwubajtowego **scanf**; *format* argument **wscanf** jest ciągiem znaku dwubajtowego. **wscanf** i **scanf** zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **scanf —** aktualnie nie obsługuje danych wejściowych ze strumienia UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tscanf —**|**scanf**|**scanf**|**wscanf —**|
+|**_tscanf —**|**scanf**|**scanf**|**wscanf**|
 |**_tscanf_l —**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
-Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu — scanf funkcji i funkcji wscanf —](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu — scanf funkcji i funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**scanf —**, **_scanf_l —**|\<stdio.h>|
-|**wscanf —**, **_wscanf_l —**|\<stdio.h > lub \<wchar.h >|
+|**wscanf**, **_wscanf_l —**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -173,7 +163,7 @@ The contents are: 36 92.300003 y n Wide characters
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

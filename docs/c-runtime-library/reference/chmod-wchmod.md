@@ -1,10 +1,6 @@
 ---
-title: _chmod —, _wchmod — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _chmod, _wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595133"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
-Zmienia ustawienia pliku uprawnień.
+Zmienia ustawienia uprawnień do pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,23 +57,23 @@ Ustawienie uprawnień dla pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają 0, jeśli ustawienie uprawnienia zostanie pomyślnie zmienione. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonego pliku, **errno** ustawiono **enoent —**; Jeśli parametr jest nieprawidłowy, **errno** ustawiono **einval —**.
+Te funkcje zwracają 0, jeśli ustawienie uprawnienia zostało pomyślnie zmienione. Zwracana wartość-1 wskazuje błąd. Jeśli nie można odnaleźć określonego pliku, **errno** ustawiono **ENOENT**; Jeśli parametr jest nieprawidłowy, **errno** ustawiono **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Chmod —** funkcji zmienia ustawienia uprawnień pliku określonego przez *filename*. Ustawienie uprawnień steruje odczytu i zapisu do pliku. Wyrażenie całkowite *pmode* zawiera co najmniej jednej z następujących stałych manifestu, zdefiniowane w SYS\Stat.h.
+**_Chmod —** funkcji zmienia ustawienie uprawnienia w pliku określonym przez *filename*. Ustawienie uprawnienia steruje odczytu i zapisu do pliku. Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba z następujących stałych manifestu, określonych w SYS\Stat.h.
 
 |*pmode*|Znaczenie|
 |-|-|
-**_S_IREAD —**|Dozwolone tylko odczyt.
-**_S_IWRITE —**|Zapisywanie dozwolone. (W praktyce umożliwia odczytywanie i zapisywanie.)
-**_S_IREAD —** &AMP;#124; **_S_IWRITE —**|Odczytywanie i zapisywanie dozwolone.
+**_S_IREAD**|Dozwolone tylko odczyt.
+**_S_IWRITE**|Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.)
+**_S_IREAD** &AMP;#124; **_S_IWRITE**|Odczyt i zapis dozwolone.
 
-Gdy zarówno stałe są podane, są połączone z bitowego or — operator (**|**). Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze do odczytu; nie jest możliwe nadaj uprawnienia tylko do zapisu. W związku z tym tryby **_s_iwrite —** i **_s_iread —** | **_s_iwrite —** są równoważne.
+Gdy oba stałe są podane, są połączone przy użyciu bitowego operatora or — operator (**|**). Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze czytelny; nie jest możliwe przyznać uprawnienia tylko do zapisu. W efekcie tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
 
-**_wchmod —** jest wersja znaków dwubajtowych **_chmod —**; *filename* argument **_wchmod —** jest ciągiem znaków dwubajtowych. **_wchmod —** i **_chmod —** zachowują się tak samo w przeciwnym razie wartość.
+**_wchmod —** to wersja znaku dwubajtowego **_chmod —**; *filename* argument **_wchmod —** jest ciągiem znaku dwubajtowego. **_wchmod —** i **_chmod —** zachowują się identycznie.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *pmode* nie jest kombinacją jednego z manifestu stałe lub zawiera inny zestaw stałych, funkcja po prostu ignoruje te. Jeśli *filename* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub inny zestaw zawiera stałych, funkcja po prostu ignoruje te. Jeśli *filename* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca wartość -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -98,7 +88,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *pmode* nie jest kombinacją jedn
 |**_chmod —**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 |**_wchmod —**|\<IO.h > lub \<wchar.h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

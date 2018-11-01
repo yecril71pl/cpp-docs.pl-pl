@@ -1,10 +1,6 @@
 ---
-title: _stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l —, _wcsicmp_l —, _mbsicmp_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -39,8 +35,6 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -62,23 +56,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0014ea3c727db2a368123696c47df1eca6ba3bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559093"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
-Wykonuje bez uwzględniania wielkości liter porównania ciągów.
+Wykonuje porównania bez uwzględniania ciągów.
 
 > [!IMPORTANT]
-> **_mbsicmp —** i **_mbsicmp_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicmp —** i **_mbsicmp_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -115,43 +105,43 @@ int _mbsicmp_l(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończone wartością null do porównania.
+Ciągi zakończony wartością null do porównania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartości zwracanej wskazuje stosunek *ciąg1* do *ciąg2* w następujący sposób.
+Wartość zwracana określa relację z *ciąg1* do *ciąg2* w następujący sposób.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
 |< 0|*ciąg1* mniej niż *ciąg2*|
-|0|*ciąg1* taki sam jak *ciąg2*|
-|> 0|*ciąg1* większe *ciąg2*|
+|0|*ciąg1* taka sama jak *ciąg2*|
+|> 0|*ciąg1* większa *ciąg2*|
 
-W przypadku wystąpienia błędu **_mbsicmp —** zwraca **_NLSCMPERROR**, która jest zdefiniowana w \<string.h > i \<mbstring.h >.
+W przypadku błędu **_mbsicmp —** zwraca **_NLSCMPERROR**, który jest zdefiniowany w \<string.h > i \<mbstring.h >.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Stricmp —** ordinally funkcji porównuje *ciąg1* i *ciąg2* po przekonwertowaniu każdego znaku małe i zwraca wartość wskazującą, ich relacji. **_stricmp —** różni się od **_stricoll —** w tym **_stricmp —** tylko dotyczy porównanie **lc_ctype —**, określa, które znaki są górne i małe litery. **_Stricoll —** funkcja porównuje ciągi zgodnie z obu **lc_ctype —** i **lc_collate —** kategorii ustawień regionalnych, która obejmuje zarówno w przypadku, jak i sortowanie kolejność. Aby uzyskać więcej informacji na temat **lc_collate —** kategorii, zobacz [setlocale](setlocale-wsetlocale.md) i [kategorie regionalne](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez **_l** sufiks Użyj bieżących ustawień regionalnych dla zachowania zależnych od ustawień regionalnych. Wersje wraz z sufiksem są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Jeśli ustawienia regionalne nie została ustawiona, ustawienia regionalne C jest używany. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_Stricmp —** ordinally funkcja porównuje *ciąg1* i *ciąg2* po konwersji każdy znak na małe litery i zwraca wartość wskazującą, ich relacje. **_stricmp —** różni się od **_stricoll —** , **_stricmp —** jedynie wpływ porównania **LC_CTYPE**, określa, jakie znaki są górnej i małe litery. **_Stricoll —** funkcja porównuje ciągi według obu **LC_CTYPE** i **LC_COLLATE** kategorie ustawień regionalnych, który obejmuje zarówno tak, jak i sortowanie kolejność. Aby uzyskać więcej informacji na temat **LC_COLLATE** kategorii, zobacz [setlocale](setlocale-wsetlocale.md) i [kategorie ustawień regionalnych](../../c-runtime-library/locale-categories.md). Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Wersje z sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Jeśli nie ustawiono ustawień regionalnych, ustawienia regionalne C jest używany. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> **_stricmp —** jest odpowiednikiem **_strcmpi —**. Mogą być używane zamiennie, ale **_stricmp —** jest preferowanym standard.
+> **_stricmp —** jest odpowiednikiem **_strcmpi —**. Mogą być używane zamiennie, ale **_stricmp —** jest standardów preferowanych.
 
-**_Strcmpi —** funkcji jest odpowiednikiem **_stricmp —** i jest dostępne tylko w przypadku zgodności z poprzednimi wersjami.
+**_Strcmpi —** funkcji jest odpowiednikiem **_stricmp —** i jest dostępne tylko w trybie zgodności z poprzednimi wersjami.
 
-Ponieważ **_stricmp —** małe porównań, może spowodować nieoczekiwane zachowanie.
+Ponieważ **_stricmp —** małe porównań, może to spowodować nieoczekiwane zachowanie.
 
-Aby zilustrować, kiedy przypadek konwersji **_stricmp —** ma wpływ na wynik porównania, założono, że użytkownik ma dwa ciągi JOHNSTON i JOHN_HENRY. JOHNSTON ciąg JOHN_HENRY będą uznawane za mniej niż ponieważ "_" ma wartość ASCII niższe niż S. małe litery W rzeczywistości dowolny znak, który ma wartość ASCII między 91 i 96 będą uznawane za mniej niż dowolnej litery.
+Aby zilustrować, kiedy zamierzone, Zapisz konwersji przez **_stricmp —** wpływa na wynik porównania, założono, że dwa ciągi JOHNSTON i JOHN_HENRY. JOHNSTON ciągu JOHN_HENRY będą uznawane za mniej niż ponieważ "_" ma niższą wartość ASCII niż małe litery S. W rzeczywistości dowolny znak, który ma wartość ASCII między 91 i 96 będą uznawane za mniej niż wszystkie litery.
 
 Jeśli [strcmp —](strcmp-wcscmp-mbscmp.md) funkcja jest używana zamiast **_stricmp —**, JOHN_HENRY będą większe niż JOHNSTON.
 
-**_wcsicmp —** i **_mbsicmp —** znaków dwubajtowych i znaków wielobajtowych wersji **_stricmp —**. Argumenty i zwracana wartość **_wcsicmp —** są znaków dwubajtowych ciągi; tych **_mbsicmp —** są ciągami znaków wielobajtowych. **_mbsicmp —** rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca **_NLSCMPERROR** w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**_wcsicmp —** i **_mbsicmp —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_stricmp —**. Argumenty i wartość zwracana przez **_wcsicmp —** są znakami dwubajtowymi ciągów; te z **_mbsicmp —** są ciągami znaków wielobajtowych. **_mbsicmp —** rozpoznaje sekwencje znaków wielobajtowych według bieżącej strony kodowe wielobajtowe i zwraca **_NLSCMPERROR** w przypadku błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje zachowują się identycznie.
 
-**_wcsicmp —** i **wcscmp —** zachowują się tak samo, z wyjątkiem **wcscmp —** nie konwertuje argumenty na małe litery przed ich porównaniem. **_mbsicmp —** i **_mbscmp —** zachowują się tak samo, z wyjątkiem **_mbscmp —** nie konwertuje argumenty na małe litery przed ich porównaniem.
+**_wcsicmp —** i **wcscmp —** zachowują się identycznie, chyba że **wcscmp —** nie konwertuje argumenty na małe litery, przed ich porównaniem. **_mbsicmp —** i **_mbscmp —** zachowują się identycznie, chyba że **_mbscmp —** nie konwertuje argumenty na małe litery, przed ich porównaniem.
 
-Należy wywołać [setlocale](setlocale-wsetlocale.md) dla **_wcsicmp —** do pracy z znaki alfabetu łacińskiego 1. Ustawienia regionalne C jest obowiązująca domyślnie tak, na przykład ä nie zostanie porównany równa Ä. Wywołanie **setlocale** z dowolnych ustawień regionalnych innych niż ustawień regionalnych C przed wywołaniem do **_wcsicmp —**. W poniższym przykładzie pokazano sposób **_wcsicmp —** jest wrażliwe na ustawienia regionalne:
+Musisz wywołać [setlocale](setlocale-wsetlocale.md) dla **_wcsicmp —** do pracy z znaki alfabetu łacińskiego 1. Ustawienia regionalne C jest obowiązywały domyślnie, tak, na przykład ä nie zostanie porównany równa Ä. Wywołaj **setlocale** za pomocą dowolnego ustawienia regionalne inne niż ustawienia regionalne C, przed wywołaniem do **_wcsicmp —**. W poniższym przykładzie pokazano sposób **_wcsicmp —** jest wrażliwe na ustawienia regionalne:
 
 ```C
 // crt_stricmp_locale.c
@@ -167,13 +157,13 @@ int main() {
 }
 ```
 
-Alternatywą jest wywołać [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) i przekazać obiekt ustawień regionalnych zwrócony jako parametr **_wcsicmp_l —**.
+Alternatywą jest wywołanie [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) i przekazać obiekt zwrócony ustawień regionalnych jako parametru **_wcsicmp_l —**.
 
-Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ciąg2* są wskaźniki o wartości null, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **einval —**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* wskaźników o wartości null są wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicmp —**|**_stricmp**|**_mbsicmp —**|**_wcsicmp**|
 
@@ -182,7 +172,7 @@ Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ci
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_stricmp —**, **_stricmp_l —**|\<string.h>|
-|**_wcsicmp —**, **_wcsicmp_l —**|\<String.h > lub \<wchar.h >|
+|**_wcsicmp —**, **_wcsicmp_l —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsicmp —**, **_mbsicmp_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

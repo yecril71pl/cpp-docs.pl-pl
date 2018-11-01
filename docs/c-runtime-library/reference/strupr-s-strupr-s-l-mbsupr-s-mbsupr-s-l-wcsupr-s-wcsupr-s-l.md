@@ -1,10 +1,6 @@
 ---
-title: _strupr_s —, _strupr_s_l —, _mbsupr_s —, _mbsupr_s_l —, _wcsupr_s —, _wcsupr_s_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad2ff06320b3251e80935776246927e4cadb50c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415663"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569705"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
-Konwertuje ciąg na wielkie litery, używając bieżących ustawień regionalnych lub określone ustawienia regionalne, który jest przekazywany w. Te wersje programu [_strupr —, _strupr_l —, _mbsupr —, _mbsupr_l —, _wcsupr_l —, _wcsupr —](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje ciąg na wielkie litery, przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych, które zostały przekazane. Te wersje [_strupr —, _strupr_l —, _mbsupr —, _mbsupr_l —, _wcsupr_l —, _wcsupr —](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsupr_s —** i **_mbsupr_s_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s —** i **_mbsupr_s_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -156,23 +146,23 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; Kod błędu zera w przypadku awarii.
+Zero, jeśli to się powiedzie; niezerowy kod błędu.
 
-Te funkcje walidację ich parametrów. Jeśli *str* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcje zwracają **einval —** i ustaw **errno** do **einval —**. Jeśli *numberOfElements* jest mniejsza niż długość ciągu zwracają **erange —** i ustaw **errno** do **erange —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *str* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**. Jeśli *numberOfElements* jest mniejsza niż długość ciągu, funkcje zwracają **ERANGE** i ustaw **errno** do **ERANGE**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strupr_s —** funkcji konwertuje w miejscu, każdy małej litery w *str* na wielkie litery. **_wcsupr_s —** jest wersja znaków dwubajtowych **_strupr_s —**. **_mbsupr_s —** jest wersja wielu znaków **_strupr_s —**.
+**_Strupr_s —** funkcji konwertuje w miejscu, każdą małą literę w *str* na wielkie litery. **_wcsupr_s —** jest wersją znaków dwubajtowych **_strupr_s —**. **_mbsupr_s —** jest wersją znaków wielobajtowych **_strupr_s —**.
 
-Konwersja jest określany przez **lc_ctype —** ustawienie kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **lc_ctype —**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez **_l** sufiks Użyj bieżących ustawień regionalnych; wizji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Konwersja jest określona przez **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **LC_CTYPE**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych; przyrostek **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsupr_s —**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
 |**_tcsupr_s_l —**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
@@ -182,7 +172,7 @@ Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłącz
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strupr_s —**, **_strupr_s_l —**|\<string.h>|
-|**_wcsupr_s —**, **_wcsupr_s_l —**, **_mbsupr_s —**, **_mbsupr_s_l —**|\<String.h > lub \<wchar.h >|
+|**_wcsupr_s —**, **_wcsupr_s_l —**, **_mbsupr_s —**, **_mbsupr_s_l —**|\<Włącz String.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

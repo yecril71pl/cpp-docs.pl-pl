@@ -1,31 +1,21 @@
 ---
-title: logic_error — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: logic_error — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::logic_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc6d3e2ec67cc60e099016ac3d7cf4d213322ce2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56470040365f1b1aa0e311f43937d7ec33f7f148
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579949"
 ---
 # <a name="logicerror-class"></a>logic_error — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, przed wykonaniem programu, np. naruszenia logicznej warunki wstępne.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania błędów prawdopodobnie wykrywalny, przed wykonaniem programu, takie jak naruszenia warunków wstępnych logiczne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -72,9 +62,9 @@ Type: class std::logic_error
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

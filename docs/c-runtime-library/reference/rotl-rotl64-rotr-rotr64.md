@@ -1,10 +1,6 @@
 ---
-title: _rotl —, _rotl64 —, _rotr —, _rotr64 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -32,8 +28,6 @@ f1_keywords:
 - _rotr
 - _rotl
 - rotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - rotl64 function
 - _rotl function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ec4844c54bef09522191be62599ed79b97eb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567417"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
@@ -86,18 +76,18 @@ unsigned __int64 _rotr64(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość, którą można obracać.
+Wartość jest.
 
 *shift*<br/>
-Liczba bitów, które mają zostać przesunięte.
+Liczba bitów, aby przesunąć.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obrócony wartość. Nie ma żadnych zwracany błąd.
+Obrócony wartość. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Rotl —** i **_rotr —** funkcje Obróć niepodpisane *wartość* przez *shift* usługi bits. **_rotl —** obraca wartość w lewo. **_rotr —** obraca prawej wartości. Funkcjami zawijać bitów obracać wyłączyć jeden z końców *wartość* w innym celu.
+**_Rotl —** i **_rotr —** funkcje Obróć niepodpisane *wartość* przez *shift* usługi bits. **_rotl —** obraca się wartości po lewej. **_rotr —** obraca się wartość po prawej stronie. Obie funkcje opakować obracać wyłączyć jeden z punktów końcowych usługi bits *wartość* w innym celu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -106,11 +96,11 @@ Obrócony wartość. Nie ma żadnych zwracany błąd.
 |**_rotl —**, **_rotl64 —**|\<stdlib.h>|
 |**_rotr —**, **_rotr64 —**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

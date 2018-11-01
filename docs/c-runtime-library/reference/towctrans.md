@@ -1,10 +1,6 @@
 ---
-title: towctrans — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561411"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -54,14 +44,14 @@ wint_t towctrans(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, który ma być transformacji.
+Znak, który chcesz przekształcić.
 
 *category*<br/>
-Identyfikator, który zawiera wartość zwracaną [wctrans —](wctrans.md).
+Identyfikator, który zawiera wartość zwracaną przez [wctrans —](wctrans.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Znak *c*, po **towctrans —** używać reguł przekształcania w *kategorii*.
+Znak *c*po **towctrans —** używane reguły przekształcania w *kategorii*.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -77,7 +67,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zobacz **wctrans —** dla przykładu korzystającego z **towctrans —**.
+Zobacz **wctrans —** dla przykładu, który używa **towctrans —**.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: _seh_filter_dll, _seh_filter_exe | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _seh_filter_dll, _seh_filter_exe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _XcptFilter
 - _seh_filter_dll
@@ -29,24 +25,18 @@ f1_keywords:
 - _seh_filter_exe
 - corecrt_startup/_seh_filter_exe
 - corecrt_startup/_seh_filter_dll
-dev_langs:
-- C++
 helpviewer_keywords:
 - XcptFilter function
 - _XcptFilter function
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75b5b1b22067566d0096aa7ab616fb32c3850998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51d6a21b3867eb830a7d9f9b4b9b0ac844cd5aa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573038"
 ---
 # <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
 
@@ -68,31 +58,31 @@ int __cdecl _seh_filter_exe(
 ### <a name="parameters"></a>Parametry
 
 *_ExceptionNum*<br/>
-Identyfikator dla wyjątku.
+Identyfikator, dla wyjątku.
 
 *_ExceptionPtr*<br/>
-Wskaźnik do informacji o wyjątkach.
+Wskaźnik do informacji o wyjątku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, która wskazuje akcji, które należy podjąć, na podstawie wyniku wyjątek podczas przetwarzania.
+Liczba całkowita, która określa akcję do wykonania, na podstawie wyniku wyjątek podczas przetwarzania.
 
 ## <a name="remarks"></a>Uwagi
 
-Te metody są wywoływane przez wyrażenie filtru wyjątków [spróbuj-except — instrukcja](../../cpp/try-except-statement.md). Metoda sprawdza stałej tabeli wewnętrznej, aby zidentyfikować wyjątek i określić odpowiednią akcję, jak pokazano poniżej. Liczby wyjątków są zdefiniowane w pliku winnt.h i numery sygnału są zdefiniowane w signal.h.
+Te metody są wywoływane przez wyrażenie filtru wyjątków [spróbuj-except, instrukcja](../../cpp/try-except-statement.md). Metoda sprawdza stałej tabeli wewnętrznej do identyfikowania wyjątek i określ odpowiednie działanie, jak pokazano poniżej. Liczby wyjątków są zdefiniowane w pliku winnt.h, i liczby sygnału są zdefiniowane w sygnale.h.
 
-|Numer wyjątku (unsigned long)|Numer sygnału|
+|Liczba wyjątków (unsigned long)|Liczba sygnałów|
 |----------------------------------------|-------------------|
 |STATUS_ACCESS_VIOLATION|SIGSEGV|
-|STATUS_ILLEGAL_INSTRUCTION|SIGILL —|
-|STATUS_PRIVILEGED_INSTRUCTION|SIGILL —|
-|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE —|
-|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE —|
-|STATUS_FLOAT_INEXACT_RESULT|SIGFPE —|
-|STATUS_FLOAT_INVALID_OPERATION|SIGFPE —|
-|STATUS_FLOAT_OVERFLOW|SIGFPE —|
-|STATUS_FLOAT_STACK_CHECK|SIGFPE —|
-|STATUS_FLOAT_UNDERFLOW|SIGFPE —|
+|STATUS_ILLEGAL_INSTRUCTION|SIGILL|
+|STATUS_PRIVILEGED_INSTRUCTION|SIGILL|
+|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE|
+|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE|
+|STATUS_FLOAT_INEXACT_RESULT|SIGFPE|
+|STATUS_FLOAT_INVALID_OPERATION|SIGFPE|
+|STATUS_FLOAT_OVERFLOW|SIGFPE|
+|STATUS_FLOAT_STACK_CHECK|SIGFPE|
+|STATUS_FLOAT_UNDERFLOW|SIGFPE|
 
 ## <a name="requirements"></a>Wymagania
 
