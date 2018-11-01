@@ -1,10 +1,6 @@
 ---
-title: _memicmp —, _memicmp_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636816"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -80,22 +70,22 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartości zwracanej wskazuje relację między buforów.
+Wartość zwracana określa relację pomiędzy buforów.
 
-|Wartość zwracana|Relacja pierwszych bajtów Liczba buf1 i buf2|
+|Wartość zwracana|Relacja pierwsze bajty liczba buf1 i buf2|
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* mniej niż *buffer2*.|
-|0|*buffer1* taki sam jak *buffer2*.|
-|> 0|*buffer1* większe *buffer2*.|
+|0|*buffer1* taka sama jak *buffer2*.|
+|> 0|*buffer1* większa *buffer2*.|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Memicmp —** funkcja porównuje pierwszy *liczba* znaków dwóch buforów *buffer1* i *buffer2* po bicie. Porównanie nie jest rozróżniana wielkość liter.
+**_Memicmp —** funkcja porównuje pierwszy *liczba* znaki z dwóch buforów *buffer1* i *buffer2* bajt po bajcie. W porównaniu nie jest rozróżniana wielkość liter.
 
-Jeśli dowolny *buffer1* lub *buffer2* jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **einval —**.
+Jeśli *buffer1* lub *buffer2* jest pustym wskaźnikiem, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **EINVAL**.
 
-**_memicmp —** używa bieżące ustawienia regionalne dla zachowań zależnych od ustawień regionalnych. **_memicmp_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_memicmp —** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_memicmp_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -104,7 +94,7 @@ Jeśli dowolny *buffer1* lub *buffer2* jest wskaźnika o wartości null, funkcja
 |**_memicmp —**|\<Memory.h > lub \<string.h >|
 |**_memicmp_l**|\<Memory.h > lub \<string.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

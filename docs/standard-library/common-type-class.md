@@ -1,32 +1,22 @@
 ---
-title: common_type — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: common_type — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::common_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53ea9683576e891d120ce17651ed853a0f101780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605234"
 ---
 # <a name="commontype-class"></a>common_type — Klasa
 
-Określa wspólnego typu jeden lub więcej typów.
+Określa typ wspólny jednego lub więcej typów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,7 +43,7 @@ struct common_type<T, U, V...> {
 
 ### <a name="parameters"></a>Parametry
 
-Lista typów, które są [ukończyć typy](../c-language/incomplete-types.md) lub void.
+Lista typów, które są albo [ukończenia typy](../c-language/incomplete-types.md) lub void.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -61,7 +51,7 @@ Lista typów, które są [ukończyć typy](../c-language/incomplete-types.md) lu
 
 ## <a name="example"></a>Przykład
 
-Następujący program przedstawiono niektóre scenariusze poprawne użycia oraz testy w celu uzyskania wyników.
+Następujący program pokazuje niektóre prawidłowe przykłady użycia scenariuszy oraz testów dla wyników.
 
 ```cpp
 // Compile using cl.exe /EHsc
@@ -128,7 +118,7 @@ ClassType: true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

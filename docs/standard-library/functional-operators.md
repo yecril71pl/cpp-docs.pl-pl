@@ -1,28 +1,18 @@
 ---
-title: '&lt;funkcjonalności&gt; operatory | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;funkcjonalności&gt; operatorów'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::operator!=
 - functional/std::operator==
-dev_langs:
-- C++
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd9d4dfa7c10d19112cd8154ddcf3b7a70bf3034
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0f06eb07d4a5ca16ae440d4756b320248261446
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440992"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalności&gt; operatorów
 

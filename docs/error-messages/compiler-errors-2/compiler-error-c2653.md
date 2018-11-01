@@ -1,41 +1,31 @@
 ---
-title: C2653 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471152"
 ---
-# <a name="compiler-error-c2653"></a>C2653 błąd kompilatora
+# <a name="compiler-error-c2653"></a>Błąd kompilatora C2653
 
-> "*identyfikator*": nie jest nazwą klasy lub przestrzeni nazw
+> "*identyfikator*": nie jest klasą lub przestrzenią nazw
 
-Składnia języka wymaga klasy, struktury, Unią lub tutaj nazwę przestrzeni nazw.
+Składnia języka wymaga klasy, struktury, Unii lub nazwa przestrzeni nazw w tym miejscu.
 
-Ten błąd może wystąpić, gdy używasz nazwę, która nie została zadeklarowana jako klasy, struktury, Unii lub przestrzeni nazw przed operatorem zakresu. Aby rozwiązać ten problem, deklaruje nazwę, lub Dołącz nagłówek, który deklaruje nazwę, przed jego użyciem.
+Ten błąd może wystąpić, gdy używasz nazwę, która nie została zadeklarowana jako klasy, struktury, Unii lub przestrzeni nazw przed operatorem zakresu. Aby rozwiązać ten problem, należy zadeklarować nazwę lub zawierać nagłówek, który deklaruje nazwę, zanim zostaną one użyte.
 
-C2653 jest także możliwe, jeśli próby zdefiniowania *złożone przestrzeni nazw*, przestrzeni nazw, która zawiera jedną lub więcej nazw zagnieżdżone w zakresie przestrzeni nazw. Złożone przestrzeni nazw, definicje nie są dozwolone w języku C++ przed C ++ 17. Złożone przestrzenie nazw są obsługiwane począwszy od programu Visual Studio 2015 Update 3 po określeniu [/std:c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) — opcja kompilatora. Począwszy od programu Visual C++ 2017 wersji 15,5 cala kompilator obsługuje definicje złożone przestrzeń nazw podczas [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję.
+C2653 jest również możliwe, jeśli zostanie podjęta próba zdefiniować *złożone przestrzeni nazw*, przestrzeń nazw, który zawiera jedną lub więcej nazw zagnieżdżony zakres przestrzeni nazw. Złożone przestrzeni nazw, których definicje nie są dozwolone w języku C++ przed C ++ 17. Złożone przestrzenie nazw są obsługiwane, począwszy od programu Visual Studio 2015 Update 3 po określeniu [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) — opcja kompilatora. Począwszy od programu Visual C++ 2017 w wersji 15.5 definicji przestrzeni nazw złożonego obsługiwanych przez kompilator podczas [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję.
 
 ## <a name="examples"></a>Przykłady
 
-W tym przykładzie generuje C2653, ponieważ nazwa zakresu jest używany, ale nie został zadeklarowany. Kompilator oczekuje klasy, struktury, Unii lub przestrzeni nazw nazwa przed operatora zakresu (:).
+Ten przykład generuje C2653, ponieważ nazwa zakresu jest używany, ale nie został zadeklarowany. Kompilator oczekuje, że klasy, struktury, Unii lub nazwa przestrzeni nazw przed operatora zakresu (:).
 
 ```cpp
 // C2653.cpp
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-W kod, który nie jest skompilowany dla języków C ++ 17 lub nowszym zagnieżdżonych obszarów nazw należy użyć deklaracji jawne przestrzeni nazw w każdym zagnieżdżonym poziomem:
+W kodzie, który nie jest kompilowany dla języka C ++ 17 lub nowszym zagnieżdżone przestrzenie nazw, należy użyć deklaracji jawną przestrzeń nazw na każdym poziomie zagnieżdżania:
 
 ```cpp
 // C2653b.cpp

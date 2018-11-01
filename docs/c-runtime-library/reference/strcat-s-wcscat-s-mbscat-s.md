@@ -1,10 +1,6 @@
 ---
-title: strcat_s —, wcscat_s —, _mbscat_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621315"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
-Dołącza ciąg. Te wersje programu [strcat —, wcscat —, _mbscat —](strcat-wcscat-mbscat.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Dołącza ciąg. Te wersje [strcat —, wcscat —, _mbscat —](strcat-wcscat-mbscat.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,29 +83,29 @@ errno_t _mbscat_s(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Bufor ciąg docelowy zerem.
+Bufor ciąg docelowy zakończony wartością null.
 
 *numberOfElements*<br/>
 Rozmiar buforu ciągu docelowego.
 
 *strSource*<br/>
-Bufor ciąg źródłowy zerem.
+Bufor ciągu źródła zakończony znakiem null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; błąd o kodzie błędu.
+Zero, jeśli to się powiedzie; Kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*strDestination*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Wartość NULL** lub niezakończony|wszystkie|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|wszystkie|**NULL**|**EINVAL —**|*strDestination*zestawu [0] 0|
-|wszystkie|0 lub za mały|wszystkie|**ERANGE —**|*strDestination*zestawu [0] 0|
+|**Wartość NULL** lub niezakończony|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|Wszystkie|**NULL**|**EINVAL**|*strDestination*[0] ustawiony na 0|
+|Wszystkie|0 lub zbyt mały|Wszystkie|**ERANGE**|*strDestination*[0] ustawiony na 0|
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcat_s —** funkcja dołącza *strSource* do *strDestination* i kończy wynikowy ciąg ze znakiem null. Litery *strSource* zastępuje znak końcowy null z *strDestination*. Zachowanie **strcat_s —** zdefiniowano nakładania się ciągów źródłowych i docelowych.
+**Strcat_s** funkcja dołącza *strSource* do *strDestination* i kończy się wynikowy ciąg znakiem null. Początkowy znak *strSource* zastępuje kończący znak null z *strDestination*. Zachowanie **strcat_s** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
 Należy pamiętać, że drugi parametr całkowity rozmiar buforu nie pozostały rozmiar:
 
@@ -126,17 +116,17 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s —** i **_mbscat_s —** znaków dwubajtowych i znaków wielobajtowych wersji **strcat_s —**. Argumenty i zwracana wartość **wcscat_s —** są znaków dwubajtowych ciągi; tych **_mbscat_s —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcscat_s —** i **_mbscat_s —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strcat_s**. Argumenty i wartość zwracana przez **wcscat_s —** są znakami dwubajtowymi ciągów; te z **_mbscat_s —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-Jeśli *strDestination* jest wskaźnika o wartości null lub nie jest zerem, lub jeśli *strSource* jest **NULL** wskaźnika, lub jeśli ciąg docelowego jest za mały, nieprawidłowy parametr Program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **einval —** i ustaw **errno** do **einval —**.
+Jeśli *strDestination* jest wskaźnikiem typu null lub nie jest zakończony znakiem null, lub jeśli *strSource* jest **NULL** wskaźnika, lub jeśli ciąg docelowy jest zbyt mały, nieprawidłowy parametr Program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
@@ -145,14 +135,14 @@ Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłącz
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcat_s**|\<string.h>|
-|**wcscat_s**|\<String.h > lub \<wchar.h >|
+|**wcscat_s**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbscat_s**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem kodu w [strcpy_s —, wcscpy_s —, _mbscpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md).
+Zobacz przykład kodu w [strcpy_s wcscpy_s —, _mbscpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 ## <a name="see-also"></a>Zobacz także
 

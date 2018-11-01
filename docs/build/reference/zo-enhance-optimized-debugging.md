@@ -1,30 +1,20 @@
 ---
-title: -Zo (Rozszerzanie zoptymalizowanego debugowania) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /Zo (rozszerzanie zoptymalizowanego debugowania)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - -Zo
 - /Zo
-dev_langs:
-- C++
 helpviewer_keywords:
 - Zo compiler option [C++]
 - /Zo compiler option [C++]
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b40f7b4fff1d6df6f5fb818e090ce687f12a7b4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7524a8a8c509470030a1850c3995e5997b61caca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497503"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (rozszerzanie zoptymalizowanego debugowania)
 

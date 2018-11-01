@@ -1,10 +1,6 @@
 ---
-title: getcwd — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: getcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getcwd
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - getcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 ms.assetid: c740ab06-9ba0-4036-a025-ce3acded3ffe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 132e24f0acccf7d22750776b34c0b4da5b3c02c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16857547a5fe0d02df791dc1b2b10fd80fd23000
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598071"
 ---
 # <a name="getcwd"></a>getcwd
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_getcwd —](getcwd-wgetcwd.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_getcwd —](getcwd-wgetcwd.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

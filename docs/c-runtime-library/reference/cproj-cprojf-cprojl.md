@@ -1,11 +1,6 @@
 ---
-title: cproj cprojf, cprojl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: cproj, cprojf, cprojl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cproj
 - cprojf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cproj
 - complex/cprojf
 - complex/cprojl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cproj function
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e47536df4efa083d3d07827bb7fbf66a8669793
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445672"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
-Pobiera projekcji liczbą sfery Reimann.
+Pobiera projekcji liczby zespolonej sfery Reimann.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,28 +64,28 @@ _Lcomplex cprojl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych.
+Liczbą.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Rzutowanie *z* sfery Reimann.
+Rzut *z* sfery Reimann.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cproj** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **cproj** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cproj** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cproj** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[normy normf, norml](norm-normf-norml1.md)<br/>
+[norm normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

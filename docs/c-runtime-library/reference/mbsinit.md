@@ -1,10 +1,6 @@
 ---
-title: mbsinit — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597239"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,13 +46,13 @@ Wskaźnik do [mbstate_t](../../c-runtime-library/standard-types.md) zmiennej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli podano niezerowe *ps* jest **NULL** lub, jeśli nie w trakcie konwersji.
+Jeśli wartość różną od zera *ps* jest **NULL** lub, jeśli nie w trakcie wykonywania konwersji.
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z jednej z funkcji ANSI, która przyjmuje **mbstate_t** wskaźnika przekazywanie adresu sieci **mbstate_t** zwróci informacji na temat tego, czy został przekonwertowany ostatnich bajtów w buforze.
+Korzystając z jednej z funkcji ANSI, które przyjmuje **mbstate_t** wskaźnika, przekazując adres usługi **mbstate_t** zostaną zwrócone informacje na temat tego, czy ostatni bajt w buforze został przekonwertowany.
 
-Odpowiednią stronę kodową musi być zainstalowane w celu obsługi znaki wielobajtowe.
+Odpowiednią stronę kodową musi zainstalować w celu obsługi swojej znaków wielobajtowych.
 
 ## <a name="example"></a>Przykład
 

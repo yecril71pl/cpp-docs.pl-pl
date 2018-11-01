@@ -1,11 +1,6 @@
 ---
-title: catanh catanhf, catanhl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646367"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Pobiera odwrotny tangens hiperboliczny liczby złożone z części gałąź poza przedział [-1; + 1] na rzeczywistych osi.
+Pobiera arcus tangens hiperboliczny liczby zespolonej, cenowe gałąź poza interwał [-1; + 1] na rzeczywistych osi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex catanhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Odwrotny tangens hiperboliczny liczby *z*, w radianach. Wynik jest niepowiązany rzeczywistych osi, a w interwale [-iπ/2; + iπ/2] urojony osi. Błąd domeny wystąpi, jeśli *z* znajduje się poza interwał [-1, + 1]. Błąd bieguna wystąpi, jeśli *z* jest wartość -1 lub + 1.
+Arcus tangens hiperboliczny liczby *z*, w radianach. Wynik jest nieograniczona, wzdłuż osi prawdziwe, a w interwale [-iπ/2 + iπ/2] urojone osi. Wystąpi błąd domeny *z* wykracza poza zakres [-1, + 1]. Wystąpi błąd bieguna *z* jest wartość -1 lub + 1.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **catanh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **catanh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **catanh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **catanh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

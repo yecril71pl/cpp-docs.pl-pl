@@ -1,17 +1,11 @@
 ---
-title: Dyrektywy przetwarzania wstępnego pliku makefile | Dokumentacja firmy Microsoft
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: Dyrektywy przetwarzania wstępnego pliku reguł programu Make
+ms.date: 06/14/2018
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
 - '!IFNDEF'
 - '!MESSAGE'
-dev_langs:
-- C++
 helpviewer_keywords:
 - ERROR directive
 - '!MESSAGE directive'
@@ -45,59 +39,71 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc81e5c4ea3d0d4a80e7efad4eaab15a5048cd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593573"
 ---
 # <a name="makefile-preprocessing-directives"></a>Dyrektywy przetwarzania wstępnego pliku reguł programu Make
-Dyrektywy przetwarzania wstępnego nie jest uwzględniana wielkość liter. Początkowa wykrzyknika (!) musi znajdować się na początku wiersza. Zero lub więcej spacji ani karty mogą być wyświetlane po wykrzyknika dla wcięcia.  
-  
- **! CMDSWITCHES**  
- {**+** &#124; **-**}*opcji*... Włącza każdego *opcji* wymienione lub wyłączyć. Spacji ani karty musi występować przed + lub - operator; Brak może wystąpić między operatora i [opcję litery](../build/nmake-options.md). Liter nie jest uwzględniana wielkość liter i zostały określone bez ukośnika (/). Aby włączyć niektóre opcje na i inne off, użyj oddzielnych specyfikacji **! CMDSWITCHES**.  
-  
- Tylko /D / I, /N i /S może być używana w pliku reguł programu make. W Tools.ini, wszystkie opcje są dozwolone z wyjątkiem /F, / Help, / nologo, / X, a /?. Określony w bloku opis zmian uwzględnione po następnym bloku opis. Ta dyrektywa aktualizuje **MAKEFLAGS**; zmiany są dziedziczone podczas rekursji, jeśli **MAKEFLAGS** jest określona.  
-  
- **! Błąd***tekstu*   
- Wyświetla *tekst* w błąd U1050, a następnie zatrzymanie NMAKE, nawet jeśli /K, / I **. Ignoruj**, **! CMDSWITCHES**, lub służy polecenie modyfikator kreski (-). Spacji ani tabulatorów przed *tekst* są ignorowane.  
-  
- **! KOMUNIKAT***tekstu*   
- Wyświetla *tekst* do wyjścia standardowego. Spacji ani tabulatorów przed *tekst* są ignorowane.  
-  
- **! OBEJMUJĄ**[ **\<**] *filename*[ **>**]  
- Odczytuje *filename* jako pliku reguł programu make, następnie jest kontynuowana z bieżącego pliku reguł programu make. Wyszukuje NMAKE *filename* najpierw w określonym katalogu lub bieżącego, następnie rekursywnie za pośrednictwem katalogów dowolnego nadrzędnego pliki reguł programu make, następnie, jeśli *filename* jest ujęta w nawiasy (\<>), w katalogach określonych przez **INCLUDE** makra, która jest początkowo ustawiona zmiennej środowiskowej INCLUDE. Przydatne do przekazania **. SUFIKSY** ustawienia **. CENNY**oraz reguły wnioskowania cyklicznego pliki reguł programu make.  
-  
- **! JEŚLI**  `constantexpression`  
- Przetwarza instrukcje między **! Jeśli** Następna **! ELSE** lub `!ENDIF` Jeśli `constantexpression` ma wartość różną od zera.  
-  
- **! IFDEF***makra*   
- Przetwarza instrukcje między `!IFDEF` Następna **! ELSE** lub `!ENDIF` Jeśli *makra* jest zdefiniowany. Null — makro jest uznawany za ma zostać zdefiniowana.  
-  
- **! IFNDEF***makra*   
- Przetwarza instrukcje między **! IFNDEF** Następna **! ELSE** lub `!ENDIF` Jeśli *makra* nie jest zdefiniowany.  
-  
- **! ELSE**[**IF** *constantexpression* &#124; **IFDEF** *makra* &#124; **IFNDEF**  *makra*]  
- Przetwarza instrukcje między **! ELSE** Następna `!ENDIF` Jeśli wcześniej **! Jeśli**, `!IFDEF`, lub **! IFNDEF** instrukcji obliczoną wartością zero. Opcjonalne słowa kluczowe podać kontroli przetwarzania wstępnego.  
-  
- **! ELSEIF**  
- Synonim **! ELSE IF**.  
-  
- **! ELSEIFDEF —**  
- Synonim **! ELSE IFDEF**.  
-  
- **! ELSEIFNDEF —**  
- Synonim **! ELSE IFNDEF**.  
-  
- `!ENDIF`  
- Oznacza koniec **! Jeśli**, `!IFDEF`, lub **! IFNDEF** bloku. Tekst po `!ENDIF` jest ignorowane w tym samym wierszu.  
-  
- **! UNDEF***makra*   
- Anulowanie definicji *makra*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przetwarzanie wstępne pliku reguł programu Make](../build/makefile-preprocessing.md)
+
+Dyrektywy przetwarzania wstępnego nie jest uwzględniana wielkość liter. Pierwszy punkt wykrzyknika (!) musi znajdować się na początku wiersza. Zero lub więcej znaków tabulacji lub spacji, może następować po elemencie wykrzyknika dla wcięcia.
+
+- **! CMDSWITCHES** {**+** &#124; **-**}*opcji* ...
+
+   Włącza każdego *opcji* wymienione lub wyłączyć. Spacje lub tabulatory musi występować przed + lub - operatora; Brak mogą występować między operatora i [opcji litery](../build/nmake-options.md). Liter nie jest uwzględniana wielkość liter i są określone bez ukośnika (/). Aby wyłączyć niektórych opcjami na i innych wyłączone, należy użyć oddzielnych specyfikacji **! CMDSWITCHES**.
+
+   Tylko /D / po, /N i /S mogą być używane w pliku reguł programu make. W Tools.ini, wszystkie opcje są dozwolone z wyjątkiem /F, / Help, / nologo, / X, a /?. Zmiany określony w bloku opis wprowadzone do czasu kolejnego bloku opisu. Ta dyrektywa aktualizuje **MAKEFLAGS**; zmiany są dziedziczone podczas rekursji, jeśli **MAKEFLAGS** jest określony.
+
+- **! Błąd***tekstu* 
+
+   Wyświetla *tekstu* w błąd U1050, a następnie zostanie zatrzymana NMAKE, nawet wtedy, gdy /K, / I **. Ignoruj**, **! CMDSWITCHES**, lub jest używany modyfikator polecenia kreski (-). Spacje lub tabulatory przed *tekstu* są ignorowane.
+
+- **! KOMUNIKAT***tekstu* 
+
+   Wyświetla *tekst* do wyjścia standardowego. Spacje lub tabulatory przed *tekstu* są ignorowane.
+
+- **! OBEJMUJĄ** [ **\<** ] *filename* [ **>** ]
+
+   Odczytuje *filename* jako pliku reguł programu make, następnie będzie kontynuowane przy użyciu bieżącego pliku reguł programu make. Wyszukuje NMAKE *filename* najpierw w określonej lub bieżącego katalogu następnie rekursywnie między katalogami wszelkich nadrzędnych pliki reguł programu make, następnie Jeśli *filename* jest ujęta w nawiasy (\<>), w katalogach określonych przez **INCLUDE** makra, która jest początkowo ustawiona zmienna środowiskowa INCLUDE. Przydatne do przekazania **. SUFIKSY** ustawień **. CENNEGO**i reguły wnioskowania cykliczne pliki reguł programu make.
+
+- **! Jeśli** *constant_expression*
+
+   Przetwarza instrukcje między **! Jeśli** , a następnie **! ELSE** lub **! ENDIF** Jeśli *constant_expression* ma wartość różną od zera.
+
+- **! IFDEF***makra* 
+
+   Przetwarza instrukcje między **! IFDEF** , a następnie **! ELSE** lub **! ENDIF** Jeśli *makra* jest zdefiniowana. Null — makro jest uważany za można zdefiniować.
+
+- **! IFNDEF***makra* 
+
+   Przetwarza instrukcje między **! IFNDEF** , a następnie **! ELSE** lub **! ENDIF** Jeśli *makra* nie został zdefiniowany.
+
+- **! ELSE** [**IF** *constant_expression* &#124; **IFDEF** *makra* &#124; **IFNDEF**  *makra*]
+
+   Przetwarza instrukcje między **! ELSE** , a następnie **! ENDIF** Jeśli wcześniej **! Jeśli**, **! IFDEF**, lub **! IFNDEF** instrukcji obliczone na wartość zero. Opcjonalne słowa kluczowe podać kontrolę nad przetwarzania wstępnego.
+
+- **! ELSEIF**
+
+   Synonim dla **! Jeśli nie**.
+
+- **! ELSEIFDEF**
+
+   Synonim dla **! ELSE IFDEF**.
+
+- **! ELSEIFNDEF**
+
+   Synonim dla **! ELSE IFNDEF**.
+
+- **! ENDIF**
+
+   Oznacza koniec **! Jeśli**, **! IFDEF**, lub **! IFNDEF** bloku. Dowolny tekst po **! ENDIF** jest ignorowane w tym samym wierszu.
+
+- **! UNDEF***makra* 
+
+   Jedno anulowanie definicji *makra*.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Przetwarzanie wstępne pliku reguł programu Make](../build/makefile-preprocessing.md)

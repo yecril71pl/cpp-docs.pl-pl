@@ -1,10 +1,6 @@
 ---
-title: _execvpe —, _wexecvpe — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,31 +22,25 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431697"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
-Ładuje i uruchamia nowe procesy podrzędne.
+Ładuje i uruchamia procesy podrzędne.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,45 +62,45 @@ intptr_t _wexecvpe(
 *cmdname*<br/>
 Ścieżka pliku do wykonania.
 
-*ARGV —*<br/>
-Tablicy wskaźników do parametrów.
+*ARGV*<br/>
+Tablica wskaźników do parametrów.
 
-*envp —*<br/>
-Tablicy wskaźników do ustawienia środowiska.
+*envp*<br/>
+Tablica wskaźników do ustawienia środowiska.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia tych funkcji nie powróci do procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** ustawiono zmiennej globalnej.
+W przypadku powodzenia, te funkcje nie zwracają procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** zmienna globalna jest ustawiona.
 
-|**errno** wartości|Opis|
+|**errno** wartość|Opis|
 |-------------------|-----------------|
-|**E2BIG —**|Miejsca, które są wymagane dla argumentów i ustawienia środowiska przekracza 32 KB.|
-|**EACCES**|Określony plik ma blokowania lub udostępniania naruszenie.|
-|**EMFILE —**|Zbyt wiele plików są otwarte. (Aby ustalić, czy jest pliku wykonywalnego musi można otworzyć określonego pliku.)|
-|**ENOENT —**|Nie znaleziono pliku lub ścieżki.|
-|**ENOEXEC —**|Określony plik nie jest wykonywalne lub ma nieprawidłowy format pliku wykonywalnego.|
-|**ENOMEM —**|Za mało pamięci jest dostępna do wykonania w nowym procesie; dostępna pamięć jest uszkodzona; lub istnieje nieprawidłowy blok, co oznacza, że proces wywołujący nie został poprawnie przydzielony.|
+|**E2BIG**|Miejsce, które są wymagane dla argumentów i ustawień środowiska przekracza 32 KB.|
+|**EACCES**|Określony plik ma naruszenie zasad współużytkowania lub blokowania.|
+|**EMFILE**|Zbyt wiele plików są otwarte. (Do ustalenia, czy jest wykonywalny musi można otworzyć określonego pliku.)|
+|**ENOENT**|Nie znaleziono pliku lub ścieżki.|
+|**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.|
+|**ENOMEM**|Jest dostępna do wykonania nowego procesu; nie ma wystarczającej ilości pamięci dostępna pamięć jest uszkodzona; lub istnieje nieprawidłowy blok, który wskazuje, że proces wywołujący nie został poprawnie przydzielony.|
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji ładuje wykonuje nowego procesu i przekazuje tablicy wskaźników do argumentów wiersza polecenia i tablicy wskaźników do ustawienia środowiska. Użyj tych funkcji **ścieżki** zmiennej środowiskowej można znaleźć pliku do wykonania.
+Każda z tych funkcji ładuje i uruchamia nowy proces i przekazuje tablicę wskaźników do argumentów wiersza polecenia oraz tablicę wskaźników do ustawienia środowiska. Te funkcje używają **ścieżki** zmiennej środowiskowej, aby znaleźć plik do wykonania.
 
-**_Execvpe —** funkcje walidację ich parametrów. Jeśli *cmdname* jest wskaźnika o wartości null, lub jeśli *ARGV —* jest wskaźnika o wartości null, wskaźnik do pustą tablicę lub wskaźnika do tablicy, która zawiera pusty ciąg jako pierwszego argumentu, nieprawidłowego wywołania funkcji Parametr obsługi, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Żaden proces nie jest uruchomiona.
+**_Execvpe** funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* jest wskaźnikiem typu null, lub jeśli *argv* jest wskaźnikiem typu null, wskaźnikiem do pustej tablicy lub wskaźnika do tablicy, która zawiera pusty ciąg jako pierwszy argument, funkcje te wywołują nieprawidłowy Procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1. Żaden proces jest uruchamiany.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
 |--------------|---------------------|---------------------|
-|**_execvpe —**|\<process.h >|\<errno.h>|
+|**_execvpe**|\<process.h >|\<errno.h>|
 |**_wexecvpe**|\<process.h > lub \<wchar.h >|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md).
+Zobacz przykład w [_exec, _wexec — funkcje](../../c-runtime-library/exec-wexec-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

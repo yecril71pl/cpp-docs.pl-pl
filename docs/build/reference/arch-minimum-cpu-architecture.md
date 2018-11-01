@@ -1,30 +1,20 @@
 ---
-title: -arch (minimalna architektura procesora CPU) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /arch (minimalna architektura procesora)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableEnhancedInstructionSet
 - /arch
-dev_langs:
-- C++
 helpviewer_keywords:
 - -arch compiler option [C++]
 - /arch compiler option [C++]
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6750b2d998976b1c19dcc5b687f407a3c32faef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 42d1db398cb4ab1391b6b54ddf70b69ef519b63c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497004"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (minimalna architektura procesora)
 

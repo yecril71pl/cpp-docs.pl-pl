@@ -1,10 +1,6 @@
 ---
-title: _realloc_dbg — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _realloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _realloc_dbg
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - reallocating memory blocks
 - realloc_dbg function
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640287"
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
-Przydziela ponownie określony blok pamięci w stercie przez przeniesienie lub zmiana rozmiaru bloku (tylko wersja do debugowania).
+Przydzieli określony blok pamięci w stercie, przenoszenie i/lub zmiany rozmiaru bloku (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,36 +50,36 @@ void *_realloc_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Danych użytkownika*<br/>
-Wskaźnik do bloku wcześniej alokacji pamięci.
+*danych użytkownika*<br/>
+Wskaźnik do bloku pamięci uprzednio przydzielony.
 
-*newSize*<br/>
-Żądany rozmiar bloku reallocated (w bajtach).
+*newsize:*<br/>
+Żądany rozmiar reallocated bloku (w bajtach).
 
 *blockType*<br/>
-Żądany typ bloku reallocated: **_client_block —** lub **_normal_block —**.
+Żądany typ bloku reallocated: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który zażądał **realloc** operacji lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał **realloc** operacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na plik źródłowy gdzie **realloc** zażądano operacji lub **NULL**.
+Numer wiersza w pliku źródłowym gdzie **realloc** zażądano operacji lub **NULL**.
 
-*Filename* i *numer wiersza* parametry są dostępne tylko podczas **_realloc_dbg —** została jawnie wywołana lub [_crtdbg_map_alloc —](../../c-runtime-library/crtdbg-map-alloc.md) stała preprocesora została zdefiniowana.
+*Filename* i *linenumber* parametry są dostępne tylko podczas **_realloc_dbg —** została jawnie wywołana lub [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) stała preprocesora został zdefiniowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym ukończeniu, ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca **NULL**. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [realloc](realloc.md) funkcji.
+Po pomyślnym zakończeniu ta funkcja zwraca wskaźnik do część użytkownika bloku pamięci ponownie przydzielane, wywołuje nową funkcję obsługi albo zwraca **NULL**. Pełny opis zachowania zwrotu zobacz następujące sekcji uwag. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji obsługi, zobacz [realloc](realloc.md) funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-**_realloc_dbg —** jest wersja debugowania [realloc](realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie **_realloc_dbg —** zostanie zmniejszona do wywołania **realloc**. Zarówno **realloc** i **_realloc_dbg —** ponownie przydzielić bloku pamięci w stosie podstawowy, ale **_realloc_dbg —** bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach Użytkownik część bloku do testowania przecieki, parametr typu bloku do śledzenia alokacji określonych typów, i *filename*/*numer wiersza* informacji do ustalenia pochodzenia żądań alokacji.
+**_realloc_dbg —** jest wersją debugowania [realloc](realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_realloc_dbg —** jest ograniczone do wywołania **realloc**. Zarówno **realloc** i **_realloc_dbg —** ponownie przydzielić blok pamięci na stosie podstawowym, ale **_realloc_dbg —** obsługuje kilka funkcji debugowania: bufory po obu stronach część użytkownika bloku do testowania przecieków, parametr typu blok do śledzenia określonych typów alokacji i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji.
 
-**_realloc_dbg —** przydziela ponownie bloku pamięci określony nieco więcej miejsca niż żądany *newSize*. *newSize* może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowne przydzielenie może spowodować przeniesienie do innej lokalizacji w stercie oryginalnego bloku pamięci, jak również zmiana rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszony, zawartość oryginalnego bloku zostaną zastąpione.
+**_realloc_dbg —** przydzieli blok określonego pamięci z nieco większą ilością miejsca niż żądane *newSize*. *newSize* może być większa lub mniejsza niż rozmiar bloku pamięci pierwotnie przydzielone. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponownej alokacji może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmiana rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszona, zawartość oryginalnego bloku zostaną zastąpione.
 
-**_realloc_dbg —** ustawia **errno** do **enomem —** Jeśli alokacja pamięci nie powiedzie się lub jeśli przekracza ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) **_HEAP_ MAXREQ**. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_realloc_dbg —** ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiedzie się lub jeśli ilość pamięci potrzebnej (w tym obciążenie, o których wspomniano) przekracza **_HEAP_ MAXREQ**. Aby uzyskać informacji na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacji na temat różnic między wywołaniem funkcji sterty standard oraz jego wersję debugowania do kompilacji debugowanej aplikacji, zobacz [Debuguj wersje z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -97,15 +87,15 @@ Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarząd
 |-------------|---------------------|
 |**_realloc_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_msize_dbg —](msize-dbg.md) tematu.
+Zobacz przykład w [_msize_dbg —](msize-dbg.md) tematu.
 
 ## <a name="see-also"></a>Zobacz także
 

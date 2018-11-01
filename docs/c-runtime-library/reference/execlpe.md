@@ -1,10 +1,6 @@
 ---
-title: execlpe — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: execlpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - execlpe
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - execlpe function
 ms.assetid: 33b28785-43e3-4971-b139-33743a7c9a32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16ef7b114eeae238f5fbd4eac0d3c722de08a917
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84f7ffef727450f6094d36426c93ded1c6d21594
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394710"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551167"
 ---
 # <a name="execlpe"></a>execlpe
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_execlpe —](execlpe-wexeclpe.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_execlpe —](execlpe-wexeclpe.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

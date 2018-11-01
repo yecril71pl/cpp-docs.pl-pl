@@ -1,27 +1,17 @@
 ---
-title: / SOURCELINK (Sourcelink obejmują pliki w pliku PDB) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: / SOURCELINK (Sourcelink obejmują pliki w pliku PDB)
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /sourcelink
-dev_langs:
-- C++
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480993"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink obejmują pliki w pliku PDB)
 

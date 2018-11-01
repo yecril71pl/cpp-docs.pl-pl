@@ -1,25 +1,16 @@
 ---
-title: Ostrzeżenia kompilatora, które są domyślnie wyłączone | Dokumentacja firmy Microsoft
+title: Domyślnie wyłączone ostrzeżenia kompilatora
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651376"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Ostrzeżenia kompilatora, które są domyślnie wyłączone
 Kompilator zawiera ostrzeżenia, które są domyślnie wyłączone, ponieważ większość programistów nie chce ich widzieć. W niektórych przypadkach ich reprezentuje wybór stylistyczne, są typowe idiomy starszego kodu lub korzystać z rozszerzeń firmy Microsoft dla języka. W innych przypadkach wskazują obszar, w którym programistów często wprowadzać nieprawidłowe wartości domyślne, które mogą prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Niektóre z tych ostrzeżeń mogą być bardzo hałas w nagłówkach biblioteki. Biblioteki środowiska uruchomieniowego C i C++ standardowych bibliotek, które są przeznaczone do emitować nie ostrzeżeń tylko na poziomie ostrzeżenia [/W4](../build/reference/compiler-option-warning-level.md).

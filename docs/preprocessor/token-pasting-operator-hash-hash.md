@@ -1,28 +1,18 @@
 ---
-title: Token wklejanie operatora (##) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Operator wklejania tokenu (##)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '##'
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df13e598dffc2f2624e5cf9193616519f8454d7c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c013d6a4ce34372e2f195876166e299f62d85d3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605949"
 ---
 # <a name="token-pasting-operator-"></a>Operator wklejania tokenu (##)
 

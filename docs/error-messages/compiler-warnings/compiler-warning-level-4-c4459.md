@@ -1,27 +1,17 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4459 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 4) C4459
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4459
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca0fc86be746bafdf4987a7492c59d9686535cef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585071"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>Kompilator ostrzeżenie (poziom 4) C4459
 

@@ -1,49 +1,39 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4412 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 2) C4412
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4412
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47659a9ba0469b8ee719dbc686ba611e876d32c1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665520"
 ---
-# <a name="compiler-warning-level-2-c4412"></a>Kompilator C4412 ostrzegawcze (poziom 2)
+# <a name="compiler-warning-level-2-c4412"></a>Kompilator ostrzeżenie (poziom 2) C4412
 
-> "*funkcja*": sygnatura funkcji zawiera typ "*typu*'; Obiektami C++ są bezpieczne między czystym kodzie i mieszanego lub macierzystego.
+> "*funkcja*': podpis funkcji podpis zawiera typ"*typu*'; Obiekty C++ są bezpieczne przekazywanie między kodem czystym i mieszanym lub macierzystym.
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r. Jeśli masz kod, który musi być czystym, firma Microsoft zaleca portu dla C#.
+**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli masz kod, który musi być czysty, firma Microsoft zaleca przenosi go na C#.
 
-Kompilator wykryto potencjalnie niebezpiecznych sytuacji, co może spowodować błąd środowiska uruchomieniowego: wywołanie jest wykonywane z **/CLR: pure** compiland do funkcji, która została zaimportowana za pośrednictwem dllimport i sygnatura funkcji zawiera niezabezpieczonego typu . Typ jest niebezpieczne, jeśli zawiera funkcji członkowskiej lub ma elementu członkowskiego danych, który jest typem niezabezpieczony lub pośredni do niezabezpieczonego typu.
+Kompilator wykrył potencjalnie niebezpieczną sytuację, która może spowodować błąd w czasie wykonywania: wykonywane jest wywołanie z **/CLR: pure** compiland — do funkcji, który został zaimportowany za pośrednictwem dllimport i sygnatura funkcji zawiera niezabezpieczonego typu . Typ jest niebezpieczne, jeśli zawiera funkcję członkowską, lub ma element członkowski danych, który jest niezabezpieczonego typu lub pośrednio do niezabezpieczonego typu.
 
-To jest niebezpieczne z powodu różnicy w domyślnym wywoływanie Konwencji między kod czysty i natywnego (lub mieszane natywnego i zarządzanego). Podczas importowania (za pośrednictwem `dllimport`) funkcja do **/CLR: pure** compiland, upewnij się, że deklaracje każdego typu w sygnaturze są takie same jak te w compiland, które eksportuje funkcję (ostrożność szczególnie różnice w konwencji wywoływania niejawne).
+To jest niebezpieczne ze względu na różnice w domyślnej Konwencji między kod czysty i natywnych wywoływania (lub mieszanych natywnego i zarządzanego). Podczas importowania (za pośrednictwem `dllimport`) funkcji do **/CLR: pure** compiland —, upewnij się, że deklaracje każdego typu w podpisie są identyczne z tymi w compiland —, które eksportuje — funkcja (ostrożność szczególnie różnice w niejawne konwencji wywoływania.)
 
-Funkcja wirtualny element członkowski jest szczególnie podatne na dać nieoczekiwane wyniki.  Jednak aby mieć pewność, że poprawnych wyników należy przetestować niewirtualną funkcji. Jeśli masz pewność, że w przypadku uzyskiwania poprawnych wyników, możesz zignorować to ostrzeżenie.
+Funkcja wirtualna elementu członkowskiego jest szczególnie podatne na dawać nieoczekiwane wyniki.  Jednak nawet funkcję niewirtualną powinien zostać przetestowany, aby upewnić się, że masz prawidłowe wyniki. Jeśli masz pewność, że pojawiają się poprawne wyniki, możesz zignorować to ostrzeżenie.
 
-C4412 jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) i [dllexport i dllimport](../../cpp/dllexport-dllimport.md) Aby uzyskać więcej informacji.
+C4412 jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) i [dllexport i dllimport](../../cpp/dllexport-dllimport.md) Aby uzyskać więcej informacji.
 
-Aby usunąć to ostrzeżenie, Usuń wszystkie funkcje związane z typem.
+Aby rozwiązać tego ostrzeżenia, należy usunąć wszystkie funkcje z typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4412.
+Poniższy przykład spowoduje wygenerowanie C4412.
 
 ```cpp
 // C4412.cpp
@@ -71,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład jest plik nagłówka, który deklaruje dwa typy. `Unsafe` Typu jest niebezpieczne, ponieważ ma ona funkcją członkowską.
+Poniższy przykład jest plik nagłówka, który deklaruje dwa typy. `Unsafe` Typu jest niebezpieczne, ponieważ ma on funkcję członkowską.
 
 ```cpp
 // C4412.h
@@ -91,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie eksportuje funkcji z typów zdefiniowanych w pliku nagłówka.
+W tym przykładzie eksportuje funkcje przy użyciu typów zdefiniowanych w pliku nagłówkowym.
 
 ```cpp
 // C4412_2.cpp
@@ -108,9 +98,9 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>Przykład
 
-Domyślną konwencję wywoływania **/CLR: pure** kompilacji różni się od kodu natywnego.  Gdy wchodzi C4412.h `Test` domyślnie `__clrcall`. Jeśli skompilować i uruchomić ten program (nie należy używać **/c**), program spowoduje zgłoszenie wyjątku.
+Domyślną konwencję wywoływania **/CLR: pure** kompilacja różni się od natywnej kompilacji.  Gdy wchodzi C4412.h `Test` wartość domyślna to `__clrcall`. Jeśli możesz skompilować i uruchomić ten program (nie używaj **/c**), program spowoduje zgłoszenie wyjątku.
 
-Poniższy przykład generuje C4412.
+Poniższy przykład spowoduje wygenerowanie C4412.
 
 ```cpp
 // C4412_3.cpp

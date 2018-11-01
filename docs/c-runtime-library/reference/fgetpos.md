@@ -1,10 +1,6 @@
 ---
-title: fgetpos — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658422"
 ---
 # <a name="fgetpos"></a>fgetpos
 
-Pobiera strumienia wskaźnika położenia pliku.
+Pobiera strumień, wskaźnik pozycji pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,19 +44,19 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Strumień docelowy.
 
-*POS*<br/>
+*punktu sprzedaży*<br/>
 Wskaźnik położenia magazynu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **fgetpos —** zwraca wartość 0. W przypadku awarii, zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu — stałe (zdefiniowany w stdio —. H): **ebadf —**, co oznacza, że określonego obiektu stream nie jest prawidłowym plikiem wskaźnikiem lub nie jest dostępny, lub **einval —**, co oznacza, że *strumienia* wartość lub wartość *pos* jest nieprawidłowy, np. Jeśli to jest wskaźnika o wartości null. Jeśli *strumienia* lub *pos* jest **NULL** wskaźnika, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+W przypadku powodzenia **fgetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w stdio —. Godz.): **EBADF**, co oznacza, że określonego strumienia nie jest prawidłowym plikiem wskaźnikiem lub nie jest dostępny, lub **EINVAL**, co oznacza, że *strumienia* wartość lub wartość *pos* jest nieprawidłowy, np. Jeśli jest wskaźnikiem typu null. Jeśli *strumienia* lub *pos* jest **NULL** wskaźnikiem, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Fgetpos —** funkcja pobiera bieżącą wartość *strumienia* wskaźnika położenia pliku argumentu i magazyny go w obiekcie wskazywana przez *pos*. **Fsetpos —** funkcja mógł później użyć informacji przechowywanych w *pos* zresetować *strumienia* argumentu wskaźnik do położenia w czasie **fgetpos —** została wywołana. *Pos* wartości są przechowywane w wewnętrznym formacie i jest przeznaczona do użycia tylko poprzez **fgetpos —** i **fsetpos —**.
+**Fgetpos** funkcja pobiera bieżącą wartość *strumienia* wskaźnik położenia pliku argumentu i magazyny w obiekt wskazywany przez *pos*. **Fsetpos** funkcja mógł później użyć informacji przechowywanych w *pos* zresetować *strumienia* wskaźnik argumentu do jego pozycja w czas **fgetpos** została wywołana. *Pos* wartość jest przechowywana w wewnętrznym formacie i jest przeznaczony do użytku tylko przez **fgetpos** i **fsetpos**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -124,7 +114,7 @@ int main( void )
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>Crt_fgetpos.txt danych wyjściowych
+### <a name="output-crtfgetpostxt"></a>Dane wyjściowe crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream
@@ -133,5 +123,5 @@ after fsetpos: gets a stream
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>

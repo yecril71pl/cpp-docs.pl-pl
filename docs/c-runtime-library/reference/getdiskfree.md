@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,23 +26,19 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602283"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
 Użyje informacji o dysku, aby wypełnić **_diskfree_t —** struktury.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,11 +55,11 @@ unsigned _getdiskfree(
 Dysk, dla którego chcesz uzyskać.
 
 *driveinfo*<br/>
-A **_diskfree_t —** strukturę, która zostanie wypełniona informacji o dysku.
+A **_diskfree_t —** strukturę, która zostanie wypełniona przy użyciu informacji o dysku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja zakończy się powodzeniem, zwracana wartość wynosi zero. Jeśli funkcja nie powiedzie się, zwracana wartość to kod błędu. Wartość **errno** ustawiono błędów, które są zwracane przez system operacyjny. Aby uzyskać więcej informacji na temat błędów, które są oznaczone **errno**, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
+Jeśli funkcja się powiedzie, wartość zwracana wynosi zero. Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu. Wartość **errno** ustawiono pod kątem błędów, które są zwracane przez system operacyjny. Aby uzyskać więcej informacji na temat warunków błędów, które są wskazane przez **errno**, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,7 +74,7 @@ struct _diskfree_t {
 };
 ```
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *driveinfo* wskaźnika jest **NULL** lub *dysku* określa nieprawidłowy dysk, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **einval —** i ustawia **errno** do **einval —**. Nieprawidłowa dysków z zakresu od 0 do 26. A *dysku* wartość 0 określa bieżący dysk; numery mapowania na litery alfabetu angielskiego takich, że wartość 1 oznacza dysk A, 3 oznacza dysk C i tak dalej.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *driveinfo* wskaźnik jest **NULL** lub *dysku* określa nieprawidłowy dysk, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**. Nieprawidłowa dysków z zakresu od 0 do 26. A *dysku* wartość 0 oznacza bieżący dysk; po tej dacie numery mapowania litery alfabetu angielskiego takie, wartość 1 oznacza stacji A, 3 oznacza dysk C i tak dalej.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -92,7 +82,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *driveinfo* wskaźnika jest **NUL
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

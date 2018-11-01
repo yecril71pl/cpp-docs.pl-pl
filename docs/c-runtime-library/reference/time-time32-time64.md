@@ -1,10 +1,6 @@
 ---
-title: czas, _time32 —, _time64 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546589"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,19 +59,19 @@ Wskaźnik do lokalizacji magazynu raz.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca czas w sekundach, jaki upłynął od północy, 1 stycznia 1970, lub wartość -1 w przypadku błędu.
+Zwraca czas w sekundach, które upłynęły od północy 1 stycznia 1970 r. lub -1 w przypadku błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Czasu** funkcja zwraca liczbę sekund, jaka upłynęła od północy (00: 00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC), zgodnie z zegarem systemowym. Wartość zwracana jest przechowywany w lokalizacji określonej przez *destTime*. Ten parametr może mieć **NULL**, w którym to przypadku wartości zwracanej nie są przechowywane.
+**Czasu** funkcja zwraca liczbę sekund, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC), zgodnie z zegarem systemowym. Zwracana wartość jest przechowywana w lokalizacji określonej przez *destTime*. Ten parametr może być **NULL**, w którym to przypadku nie są przechowywane wartości zwracanej.
 
-**czas** jest otoki dla **_time64 —** i **time_t —** jest domyślnie odpowiednikiem **__time64_t —**. Aby wymusić kompilatora, aby zinterpretować **time_t —** jako starego 32-bitowych **time_t —**, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
+**czas** jest otoką **_time64** i **time_t** jest domyślnie odpowiednikiem **__time64_t —**. Jeśli chcesz wymusić na kompilatorze interpretowanie **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może przestać działać po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |-------------|---------------------|
-|**czas**, **_time32 —**, **_time64 —**|\<time.h>|\<ctime — > lub \<time.h >|
+|**czas**, **_time32 —**, **_time64**|\<time.h>|\<ctime — > lub \<time.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -1,27 +1,17 @@
 ---
-title: . Pliki txt — wejście konsolidatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Pliki .Txt — Wejście konsolidatora
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - .txt files, linker input
 - text files, linker input
 - txt files, linker input
 ms.assetid: 220b5a59-8b78-43f6-a8c3-f3134ccddf9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73d6966844ae8dc6c41350aad57ad310310b3a32
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 519170f508fbed423d6ba97ecdfe7141ff746d10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621822"
 ---
 # <a name="txt-files-as-linker-input"></a>Pliki .Txt — Wejście konsolidatora
 

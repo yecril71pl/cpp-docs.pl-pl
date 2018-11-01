@@ -1,10 +1,6 @@
 ---
-title: _ismbbkana —, _ismbbkana_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkana_l
 - _ismbbkana
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbkana_l
 - ismbbkana
 - _ismbbkana
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkana_l function
 - _ismbbkana function
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e0d4f470a2d40540508a6701e587987df9b0df4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400031"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440988"
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 
-Sprawdza, czy katakana symbol i jest specyficzna dla strona kodowa 932.
+Testuje dla symbolu katakana i jest specyficzny dla strony kodu 932.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,14 +54,14 @@ int _ismbbkana_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita ma zostać przetestowana.
+Liczba całkowita do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkana —** zwraca wartość niezerową, jeśli liczba całkowita *c* jest katakana symbol lub 0, jeśli nie jest. **_ismbbkana —** używany bieżące ustawienia regionalne informacji znak zależnych od ustawień regionalnych. **_ismbbkana_l —** jest identyczny z tą różnicą, że używa przekazano obiekt ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbbkana —** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem katakana lub 0, jeśli nie jest. **_ismbbkana —** używa bieżących ustawień regionalnych dla wszelkich informacji o znakach zależnych od ustawień regionalnych. **_ismbbkana_l —** jest identyczna, z tą różnicą, że używa przekazany obiekt regionalny. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,7 +70,7 @@ Ustawienia regionalne do użycia.
 |**_ismbbkana**|\<mbctype.h>|
 |**_ismbbkana_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

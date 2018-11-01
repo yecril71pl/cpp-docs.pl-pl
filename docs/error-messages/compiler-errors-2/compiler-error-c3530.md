@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3530 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3530
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3530
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5866e2ea44b84f3afeb0cef8423abc28f8e056ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90f6000c7d4c4bfa0d610bd5942df0b958e47c60
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643631"
 ---
 # <a name="compiler-error-c3530"></a>Błąd kompilatora C3530
 

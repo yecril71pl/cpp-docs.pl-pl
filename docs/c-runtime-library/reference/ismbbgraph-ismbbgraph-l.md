@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph —, _ismbbgraph_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,28 +22,22 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662884"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 
-Określa, czy konkretnego znaków wielobajtowych jest znak graficzny.
+Określa, czy określony znak wielobajtowy jest znakiem graficznym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,18 +54,18 @@ int _ismbbgraph_l (
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita ma zostać przetestowana.
+Liczba całkowita do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość niezerową, jeśli wyrażenie:
+Zwraca wartość różną od zera, jeśli wyrażenie:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-jest różna od zera dla *c*, lub wartość 0, jeśli nie jest. **_ismbbgraph —** używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. **_ismbbgraph_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+jest różny od zera dla *c*, lub 0, jeśli nie jest. **_ismbbgraph —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_ismbbgraph_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -84,11 +74,11 @@ jest różna od zera dla *c*, lub wartość 0, jeśli nie jest. **_ismbbgraph �
 |**_ismbbgraph —**|\<mbctype.h>|
 |**_ismbbgraph_l —**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,6 @@
 ---
-title: Usuń _wremove — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613975"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
-Usuń plik.
+Usuwanie pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,17 +59,17 @@ int _wremove(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli plik zostanie pomyślnie usunięty. W przeciwnym razie zwraca wartość -1 i ustawia **errno** albo **eacces —** aby wskazać, że ścieżka Określa plik tylko do odczytu lub plik jest otwarty, lub do **enoent —** z informacją, że Nazwa pliku lub ścieżka nie została odnaleziona, lub określa, że ścieżka katalogu.
+Każda z tych funkcji zwraca wartość 0, jeśli plik został pomyślnie usunięty. W przeciwnym razie zwraca wartość -1 i ustawia **errno** albo **EACCES** aby wskazać, że ścieżka Określa plik tylko do odczytu lub plik jest otwarty, lub **ENOENT** z informacją, że Nie znaleziono nazwy pliku lub ścieżki, lub określa, czy ścieżka katalogu.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów zwrotu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Usuń** funkcja usuwa plik określony przez *ścieżki.* **_wremove —** jest wersja znaków dwubajtowych **_Usuń**; *ścieżki* argument **_wremove —** jest ciągiem znaków dwubajtowych. **_wremove —** i **_Usuń** zachowują się tak samo w przeciwnym razie wartość. Należy zamknąć wszystkie dojścia do pliku, aby można było usunąć.
+**Usuń** funkcja usuwa plik określony przez *ścieżki.* **_wremove —** to wersja znaku dwubajtowego **_Usuń**; *ścieżki* argument **_wremove —** jest ciągiem znaku dwubajtowego. **_wremove —** i **_Usuń** zachowują się identycznie. Muszą być zamknięte wszystkie dojścia do pliku, aby można było usunąć.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tremove —**|**remove**|**remove**|**_wremove —**|
 
@@ -94,7 +84,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

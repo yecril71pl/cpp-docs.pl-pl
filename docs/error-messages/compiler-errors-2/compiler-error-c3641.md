@@ -1,41 +1,31 @@
 ---
-title: C3641 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3641
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3641
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648581"
 ---
-# <a name="compiler-error-c3641"></a>C3641 błąd kompilatora
+# <a name="compiler-error-c3641"></a>Błąd kompilatora C3641
 
-> "*funkcja*": Nieprawidłowa konwencja wywoływania 'calling_convention' dla funkcji kompilowanych z/CLR: pure lub/CLR: Safe
+> "*funkcja*": nieprawidłowy, Konwencja wywoływania "calling_convention" dla funkcji kompilowanych z/CLR: pure lub/CLR: Safe
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-Tylko [__clrcall](../../cpp/clrcall.md) konwencji wywoływania jest dozwolone w przypadku [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+Tylko [__clrcall](../../cpp/clrcall.md) konwencja wywołania jest dozwolona z [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3641:
+Poniższy przykład spowoduje wygenerowanie C3641:
 
 ```cpp
 // C3641.cpp

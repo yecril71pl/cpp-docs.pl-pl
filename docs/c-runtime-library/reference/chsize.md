@@ -1,10 +1,6 @@
 ---
-title: _chsize — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600645"
 ---
 # <a name="chsize"></a>_chsize
 
-Zmienia rozmiar pliku. Bezpieczniejsza wersja jest dostępna; zobacz [_chsize_s —](chsize-s.md).
+Zmienia rozmiar pliku. Bardziej bezpieczna wersja jest dostępna; zobacz [_chsize_s —](chsize-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,22 +48,22 @@ int _chsize(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora odwołujących się do otwartego pliku.
+Deskryptor pliku odnoszące się do otwartego pliku.
 
 *Rozmiar*<br/>
 Długość nowego pliku w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_chsize —** zwraca wartość 0, jeśli rozmiar pliku zostało pomyślnie zmienione. Zwracana wartość -1 oznacza błąd: **errno** ustawiono **eacces —** , jeśli określony plik jest tylko do odczytu lub określony plik jest zablokowany przed dostępem, do **ebadf —** Jeśli Deskryptor jest nieprawidłowy, **enospc —** , jeśli nie ma jest wolnego miejsca na urządzeniu, lub **einval —** Jeśli *rozmiar* jest mniejsza od zera.
+**_chsize —** zwraca wartość 0, jeśli rozmiar pliku zostało pomyślnie zmienione. Zwracana wartość-1 wskazuje błąd: **errno** ustawiono **EACCES** Jeśli określony plik jest tylko do odczytu lub określony plik jest zablokowany dla dostępu do **EBADF** Jeśli deskryptora jest nieprawidłowy, **ENOSPC** Jeśli nie miejsca na urządzeniu lub **EINVAL** Jeśli *rozmiar* jest mniejsza niż zero.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Chsize —** funkcja rozszerza lub obcina plik skojarzony z *fd* do długości określonej przez *rozmiar*. Plik musi być otwarty w trybie umożliwiającym zapis. Znaki null ('\0') są dołączane, jeśli plik zostanie rozszerzony. Jeśli plik został obcięty, wszystkie dane na końcu pliku skróconą długość oryginalnego pliku zostaną utracone.
+**_Chsize —** funkcja rozszerza lub obcina plik skojarzony z *fd* do długości określonej przez *rozmiar*. Plik musi być otwarty w trybie który pozwala na zapis. Znaki null ('\0') są dołączane, jeśli plik zostanie rozszerzony. Jeśli plik został obcięty, wszystkie dane na końcu pliku skróconą długość oryginalnego pliku zostaną utracone.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *rozmiar* jest mniejszy od zera lub *fd* deskryptor nieprawidłowego pliku, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *rozmiar* jest mniejsza od zera lub *fd* deskryptor pliku uszkodzonych jest wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -81,7 +71,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *rozmiar* jest mniejszy od zera l
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

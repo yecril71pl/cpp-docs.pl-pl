@@ -1,10 +1,6 @@
 ---
-title: strtold, _strtold_l, wcstold, _wcstold_l | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,23 +26,17 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484581"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
-Konwertuje ciągów na wartości zmiennoprzecinkowej długo podwójnej precyzji.
+Konwertuje ciągi na wartość zmiennoprzecinkową długa podwójnej precyzji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,42 +64,42 @@ long double wcstold_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Zerem ciąg do konwersji.
+Ciąg zakończony wartością null do konwersji.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowania.
+Wskaźnik znaku zatrzymującego skanowanie.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtold** zwraca wartość liczby zmiennoprzecinkowej jako **długi** **podwójne**, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku funkcja zwraca +/-**HUGE_VALL**. Znak **HUGE_VALL** znak wartość, która nie może być przedstawiony jest zgodna. **strtold** zwraca wartość 0, jeśli konwersja nie można wykonać lub niedopełnienie występuje.
+**strtold** zwraca wartość zmiennoprzecinkową jako **długie** **double**, z wyjątkiem sytuacji, gdy ta reprezentacja spowodowałoby przepełnienie — w takim przypadku funkcja zwraca wartość +/-**HUGE_VALL**. Znak **HUGE_VALL** odpowiada znakowi wartości, który nie może być reprezentowana. **strtold** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
 
-**wcstold** zwraca wartości analogously do **strtold**. Dla obu tych funkcji **errno** ustawiono **erange —** Jeśli występuje przepełnienie lub niedomiar i program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+**wcstold** zwraca wartości analogicznie do **strtold**. Dla obu funkcji **errno** ustawiono **ERANGE** Jeśli występuje przepełnienie lub niedopełnienie i wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Aby uzyskać więcej informacji na temat kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja każdego konwertuje ciąg wejściowy *strSource* do **długi** **podwójne**. **Strtold** funkcja przestaje czytać ciąg *strSource* pierwszego znaku nie jest rozpoznawana jako część liczby. Może to być znak końcowy null. Wersja znaków dwubajtowych **strtold** jest **wcstold**; *strSource* argument jest ciąg znaków dwubajtowych. W przeciwnym razie funkcje te działają tak samo.
+Każda funkcja konwertuje ciąg wejściowy *strSource* do **długie** **double**. **Strtold** funkcja przestaje odczytywać ciąg *strSource* przy pierwszym znaku, nie może rozpoznać jako elementu liczby. Może to być kończący znak null. Wersja znaków dwubajtowych **strtold** jest **wcstold**; jej *strSource* argumentu jest ciągiem znaku dwubajtowego. W przeciwnym wypadku te funkcje zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-**Lc_numeric —** ustawienie kategorii bieżące ustawienia regionalne określa rozpoznawania znaku podstawa w *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md). Funkcje bez **_l** sufiks Użyj bieżących ustawień regionalnych; **_strtold_l** i **_wcstold_l** są takie same jak **_strtold** i **_wcstold** z tą różnicą, że zamiast tego użyć ustawienia regionalne to jest Przekazano. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**LC_NUMERIC** ustawienie kategorii bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy w parametrze *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkcje bez **_l** sufiksa używa bieżących ustawień regionalnych; **_strtold_l** i **_wcstold_l** są takie same jak **_strtold** i **_wcstold** z tą różnicą, że używają w zamian ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie jest **NULL**, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji, która jest wskazywana przez *endptr*. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość *strSource* są przechowywane w lokalizacji, która jest wskazywana przez *endptr*.
+Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji, która jest wskazywany przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* znajduje się w lokalizacji, która jest wskazywany przez *endptr*.
 
-**strtold** oczekuje *strSource* wskaż ciąg następującą postać:
+**strtold** oczekuje *strSource* do wskaże ciąg o następującej postaci:
 
-[*odstępem*] [*znak*] [*cyfr*] [. *cyfry*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*logowania* ]*cyfr*]
+[*odstępu*] [*logowania*] [*cyfr*] [. *cyfry*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*logowania* ]*cyfr*]
 
-A *odstępem* może zawierać znaków miejsca i karty, które są ignorowane. *znak* jest plus (**+**) lub minus (**-**); i *cyfr* są co najmniej jeden cyfr dziesiętnych. Jeśli cyfr nie pojawia się przed znakiem podstawa, co najmniej jeden musi występować po znaku podstawę systemu liczbowego. Wykładnik, obejmującego wprowadzające litery może zawierać wyłącznie cyfr dziesiętnych (**d**, **D**, **e**, lub **E**) i opcjonalnie liczbę całkowitą ze znakiem. Jeśli pojawi się części wykładnika ani znaków podstawa, znak radix — zakłada się, że wykonaj ostatnich cyfr w ciągu. Pierwszy znak należący do tego formularza zatrzymuje skanowania.
+A *odstępu* może składać się ze znaków spacji lub tabulatora, które są ignorowane. *logowania* jest plus (**+**) lub minus (**-**); i *cyfr* są co najmniej jedna cyfra dziesiętna. Jeśli żadna cyfra pojawia się przed znakiem podstawy, co najmniej jedna musi występować po znaku podstawy. Cyfr dziesiętnych może następować wykładnik, który składa się z litery wprowadzającej (**d**, **D**, **e**, lub **E**) i opcjonalnie liczby całkowitej ze znakiem. Jeśli wykładnik ani znak podstawy nie pojawia się, znak podstawy zakłada się, że ostatniej cyfrze w ciągu. Pierwszy znak, który nie mieści się tym formularzu zatrzymuje skanowanie.
 
 ## <a name="requirements"></a>Wymagania
 

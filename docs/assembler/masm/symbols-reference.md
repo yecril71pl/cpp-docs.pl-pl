@@ -1,25 +1,15 @@
 ---
-title: Odwołanie do symboli | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Odwołania do symboli
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 66a4c217cf164f8094ef7a2e9200b51a7a7e19ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 100124f465280d1e573c331fb3c4e7c02d247349
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555678"
 ---
 # <a name="symbols-reference"></a>Odwołania do symboli
 
