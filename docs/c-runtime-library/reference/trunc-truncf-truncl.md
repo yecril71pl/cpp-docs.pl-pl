@@ -1,11 +1,6 @@
 ---
-title: TRUNC truncf —, truncl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: trunc, truncf, truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519863"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
-Określa najbliższej liczby całkowitej, która jest mniejsza lub równa określonej wartości zmiennoprzecinkowych.
+Określa najbliższej liczby całkowitej, która jest mniejsza niż lub równa określonej wartości zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,27 +65,27 @@ Jeśli to się powiedzie, zwraca wartość całkowitą *x*zaokrągloną w kierun
 
 W przeciwnym razie może zwracać jedną z następujących czynności:
 
-|Problem|Zwraca|
+|Problem|Wróć|
 |-----------|------------|
 |*x* = ±INFINITY|x|
 |*x* = ±0|x|
 |*x* = NaN|NaN|
 
-Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+Błędy są zgłaszane określonej [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **trunc** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **trunc** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **trunc** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **trunc** zawsze przyjmuje i zwraca **double**.
 
-Ponieważ największych wartości zmiennoprzecinkowe są dokładne liczb całkowitych, ta funkcja nie będzie przepełnienie samodzielnie. Może jednak spowodować przepełnienie buforu, zwracając wartość do typu integer funkcji.
+Ponieważ największej wartości zmiennoprzecinkowe są dokładne liczb całkowitych, ta funkcja nie będzie przepełnienia samodzielnie. Może jednak spowodować przepełnienie buforu, zwracając wartość do typu całkowitego funkcji.
 
-Można również zaokrąglenie konwertując niejawnie z zmiennoprzecinkowe do całkowitych; jednak zrobić to jest ograniczona do wartości, które mogą być przechowywane w typie docelowym.
+Można również zaokrąglenie konwertując niejawnie z zmiennoprzecinkowe do całkowitych; Spowoduje to więc jest jednak ograniczona do wartości, które mogą być przechowywane w typie docelowym.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**TRUNC**, **truncf —**, **truncl**|\<math.h>|\<cmath >|
+|**TRUNC —**, **truncf —**, **truncl**|\<math.h>|\<cmath >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

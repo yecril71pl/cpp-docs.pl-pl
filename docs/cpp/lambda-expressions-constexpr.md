@@ -1,25 +1,15 @@
 ---
-title: wyrażenia constexpr wyrażeń lambda w języku C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: wyrażenia constexpr wyrażeń lambda w języku C++
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71c28ab1531c2af19f2b8f594db457d0272b0664
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820363"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506603"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>wyrażenia constexpr wyrażeń lambda w języku C++
 
