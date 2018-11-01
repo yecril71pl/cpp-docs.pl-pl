@@ -1,27 +1,17 @@
 ---
-title: C2687 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: C2687 błąd kompilatora
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2687
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1333d26a7733ffeb0876a9b563377e5ead010261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a30efa264a4e7be387c3c2363940bd5ceca1bcc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540949"
 ---
 # <a name="compiler-error-c2687"></a>C2687 błąd kompilatora
 

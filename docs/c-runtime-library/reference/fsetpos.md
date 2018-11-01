@@ -1,10 +1,6 @@
 ---
-title: fsetpos — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528235"
 ---
 # <a name="fsetpos"></a>fsetpos
 
-Ustawia wskaźnik pozycji w strumieniu.
+Ustawia wskaźnik pozycji strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,21 +44,21 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
-*POS*<br/>
+*punktu sprzedaży*<br/>
 Wskaźnik położenia magazynu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **fsetpos —** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu — stałe (zdefiniowany w numer błędu. H): **ebadf —**, co oznacza, że plik nie jest dostępny lub obiekt który *strumienia* punktów nie jest prawidłowym plikiem strukturą; lub **einval —**, co oznacza nieprawidłową wartością dla *strumienia* lub *pos* został przekazany. Jeśli przekazano nieprawidłowy parametr tych funkcji Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+W przypadku powodzenia **fsetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w numer błędu. Godz.): **EBADF**, co oznacza, że plik nie jest dostępna, albo ten obiekt, *strumienia* wskazuje nie jest prawidłowym plikiem struktury; lub **EINVAL**, co oznacza nieprawidłową wartością dla *strumienia* lub *pos* został przekazany. Jeśli podano nieprawidłowy parametr jest przekazywany w, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fsetpos —** funkcja ustawia wskaźnik położenia pliku *strumienia* wartość *pos*, jest uzyskiwany wcześniejszym wywołaniu **fgetpos —** przed *strumienia*. Funkcja usuwa plik końcowy wskaźnika i cofa efekty [ungetc —](ungetc-ungetwc.md) na *strumienia*. Po wywołaniu **fsetpos —**, następnej operacji na *strumienia* mogą być danych wejściowych lub wyjściowych.
+**Fsetpos** funkcja ustawia wskaźnik położenia pliku *strumienia* wartość *pos*, jest uzyskiwany podczas wcześniejszego wywołania **fgetpos**względem *strumienia*. Funkcja czyści wskaźnik końca pliku i cofa efekty [ungetc —](ungetc-ungetwc.md) na *strumienia*. Po wywołaniu **fsetpos**, następnej operacji na *strumienia* mogą być danych wejściowych lub wyjściowych.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,9 +70,9 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [fgetpos —](fgetpos.md).
+Zobacz przykład [fgetpos](fgetpos.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetpos](fgetpos.md)<br/>

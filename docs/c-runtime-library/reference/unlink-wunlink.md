@@ -1,10 +1,6 @@
 ---
-title: _unlink, _wunlink | Microsoft Docs
-ms.custom: ''
+title: _unlink, _wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544202"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
-Usuń plik.
+Usuwanie pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,17 +61,17 @@ Nazwa pliku do usunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0 w przypadku powodzenia. W przeciwnym razie funkcja zwraca wartość -1 i zestawy **errno** do **eacces —**, co oznacza, że ścieżka Określa plik tylko do odczytu lub **enoent —**, co oznacza pliku lub ścieżka nie można odnaleźć lub Określona ścieżka katalogu.
+Każda z tych funkcji zwraca wartość 0, jeśli kończy się pomyślnie. W przeciwnym razie funkcja zwraca wartość -1 i ustawia **errno** do **EACCES**, co oznacza, że ścieżka Określa plik tylko do odczytu lub **ENOENT**, co oznacza plik lub ścieżka nie zostanie znaleziony lub Ścieżka określona w katalogu.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Unlink —** funkcja usuwa plik określony przez *filename*. **_wunlink —** jest wersja znaków dwubajtowych **_unlink —**; *filename* argument **_wunlink —** jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**_Unlink —** funkcja usuwa plik określony przez *filename*. **_wunlink —** to wersja znaku dwubajtowego **_unlink —**; *filename* argument **_wunlink —** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tunlink —**|**_unlink**|**_unlink**|**_wunlink**|
 

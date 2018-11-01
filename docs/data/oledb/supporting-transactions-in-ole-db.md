@@ -1,12 +1,6 @@
 ---
-title: Obsługa transakcji w OLE DB | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Obsługa transakcji w OLE DB
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB consumer templates [C++], transaction support
 - transactions [C++], OLE DB support for
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 658313ddaf29e67c7be5c83dbc38c3b5da95eba9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 58316a6f09fcd60aae8b8de41e22af138ae88813
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527173"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
 

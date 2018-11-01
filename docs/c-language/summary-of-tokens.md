@@ -1,23 +1,13 @@
 ---
-title: Podsumowanie tokenów | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Podsumowanie tokenów
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e331661fc011fe0ab98a762f5c7081c35f06363c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f295f59ce5767fce5416dde3545188cb0b1d4408
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549542"
 ---
 # <a name="summary-of-tokens"></a>Podsumowanie tokenów
 
@@ -40,7 +30,7 @@ ms.locfileid: "43758482"
 
 *Nazwa nagłówka*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**\<**  *PATH-spec*  **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"***specyfikacji ścieżki***"** 
+&nbsp;&nbsp;&nbsp;&nbsp;**"***specyfikacji ścieżki***"**
 
 *PATH-spec*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Ścieżka pliku prawne
@@ -50,9 +40,9 @@ ms.locfileid: "43758482"
 &nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *cyfra* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *nie cyfrą*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***e***logowania* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***E***logowania* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***.** 
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***e***logowania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***E***logowania*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***.**
 
 ## <a name="see-also"></a>Zobacz też
 
