@@ -1,39 +1,29 @@
 ---
-title: Kompilator C4700 ostrzegawcze (poziom 1 i 4) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie C4700 kompilatora (poziom 1 i 4)
 ms.date: 02/21/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4700
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876ae98fb2fdea5a9d8bdaecb93b8c229213d329
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463222"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Ostrzeżenie C4700 kompilatora (poziom 1 i 4)
 
 > niezainicjowanej zmiennej lokalnej "*nazwa*" używane
 
-Zmienna lokalna *nazwa* został *używane*, oznacza to, odczytywać, zanim ma zostanie przypisana wartość. C i C++ zmienne lokalne nie są domyślnie zainicjowane. Niezainicjowanych zmiennych może zawierać żadnej wartości, i ich użycia prowadzi do niezdefiniowane zachowanie. Ostrzeżenie C4700 prawie zawsze informuje usterkę, która może spowodować nieoczekiwane wyniki lub awarie w programie.
+Zmienna lokalna *nazwa* został *używane*, oznacza to, odczytywanie, zanim ma przypisaną wartość. W językach C i C++ zmienne lokalne nie są inicjowane domyślnie. Niezainicjowane zmienne może zawierać żadnej wartości, a ich użycie prowadzi do niezdefiniowanego zachowania. Ostrzeżenie C4700 prawie zawsze wskazuje usterkę, która może spowodować nieprzewidywalne skutki lub awarie w programach.
 
-Aby rozwiązać ten problem, można zainicjować zmienne lokalne, gdy są one zgłoszone lub przypisać wartość do nich, zanim zostaną użyte. Funkcja można zainicjować zmiennej, który jest przekazywany jako parametru odwołania lub po jego adres jest przekazywana jako parametr wskaźnika.
+Aby rozwiązać ten problem, można zainicjować zmienne lokalne, gdy są one zadeklarowane lub przypisać wartość do nich, zanim zostaną użyte. Funkcja może służyć do zainicjowania zmiennej, który jest przekazywany jako parametr przekazany przez odwołanie, lub po jego adres jest przekazywany jako parametr wskaźnika.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie generuje C4700, gdy zmienne t, u i v są używane przed zainicjowaniem i przedstawia rodzaj wartość pamięci, która może spowodować. Zmienne x, y oraz czy z powodują ostrzeżenia, ponieważ są one inicjowane przed użyciem:
+Ten przykład generuje C4700, gdy zmienne t, u i v są używane przed są inicjowane i pokazuje rodzaj wartość pamięci, która może spowodować. Zmienne x, y i z czy powoduje ostrzeżenie, ponieważ są one zainicjowane przed użyciem:
 
 ```cpp
 // c4700.cpp
@@ -63,7 +53,7 @@ int main()
 }
 ```
 
-Gdy ten kod jest uruchamianie, t, u i v niezainicjowanej, i dane wyjściowe dla s nieprzewidywalne:
+Gdy ten kod jest Uruchom "," t "," u "i" v są niezainicjowanej, a dane wyjściowe s jest nieprzewidywalne:
 
 ```Output
 Value in s: 37816963

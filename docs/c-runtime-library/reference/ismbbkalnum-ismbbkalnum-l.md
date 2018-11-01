@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum —, _ismbbkalnum_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481058"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
-Określa, czy konkretnego znaków wielobajtowych jest symbol tekstu spoza zestawu ASCII.
+Określa, czy określony znak wielobajtowy jest symbol tekstu spoza zestawu ASCII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,14 +54,14 @@ int _ismbbkalnum_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita ma zostać przetestowana.
+Liczba całkowita do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkalnum —** zwraca wartość niezerową, jeśli liczba całkowita *c* to symbol trójwarstwowa-innych niż znaki interpunkcyjne lub 0, jeśli nie jest. **_ismbbkalnum —** używany bieżące ustawienia regionalne informacji znak zależnych od ustawień regionalnych. **_ismbbkalnum_l —** jest taka sama jak **_ismbbkalnum —** z tym że jej ustawienia regionalne jako parametr. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbbkalnum —** zwraca wartość różną od zera, jeśli liczba całkowita *c* to symbol tekstu spoza zestawu ASCII inny niż znak interpunkcyjny lub 0, jeśli nie jest. **_ismbbkalnum —** używa bieżących ustawień regionalnych dla wszelkich informacji o znakach zależnych od ustawień regionalnych. **_ismbbkalnum_l —** jest taka sama jak **_ismbbkalnum —** z tą różnicą, że wykorzystuje ustawień regionalnych jako parametru. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,7 +70,7 @@ Ustawienia regionalne do użycia.
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

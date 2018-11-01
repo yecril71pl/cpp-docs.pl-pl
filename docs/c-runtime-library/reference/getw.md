@@ -1,10 +1,6 @@
 ---
-title: _getw — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getw
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getw
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3caffb90252780b833b80e3e5d1cd6d5ef6b0fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487610"
 ---
 # <a name="getw"></a>_getw
 
@@ -54,16 +44,16 @@ int _getw(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_getw —** zwraca wartość liczby całkowitej do odczytu. Zwracana wartość **EOF** wskazuje błąd lub koniec pliku. Jednak ponieważ **EOF** wartości jest również wartością całkowitą uzasadnione, użyj **feof —** lub **ferror —** można zweryfikować warunek plik końcowy lub błędu. Jeśli *strumienia* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **EOF**.
+**_getw —** zwraca wartość całkowitą odczytu. Zwracana wartość wynosząca **EOF** wskazuje błąd lub koniec pliku. Jednak ponieważ **EOF** wartość jest również wartością całkowitą autoryzowanych, należy użyć **feof** lub **ferror** Aby zweryfikować warunek końca pliku lub błąd. Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **EOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getw —** funkcja odczytuje następny wartości binarnej typu **int** z pliku skojarzone z *strumienia* i zwiększa wskaźnik skojarzony plik (jeśli istnieje) do punktu nieprzeczytana następny znak. **_getw —** nie przyjmuje żadnych specjalnych wyrównania elementów w strumieniu. Może wystąpić problemy z eksportowanie **_getw —** ponieważ rozmiar **int** typu i kolejności bajtów w ramach **int** typu różnią się w różnych systemach.
+**_Getw —** funkcja odczytuje następny wartość binarna typu **int** z pliku skojarzone z *strumienia* i zwiększa skojarzony wskaźnik pliku (jeśli istnieje) w celu wskazania Następny znak jako nieprzeczytane. **_getw —** nie przyjmuje żadnych specjalnych wyrównania elementów w strumieniu. Mogą wystąpić problemy z przenoszenie ze **_getw —** ponieważ rozmiar **int** typu i kolejność bajtów w ramach **int** typu różne w różnych systemach.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,7 +61,7 @@ Wskaźnik do **pliku** struktury.
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -123,5 +113,5 @@ First data word in file: 0x656e694c
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_putw](putw.md)<br/>
