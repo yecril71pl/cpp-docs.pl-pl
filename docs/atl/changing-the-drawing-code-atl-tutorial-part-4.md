@@ -1,25 +1,16 @@
 ---
-title: Zmiana kodu rysującego (ALT — samouczek, część 4) | Dokumentacja firmy Microsoft
+title: Zmiana kodu rysującego (ATL — Samouczek, część 4)
 ms.custom: get-started-article
 ms.date: 09/26/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f86574dc1d2b996b66b29d2db6d45afc6b81ff7f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065229"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481422"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Zmiana kodu rysującego (ATL — Samouczek, część 4)
 

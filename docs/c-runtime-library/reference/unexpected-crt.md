@@ -1,10 +1,6 @@
 ---
-title: Nieoczekiwany (CRT) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: nieoczekiwany (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534029"
 ---
 # <a name="unexpected-crt"></a>nieoczekiwany (CRT)
 
-Wywołania **przerwanie** lub można ją określić za pomocą funkcji **set_unexpected —**.
+Wywołania **zakończyć** lub funkcji, można określić za pomocą **set_unexpected**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,7 +39,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Uwagi
 
-**Nieoczekiwany** procedura nie jest używany z bieżąca implementacja C++, obsługa wyjątków. **Nieoczekiwany** wywołania **przerwanie** domyślnie. To zachowanie domyślne można zmienić, pisanie funkcji niestandardowych zakończenia i wywołanie **set_unexpected —** z nazwą funkcji jako jej argument. **Nieoczekiwany** wywołuje ostatniej podany jako argument do funkcji **set_unexpected —**.
+**Nieoczekiwany** procedura nie jest używany z bieżącej implementacji programu obsługi wyjątków C++. **Nieoczekiwany** wywołania **zakończyć** domyślnie. To zachowanie domyślne można zmienić przez pisanie funkcji niestandardowych zakończenia i wywołanie **set_unexpected** o nazwie funkcji jako argumentem. **Nieoczekiwany** wywołuje funkcję ostatniego podawana jako argument do **set_unexpected**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,6 +54,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
 [abort](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
-[set_terminate —](set-terminate-crt.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [Zakończenie](terminate-crt.md)<br/>

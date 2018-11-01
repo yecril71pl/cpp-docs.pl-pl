@@ -1,10 +1,6 @@
 ---
-title: _Crtgetallochook — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514962"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
-Pobiera bieżącego funkcji zdefiniowanych przez klienta alokacji dla przechwytywanie do procesu alokacji pamięci C debugowania środowiska wykonawczego (tylko wersja do debugowania).
+Pobiera bieżącą funkcję alokacji zdefiniowaną przez klienta dla przechwytywanie do procesu alokacji pamięci debugowania w czasie wykonywania C (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,13 +41,13 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca funkcję punktu zaczepienia alokacji obecnie zdefiniowane.
+Zwraca wartość funkcji podłączania alokacji aktualnie zdefiniowanych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtgetallochook —** pobiera bieżącej funkcji punktów zaczepienia zdefiniowane przez klienta aplikacji procesu alokacji pamięci biblioteki wykonawcze debugowania C.
+**_Crtgetallochook —** pobiera bieżącą funkcję podłączania zdefiniowaną przez klienta aplikacji do procesu alokacji pamięci biblioteki debugowania w czasie wykonywania C.
 
-Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
+Aby uzyskać więcej informacji na temat korzystania innych funkcją podłączania funkcji wykonawczej i pisanie własnych zdefiniowaną przez klienta funkcje punktów zaczepienia, zobacz [debugowania pisania funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -65,11 +55,11 @@ Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zac
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,27 +1,17 @@
 ---
-title: Używanie formantów suwaka | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Używanie formantów suwaka
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d0496a15b289ec055fd2706975603f25cef13938
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7bb5bda4a7b85ea8bb852649b20f10f0c4693188
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533571"
 ---
 # <a name="using-slider-controls"></a>Używanie formantów suwaka
 
