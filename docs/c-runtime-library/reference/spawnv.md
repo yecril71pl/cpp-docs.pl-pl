@@ -1,10 +1,6 @@
 ---
-title: spawnv — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: spawnv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - spawnv
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - spawnv
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnv function
 ms.assetid: 6f9b247c-1524-4c24-b846-6925fe22f1cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 309d3953a9548c8950fc6f84322e88d6a8db5418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7922763ebc482d9bad5037965b7a85824d894c38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471126"
 ---
 # <a name="spawnv"></a>spawnv
 
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_spawnv —](spawnv-wspawnv.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_spawnv](spawnv-wspawnv.md) zamiast tego.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

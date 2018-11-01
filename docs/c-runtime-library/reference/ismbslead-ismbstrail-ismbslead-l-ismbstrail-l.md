@@ -1,10 +1,6 @@
 ---
-title: _ismbslead —, _ismbstrail —, _ismbslead_l —, _ismbstrail_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403199"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468916"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
-Wykonuje testy kontekstowa bajtów realizacji ciągu w przypadku znaków wielobajtowych i ślad bajtów i określa, czy wskaźnik danego podciągu wskazuje bajtu lub bajt.
+Wykonuje testy kontekstowych dla potencjalnych klientów w ciągu w przypadku znaków wielobajtowych bajtów i bajtów dziennika i określa, czy wskaźnik danego podciągu wskazuje na bajt wiodący lub bajt.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,23 +80,23 @@ int _ismbstrail_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Wskaźnik do początku ciąg lub poprzednie znane bajtu.
+Wskaźnik do początku ciągu lub poprzedniego znanych bajt.
 
-*Bieżący*<br/>
-Wskaźnik do pozycji w ciągu do sprawdzenia.
+*bieżący*<br/>
+Wskaźnik na pozycji w ciągu, który ma zostać przetestowana.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbslead —** zwraca wartość -1, jeśli znak jest bajtu i **_ismbstrail —** zwraca wartość -1, jeśli znak jest bajt. Jeśli parametry wejściowe są prawidłowe, ale nie są bajtu lub bajt, te funkcje zwracać zera. Jeśli którykolwiek argument ma **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **NULL** i ustaw **errno** do **einval —**.
+**_ismbslead —** zwraca wartość -1, jeśli znak jest wiodącym bajtem i **_ismbstrail —** zwraca wartość -1, jeśli znak jest bajt. Jeśli ciągi wejściowe są prawidłowe, ale nie są bajt wiodący lub bajt, te funkcje zwracają wartość zero. Jeśli którykolwiek z argumentów jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustaw **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_ismbslead —** i **_ismbstrail —** wolniej niż **_ismbblead —** i **_ismbbtrail —** wersji ponieważ uwzględniają kontekst ciągu.
+**_ismbslead —** i **_ismbstrail —** wolniej niż **_ismbblead** i **_ismbbtrail** wersje ponieważ uwzględniają kontekst ciągu.
 
-Wersje tych funkcji, które mają **_l** sufiks są identyczne z tym, że ich działania zależnego od ustawień regionalnych używają ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnicą, że zachowań zależnych od ustawień regionalnych używają ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -117,9 +107,9 @@ Wersje tych funkcji, które mają **_l** sufiks są identyczne z tym, że ich dz
 |**_ismbslead_l —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 |**_ismbstrail_l —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\* Dla manifestu stałe warunki testu.
+\* Dla stałych manifestu do warunków badania.
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

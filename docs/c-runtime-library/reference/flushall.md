@@ -1,10 +1,6 @@
 ---
-title: _flushall — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398025"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466247"
 ---
 # <a name="flushall"></a>_flushall
 
@@ -53,17 +43,17 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_flushall —** zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie ma żadnych zwracany błąd.
+**_flushall —** zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **_flushall —** funkcja zapisuje odpowiednią zawartość buforów wszystkie skojarzone z strumienie wyjściowe otwarte pliki. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącej zawartości. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumieni.)
+Domyślnie **_flushall —** funkcja zapisuje do odpowiednich plików zawartości wszystkich buforów skojarzone z strumienie wyjściowe Otwórz. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącą zawartość. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa optymalny czas automatycznie zapisywać dane na dysku: gdy bufor jest pełny, jeśli strumień jest zamknięty lub gdy program kończy się normalnie bez zamykania strumieni.)
 
-Jeśli odczytu następuje po wywołaniu **_flushall —**, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu **_flushall —**.
+Jeśli odczyt następuje po wywołaniu **_flushall —**, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu **_flushall —**.
 
-Funkcja commit-to-disk biblioteki wykonawczej umożliwia upewnij się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez ponowne zapisywanie istniejący program, łącząc plików obiektów programu z Commode.obj można włączyć tę funkcję. W wynikowym pliku wykonywalnego, wywołań **_flushall —** zapisać zawartość buforów wszystkich na dysku. Tylko **_flushall —** i [fflush —](fflush.md) dotyczy Commode.obj.
+Funkcja commit-to-disk biblioteki wykonawczej pozwala upewnić się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez konieczności ponownego zapisu istniejący program, można włączyć tę funkcję, konsolidacji plików obiektu programu z plikiem Commode.obj. Wynikowy plik wykonywalny wywołuje w celu **_flushall —** zapisywanie zawartości wszystkich buforów na dysku. Tylko **_flushall —** i [fflush —](fflush.md) dotyczy plikiem Commode.obj.
 
-Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
+Aby uzyskać informacje o sposobie sterowania funkcją commit-to-disk, zobacz [Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,7 +61,7 @@ Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -97,7 +87,7 @@ There were 3 streams flushed
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>

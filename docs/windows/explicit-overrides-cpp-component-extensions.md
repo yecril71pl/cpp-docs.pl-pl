@@ -1,26 +1,16 @@
 ---
-title: Jawne przesłonięcia (C + +/ CLI i C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Jawne przesłonięcia (C + +/ CLI i C + +/ CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 54f3d50b3a47890e6f3dd68c41832fa3d1e13e59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328041"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459829"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Jawne przesłonięcia (C + +/ CLI i C + +/ CX)
 
@@ -184,4 +174,4 @@ public:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../windows/component-extensions-for-runtime-platforms.md)

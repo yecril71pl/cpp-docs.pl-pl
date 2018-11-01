@@ -1,10 +1,6 @@
 ---
-title: _Crtsetreporthook — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtSetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportHook
 - CrtSetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ef76fe0b7befb99b5bf0e8bb69fa1a1229782de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dcb916ea920751618ffa6a4afbcde8df5e35cba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478341"
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
 
-Instaluje zdefiniowane przez klienta funkcji raportowania przez Przechwytywanie go do procesu raportowania debugowania środowiska wykonawczego C (tylko wersja do debugowania).
+Instaluje funkcję raportowania zdefiniowaną przez klienta przez podłączenie jej do procesu raportowania debugowania w czasie wykonywania C (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,32 +44,32 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
 ### <a name="parameters"></a>Parametry
 
 *reportHook*<br/>
-Nowy klient funkcji zdefiniowanej przez raportowania do przyłączanie się do C-run-time debugowania procesu raportowania.
+Nowe zdefiniowaną przez klienta raportowania funkcję, aby dołączyć do środowiska wykonawczego języka C debugować proces raportowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca poprzedni klienta zdefiniowanych funkcji raportowania.
+Zwraca poprzedni zdefiniowaną przez klienta funkcji raportowania.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtsetreporthook —** pozwala aplikacji na używanie własnej raportowania funkcji do biblioteki wykonawcze debugowania C raportowania procesu. W związku z tym, gdy [_crtdbgreport —](crtdbgreport-crtdbgreportw.md) jest nazywany aby wygenerować raport debugowania, raportowanie do aplikacji, funkcja jest wywoływana, najpierw. Ta funkcja umożliwia wykonywanie operacji takich jak filtrowania raportów debugowania można skupić się na typy alokacji określonych lub wysłać raport do miejsc docelowych nie jest dostępny za pomocą aplikacji **_crtdbgreport —**. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtsetreporthook —** są usuwane podczas przetwarzania wstępnego.
+**_CrtSetReportHook** pozwala aplikacji używać własnej raportowania funkcji do biblioteki debugowania w czasie wykonywania C procesu raportowania. W rezultacie, zawsze, gdy [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) nosi nazwę do wygenerowania raportu debugowania, raportowanie w aplikacji, funkcja jest wywoływana, najpierw. Ta funkcja umożliwia aplikacji wykonywanie operacji takich jak filtrowanie raportów debugowania, dzięki czemu można skupić się na określonych typów alokacji, lub wysłać raport do miejsc docelowych nie jest dostępny za pomocą **_CrtDbgReport**. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtSetReportHook** są usuwane podczas przetwarzania wstępnego.
 
-Bardziej niezawodna w wersji **_crtsetreporthook —**, zobacz [_crtsetreporthook2 —](crtsetreporthook2-crtsetreporthookw2.md).
+Bardziej niezawodna wersji **_CrtSetReportHook**, zobacz [_crtsetreporthook2 —](crtsetreporthook2-crtsetreporthookw2.md).
 
-**_Crtsetreporthook —** funkcja instaluje nowy klient zdefiniowane przez określone w funkcji raportowania *reportHook* i zwraca poprzedniego punktu zaczepienia zdefiniowane przez klienta. W poniższym przykładzie pokazano, jak powinna być prototypowana haku zdefiniowane przez klienta raportu:
+**_CrtSetReportHook** funkcja instaluje nowy zdefiniowaną przez klienta określona w funkcji raportowania *reportHook* i zwraca poprzedniego punktu zaczepienia zdefiniowaną przez klienta. W poniższym przykładzie pokazano, jak powinny być prototypowane hook zdefiniowaną przez klienta raportu:
 
 ```C
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-gdzie *reportType* jest typ raportu debugowania (**_CRT_WARN**, **_CRT_ERROR**, lub **_CRT_ASSERT**), *komunikat* jest całkowicie złożony debugowania komunikat użytkownika mają być zawarte w raporcie, i **returnValue** jest wartość określoną przez klienta zdefiniowane raportowania funkcji, która ma zostać zwrócony przez **_ Crtdbgreport —**. Pełny opis typy dostępnych raportów, zobacz [_crtsetreportmode —](crtsetreportmode.md) funkcji.
+gdzie *reportType* jest typem raportu debugowania (**_CRT_WARN**, **_CRT_ERROR**, lub **_CRT_ASSERT**), *komunikat* jest zmontowanych debugowania dla użytkownika komunikat o muszą być zawarte w raporcie i **returnValue** wartość określoną przez zdefiniowaną przez klienta zgłasza funkcja, która ma zostać zwrócony przez **_ Crtdbgreport —**. Aby uzyskać pełny opis typów dostępnych raportów, zobacz [_CrtSetReportMode](crtsetreportmode.md) funkcji.
 
-Jeśli funkcja raportowania zdefiniowana przez klienta obsługuje całkowicie wiadomość debugowania taki sposób, że nie dalsze reporting jest wymagane, funkcja powinna zwrócić **TRUE**. Gdy funkcja zwraca **FALSE**, **_crtdbgreport —** jest wywoływana w celu wygenerowania raportu debugowania przy użyciu bieżących ustawień typ raportu, tryb i plików. Ponadto, określając **_crtdbgreport —** zwracają wartość w **returnValue**, aplikację można też kontrolować, czy występuje przerwanie debugowania. Pełny opis sposobu skonfigurowane i wygenerowany raport debugowania, zobacz **_crtsetreportmode —**, [_crtsetreportfile —](crtsetreportfile.md), i **_crtdbgreport —**.
+Jeśli zdefiniowaną przez klienta funkcji raportowania obsługuje całkowicie komunikat debugowania w taki sposób, że nie dalsze raportowanie jest wymagana, funkcja powinna zwrócić **TRUE**. Gdy funkcja zwraca **FALSE**, **_CrtDbgReport** jest wywoływana, aby wygenerować raport debugowania przy użyciu bieżących ustawień dla typu raportu, tryb i pliku. Ponadto, określając **_CrtDbgReport** zwracają wartości w **returnValue**, aplikację można także kontrolować, czy występuje przerwanie debugowania. Aby uzyskać pełny opis sposobu skonfigurowane i wygenerowany raport debugowania, zobacz **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md), i **_CrtDbgReport**.
 
-Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
+Aby uzyskać więcej informacji na temat korzystania innych funkcją podłączania funkcji wykonawczej i pisanie własnych zdefiniowaną przez klienta funkcje punktów zaczepienia, zobacz [debugowania pisania funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
 
 > [!NOTE]
-> Jeśli aplikacja jest skompilowana przy użyciu **/CLR** i funkcji raportowania jest wywoływana po zakończył działanie aplikacji głównej, CLR spowoduje zgłoszenie wyjątku, jeśli wszystkie funkcje CRT wywołuje funkcję raportowania.
+> Jeśli aplikacja jest kompilowana z **/CLR** i funkcji raportowania jest wywoływana po zakończył działanie aplikacji głównej, środowisko CLR spowoduje zgłoszenie wyjątku, jeśli funkcja raportowania wywołuje wszystkie funkcje CRT.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -87,11 +77,11 @@ Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zac
 |-------------|---------------------|
 |**_CrtSetReportHook**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

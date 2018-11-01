@@ -1,30 +1,20 @@
 ---
-title: Przykłady wyrównania struktury | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Przykłady wyrównania struktury
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466251"
 ---
 # <a name="examples-of-structure-alignment"></a>Przykłady wyrównania struktury
 
-Następujące cztery przykłady deklarowania wyrównany struktury lub Unii i porównawcze ilustrują układ struktury lub Unii w pamięci. Każda kolumna na ilustracji reprezentuje bajtów pamięci i liczby w kolumnie wskazuje przemieszczenie tego bajtu. Nazwa w drugim wierszu każdej rysunek odpowiada nazwie w deklaracji zmiennej. Przyciemnione kolumn wskazująca, że dopełnienie, który jest wymagany do osiągnięcia określonej wyrównania.
+Następujące cztery przykłady zadeklarować, że wyrównany struktury lub Unii i dane porównawcze ilustrują układ tej struktury lub Unii w pamięci. Każda kolumna na ilustracji reprezentuje bajt pamięci i liczby w kolumnie wskazuje przesunięcie tego bajtu. Nazwa w drugim wierszu każdej rysunek odnosi się do nazwy zmiennej w deklaracji. Zacieniowaniu kolumn wskazują, że dopełnienie, które są wymagane do osiągnięcia określonego wyrównania.
 
 ## <a name="example-1"></a>Przykład 1
 

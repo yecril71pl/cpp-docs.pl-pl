@@ -1,10 +1,6 @@
 ---
-title: Klasa CWinThread | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Cwinthread — klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinThread
 - AFXWIN/CWinThread
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXWIN/CWinThread::m_nThreadID
 - AFXWIN/CWinThread::m_pActiveWnd
 - AFXWIN/CWinThread::m_pMainWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinThread [MFC], CWinThread
 - CWinThread [MFC], CreateThread
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477327"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -100,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty zanim osiągną one aplikację.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie nieobsługiwane wyjątki rzucane przez komunikat dla wątku i programy obsługi poleceń.|
-|[CWinThread::PumpMessage](#pumpmessage)|zawiera pętli komunikatów dla wątku.|
+|[CWinThread::PumpMessage](#pumpmessage)|Zawiera pętli komunikatów dla wątku.|
 |[CWinThread::ResumeThread](#resumethread)|Zmniejsza wątku zawiesić count.|
 |[CWinThread::Run](#run)|Kontrolowanie funkcji dla wątków, za pomocą "pompy komunikatów". Przesłoń, aby dostosować domyślną pętlę komunikatów.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Ustawia priorytet bieżącego wątku.|
@@ -545,7 +535,7 @@ Ta funkcja członkowska jest używany tylko w wątki, które zawierają "pompy k
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-zawiera pętli komunikatów dla wątku.
+Zawiera pętli komunikatów dla wątku.
 
 ```
 virtual BOOL PumpMessage();

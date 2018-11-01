@@ -1,10 +1,6 @@
 ---
-title: strspn —, wcsspn —, _mbsspn —, _mbsspn_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477321"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
-Zwraca indeks pierwszego znaku w ciągu, który nie należy do zestawu znaków.
+Zwraca indeks pierwszego wystąpienia znaku w ciągu, który nie należy do zestawu znaków.
 
 > [!IMPORTANT]
-> **_mbsspn —** i **_mbsspn_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn —** i **_mbsspn_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,7 +79,7 @@ size_t _mbsspn_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Zerem ciąg do wyszukania.
+Ciąg zakończony wartością null do wyszukania.
 
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
@@ -99,19 +89,19 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość całkowita określająca długość podciągu w *str* składa całkowicie znaków *strCharSet*. Jeśli *str* rozpoczyna się od znaku nie *strCharSet*, funkcja zwraca wartość 0.
+Zwraca wartość całkowitą określającą długość podciągu w *str* który składa się w całości ze znaków w *strCharSet*. Jeśli *str* zaczyna się od znaku nie w *strCharSet*, funkcja zwraca 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strspn —** funkcja zwraca indeks pierwszego znaku w *str* nienależącym do zestawu znaków *strCharSet*. Wyszukiwanie nie obejmuje Kończenie znaki null.
+**Strspn —** funkcja zwraca indeks pierwszego znaku w *str* , nie należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie obejmuje kończących się pustych znaków.
 
-**wcsspn —** i **_mbsspn —** znaków dwubajtowych i znaków wielobajtowych wersji **strspn —**. Argumenty **wcsspn —** są znaków dwubajtowych ciągi; tych **_mbsspn —** są ciągami znaków wielobajtowych. **_mbsspn —** sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbspn** ustawia **errno** do **einval —** i zwraca wartość 0. **strspn —** i **wcsspn —** nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcsspn —** i **_mbsspn —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strspn —**. Argumenty **wcsspn —** są znakami dwubajtowymi ciągów; te z **_mbsspn —** są ciągami znaków wielobajtowych. **_mbsspn —** sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, **_mbspn** ustawia **errno** do **EINVAL** i zwraca wartość 0. **strspn —** i **wcsspn —** nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsspn —**|**strspn**|**_mbsspn**|**wcsspn**|
 |**n/d**|**n/d**|**_mbsspn_l**|**n/d**|
@@ -121,7 +111,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strspn**|\<string.h>|
-|**wcsspn**|\<String.h > lub \<wchar.h >|
+|**wcsspn**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsspn —**, **_mbsspn_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
