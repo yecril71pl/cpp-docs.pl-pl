@@ -1,32 +1,22 @@
 ---
-title: '&lt;stos&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;stack&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <stack>
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68f16523b1fda7b8b3d6b8dca5b4d1960c5c815f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51e350169babc3d5247fbdabab2f3b9bda717d47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617057"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Definiuje stosu klasy szablonu i dwa szablony pomocniczych.
+Definiuje stosu klasy szablonu i dwóch szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,18 +29,18 @@ Definiuje stosu klasy szablonu i dwa szablony pomocniczych.
 
 |Operator|Opis|
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Testy, jeśli obiekt stosu po lewej stronie operatora nie jest taki sam jak obiekt stosu po prawej stronie.|
-|[Operator <](../standard-library/stack-operators.md#op_lt)|Testy, jeśli obiekt stosu po lewej stronie operatora jest mniejsza niż obiekt stosu po prawej stronie.|
-|[Operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Testy, jeśli obiekt stosu po lewej stronie operatora jest mniejsza niż lub równe obiekcie stosu po prawej stronie.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testy, jeśli obiekt stosu po lewej stronie operatora jest taki sam jak obiekt stosu po prawej stronie.|
-|[operator>](../standard-library/stack-operators.md#op_gt)|Testy, jeśli obiekt stosu po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.|
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testy, jeśli obiekt stosu po lewej stronie operatora jest większa niż lub równa obiekcie stosu po prawej stronie.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Sprawdza, czy obiekt stosu po lewej stronie operatora nie jest równy obiektowi stosu po prawej stronie.|
+|[Operator <](../standard-library/stack-operators.md#op_lt)|Sprawdza, czy obiekt stack po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.|
+|[Operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Sprawdza, czy stosu obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Sprawdza, czy obiekt stack po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.|
+|[operator>](../standard-library/stack-operators.md#op_gt)|Sprawdza, czy obiekt stack po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.|
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Sprawdza, czy obiekt stack po lewej stronie operatora jest większy lub równy obiektowi stosu po prawej stronie.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[stack, klasa](../standard-library/stack-class.md)|Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu ostatnio dodane do niektórych podstawowy typ kontenera.|
+|[stack, klasa](../standard-library/stack-class.md)|Szablon kontenera adaptera Klasa udostępniająca ograniczenia funkcjonalność ograniczania dostępu do elementu ostatnio dodane do niektórych podstawowych typ kontenera.|
 
 ## <a name="see-also"></a>Zobacz także
 

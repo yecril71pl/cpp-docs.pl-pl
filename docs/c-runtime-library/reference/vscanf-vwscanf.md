@@ -1,10 +1,6 @@
 ---
-title: vscanf, vwscanf | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: vscanf, vwscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf
 - vwscanf
@@ -24,23 +20,17 @@ f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
-dev_langs:
-- C++
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 825d0d61fccc6d0f83ae8b11648a3c7a3a9c50a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ba72e0dc313617211f7b9608bcbd8919bbc62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625092"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
-Odczyty sformatowanych danych z Standardowy strumień wejściowy. Bezpieczniejsza wersje tych funkcji są dostępne; zobacz [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md).
+Odczyty sformatowanych danych ze standardowego strumienia wejściowego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,31 +49,31 @@ int vwscanf(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Ciąg formatu w kontroli.
+Ciąg formantu formatu.
 
 *arglist*<br/>
-Listy zmiennych argumentów.
+Lista zmiennych argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane.
+Zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól.
 
-Jeśli *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Jeśli *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Vscanf** funkcja odczytuje dane z Standardowy strumień wejściowy **stdin** i zapisuje dane do lokalizacji, które są podane przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+**Vscanf** funkcja odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje je w lokalizacjach, które są określone przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Jeśli używasz **vscanf** odczytać ciągu, należy zawsze określić szerokość **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie niepoprawnie sformatowany danych wejściowych może spowodować przepełnienie buforu. Alternatywnie, można użyć [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) lub [fgets —](fgets-fgetws.md).
+> Kiedy używasz **vscanf** do odczytywania ciągu, należy zawsze określać szerokość dla **%s** formacie (na przykład **"% 32s"** zamiast **"%s"**); w przeciwnym razie niepoprawnie sformatowane dane wejściowe mogą spowodować przepełnienie buforu. Alternatywnie, można użyć [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) lub [fgets](fgets-fgetws.md).
 
-**vwscanf** jest wersja znaków dwubajtowych **vscanf**; *format* argument **vwscanf** jest ciągiem znaków dwubajtowych. **vwscanf** i **vscanf** zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **vscanf** nie obsługuje dane wejściowe ze strumienia UNICODE.
+**vwscanf** to wersja znaku dwubajtowego **vscanf**; *format* argument **vwscanf** jest ciągiem znaku dwubajtowego. **vwscanf** i **vscanf** zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vscanf** nie obsługuje danych wejściowych ze strumienia UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtscanf**|**vscanf**|**vscanf**|**vwscanf**|
 
@@ -96,7 +86,7 @@ Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wsca
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -157,7 +147,7 @@ The contents are: 36 92.300003 y n Wide characters
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

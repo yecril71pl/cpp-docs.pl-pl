@@ -1,32 +1,22 @@
 ---
-title: duration_values — struktura | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: duration_values — Struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration_values
 - chrono/std::chrono::duration_values::max
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
-dev_langs:
-- C++
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d781d04097b205750e7ac65529cfa8ad7b37f9c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846015"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653391"
 ---
 # <a name="durationvalues-structure"></a>duration_values — Struktura
 
-Udostępnia wartości określonej dla [czas trwania](../standard-library/duration-class.md) parametr szablonu `Rep`.
+Zawiera określone wartości dla [czas trwania](../standard-library/duration-class.md) parametru szablonu `Rep`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,9 +31,9 @@ struct duration_values;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[max](#max)|Statyczna. Określa górne ograniczenie dla wartości typu `Rep`.|
-|[min](#min)|Statyczna. Określa dolną granicę dla wartości typu `Rep`.|
-|[zero](#zero)|Statyczna. Zwraca `Rep(0)`.|
+|[max](#max)|Statyczne. Określa górną granicę dla wartości typu `Rep`.|
+|[min](#min)|Statyczne. Określa dolną granicę dla wartości typu `Rep`.|
+|[zero](#zero)|Statyczne. Zwraca `Rep(0)`.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -51,9 +41,9 @@ struct duration_values;
 
 **Namespace:** std::chrono
 
-## <a name="max"></a>  duration_values::Max
+## <a name="max"></a>  duration_values::Max —
 
-Metoda statyczna, która zwraca górną granicę dla wartości typu `Ref`.
+Metoda statyczna zwraca górną granicę wartości typu `Ref`.
 
 ```cpp
 static constexpr Rep max();
@@ -65,11 +55,11 @@ W efekcie zwraca `numeric_limits<Rep>::max()`.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `Rep` typu zdefiniowane przez użytkownika jest zwracana wartość musi być większa niż [duration_values::zero](#zero).
+Gdy `Rep` jest typ zdefiniowany przez użytkownika, zwracana wartość musi być większa niż [duration_values::zero](#zero).
 
-## <a name="min"></a>  duration_values::min
+## <a name="min"></a>  duration_values::min —
 
-Statyczną metodę, która zwraca ograniczeniem dla wartości typu `Ref`.
+Metoda statyczna zwraca dolną granicę wartości typu `Ref`.
 
 ```cpp
 static constexpr Rep min();
@@ -81,7 +71,7 @@ W efekcie zwraca `numeric_limits<Rep>::lowest()`.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `Rep` typu zdefiniowane przez użytkownika jest zwracana wartość musi być mniejsza lub równa [duration_values::zero](#zero).
+Gdy `Rep` jest typ zdefiniowany przez użytkownika, zwracana wartość musi być mniejsza lub równa [duration_values::zero](#zero).
 
 ## <a name="zero"></a>  duration_values::zero
 
@@ -93,7 +83,7 @@ static constexpr Rep zero();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `Rep` jest typem użytkownika zwracana wartość musi reprezentować nieskończoności dodatku.
+Gdy `Rep` jest typ zdefiniowany przez użytkownika, wartość zwracana musi reprezentować dodatek nieskończoności.
 
 ## <a name="see-also"></a>Zobacz także
 

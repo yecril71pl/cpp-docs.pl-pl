@@ -1,28 +1,18 @@
 ---
-title: Praca z właściwościami projektu | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Praca z właściwościami projektu
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 5edf7a9a162c0980a6d872658204bcdf66fbdb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516288"
 ---
 # <a name="working-with-project-properties"></a>Praca z właściwościami projektu
 

@@ -1,10 +1,6 @@
 ---
-title: strcpy wcscpy —, _mbscpy — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413924"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640066"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
-Kopiuje ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strcpy_s —, wcscpy_s —, _mbscpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md).
+Kopiuje ciąg. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [strcpy_s wcscpy_s —, _mbscpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,29 +86,29 @@ unsigned char *_mbscpy(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Ciąg docelowego.
+Ciąg docelowy.
 
 *strSource*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca ciąg docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Każda z tych funkcji zwraca ciąg docelowy. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcpy** funkcji kopie *strSource*, w tym znak końcowy null do lokalizacji określonej przez *strDestination*. Zachowanie **strcpy** jest niezdefiniowana, jeśli parametry źródłowe i docelowe nakładają się.
+**Strcpy** funkcja kopiuje *strSource*, łącznie z końcowym znakiem zerowym, do lokalizacji, która jest określona przez *strDestination*. Zachowanie **strcpy** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
 > [!IMPORTANT]
-> Ponieważ **strcpy** nie sprawdza wystarczającą ilość miejsca w *strDestination* przed skopiowaniem *strSource*, jest przyczyną przepełnienia buforu. Dlatego zaleca się używanie [strcpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md) zamiast tego.
+> Ponieważ **strcpy** nie sprawdza wystarczająco dużo miejsca w *strDestination* przed skopiowaniem *strSource*, jest potencjalną przyczyną przekroczenia buforu. Dlatego zaleca się używanie [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zamiast tego.
 
-**wcscpy —** i **_mbscpy —** są odpowiednio znaków dwubajtowych i znaków wielobajtowych wersje **strcpy**. Argumenty i zwracana wartość **wcscpy —** są znaków dwubajtowych ciągi; tych **_mbscpy —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcscpy —** i **_mbscpy —** odpowiednio są wersjami znaków dwubajtowych i znaków wielobajtowych **strcpy**. Argumenty i wartość zwracana przez **wcscpy —** są znakami dwubajtowymi ciągów; te z **_mbscpy —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy —**|**strcpy**|**_mbscpy**|**wcscpy**|
 
@@ -127,7 +117,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
-|**wcscpy**|\<String.h > lub \<wchar.h >|
+|**wcscpy**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbscpy**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

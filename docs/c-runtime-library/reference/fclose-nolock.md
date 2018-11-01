@@ -1,10 +1,6 @@
 ---
-title: _fclose_nolock — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fclose_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fclose_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7474d195f2a04525ed2bc4cf671950308a70c7b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620964"
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 
@@ -55,7 +45,7 @@ int _fclose_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -64,7 +54,7 @@ Wskaźnik do **pliku** struktury.
 
 ## <a name="remarks"></a>Uwagi
 
-Tej funkcji jest wersja — blokowanie **fclose —**. Jest on identyczny z tą różnicą, że nie jest chroniony przez inne wątki od zakłóceń. Może to oznaczać szybsze nie wpływa negatywnie obciążenie zablokowania inne wątki. Ta funkcja służy tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+Tej funkcji jest wersja bez blokady **fclose —**. Jest on identyczny, z tą różnicą, że nie jest chronione przed ingerencją przez inne wątki. Może on być szybsze, ponieważ nie są naliczane z obciążeniem związanym z blokowaniem innych wątków. Ta funkcja służy tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,11 +62,11 @@ Tej funkcji jest wersja — blokowanie **fclose —**. Jest on identyczny z tą 
 |--------------|---------------------|
 |**_fclose_nolock**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

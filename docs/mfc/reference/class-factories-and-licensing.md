@@ -1,27 +1,17 @@
 ---
-title: Fabryki klas i Licencjonowanie | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Fabryki klas i licencjonowanie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5cedcedce14ce2fa6638091f0785f0456dee9891
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514403"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 

@@ -1,18 +1,12 @@
 ---
-title: 'Kontrolki ActiveX MFC: Używanie powiązania danych w kontrolce ActiveX | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
 - defaultbind
 - displaybind
 - dispid
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], data binding
 - data binding [MFC], MFC ActiveX controls
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603661"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 

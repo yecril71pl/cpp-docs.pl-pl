@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,20 +35,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416239"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616495"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
-Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Są to wersje [vsprintf —, _vsprintf_l —, vswprintf —, _vswprintf_l —, \__vswprintf_l —](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów. Są to wersje [vsprintf —, _vsprintf_l —, vswprintf —, _vswprintf_l —, \__vswprintf_l —](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -102,13 +92,13 @@ int vswprintf_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla danych wyjściowych.
+Lokalizacja magazynowa danych wyjściowych.
 
 *numberOfElements*<br/>
 Rozmiar *buforu* w znakach.
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -118,25 +108,25 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vsprintf_s —** i **vswprintf_s —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli *buforu* lub *format* jest wskaźnika o wartości null, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+**vsprintf_s —** i **vswprintf_s —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *buforu* lub *format* jest wskaźnikiem typu null, jeśli liczba jest równa zero lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów i sformatowanie i zapisuje podane dane pamięci wskazywanej przez *buforu*.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do pamięci wskazywany przez *buforu*.
 
-**vswprintf_s —** jest zgodny z normą ISO C dla **vswprintf —**, co wymaga drugiego parametru *liczba*, typu **size_t**.
+**vswprintf_s —** jest zgodny ze standardem C ISO dla **vswprintf —**, co wymaga drugiego parametru *liczba*, typu **size_t**.
 
-Tych funkcji różnią się od wersji niezabezpieczonego tylko bezpieczny wersje obsługują parametrów pozycyjnych. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Funkcje te różnią się od wersji niezabezpieczonej, tylko dlatego, że bezpieczne wersje obsługuje parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf_s —**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
 |**_vstprintf_s_l —**|**_vsprintf_s_l**|**_vsprintf_s_l**|**_vswprintf_s_l**|
@@ -148,7 +138,7 @@ W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążeni
 |**vsprintf_s —**, **_vsprintf_s_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**vswprintf_s —**, **_vswprintf_s_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -192,7 +182,7 @@ This is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

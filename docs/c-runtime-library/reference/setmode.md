@@ -1,10 +1,6 @@
 ---
-title: _setmode — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407499"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617441"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -59,27 +49,27 @@ int _setmode (
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora.
+Deskryptor pliku.
 
 *Tryb*<br/>
-Nowy tryb tłumaczenia.
+Nowy tryb translacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca poprzedniej tryb tłumaczenia.
+Jeśli to się powiedzie, zwraca poprzedniego tryb translacji.
 
-Jeśli nieprawidłowe parametry są przekazywane do tej funkcji, program obsługi nieprawidłowy parametr zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca wartość -1 i zestawy **errno** albo **ebadf —**, co oznacza deskryptora nieprawidłowy plik lub **einval —**, która wskazuje nieprawidłową *tryb* argumentu.
+Jeśli nieprawidłowe parametry są przekazywane do tej funkcji, parametr nieprawidłowy program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość -1 i ustawia **errno** do jednej **EBADF**, co oznacza nieprawidłowego deskryptora pliku, lub **EINVAL**, który wskazuje nieprawidłową *tryb* argumentu.
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Setmode —** funkcja ustawia *tryb* tryb tłumaczenia pliku określonego przez *fd*. Przekazywanie **_o_text —** jako *tryb* ustawia tekst (translacji) trybu. Zwracany wiersz karetki źródła kombinacji (CR LF) są przekształcane na jeden wiersz źródła znaku w danych wejściowych. Wiersz źródła znaki są tłumaczone na kombinacje CR LF w danych wyjściowych. Przekazywanie **_o_binary —** zestawów (niezrozumiały) trybie binarnym, w którym te tłumaczenia są pomijane.
+**_Setmode —** funkcja ustawia *tryb* tryb translacji pliku przez *fd*. Przekazywanie **_O_TEXT** jako *tryb* ustawia tekst (tłumaczonym) trybu. Kombinacji (CR-LF) kanału informacyjnego wiersza powrotu karetki są tłumaczone na jednym wierszu znaku wysuwu na dane wejściowe. Znaki kanału informacyjnego wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie **_O_BINARY** ustawia binarnym (nieprzetłumaczonym) tryb, w którym te tłumaczenia są pomijane.
 
-Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu. **_setmode —** jest zwykle używane do modyfikowania domyślny tryb tłumaczenia **stdin** i **stdout**, ale można go używać na dowolnym pliku. W przypadku zastosowania **_setmode —** do deskryptorów plików dla strumienia, wywołaj **_setmode —** przed wykonaniem żadnych operacji na strumieniu wejściowych lub wyjściowych.
+Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu. **_setmode —** jest zwykle używane do modyfikowania domyślny tryb translacji **stdin** i **stdout**, ale służy dowolny plik. Jeśli zastosujesz **_setmode —** deskryptor pliku dla strumienia, wywołać **_setmode —** przed wykonaniem jakiejkolwiek operacji na strumieniu danych wejściowych lub wyjściowych.
 
 > [!CAUTION]
-> Jeśli zapisywania danych do strumienia pliku, jawnie opróżnić kodu za pomocą [fflush —](fflush.md) przed użyciem **_setmode —** do zmieniania trybu. Jeśli nie mogło opróżnić kod, mogą uzyskać nieoczekiwane zachowanie. Jeśli dane nie zostały zapisane strumienia, nie trzeba opróżnić kod.
+> Jeśli piszesz danych w strumieniu plików jawnie opróżnić kodu za pomocą [fflush —](fflush.md) przed użyciem **_setmode —** Aby zmienić tryb. Jeśli kod nie jest opróżnienia, możesz otrzymać nieoczekiwane zachowanie. W przypadku niezapisania danych w strumieniu ma opróżniania kodu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -87,7 +77,7 @@ Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby 
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

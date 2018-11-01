@@ -1,32 +1,22 @@
 ---
-title: unchecked_array_iterator — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: unchecked_array_iterator — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdext::unchecked_array_iterator
-dev_langs:
-- C++
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a483d1509ce14a9192c237c5475ec9b8e65d24e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b3db474bedca50922334bd4dbd09c71d4e6e987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626203"
 ---
 # <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator — Klasa
 
-`unchecked_array_iterator` Klasa umożliwia zawijać tablicy lub wskaźnika do iteratora niezaznaczone. Klasa jest używana jako otoka (przy użyciu [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) funkcji) dla wskaźników raw lub tablic jako docelowych sposób zarządzania ostrzeżenia wskaźnika niezaznaczone zamiast globalnie wykluczania tych ostrzeżeń. Jeśli to możliwe, preferowane sprawdzona wersja tej klasy [checked_array_iterator —](../standard-library/checked-array-iterator-class.md).
+`unchecked_array_iterator` Klasa umożliwia owijanie tablicy lub wskaźnika w niesprawdzony iterator. Ta klasa jest używana jako otoka (przy użyciu [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) funkcji) dla surowych wskaźników lub tablic jako ukierunkowany sposób zarządzania ostrzeżeniami niezaznaczonych wskaźników zamiast globalnego wyciszania tych ostrzeżeń. Jeśli to możliwe, Preferuj sprawdzonej wersji tej klasy, [checked_array_iterator](../standard-library/checked-array-iterator-class.md).
 
 > [!NOTE]
-> Ta klasa jest rozszerzeniem Microsoft standardowej biblioteki C++. Kod zaimplementowany przy użyciu tej funkcji nie jest przenośny do standardowych środowisk kompilacji C++, które nie obsługują tego rozszerzenia Microsoft.
+> Ta klasa jest rozszerzeniem Microsoft standardowej biblioteki języka C++. Kod zaimplementowany przy użyciu tej funkcji nie jest przenośny do standardowych środowisk kompilacji C++, które nie obsługują tego rozszerzenia Microsoft.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,15 +27,15 @@ class unchecked_array_iterator;
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest zdefiniowana w [stdext —](../standard-library/stdext-namespace.md) przestrzeni nazw.
+Ta klasa jest zdefiniowana w [stdext](../standard-library/stdext-namespace.md) przestrzeni nazw.
 
-To jest wersja niezaznaczone [checked_array_iterator — klasa](../standard-library/checked-array-iterator-class.md) i obsługuje te same przeciążenia i elementów członkowskich. Aby uzyskać więcej informacji, funkcja iteratora zaznaczone z przykładów kodu, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md).
+To jest niesprawdzona wersja [klasy checked_array_iterator](../standard-library/checked-array-iterator-class.md) i obsługuje te same przeciążenia i członków. Aby uzyskać więcej informacji na temat funkcji sprawdzonego iteratora z przykładami kodu, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 

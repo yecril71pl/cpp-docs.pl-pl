@@ -1,10 +1,6 @@
 ---
-title: System, _wsystem — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624669"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
-Wykonuje polecenia.
+Wykonuje polecenie.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,33 +56,33 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parametry
 
-*polecenie*<br/>
+*Polecenie*<br/>
 Polecenie do wykonania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli *polecenia* jest **NULL** i interpreter poleceń zostanie znaleziony, zwraca wartość różną od zera. Jeśli interpreter poleceń nie zostanie znaleziony, zwraca wartość 0 i ustawia **errno** do **enoent —**. Jeśli *polecenia* nie jest **NULL**, **systemu** zwraca wartość zwracaną przez interpreter poleceń. Zwraca wartość 0, tylko wtedy, gdy interpreter poleceń zwraca wartość 0. Zwracana wartość - 1 wskazuje błąd i **errno** ustawiono na jedną z następujących wartości:
+Jeśli *polecenia* jest **NULL** i interpretera poleceń zostanie znaleziona, zwraca wartość różną od zera. Jeśli interpreter poleceń nie zostanie znaleziona, zwraca wartość 0 i ustawia **errno** do **ENOENT**. Jeśli *polecenia* nie **NULL**, **systemu** zwraca wartość, która jest zwracana przez interpretera poleceń. Zwraca wartość 0, tylko wtedy, gdy interpreter poleceń zwraca wartość 0. Zwracana wartość-1 wskazuje błąd, i **errno** jest ustawiony na jedną z następujących wartości:
 
 |||
 |-|-|
-**E2BIG —**|Lista argumentów (który jest zależny od systemu) jest za duży.
-**ENOENT —**|Nie można odnaleźć interpreter poleceń.
-**ENOEXEC —**|Nie można wykonać pliku interpreter poleceń, ponieważ format jest nieprawidłowy.
-**ENOMEM —**|Za mało pamięci jest dostępna do wykonania polecenia; lub ilość dostępnej pamięci jest uszkodzona; lub istnieje bloku nie jest ważna, co oznacza, że proces, który jest wywołania nie został poprawnie przydzielony.
+**E2BIG**|Lista argumentów (która jest zależna od systemu) jest zbyt duży.
+**ENOENT**|Nie można odnaleźć interpreter poleceń.
+**ENOEXEC**|Nie można wykonać pliku interpreter poleceń, ponieważ format jest nieprawidłowy.
+**ENOMEM**|Jest dostępna, można wykonać polecenia; nie ma wystarczającej ilości pamięci lub ilość dostępnej pamięci jest uszkodzony; lub istnieje nieprawidłowy blok, co oznacza, że proces, który wykonuje wywołanie nie został poprawnie przydzielony.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji o tych kody powrotne.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji o tych kody powrotne.
 
 ## <a name="remarks"></a>Uwagi
 
-**Systemu** funkcji przekazuje *polecenia* interpreter poleceń, które wykonuje ciąg jako polecenie systemu operacyjnego. **System** używa **COMSPEC** i **ścieżki** zmiennych środowiskowych, aby zlokalizować interpreter poleceń plik CMD.exe. Jeśli *polecenia* jest **NULL**, funkcja właśnie sprawdza, czy istnieje interpreter poleceń.
+**Systemu** funkcji przebiegów *polecenia* do interpretera poleceń, które wykonuje ciągu jako polecenie systemu operacyjnego. **System** używa **COMSPEC** i **ścieżki** zmiennych środowiskowych w celu zlokalizowania interpreter poleceń plik CMD.exe. Jeśli *polecenia* jest **NULL**, funkcja sprawdza jedynie, czy istnieje interpreter poleceń.
 
-Użytkownik musi jawnie opróżnić, za pomocą [fflush —](fflush.md) lub [_flushall —](flushall.md), lub zamknij strumieniem przed wywołaniem **systemu**.
+Użytkownik musi jawnie opróżnienia, za pomocą [fflush —](fflush.md) lub [_flushall —](flushall.md), lub zamknij strumienie przed wywołaniem **systemu**.
 
-**_wsystem —** jest wersja znaków dwubajtowych **systemu**; *polecenia* argument **_wsystem —** jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**_wsystem —** to wersja znaku dwubajtowego **systemu**; *polecenia* argument **_wsystem —** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem —**|**system**|**system**|**_wsystem**|
 
@@ -107,7 +97,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto **systemu** na typ pliku tekstowego.
+W tym przykładzie użyto **systemu** do typu pliku tekstowego.
 
 ```C
 // crt_system.c

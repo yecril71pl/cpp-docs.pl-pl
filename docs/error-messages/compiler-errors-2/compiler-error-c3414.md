@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3414 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3414
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3414
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3414
 ms.assetid: 715f5432-b509-4f8f-84f5-e1463bac490f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c07033489538011889ef939599b30b88664c08ee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86ed40f31ae17724700e9d2c68950027d0eefb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608994"
 ---
 # <a name="compiler-error-c3414"></a>Błąd kompilatora C3414
 

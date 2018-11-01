@@ -1,23 +1,13 @@
 ---
-title: 2.6 głównego i dyrektyw synchronizacji | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: 2.6 Dyrektywy główna i dotycząca synchronizacji
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 9cf07327-1b8d-4dce-954c-b1c59d0ea51d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 408f9340ac71b0e57996cdc0d1c3f87ed5dcfa79
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ebd966caaaf06683ca56299b57336fc057ee9c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620067"
 ---
 # <a name="26-master-and-synchronization-directives"></a>2.6 Dyrektywy główna i dotycząca synchronizacji
 

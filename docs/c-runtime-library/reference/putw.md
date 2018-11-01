@@ -1,10 +1,6 @@
 ---
-title: _putw — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404015"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602686"
 ---
 # <a name="putw"></a>_putw
 
-Zapisuje całkowitą strumienia.
+Zapisuje liczbę całkowitą do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,20 +48,20 @@ int _putw(
 ### <a name="parameters"></a>Parametry
 
 *binint*<br/>
-Binarne liczby całkowitej jako danych wyjściowych.
+Binarny liczba całkowita ma być danych wyjściowych.
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zapisywane. Zwracana wartość **EOF** może wskazywać na błąd. Ponieważ **EOF** jest również wartością całkowitą uzasadnione, użyj **ferror —** można zweryfikować wystąpił błąd. Jeśli *strumienia* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **EOF**.
+Zwraca wartość zapisywane. Zwracana wartość wynosząca **EOF** może wskazywać na błąd. Ponieważ **EOF** jest również wartość całkowitą uzasadnione, użyj **ferror** Aby sprawdzić, wystąpił błąd. Jeśli *strumienia* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EOF**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Putw —** funkcja zapisuje wartość binarną typu **int** do bieżącego położenia *strumienia.* **_putw —** nie wpływa na sposób wyrównania elementów w strumieniu ani nie przyjmuje żadnych specjalnych wyrównania. **_putw —** jest przeznaczone głównie dla zgodności z poprzedniej biblioteki. Mogą wystąpić problemy z przenośnością z **_putw —** ponieważ rozmiar **int** i kolejność bajtów w ramach **int** różnią się w różnych systemach.
+**_Putw —** funkcja zapisuje wartość binarna typu **int** do bieżącego położenia obiektu *strumienia.* **_putw —** wyrównania elementów w strumieniu nie wpływa ani nie założono żadnych specjalnych wyrównania. **_putw —** jest przeznaczone głównie dla zachowania zgodności z poprzedniej biblioteki. Za pomocą mogą wystąpić problemy z przenośnością **_putw —** ponieważ rozmiar **int** i kolejność bajtów w ramach **int** różne w różnych systemach.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -79,11 +69,11 @@ Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserr
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,5 +115,5 @@ Wrote ten words
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

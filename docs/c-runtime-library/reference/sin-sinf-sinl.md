@@ -1,10 +1,6 @@
 ---
-title: SIN, sinf — sinl — | Dokumenty Microsoft
-ms.custom: ''
+title: SIN sinf —, sinl —
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430365"
 ---
 # <a name="sin-sinf-sinl"></a>SIN sinf —, sinl —
 
-Oblicza sinus wartość zmiennoprzecinkową.
+Oblicza wartość funkcji sinus wartości zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,22 +62,22 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Sin** funkcji sinusa *x*. Jeśli *x* jest większa niż lub równa 263 lub mniejsza niż lub równa -263 dojdzie do utraty znaczenie w wyniku.
+**Sin** funkcje zwracają sinusa *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub równy -263, wystąpi utrata znaczenia w wyniku.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, IND|Brak|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|Brak|_DOMAIN|
 |∞ granicach; (sin, sinf — sinl —)|NIEPRAWIDŁOWY|_DOMAIN|
 
-Aby uzyskać więcej informacji na temat kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **sin** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **sin** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sin** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **sin** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
 |**SIN**, **sinf —**, **sinl —**|\<math.h>|\<cmath > lub \<math.h >|
 

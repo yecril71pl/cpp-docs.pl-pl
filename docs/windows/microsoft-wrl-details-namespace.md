@@ -1,24 +1,14 @@
 ---
-title: 'Microsoft::wrl:: details Namespace | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: Microsoft::WRL::Details — Przestrzeń nazw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 3f8f6849ec20956d10147a0e6ecb2fd023874807
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644382"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details — Przestrzeń nazw
 
@@ -43,7 +33,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator, klasa](../windows/makeallocator-class.md)|Przydziela pamięć dla klasy aktywowalnej, z lub bez niej odwołanie tymczasowe wsparcia.|
 |[ModuleBase, klasa](../windows/modulebase-class.md)|Reprezentuje klasę bazową [modułu](../windows/module-class.md) klasy.|
 |[RemoveIUnknown, klasa](../windows/removeiunknown-class.md)|Tworzy typ, który jest odpowiednikiem `IUnknown`— na podstawie typu, ale ma niewirtualną `QueryInterface`, `AddRef`, i `Release` metody.|
-|[Weakreference — klasa](../windows/weakreference-class.md)|Reprezentuje *słabe odwołanie* które mogą być używane z Windows Runtime lub Klasyczny model COM. Słabe odwołanie reprezentuje obiekt, który może być lub może być niedostępny.|
+|[WeakReference — Klasa](../windows/weakreference-class.md)|Reprezentuje *słabe odwołanie* które mogą być używane z Windows Runtime lub Klasyczny model COM. Słabe odwołanie reprezentuje obiekt, który może być lub może być niedostępny.|
 
 ### <a name="structures"></a>Struktury
 
@@ -84,7 +74,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback, funkcja](../windows/activationfactorycallback-function.md)|Pobiera fabrykę aktywacji dla identyfikatora określonego aktywacji.|
 |[Move, funkcja](../windows/move-function.md)|Przenosi określonego argumentu z jednej lokalizacji.|
 |[RaiseException, funkcja](../windows/raiseexception-function.md)|Zgłasza wyjątek w wątku wywołującego.|
-|[Swap — funkcja (WRL)](../windows/swap-function-wrl.md)|Zamienia wartości dwóch określonych argumentów.|
+|[Swap — Funkcja (WRL)](../windows/swap-function-wrl.md)|Zamienia wartości dwóch określonych argumentów.|
 |[TerminateMap, funkcja](../windows/terminatemap-function.md)|Zamyka fabryki klas w określonym module.|
 
 ## <a name="requirements"></a>Wymagania

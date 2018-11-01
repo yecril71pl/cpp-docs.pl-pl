@@ -1,10 +1,6 @@
 ---
-title: strcpy_s —, wcscpy_s —, _mbscpy_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616609"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
-Kopiuje ciąg. Te wersje programu [strcpy wcscpy —, _mbscpy —](strcpy-wcscpy-mbscpy.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopiuje ciąg. Te wersje [strcpy wcscpy —, _mbscpy —](strcpy-wcscpy-mbscpy.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -102,40 +92,40 @@ errno_t _mbscpy_s(
 Lokalizacja buforu ciągu docelowego.
 
 *dest_size*<br/>
-Rozmiar buforu ciągu docelowego w **char** jednostki dla funkcji wąskie i wielobajtowe, i **wchar_t** jednostki dla szerokiego funkcji. Ta wartość musi być większa od zera i nie większą niż **RSIZE_MAX**.
+Rozmiar buforu miejsca docelowego ciągu w **char** jednostki dla funkcji wąskie i wielobajtowego, i **wchar_t** jednostki dla szerokiego funkcji. Ta wartość musi być większa od zera i nie więcej niż **RSIZE_MAX**.
 
 *src*<br/>
-Bufor ciąg źródłowy zerem.
+Bufor ciągu źródła zakończony znakiem null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; w przeciwnym razie błąd.
+Zero, jeśli to się powiedzie; w przeciwnym razie błąd.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*dest*|*dest_size*|*src*|Wartość zwracana|Zawartość *docelowy*|
+|*dest*|*dest_size*|*src*|Wartość zwracana|Zawartość *miejsca docelowego*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|wszystkie|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|wszystkie|**NULL**|**EINVAL —**|*docelowy*zestawu [0] 0|
-|wszystkie|0 lub za mały|wszystkie|**ERANGE —**|*docelowy*zestawu [0] 0|
+|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|Wszystkie|**NULL**|**EINVAL**|*dest*[0] ustawiony na 0|
+|Wszystkie|0 lub zbyt mały|Wszystkie|**ERANGE**|*dest*[0] ustawiony na 0|
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcpy_s —** funkcja kopiuje zawartość adresu *src*, w tym znak końcowy null do lokalizacji określonej przez *dest*. Ciąg docelowego musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jej znak końcowy null. Zachowanie **strcpy_s —** zdefiniowano nakładania się ciągów źródłowych i docelowych.
+**Strcpy_s** funkcja kopiuje zawartość adresu *src*, łącznie z końcowym znakiem zerowym, do lokalizacji, która jest określona przez *dest*. Ciąg docelowy musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jego kończącego znaku null. Zachowanie **strcpy_s** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
-**wcscpy_s —** jest wersja znaków dwubajtowych **strcpy_s —**, i **_mbscpy_s —** jest wersja znaków wielobajtowych. Argumenty **wcscpy_s —** są znaków dwubajtowych ciągi; tych **_mbscpy_s —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcscpy_s —** jest wersją znaków dwubajtowych **strcpy_s**, i **_mbscpy_s —** jest wersją znaków wielobajtowych. Argumenty **wcscpy_s —** są znakami dwubajtowymi ciągów; te z **_mbscpy_s —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-Jeśli *dest* lub *src* jest wskaźnika o wartości null, lub jeśli rozmiar ciągu docelowego *dest_size* jest za mały, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **einval —** i ustaw **errno** do **einval —** podczas *dest* lub  *SRC* jest wskaźnika o wartości null i zwracają **erange —** i ustaw **errno** do **erange —** po ciągu docelowego jest za mały.
+Jeśli *dest* lub *src* jest wskaźnikiem typu null, lub jeśli miejsce docelowe ciągu rozmiaru *dest_size* jest zbyt mały, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL** podczas *dest* lub  *SRC* jest wskaźnikiem typu null, a także zwracają **ERANGE** i ustaw **errno** do **ERANGE** kiedy ciąg docelowy jest za mały.
 
-Po pomyślnym wykonaniu ciąg docelowej są jest zawsze zerem.
+Po pomyślnym wykonaniu ciąg docelowy zawsze jest zakończony znakiem null.
 
-W języku C++ użycia tych funkcji zostało uproszczone dzięki szablonu przeciążeń, które można wnioskować o długości buforu automatycznie, dzięki czemu nie trzeba określić argument rozmiar i automatycznie można zastąpić starszą funkcji o niższym poziomie zabezpieczeń z ich nowsze bardziej bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++, korzystania z tych funkcji jest uproszczone przez przeciążania szablonu, które mogą automatycznie wywnioskować długość buforu tak, aby nie jest konieczne określenie argumentu rozmiaru i ich mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje ich nowsze, bezpieczniejsze odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje biblioteki debugowania tych funkcji najpierw wprowadzić bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s —**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
@@ -144,14 +134,14 @@ Wersje biblioteki debugowania tych funkcji najpierw wprowadzić bufor 0xFE. Aby 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcpy_s**|\<string.h>|
-|**wcscpy_s**|\<String.h > lub \<wchar.h >|
+|**wcscpy_s**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbscpy_s**|\<mbstring.h>|
 
 Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W przeciwieństwie do produkcji jakości kodu w tym przykładzie wywołuje funkcje bezpieczny ciąg bez sprawdzania pod kątem błędów:
+W przeciwieństwie do kodu o jakości produkcyjnej w tym przykładzie wywołuje funkcje bezpieczny ciąg bez sprawdzania pod kątem błędów:
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Podczas kompilowania kodu C++, wersji szablonu może być łatwiejsze do użycia.
+Podczas kompilowania kodu C++, wersje szablonów może być łatwiejsze w użyciu.
 
 ```cpp
 // crt_wcscpy_s.cpp

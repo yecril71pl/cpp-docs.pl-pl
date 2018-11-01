@@ -1,10 +1,6 @@
 ---
-title: isNaN _isnan —, _isnanf | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isNaN, _isnan —, _isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650869"
 ---
-# <a name="isnan-isnan-isnanf"></a>isNaN _isnan —, _isnanf
+# <a name="isnan-isnan-isnanf"></a>isNaN, _isnan —, _isnanf
 
-Testy, jeśli wartość zmiennoprzecinkowa nie jest liczbą (NAN).
+Sprawdza, czy wartość zmiennoprzecinkowa nie jest liczbą (NAN).
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,26 +71,26 @@ Wartość zmiennoprzecinkowa do testowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W języku C **isnan** makro i **_isnan —** i **_isnanf** funkcje zwracają wartość niezerową, jeśli argument *x* jest wartością typu NAN; w przeciwnym razie ich Zwraca 0.
+W języku C **isnan** — makro i **_isnan —** i **_isnanf** funkcje zwracają wartość różną od zera, jeśli argument *x* jest NAN; w przeciwnym razie one Zwraca 0.
 
-W języku C++ **isnan** szablonu funkcje zwracają **true** Jeśli argument *x* jest wartością typu NAN; w przeciwnym razie zwraca **false**.
+W języku C++ **isnan** szablonu funkcje zwracają **true** Jeśli argument *x* jest NAN; w przeciwnym razie zwraca **false**.
 
 ## <a name="remarks"></a>Uwagi
 
-C **isnan** makro i **_isnan —** i **_isnanf** funkcji testowania wartość zmiennoprzecinkowa *x*, zwracając wartość niezerową, jeśli *x* nie jest wartością liczbą (NAN). NAN jest generowany, gdy wynik operacji zmiennoprzecinkowej nie może być reprezentowany w formacie zmiennoprzecinkowej IEEE-754 dla określonego typu. Informacje, jak NAN są reprezentowane dla danych wyjściowych, zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
+C **isnan** — makro i **_isnan —** i **_isnanf** wartość zmiennoprzecinkowa testowanie funkcji *x*, zwraca wartość różną od zera, jeśli *x* nie jest wartością liczby (NAN). NAN jest generowany, gdy wynik operacji zmiennoprzecinkowej nie może być przedstawiony w formacie zmiennoprzecinkowych IEEE 754 dla określonego typu. Aby dowiedzieć się, jak jak NAN jest reprezentowana w danych wyjściowych, zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Podczas kompilacji jako C++, **isnan** makro nie jest zdefiniowany i **isnan** funkcji szablonu jest zdefiniowany w zamian. Zwraca wartość typu **bool** zamiast liczbą całkowitą.
+Podczas kompilowania co kod C++, **isnan** makro jest niezdefiniowane i **isnan** funkcji szablonu jest zdefiniowany w zamian. Zwraca wartość typu **bool** zamiast liczby całkowitej.
 
-**_Isnan —** i **_isnanf** funkcje są określone firmy Microsoft. **_Isnanf** funkcja jest dostępna, gdy kompilowany dla x64 tylko.
+**_Isnan —** i **_isnanf** funkcje są specyficzne dla firmy Microsoft. **_Isnanf** funkcja jest dostępna, gdy kompilowany x64 tylko.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------------|-------------------------------|
 |**isNaN —**, **_isnanf**|\<math.h>|\<Math.h > lub \<cmath >|
-|**_isnan —**|\<float.h>|\<float.h — > lub \<cfloat — >|
+|**_isnan —**|\<float.h>|\<float.h > lub \<cfloat — >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

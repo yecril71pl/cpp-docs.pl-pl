@@ -1,10 +1,6 @@
 ---
-title: _snscanf —, _snscanf_l —, _snwscanf —, _snwscanf_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,20 +48,16 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408347"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626892"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
-Odczyty sformatowanych danych o określonej długości ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_snscanf_s —, _snscanf_s_l —, _snwscanf_s —, _snwscanf_s_l —](snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).
+Odczyty sformatowanych danych o określonej długości ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_snscanf_s —, _snscanf_s_l —, _snwscanf_s —, _snwscanf_s_l —](snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -105,31 +95,31 @@ int __cdecl _snwscanf_l(
 *Dane wejściowe*<br/>
 Wejściowy ciąg do sprawdzenia.
 
-*długość*<br/>
-Liczba znaków zbadać *wejściowych*.
+*Długość*<br/>
+Liczba znaków do sprawdzenia w *wejściowych*.
 
 *Format*<br/>
-Specyfikatory formatu jeden lub więcej.
+Jeden lub więcej specyfikatorów formatu.
 
 *...*<br/>
-Opcjonalne zmienne, które będą używane do przechowywania wartości wyodrębniony z ciągu wejściowego przez specyfikatory formatu w *format*.
+Opcjonalne zmienne, które będą używane do przechowywania wartości wyodrębnione z ciągu wejściowego przez specyfikatory formatu w *format*.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie te funkcje zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji. Aby uzyskać więcej informacji, zobacz [sscanf —](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Obu tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji. Aby uzyskać więcej informacji, zobacz [sscanf —](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Jeśli *wejściowych* lub *format* jest **NULL** wskaźnika, lub, jeśli *długość* jest mniejsza lub równa zero, zostanie wywołany program obsługi nieprawidłowych parametrów, jako opisany w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Jeśli *wejściowych* lub *format* jest **o wartości NULL** wskaźnika, lub jeśli *długość* jest mniejszy niż lub równy zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, jako opisane w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja przypomina **sscanf —** z tą różnicą, że zapewnia możliwość określenia stała liczba znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf —](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Ta funkcja przypomina **sscanf —** z tą różnicą, że zapewnia możliwość określenia stałą liczbę znaków, aby sprawdzić, z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf —](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -145,7 +135,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**_snscanf —**, **_snscanf_l —**|\<stdio.h>|
 |**_snwscanf —**, **_snwscanf_l —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

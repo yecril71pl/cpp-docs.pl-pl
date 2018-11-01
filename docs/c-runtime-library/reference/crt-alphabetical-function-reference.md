@@ -1,29 +1,19 @@
 ---
-title: Biblioteka UCRT alfabetyczne odwołanie funkcji | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: UCRT alfabetyczne odwołanie funkcji
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vc.tables.runtime
-dev_langs:
-- C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e5b6d73219bed94268ee3a9b8854d28d1fc6c06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8c16b0f3eeb21bc9ad665bffee9fac15607f21f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520471"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>Biblioteka UCRT alfabetyczne odwołanie funkcji
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT alfabetyczne odwołanie funkcji
 
-Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, często tylko CRT) są rozmieszczone alfabetycznie przez procedury. Aby uzyskać procedury CRT, w oparciu o funkcje, zobacz [Universal C procedury czasu wykonywania według kategorii](../../c-runtime-library/run-time-routines-by-category.md).
+Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po prostu CRT) jest uporządkowane alfabetycznie według procedury. Aby znaleźć procedurę CRT w oparciu o funkcjonalność, zobacz [procedury czasu wykonywania języka Universal C według kategorii](../../c-runtime-library/run-time-routines-by-category.md).
 
 ## <a name="a"></a>ELEMENT
 
@@ -33,7 +23,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[Dostęp](access-crt.md)
+[Dostęp do](access-crt.md)
 
 [_access](access-waccess.md)
 
@@ -43,7 +33,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [acosf](acos-acosf-acosl.md)
 
-[ACOSH](acosh-acoshf-acoshl.md)
+[ACOSH —](acosh-acoshf-acoshl.md)
 
 [acoshf](acosh-acoshf-acoshl.md)
 
@@ -99,7 +89,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [asinf —](asin-asinf-asinl.md)
 
-[ASINH](asinh-asinhf-asinhl.md)
+[ASINH —](asinh-asinhf-asinhl.md)
 
 [asinhf](asinh-asinhf-asinhl.md)
 
@@ -273,7 +263,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [ccosl](ccos-ccosf-ccosl.md)
 
-[ceil](ceil-ceilf-ceill.md)
+[Ceil —](ceil-ceilf-ceill.md)
 
 [ceilf](ceil-ceilf-ceill.md)
 
@@ -363,7 +353,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [__control87_2](control87-controlfp-control87-2.md)
 
-[_controlfp —](control87-controlfp-control87-2.md)
+[_controlfp](control87-controlfp-control87-2.md)
 
 [_controlfp_s](controlfp-s.md)
 
@@ -533,13 +523,13 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [ctime —](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
-[ctime_s —](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
+[ctime_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
 [_ctime32](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
 [_ctime32_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
-[_ctime64 —](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
+[_ctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
 [_ctime64_s —](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
@@ -581,7 +571,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_dup](dup-dup2.md)
 
-[Dup —](posix-dup-dup2.md)
+[Dup](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -599,7 +589,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_ecvt_s](ecvt-s.md)
 
-[_endthread —](endthread-endthreadex.md)
+[_endthread](endthread-endthreadex.md)
 
 [_endthreadex](endthread-endthreadex.md)
 
@@ -609,7 +599,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [erf](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
-[ERFC](erf-erff-erfl-erfc-erfcf-erfcl.md)
+[ERFC —](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
 [erfcf](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
@@ -649,13 +639,13 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [execvpe](execvpe.md)
 
-[_execvpe —](execvpe-wexecvpe.md)
+[_execvpe](execvpe-wexecvpe.md)
 
 [Zakończ](exit-exit-exit.md)
 
 [_Exit](exit-exit-exit.md)
 
-[_exit —](exit-exit-exit.md)
+[_exit](exit-exit-exit.md)
 
 [EXP](exp-expf.md)
 
@@ -687,7 +677,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_fclose_nolock](fclose-nolock.md)
 
-[_fcloseall —](fclose-fcloseall.md)
+[_fcloseall](fclose-fcloseall.md)
 
 [fcloseall](fcloseall.md)
 
@@ -747,7 +737,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [fgetpos](fgetpos.md)
 
-[fgets —](fgets-fgetws.md)
+[fgets](fgets-fgetws.md)
 
 [fgetwc](fgetc-fgetwc.md)
 
@@ -825,7 +815,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [fminl](fmin-fminf-fminl.md)
 
-[fmod —](fmod-fmodf.md)
+[Fmod —](fmod-fmodf.md)
 
 [fmodf](fmod-fmodf.md)
 
@@ -855,13 +845,13 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_fprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
 
-[fputc —](fputc-fputwc.md)
+[fputc](fputc-fputwc.md)
 
 [_fputc_nolock](fputc-nolock-fputwc-nolock.md)
 
 [fputchar](fputchar.md)
 
-[_fputchar —](fputchar-fputwchar.md)
+[_fputchar](fputchar-fputwchar.md)
 
 [fputs —](fputs-fputws.md)
 
@@ -935,9 +925,9 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_ftelli64_nolock](ftell-nolock-ftelli64-nolock.md)
 
-[_ftime —](ftime-ftime32-ftime64.md)
+[_ftime](ftime-ftime32-ftime64.md)
 
-[_ftime_s —](ftime-s-ftime32-s-ftime64-s.md)
+[_ftime_s](ftime-s-ftime32-s-ftime64-s.md)
 
 [_ftime32](ftime-ftime32-ftime64.md)
 
@@ -1101,7 +1091,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_getws_s](gets-s-getws-s.md)
 
-[gmtime —](gmtime-gmtime32-gmtime64.md)
+[gmtime](gmtime-gmtime32-gmtime64.md)
 
 [gmtime_s](gmtime-s-gmtime32-s-gmtime64-s.md)
 
@@ -1209,7 +1199,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[isgraph —](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
+[isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l —](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
@@ -1265,7 +1255,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_ismbbpunct_l](ismbbpunct-ismbbpunct-l.md)
 
-[_ismbbtrail —](ismbbtrail-ismbbtrail-l.md)
+[_ismbbtrail](ismbbtrail-ismbbtrail-l.md)
 
 [_ismbbtrail_l —](ismbbtrail-ismbbtrail-l.md)
 
@@ -1345,25 +1335,25 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_ismbstrail_l —](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isNaN](isnan-isnan-isnanf.md)
+[isNaN —](isnan-isnan-isnanf.md)
 
 [_isnan —](isnan-isnan-isnanf.md)
 
 [_isnanf](isnan-isnan-isnanf.md)
 
-[isprint —](isprint-iswprint-isprint-l-iswprint-l.md)
+[isprint](isprint-iswprint-isprint-l-iswprint-l.md)
 
 [_isprint_l](isprint-iswprint-isprint-l-iswprint-l.md)
 
-[ispunct —](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
+[ispunct](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
 
 [_ispunct_l](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
 
-[isspace —](isspace-iswspace-isspace-l-iswspace-l.md)
+[isspace](isspace-iswspace-isspace-l-iswspace-l.md)
 
 [_isspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
-[isupper —](isupper-isupper-l-iswupper-iswupper-l.md)
+[isupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_isupper_l —](isupper-isupper-l-iswupper-iswupper-l.md)
 
@@ -1393,7 +1383,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_iswcsymf_l](iscsym-functions.md)
 
-[iswctype —](isctype-iswctype-isctype-l-iswctype-l.md)
+[iswctype](isctype-iswctype-isctype-l-iswctype-l.md)
 
 [_iswctype_l —](isctype-iswctype-isctype-l-iswctype-l.md)
 
@@ -1465,7 +1455,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 ## <a name="l"></a>L
 
-[Labs](abs-labs-llabs-abs64.md)
+[Warsztaty](abs-labs-llabs-abs64.md)
 
 [ldexp](ldexp.md)
 
@@ -1501,11 +1491,11 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [localeconv](localeconv.md)
 
-[czas lokalny](localtime-localtime32-localtime64.md)
+[localtime](localtime-localtime32-localtime64.md)
 
 [localtime_s —](localtime-s-localtime32-s-localtime64-s.md)
 
-[_localtime32 —](localtime-localtime32-localtime64.md)
+[_localtime32](localtime-localtime32-localtime64.md)
 
 [_localtime32_s —](localtime-s-localtime32-s-localtime64-s.md)
 
@@ -1911,7 +1901,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_memicmp_l](memicmp-memicmp-l.md)
 
-[memmove —](memmove-wmemmove.md)
+[memmove](memmove-wmemmove.md)
 
 [memmove_s —](memmove-s-wmemmove-s.md)
 
@@ -1979,7 +1969,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [nexttowardl](nextafter-functions.md)
 
-[norm —](norm-normf-norml1.md)
+[norm](norm-normf-norml1.md)
 
 [normf](norm-normf-norml1.md)
 
@@ -1993,7 +1983,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [offsetof](offsetof-macro.md)
 
-[_onexit —](onexit-onexit-m.md)
+[_onexit](onexit-onexit-m.md)
 
 [_onexit_m](onexit-onexit-m.md)
 
@@ -2037,7 +2027,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_purecall](purecall.md)
 
-[putc —](putc-putwc.md)
+[putc](putc-putwc.md)
 
 [_putc_nolock](putc-nolock-putwc-nolock.md)
 
@@ -2047,7 +2037,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_putch_nolock](putch-nolock-putwch-nolock.md)
 
-[putchar —](putchar-putwchar.md)
+[putchar](putchar-putwchar.md)
 
 [_putchar_nolock](putchar-nolock-putwchar-nolock.md)
 
@@ -2071,7 +2061,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_putwch_nolock](putch-nolock-putwch-nolock.md)
 
-[putwchar —](putchar-putwchar.md)
+[putwchar](putchar-putwchar.md)
 
 [_putwchar_nolock](putchar-nolock-putwchar-nolock.md)
 
@@ -2109,7 +2099,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[pozostałe](remainder-remainderf-remainderl.md)
+[Pozostała](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2253,7 +2243,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_set_SSE2_enable](set-sse2-enable.md)
 
-[set_terminate —](set-terminate-crt.md)
+[set_terminate](set-terminate-crt.md)
 
 [_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)
 
@@ -2331,7 +2321,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [spawnl](spawnl.md)
 
-[_spawnl —](spawnl-wspawnl.md)
+[_spawnl](spawnl-wspawnl.md)
 
 [spawnle](spawnle.md)
 
@@ -2347,7 +2337,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [spawnv](spawnv.md)
 
-[_spawnv —](spawnv-wspawnv.md)
+[_spawnv](spawnv-wspawnv.md)
 
 [spawnve](spawnve.md)
 
@@ -2355,11 +2345,11 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [spawnvp](spawnvp.md)
 
-[_spawnvp —](spawnvp-wspawnvp.md)
+[_spawnvp](spawnvp-wspawnvp.md)
 
 [spawnvpe](spawnvpe.md)
 
-[_spawnvpe —](spawnvpe-wspawnvpe.md)
+[_spawnvpe](spawnvpe-wspawnvpe.md)
 
 [_splitpath](splitpath-wsplitpath.md)
 
@@ -2667,7 +2657,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [tanhl](tanh-tanhf-tanhl.md)
 
-[tanl —](tan-tanf-tanl.md)
+[tanl](tan-tanf-tanl.md)
 
 [tell](tell.md)
 
@@ -2689,7 +2679,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [tgammal](tgamma-tgammaf-tgammal.md)
 
-[Czas](time-time32-time64.md)
+[czas](time-time32-time64.md)
 
 [_time32](time-time32-time64.md)
 
@@ -3215,7 +3205,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
 
-[_wctime —](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
+[_wctime](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
 [_wctime_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
@@ -3371,7 +3361,7 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_wrmdir](rmdir-wrmdir.md)
 
-[wscanf —](scanf-scanf-l-wscanf-wscanf-l.md)
+[wscanf](scanf-scanf-l-wscanf-wscanf-l.md)
 
 [_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)
 
@@ -3379,11 +3369,11 @@ Dokumentację odwołanie do biblioteki Universal C Runtime (Biblioteka UCRT, cz�
 
 [_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
 
-[_wsearchenv —](searchenv-wsearchenv.md)
+[_wsearchenv](searchenv-wsearchenv.md)
 
 [_wsearchenv_s](searchenv-s-wsearchenv-s.md)
 
-[_wsetlocale —](setlocale-wsetlocale.md)
+[_wsetlocale](setlocale-wsetlocale.md)
 
 [_wsopen](sopen-wsopen.md)
 

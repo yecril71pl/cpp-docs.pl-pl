@@ -1,29 +1,19 @@
 ---
-title: Funkcja SWAP (auto_handle) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Funkcja swap (auto_handle)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::swap
 - msclr.swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 36a118ec21ccb3eee7b90798cfb730e7402b308a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638305"
 ---
 # <a name="swap-function-autohandle"></a>Funkcja swap (auto_handle)
 

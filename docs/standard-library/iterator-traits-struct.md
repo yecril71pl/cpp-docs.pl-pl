@@ -1,28 +1,18 @@
 ---
-title: iterator_traits — struktura | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: iterator_traits — Struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xutility/std::iterator_traits
-dev_langs:
-- C++
 helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb91bc7ec37d4738aaf9f1c7ac6532079a0b71d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657226"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits — Struktura
 

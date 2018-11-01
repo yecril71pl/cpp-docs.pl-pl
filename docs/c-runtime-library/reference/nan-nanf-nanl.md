@@ -1,10 +1,6 @@
 ---
-title: nanf — NaN, nanl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,27 +22,21 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610265"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
-Zwraca wartość quiet NaN.
+Zwraca wartość NaN cichy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,15 +53,15 @@ Wartość ciągu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Nan** zwracają quiet wartości NaN.
+**Nan** funkcje zwracają cichy wartości NaN.
 
 ## <a name="remarks"></a>Uwagi
 
-**Nan** zwracają wartość zmiennoprzecinkowa, która odpowiada na NaN quiet (z systemem innym niż sygnalizacji). *Wejściowych* wartość jest ignorowana. Informacje, jak NaN są reprezentowane dla danych wyjściowych, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
+**Nan** funkcje zwracają wartość zmiennoprzecinkową, która odnosi się do NaN quiet (inne niż sygnalizacji). *Wejściowych* wartość jest ignorowana. Aby dowiedzieć się, jak jak NaN jest reprezentowana w danych wyjściowych, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**NaN**, **nanf —**, **nanl**|\<math.h>|\<cmath > lub \<math.h >|
 
