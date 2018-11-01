@@ -1,10 +1,6 @@
 ---
-title: _initterm —, _initterm_e — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _initterm, _initterm_e
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _initterm_e
 - _initterm
@@ -26,30 +22,24 @@ f1_keywords:
 - initterm
 - _initterm
 - initterm_e
-dev_langs:
-- C++
 helpviewer_keywords:
 - initterm function
 - initterm_e function
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 470ad6cbf13efb170f61aa12f7859f2baa248c2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65963e95507d4d6444ebcc9038b5b8cf797f9feb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620717"
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 
-Wewnętrzny metody, które opisano tabeli wskaźników funkcji i ich inicjowania.
+Metod wewnętrznych, zapoznaj się z tabelą wskaźników funkcji, które ich inicjowania.
 
-Ten wskaźnik jest początkową lokalizację w tabeli, a wskaźnik drugiego jest lokalizacja końcowa.
+Pierwszy wskaźnik znajdują się już w tabeli, a drugi wskaźnik jest lokalizacja końcowa.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,13 +57,13 @@ int __cdecl _initterm_e(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Kodu zera błąd, jeśli inicjowanie zakończy się niepowodzeniem i zgłasza błąd; 0, jeśli nie występują błędy.
+Kod błędu różny od zera, jeśli inicjowanie zakończy się niepowodzeniem i zgłasza błąd; 0, jeśli żaden błąd nie wystąpi.
 
 ## <a name="remarks"></a>Uwagi
 
-Te metody są wewnętrznie wywołana tylko podczas inicjowania programu C++. Nie wywołuj tych metod w programie.
+Te metody są wewnętrznie wywołana tylko podczas inicjowania programu w języku C++. Nie należy wywoływać tych metod w programie.
 
-Jeśli te metody Przeprowadź spis wpisów funkcji, pomijają **NULL** wpisy i kontynuować.
+Gdy te metody zapoznaj się z tabelą funkcji wpisów, pomijają **NULL** wpisów i kontynuować.
 
 ## <a name="see-also"></a>Zobacz także
 

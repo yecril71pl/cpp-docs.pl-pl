@@ -1,10 +1,6 @@
 ---
-title: _getpid — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getpid
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getpid
 apilocation:
@@ -22,30 +18,24 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getpid
-dev_langs:
-- C++
 helpviewer_keywords:
 - getpid function
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f93f6c1c70618b300e8bc05b8e3a15104de6fa6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c110fb7b6d64be281fb3779c7e03f2c4145f4ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621081"
 ---
 # <a name="getpid"></a>_getpid
 
 Pobiera identyfikator procesu.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,11 +45,11 @@ int _getpid( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca identyfikator procesu uzyskane z systemu. Nie ma żadnych zwracany błąd.
+Zwraca identyfikator procesu uzyskany z systemu. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getpid —** funkcja uzyskuje identyfikator procesu w systemie. Identyfikator procesu unikatowo identyfikuje proces wywoływania.
+**_Getpid —** funkcja pobiera identyfikator procesu z systemu. Identyfikator procesu unikatowo identyfikuje proces wywołujący.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,7 +57,7 @@ Zwraca identyfikator procesu uzyskane z systemu. Nie ma żadnych zwracany błąd
 |-------------|---------------------|
 |**_getpid**|\<process.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

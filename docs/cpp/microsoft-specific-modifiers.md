@@ -1,23 +1,13 @@
 ---
-title: Modyfikatory specyficzne dla firmy Microsoft | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Modyfikatory specyficzne dla firmy Microsoft
 ms.date: 08/16/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b845ccb24d6d7a93767ec3c3219562c1c87bf81f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: be126e90ca6f77ef43b49ccd5b83c0f307f7f307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646033"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft
 

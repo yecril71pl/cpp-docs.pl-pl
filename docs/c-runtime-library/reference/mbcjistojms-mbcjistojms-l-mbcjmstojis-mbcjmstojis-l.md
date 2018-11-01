@@ -1,10 +1,6 @@
 ---
-title: _mbcjistojms —, _mbcjistojms_l —, _mbcjmstojis —, _mbcjmstojis_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbcjistojms
 - _mbcjmstojis
@@ -32,8 +28,6 @@ f1_keywords:
 - mbcjmstojis_l
 - mbcjistojms_l
 - mbcjmstojis
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbcjmstojis_l function
 - _mbcjistojms function
@@ -44,23 +38,19 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07d34331e38362a6491e3231566443b5fe03260e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665897"
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
-Wykonuje konwersję między znakami Japonii branżowy Standard (JIS) i Microsoft Japonii (JMS).
+Konwertuje między znakami Japan Industry Standard (JIS) i Japonia, część firmy Microsoft (JMS).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,26 +74,26 @@ unsigned int _mbcjmstojis_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do konwersji.
+Znak do przekształcenia.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W japońskich ustawień regionalnych te funkcje zwraca znak przekonwertowany lub zwraca 0, jeśli konwersja nie jest możliwe. Na ustawień regionalnych innych niż japońska te funkcje zwracają znaków przekazany.
+W japońskich ustawieniach regionalnych funkcje te przywracają przekonwertowany znak lub zwracają 0, jeśli konwersja nie jest możliwa. W ustawieniach regionalnych innych niż japońska funkcje te zwracają znaku przekazany.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbcjistojms —** funkcja konwertuje znak Japonii branżowy Standard (JIS) znaków Kanji firmy Microsoft (Shift JIS). Znak jest konwertowana tylko wtedy, gdy bajtów potencjalnych klientów i dziennika znajdują się w zakresie 0x21 - 0x7E. Jeśli poza tym zakresem realizacji lub wersji próbnej bajt **errno** ustawiono **eilseq —**. Aby uzyskać więcej informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_Mbcjistojms —** funkcja konwertuje znak Japan Industry Standard (JIS) na znaki Kanji Microsoft (Shift JIS). Znak jest konwertowany tylko wtedy, gdy potencjalny klienta i szlak bajtów są w zakresie 0x21 — 0x7E. Jeśli potencjalny klient bajt wiodący lub próbny jest poza tym zakresem **errno** ustawiono **EILSEQ**. Aby uzyskać więcej informacji na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**_Mbcjmstojis —** funkcja konwertuje znaków Shift JIS znaków JIS. Znak jest konwertowana tylko wtedy, gdy bajtu znajduje się w zakresie 0x81-0x9F lub wartość 0xE0 - 0xFC i bajt jest w zasięgu 0x40-0x7E lub 0x80 - 0xFC. Należy pamiętać, że niektóre kodu wskazuje z tego zakresu nie ma przypisany znak w związku z czym nie można przekonwertować.
+**_Mbcjmstojis —** funkcja konwertuje znak Shift JIS znak JIS. Znak jest konwertowany tylko wtedy, gdy bajt jest w zakresie 0x81-0x9F lub wartość 0xE0 — 0xFC i bajt jest w zasięgu 0x40-0x7E lub 0x80 - 0xFC. Należy pamiętać, że niektóre punkty kodów w tym zakresu nie mają postaci przypisanej, a zatem nie może zostać przekonwertowany.
 
-Wartość *c* powinny być 16-bitową wartość, którego górny 8 bitów reprezentują bajtu znaku do przekonwertowania i którego pierwszych 8 bitów reprezentują bajt.
+Wartość *c* powinna być wartością 16-bitową, której górne 8 bitów reprezentuje bajt wiodący znaku do konwersji i której dolne 8 bitów reprezentuje bajt.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-We wcześniejszych wersjach **_mbcjistojms —** i **_mbcjmstojis —** były nazywane **jistojms** i **jmstojis**odpowiednio. **_mbcjistojms —**, **_mbcjistojms_l —**, **_mbcjmstojis —** i **_mbcjmstojis_l —** należy użyć.
+We wcześniejszych wersjach **_mbcjistojms —** i **_mbcjmstojis —** były nazywane **jistojms** i **jmstojis**, odpowiednio. **_mbcjistojms —**, **_mbcjistojms_l —**, **_mbcjmstojis —** i **_mbcjmstojis_l —** powinny być używane zamiast tego.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -114,7 +104,7 @@ We wcześniejszych wersjach **_mbcjistojms —** i **_mbcjmstojis —** były na
 |**_mbcjmstojis**|\<mbstring.h>|
 |**_mbcjmstojis_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

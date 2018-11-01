@@ -1,25 +1,15 @@
 ---
-title: Kontener Class::begin | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kontener Class::begin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30777ee36c3b5721219dfb676fe3f3d1ff0e31fe
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ede3b1d430a057772d1461d6565dcd3a13f86c46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603752"
 ---
 # <a name="container-classbegin"></a>Kontener Class::begin
 

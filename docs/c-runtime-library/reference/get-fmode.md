@@ -1,10 +1,6 @@
 ---
-title: _get_fmode — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,48 +19,42 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658032"
 ---
 # <a name="getfmode"></a>_get_fmode
 
-Pobiera domyślny tryb tłumaczenia pliku dla operacji We/Wy na plikach.
+Pobiera domyślny tryb translacji plików dla operacji We/Wy na plikach.
 
 ## <a name="syntax"></a>Składnia
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pmode*<br/>
-Wskaźnik do wartości całkowitej, należy podać bieżący tryb domyślny: **_o_text —** lub **_o_binary —**.
+Wskaźnik do liczby całkowitej trzeba napełniać bieżący tryb domyślny: **_O_TEXT** lub **_O_BINARY**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli *pmode* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **einval —**.
+Zwraca wartość zero, jeśli to się powiedzie; Kod błędu. Jeśli *pmode* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja pobiera wartość [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb tłumaczenia pliku dla obu niskiego poziomu i strumienia operacji We/Wy plików, takich jak **_otwórz**, **_pipe —**, **fopen —**, i [ freopen —](freopen-wfreopen.md).
+Funkcja pobiera wartość [_fmode](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb translacji plików dla obu niskiego poziomu i przesyłanie strumieniowe operacji We/Wy pliku, taką jak **_otwórz**, **_pipe —**, **fopen —**, i [ freopen —](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,11 +62,11 @@ Funkcja pobiera wartość [_fmode —](../../c-runtime-library/fmode.md) zmienne
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_set_fmode —](set-fmode.md).
+Zobacz przykład w [_set_fmode —](set-fmode.md).
 
 ## <a name="see-also"></a>Zobacz także
 

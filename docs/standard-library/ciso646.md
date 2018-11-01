@@ -1,31 +1,21 @@
 ---
-title: '&lt;ciso646&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;ciso646&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ciso646>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ciso646 header
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccc69ec1d454048095be1f060c872cc7f9f71f0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4d92fc57d6b10295456da9aa80afb1c705c89a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666781"
 ---
 # <a name="ltciso646gt"></a>&lt;ciso646&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<iso646.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<iso646.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +26,7 @@ Zawiera nagłówek biblioteki standardowe C \<iso646.h > i dodaje skojarzone naz
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

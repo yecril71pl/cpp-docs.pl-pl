@@ -1,32 +1,22 @@
 ---
-title: '&lt;bitset —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;bitset —&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <bitset>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9294edb0a6b258fff9041c01dc4354e918a8c380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a0a38c97027c8d41fca3d6d7e9b7b96e80b3232
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656914"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset —&gt;
 
-Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezentujący i operowanie nimi sekwencji stałym rozmiarze bitów.
+Definiuje bitset — klasa szablonu i dwie funkcje szablonu pomocnicze do reprezentujący i manipulowania sekwencje o stałym rozmiarze bitów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,16 +31,16 @@ Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezen
 |Operator|Opis|
 |-|-|
 |[Operator &](../standard-library/bitset-operators.md#op_amp)|Wykonuje iloczynu bitowego AND między dwoma bitsets.|
-|[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekst reprezentację sekwencji bit do standardowego strumienia wyjściowego.|
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekst reprezentację sekwencji bit do Standardowy strumień wejściowy.|
-|[operator^](../standard-library/bitset-operators.md#op_xor)|Wykonuje bitowej OR wyłączne między dwoma bitsets.|
+|[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekst reprezentujący sekwencji bit do standardowego strumienia wyjściowego.|
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekst reprezentujący sekwencji bit do standardowego strumienia wejściowego.|
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Wykonuje logiczny OR wyłączne między dwoma bitsets.|
 |[operator&#124;](../standard-library/bitset-operators.md#op_or)|Wykonuje logiczną lub między dwoma bitsets.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[bitset, klasa](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z określoną liczbę bitów, które umożliwiają compact zachowania flagi zbiór elementów lub warunków.|
+|[bitset, klasa](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z stałą liczbą bitów, które zapewniają zwarty sposób zachowania flagi dla zestawu elementów lub warunki.|
 
 ## <a name="see-also"></a>Zobacz także
 

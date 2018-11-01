@@ -1,31 +1,21 @@
 ---
-title: moneypunct_byname — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: moneypunct_byname — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e4720ac87884a079bbc2ede6b625658adb9c29c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574440"
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname — Klasa
 
-Klasy pochodne szablonu, która opisuje obiekt, który może służyć jako `moneypunct` aspektu danego ustawienia regionalne, włączanie pieniężnego formatowania danych wejściowych pól pieniężnego danych wyjściowych.
+Klasa pochodna szablonu opisująca obiekt, który może służyć jako `moneypunct` aspekt danych ustawień regionalnych, umożliwiając formatowanie pieniężnych danych wejściowych, pole lub pola pieniężnych danych wyjściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,13 +40,13 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określany przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [moneypunct —](../standard-library/moneypunct-class.md#moneypunct)\<CharType, wewnętrzna > ( `_Refs`).
+Jego zachowanie jest określana przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego podstawowego obiektu z [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

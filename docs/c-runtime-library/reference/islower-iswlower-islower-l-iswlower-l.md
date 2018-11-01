@@ -1,10 +1,6 @@
 ---
-title: islower —, iswlower —, _islower_l —, _iswlower_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -47,20 +41,16 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14fb6eae9e06e973413c21607f2ca2881f33aa38
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14510d38f5bb4890f98c39b49ca17adc2be3ff41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594132"
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 
-Określa, czy liczba całkowita reprezentuje małą literę.
+Określa, czy liczba całkowita reprezentuje znak małej litery.
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,22 +74,22 @@ int _iswlower_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego obiektu małą literę. **islower —** zwraca wartość niezerową, jeśli *c* jest małą literę (- z). **iswlower —** zwraca wartość niezerową, jeśli *c* jest znaków dwubajtowych, umożliwiająca małe litery, lub jeśli *c* jest jednym z zestawu znaki dwubajtowe zdefiniowane w implementacji dla których żadna **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku małej litery. **islower** zwraca wartość różną od zera, jeśli *c* jest znakiem małej litery (- z). **iswlower —** zwraca wartość różną od zera, jeśli *c* jest szerokmi znakiem, który odnosi się do małej literze lub, jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji dla którego żadna **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wersje tych funkcji, które mają **_l** sufiks Użyj ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksa używa ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **islower —** i **_islower_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **islower** i **_islower_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istlower —**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
 |**_istlower_l —**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l —**|

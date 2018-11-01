@@ -1,10 +1,6 @@
 ---
-title: _strupr —, _strupr_l —, _mbsupr —, _mbsupr_l —, _wcsupr_l —, _wcsupr — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603648"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
-Konwertuje ciąg na wielkie litery. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strupr_s —, _strupr_s_l —, _mbsupr_s —, _mbsupr_s_l —, _wcsupr_s —, _wcsupr_s_l —](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
+Konwertuje ciąg na wielkie litery. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_strupr_s —, _strupr_s_l —, _mbsupr_s —, _mbsupr_s_l —, _wcsupr_s —, _wcsupr_s_l —](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsupr —** i **_mbsupr_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr —** i **_mbsupr_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -147,21 +137,21 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do ciągu zmieniony. Ponieważ modyfikacja jest wykonywana w miejscu, wskaźnik zwracany jest taka sama jak wskaźnik przekazany jako argument wejściowy. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Zwraca wskaźnik do zmienionego ciągu. Ponieważ modyfikacja odbywa się w miejscu, zwracany wskaźnik jest taki sam jak wskaźnik przekazywany jako argument wejściowy. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strupr —** funkcji konwertuje w miejscu, każdy małej litery w *str* na wielkie litery. Konwersja jest określany przez **lc_ctype —** ustawienie kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **lc_ctype —**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez **_l** sufiks Użyj bieżących ustawień regionalnych; wersji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast tego ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_Strupr —** funkcji konwertuje w miejscu, każdą małą literę w *str* na wielkie litery. Konwersja jest określona przez **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **LC_CTYPE**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**_wcsupr —** i **_mbsupr —** znaków dwubajtowych i znaków wielobajtowych wersji **_strupr —**. Wartość argumentów i **_wcsupr —** są znaków dwubajtowych ciągi; tych **_mbsupr —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**_wcsupr —** i **_mbsupr —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_strupr —**. Argument i wartość zwracana przez **_wcsupr —** są znakami dwubajtowymi ciągów; te z **_mbsupr —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-Jeśli *str* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracane oryginalnego ciągu i zestaw **errno** do **einval —**.
+Jeśli *str* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają ciąg oryginalny i ustawiają **errno** do **EINVAL**.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsupr —**|**_strupr**|**_mbsupr —**|**_wcsupr**|
 |**_tcsupr_l —**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
@@ -171,14 +161,14 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strupr —**, **_strupr_l —**|\<string.h>|
-|**_wcsupr —**, **_wcsupr_l —**|\<String.h > lub \<wchar.h >|
+|**_wcsupr —**, **_wcsupr_l —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsupr —**, **_mbsupr_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_strlwr —](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).
+Zobacz przykład [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).
 
 ## <a name="see-also"></a>Zobacz także
 

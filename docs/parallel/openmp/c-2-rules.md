@@ -1,23 +1,13 @@
 ---
-title: C.2 reguły | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: C.2 Reguły
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642809"
 ---
 # <a name="c2-rules"></a>C.2 Reguły
 
@@ -199,18 +189,18 @@ Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedsta
 &nbsp;&nbsp;&nbsp;&nbsp;*dyrektywa threadprivate*
 
 *dyrektywa threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *liście zmiennych***)** *nowy wiersz* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *liście zmiennych***)** *nowy wiersz*
 
 *klauzuli danych*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**prywatne (** *liście zmiennych* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***liście zmiennych***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***liście zmiennych***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *liście zmiennych***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***liście zmiennych***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***liście zmiennych***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *liście zmiennych***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**udostępnione (** *liście zmiennych* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**domyślne (udostępnione)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Domyślnie (Brak)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**redukcja (***operatorem redukcji***:***liście zmiennych***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***liście zmiennych***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**redukcja (***operatorem redukcji***:***liście zmiennych***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***liście zmiennych***)**
 
 *operatorem redukcji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Jeden z:  **+  \* -& ^ &#124; & &&#124;&#124;**

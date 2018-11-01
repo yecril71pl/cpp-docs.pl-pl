@@ -1,8 +1,6 @@
 ---
-title: '&lt;valarray&gt; funkcje | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;valarray —&gt; funkcji'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - valarray/std::abs
 - valarray/std::acos
@@ -40,12 +38,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630971"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray —&gt; funkcji
 

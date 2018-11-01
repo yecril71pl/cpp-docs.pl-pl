@@ -1,30 +1,20 @@
 ---
-title: Efekty buforowania | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Effects of Buffering
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631442"
 ---
 # <a name="effects-of-buffering"></a>Effects of Buffering
 
-W poniższym przykładzie przedstawiono efekty buforowania. Może spodziewać się być `please wait`, Zaczekaj 5 sekund, a następnie kontynuuj. Nie zawsze działa on w ten sposób, ponieważ dane wyjściowe są buforowane.
+Efekty buforowania można znaleźć w poniższym przykładzie. Można by oczekiwać program, aby wydrukować `please wait`poczekaj 5 sekund, a następnie przejść. Jej będzie działać w ten sposób, ponieważ dane wyjściowe są buforowane.
 
 ```cpp
 // effects_buffering.cpp
@@ -43,13 +33,13 @@ int main( )
 }
 ```
 
-Aby program działa logicznie, `cout` obiektu musi się pustej, gdy komunikat jest wyświetlany. Aby opróżnić `ostream` obiektów, wysłać `flush` manipulatora:
+Zapewnienie pracę logicznie programu `cout` obiektu musi pustej sam, gdy komunikat jest wyświetlany. Aby opróżnić `ostream` obiektu, wysłać `flush` manipulator:
 
 ```cpp
 cout <<"Please wait..." <<flush;
 ```
 
-Ten krok opróżnia bufor, zapewnienie, że komunikat wyświetla przed czas oczekiwania. Można również użyć `endl` manipulatora, które opróżnia bufor i wyprowadza wysuwu wiersza powrotu karetki, lub można użyć `cin` obiektu. Ten obiekt (z `cerr` lub `clog` obiektów) jest zwykle powiązane `cout` obiektu. W związku z tym jakimkolwiek użyciem `cin` (lub `cerr` lub `clog` obiektów) opróżnia `cout` obiektu.
+W tym kroku opróżnia bufor, zapewnienie, że komunikat wyświetla przed czas oczekiwania. Można również użyć `endl` manipulator, które opróżnia bufor i generuje wysuwu wiersza powrotu karetki, lub możesz użyć `cin` obiektu. Ten obiekt (przy użyciu `cerr` lub `clog` obiektów) są zazwyczaj powiązane `cout` obiektu. Dlatego jakiekolwiek wykorzystanie `cin` (lub `cerr` lub `clog` obiektów) opróżnia `cout` obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

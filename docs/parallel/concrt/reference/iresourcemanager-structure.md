@@ -1,10 +1,6 @@
 ---
-title: Iresourcemanager — struktura | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: IResourceManager — Struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -15,21 +11,15 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26181c12bd3775a4fee0086be8459251ddf25afd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657205"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager — Struktura
 
@@ -165,7 +155,7 @@ virtual ISchedulerProxy *RegisterScheduler(
 *pScheduler*<br/>
 `IScheduler` Interfejs harmonogram, który ma zostać zarejestrowany.
 
-*Wersja*<br/>
+*version*<br/>
 Wersja interfejsu komunikacji harmonogram używa do komunikowania się z usługą Resource Manager. Przy użyciu wersji umożliwia rozwój interfejsu komunikacji, zapewniając transfery danych w celu uzyskania dostępu do starszych funkcji Menedżera zasobów. Transfery danych, które chcą korzystać z funkcji usługi Resource Manager w programie Visual Studio 2010 należy użyć wersji `CONCRT_RM_VERSION_1`.
 
 ### <a name="return-value"></a>Wartość zwracana

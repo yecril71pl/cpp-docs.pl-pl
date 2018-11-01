@@ -1,10 +1,6 @@
 ---
-title: _Rtc_seterrortype — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635681"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
-Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Twoje obsługi błędu przetwarza jak dane wyjściowe błędów określonego typu.
+Kojarzy błąd, który zostanie wykryty przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Twoja procedura obsługi błędów przetwarza jak produkt wyjściowy błędy określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,22 +46,22 @@ int _RTC_SetErrorType(
 ### <a name="parameters"></a>Parametry
 
 *errnum*<br/>
-Liczbą z zakresu od zera do jednego mniejsza niż wartość zwrócona przez [_rtc_numerrors —](rtc-numerrors.md).
+Liczbą z zakresu od zera i jeden mniejsza niż wartość zwrócona przez obiekt [_rtc_numerrors —](rtc-numerrors.md).
 
 *ErrType*<br/>
-Wartość można przypisać do tego *errnum*. Na przykład może użyć **_CRT_ERROR**. Jeśli używasz **_crtdbgreport —** jako programu obsługi błędu *ErrType* może mieć tylko jedną symbole zdefiniowane w [_crtsetreportmode —](crtsetreportmode.md). Jeśli masz własne program obsługi błędów ([_rtc_seterrorfunc —](rtc-seterrorfunc.md)), może mieć tyle *ErrType*są określane jako miejsca *errnum*s.
+Wartość do przypisania do tego *errnum*. Na przykład, można na przykład **_CRT_ERROR**. Jeśli używasz **_CrtDbgReport** jako procedurę obsługi błędów, *ErrType* może zawierać tylko jeden z symboli zdefiniowanych w [_CrtSetReportMode](crtsetreportmode.md). Jeśli masz własną procedurę obsługi błędów ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), może mieć tyle *ErrType*są określane jako miejsca *errnum*s.
 
-*ErrType* _RTC_ERRTYPE_IGNORE ma specjalne znaczenie **_crtsetreportmode —**; ten błąd jest ignorowany.
+*ErrType* _RTC_ERRTYPE_IGNORE ma specjalne znaczenie **_CrtSetReportMode**; błąd jest ignorowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzednia wartość dla typu błędu *typu*.
+Poprzednią wartość dla typu błędu *typu*.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie wszystkie błędy są ustawione na *ErrType* = 1, która odpowiada **_CRT_ERROR**. Aby uzyskać więcej informacji o błędzie domyślne typy takich jak **_CRT_ERROR**, zobacz [_crtdbgreport —](crtdbgreport-crtdbgreportw.md).
+Domyślnie wszystkie błędy są ustawione na *ErrType* = 1, co odpowiada **_CRT_ERROR**. Aby uzyskać więcej informacji o błędzie domyślne typy takie jak **_CRT_ERROR**, zobacz [_CrtDbgReport](crtdbgreport-crtdbgreportw.md).
 
-Przed wywołaniem tej funkcji, należy najpierw wywołać jednej z funkcji inicjowania sprawdzanie błędów czasu wykonywania; zobacz [przy użyciu sprawdza czasu wykonywania bez biblioteki wykonawczej języka C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
+Przed wywołaniem tej funkcji, należy najpierw wywołać jedną z funkcji inicjowania sprawdzanie błędów czasu wykonywania; zobacz [przy użyciu kontroli czasu wykonywania bez biblioteki wykonawczej języka C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
 
 ## <a name="requirements"></a>Wymagania
 
@@ -83,7 +73,7 @@ Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/com
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,26 +1,16 @@
 ---
-title: Przenoszenie bibliotek innych firm | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Przenoszenie bibliotek innych firm
 ms.date: 01/10/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658305"
 ---
 # <a name="porting-third-party-libraries"></a>Przenoszenie bibliotek innych firm
 

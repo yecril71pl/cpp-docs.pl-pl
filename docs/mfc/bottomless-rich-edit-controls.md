@@ -1,27 +1,17 @@
 ---
-title: Formanty edycji wzbogaconej nieograniczone od dołu | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Formanty edycji wzbogaconej nieograniczone od dołu
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - bottomless rich edit controls
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ce3922bfd1a86864886057a4457627547fe85e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1c5578181b580ddb07b69f5fd2e91aea4b85a72b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373357"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624873"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Formanty edycji wzbogaconej nieograniczone od dołu
 

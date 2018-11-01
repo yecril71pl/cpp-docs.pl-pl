@@ -1,10 +1,6 @@
 ---
-title: wctrans — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656693"
 ---
 # <a name="wctrans"></a>wctrans
 
-Określa mapowanie jeden zestaw kodów znaków do innego.
+Określa mapowania z jednego zestawu kodów znaków do innego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,19 +46,19 @@ wctrans_t wctrans(
 ### <a name="parameters"></a>Parametry
 
 *właściwość*<br/>
-Ciąg, który określa jeden prawidłowy przekształcenia.
+Ciąg, który określa jedno z prawidłową przekształcenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **lc_ctype —** kategorii bieżące ustawienia regionalne nie definiuje mapowanie, którego nazwa odpowiada właściwości ciągu *właściwości*, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość niezerową odpowiednie do użycia jako drugi argument do kolejne wywołanie [towctrans —](towctrans.md).
+Jeśli **LC_CTYPE** kategorii bieżących ustawień regionalnych nie definiuje mapowania, których nazwa pasuje do ciągu właściwość *właściwość*, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiedni do użytku jako drugi argument na kolejne wywołanie [towctrans —](towctrans.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja określa mapowanie jeden zestaw kodów znaków do innego.
+Ta funkcja określa mapowania z jednego zestawu kodów znaków do innego.
 
-Następujące pary wywołań ma takie samo zachowanie wszystkich ustawień regionalnych, ale można zdefiniować dodatkowe mapowania nawet zgodnie z ustawieniami regionalnymi "C":
+Następujące pary wywołania mają takie samo zachowanie we wszystkich ustawieniach regionalnych, ale można zdefiniować dodatkowe mapowania nawet w przypadku ustawień regionalnych "C":
 
-|Funkcja|Identyczny|
+|Funkcja|Takie same jak|
 |--------------|-------------|
 |tolower(c)|towctrans — (c, wctrans("towlower"))|
 |towupper(c)|towctrans — (c, wctrans("toupper"))|

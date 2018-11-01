@@ -1,12 +1,6 @@
 ---
-title: Uzyskiwanie dostępu do plików stanu | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Uzyskiwanie dostępu do stanu pliku
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [MFC], status information
 - examples [MFC], file status
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f7c2d5d76616ed78768b5e133029cf047ed4453
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3e16f8b11d17cd911646c3c9206d1d7deb577ef9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629791"
 ---
 # <a name="accessing-file-status"></a>Uzyskiwanie dostępu do stanu pliku
 

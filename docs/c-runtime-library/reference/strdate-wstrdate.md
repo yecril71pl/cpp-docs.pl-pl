@@ -1,10 +1,6 @@
 ---
-title: _strdate —, _wstrdate — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639614"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
-Skopiuj bieżącą datę systemową w buforze. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strdate_s —, _wstrdate_s —](strdate-s-wstrdate-s.md).
+Skopiuj bieżącą datą systemu do buforu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_strdate_s —, _wstrdate_s —](strdate-s-wstrdate-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,27 +66,27 @@ wchar_t *_wstrdate(
 ### <a name="parameters"></a>Parametry
 
 *datestr*<br/>
-Wskaźnik do buforu zawierającą ciąg daty sformatowane.
+Wskaźnik do buforu zawierające ciąg daty sformatowane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do wynikowy ciąg znaków *datestr*.
+Każda z tych funkcji zwraca wskaźnik do ciągu wynikowego znak *datestr*.
 
 ## <a name="remarks"></a>Uwagi
 
-Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strdate_s —, _wstrdate_s —](strdate-s-wstrdate-s.md). Zaleca się, że bezpieczniejsze funkcji można używać, gdy jest to możliwe.
+Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_strdate_s —, _wstrdate_s —](strdate-s-wstrdate-s.md). Zaleca się, że funkcje bardziej bezpieczne służyć wszędzie tam, gdzie to możliwe.
 
-**_Strdate —** funkcja kopiuje bieżącej systemowej daty do bufor wskazywany przez *datestr*, sformatowany **mm**/**dd** / **rr**, gdzie **mm** to dwie cyfry reprezentującą miesiąc, **dd** to dwie cyfry reprezentującą dzień, a **RR**  to dwa ostatnie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Rozmiar buforu musi być co najmniej 9 bajtów.
+**_Strdate —** funkcja kopiuje bufor wskazywany przez bieżącą datą systemu *datestr*, sformatowany **mm**/**dd** / **rr**, gdzie **mm** to dwie cyfry reprezentującą miesiąc, **dd** to dwie cyfry reprezentującą dzień, a **RR**  to dwie ostatnie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Rozmiar buforu musi być co najmniej 9 bajtów.
 
-Jeśli *datestr* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Jeśli *datestr* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-**_wstrdate —** jest wersja znaków dwubajtowych **_strdate —**; argumentów i wartości **_wstrdate —** są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**_wstrdate —** to wersja znaku dwubajtowego **_strdate —**; argument i wartość zwracana przez **_wstrdate —** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate —**|**_strdate**|**_strdate**|**_wstrdate**|
 

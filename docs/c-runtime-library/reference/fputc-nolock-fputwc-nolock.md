@@ -1,10 +1,6 @@
 ---
-title: _fputc_nolock —, _fputwc_nolock — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _fputc_nolock, _fputwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputwc_nolock
 - _fputc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - fputtc_nolock
 - _fputwc_nolock
 - _fputtc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputwc_nolock function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2ef3afffe1cbd8764e389f613b3679e3fa5a580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579776"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
-Zapisuje znak w strumieniu bez blokowania wątku.
+Zapisuje znak do strumienia bez blokowania wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,18 +62,18 @@ wint_t _fputwc_nolock(
 *c*<br/>
 Znak do zapisania.
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać informacje o błędzie, zobacz [fputc —, fputwc —](fputc-fputwc.md).
+Każda z tych funkcji zwraca znak napisany. Aby uzyskać informacje o błędzie, zobacz [fputc, fputwc —](fputc-fputwc.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_fputc_nolock —** i **_fputwc_nolock —** są takie same jak **fputc —** i **fputwc —** odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_fputc_nolock** i **_fputwc_nolock —** są takie same jak **fputc** i **fputwc —**, odpowiednio, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
-Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **_fputc_nolock —** nie obsługuje obecnie dane wyjściowe do strumienia UNICODE.
+Te dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **_fputc_nolock** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -98,7 +88,7 @@ Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANS
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą —**stdin**, **stdout**, i **stderr**— muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -127,6 +117,6 @@ This is a test of _fputc_nolock!!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

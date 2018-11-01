@@ -1,10 +1,6 @@
 ---
-title: wcrtomb — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: wcrtomb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb function
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eca27e81cbb1df26d04059974cdc1ce5313bafa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659254"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
-Przekonwertuj znaków dwubajtowych na jej reprezentację znaków wielobajtowych. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [wcrtomb_s —](wcrtomb-s.md).
+Przekonwertuj znakiem dwubajtowym na jego reprezentację w postaci znaku wielobajtowego. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [wcrtomb_s —](wcrtomb-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,31 +54,31 @@ size_t wcrtomb(
 ### <a name="parameters"></a>Parametry
 
 *mbchar*<br/>
-Wynikowa wielobajtowe konwersji znaków.
+Wynikowy znaków wielobajtowych konwersji znaków.
 
 *WChar*<br/>
-Szerokie do konwersji.
+Szeroki znak do przekształcenia.
 
 *mbstate*<br/>
 Wskaźnik do **mbstate_t** obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę bajtów wymaganą do reprezentowania przekonwertowanego znaków wielobajtowych, w przeciwnym razie wartość -1 w przypadku wystąpienia błędu.
+Zwraca liczbę bajtów wymaganą do reprezentowania przekonwertowany znak wielobajtowy, w przeciwnym razie -1 w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wcrtomb —** funkcja konwertuje znaków dwubajtowych, począwszy od określonej konwersji stanie zawartymi w *mbstate*, od wartości zawartych w *wchar*, do adres reprezentowany przez *mbchar*. Wartość zwracana jest liczbę bajtów wymaganą do reprezentowania odpowiednich znaków wielobajtowych, ale nie będzie zwracać więcej niż **mb_cur_max —** bajtów.
+**Wcrtomb —** funkcja konwertuje znakiem dwubajtowym, począwszy od stanu określonej konwersji zawarte w *mbstate*, od wartości zawarte w *wchar*, do adres jest reprezentowany przez *mbchar*. Wartość zwracana jest liczba bajtów potrzebnych do reprezentowania odpowiedniego znaku wielobajtowego, ale nie zwróci więcej niż **MB_CUR_MAX** bajtów.
 
-Jeśli *mbstate* ma wartość null, wewnętrznego **mbstate_t** obiekt zawierający stan konwersji *mbchar* jest używany. Jeśli sekwencja znaków *wchar* nie ma odpowiedniego wielobajtowe reprezentacji znaków, zwracany jest -1 i **errno** ma ustawioną wartość **eilseq —**.
+Jeśli *mbstate* ma wartość null, wewnętrzny **mbstate_t** obiekt, który zawiera stan konwersji *mbchar* jest używany. Jeśli sekwencja znaków *wchar* nie ma odpowiedniego znaków wielobajtowych reprezentacji znaków, jest zwracana wartość -1 i **errno** ustawiono **EILSEQ**.
 
-**Wcrtomb —** funkcja różni się od [wctomb —, _wctomb_l —](wctomb-wctomb-l.md) przez jego restartability. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład aplikacja może użyć **wcsrlen** zamiast **wcsnlen —**, jeśli kolejne wywołanie **wcsrtombs —** użyto zamiast **wcstombs —**.
+**Wcrtomb —** funkcja różni się od [wctomb —, _wctomb_l —](wctomb-wctomb-l.md) przez jego restartability. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań tej samej lub innych funkcji ponownego uruchamiania. Podczas korzystania z funkcji ponownego uruchamiania i nonrestartable mieszania, wyniki są niezdefiniowane. Na przykład, aplikacja będzie używać **wcsrlen** zamiast **wcsnlen —**, jeśli kolejne wywołanie **wcsrtombs —** były używane zamiast **wcstombs —**.
 
-W języku C++ ta funkcja ma przeciążenia szablonów, które wywołuje odpowiedników nowsza, bezpieczne tej funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcja ta ma przeciążenia szablonu, który wywołuje nowsze, bezpieczne odpowiedniki tej funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-**Wcrtomb —** funkcji jest bezpieczne wielowątkowe tak długo, jak wywołuje żadnej funkcji w bieżącym wątku **setlocale** podczas wykonywania tej funkcji oraz w trakcie *mbstate* ma wartość null.
+**Wcrtomb —** funkcja jest bezpieczna wielowątkowych, tak długo, jak wywołania funkcji, nie w bieżącym wątku **setlocale** podczas wykonywania tej funkcji oraz w trakcie *mbstate* ma wartość null.
 
 ## <a name="example"></a>Przykład
 

@@ -1,29 +1,19 @@
 ---
-title: komunikat | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: — komunikat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - message_CPP
 - vc-pragma.message
-dev_langs:
-- C++
 helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98cdb6e089b972bbc53a6816287595d952aed1f5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a55721fb954cf9383022b4fc8e84327ea4c772e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627386"
 ---
 # <a name="message"></a>— komunikat
 Wysyła ciąg literału do wyjścia standardowego bez przerywania kompilacji.

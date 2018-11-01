@@ -1,24 +1,14 @@
 ---
-title: Pojęcia związane z MFC | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Pojęcia związane z MFC
 ms.date: 1/09/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - Concepts
-dev_langs:
-- C++
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da0fde988b2fa4bbe079c4d392edc45329627ad3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633381"
 ---
 # <a name="mfc-concepts"></a>Pojęcia związane z MFC
 

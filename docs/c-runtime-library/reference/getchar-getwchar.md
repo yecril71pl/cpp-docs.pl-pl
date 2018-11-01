@@ -1,10 +1,6 @@
 ---
-title: getchar, getwchar — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: getchar, getwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getchar
 - getwchar
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - getwchar
 - GetChar
-dev_langs:
-- C++
 helpviewer_keywords:
 - gettchar function
 - characters, reading
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c05fca568c8d69d34aa1386030eef3f2cb09f11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626606"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
-Odczytuje znak z standardowe dane wejściowe.
+Odczytuje znaku ze standardowego wejścia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,17 +47,17 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak do odczytu. Błąd odczytu lub warunek plik końcowy **getchar** zwraca **EOF**, i **getwchar —** zwraca **weof —**. Dla **getchar**, użyj **ferror —** lub **feof —** do sprawdzania błędów lub na końcu pliku.
+Zwraca znak odczytywany. Aby wskazać błąd odczytu lub warunek końca pliku **getchar** zwraca **EOF**, i **getwchar —** zwraca **WEOF**. Aby uzyskać **getchar**, użyj **ferror** lub **feof** pod kątem wystąpienia błędu lub końca pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa kursor skojarzony plik na następny znak. **getchar** jest taka sama jak [_fgetchar —](fgetc-fgetwc.md), ale jest zaimplementowana, jako funkcję, a makra.
+Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa skojarzony wskaźnik pliku aby wskazywała na następny znak. **getchar** jest taka sama jak [_fgetchar —](fgetc-fgetwc.md), ale jest stosowana jako funkcja i makra.
 
-Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Wersja — blokowanie dla [_getchar_nolock —, _getwchar_nolock —](getchar-nolock-getwchar-nolock.md).
+Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getchar_nolock —, _getwchar_nolock —](getchar-nolock-getwchar-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar —**|**getchar**|**getchar**|**getwchar**|
 
@@ -78,7 +68,7 @@ Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Wersja 
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -112,7 +102,7 @@ This textInput was: This text
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

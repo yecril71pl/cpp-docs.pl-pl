@@ -1,10 +1,6 @@
 ---
-title: _printf_p —, _printf_p_l —, _wprintf_p —, _wprintf_p_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,20 +39,16 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660368"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
-Drukuje sformatowane dane wyjściowe do standardowego strumienia wyjściowego i umożliwia określenie kolejności, w której parametry są używane w ciągu formatu.
+Drukuje sformatowane dane wyjściowe do strumienia wyjścia standardowego i umożliwia specyfikację zamówienia, w której parametry są używane w ciągu formatu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,7 +76,7 @@ int _wprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Format formantu.
+Formant formatu.
 
 *Argument*<br/>
 Argumenty opcjonalne.
@@ -96,22 +86,22 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę znakom lub wartość ujemną, jeśli wystąpi błąd.
+Zwraca liczbę znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Printf_p —** funkcji formatuje i wyświetla serii znaków i wartości do standardowego strumienia wyjściowego, **stdout**. Jeśli argumenty *format* ciągu *format* ciąg musi zawierać specyfikacji, które określają format wyjściowy dla argumentów (zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p —** funkcja formatuje i drukuje serie znaków i wartości do standardowego strumienia wyjściowego, **stdout**. Jeśli argumenty należy wykonać *format* ciągu, *format* musi zawierać specyfikacje, które określają format wyjściowy dla argumentów (patrz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-Różnica między **_printf_p —** i **printf_s —** jest to, że **_printf_p —** parametrów pozycyjnych obsługuje, co umożliwia określenie kolejności, w którym znajdują się argumenty używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Różnica między **_printf_p —** i **printf_s** jest fakt, że **_printf_p —** wspiera parametry pozycyjne, które umożliwiają określenie kolejności, w której argumenty są: używany w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p —** jest wersja znaków dwubajtowych **_printf_p —**; działają tak samo, jeśli strumień jest otwarty w trybie ANSI. **_printf_p —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**_wprintf_p —** jest wersją znaków dwubajtowych **_printf_p —**; obie zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **_printf_p —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika.
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
-Jeśli *format* lub *argument* są **NULL**, lub w formacie ciągu zawiera nieprawidłowe znaki formatowania, **_printf_p —** i **_wprintf_p —** funkcji Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość -1 i zestawy **errno** do **einval —**.
+Jeśli *format* lub *argument* są **NULL**, lub ciąg formatu zawiera nieprawidłowe znaki formatowania, **_printf_p —** i **_wprintf_p —** wywołają procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -127,7 +117,7 @@ Jeśli *format* lub *argument* są **NULL**, lub w formacie ciągu zawiera niepr
 |**_printf_p —**, **_printf_p_l —**|\<stdio.h>|
 |**_wprintf_p —**, **_wprintf_p_l —**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -162,7 +152,7 @@ Width specifiers:     Hello
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>

@@ -1,55 +1,45 @@
 ---
-title: / CLR ograniczenia | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /clr Ograniczenia
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34d21939f51fc3d4800d5cdd887b283b7e690db6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639353"
 ---
 # <a name="clr-restrictions"></a>/clr Ograniczenia
 
-Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR**:
+Należy zauważyć następujące ograniczenia na użycie **/CLR**:
 
-- W procedurze obsługi wyjątków strukturalnych, istnieją ograniczenia dotyczące używania `_alloca` podczas kompilowania za pomocą **/CLR**. Aby uzyskać więcej informacji, zobacz [_alloca](../../c-runtime-library/reference/alloca.md).
+- W obsłudze wyjątków strukturalnych, istnieją ograniczenia dotyczące używania `_alloca` podczas kompilowania za pomocą **/CLR**. Aby uzyskać więcej informacji, zobacz [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Korzystanie z sprawdzanie błędów czasu wykonywania nie jest prawidłowy w przypadku **/CLR**. Aby uzyskać więcej informacji, zobacz [porady: Użyj natywnego Run-Time sprawdza](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Użycie sprawdzanie błędów czasu wykonywania nie jest prawidłowa w przypadku **/CLR**. Aby uzyskać więcej informacji, zobacz [porady: użycie macierzystego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
-- Gdy **/CLR** jest używana do kompilowania program, który używa tylko standardowe składni języka C++, poniższe wskazówki dotyczą stosowania zestaw wbudowany:
+- Gdy **/CLR** jest używany, aby skompilować program, który używa tylko standardową składnię C++, poniższe wskazówki dotyczą korzystania z wbudowanego asemblera:
 
-  - Kod zestawu wbudowanego założono znajomość układu natywnego stosu, wywoływanie Konwencji poza bieżącą funkcję lub inne niskiego poziomu informacje o komputerze może się niepowodzeniem, jeśli wiedzy stosowany do ramki stosu funkcji zarządzanych. Funkcje zawierające kod zestawu wbudowanego są generowane jako niezarządzane funkcje, jak gdyby zostały one umieszczone w osobnym moduł, który został skompilowany bez **/CLR**.
+  - Kod zestawu wbudowanego założono znajomość układ stosu macierzystego, konwencje poza bieżącą funkcję lub innych niskiego poziomu informacji o komputerze wywoływania może się niepowodzeniem, jeśli wiedzy stosowany do ramki stosu dla funkcji zarządzanych. Funkcje zawierające kod zestawu wbudowanego są generowane jako funkcji niezarządzanych, tak jakby były one umieszczone w oddzielny moduł, który został skompilowany bez **/CLR**.
 
-  - Kod zestawu wbudowanego w funkcje, które przekazania parametrów funkcji skonstruowany kopiowania nie jest obsługiwane.
+  - Wbudowany kod asemblera w funkcje, które wychodzą parametrów funkcji skonstruowany kopiowania nie jest obsługiwana.
 
-- [Vprintf — funkcje](../../c-runtime-library/vprintf-functions.md) nie można wywołać z poziomu programu skompilowane z **/CLR**.
+- [Vprintf — funkcje](../../c-runtime-library/vprintf-functions.md) nie można wywołać z programu, który został skompilowany przy użyciu **/CLR**.
 
-- [Naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) modyfikator jest ignorowany w/CLR.
+- ["Naked"](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) modyfikator jest zignorowane z opcją/CLR.
 
-- Funkcja translator ustawione przez [_set_se_translator —](../../c-runtime-library/reference/set-se-translator.md) obejmie tylko połowy za pomocą kodu niezarządzanego. Zobacz [obsługi wyjątków](../../windows/exception-handling-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+- Funkcję tłumacza ustawione przez [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) wpłynie tylko połowy w niezarządzanym kodzie. Zobacz [wyjątków](../../windows/exception-handling-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
-- Porównanie wskaźników funkcji jest niedozwolone w obszarze **/CLR**.
+- Porównanie wskaźników funkcji nie jest dozwolona w ramach **/CLR**.
 
-- Korzystanie z funkcji, które nie są w pełni prototypowanych nie jest dozwolone w obszarze **/CLR**.
+- Korzystania z funkcji, które nie są w pełni prototypowane nie jest dozwolona w ramach **/CLR**.
 
-- Następujące opcje kompilatora nie są obsługiwane przez **/CLR**:
+- Następujące opcje kompilatora są nieobsługiwane w przypadku **/CLR**:
 
   - **/ EHsc** i **/EHS** (**/CLR** oznacza **/eha** (zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md))
 
-  - **/ FP: strict** i **/FP: except** (zobacz [/fp (określenie zachowania Floating-Point)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ FP: strict** i **/FP: except** (zobacz [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md))
 
   - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
 
@@ -61,40 +51,40 @@ Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR
 
   - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
 
-- Kombinacja `_STATIC_CPPLIB` definicja preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji może spowodować, że aplikacja do łączenia z statycznych wielowątkowe standardowa biblioteka C++, która nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Użyj biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md) tematu.
+- Kombinacja `_STATIC_CPPLIB` definicji preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji spowodowałoby aplikację, aby połączyć się przy użyciu statycznych wielowątkowe standardowej biblioteki C++, który nie jest obsługiwany. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) tematu.
 
-- Korzystając z **/zi** z **/CLR**, jest wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Korzystając z **/zi** z **/CLR**, ma to wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-- Przekazywanie znaków dwubajtowych .NET Framework output procedury bez określenia [/Zc:](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) lub bez rzutowania znak `__wchar_t` spowoduje, że dane wyjściowe do są wyświetlane jako `unsigned short int`. Na przykład:
+- Przekazywanie znaków dwubajtowych do .NET Framework danych wyjściowych procedury bez jednoczesnego określenia [/Zc:](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) lub bez rzutowania znak `__wchar_t` spowoduje, że dane wyjściowe są wyświetlane jako `unsigned short int`. Na przykład:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/ GS](../../build/reference/gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja podlega `#pragma` [niezarządzane](../../preprocessor/managed-unmanaged.md) lub jeśli funkcji muszą być skompilowane na natywny, w którym to przypadku kompilator generuje Ostrzeżenie C4793, który jest domyślnie wyłączone.
+- [/ GS](../../build/reference/gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja jest w obszarze `#pragma` [niezarządzanych](../../preprocessor/managed-unmanaged.md) lub jeśli funkcja musi zostać skompilowana do natywnego, w którym to przypadku kompilator wygeneruje Ostrzeżenie C4793, która jest domyślnie wyłączona.
 
-- Zobacz [/Entry](../../build/reference/entry-entry-point-symbol.md) wymagania podpisu funkcji zarządzanych aplikacji.
+- Zobacz [/Entry](../../build/reference/entry-entry-point-symbol.md) wymagania podpisu funkcji zarządzanej aplikacji.
 
 - Aplikacje skompilowane z **/OpenMP** i **/CLR** może być uruchamiany tylko w procesie pojedynczego elementu appdomain.  Zobacz [/OpenMP (Włącz obsługę OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Aby uzyskać więcej informacji.
 
-- Funkcje, których zmienną liczbę argumentów (VARARG) zostaną wygenerowane jako funkcje natywne. Wszystkie typy zarządzanych danych na pozycji zmiennych argumentów będzie można zorganizować natywnych typów. Należy pamiętać, że <xref:System.String?displayProperty=fullName> typy są faktycznie znaków dwubajtowych ciągów, ale są one przekazywane do ciągów znaków. Więc jeśli specyfikator printf %S (wchar_t *), go będzie kierować na ciąg %s zamiast tego.
+- Funkcje, które przyjmują zmienną liczbę argumentów (VARARG) zostanie wygenerowany jako funkcje natywne. Wszystkie typy zarządzanych danych w miejscu zmiennych argumentów będzie można zorganizować typy natywne. Należy pamiętać, że <xref:System.String?displayProperty=fullName> typy są ciągami faktycznie znaków dwubajtowych, ale są one przekazywane do ciągów znaków jednobajtowych. Więc jeśli specyfikatora printf %S (wchar_t *), go będzie kierować ciąg %s zamiast tego.
 
-- Korzystając z makra va_arg, mogą wystąpić nieoczekiwane wyniki podczas kompilowania za pomocą **/CLR: pure**. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end, va_start —](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r. Kod, który musi być "czysty" lub "bezpiecznej" powinny być przenoszone do języka C#.
+- Korzystając z va_arg — makro, może uzyskać nieoczekiwane wyniki podczas kompilowania za pomocą **/CLR: pure**. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
 
-- Należy nie wywołać, z kodu zarządzanego, wszystkie funkcje, które opisano stos, aby uzyskać informacje o parametrach (argumenty funkcji); Warstwa P/Invoke powoduje, że te informacje będzie dalej w dół stosu.  Na przykład nie skompilować proxy/stub z **/CLR**.
+- Nie należy wywołać, z kodu zarządzanego, wszystkie funkcje, które pomagają stosu, aby uzyskać informacje o parametrach (argumenty funkcji); Warstwa P/Invoke powoduje, że te informacje jako dalej na dół stosu.  Na przykład nie można skompilować proxy/zastępczego za pomocą **/CLR**.
 
-- Funkcje zostanie skompilowany do kodu zarządzanego, jeśli to możliwe, ale nie wszystkie konstrukcje C++ mogą być przekonwertowana na stronę kodu zarządzanego.  Jest wybierana na podstawie funkcja przez funkcję. Jeśli dowolną część funkcji nie można przekonwertować na kod zarządzany, Cała funkcja zostanie przekonwertowany do kodu natywnego zamiast tego. Gdy zapobiec generowania kodu zarządzanego przez kompilator.
+- Funkcje, które będzie kompilowana do kodu zarządzanego, jeśli to możliwe, ale nie wszystkie konstrukcje C++ mogą być tłumaczone do kodu zarządzanego.  Jest wybierana na podstawie funkcji przez funkcję. Jeśli którejkolwiek funkcji nie można przekonwertować na kod zarządzany, całą funkcję zostaną przekonwertowane na kod natywny zamiast tego. Gdy uniemożliwić kompilatorowi generowanie kodu zarządzanego.
 
-  - Generowane przez kompilator sekcje Thunk lub funkcje pomocnicze. Natywny sekcje Thunk są generowane dla każde wywołanie funkcji za pomocą wskaźnika funkcji, łącznie z wywołania funkcji wirtualnej.
+  - Generowane przez kompilator sekcje Thunk lub funkcji pomocnika. Sekcje Thunk natywne są generowane dla dowolnego wywołania funkcji za pomocą wskaźnika funkcji, łącznie z wywołania funkcji wirtualnej.
 
-  - Tego wywołania funkcji `setjmp` lub `longjmp`.
+  - To wywołanie funkcji `setjmp` lub `longjmp`.
 
-  - Funkcje, które umożliwiają niektórych wewnętrznej procedury bezpośrednio manipulowania zasoby maszyny. Na przykład użycie `__enable` i `__disable`, `_ReturnAddress` i `_AddressOfReturnAddress`, lub wszystkich wyników w kodzie natywnym zostanie funkcje wewnętrzne multimediów.
+  - Funkcje, które umożliwia bezpośrednie manipulowanie zasoby maszyny niektóre procedury wewnętrzne. Na przykład użycie `__enable` i `__disable`, `_ReturnAddress` i `_AddressOfReturnAddress`, lub wewnętrznych elementów multimedialnych będą wszystkie wynik w kodzie natywnym.
 
-  - Funkcje poniżej `#pragma unmanaged` dyrektywy. (Należy pamiętać, że odwrotność, `#pragma managed`, jest również obsługiwany.)
+  - Funkcje poniżej `#pragma unmanaged` dyrektywy. (Należy pamiętać, że odwrotność `#pragma managed`, jest również obsługiwany.)
 
-  - Funkcja, która zawiera odwołania do wyrównane typy, oznacza to, że typy zadeklarowane za pomocą `__declspec(align(...))`.
+  - Funkcja, która zawiera odwołania do wyrównanych typów, oznacza to, że typy zadeklarowane za pomocą `__declspec(align(...))`.
 
 ## <a name="see-also"></a>Zobacz także
 

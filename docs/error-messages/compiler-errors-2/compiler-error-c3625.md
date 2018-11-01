@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3625 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3625
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3625
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3625
 ms.assetid: fdf49f21-d6b1-42f4-9eec-23b04ae8b4aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ebb7a94e807dbd8bbb9e5614f15d03e9b577858
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 08ad1d09cb9149811566f67a585a718340254de9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635406"
 ---
 # <a name="compiler-error-c3625"></a>Błąd kompilatora C3625
 

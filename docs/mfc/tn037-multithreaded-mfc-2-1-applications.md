@@ -1,27 +1,17 @@
 ---
-title: 'TN037: Wielowątkowe MFC 2.1 aplikacji | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'TN037: wielowątkowe aplikacje MFC 2.1'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.multithread
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN037
 ms.assetid: 05ee204c-700a-4c40-957c-dc2d0db1249d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a30ea081ba03ae9a5cb17d1139f3d1fcf385000a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0a43a6502b96e1e3744fbf7f2b5938dd00af3a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658825"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: wielowątkowe aplikacje MFC 2.1
 

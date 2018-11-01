@@ -1,31 +1,21 @@
 ---
-title: system_error — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: system_error — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::system_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde8e448d54be41516e65969f60b0651cacc8ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bad260e5372965c35517986da8feb2cfa3c0e1d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622264"
 ---
 # <a name="systemerror-class"></a>system_error — Klasa
 
-Reprezentuje klasę podstawową dla wszystkich wyjątków zgłoszonych zgłosić błąd systemowy niskiego poziomu.
+Reprezentuje klasę bazową dla wszystkich wyjątków generowanych, aby zgłosić błąd systemowy niskiego poziomu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,15 +43,15 @@ const error_code& code() const throw();
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez `what` w klasie [wyjątek](../standard-library/exception-class.md) jest tworzony z `_Message` i przechowywane obiektu typu [error_code —](../standard-library/error-code-class.md) (albo `code` lub `error_code(_Errval, _Errcat)`).
+Wartość zwrócona przez obiekt `what` w klasie [wyjątek](../standard-library/exception-class.md) jest zbudowany z `_Message` i przechowywany obiekt typu [error_code](../standard-library/error-code-class.md) (albo `code` lub `error_code(_Errval, _Errcat)`).
 
-Funkcja członkowska `code` zwraca zapisana [error_code —](../standard-library/error-code-class.md) obiektu.
+Funkcja elementu członkowskiego `code` zwraca przechowywaną [error_code](../standard-library/error-code-class.md) obiektu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<system_error — >
+**Nagłówek:** \<system_error >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
