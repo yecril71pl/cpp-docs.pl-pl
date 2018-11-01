@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc _FCmulcc, _LCmulcc | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656771"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
@@ -62,33 +51,33 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Jeden z argumentów złożonych Aby pomnożyć.
+Jeden z argumentów złożone do pomnożenia.
 
 *y*<br/>
-Inne złożonych operandu na wielokrotnie.
+Drugi złożonych operand do pomnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuje złożonych iloczyn liczb złożone *x* i *y*.
+A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuje złożonych iloczyn liczb zespolonych *x* i *y*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ wbudowanych operatorów arytmetycznych nie działają na przez firmę Microsoft implementacją typów złożonych **_Cmulcc**, **_FCmulcc**, i **_LCmulcc** funkcji Uproszczenie mnożenia typów złożonych.
+Ponieważ wbudowanych operatorów arytmetycznych, nie działają na implementacja firmy Microsoft, złożonych typów **_Cmulcc**, **_FCmulcc**, i **_LCmulcc** funkcji Uprość mnożenia typów złożonych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **_Complex podwójne** , **float _Complex**, i **_Complex podwójnej długości**odpowiednio. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **double _complex —** , **float _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
-[normy normf, norml](norm-normf-norml1.md)<br/>
+[norm normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
