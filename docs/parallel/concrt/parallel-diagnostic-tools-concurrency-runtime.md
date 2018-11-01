@@ -1,25 +1,15 @@
 ---
-title: Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0666d3623dbd2e341b6a27c01d78ef22c6cc6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 44bb32f87379a05829816234ee8bc412de1f24b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446059"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608575"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 

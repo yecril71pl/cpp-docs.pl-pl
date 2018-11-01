@@ -1,10 +1,6 @@
 ---
-title: _tell —, _telli64 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660151"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
-Pobierz pozycję wskaźnika pliku.
+Pobierz położenie wskaźnika pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,20 +54,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parametry
 
-*Dojście*<br/>
-Plik deskryptora odwołujące się do otwarcia pliku.
+*uchwyt*<br/>
+Plik deskryptora odnoszące się do otwarcia pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Bieżąca pozycja wskaźnika pliku. Na urządzeniach niezdolne do wyszukiwania wartość zwracana jest niezdefiniowany.
+Bieżąca pozycja wskaźnika pliku. Na urządzeniach bez możliwości wyszukiwania wartość zwracana jest niezdefiniowane.
 
-Zwracana wartość L-1 wskazuje błąd. Jeśli *obsługi* jest deskryptora nieprawidłowy plik wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **ebadf —** i zwracać L-1.
+Zwracana wartość l-1 wskazuje błąd. Jeśli *obsługi* nieprawidłowego deskryptora pliku, jest wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EBADF** i zwracają wartość-1 L.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na ten i inne.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tego i innych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Tell —** funkcja pobiera bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzone z *obsługi* argumentu. Pozycja jest wyrażone jako liczba bajtów od początku pliku. Aby uzyskać **_telli64 —** funkcji, ta wartość jest wyrażona jako 64-bitową liczbę całkowitą.
+**_Tell —** funkcja pobiera bieżącą pozycję wskaźnika pliku (jeśli istnieje), skojarzone z *obsługi* argumentu. Pozycja jest wyrażona jako liczba bajtów od początku pliku. Aby uzyskać **_telli64 —** funkcji, ta wartość jest wyrażona jako liczba całkowita 64-bitowych.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -135,6 +125,6 @@ Current file position is: 20
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>

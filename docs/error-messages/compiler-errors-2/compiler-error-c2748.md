@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2748 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2748
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2748
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d57c7919cd33f9e27ad34b1298d8af36ec360200
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a85ee151d9a4d62cc4b95248d669ff924365a95a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655640"
 ---
 # <a name="compiler-error-c2748"></a>Błąd kompilatora C2748
 

@@ -1,41 +1,31 @@
 ---
-title: C3389 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3389
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3389
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b540f87458c75ddf7d57626b6251248652b96213
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584304"
 ---
-# <a name="compiler-error-c3389"></a>C3389 błąd kompilatora
+# <a name="compiler-error-c3389"></a>Błąd kompilatora C3389
 
 > __declspec (*— słowo kluczowe*) nie może być użyty z/CLR: pure lub/CLR: Safe
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-A [__declspec](../../cpp/declspec.md) oznacza modyfikator używane na stan procesu.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) oznacza na [elementu appdomain](../../cpp/appdomain.md) stanu.  Tak, deklarowanie zmiennej o `keyword` **__declspec** modyfikator i kompilowania przy użyciu **/CLR: pure** jest niedozwolone.
+A [__declspec](../../cpp/declspec.md) używany modyfikator oznacza stan procesu.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) wskazuje na [appdomain](../../cpp/appdomain.md) stanu.  Dlatego deklarowanie zmiennej za pomocą `keyword` **__declspec** modyfikator i kompilowanie za pomocą **/CLR: pure** nie jest dozwolone.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3389:
+Poniższy przykład spowoduje wygenerowanie C3389:
 
 ```cpp
 // C3389.cpp

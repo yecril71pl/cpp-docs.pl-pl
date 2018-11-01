@@ -1,11 +1,6 @@
 ---
-title: casinh casinhf, casinhl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393969"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580799"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Pobiera odwrotny sinus hiperboliczny liczby złożone z części gałąź poza przedział [-i, + i] urojony osi.
+Pobiera odwrotny sinus hiperboliczny liczby zespolonej, cenowe gałąź poza przedział [-i, + i] urojone osi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,23 +64,23 @@ _Lcomplex casinhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Odwrotny sinus hiperboliczny dla *z*, w radianach. Wynik jest niezwiązanego rzeczywistych osi, a w interwale [-iπ/2 + iπ/2] urojony osi.
+Odwrotny sinus hiperboliczny dla *z*, w radianach. Wynik jest niezwiązany, wzdłuż osi prawdziwe, a w interwale [-iπ/2 + iπ/2] urojone osi.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **casinh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **casinh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **casinh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **casinh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**casinh**, **casinhf**, **casinhl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,12 +1,6 @@
 ---
-title: Mapowanie komunikatów Windows na klasę | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Mapowanie komunikatów systemu Windows na klasę
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - message maps [MFC], in dialog class
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - message maps [MFC], mapping Windows messages to classes
 - messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 37c0f61f4d38e3e152d9dd508c9487782ebdf81a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630468"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows na klasę
 

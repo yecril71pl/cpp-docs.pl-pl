@@ -1,57 +1,47 @@
 ---
-title: / PGD (Określ bazę danych dla optymalizacji sterowanych profilem) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /PGD (Określ bazę danych dla optymalizacji sterowanych profilem)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ProfileGuidedDatabase
-dev_langs:
-- C++
 helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7685f99137a1b599a5f9020fac9e3cae4ba3bc3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601295"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Określ bazę danych dla optymalizacji sterowanych profilem)
 
-**Opcja /PGD jest przestarzały.** Począwszy od programu Visual Studio 2015, preferowane [opcji/genprofile lub /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) konsolidatora zamiast tego opcje. Ta opcja jest używana do określenia nazwy pliku .pgd używanego przez proces optymalizacji.
+**Opcja /PGD jest przestarzały.** Począwszy od programu Visual Studio 2015 Preferuj [przełączników/genprofile i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) zamiast tego opcje konsolidatora. Ta opcja jest używana do określenia nazwy pliku .pgd używany przez proces optymalizacji sterowanej profilem.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ PGD:**_filename_
+> **/ PGD:**_nazwy pliku_
 
 ## <a name="argument"></a>Argument
 
 *Nazwa pliku*<br/>
-Określa nazwę pliku .pgd, który jest używany do przechowywania informacji na temat uruchomiony program.
+Określa nazwę pliku .pgd, który jest używany do przechowywania informacji na temat uruchomionego programu.
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z przestarzałe [/LTCG:PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) , należy użyć **/PGD** można określić niestandardowy nazwę lub lokalizację pliku .pgd. Jeśli nie określisz **/PGD**, nazwa podstawowa pliku .pgd jest taka sama jak nazwa pliku wyjściowego (.exe lub .dll) podstawowej i jest tworzony w tym samym katalogu, z którego został wywołany łącza.
+Korzystając z przestarzałego [pginstrument](../../build/reference/ltcg-link-time-code-generation.md) opcji, należy użyć **/PGD** do określenia niedomyślną nazwą lub lokalizacją pliku .pgd. Jeśli nie określisz **/PGD**, nazwa podstawowa pliku .pgd jest taka sama jak nazwa pliku wyjściowego (.exe lub .dll) podstawowej i jest tworzony w tym samym katalogu, z którego wywołano łącze.
 
-Korzystając z przestarzałe **/LTCG:PGOPTIMIZE** , należy użyć **/PGD** opcję, aby określić nazwę pliku .pgd służące do utworzenia zoptymalizowanego obrazu. *Filename* argument powinien być zgodny *filename* określony do **/LTCG:PGINSTRUMENT**.
+Korzystając z przestarzałego **/LTCG:PGOPTIMIZE** opcji, należy użyć **/PGD** opcję, aby określić nazwę pliku .pgd można użyć do utworzenia zoptymalizowanego obrazu. *Filename* argument powinien być zgodny *filename* określony do **pginstrument**.
 
 Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
 
-1. Modyfikowanie **bazy danych profilu z przewodnikiem** właściwości. Wybierz **OK** Aby zapisać zmiany.
+1. Modyfikowanie **profilowej bazie danych z przewodnikiem** właściwości. Wybierz **OK** Aby zapisać zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

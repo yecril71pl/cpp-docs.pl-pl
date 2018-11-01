@@ -1,23 +1,13 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4436 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4436
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2484b5420347f49a74d8eb3cdf65a8221741cc63
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b8f62b7556d458f285597b4ae92a4f6e15ee60c9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657996"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Kompilator ostrzeżenie (poziom 1) C4436
 

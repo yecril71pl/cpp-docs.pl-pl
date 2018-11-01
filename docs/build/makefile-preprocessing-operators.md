@@ -1,12 +1,6 @@
 ---
-title: Przetwarzanie wstępne operatorów pliku makefile | Dokumentacja firmy Microsoft
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
+title: Operatory przetwarzania wstępnego pliku reguł programu Make
+ms.date: 06/14/2018
 helpviewer_keywords:
 - operators [C++], makefile preprocessing
 - EXIST operator
@@ -15,66 +9,65 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a78abd3c71d6fec2b77dbb2c2e7b40f8f703626b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650843"
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatory przetwarzania wstępnego pliku reguł programu Make
-Pliku reguł programu make przetwarzania wstępnego wyrażenia można używać operatorów, które działają na stałych kody wyjścia z poleceń, ciągi makra i ścieżki systemu plików. Można oszacować wyrażenia, preprocesora najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane według grupowanie jawne w nawiasy, a następnie według kolejność wykonywania działań. Wynik jest wartością stałą.  
-  
- `DEFINED` Operator to operator logiczny, który działa na nazwę makra. Wyrażenie `DEFINED(` *makra* `)` ma wartość true Jeśli *makra* jest zdefiniowany, nawet jeśli nie ma przypisanej wartości. `DEFINED` w połączeniu z `!IF` lub `!ELSE IF` jest odpowiednikiem `!IFDEF` lub `!ELSE IFDEF`. Jednak w przeciwieństwie do tych dyrektyw `DEFINED` mogą być używane w złożonych wyrażeń.  
-  
- `EXIST` Operator to operator logiczny, który działa na ścieżki systemu plików. `EXIST(`*ścieżka* `)` ma wartość true Jeśli *ścieżki* istnieje. Wynik `EXIST` można używać w wyrażeniach binarnego. Jeśli *ścieżki* zawiera spacje, ujmij ją w podwójny cudzysłów.  
-  
- Aby porównać dwa ciągi, użyj równości (`==`) operator lub nierówności (`!=`) operatora. Ciągi należy ująć w podwójny cudzysłów.  
-  
- Stałe całkowite umożliwiają operatory jednoargumentowe Negacja wartości liczbowych (`-`), co do uzupełnienia (`~`), a logiczny negacji (`!`).  
-  
- Wyrażenia można użyć następujących operatorów. Operatory równy priorytet są grupowane i grup są wymienione w kolejności malejącej. Operatory jednoargumentowe skojarzyć z argumentem w prawo. Operatory binarne pierwszeństwa równy skojarzyć operandy od lewej do prawej.  
-  
-|Operator|Opis|  
-|--------------|-----------------|  
-|`DEFINED(` *makra* `)`|Tworzy wartość logiczną dla bieżącego stanu definicji *makra*.|  
-|`EXIST(` *Ścieżka* `)`|Tworzy wartość logiczną istnienie w pliku *ścieżki*.|  
-|||  
-|`!`|NEGACJA jednoargumentowy.|  
-|`~`|Uzupełnienie jednoargumentowy osoby.|  
-|`-`|Negacja jednoargumentowy.|  
-|||  
-|`*`|Mnożenia.|  
-|`/`|Podział.|  
-|`%`|Modułu (reszty).|  
-|||  
-|`+`|Dodatek.|  
-|`-`|Odejmowanie.|  
-|||  
-|`<<`|Operatory przesunięcia w lewo.|  
-|`>>`|Bitowe przesunięcia w prawo.|  
-|||  
-|`<=`|Mniejsze niż lub równe.|  
-|`>=`|Większe lub równe.|  
-|`<`|Poniżej.|  
-|`>`|Większa.|  
-|||  
-|`==`|Równości.|  
-|`!=`|Nierówności.|  
-|||  
-|`&`|Bitowe koniunkcji binarnej.|  
-|`^`|Iloczynu bitowego XOR.|  
-|`&#124;`|Wartość logiczną lub.|  
-|||  
-|`&&`|Operatora logicznego AND.|  
-|||  
-|`&#124;&#124;`|Operatora logicznego OR.|  
-  
+
+Pliku reguł programu make wstępnego przetwarzania wyrażenia można użyć operatorów, które działają na stałe wartości, kody wyjścia z poleceń, ciągi, makr i ścieżki systemu plików. Można obliczyć wyrażenia, preprocesor najpierw rozszerza makra i następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są obliczane w kolejności jawne grupowania w nawiasach, a następnie zgodnie z kolejnością pierwszeństwo operatorów. Wynik jest wartością stałą.
+
+**Zdefiniowane** operator jest operator logiczny, który działa na nazwę makra. Wyrażenie **zdefiniowane (**_makra_**)** ma wartość true Jeśli *makra* jest zdefiniowany, nawet jeśli nie ma przypisaną wartość. **ZDEFINIOWANE** w połączeniu z **! Jeśli** lub **! Jeśli nie** jest odpowiednikiem **! IFDEF** lub **! ELSE IFDEF**. Jednak w przeciwieństwie do tych dyrektyw **zdefiniowane** mogą być używane w złożonych wyrażeń.
+
+**ISTNIEJE** operator jest operator logiczny, który działa w ścieżce systemu plików. **ISTNIEJE (**_ścieżki_**)** ma wartość true Jeśli *ścieżki* istnieje. Wynik **ISTNIEJE** mogą być używane w wyrażenia binarnego. Jeśli *ścieżki* zawiera spacje, należy ją ująć w znaki podwójnego cudzysłowu.
+
+Aby porównać dwa ciągi, należy użyć równości (**==**) operatora i nierówności (**! =**) — operator. Ciągi należy ująć w znaki podwójnego cudzysłowu.
+
+Stałe całkowite można użyć operatorów jednoargumentowych dla wartości liczbowych negacji (**-**), jednego użytkownika uzupełniają (**~**), a logiczny negacji (**!**).
+
+Wyrażenia można używać następujących operatorów. Operatory równy priorytet są zgrupowane razem i grup są wymienione w kolejności malejącej. Operatory jednoargumentowe skojarzyć z argument operacji po prawej stronie. Operatory dwuargumentowe równe pierwszeństwo skojarzyć argumentów od lewej do prawej.
+
+|Operator|Opis|
+|--------------|-----------------|
+|**ZDEFINIOWANE (** *makra* **)**|Tworzy wartość logiczną, aby uzyskać bieżący stan definicji *makra*.|
+|**ISTNIEJE (** *ścieżki* **)**|Tworzy wartość logiczną, istnieje w pliku, *ścieżki*.|
+|||
+|**\!**|Jednoargumentowy logiczne NOT.|
+|**~**|Jednoargumentowy jednostkowego dopełnienia.|
+|**-**|Negacja Jednoargumentowa.|
+|||
+|**&#42;**|Mnożenia.|
+|**/**|Dzielenie.|
+|**%**|Moduł (resztę).|
+|||
+|**+**|Dodatek.|
+|**-**|Odejmowanie.|
+|||
+|**\<\<**|Operatory przesunięcia w lewo.|
+|**>>**|Bitowe przesunięcia w prawo.|
+|||
+|**\<=**|Mniejsze niż lub równe.|
+|**>=**|Większe lub równe.|
+|**\<**|Mniejsze niż.|
+|**>**|Większe niż.|
+|||
+|**==**|Równości.|
+|**\!=**|Nierówności.|
+|||
+|**&**|Operatora bitowego AND.|
+|**^**|Bitowe XOR.|
+|**&#124;**|Bitowe OR.|
+|||
+|**&&**|Operatora logicznego AND.|
+|||
+|**&#124;&#124;**|Logiczne OR.|
+
 > [!NOTE]
->  Bitowy operator XOR (`^`) jest taka sama jak znak ucieczki i należy zastosować ucieczkę (jako `^^`) gdy jest używana w wyrażeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](../build/expressions-in-makefile-preprocessing.md)
+> Bitowy operator XOR (**^**) jest taka sama jak znak ucieczki. Ponadto należy użyć znaków ucieczki (jako **^^**) gdy jest używany w wyrażeniu.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](../build/expressions-in-makefile-preprocessing.md)

@@ -1,10 +1,6 @@
 ---
-title: fprintf —, _fprintf_l —, fwprintf —, _fwprintf_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,20 +35,16 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637306"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
-Drukowanie sformatowanych danych do strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+Drukowanie sformatowanych danych do strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,7 +75,7 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -99,35 +89,35 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fprintf —** zwraca liczba zapisanych bajtów. **fwprintf —** zwraca liczbę znaki dwubajtowe są zapisywane. Każda z tych funkcji zwraca wartość ujemną zamiast tego po wystąpieniu błędu w danych wyjściowych. Jeśli *strumienia* lub *format* jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**. Ciąg formatu nie jest zaznaczone występowanie prawidłowych znaków formatowania, ponieważ jest on przy użyciu **fprintf_s —** lub **fwprintf_s —**.
+**fprintf** zwraca liczba zapisanych bajtów. **fwprintf —** zwraca liczbę znaków dwubajtowych, zapisane. Każda z tych funkcji zwraca wartość ujemną zamiast tego po wystąpieniu błędu danych wyjściowych. Jeśli *strumienia* lub *format* jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**. Ciąg formatu, który nie jest zaznaczone dla prawidłowych znaków formatowania, ponieważ podczas korzystania **fprintf_s —** lub **fwprintf_s —**.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**fprintf —** formatuje i wyświetla serii znaków i wartościami danych wyjściowych *strumienia*. Każda funkcja *argument* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. Aby uzyskać **fprintf —**, *format* argument ma tej samej składni i użycia, które ma w **printf**.
+**fprintf** formatuje i drukuje serie znaków i wartości w danych wyjściowych *strumienia*. Każda funkcja *argument* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. Aby uzyskać **fprintf**, *format* argument ma tej samej składni i użycia, które ma w **printf**.
 
-**fwprintf —** jest wersja znaków dwubajtowych **fprintf —**; na liście **fwprintf —**, *format* jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **fprintf —** nie obsługuje obecnie dane wyjściowe do strumienia UNICODE.
+**fwprintf —** to wersja znaku dwubajtowego **fprintf**; w **fwprintf —**, *format* jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **fprintf** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika.
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ftprintf —**|**fprintf —**|**fprintf —**|**fwprintf**|
 |**_ftprintf_l —**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fprintf —**, **_fprintf_l —**|\<stdio.h>|
+|**fprintf**, **_fprintf_l —**|\<stdio.h>|
 |**fwprintf —**, **_fwprintf_l —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
@@ -171,7 +161,7 @@ this is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

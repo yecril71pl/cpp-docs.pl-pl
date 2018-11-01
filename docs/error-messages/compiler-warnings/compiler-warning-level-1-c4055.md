@@ -1,41 +1,31 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4052 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 1) C4052
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4055
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47d7d8891b589dc8205b0d799f88466c1e7d8a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601321"
 ---
-# <a name="compiler-warning-level-1-c4055"></a>Kompilator C4055 ostrzegawcze (poziom 1)
+# <a name="compiler-warning-level-1-c4055"></a>Kompilator ostrzeżenie (poziom 1) C4055
 
 > "*konwersji*": ze wskaźnika danych "*type1*"do wskaźnika funkcji"*type2*"
 
 ## <a name="remarks"></a>Uwagi
 
-**Wygasłe:** to ostrzeżenie nie jest generowany przez Visual Studio 2017 i nowszych wersjach.
+**Wygasłe:** to ostrzeżenie nie jest generowany w programie Visual Studio 2017 i nowsze wersje.
 
-Wskaźnik danych jest rzutowane (prawdopodobnie nieprawidłowo) na wskaźnik funkcji. Jest to ostrzeżenia poziomu 1, w obszarze /Za i ostrzeżenie poziom 4 w obszarze /Ze.
+Wskaźnik danych jest (prawdopodobnie nieprawidłowo) rzutowany na wskaźnik funkcji. To jest ostrzeżenia poziomu 1, w obszarze/za włączonego ostrzeżenia poziomu 4 pod /Ze.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4055:
+Poniższy przykład spowoduje wygenerowanie C4055:
 
 ```C
 // C4055.c
@@ -47,7 +37,7 @@ PFUNC f() {
 }
 ```
 
-W obszarze /Ze to ostrzeżenie poziom 4.
+Pod /Ze to jest ostrzeżenie poziom 4.
 
 ```C
 // C4055b.c

@@ -1,31 +1,21 @@
 ---
-title: Wyjściowe pliki binarne | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Binarne pliki wyjściowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842355"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615649"
 ---
 # <a name="binary-output-files"></a>Binarne pliki wyjściowe
 
-Strumienie pierwotnie zostały zaprojektowane dla tekstu, więc tekst jest to domyślny tryb danych wyjściowych. W trybie tekstu znaku nowego wiersza (10 szesnastkowe) rozwijany do karetki return-wysuwu wiersza (tylko 16-bitowe). Rozszerzenie może spowodować problemy, jak pokazano poniżej:
+Strumienie pierwotnie zostały zaprojektowane dla tekstu, więc to domyślny tryb wyjściowy jest tekst. W trybie tekstowym znak nowego wiersza (szesnastkowa 10) rozszerza się na powrót karetki return-wysuwu wiersza (tylko 16-bitowy). Rozszerzenie może spowodować problemy, jak pokazano poniżej:
 
 ```cpp
 // binary_output_files.cpp
@@ -40,7 +30,7 @@ int main( )
 }
 ```
 
-Mogą wymagać tego programu do wyjściowego sekwencji bajtów {99, 0, 10, 0}; Zamiast tego należy go generuje {99, 0, 13, 10, 0}, która powoduje występowanie problemów programu oczekiwano binarne dane wejściowe. Jeśli konieczne true binarne dane wyjściowe, w którym są zapisywane znaków niezrozumiały, można określić formatu binarnego przy użyciu [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) Konstruktor openmode argumentu:
+Można by oczekiwać na dane wyjściowe sekwencja bajtów {99, 0, 10, 0}; tego programu Zamiast tego Wyświetla {99, 0, 13, 10, 0}, która powoduje występowanie problemów, w programie oczekiwano binarnego danych wejściowych. Jeśli potrzebujesz true binarne dane wyjściowe, w którym zapisywane są znaki nieprzetłumaczone, można określić binarne dane wyjściowe przy użyciu [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) argumentu openmode konstruktora:
 
 ```cpp
 // binary_output_files2.cpp

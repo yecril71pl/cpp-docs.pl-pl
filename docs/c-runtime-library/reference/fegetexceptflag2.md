@@ -1,11 +1,6 @@
 ---
-title: fegetexceptflag | Dokumenty Microsoft
-ms.custom: ''
+title: fegetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetexceptflag
 apilocation:
@@ -24,25 +19,19 @@ apitype: DLLExport
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baccf3f32381568472bd4d0d5f37d434ca789fc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8dc82f6ee054dc3d0f86055cb63da1fc63c79a8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605481"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
-Zapisuje bieżący stan flagi określony wyjątek zmiennoprzecinkowy.
+Zapisuje bieżący stan flagi określonego wyjątku zmiennoprzecinkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,35 +46,35 @@ int fegetexceptflag(
 ### <a name="parameters"></a>Parametry
 
 *pstatus*<br/>
-Wskaźnik do **fexcept_t** obiektu zawiera bieżące wartości flag wyjątek określonych przez *z wyjątkiem*.
+Wskaźnik do **fexcept_t** zawierają bieżących wartości flag wyjątków określonych przez obiekt *z wyjątkiem*.
 
 *z wyjątkiem*<br/>
-Flagi wyjątek zmiennoprzecinkowy, którego mają być przechowywane w *pstatus*.
+Flagi wyjątków zmiennoprzecinkowych, aby przechowywać w *pstatus*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia zwraca wartość 0. W przeciwnym razie zwraca wartość inną niż zero.
+W przypadku powodzenia zwraca wartość 0. W przeciwnym razie zwraca wartość różna od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fegetexceptflag** funkcja przechowuje bieżący stan flagi stanu zmiennoprzecinkowych wyjątków, określony przez *z wyjątkiem* w **fexcept_t** obiekt wskazywany przez *pstatus*.  *pstatus* musi wskazywać prawidłowe **fexcept_t** obiektu lub kolejnych zachowanie jest niezdefiniowana. **Fegetexceptflag** funkcja obsługuje makrach wyjątków zdefiniowane w \<fenv.h >:
+**Fegetexceptflag** funkcja przechowuje bieżący stan flagi stanu wyjątków zmiennoprzecinkowych, które są określone przez *z wyjątkiem* w **fexcept_t** obiekt wskazywany przez *pstatus*.  *pstatus* musi wskazywać prawidłowy **fexcept_t** obiektu lub kolejnych zachowanie jest niezdefiniowane. **Fegetexceptflag** funkcja obsługuje te makra wyjątków, zdefiniowane w pliku \<fenv.h >:
 
 |Makra wyjątków|Opis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w wcześniej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
-|FE_INEXACT|Funkcja wymuszono zaokrąglona wyniku przechowywanego wcześniej operacji zmiennoprzecinkowej.|
-|FE_INVALID|Wystąpił błąd domeny w wcześniej operacji zmiennoprzecinkowej.|
-|FE_OVERFLOW|Wystąpił błąd zakresu; wcześniej wynik operacji zmiennoprzecinkowej jest zbyt duży, może być reprezentowana.|
-|FE_UNDERFLOW|Wynik operacji zmiennoprzecinkowej wcześniej był za mały na pełne precyzji; wartość została utworzona.|
-|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w starszej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
+|FE_INEXACT|Wymuszono funkcji round przechowywanych wynikiem wcześniejszych operacji zmiennoprzecinkowej.|
+|FE_INVALID|Wystąpił błąd domeny w starszej operacji zmiennoprzecinkowej.|
+|FE_OVERFLOW|Wystąpił błąd zakresu; wynik operacji zmiennoprzecinkowej wcześniej była zbyt duża, aby mogły być reprezentowane.|
+|FE_UNDERFLOW|Wcześniej wyniku operacji zmiennoprzecinkowej był za mały, aby mogły być reprezentowane w o pełnej dokładności; wartość została utworzona.|
+|FE_ALLEXCEPT|Bitowe OR wszystkich obsługiwane wyjątki zmiennoprzecinkowe.|
 
-*z wyjątkiem* argument może być równy zero, jednym z makr wyjątków dotyczących liczb zmiennoprzecinkowych obsługiwanych lub operatora testu koniunkcji lub dwóch lub więcej makr. Efekt dowolna inna wartość argumentu jest niezdefiniowany.
+*z wyjątkiem* argument może być zera, makra wyjątków dotyczących liczb zmiennoprzecinkowych obsługiwanych lub operatora testu koniunkcji lub dwóch lub więcej makra. Wpływ dowolna inna wartość argumentu jest niezdefiniowane.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**fegetexceptflag**|\<fenv.h>|\<cfenv>|
 

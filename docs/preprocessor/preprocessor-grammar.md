@@ -1,27 +1,17 @@
 ---
-title: Gramatyka preprocesora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Gramatyka preprocesora
 ms.date: 09/04/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614191"
 ---
 # <a name="preprocessor-grammar"></a>Gramatyka preprocesora
 
@@ -30,7 +20,7 @@ ms.locfileid: "43766119"
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identyfikator</em>**(** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **,** ... **,** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **)** *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekwencję cyfr***"** *filename* **"**<sub>zoptymalizowany pod kątem  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekwencję cyfr***"** *filename* **"**<sub>zoptymalizowany pod kątem</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identyfikator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *ciąg tokenu*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *ciąg tokenu*

@@ -1,27 +1,16 @@
 ---
-title: Atrybuty parametru (C++ COM) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Atrybuty parametru (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 160e71111a9080367390302a59c41a53580ffe0b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619638"
 ---
 # <a name="parameter-attributes"></a>Atrybuty parametru
 
@@ -39,9 +28,9 @@ Następujące atrybuty dotyczą parametry metody w klasie lub interfejsie.
 |[lcid](lcid.md)|Służy do przekazywania identyfikator ustawień regionalnych do funkcji.|
 |[length_is](length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|
 |[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
-|[Opcjonalne](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
+|[optional](optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|
 |[out](out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|
-|[Zakres](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
+|[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[ref](ref-cpp.md)|Określa odwołanie do wskaźnika.|
 |[retval](retval.md)|Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.|
 |[satype](satype.md)|Określa typ danych `SAFEARRAY` struktury.|

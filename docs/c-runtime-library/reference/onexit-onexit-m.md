@@ -1,10 +1,6 @@
 ---
-title: _onexit —, _onexit_m — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609611"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
-Rejestruje procedura ma być wywoływana w momencie zakończenia.
+Rejestruje procedury wywoływanej w momencie zakończenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,28 +54,28 @@ _onexit_t_m _onexit_m(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkcja*<br/>
-Wskaźnik do funkcję, która ma zostać wywołana w chwili zakończenia.
+*— Funkcja*<br/>
+Wskaźnik do funkcji ma być wywoływana przy wyjściu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_onexit —** zwraca wskaźnik do funkcji w przypadku powodzenia lub **NULL** Jeśli brakuje miejsca do przechowywania wskaźnik funkcji.
+**_onexit** zwraca wskaźnik do funkcji, jeśli kończy się pomyślnie lub **NULL** Jeśli nie ma już miejsca do przechowywania wskaźnik funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Onexit —** funkcji została przekazana adresu funkcji (*funkcja*) wywoływana, gdy program zakończy się normalnie. Kolejne wywołania **_onexit —** tworzenia rejestru funkcje, które są wykonywane w kolejności LIFO (ostatnie — w pierwszej — ruch wychodzący). Funkcje przekazany do **_onexit —** nie może mieć parametrów.
+**_Onexit** funkcji jest przekazywany adresu funkcji (*funkcja*) wywoływana, gdy program zakończy się normalnie. Kolejne wywołania **_onexit** tworzenia rejestru funkcji, które zostały wykonane w porządku LIFO (ostatni wejściu — pierwszy na wyjściu). Funkcje przekazane do **_onexit** nie przyjmuje parametrów.
 
-W przypadku gdy **_onexit —** jest wywołana z poziomu biblioteki DLL, procedury zarejestrowana w usłudze **_onexit —** Uruchom na bibliotekę DLL na zwalnianie po **DllMain** jest wywoływana z komunikat DLL_PROCESS_DETACH.
+W przypadku podczas **_onexit** jest wywoływana z w ramach biblioteki DLL, zarejestrowane przy użyciu procedury **_onexit** wykonywania dla biblioteki DLL przez zwalnianie po **DllMain** jest wywoływana z komunikat DLL_PROCESS_DETACH.
 
-**_onexit —** to rozszerzenie firmy Microsoft. Przenośności ANSI, użyj [atexit —](atexit.md). **_Onexit_m —** wersji funkcji jest przeznaczona do użytku w trybie mieszanym.
+**_onexit** jest rozszerzeniem firmy Microsoft. Przenośność kodowania ANSI, można użyć [atexit](atexit.md). **_Onexit_m** wersja tej funkcji jest przeznaczona do użytku w trybie mieszanym.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_onexit —**|\<stdlib.h>|
+|**_onexit**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,12 +1,6 @@
 ---
-title: Podstawowe pojęcia związane z używaniem wyjątków zarządzanych | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - try-catch exception handling, managed applications
 - __finally keyword, managed exceptions
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: cb94b262967723b9d0ed1c177c9ca7996b30f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588243"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 

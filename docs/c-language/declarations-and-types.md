@@ -1,28 +1,18 @@
 ---
-title: Deklaracje i typy | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Deklaracje i typy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - data types [C]
 - types [C]
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf8b67e7416d58be4f3816658a78d1d9133dec37
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2caf3022f5a1b23d50d994c3408cf4024c69ea2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057369"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607340"
 ---
 # <a name="declarations-and-types"></a>Deklaracje i typy
 

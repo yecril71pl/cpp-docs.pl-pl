@@ -1,28 +1,17 @@
 ---
-title: ciąg (C++ COM atrybut) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ciąg (C++ COM atrybut)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.string
-dev_langs:
-- C++
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f78b7af310ce619eaf595726e51775ba72e37479
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603193"
 ---
 # <a name="string-c"></a>string (C++)
 

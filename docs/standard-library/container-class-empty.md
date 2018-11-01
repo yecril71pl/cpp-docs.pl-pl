@@ -1,32 +1,22 @@
 ---
-title: Kontener Class::empty | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kontener Class::empty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa89020c701f58bc5553a0d1382682b76a9ee9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7bd8ee08c82b0f1b19f44b962e0944e6e76d82d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613641"
 ---
 # <a name="container-classempty"></a>Kontener Class::empty
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
-Zwraca **true** dla pustego kontrolowanej sekwencji.
+Zwraca **true** dla pustą kontrolowaną sekwencję.
 
 ## <a name="syntax"></a>Składnia
 

@@ -1,10 +1,6 @@
 ---
-title: Operator == (&lt;przykładowy kontener&gt;) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Operator == (&lt;przykładowy kontener&gt;)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std.==
 - std::==
@@ -12,28 +8,22 @@ f1_keywords:
 - std.operator==
 - std::operator==
 - ==
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator ==, containers
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 360c4f38b0c740d1c23b1fa9c0712eaf6657d495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c49c58bdc168385d421cf942735b7473de70925f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613502"
 ---
 # <a name="operator-ltsample-containergt"></a>Operator == (&lt;przykładowy kontener&gt;)
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Overloads `operator==` do porównywania dwóch obiektów klasy szablonu [kontenera](../standard-library/sample-container-class.md).
 

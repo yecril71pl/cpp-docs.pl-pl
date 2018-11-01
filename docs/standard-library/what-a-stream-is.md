@@ -1,34 +1,24 @@
 ---
-title: Czym jest strumień | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Czym jest strumień?
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], iostream programming
 - data [C++], reading
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47f56a3d717c2dc9cebb3df30739954e5f6bf9e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b8821861baed53880a00695204a4555994dccb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637089"
 ---
 # <a name="what-a-stream-is"></a>Czym jest strumień?
 
-Podobnie jak C C++ nie ma wbudowaną funkcję wejścia/wyjścia. Wszystkie Kompilatory języka C++, jednak być powiązany z systematyczne, zorientowany obiektowo pakiet we/wy, znany jako klasach iostream. Strumień jest głównym pojęciem klasach iostream. Obiekt stream można traktować jako plik inteligentne, który działa jako źródło i miejsce docelowe bajtów. Strumień właściwości są określane przez jego klasa i dostosowane operatorów wstawiania i wyodrębniania.
+Takich jak C C++ nie ma wbudowanych funkcji wejścia/wyjścia. Wszystkie Kompilatory języka C++, jednak dostarczane wraz z pakietem operacji We/Wy systematyczne, zorientowana obiektowo, znane jako klasach iostream. Strumień jest centralnej pojęcia klasach iostream. Obiekt strumienia można traktować jako plik inteligentnego, który działa jako źródło i miejsce docelowe bajtów. Strumień właściwości są określane przez jego klasy i niestandardowych operatorów wstawiania i wyodrębniania.
 
-Za pomocą sterowników urządzeń dysk systemu operacyjnego dotyczy klawiatury, ekranu, drukarki i porty komunikacyjne jako rozszerzonych plików. W klasach iostream interakcji z tych rozszerzonych plików. Wbudowane klasy obsługuje odczytywanie z oraz zapisywanie do pamięci ze składnią identyczna jak dysku we/wy, co ułatwia pochodzi z klasy strumieni.
+Za pomocą sterowników urządzeń system operacyjny dysku dotyczy klawiatury, ekran, drukarki i porty komunikacyjne jako pliki rozszerzonych. W klasach iostream wchodzić w interakcje z tymi plikami rozszerzonej. Wbudowane klasy zapewniają obsługę odczytywanie z oraz zapisywanie w pamięci przy użyciu składni identyczna jak dla dysku operacji We/Wy, która ułatwia pochodną klasy strumieni.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

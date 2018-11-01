@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C3772 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3772
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3772
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3772
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db40c71001e34cc24c19410006cd39f658718c14
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a72cb9ee5d1d839f6ca5d113c25795f83dab811
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595679"
 ---
 # <a name="compiler-error-c3772"></a>Błąd kompilatora C3772
 

@@ -1,10 +1,6 @@
 ---
-title: strtol —, wcstol —, _strtol_l —, _wcstol_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strtol, wcstol, _strtol_l, _wcstol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -43,20 +37,16 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70f854e9bb78932f5d9fc102c835476e6b52d68b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617467"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Konwertowanie ciągów na wartość całkowitą long.
+Konwertowanie ciągów na wartość całkowita.
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,45 +78,45 @@ long _wcstol_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Zerem ciąg do konwersji.
+Ciąg zakończony wartością null do konwersji.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowania.
+Wskaźnik znaku zatrzymującego skanowanie.
 
 *base*<br/>
-Podstawowy numer do użycia.
+Numer podstawowy do użycia.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtol —** zwraca wartość w ciągu *strSource*, z wyjątkiem gdy reprezentacja mogłoby spowodować przepełnienie, w takim przypadku go zwraca **long_max —** lub **LONG_ MIN**. **strtol —** zwraca wartość 0, jeśli konwersja nie jest możliwe. **wcstol —** zwraca wartości analogously do **strtol —**. Dla obu tych funkcji **errno** ustawiono **erange —** Jeśli wystąpi przepełnienie lub niedomiar.
+**strtol —** zwraca wartość reprezentowana w ciągu *strSource*, gdy ta reprezentacja spowodowałoby przepełnienie, z wyjątkiem przypadków, jego zwraca **LONG_MAX** lub **LONG_ MIN**. **strtol —** zwraca wartość 0, jeśli nie można wykonać konwersji. **wcstol —** zwraca wartości analogicznie do **strtol —**. Dla obu funkcji **errno** ustawiono **ERANGE** Jeśli występuje przepełnienie lub niedopełnienie.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów zwrotu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strtol —** funkcji konwertuje *strSource* do **długi**. **strtol —** przestaje czytać ciąg *strSource* pierwszego znaku nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub może być pierwszym znaku numerycznego większa niż lub równa *podstawowej*.
+**Strtol —** funkcji konwertuje *strSource* do **długie**. **strtol —** przestaje odczytywać ciąg *strSource* przy pierwszym znaku, nie może rozpoznać jako elementu liczby. Może to być kończący znak null lub pierwszy znak numeryczny, większa niż lub równa może być *podstawowy*.
 
-**wcstol —** jest wersja znaków dwubajtowych **strtol —**; *strSource* argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**wcstol —** to wersja znaku dwubajtowego **strtol —**; jej *strSource* argumentu jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstol —**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-Bieżące ustawienia regionalne **lc_numeric —** ustawienie kategorii określa rozpoznawania po znaku radix *strSource **;* uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez **_l** sufiks Użyj bieżących ustawień regionalnych; **_strtol_l —** i **_wcstol_l —** są takie same jak odpowiednie funkcje bez **_l** sufiks z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Bieżące ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource **;* Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez **_l** sufiksa używa bieżących ustawień regionalnych; **_strtol_l —** i **_wcstol_l —** są identyczne z odpowiednimi funkcjami bez **_l** sufiks z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie jest **NULL**, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość *strSource* są przechowywane w lokalizacji wskazywanej przez *endptr*.
+Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywany w lokalizacji wskazywanej przez *endptr*.
 
-**strtol —** oczekuje *strSource* wskaż ciąg następującą postać:
+**strtol —** oczekuje *strSource* do wskaże ciąg o następującej postaci:
 
-> [*odstępem*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
+> [*odstępu*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
 
-A *odstępem* może zawierać znaków miejsca i karty, które są ignorowane. *cyfr* są co najmniej jeden cyfr dziesiętnych; *litery* to jeden lub więcej litery "" do "z" (lub "A" do "Z").  Pierwszy znak należący do tego formularza zatrzymuje skanowania. Jeśli *podstawowej* jest od 2 do 36, zostanie użyty jako podstawa liczby. Jeśli *podstawowej* ma wartość 0, znaków ciągu wskazywana przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem 0 i nie jest znak "x" lub "X", ciąg jest interpretowany jako ósemkową liczby całkowitej. Jeśli pierwszym znakiem jest "0" i jest znak "x" lub "X", ciąg jest interpretowany jako szesnastkową liczby całkowitej. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętną liczbą całkowitą. Litery "" do "z" (lub "" do "Z") mają przypisane wartości 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowej* są dozwolone. Pierwszy znak poza zakresem podstawy zatrzymuje skanowania. Na przykład jeśli *podstawowej* wynosi 0 i pierwszy znak skanowane to "0", zakłada, że całkowitą ósemkowe i się od znaku "8" lub "9" spowoduje zatrzymanie skanowania.
+A *odstępu* może składać się ze znaków spacji lub tabulatora, które są ignorowane. *cyfr* są co najmniej jedna cyfra dziesiętna; *litery* są co najmniej liter "" do "z" (lub "A" do "Z").  Pierwszy znak, który nie mieści się tym formularzu zatrzymuje skanowanie. Jeśli *podstawowy* jest między 2 a 36, zostanie użyty jako podstawa numeru. Jeśli *podstawowy* ma wartość 0, początkowe znaki ciągu wskazywany przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugim znakiem nie jest,, x"lub,, X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszym znakiem jest "0", a drugim znakiem jest,, x"lub,, X", ciąg jest interpretowany jako szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest,, 1 "do,, 9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "" do "z" (lub "" – "Z") są przypisane wartości od 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowy* są dozwolone. Pierwszy znak spoza zakresu podstawy zatrzymuje skanowanie. Na przykład jeśli *podstawowy* wynosi 0 i pierwszy znak skanowany to "0", zakłada, że ósemkowa liczba całkowitej i znaku "8" lub "9" zatrzyma skanowanie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -140,7 +130,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [strtod —](strtod-strtod-l-wcstod-wcstod-l.md).
+Zobacz przykład [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
 ## <a name="see-also"></a>Zobacz także
 

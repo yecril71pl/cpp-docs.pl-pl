@@ -1,10 +1,6 @@
 ---
-title: COSH, coshf — coshl — | Dokumenty Microsoft
-ms.custom: ''
+title: COSH coshf —, coshl —
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,24 +22,18 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609537"
 ---
 # <a name="cosh-coshf-coshl"></a>COSH coshf —, coshl —
 
@@ -69,22 +59,22 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus hiperboliczny *x*.
+Cosinus hiperboliczny liczby *x*.
 
-Domyślnie, jeśli wynik jest za duża w **cosh**, **coshf —**, lub **coshl —** wywołać, funkcja zwraca **huge_val —** i ustawia **errno** do **erange —**.
+Domyślnie, jeśli wynik jest za duży w **cosh**, **coshf —**, lub **coshl —** wywołać, funkcja zwraca **HUGE_VAL** i ustawia **errno** do **ERANGE**.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **IND**|brak|**_DOMAIN —**|
-|*x* ≥ 7.104760e + 002|**NIEDOKŁADNY**+**PRZEPEŁNIENIEM**|**PRZEPEŁNIENIE**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
+|*x* ≥ 7.104760e + 002|**NIEDOKŁADNY**+**PRZEPEŁNIENIA**|**PRZEPEŁNIENIA**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cosh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **cosh** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cosh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **cosh** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**coshf —**, **cosl —**, **coshl —**|\<math.h>|\<cmath > lub \<math.h >|
 
@@ -92,7 +82,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [sinh sinhf —, sinhl —](sinh-sinhf-sinhl.md).
+Zobacz przykład w [sinh sinhf —, sinhl —](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Zobacz także
 

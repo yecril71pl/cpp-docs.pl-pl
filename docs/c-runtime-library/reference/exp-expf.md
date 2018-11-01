@@ -1,10 +1,6 @@
 ---
-title: EXP, expf —, expl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: exp, expf, expl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596758"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
-Oblicza wykładniczej.
+Oblicza wartość wykładniczą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,28 +64,28 @@ long double expl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Zmiennoprzecinkowe do wartości exponentiate podstawa logarytmu naturalnego *e* przez.
+Zmiennoprzecinkowa wartość exponentiate podstawa logarytmu naturalnego *e* przez.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Exp** zwracają wykładniczej wartość parametru zmiennoprzecinkowego *x*, jeśli to się powiedzie. Wynik jest *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. Przepełnienie, funkcja zwraca INF (nieskończoności) i niedopełnienie **exp** zwraca wartość 0.
+**Exp** funkcje zwracają wartość parametru zmiennoprzecinkowego *x*, jeśli to się powiedzie. Wynik jest *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. W przepełnieniu, funkcja zwraca INF (nieskończoność) i na niedopełnienie **exp** zwraca wartość 0.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|Quiet NaN granicach, nieokreślone|Brak|_DOMAIN|
+|Ciche NaN granicach, nieokreślone|Brak|_DOMAIN|
 |Infinity granicach|NIEPRAWIDŁOWY|_DOMAIN|
-|x ≥ 7.097827e+002|NIEDOKŁADNY + PRZEPEŁNIENIA|PRZEPEŁNIENIE|
-|X ≤ -7.083964e+002|NIEDOPEŁNIENIE NIEDOKŁADNYMI +|NIEDOPEŁNIENIE|
+|x ≥ 7.097827e+002|NIEDOKŁADNY + PRZEPEŁNIENIA|PRZEPEŁNIENIA|
+|X ≤ -7.083964e+002|+ NIEDOKŁADNY, NIEDOPEŁNIENIE|NIEDOPEŁNIENIE|
 
-**Exp** funkcja ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](set-sse2-enable.md) informacje i ograniczenia dotyczące używania implementacji SSE2.
+**Exp** funkcja ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](set-sse2-enable.md) informacje i ograniczenia dotyczące przy użyciu implementacji SSE2.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **exp** które trwają **float** lub **podwójnej długości** argumentu. W programie C **exp** zawsze przyjmuje i zwraca **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **exp** o **float** lub **typu long double** argumentu. W programie C **exp** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
+|Funkcja|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |--------------|---------------------|---|
 |**EXP**, **expf —**, **expl**|\<math.h>|\<cmath > lub \<math.h >|
 

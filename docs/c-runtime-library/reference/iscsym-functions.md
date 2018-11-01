@@ -1,10 +1,6 @@
 ---
-title: iscsym —, iscsymf —, __iscsym —, __iswcsym —, __iscsymf —, __iswcsymf —, _iscsym_l —, _iswcsym_l —, _iscsymf_l —, _iswcsymf_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswcsym_l
 - __iswcsym
@@ -50,8 +46,6 @@ f1_keywords:
 - ctype/__iswcsymf
 - ctype/__iswcsym_l
 - ctype/__iswcsymf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscsymf_l function
 - iswsym_l function
@@ -68,20 +62,16 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b1561e93fc19832607d304f3d087ab33b04040de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617866"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
-Określanie, czy całkowitą reprezentuje znak, który może być używany w identyfikatorze.
+Ustal, jeżeli liczba całkowita reprezentuje znak, który może być używany w identyfikatorze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -121,20 +111,20 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania. *c* powinien być z zakresu od 0 do 255 dla wersji znaki wąskie funkcji.
+Liczba całkowita to testowania. *c* musi należeć do zakresu 0-255 wąskiego znaku wersję funkcji.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zarówno **__iscsym —** i **__iswcsym —** zwrócić wartość niezerową, jeśli *c* litera, podkreślenie lub cyfr. Zarówno **__iscsymf —** i **__iswcsymf —** zwrócić wartość niezerową, jeśli *c* jest literą lub znakiem podkreślenia. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku. Wersje tych funkcji z **_l** sufiks są identyczne z tą różnicą, że używają one *ustawień regionalnych* przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Zarówno **__iscsym —** i **__iswcsym —** zwraca wartość różną od zera, jeśli *c* to litera, podkreślenie lub cyfra. Zarówno **__iscsymf —** i **__iswcsymf —** zwraca wartość różną od zera, jeśli *c* jest literą lub podkreśleniem. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego. Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one *ustawień regionalnych* przekazywane, zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Te procedury są definiowane jako makra, chyba że jest zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora. Gdy używasz wersji makro tych procedur, argumenty może przyjąć więcej niż raz. Należy zachować ostrożność, korzystając z wyrażeń, które ma efekty uboczne w liście argumentów.
+Te procedury są definiowane jako makra, chyba że _CTYPE_DISABLE_MACROS makro preprocesora jest zdefiniowana. Gdy używasz wersji — makro tych procedur, argumenty może zostać oceniony w więcej niż jeden raz. Należy zachować ostrożność, korzystając z wyrażenia, które mają skutki uboczne w liście argumentów.
 
-W celu zapewnienia zgodności z poprzednimi wersjami **iscsym —** i **iscsymf —** są zdefiniowane jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie zostały zdefiniowane.
+W celu zapewnienia zgodności z poprzednimi wersjami **iscsym —** i **iscsymf —** są określone jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0. w przeciwnym razie są niezdefiniowane.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -142,7 +132,7 @@ W celu zapewnienia zgodności z poprzednimi wersjami **iscsym —** i **iscsymf 
 |-------------|---------------------|
 |**iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__iswcsymf —**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, **_iswcsymf_l —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 
-**Iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__ iswcsymf**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, i **_iswcsymf_l —** są procedury Określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**Iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__ iswcsymf**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, i **_iswcsymf_l —** procedur Specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

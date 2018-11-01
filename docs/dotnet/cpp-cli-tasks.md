@@ -1,24 +1,13 @@
 ---
-title: C + +/ interfejsu wiersza polecenia zadania | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Zadania C++/CLI
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 5851b113-91f9-4062-9427-c0669f333636
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f39c38f121c780829910398b0ca7989e47e06185
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a3cd7ef99511c3ad2dc6e14d0d5374a86ab3a85f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645111"
 ---
 # <a name="ccli-tasks"></a>Zadania C++/CLI
 

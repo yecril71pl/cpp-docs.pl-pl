@@ -1,31 +1,21 @@
 ---
-title: '&lt;iosfwd&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iosfwd&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iosfwd>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7e4d382250a559a3c597c008a3b6a285b3842ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b259a0c2eaf816effaf72104e4cdf344a43c71c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619313"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Deklaruje odwołania w przód do kilku klas szablonów używanych w całym iostream. Takie klas szablonów są definiowane w innych standardowych nagłówków. Możesz dołączyć ten nagłówek jawnie tylko wtedy, gdy potrzebujesz jednego z jego deklaracji, ale nie jego definicji.
+Deklaruje odwołania w przód na kilka klas szablonów używane w całym iostream. Takie klasy szablonów są definiowane w innych standardowych nagłówków. Możesz uwzględnić tego pliku nagłówkowego jawnie tylko wtedy, gdy potrzebujesz jednego z jego deklaracji, ale nie jego definicji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,7 +63,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Deklaracje do przodu/szablonu klasy
+## <a name="forward-declarationstemplate-classes"></a>Do przodu deklaracje/szablonu klasy
 
 ```cpp
 template <class _Statetype>

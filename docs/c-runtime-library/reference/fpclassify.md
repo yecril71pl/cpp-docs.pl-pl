@@ -1,8 +1,6 @@
 ---
-title: fpclassify — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fpclassify —
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,20 +22,16 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398435"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613879"
 ---
 # <a name="fpclassify"></a>fpclassify —
 
-Zwraca zmiennoprzecinkowe klasyfikacji argumentu.
+Zwraca wartość zmiennoprzecinkową klasyfikacji argumentu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,27 +61,27 @@ Wartość zmiennoprzecinkowa do testowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fpclassify —** zwraca wartość wskazującą zmiennoprzecinkowe klasy argumentu *x*. W tej tabeli przedstawiono możliwe wartości zwracane przez **fpclassify —** zdefiniowanej w \<math.h >.
+**fpclassify —** zwraca wartość całkowitą, która wskazuje klasę zmiennoprzecinkową argumentu *x*. W poniższej tabeli przedstawiono możliwe wartości zwracane przez **fpclassify —** zdefiniowaną w \<math.h >.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|**FP_NAN**|Cichy, sygnalizowania lub nieokreślony NaN|
-|**FP_INFINITE**|Infinity dodatnie lub ujemne|
-|**FP_NORMAL**|Dodatnie lub ujemne niezerową wartość znormalizowaną|
-|**FP_SUBNORMAL**|Nieznormalizowana wartość dodatnią lub ujemną|
+|**FP_NAN**|Cichy, sygnalizowanie lub nieokreślony NaN|
+|**FP_INFINITE**|Nieskończoność dodatnia lub ujemna|
+|**FP_NORMAL**|Dodatnie lub ujemne różna od zera wartość znormalizowaną|
+|**FP_SUBNORMAL**|Nieznormalizowana wartość dodatnia lub ujemna|
 |**FP_ZERO**|Dodatnią lub ujemną wartość zero|
 
 ## <a name="remarks"></a>Uwagi
 
-W języku C **fpclassify —** jest makrem; w języku C++ **fpclassify —** jest przeciążony przy użyciu typów argumentu funkcji **float**, **podwójne**, lub **długi** **podwójne**. W obu przypadkach wartość zwracana zależy od wprowadzenia typu wyrażenia argumentu, a nie na dowolnym reprezentacji pośredniej. Na przykład zwykłym **podwójne** lub **długi** **podwójne** wartość może stać się nieskończoności, Brak reprezentacji zmiennoprzecinkowej lub zero wartości po konwersji na **float**.
+W języku C **fpclassify —** jest makrem; w języku C++, **fpclassify —** jest przeciążona, przy użyciu typów argumentu funkcji **float**, **double**, lub **długie** **double**. W obu przypadkach na efektywne typ wyrażenia argumentu, a nie na dowolnym reprezentacji pośredniej zależy od wartości zwracanej. Na przykład, jako normalny **double** lub **długie** **double** wartość może stać się nieskończoność, zdenormalizowany lub zero wartości podczas konwersji na **float**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja/makra|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Funkcja / — makro|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<Math.h > lub \<cmath >|
 
-**Fpclassify —** makro i **fpclassify —** funkcje odpowiadają ISO C99 i C ++ 11 specyfikacji. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**Fpclassify —** — makro i **fpclassify —** funkcje są zgodne z ISO C99 i C ++ 11 specyfikacji. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

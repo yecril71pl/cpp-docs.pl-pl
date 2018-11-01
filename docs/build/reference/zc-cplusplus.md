@@ -1,64 +1,54 @@
 ---
-title: /Zc:__cplusplus (Włącz zaktualizowane __cplusplus — makro)
-ms.custom: ''
+title: Użyciem (Włącz makra __cplusplus zaktualizowane)
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:__cplusplus
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a796794c0086b09c15ee88442e0fea4d1b114d98
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623993"
 ---
-# <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc:__cplusplus (Włącz zaktualizowane __cplusplus — makro)
+# <a name="zccplusplus-enable-updated-cplusplus-macro"></a>Użyciem (Włącz makra __cplusplus zaktualizowane)
 
-**/Zc:__cplusplus** włącza opcję kompilatora  **\_ \_cplusplus** makro preprocesora do zgłaszania zaktualizowanej wartości dla ostatnich obsługę standardów języka C++. Domyślnie program Visual Studio zawsze zwraca wartość "199711L"  **\_ \_cplusplus** makro preprocesora.
+**Użyciem** włącza opcję kompilatora  **\_ \_cplusplus** makro preprocesora Aby zgłosić zaktualizowaną wartość dla ostatnich Obsługa standardów języka C++. Domyślnie program Visual Studio zawsze zwraca wartość "199711L"  **\_ \_cplusplus** makro preprocesora.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:__cplusplus**[**-**]
+> **Użyciem**[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
-**\_ \_Cplusplus** makro preprocesora jest najczęściej używany do obsługi raportów dla konkretnej wersji C++ standard. Ponieważ wiele istniejący kod wydaje się zależą od wartości to makro dopasowania "199711L", kompilator nie powoduje zmiany wartości makra, chyba że użytkownik jawnie uczestnictwa w za pomocą **/Zc:__cplusplus** — opcja kompilatora. **/Zc:__cplusplus** opcja jest dostępna, począwszy od programu Visual Studio 2017 wersji 15.7 i jest domyślnie wyłączone. We wcześniejszych wersjach programu Visual Studio i domyślnie lub, jeśli **/Zc:__cplusplus-** jest określony, program Visual Studio zwraca wartość "199711 L" dla  **\_ \_cplusplus** Makro preprocesora. [/ Ograniczająca-](permissive-standards-conformance.md) nie obsługuje opcji **/Zc:__cplusplus**.
+**\_ \_Cplusplus** makro preprocesora jest najczęściej używany do obsługi raport dla konkretnej wersji C++ standard. Ponieważ wiele istniejący kod wydaje się zależą od wartości tego makra dopasowania "199711L", kompilator nie zmienia wartość makra, chyba że jawnie zgody przez klienta na przy użyciu **użyciem** — opcja kompilatora. **Użyciem** opcja jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.7 i jest domyślnie wyłączona. We wcześniejszych wersjach programu Visual Studio i domyślnie lub jeśli **/Zc:__cplusplus-** jest określony, program Visual Studio zwraca wartość "199711 L" dla  **\_ \_cplusplus** Makro preprocesora. [/ Permissive-](permissive-standards-conformance.md) opcji nie włącza **użyciem**.
 
-Gdy **/Zc:__cplusplus** opcja jest włączona, wartość zgłaszana przez  **\_ \_cplusplus** makro jest zależna od [/std](std-specify-language-standard-version.md) przełącznika wersji ustawienie. W tej tabeli przedstawiono możliwe wartości makra:
+Gdy **użyciem** opcja jest włączona, wartość zgłoszone przez  **\_ \_cplusplus** — makro jest zależna od [/STD](std-specify-language-standard-version.md) przełącznika wersji ustawienie. W poniższej tabeli przedstawiono możliwe wartości dla makra:
 
-|Przełącznik /Zc:__cplusplus|Przełącznik /STD:c++|__cplusplus — wartość|
+|Użyciem przełącznika|Przełącznik /STD:c++|__cplusplus wartość|
 |-|-|-|
-Zc:__cplusplus|/STD:c ++ 14 (ustawienie domyślne)|201402L
-Zc:__cplusplus|/STD:c ++ 17|201703L
-Zc:__cplusplus|/STD:c ++ najnowsze|201704L
-Zc:__cplusplus-(wyłączone)|Dowolna wartość|199711L
+Zc:__cplusplus|/ STD: c ++ 14 (domyślnie)|201402L
+Zc:__cplusplus|/ STD: c ++ 17|201703L
+Zc:__cplusplus|/ STD: c ++ najnowsze|201704L
+Zc:__cplusplus-(wyłączony)|Dowolna wartość|199711L
 Nie określono|Dowolna wartość|199711L
 
-Kompilator nie obsługuje przełączników standardów języka C ++ 98, C ++ 03 lub C ++ 11.
+Kompilator nie obsługuje przełączników standardów C ++ 98, C ++ 03 lub C ++ 11.
 
-Precyzyjny system wykrywania zmian do zestawu narzędzi kompilatora, użyj [elemencie _MSC_VER](../../preprocessor/predefined-macros.md) wstępnie zdefiniowanego makra. Wartość to wbudowane makro jest zwiększany dla każdej aktualizacji narzędzi programu Visual Studio 2017 i nowszych wersjach. [_MSVC_LANG](../../preprocessor/predefined-macros.md) wstępnie zdefiniowanego makra raporty standardowe wersji czy **/Zc:__cplusplus** opcja jest włączona lub wyłączona. Gdy **/Zc:__cplusplus** jest włączona, `__cplusplus == _MSVC_LANG`.
+Bardziej szczegółowej wykrycia zmiany zestawu narzędzi kompilatora, można użyć [_MSC_VER](../../preprocessor/predefined-macros.md) wstępnie zdefiniowane makro. Wartość tego makra wbudowane są zwiększane dla każdej aktualizacji zestawu narzędzi w programie Visual Studio 2017 i nowszych wersjach. [_MSVC_LANG](../../preprocessor/predefined-macros.md) czy raporty wstępnie zdefiniowane makro standardowej wersji **użyciem** opcja jest włączona lub wyłączona. Gdy **użyciem** jest włączona, `__cplusplus == _MSVC_LANG`.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Dodaj **/Zc:__cplusplus** lub **/Zc:__cplusplus-** do **dodatkowe opcje:** okienka.
+1. Dodaj **użyciem** lub **/Zc:__cplusplus-** do **dodatkowe opcje:** okienka.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [/Zc (Zgodność)](zc-conformance.md)
-- [/STD (Określanie języka standardowej wersji)](std-specify-language-standard-version.md)
+- [/ STD (Określ wersję standardu języka)](std-specify-language-standard-version.md)
 - [Wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md)

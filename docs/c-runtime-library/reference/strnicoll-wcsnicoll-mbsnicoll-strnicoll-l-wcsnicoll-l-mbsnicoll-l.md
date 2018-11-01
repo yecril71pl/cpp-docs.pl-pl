@@ -1,10 +1,6 @@
 ---
-title: _strnicoll —, _wcsnicoll —, _mbsnicoll —, _strnicoll_l —, _wcsnicoll_l —, _mbsnicoll_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbsnicoll
 - strinicoll
 - _tcsncicoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - ftcsncicoll function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f8592f40dda312f138351526509b69eadf9647c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606040"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
-Porównanie ciągów za pomocą informacje specyficzne dla ustawień regionalnych.
+Porównuje ciągi przy użyciu informacji specyficznych dla ustawień regionalnych.
 
 > [!IMPORTANT]
-> **_mbsnicoll —** i **_mbsnicoll_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicoll —** i **_mbsnicoll_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -135,25 +125,25 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość wskazującą relacji podciągów *ciąg1* i *ciąg2*, wykonując następujące czynności.
+Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1* i *ciąg2*, wykonując następujące czynności.
 
 |Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
 |< 0|*ciąg1* mniej niż *ciąg2*|
-|0|*ciąg1* taki sam jak *ciąg2*|
-|> 0|*ciąg1* większe *ciąg2*|
+|0|*ciąg1* taka sama jak *ciąg2*|
+|> 0|*ciąg1* większa *ciąg2*|
 
-Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, obejmują typu STRING. H lub MBSTRING. H. **_wcsnicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsnicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsnicoll —** ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll —**.
+Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Dołącz albo ciąg. H lub MBSTRING. H. **_wcsnicoll —** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsnicoll —** mogą ustawiać **errno** do **EINVAL**. Aby sprawdzić, czy błąd w wywołaniu **_wcsnicoll —** ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll —**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wykonuje porównania bez uwzględniania wielkości liter pierwszego *liczba* znaków *ciąg1* i *ciąg2* zgodnie ze strony kodowej. Można używać tych funkcji, tylko wtedy, gdy istnieje następująca różnica między znak Ustaw kolejność i kolejność lexicographic znak w stronie kodowej i ta różnica polega na istotnych dla porównania ciągów. Wersje tych funkcji bez **_l** bieżącej strony ustawień regionalnych i kod używać sufiksu. Wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Każda z tych funkcji wykonuje porównania bez uwzględniania pierwszego *liczba* znaki w *ciąg1* i *ciąg2* zgodnie ze stroną kodową. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy znak zestawu kolejności i kolejnością znaków leksykograficznych w stronie kodowej, a różnica ta ma znaczenie dla porównania ciągu. Wersje tych funkcji, bez **_l** sufiksa używa bieżącej strony ustawień regionalnych i kodu. Wersje **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ciąg2* jest wskaźnika o wartości null, lub jeśli liczba jest większa niż **int_max —**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **einval —**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem wartości null lub jeżeli liczba jest większa niż **INT_MAX**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncicoll —**|**_strnicoll**|**_mbsnbicoll —**|**_wcsnicoll**|
 |**_tcsnicoll —**|**_strnicoll**|[_mbsnbicoll —](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|

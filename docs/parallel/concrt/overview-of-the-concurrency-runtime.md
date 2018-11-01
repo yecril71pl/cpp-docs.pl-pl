@@ -1,28 +1,18 @@
 ---
-title: Omówienie środowiska uruchomieniowego współbieżności | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Omówienie współbieżności środowiska wykonawczego
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b837a68c1887254cd6ace9546a9c5175d1ee08a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613671"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Omówienie współbieżności środowiska wykonawczego
 Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opisuje korzyści ze współbieżności środowiska wykonawczego, kiedy go używać, i sposobu jego składniki interakcji ze sobą oraz z systemu operacyjnego i aplikacji.

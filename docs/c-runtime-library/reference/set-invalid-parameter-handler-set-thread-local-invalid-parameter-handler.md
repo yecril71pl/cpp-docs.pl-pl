@@ -1,10 +1,6 @@
 ---
-title: _set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -25,28 +21,22 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4808367c94ec6c869c7f3bcafd2965a317553a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617038"
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler
 
-Ustawia funkcja wywoływana, gdy CRT wykrywa nieprawidłowy argument.
+Określa funkcję, która ma być wywoływana, gdy CRT wykrywa nieprawidłowy argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,19 +52,19 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 ### <a name="parameters"></a>Parametry
 
 *pNew*<br/>
-Wskaźnik funkcji do nowy program obsługi nieprawidłowych parametrów.
+Wskaźnik funkcji na nowy program obsługi nieprawidłowego parametru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do program obsługi nieprawidłowych parametrów przed wywołaniem.
+Wskaźnik do obsługi nieprawidłowego parametru, przed wywołaniem.
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele funkcji środowiska wykonawczego języka C sprawdzania poprawności Argumenty przekazane do nich. Jeśli podano nieprawidłowy argument zostanie przekazany, można ustawić funkcję **errno** numeru błędu lub zwracany kod błędu. W takich przypadkach program obsługi nieprawidłowych parametrów skrót. Środowisko uruchomieniowe C udostępnia domyślny globalny nieprawidłowy parametr program obsługi kończy program, który wyświetla komunikat o błędzie środowiska wykonawczego. Można użyć **_set_invalid_parameter_handler —** można ustawić jako program obsługi nieprawidłowych parametrów globalnych własnych funkcji. Środowisko uruchomieniowe C obsługuje również obsługi lokalnej wątku nieprawidłowy parametr. Jeśli parametr lokalnej wątku jest ustawiony program obsługi w wątku przy użyciu **_set_thread_local_invalid_parameter_handler**, funkcje środowiska wykonawczego języka C wywołać z wątku Użyj programu obsługi zamiast globalnego programu obsługi. Tylko jednej funkcji można określić jako program obsługi globalne nieprawidłowy argument w czasie. Można określić tylko jedną funkcję jako program obsługi nieprawidłowy argument lokalnej wątku na wątek, ale inne wątki mogą mieć różne obsługi lokalnej wątku. Dzięki temu można zmienić obsługi używane w jednej części kodu bez wpływu na zachowanie inne wątki.
+Wiele funkcji środowiska uruchomieniowego C sprawdzania poprawności argumentów przekazanych do nich. Nieprawidłowy argument jest przekazywany, funkcja ustawić **errno** numer błędu lub zwracają kod błędu. W takich przypadkach procedura obsługi nieprawidłowego parametru jest również nazywany. Środowisko wykonawcze C dostarcza domyślne globalne nieprawidłowy program obsługi parametrów kończy program, który wyświetla komunikat o błędzie w czasie wykonywania. Możesz użyć **_set_invalid_parameter_handler —** można ustawić własną funkcję jako globalne nieprawidłowy parametr uchwytu. Środowisko wykonawcze języka C obsługuje również program obsługi nieprawidłowego parametru lokalnej wątku. Jeśli program obsługi parametrów lokalnej wątku można ustawić w wątku za pomocą **_set_thread_local_invalid_parameter_handler**, funkcje środowiska uruchomieniowego języka C, wywoływana z wątku, użyj tej procedury obsługi zamiast globalnego programu obsługi. Tylko jednej funkcji — można określić jako procedura obsługi globalnej nieprawidłowy argument w danym momencie. Można określić tylko jednej funkcji — jako procedura obsługi nieprawidłowy argument lokalnej wątku na wątek, ale inne wątki mogą mieć różne obsługi lokalnej wątku. Dzięki temu można zmienić obsługi używane w jednej części kodu, bez wywierania wpływu na działanie innych wątków.
 
-Gdy środowiska uruchomieniowego wywołuje funkcję nieprawidłowy parametr, zwykle oznacza to, że wystąpił nieodwracalny błąd. Funkcji obsługi nieprawidłowy parametr, który podasz należy zapisywać żadnych danych może, a następnie przerwania. Nie powinien zwracać sterowania funkcji main Jeśli nie ma pewności, czy błąd jest możliwe do odzyskania.
+Gdy środowisko uruchomieniowe wywołuje funkcję nieprawidłowego parametru, zwykle oznacza to, że wystąpił nieodwracalny błąd. Funkcja obsługi nieprawidłowego parametru, dostraczone należy zapisać wszystkie dane, można, a następnie Przerwij. Go nie powinny zwracać kontroli do funkcji main, chyba że masz pewność, że błąd jest możliwy do odzyskania.
 
-Nieprawidłowy parametr funkcji obsługi musi mieć następujące prototypu:
+Funkcja obsługi nieprawidłowego parametru, musi mieć poniższy prototyp:
 
 ```C
 void _invalid_parameter(
@@ -86,7 +76,7 @@ void _invalid_parameter(
 );
 ```
 
-*Wyrażenie* argument to reprezentacja ciągu typu wide wyrażenie argumentu, który zgłoszony błąd. *Funkcja* argument jest nazwą funkcji CRT, który odebrał nieprawidłowy argument. *Pliku* argument jest nazwą pliku źródłowego CRT, która zawiera funkcję. *Wiersza* argument jest numer wiersza, w tym pliku. Ostatni argument jest zarezerwowana. Wszystkie parametry mają wartość **NULL** chyba że używana jest wersja biblioteki CRT do debugowania.
+*Wyrażenie* argument jest szeroki ciąg reprezentujący wyrażenie argumentu, który spowodował błąd. *Funkcja* argument jest nazwą funkcji CRT, który otrzymał nieprawidłowy argument. *Pliku* argument jest nazwą pliku źródłowego CRT, która zawiera funkcję. *Wiersza* argument jest numer wiersza, w tym pliku. Ostatni argument jest zarezerwowana. Wszystkie parametry mają wartość **NULL** chyba że używana jest wersja do debugowania biblioteki CRT.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -94,11 +84,11 @@ void _invalid_parameter(
 |-------------|---------------------|
 |**_set_invalid_parameter_handler —**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib — > lub \<stdlib.h >|
 
-**_Set_invalid_parameter_handler —** i **_set_thread_local_invalid_parameter_handler** funkcje są określone firmy Microsoft. Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**_Set_invalid_parameter_handler —** i **_set_thread_local_invalid_parameter_handler** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie program obsługi nieprawidłowych parametrów błąd służy do drukowania funkcji, które odebrano nieprawidłowy parametr i plików i wierszy w CRT źródeł. W przypadku bibliotek debugowania CRT nieprawidłowy parametr błędy też wiązać się z potwierdzeniem, która jest wyłączona w tym przykładzie przy użyciu [_crtsetreportmode —](crtsetreportmode.md).
+W poniższym przykładzie procedura obsługi nieprawidłowego parametru błędów służy do drukowania funkcji, który otrzymał nieprawidłowy parametr i pliku i wierszu w źródłach CRT. Gdy jest używana biblioteka debugowania CRT, nieprawidłowy parametr błędy też wiązać się z potwierdzenie, która jest wyłączona w tym przykładzie, korzystając [_CrtSetReportMode](crtsetreportmode.md).
 
 ```C
 // crt_set_invalid_parameter_handler.c

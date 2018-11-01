@@ -1,31 +1,21 @@
 ---
-title: '&lt;unordered_map —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;unordered_map&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <unordered_map>
-dev_langs:
-- C++
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cfcac3a629e048d12d39bd5008c9e2b1e286c76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627503"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
-Określa kontener klasy szablonu [unordered_map](../standard-library/unordered-map-class.md) i [unordered_multimap](../standard-library/unordered-multimap-class.md) i ich obsługi szablonów.
+Definiuje klasy szablonów kontenera [unordered_map](../standard-library/unordered-map-class.md) i [unordered_multimap](../standard-library/unordered-multimap-class.md) i ich szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,19 +27,19 @@ Określa kontener klasy szablonu [unordered_map](../standard-library/unordered-m
 
 |Class|Opis|
 |-|-|
-|[unordered_map, klasa](../standard-library/unordered-map-class.md)|Magazyny tablicy skrótów par {klucza, mapowane}.|
-|[unordered_multimap, klasa](../standard-library/unordered-multimap-class.md)|Magazyny tablicy skrótów par {klucza, mapowane}.|
+|[unordered_map, klasa](../standard-library/unordered-map-class.md)|Tabeli mieszania magazyny par {klucza, zamapowanego}.|
+|[unordered_multimap, klasa](../standard-library/unordered-multimap-class.md)|Tabeli mieszania magazyny par {klucza, zamapowanego}.|
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testy, jeśli obiekt unordered_map po lewej stronie operatora nie jest taki sam jak obiekt unordered_map po prawej stronie.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testy, jeśli obiekt unordered_map po lewej stronie operatora jest taki sam jak obiekt unordered_map po prawej stronie.|
-|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwie mapy.|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testy, jeśli obiekt unordered_multimap po lewej stronie operatora nie jest taki sam jak obiekt unordered_multimap po prawej stronie.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testy, jeśli obiekt unordered_multimap po lewej stronie operatora jest taki sam jak obiekt unordered_multimap po prawej stronie.|
-|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia multimaps dwa.|
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Sprawdza, czy obiekt unordered_map po lewej stronie operatora nie jest równy obiektowi unordered_map po prawej stronie.|
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Sprawdza, czy obiekt unordered_map po lewej stronie operatora jest równy obiektowi unordered_map po prawej stronie.|
+|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwóch map.|
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Sprawdza, czy obiekt unordered_multimap po lewej stronie operatora nie jest równy obiektowi unordered_multimap po prawej stronie.|
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Sprawdza, czy obiekt unordered_multimap po lewej stronie operatora jest równy obiektowi unordered_multimap po prawej stronie.|
+|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwa multimaps.|
 
 ## <a name="see-also"></a>Zobacz także
 

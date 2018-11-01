@@ -1,10 +1,6 @@
 ---
-title: _getdrives — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getdrives
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrives
 apilocation:
@@ -23,30 +19,24 @@ apitype: DLLExport
 f1_keywords:
 - getdrives
 - _getdrives
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getdrives function
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec2834e9f755a8039326ea6fb193c4bc591355ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34b03e307a9c619fab077973e4cc0a4c644de6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597265"
 ---
 # <a name="getdrives"></a>_getdrives
 
-Zwraca maską bitów reprezentuje aktualnie dostępnych dysków.
+Zwraca wartość maski bitów, który reprezentuje aktualnie dostępnych dysków.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,7 +46,7 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja zakończy się powodzeniem, zwracana wartość jest maską bitów reprezentuje aktualnie dostępnych dysków. Pozycja bitu 0 (najmniej znaczącego bitu) to dysk A, pozycja bitu 1 jest dysk B, pozycja bitu 2 jest dysk C i tak dalej. Jeśli funkcja nie powiedzie się, zwracana wartość wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać **GetLastError**.
+Jeśli funkcja się powiedzie, wartość zwracana jest maską bitów, który reprezentuje aktualnie dostępnych dysków. Pozycja bitu 0 (najmniej znaczący bit) Określa dysk, A, bit pozycja 1 jest dysk B, pozycja bitu 2 jest dysk C i tak dalej. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać **GetLastError**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +54,7 @@ Jeśli funkcja zakończy się powodzeniem, zwracana wartość jest maską bitów
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

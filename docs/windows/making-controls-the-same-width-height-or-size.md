@@ -1,27 +1,16 @@
 ---
-title: Tworzenie formantów o tej samej szerokości, wysokości lub rozmiar | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Tworzenie formantów o tej samej szerokości, wysokości lub o tym samym rozmiarze
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Make Same Size command
 - controls [C++], sizing
 ms.assetid: 94b50613-67e2-497b-a2b6-6d98dccfd345
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fe7831c12a9ea68525334a55aec5a1fa2ecb847d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1c0b51e7f870c60e3186242005cfa985d91aa870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619846"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Tworzenie formantów o tej samej szerokości, wysokości lub o tym samym rozmiarze
 

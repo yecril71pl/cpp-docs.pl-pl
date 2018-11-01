@@ -1,48 +1,38 @@
 ---
-title: Bezpieczeństwo wątku w standardowej bibliotece C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Bezpieczeństwo wątku w standardowej bibliotece C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc39fd944c035c0e8dfa5f5b66cc045a115185ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27ac930e567521b12dfc35e2f8c4c389c35ae47d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607639"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Bezpieczeństwo wątku w standardowej bibliotece C++
 
-Mają zastosowanie następujące reguły bezpieczeństwa wątków wszystkie klasy w standardowej bibliotece C++ — dotyczy to również `shared_ptr`, zgodnie z poniższym opisem.  Czasami podano większą — na przykład standardowe iostream obiekty, zgodnie z poniższym opisem i typy przeznaczony specjalnie dla wielowątkowości, jak w [ \<atomic >](../standard-library/atomic.md).
+Następujące zasady bezpieczeństwa wątku zastosowanie do wszystkich klas w standardowej biblioteki języka C++ — dotyczy to również `shared_ptr`, zgodnie z poniższym opisem.  Czasami znajdują się lepsze gwarancje — na przykład standardowy iostream obiekty, zgodnie z poniższym opisem i typy przeznaczony specjalnie dla wielowątkowości, takich jak te w [ \<atomic >](../standard-library/atomic.md).
 
-Obiekt jest bezpieczne wątkowo odczytu z wielu wątków. Na przykład mając obiektu A, jest bezpieczne odczytać A z wątku 1 i 2 wątków jednocześnie.
+Obiekt jest bezpieczna dla wątków do odczytu z wielu wątków. Na przykład biorąc pod uwagę obiekt A, jest bezpieczne, A z wątku 1 i 2 wątków jednocześnie odczytać.
 
-Jeśli obiekt jest zapisywana przez jeden wątek, następnie wszystkich operacji odczytu i zapisu do tego obiektu na tym samym lub inne wątki muszą być chronione. Przykładowo podana obiektu A, jeśli wątek 1 zapisuje A, następnie wątku 2 należy uniemożliwić odczyt lub zapis do serwera A.
+Jeśli obiekt jest zapisywany w jednego wątku, następnie wszystkich operacji odczytu i zapisu do tego obiektu w tym samym lub inne wątki, które muszą być chronione. Na przykład biorąc pod uwagę obiekt A, jeśli wątek 1 zapisuje element, następnie wątek 2 należy uniemożliwić odczytu / zapisu do serwera A.
 
-Jest to bezpieczne odczytu i zapisu w jedno wystąpienie typu, nawet jeśli inny wątek jest odczytu lub zapisu do innego wystąpienia tego samego typu. Przykładowo podana obiektów, A i B tego samego typu, jest bezpieczne podczas zapisywania w wątku 1 A i B odczytu w wątku 2.
+Jest bezpieczne do odczytu i zapisu do pojedynczego wystąpienia typu, nawet jeśli inny wątek jest odczyt lub zapis do innego wystąpienia tego samego typu. Na przykład biorąc pod uwagę obiektów, A i B tego samego typu, jest bezpieczne podczas zapisywany w wątku 1 A i B jest odczytywany w wątku 2.
 
 ## <a name="sharedptr"></a>shared_ptr
 
-Wiele wątków można jednocześnie odczytu i zapisu różnych [shared_ptr](../standard-library/shared-ptr-class.md) obiektów, nawet wtedy, gdy obiekty są kopie, które mają prawo własności.
+Wiele wątków jednocześnie może odczytywać i zapisywać różne [shared_ptr](../standard-library/shared-ptr-class.md) obiektów, nawet wtedy, gdy obiekty są kopiami, które dzielą prawo własności.
 
 ## <a name="iostream"></a>iostream
 
-Obiekty standardowe iostream `cin`, `cout`, `cerr`, `clog`, `wcin`, `wcout`, `wcerr`, i `wclog` są zgodne z regułami innych klas, z tym wyjątkiem: bezpiecznie zapis do obiektu z wielu wątków. Na przykład może zapisać wątku 1 [cout](../standard-library/iostream.md#cout) w tym samym czasie jako wątku 2. Jednak może to spowodować dane wyjściowe z dwoma wątkami na się zmieszać.
+Obiekty standardowa iostream `cin`, `cout`, `cerr`, `clog`, `wcin`, `wcout`, `wcerr`, i `wclog` wykonaj te same reguły jako inne klasy, z tym wyjątkiem: jest bezpieczne Napisz do obiektu z wielu wątków. Na przykład, można zapisać wątku 1 [cout](../standard-library/iostream.md#cout) w tym samym czasie jako wątek 2. Jednak może to spowodować dane wyjściowe z dwoma wątkami na się zmieszać.
 
 > [!NOTE]
-> Odczytywanie z buforu strumienia nie jest uważany za operacji odczytu. Zamiast tego jest on uznawany za można operacji zapisu, ponieważ stan klasy zostanie zmieniona.
+> Odczyt z buforu strumienia nie jest uważane za operacje odczytu. Zamiast tego jest on uznawany za być operacji zapisu, ponieważ stan klasy zmienił się.
 
 ## <a name="see-also"></a>Zobacz także
 

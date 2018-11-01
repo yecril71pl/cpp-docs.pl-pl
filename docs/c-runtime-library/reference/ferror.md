@@ -1,10 +1,6 @@
 ---
-title: ferror — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587892"
 ---
 # <a name="ferror"></a>ferror
 
-Testy wystąpił błąd w strumieniu.
+Testuje pod kątem wystąpienia błędu w strumieniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,18 +44,18 @@ int ferror(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli błąd nie wystąpił na *strumienia*, **ferror —** zwraca wartość 0. W przeciwnym wypadku zwraca wartość różną od zera. W przypadku strumienia **NULL**, **ferror —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca wartość 0.
+Jeśli żaden błąd nie wystąpił na *strumienia*, **ferror** zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera. Jeśli wartość strumienia wynosi **NULL**, **ferror** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ferror —** procedura (zaimplementowano funkcji oraz w makrze) testów dla odczytu lub zapisu błędu w pliku skojarzone z *strumienia*. Jeśli wystąpi błąd, wskaźnik błędów dla strumienia pozostaje Ustaw dopóki strumień jest zamknięty lub przewinięta lub do czasu **clearerr —** nazywa się przed nim.
+**Ferror** procedura (implementowana jako funkcja i jak makra) testy na potrzeby odczytywania lub zapisywania błąd w pliku skojarzone z *strumienia*. Jeśli wystąpi błąd, pozostaje Ustaw wskaźnik błędu dla strumienia, dopóki strumień zostanie zamknięty lub przewinięta lub do momentu **clearerr —** nazywa się przed nim.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -77,12 +67,12 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [feof —](feof.md).
+Zobacz przykład [feof](feof.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>

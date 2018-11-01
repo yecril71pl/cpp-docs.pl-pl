@@ -1,31 +1,21 @@
 ---
-title: Ostrzeżenie | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ostrzeżenie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631728"
 ---
 # <a name="warning-pragma"></a>Ostrzeżenie Pragma
 Umożliwia selektywne modyfikacji zachowania wiadomości ostrzeżeń kompilatora.

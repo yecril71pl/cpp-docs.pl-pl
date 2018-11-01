@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450882"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628374"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
-Zapis sformatowane wyniki za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, w którym są używane argumentów.
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów, za pomocą możliwość określenia kolejność, w której argumenty są używane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -95,7 +85,7 @@ int _vswprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla danych wyjściowych.
+Lokalizacja magazynowa danych wyjściowych.
 
 *sizeInBytes*<br/>
 Rozmiar *buforu* w znakach.
@@ -104,7 +94,7 @@ Rozmiar *buforu* w znakach.
 Maksymalna liczba znaków do przechowywania w wersji UNICODE tej funkcji.
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -114,21 +104,21 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_vsprintf_p —** i **_vswprintf_p —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia.
+**_vsprintf_p —** i **_vswprintf_p —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów i sformatowanie i zapisuje podane dane pamięci wskazywanej przez *buforu*.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do pamięci wskazywany przez *buforu*.
 
-Funkcje te różnią się od **vsprintf_s —** i **vswprintf_s —** tylko w tym obsługują parametrów pozycyjnych. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Funkcje te różnią się od **vsprintf_s —** i **vswprintf_s —** tylko dlatego, że obsługują one parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
-Jeśli *buforu* lub *format* parametry są **NULL** wskaźniki, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe formatowanie znaków, nieprawidłowy parametr Program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* lub *format* parametry są **NULL** wskaźników, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe formatowanie znaków, nieprawidłowy parametr Program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf_p —**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
 |**_vstprintf_p_l —**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
@@ -140,7 +130,7 @@ Jeśli *buforu* lub *format* parametry są **NULL** wskaźniki, jeśli liczba je
 |**_vsprintf_p —**, **_vsprintf_p_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**_vswprintf_p —**, **_vswprintf_p_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -195,7 +185,7 @@ This is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

@@ -1,25 +1,15 @@
 ---
-title: Sprawdzanie dla zastąpienia w pamięci | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Sprawdzanie nadpisywania pamięci
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 246f625e899016080662f27a5901962c1c62f1a8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ff900c7366a28d19d3b90cbd4a6d9ee732e4ce02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621562"
 ---
 # <a name="checking-for-memory-overwrites"></a>Sprawdzanie nadpisywania pamięci
 

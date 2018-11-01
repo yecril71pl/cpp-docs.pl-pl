@@ -1,29 +1,19 @@
 ---
-title: '&lt;ccomplex&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;ccomplex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ccomplex>
-dev_langs:
-- C++
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de5c67fc88da6fc4674b7dad67b5f74dcc3ce54d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0f8c31afac0608b4de66bd10602264666d39426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667938"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-Zawiera nagłówek standardowa biblioteka C++ [ \<złożonych >](../standard-library/complex.md), w tym skutecznie nagłówka biblioteki standardowe C \<complex.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej języka C++ [ \<złożonych >](../standard-library/complex.md), które efektywnie dołącza nagłówek biblioteki standardowej C \<complex.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +24,7 @@ Zawiera nagłówek standardowa biblioteka C++ [ \<złożonych >](../standard-lib
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 Nazwa `clog`, która jest zadeklarowana w \<complex.h >, nie jest zdefiniowany w `std` przestrzeni nazw z powodu potencjalnych konfliktów z `clog` zadeklarowanego w [ \<iostream >](../standard-library/iostream.md).
 

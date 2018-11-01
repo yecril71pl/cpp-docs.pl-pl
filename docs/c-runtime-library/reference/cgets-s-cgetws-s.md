@@ -1,10 +1,6 @@
 ---
-title: _cgets_s —, _cgetws_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588542"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
-Pobiera ciąg znaków z konsoli. Te wersje programu [_cgets — i _cgetws —](../../c-runtime-library/cgets-cgetws.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera ciąg znaków z konsoli. Te wersje [_cgets i _cgetws —](../../c-runtime-library/cgets-cgetws.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,33 +72,33 @@ errno_t _cgetws_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu danych.
+Lokalizacja magazynowa danych.
 
 *numberOfElements*<br/>
-Rozmiar buforu w znaki jednobajtowe lub szerokie, która jest również maksymalną liczbę znaków do odczytania.
+Rozmiar buforu znaków jednobajtowych lub szerokie, która jest również maksymalna liczba znaków do odczytania.
 
 *pSizeRead*<br/>
-Liczba znaków faktycznie odczytu.
+Liczba znaków rzeczywiście odczytu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana jest wartość zero w przypadku powodzenia; w przeciwnym razie kod błędu, jeśli wystąpi błąd.
+Wartość zwracana wynosi zero, jeśli to się powiedzie; w przeciwnym razie kod błędu, jeśli wystąpi błąd.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Zwraca|Zawartość *buforu*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Wróć|Zawartość *buforu*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|wszystkie|wszystkie|**EINVAL —**|n/d|
-|Nie **wartości NULL**|zero|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|Nie **wartości NULL**|wszystkie|**NULL**|**EINVAL —**|Ciąg o zerowej długości|
+|**NULL**|Wszystkie|Wszystkie|**EINVAL**|n/d|
+|Nie **o wartości NULL**|zero|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Nie **o wartości NULL**|Wszystkie|**NULL**|**EINVAL**|Ciąg o zerowej długości|
 
 ## <a name="remarks"></a>Uwagi
 
-**_cgets_s —** i **_cgetws_s —** odczytać ciągu z konsoli i skopiuj ciąg (z terminatorem null) do *buforu*. **_cgetws_s —** jest wersja znaków dwubajtowych w funkcji; innej niż rozmiar znaków zachowanie tych dwóch funkcji jest identyczne. Maksymalny rozmiar ciągu do odczytu jest przekazywany jako *numberOfElements* parametru. Ten rozmiar powinna zawierać nadmiarowe znaki do zakończenia wartości null. Rzeczywista liczba znaków do odczytu jest umieszczany w *pSizeRead*.
+**_cgets_s** i **_cgetws_s —** odczytują ciąg z konsoli i skopiuj ciąg (z terminatorem null) do *buforu*. **_cgetws_s —** to wersja znaku dwubajtowego funkcji; inne niż rozmiar znaków zachowanie te dwie funkcje są identyczne. Maksymalny rozmiar ciągu do odczytu jest przekazywany jako *numberOfElements* parametru. Ten rozmiar powinien zawierać dodatkowy znak dla zakończenia o wartości null. Rzeczywista liczba znaków czytanych jest umieszczany w *pSizeRead*.
 
-Jeśli wystąpi błąd podczas operacji lub podczas sprawdzania poprawności parametrów, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i **einval —** jest zwracany.
+Jeśli wystąpi błąd podczas operacji lub Sprawdzanie poprawności parametrów, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i **EINVAL** jest zwracana.
 
-W języku C++ użycia tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można wnioskować o długości buforu automatycznie, a tym samym wyeliminowanie konieczności określania argumentem rozmiaru i automatycznie można zastąpić starszą funkcji o niższym poziomie zabezpieczeń z ich odpowiedniki nowsze, bardziej bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia może wywnioskować długość buforu automatycznie, a tym samym, eliminując konieczność określenia argumentu rozmiaru, a te mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje z ich nowszymi, bardziej bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -123,7 +113,7 @@ W języku C++ użycia tych funkcji zostało uproszczone dzięki przeciążenia s
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

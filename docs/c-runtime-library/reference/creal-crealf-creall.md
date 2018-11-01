@@ -1,11 +1,6 @@
 ---
-title: creal crealf, creall | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: creal crealf, creall
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - creal
 - crealf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/creal
 - complex/crealf
 - complex/creall
-dev_langs:
-- C++
 helpviewer_keywords:
 - creal function
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b8d3ca02aeb0f3f9b12c8b82cbb27d9bd3ad3aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400863"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604311"
 ---
 # <a name="creal-crealf-creall"></a>creal crealf, creall
 
@@ -68,7 +57,7 @@ long double creal( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych.
+Liczbą.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -76,21 +65,21 @@ Część rzeczywista *z*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **creal** które trwają **_Fcomplex** lub **_Lcomplex** wartości i wróć **float** lub **podwójnej długości** wartości. W programie C **creal** zawsze ma **_Dcomplex** wartości i zwraca **podwójne** wartość.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **creal** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float** lub **typu long double** wartości. W programie C **creal** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
 
-**_Fcomplex**, **_Dcomplex**, i **_Lcomplex** typy są specyficzne dla firmy Microsoft odpowiedniki niezaimplementowana natywnych typów C99 **float _Complex** , **podwójne _Complex**, i **_Complex podwójnej długości**odpowiednio. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**_Fcomplex**, **_Dcomplex**, i **_Lcomplex** typy są specyficzne dla firmy Microsoft odpowiedników niezaimplementowana natywnych typów C99 **float _complex —** , **double _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
-[normy normf, norml](norm-normf-norml1.md)<br/>
+[norm normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

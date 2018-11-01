@@ -1,10 +1,6 @@
 ---
-title: funkcji memcmp, wmemcmp — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: memcmp, wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610476"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -69,21 +59,21 @@ Pierwszy buforu.
 Drugi buforu.
 
 *Liczba*<br/>
-Liczba znaków do porównania. (Porównanie bajtów **funkcji memcmp**, wielu znaków dla **wmemcmp —**).
+Liczba znaków do porównania. (Porównuje bajty dla **memcmp**, znaki dwubajtowe dla **wmemcmp —**).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartości zwracanej wskazuje relację między buforów.
+Wartość zwracana określa relację pomiędzy buforów.
 
-|Wartość zwracana|Relacja pierwszy *liczba* znaków buf1 i buf2|
+|Wartość zwracana|Relacja między pierwszym *liczba* znaków buf1 i buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* mniej niż *buffer2*|
-|0|*buffer1* taki sam jak *buffer2*|
-|> 0|*buffer1* większa niż *buffer2*|
+|0|*buffer1* taka sama jak *buffer2*|
+|> 0|*buffer1* większa *buffer2*|
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje pierwszy *liczba* znaków *buffer1* i *buffer2* i zwraca wartość wskazującą, ich relacji. Wartość jest znak różnicy między pierwszym pary różne wartości w buforów zwrotu logowania z systemem innym niż zero. Wartości są interpretowane jako **niepodpisane** **char** dla **funkcji memcmp**, a jako **wchar_t** dla **wmemcmp —**.
+Porównuje pierwszy *liczba* znaków *buffer1* i *buffer2* i zwraca wartość wskazującą, ich relacje. Znak różna od zera zwracana wartość jest znak różnica między pierwszej pary różne wartości w buforów. Wartości są interpretowane jako **niepodpisane** **char** dla **memcmp**i **wchar_t** dla **wmemcmp —**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -96,7 +86,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

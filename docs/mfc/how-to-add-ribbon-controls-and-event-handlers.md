@@ -1,26 +1,16 @@
 ---
-title: 'Porady: Dodawanie kontrolek wstążki do programów obsługi zdarzeń | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Porady: dodawanie formantów wstążki do programów obsługi zdarzeń'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3c4af695553bc97815915454bda2aae481543e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f5b85fad181dba147c2135784d237bccdceb422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637999"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Porady: dodawanie formantów wstążki do programów obsługi zdarzeń
 

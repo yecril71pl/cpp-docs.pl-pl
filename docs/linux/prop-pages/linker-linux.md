@@ -1,23 +1,13 @@
 ---
-title: Właściwości konsolidatora (C++ systemu Linux) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Właściwości konsolidatora (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333108"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580677"
 ---
 # <a name="linker-properties-linux-c"></a>Właściwości konsolidatora (Linux C++)
 
@@ -29,33 +19,33 @@ Plik wyjściowy | Opcja przesłania domyślną nazwę i lokalizację programu tw
 Pokaż postęp | Drukuje wiadomości dotyczące postępu konsolidatora.
 Wersja | -Version — opcja nakazuje konsolidatorowi umieszczenie numeru wersji w nagłówku pliku wykonywalnego.
 Włącz pełne dane wyjściowe | Verbose — opcja nakazuje konsolidatorowi wysyłanie pełnych komunikatów na potrzeby debugowania.
-śledzenia | Śledzenia opcja informuje konsolidator, aby dane wyjściowe plików wejściowych, jak są przetwarzane.
-Symbole śledzenia | Drukować listę plików, w których występuje symbol. (— symbol śledzenia = symboli)
-Drukowanie mapy | Mapy drukowania opcja informuje konsolidator, aby dane wyjściowe mapy łącza.
+Śledzenia | --Trace opcji informuje konsolidator, aby dane wyjściowe pliki wejściowe, jak są przetwarzane.
+Śledź symbole | Drukuj listę plików, w których jest wyświetlany symbol. (--trace-symbol = symbol)
+Drukuj mapę | Print-map — opcja nakazuje konsolidatorowi danych wyjściowych mapę linków.
 Raport nierozpoznanych odwołań do symboli | Włączenie tej opcji będzie zgłaszać nierozpoznanych odwołań do symboli.
-Optymalizuj pod kątem użycia pamięci | Optymalizuj pod kątem użycia pamięci przez ponowne odczytanie tabel symboli, jeśli to konieczne.
-Ścieżka wyszukiwania biblioteki udostępnionej | Umożliwia użytkownikowi wypełnienie ścieżki wyszukiwania biblioteki udostępnionej. (link - rpath-= ścieżka)
-Katalogi bibliotek dodatkowe | Umożliwia użytkownikowi przesłanianie ścieżki środowiskowej biblioteki. (-L folder).
-Konsolidatora | Określa program do wywołania podczas łączenia lub ścieżka do konsolidatora w systemie zdalnym.
-Limit czasu łącza | Zdalne połączenie limit czasu w milisekundach.
-Kopiuj dane wyjściowe | Określa, czy można skopiować pliku danych wyjściowych kompilacji z systemu zdalnego na komputerze lokalnym.
+Optymalizacja pod kątem użycia pamięci | Optymalizuj pod kątem użycia pamięci przez kątem tabel symboli, zgodnie z potrzebami.
+Ścieżka wyszukiwania biblioteki udostępnionej | Umożliwia użytkownikowi Wypełnianie ścieżki wyszukiwania biblioteki udostępnionej. (- rpath - link = path)
+Dodatkowe katalogi biblioteki | Umożliwia użytkownikowi przesłanianie ścieżki środowiskowej biblioteki. (-L folder).
+Konsolidator | Określa program do wywołania podczas łączenia lub ścieżkę do konsoliatora w systemie zdalnym.
+Limit czasu łączenia | Limit czasu zdalnego łączenia, w milisekundach.
+Kopiuj dane wyjściowe | Określa, czy można skopiować pliku danych wyjściowych kompilacji z systemu zdalnego na maszynę lokalną.
 
 ## <a name="input"></a>Dane wejściowe
 
 Właściwość | Opis | Opcje
 --- | ---| ---
-Ignoruj określone biblioteki domyślne | Określa jedną lub więcej nazw bibliotek domyślnych do zignorowania. (— Wyklucz biblioteki lib, lib)
-Ignoruj biblioteki domyślne | Ignoruj biblioteki domyślne i wyszukiwanie tylko określone jawnie bibliotek.
-Niezdefiniowany Symbol odwołań Force | Wymuś symbolu, które zostaną wprowadzone w pliku wyjściowym jako niezdefiniowanego symbolu. (- u symbol--niezdefiniowana = symboli)
-Zależności biblioteki | Ta opcja umożliwia określenie dodatkowych bibliotek, które mają zostać dodane do wiersza polecenia konsolidatora. Dodatkowe biblioteki zostaną dodane na końcu wiersza polecenia konsolidatora prefiksem "lib" i kończyć się rozszerzeniem ".a".  (-lFILE)
+Ignoruj określone biblioteki domyślne | Określa jedną lub więcej nazw bibliotek domyślnych do zignorowania. (--exclude-libs lib, lib)
+Ignoruj biblioteki domyślne | Ignoruj biblioteki domyślne i wyszukuj tylko biblioteki określone.
+Wymuszaj odwołania do niezdefiniowanych symboli | Symbol wymuszania do można wpisać w pliku wyjściowym jako niezdefiniowanego symbolu. (- u symbol--undefined = symbol)
+Zależności biblioteki | Ta opcja umożliwia określenie dodatkowych bibliotek, które mają zostać dodane do wiersza polecenia konsolidatora. Dodatkowa biblioteka zostanie dodany na końcu wiersza polecenia konsolidatora z prefiksem "lib" i kończyć się rozszerzeniem ".a".  (-lFILE)
 {1&gt;Dodatkowe zależności&lt;1} | Określa dodatkowe elementy do dodania do wiersza polecenia konsolidacji.
 
 ## <a name="debugging"></a>Debugowanie
 
 Właściwość | Opis | Opcje
 --- | ---| ---
-Informacje o symbolach debugera | Informacje o symbolach z pliku danych wyjściowych debugera. | **Uwzględnij wszystkie**<br>**Pomiń informacje o symbolach debugera tylko**<br>**Pomiń informacje o wszystkich symbolach**<br>
-Nazwa pliku mapy | Opcja Map nakazuje konsolidatorowi utworzenie pliku mapy o nazwie określonej przez użytkownika. (-Mapy =)
+Informacje o symbolach debugera | Informacje o symbolach w pliku danych wyjściowych debugera. | **Uwzględnij wszystkie**<br>**Pomiń informacje o symbolach debugera tylko**<br>**Pomiń wszystkie informacje o symbolach**<br>
+Nazwa pliku mapy | Opcja Map nakazuje konsolidatorowi utworzenie pliku mapy o nazwie określonej przez użytkownika. (-Map =)
 
 ## <a name="advanced"></a>Zaawansowane
 
@@ -63,5 +53,5 @@ Właściwość | Opis | Opcje
 --- | ---| ---
 Oznacz zmienne tylko do odczytu po relokacji | Ta opcja oznacza zmienne jako tylko do odczytu po relokacji.
 Włącz natychmiastowe powiązanie funkcji | Ta opcja oznacza obiekt do natychmiastowego powiązania funkcji.
-Nie wymagają stosu wykonywalnego | Ta opcja oznacza dane wyjściowe jako niewymagające stosu wykonywalnego.
+Nie wymagaj stosu wykonywalnego | Ta opcja oznacza dane wyjściowe jako niewymagające stosu wykonywalnego.
 Całe archiwum | Całe archiwum używa całego kodu ze źródeł i zależności dodatkowych.

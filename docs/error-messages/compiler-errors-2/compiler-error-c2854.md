@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2854 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2854
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2854
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2854
 ms.assetid: 917fec9c-790a-4149-8dfc-00d17a09199c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7bd49c9fbfa88667cdb2e8bd57466632c0a051e3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a1c30e1fa0f70e5e7bb4b1c97421ca06913fc6f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628972"
 ---
 # <a name="compiler-error-c2854"></a>Błąd kompilatora C2854
 

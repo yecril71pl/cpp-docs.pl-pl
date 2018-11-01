@@ -1,29 +1,19 @@
 ---
-title: -bigobj (Zwiększ liczbę sekcji w. Plik obj) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: /bigobj (Zwiększ ilość sekcji w pliku .Obj)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /bigobj
-dev_langs:
-- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f10456bea8be552df42efe135818ac9c47393fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d2deaf7b3e248dd1269d9f04037c9d38651a5b56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649712"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zwiększ ilość sekcji w pliku .Obj)
 

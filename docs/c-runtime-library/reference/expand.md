@@ -1,10 +1,6 @@
 ---
-title: _rozszerz lokację | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _expand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand
 apilocation:
@@ -29,23 +25,17 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f709df131ded856881dc171c2e1549d3d5d378e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665663"
 ---
 # <a name="expand"></a>_expand
 
@@ -63,31 +53,31 @@ void *_expand(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Wskaźnik do bloku wcześniej alokacji pamięci.
+Wskaźnik do bloku pamięci uprzednio przydzielony.
 
 *Rozmiar*<br/>
 Nowy rozmiar w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_rozszerz lokację** zwraca typ void wskaźnik do bloku przydzielić pamięci. **_rozszerz lokację**, w przeciwieństwie do **realloc**, nie można przenieść bloku, aby zmienić jego rozmiaru. W związku z tym, jeśli istnieje wystarczająca ilość pamięci rozwinąć blok bez przenoszenia go, *memblock* parametr **_rozszerz lokację** jest taka sama jak wartość zwracaną.
+**_rozwiń** zwraca pusty wskaźnik do bloku pamięci ponownie przydzielona. **_rozwiń**, w przeciwieństwie do **realloc**, nie można przenieść bloku, aby zmienić jego rozmiar. Dlatego, jeśli istnieje wystarczająca ilość pamięci rozwinąć blok bez przenoszenia, *memblock* parametr **_rozwiń** jest taka sama jak wartość zwracaną.
 
-**_rozszerz lokację** zwraca **NULL** gdy zostaje wykryty błąd podczas jego działania. Na przykład jeśli **_rozszerz lokację** jest używany do zmniejszania blok pamięci, go może wykrywać uszkodzenia w stercie niewielki blok lub bloku nieprawidłowy wskaźnik i zwracać **NULL**.
+**_rozwiń** zwraca **NULL** gdy zostanie wykryty błąd podczas jego działania. Na przykład jeśli **_rozwiń** jest używany, aby zmniejszyć bloku pamięci, jego może wykrywać uszkodzenia sterty małych blokach lub wskaźnik nieprawidłowy blok i powrócić **NULL**.
 
-Jeśli jest za mało pamięci rozwinąć blok na dany rozmiar bez przenoszenia go, funkcja zwraca **NULL**. **_rozszerz lokację** nigdy nie zwraca blok rozszerzonej na rozmiar mniej niż żądana. Jeśli wystąpi błąd, **errno** wskazuje naturę niepowodzenia. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli jest za mało pamięci rozwinąć blok na dany rozmiar bez przenoszenia go, funkcja zwraca **NULL**. **_rozwiń** nigdy nie zwraca blok rozwinięty rozmiar mniej niż żądana. Jeśli wystąpi błąd, **errno** wskazuje naturę niepowodzenia. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby sprawdzić nowy rozmiar elementu, użyj **_msize —**. Aby otrzymywać wskaźnik do typu innego niż **void**, użyj typu rzutowania wartości zwracanej.
+Zwracana wartość wskazuje miejsce do magazynowania, który gwarantuje bycia odpowiednio wyrównaną do przechowywania dowolnego typu obiektu. Aby sprawdzić nowy rozmiar elementu, użyj **_msize —**. Aby uzyskać wskaźnik do typu innego niż **void**, użyj typu rzutowanego na wartość zwracaną.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Rozszerz lokację** funkcja zmienia rozmiar bloku wcześniej alokacji pamięci próbując rozwiń lub Zwiń bloku bez przenoszenia jego lokalizacji w stosie. *Memblock* parametr wskazuje na początku bloku. *Rozmiar* parametru zapewnia nowy rozmiar bloku, w bajtach. Treść bloku nie uległy zmianie do krótszej z nowym i starym rozmiary. *memblock* nie może być blokiem został zwolniony.
+**_Rozwiń** funkcja zmienia rozmiar bloku pamięci uprzednio przydzielony spowodowany próbą rozwiń lub Zwiń blok bez przenoszenia jego lokalizację w stosie. *Memblock* parametr wskazuje na początku bloku. *Rozmiar* parametru zapewnia nowy rozmiar bloku, w bajtach. Zawartość bloku nie uległy zmianie maksymalnie krótszy z nowym i starym rozmiarów. *memblock* nie powinny być blok, który ma zostać zwolniony.
 
 > [!NOTE]
-> Na platformach 64-bitowych **_rozszerz lokację** nie może być kontraktu bloku, jeśli nowy rozmiar jest mniejszy niż bieżący rozmiar; w szczególności, jeśli blok był mniejszy niż 16 KB, rozmiar i w związku z tym przydzielić w stercie fragmentacji małej **_rozszerz lokację**  opuszcza blok bez zmian i zwraca *memblock*.
+> Na platformach 64-bitowych **_rozwiń** nie może być kontraktu bloku, jeśli nowy rozmiar jest mniejszy niż bieżący rozmiar; w szczególności, jeśli blok został mniej niż 16 KB, rozmiar i w związku z tym jest przydzielonych w niską fragmentację sterty **_rozwiń**  opuszcza blok bez zmian i zwraca *memblock*.
 
-Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, **_rozszerz lokację** jest rozpoznawana jako [_expand_dbg —](expand-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C, **_rozwiń** jest rozpoznawana jako [_expand_dbg —](expand-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stosem podczas debugowania, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *memblock* jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**. Jeśli *rozmiar* jest większa niż **_heap_maxreq —**, **errno** ustawiono **enomem —** i funkcja zwraca **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *memblock* jest pustym wskaźnikiem, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**. Jeśli *rozmiar* jest większa niż **_heap_maxreq —**, **errno** ustawiono **ENOMEM** a funkcja zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 

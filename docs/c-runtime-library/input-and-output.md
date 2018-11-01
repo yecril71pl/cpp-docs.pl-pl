@@ -1,14 +1,8 @@
 ---
-title: Wejście i wyjście | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Dane wejściowe i wyjściowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.io
-dev_langs:
-- C++
 helpviewer_keywords:
 - input routines
 - I/O [CRT]
@@ -16,29 +10,25 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e62319d040275d96314ee824f9fea020a4004974
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590388"
 ---
 # <a name="input-and-output"></a>Dane wejściowe i wyjściowe
 
-Funkcje We/Wy odczytu i zapisu danych do i z plików i urządzeń. Operacje We/Wy pliku została wykonana w trybie tekst lub binarny. Biblioteka wykonawcza Microsoft zawiera trzy funkcje We/Wy:
+Funkcje We/Wy odczytu i zapisu danych do i z plików i urządzeń. Operacje We/Wy na plikach odbywać się w trybie tekstu lub w trybie binarnym. Biblioteki wykonawczej firmy Microsoft dostępne są trzy typy operacji We/Wy funkcji:
 
-- [We/Wy strumienia](../c-runtime-library/stream-i-o.md) funkcje traktować danych jako strumień znaki.
+- [Stream operacji We/Wy](../c-runtime-library/stream-i-o.md) funkcje traktowanie danych jako strumień pojedynczych znaków.
 
-- [We/Wy niskiego poziomu](../c-runtime-library/low-level-i-o.md) systemu operacyjnego bezpośrednio dla operacji niższe niż te dostarczone przez we/wy strumienia wywołania funkcji.
+- [Niskiego poziomu operacji We/Wy](../c-runtime-library/low-level-i-o.md) wywołają procedurę obsługi systemu operacyjnego bezpośrednio do operacji niższe niż te dostarczone przez strumień we/wy.
 
-- [Konsoli i portu We/Wy](../c-runtime-library/console-and-port-i-o.md) funkcji odczytu lub zapisu bezpośrednio w konsoli (klawiatury i ekranu), czy port We/Wy (na przykład port drukarki).
+- [Konsoli i portu We/Wy](../c-runtime-library/console-and-port-i-o.md) funkcji Odczyt lub zapis bezpośrednio do konsoli (klawiatury i ekran) lub portu We/Wy (na przykład portu drukarki).
 
    > [!NOTE]
-   > Ponieważ funkcje strumienia są buforowane, a nie są funkcje niskiego poziomu, te dwa typy funkcji są zazwyczaj niezgodne. Dla przetwarzania danego pliku, użyj wyłącznie strumienia lub funkcje niskiego poziomu.
+   > Ponieważ funkcje strumienia są buforowane i nie są funkcje niskiego poziomu, te dwa typy funkcji są zazwyczaj niezgodne. Dla przetwarzania danego pliku, użyj wyłącznie strumienia lub funkcji niskiego poziomu.
 
 ## <a name="see-also"></a>Zobacz też
 
