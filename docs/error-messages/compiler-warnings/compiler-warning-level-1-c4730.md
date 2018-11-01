@@ -1,27 +1,17 @@
 ---
-title: Ostrzeżenie (poziom 1) C4730 kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie C4730 kompilatora (poziom 1)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4730
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d740e1574d4cc538a27471c07795b7c95dd17565
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070460"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487038"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Ostrzeżenie C4730 kompilatora (poziom 1)
 

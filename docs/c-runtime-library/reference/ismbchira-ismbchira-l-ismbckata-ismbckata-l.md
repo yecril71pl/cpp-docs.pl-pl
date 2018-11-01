@@ -1,10 +1,6 @@
 ---
-title: _ismbchira —, _ismbchira_l —, _ismbckata —, _ismbckata_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506593"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
-**Funkcje właściwe 932 strony kodu**
+**Funkcje dla 932 strony kodu**
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,29 +76,29 @@ int _ismbckata_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do sprawdzenia.
+Znak do zbadania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli *c* < = 255 i ma odpowiadającego **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest zwracana wartość odpowiadającego **_ismbb —** procedury.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli nie jest. Jeśli *c* < = 255 i istnieje odpowiedni **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest wartością zwracaną odpowiadającego **_ismbb —** procedury.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.
+Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 |Procedura|Testowanie warunku (strona kodowa 932 tylko)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana znaków dwubajtowych: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Hiragana znaków dwubajtowych: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Katakana znaków dwubajtowych: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Katakana znaków dwubajtowych: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Dwubajtowych znaków Hiragana: 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Dwubajtowych znaków Hiragana: 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Znaki dwubajtowe katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbckata_l**|Znaki dwubajtowe katakana: 0x8340 < =*c*< = 0x8396.|
 
-**Strony 932 określonego kodu zakończenia**
+**Zakończenia dla strony kodu 932**
 
 ## <a name="requirements"></a>Wymagania
 
@@ -119,7 +109,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były
 |**_ismbckata**|\<mbstring.h>|
 |**_ismbckata_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

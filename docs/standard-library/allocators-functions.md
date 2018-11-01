@@ -1,8 +1,6 @@
 ---
-title: '&lt;allocators —&gt; makra | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;allocators —&gt; makra'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
 - allocators/std::CACHE_CHUNKLIST
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a24b854ac37dc0dfed44aec33fc1fb7e0bedcfc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492660"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators —&gt; makra
 
@@ -30,7 +28,7 @@ ms.locfileid: "33842667"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST —](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL —
+## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
 Daje alokatora klasy szablonu.
 
@@ -40,9 +38,9 @@ Daje alokatora klasy szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Makro daje definicji szablonu `template <class Type> class name {.....}` i specjalizacji `template <> class name<void> {.....}` definiującą razem Allocator — klasa szablonu, który używa filtr synchronizacji `sync` i pamięci podręcznej typu `cache`.
+Makro daje definicji szablonu `template <class Type> class name {.....}` i specjalizacji `template <> class name<void> {.....}` które razem definiują alokatora klasy szablonu, która używa filtru synchronizacji `sync` i pamięci podręcznej typu `cache`.
 
-Dla kompilatorów, które można skompilować ponownie Utwórz wiązanie wynikowy definicji szablonu wygląda następująco:
+Dla kompilatory, które można skompilować ponowne wiązanie wynikowy definicji szablonu wygląda następująco:
 
 ```cpp
 struct rebind
@@ -51,7 +49,7 @@ struct rebind
    };
 ```
 
-Dla kompilatory, nie można skompilować ponownie Utwórz wiązanie, wynikowy definicji szablonu wygląda następująco:
+Aby uzyskać kompilatory, których nie można skompilować ponowne wiązanie wynikowy definicji szablonu wygląda następująco:
 
 ```cpp
 template <class Type<class name
@@ -110,7 +108,7 @@ Daje filtr synchronizacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kompilatora obsługuje kompilowania zarówno jednowątkowe i wielowątkowe aplikacje, dla aplikacji jednowątkowych makro daje `stdext::allocators::sync_none`; we wszystkich innych przypadkach go daje `stdext::allocators::sync_shared`.
+Jeśli kompilator obsługuje kompilowanie jednowątkowe i wielowątkowe aplikacje, dla aplikacje jednowątkowe makro daje `stdext::allocators::sync_none`; we wszystkich innych przypadkach daje `stdext::allocators::sync_shared`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,41 +1,31 @@
 ---
-title: Błąd narzędzi konsolidatora LNK2031 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd narzędzi konsolidatora LNK2031
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2031
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484845"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Błąd narzędzi konsolidatora LNK2031
 
-> Nie można wygenerować p/invoke dla elementu "*function_declaration*" *decorated_name*; Brak konwencji wywoływania w metadanych
+> Nie można wygenerować p/invoke do "*function_declaration*" *decorated_name*; Brak metadanych konwencji wywoływania
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas próby importowanie funkcji macierzystej czysty obraz, należy pamiętać, że niejawne konwencji wywoływania różnią się w kompilacjach kodu natywnego i czysty. Aby uzyskać więcej informacji o obrazach czystego, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Podczas próby zaimportowania funkcji natywnej do czystego obrazu, należy pamiętać, że niejawne konwencji wywoływania różnią się macierzystych i czystych kompilacji. Aby uzyskać więcej informacji o obrazach czystego, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: pure** — opcja kompilatora jest przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Ten przykładowy kod generuje składnika z funkcją wyeksportowany, natywnego, których Konwencja wywoływania jest niejawnie [__cdecl](../../cpp/cdecl.md).
+Ten przykładowy kod generuje składnika za pomocą funkcji eksportowanych, natywnego, którego Konwencja wywołania jest niejawnie [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2031.cpp
@@ -47,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie tworzone czysty klienta, który używa funkcji macierzystej. Jednak Konwencja wywoływania w obszarze **/CLR: pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład generuje LNK2031.
+Poniższy przykład tworzy czystego klienta, który używa funkcji macierzystej. Jednak konwencji wywoływania, w obszarze **/CLR: pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład spowoduje wygenerowanie LNK2031.
 
 ```cpp
 // LNK2031_b.cpp
@@ -62,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób korzystać z funkcji macierzystej czysty obraz. Należy zwrócić uwagę jawnych **__cdecl** specyfikator konwencji wywoływania.
+Poniższy przykład pokazuje jak używać funkcji natywnej za pomocą czystego obrazu. Należy pamiętać, jawnie **__cdecl** wywoływania specyfikator Konwencji.
 
 ```cpp
 // LNK2031_c.cpp

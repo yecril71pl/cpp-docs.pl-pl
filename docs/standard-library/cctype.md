@@ -1,31 +1,21 @@
 ---
-title: '&lt;cctype —&gt; | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: '&lt;cctype&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cctype>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a41e73b63d6df63d3008c4301e98127ad08fe1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce46247d84259998d614fb8ed336231a1c4a91d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841369"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467850"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
-Zawiera nagłówek biblioteki standardowe C \<ctype.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Dołącza nagłówek biblioteki standardowej C \<ctype.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +26,7 @@ Zawiera nagłówek biblioteki standardowe C \<ctype.h > i dodaje skojarzone nazw
 
 ## <a name="remarks"></a>Uwagi
 
-Ten nagłówek w tym zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku biblioteki standardowe C są zadeklarowane w `std` przestrzeni nazw.
+Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 

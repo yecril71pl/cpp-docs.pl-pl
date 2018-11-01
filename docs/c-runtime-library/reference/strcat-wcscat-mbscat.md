@@ -1,10 +1,6 @@
 ---
-title: strcat —, wcscat —, _mbscat — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546396"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
-Dołącza ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strcat_s —, wcscat_s —, _mbscat_s —](strcat-s-wcscat-s-mbscat-s.md).
+Dołącza ciąg. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [strcat_s wcscat_s —, _mbscat_s —](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -98,29 +88,29 @@ unsigned char *_mbscat(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Ciąg docelowego zerem.
+Ciąg docelowy zakończony wartością null.
 
 *strSource*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca ciąg docelowego (*strDestination*). Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Każda z tych funkcji zwraca ciąg docelowy (*strDestination*). Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcat —** funkcja dołącza *strSource* do *strDestination* i kończy wynikowy ciąg ze znakiem null. Litery *strSource* zastępuje znak końcowy null z *strDestination*. Zachowanie **strcat —** zdefiniowano nakładania się ciągów źródłowych i docelowych.
+**Strcat —** funkcja dołącza *strSource* do *strDestination* i kończy się wynikowy ciąg znakiem null. Początkowy znak *strSource* zastępuje kończący znak null z *strDestination*. Zachowanie **strcat —** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
 > [!IMPORTANT]
-> Ponieważ **strcat —** nie sprawdza wystarczającą ilość miejsca w *strDestination* przed dołączeniem *strSource*, jest przyczyną przepełnienia buforu. Należy rozważyć użycie [strncat —](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) zamiast tego.
+> Ponieważ **strcat —** nie sprawdza wystarczająco dużo miejsca w *strDestination* przed dołączeniem *strSource*, jest potencjalną przyczyną przekroczenia buforu. Należy rozważyć użycie [strncat —](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) zamiast tego.
 
-**wcscat —** i **_mbscat —** znaków dwubajtowych i znaków wielobajtowych wersji **strcat —**. Argumenty i zwracana wartość **wcscat —** są znaków dwubajtowych ciągi; tych **_mbscat —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcscat —** i **_mbscat —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strcat —**. Argumenty i wartość zwracana przez **wcscat —** są znakami dwubajtowymi ciągów; te z **_mbscat —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat —**|**strcat**|**_mbscat**|**wcscat**|
 
@@ -129,7 +119,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcat**|\<string.h>|
-|**wcscat**|\<String.h > lub \<wchar.h >|
+|**wcscat**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbscat**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

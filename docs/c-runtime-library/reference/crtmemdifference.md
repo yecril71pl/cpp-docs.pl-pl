@@ -1,10 +1,6 @@
 ---
-title: _Crtmemdifference — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtMemDifference
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemDifference
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 66bb770c2f24c0312277d23c14beef09e2265f88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429656"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
-Porównuje dwa pamięci Stany i zwraca różnice między nimi (tylko wersja do debugowania).
+Porównuje dwa stany pamięci i zwraca ich różnice (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,29 +46,29 @@ int _CrtMemDifference(
 ### <a name="parameters"></a>Parametry
 
 *stateDiff*<br/>
-Wskaźnik do **_crtmemstate —** struktury, która jest używana do przechowywania różnice między Stanami dwóch pamięci (zwrócone).
+Wskaźnik do **_CrtMemState** strukturę, która jest używana do przechowywania różnic pomiędzy stanami dwóch pamięci (zwrócone).
 
 *oldState*<br/>
-Wskaźnik do wcześniejszego stanu pamięci (**_crtmemstate —** struktury).
+Wskaźnik na wcześniejszy stan pamięci (**_CrtMemState** struktury).
 
 *Nowy stan*<br/>
-Wskaźnik do nowszej stanu pamięci (**_crtmemstate —** struktury).
+Wskaźnik do późniejszego stanu pamięci (**_CrtMemState** struktury).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli ilość pamięci są różne, **_crtmemdifference —** zwraca wartość TRUE. W przeciwnym razie funkcja zwraca wartość FALSE.
+Jeśli stany pamięci są znacząco różne **_crtmemdifference —** zwraca wartość TRUE. W przeciwnym razie funkcja zwraca wartość FALSE.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtmemdifference —** funkcji porównuje *oldState* i *nowy stan* i przechowuje różnice między nimi w *stateDiff*, który można następnie używany przez aplikację wykrywanie przecieków pamięci i inne problemy z pamięcią. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtmemdifference —** są usuwane podczas przetwarzania wstępnego.
+**_Crtmemdifference —** funkcja porównuje *oldState* i *newState* i przechowuje te różnice w *stateDiff*, który można następnie używany przez aplikację do wykrywania przecieków pamięci i innych problemów z pamięcią. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_crtmemdifference —** są usuwane podczas przetwarzania wstępnego.
 
-*Nowy stan* i *oldState* muszą być prawidłowe wskaźnik do **_crtmemstate —** struktury zdefiniowane w Crtdbg.h, który ma zostać wypełnione podczas [_crtmemcheckpoint —](crtmemcheckpoint.md)przed wywołaniem **_crtmemdifference —**. *stateDiff* musi być wskaźnikiem do wcześniej alokowanego wystąpienia elementu **_crtmemstate —** struktury. Jeśli *stateDiff*, *nowy stan*, lub *oldState* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **einval —** i funkcja zwraca wartość FALSE.
+*Nowy stan* i *oldState* muszą być ważnym wskaźnik do **_CrtMemState** struktury, zdefiniowanego w Crtdbg.h, która ma zostać wypełnione podczas [_crtmemcheckpoint —](crtmemcheckpoint.md)przed wywołaniem **_crtmemdifference —**. *stateDiff* musi być wskaźnikiem do poprzednio przydzielonego wystąpienia **_CrtMemState** struktury. Jeśli *stateDiff*, *newState*, lub *oldState* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **EINVAL** i funkcja zwraca wartość FALSE.
 
-**_Crtmemdifference —** porównuje **_crtmemstate —** pola wartości bloków w *oldState* określone w *nowy stan* i przechowuje wyniki w *stateDiff*. Stany liczba przydzielonych typy bloku lub całkowita liczba bloków przydzielonego dla każdego typu różni się między Stanami dwóch pamięci, są określane jako się znacznie różnić. Różnica między największe kiedykolwiek przydzielone jednocześnie dwa stany i różnica między całkowita alokacje na dwa stany są także przechowywane w *stateDiff*.
+**_Crtmemdifference —** porównuje **_CrtMemState** wartości bloków w pola *oldState* do tych w *newState* i zapisuje wynik w *stateDiff*. Gdy liczba przydzielonych typów bloków lub całkowita liczba bloków przydzielonego dla każdego typu różni się pomiędzy stanami dwóch pamięci, Stany są określone jako znacząco różne. Różnica między największą kwotę kiedykolwiek przydzieloną na raz dla dwóch stanów i różnica między całkowitą alokacji dla dwóch stanów jest również przechowywana w *stateDiff*.
 
-Domyślnie wewnętrzny bloki wykonawcze języka C (**_crt_block —**) nie są uwzględnione w operacji stan pamięci. [_Crtsetdbgflag —](crtsetdbgflag.md) funkcji można włączyć **_crtdbg_check_crt_df —** bit z **_crtdbgflag —** do dołączenia te bloki wykrywania przecieków i inny stan pamięci operacje. Zwolnienie bloki pamięci (**_free_block —**), nie powodują **_crtmemdifference —** aby zwrócić wartość TRUE.
+Domyślnie wewnętrzne bloki wykonywania C (**_CRT_BLOCK**) nie są objęte operacjami stanu pamięci. [_CrtSetDbgFlag](crtsetdbgflag.md) funkcja może służyć do włączyć **_CRTDBG_CHECK_CRT_DF** trochę **_crtDbgFlag** aby objąć te bloki wykrywania przecieków i innych stan pamięci operacje. Uwolnione bloki pamięci (**_FREE_BLOCK**) nie powodują **_crtmemdifference —** zwraca wartość TRUE.
 
-Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate —** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -86,9 +76,9 @@ Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate �
 |-------------|---------------------|---------------------|
 |**_CrtMemDifference**|\<crtdbg.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** wersja debugowania [Biblioteka CRT — funkcje](../../c-runtime-library/crt-library-features.md) tylko.
+**Biblioteki:** Debuguj wersje [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

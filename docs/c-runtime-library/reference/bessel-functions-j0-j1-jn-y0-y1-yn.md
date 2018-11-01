@@ -1,10 +1,6 @@
 ---
-title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn | Dokumentacja firmy Microsoft'
-ms.custom: ''
+title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393605"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531866"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 
-Oblicza funkcji Bessela rodzaju pierwszej lub drugiej zamówień 0, 1 lub n. Funkcje Bessela są często używane w matematyce teorii elektromagnetycznych wave.
+Oblicza funkcję Bessela rodzaju pierwszej lub drugiej zamówień 0, 1 lub n. Funkcje Bessela są często używane w matematyce teorii elektromagnetycznych wave.
 
 ## <a name="syntax"></a>Składnia
 
@@ -94,23 +84,23 @@ Liczba całkowita kolejność Bessela funkcji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca funkcja Bessela *x*. Jeśli *x* ma ujemną wartość w **_y0**, **_y1**, lub **_yn** funkcji, ustawia rutynowych **errno** do  **Edom —**, drukuje **_domain —** komunikat o błędzie **stderr**i zwraca **_HUGE_VAL**. Można zmodyfikować obsługi przy użyciu błędów **_matherr —**.
+Każda z tych procedur zwraca funkcja Bessela *x*. Jeśli *x* ma ujemną wartość w **_y0**, **_y1**, lub **_yn** funkcje, rutynowe zestawy **errno** do  **EDOM**, drukuje **_domeny** komunikat o błędzie **stderr**i zwraca **_HUGE_VAL**. Możesz zmodyfikować obsługi przy użyciu błędów **_matherr**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_J0**, **_j1**, i **_jn** procedury zwracać Bessela funkcje pierwszego rodzaju: porządkuje 0, 1 lub n, odpowiednio.
+**_J0**, **_j1**, i **_jn** procedury wróć Bessela funkcje pierwszy rodzaj: porządkuje 0, 1 i n, odpowiednio.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMENY**|
 
-**_Y0**, **_y1**, i **_yn** procedury zwracać Bessela funkcje drugiego rodzaju: porządkuje 0, 1 lub n, odpowiednio.
+**_Y0**, **_y1**, i **_yn** procedury wróć Bessela funkcji drugiego rodzaju: porządkuje 0, 1 i n, odpowiednio.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
-|± 0|**ZERODIVIDE**|**—**|
-|&#124;x&#124; < 0,0|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|± 0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0.0|**NIEPRAWIDŁOWY**|**_DOMENY**|
 
 ## <a name="requirements"></a>Wymagania
 

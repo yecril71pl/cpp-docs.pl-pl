@@ -1,15 +1,9 @@
 ---
-title: /Zc:referenceBinding (wymuszanie zasad powiązanie odwołania) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: '/ Zc: referencebinding (wymuszanie zasad powiązania odwołań)'
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - referenceBinding
@@ -17,20 +11,16 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428330"
 ---
-# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (wymuszanie zasad powiązanie odwołanie)
+# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ Zc: referencebinding (wymuszanie zasad powiązania odwołań)
 
-Gdy **/Zc:referenceBinding** zostanie określona opcja, kompilator nie zezwala na odwołania do wartości innej niż stała powiązać do tymczasowej.
+Gdy **/Zc: referencebinding** opcja zostanie określona, kompilator nie zezwala na odwołanie niestałe l-wartości do powiązania do tymczasowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,13 +28,13 @@ Gdy **/Zc:referenceBinding** zostanie określona opcja, kompilator nie zezwala n
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **/Zc:referenceBinding** jest określony, kompilator następuje sekcji 8.5.3 standardem C ++ 11 i nie zezwala na wyrażeń, które powiązanie tymczasowego zdefiniowane przez użytkownika typu odwołania do wartości innej niż stała. Domyślnie lub jeśli **/Zc:referenceBinding-** jest określony, kompilator umożliwia takich wyrażeń jako rozszerzenie firmy Microsoft, ale poziom 4 pojawi się ostrzeżenie. Kod zabezpieczeń, przenośność i zgodność, firma Microsoft zaleca się używanie **/Zc:referenceBinding**.
+Jeśli **/Zc: referencebinding** jest określony, kompilator poniżej sekcji 8.5.3 standardem C ++ 11 i nie zezwala na wyrażeniach, które powiązanie typu zdefiniowanych przez użytkownika tymczasowe odwołanie niestałe l-wartości. Domyślnie lub jeśli **/Zc:referenceBinding-** jest określony, kompilator umożliwi takie wyrażenia jako rozszerzeń firmy Microsoft, ale jest wyświetlane ostrzeżenie poziom 4. Zabezpieczenia kodu, przenoszenia i zgodności zaleca się użycie **/Zc: referencebinding**.
 
-**/Zc:referenceBinding** opcja jest domyślnie wyłączona. [/ Ograniczająca-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:referenceBinding-**.
+**/Zc: referencebinding** opcja jest domyślnie wyłączona. [/ Permissive-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:referenceBinding-**.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano rozszerzenia firmy Microsoft, które umożliwia tymczasowej typu zdefiniowane przez użytkownika może być powiązane z odwołania do wartości innej niż stała.
+Niniejszy przykład pokazuje rozszerzenie Microsoft, które umożliwia to tymczasowy typ zdefiniowany przez użytkownika może być powiązane z odwołaniem lvalue wartości innej niż stała.
 
 ```cpp
 // zcreferencebinding.cpp
@@ -65,15 +55,15 @@ void main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc:referenceBinding** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: referencebinding** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

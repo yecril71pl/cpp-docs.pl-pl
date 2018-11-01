@@ -1,10 +1,6 @@
 ---
-title: tmpfile — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530328"
 ---
 # <a name="tmpfile"></a>tmpfile
 
-Tworzy plik tymczasowy. Ta funkcja jest przestarzały, ponieważ bezpieczniejsza wersja jest dostępna; zobacz [tmpfile_s —](tmpfile-s.md).
+Tworzy plik tymczasowy. Ta funkcja jest przestarzały, ponieważ bardziej bezpieczna wersja jest dostępna; zobacz [tmpfile_s —](tmpfile-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,11 +46,11 @@ W przypadku powodzenia **tmpfile —** zwraca wskaźnik strumienia. W przeciwnym
 
 ## <a name="remarks"></a>Uwagi
 
-**Tmpfile —** funkcji powoduje utworzenie pliku tymczasowego i zwraca wskaźnik do tego strumienia. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć pliku tymczasowego w katalogu innym niż katalog główny, użyj [tmpnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) lub [tempnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen —](fopen-wfopen.md).
+**Tmpfile —** funkcji utworzy plik tymczasowy i zwraca wskaźnik do tego strumienia. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć pliku tymczasowego w katalogu innym niż katalog główny, użyj [tmpnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) lub [tempnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen —](fopen-wfopen.md).
 
-Jeśli nie można otworzyć pliku, **tmpfile —** zwraca **NULL** wskaźnika. Plik tymczasowy jest automatycznie usuwana, gdy plik jest zamknięty, gdy program zakończenie zwykle lub **_rmtmp —** jest wywoływana przy założeniu, że bieżący katalog roboczy nie ulega zmianie. Plik tymczasowy jest otwarty w **w + b** trybu (binarne odczytu/zapisu).
+Jeśli nie można otworzyć pliku, **tmpfile —** zwraca **NULL** wskaźnika. Plik tymczasowy jest automatycznie usuwany po pliku jest zamykane, gdy program zakończy się normalnie lub **_rmtmp —** jest wywoływana przy założeniu, że nie zmienia bieżącego katalogu roboczego. Plik tymczasowy jest otwarty w **w + b** trybu (binarne odczyt/zapis).
 
-Błąd może wystąpić przy próbie więcej niż tmp_max — (zobacz stdio —. H) wywołania z **tmpfile —**.
+Błąd może wystąpić, jeśli użytkownik podejmie więcej niż TMP_MAX (zobacz stdio —. H) wywołań w przypadku **tmpfile —**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -111,6 +101,6 @@ Temporary file 3 was created
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

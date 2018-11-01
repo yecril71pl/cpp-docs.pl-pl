@@ -1,10 +1,6 @@
 ---
-title: _findclose — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _findclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findclose
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - _findclose
 - findclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a25ed42f1a53eb81c834997f42db0154658f376
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538115"
 ---
 # <a name="findclose"></a>_findclose
 
-Zamyka dojście wyszukiwania i zwalnia zasoby skojarzone.
+Zamyka uchwyt wyszukiwania i zwalnia skojarzonych zasobów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,12 +44,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parametry
 
-*Dojście*<br/>
-Dojście wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst —**.
+*uchwyt*<br/>
+Dojście wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_findclose —** zwraca wartość 0. W przeciwnym razie zwraca wartość -1 i ustawia **errno** do **enoent —**, wskazujący, że już pasujących plików można znaleźć.
+W przypadku powodzenia **_findclose —** zwraca wartość 0. W przeciwnym razie zwraca wartość -1 i ustawia **errno** do **ENOENT**, wskazujący, że dopasowanie nie ma więcej plików został odnaleziony.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,7 +57,7 @@ W przypadku powodzenia **_findclose —** zwraca wartość 0. W przeciwnym razie
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

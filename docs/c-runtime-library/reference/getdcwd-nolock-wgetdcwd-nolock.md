@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock —, _wgetdcwd_nolock — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,23 +34,19 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563696"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
 Pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,10 +66,10 @@ wchar_t *_wgetdcwd_nolock(
 ### <a name="parameters"></a>Parametry
 
 *Dysk*<br/>
-Dysk.
+Stacja dysków.
 
 *buffer*<br/>
-Lokalizacja magazynu dla ścieżki.
+Lokalizacja przechowywania dla ścieżki.
 
 *maxlen*<br/>
 Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd —** i **wchar_t** dla **_wgetdcwd —**.
@@ -90,7 +80,7 @@ Zobacz [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_getdcwd_nolock —** i **_wgetdcwd_nolock —** są takie same jak **_getdcwd —** i **_wgetdcwd —** odpowiednio z tą różnicą, że nie są chronione z zakłócenia przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_getdcwd_nolock —** i **_wgetdcwd_nolock —** są takie same jak **_getdcwd —** i **_wgetdcwd —**, odpowiednio, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -105,7 +95,7 @@ Zobacz [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md).
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<Direct.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

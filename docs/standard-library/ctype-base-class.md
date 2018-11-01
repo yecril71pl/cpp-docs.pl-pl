@@ -1,31 +1,21 @@
 ---
-title: ctype_base — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ctype_base — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531134"
 ---
 # <a name="ctypebase-class"></a>ctype_base — Klasa
 
-Klasa służy jako klasę podstawową dla aspekty szablonu klasy [ctype](../standard-library/ctype-class.md). Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.
+Klasa służy jako klasa bazowa dla zestawów reguł klasy szablonu [ctype](../standard-library/ctype-class.md). Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,37 +45,37 @@ struct ctype_base : public locale::facet
 
 ## <a name="remarks"></a>Uwagi
 
-Definiuje wyliczenie maski. Każdy stała wyliczenia charakteryzuje sposobu klasyfikowania znaków, zgodnie z definicją przez funkcje o podobnej nazwie zadeklarowany w nagłówku \<ctype.h >. Stałe są:
+Definiuje wyliczenie maski. Każda stała wyliczenia charakteryzuje inny sposób do klasyfikowania znaków, zgodnie z definicją funkcji o podobnych nazwach, zadeklarowany w nagłówku \<ctype.h >. Stałe są następujące:
 
-- **miejsce** (funkcja [isspace —](../standard-library/locale-functions.md#isspace))
+- **miejsce** (funkcja [isspace](../standard-library/locale-functions.md#isspace))
 
-- **Drukowanie** (funkcja [isprint —](../standard-library/locale-functions.md#isprint))
+- **Drukuj** (funkcja [isprint](../standard-library/locale-functions.md#isprint))
 
-- **nacisnąć klawisze CTRL +** (funkcja [iscntrl —](../standard-library/locale-functions.md#iscntrl))
+- **nacisnąć klawisze CTRL +** (funkcja [iscntrl](../standard-library/locale-functions.md#iscntrl))
 
-- **Górny** (funkcja [isupper —](../standard-library/locale-functions.md#isupper))
+- **Górny** (funkcja [isupper](../standard-library/locale-functions.md#isupper))
 
-- **niższe** (funkcja [islower —](../standard-library/locale-functions.md#islower))
+- **niższe** (funkcja [islower](../standard-library/locale-functions.md#islower))
 
-- **cyfra** (funkcja [isdigit —](../standard-library/locale-functions.md#isdigit))
+- **cyfra** (funkcja [isdigit](../standard-library/locale-functions.md#isdigit))
 
-- **punct** (funkcja [ispunct —](../standard-library/locale-functions.md#ispunct))
+- **punct** (funkcja [ispunct](../standard-library/locale-functions.md#ispunct))
 
-- **xdigit** (funkcja [isxdigit —](../standard-library/locale-functions.md#isxdigit))
+- **xdigit** (funkcja [isxdigit](../standard-library/locale-functions.md#isxdigit))
 
-- **Alpha** (funkcja [isalpha —](../standard-library/locale-functions.md#isalpha))
+- **alfa** (funkcja [isalpha](../standard-library/locale-functions.md#isalpha))
 
-- **alnum** (funkcja [isalnum —](../standard-library/locale-functions.md#isalnum))
+- **alnum** (funkcja [isalnum](../standard-library/locale-functions.md#isalnum))
 
-- **Wykres** (funkcja [isgraph —](../standard-library/locale-functions.md#isgraph))
+- **Wykres** (funkcja [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Kombinację klasyfikacje przez ORing można określić te stałe. W szczególności jest zawsze wartość true, który **alnum** == ( **alfa** &#124; **cyfrę** \) i **wykres** \= \= \( **alnum** &#124; **punct**).
+Kombinacja klasyfikacji przez ORing można scharakteryzowania te stałe. W szczególności jest zawsze wartość true, który **alnum** == ( **alfa** &#124; **cyfrę** \) i **wykres** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

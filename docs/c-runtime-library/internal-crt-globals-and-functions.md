@@ -1,10 +1,6 @@
 ---
-title: Wewnętrzny Globals CRT i funkcje | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Wewnętrzne zmienne globalne CRT i funkcji
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -570,8 +566,6 @@ f1_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -847,24 +841,20 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 223e4860e1c7a0bd2f414b224c32818895b4398b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485621"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Wewnętrzny Globals CRT i funkcje
+# <a name="internal-crt-globals-and-functions"></a>Wewnętrzne zmienne globalne CRT i funkcji
 
-Biblioteki C runtime (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu publicznego biblioteki. Niektóre z nich są widoczne w nagłówkach publicznego szczegóły implementacji. Mimo że te funkcje i zmienne globalne są dostępne za pośrednictwem publicznego eksportu, są one nie przeznaczone do użytku przez kod. Firma Microsoft zaleca zmianę kodu, który używa te funkcje i zmienne, aby zamiast niej używać biblioteki publiczne odpowiedniki. Te funkcje mogą ulec zmianie w kolejnych wersjach. Są one wyświetlane tutaj pomoże zidentyfikować je. Łącza są zawarte w dodatkowej dokumentacji istnieje, ale ogólnie rzecz biorąc, nie opisano te szczegóły implementacji.
+Biblioteki języka C runtime (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejs publiczny biblioteki. Niektóre z nich są widoczne w nagłówkach publicznych szczegółów implementacji. Chociaż te funkcje i zmienne globalne są dostępne za pośrednictwem publicznego eksportu, ich nie są przeznaczone do użycia w kodzie. Zaleca się, że zmieniasz wszelki kod, który używa tych funkcji i zmiennych, aby zamiast tego użyj odpowiedników Biblioteka publiczna. Te funkcje mogą ulec zmianie w kolejnych wersjach. Są one wymienione w tym miejscu możesz łatwiej zidentyfikować je. Linki zostały podane, gdy istnieje dodatkowej dokumentacji, ale ogólnie rzecz biorąc, nie opisano szczegóły tych implementacji.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzny Globals CRT i wartość makra
+## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne zmienne globalne CRT i wartość makra
 
-Te zmienne globalne i definicje makr są używane do implementowania CRT.
+Te zmienne globalne i makra definicje są używane do implementowania CRT.
 
 |Nazwa|
 |----------|
@@ -881,9 +871,9 @@ Te zmienne globalne i definicje makr są używane do implementowania CRT.
 |[_wcmdln —](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
 |__winitenv|
 
-## <a name="internal-crt-functions-and-function-macros"></a>Funkcje wewnętrzne CRT i makra funkcji
+## <a name="internal-crt-functions-and-function-macros"></a>Funkcje wewnętrzne CRT i makra — funkcja
 
-Te funkcje i makra funkcji są używane do implementowania CRT i standardowej biblioteki C++.
+Te funkcje i makra funkcji są używane do implementowania CRT i standardowej biblioteki języka C++.
 
 |Nazwa|
 |----------|
@@ -1092,12 +1082,12 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__p\__acmdln —|
 |[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
-|__p\__crtbreakalloc —|
-|__p\__crtdbgflag —|
+|__p\__crtBreakAlloc|
+|__p\__crtDbgFlag|
 |__p\__daylight|
 |__p\__dstbias|
-|__p\__environ —|
-|[__p\__fmode —](../c-runtime-library/p-fmode.md)|
+|__p\__environ|
+|[__p\__fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob —|
 |__p\__mbcasemap —|
 |__p\__mbctype —|
@@ -1107,7 +1097,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__p\__timezone|
 |__p\__tzname|
 |__p\__wcmdln —|
-|__p\__wenviron —|
+|__p\__wenviron|
 |__p\__wpgmptr —|
 |_pctype —|
 |[__pctype_func](../c-runtime-library/pctype-func.md)|

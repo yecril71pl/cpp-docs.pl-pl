@@ -1,10 +1,6 @@
 ---
-title: _amsg_exit | Microsoft Docs
-ms.custom: ''
+title: _amsg_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _amsg_exit
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _amsg_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbb7f46bb4f3c942fd1c9e1a1d45c1ccf48739f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534033"
 ---
 # <a name="amsgexit"></a>_amsg_exit
 
-Emituje komunikat o błędzie wykonawcze i kończy działanie aplikacji z kodem błędu 255.
+Emituje runtime określony komunikat o błędzie, a następnie kończy działanie aplikacji z kodem błędu 255.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,11 +40,11 @@ void _amsg_exit ( int rterrnum );
 ### <a name="parameters"></a>Parametry
 
 *rterrnum*<br/>
-Numer identyfikacyjny runtime zdefiniowanym przez system komunikatu o błędzie.
+Numer identyfikacyjny zdefiniowaną przez system runtime komunikat o błędzie.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja emituje środowiska uruchomieniowego komunikat o błędzie **stderr** dla aplikacji konsoli lub wyświetlanie pola komunikatu do wiadomości dla aplikacji systemu Windows. W trybie debugowania można wywołać debugera przed zakończeniem.
+Ta funkcja generuje komunikat o błędzie środowiska uruchomieniowego do **stderr** dla aplikacji konsoli lub wyświetla komunikat w komunikacie pole dla aplikacji Windows. W trybie debugowania można wywołać debugera przed zamknięciem.
 
 ## <a name="requirements"></a>Wymagania
 

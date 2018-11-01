@@ -1,10 +1,6 @@
 ---
-title: scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - scanf_s
 - _tscanf_s
 - _scanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - buffers [C++], buffer overruns
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8abf72b67c060bd6016b7e784ded5a30801ca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528621"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
-Odczyty sformatowanych danych z Standardowy strumień wejściowy. Te wersje programu [scanf, _scanf_l —, wscanf —, _wscanf_l —](scanf-scanf-l-wscanf-wscanf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczyty sformatowanych danych ze standardowego strumienia wejściowego. Te wersje [scanf, _scanf_l —, wscanf, _wscanf_l —](scanf-scanf-l-wscanf-wscanf-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,7 +79,7 @@ int _wscanf_s_l(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Ciąg formatu w kontroli.
+Ciąg formantu formatu.
 
 *Argument*<br/>
 Argumenty opcjonalne.
@@ -99,47 +89,47 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** wystąpił błąd, lub jeśli napotkano znak końca pliku lub znak zakończenia ciągu w pierwszej próby odczytu znak. Jeśli *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **scanf_s —** i **wscanf_s —** zwracać **EOF** i ustaw **errno** do **einval —**.
+Zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu, czy znak końca pliku lub koniec ciągu zostanie napotkany w pierwszej próbie odczytania znaku. Jeśli *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **scanf_s** i **wscanf_s —** zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Scanf_s —** funkcja odczytuje dane z Standardowy strumień wejściowy **stdin** i zapisuje dane do lokalizacji, która jest określany przez *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+**Scanf_s** funkcja odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje je w lokalizacji, która jest nadawana przez *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-**wscanf_s —** jest wersja znaków dwubajtowych **scanf_s —**; *format* argument **wscanf_s —** jest ciągiem znaków dwubajtowych. **wscanf_s —** i **scanf_s —** zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **scanf_s —** nie obsługuje obecnie danych wejściowych z strumienia UNICODE.
+**wscanf_s —** to wersja znaku dwubajtowego **scanf_s**; *format* argument **wscanf_s —** jest ciągiem znaku dwubajtowego. **wscanf_s —** i **scanf_s** zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **scanf_s** aktualnie nie obsługuje danych wejściowych ze strumienia UNICODE.
 
-Wersje tych funkcji, które mają **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych, który jest przekazywany w zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych wątku.
 
-W odróżnieniu od **scanf** i **wscanf —**, **scanf_s —** i **wscanf_s —** wymagają określenia wszystkich parametrów typu wejściowychrozmiarbuforu**c**, **C**, **s**, **S**, lub string zestawów kontroli, które są ujęte w **[]**. Rozmiar buforu w znakach jest przekazywany jako dodatkowy parametr natychmiast po wskaźnik do buforu lub zmiennej. Na przykład jeśli odczytujesz ciąg rozmiar buforu dla tego ciągu jest przekazywany w następujący sposób:
+W odróżnieniu od **scanf** i **wscanf**, **scanf_s** i **wscanf_s —** wymagają rozmiar buforu, należy określić dla wszystkich parametrów wejściowych typu **c**, **C**, **s**, **S**, lub zestawów kontroli, które są ujęte w ciągów **[]**. Rozmiar buforu w znakach jest przekazywany jako dodatkowy parametr natychmiast po wskaźniku do buforu lub zmiennej. Na przykład jeśli czytasz ciąg rozmiar buforu dla tego ciągu jest przekazywany w następujący sposób:
 
 ```C
 char s[10];
 scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9
 ```
 
-Rozmiar buforu obejmuje zakończenia wartości null. Szerokość pola specyfikacji służy do zapewnienia, że token, który jest odczytywany w zmieści się w buforze. Jeśli żadne pole Specyfikacja szerokości jest używany, a token odczytu w jest zbyt duży, aby zmieścić się w buforze, nic nie są zapisywane w tym buforu.
+Rozmiar buforu obejmuje kończącą wartość null. Pole określania szerokości można użyć, aby upewnić się, że token, który jest wczytywany w zmieści się w buforze. Jeśli jest używane nie pole specyfikacji szerokości, a odczyt tokenu jest zbyt duży, aby zmieścić się w buforze, nic nie jest zapisywane do tego buforu.
 
 > [!NOTE]
-> Parametr rozmiaru jest typu **niepodpisane**, a nie **size_t**. Użyj rzutowania statycznego do konwertowania **size_t** do wartości **niepodpisane** konfiguracje kompilacji dla 64-bitowej.
+> Parametr rozmiaru ma typ **niepodpisane**, a nie **size_t**. Użyj rzutowania statycznego do konwertowania **size_t** wartość **niepodpisane** konfiguracje kompilacji dla 64-bitowych.
 
-W poniższym przykładzie pokazano, opisujący parametr rozmiaru buforu maksymalną liczbę znaków, a nie w bajtach. W wywołaniu **wscanf_s —**, szerokość znaku, który wskazuje typ buforu jest niezgodna z szerokość znaków, który jest wskazywany przez specyfikator formatu.
+Poniższy przykład pokazuje, że parametr rozmiaru buforu w tym artykule opisano maksymalną liczbę znaków, nie w bajtach. W wywołaniu **wscanf_s —**, szerokość znaków, który jest wskazywany przez typ buforu jest niezgodna z szerokość znaków, który jest wskazywany przez specyfikator formatu.
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-**S** specyfikator formatu oznacza użycie szerokości znaków, która jest "przeciwne" domyślnej szerokości, który jest obsługiwany przez funkcję. Szerokość znaku jest jednobajtowe, ale funkcja obsługuje znaki dwubajtowe. W tym przykładzie odczytuje w ciągu maksymalnie 9 znaków jednego bajtu całej i umieszcza je w buforze znak podwójnej szerokości bajtów. Znaki są traktowane jako wartości jednobajtowe. pierwsze dwa znaki są przechowywane w `ws[0]`, następne dwa są przechowywane w `ws[1]`i tak dalej.
+**S** specyfikatora formatu wskazuje użytkowania szerokości znaków, która jest "odwrotną" domyślnej szerokości, który jest obsługiwany przez funkcję. Szerokość znaków jest Jednobajtowy, ale funkcja obsługuje znaki dwubajtowe. W tym przykładzie odczytuje w ciągu maksymalnie 9 znaków jednego bajtu na poziomie i umieszcza je w buforze podwójnej szerokości bajt znaku. Znaki są traktowane jako wartości jednobajtowych. dwa pierwsze znaki są przechowywane w `ws[0]`, następne dwa są przechowywane w `ws[1]`i tak dalej.
 
-W przypadku znaków pojedynczy znak może wyglądać następująco:
+W przypadku znaków jeden znak może wyglądać następująco:
 
 ```C
 char c;
 scanf_s("%c", &c, 1);
 ```
 
-Przeczytaniu wielu znaków dla ciągów zakończone inną niż null liczb całkowitych są używane jako specyfikacja szerokości i rozmiar buforu.
+Podczas odczytu wielu znaków dla ciągów zakończonych wartością inną niż null liczb całkowitych są używane jako specyfikacje szerokości i rozmiar buforu.
 
 ```C
 char c[4];
@@ -150,7 +140,7 @@ Aby uzyskać więcej informacji, zobacz [scanf — specyfikacje szerokości](../
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tscanf_s —**|**scanf_s**|**scanf_s**|**wscanf_s**|
 |**_tscanf_s_l —**|**_scanf_s_l**|**_scanf_s_l**|**_wscanf_s_l**|
@@ -161,10 +151,10 @@ Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wsca
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**scanf_s —**, **_scanf_s_l —**|\<stdio.h>|
+|**scanf_s**, **_scanf_s_l —**|\<stdio.h>|
 |**wscanf_s —**, **_wscanf_s_l —**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -199,7 +189,7 @@ int main( void )
 }
 ```
 
-Ten program tworzy następujące dane wyjściowe w przypadku danych wejściowych to:
+Ten program generuje następujące dane wyjściowe, gdy te dane wejściowe:
 
 ```Input
 71 98.6 h z Byte characters
@@ -216,7 +206,7 @@ The contents are: 36 92.300003 y n Wide characters
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _Rtc_numerrors — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _RTC_NumErrors
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_NumErrors
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - _RTC_NumErrors
 - RTC_NumErrors
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af223e1e2d183f5357cf1d1bac96aabb042a99da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e13f85f2140473d6e971d27abb6012effd36c37c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477197"
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
 
-Zwraca sumę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Numer ten może posłużyć jako formant w **dla** pętli, w której każda wartość w pętli są przekazywane do [_rtc_geterrdesc —](rtc-geterrdesc.md).
+Zwraca całkowitą liczbę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Numer ten może posłużyć jako formant w **dla** pętli, w którym każda wartość w pętli jest przekazywany do [_RTC_GetErrDesc](rtc-geterrdesc.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,7 +44,7 @@ int _RTC_NumErrors( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, którego wartość reprezentuje całkowita liczba błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania Visual C++.
+Liczba całkowita, których wartość reprezentuje całkowita liczba błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania Visual C++.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -66,7 +56,7 @@ Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/com
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

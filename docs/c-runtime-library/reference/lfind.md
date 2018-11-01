@@ -1,10 +1,6 @@
 ---
-title: _lfind — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579169"
 ---
 # <a name="lfind"></a>_lfind
 
-Wykonuje wyszukiwanie liniowe dla określonego klucza. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_lfind_s —](lfind-s.md).
+Wykonuje wyszukiwanie liniowe dla określonego klucza. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [_lfind_s —](lfind-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,18 +64,18 @@ Liczba elementów tablicy.
 *width*<br/>
 Szerokość elementów tablicy.
 
-*Porównaj*<br/>
-Wskaźnik do porównania procedury. Pierwszym parametrem jest wskaźnik do klucza dla wyszukiwania. Drugi parametr jest wskaźnik do elementu tablicy ma zostać porównane z kluczem.
+*Porównanie*<br/>
+Wskaźnik do procedury porównania. Pierwszy parametr jest wskaźnikiem do klucza dla wyszukiwania. Drugi parametr jest wskaźnik do elementu tablicy, który można porównać z kluczem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli klucz zostanie znaleziony, **_lfind —** zwraca wskaźnik do elementu tablicy w *podstawowej* odpowiadającego *klucza*. Jeśli klucz nie zostanie znaleziony, **_lfind —** zwraca **NULL**.
+Jeśli klucz zostanie znaleziony, **_lfind —** zwraca wskaźnik do elementu tablicy, od *podstawowy* odpowiadający *klucz*. Jeśli klucz nie zostanie znaleziony, **_lfind —** zwraca **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lfind —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucza* w tablicy *numer* z elementów *szerokość* bajtów. W odróżnieniu od **bsearch —**, **_lfind —** nie wymaga tablicy ma zostać posortowana. *Podstawowej* argument jest wskaźnik do podstawy tablicy do wyszukania. *Porównania* argument jest wskaźnik do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą ich relacji. **_lfind —** wywołania *porównania* rutynowych jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. *Porównania* procedury należy porównać elementy, a następnie wróć różną od zera (to znaczy elementy są różne) lub wartość 0 (tzn. elementy są identyczne).
+**_Lfind —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucz* tablicę *numer* elementów, z których każdy z *szerokość* bajtów. W odróżnieniu od **bsearch —**, **_lfind —** nie wymaga tablicy, która ma zostać posortowana. *Podstawowy* argument jest wskaźnikiem do podstawy tablicy, który ma być przeszukiwany. *Porównania* argument jest wskaźnikiem do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą, ich relacje. **_lfind —** wywołania *porównania* rutynowych jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy przy każdym wywołaniu. *Porównania* procedury musi porównywania elementów, a następnie zwracają wartość różną od zera (tzn. elementy są różnych) lub od 0 (co oznacza, że elementy są identyczne).
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* jest **NULL**i *numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *porównania*, *klucz* lub *numer* jest **NULL**, lub jeśli *podstawowy* jest **NULL**i *numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza niż zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -93,7 +83,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *nume
 |-------------|---------------------|
 |**_lfind**|\<Search.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,10 +1,6 @@
 ---
-title: _strlwr —, _wcslwr —, _mbslwr —, _strlwr_l —, _wcslwr_l —, _mbslwr_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,23 +55,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505693"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
-Konwertuje ciąg na małe litery. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strlwr_s —, _strlwr_s_l —, _mbslwr_s —, _mbslwr_s_l —, _wcslwr_s —, _wcslwr_s_l —](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
+Konwertuje ciąg na małe litery. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_strlwr_s —, _strlwr_s_l —, _mbslwr_s —, _mbslwr_s_l —, _wcslwr_s —, _wcslwr_s_l —](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr —** i **_mbslwr_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr —** i **_mbslwr_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -135,28 +125,28 @@ unsigned char *_mbslwr_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Zerem ciąg do przekonwertowania na małe litery.
+Ciąg zakończony zerem do przekonwertowania na małe litery.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do skonwertowany ciąg. Ponieważ modyfikacja jest wykonywana w miejscu, wskaźnik zwracany jest taka sama jak wskaźnik przekazany jako argument wejściowy. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Każda z tych funkcji zwraca wskaźnik do ciągu przekonwertowanego. Ponieważ modyfikacja odbywa się w miejscu, zwracany wskaźnik jest taki sam jak wskaźnik przekazywany jako argument wejściowy. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strlwr —** funkcja konwertuje wszystkie wielkie litery w *str* na małe litery, zgodnie z ustaleniami **lc_ctype —** ustawienie kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **lc_ctype —**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazano Zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_Strlwr** funkcja konwertuje wszystkie wielkie litery w *str* na małe litery, zgodnie z ustaleniami **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat **LC_CTYPE**, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że korzystają z przekazanych ustawień regionalnych Zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**_Wcslwr —** i **_mbslwr —** funkcje są wersje znaków dwubajtowych i znaków wielobajtowych **_strlwr —**. Wartość argumentów i **_wcslwr —** są znaków dwubajtowych ciągi; tych **_mbslwr —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**_Wcslwr —** i **_mbslwr —** funkcje są wersjami znaków dwubajtowych i znaków wielobajtowych **_strlwr**. Argument i wartość zwracana przez **_wcslwr —** są znakami dwubajtowymi ciągów; te z **_mbslwr —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-Jeśli *str* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracane oryginalnego ciągu i zestaw **errno** do **einval —**.
+Jeśli *str* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają ciąg oryginalny i ustawiają **errno** do **EINVAL**.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcslwr —**|**_strlwr**|**_mbslwr**|**_wcslwr**|
 |**_tcslwr_l —**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
@@ -165,8 +155,8 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strlwr —**, **_strlwr_l —**|\<string.h>|
-|**_wcslwr —**, **_wcslwr_l —**|\<String.h > lub \<wchar.h >|
+|**_strlwr**, **_strlwr_l —**|\<string.h>|
+|**_wcslwr —**, **_wcslwr_l —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbslwr —**, **_mbslwr_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

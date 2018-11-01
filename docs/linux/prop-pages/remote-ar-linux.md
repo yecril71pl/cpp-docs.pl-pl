@@ -1,37 +1,27 @@
 ---
-title: Właściwości zdalnego archiwum (C++ Linux) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Właściwości zdalnego archiwum (C++ Linux)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
-author: mikeblome
-ms.author: mblome
 f1_keywords: []
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 004e015b7e5ad8a99b3bea2bf21b7b598f2fedbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcd0e0eef16addc60743000b6ed8cba12276e29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328656"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439233"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Właściwości zdalnego archiwum (C++ Linux)
 
 Właściwość | Opis
 --- | ---
 Utwórz indeks archiwum | Utwórz indeks archiwum (cf. ranlib).  Może to przyspieszyć konsolidowanie i ograniczyć zależność w obrębie własnej biblioteki.
-Tworzenie elastycznej archiwum | Tworzenie elastycznej archiwum.  Archiwum alokowania zawiera ścieżki względne do obiektów zamiast osadzania obiektów.  Przełączanie między uproszczonym i normalnym wymaga usunięcia istniejącej biblioteki.
+Utwórz archiwum uproszczone | Utwórz archiwum uproszczone.  Archiwum uproszczone zawiera ścieżki względne do obiektów zamiast osadzania obiektów.  Przełączanie między uproszczonym i normalnym wymaga usunięcia istniejącej biblioteki.
 Bez ostrzeżenia o utworzeniu | Nie Ostrzegaj, jeśli po utworzeniu biblioteki.
-TRUNCATE sygnatury czasowej | Użyj wartości zero dla sygnatur czasowych oraz identyfikatorów UID i GID.
-Pomiń Baner startowy | Nie pokazuj numeru wersji.
+Obetnij sygnaturę czasową | Użyj wartości zero dla sygnatur czasowych i GID.
+Pomijaj transparent startowy | Nie pokazuj numeru wersji.
 Pełny | Pełny
 Dodatkowe opcje | Dodatkowe opcje.
-Plik wyjściowy | Opcja/out przesłania domyślną nazwę i lokalizację programu tworzonego przez bibliotekę.
-Archiver | Określa program do wywołania podczas łączenia statycznych obiektów lub ścieżka do archiver w systemie zdalnym.
-Limit czasu archiver | Limit zdalnego archiver czasu w milisekundach.
-Kopiuj dane wyjściowe | Określa, czy można skopiować pliku danych wyjściowych kompilacji z systemu zdalnego na komputerze lokalnym.
+Plik wyjściowy | Opcja/out przesłania domyślną nazwę i lokalizację programu, który tworzy lib.
+Programu archiwizującego | Określa program do wywołania podczas łączenia obiektów statycznych lub ścieżkę do programu archiwizującego w systemie zdalnym.
+Limit czasu programu archiwizującego | Czasu zdalnego programu archiwizującego, w milisekundach.
+Kopiuj dane wyjściowe | Określa, czy można skopiować pliku danych wyjściowych kompilacji z systemu zdalnego na maszynę lokalną.

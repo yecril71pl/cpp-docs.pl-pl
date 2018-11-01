@@ -1,10 +1,6 @@
 ---
-title: isupper —, _isupper_l —, iswupper —, _iswupper_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588438"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
-Określa, czy liczba całkowita reprezentuje wielką literę.
+Określa, czy liczba całkowita reprezentuje znak wielkiej litery.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,31 +66,31 @@ int _iwsupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania.
+Liczba całkowita to testowania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego obiektu wielką literę. **isupper —** zwraca wartość niezerową, jeśli *c* jest wielką literę (- Z). **iswupper —** zwraca wartość niezerową, jeśli *c* jest znaków dwubajtowych, umożliwiająca wielką literę, lub jeśli *c* jest jednym z zdefiniowane w implementacji zbiór znaki dwubajtowe, dla których żadna z **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją wielką literą. **isupper** zwraca wartość różną od zera, jeśli *c* jest znakiem wielkiej litery (- Z). **iswupper —** zwraca wartość różną od zera, jeśli *c* jest szerokmi znakiem, który odpowiada odpowiadającym Wielkiej literze lub, jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji dla którego żadna **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wersje tych funkcji, które mają **_l** sufiks Użyj ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksa używa ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **isupper —** i **_isupper_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **isupper** i **_isupper_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istupper —**|**isupper —**|[_ismbcupper —](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper —**|
+|**_istupper —**|**isupper**|[_ismbcupper —](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper —**|
 |**_istupper_l**|**_isupper_l —**|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isupper —**|\<ctype.h>|
+|**isupper**|\<ctype.h>|
 |**_isupper_l —**|\<ctype.h>|
 |**iswupper —**|\<CType.h > lub \<wchar.h >|
 |**_iswupper_l —**|\<ctype.h>|

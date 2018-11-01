@@ -1,10 +1,6 @@
 ---
-title: wctype — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,26 +17,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456904"
 ---
 # <a name="wctype"></a>wctype
 
-Określa reguły klasyfikacji kodów znaków dwubajtowych.
+Określa reguły klasyfikacji, aby poznać kody znaków dwubajtowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,29 +43,29 @@ wctype_t wctype(
 ### <a name="parameters"></a>Parametry
 
 *właściwość*<br/>
-Ciąg właściwości.
+Właściwość ciągu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **lc_ctype —** kategorii bieżące ustawienia regionalne nie definiuje reguły klasyfikacji, którego nazwa odpowiada właściwości ciągu *właściwości*, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość niezerową odpowiednie do użycia jako drugi argument do kolejne wywołanie [towctrans —](towctrans.md).
+Jeśli **LC_CTYPE** kategorii bieżących ustawień regionalnych nie definiuje reguły klasyfikacji, w których nazwa pasuje do ciągu właściwość *właściwość*, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiedni do użytku jako drugi argument na kolejne wywołanie [towctrans —](towctrans.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja Określa regułę klasyfikacji kodów znaków dwubajtowych. Następujące pary wywołań ma takie samo zachowanie wszystkich ustawień regionalnych (ale implementacja można zdefiniować reguły klasyfikacji dodatkowe nawet zgodnie z ustawieniami regionalnymi "C"):
+Funkcja określa reguły klasyfikacji, aby poznać kody znaków dwubajtowych. Następujące pary wywołania mają takie samo zachowanie we wszystkich ustawieniach regionalnych (ale implementację można zdefiniować reguły klasyfikacji dodatkowe nawet w przypadku ustawień regionalnych "C"):
 
-|Funkcja|Identyczny|
+|Funkcja|Takie same jak|
 |--------------|-------------|
-|iswalnum(c)|iswctype — wctype (c — ("alnum"))|
-|iswalpha(c)|iswctype — wctype (c — ("Alfa"))|
-|iswcntrl(c)|iswctype — wctype (c — ("CTRL"))|
-|iswdigit(c)|iswctype — wctype (c — ("cyfr"))|
-|iswgraph(c)|iswctype — wctype (c — ("wykresu"))|
-|iswlower(c)|iswctype — wctype (c — ("niżej"))|
-|iswprint(c)|iswctype — wctype (c — ("print"))|
-|iswpunct(c)|iswctype — wctype (c — ("punct"))|
-|iswspace(c)|iswctype — wctype (c — ("miejsca"))|
-|iswupper(c)|iswctype — wctype (c — ("górna"))|
-|iswxdigit(c)|iswctype — wctype (c — ("xdigit"))|
+|iswalnum(c)|iswctype (c, wctype ("alnum"))|
+|iswalpha(c)|iswctype (c, wctype ("Alfa"))|
+|iswcntrl(c)|iswctype (c, wctype ("CTRL"))|
+|iswdigit(c)|iswctype (c, wctype ("digit"))|
+|iswgraph(c)|iswctype (c, wctype ("wykres"))|
+|iswlower(c)|iswctype (c, wctype ("małe"))|
+|iswprint(c)|iswctype (c, wctype ("print")")|
+|iswpunct(c)|iswctype (c, wctype ("punct"))|
+|iswspace(c)|iswctype (c, wctype ("space"))|
+|iswupper(c)|iswctype (c, wctype ("górnego"))|
+|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
 
 ## <a name="requirements"></a>Wymagania
 

@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,28 +21,22 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446777"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
-Instaluje lub odinstalowuje zdefiniowane przez klienta funkcji raportowania przez Przechwytywanie go do procesu raportowania debugowania środowiska wykonawczego C (tylko wersja do debugowania).
+Instaluje lub odinstalowuje zdefiniowaną przez klienta funkcji raportowania przez podłączenie jej do procesu raportowania debugowania w czasie wykonywania C (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,36 +57,36 @@ int _CrtSetReportHookW2(
 Akcja do wykonania: **_CRT_RPTHOOK_INSTALL** lub **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Raport punktu zaczepienia w celu zainstalowania lub usunięcia w wersji wąskie znaku lub znaków dwubajtowych tej funkcji.
+Należy sporządzić raport podłączania, aby zainstalować lub usunąć w wąskiego znaku lub znaków dwubajtowych wersja tej funkcji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
--1, jeśli wystąpił błąd z **einval —** lub **enomem —** ustawić; w przeciwnym razie zwraca wartość liczebności referencyjnej równej *pfnNewHook* po wywołaniu.
+-1, jeśli wystąpił błąd przy użyciu **EINVAL** lub **ENOMEM** ustawić; w przeciwnym razie zwraca wartość licznika odwołań *pfnNewHook* po wywołaniu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtsetreporthook2 —** i **_crtsetreporthookw2 —** umożliwiają utworzenie punktu zaczepienia lub odpięcie funkcja, podczas gdy [_crtsetreporthook —](crtsetreporthook.md) tylko umożliwia utworzenie punktu zaczepienia funkcji.
+**_Crtsetreporthook2 —** i **_crtsetreporthookw2 —** umożliwiają utworzenie punktu zaczepienia lub odczepić funkcji, natomiast [_CrtSetReportHook](crtsetreporthook.md) pozwala tylko funkcję podłączania.
 
-**_Crtsetreporthook2 —** lub **_crtsetreporthookw2 —** powinien być używany zamiast **_crtsetreporthook —** nawiązaniem połączenia punktu zaczepienia w bibliotece DLL i po może załadować kilka bibliotek DLL i ustawiania ich własnych Funkcje punktów zaczepienia. W takiej sytuacji bibliotek DLL może zostać zwolniona w innym porządku niż zostały załadowane i funkcji punktów zaczepienia może pozostać wskazując zwolnić biblioteki DLL. Żadnych danych wyjściowych debugowania awarii procesu Jeśli dodano funkcji punktów zaczepienia z **_crtsetreporthook —**.
+**_Crtsetreporthook2 —** lub **_crtsetreporthookw2 —** powinny być używane zamiast **_CrtSetReportHook** gdy dochodzi do wywołania punktu zaczepienia w bibliotece DLL i po może załadować kilka bibliotek DLL i ustawianie ich własnych Funkcje punktów zaczepienia. W takiej sytuacji bibliotek DLL może zostać zwolniona w innym porządku niż zostały załadowane, a funkcja podłączania może pozostać wskazywanym zwolniono bibliotekę DLL. Wszelkie dane wyjściowe debugowania ulega awarii procesu, jeśli funkcje punktu zaczepienia zostały dodane za pomocą **_CrtSetReportHook**.
 
-Dowolne funkcje dodane w utworzenie punktu zaczepienia **_crtsetreporthook —** są nazywane, jeśli nie ma żadnych punktów zaczepienia funkcje dodane w **_crtsetreporthook2 —** lub **_crtsetreporthookw2 —** lub jeśli wszystkich punktów zaczepienia funkcje dodane w **_crtsetreporthook2 —** i **_crtsetreporthookw2 —** zwracać **FALSE**.
+Dowolne funkcje dodane przy użyciu utworzenie punktu zaczepienia **_CrtSetReportHook** są wywoływane, jeśli nie ma żadnych punktów zaczepienia funkcje dodawane przy użyciu **_crtsetreporthook2 —** lub **_crtsetreporthookw2 —** , czy dołączyć wszystkie funkcje dodane za pomocą **_crtsetreporthook2 —** i **_crtsetreporthookw2 —** zwracają **FALSE**.
 
-Dostępna jest wersja znaków dwubajtowych tej funkcji. Raportowanie funkcji punktów zaczepienia zająć ciąg, którego typ (znaki dwubajtowe lub wąskie) musi odpowiadać wersji tej funkcji używany. Użyj następujących prototypu funkcji punkty zaczepienia raportu w wersji znaków dwubajtowych tej funkcji:
+Dostępna jest wersja znaków dwubajtowych tej funkcji. Raportowanie funkcji punktów zaczepienia zająć ciąg o typie (szeroki lub wąski znaków) musi być zgodny z wersją tę funkcję, używana. Użyj następujących prototypu funkcji hooks raportu używane z wersją znaków dwubajtowych tej funkcji:
 
 ```C
 int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 ```
 
-Użyj następujących prototypu punkty zaczepienia znak wąskie raportu:
+Poniższy prototyp na użytek punktów zaczepienia wąskie raportu:
 
 ```C
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Te funkcje walidację ich parametrów. Jeśli *tryb* lub **pfnNewNook** jest nieprawidłowy, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *tryb* lub **pfnNewNook** jest nieprawidłowy, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
 
 > [!NOTE]
-> Jeśli aplikacja jest skompilowana przy użyciu **/CLR** i funkcji raportowania jest wywoływana po zakończył działanie aplikacji głównej, CLR spowoduje zgłoszenie wyjątku, jeśli wszystkie funkcje CRT wywołuje funkcję raportowania.
+> Jeśli aplikacja jest kompilowana z **/CLR** i funkcji raportowania jest wywoływana po zakończył działanie aplikacji głównej, środowisko CLR spowoduje zgłoszenie wyjątku, jeśli funkcja raportowania wywołuje wszystkie funkcje CRT.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -105,11 +95,11 @@ Te funkcje walidację ich parametrów. Jeśli *tryb* lub **pfnNewNook** jest nie
 |**_CrtSetReportHook2**|\<crtdbg.h>|\<errno.h>|
 |**_CrtSetReportHookW2**|\<crtdbg.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="example"></a>Przykład
 

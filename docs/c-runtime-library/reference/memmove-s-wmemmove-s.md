@@ -1,10 +1,6 @@
 ---
-title: memmove_s —, wmemmove_s — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,26 +20,20 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561190"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
-Przenosi buforu na inny. Są to wersje [memmove —, wmemmove —](memmove-wmemmove.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Przenosi buforu na inny. Są to wersje [memmove, wmemmove —](memmove-wmemmove.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,7 +58,7 @@ errno_t wmemmove_s(
 Obiekt docelowy.
 
 *numberOfElements*<br/>
-Rozmiar buforu docelowego.
+Rozmiar buforu miejsca docelowego.
 
 *src*<br/>
 Obiekt źródłowy.
@@ -78,21 +68,21 @@ Liczba bajtów (**memmove_s —**) ani znaków (**wmemmove_s —**) do skopiowan
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; Kod błędu w przypadku awarii
+Zero, jeśli to się powiedzie; Kod błędu
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*dest*|*numberOfElements*|*src*|Wartość zwracana|Zawartość *docelowy*|
+|*dest*|*numberOfElements*|*src*|Wartość zwracana|Zawartość *miejsca docelowego*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|wszystkie|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|wszystkie|**NULL**|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|< *Liczba*|wszystkie|**ERANGE —**|Nie zmodyfikowano|
+|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|Wszystkie|**NULL**|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|< *Liczba*|Wszystkie|**ERANGE**|Nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Kopie *liczba* bajtów znaków z *src* do *dest*. Jeśli nakładają się pewnych regionach obszar źródłowy i docelowy, **memmove_s —** gwarantuje, że oryginalne źródło bajty nakładających się są kopiowane przed zastąpieniem.
+Kopiuje *liczba* bajtów znaków ze zbioru *src* do *dest*. Jeśli niektóre regiony obszaru źródłowy i docelowy zachodziły na siebie, **memmove_s —** gwarantuje, że oryginalne źródło bajty nakładających się są kopiowane przed zastąpieniem.
 
-Jeśli *dest* lub, jeśli *src* jest wskaźnika o wartości null, lub jeśli ciągu docelowego jest zbyt mały, te funkcje wywołanie program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **einval —** i ustaw **errno** do **einval —**.
+Jeśli *dest* lub jeśli *src* jest wskaźnikiem typu null lub jeśli ciąg docelowy jest zbyt mały, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 

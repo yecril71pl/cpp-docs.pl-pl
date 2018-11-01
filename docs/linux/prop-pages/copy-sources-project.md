@@ -1,30 +1,20 @@
 ---
-title: Kopiuj źródła właściwości projektu (Linux C++) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kopiuj źródła właściwości projektu (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: d13bc7c129696e2b7251ccb23b68338956864321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd0a26db58265724f0a0e46c31365c97c00ff568
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325594"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477249"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Kopiuj źródła właściwości projektu (Linux C++)
 
-Właściwości ustawione na tej stronie właściwości stosowane do wszystkich plików w projekcie, z wyjątkiem przypadków, w których właściwości poziomu plików są ustawione.
+Właściwości ustawione na tej stronie właściwości dotyczą wszystkich plików w projekcie, z wyjątkiem sytuacji, w której właściwości poziomu plików są ustawione.
 
 Właściwość | Opis
 --- | ---
-Źródło do kopiowania | Określa źródła, aby skopiować do systemu zdalnego. Zmiana tej listy może shift lub inaczej nie wpływa na struktury katalogów, w którym pliki są kopiowane do systemu zdalnego.
-Skopiuj źródeł | Określa, czy można skopiować do systemu zdalnego źródła.
-Dodatkowe źródła do kopiowania | Określa dodatkowe źródła można skopiować do systemu zdalnego. Opcjonalnie listy można podać jako lokalnego z parami mapowania zdalnego przy użyciu składni następująco: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, w której plik lokalny mogą zostać skopiowane do określonej lokalizacji zdalnego w systemie zdalnym.
+Źródła do skopiowania | Określa źródła do skopiowania do systemu zdalnego. Zmiana tej listy może spowodować przesunięcie lub inną modyfikację struktury katalogów, w której pliki są kopiowane do systemu zdalnego.
+Kopiuj źródła | Określa, czy można skopiować źródła do systemu zdalnego.
+Dodatkowe źródła do skopiowania | Określa dodatkowe źródła do skopiowania do systemu zdalnego. Opcjonalnie listę można przekazać jako lokalną do par mapowania zdalnego przy użyciu składni: pełna_ścieżka_lokalna_1: = pełna_ścieżka_zdalna_1; pełna_ścieżka_lokalna_2: = pełna_ścieżka_zdalna_2, gdzie można skopiować plik lokalny do określonej lokalizacji zdalnej w systemie zdalnym.

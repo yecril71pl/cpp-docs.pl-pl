@@ -1,10 +1,6 @@
 ---
-title: Klasa CMFCPropertySheet | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Klasa CMFCPropertySheet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXPROPERTYSHEET/CMFCPropertySheet::RemovePage
 - AFXPROPERTYSHEET/CMFCPropertySheet::SetIconsList
 - AFXPROPERTYSHEET/CMFCPropertySheet::SetLook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertySheet [MFC], CMFCPropertySheet
 - CMFCPropertySheet [MFC], AddPage
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5512f806b5abdee56b2c6eabe45f93545c8788e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531615"
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 
@@ -94,7 +84,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Metoda wywoływana przez platformę, by narysować nagłówek strony właściwości niestandardowej.|
 |`CMFCPropertySheet::OnInitDialog`|Obsługuje [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości. (Przesłania [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Metoda wywoływana przez platformę, by usunąć stronę właściwości z kontrolką drzewa.|
-|`CMFCPropertySheet::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania `CPropertySheet::PreTranslateMessage`.)|
+|`CMFCPropertySheet::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania `CPropertySheet::PreTranslateMessage`).|
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Usunięcie węzła z formantu drzewa.|
 |[CMFCPropertySheet::RemovePage](#removepage)|Usuwa stronę właściwości z arkusza właściwości.|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Określa listę obrazów, które są używane w formancie nawigacji w okienku programu Outlook.|

@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579603"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
-Pobieranie wartości z bieżącego środowiska.  Wersje [_dupenv_s —, _wdupenv_s —](dupenv-s-wdupenv-s.md) który przydzielić pamięci z [_malloc_dbg —](malloc-dbg.md) o podanie dodatkowych informacji debugowania.
+Pobieranie wartości z bieżącego środowiska.  Wersje [_dupenv_s —, _wdupenv_s —](dupenv-s-wdupenv-s.md) , przydziel pamięć z [_malloc_dbg](malloc-dbg.md) podać dodatkowe informacje debugowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,40 +64,40 @@ errno_t _wdupenv_s_dbg(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Bufor do przechowywania wartość zmiennej.
+Bufor do przechowywania wartości zmiennej.
 
 *numberOfElements*<br/>
 Rozmiar *buforu*.
 
-*nazwa_zmiennej*<br/>
+*Nazwa zmiennej*<br/>
 Nazwa zmiennej środowiskowej.
 
 *blockType*<br/>
-Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
+Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na pliku źródłowego lub **NULL**.
+Numer wiersza w pliku źródłowym lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia, kod błędu w przypadku awarii.
+Zero, w przypadku powodzenia, kod błędu.
 
-Te funkcje walidację ich parametrów; Jeśli *buforu* lub *nazwa_zmiennej* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, Ustaw funkcje **errno** do **einval —** i zwracać **einval —**.
+Te funkcje sprawdzają poprawność parametrów; Jeśli *buforu* lub *nazwa_zmiennej* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
 
-Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, sami ustawiają *buforu* do **NULL** i *numberOfElements* 0 i powrotu **enomem —**.
+Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, ustawiają *buforu* do **NULL** i *numberOfElements* do 0 i zwracają **ENOMEM**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Dupenv_s_dbg —** i **_wdupenv_s_dbg —** funkcje są takie same jak **_dupenv_s —** i **_wdupenv_s —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania [— funkcja malloc](malloc.md), [_malloc_dbg —](malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
+**_Dupenv_s_dbg —** i **_wdupenv_s_dbg —** funkcje są takie same jak **_dupenv_s —** i **_wdupenv_s —** z tą różnicą, że gdy **_DEBUG** jest zdefiniowany, te funkcje używają wersji debugowania [— funkcja malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Instrukcje dotyczące debugowania funkcji **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego można określić flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —**, odpowiednio, z *blockType* równa **_NORMAL_BLOCK**. Dzięki temu, nie trzeba jawnie wywołać te funkcje, chyba że chcesz oznaczyć bloki stosu jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg —**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 

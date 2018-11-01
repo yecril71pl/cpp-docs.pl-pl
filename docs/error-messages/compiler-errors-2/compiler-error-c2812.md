@@ -1,41 +1,31 @@
 ---
-title: C2812 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2812
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2812
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c5469e4f7be3c164cc63fa30f5069009846be48
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88b071f38cf41db9c929d25ffd526b3f2b7ca468
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531823"
 ---
-# <a name="compiler-error-c2812"></a>C2812 błąd kompilatora
+# <a name="compiler-error-c2812"></a>Błąd kompilatora C2812
 
 > \#Import nie jest obsługiwany z/CLR: pure i/CLR: Safe
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-[#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md) nie jest obsługiwany z **/CLR: pure** i **/CLR: Safe** ponieważ `#import` wymaga użycia bibliotek obsługi macierzystego kompilatora.
+[#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md) nie jest obsługiwany przez **/CLR: pure** i **/CLR: Safe** ponieważ `#import` wymaga korzystania z biblioteki obsługi natywnego kompilatora.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2812.
+Poniższy przykład spowoduje wygenerowanie C2812.
 
 ```cpp
 // C2812.cpp

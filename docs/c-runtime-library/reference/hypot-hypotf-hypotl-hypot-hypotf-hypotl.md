@@ -1,10 +1,6 @@
 ---
-title: hypot —, hypotf —, hypotl —, _hypot —, _hypotf, _hypotl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,20 +37,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439536"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Obliczanie przeciwprostokątnej.
+Oblicza przeciwprostokątną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,19 +80,19 @@ long double _hypotl(
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Wartości zmiennoprzecinkowych.
+Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **hypot —** zwraca długość przeciwprostokątnej; na przepełnienia, **hypot —** zwraca INF (nieskończoności) i **errno** zmienna jest ustawiona na **erange —** . Można użyć **_matherr —** do zmodyfikowania obsługi błędów.
+W przypadku powodzenia **hypot —** zwraca długość przeciwprostokątnej; przy przepełnieniu **hypot —** zwraca INF (nieskończoność) i **errno** zmienna jest ustawiona na **ERANGE** . Możesz użyć **_matherr** do modyfikowania obsługi błędów.
 
-Aby uzyskać więcej informacji na temat kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Hypot —** funkcje obliczyć długość przeciwprostokątnej trójkąt, podana długość obu stron *x* i *y* (innymi słowy, pierwiastek kwadratowy liczby *x*<sup>2</sup> + *y*<sup>2</sup>).
+**Hypot —** funkcje obliczają długość przeciwprostokątnej trójkąta prostokątnego, biorąc pod uwagę długość obu stron *x* i *y* (innymi słowy, pierwiastek kwadratowy liczby *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Wersje funkcje, które mają wiodące znaki podkreślenia są dostępne dla zgodności ze standardami wcześniej. Ich zachowanie jest takie same jak wersje, które nie mają wiodące znaki podkreślenia. Firma Microsoft zaleca dla nowego kodu przy użyciu wersji bez wiodące znaki podkreślenia.
+Wersje funkcji, które mają wiodące znaki podkreślenia są zapewniane dla zgodności z wcześniejszymi standardami. Ich zachowanie jest identyczne z wersjami, które nie mają wiodących znaków podkreślenia. Zaleca się używania wersji bez wiodącego podkreślenia dla nowego kodu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -110,7 +100,7 @@ Wersje funkcje, które mają wiodące znaki podkreślenia są dostępne dla zgod
 |-------------|---------------------|
 |**hypot —**, **hypotf —**, **hypotl —**, **_hypot —**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
