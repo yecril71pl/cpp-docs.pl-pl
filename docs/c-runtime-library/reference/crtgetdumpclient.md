@@ -1,10 +1,6 @@
 ---
-title: _Crtgetdumpclient — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550738"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-Pobiera bieżącą funkcję zrzucanie zdefiniowanym przez aplikację **_client_block —** wpisz bloki pamięci (tylko wersja do debugowania).
+Pobiera bieżącą funkcję zdefiniowanych przez aplikację do zrzucania **_CLIENT_BLOCK** wpisz bloki pamięci (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,9 +45,9 @@ Zwraca bieżący procedury zrzutu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtgetdumpclient —** funkcja pobiera bieżącej funkcji punktów zaczepienia dla zrzucanie obiekty przechowywane w **_client_block —** bloków pamięci dla C-run-time debugowania procesu zrzutu pamięci.
+**_Crtgetdumpclient —** funkcja pobiera bieżącą funkcję hak służąca do zrzucania obiektów przechowywanych w **_CLIENT_BLOCK** bloki pamięci dla środowiska wykonawczego języka C debugować proces zrzutu pamięci.
 
-Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
+Aby uzyskać więcej informacji na temat korzystania innych funkcją podłączania funkcji wykonawczej i pisanie własnych zdefiniowaną przez klienta funkcje punktów zaczepienia, zobacz [debugowania pisania funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -65,11 +55,11 @@ Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zac
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 
