@@ -1,27 +1,17 @@
 ---
-title: sizeof Operator (C) operator | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: sizeof — operator (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - sizeof
-dev_langs:
-- C++
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa3c959e4a839521dddc78d97fbf77db2e1c4b99
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577635"
 ---
 # <a name="sizeof-operator-c"></a>sizeof — operator (C)
 

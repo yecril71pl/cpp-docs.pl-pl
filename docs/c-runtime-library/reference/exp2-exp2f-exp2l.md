@@ -1,11 +1,6 @@
 ---
-title: exp2 —, exp2f —, exp2l | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,23 +25,17 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562763"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -79,30 +68,30 @@ long double exp2l(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość wykładnik.
+Wartość wykładnika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wykładnik base-2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
+Jeśli to się powiedzie, zwraca wykładnik base 2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Wróć|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* = - INFINITY|+0|
+|*x* = - NIESKOŃCZONOŚĆ|+0|
 |*x* = + INFINITY|+ INFINITY|
 |*x* = NaN|NaN|
-|Błąd przepełnienia zakresu|+ Huge_val — + HUGE_VALF, lub + HUGE_VALL|
-|Błąd zakresu niedopełnienie|Prawidłowego wyniku zaokrągloną|
+|Błąd w zakresie przepełnienia|+ HUGE_VAL + HUGE_VALF, lub + HUGE_VALL|
+|Błąd zakresu niedopełnienie|Odpowiedni wynik po zaokrągleniu zgodnym|
 
-Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+Błędy są zgłaszane określonej [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **exp2 —** który przyjmować i zwracać **float** i **podwójnej długości** typów. W programie C **exp2 —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **exp2 —** przyjmujące i zwracające **float** i **typu long double** typów. W programie C **exp2 —** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**EXP**, **expf —**, **expl**|\<math.h>|\<cmath >|
 

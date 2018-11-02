@@ -1,43 +1,33 @@
 ---
-title: C2144 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483333"
 ---
-# <a name="compiler-error-c2144"></a>C2144 błąd kompilatora
+# <a name="compiler-error-c2144"></a>Błąd kompilatora C2144
 
-> Błąd składniowy: "*typu*"powinien być poprzedzony przez"*tokenu*"
+> Błąd składniowy: "*typu*"powinien być poprzedzony"*tokenu*"
 
-Kompilator Oczekiwano *tokenu* i znaleźć *typu* zamiast tego.
+Kompilator oczekuje *tokenu* i znaleźć *typu* zamiast tego.
 
-Przyczyną tego błędu może być brak zamykającego nawiasu klamrowego, prawy nawias lub średnikami.
+Ten błąd może być spowodowany przez brak zamykającego nawiasu klamrowego, prawy nawias okrągły lub średnika.
 
-C2144 może również wystąpić podczas próby utworzenia makra ze słowem kluczowym CLR, która zawiera biały znak.
+C2144 może również wystąpić podczas próby utworzenia makra ze słowem kluczowym CLR, która zawiera znak odstępu.
 
-Może również zostać wyświetlony C2144 próbie przekazywanie dalej typu. Zobacz [przesyłania dalej typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Aby uzyskać więcej informacji.
+C2144 może być też widoczny, jeśli próbujesz przekazywanie dalej typu. Zobacz [przekazywania dalej typów (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Aby uzyskać więcej informacji.
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład generuje C2144 i przedstawia sposób, aby go rozwiązać:
+Poniższy przykład generuje C2144 i pokazuje sposób, aby rozwiązać ten problem:
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-Poniższy przykład generuje C2144 i przedstawia sposób, aby go rozwiązać:
+Poniższy przykład generuje C2144 i pokazuje sposób, aby rozwiązać ten problem:
 
 ```cpp
 // C2144_2.cpp

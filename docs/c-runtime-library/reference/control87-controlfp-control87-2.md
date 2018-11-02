@@ -1,10 +1,6 @@
 ---
-title: _control87 —, _controlfp —, __control87_2 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _control87, _controlfp, __control87_2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _control87
 - _controlfp
@@ -30,8 +26,6 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505875"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
-Pobiera i ustawia słowa formantu zmiennoprzecinkowych. Bezpieczniejsza wersja **_controlfp —** jest dostępna; zobacz [_controlfp_s —](controlfp-s.md).
+Pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Bardziej bezpieczna wersja **_controlfp** jest dostępna; zobacz [_controlfp_s —](controlfp-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,33 +71,33 @@ int __control87_2(
 ### <a name="parameters"></a>Parametry
 
 *new*<br/>
-Nowe wartości bitowe słowa formantu.
+Nowe wartości bitowe słowa sterującego.
 
 *Maska*<br/>
-Maska nowe bity słowa formantu można ustawić.
+Maska dla nowych bitów słowa kontrolującego do ustawienia.
 
 *x86_cw*<br/>
-Wypełnione słowa formantu dla x87 zmiennoprzecinkowe jednostki. Przekazywanie 0 (**NULL**) można ustawić tylko słowa formantu SSE2.
+Wypełniony wyrazem sterującym dla x87 jednostki zmiennoprzecinkowej. Przenieść 0 (**NULL**) można ustawić tylko wyraz kontroli SSE2.
 
 *sse2_cw*<br/>
-Słowa formantu SSE jednostki zmiennoprzecinkowych. Przekazywanie 0 (**NULL**) można ustawić tylko x87 kontroli programu word.
+Słowo sterujące dla jednostki zmiennoprzecinkowej SSE. Przenieść 0 (**NULL**) można ustawić x87 słowo sterujące.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Aby uzyskać **_control87 —** i **_controlfp —**, usługi bits w wartości zwracane wskazują stan formantu zmiennoprzecinkowych. Dla pełnej definicji usługi bits, które są zwracane przez **_control87 —**, zobacz FLOAT. H.
+Aby uzyskać **_control87 —** i **_controlfp**, bity w wartości zwracanej, wskazują stan sterowania zmiennoprzecinkowego. Aby uzyskać pełną definicję bitów, które są zwracane przez **_control87 —**, zobacz FLOAT. H.
 
-Aby uzyskać **__control87_2 —**, zwracana wartość wynosi 1, co oznacza Powodzenie.
+Aby uzyskać **__control87_2**, wartość zwracana wynosi 1, co wskazuje sukces.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Control87 —** funkcja pobiera i ustawia słowa formantu zmiennoprzecinkowych. Słowa formantu zmiennoprzecinkowe umożliwia programowi zmienić dokładność, zaokrąglania i tryby infinity w pakiecie zmiennoprzecinkowej matematyczny, w zależności od platformy. Można również użyć **_control87 —** zamaskować lub anulować maskowanie wyjątki zmiennoprzecinkowe. Jeśli wartość *maski* jest równa 0, **_control87 —** pobiera słowa formantu zmiennoprzecinkowych. Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa formantu: dla dowolnego bit, który znajduje się na (to znaczy równą 1) w *maski*, odpowiadający mu bit *nowe* używane do aktualizowania formantu Word. Innymi słowy **fpcntrl** = ((**fpcntrl** & ~*maski*) &#124; (*nowe* & *maski*)) gdzie **fpcntrl** słowo formantu zmiennoprzecinkowych.
+**_Control87 —** funkcja pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Słowo sterowania zmiennoprzecinkowego Włącza program do zmiany precyzji, zaokrąglania oraz trybu nieskończoności w pakiecie zmiennoprzecinkowym zapisu matematycznego, w zależności od platformy. Można również użyć **_control87 —** do zamaskowania lub usunięcia wyjątki zmiennoprzecinkowe. Jeśli wartość *maski* jest równa 0, **_control87 —** pobiera słowo sterujące zmiennoprzecinkowe. Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa sterującego: dla każdego bitu, który znajduje się na (czyli wynosi 1) w *maski*, odpowiadający mu bit w *nowe* służy do aktualizowania kontrolki Program Word. Innymi słowy **fpcntrl** = ((**fpcntrl** & ~*maski*) &#124; (*nowe* & *maski*)) gdzie **fpcntrl** jest słowem sterującym zmiennoprzecinkowym.
 
 > [!NOTE]
-> Domyślnie biblioteki wykonawczej maski wszystkie wyjątki zmiennoprzecinkowe.
+> Domyślnie bibliotek środowiska uruchomieniowego maskują wszystkie wyjątki zmiennoprzecinkowe.
 
-**_controlfp —** jest niezależne od platformy, przenośne wersja **_control87 —**. Jest niemal identyczna z **_control87 —** funkcja x86, x64 i platformy ARM. Jeśli ma być przeznaczona dla x86, x64 lub platformy ARM, użyj **_control87 —** lub **_controlfp —**.
+**_controlfp** jest niezależny od platformy, przenośną wersją **_control87 —**. Jest prawie identyczna **_control87 —** funkcji na platformach ARM, x64 i x86. Jeśli obiektem docelowym x86, x64 lub platformy ARM, użyj **_control87 —** lub **_controlfp**.
 
-Różnica między **_control87 —** i **_controlfp —** znajduje się w sposób traktują NIEZNORMALIZOWANY wartości. X86, x64 i platformy ARM **_control87 —** można ustawić i wyczyść maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. **_controlfp —** nie modyfikuje maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. W tym przykładzie przedstawiono różnice:
+Różnica między **_control87 —** i **_controlfp** znajduje się w jaki sposób traktuje wartości DENORMAL. X86, x64 i platform ARM **_control87 —** można ustawić lub wyczyścić maskę wyjątku ZDENORMALIZOWANY OPERAND. **_controlfp** nie modyfikuje maski wyjątku DENORMALIZACJA OPERANDU. Ten przykład ilustruje różnicę:
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -116,9 +106,9 @@ _controlfp( _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged
 ```
 
-Możliwe wartości stałej maski (*maski*) oraz nowych wartości formantu (*nowe*) są wyświetlane w tabeli poniżej wartości szesnastkowe. Użyj przenośne stałe wymienione poniżej (**_MCW_EM**, **_EM_INVALID**itd) jako argumenty do tych funkcji, zamiast dostarczanie szesnastkowym wartości jawnie.
+Możliwe wartości dla stałej maski (*maski*) i nowe wartości formantu (*nowe*) są wyświetlane w poniższej tabeli wartości szesnastkowych. Używanie przenośnych stałych wymienionych poniżej (**_MCW_EM**, **_EM_INVALID**, i tak dalej) jako argumenty tych funkcji, a nie dostarczanie szesnastkowych wartości jawnie.
 
-Intel pochodnych x86 platformy obsługuje NIEZNORMALIZOWANY danych wejściowych i wyjściowych wartości na liście sprzętu. X86 zachowanie jest zachowanie Brak reprezentacji ZMIENNOPRZECINKOWEJ wartości. Platforma ARM i x64 obsługiwanych platform, które mają SSE2 Włącz argumenty NIEZNORMALIZOWANY i wyniki opróżnionych lub wymusić na zero. **_Controlfp —** i **_control87 —** funkcje umożliwiać maski, aby zmienić to zachowanie. W poniższym przykładzie pokazano użycie tej maski.
+Intel x86-platformy obsługuje danych wejściowych DENORMAL i wyjściowych wartości na liście sprzętu. X86 ma zachować wartości DENORMAL. Platforma ARM i x64 obsługiwanych platform, które mają SSE2 Włącz DENORMAL i wyników do należy, lub wymuszają zero. **_Controlfp** i **_control87 —** funkcje zapewniają maskę, aby zmienić to zachowanie. Poniższy przykład demonstruje użycie tej maski.
 
 ```C
 _controlfp(_DN_SAVE, _MCW_DN);
@@ -129,34 +119,34 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Na platformach ARM **_control87 —** i **_controlfp —** funkcje odnoszą się do rejestru FPSCR. Na x64 architektury, tylko SSE2 kontroli słowo, które są przechowywane w MXCSR dotyczy rejestru. Na x86 platform, **_control87 —** i **_controlfp —** wpływają na słowa formantu x87 i SSE2, jeśli jest obecny. Funkcja **__control87_2 —** umożliwia zarówno x87 i SSE2 liczb zmiennoprzecinkowych jednostki, aby można było nim sterować razem lub oddzielnie. Jeśli chcesz mieć wpływ na obu jednostki przekazywanie adresów dwie liczb całkowitych na **x86_cw** i **sse2_cw**. Jeśli chcesz mieć wpływ na jedną jednostkę, podaj adres dla tego parametru, ale należy przekazać w 0 (**NULL**) dla siebie. Jeśli 0 jest przekazywane do jednego z tych parametrów, funkcja nie ma wpływu na tej jednostce zmiennoprzecinkowych. Ta funkcja może być przydatne w sytuacjach, w których jednostki zmiennoprzecinkowe używa x87 kodu i część innego kodu używa jednostki zmiennoprzecinkowe SSE2. Jeśli używasz **__control87_2 —** w jednej części programu i ustawić różne wartości dla słowa formantu liczb zmiennoprzecinkowych, a następnie użyj **_control87 —** lub **_controlfp —** do dalszego następnie manipulowania słowa formantu **_control87 —** i **_controlfp —** może być niemożliwe do zwrócenia wyraz jeden formant do reprezentowania stan zarówno zmiennoprzecinkowe jednostki. W takim przypadku ustawić te funkcje **EM_AMBIGUOUS** flagi wartości zwrócona liczba całkowita wskazująca, czy występuje niespójność między wyrazami dwóch formantu. To ostrzeżenie, że słowa formantu zwrócony może nie mieć stan oba słowa formantu liczb zmiennoprzecinkowych dokładnie.
+Na platformach ARM **_control87 —** i **_controlfp** funkcje odnoszą się do rejestru fpscr. Na x64 architektury, tylko wyraz kontroli SSE2, który jest przechowywany w mxcsr rejestru ma wpływ. Na x86 platformach **_control87 —** i **_controlfp** wpływa na wyrazy sterowania zarówno dla x87 i SSE2, jeśli jest obecny. Funkcja **__control87_2** umożliwia x87 i jednostki zmiennoprzecinkowej SSE2 będą kontrolowane, razem lub oddzielnie. Jeśli chcesz mieć wpływ na obie jednostki, przejdź w adresach dwóch liczb całkowitych do **x86_cw** i **sse2_cw**. Jeśli chcesz mieć wpływ na jedną jednostkę, Przekaż adres dla tego parametru, ale Przekaż 0 (**NULL**) dla siebie. Jeśli dla jednego z tych parametrów jest przekazywane 0, funkcja nie ma wpływu na tę jednostkę zmiennoprzecinkową. Ta funkcja może być przydatna w sytuacjach, gdzie jednostka zmiennoprzecinkowa używa x87 kodu i innego część kodu używa jednostki zmiennoprzecinkowej SSE2. Jeśli używasz **__control87_2** w jednej części programu i ustawiasz różne wartości dla słów sterujących zmiennoprzecinkowych, a następnie użyj **_control87 —** lub **_controlfp** , aby bardziej szczegółowo następnie manipulować słowo sterujące **_control87 —** i **_controlfp** może nie być w stanie zwrócić pojedynczego słowa sterującego do reprezentowania stanu obu jednostek zmiennoprzecinkowych. W takim przypadku te funkcje ustawiają **obiekt EM_AMBIGUOUS** flagi w zwracanej wartości liczby całkowitej do wskazania, że występuje niespójność między dwoma słowami sterującymi. To ostrzeżenie, że wyraz zwróconego formantu może reprezentują dokładnie stanu obu wyrazów zmiennoprzecinkowych formantu.
 
-Na ARM i x64 architektury, zmiana trybu infinity lub zmiennoprzecinkowe dokładność nie jest obsługiwane. Jeśli maska kontroli dokładności jest używany na x64 platformy, funkcja podnosi potwierdzenia i program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+Na ARM i x64 architektury, zmiana trybu nieskończoności lub Zwiększanie dokładności nie jest obsługiwane. Jeśli używana jest maska kontroli dokładności, na x64 platformy, funkcja wywołuje potwierdzenie i procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 > [!NOTE]
-> **__control87_2 —** nie jest obsługiwane dla ARM lub x64 architektury. Jeśli używasz **__control87_2 —** i kompilowania programu dla ARM lub x64 architektury, kompilator generuje błąd.
+> **__control87_2** nie jest obsługiwana na ARM lub x64 architektury. Jeśli używasz **__control87_2** i kompilujesz program dla ARM lub x64 architektury, kompilator generuje błąd.
 
-Funkcje te są ignorowane, gdy używasz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) do kompilacji, ponieważ środowisko uruchomieniowe języka wspólnego (CLR) obsługuje tylko domyślna dokładność zmiennoprzecinkowych.
+Funkcje te są ignorowane, gdy używasz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) do kompilacji ponieważ środowisko uruchomieniowe języka wspólnego (CLR) obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
 **Wartości szesnastkowe**
 
-Aby uzyskać **_MCW_EM** maska wyczyszczenie maska ustawia wyjątek, dzięki czemu wyjątek sprzętu; ustawienie maski ukrywa wyjątek. Jeśli **_EM_UNDERFLOW** lub **_EM_OVERFLOW** występuje nie sprzętu wyjątku do momentu następnej instrukcji zmiennoprzecinkowych jest wykonywana. Aby wygenerować wyjątek sprzętu natychmiast po **_EM_UNDERFLOW** lub **_EM_OVERFLOW**, wywołaj **FWAIT** MASM instrukcji.
+Aby uzyskać **_MCW_EM** maska, czyszczenie maski ustawia wyjątek, który umożliwia wyjątek sprzętowy; ustawienie maski ukrywa wyjątek. Jeśli **_EM_UNDERFLOW** lub **_EM_OVERFLOW** problem wystąpi, żaden wyjątek sprzętowy nie jest zgłaszany do momentu następnej instrukcji zmiennoprzecinkowej jest wykonywany. Do generowania wyjątków sprzętowych natychmiast po **_EM_UNDERFLOW** lub **_EM_OVERFLOW**, wywołaj **FWAIT** instrukcji MASM.
 
 |Maska|Wartość szesnastkowa|Stała|Wartość szesnastkowa|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN** (Brak reprezentacji zmiennoprzecinkowej sterowania)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
-|**_MCW_EM** (maska wyjątek przerwań)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** (kontrola nieskończoności)<br /><br /> (Nie jest obsługiwane dla ARM lub x64] platformy.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
-|**_MCW_RC** (zaokrąglania sterowania)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (precyzyjną kontrolę)<br /><br /> (Nie obsługiwany na ARM lub x64 platformy.)|0x00030000|**_PC_24** (24-bitowy)<br /><br /> **_PC_53** (53-bitowy)<br /><br /> **_PC_64** (64-bitowy)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_DN** (formant zdenormalizowany)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_EM** (maska wyjątku przerwania)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
+|**_MCW_IC** (formant nieskończoność)<br /><br /> (Nie jest obsługiwana na ARM lub x64] platformy.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_RC** (formant zaokrąglenia)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
+|**_MCW_PC** (formant precyzji)<br /><br /> (Nie obsługiwany na ARM lub x64 platformy.)|0x00030000|**_PC_24** (24 bity)<br /><br /> **_PC_53** (53-bitowy)<br /><br /> **_PC_64** (64-bitowy)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_control87 —**, **_controlfp —**, **_control87_2**|\<float.h>|
+|**_control87 —**, **_controlfp**, **_control87_2**|\<float.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

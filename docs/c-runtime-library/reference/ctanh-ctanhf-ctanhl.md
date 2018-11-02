@@ -1,11 +1,6 @@
 ---
-title: ctanh ctanhf, ctanhl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctanh
 - ctahf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ctanh
 - complex/ctanhf
 - complex/ctanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctanh function
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf81e503405959686974a26ceb5d064c1ab84400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396085"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470567"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
-Oblicza złożonych tangens hiperboliczny dla liczby złożonej.
+Oblicza złożonych tangens hiperboliczny dla liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,28 +64,28 @@ _Lcomplex ctanhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych, która reprezentuje kąt w radianach.
+Liczby zespolonej oznacza kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Złożone tangens hiperboliczny *z*.
+Złożone tangens hiperboliczny liczby *z*.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
 |-----------|-------------------|--------------------------|
-|∞; GRANICACH, QNAN, IND|brak|_DOMAIN|
+|∞; GRANICACH, QNAN, ZNAJDŹ|brak|_DOMAIN|
 |∞ granicach; (tan, tanf —)|NIEPRAWIDŁOWY|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ctanh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **ctanh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ctanh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **ctanh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**ctanh**, **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex >|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

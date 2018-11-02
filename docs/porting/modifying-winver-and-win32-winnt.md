@@ -1,26 +1,16 @@
 ---
-title: Modyfikowanie symboli WINVER i _WIN32_WINNT | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Modyfikowanie symboli WINVER i _WIN32_WINNT
 ms.date: 09/04/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - WINVER in an upgraded Visual C++ project
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df0b01cebb9e88602a201e50cbfdc45daf44d615
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 919e1656457d13eba3864be44f07f2b4c089b096
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502495"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
 

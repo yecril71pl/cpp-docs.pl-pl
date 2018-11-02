@@ -1,15 +1,9 @@
 ---
-title: Używanie pól wywołania zwrotnego w selektora dat i godzin kontrolki | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Używanie pól wywołania zwrotnego w formancie selektora dat i godzin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - DTN_FORMATQUERY
 - DTN_FORMAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - DateTimePicker control [MFC], callback fields
 - callback fields in CDateTimeCtrl class [MFC]
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94ec357d613a48102b54cf4142c9f3ea735bb698
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82dd4bac53b419b531f512aff859510d6603d462
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564245"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Używanie pól wywołania zwrotnego w formancie selektora dat i godzin
 

@@ -1,10 +1,6 @@
 ---
-title: ASIN asinf —, asinl — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476053"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
-Oblicza sinus.
+Oblicza arcus sinus.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,27 +56,27 @@ long double asin( long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość, którego sinus ma zostać obliczona.
+Wartość, której sinus ma zostać obliczona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Asin** funkcja Zwraca arcus sinus (Funkcja sinus) *x* w zakresie - π/2 na radiany π/2.
+**Asin** funkcja Zwraca arcus sinus (funkcji sinus) *x* w zakresie - π/2 do π/2 radianów.
 
-Domyślnie jeśli *x* jest mniejsza niż -1 lub większą niż 1, **asin** zwraca nieokreślony.
+Domyślnie jeśli *x* jest mniejsza niż -1 lub większa niż 1, **asin** zwraca wartość nieokreśloną.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
-|GRANICACH **QNAN**, **IND**|brak|**_DOMAIN —**|
-|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|± ∞|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
+|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMENY**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **asin** z **float** i **długi** **podwójne** wartości. W programie C **asin** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **asin** z **float** i **długie** **double** wartości. W programie C **asin** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**ASIN**, **asinf —**, **asinl —**|\<math.h>|\<cmath > lub \<math.h >|
 

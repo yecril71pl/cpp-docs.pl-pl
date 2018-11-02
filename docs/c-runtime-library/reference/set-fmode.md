@@ -1,10 +1,6 @@
 ---
-title: _set_fmode — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,51 +19,45 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500363"
 ---
 # <a name="setfmode"></a>_set_fmode
 
-Ustawia domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku.
+Ustawia domyślny tryb translacji plików dla operacji We/Wy pliku.
 
 ## <a name="syntax"></a>Składnia
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Tryb*<br/>
-Tryb tłumaczenia pliku żądanego: **_o_text —** lub **_o_binary —**.
+Tryb tłumaczenia pliku żądanego: **_O_TEXT** lub **_O_BINARY**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero, jeśli to się powiedzie, kod błędu w przypadku awarii. Jeśli *tryb* nie jest **_o_text —** lub **_o_binary —** lub **_O_WTEXT**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Zwraca wartość zero, jeśli to się powiedzie, kod błędu. Jeśli *tryb* nie **_O_TEXT** lub **_O_BINARY** lub **_O_WTEXT**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Zestawy funkcji [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku **_otwórz** i **_pipe —**.
+Zestawy funkcji [_fmode](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb translacji plików dla operacji We/Wy pliku **_otwórz** i **_pipe —**.
 
-**_O_text —** i **_o_binary —** są zdefiniowane w Fcntl.h. **Einval —** jest zdefiniowany w Errno.h.
+**_O_TEXT** i **_O_BINARY** są zdefiniowane w Fcntl.h. **EINVAL** jest zdefiniowany w Errno.h.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,7 +65,7 @@ Zestawy funkcji [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalne
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

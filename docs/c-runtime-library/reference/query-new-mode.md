@@ -1,10 +1,6 @@
 ---
-title: _query_new_mode | Microsoft Docs
-ms.custom: ''
+title: _query_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_mode
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - query_new_mode
 - _query_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_mode function
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8907b043e8b4441d6e5213a1d386dbc1a5a6910a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620028"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
-Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawione przez **_set_new_mode —** dla **— funkcja malloc**.
+Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawione przez **_set_new_mode** dla **— funkcja malloc**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,11 +45,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżący nowy tryb obsługi, a mianowicie 0 lub 1, **— funkcja malloc**. Zwracana wartość 1 oznacza, że, nie można przydzielić pamięci, **— funkcja malloc** wywołuje nowe procedury obsługi; wartość zwracana 0 wskazuje, nie ma.
+Zwraca bieżący nowy tryb obsługi, a mianowicie 0 lub 1, **— funkcja malloc**. Zwracana wartość 1 oznacza, że, w przypadku niepowodzenia, można przydzielić pamięci, **— funkcja malloc** wywoła nową procedurę obsługi; zwracana wartość wynosząca 0 wskazuje, czy nie.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ **_query_new_mode —** funkcja zwróci liczbę całkowitą wskazującą nowy tryb obsługi, który jest uporządkowany według języka C++ [_set_new_mode —](set-new-mode.md) działać w ramach [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, **— funkcja malloc** jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowe procedury obsługi w przypadku awarii. Można użyć **_set_new_mode —** Aby zmienić to zachowanie, tak że w przypadku niepowodzenia **— funkcja malloc** wywołuje nowe procedury obsługi, w tym samym jak robi **nowe** operator nie, gdy nie powiedzie się przydzielić pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowy i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacja języka C++.
+C++ **_query_new_mode —** funkcji zwraca liczbę całkowitą, wskazującą nowy tryb obsługi, który jest ustawiony przez C++ [_set_new_mode](set-new-mode.md) działać w ramach [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia. Możesz użyć **_set_new_mode** zastąpienia tego zachowania, więc, w przypadku niepowodzenia **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** operator nie, gdy nie jest on Przydzielanie pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowych i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacji języka C++.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,11 +57,11 @@ C++ **_query_new_mode —** funkcja zwróci liczbę całkowitą wskazującą now
 |-------------|---------------------|
 |**_query_new_mode**|\<new.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

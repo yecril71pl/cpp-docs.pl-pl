@@ -1,32 +1,22 @@
 ---
-title: char_traits&lt;char16_t&gt; struktury | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: char_traits&lt;char16_t&gt; — struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - char_traits<char16_t>
 - iosfwd/std::char_traits<char16_t>
-dev_langs:
-- C++
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24d6c3d5dd11290ce4151b5d54885ba492b8ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: def0023b259a7b4816bdda29684c1dd9853d5f5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619105"
 ---
 # <a name="chartraitsltchar16tgt-struct"></a>char_traits&lt;char16_t&gt; — struktura
 
-Struktury, która jest specjalizacją szablonu struktury **char_traits\<CharType >** do elementu typu `char16_t`.
+Struktura, która jest specjalizacją szablonu struktury **char_traits\<CharType >** do elementu typu `char16_t`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +27,13 @@ struct char_traits<char16_t>;
 
 ## <a name="remarks"></a>Uwagi
 
-Struktury móc korzystać z funkcji biblioteki, które manipulowania obiektów tego typu umożliwia specjalizacji `char16_t`.
+Specjalizacja umożliwia struktury móc korzystać z funkcji biblioteki, które manipulowania obiektami typu `char16_t`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ciąg >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
