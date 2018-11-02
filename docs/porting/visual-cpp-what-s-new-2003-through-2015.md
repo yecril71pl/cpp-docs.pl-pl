@@ -1,24 +1,13 @@
 ---
-title: Visual C++ co&#39;s nowego od roku 2003 do 2015 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499622"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -832,9 +821,9 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykłady przywróconej ostrzeżeń, które znajdują się w dokumentacji.
 
-- **#include: użycie specyfikatora katalog nadrzędny ".." w pathname** (dotyczy tylko `/Wall` `/WX`)
+- **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)
 
-   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny ".." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
+   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -852,7 +841,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
    ```
 
-   Ponadto, mimo że kompilator nie daje określonych diagnostyczne, również zalecamy specyfikator katalog nadrzędny ".." Uwaga stosuje się do określenia katalogi dołączane projektu.
+   Ponadto, mimo że kompilator nie daje określonych diagnostyczne, również zalecamy specyfikator katalog nadrzędny "." Uwaga stosuje się do określenia katalogi dołączane projektu.
 
 - **#pragma optimize() wykracza poza końcem pliku nagłówkowego** (dotyczy tylko `/Wall` `/WX`)
 
