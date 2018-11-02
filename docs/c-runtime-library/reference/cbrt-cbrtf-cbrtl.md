@@ -1,10 +1,6 @@
 ---
-title: cbrt —, cbrtf —, cbrtl | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,27 +22,21 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505537"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
-Oblicza pierwiastek modułu.
+Oblicza kwadratowy modułu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,19 +65,19 @@ Wartość zmiennoprzecinkowa
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Cbrt —** zwracają pierwiastek modułu z *x*.
+**Cbrt —** funkcje zwracają modułu — katalog główny *x*.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
 |-----------|-------------------|--------------------------|
-|∞; GRANICACH, QNAN, IND|brak|brak|
+|∞; GRANICACH, QNAN, ZNAJDŹ|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **cbrt —** które trwają **float** lub **długi** **podwójne** typów. W programie C **cbrt —** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cbrt —** o **float** lub **długie** **double** typów. W programie C **cbrt —** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**cbrt —**, **cbrtf —**, **cbrtl**|\<math.h>|\<cmath >|
 

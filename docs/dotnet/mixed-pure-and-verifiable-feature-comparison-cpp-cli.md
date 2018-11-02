@@ -1,12 +1,6 @@
 ---
-title: Porównanie funkcji mieszanych, czystych i weryfikowalnych (C + +/ CLI) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Porównanie funkcji mieszanych, czystych i weryfikowalnych (C + +/ CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe assemblies [C++], vs. pure
 - mixed assemblies [C++], vs. pure
@@ -23,36 +17,31 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 8cb1b2ba71277415fd1ba5124f6120cc2f2c995d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 81fcf986ee68f5f8f64c8070bb992fa1cda1683b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482081"
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Porównanie funkcji mieszanych, czystych i weryfikowalnych (C + +/ CLI)
 
-W tym temacie porównanie funkcji spośród różnych **/CLR** tryby kompilacji. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+W tym temacie porównano funkcje wśród różnych **/CLR** trybów kompilacji. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!IMPORTANT]
-> **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+> **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="feature-comparison"></a>Porównanie funkcji
 
-|Funkcja|Mieszane (/ clr)|Czysty (/ clr: pure)|Bezpieczne (/ CLR: Safe)|Informacje pokrewne|
+|Funkcja|Mieszany (/ clr)|Czysty (/ clr: pure)|Bezpieczne (/ CLR: Safe)|Informacje pokrewne|
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|
 |Biblioteka CRT|Obsługiwane|przestarzałe||[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)|
-|MFC/ATL|Obsługiwane|||[Aplikacje dla pulpitu MFC](../mfc/mfc-desktop-applications.md) &#124; [Przegląd klas](../atl/atl-class-overview.md)|
+|MFC I ATL|Obsługiwane|||[Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md) &#124; [Przegląd klas](../atl/atl-class-overview.md)|
 |Funkcje niezarządzane|Obsługiwane|||[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)|
 |Niezarządzanych danych|Obsługiwane|przestarzałe||[Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|
-|Można wywołać z funkcjami niezarządzanymi|Obsługiwane||||
+|Można wywołać za pomocą funkcji niezarządzanych|Obsługiwane||||
 |Obsługuje wywoływanie niezarządzanych funkcji|Obsługiwane|przestarzałe|przestarzałe|[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|
-|Obsługuje odbicia|Tylko biblioteki dll|przestarzałe|przestarzałe|[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|
+|Obsługuje odbicia|Tylko bibliotek DLL|przestarzałe|przestarzałe|[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|
 
 ## <a name="see-also"></a>Zobacz także
 

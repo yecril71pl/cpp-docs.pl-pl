@@ -1,26 +1,16 @@
 ---
-title: Pliki o zerowej długości | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Pliki o zerowej długości
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], zero-length
 - zero-length files
 ms.assetid: f0725a4e-7a39-4b1e-ba23-58171250919e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6352723cc65ba1ed87d867fd1a9938269cc84832
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 351c102f123277c26799d9538d0b3438355b9f92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528170"
 ---
 # <a name="zero-length-files"></a>Pliki o zerowej długości
 

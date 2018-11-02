@@ -1,10 +1,6 @@
 ---
-title: _fullpath, _wfullpath | Microsoft Docs
-ms.custom: ''
+title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -26,8 +22,6 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550400"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
-Tworzy ścieżkę bezwzględną lub pełną nazwę określoną ścieżką względną.
+Tworzy ścieżkę bezwzględną, lub pełną nazwę określoną ścieżką względną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,37 +59,37 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parametry
 
 *absPath*<br/>
-Wskaźnik do bufor zawierający nazwę ścieżki bezwzględnej lub pełnego lub **NULL**.
+Wskaźnik do buforu, zawierające nazwę ścieżki bezwzględnej lub pełnego lub **NULL**.
 
 *relPath*<br/>
 Nazwa ścieżki względnej.
 
 *Element maxLength*<br/>
-Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). Jest to długość w bajtach dla **_fullpath —** , ale w znaki dwubajtowe (**wchar_t**) dla **_wfullpath —**.
+Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). To długość jest w bajtach dla **_fullpath —** , ale w znaków dwubajtowych (**wchar_t**) dla **_wfullpath —**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do buforu, zawierający nazwę ścieżkę bezwzględną (*absPath*). Jeśli błąd (na przykład, jeśli wartość przekazano *relPath* zawiera literę dysku, który jest nieprawidłowy lub nie można znaleźć, lub jeśli długość nazwy utworzonego ścieżkę bezwzględną (*absPath*) jest większa niż *maxLength*), funkcja zwraca **NULL**.
+Każda z tych funkcji zwraca wskaźnik do buforu, zawierający nazwę ścieżkę bezwzględną (*absPath*). Jeśli wystąpi błąd (na przykład, jeśli wartość przekazywana w *relPath* zawiera literę dysku, który jest nieprawidłowy lub nie można odnaleźć, lub jeśli długość nazwy utworzona ścieżka bezwzględna (*absPath*) jest większa niż *maxLength*), funkcja zwraca **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fullpath —** funkcja rozszerza nazwy ścieżki względnej w *relPath* ścieżka w pełni kwalifikowaną lub bezwzględną i magazyny to imię i nazwisko *absPath*. Jeśli *absPath* jest **NULL**, **— funkcja malloc** służy można przydzielić bufora o długości wystarczające, aby pomieścić nazwę ścieżki. Jest odpowiedzialny za obiekt wywołujący, aby zwolnić tego buforu. Względna ścieżka Określa ścieżkę do innej lokalizacji z bieżącej lokalizacji (takich jak bieżący katalog roboczy: "."). Nazwa ścieżki jest rozszerzenie nazwy ścieżki względnej, stwierdzający całej ścieżki, które są wymagane do uzyskania żądanej lokalizacji z katalogu głównego systemu plików. W odróżnieniu od **_makepath —**, **_fullpath —** może zostać użyty do uzyskania nazwę ścieżki bezwzględnej ścieżki względne (*relPath*) zawierające ". /"lub".. / "w ich nazwy.
+**_Fullpath —** funkcja rozszerza nazwę ścieżki względnej w *relPath* jego w pełni kwalifikowaną lub bezwzględna ścieżka i magazyny to imię i nazwisko *absPath*. Jeśli *absPath* jest **NULL**, **— funkcja malloc** jest używany, można przydzielić bufora wystarczająco długa, aby pomieścić nazwę ścieżki. Jest odpowiedzialny za obiekt wywołujący, aby zwolnić buforu. Nazwa ścieżki względnej Określa ścieżkę do innej lokalizacji z bieżącej lokalizacji (np. bieżący katalog roboczy: "."). Nazwa ścieżki bezwzględnej jest rozszerzenie pełną ścieżkę, wymagane do uzyskania żądanej lokalizacji systemu plików z katalogu głównego, stwierdzający, że nazwa ścieżki względnej. W odróżnieniu od **_makepath —**, **_fullpath —** można uzyskać nazwy ścieżki bezwzględnej dla ścieżek względnych (*relPath*) zawierające ". /"lub".. / "w nazwach.
 
-Na przykład aby użyć procedury środowiska wykonawczego języka C, aplikacja musi zawierać pliki nagłówkowe, zawierające deklaracje dla procedury. Każdy plik nagłówka obejmują instrukcji odwołuje się do lokalizacji pliku w sposób względny (od katalog roboczy aplikacji):
+Na przykład aby użyć procedury czasu wykonywania języka C, aplikacja musi zawierać pliki nagłówkowe, które zawierać deklaracje dla procedur. Każdy plik nagłówkowy obejmują odwołuje się do instrukcji lokalizację pliku w sposób względnych (z katalogu roboczego aplikacji):
 
 ```C
 #include <stdlib.h>
 ```
 
-Jeśli ścieżka bezwzględna (rzeczywista lokalizacja systemu plików) w pliku może być:
+Jeśli ścieżka bezwzględna (rzeczywista lokalizacja systemu plików) plik może być:
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath —** automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. **_wfullpath —** jest wersja znaków dwubajtowych **_fullpath —**; argumenty ciągu **_wfullpath —** są ciągami znaków dwubajtowych. **_wfullpath —** i **_fullpath —** zachowują się tak samo, z wyjątkiem **_wfullpath —** nie obsługuje ciągów znaków wielobajtowych.
+**_fullpath —** automatycznie obsługuje argumenty ciągu znaków wielobajtowych zgodnie z potrzebami, rozpoznawaniu sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtowe. **_wfullpath —** to wersja znaku dwubajtowego **_fullpath —**; argumentów ciągów **_wfullpath —** są ciągami znaków dwubajtowych. **_wfullpath —** i **_fullpath —** zachowują się identycznie, chyba że **_wfullpath —** nie obsługuje ciągi znaków wielobajtowych.
 
-Jeśli **_DEBUG** i **_crtdbg_map_alloc —** są zdefiniowane, wywołania **_fullpath —** i **_wfullpath —** zastępuje wywołań **_fullpath_dbg —** i **_wfullpath_dbg —** umożliwiające profilowanie przydziału pamięci. Aby uzyskać więcej informacji, zobacz [_fullpath_dbg —, _wfullpath_dbg —](fullpath-dbg-wfullpath-dbg.md).
+Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zarówno zdefiniowany, wywołania **_fullpath —** i **_wfullpath —** są zastępowane przez wywołania **_fullpath_dbg —** i **_wfullpath_dbg —** aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz [_fullpath_dbg —, _wfullpath_dbg —](fullpath-dbg-wfullpath-dbg.md).
 
-Ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), jeśli *maxlen* jest mniejsza niż lub równa 0. Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **NULL**.
+Ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md), jeśli *maxlen* jest mniejszy niż lub równe 0. Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **NULL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -107,7 +97,7 @@ Ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z op
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Jeśli *absPath* bufor jest **NULL**, **_fullpath —** wywołania [— funkcja malloc](malloc.md) alokować buforu ignoruje *maxLength*  argumentu. Odpowiedzialność wywołującego można cofnąć alokacji buforu (przy użyciu [wolnego](free.md)) jako odpowiednie. Jeśli *relPath* argument określa dysk, bieżącego katalogu tego dysku są łączone ze ścieżką.
+Jeśli *absPath* bufor jest **NULL**, **_fullpath —** wywołania [— funkcja malloc](malloc.md) można przydzielić bufora i ignoruje *maxLength*  argumentu. Odpowiada za wywołującego można cofnąć alokacji buforu (przy użyciu [bezpłatne](free.md)) odpowiednio. Jeśli *relPath* argument określa dysk, bieżący katalog ten dysk jest w połączeniu ze ścieżką.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -116,7 +106,7 @@ Jeśli *absPath* bufor jest **NULL**, **_fullpath —** wywołania [— funkcja 
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

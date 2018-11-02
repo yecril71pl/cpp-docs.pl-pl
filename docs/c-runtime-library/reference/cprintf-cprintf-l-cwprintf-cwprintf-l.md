@@ -1,10 +1,6 @@
 ---
-title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534046"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
-Formatuje i drukowanie do konsoli. Bardziej bezpiecznych wersje są dostępne; zobacz [_cprintf_s —, _cprintf_s_l —, _cwprintf_s —, _cwprintf_s_l —](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
+Formatuje i drukuje do konsoli. Bardziej bezpieczne wersje są dostępne; zobacz [_cprintf_s, _cprintf_s_l —, _cwprintf_s —, _cwprintf_s_l —](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -101,20 +91,20 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków, wydrukować.
+Liczba znaków wydrukowanych.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje formatowania i drukowania serii znaków i wartości bezpośrednio z konsoli programu przy użyciu **_putch —** — funkcja (**_putwch —** dla **_cwprintf —**) znaków danych wyjściowych . Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W odróżnieniu od **fprintf —**, **printf**, i **sprintf** funkcji ani **_cprintf —** ani **_cwprintf —** tłumaczy znaki wysuwu wiersza na kombinacji powrotu wiersza kanału informacyjnego (CR LF) karetki podczas drukowania.
+Te funkcje formatują i drukują szeregi znaków i wartości bezpośrednio do konsoli, za pomocą **_putch** — funkcja (**_putwch** dla **_cwprintf —**) do znaków danych wyjściowych . Każdy argument *argument_list* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. *Format* używa argumentu [formatowanie składni Specyfikacja funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W odróżnieniu od **fprintf**, **printf**, i **sprintf** funkcji ani **_cprintf** ani **_cwprintf —** tłumaczy znaków wysuwu wiersza na powrotu karetki, kombinacje kanał wiersza powrotu (CR-LF) podczas drukowania.
 
-Jest to ważna różnica **_cwprintf —** Wyświetla znaków Unicode, gdy jest używany w systemie Windows. W odróżnieniu od **_cprintf —**, **_cwprintf —** używa bieżących ustawień regionalnych konsoli.
+Jest to ważna różnica **_cwprintf —** Wyświetla znaki Unicode, gdy są używane w Windows. W odróżnieniu od **_cprintf**, **_cwprintf —** używa bieżących ustawień regionalnych konsoli.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych.
 
-**_cprintf —** weryfikuje *format* parametru. Jeśli *format* jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość -1 i zestawy **errno** do **einval —**.
+**_cprintf** weryfikuje *format* parametru. Jeśli *format* jest pustym wskaźnikiem, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika.
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -127,10 +117,10 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cprintf —**, **_cprintf_l —**|\<conio.h>|
+|**_cprintf**, **_cprintf_l —**|\<conio.h>|
 |**_cwprintf —**, **_cwprintf_l —**|\<conio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

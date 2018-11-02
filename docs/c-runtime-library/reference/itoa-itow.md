@@ -1,10 +1,6 @@
 ---
-title: _itoa —, _itow — funkcje | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _itoa —, _itow — funkcje
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - itoa
 - _itoa
@@ -83,8 +79,6 @@ f1_keywords:
 - _MAX_U64TOSTR_BASE10_COUNT
 - _MAX_U64TOSTR_BASE8_COUNT
 - _MAX_U64TOSTR_BASE2_COUNT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -104,20 +98,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95aa140eae6d8a06eff84d03cbb562444c3bd552
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464095"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa — _itoa —, ltoa —, _ltoa —, ultoa —, _ultoa —, _i64toa —, _ui64toa —, _itow —, _ltow —, _ultow —, _i64tow —, _ui64tow —
 
-Konwertuje liczbę całkowitą na ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
+Konwertuje liczbę całkowitą na ciąg. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -175,42 +165,42 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Numer do skonwertowania.
+Numer ma zostać przekonwertowany.
 
 *buffer*<br/>
-Bufor przechowujący wynik konwersji.
+Bufor, który zawiera wynik konwersji.
 
 *radix*<br/>
-Podstawa do użycia na potrzeby konwersji *wartość*, która musi być w zakresie od 2 36.
+Podstawowa na potrzeby konwersji *wartość*, które muszą być z zakresu od 2 do 36.
 
 *Rozmiar*<br/>
-Długość buforu w jednostkach typu znaków. Ten parametr jest wywnioskowany na podstawie *buforu* argument w języku C++.
+Długość buforu w jednostkach typu znaków. Ten parametr jest wnioskowany z *buforu* argument w języku C++.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji, zwraca wskaźnik do *buforu*. Nie ma żadnych zwracany błąd.
+Każda z tych funkcji zwraca wskaźnik do *buforu*. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —** funkcji konwertuje cyfry podany *wartość* argumentu na ciąg znaków zakończony znakiem null i zapisać wynik (maksymalnie 33 znaków **_itoa —**, **_ltoa —**, i  **_ultoa —** i 65 dla **_i64toa —** i **_ui64toa —**) w *buforu*. Jeśli *radix* równa 10 i *wartość* jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (**-**). **_Itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, i **_ui64tow —** funkcje są znaków dwubajtowych wersje **_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —**, odpowiednio.
+**_Itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —** funkcji konwertuje cyfry danego *wartość* argument ciąg znaków zakończony znakiem null, a Magazyn wynik (maksymalnie 33 znaków **_itoa —**, **_ltoa —**, i  **_ultoa —** i 65 dla **_i64toa —** i **_ui64toa —**) w *buforu*. Jeśli *podstawy* jest równa 10 i *wartość* jest ujemna, pierwszym znakiem ciągu przechowywane jest znak minus (**-**). **_Itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, i **_ui64tow —** są funkcje znaków dwubajtowych wersje **_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —**, odpowiednio.
 
 > [!IMPORTANT]
-> Funkcje te można napisać poza koniec buforu, który jest za mały. Aby uniknąć przepełnienia buforu, upewnij się, że *buforu* jest wystarczająco duży, aby pomieścić przekonwertowanego cyfr oraz końcowego znaku null i znak. Nieprawidłowe użycie tych funkcji mogą powodować problemy zabezpieczenia w kodzie.
+> Te funkcje można napisać poza końcem bufor, który jest za mały. Aby uniknąć przepełnienia buforu, upewnij się, że *buforu* jest wystarczająco duży, aby pomieścić cyfr przekonwertowany znak plus końcowego znaku null, a znak. Niewłaściwe korzystanie z tych funkcji może spowodować problemy z powodu poważnego naruszenia zabezpieczeń w kodzie.
 
-Ze względu na ich potencjalnych problemów z zabezpieczeniami, domyślnie, te funkcje powodują ostrzeżenie [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **tej funkcji lub zmienna może być niebezpieczne. Należy rozważyć użycie** *safe_function* **zamiast tego. Aby wyłączyć amortyzacja, należy użyć _CRT_SECURE_NO_WARNINGS.** Zaleca się zmienić kod źródłowy, aby używał *safe_function* zasugerowany przez komunikat ostrzegawczy. Funkcje bezpieczniejsze nie zapisuj więcej znaków niż określony rozmiar buforu. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
+Ze względu na ich ryzyko związane z zabezpieczeniami, domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **tej funkcji lub zmienna może być niebezpieczne. Należy rozważyć użycie** *safe_function* **zamiast tego. Aby wyłączyć wycofywania, należy użyć _CRT_SECURE_NO_WARNINGS.** Firma Microsoft zaleca zmianę kodu źródłowego do użycia *safe_function* zaproponowana przez komunikat ostrzegawczy. Funkcje bardziej bezpieczne nie zapisują więcej znaków niż określony rozmiar buforu. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
 
-Aby korzystać z tych funkcji bez ostrzeżenia dotyczące zaniechania, zdefiniuj **_CRT_SECURE_NO_WARNINGS** makro preprocesora przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dewelopera, dodając **/D_CRT_SECURE_NO_WARNINGS** — opcja kompilatora do **cl** polecenia. W przeciwnym razie należy zdefiniować makra w plikach źródłowych. Jeśli używasz prekompilowanych nagłówków, zdefiniuj makra w górnej części prekompilowany nagłówek pliku, zwykle stdafx.h dołączenia. Aby zdefiniować makra w kodzie źródłowym, należy użyć **#define** dyrektywy przed wprowadzeniem nagłówek dowolnej CRT, jak w poniższym przykładzie:
+Aby korzystać z tych funkcji bez ostrzeżenie o zakończeniu obsługi, należy zdefiniować **_CRT_SECURE_NO_WARNINGS** makro preprocesora, przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dla deweloperów, dodając **/D_CRT_SECURE_NO_WARNINGS** opcji kompilatora **cl** polecenia. W przeciwnym razie zdefiniuj makro w plikach źródłowych. Jeśli używasz wstępnie skompilowanych nagłówków, zdefiniuj makro, które w górnej części prekompilowanego pliku nagłówkowego dołączyć plik, zwykle w pliku stdafx.h. Aby zdefiniować makro w kodzie źródłowym, należy użyć **#define** dyrektywy przed wprowadzeniem dowolny nagłówek CRT, jak w poniższym przykładzie:
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-W języku C++ te funkcje mają przeciążenia szablonów, które wywołują ich odpowiedniki bezpieczniejsze. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują ich bezpieczniejsze odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-Nazwy Posix **itoa —**, **ltoa —**, i **ultoa —** istnieje jako aliasów **_itoa —**, **_ltoa —**, i **_ultoa —** funkcji. Nazwy Posix są przestarzałe, ponieważ nie wykonuj konkretnej implementacji funkcji konwencji nazw ISO c. Domyślnie te funkcje powodują ostrzeżenie [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX nazwę tego elementu jest przestarzałe. Zamiast tego użyj nazwy zgodność ISO C i C++:** *nowa_nazwa*. Zaleca się zmiany kodu źródłowego na używanie bezpieczniejsze wersji tych funkcji, **_itoa_s —**, **_ltoa_s —**, lub **_ultoa_s —**. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
+POSIX — nazwy **itoa —**, **ltoa —**, i **ultoa —** istnieje jako aliasów **_itoa —**, **_ltoa —**, i **_ultoa —** funkcji. Nazw Posix są przestarzałe, ponieważ nie podlegają Konwencji nazwy funkcji specyficzne dla implementacji ISO C. Domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX nazwę dla tego elementu jest przestarzałe. Zamiast tego należy użyć nazwy zgodność ISO C i C++:** *nowa_nazwa*. Firma Microsoft zaleca zmianę kodu źródłowego do użycia bezpieczniejsze wersje tych funkcji, **_itoa_s —**, **_ltoa_s —**, lub **_ultoa_s —**. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
 
-Przenośność kodu źródłowego można zachować nazw Posix w kodzie. Aby korzystać z tych funkcji bez ostrzeżenia dotyczące zaniechania, zdefiniuj zarówno **_CRT_NONSTDC_NO_WARNINGS** i **_CRT_SECURE_NO_WARNINGS** makra preprocesora przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dewelopera, dodając **/D_CRT_SECURE_NO_WARNINGS** i **/D_CRT_NONSTDC_NO_WARNINGS** opcji kompilatora **cl**polecenia. W przeciwnym razie należy zdefiniować makra w plikach źródłowych. Jeśli używasz prekompilowanych nagłówków, zdefiniuj dostępne są następujące makra w górnej części prekompilowany nagłówek pliku, zwykle stdafx.h. Aby zdefiniować makra w kodzie źródłowym, należy użyć **#define** dyrektywy przed wprowadzeniem nagłówek dowolnej CRT, jak w poniższym przykładzie:
+Przenośność kodu źródłowego możesz zachować nazw Posix w kodzie. Aby korzystać z tych funkcji bez ostrzeżenie o zakończeniu obsługi, zdefiniuj zarówno **_CRT_NONSTDC_NO_WARNINGS** i **_CRT_SECURE_NO_WARNINGS** makra preprocesora, przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dla deweloperów, dodając **/D_CRT_SECURE_NO_WARNINGS** i **/D_CRT_NONSTDC_NO_WARNINGS** opcji kompilatora, aby **cl**polecenia. W przeciwnym razie zdefiniuj makr w plikach źródłowych. Jeśli używasz wstępnie skompilowanych nagłówków, zdefiniuj plik, zwykle w pliku stdafx.h dostępne są następujące makra w górnej części prekompilowany plik nagłówkowy. Aby zdefiniować makra w kodzie źródłowym, należy użyć **#define** dyrektyw przed wprowadzeniem dowolny nagłówek CRT, jak w poniższym przykładzie:
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -218,11 +208,11 @@ Przenośność kodu źródłowego można zachować nazw Posix w kodzie. Aby korz
 #include <stdlib.h>
 ```
 
-### <a name="maximum-conversion-count-macros"></a>Konwersja maksymalna liczba makra
+### <a name="maximum-conversion-count-macros"></a>Makra liczbę maksymalną konwersją
 
-Ułatwiające tworzenie bezpiecznej buforów dla konwersji, CRT zawiera niektóre wygodny makra. Te zdefiniować rozmiar buforu wymaganych do przekonwertowania najdłuższym możliwa wartość każdego typu Liczba całkowita, włącznie z terminatorem null i zaloguj się znak, dla kilku wspólnej bazy. W celu zapewnienia wystarczająco duże, aby odbierać wszelkiej konwersji w podstawowym określonego przez użytkownika buforu konwersji *radix*, użyj jednej z tych zdefiniowanego makra podczas alokacji buforu. Pozwala to zapobiec błędy przepełnienia buforu podczas konwersji typów całkowitych na ciągi. Następujące makra są definiowane po dołączeniu stdlib.h lub wchar.h w źródle.
+Pomaga tworzyć bezpieczne buforów dla konwersji, CRT obejmuje niektóre wygodne makra. Te może zdefiniować rozmiar buforu wymaganych do przekonwertowania najdłuższy możliwa wartość każdego typu Liczba całkowita, łącznie z terminatorem null, a następnie zaloguj znaków dla kilku typowych zasad. Aby upewnić się, czy usługi buforu konwersji jest wystarczająco duży, aby otrzymać każda konwersja na podstawie określonej przez *podstawy*, użyj jednej z tych zdefiniowanych makra podczas alokacji buforu. Pomaga to zapobiec błędy przepełnienia buforu, podczas konwersji typów całkowitych na ciągi. Te makra są definiowane przy dodawaniu stdlib.h lub wchar.h w źródle.
 
-Użycia jednej z tych makr w funkcji konwersji ciągu, deklarowanie z buforu konwersji typu odpowiedni znak i użyj wartości makra dla typu Liczba całkowita i base jako wymiar buforu. Poniższa tabela zawiera makra, które są odpowiednie dla każdej funkcji dla zasad wymienione:
+Aby użyć jednego z tych makr w funkcję konwersji ciągu, Zadeklaruj swoje buforu konwersji typu odpowiedniego znaku i użyj wartości — makro dla typu Liczba całkowita i base jako wymiar buforu. Poniższa tabela zawiera makra, które są odpowiednie dla każdej funkcji dla wymienionych baz:
 
 ||||
 |-|-|-|
@@ -233,7 +223,7 @@ Użycia jednej z tych makr w funkcji konwersji ciągu, deklarowanie z buforu kon
 |**_i64toa —**, **_i64tow —**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa —**, **_ui64tow —**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-W tym przykładzie użyto makro Liczba konwersji do definiowania buforu wystarczająco duży, aby zawierała **unsigned long long** w podstawowej 2:
+W tym przykładzie użyto makr Liczba konwersji do definiowania bufor wystarczająco duży, aby zawierała **unsigned long long** w podstawie 2:
 
 ```cpp
 #include <wchar.h>
@@ -263,11 +253,11 @@ int main()
 |**_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, **_ui64toa —**|\<stdlib.h>|
 |**_itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, **_ui64tow —**|\<stdlib.h > lub \<wchar.h >|
 
-Te funkcje i makra są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Te funkcje i makra są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono użycie niektórych funkcji konwersja liczby całkowitej. Zwróć uwagę na użycie **_CRT_SECURE_NO_WARNINGS** makro o wyłączeniu ostrzeżenie C4996.
+Niniejszy przykład pokazuje użycie niektórych funkcji konwersji liczby całkowitej. Zwróć uwagę na użycie **_CRT_SECURE_NO_WARNINGS** makra o wyłączeniu ostrzeżenie C4996.
 
 ```C
 // crt_itoa.c

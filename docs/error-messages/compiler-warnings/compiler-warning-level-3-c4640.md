@@ -1,27 +1,17 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4640 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 3) C4640
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4640
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4640
 ms.assetid: f76871f6-e436-4c35-9793-d2f22f7e1c7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 945e6c792a3200bfa115dfffaba216ed43266cde
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ccfb82852325437a739d7a8f8a5c5b06ce5f9714
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538540"
 ---
 # <a name="compiler-warning-level-3-c4640"></a>Kompilator ostrzeżenie (poziom 3) C4640
 

@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2937 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2937
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2937
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2937
 ms.assetid: 95671ca3-79f7-4b56-a5f2-a92296da1629
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccb13a7cf95e1f63bd10b3901a3c2157a7fe29bf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ad25dbcec4ee8a8ed49449cf9e64ebae4af1321
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541014"
 ---
 # <a name="compiler-error-c2937"></a>Błąd kompilatora C2937
 

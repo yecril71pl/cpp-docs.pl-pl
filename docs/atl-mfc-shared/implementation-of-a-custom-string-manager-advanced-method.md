@@ -1,25 +1,15 @@
 ---
-title: Implementacja elementu niestandardowego Menedżera ciągów (zaawansowane metody) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Implementacja elementu niestandardowego Menedżera ciągów (metoda zaawansowana)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2dd21ffbaf3e3a6654e23346af39ab401484b1cd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 824e9b1b71615bd3fc488052d5e713dee2e0d015
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524842"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementacja elementu niestandardowego Menedżera ciągów (metoda zaawansowana)
 

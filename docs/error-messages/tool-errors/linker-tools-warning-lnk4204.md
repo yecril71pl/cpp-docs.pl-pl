@@ -1,27 +1,17 @@
 ---
-title: Ostrzeżenie LNK4204 narzędzi konsolidatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Ostrzeżenie LNK4204 narzędzi konsolidatora
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4204
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4204
 ms.assetid: 14adda20-0cbe-407b-90f6-9f81c93530e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee6164f20bbf91a8cb0b88d8a1333107f239d3f2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 790b0fa25bbf41c38b843e1a2ea757fdc0d10b9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475187"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Ostrzeżenie LNK4204 narzędzi konsolidatora
 

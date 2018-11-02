@@ -1,11 +1,6 @@
 ---
-title: FMA fmaf —, fmal | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529951"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Mnoży dwie wartości ze sobą, dodaje trzecia wartość, a następnie zaokrągla wyniku bez utraty żadnych precyzji z powodu pośredniczące zaokrąglania.
+Mnoży dwie wartości ze sobą, dodaje trzecia wartość, a następnie zaokrągla wyniku bez utraty żadnych dokładności spowodowane zaokrąglanie pośrednie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,40 +79,40 @@ long double fmal(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Pierwsza wartość wielokrotnie.
+Pierwsza wartość do pomnożenia.
 
 *y*<br/>
-Druga wartość używana w wielokrotnie.
+Druga wartość do pomnożenia.
 
 *z*<br/>
 Wartość do dodania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `(x * y) + z`. Wartość zwracana jest następnie zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
+Zwraca `(x * y) + z`. Wartość zwracana to jest zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Wróć|
 |-----------|------------|
-|*x* = NIESKOŃCZONOŚCI, *y* = 0 lub<br /><br /> *x* = 0, *y* = INFINITY|NaN|
-|*x* lub *y* mniej dokładne więcej NIESKOŃCZONOŚCI, *z* = NIESKOŃCZONOŚCI symbol przeciwnego|NaN|
+|*x* = NIESKOŃCZONOŚĆ, *y* = 0 lub<br /><br /> *x* = 0, *y* = NIESKOŃCZONOŚĆ|NaN|
+|*x* lub *y* dokładnie mniej więcej w NIESKOŃCZONOŚĆ, *z* = NIESKOŃCZONOŚCI znakiem odwrotną|NaN|
 |*x* lub *y* = NaN|NaN|
-|nie (*x* = 0, *y*= nieograniczonego) i *z* = NaN<br /><br /> nie (*x*= nieokreślony, *y*= 0) i *z* = NaN|NaN|
-|Błąd przepełnienia zakresu|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
-|Błąd zakresu niedopełnienie|prawidłowa wartość zaokrągloną.|
+|nie (*x* = 0, *y*= nieokreślony) i *z* = NaN<br /><br /> nie (*x*= nieokreślony, *y*= 0) i *z* = NaN|NaN|
+|Błąd w zakresie przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd zakresu niedopełnienie|poprawnej wartości, po zaokrągleniu zgodnym.|
 
-Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+Błędy są zgłaszane określonej [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **fma** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **fma** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **fma** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **fma** zawsze przyjmuje i zwraca **double**.
 
-Ta funkcja oblicza wartość tak, jakby zostały podjęte dokładnością nieskończone, a następnie zaokrągla wynik końcowy.
+Ta funkcja oblicza wartość tak, jakby zostały pobrane z dokładnością do nieskończoności, a następnie zaokrągla wynik końcowy.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**FMA**, **fmaf —**, **fmal**|\<math.h>|\<cmath >|
 

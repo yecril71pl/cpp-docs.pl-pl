@@ -1,10 +1,6 @@
 ---
-title: difftime —, _difftime32 —, _difftime64 — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398724"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505953"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -67,21 +57,21 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 Godzina zakończenia.
 
 *timeStart*<br/>
-Godzina rozpoczęcia.
+Czas rozpoczęcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**difftime —** zwraca czas w sekundach, z *timeStart* do *timeEnd*. Wartość zwracana jest liczba zmiennoprzecinkowa podwójnej precyzji. Wartość zwracana może być 0, co wskazuje na błąd.
+**difftime —** zwraca czas w sekundach, z *timeStart* do *timeEnd*. Wartość zwracana jest liczba zmiennoprzecinkowa podwójnej precyzji. Zwracana wartość może być 0, co wskazuje na błąd.
 
 ## <a name="remarks"></a>Uwagi
 
 **Difftime —** funkcja oblicza różnicę między dwiema wartościami godziny podane *timeStart* i *timeEnd*.
 
-Podana wartość czasu musi mieścić się w zakresie **time_t —**. **time_t —** jest wartością 64-bitowych. W związku z tym końca zakresu został rozszerzony z 23:59:59 18 stycznia 2038 r., UTC do 23:59:59 31 grudnia 3000. Dolna granica z **time_t —** jest nadal północy, 1 stycznia 1970.
+Dostarczona wartość czasu musi mieścić się w zakresie **time_t**. **time_t** ma wartość 64-bitowych. W związku z tym koniec zakresu został rozszerzony 23:59:59 18 stycznia 2038 r. UTC do 23:59:59, 31 grudnia 3000. Dolna granica z **time_t** jest nadal północy 1 stycznia 1970.
 
-**difftime —** jest obliczane jednej wbudowanej funkcji **_difftime32 —** lub **_difftime64 —** w zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowany. _difftime32 — i _difftime64 — można bezpośrednio, aby wymusić użycie określonego rozmiaru typu time.
+**difftime —** jest funkcją śródwierszową, którego wynikiem jest albo **_difftime32 —** lub **_difftime64 —** zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowana. _difftime32 — i _difftime64 — można bezpośrednio, aby wymusić użycie o ustalonym rozmiarze typu time.
 
-Te funkcje walidację ich parametrów. Jeśli wartość parametrów wynosi zero lub ujemne, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcje zwracają 0 i ustaw **errno** do **einval —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli z parametrów ma wartość zero lub ujemne, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają 0 i ustaw **errno** do **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -1,41 +1,31 @@
 ---
-title: C3808 błąd kompilatora | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587736"
 ---
-# <a name="compiler-error-c3808"></a>C3808 błąd kompilatora
+# <a name="compiler-error-c3808"></a>Błąd kompilatora C3808
 
-> "*typu*": klasa z atrybutem ComImport nie może definiować elementu członkowskiego "*elementu członkowskiego*" tylko jako abstract i funkcje dllimport są dozwolone
+> "*typu*": klasa z atrybutem ComImport nie może definiować składowej "*elementu członkowskiego*", tylko abstrakcyjne lub dllimport funkcje są dozwolone
 
 ## <a name="remarks"></a>Uwagi
 
 Typ, który pochodzi od <xref:System.Runtime.InteropServices.ComImportAttribute> nie można zdefiniować *elementu członkowskiego*.
 
-**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3808.
+Poniższy przykład spowoduje wygenerowanie C3808.
 
 ```cpp
 // C3808.cpp

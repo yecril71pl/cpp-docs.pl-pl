@@ -1,10 +1,6 @@
 ---
-title: toupper, _toupper —, towupper —, _toupper_l —, _towupper_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _toupper_l
 - towupper
@@ -29,8 +25,6 @@ f1_keywords:
 - _toupper
 - _totupper
 - toupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - _toupper function
 - towupper function
@@ -47,20 +41,16 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73157691cc1635d038339d9fe707aa535e1df93f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608916"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
-Konwertuj znaki na wielkie litery.
+Znak przekonwertowania na wielkie litery.
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,38 +77,38 @@ int _towupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do konwersji.
+Znak do przekształcenia.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur konwertuje kopię *c*, jeśli to możliwe i zwraca wynik.
+Każda z tych procedur konwertuje kopię *c*, jeśli jest to możliwe i zwraca wynik.
 
-Jeśli *c* jest znaków dwubajtowych, dla którego **iswlower —** jest różna od zera i ma odpowiedniego znaków dwubajtowych, dla którego [iswupper —](isupper-isupper-l-iswupper-iswupper-l.md) jest różna od zera, **towupper —** zwraca odpowiedniego znaków dwubajtowych; w przeciwnym razie **towupper —** zwraca *c* bez zmian.
+Jeśli *c* jest znakiem dwubajtowym, dla którego **iswlower —** jest różna od zera i ma odpowiedniego znak dwubajtowy, dla którego [iswupper —](isupper-isupper-l-iswupper-iswupper-l.md) jest różna od zera, **towupper —** zwraca odpowiedni znak dwubajtowy; w przeciwnym razie **towupper —** zwraca *c* bez zmian.
 
-Brak wartości zwracanej jest zastrzeżony wystąpił błąd.
+Nie zwraca wartości jest rezerwowana w celu wskazania błędu.
 
-Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [islower —](islower-iswlower-islower-l-iswlower-l.md) musi zwrócą różną od zera.
+Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [islower](islower-iswlower-islower-l-iswlower-l.md) musi oba zwracają wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy z tych procedur konwertuje danego małej litery na wielką literę, jeśli to możliwe i odpowiednią. Wielkość konwersji **towupper —** jest specyficzne dla ustawień regionalnych. Tylko znaki dotyczy bieżące ustawienia regionalne są zmieniane w przypadku. Funkcje bez **_l** aktualnie ustawione używać sufiksu ustawień regionalnych. Wersje tych funkcji z **_l** sufiks zająć ustawień regionalnych jako parametr i używać zamiast aktualnie ustawione ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Każda z tych procedur konwertuje dany mała litera wielką literą, jeśli jest to możliwe, a odpowiednie. Konwersja przypadków **towupper —** jest specyficzne dla ustawień regionalnych. Tylko znaki, które są istotne dla bieżących ustawień regionalnych zostały zmienione w przypadku. Funkcje bez **_l** sufiksa używa aktualnie ustawione ustawień regionalnych. Wersje tych funkcji **_l** sufiks zająć ustawień regionalnych jako parametru i używać go zamiast aktualnie ustawione ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [isupper —](isupper-isupper-l-iswupper-iswupper-l.md) musi zwrócą różną od zera.
+Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musi oba zwracają wartość różną od zera.
 
 [Procedury konwersji danych](../../c-runtime-library/data-conversion.md)
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_totupper —**|**toupper**|**_mbctoupper —**|**towupper —**|
 |**_totupper_l**|**_toupper_l —**|**_mbctoupper_l —**|**_towupper_l —**|
 
 > [!NOTE]
-> **_toupper_l —** i **_towupper_l —** nie zależność od ustawień regionalnych, a nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totupper_l**.
+> **_toupper_l —** i **_towupper_l —** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totupper_l**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -132,7 +122,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [do funkcji](../../c-runtime-library/to-functions.md).
+Zobacz przykład w [funkcji](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
