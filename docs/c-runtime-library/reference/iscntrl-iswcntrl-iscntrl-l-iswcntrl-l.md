@@ -1,10 +1,6 @@
 ---
-title: iscntrl —, iswcntrl —, _iscntrl_l —, _iswcntrl_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,20 +35,16 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506759"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
-Określa, czy liczba całkowita reprezentuje znaków kontrolnych.
+Określa, czy liczba całkowita reprezentuje znak kontrolny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,22 +68,22 @@ int _iswcntrl_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do testowania
+Liczba całkowita to testowania
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego znaku kontrolnego. **iscntrl —** zwraca wartość niezerową, jeśli *c* jest znak kontrolny (0x00-0x1F lub 0x7F). **iswcntrl —** zwraca wartość niezerową, jeśli *c* jest formantem szerokość znaku. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku kontrolnego. **iscntrl** zwraca wartość różną od zera, jeśli *c* jest znakiem formantu (0x00-0x1F or 0x7F). **iswcntrl —** zwraca wartość różną od zera, jeśli *c* jest formantem szerokość znaków. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
 
-Wersje tych funkcji, które mają **_l** sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Zachowanie **iscntrl —** i **_iscntrl_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+Zachowanie **iscntrl** i **_iscntrl_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istcntrl —**|**iscntrl**|**iscntrl**|**iswcntrl**|
 |**_istcntrl_l —**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|

@@ -1,10 +1,6 @@
 ---
-title: _eof — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395127"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522398"
 ---
 # <a name="eof"></a>_eof
 
-Testy do końca pliku (EOF).
+Testuje pod kątem końca pliku (EOF).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,11 +48,11 @@ int _eof(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Plik deskryptora odwołujących się do otwartego pliku.
+Deskryptor pliku odnoszące się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_eof —** zwraca wartość 1, jeśli bieżące położenie jest koniec pliku lub wartość 0, jeśli nie jest. Zwracana wartość -1 wskazuje błąd; w takim przypadku program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ma ustawioną wartość **ebadf —**, która wskazuje nieprawidłowy plik deskryptora.
+**_eof —** zwraca wartość 1, jeśli bieżące położenie jest końcem pliku lub 0, jeśli nie jest. Zwracana wartość-1 wskazuje błąd; w takim przypadku procedurę obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EBADF**, co oznacza nieprawidłowego deskryptora pliku.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -74,7 +64,7 @@ Plik deskryptora odwołujących się do otwartego pliku.
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -131,7 +121,7 @@ Number of bytes read = 29
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

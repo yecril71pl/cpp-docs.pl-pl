@@ -1,10 +1,6 @@
 ---
-title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l | Microsoft Docs
-ms.custom: ''
+title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strtoi64
 - _strtoi64_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _wcstoi64
 - wcstoi64
 - strtoi64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtoi64 function
 - _wcstoi64 function
@@ -45,20 +39,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77997cd5a10a4f4b5f637bcf24730505ca4b9a6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490782"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Konwertowanie ciągu do **__int64** wartości.
+Konwertuj ciąg na **__int64** wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,47 +80,47 @@ __int64 _wcstoi64_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Zerem ciąg do konwersji.
+Ciąg zakończony wartością null do konwersji.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowania.
+Wskaźnik znaku zatrzymującego skanowanie.
 
 *base*<br/>
-Podstawowy numer do użycia.
+Numer podstawowy do użycia.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_strtoi64 —** zwraca wartość w ciągu *strSource*, z wyjątkiem gdy reprezentacja mogłoby spowodować przepełnienie, w takim przypadku go zwraca **_I64_MAX** lub **_I64 _Min —**. Funkcja zwróci 0, jeśli konwersja nie jest możliwe. **_wcstoi64 —** zwraca wartości analogously do **strtoi64 —**.
+**_strtoi64 —** zwraca wartość reprezentowana w ciągu *strSource*, gdy ta reprezentacja spowodowałoby przepełnienie, z wyjątkiem przypadków, jego zwraca **_I64_MAX** lub **_I64 _MIN**. Funkcja zwróci wartość 0, jeśli nie można wykonać konwersji. **_wcstoi64 —** zwraca wartości analogicznie do **strtoi64 —**.
 
-**_I64_MAX** i **_I64_MIN** są definiowane w granicach. H.
+**_I64_MAX** i **_I64_MIN** są zdefiniowane w granicach. H.
 
-Jeśli *strSource* jest **NULL** lub *podstawowej* jest różna od zera i mniejszym niż 2 lub większą niż 36 **errno** ustawiono **einval —** .
+Jeśli *strSource* jest **NULL** lub *podstawowy* jest różna od zera i albo mniejszy niż 2 albo większy niż 36, atrybut **errno** ustawiono **EINVAL** .
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strtoi64 —** funkcji konwertuje *strSource* do **__int64**. Zatrzymaj funkcjami odczytywania ciąg *strSource* pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub może być pierwszym znaku numerycznego większa niż lub równa *podstawowej*. **_wcstoi64 —** jest wersja znaków dwubajtowych **_strtoi64 —**; *strSource* argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**_Strtoi64 —** funkcji konwertuje *strSource* do **__int64**. Obie funkcje przestają odczytywać ciąg *strSource* przy pierwszym znaku, ich nie może rozpoznać jako elementu liczby. Może to być kończący znak null lub pierwszy znak numeryczny, większa niż lub równa może być *podstawowy*. **_wcstoi64 —** to wersja znaku dwubajtowego **_strtoi64 —**; jej *strSource* argumentu jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Ustawienia regionalne **lc_numeric —** ustawienie kategorii określa rozpoznawania po znaku radix *strSource **;* uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje sufiksu _l Użyj bieżących ustawień regionalnych; **_strtoi64_l —** i **_wcstoi64_l —** są identyczne z odpowiedniej funkcji bez **_l** sufiks z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource **;* Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje, które mają przyrostka _l używają bieżących ustawień regionalnych; **_strtoi64_l —** i **_wcstoi64_l —** są identyczne z odpowiednimi funkcjami bez **_l** sufiks z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie jest **NULL**, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość *strSource* są przechowywane w lokalizacji wskazywanej przez *endptr*.
+Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywany w lokalizacji wskazywanej przez *endptr*.
 
-**_strtoi64 —** oczekuje *strSource* wskaż ciąg następującą postać:
+**_strtoi64 —** oczekuje *strSource* do wskaże ciąg o następującej postaci:
 
-> [*odstępem*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
+> [*odstępu*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfr* &#124; *litery*]  
 
-A *odstępem* może zawierać znaków miejsca i karty, które są ignorowane. *cyfr* są co najmniej jeden cyfr dziesiętnych; *litery* to jeden lub więcej litery "" do "z" (lub "A" do "Z").  Pierwszy znak należący do tego formularza zatrzymuje skanowania. Jeśli *podstawowej* jest od 2 do 36, zostanie użyty jako podstawa liczby. Jeśli *podstawowej* ma wartość 0, znaków ciągu wskazywana przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem 0 i nie jest znak "x" lub "X", ciąg jest interpretowany jako ósemkową liczby całkowitej. Jeśli pierwszym znakiem jest "0" i jest znak "x" lub "X", ciąg jest interpretowany jako szesnastkową liczby całkowitej. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętną liczbą całkowitą. Litery "" do "z" (lub "" do "Z") mają przypisane wartości 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowej* są dozwolone. Pierwszy znak poza zakresem podstawy zatrzymuje skanowania. Na przykład jeśli *podstawowej* wynosi 0 i pierwszy znak skanowane to "0", zakłada, że całkowitą ósemkowe i się od znaku "8" lub "9" spowoduje zatrzymanie skanowania.
+A *odstępu* może składać się ze znaków spacji lub tabulatora, które są ignorowane. *cyfr* są co najmniej jedna cyfra dziesiętna; *litery* są co najmniej liter "" do "z" (lub "A" do "Z").  Pierwszy znak, który nie mieści się tym formularzu zatrzymuje skanowanie. Jeśli *podstawowy* jest między 2 a 36, zostanie użyty jako podstawa numeru. Jeśli *podstawowy* ma wartość 0, początkowe znaki ciągu wskazywany przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugim znakiem nie jest,, x"lub,, X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszym znakiem jest "0", a drugim znakiem jest,, x"lub,, X", ciąg jest interpretowany jako szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest,, 1 "do,, 9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "" do "z" (lub "" – "Z") są przypisane wartości od 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowy* są dozwolone. Pierwszy znak spoza zakresu podstawy zatrzymuje skanowanie. Na przykład jeśli *podstawowy* wynosi 0 i pierwszy znak skanowany to "0", zakłada, że ósemkowa liczba całkowitej i znaku "8" lub "9" zatrzyma skanowanie.
 
 ## <a name="requirements"></a>Wymagania
 

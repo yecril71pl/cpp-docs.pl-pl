@@ -1,45 +1,35 @@
 ---
-title: Strumienie wyjściowe | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Strumienie wyjściowe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dde86faf5a19cfe57e445814b75bb3c8b82efbc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c64c46acca405f948e8314fb23944682adf09c43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511114"
 ---
 # <a name="output-streams"></a>Strumienie wyjściowe
 
-Obiekt strumień wyjściowy jest docelowy dla bajtów. Są trzy najważniejsze klasy strumienia wyjściowego `ostream`, `ofstream`, i `ostringstream`.
+Obiekt strumienia wyjściowego jest miejsce docelowe dla bajtów. Są trzy najważniejsze klasy strumieni danych wyjściowych `ostream`, `ofstream`, i `ostringstream`.
 
-`ostream` Klasy za pomocą klasy pochodnej `basic_ostream`, obsługuje obiekty wstępnie zdefiniowanych strumienia:
+`ostream` Klasy do klasy pochodnej `basic_ostream`, obsługuje obiekty strumienia wstępnie zdefiniowane:
 
 - `cout` Standardowe dane wyjściowe
 
-- `cerr` Błąd standardowy z ograniczoną buforowania
+- `cerr` Standardowy błąd za pomocą ograniczone buforowania
 
-- `clog` Podobnie jak `cerr` , ale pełne buforowanie
+- `clog` Podobnie jak `cerr` , ale za pomocą pełnego buforowania
 
-Obiekty rzadko są tworzone na podstawie `ostream`; wstępnie zdefiniowanych obiektów są zazwyczaj używane. W niektórych przypadkach można ponownie przypisać wstępnie zdefiniowanych obiektów po uruchomieniu programu. `ostream` Klasy, która może być skonfigurowana dla operacji buforowane lub Niebuforowane, najlepiej nadaje się do wyjścia sekwencyjnych tekstowej. Wszystkie funkcje klasy podstawowej, `ios`, znajduje się w `ostream`. W przypadku utworzenia obiektu klasy `ostream`, należy określić `streambuf` obiekt do konstruktora.
+Obiekty rzadko są konstruowane na podstawie `ostream`; wstępnie zdefiniowane obiekty są zazwyczaj używane. W niektórych przypadkach można ponownie przypisać wstępnie zdefiniowanych obiektów po uruchomieniu programu. `ostream` Klasy, które można skonfigurować dla operacji buforowane lub Niebuforowane najlepiej nadaje się do trybu sekwencyjnego tekstu w danych wyjściowych. Wszystkie funkcje klasy bazowej, `ios`, znajduje się w `ostream`. Można utworzyć obiekt klasy `ostream`, należy określić `streambuf` obiekt do konstruktora.
 
-`ofstream` Klasa obsługuje dysku pliku wyjściowego. Dysk tylko do danych wyjściowych, należy utworzyć obiekt klasy `ofstream`. Można określić czy `ofstream` obiektów akceptować dane pliku binarnego lub trybie tekstowym podczas konstruowania `ofstream` obiektu lub podczas wywoływania metody `open` funkcji członkowskiej klasy obiektu. Wiele funkcji formatowania opcje i element członkowski dotyczą `ofstream` obiekty i wszystkie funkcje klasy podstawowe `ios` i `ostream` jest dołączony.
+`ofstream` Klasa obsługuje dane wyjściowe pliku dysku. Dysk tylko do danych wyjściowych, należy utworzyć obiekt klasy `ofstream`. Można określić czy `ofstream` obiektów akceptować dane trybu tekst lub dane binarne, przy konstruowaniu `ofstream` obiektu lub podczas wywoływania `open` funkcja elementu członkowskiego obiektu. Wiele funkcji formatowania opcje i elementów członkowskich dotyczą `ofstream` obiekty i wszystkie funkcje klasy bazowe `ios` i `ostream` jest dołączony.
 
-Jeśli w Konstruktorze określono nazwę pliku, jest automatycznie otworzyć tego pliku podczas konstruowania obiektu. W przeciwnym razie można użyć `open` funkcji członkowskiej po wywołaniu konstruktora domyślnego.
+Jeśli określisz parametr filename w Konstruktorze ten plik jest automatycznie otwierany, gdy obiekt jest konstruowany. W przeciwnym razie można użyć `open` funkcja elementu członkowskiego po wywołaniu konstruktora domyślnego.
 
-Funkcja środowiska wykonawczego, takich jak `sprintf_s`, `ostringstream` klasa obsługuje dane wyjściowe do ciągów w pamięci. Aby utworzyć ciąg w pamięci przy użyciu formatowania strumień we/wy, należy utworzyć obiekt klasy `ostringstream`.
+Jak funkcja środowiska wykonawczego `sprintf_s`, `ostringstream` klasa obsługuje dane wyjściowe do ciągów w pamięci. Aby utworzyć ciąg w pamięci, korzystając z operacji We/Wy strumienia formatowania, należy utworzyć obiekt klasy `ostringstream`.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

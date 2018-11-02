@@ -1,20 +1,13 @@
 ---
-title: Wycofane typy i składowe (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Wycofane typy i składowe (C + +/ CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 500b93f3a84ecb39706b5c1575887a7339d1fdd4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102094"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618637"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Wycofane typy i składowe (C + +/ CX)
 

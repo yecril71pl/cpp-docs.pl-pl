@@ -1,27 +1,17 @@
 ---
-title: Błąd kompilatora C2224 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Błąd kompilatora C2224
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2224
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2224
 ms.assetid: 27b93bbf-4ce7-47a3-a9c4-f4fbed689bdf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4420e0e2f89c50bbc7d0748779efcc0eccf117d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8660f45267a21eb0914cc54dd2c4137fd5a336e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521092"
 ---
 # <a name="compiler-error-c2224"></a>Błąd kompilatora C2224
 

@@ -1,23 +1,13 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4437 | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Kompilator ostrzeżenie (poziom 4) C4437
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11d234f7f264f051042ae99900875b8e570fa66a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29dd5e7aff8a12ab3df2e56c9f7517ca0f80bdbe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118651"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569185"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Kompilator ostrzeżenie (poziom 4) C4437
 

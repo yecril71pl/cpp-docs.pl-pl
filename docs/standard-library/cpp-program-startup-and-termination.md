@@ -1,12 +1,6 @@
 ---
-title: Uruchamianie programu C++ i kończenie działania | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Uruchamianie i kończenie działania programu C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, program startup and termination
 - terminating execution
@@ -15,34 +9,30 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f781df914384b553c53e5c42fe16d4c74c9ef99d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459192"
 ---
 # <a name="c-program-startup-and-termination"></a>Uruchamianie i kończenie działania programu C++
 
-Program w języku C++ wykonuje te same operacje, jak C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.
+Program w języku C++ wykonuje te same operacje co C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.
 
-Przed elementem docelowym środowisko wywołuje funkcję `main`, a po przechowuje stałej wartości początkowe Określ wszystkich obiektów, które ma statyczny czasu trwania, program wykonuje wszelkie pozostałe konstruktory takie obiekty statyczne. Nie określono kolejność wykonywania między jednostek tłumaczenia, ale można jednak założyć, że niektóre [iostream](../standard-library/iostreams-conventions.md) obiekty zostały poprawnie zainicjowane do użytku przez te konstruktory statyczne. Te strumienie tekstu formantu są:
+Przed docelowego środowiska wywołuje funkcję `main`, i po przechowuje stałej wartości początkowe określisz we wszystkich obiektach, które mają statyczny czas trwania, program wykonuje wszystkie pozostałe konstruktory takich obiektów statycznych. Kolejność wykonywania nie jest określony w zakresie od jednostki translacji, ale można jednak założyć, że niektóre [iostreams](../standard-library/iostreams-conventions.md) obiekty zostały poprawnie zainicjowane do użytku przez te konstruktorów statycznych. Te strumienie tekstu formantu są następujące:
 
-- [CIN](../standard-library/iostream.md#cin) — dla standardowe dane wejściowe.
+- [CIN](../standard-library/iostream.md#cin) — Aby uzyskać standardowe dane wejściowe.
 
 - [Cout](../standard-library/iostream.md#cout) — do wyjścia standardowego.
 
-- [cerr](../standard-library/iostream.md#cerr) — Niebuforowane błędów w danych wyjściowych.
+- [cerr](../standard-library/iostream.md#cerr) — dla Niebuforowane standardowe dane wyjściowe błędów.
 
-- [clog —](../standard-library/iostream.md#clog) — dla buforowane dane wyjściowe błędów.
+- [clog —](../standard-library/iostream.md#clog) — dla buforowanych standardowe dane wyjściowe błędów.
 
-Umożliwia także te obiekty w ramach destruktory wywołana dla statycznych obiektów podczas Kończenie działania programu.
+Można również użyć tych obiektów w ramach destruktory wywoływana dla obiektów statycznych podczas Kończenie działania programu.
 
-Podobnie jak w przypadku C, zwracanie z `main` lub wywoływania `exit` wywołuje wszystkich funkcji w zarejestrowany `atexit` w odwrotnej kolejności z rejestru. Wywołuje funkcję zarejestrowanych wyjątek zgłoszony z takiego `terminate`.
+Podobnie jak w przypadku C, zwracanie z `main` lub wywoływania `exit` wywołuje funkcje wszystkie zarejestrowane w usłudze `atexit` w odwrotnej kolejności z rejestru. Wyjątek zgłoszony z takiego zarejestrowanych funkcja wywołuje `terminate`.
 
 ## <a name="see-also"></a>Zobacz także
 

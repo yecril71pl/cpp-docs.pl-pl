@@ -1,11 +1,6 @@
 ---
-title: _Cmulcr _FCmulcr, _LCmulcr | Dokumenty Microsoft
-ms.custom: ''
+title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcr
 - _FCmulcr
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cmulcr
 - complex/_FCmulcr
 - complex/_LCmulcr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd42e4c543d4bc42afa023d62b328a143c90374
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507487"
 ---
 # <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
-Mnoży liczbą przez liczba zmiennoprzecinkowa.
+Mnoży liczbę złożone przez liczbę zmiennoprzecinkową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,33 +51,33 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Jeden z argumentów złożonych Aby pomnożyć.
+Jeden z argumentów złożone do pomnożenia.
 
 *y*<br/>
-Argument operacji zmiennoprzecinkowych Aby pomnożyć.
+Argument operacji zmiennoprzecinkowych do pomnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuje złożonych iloczyn liczby złożonej *x* i numer punktu flaoting *y*.
+A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuje złożonych iloczyn liczby zespolonej *x* i numer punktu flaoting *y*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ wbudowanych operatorów arytmetycznych nie działają na przez firmę Microsoft implementacją typów złożonych **_Cmulcr**, **_FCmulcr**, i **_LCmulcr** funkcji Uproszczenie mnożenia typów złożonych przez typów zmiennoprzecinkowych.
+Ponieważ wbudowanych operatorów arytmetycznych, nie działają na implementacja firmy Microsoft, złożonych typów **_Cmulcr**, **_FCmulcr**, i **_LCmulcr** funkcji Uprość mnożenia typy złożone przez typów zmiennoprzecinkowych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **_Complex podwójne** , **float _Complex**, i **_Complex podwójnej długości**odpowiednio. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **double _complex —** , **float _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
-[normy normf, norml](norm-normf-norml1.md)<br/>
+[norm normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

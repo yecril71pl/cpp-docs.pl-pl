@@ -1,10 +1,6 @@
 ---
-title: _snscanf_s —, _snscanf_s_l —, _snwscanf_s —, _snwscanf_s_l — | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf_s_l
 - _snwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _sntscanf_s_l
 - _snscanf_s_l
 - sntscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snscanf_s_l function
 - snwscanf_s function
@@ -54,20 +48,16 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08c269d0139767f260c68d07d660ecc818b36cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7f6fbbcdb6e3fa9d3137337992b2de0d81c1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533331"
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
-Odczyty sformatowanych danych o określonej długości ciągu. Są to wersje [_snscanf —, _snscanf_l —, _snwscanf —, _snwscanf_l —](snscanf-snscanf-l-snwscanf-snwscanf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczyty sformatowanych danych o określonej długości ciągu. Są to wersje [_snscanf —, _snscanf_l —, _snwscanf —, _snwscanf_l —](snscanf-snscanf-l-snwscanf-snwscanf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -101,36 +91,36 @@ int __cdecl _snwscanf_s_l(
 *Dane wejściowe*<br/>
 Wejściowy ciąg do sprawdzenia.
 
-*długość*<br/>
-Liczba znaków zbadać *wejściowych*.
+*Długość*<br/>
+Liczba znaków do sprawdzenia w *wejściowych*.
 
 *Format*<br/>
-Specyfikatory formatu jeden lub więcej.
+Jeden lub więcej specyfikatorów formatu.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 *argument_list*<br/>
-Argumenty opcjonalne przypisanie zgodnie z ciągu formatu.
+Argumenty opcjonalne do przypisania, zgodnie z ciągu formatu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie te funkcje zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest **EOF** błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Obu tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Jeśli *wejściowych* lub *format* jest **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Jeśli *wejściowych* lub *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja przypomina **sscanf_s —** z tą różnicą, że zapewnia możliwość określenia stała liczba znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Ta funkcja przypomina **sscanf_s —** z tą różnicą, że zapewnia możliwość określenia stałą liczbę znaków, aby sprawdzić, z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
 Parametr rozmiaru buforu jest wymagany w przypadku znaki pola typu **c**, **C**, **s**, **S**, i **[** . Aby uzyskać więcej informacji, zobacz [scanf — znaki pola typu](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr rozmiaru jest typu **niepodpisane**, a nie **size_t**.
+> Parametr rozmiaru ma typ **niepodpisane**, a nie **size_t**.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -146,7 +136,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**_snscanf_s —**, **_snscanf_s_l —**|\<stdio.h>|
 |**_snwscanf_s —**, **_snwscanf_s_l —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
