@@ -1,33 +1,33 @@
 ---
 title: Dodawanie interfejsu do dostawcy
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: 295a7955b78918d6281a28b616f201869f37b01e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5659078641439744c1f68cbb399c19b9b58bd0bb
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488676"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265142"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Dodawanie interfejsu do dostawcy
 
-Ustal, obiektu, który chcesz dodać interfejs do (zazwyczaj danych źródła, zestawu wierszy, polecenie lub sesji obiekty utworzone przez OLE DB Provider kreatora). Jest możliwe, że obiekt, należy dodać interfejs do jest taki, który nie obsługuje obecnie dostawcy. W takiej sytuacji Uruchom ATL OLE DB Provider kreatora, aby utworzyć obiekt. Kliknij prawym przyciskiem myszy projekt w widoku klas, kliknij przycisk **Dodaj klasę** z **Dodaj** menu, a następnie kliknij przycisk **ATL OLE DB Provider**. Warto umieścić kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.
+Określić obiekt, do którego chcesz dodać interfejs do (zazwyczaj danych źródła, zestawu wierszy, polecenie lub sesji obiekty utworzone przez **OLE DB Provider kreatora**). Istnieje możliwość, że obiektu, należy dodać interfejs, który ma to taki, który Twój dostawca nie obsługuje obecnie. W takiej sytuacji Uruchom **Kreator biblioteki ATL OLE DB Provider** do utworzenia obiektu. Kliknij prawym przyciskiem myszy projekt w **Widok klas**, kliknij przycisk **Dodaj** > **nowy element** menu, wybierz polecenie **zainstalowane**  >  **Visual C++** > **ATL**, a następnie kliknij przycisk **dostawcy OLE DB ATL**. Warto umieścić kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.
 
-Utworzono nową klasę do obsługi interfejsu, aby obiekt dziedziczą z klasy. Na przykład dodać klasę **IRowsetIndexImpl** do obiektu zestawu wierszy:
+Utworzono nową klasę do obsługi interfejsu, aby obiekt dziedziczą z klasy. Na przykład dodać klasę `IRowsetIndexImpl` do obiektu zestawu wierszy:
 
 ```cpp
 template <class Creator>
-class CAgentRowset :
-    public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
+class CCustomRowset :
+    public CRowsetImpl< CCustomRowset<Creator>, CCustomWindowsFile, Creator>,
     public IRowsetIndexImpl< ... >
 ```
 
-Dodawanie interfejsu do **COM_MAP** w obiekcie, użycie makra com_interface_entry —. Jeśli nie ma żadnych mapy, zrób to. Na przykład:
+Dodawanie interfejsu do COM_MAP w obiekcie, użycie makra com_interface_entry —. Jeśli nie ma żadnych mapy, zrób to. Na przykład:
 
 ```cpp
-BEGIN_COM_MAP(CAgentRowset)
+BEGIN_COM_MAP(CCustomRowset)
      COM_INTERFACE_ENTRY(IRowsetIndex)
 END_COM_MAP()
 ```
@@ -35,7 +35,7 @@ END_COM_MAP()
 Dla obiektu zestawu wierszy łańcuch mapy jego elementu nadrzędnego obiektu tak, aby delegować do klasy nadrzędnej obiektu. W tym przykładzie należy dodać makra COM_INTERFACE_ENTRY_CHAIN do mapy:
 
 ```cpp
-BEGIN_COM_MAP(CAgentRowset)
+BEGIN_COM_MAP(CCustomRowset)
      COM_INTERFACE_ENTRY(IRowsetIndex)
      COM_INTERFACE_ENTRY_CHAIN(CRowsetImpl)
 END_COM_MAP()

@@ -5,33 +5,34 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 0d01fdac1a64bee62bd7227f4efac8650ff635b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428383"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265181"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 
 Makra PROVIDER_COLUMN_ENTRY zwykle obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania. Jednak ponieważ konsumenta wybrać korzystanie z zakładek, dostawca musi mieć możliwość zmiany kolumn zwrócone w zależności od tego, czy użytkownik poprosi o podanie zakładki.
 
-Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` użytkownika rekord w CustomRS.h i zastąp go własną definicję `GetColumnInfo` funkcji:
+Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CCustomWindowsFile` rekordu użytkownika w *niestandardowe*RS.h i zastąp go własną definicję `GetColumnInfo` Funkcja:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // CustomRS.H
-class CAgentMan
+class CCustomWindowsFile
 {
 public:
    DWORD dwBookmark;
-   TCHAR szCommand[256];
-   TCHAR szText[256];
-   TCHAR szCommand2[256];
-   TCHAR szText2[256];
+   static const int iSize = 256;
+   TCHAR szCommand[iSize];
+   TCHAR szText[iSize];
+   TCHAR szCommand2[iSize];
+   TCHAR szText2[iSize];
   
    static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
-   bool operator==(const CAgentMan& am)
+   bool operator==(const CCustomWindowsFile& am)
    {
       return (lstrcmpi(szCommand, am.szCommand) == 0);
    }
@@ -47,14 +48,14 @@ Pod kątem `DBPROP_BOOKMARKS` właściwości `GetColumnInfo` używa `IRowsetInfo
 ```cpp
 ////////////////////////////////////////////////////////////////////
 // CustomRS.cpp
-ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
+ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 {
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
    // Check the property flag for bookmarks; if it is set, set the zero 
    // ordinal entry in the column map with the bookmark information.
-   CAgentRowset* pRowset = (CAgentRowset*) pThis;
+   CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
   
    CDBPropIDSet set(DBPROPSET_ROWSET);
@@ -75,7 +76,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
          ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark, 
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
@@ -83,17 +84,17 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
    // Next, set the other columns up.
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand)
+      GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText)
+      GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand2)
+      GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText2)
+      GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
    if (pcCols != NULL)
@@ -106,12 +107,43 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 W tym przykładzie użyto tablicy statycznej do przechowywania informacji o kolumnie. Jeśli użytkownik nie chce, aby kolumna zakładki, jeden wpis w tablicy jest nieużywany. Aby obsługiwać informacje, należy utworzyć dwa makra tablicy: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX przyjmuje jako dodatkowy parametr *flagi*, która jest wymagane, jeśli należy wyznaczyć kolumna zakładki.
 
 ```cpp
+////////////////////////////////////////////////////////////////////////  
+// CustomRS.h  
+  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = 0; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
+  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = flags; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member); \  
+   memset(&(_rgColumns[ulCols].columnid), 0, sizeof(DBID)); \  
+   _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
+```
+
+W `GetColumnInfo` służy funkcja i makra zakładki następująco:
+
+```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą. Sprawdź, czy odbiorcy test pobiera odpowiednie ciągi od dostawcy, po kliknięciu **Uruchom** znajdujący się w **Test konsumenta** okno dialogowe.
+Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą i sprawdź, czy konsumenta test pobiera odpowiednie ciągi od dostawcy.
 
 ## <a name="see-also"></a>Zobacz też
 
