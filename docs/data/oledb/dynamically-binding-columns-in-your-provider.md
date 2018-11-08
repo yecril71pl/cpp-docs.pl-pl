@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 5ceb3b21d59bef3dcbe9d5b53e6a9b779b8b381f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f681907360812f51b34b187ee0ece776816cc82
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509321"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264609"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
 
@@ -19,7 +19,7 @@ Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz 
 
 - Kolumny zestawu wierszy nie są zdefiniowane w czasie kompilacji.
 
-- Obsługujesz elementu, takiego jak zakładki, który dodaje kolumn.
+- Obsługujesz element, na przykład zakładki, która dodaje kolumn.
 
 ## <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn
 

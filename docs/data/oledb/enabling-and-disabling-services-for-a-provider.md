@@ -1,20 +1,20 @@
 ---
 title: Włączanie i wyłączanie usług dla dostawcy
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: ca621b005dd0bad60c70298e4d49abce6fb8d1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23579b9561356e95d315c0fbe47132208753afa8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665455"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265129"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Włączanie i wyłączanie usług dla dostawcy
 
-Poszczególne usługi OLE DB można włączać lub wyłączać domyślnie dla wszystkich aplikacji uzyskujących dostęp do jednego dostawcy. Jest to realizowane przez dodanie wpisu rejestru OLEDB_SERVICES CLSID dostawcy z `DWORD` wartość określającą usług, aby włączyć lub wyłączyć, jak pokazano w poniższej tabeli.
+Poszczególne usługi OLE DB można włączać lub wyłączać domyślnie dla wszystkich aplikacji uzyskujących dostęp do jednego dostawcy. Odbywa się to przez dodanie wpisu rejestru OLEDB_SERVICES w obszarze CLSID dostawcy o wartości DWORD, określając usług, aby włączyć lub wyłączyć, jak pokazano w poniższej tabeli.
 
 |Włączone usługi domyślne|Wartość — słowo kluczowe|
 |------------------------------|-------------------|

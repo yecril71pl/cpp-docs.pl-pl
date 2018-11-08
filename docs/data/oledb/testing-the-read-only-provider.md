@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611214"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265103"
 ---
 # <a name="testing-the-read-only-provider"></a>Testowanie dostawcy tylko do odczytu
 
@@ -24,11 +24,11 @@ W przykładzie w tym temacie tworzy domyślną aplikację Kreator aplikacji MFC 
 
 1. Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.
 
-1. W **typów projektów** okienku wybierz **projekty języka Visual C++** folderu. W **szablony** okienku wybierz **aplikacji MFC**.
+1. W **typów projektów** okienku wybierz **zainstalowane** > **Visual C++** > **MFC i ATL** folderu. W **szablony** okienku wybierz **aplikacji MFC**.
 
 1. Wprowadź nazwę projektu *TestProv*, a następnie kliknij przycisk **OK**.
 
-   Zostanie wyświetlony Kreator aplikacji MFC.
+   **Aplikacji MFC** pojawi się Kreator.
 
 1. Na **typ aplikacji** wybierz opcję **oparte o okna dialogowe**.
 
@@ -37,13 +37,14 @@ W przykładzie w tym temacie tworzy domyślną aplikację Kreator aplikacji MFC 
 > [!NOTE]
 > Aplikacja nie wymaga obsługi automatyzacji, jeśli dodasz `CoInitialize` w `CTestProvApp::InitInstance`.
 
-Można wyświetlać i edytować **TestProv** okno dialogowe (IDD_TESTPROV_DIALOG), wybierając je w **widok zasobów**. W oknie dialogowym, należy umieścić dwa pola listy, po jednym dla każdego ciągu w zestawie wierszy. Wyłączyć właściwość sortowania dla obu pola listy, naciskając klawisz **Alt**+**Enter** po wybraniu pola listy, klikając **style** kartę, a następnie usuwając zaznaczenie  **Sortuj** pole wyboru. Ponadto Umieść **Uruchom** przycisku na okno dialogowe, aby pobrać plik. Zakończono **TestProv** okno dialogowe powinna mieć dwa pola listy, odpowiednio oznaczone jako "W ciągu 1" i "2 ciąg"; ma on także **OK**, **anulować**, i **uruchamiania**  przycisków.
+Można wyświetlać i edytować **TestProv** okno dialogowe (IDD_TESTPROV_DIALOG), wybierając je w **widok zasobów**. W oknie dialogowym, należy umieścić dwa pola listy, po jednym dla każdego ciągu w zestawie wierszy. Wyłączyć właściwość sortowania dla obu pola listy, naciskając klawisz **Alt**+**Enter** po wybraniu pola listy i ustawienie **sortowania** właściwość **False**. Ponadto Umieść **Uruchom** przycisku na okno dialogowe, aby pobrać plik. Zakończono **TestProv** okno dialogowe powinna mieć dwa pola listy, odpowiednio oznaczone jako "W ciągu 1" i "2 ciąg"; ma on także **OK**, **anulować**, i **uruchamiania**  przycisków.
 
 Otwórz plik nagłówkowy klasy okien dialogowych (w tym TestProvDlg.h wielkości liter). Dodaj następujący kod do pliku nagłówka (poza wszelkimi deklaracjami klasy):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ Dodawanie funkcji obsługi dla **Uruchom** przycisku, naciskając klawisz **Ctrl
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-`CCommand`, `CDataSource`, I `CSession` klasy wszystkie należeć do szablony konsumentów OLE DB. Każda klasa naśladuje obiektów COM w dostawcy. `CCommand` Przyjmuje obiekt `CProvider` klasy, zadeklarowana w pliku nagłówkowym, jako parametr szablonu. `CProvider` Parametr reprezentuje powiązań, które umożliwiają dostęp do danych od dostawcy. Oto `Open` kod dla źródła danych, sesji i polecenia:
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+`CCommand`, `CDataSource`, I `CSession` klasy wszystkie należeć do szablony konsumentów OLE DB. Każda klasa naśladuje obiektów COM w dostawcy. `CCommand` Przyjmuje obiekt `CProvider` klasy, zadeklarowana w pliku nagłówkowym, jako parametr szablonu. `CProvider` Parametr reprezentuje powiązań, które umożliwiają dostęp do danych od dostawcy. 
 
 Wiersze, które można otworzyć każdą z klas tworzenia każdego obiektu modelu COM w dostawcy. Aby zlokalizować dostawcę, należy użyć `ProgID` dostawcy. Możesz uzyskać `ProgID` z rejestru systemowego lub przez wyszukiwanie w pliku Custom.rgs (Otwórz katalog dostawcy i wyszukaj `ProgID` klucza).
 
-Plik MyData.txt jest dołączany `MyProv` próbki. Aby utworzyć plik samodzielnie, należy użyć edytora, a następnie wpisz parzystą liczbę ciągów, naciskając klawisz ENTER między każdego ciągu. Jeśli plik zostanie przeniesiony, należy zmienić nazwę ścieżki.
+Plik MyData.txt jest dołączany `MyProv` próbki. Aby utworzyć plik zawierający własny, użyj edytora, a następnie wpisz parzystą liczbę ciągów, naciskając klawisz **Enter** między każdego ciągu. Jeśli plik zostanie przeniesiony, należy zmienić nazwę ścieżki.
 
 Przekaż w ciągu "c:\\\samples\\\myprov\\\MyData.txt" w `table.Open` wiersza. Jeśli znajdujesz się w `Open` wywołanie, zobaczysz, że ten ciąg jest przekazywany do `SetCommandText` metody w dostawcy. Należy pamiętać, że `ICommandText::Execute` metody używane te parametry.
 
-Aby pobrać dane, należy wywołać `MoveNext` w tabeli. `MoveNext` wywołania `IRowset::GetNextRows`, `GetRowCount`, i `GetData` funkcji. Gdy nie ma żadnych więcej wierszy (bieżąca pozycja w zestawie wierszy jest większa niż `GetRowCount`), kończy się pętla:
+Aby pobrać dane, należy wywołać `MoveNext` w tabeli. `MoveNext` wywołania `IRowset::GetNextRows`, `GetRowCount`, i `GetData` funkcji. Jeśli nie ma żadnych więcej wierszy (bieżąca pozycja w zestawie wierszy jest większa niż `GetRowCount`), kończy pętli.
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-Należy pamiętać, że w przypadku Brak kolejnych wierszy dostawców zwracają DB_S_ENDOFROWSET. Wartość DB_S_ENDOFROWSET nie jest błąd. Należy zawsze sprawdzić, względem S_OK, aby anulować pętli pobierania danych i używaj makro zakończone POWODZENIEM.
+W przypadku Brak kolejnych wierszy dostawców Zwróć DB_S_ENDOFROWSET. Wartość DB_S_ENDOFROWSET nie jest błąd. Należy zawsze sprawdzić, względem S_OK, aby anulować pętli pobierania danych i używaj makro zakończone POWODZENIEM.
 
 Powinny teraz mieć możliwość tworzenia i testowania programu.
 

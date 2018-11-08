@@ -6,18 +6,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: 51cca65b6b55de8b628cb5d233ab06f0101f466d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34eb07611ebfff09918d62273d4ca4a8c9cf4f7b
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637960"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265155"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>Modyfikowanie dziedziczenia obiektu RCustomRowset
 
-Aby dodać `IRowsetLocate` interfejsu na przykładzie prostego dostawcy tylko do odczytu, modyfikowanie dziedziczenia obiektu `RCustomRowset`. Początkowo `RCustomRowset` dziedziczy `CRowsetImpl`. Należy zmodyfikować, aby dziedziczyć `CRowsetBaseImpl`.
+Aby dodać `IRowsetLocate` interfejsu na przykładzie prostego dostawcy tylko do odczytu, modyfikowanie dziedziczenia obiektu `CCustomRowset`. Początkowo `CCustomRowset` dziedziczy `CRowsetImpl`. Należy zmodyfikować, aby dziedziczyć `CRowsetBaseImpl`.
 
-Aby to zrobić, Utwórz nową klasę, `CCustomRowsetImpl`, w CustomRS.h:
+Aby to zrobić, Utwórz nową klasę, `CCustomRowsetImpl`w *niestandardowe*RS.h:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -42,13 +42,13 @@ END_COM_MAP()
 
 Ten kod tworzy mapę interfejsu COM, który informuje `CMyRowsetImpl` do wywołania `QueryInterface` dla obu `IRowset` i `IRowsetLocate` interfejsów. Aby uzyskać wszystkie wdrożenia w zestawie wierszy klas łącza mapy `CMyRowsetImpl` klasy z powrotem do `CRowsetBaseImpl` klasy zdefiniowane przez Szablony OLE DB; mapy używa makra COM_INTERFACE_ENTRY_CHAIN, która informuje o szablonach OLE DB do mapy COM w skanowania `CRowsetBaseImpl` w odpowiedzi na `QueryInterface` wywołania.
 
-Na koniec link `RAgentRowset` do `CMyRowsetBaseImpl` , modyfikując `RAgentRowset` odziedziczone `CMyRowsetImpl`, wykonując następujące czynności:
+Na koniec link `CCustomRowset` do `CMyRowsetBaseImpl` , modyfikując `CCustomRowset` odziedziczone `CMyRowsetImpl`, wykonując następujące czynności:
 
 ```cpp
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`RAgentRowset` można teraz używać `IRowsetLocate` interfejsu, wykorzystując pozostałe implementacji klasy zestawu wierszy.
+`CCustomRowset` można teraz używać `IRowsetLocate` interfejsu, wykorzystując pozostałe implementacji klasy zestawu wierszy.
 
 Po zakończeniu tej operacji możesz [dynamiczne określanie kolumn zwracanych do konsumenta](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 

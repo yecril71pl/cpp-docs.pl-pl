@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584630"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264726"
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 
@@ -60,7 +60,7 @@ Musisz również dołączyć mapę do `CRowsetImpl` klasy. Dodaj w makrze COM_IN
 
 Na koniec obsługi `IColumnsInfo::GetColumnsInfo` wywołania. Makra PROVIDER_COLUMN_ENTRY zwykle są używane w tym celu. Jednak użytkownik może być używanie zakładek. Musi być w stanie zmienić kolumny, które zwraca dostawcę, w zależności od tego, czy użytkownik poprosi o podanie zakładki.
 
-Aby obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania, Usuń `PROVIDER_COLUMN` mapy w `CTextData` klasy. Makra PROVIDER_COLUMN_MAP definiuje funkcję `GetColumnInfo`. Musisz zdefiniować własne `GetColumnInfo` funkcji. Deklaracja funkcji powinna wyglądać następująco:
+Aby obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania, Usuń mapowanie PROVIDER_COLUMN `CTextData` klasy. Makra PROVIDER_COLUMN_MAP definiuje funkcję `GetColumnInfo`. Definiowanie swoich własnych `GetColumnInfo` funkcji. Deklaracja funkcji powinna wyglądać następująco:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Następnie należy zaimplementować `GetColumnInfo` funkcji w pliku CustomRS.cpp w następujący sposób:
+Następnie należy zaimplementować `GetColumnInfo` działać w *niestandardowe*RS.cpp pliku w następujący sposób:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` Po pierwsze sprawdza czy właściwość o nazwie `DBPROP_IRowsetLocate` jest ustawiona. OLE DB ma właściwości dla każdego opcjonalne interfejsów wyłączyć obiektu zestawu wierszy. Jeśli użytkownik chce, aby użyć jednego z tych interfejsów opcjonalne, ustawia właściwość na true. Dostawcę można sprawdzić tę właściwość i podejmować żadnych specjalnych czynności, na jego podstawie.
 
-W danej implementacji można pobrać właściwości, za pomocą wskaźnika do obiektu command. `pThis` Wskaźnika reprezentuje klasę polecenia lub zestaw wierszy. Ponieważ w tym miejscu możesz użyć szablonów, należy przekazać go jako `void` wskaźnik lub kod nie kompiluje się.
+W danej implementacji można pobrać właściwości, za pomocą wskaźnika do obiektu command. `pThis` Wskaźnika reprezentuje klasę polecenia lub zestaw wierszy. Ponieważ w tym miejscu możesz użyć szablonów, należy przekazać go jako **void** wskaźnik lub kod nie kompilacji.
 
-Określ tablicy statycznej w celu uwzględnienia informacji o kolumnie. Jeśli użytkownik nie chce kolumna zakładki, zostanie zmarnowane wpisem w tablicy. Mogą dynamicznie przydzielać tej tablicy, ale trzeba upewnij się, że prawidłowo zniszczenia. W tym przykładzie definiuje i używa makra ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX do wstawiania informacji do tablicy. Makra można dodać do pliku CustomRS.H, jak pokazano w poniższym kodzie:
+Określ tablicy statycznej do przechowywania informacji o kolumnie. Jeśli użytkownik nie chce, aby kolumna zakładki, zostanie zmarnowane wpisem w tablicy. Mogą dynamicznie przydzielać tej tablicy, ale trzeba upewnij się, że prawidłowo zniszczenia. W tym przykładzie definiuje i używa makra ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX do wstawiania informacji do tablicy. Możesz dodać makra do *niestandardowe*RS. Plik H, jak pokazano w poniższym kodzie:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +237,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 
 **Podczas** pętla zawiera kod, aby wywołać `Compare` method in Class metoda `IRowsetLocate` interfejsu. Kod, który masz powinna zawsze przekazać, ponieważ porównujemy dokładnie tych samych zakładek. Ponadto przechowywanie jedną zakładkę w zmiennej tymczasowej, tak, aby użyć go po **podczas** pętla zostanie zakończone, aby wywołać `MoveToBookmark` funkcji w szablonach konsumenta. `MoveToBookmark` Wywołaniach funkcji `GetRowsAt` method in Class metoda `IRowsetLocate`.
 
-Należy również zaktualizować rekord użytkownika u odbiorcy. Dodaj odpowiedni wpis w klasie w celu obsługi zakładki i do wpisu w `COLUMN_MAP`:
+Należy również zaktualizować rekord użytkownika u odbiorcy. Dodaj wpis w klasie w celu obsługi zakładki i do wpisu w COLUMN_MAP:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 7fcd948fc093253c3565e7d4d35237d87ba4bdb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571252"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265168"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odwoływanie się do właściwości w dostawcy
 
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w *OLE DB Podręcznik programisty*.
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w **OLE DB Podręcznik programisty**.
 
-W poniższym przykładzie założono, próby pobrania właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.
+W poniższym przykładzie założono, że próbujesz pobrać właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.
 
 Tworzenie [cdbpropset —](../../data/oledb/cdbpropset-class.md) przy użyciu grupy właściwości jako parametr do konstruktora. Na przykład:
 
@@ -25,7 +25,7 @@ Tworzenie [cdbpropset —](../../data/oledb/cdbpropset-class.md) przy użyciu gr
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Wywołaj [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej identyfikator właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, którego używasz.
+Wywołaj [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej identyfikator właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, których używasz.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
