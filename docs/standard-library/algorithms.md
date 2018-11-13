@@ -1,12 +1,6 @@
 ---
-title: Algorytmy | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: Algorytmy
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063032"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648035"
 ---
 # <a name="algorithms"></a>Algorytmy
 
@@ -35,7 +25,7 @@ Opisy funkcji szablonu algorytm stosować kilka skróconą wyrażenia:
 
 - Wyrażenie "w zakresie \[ *A*, *B*)" oznacza, że Sekwencja zero lub więcej wartości dyskretnych, począwszy od *A* maksymalnie z wyjątkiem *B* . Zakres jest prawidłowy tylko wtedy, gdy *B* jest dostępny z *A;* można przechowywać *A* w obiekcie *N* (*N*  =  *A*), Zwiększ obiekt zero lub więcej razy (++*N*), i zastosować obiekt równe *B* po skończoną liczbę przyrostów (*N*   ==  *B*).
 
-- Wyrażenie "każdego *N* w zakresie \[ *A*, *B*)" oznacza, że *N* zaczyna się od wartości ** i następuje zero lub więcej razy do momentu jej jest równa wartości *B*. Przypadek *N* == *B* nie znajduje się w zakresie.
+- Wyrażenie "każdego *N* w zakresie \[ *A*, *B*)" oznacza, że *N* zaczyna się od wartości *A*i następuje zero lub więcej razy do momentu jej jest równa wartości *B*. Przypadek *N* == *B* nie znajduje się w zakresie.
 
 - Wyrażenie "najmniejszą wartość z *N* w zakresie \[ *A*, *B*) tak, aby *X*" oznacza, że warunek *X* jest określany dla poszczególnych *N* w zakresie \[ *A*, *B*) aż do warunku *X*jest spełniony.
 
