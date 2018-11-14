@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505901"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525343"
 ---
 # <a name="coledatetime-class"></a>COleDateTime, klasa
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` nie ma klasy bazowej.
 
-Jest jednym z możliwych typów dla [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) typ danych w automatyzacji OLE. A `COleDateTime` wartość reprezentuje bezwzględną wartość daty i godziny.
+Jest jednym z możliwych typów dla [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) typ danych w automatyzacji OLE. A `COleDateTime` wartość reprezentuje bezwzględną wartość daty i godziny.
 
 `DATE` Typ jest zaimplementowany jako wartość zmiennoprzecinkowa. Dni jest mierzony od 30 grudnia 1899 o północy. W poniższej tabeli przedstawiono niektóre dat i ich skojarzone wartości:
 
@@ -828,7 +828,7 @@ Te operatory przeciążone przypisania kopiowania wartości daty/godziny źród�
 
 - **Operator = (** `dateSrc` **)** wartości i stanu operand są kopiowane do tego `COleDateTime` obiektu.
 
-- **Operator = (** *varSrc* **)** Jeśli konwersja [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) do daty/godziny (VT_ Data) zakończy się pomyślnie, przekonwertowana wartości zostanie skopiowany do tego `COleDateTime` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja się nie powiedzie, wartość tego obiektu jest równa zero (30 grudnia 1899, północ) i jej stanie się nieprawidłowy.
+- **Operator = (** *varSrc* **)** Jeśli konwersja [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) do daty/godziny (VT_ Data) zakończy się pomyślnie, przekonwertowana wartości zostanie skopiowany do tego `COleDateTime` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja się nie powiedzie, wartość tego obiektu jest równa zero (30 grudnia 1899, północ) i jej stanie się nieprawidłowy.
 
 - **Operator = (** `dtSrc` **)** `DATE` jest kopiowana do to `COleDateTime` obiekt i jego stan jest ustawiony na prawidłowy.
 
@@ -836,11 +836,11 @@ Te operatory przeciążone przypisania kopiowania wartości daty/godziny źród�
 
 - **Operator = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową.
 
-- **Operator = (** `udate` **)** `UDATE` wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową. A `UDATE` struktury reprezentuje datę "nierozpakowane". Zobacz opis funkcji [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) Aby uzyskać więcej informacji.
+- **Operator = (** `udate` **)** `UDATE` wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową. A `UDATE` struktury reprezentuje datę "nierozpakowane". Zobacz opis funkcji [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) Aby uzyskać więcej informacji.
 
 - **Operator = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; w przeciwnym razie jest ustawiona na nieprawidłową. `FILETIME` używa skoordynowany czas uniwersalny (UTC), jeśli przekażesz czasu UTC w strukturze wyniki zostanie przekonwertowana z czasu UTC na czas lokalny i będą przechowywane jako wariant czasu. To zachowanie jest takie same jak Visual C++ 6.0 i Visual C++ .NET 2003 z dodatkiem SP2. Zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
-Aby uzyskać więcej informacji, zobacz [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wejścia w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wejścia w zestawie Windows SDK.
 
 Aby uzyskać więcej informacji na temat `time_t` typ danych, zobacz [czasu](../../c-runtime-library/reference/time-time32-time64.md) działa w programach *odwołanie do biblioteki wykonawczej*.
 
@@ -1083,7 +1083,7 @@ Zobacz w tabeli poniżej granic o wprowadzenie wartości parametrów:
 |*Nmin.*|0 - 59|
 |*rekordy nSec*|0 - 59|
 
-Jeśli zachodzi dzień miesiąca, jest konwertowany na poprawne dnia następnego miesiąca i miesiąca i/lub rok jest zwiększany, odpowiednio. Dzień wartość zero wskazuje ostatni dzień poprzedniego miesiąca. To zachowanie jest taka sama jak [SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+Jeśli zachodzi dzień miesiąca, jest konwertowany na poprawne dnia następnego miesiąca i miesiąca i/lub rok jest zwiększany, odpowiednio. Dzień wartość zero wskazuje ostatni dzień poprzedniego miesiąca. To zachowanie jest taka sama jak [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
 Jeśli wartość daty lub godziny, określona przez parametry nie jest prawidłowy, stan tego obiektu jest ustawiony na nieprawidłowy i wartość tego obiektu jest zmieniany.
 

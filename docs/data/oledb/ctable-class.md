@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 15081173edfae5ba0f881a6c1607a22e77a8a7c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452172"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556689"
 ---
 # <a name="ctable-class"></a>Klasa CTable
 
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] `DBID` Tabeli, aby otworzyć.
 
 *pPropSet*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.
+[in] Wskaźnik do tablicy [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.
 
 *ulPropSets*<br/>
-[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury przekazany *pPropSet* argumentu.
+[in] Liczba [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -106,7 +106,7 @@ Standardowa HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) w *OLE DB Podręcznik programisty*.
+Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="see-also"></a>Zobacz też
 

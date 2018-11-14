@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438044"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519987"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 
@@ -280,13 +280,13 @@ Poniższe porady dotyczą `CDockingManager` obiektów:
 
 - [Klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) obsługuje następujące tryby dokowania:
 
-    - `AFX_DOCK_TYPE::DT_IMMEDIATE`
+  - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
-    - `AFX_DOCK_TYPE::DT_STANDARD`
+  - `AFX_DOCK_TYPE::DT_STANDARD`
 
-    - `AFX_DOCK_TYPE::DT_SMART`
+  - `AFX_DOCK_TYPE::DT_SMART`
 
-   Te tryby dokowania są definiowane przez [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) i są ustawiane przez wywołanie metody [CDockingManager::SetDockingMode](#setdockingmode).
+  Te tryby dokowania są definiowane przez [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) i są ustawiane przez wywołanie metody [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Jeśli chcesz utworzyć okienka niezmienny, nie o zmiennym rozmiarze, wywołaj [CDockingManager::AddPane](#addpane) metody. Ta metoda rejestruje okienka dokowania menedżera, który jest odpowiedzialny za układ okienka.
 

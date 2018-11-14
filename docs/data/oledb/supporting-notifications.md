@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 2e5327f2197a1d48542ad5f7a615294a915948f5
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 77344150f5c0d969c1636ac146138242d96ee39f
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265025"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556559"
 ---
 # <a name="supporting-notifications"></a>Obsługa powiadomień
 
@@ -22,7 +22,7 @@ ms.locfileid: "51265025"
 
 Aby zaimplementować powiadomienia, klasa dostawcy musi dziedziczyć z [irowsetnotifycp —](../../data/oledb/irowsetnotifycp-class.md) i [interfejsy IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](/previous-versions/windows/desktop/ms712959). `IRowsetNotifyCP` implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
+`IRowsetNotifyCP` implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
 
 Należy również wdrożyć i zarejestrować `IRowsetNotify` na odbiorcę (znany także jako ujścia) za pomocą [irowsetnotifyimpl —](../../data/oledb/irowsetnotifyimpl-class.md) , dzięki czemu użytkownik może obsługiwać powiadomienia. Aby uzyskać informacji na temat implementowania interfejsu punktu połączenia na użytkownika, zobacz [odbieranie powiadomień](../../data/oledb/receiving-notifications.md).
 

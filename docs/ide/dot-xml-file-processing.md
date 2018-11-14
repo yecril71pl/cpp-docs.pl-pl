@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 6592352e2afc02d3689f328ab37db6f289880cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522190"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524173"
 ---
 # <a name="xml-file-processing"></a>Przetwarzanie pliku .Xml
 
@@ -23,50 +23,50 @@ Kompilator stosuje następujące reguły podczas generowania ciągi identyfikato
 
 - Pierwsza część ciąg Identyfikatora określa rodzaj elementu członkowskiego są identyfikowane za pomocą pojedynczy znak z dwukropkiem. Używane są następujące typy elementu członkowskiego:
 
-   |Znak|Opis|
-   |---------------|-----------------|
-   |N|— przestrzeń nazw<br /><br /> Nie można dodać komentarze dokumentacji do przestrzeni nazw, możliwe są cref odwołania do przestrzeni nazw.|
-   |T|Typ: klasy, interfejsu, struktury, wyliczenia, delegat|
-   |D|— klasa typedef|
-   |F|pole|
-   |P|właściwości (w tym indeksatory lub innych właściwości indeksowane)|
-   |M|metody (w tym specjalnych metodami, takimi jak konstruktory, operatorów i tak dalej)|
-   |E|zdarzenie|
-   |!|Ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o tym błędzie. Kompilator języka Visual C++ generuje informacje o błędzie dla łączy, których nie można rozpoznać.|
+  | Znak | Opis |
+  |---------------|-----------------|
+  | N | — przestrzeń nazw<br /><br /> Nie można dodać komentarze dokumentacji do przestrzeni nazw, możliwe są cref odwołania do przestrzeni nazw. |
+  | T | Typ: klasy, interfejsu, struktury, wyliczenia, delegat |
+  | D | — klasa typedef |
+  | F | pole |
+  | P | właściwości (w tym indeksatory lub innych właściwości indeksowane) |
+  | M | metody (w tym specjalnych metodami, takimi jak konstruktory, operatorów i tak dalej) |
+  | E | zdarzenie |
+  | ! | Ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o tym błędzie. Kompilator języka Visual C++ generuje informacje o błędzie dla łączy, których nie można rozpoznać. |
 
 - Druga część ciągu jest w pełni kwalifikowana nazwa elementu, począwszy od głównego obszaru nazw. Nazwa elementu, jego otaczającego typu lub typów i przestrzeni nazw są oddzielone kropkami. Jeśli nazwa elementu zawiera kropek, są one zastąpione przez znak kratki (#). Zakłada się, że żaden element ma znak kratki bezpośrednio w jego nazwę. Na przykład w pełni kwalifikowanej nazwy `String` Konstruktor może być "System.String.#ctor".
 
 - Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio, jak jest zakodowany w podpisie .NET Framework:
 
-   - Typy podstawowe. Regularne typów (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowaną nazwę typu.
+  - Typy podstawowe. Regularne typów (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowaną nazwę typu.
 
-   - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowaną nazwę odpowiedniego typu pełną, na przykład **System.Int32** lub **System.TypedReference**.
+  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowaną nazwę odpowiedniego typu pełną, na przykład **System.Int32** lub **System.TypedReference**.
 
-   - ELEMENT_TYPE_PTR jest reprezentowany jako "*" zgodnie z zmodyfikowany typ.
+  - ELEMENT_TYPE_PTR jest reprezentowany jako "*" zgodnie z zmodyfikowany typ.
 
-   - Pole jest reprezentowany jako "\@" po modyfikacji typu.
+  - Pole jest reprezentowany jako "\@" po modyfikacji typu.
 
-   - ELEMENT_TYPE_PINNED jest reprezentowany jako "^" po modyfikacji typu. Kompilator języka Visual C++ generuje nigdy nie tak.
+  - ELEMENT_TYPE_PINNED jest reprezentowany jako "^" po modyfikacji typu. Kompilator języka Visual C++ generuje nigdy nie tak.
 
-   - ELEMENT_TYPE_CMOD_REQ jest reprezentowany jako "&#124;" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące. Kompilator języka Visual C++ generuje nigdy nie tak.
+  - ELEMENT_TYPE_CMOD_REQ jest reprezentowany jako "&#124;" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące. Kompilator języka Visual C++ generuje nigdy nie tak.
 
-   - ELEMENT_TYPE_CMOD_OPT jest reprezentowany jako "!" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące.
+  - ELEMENT_TYPE_CMOD_OPT jest reprezentowany jako "!" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące.
 
-   - ELEMENT_TYPE_SZARRAY jest reprezentowany jako "[]", zgodnie z typem elementu tablicy.
+  - ELEMENT_TYPE_SZARRAY jest reprezentowany jako "[]", zgodnie z typem elementu tablicy.
 
-   - ELEMENT_TYPE_GENERICARRAY jest reprezentowany jako "[?]" po typ elementu tablicy. Kompilator języka Visual C++ generuje nigdy nie tak.
+  - ELEMENT_TYPE_GENERICARRAY jest reprezentowany jako "[?]" po typ elementu tablicy. Kompilator języka Visual C++ generuje nigdy nie tak.
 
-   - ELEMENT_TYPE_ARRAY jest reprezentowany jako [*ich*:`size`,*ich*:`size`] gdzie liczba przecinków jest ranga - 1 i dolne granice i rozmiaru każdego wymiaru, jeśli znane są reprezentowane w zapisie dziesiętnym. Jeśli dolna granica lub rozmiar nie zostanie określony, po prostu zostanie pominięta. W przypadku pominięcia dolną granicę i rozmiar dla określonego wymiaru ":" pominięto w także. Na przykład, to 2-wymiarowej tablicy przy użyciu 1 jako nieokreślony rozmiary i dolne granice [1:, 1:].
+  - ELEMENT_TYPE_ARRAY jest reprezentowany jako [*ich*:`size`,*ich*:`size`] gdzie liczba przecinków jest ranga - 1 i dolne granice i rozmiaru każdego wymiaru, jeśli znane są reprezentowane w zapisie dziesiętnym. Jeśli dolna granica lub rozmiar nie zostanie określony, po prostu zostanie pominięta. W przypadku pominięcia dolną granicę i rozmiar dla określonego wymiaru ":" pominięto w także. Na przykład, to 2-wymiarowej tablicy przy użyciu 1 jako nieokreślony rozmiary i dolne granice [1:, 1:].
 
-   - ELEMENT_TYPE_FNPTR jest reprezentowany jako "= FUNC:`type`(*podpisu*)", gdzie `type` jest zwracany typ i *podpisu* jest argumenty metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. Kompilator języka Visual C++ generuje nigdy nie tak.
+  - ELEMENT_TYPE_FNPTR jest reprezentowany jako "= FUNC:`type`(*podpisu*)", gdzie `type` jest zwracany typ i *podpisu* jest argumenty metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. Kompilator języka Visual C++ generuje nigdy nie tak.
 
-   Następujące składniki podpis nie są reprezentowane, ponieważ nigdy nie są one używane do różnicujący przeciążonych metod:
+  Następujące składniki podpis nie są reprezentowane, ponieważ nigdy nie są one używane do różnicujący przeciążonych metod:
 
-   - Konwencja wywoływania
+  - Konwencja wywoływania
 
-   - Zwracany typ
+  - Zwracany typ
 
-   - ELEMENT ELEMENT_TYPE_SENTINEL
+  - ELEMENT ELEMENT_TYPE_SENTINEL
 
 - Tylko operatory konwersji, aby uzyskać wartość zwracaną metody jest zakodowane jako "~" następuje zwracany typ, jak wcześniej zakodowany.
 
@@ -76,9 +76,9 @@ Kompilator stosuje następujące reguły podczas generowania ciągi identyfikato
     <member name="T:MyClass`2">
     ```
 
-   Dla typu, który jest zdefiniowany jako `public class MyClass<T, U>`.
+  Dla typu, który jest zdefiniowany jako `public class MyClass<T, U>`.
 
-   Dla metod biorąc typów podstawowych jako parametrów, parametry typu ogólnego są określane jako numery poprzedzone znakiem wstecz znaczniki (na przykład \`0, \`1).  Liczba, każda reprezentująca notacji tablicę indeksowaną od zera dla ogólnych parametrów typu.
+  Dla metod biorąc typów podstawowych jako parametrów, parametry typu ogólnego są określane jako numery poprzedzone znakiem wstecz znaczniki (na przykład \`0, \`1).  Liczba, każda reprezentująca notacji tablicę indeksowaną od zera dla ogólnych parametrów typu.
 
 ## <a name="example"></a>Przykład
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b1411f3df97aeaf66abcccc5be78c734e3a71f19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603492"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556156"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
 
-Udostępnia implementację [ICommandProperties](/previous-versions/windows/desktop/ms723044) interfejsu.
+Udostępnia implementację [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,15 +67,15 @@ Zwraca wszystkie zestawy żądanej właściwości z użyciem mapowania właściw
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -88,13 +88,13 @@ Ustawia właściwości dla obiektu polecenia.
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542015"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524004"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otwórz Folder projektów w języku Visual C++
 
@@ -33,7 +33,8 @@ Możesz użyć dowolnego systemu kompilacji w programie Visual C++ i nadal korzy
 ## <a name="configuring-open-folder-projects"></a>Konfigurowanie projektów Otwórz Folder
 
 Otwórz Folder projektu można dostosować za pomocą trzech plików JSON:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Określ informacje o konfiguracji niestandardowej do przeglądania. Ten plik, należy utworzyć, jeśli to konieczne, w folderze głównym projektu.|
 |launch.vs.json|Określ argumenty wiersza polecenia. Udostępnianych za pośrednictwem **Eksploratora rozwiązań** element menu kontekstowego **ustawienia debugowania i uruchamiania**.|
@@ -58,6 +59,7 @@ Funkcja IntelliSense i przeglądanie częściowo zachowanie zależy od aktywną 
   ]
 }
 ```
+
 Konfiguracja może mieć jedną z następujących właściwości:
 
 |||
@@ -135,6 +137,7 @@ Można zdefiniować niestandardowe zmienne środowiskowe w CppProperties.json al
   ]
 }
 ```
+
 Można również definiować **środowisk** właściwości w konfiguracji, tak że ma zastosowanie tylko do konfiguracji i zastępuje wszystkie zmienne globalne o takiej samej nazwie. W poniższym przykładzie x64 Konfiguracja definiuje lokalnym **INCLUDE** zmiennej, która zastępuje wartości globalnej:
 
 ```json
@@ -186,6 +189,7 @@ Wszystkie niestandardowe i domyślne zmienne środowiskowe są również dostęp
 #### <a name="macros"></a>Makra
 
 Masz dostęp do następujących wbudowanych makr wewnątrz CppProperties.json:
+
 |||
 |-|-|
 |`${workspaceRoot}`| Pełna ścieżka do folderu obszaru roboczego|
@@ -258,11 +262,13 @@ Tworzy (lub zostanie otwarty) `tasks.vs.json` pliku w folderze .vs, który progr
   ]
 }
 ```
+
 Po zapisaniu pliku tasks.vs.json, kliknij prawym przyciskiem myszy dowolny plik .cpp, w tym folderze, wybierz polecenie **Echo, nazwa_pliku** z menu kontekstowego i zobacz, nazwa pliku jest wyświetlany w oknie danych wyjściowych.
 
 #### <a name="appliesto"></a>AppliesTo
 
 Można utworzyć zadania dla dowolnego pliku lub folderu, określając jej nazwę w `appliesTo` pole, na przykład `"appliesTo" : "hello.cpp"`. Następujące maski plików mogą być używane jako wartości:
+
 |||
 |-|-|
 |`"*"`| zadanie jest dostępne dla wszystkich plików i folderów w obszarze roboczym|
@@ -340,4 +346,3 @@ Po zapisaniu tego pliku, nowa konfiguracja zostanie wyświetlona w menu rozwijan
 ## <a name="see-also"></a>Zobacz też
 
 [Zintegrowane środowisko projektowe i narzędzia projektowe Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

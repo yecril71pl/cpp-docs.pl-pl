@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 642e6219f72e506205e8192770be7d8af5d0d817
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265168"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556476"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odwoływanie się do właściwości w dostawcy
 
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734) w **OLE DB Podręcznik programisty**.
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) w **OLE DB Podręcznik programisty**.
 
 W poniższym przykładzie założono, że próbujesz pobrać właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.
 

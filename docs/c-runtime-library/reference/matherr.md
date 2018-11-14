@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445724"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329634"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ struct _exception
 
 |Macro|Znaczenie|
 |-|-|
-**_DOMENY**|Argument domeny błędów
-**_SING**|Argument singularity
-**_OVERFLOW**|Błąd w zakresie przepełnienia
-**_PLOSS**|Częściowo utraciła istotności.
-**_TLOSS**|Całkowita utrata znaczenia
-**_UNDERFLOW**|Wynik jest za mały, aby mogły być reprezentowane. (Ten warunek nie jest obecnie obsługiwane.)
+| **_DOMENY** | Argument domeny błędów |
+| **_SING** | Argument singularity |
+| **_OVERFLOW** | Błąd w zakresie przepełnienia |
+| **_PLOSS** | Częściowo utraciła istotności. |
+| **_TLOSS** | Całkowita utrata znaczenia |
+| **_UNDERFLOW** | Wynik jest za mały, aby mogły być reprezentowane. (Ten warunek nie jest obecnie obsługiwane.) |
 
 Element członkowski struktury **nazwa** jest wskaźnikiem do ciąg zakończony wartością null zawierający nazwę funkcji, które spowodowały błąd. Elementy członkowskie struktury **arg1** i **argument2** wpisz wartości, które spowodowały błąd. Jeśli tylko jeden argument zostanie podany, jest on przechowywany w **arg1**.
 

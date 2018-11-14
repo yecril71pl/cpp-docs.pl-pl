@@ -1,6 +1,6 @@
 ---
 title: Klasa CBasePane
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469371"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525421"
 ---
 # <a name="cbasepane-class"></a>Klasa CBasePane
 
@@ -316,13 +316,13 @@ Poniższe porady dotyczące dostosowywania odnoszą się do `CBasePane Class` i 
 
 - Kiedy tworzysz okienko, należy zastosować kilka nowych stylów:
 
-    - AFX_CBRS_FLOAT sprawia, że wartość zmiennoprzecinkowa okienka.
+  - AFX_CBRS_FLOAT sprawia, że wartość zmiennoprzecinkowa okienka.
 
-    - AFX_CBRS_AUTOHIDE Włącza tryb automatycznego ukrywania.
+  - AFX_CBRS_AUTOHIDE Włącza tryb automatycznego ukrywania.
 
-    - AFX_CBRS_CLOSE umożliwia okienko zostanie zamknięty (ukryta).
+  - AFX_CBRS_CLOSE umożliwia okienko zostanie zamknięty (ukryta).
 
-   Są to flagi, które można połączyć za pomocą operacji bitowej OR.
+  Są to flagi, które można połączyć za pomocą operacji bitowej OR.
 
 `CBasePane` implementuje następujące metody logiczna wirtualnego, aby odzwierciedlić te flagi: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Można je zastąpić w klasach pochodnych, aby dostosować jego zachowanie.
 
@@ -1628,12 +1628,12 @@ Ta metoda nie ma żadnych funkcji `CBasePane` klasy.
 Ta metoda nie jest obecnie używana.
 
 ```
-virtual void OnMovePaneDivider(CPaneDivider*);
+virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*CPaneDivider\**<br/>
+*Nieużywane*<br/>
 [in] Nie jest używany.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu

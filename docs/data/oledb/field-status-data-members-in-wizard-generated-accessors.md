@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664571"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524361"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 
@@ -58,7 +58,7 @@ Wartości stanu można użyć na potrzeby debugowania. Jeśli kod wygenerowany p
 
 Można również użyć wartości stanu, można ustawić wartości NULL dla określonego pola. Pomoże w przypadkach, w których chcesz rozróżnienie wartości pola jako wartość NULL, a nie wartość zero. Jest podjęcie decyzji o wartości NULL, jest prawidłową wartością lub wartością specjalną, i zdecyduj, jak aplikacja powinna obsługiwać go. OLE DB definiuje DBSTATUS_S_ISNULL jako prawidłowy sposób określania ogólnej wartości NULL. Jeśli odbiorca odczytuje dane i ma wartość null, w polu stanu jest równa DBSTATUS_S_ISNULL. Jeśli użytkownik chce, aby ustawić wartość NULL, użytkownik ustawia wartość stanu DBSTATUS_S_ISNULL przed wywołaniem dostawcy.
 
-Następnie otwórz Oledb.h i wyszukaj DBSTATUSENUM. Następnie można dopasować liczbową wartość różną od zera stanu dla DBSTATUSENUM wartości wyliczenia. Jeśli nazwa wyliczenia nie są wystarczające do informujące o tym, czym jest problem, zobacz **stan** tematu w **powiązania wartości danych** części [OLE DB przewodnik](/previous-versions/windows/desktop/ms713643). Ten temat zawiera tabele wartości stanu używany podczas pobierania lub ustawiania danych. Aby uzyskać informacji na temat wartości długości, zobacz **długość** tematu w tej samej sekcji.
+Następnie otwórz Oledb.h i wyszukaj DBSTATUSENUM. Następnie można dopasować liczbową wartość różną od zera stanu dla DBSTATUSENUM wartości wyliczenia. Jeśli nazwa wyliczenia nie są wystarczające do informujące o tym, czym jest problem, zobacz **stan** tematu w **powiązania wartości danych** części [OLE DB przewodnik](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Ten temat zawiera tabele wartości stanu używany podczas pobierania lub ustawiania danych. Aby uzyskać informacji na temat wartości długości, zobacz **długość** tematu w tej samej sekcji.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Pobieranie długości lub stan kolumny
 

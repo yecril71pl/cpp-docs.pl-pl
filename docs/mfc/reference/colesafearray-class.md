@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648100"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525408"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
 
@@ -408,7 +408,7 @@ Podstawowe `VARIANT` wartość w `COleSafeArray` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja odłącza danych w bezpiecznej tablicy, ustawiając VT_EMPTY VARTYPE obiektu. Odpowiada za wywołującego bezpłatne tablicy przez wywołanie funkcji Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+Funkcja odłącza danych w bezpiecznej tablicy, ustawiając VT_EMPTY VARTYPE obiektu. Odpowiada za wywołującego bezpłatne tablicy przez wywołanie funkcji Windows [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ Wskaźnik do danych, które można przypisać do tablicy. VT_DISPATCH VT_UNKNOWN
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja automatycznie wywołuje funkcje Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) i [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) przed i po przypisaniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja go został poprawnie skopiowany, a w przypadku ciąg, obiekt lub wariant istniejącego elementu jest poprawnie wyczyszczone.
+Ta funkcja automatycznie wywołuje funkcje Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) i [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) przed i po przypisaniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja go został poprawnie skopiowany, a w przypadku ciąg, obiekt lub wariant istniejącego elementu jest poprawnie wyczyszczone.
 
 Należy pamiętać, że masz kilka blokad w tablicy, dzięki czemu można umieścić elementy w tablicy, podczas gdy tablica jest zablokowany przez inne operacje.
 

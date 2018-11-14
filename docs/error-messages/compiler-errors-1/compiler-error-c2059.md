@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 915121b28adbc97032d5949726dc6fd5d3ab5091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dec5f7a9eb91603b129cfb589352b6ee2579e553
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632482"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521794"
 ---
 # <a name="compiler-error-c2059"></a>Błąd kompilatora C2059
 
@@ -112,7 +112,6 @@ template <typename T> struct Allocator {
 template <typename X, typename AY> struct Container {
     typedef typename AY::Rebind<X>::Other AX; // error C2059
 };
-
 ```
 
 Domyślnie C++ założono, że `AY::Rebind` nie jest szablonem; w związku z tym, że `<` jest interpretowany jako mniej-niż logowania.  Musisz poinformować kompilator jawnie, `Rebind` jest szablon, aby go można poprawnie przeanalizować nawiasu ostrego. Aby rozwiązać ten problem, należy użyć `template` słów kluczowych dotyczących nazwy typ zależny, jak pokazano poniżej:
@@ -127,5 +126,4 @@ template <typename T> struct Allocator {
 template <typename X, typename AY> struct Container {
     typedef typename AY::template Rebind<X>::Other AX; // correct
 };
-
 ```

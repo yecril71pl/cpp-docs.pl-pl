@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b8c43a47eceb5213f292b825a771cd25e99efceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592663"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556975"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor — Klasa
 
@@ -147,9 +147,10 @@ Konstruktor.
 
 ```cpp
 typedef CDynamicParameterAccessor _ParamClass;
-CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
-   DBLENGTH nBlobSize = 8000 )
-   : CDynamicAccessor(eBlobHandling, nBlobSize )
+CDynamicParameterAccessor(
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000 )
+   : CDynamicAccessor(eBlobHandling, nBlobSize )
 ```
 
 #### <a name="parameters"></a>Parametry
@@ -171,10 +172,10 @@ Pobiera dane typu dla określonego parametru z buforu parametru.
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-template <class ctype>bool GetParam(DBORDINAL nParam, 
+template <class ctype>bool GetParam(DBORDINAL nParam,
    ctype* pData) const throw();
 
-template <class ctype> bool GetParam(TCHAR* pParamName, 
+template <class ctype> bool GetParam(TCHAR* pParamName,
    ctype* pData) const throw();
 
 void* GetParam(DBORDINAL nParam) const throw();
@@ -223,7 +224,7 @@ Określa, czy określony parametr to parametr danych wejściowych lub wyjściowy
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-bool GetParamIO(DBORDINAL nParam, 
+bool GetParamIO(DBORDINAL nParam,
    DBPARAMIO* pParamIO) const throw();
 ```
 
@@ -312,7 +313,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Liczba parametrów (przesunięcie od 1). Parametr 0 jest zarezerwowany dla wartości zwracanych. Liczba parametrów jest indeks parametru na podstawie jego zamówienia w języku SQL lub wywołanie procedury składowanej. Zobacz [setparam —](../../data/oledb/cdynamicparameteraccessor-setparam.md) przykład.
 
 *pStatus*<br/>
-[out] Wskaźnik do zmiennej, zawierający stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](/previous-versions/windows/desktop/ms722617) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
+[out] Wskaźnik do zmiennej, zawierający stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -424,7 +425,7 @@ Oparte na szablonach parametr, który jest typem danych.
 [in] Wskaźnik do pamięci zawierający dane do zapisania w buforze.
 
 *status*<br/>
-[in] DBSTATUS stan kolumny. Informacje o wartościach DBSTATUS, zobacz [stan](/previous-versions/windows/desktop/ms722617) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
+[in] DBSTATUS stan kolumny. Informacje o wartościach DBSTATUS, zobacz [stan](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -472,7 +473,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] Liczba parametrów (przesunięcie od 1). Parametr 0 jest zarezerwowany dla wartości zwracanych. Liczba parametrów jest indeks parametru na podstawie jego zamówienia w języku SQL lub wywołanie procedury składowanej. Zobacz [setparam —](../../data/oledb/cdynamicparameteraccessor-setparam.md) przykład.
 
 *status*<br/>
-[in] Stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](/previous-versions/windows/desktop/ms722617) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
+[in] Stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -485,10 +486,10 @@ Ustawia dane ciągu określonego parametru, które są przechowywane w buforze.
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-bool SetParamString(DBORDINAL nParam, 
-   constCHAR* pString, 
-   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam, 
-   constWCHAR* pString, 
+bool SetParamString(DBORDINAL nParam,
+   constCHAR* pString,
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,
+   constWCHAR* pString,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
@@ -501,7 +502,7 @@ bool SetParamString(DBORDINAL nParam, 
 [in] Wskaźnik do ANSI (**CHAR**) lub Unicode (**WCHAR**) ciągu danych określony parametr. Zobacz DBSTATUS w oledb.h.
 
 *status*<br/>
-[in] Stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](/previous-versions/windows/desktop/ms722617) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
+[in] Stan DBSTATUS określony parametr. Informacje o wartościach DBSTATUS, zobacz [stan](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*, lub Wyszukaj DBSTATUS w oledb.h.
 
 ### <a name="remarks"></a>Uwagi
 

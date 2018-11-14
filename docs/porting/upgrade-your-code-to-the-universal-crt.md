@@ -2,12 +2,12 @@
 title: Uaktualnienie kodu do Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668614"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331753"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Uaktualnienie kodu do Universal CRT
 
@@ -37,7 +37,7 @@ Ponieważ UCRT jest obecnie składnikiem systemu operacyjnego Microsoft Windows,
 
 UCRT można użyć w dowolnej wersji systemu Windows, obsługiwane przez program Visual Studio 2015 lub Visual Studio 2017. Można redystrybuować go za pomocą pakietu vcredist dla obsługiwanych wersji systemu Windows innych niż Windows 10. Pakiety programu vcredist zawiera składniki UCRT i automatycznie instalowane w systemach operacyjnych Windows, które nie masz je zainstalowane domyślnie. Aby uzyskać więcej informacji, zobacz [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
 
-Wdrożenia lokalnego dla aplikacji UCRT jest obsługiwane, ale niezalecane ze względów wydajności i zabezpieczeń. Biblioteki DLL dla wdrożenia lokalnego dla aplikacji zostały dołączone jako część zestawu Windows SDK, w obszarze **redist** podkatalogu. Biblioteki DLL wymagane obejmują ucrtbase.dll oraz zestaw **APISet usługi przesyłania dalej** biblioteki dll o nazwie interfejsu api-ms-win -_podzbioru_.dll. Różni się zbiór bibliotek DLL wymagane w każdym systemie operacyjnym, dlatego zaleca się obejmują wszystkie biblioteki DLL korzystając z wdrożenia lokalnego dla aplikacji. Dodatkowe szczegóły i ostrzeżenia dotyczące wdrożenia lokalnego dla aplikacji, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).
+Wdrożenia lokalnego dla aplikacji UCRT jest obsługiwane, ale niezalecane ze względów wydajności i zabezpieczeń. Biblioteki DLL dla wdrożenia lokalnego dla aplikacji zostały dołączone jako część zestawu Windows SDK, w obszarze **redist** podkatalogu. Biblioteki DLL wymagane obejmują ucrtbase.dll oraz zestaw **APISet usługi przesyłania dalej** biblioteki dll o nazwie interfejsu api-ms-win -_podzbioru_.dll. Różni się zbiór bibliotek DLL wymagane w każdym systemie operacyjnym, dlatego zaleca się obejmują wszystkie biblioteki DLL korzystając z wdrożenia lokalnego dla aplikacji. Dodatkowe szczegóły i ostrzeżenia dotyczące wdrożenia lokalnego dla aplikacji, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Zmiany w funkcji Universal CRT i makra
 

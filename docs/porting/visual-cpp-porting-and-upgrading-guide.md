@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: c1f4114be236e5e3707113bc19779bb50f358ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478094"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556871"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -63,7 +63,7 @@ Oprócz zmian, których nie można uniknąć z powodu błędów kompilatora niek
 
 3. Być może chcesz zaktualizować niektóre kod, aby korzystać z nowych funkcji języka, które upraszcza kod, poprawić wydajność programów lub zaktualizować kod, aby korzystać z bibliotek nowoczesnych i być zgodna z nowoczesnych standardów i najlepsze rozwiązania.
 
-Po uaktualnieniu i przetestowany projekt, możesz również chcieć należy wziąć pod uwagę poprawiania kodu w dalszych planowanie kierunek rozwoju kodu lub nawet ponowne rozpatrzenie architektury projektu. Będzie ona otrzymywać bieżących prac projektowych Czy będą ważne w przypadku wykonywania na innych platformach kodu?  Jeśli tak, jakie platformy?  C++ jest standardowy langauge, zaprojektowana z przenośność i programowanie dla wielu platform, pamiętaj, a jeszcze kodu dla wielu aplikacji Windows zdecydowanie jest powiązany z Windows platform. Czy chcesz wykonać refaktoryzację kodu, do oddzielenia tych elementów, które są bardziej powiązane z platformą Windows?
+Po uaktualnieniu i przetestowany projekt, możesz również chcieć należy wziąć pod uwagę poprawiania kodu w dalszych planowanie kierunek rozwoju kodu lub nawet ponowne rozpatrzenie architektury projektu. Będzie ona otrzymywać bieżących prac projektowych Czy będą ważne w przypadku wykonywania na innych platformach kodu?  Jeśli tak, jakie platformy?  Język C++ jest językiem standardowych, zaprojektowana z przenośność i programowanie dla wielu platform, pamiętaj, a jeszcze kodu dla wielu aplikacji Windows zdecydowanie jest powiązany z Windows platform. Czy chcesz wykonać refaktoryzację kodu, do oddzielenia tych elementów, które są bardziej powiązane z platformą Windows?
 
 Jak wygląda interfejs użytkownika? Jeśli używasz biblioteki MFC, możesz chcieć zaktualizować interfejs użytkownika. Używasz dowolnego z nowszych funkcji MFC, które zostały wprowadzone w 2008 roku jako dodatek Feature Pack? Jeśli chcesz nadaj nowszej wygląd i działanie aplikacji bez konieczności ponownego zapisu całej aplikacji, można rozważyć za pomocą wstążki interfejsów API w MFC lub niektóre z nowych funkcji MFC.
 

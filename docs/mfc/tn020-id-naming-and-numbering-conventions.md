@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464505"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518674"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: konwencje nazewnictwa i numerowania identyfikatorów
 
@@ -89,13 +89,13 @@ Przyczyny te limity zakres:
 
 - Biblioteki MFC wewnętrzną strukturę rezerwuje tych zakresów:
 
-   - 0x7000 za pośrednictwem 0x7FFF (patrz afxres.h)
+  - 0x7000 za pośrednictwem 0x7FFF (patrz afxres.h)
 
-   - 0xE000 za pośrednictwem 0xEFFF (patrz afxres.h)
+  - 0xE000 za pośrednictwem 0xEFFF (patrz afxres.h)
 
-   - 16000 za pośrednictwem 18000 (zobacz afxribbonres.h)
+  - 16000 za pośrednictwem 18000 (zobacz afxribbonres.h)
 
-   Te zakresy mogą ulec zmianie w przyszłości implementacji MFC.
+  Te zakresy mogą ulec zmianie w przyszłości implementacji MFC.
 
 - Kilka poleceń systemu Windows użyj zakresu 0xF000 0xffff.
 

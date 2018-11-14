@@ -29,12 +29,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 4fa5afb1baea33178c987b45e8b7dace4e4515eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649530"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332507"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -88,12 +88,12 @@ Bardziej bezpieczne wersje tych funkcji istnieje, zobacz [freopen_s —, _wfreop
 
 |*Tryb*|Access|
 |-|-|
-**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **freopen —** wywołanie zakończy się niepowodzeniem.
-**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.
-**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje.
-**"r +"**|Otwiera Odczyt i zapis. Plik musi istnieć.
-**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona.
-**"+"**|Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje.
+| **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **freopen —** wywołanie zakończy się niepowodzeniem. |
+| **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
+| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
+| **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
+| **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
+| **"+"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |
 
 Użyj **"w"** i **"w +"** typów z rozwagą, zgodnie z ich może zniszczyć istniejących plików.
 
@@ -105,8 +105,8 @@ Gdy **"r +"**, **"w +"**, lub **"+"** jest określony typ dostępu, Odczyt i zap
 
 |*tryb* modyfikator|Tryb translacji|
 |-|-|
-**t**|Otwórz w tekście (tłumaczonym) trybu.
-**b**|Otwórz w trybie binarnym (nieprzetłumaczonym); tłumaczenia znaków powrotu karetki i wysuwu wiersza są pomijane.
+| **t** | Otwórz w tekście (tłumaczonym) trybu. |
+| **b** | Otwórz w trybie binarnym (nieprzetłumaczonym); tłumaczenia znaków powrotu karetki i wysuwu wiersza są pomijane. |
 
 W trybie tekstowym (tłumaczonym) kombinacje powrotu wysuwu wiersza (CR-LF) powrotu karetki są tłumaczone na znaki pojedynczego wysuwu wiersza (LF) na dane wejściowe Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W plikach otworzyć do odczytu lub zapisu i odczytu z **"+"**, biblioteki wykonawczej wyszukuje klawisze CTRL + Z końcem pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa [fseek](fseek-fseeki64.md) i [ftell —](ftell-ftelli64.md) można przenieść w pliku może spowodować, że [fseek](fseek-fseeki64.md) działać nieprawidłowo w pobliżu końca pliku. **t** opcji jest rozszerzeniem firmy Microsoft, które nie mają być używane gdzie pożądana jest przenośność kodowania ANSI.
 

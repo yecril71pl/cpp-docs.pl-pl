@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542561"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333296"
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 
@@ -95,15 +95,19 @@ W poniższej tabeli przedstawiono typowe `concurrent_vector` metody i operatory,
 
 ||||
 |-|-|-|
-
-|[w](reference/concurrent-vector-class.md#at)|[zakończenia](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)||[ Rozpocznij](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back —](reference/concurrent-vector-class.md#push_back)||[ ponownie](reference/concurrent-vector-class.md#back)|[grow_by —](reference/concurrent-vector-class.md#grow_by)|[rbegin —](reference/concurrent-vector-class.md#rbegin)||[ pojemność](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least —](reference/concurrent-vector-class.md#grow_to_at_least)|[rend —](reference/concurrent-vector-class.md#rend)||[ pusty](reference/concurrent-vector-class.md#empty)|[max_size —](reference/concurrent-vector-class.md#max_size)|[rozmiar](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[koniec](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[begin](reference/concurrent-vector-class.md#begin)|[Frontonu](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[back](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[Pojemność](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend —](reference/concurrent-vector-class.md#rend)|
+|[pusty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[Rozmiar](reference/concurrent-vector-class.md#size)|
 
 Operacje, które środowisko wykonawcze zapewnia zgodność ze standardowej biblioteki C++, na przykład `reserve`, nie są bezpieczne pod względem współbieżności. W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne pod względem współbieżności.
 
 |||
 |-|-|
-
-|[Przypisz](reference/concurrent-vector-class.md#assign)|[zarezerwować](reference/concurrent-vector-class.md#reserve)||[ Wyczyść](reference/concurrent-vector-class.md#clear)|[rozmiar](reference/concurrent-vector-class.md#resize)||[ operator =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit —](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[Przypisz](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[Usuń zaznaczenie](reference/concurrent-vector-class.md#clear)|[Zmiana rozmiaru](reference/concurrent-vector-class.md#resize)|
+|[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Operacje, zmodyfikuj wartość istniejące elementy, które nie są bezpieczne pod względem współbieżności. Użyj obiektu synchronizacji, takie jak [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) obiekt, aby zsynchronizować współbieżne odczytu i zapisu do tego samego elementu danych. Aby uzyskać więcej informacji na temat obiektów synchronizacji zobacz [struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md).
 

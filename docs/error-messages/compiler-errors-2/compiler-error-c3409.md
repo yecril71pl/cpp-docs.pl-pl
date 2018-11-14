@@ -1,21 +1,23 @@
 ---
 title: Błąd kompilatora C3409
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - C3409
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 2a677da40b64a19c4d2a27436344eec7adb80c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600892"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330089"
 ---
 # <a name="compiler-error-c3409"></a>Błąd kompilatora C3409
 
-pusty blok atrybutu nie jest dozwolone.
+> pusty blok atrybutu nie jest dozwolone.
+
+## <a name="remarks"></a>Uwagi
 
 Nawiasy kwadratowe są interpretowane przez kompilator jako [atrybut](../../windows/cpp-attributes-reference.md) znaleziono blok, ale żadne atrybuty.
 
@@ -29,19 +31,15 @@ Kompilator może wygenerować tego błędu, korzystając z nawiasami kwadratowym
 
    1. Usuń blok atrybutu.
 
-1. Jeśli nawiasy kwadratowe są częścią wyrażenia lambda:
+1. Jeśli nawiasy kwadratowe są częścią wyrażenia lambda, upewnij się, że wyrażenie lambda regułom prawidłowej składni.
 
-   1. Upewnij się, że wyrażenie lambda regułom prawidłowej składni.
-
-         Aby uzyskać więcej informacji na temat składni wyrażeń lambda, zobacz [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md).
-
-    2.
+   Aby uzyskać więcej informacji na temat składni wyrażeń lambda, zobacz [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3409.
 
-```
+```cpp
 // C3409.cpp
 // compile with: /c
 #include <windows.h>
@@ -60,7 +58,7 @@ class b : public x {};
 
 Poniższy przykład generuje C3409, ponieważ korzysta z wyrażenia lambda `mutable` specyfikacji, ale nie zapewnia listę parametrów. Kompilator nie może określić, czy nawiasy kwadratowe są częścią definicji wyrażenia lambda lub bloku atrybutu.
 
-```
+```cpp
 // C3409b.cpp
 
 int main()

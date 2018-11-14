@@ -1,15 +1,15 @@
 ---
 title: Opcje kompilatora w rozbiciu na kategorie
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532954"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598824"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -46,7 +46,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/Gh](gh-enable-penter-hook-function.md)|Wywołuje funkcję podłączania `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję podłączania `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Włącza optymalizację całego programu.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Włącza minimalną ponowną kompilację.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
 |[/GR](gr-enable-run-time-type-information.md)|Włącza informacje typu run-time (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa `__fastcall` konwencji wywoływania. (tylko x86)|
 |[/GS](gs-buffer-security-check.md)|Sprawdza zabezpieczenia buforu.|
@@ -202,6 +202,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/CLR:noAssembly](clr-common-language-runtime-compilation.md)|Przestarzałe. Użyj [/LN (Utwórz moduł MSIL)](ln-create-msil-module.md) zamiast tego.|
 |[/FR](fr-fr-create-dot-sbr-file.md)|Przestarzałe. Tworzy plik przeglądania informacji bez zmiennych lokalnych.|
 |[/Ge](ge-enable-stack-probes.md)|Przestarzałe. Uaktywnia sondy stosu. Na domyślnie.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
 |[/GX](gx-enable-exception-handling.md)|Przestarzałe. Włącza synchroniczną obsługę wyjątków. Użyj [/EH](eh-exception-handling-model.md) zamiast tego.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Przestarzałe. Umożliwia szybkie testy. Użyj [rtc1](rtc-run-time-error-checks.md) zamiast tego.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|

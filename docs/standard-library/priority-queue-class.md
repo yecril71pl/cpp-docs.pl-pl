@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677178"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333218"
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 
@@ -224,9 +224,9 @@ Tworzy priority_queue —, który jest pusty lub jest kopią zakresu obiektu kon
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_ comp*<br/>
+*_comp*<br/>
 Funkcja porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Każdy pierwsze trzy konstruktory Określa pusty początkowej priority_queue —
 
 Czwarty Konstruktor Określa kopię priority_queue — *prawo*.
 
-Ostatnie trzy konstruktory kopiują zakres [* pierwszy, ostatni *) niektóre kontenera i użyć wartości, aby zainicjować priority_queue — uwzględni się rosnącą explicitness, określając typ funkcji porównywania klasy **cech** i `container_type`.
+Ostatnie trzy konstruktory kopiują zakres \[ *pierwszy*, *ostatniego*) niektóre kontenera i użyć wartości, aby zainicjować priority_queue — uwzględni się rosnącą explicitness podczas określania typu Porównanie funkcji klasy `Traits` i `container_type`.
 
 ### <a name="example"></a>Przykład
 

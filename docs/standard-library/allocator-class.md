@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450677"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518869"
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 
@@ -63,7 +63,7 @@ Wszystkie kontenery standardowej biblioteki języka C++ ma parametr szablonu, kt
 
 Na przykład obiekt programu przydzielania mogą przydzielić pamięć na stosie prywatnej lub w pamięci współdzielonej, lub może zoptymalizować rozmiary małych lub dużych obiektów. On może również określać, za pośrednictwem definicji typu, który dostarcza mu elementy były dostępne za pośrednictwem obiektów specjalne metody dostępu, które zarządzać pamięci współużytkowanej lub wykonać automatyczne wyrzucanie elementów bezużytecznych. W związku z tym klasa, która przydziela pamięć przy użyciu obiekt programu przydzielania należy te są używane do deklarowania wskaźników i odwołują się do obiektów, tak jak kontenery w standardowej biblioteki języka C++.
 
-**(C_ ++ 98/03)** Po utworzeniu klasy pochodnej z klasy programu przydzielania, musisz podać [ponownie powiązać](#rebind) struktury, których `_Other` typedef odwołuje się do klasy pochodnej nowo.
+<strong>(C ++ 98/03 tylko)</strong>  Po utworzeniu klasy pochodnej z klasy programu przydzielania, musisz podać [ponownie powiązać](#rebind) struktury, których `_Other` typedef odwołuje się do klasy pochodnej nowo.
 
 W efekcie alokatora definiuje następujące typy:
 

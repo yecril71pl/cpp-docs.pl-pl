@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563205"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333335"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 
@@ -148,11 +148,10 @@ Możesz przekazać `task_continuation_context` obiekt [Task::Then —](reference
 W poniższej sekcji pokazano aplikację, która odczytuje plik z dysku, znajduje najbardziej popularne wyrazy w tym pliku, a następnie przedstawia wyniki w interfejsie użytkownika. Ostatniej operacji, aktualizowanie interfejsu użytkownika, występuje w wątku interfejsu użytkownika.
 
 > [!IMPORTANT]
->  To zachowanie jest specyficzne dla aplikacji platformy uniwersalnej systemu Windows. Dla aplikacji komputerowych nie kontroli, gdzie kontynuacje uruchomiona. Zamiast tego harmonogramu wybiera wątku roboczego, w którym można uruchomić każdy kontynuacji.
+> To zachowanie jest specyficzne dla aplikacji platformy uniwersalnej systemu Windows. Dla aplikacji komputerowych nie kontroli, gdzie kontynuacje uruchomiona. Zamiast tego harmonogramu wybiera wątku roboczego, w którym można uruchomić każdy kontynuacji.
 
 > [!IMPORTANT]
-
->  Nie wywołuj [CONCURRENCY::Task:: wait](reference/task-class.md#wait) w treści kontynuacja, która działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , ponieważ ta metoda blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać [CONCURRENCY::Task:: GET](reference/task-class.md#get) metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach.
+> Nie wywołuj [CONCURRENCY::Task:: wait](reference/task-class.md#wait) w treści kontynuacja, która działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , ponieważ ta metoda blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać [CONCURRENCY::Task:: GET](reference/task-class.md#get) metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach.
 
 ##  <a name="example-app"></a> Przykład: Sterowanie wykonywaniem w aplikacji Windows Runtime z C++ i XAML
 

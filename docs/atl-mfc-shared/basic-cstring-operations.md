@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: d1f16e470123bd52cb2656541aafaabdfc16af8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434078"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523133"
 ---
 # <a name="basic-cstring-operations"></a>Operacje na obiekcie CString podstawowe
 
@@ -91,11 +91,10 @@ Aby uzyskać informacji na temat konwertowania cstring — obiekty na inne typy 
 
 Aby użyć CString z `wcout` musi jawnie rzutowane obiekt do `const wchar_t*` jak pokazano w poniższym przykładzie:
 
-```
+```cpp
 CString cs("meow");
 
-    wcout <<(const wchar_t*) cs <<endl;
-
+wcout << (const wchar_t*) cs << endl;
 ```
 
 Bez rzutowania `cs` jest traktowany jako `void*` i `wcout` drukuje adres obiektu. To zachowanie jest spowodowane przez subtelne interakcje między argument potrąceń i przeciążenie rozdzielczość szablon używanej w sobie poprawne i zgodność ze standardem C++.

@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 18e4185f1cbd8b37e0e3cc7b11abc24505980b7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562165"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524255"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
@@ -223,9 +223,9 @@ Poniższy przykład przedstawia C ++ 14 zgodność zachowanie:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -243,9 +243,9 @@ W poniższym przykładzie pokazano C ++ 17 zachowania w programie Visual Studio 
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1371,7 +1371,7 @@ Elementy członkowskie danych statycznych constexpr niejawnie są teraz w tekśc
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1600,7 +1600,6 @@ int main() {
     };
     return 0;
 }
-
 ```
 
 W programie Visual Studio 2017 w wersji 15.7 z aktualizacją 3 lub nowszym, zgłasza teraz poprzedni przykład *C2078 zbyt wiele inicjatorów*. Poniższy przykład pokazuje, jak naprawić kod. Podczas inicjowania `std::array` zagnieżdżonych nawiasów klamrowych list inicjacji, nadaj wewnętrzny tablicy w nawiasach klamrowych listę swój własny:
@@ -1619,7 +1618,6 @@ int main() {
     }}; // note double braces
     return 0;
 }
-
 ```
 
 ## <a name="update_158"></a> Poprawki i zmiany zachowania w programie Visual Studio 2017 wersja 15.8
@@ -1675,7 +1673,6 @@ struct S : Base<T> {
         return base_value;
     }
 };
-
 ```
 
 Aby naprawić błąd, zmień `return` instrukcję, aby `return this->base_value;`.
@@ -1851,7 +1848,6 @@ struct A
 };
 
 A<>::from_template_t<A<int>> a;
-
 ```
 
 W programie Visual Studio 2017 w wersji 15.9 w **/ permissive-** tryb, wywołuje kompilatora C3861: *"from_template": nie odnaleziono identyfikatora*.d
@@ -1917,7 +1913,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 Poprzedni przykład wywołuje C2668:
@@ -1979,7 +1974,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 ## <a name="see-also"></a>Zobacz także

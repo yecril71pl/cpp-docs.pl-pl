@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642913"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525310"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC
 
@@ -338,7 +338,7 @@ Style pola listy dotyczą [klasa CListBox](../../mfc/reference/clistbox-class.md
 |LBS_HASSTRINGS|Określa pole listy rysowane przez właściciela, który zawiera elementy składające się z ciągów. Pole listy zachowuje pamięci i wskaźnikami do ciągów, dzięki czemu aplikacja może używać `GetText` funkcję elementu członkowskiego, aby pobrać tekst dla konkretnego elementu.|
 |LBS_MULTICOLUMN|Określa wielokolumnowe pole listy, które jest przewijane w poziomie. `SetColumnWidth` Funkcja elementu członkowskiego Ustawia szerokość kolumn.|
 |LBS_MULTIPLESEL|Wybór ciągu jest włączony za każdym razem użytkownik kliknie lub kliknie dwukrotnie ciągu. Można wybrać dowolną liczbę ciągów.|
-|LBS_NODATA|Określa pola listy nie danych. Należy określić ten styl, gdy liczba elementów w polu listy przekroczy tysiąc. Pole listy danych nie musi mieć również styl LBS_OWNERDRAWFIXED, ale nie może mieć LBS_SORT lub LBS_HASSTRINGS stylu. <br />< /br / > pola listy nie danych przypomina pole listy rysowane przez właściciela, z tą różnicą, że zawiera on żadnych danych ciągu lub mapy bitowej dla elementu. Polecenia służące do dodawania, wstawiania lub usuwania elementu zawsze Ignoruj wszystkie podane elementu danych. Niepowodzenie żądania, aby zawsze znaleźć ciąg w polu listy. System wysyła komunikat WM_DRAWITEM do okna właściciela, gdy musi zostać narysowany element. Identyfikator elementu członkiem `DRAWITEMSTRUCT` struktury przekazany z komunikatem WM_DRAWITEM Określa numer wiersza elementu do narysowania. Pole listy danych nie wysłał wiadomości WM_DELETEITEM.|
+|LBS_NODATA|Określa pola listy nie danych. Należy określić ten styl, gdy liczba elementów w polu listy przekroczy tysiąc. Pole listy danych nie musi mieć również styl LBS_OWNERDRAWFIXED, ale nie może mieć LBS_SORT lub LBS_HASSTRINGS stylu.<br/><br/> Pola listy nie danych przypomina pole listy rysowane przez właściciela, z tą różnicą, że zawiera on żadnych danych ciągu lub mapy bitowej dla elementu. Polecenia służące do dodawania, wstawiania lub usuwania elementu zawsze Ignoruj wszystkie podane elementu danych. Niepowodzenie żądania, aby zawsze znaleźć ciąg w polu listy. System wysyła komunikat WM_DRAWITEM do okna właściciela, gdy musi zostać narysowany element. Identyfikator elementu członkiem `DRAWITEMSTRUCT` struktury przekazany z komunikatem WM_DRAWITEM Określa numer wiersza elementu do narysowania. Pole listy danych nie wysłał wiadomości WM_DELETEITEM.|
 |LBS_NOINTEGRALHEIGHT|Rozmiar pola listy jest dokładnie taki rozmiar, które są określone przez aplikację podczas jej tworzenia pola listy. Zazwyczaj Windows rozmiarów pola listy, aby pole listy nie wyświetla elementów częściowe.|
 |LBS_NOREDRAW|Wyświetlanie pola listy nie zostanie zaktualizowany, gdy zostaną wprowadzone zmiany. Ten styl można zmienić w dowolnym momencie, wysyłając wiadomość WM_SETREDRAW.|
 |LBS_NOSEL|Określa, że pole listy zawiera elementy, które mogą być wyświetlane, ale nie jest zaznaczone.|
@@ -350,7 +350,7 @@ Style pola listy dotyczą [klasa CListBox](../../mfc/reference/clistbox-class.md
 |LBS_USETABSTOPS|Umożliwia pola listy rozpozna i rozszerzy znaki tabulacji podczas rysowania nią ciągi. Położenie karty domyślną jest 32 jednostki okna dialogowego. (Jednostki okna dialogowego jest odległość pozioma lub pionowa. Jednostki okna dialogowego w poziomie jest równy jednej czwartej bieżącej jednostki podstawowej szerokość okna dialogowego. Okno dialogowe stanowiącej są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. `GetDialogBaseUnits` Windows funkcja zwraca bieżące okno dialogowe stanowiącej w pikselach.) Ten styl nie powinien być używany z LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|Właściciel pola listy otrzymuje WM_VKEYTOITEM lub WM_CHARTOITEM wiadomości, zawsze wtedy, gdy użytkownik naciśnie klawisz, gdy pole listy ma fokus wejścia. Umożliwia to aplikacji do wykonywania przetwarzania specjalne na klawiaturze, danych wejściowych.|
 
-##<a name="message-box-styles"></a>  Style okna komunikatu
+## <a name="message-box-styles"></a>  Style okna komunikatu
 
 Style okna komunikatu dotyczą [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementów. Określ kombinację style w *nNie* parametru `AfxMessageBox`. Aby uzyskać więcej informacji na temat Style okna komunikatu w Windows, zobacz [funkcji MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Dostępne są następujące style okno komunikatu.
 |MB_ICONINFORMATION|W oknie komunikatu pojawia się ikona składająca się z "I" w okręgu.|
 |MB_ICONQUESTION|W oknie komunikatu pojawi się ikona znaku zapytania.|
 |MB_ICONSTOP|Ikona znak stop pojawia się w oknie komunikatu.|
+
 ### <a name="message-box-default-buttons"></a>Okno komunikatu domyślnych przycisków
 
 |Styl|Opis|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 7f5b85fad181dba147c2135784d237bccdceb422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637999"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518401"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Porady: dodawanie formantów wstążki do programów obsługi zdarzeń
 
@@ -36,7 +36,6 @@ W tym temacie zostanie otwierania projektanta wstążki, Dodaj przycisk i nastę
 
 ```
     MessageBox((LPCTSTR)L"Hello World");
-
 ```
 
 ## <a name="see-also"></a>Zobacz też

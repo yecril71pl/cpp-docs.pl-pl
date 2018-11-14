@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595133"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518414"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -63,13 +63,13 @@ Te funkcje zwracają 0, jeśli ustawienie uprawnienia zostało pomyślnie zmieni
 
 **_Chmod —** funkcji zmienia ustawienie uprawnienia w pliku określonym przez *filename*. Ustawienie uprawnienia steruje odczytu i zapisu do pliku. Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba z następujących stałych manifestu, określonych w SYS\Stat.h.
 
-|*pmode*|Znaczenie|
+| *pmode* | Znaczenie |
 |-|-|
-**_S_IREAD**|Dozwolone tylko odczyt.
-**_S_IWRITE**|Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.)
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|Odczyt i zapis dozwolone.
+| **\_S\_IREAD** | Dozwolone tylko odczyt. |
+| **\_S\_IWRITE** | Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.) |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Odczyt i zapis dozwolone. |
 
-Gdy oba stałe są podane, są połączone przy użyciu bitowego operatora or — operator (**|**). Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze czytelny; nie jest możliwe przyznać uprawnienia tylko do zapisu. W efekcie tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
+Gdy oba stałe są podane, są połączone przy użyciu bitowego operatora or — operator (**\|**). Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze czytelny; nie jest możliwe przyznać uprawnienia tylko do zapisu. W efekcie tryby **_S_IWRITE** i **_S_IREAD** \| **_S_IWRITE** są równoważne.
 
 **_wchmod —** to wersja znaku dwubajtowego **_chmod —**; *filename* argument **_wchmod —** jest ciągiem znaku dwubajtowego. **_wchmod —** i **_chmod —** zachowują się identycznie.
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output

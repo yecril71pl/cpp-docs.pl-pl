@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586335"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519296"
 ---
 # <a name="cinternetsession-class"></a>Klasa CInternetSession
 
@@ -318,12 +318,12 @@ Wskaźnik na ciąg zakończony znakiem null, określający nazwę użytkownika, 
 *pstrPassword*<br/>
 Wskaźnik Określa hasło używane do logowania się w ciąg zakończony znakiem null. Jeśli oba *pstrPassword* i *pstrUserName* mają wartość NULL, domyślne hasło anonimowe to nazwa adres e-mail użytkownika. Jeśli *pstrPassword* ma wartość NULL (lub pustego ciągu), ale *pstrUserName* nie ma wartości NULL, puste hasło jest używane. W poniższej tabeli opisano zachowanie cztery ustawienia możliwe *pstrUserName* i *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Nazwa użytkownika jest wysyłane do serwera FTP|Hasła przesyłanych do serwera FTP|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|Wartość NULL lub ""|Wartość NULL lub ""|"anonimowy"|Nazwa e-mail użytkownika|
-|Ciąg znaków innych niż NULL|Wartość NULL lub ""|*pstrUserName*|" "|
-|NULL|Ciąg znaków innych niż NULL|BŁĄD|BŁĄD||
-|Ciąg znaków innych niż NULL|Ciąg znaków innych niż NULL|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Nazwa użytkownika jest wysyłane do serwera FTP | Hasła przesyłanych do serwera FTP |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   Wartość NULL lub ""   |   Wartość NULL lub ""   |         "anonimowy"         |      Nazwa e-mail użytkownika      |
+| Ciąg znaków innych niż NULL |   Wartość NULL lub ""   |       *pstrUserName*        |             " "             |
+|      NULL       | Ciąg znaków innych niż NULL |            BŁĄD            |            BŁĄD            |
+| Ciąg znaków innych niż NULL | Ciąg znaków innych niż NULL |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 Liczba, która identyfikuje port TCP/IP używany na serwerze.

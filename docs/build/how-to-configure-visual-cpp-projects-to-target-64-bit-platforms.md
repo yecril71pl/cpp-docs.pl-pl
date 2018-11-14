@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664558"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523940"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Porady: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy
 
@@ -43,18 +43,18 @@ Konfiguracje projektu w środowisku IDE programu Visual Studio służy do konfig
 
 - Gdy **nowa platforma rozwiązania** jest otwarte okno dialogowe podczas konfigurowania projektu do elementu docelowego platformy 64-bitowej w **Kopiuj ustawienia** listy rozwijanej wybierz **Win32**. Te ustawienia projektu są automatycznie aktualizowane na poziomie projektu:
 
-   - [/MACHINE](../build/reference/machine-specify-target-platform.md) ustawiono opcję konsolidatora **/MACHINE:X 64**.
+  - [/MACHINE](../build/reference/machine-specify-target-platform.md) ustawiono opcję konsolidatora **/MACHINE:X 64**.
 
-   - **Zarejestruj dane wyjściowe** jest wyłączone. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
+  - **Zarejestruj dane wyjściowe** jest wyłączone. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
 
-   - **Docelowe środowisko** ustawiono **/ENV x64**. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: Ogólne](../ide/midl-property-pages-general.md).
+  - **Docelowe środowisko** ustawiono **/ENV x64**. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: Ogólne](../ide/midl-property-pages-general.md).
 
-   - **Sprawdza poprawność parametrów** jest czyszczona i Zresetuj wartość domyślną. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: zaawansowane](../ide/midl-property-pages-advanced.md).
+  - **Sprawdza poprawność parametrów** jest czyszczona i Zresetuj wartość domyślną. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: zaawansowane](../ide/midl-property-pages-advanced.md).
 
-   - Jeśli **formatu informacji debugowania** została ustawiona na **/zi** w konfiguracji projektu Win32, następnie ustawiana jest na **/zi** w konfiguracji projektu 64-bitowych. Aby uzyskać więcej informacji, zobacz [/z7, / zi, /ZI (Format informacji debugowania)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Jeśli **formatu informacji debugowania** została ustawiona na **/zi** w konfiguracji projektu Win32, następnie ustawiana jest na **/zi** w konfiguracji projektu 64-bitowych. Aby uzyskać więcej informacji, zobacz [/z7, / zi, /ZI (Format informacji debugowania)](../build/reference/z7-zi-zi-debug-information-format.md).
 
-   > [!NOTE]
-   > Żadna z tych właściwości projektu są zmieniane, jeśli zostaną one zastąpione na poziomie plików.
+  > [!NOTE]
+  > Żadna z tych właściwości projektu są zmieniane, jeśli zostaną one zastąpione na poziomie plików.
 
 ## <a name="see-also"></a>Zobacz też
 

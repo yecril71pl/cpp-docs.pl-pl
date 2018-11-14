@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565727"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524680"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf — Klasa
 
@@ -457,7 +457,7 @@ Jeśli funkcja nie powiedzie się, zwraca **traits_type::eof** ani nie zgłasza 
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ *Meta* porównuje równa **traits_type::eof**, chronionych wirtualna funkcja składowa usiłują Wstaw element **traits_type::**[_Z char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do strumienia wyjściowego. Jego można to zrobić na różne sposoby:
+Jeśli  *\_Meta* porównuje równa **traits_type::eof**, chronionych wirtualna funkcja składowa usiłują Wstaw element **traits_type::** [ to_char_type —](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) do strumienia wyjściowego. Jego można to zrobić na różne sposoby:
 
 - Jeśli `write position` jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 
@@ -492,7 +492,7 @@ Jeśli funkcja nie powiedzie się, zwraca **traits_type::eof** ani nie zgłasza 
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ *Meta* porównuje równa **traits_type::eof**, element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkcję można odłożyć element na różne sposoby:
+Jeśli  *\_Meta* porównuje równa **traits_type::eof**, element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Funkcję można odłożyć element na różne sposoby:
 
 - Jeśli pozycja putback — jest dostępny, można przechowywać element w określonej pozycji putback — i dekrementacji wskaźnik następnej dla buforu danych wejściowych.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

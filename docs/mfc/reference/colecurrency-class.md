@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553494"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519194"
 ---
 # <a name="colecurrency-class"></a>Klasa COleCurrency
 
@@ -132,11 +132,11 @@ Wszystkie te konstruktory tworzą nowe `COleCurrency` obiektów inicjowane z pod
 
 - COleCurrency (`curSrc`) tworzy `COleCurrency` obiektu z istniejącego `COleCurrency` obiektu. Nowy obiekt ma ten sam stan, co obiekt źródłowy.
 
-- COleCurrency (`varSrc`) tworzy `COleCurrency` obiektu. Stara się przekonwertować [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury lub `COleVariant` obiektu jako wartość waluty (VT_CY). Jeśli ta konwersja zakończy się pomyślnie, przekonwertowana wartości jest kopiowana do nowej `COleCurrency` obiektu. Jeśli nie, to wartość `COleCurrency` obiekt jest ustawiony na wartość zero (0) i jej stanie się nieprawidłowy.
+- COleCurrency (`varSrc`) tworzy `COleCurrency` obiektu. Stara się przekonwertować [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury lub `COleVariant` obiektu jako wartość waluty (VT_CY). Jeśli ta konwersja zakończy się pomyślnie, przekonwertowana wartości jest kopiowana do nowej `COleCurrency` obiektu. Jeśli nie, to wartość `COleCurrency` obiekt jest ustawiony na wartość zero (0) i jej stanie się nieprawidłowy.
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "obiektu z określonym składników liczbowych. Jeśli wartość bezwzględna część ułamkową jest większa niż 10 000, odpowiednie dostosowania do jednostek. Należy zauważyć, że jednostki i część ułamkową są określone przez podpisany długich wartości.
 
-Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -314,7 +314,7 @@ Krótki opis każdego operatora następująco:
 
 - **Operator = (** *varSrc* **)** Jeśli konwersja `VARIANT` wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) walutę ( `VT_CY`) jest Operacja się powiedzie, wartość przekonwertowanego jest kopiowana do to `COleCurrency` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja nie powiedzie, wartość `COleCurrency` obiekt jest ustawiony na 0 i jej stanie się nieprawidłowy.
 
-Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 

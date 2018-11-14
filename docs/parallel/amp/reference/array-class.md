@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 5b123eb8d21c7273c41a713de5500df164511dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537205"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523731"
 ---
 # <a name="array-class"></a>array — Klasa
 
@@ -56,6 +56,7 @@ Ranga tablicy.
 |----------|-----------------|
 |[Array — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `array` klasy.|
 |[~ array — destruktor](#dtor)|Niszczy `array` obiektu.|
+
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|

@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599676"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556923"
 ---
 # <a name="asyncbase-class"></a>AsyncBase — Klasa
 
@@ -116,7 +114,7 @@ Nazwa                                         | Opis
 [AsyncBase::put_Id](#put-id)                 | Ustawia uchwyt operację asynchroniczną.
 [AsyncBase::PutOnComplete](#putoncomplete)   | Ustawia adres procedury obsługi zdarzeń zakończenia z podaną wartością.
 [AsyncBase::PutOnProgress](#putonprogress)   | Ustawia adres obsługi zdarzenia postępu z podaną wartością.
-[AsyncBase::Start](#start)                   | Rozpoczyna operację asynchroniczną.
+
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -130,6 +128,7 @@ Nazwa                                                                         | 
 [AsyncBase::OnCancel](#oncancel)                                             | W przypadku przesłonięcia w klasie pochodnej, anuluje operację asynchroniczną.
 [AsyncBase::OnClose](#onclose)                                               | W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.
 [AsyncBase::OnStart](#onstart)                                               | W przypadku przesłonięcia w klasie pochodnej, rozpoczyna operację asynchroniczną.
+[AsyncBase::Start](#start)                                                   | Rozpoczyna operację asynchroniczną.
 [AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.
 [AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | Wskazuje, czy określonego kodu błędu, można zmodyfikować stanu błędu wewnętrznego.
 
@@ -504,7 +503,7 @@ S_OK, jeśli operacja rozpoczyna się lub jest już uruchomiona; w przeciwnym ra
 
 ### <a name="remarks"></a>Uwagi
 
-`Start()` jest domyślna Implementacja klasy `IAsyncInfo::Start`, a nie rzeczywiste działa. Uruchamia operację asynchroniczną, należy zastąpić `OnStart()` czystej wirtualnej metody.
+`Start()` jest metodą chronionych, który nie jest widoczna na zewnątrz, ponieważ operacje asynchroniczne oznaczenie "gorąca start" przed zwróceniem do obiektu wywołującego.
 
 ## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
 

@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677347"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521079"
 ---
 # <a name="concurrency-namespace-enums"></a>wyliczenia przestrzeni nazw współbieżności
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|Harmonogram nie zbierać informacje o postępie. Ponowne równoważenie odbywa się na podstawie wyłącznie na poziomie subskrypcji podstawowej wątku sprzętu. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](IExecutionResource-structure.md).<br /><br /> Ta wartość jest zarezerwowana do użytku w czasie wykonywania.|
 |`ProgressFeedbackEnabled`|Harmonogram zbiera informacje o postępie i przekazuje je do usługi resource manager. Te informacje statystyczne na ponowne zrównoważenie zasobów w imieniu harmonogramu oprócz poziom subskrypcji w podstawowym wątku sprzętu będzie korzystać z usługi resource manager. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  join_type — wyliczenie
 
 Typ `join` Blok obsługi wiadomości.

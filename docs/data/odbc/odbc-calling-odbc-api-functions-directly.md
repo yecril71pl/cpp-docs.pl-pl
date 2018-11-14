@@ -12,12 +12,12 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: 8c6781e0ff49b026e3b969f062f01e9923eb0a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e76ff4da090a00409465333f8cbc9816ab4c4de6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665702"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518349"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: bezpośrednie wywoływanie funkcji ODBC API
 
@@ -38,7 +38,7 @@ Wywołanie funkcji interfejsu API ODBC bezpośrednio, należy wykonać te same c
 
 - Po zakończeniu, cofnięcie przydziału magazynu.
 
-Aby uzyskać więcej informacji na temat tych kroków, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) zestawu SDK w dokumentacji MSDN.
+Aby uzyskać więcej informacji na temat tych kroków, zobacz [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) zestawu SDK w dokumentacji MSDN.
 
 Oprócz tych kroków musisz wykonać dodatkowe czynności, aby sprawdzić wartości zwracane przez funkcję, upewnij się, że program nie czeka na wywołanie asynchroniczne zakończyć i tak dalej. AFX_SQL_ASYNC i AFX_SQL_SYNC makra można uprościć te ostatnie kroki. Aby uzyskać więcej informacji, zobacz [makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md) w *odwołanie MFC*.
 

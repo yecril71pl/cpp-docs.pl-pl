@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: a8b204c2bf48802b8efcfe5ca487d62876942c29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540339"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333231"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -117,12 +117,12 @@ Ciąg znaków *tryb* określa rodzaj dostępu, który jest wnioskowany dla pliku
 
 |*Tryb*|Access|
 |-|-|
-**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem.
-**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.
-**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje.
-**"r +"**|Otwiera Odczyt i zapis. Plik musi istnieć.
-**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona.
-**"+"**|Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje.
+| **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem. |
+| **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
+| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
+| **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
+| **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
+| **"+"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |
 
 Po otwarciu pliku przy użyciu **""** dostęp typu lub **"+"** uzyskiwać dostępu do typu, wszystkie operacje zapisu występują na końcu pliku. Wskaźnik pliku może być przeniesiony za pomocą [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacja została wykonana. W związku z tym nie można zastąpić istniejące dane.
 
@@ -134,8 +134,8 @@ Oprócz wcześniejszych wartości następujące znaki mogą być dołączane do 
 
 |*tryb* modyfikator|Tryb translacji|
 |-|-|
-**t**|Otwórz w tekście (tłumaczonym) trybu.
-**b**|Otwórz w trybie binarnym (nieprzetłumaczonym); tłumaczenia znaków powrotu karetki i wysuwu wiersza są pomijane.
+| **t** | Otwórz w tekście (tłumaczonym) trybu. |
+| **b** | Otwórz w trybie binarnym (nieprzetłumaczonym); tłumaczenia znaków powrotu karetki i wysuwu wiersza są pomijane. |
 
 W trybie tekstowym CTRL + Z jest interpretowany jako znak końca pliku na dane wejściowe. W plikach otwartych do odczytu/zapisu, przy użyciu **"+"**, **fopen —** wyszukuje klawisze CTRL + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa [fseek](fseek-fseeki64.md) i **ftell —** można przenieść w pliku, który może spowodować, że kończy się znakiem CRTL + Z [fseek](fseek-fseeki64.md) będzie działać nieprawidłowo w pobliżu końca pliku.
 
@@ -149,14 +149,14 @@ Poniższe opcje, które można dołączać do *tryb* Aby określić dodatkowe za
 
 |*tryb* modyfikator|Zachowanie|
 |-|-|
-**c**|Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana.
-**N**|Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem COMMODE.OBJ. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)).
-**N**|Określa, że plik nie jest dziedziczony przez procesy podrzędne.
-**S**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku.
-**R**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku.
-**T**|Określa plik jako tymczasowy. Jeśli to możliwe, nie jest on opróżniany do dysku.
-**D**|Określa plik jako tymczasowy. Jest usuwany po zamknięciu ostatniego wskaźnika do pliku.
-**ccs =**_kodowania_|Określa zakodowany zestaw znaków używany (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz, aby kodowania ANSI.
+| **c** | Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana. |
+| **N** | Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem COMMODE.OBJ. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)). |
+| **N** | Określa, że plik nie jest dziedziczony przez procesy podrzędne. |
+| **S** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku. |
+| **R** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku. |
+| **T** | Określa plik jako tymczasowy. Jeśli to możliwe, nie jest on opróżniany do dysku. |
+| **D** | Określa plik jako tymczasowy. Jest usuwany po zamknięciu ostatniego wskaźnika do pliku. |
+| **ccs =**_kodowania_ | Określa zakodowany zestaw znaków używany (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz, aby kodowania ANSI. |
 
 Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty, które są używane w [_otwórz](open-wopen.md) i [_sopen](sopen-wsopen.md), wykonując następujące czynności.
 

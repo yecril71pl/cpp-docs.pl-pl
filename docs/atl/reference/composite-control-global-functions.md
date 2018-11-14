@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525271"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524433"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [porady: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](/windows/desktop/menurc/common-control-parameters) w ramach zestawu Windows SDK *: SDK Tools*.
+Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [porady: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](/windows/desktop/menurc/common-control-parameters) w ramach zestawu Windows SDK: SDK Tools.
 
 Aby uzyskać więcej informacji o oknach dialogowych, ogólnie rzecz biorąc, zobacz [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) i [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) w zestawie Windows SDK.
 
@@ -160,7 +160,7 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
 
 - CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "http://www.microsoft.com"
+- Adres URL, takich jak "<http://www.microsoft.com>"
 
 - Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
 
 - CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "http://www.microsoft.com"
+- Adres URL, takich jak "<http://www.microsoft.com>"
 
 - Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
 
 - CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "http://www.microsoft.com"
+- Adres URL, takich jak "<http://www.microsoft.com>"
 
 - Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
 
 - CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "http://www.microsoft.com"
+- Adres URL, takich jak "<http://www.microsoft.com>"
 
 - Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
 

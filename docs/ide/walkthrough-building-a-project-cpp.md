@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618366"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524160"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
 
@@ -27,15 +27,15 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 1. W Game.cpp Usuń średnik w ostatnim wierszu, tak aby wyglądała jak instrukcji:
 
-    `return 0`
+   `return 0`
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
 
 1. Wiadomości w **lista błędów** okno wskazuje, że wystąpił błąd podczas tworzenia projektu. Opis wygląda komunikat o błędzie:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Aby wyświetlić Pomoc dotyczącą tego błędu, wyróżnij go w **lista błędów** okna, a następnie wybierz **F1** klucza.
+   Aby wyświetlić Pomoc dotyczącą tego błędu, wyróżnij go w **lista błędów** okna, a następnie wybierz **F1** klucza.
 
 1. Dodać średnik z powrotem do końca wiersza, który zawiera błąd składni:
 
@@ -43,7 +43,7 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
 
-  Wiadomości w **dane wyjściowe** okno wskazuje, że projekt został pomyślnie skompilowany.
+   Wiadomości w **dane wyjściowe** okno wskazuje, że projekt został pomyślnie skompilowany.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

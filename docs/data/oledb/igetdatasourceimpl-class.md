@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 75b95f871023d7bfdea198a69377b1f360ab115f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd6b56f4281a2fdde77229ec54be6d6289a87148
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637843"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556572"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl — Klasa
 
-Udostępnia implementację [IGetDataSource](/previous-versions/windows/desktop/ms709721) obiektu.
+Udostępnia implementację [IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85)) obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,13 +60,13 @@ Zwraca wskaźnik interfejsu na obiekt źródła danych, do utworzenia sesji.
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid, 
+STDMETHOD(GetDataSource)(REFIID riid,
    IUnknown ** ppDataSource);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) w *OLE DB Podręcznik programisty*.
+Zobacz [IGetDataSource::GetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms725443(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 

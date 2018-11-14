@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471098"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524641"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Każda z tych funkcji zwraca wartość 0, jeśli czas modyfikacji pliku została
 
 |errno wartość|Warunek|
 |-|-|
-**EACCES**|Ścieżka Określa katalog lub plik tylko do odczytu
-**EINVAL**|Nieprawidłowy *razy* argumentu
-**EMFILE**|Zbyt wiele otwartych plików (musi można otworzyć pliku, aby zmienić czas jego modyfikacji)
-**ENOENT**|Ścieżka lub nazwa pliku nie można odnaleźć
+| **EACCES** | Ścieżka Określa katalog lub plik tylko do odczytu |
+| **EINVAL** | Nieprawidłowy *razy* argumentu |
+| **EMFILE** | Zbyt wiele otwartych plików (musi można otworzyć pliku, aby zmienić czas jego modyfikacji) |
+| **ENOENT** | Ścieżka lub nazwa pliku nie można odnaleźć |
 
 Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
@@ -123,14 +123,14 @@ Plik można zmienić z datą pod warunkiem, że zmiana daty jest po północy 1 
 
 ## <a name="remarks"></a>Uwagi
 
-**_Utime** funkcja ustawia czas modyfikacji pliku określonego przez *filename **.* Proces musi mieć dostęp do zapisu do pliku, aby można było zmienić czas. W systemie operacyjnym Windows, możesz zmienić czas dostępu i czas modyfikacji w **_utimbuf —** struktury. Jeśli *razy* jest **NULL** wskaźnik, czas modyfikacji jest ustawiony na bieżącym czasem lokalnym. W przeciwnym razie *razy* musi się odnosić do struktury typu **_utimbuf —** zdefiniowaną w SYS\UTIME. H.
+**_Utime** funkcja ustawia czas modyfikacji pliku określonego przez *filename*. Proces musi mieć dostęp do zapisu do pliku, aby można było zmienić czas. W systemie operacyjnym Windows, możesz zmienić czas dostępu i czas modyfikacji w **_utimbuf —** struktury. Jeśli *razy* jest **NULL** wskaźnik, czas modyfikacji jest ustawiony na bieżącym czasem lokalnym. W przeciwnym razie *razy* musi się odnosić do struktury typu **_utimbuf —** zdefiniowaną w SYS\UTIME. H.
 
 **_Utimbuf —** struktury przechowuje czasy dostępu i modyfikacji plików używane przez **_utime** celu zmiany daty modyfikacji pliku. Struktura zawiera następujące pola, które są zarówno typ **time_t**:
 
-|Pole||
-|-|-|
-**actime**|Czas dostępu do plików
-**modtime**|Czas modyfikacji pliku
+| Pole |   |
+|-------|---|
+| **actime** | Czas dostępu do plików |
+| **modtime** | Czas modyfikacji pliku |
 
 Określone wersje **_utimbuf —** struktury (**_utimebuf32** i **__utimbuf64 —**) są definiowane przy użyciu 32-bitowych i 64-bitowe wersje typu time. Są one używane w 32-bitowych i 64-bitowych określonych wersji tej funkcji. **_utimbuf —** sam domyślnie korzysta z typu czasu 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowana.
 

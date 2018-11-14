@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 478e988b350a4e52935838465004cf77f5c1e177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539493"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556637"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 
@@ -105,7 +105,7 @@ Wskaźnik do `CSimpleRow` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
+Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

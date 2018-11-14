@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632287"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329258"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 
@@ -88,11 +88,11 @@ Wartość zwracana przez synchroniczny **_spawnel** lub **_wspawnle —** (**_P_
 
 |||
 |-|-|
-**E2BIG**|Argument w postaci listy przekracza 1024 bajty.
-**EINVAL**|*tryb* argument jest nieprawidłowy.
-**ENOENT**|Nie znaleziono pliku lub ścieżki.
-**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.
-**ENOMEM**|Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu.
+| **E2BIG** | Argument w postaci listy przekracza 1024 bajty. |
+| **EINVAL** | *tryb* argument jest nieprawidłowy. |
+| **ENOENT** | Nie znaleziono pliku lub ścieżki. |
+| **ENOEXEC** | Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego. |
+| **ENOMEM** | Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu. |
 
 Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

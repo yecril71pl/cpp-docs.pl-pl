@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 6743741f0c4045df577aeff69f0cfb00ac9aa96a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503106"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557054"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 
@@ -158,11 +158,11 @@ BEGIN_PROPSET_MAP(Class)
 *Class*<br/>
 [in] Określono klasy, w którym ta właściwość jest ustawiona. Zestaw właściwości można określić w następujących obiektów OLE DB:
 
-- [Obiekty źródła danych](/previous-versions/windows/desktop/ms721278)
+- [Obiekty źródła danych](https://docs.microsoft.com/previous-versions/windows/desktop/ms721278(v=vs.85))
 
-- [Obiektów sesji](/previous-versions/windows/desktop/ms711572)
+- [Obiektów sesji](https://docs.microsoft.com/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [Polecenia](/previous-versions/windows/desktop/ms724608)
+- [Polecenia](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85))
 
 #### <a name="example"></a>Przykład
 
@@ -238,11 +238,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
+[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
 
 #### <a name="remarks"></a>Uwagi
 
-To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić `VARTYPE` i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić `VARTYPE` i [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
 
 #### <a name="example"></a>Przykład
 
@@ -261,13 +261,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
+[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
 
 *vt*<br/>
 [in] `VARTYPE` Tego wpisu właściwości. (Zdefiniowanymi w wtypes.h)
 
 *Flagidw*<br/>
-[in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342) wartości opisujące ten wpis właściwości.
+[in] A [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) wartości opisujące ten wpis właściwości.
 
 *value*<br/>
 [in] Wartość właściwości typu `DWORD`.
@@ -296,7 +296,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
+[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.
 
 *value*<br/>
 [in] Wartość właściwości typu `DWORD`.
@@ -384,7 +384,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.
 
 *Atrybut DbType*<br/>
-[in] Typ danych w [DBTYPE](/previous-versions/windows/desktop/ms711251).
+[in] Typ danych w [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Element członkowski*<br/>
 [in] Zmiennej składowej w `dataClass` która przechowuje dane.
@@ -416,22 +416,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.
 
 *flagi*<br/>
-[in] Określa, jak dane są zwracane. Zobacz `dwFlags` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845).
+[in] Określa, jak dane są zwracane. Zobacz `dwFlags` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *colSize*<br/>
 [in] Rozmiar kolumny.
 
 *Atrybut DbType*<br/>
-[in] Wskazuje typ danych wartości. Zobacz `wType` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845).
+[in] Wskazuje typ danych wartości. Zobacz `wType` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *Precyzja*<br/>
-[in] Wskazuje dokładności do użycia podczas pobierania danych, jeśli *dbType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bPrecision` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845).
+[in] Wskazuje dokładności do użycia podczas pobierania danych, jeśli *dbType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bPrecision` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *Skala*<br/>
-[in] Wskazuje skalowania do użycia podczas pobierania danych, jeśli atrybut dbType jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bScale` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845).
+[in] Wskazuje skalowania do użycia podczas pobierania danych, jeśli atrybut dbType jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bScale` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *Identyfikator GUID*<br/>
-Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.
+Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.
 
 #### <a name="remarks"></a>Uwagi
 
@@ -492,7 +492,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### <a name="remarks"></a>Uwagi
 
-Użyj tego makra, gdy danych kolumny zakłada się, że [typem DBTYPE_STR](/previous-versions/windows/desktop/ms711251).
+Użyj tego makra, gdy danych kolumny zakłada się, że [typem DBTYPE_STR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 #### <a name="example"></a>Przykład
 
@@ -517,7 +517,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.
 
 *Atrybut DbType*<br/>
-[in] Typ danych w [DBTYPE](/previous-versions/windows/desktop/ms711251).
+[in] Typ danych w [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Rozmiar*<br/>
 [in] Rozmiar kolumny w bajtach.
@@ -552,7 +552,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 
 #### <a name="remarks"></a>Uwagi
 
-Użyj tego makra, gdy danych kolumny jest zakończony ciąg znaków Unicode, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251).
+Użyj tego makra, gdy danych kolumny jest zakończony ciąg znaków Unicode, [DBTYPE_WSTR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 
@@ -571,7 +571,7 @@ Klasa, która zawiera MAPĘ. Zazwyczaj są to klasy sesji.
 
 #### <a name="remarks"></a>Uwagi
 
-Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) w zestawie Windows SDK, aby uzyskać więcej informacji na temat zestawów wierszy schematu.
+Zobacz [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w zestawie Windows SDK, aby uzyskać więcej informacji na temat zestawów wierszy schematu.
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 
@@ -601,7 +601,7 @@ SCHEMA_ENTRY(guid,
 #### <a name="parameters"></a>Parametry
 
 *Identyfikator GUID*<br/>
-Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.
+Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.
 
 *RowsetClass*<br/>
 Klasa, która zostanie utworzona do reprezentowania zestawu wierszy schematu.
@@ -616,7 +616,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-To `Execute` funkcja wypełnia zestawu wierszy danych. Tworzy kreator projektów ATL, zgodnie z opisem w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) w *OLE DB Podręcznik programisty*, trzy początkowej zestawów wierszy schematu w projekcie dla każdego z trzech obowiązkowe schematów OLE DB:
+To `Execute` funkcja wypełnia zestawu wierszy danych. Tworzy kreator projektów ATL, zgodnie z opisem w [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w *OLE DB Podręcznik programisty*, trzy początkowej zestawów wierszy schematu w projekcie dla każdego z trzech obowiązkowe schematów OLE DB:
 
 - DBSCHEMA_TABLES
 

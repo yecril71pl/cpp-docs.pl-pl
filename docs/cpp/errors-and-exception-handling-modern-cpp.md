@@ -3,12 +3,12 @@ title: Błędy w obsłudze wyjątków (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667998"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523291"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Wyjątki w języku C++ przypominają wyjątki w językach takich jak C# i Java. W **spróbuj** zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy związany **catch** blok, którego typ jest zgodny z typem wyjątek. Innymi słowy, wykonywanie przeskakuje z **throw** instrukcję, aby **catch** instrukcji. Jeśli zostanie znalezione nie bloku catch można używać, `std::terminate` jest wywoływany i program jest zamykany. W języku C++ można wygenerować dowolny typ; Jednak firma Microsoft zaleca generowanie typu, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie, typ wyjątku [invalid_argument](../standard-library/invalid-argument-class.md), jest zdefiniowany w bibliotece standardowej w [ \<stdexcept >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga **na koniec** bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek jest zgłaszany. Pobieranie źródeł to idiom inicjalizacji (RAII), który wykorzystuje inteligentne wskaźniki, zapewnia wymaganą funkcję czyszczenia źródeł. Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Aby uzyskać informacje o mechanizmie odwracania stosu C++, zobacz [wyjątków i rozwijania stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

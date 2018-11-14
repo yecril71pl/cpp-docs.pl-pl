@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77385fc8b2869cc59c7a0061951c76a431490efe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638051"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556949"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
 
@@ -62,7 +62,7 @@ Z klasą pochodną `IDBPropertiesImpl`.
 
 ## <a name="remarks"></a>Uwagi
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](/previous-versions/windows/desktop/ms713706), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85)) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
@@ -71,15 +71,15 @@ Zwraca wartości właściwości w grupach właściwości źródła danych, infor
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcProperties, 
+STDMETHOD(GetProperties)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcProperties,
    DBPROPSET ** prgProperties);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetProperties`:
 
@@ -101,16 +101,16 @@ Zwraca informacje o właściwościach obsługiwane przez źródło danych.
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcPropertyInfoSets, 
-   DBPROPINFOSET ** prgPropertyInfoSets, 
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcPropertyInfoSets,
+   DBPROPINFOSET ** prgPropertyInfoSets,
    OLECHAR ** ppDescBuffer);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBProperties::GetPropertyInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetPropertyInfo`:
 
@@ -130,13 +130,13 @@ Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obie
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 

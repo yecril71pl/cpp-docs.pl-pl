@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483411"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525499"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -94,13 +94,10 @@ Ta klasa reprezentuje `CStringT` obiektu.
 ## <a name="syntax"></a>Składnia
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
@@ -117,19 +114,19 @@ Typ znaku klasa string. Może to być jeden z następujących elementów:
 *StringTraits*<br/>
 Określa, czy klasa string konieczne Obsługa bibliotek C Run-Time (CRT) i gdzie znajdują się zasoby w postaci ciągów. Może to być jeden z następujących elementów:
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Klasa wymaga obsługi CRT i umożliwia wyszukiwanie ciągów zasobów w moduł określony przez `m_hInstResource` (członek klasy modułu aplikacji).
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Klasa nie wymaga obsługi CRT i umożliwia wyszukiwanie ciągów zasobów w moduł określony przez `m_hInstResource` (członek klasy modułu aplikacji).
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Klasa wymaga obsługi CRT i umożliwia wyszukiwanie ciągów zasobów za pomocą standardowego algorytmu wyszukiwania MFC.
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Klasa nie wymaga obsługi CRT i umożliwia wyszukiwanie ciągów zasobów za pomocą standardowego algorytmu wyszukiwania MFC.
 
@@ -295,9 +292,9 @@ Nowo przydzielone ciąg.
 
 W programach MFC [klasa CMemoryException](../../mfc/reference/cmemoryexception-class.md) jest generowany, jeśli istnieje niewystarczająca ilość pamięci. W programach ATL [CAtlException](../../atl/reference/catlexception-class.md) zgłaszany. Ta funkcja jest zwykle używana do zwracania ciągów dla usługi Automation.
 
-Najczęściej Jeśli ten ciąg jest przekazywany do funkcji COM jako [in] parametru, a następnie ta wymaga obiekt wywołujący zwolnić ciągu. Można to zrobić za pomocą [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), zgodnie z opisem w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Allocating i zwalnianie pamięci dla BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Najczęściej Jeśli ten ciąg jest przekazywany do funkcji COM jako [in] parametru, a następnie ta wymaga obiekt wywołujący zwolnić ciągu. Można to zrobić za pomocą [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), zgodnie z opisem w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Allocating i zwalnianie pamięci dla BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Aby uzyskać więcej informacji na temat funkcji alokacji OLE w Windows, zobacz [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat funkcji alokacji OLE w Windows, zobacz [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 

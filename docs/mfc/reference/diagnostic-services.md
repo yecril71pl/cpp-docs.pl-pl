@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644330"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524563"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 
@@ -657,7 +657,7 @@ Aby pomyślnie użyć tej funkcji:
 - Plik IMAGEHLP. Biblioteka DLL musi być w zmiennej path. Jeśli nie masz tej biblioteki DLL, funkcja wyświetli komunikat o błędzie. Zobacz [biblioteki Pomocy obrazu](/windows/desktop/Debug/image-help-library) uzyskać informacji na temat zestawu funkcji dostarczonych przez IMAGEHLP.
 
 - Moduły, które mają ramki na stosie musi zawierać informacje o debugowaniu. Jeśli nie zawierają informacji o debugowaniu, funkcja nadal wygeneruje ślad stosu, ale będzie mniej dokładny śledzenia.
-### <a name="requirements"></a>Wymagania
+  ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afx.h
 

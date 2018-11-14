@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657512"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333605"
 ---
 # <a name="hashset-class"></a>hash_set — Klasa
 
@@ -565,7 +565,7 @@ Klucz elementy, które mają być dopasowywane z hash_set.
 
 Element członkowski funkcji zwraca liczbę elementów w następującym zakresie:
 
-[ **lower_bound** (_ *klucz* ), **upper_bound** (\_ *klucz* )).
+\[ lower_bound (*klucz*), upper_bound (*klucz*)).
 
 ### <a name="example"></a>Przykład
 
@@ -1534,7 +1534,7 @@ Aby uzyskać więcej informacji na temat *cech* zobacz [hash_set — klasa](../s
 
 Przechowywany obiekt definiuje funkcję członka:
 
-**bool — operator**( **const Key &** _ *xVal*, **const Key &** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 Zwraca ona **true** Jeśli `_xVal` poprzedza i nie jest równa `_yVal` w porządku sortowania.
 
@@ -2296,7 +2296,7 @@ Aby uzyskać więcej informacji na temat *porównania*, zobacz sekcję Uwagi [ha
 
 Przechowywany obiekt definiuje funkcję członka:
 
-**bool — operator**( **const Key &** _ *xVal*, **const Key &** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 Zwraca ona **true** Jeśli `_xVal` poprzedza i nie jest równa `_yVal` w porządku sortowania.
 

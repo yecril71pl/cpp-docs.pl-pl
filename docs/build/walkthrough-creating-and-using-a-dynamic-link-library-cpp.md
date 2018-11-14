@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591012"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330544"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -396,7 +396,7 @@ Naciśnij dowolny klawisz, aby zamknąć okno polecenia.
 
 Teraz, po utworzeniu biblioteki DLL i aplikacja kliencka, możesz eksperymentować. Spróbuj ustawić punkty przerwania w kodzie aplikacji klienckiej i uruchomić aplikację w debugerze. Zobacz, co się stanie, gdy wchodzisz do wywołania biblioteki. Dodawanie innych funkcji w bibliotece lub innej aplikacji klienta, który korzysta z biblioteki DLL do zapisu.
 
-Podczas wdrażania aplikacji, należy wdrożyć używa biblioteki dll. Najprostszym sposobem udostępnienia biblioteki dll, tworzenia, lub możesz uwzględnić pochodzące od innych firm do aplikacji jest umieścić w tym samym katalogu co aplikacja, znany także jako *wdrożenia lokalnego dla aplikacji*. Aby uzyskać więcej informacji na temat wdrażania, zobacz [wdrożenia w programie Visual C++](..\ide\deployment-in-visual-cpp.md).
+Podczas wdrażania aplikacji, należy wdrożyć używa biblioteki dll. Najprostszym sposobem udostępnienia biblioteki dll, tworzenia, lub możesz uwzględnić pochodzące od innych firm do aplikacji jest umieścić w tym samym katalogu co aplikacja, znany także jako *wdrożenia lokalnego dla aplikacji*. Aby uzyskać więcej informacji na temat wdrażania, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Zobacz też
 

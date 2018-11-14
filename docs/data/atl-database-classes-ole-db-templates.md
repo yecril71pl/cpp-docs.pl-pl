@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: c73b4f318009cf95f58bdd69ec9fc4e0c967604f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610382"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522083"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 
@@ -29,7 +29,7 @@ Ponadto [atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)
 
 Należy pamiętać, że biblioteka MFC zawiera jedną klasę [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), który wyświetla rekordy bazy danych w kontrolkach. Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu, a następnie wyświetla pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego.
 
-Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](/previous-versions/windows/desktop/ms713643).
+Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 ## <a name="see-also"></a>Zobacz też
 

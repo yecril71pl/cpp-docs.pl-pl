@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618455"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329478"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)
 
@@ -61,9 +61,8 @@ Gdy wywołujesz obiektem rekordem [Otwórz](../../mfc/reference/crecordset-class
 
 - [Sortowania](../../data/odbc/recordset-sorting-records-odbc.md) order dla zestawu rekordów, jeśli istnieją, zawarty w [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) element członkowski danych. Struktura używa tego ciągu do konstruowania SQL **ORDER BY** klauzuli.
 
-
-    > [!TIP]
-    >  Aby użyć SQL **GROUP BY** klauzuli (i ewentualnie **HAVING** klauzuli), Dodaj klauzul do końca ciągu filtru.
+   > [!TIP]
+   > Aby użyć SQL **GROUP BY** klauzuli (i ewentualnie **HAVING** klauzuli), Dodaj klauzul do końca ciągu filtru.
 
 - Wartości dowolnego [elementy członkowskie danych parametru](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) określ dla tej klasy. Ustawianie wartości parametrów, po prostu, przed wywołaniem `Open` lub `Requery`. Struktura powiązania wartości parametrów, aby "?" symbole zastępcze w ciągu SQL. W czasie kompilacji można określić ciąg z symbolami zastępczymi. W czasie wykonywania struktura wypełnia szczegółowe informacje na podstawie wartości parametru, które można przekazać.
 

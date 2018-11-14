@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: 8b56378eb93216891f4c0b540d622dbdb412b8cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59bee1c204d2f101d8175ff42c78ca4bbdcaeb4c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576920"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523146"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
 
@@ -29,7 +29,7 @@ Ponadto możesz użyć atrybutów do zaimplementowania szablony konsumentów OLE
 |Za pomocą szablonów dostawców OLE DB (tematów pojęciowych)|[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |Klasy szablonów OLE DB i makra|[Szablony OLE DB — Kompendium](../../data/oledb/ole-db-templates.md) (Visual C++)|
 |Atrybuty konsumentów OLE DB|[Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)|
-|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643(v%3dvs.85)) (w zestawie Windows SDK)|
+|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming(v%3dvs.85)) (w zestawie Windows SDK)|
 |Przykłady szablonów OLE DB|[Przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples)|
 |Dostęp do danych programowania — Przegląd (Visual C++)|[Programowanie dostępu do danych](../../data/data-access-programming-mfc-atl.md)|
 |Tematy dotyczące pojęć ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|

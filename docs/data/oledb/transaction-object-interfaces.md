@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: af67edca97cbfd644668ed48b3145cdbc38636a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f66222a054c3305418ffcd0acdda5c82ccf43
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564323"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556182"
 ---
 # <a name="transaction-object-interfaces"></a>Interfejsy obiektu transakcji
 
@@ -25,8 +25,8 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|
 |---------------|---------------|--------------------------------------|
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obowiązkowy|Nie|
-|[Metody ITransaction](/previous-versions/windows/desktop/ms723053)|Obowiązkowy|Nie|
-|[Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|Nie|
+|[Metody ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|Obowiązkowy|Nie|
+|[Interfejs ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|Nie|
 
 ## <a name="see-also"></a>Zobacz też
 

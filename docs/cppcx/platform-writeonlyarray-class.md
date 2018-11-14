@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651324"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330622"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray, klasa
 
@@ -39,8 +39,12 @@ Te metody mają wewnętrznej dostępności — oznacza to, że tylko są one dos
 
 |Nazwa|Opis|
 |----------|-----------------|
-
-|[WriteOnlyArray::begin](#begin)| Iterator, który wskazuje na pierwszy element tablicy. | | [WriteOnlyArray::Data](#data)| Wskaźnik do buforu danych. | | [WriteOnlyArray::end](#end)| Iterator, który wskazuje na po ostatnim elemencie w tablicy. | | [WriteOnlyArray::FastPass](#fastpass)| Wskazuje, czy tablica mogą używać mechanizmu FastPass, czyli optymalizacji, w sposób niewidoczny dla użytkownika wykonywane przez system. Nie używaj to w kodzie | | [WriteOnlyArray::Length](#length)| Zwraca liczbę elementów w tablicy. | | [WriteOnlyArray::set](#set)| Ustawia określony element z podaną wartością. |
+|[WriteOnlyArray::begin](#begin)|Iterator, który wskazuje na pierwszy element tablicy.|
+|[WriteOnlyArray::Data](#data)|Wskaźnik do buforu danych.|
+|[WriteOnlyArray::end](#end)|Iterator, który wskazuje na po ostatnim elemencie w tablicy.|
+|[WriteOnlyArray::FastPass](#fastpass)|Wskazuje, czy tablica mogą używać mechanizmu FastPass, czyli optymalizacji, w sposób niewidoczny dla użytkownika wykonywane przez system. Nie używaj to w kodzie|
+|[WriteOnlyArray::Length](#length)|Zwraca liczbę elementów w tablicy.|
+|[WriteOnlyArray::set](#set)|Ustawia określony element z podaną wartością.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

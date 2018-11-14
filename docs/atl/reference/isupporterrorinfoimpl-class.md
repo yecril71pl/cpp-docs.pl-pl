@@ -10,16 +10,16 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: a4427a1190f145cc001a3288535df287326e97e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3227142d6ca31d0015411a3619281894eb5e419
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523295"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520052"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Klasa ISupportErrorInfoImpl
 
-Ta klasa udostępnia domyślną implementację elementu [interfejsu Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) i mogą być używane, gdy tylko jeden interfejs generuje błędy na obiekcie.
+Ta klasa udostępnia domyślną implementację elementu [interfejsu Interfejs ISupportErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) i mogą być używane, gdy tylko jeden interfejs generuje błędy na obiekcie.
 
 > [!IMPORTANT]
 >  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 #### <a name="parameters"></a>Parametry
 
 *piid*<br/>
-Wskaźnik do identyfikatora IID interfejsu, który obsługuje [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
+Wskaźnik do identyfikatora IID interfejsu, który obsługuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -43,11 +43,11 @@ Wskaźnik do identyfikatora IID interfejsu, który obsługuje [IErrorInfo](/prev
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Wskazuje, czy interfejsie zidentyfikowany przez `riid` obsługuje [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfejsu.|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Wskazuje, czy interfejsie zidentyfikowany przez `riid` obsługuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfejsu.|
 
 ## <a name="remarks"></a>Uwagi
 
-[Interfejsu Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) gwarantuje, że informacje o błędzie mogą być zwrócone do klienta. Obiekty używające `IErrorInfo` musi implementować `ISupportErrorInfo`.
+[Interfejsu Interfejs ISupportErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) gwarantuje, że informacje o błędzie mogą być zwrócone do klienta. Obiekty używające `IErrorInfo` musi implementować `ISupportErrorInfo`.
 
 Klasa `ISupportErrorInfoImpl` udostępnia domyślną implementację elementu `ISupportErrorInfo` i mogą być używane, gdy tylko jeden interfejs generuje błędy na obiekcie. Na przykład:
 
@@ -65,7 +65,7 @@ Klasa `ISupportErrorInfoImpl` udostępnia domyślną implementację elementu `IS
 
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 
-Wskazuje, czy interfejsie zidentyfikowany przez `riid` obsługuje [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfejsu.
+Wskazuje, czy interfejsie zidentyfikowany przez `riid` obsługuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfejsu.
 
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,7 +73,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) w Windows SDK.
+Zobacz [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) w Windows SDK.
 
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
 

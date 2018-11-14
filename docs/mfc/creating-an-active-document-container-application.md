@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463339"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520416"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
 
@@ -37,15 +37,15 @@ Najprostszy i najbardziej zalecany sposób tworzenia aplikacji kontenera dokumen
 
 1. Kliknij przycisk **Zakończ**.
 
-9. Po zakończeniu pracy Kreatora aplikacji MFC, generowania aplikacji, należy otworzyć następujące pliki za pomocą Eksploratora rozwiązań:
+1. Po zakończeniu pracy Kreatora aplikacji MFC, generowania aplikacji, należy otworzyć następujące pliki za pomocą Eksploratora rozwiązań:
 
    - *MyProjview.cpp*
 
-10. W *MyProjview.cpp*, wprowadź następujące zmiany:
+1. W *MyProjview.cpp*, wprowadź następujące zmiany:
 
    - W `CMyProjView::OnPreparePrinting`, Zastąp zawartość funkcji następującym kodem:
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting`, który jest domyślne przygotowanie drukowania.
 
@@ -59,7 +59,7 @@ Najprostszy i najbardziej zalecany sposób tworzenia aplikacji kontenera dokumen
 
    Statyczne funkcje Członkowskie `COleDocObjectItem::OnPrint` i `COleDocObjectItem::OnPreparePrinting`, zaimplementowanego w poprzednim kodzie obsługi tego udoskonalony schemat drukowania.
 
-11. Dodaj własny implementacji i skompilować aplikację.
+1. Dodaj własny implementacji i skompilować aplikację.
 
 ## <a name="see-also"></a>Zobacz też
 
