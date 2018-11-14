@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429075"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327034"
 ---
 # <a name="platformbox-class"></a>Platform::Box, klasa
 
@@ -21,24 +21,29 @@ Umożliwia to typ wartości takie jak `Windows::Foundation::DateTime` lub typem 
 ```cpp
 ref class Box abstract;
 ```
-  ### <a name="remarks"></a>Uwagi
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** vccorlib.h
 
 **Namespace:** platformy
+
+### <a name="members"></a>Elementy członkowskie
+
 |Element członkowski|Opis|
 |------------|-----------------|
-|[Box](#ctor)|Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu.|
-|[Operator pole&lt;const T&gt;^](#box-const-t)|Umożliwia konwersje boxing z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`.|
-|[Operator pole&lt;const volatile T&gt;^](#box-const-volatile-t)|Umożliwia konwersje boxing z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`. |
-|[Operator pole&lt;T&gt;^](#box-t)|Umożliwia konwersje boxing z klasą wartości `T` do `Box<T>`.|
-|[Operator pole&lt;volatile T&gt;^](#box-volatile-t)|Umożliwia konwersje boxing z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.|
-|[Box::operator T](#t)|Umożliwia konwersje boxing z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`.|
+|[Box](#ctor) | Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu. |
+|[Operator pole&lt;const T&gt;^](#box-const-t) | Umożliwia konwersje boxing z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`. |
+|[Operator pole&lt;const volatile T&gt;^](#box-const-volatile-t) | Umożliwia konwersje boxing z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`. |
+|[Operator pole&lt;T&gt;^](#box-t) | Umożliwia konwersje boxing z klasą wartości `T` do `Box<T>`. |
+|[Operator pole&lt;volatile T&gt;^](#box-volatile-t) | Umożliwia konwersje boxing z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`. |
+|[Box::operator T](#t) | Umożliwia konwersje boxing z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`. |
+|[Wartość właściwości](#value) | Zwraca wartość, która jest hermetyzowany w `Box` obiektu. |
+
 ## <a name="ctor"></a> Konstruktor Box::Box
 
-Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu. | |[ Wartość właściwości](#value)| Zwraca wartość, która jest hermetyzowany w `Box` obiektu. |
+Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu.
+
 ### <a name="syntax"></a>Składnia
 
 ```cpp

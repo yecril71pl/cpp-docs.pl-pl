@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 2395b1aa48b7802a508ab0cb8be1ef35a1a81564
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef28d6cafa0b74b50ee2c50ec380b8bd3aed79f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612996"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327294"
 ---
 # <a name="open-wopen"></a>_open, _wopen
 
@@ -74,11 +74,11 @@ Każda z tych funkcji zwraca deskryptor pliku dla otwartego pliku. Zwracana wart
 
 |errno wartość|Warunek|
 |-|-|
-**EACCES**|Podjęto próbę otwarcia pliku tylko do odczytu do zapisywania pliku trybie współdzielenia nie zezwala na określonej operacji lub podana ścieżka jest katalogiem.
-**EEXIST**|**_O_CREAT** i **_O_EXCL** flag określonych, ale *filename* już istnieje.
-**EINVAL**|Nieprawidłowy *oflag* lub *pmode* argumentu.
-**EMFILE**|Dostępnych jest więcej deskryptorów plików nie (za dużo plików otwartych).
-**ENOENT**|Plik lub nie można odnaleźć ścieżki.
+| **EACCES** | Podjęto próbę otwarcia pliku tylko do odczytu do zapisywania pliku trybie współdzielenia nie zezwala na określonej operacji lub podana ścieżka jest katalogiem. |
+| **EEXIST** | **_O_CREAT** i **_O_EXCL** flag określonych, ale *filename* już istnieje. |
+| **EINVAL** | Nieprawidłowy *oflag* lub *pmode* argumentu. |
+| **EMFILE** | Dostępnych jest więcej deskryptorów plików nie (za dużo plików otwartych). |
+| **ENOENT** | Plik lub nie można odnaleźć ścieżki. |
 
 Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -96,23 +96,23 @@ Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz
 
 |*oflag* stałej|Zachowanie|
 |-|-|
-**_O_APPEND**|Przesuwa wskaźnik myszy plików na koniec pliku przed każdej operacji zapisu.
-**_O_BINARY**|Otwiera plik w trybie binarnym (nieprzetłumaczonym). (Zobacz [fopen —](fopen-wfopen.md) opis trybie binarnym.)
-**_O_CREAT**|Tworzy plik i otwiera go do zapisu. Nie obowiązuje, jeżeli plik określony przez *filename* istnieje. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony.
-**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony.
-**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony.
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|Zwraca wartość błędu, jeśli w pliku określonym przez *filename* istnieje. Ma zastosowanie tylko wtedy, gdy jest używane z **_O_CREAT**.
-**_O_NOINHERIT**|Uniemożliwia tworzenie deskryptora udostępnionego pliku.
-**_O_RANDOM**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku.
-**_O_RDONLY**|Otwiera plik do odczytu tylko. Nie można określić za pomocą **_O_RDWR** lub **_O_WRONLY**.
-**_O_RDWR**|Otwiera plik na odczyt i zapis. Nie można określić za pomocą **_O_RDONLY** lub **_O_WRONLY**.
-**_O_SEQUENTIAL**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku.
-**_O_TEXT**|Otwiera plik w trybie tekstowym (tłumaczonym). (Aby uzyskać więcej informacji, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [fopen —](fopen-wfopen.md).)
-**_O_TRUNC**|Otwiera plik i obcina go na wartość zero length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą **_O_RDONLY**. **_O_TRUNC** używane z **_O_CREAT** otwiera istniejący plik lub tworzy plik. **Uwaga:** **_O_TRUNC** flagi niszczy zawartość określonego pliku.
-**_O_WRONLY**|Otwiera plik do zapisywania tylko. Nie można określić za pomocą **_O_RDONLY** lub **_O_RDWR**.
-**_O_U16TEXT**|Otwiera plik w trybie Unicode UTF-16.
-**_O_U8TEXT**|Otwiera plik w trybie Unicode UTF-8.
-**_O_WTEXT**|Otwiera plik w trybie Unicode.
+| **_O_APPEND** | Przesuwa wskaźnik myszy plików na koniec pliku przed każdej operacji zapisu. |
+| **_O_BINARY** | Otwiera plik w trybie binarnym (nieprzetłumaczonym). (Zobacz [fopen —](fopen-wfopen.md) opis trybie binarnym.) |
+| **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie obowiązuje, jeżeli plik określony przez *filename* istnieje. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Zwraca wartość błędu, jeśli w pliku określonym przez *filename* istnieje. Ma zastosowanie tylko wtedy, gdy jest używane z **_O_CREAT**. |
+| **_O_NOINHERIT** | Uniemożliwia tworzenie deskryptora udostępnionego pliku. |
+| **_O_RANDOM** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku. |
+| **_O_RDONLY** | Otwiera plik do odczytu tylko. Nie można określić za pomocą **_O_RDWR** lub **_O_WRONLY**. |
+| **_O_RDWR** | Otwiera plik na odczyt i zapis. Nie można określić za pomocą **_O_RDONLY** lub **_O_WRONLY**. |
+| **_O_SEQUENTIAL** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku. |
+| **_O_TEXT** | Otwiera plik w trybie tekstowym (tłumaczonym). (Aby uzyskać więcej informacji, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [fopen —](fopen-wfopen.md).) |
+| **_O_TRUNC** | Otwiera plik i obcina go na wartość zero length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą **_O_RDONLY**. **_O_TRUNC** używane z **_O_CREAT** otwiera istniejący plik lub tworzy plik. **Uwaga:** **_O_TRUNC** flagi niszczy zawartość określonego pliku. |
+| **_O_WRONLY** | Otwiera plik do zapisywania tylko. Nie można określić za pomocą **_O_RDONLY** lub **_O_RDWR**. |
+| **_O_U16TEXT** | Otwiera plik w trybie Unicode UTF-16. |
+| **_O_U8TEXT** | Otwiera plik w trybie Unicode UTF-8. |
+| **_O_WTEXT** | Otwiera plik w trybie Unicode. |
 
 Aby określić tryb dostępu do pliku, należy określić **_O_RDONLY**, **_O_RDWR**, lub **_O_WRONLY**. Nie ma domyślne wartości dla trybu dostępu.
 
@@ -128,9 +128,9 @@ Gdy dwa lub więcej stałych manifestu są używane do formularza *oflag* argume
 
 |*pmode*|Znaczenie|
 |-|-|
-**_S_IREAD**|Dozwolone tylko odczyt.
-**_S_IWRITE**|Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.)
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|Odczyt i zapis dozwolone.
+| **_S_IREAD** | Dozwolone tylko odczyt. |
+| **_S_IWRITE** | Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.) |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
 
 Gdy oba stałe są podane, są połączone za pomocą operatora bitowego OR ( **&#124;** ). W Windows wszystkie pliki są do odczytu; nie ma uprawnienia tylko do zapisu. W związku z tym, tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
 

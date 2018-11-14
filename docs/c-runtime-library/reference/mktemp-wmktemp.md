@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554179"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326267"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -82,7 +82,7 @@ Każda z tych funkcji zwraca wskaźnik do modyfikacji nametemplate innej. Funkcj
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp —**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*Nametemplate innej* argument ma postać *podstawowy ** XXXXXX*, gdzie *podstawowy* jest częścią nową nazwę pliku, który podasz, a każda X jest symbolem zastępczym dla znak, który został dostarczony przez **_mktemp —**. Dla każdego znaku zastępczego *nametemplate innej* musi być wielkie X. **_mktemp —** zachowuje *podstawowy* i zamienia pierwszą X końcowe litery alfabetu. **_mktemp —** zastępuje następujące końcowe x o wartości 5 cyfrowy; ta wartość jest unikatowy numer identyfikujący wywołania procesu, lub w przypadku programów wielowątkowych wątku wywołującego.
+*Nametemplate innej* argument ma postać *podstawowy*XXXXXX, gdzie *podstawowy* jest częścią nową nazwę pliku, który podasz, a każda X jest symbolem zastępczym dla znak, który został dostarczony przez **_mktemp —**. Dla każdego znaku zastępczego *nametemplate innej* musi być wielkie X. **_mktemp —** zachowuje *podstawowy* i zamienia pierwszą X końcowe litery alfabetu. **_mktemp —** zastępuje następujące końcowe x o wartości 5 cyfrowy; ta wartość jest unikatowy numer identyfikujący wywołania procesu, lub w przypadku programów wielowątkowych wątku wywołującego.
 
 Każde wywołanie pomyślne **_mktemp —** modyfikuje *nametemplate innej*. W każdym wywołaniu kolejnych ten sam proces lub wątek z takimi samymi *nametemplate innej* argument **_mktemp —** sprawdza, czy nazw plików, które odpowiadają nazwom zwrócony przez **_mktemp —** w poprzednie wywołania. Jeśli plik nie istnieje dla danej nazwy **_mktemp —** zwraca tę nazwę. Pliki, jeśli istnieją dla nazwy, wszystkie wcześniej zwrócony **_mktemp —** tworzy nową nazwę, zastępując znaku alfabetycznego go użyć w nazwie wcześniej zwrócony z na kolejne dostępne małe litery, w kolejności, od "" do "z". Na przykład jeśli *podstawowy* jest:
 

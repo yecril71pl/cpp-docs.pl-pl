@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480292"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326969"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 
@@ -25,28 +25,40 @@ Deklaracje wskaźników do elementów członkowskich są specjalne przypadki dek
 ```
 
 1. Specyfikator deklaracji:
-  - Specyfikator klasy magazynowania opcjonalne.
 
-  - Opcjonalnie **const** i/lub **volatile** specyfikatorów.
+   - Specyfikator klasy magazynowania opcjonalne.
 
-  - Specyfikator typu: Nazwa typu.  Jest to typ elementu członkowskiego, aby wskazywał, nie klasy.
+   - Opcjonalnie **const** i/lub **volatile** specyfikatorów.
+
+   - Specyfikator typu: Nazwa typu.  Jest to typ elementu członkowskiego, aby wskazywał, nie klasy.
 
 1. Specyfikator:
 
-  - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. Kwalifikowana nazwa klasy zawierającej członków do będzie wskazywał na.
-  - :: Operator.
-  - <strong>\*</strong> Operatora.
-  - Opcjonalnie **const** i/lub **volatile** specyfikatorów.
-  - Identyfikator nazwy wskaźnika do składowej.
+   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Opcjonalny inicjator:
-  - **=** Operatora.
-  - **&** Operatora.
-  - Kwalifikowana nazwa klasy.
-  - Operator `::`.
-  - Nazwa niestatycznej składowej klasy odpowiedniego typu.
-  - Jak zawsze wiele deklaratorów (i wszystkie skojarzone inicjatory) są dozwolone w jednej deklaracji.
+   - Kwalifikowana nazwa klasy zawierającej członków do będzie wskazywał na.
+
+   - __::__ Operatora.
+
+   - __\*__ Operatora.
+
+   - Opcjonalnie **const** i/lub **volatile** specyfikatorów.
+
+   - Identyfikator nazwy wskaźnika do składowej.
+
+1. Opcjonalny inicjator:
+
+   - **=** Operatora.
+
+   - **&** Operatora.
+
+   - Kwalifikowana nazwa klasy.
+
+   - __::__ Operatora.
+
+   - Nazwa niestatycznej składowej klasy odpowiedniego typu.
+
+Jak zawsze wiele deklaratorów (i wszystkie skojarzone inicjatory) są dozwolone w jednej deklaracji.
 
 Wskaźnik do składowej klasy typu różni się od normalnych wskaźnika, ponieważ zawiera ona informacje o typie dla typu elementu członkowskiego i klasy, do której należy dany element członkowski. Identyfikuje normalny wskaźnik (ma adres) pojedynczego obiektu w pamięci. Wskaźnik do składowej klasy identyfikuje ten element członkowski w żadnym wystąpieniu klasy. Poniższy przykład deklaruje klasę, `Window`i niektóre wskaźników do danych elementów członkowskich.
 

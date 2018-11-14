@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644825"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332221"
 ---
 # <a name="ltstringgt-operators"></a>&lt;ciąg&gt; operatorów
 
@@ -115,7 +115,7 @@ Ciąg, który jest łączenie ciągów wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążanie funkcji każdego `operator+` do łączenia dwóch obiektów klasy szablonu [basic_string — klasa](../standard-library/basic-string-class.md). Efektywnej zwracany `basic_string` \< **CharType**, **cech**, **alokatora**> (_ *po lewej stronie*). [Dołącz](../standard-library/basic-string-class.md#append)(\_ *po prawej stronie*).
+Przeciążanie funkcji każdego `operator+` do łączenia dwóch obiektów klasy szablonu [basic_string — klasa](../standard-library/basic-string-class.md). Efektywnej zwracany `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Aby uzyskać więcej informacji, zobacz [Dołącz](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Przykład
 
@@ -575,7 +575,7 @@ Zapisuje wartość określony ciąg znaków do strumienia wyjściowego *_Ostr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu **operator <<** do wstawienia _ obiektu *Str* szablonu klasy [basic_string](../standard-library/basic-string-class.md) w strumieniu \_  *OSTR.* Funkcja skutecznie zwraca \_ *Ostr*. **zapis**( \_ *Str*. [c_str —](../standard-library/basic-string-class.md#c_str), \_ *Str*. [rozmiar](../standard-library/basic-string-class.md#size)).
+Przeciążenia funkcji szablonu **operator <<** do wstawienia obiektu, *str* szablonu klasy [basic_string](../standard-library/basic-string-class.md) w strumieniu  *\_ OSTR*. Funkcja skutecznie zwraca `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  Operator&gt;
 

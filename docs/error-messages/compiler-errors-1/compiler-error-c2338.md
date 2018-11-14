@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539597"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332065"
 ---
 # <a name="compiler-error-c2338"></a>Błąd kompilatora C2338
 
@@ -21,11 +21,11 @@ Ten błąd może być spowodowany przez `static_assert` wystąpił błąd podcza
 
 Ten komunikat o błędzie mogą być też generowane przez zewnętrznych dostawców w kompilatorze. W większości przypadków te błędy są zgłaszane przez dostawcę atrybutu biblioteki DLL, takie jak ATLPROV. Niektóre typowe rodzaje tego komunikatu, obejmują:
 
-> "*atrybut*" dostawca atrybutów Atl: Błąd biblioteki ATL*numer* *wiadomości*
+- "*atrybut*" dostawca atrybutów Atl: Błąd biblioteki ATL*numer* *wiadomości*
 
-> Nieprawidłowe użycie atrybutu "*atrybut*"
+- Nieprawidłowe użycie atrybutu "*atrybut*"
 
-> "*użycia*": nieprawidłowy format atrybutu "użycie"
+- "*użycia*": nieprawidłowy format atrybutu "użycie"
 
 Te błędy są często nieodwracalny, a następuje błąd krytyczny kompilatora.
 

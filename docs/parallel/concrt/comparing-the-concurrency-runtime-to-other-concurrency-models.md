@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655848"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332676"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 
@@ -33,7 +33,7 @@ Preemptive modelu i cooperative planowania modeli są dwa podstawowe sposoby wł
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planowanie preemptive i współpracy
 
-*Planowanie preemptive* jest działanie okrężne, oparte na priorytetach mechanizm, który umożliwia każdego zadania wyłącznego dostępu do zasobów obliczeniowych dla danego okresu, a następnie zmienia się na inne zadanie. Planowanie preemptive jest często używany w systemach operacyjnych wielozadaniowości, takich jak Windows *. Planowanie współpracy* to mechanizm, który zapewnia co zadanie wyłącznego dostępu do zasobów obliczeniowych, przed zakończeniem zadania lub zadania daje jego dostęp do zasobu. Środowisko uruchomieniowe współbieżności używa współpracy planowania wraz z preemptive Harmonogram systemu operacyjnego do osiągnięcia maksymalnego użycia przetwarzania zasobów.
+*Planowanie preemptive* jest działanie okrężne, oparte na priorytetach mechanizm, który umożliwia każdego zadania wyłącznego dostępu do zasobów obliczeniowych dla danego okresu, a następnie zmienia się na inne zadanie. Planowanie preemptive jest często używany w systemach operacyjnych wielozadaniowości, takich jak Windows. *Planowanie współpracy* to mechanizm, który zapewnia co zadanie wyłącznego dostępu do zasobów obliczeniowych, przed zakończeniem zadania lub zadania daje jego dostęp do zasobu. Środowisko uruchomieniowe współbieżności używa współpracy planowania wraz z preemptive Harmonogram systemu operacyjnego do osiągnięcia maksymalnego użycia przetwarzania zasobów.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Różnice między lotów Preemptive i współpracy
 

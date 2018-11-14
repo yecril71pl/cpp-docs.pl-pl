@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633588"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332390"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,7 +62,7 @@ Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, każda z tych funkcji zwraca znak argumentu *c*. Jeśli *c* nie może zostać przesunięty lub jeśli został odczytany żaden znak, strumień wejściowy pozostaje niezmieniony i **ungetc —** zwraca ** EOF`; **ungetwc` zwraca **WEOF**. Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **EOF** lub **WEOF** zwróceniem i **errno** ustawiono **EINVAL**.
+Jeśli operacja się powiedzie, każda z tych funkcji zwraca znak argumentu *c*. Jeśli *c* nie może zostać przesunięty lub jeśli został odczytany żaden znak, strumień wejściowy pozostaje niezmieniony i **ungetc —** zwraca **EOF**; **ungetwc —** zwraca **WEOF**. Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **EOF** lub **WEOF** zwróceniem i **errno** ustawiono **EINVAL**.
 
 Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677165"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327671"
 ---
 # <a name="umask"></a>_umask
 
@@ -58,13 +58,13 @@ Domyślne ustawienie uprawnień.
 
 Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba z następujących stałych manifestu, określonych w SYS\STAT. GODZ.:
 
-|*pmode*||
+|*pmode*| |
 |-|-|
-**_S_IWRITE**|Zapisywanie jest dozwolone.
-**_S_IREAD**|Odczytywanie dozwolone.
-**_S_IREAD** \| **_S_IWRITE**|Odczyt i zapis dozwolone.
+| **_S_IWRITE** | Zapisywanie jest dozwolone. |
+| **_S_IREAD** | Odczytywanie dozwolone. |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
 
-Gdy oba stałe są podane, są połączone za pomocą operatora bitowego OR ( **|** ). Jeśli *pmode* argument jest **_S_IREAD**, odczytu, nie jest dozwolona (plik jest tylko do zapisu). Jeśli *pmode* argument jest **_S_IWRITE**, nie jest dozwolone zapisywanie (plik jest tylko do odczytu). Na przykład jeśli maska jest ustawiony bit zapisu, nowe pliki będą tylko do odczytu. Należy zauważyć, że MS-DOS i systemów operacyjnych Windows, wszystkie pliki do odczytu; nie jest możliwe przyznać uprawnienia tylko do zapisu. W związku z tym, ustawienie odczytu bit z **_umask —** nie ma wpływu na tryby plików.
+Gdy oba stałe są podane, są połączone za pomocą operatora bitowego OR ( **&#124;** ). Jeśli *pmode* argument jest **_S_IREAD**, odczytu, nie jest dozwolona (plik jest tylko do zapisu). Jeśli *pmode* argument jest **_S_IWRITE**, nie jest dozwolone zapisywanie (plik jest tylko do odczytu). Na przykład jeśli maska jest ustawiony bit zapisu, nowe pliki będą tylko do odczytu. Należy zauważyć, że MS-DOS i systemów operacyjnych Windows, wszystkie pliki do odczytu; nie jest możliwe przyznać uprawnienia tylko do zapisu. W związku z tym, ustawienie odczytu bit z **_umask —** nie ma wpływu na tryby plików.
 
 Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub inny zestaw zawiera stałych, funkcja będzie ignorować te.
 

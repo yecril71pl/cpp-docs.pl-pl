@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612501"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518987"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake w programie Visual C++
 
@@ -38,8 +38,11 @@ Począwszy od programu Visual Studio 2017, **Visual C++ Tools for CMake** skład
 Po wybraniu **pliku | Otwórz | Folder** aby otworzyć folder zawierający plik CMakeLists.txt, się zdarzyć, następujące elementy:
 
 - Program Visual Studio dodaje **CMake** element menu do menu głównego, za pomocą poleceń do wyświetlania i edytowania skryptów narzędzia CMake.
+
 - **Eksplorator rozwiązań** wyświetla strukturę folderów i plików.
+
 - Program Visual Studio uruchamia CMake.exe i generuje pamięci podręcznej narzędzia CMake dla domyślnej *konfiguracji*, czyli x86 debugowania. W wierszu polecenia CMake są wyświetlane w **okno danych wyjściowych**, wraz z dodatkowych danych wyjściowych z narzędzia CMake.  **Visual Studio 2017 w wersji 15.7 lub nowszej**: generowanie pamięci podręcznej automatycznego można wyłączyć w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
+
 - W tle programu Visual Studio uruchamia do indeksowania plików źródłowych, aby włączyć technologię IntelliSense, informacji o przeglądaniu, Refaktoryzacja i tak dalej. Podczas pracy programu Visual Studio monitoruje zmiany w edytorze, a także na dysku w celu synchronizowania jej indeks ze źródłami.
 
 Możesz otworzyć foldery zawierające dowolną liczbę projekty narzędzia CMake. Visual Studio wykrywa i skonfiguruje wszystkie pliki CMakeLists.txt "root" w obszarze roboczym. Operacje CMake (Konfigurowanie, tworzenie, debugowanie) również funkcji C++ IntelliSense i przeglądania są dostępne dla wszystkich projektów CMake w obszarze roboczym.
@@ -77,7 +80,9 @@ Nie wszystkie elementy w pamięci podręcznej jest importowany.  Właściwości,
 Aby skompilować projekt CMake, masz następujące opcje:
 
 1. Wybierz element docelowy w **debugowania** listy rozwijanej i naciśnij klawisz **F5**, lub kliknij przycisk **Uruchom** przycisku (zielony trójkąt). Automatycznie kompilacje projektu po pierwsze, podobnie jak rozwiązanie programu Visual Studio.
+
 1. Kliknij prawym przyciskiem myszy pliku CMakeLists.txt i wybierz pozycję **kompilacji** z menu kontekstowego. Jeśli masz wiele elementów docelowych w strukturze folderów, można tworzyć wszystkie lub tylko jeden określony element docelowy.
+
 1. W menu głównym wybierz **kompilacji | Tworzenie rozwiązania** (**F7** lub **Ctrl + Shift + B**). Upewnij się, czy docelowych narzędzia CMake została już wybrana w **element startowy** liście rozwijanej **ogólne** paska narzędzi.
 
 ![Polecenia menu kompilacji CMake](media/cmake-build-menu.png "menu poleceń kompilacji CMake")
@@ -182,20 +187,25 @@ Poniższy przykład pokazuje Przykładowa konfiguracja, który służy jako punk
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **Nazwa**: Nazwa wyświetlana na liście rozwijanej konfiguracji C++. Wartość tej właściwości może również służyć jako makra, `${name}`, aby określić wartości innych właściwości. Aby uzyskać przykład, zobacz **wybrany element buildRoot** definicję w pliku CMakeSettings.json.
 
 1. **Generator**: mapuje **- G** przełącznika i określa generator, który ma być używany. Ta właściwość może również służyć jako makra, `${generator}`, aby pomóc określić wartości innych właściwości. Program Visual Studio obsługuje obecnie następujące generatory CMake:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Win64 programu visual Studio 14 2015"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+   - "Ninja"
+
+   - "Visual Studio 14 2015"
+
+   - "Visual Studio 14 2015 ARM"
+
+   - "Win64 programu visual Studio 14 2015"
+
+   - "Visual Studio 15 2017"
+
+   - "Visual Studio 15 2017 ARM"
+
+   - "Visual Studio 15 2017 Win64"
 
 Ponieważ Ninja jest przeznaczona dla szybkości szybkie kompilacji zamiast elastyczności i funkcji, jest ustawiona jako domyślna. Jednak niektóre projekty narzędzia CMake, może być nie można poprawnie tworzyć zawartość przy użyciu Ninja. W takiej sytuacji można nakazać narzędzia CMake w celu wygenerowania projektu programu Visual Studio, zamiast tego.
 
@@ -232,11 +242,17 @@ CMakeSettings.json obsługuje również konsumencki zmiennych środowiskowych w 
 Masz także dostęp do wbudowanych makr, w tym pliku:
 
 - `${workspaceRoot}` — zapewnia pełną ścieżkę folderu obszaru roboczego
+
 - `${workspaceHash}` — Skrót lokalizacji obszaru roboczego. przydatne podczas tworzenia Unikatowy identyfikator dla bieżącego obszaru roboczego (na przykład do użycia w ścieżkach folderów)
+
 - `${projectFile}` — Pełna ścieżka pliku CMakeLists.txt głównego
+
 - `${projectDir}` — Pełna ścieżka do folderu głównego pliku CMakeLists.txt
+
 - `${thisFile}` — Pełna ścieżka pliku CMakeSettings.json
+
 - `${name}` — Nazwa konfiguracji
+
 - `${generator}` — Nazwa generatora narzędzia CMake, używany w tej konfiguracji
 
 ### <a name="ninja-command-line-arguments"></a>Ninja argumenty wiersza polecenia
@@ -393,9 +409,11 @@ Jeśli potrzebujesz więcej informacji na temat stanu pamięci podręcznej narz�
 ![Narzędzie CMake pojedynczy plik kompilacji](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>Wykonywania CMake z wiersza polecenia
+
 Po zainstalowaniu narzędzia CMake z Instalatora programu Visual Studio, można uruchomić go z wiersza polecenia, wykonując następujące czynności:
 
 1. Uruchom odpowiedni vsdevcmd.bat — x86/x64 64. Zobacz [tworzenia w wierszu polecenia](../build/building-on-the-command-line.md) Aby uzyskać więcej informacji.
-1. Przejdź do folderu wyjściowego.
-1. Wykonywania CMake kompilacji/skonfigurować aplikację.
 
+1. Przejdź do folderu wyjściowego.
+
+1. Wykonywania CMake kompilacji/skonfigurować aplikację.

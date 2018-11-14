@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648672"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333361"
 ---
 # <a name="iosbase-class"></a>ios_base — Klasa
 
@@ -914,7 +914,7 @@ Poprzednie flagi formatu
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego skutecznie wywołuje [flagi](#flags)(_ *maski* &#124; \_ *flagi*) (Ustaw wybrane usługi bits), a następnie zwraca poprzedniego flagi formatu. Funkcja drugiego członka skutecznie wywołuje **flagi**(\_ *maski* **& fmtfl, flagi & ~**`_Mask`) (Zastąp wybrany bitów pod maską) a następnie zwraca poprzedniego flagi formatu.
+Pierwsza funkcja elementu członkowskiego skutecznie wywołuje [flagi](#flags)(  *\_maski* &#124;  *\_flagi*) (Ustaw wybrane usługi bits), a następnie zwraca poprzednie flagi formatu. Funkcja drugiego członka skutecznie wywołuje `flags(_Mask & fmtfl, flags & ~_Mask)` (Zastąp wybrany bitów pod maską), a następnie zwraca poprzedniego flagi formatu.
 
 ### <a name="example"></a>Przykład
 

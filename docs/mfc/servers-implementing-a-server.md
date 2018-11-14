@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566763"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518965"
 ---
 # <a name="servers-implementing-a-server"></a>Serwery: implementowanie serwera
 
@@ -22,11 +22,11 @@ Kod serwera, który zawiera Kreatora aplikacji znajduje się na kilka kategorii:
 
 - Definiowanie zasobów serwera:
 
-   - Zasób menu używany, gdy serwer edytuje element osadzony w osobnym oknie.
+  - Zasób menu używany, gdy serwer edytuje element osadzony w osobnym oknie.
 
-   - Menu i paski narzędzi zasobów używana, gdy serwer jest aktywny w miejscu.
+  - Menu i paski narzędzi zasobów używana, gdy serwer jest aktywny w miejscu.
 
-   Aby uzyskać więcej informacji na temat tych zasobów, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).
+  Aby uzyskać więcej informacji na temat tych zasobów, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).
 
 - Definiowanie klasy elementu pochodną `COleServerItem`. Aby uzyskać więcej szczegółowych informacji dotyczących elementów serwera, zobacz [serwery: elementy serwera](../mfc/servers-server-items.md).
 

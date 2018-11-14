@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648386"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326046"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ Poprzedni stan ustawień regionalnych na wątek (**_DISABLE_PER_THREAD_LOCALE** 
 
 **_Configurethreadlocale** funkcja służy do kontrolowania użycia ustawień regionalnych właściwych dla wątku. Użyj jednej z tych *per_thread_locale_type* sposoby określania lub ustalania stanu ustawień regionalnych na wątek:
 
-|||
+| Opcja | Opis |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Upewnij się użycie właściwych dla wątku ustawień regionalnych bieżącego wątku. Kolejne wywołania **setlocale** w tym wątku wpływają tylko ustawienia regionalne dla wątku.
-**_DISABLE_PER_THREAD_LOCALE**|Należy bieżący wątek, użyj globalnych ustawień regionalnych. Kolejne wywołania **setlocale** w tym wątku wpływają na inne wątki przy użyciu globalnych ustawień regionalnych.
-**0**|Pobiera bieżące ustawienie dla tego określonego wątku.
+| **_ENABLE_PER_THREAD_LOCALE** | Upewnij się użycie właściwych dla wątku ustawień regionalnych bieżącego wątku. Kolejne wywołania **setlocale** w tym wątku wpływają tylko ustawienia regionalne dla wątku. |
+| **_DISABLE_PER_THREAD_LOCALE** | Należy bieżący wątek, użyj globalnych ustawień regionalnych. Kolejne wywołania **setlocale** w tym wątku wpływają na inne wątki przy użyciu globalnych ustawień regionalnych. |
+| **0** | Pobiera bieżące ustawienie dla tego określonego wątku. |
 
 Te funkcje mają wpływ na zachowanie **setlocale**, **_tsetlocale —**, **_wsetlocale**, i **_setmbcp**. Gdy ustawienia regionalne na wątek jest wyłączone, wszelkie następne wywołania **setlocale** lub **_wsetlocale** zmieniają ustawienia regionalne wszystkich wątków, które używają globalnych ustawień regionalnych. Po włączeniu ustawień regionalnych na wątek **setlocale** lub **_wsetlocale** ma wpływ tylko na ustawienia regionalne bieżącego wątku.
 

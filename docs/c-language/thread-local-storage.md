@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: e13aa9600cd26fba47ce43a318fa7174995d58fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572227"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330310"
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 
@@ -86,7 +86,7 @@ Po użytkownik deklaruje wątku statycznie powiązanych zmiennych lokalnych nale
 
    Pamiętaj, że wyrażenie sizeof, która zawiera zmienną inicjowany nie stanowi odwołanie do samego siebie jest dozwolone.
 
-- Korzystanie z **__declspec(thread)** może zakłócać [opóźnienie ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) importowanych bibliotek DLL **.**
+- Korzystanie z  **\_ \_declspec(thread)** może zakłócać [opóźnienie ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) importowanych bibliotek DLL.
 
 Aby uzyskać więcej informacji o używaniu atrybut wątku, zobacz [tematy o wielowątkowości](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 

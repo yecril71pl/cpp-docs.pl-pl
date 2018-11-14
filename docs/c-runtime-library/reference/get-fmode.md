@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc4740b20ab7283dd8b9f73f458eaba34e582832
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658032"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328048"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -38,8 +38,8 @@ Pobiera domyślny tryb translacji plików dla operacji We/Wy na plikach.
 ## <a name="syntax"></a>Składnia
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode(
+   int * pmode
 );
 ```
 

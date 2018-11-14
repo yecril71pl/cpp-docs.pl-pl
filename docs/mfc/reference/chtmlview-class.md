@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438119"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333644"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -1194,7 +1194,7 @@ Wskaźnik do ciągu, który ocenia do adresu URL, UNC pliku nazwę lub został p
 
 Nie wszystkie ramki nastąpi to zdarzenie, ale w każdej klatce, który jest uruchamiany [OnDownloadBegin](#ondownloadbegin) zdarzenia będą uruchamiane, odpowiedni `OnDocumentComplete` zdarzeń.
 
-Adres URL wskazywanym przez *lpszURL* może być inny niż adres URL, który przeglądarka został informację można przejść do lokalizacji, ponieważ ten adres URL jest postaci kanonicznej i kwalifikowany adres URL. Na przykład, jeśli aplikacja określa adres URL "www.microsoft.com" w wywołaniu do [Navigate](#navigate) lub [Navigate2](#navigate2), adres URL przekazany `OnNavigateComplete2` będzie "http://www.microsoft.com/". Ponadto jeśli serwer ma przekierowanie przeglądarki do innego adresu URL, adresu URL zostaną uwzględnione w tym miejscu.
+Adres URL wskazywanym przez *lpszURL* może być inny niż adres URL, który przeglądarka został informację można przejść do lokalizacji, ponieważ ten adres URL jest postaci kanonicznej i kwalifikowany adres URL. Na przykład, jeśli aplikacja określa adres URL "www.microsoft.com" w wywołaniu do [Navigate](#navigate) lub [Navigate2](#navigate2), adres URL przekazany `OnNavigateComplete2` będzie "<http://www.microsoft.com/>". Ponadto jeśli serwer ma przekierowanie przeglądarki do innego adresu URL, adresu URL zostaną uwzględnione w tym miejscu.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Wyrażenie ciągu, którego wynikiem jest adres URL UNC nazwy pliku, lub został
 
 Parametr adresu URL może być PIDL w przypadku jednostki przestrzeni nazwy powłoki, dla których nie ma żadnych adresu URL reprezentację.
 
-Należy zauważyć, że adres URL zawarte w *strURL* może być inny niż adres URL, który przeglądarka został informację można przejść do lokalizacji, ponieważ ten adres URL jest postaci kanonicznej i kwalifikowany adres URL. Na przykład, jeśli aplikacja określa adres URL "www.microsoft.com" w wywołaniu do [Navigate](#navigate) lub [Navigate2](#navigate2), adres URL przekazany `OnNavigateComplete2` będzie "http://www.microsoft.com/". Ponadto jeśli serwer ma przekierowanie przeglądarki do innego adresu URL, adresu URL zostaną uwzględnione w tym miejscu.
+Należy zauważyć, że adres URL zawarte w *strURL* może być inny niż adres URL, który przeglądarka został informację można przejść do lokalizacji, ponieważ ten adres URL jest postaci kanonicznej i kwalifikowany adres URL. Na przykład, jeśli aplikacja określa adres URL "www.microsoft.com" w wywołaniu do [Navigate](#navigate) lub [Navigate2](#navigate2), adres URL przekazany `OnNavigateComplete2` będzie "<http://www.microsoft.com/>". Ponadto jeśli serwer ma przekierowanie przeglądarki do innego adresu URL, adresu URL zostaną uwzględnione w tym miejscu.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

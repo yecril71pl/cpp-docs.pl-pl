@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454642"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326735"
 ---
 # <a name="ismbc-routines"></a>_ismbc — Procedury
 
@@ -42,7 +42,7 @@ Wartość wyjściowa jest zależna od `LC_CTYPE` ustawienia kategorii ustawień 
 |Procedura|Testowanie warunku|Przykład strony kodu 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum —, _ismbcalnum_l —](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumeryczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy `c` jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: Zobacz przykłady dla `_ismbcdigit` i `_ismbcalpha`.|
-|[_ismbcalpha —, _ismbcalpha —\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfabetyczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy `c` jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: Zobacz przykłady dla `_ismbcupper` i `_ismbclower`; lub literę katakana: 0xA6 < =`c`< = 0xDF.|
+|[_ismbcalpha —, _ismbcalpha_l —](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfabetyczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy `c` jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: Zobacz przykłady dla `_ismbcupper` i `_ismbclower`; lub literę katakana: 0xA6 < =`c`< = 0xDF.|
 |[_ismbcdigit —, _ismbcdigit_l —](../c-runtime-library/reference/ismbcalnum-functions.md)|cyfra|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy `c` jest reprezentacją jednobajtowego cyfr ASCII: 0x30 < =`c`< = 0x39.|
 |[_ismbcgraph —, _ismbcgraph_l —](../c-runtime-library/reference/ismbcgraph-functions.md)|Grafika|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy `c` jest reprezentacją jednobajtowego znaku wszelkie ASCII lub katakana drukowalnego z wyjątkiem (biały). Zobacz przykłady dla `_ismbcdigit`, `_ismbcalpha`, i `_ismbcpunct`.|
 |[_ismbclegal —, _ismbclegal_l —](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Prawidłowy znak wielobajtowy|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy pierwszy bajt `c` znajduje się w zakresach 0x81-0x9F lub wartość 0xE0 — 0xFC, podczas gdy drugi bajt jest w zakresach 0x40-0x7E lub 0x80 - FC.|

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: ccbf604b13db3d40b8ee62c18db1a71e615c79ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 477d8ddfe970c6d04e61a47eb4bb10e3fbc570de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505407"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329075"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 
@@ -29,17 +29,17 @@ Dodaj wartość do lokalizacji w pamięci określonej przez przesunięcie wzglę
 ## <a name="syntax"></a>Składnia
 
 ```
-void __addfsbyte( 
-   unsigned long Offset, 
-   unsigned char Data 
+void __addfsbyte(
+   unsigned long Offset,
+   unsigned char Data
 );
-void __addfsword( 
-   unsigned long Offset, 
-   unsigned short Data 
+void __addfsword(
+   unsigned long Offset,
+   unsigned short Data
 );
-void __addfsdword( 
-   unsigned long Offset, 
-   unsigned long Data 
+void __addfsdword(
+   unsigned long Offset,
+   unsigned long Data
 );
 ```
 

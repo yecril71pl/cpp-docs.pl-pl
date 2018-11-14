@@ -1,13 +1,13 @@
 ---
 title: 'Wskazówki: mnożenie macierzy'
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a8f43f5b9df0726c9c01f940965b77b856e35430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647462"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327112"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 
@@ -27,15 +27,15 @@ Przed rozpoczęciem:
 
 1. Na pasku menu w programie Visual Studio, wybierz **pliku** > **New** > **projektu**.
 
-2. W obszarze **zainstalowane** w okienku szablonów zaznacz **Visual C++**.
+1. W obszarze **zainstalowane** w okienku szablonów zaznacz **Visual C++**.
 
-3. Wybierz **pusty projekt**, wprowadź `MatrixMultiply` w **nazwa** , a następnie wybierz **OK** przycisku.
+1. Wybierz **pusty projekt**, wprowadź *MatrixMultiply* w **nazwa** , a następnie wybierz **OK** przycisku.
 
-4. Wybierz **dalej** przycisku.
+1. Wybierz **dalej** przycisku.
 
-5. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **pliki źródłowe**, a następnie wybierz **Dodaj** > **nowy element**.
+1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **pliki źródłowe**, a następnie wybierz **Dodaj** > **nowy element**.
 
-6. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**, wprowadź `MatrixMultiply.cpp` w **nazwa** , a następnie wybierz **Dodaj** przycisk.
+1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**, wprowadź *MatrixMultiply.cpp* w **nazwa** , a następnie wybierz  **Dodaj** przycisku.
 
 ## <a name="multiplication-without-tiling"></a>Mnożenie bez fragmentacji
 
@@ -47,7 +47,7 @@ W tej sekcji należy wziąć pod uwagę mnożenie dwóch macierzy, A i B, które
 
 Jest tabela 3, 2 i B jest tabela 2, 3. Produkt multiplikujący a, B jest następujący macierzy 3 x 3. Produkt jest obliczane przez pomnożenie wierszy A według kolumn B elementów.
 
-![3&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")
+![3&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;przez&#45;macierzy 3")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Aby pomnożyć bez korzystania z C++ AMP
 
@@ -79,13 +79,13 @@ void main() {
 }
 ```
 
-    The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.
+   Algorytm jest prosta implementacja definicji mnożenie macierzy. Nie używa żadnych algorytmy równoległe lub niezhierarchizowanych skracają czas obliczeń.
 
-2. Na pasku menu wybierz **pliku** > **Zapisz wszystko**.
+1. Na pasku menu wybierz **pliku** > **Zapisz wszystko**.
 
-3. Wybierz **F5** skrót klawiaturowy, aby rozpocząć debugowanie i sprawdź poprawność danych wyjściowych.
+1. Wybierz **F5** skrót klawiaturowy, aby rozpocząć debugowanie i sprawdź poprawność danych wyjściowych.
 
-4. Wybierz **Enter** aby zakończyć działanie aplikacji.
+1. Wybierz **Enter** aby zakończyć działanie aplikacji.
 
 ### <a name="to-multiply-by-using-c-amp"></a>Aby pomnożyć przez korzystanie z C++ AMP
 
@@ -124,16 +124,16 @@ void MultiplyWithAMP() {
 }
 ```
 
-    The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.
+   W kodzie AMP podobny kod non-AMP. Wywołanie `parallel_for_each` uruchamia jeden wątek dla każdego elementu w `product.extent`i zastępuje `for` pętli dla wierszy i kolumn. Wartość komórki na wierszy i kolumn jest dostępna w `idx`. Możesz uzyskać dostęp do elementów `array_view` obiektu przy użyciu `[]` operatora i zmienna index lub `()` operatora i zmienne wierszy i kolumn. W przykładzie pokazano obu tych metod. `array_view::synchronize` Metoda kopiuje wartości `product` zmiennej do `productMatrix` zmiennej.
 
-2. Dodaj następujący kod `include` i `using` instrukcji w górnej części MatrixMultiply.cpp.
+1. Dodaj następujący kod `include` i `using` instrukcji w górnej części MatrixMultiply.cpp.
 
 ```cpp
 #include <amp.h>
 using namespace concurrency;
 ```
 
-3. Modyfikowanie `main` metodę do wywołania `MultiplyWithAMP` metody.
+1. Modyfikowanie `main` metodę do wywołania `MultiplyWithAMP` metody.
 
 ```cpp
 void main() {
@@ -143,9 +143,9 @@ void main() {
 }
 ```
 
-4. Wybierz **Ctrl**+**F5** skrót klawiaturowy, aby rozpocząć debugowanie i sprawdź poprawność danych wyjściowych.
+1. Wybierz **Ctrl**+**F5** skrót klawiaturowy, aby rozpocząć debugowanie i sprawdź poprawność danych wyjściowych.
 
-5. Wybierz **spacja** aby zakończyć działanie aplikacji.
+1. Wybierz **spacja** aby zakończyć działanie aplikacji.
 
 ## <a name="multiplication-with-tiling"></a>Mnożenie przy użyciu fragmentacji
 
@@ -159,23 +159,23 @@ Fragmentacji to technika partycjonowanie danych na równe wielkości podzestawy,
 
 Aby skorzystać z fragmentacji w mnożenie macierzy, algorytm musi podzielić macierzy na kafelkach i następnie skopiuj dane kafelka do `tile_static` zmienne szybszy dostęp. W tym przykładzie macierzy zostanie poddana partycjonowaniu na submatrices taki sam rozmiar. Produktu znajduje się przez pomnożenie submatrices. Są dwa macierzy, a ich produktów, w tym przykładzie:
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")
+![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;przez&#45;macierzy 4 A")
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")
+![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixbtiled.png "4&#45;przez&#45;macierzy 4 B")
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")
+![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;przez&#45;produktu macierzy 4")
 
 Macierze są partycjonowane na macierzy cztery 2 x 2, które są zdefiniowane w następujący sposób:
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")
+![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")
+![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
 
 Produkt A i B mogą teraz zapisywane i obliczana w następujący sposób:
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")
+![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;przez&#45;4 macierz iloczynu A i B")
 
-Ponieważ macierzy `a` za pośrednictwem `h` macierzy 2 x 2, wszystkie produkty i sum z nich są również macierzy 2 x 2. Również wynika, że A * B jest macierzy 4 x 4, zgodnie z oczekiwaniami. Można szybko sprawdzić algorytm, należy obliczyć wartość elementu w pierwszym wierszu, w pierwszej kolumnie w produkcie. W przykładzie, który byłby wartość elementu w pierwszym wierszu i pierwszą kolumnę `ae + bg`. Masz do obliczania, pierwszą kolumnę pierwszego wiersza `ae` i `bg` każdego terminu. Tę wartość dla `ae` jest `1*1 + 2*5 = 11`. Wartość `bg` jest `3*1 + 4*5 = 23`. Końcowa wartość jest `11 + 23 = 34`, który jest poprawny.
+Ponieważ macierzy `a` za pośrednictwem `h` macierzy 2 x 2, wszystkie produkty i sum z nich są również macierzy 2 x 2. Również wynika, że produkt A i B jest macierzy 4 x 4, zgodnie z oczekiwaniami. Można szybko sprawdzić algorytm, należy obliczyć wartość elementu w pierwszym wierszu, w pierwszej kolumnie w produkcie. W przykładzie, który byłby wartość elementu w pierwszym wierszu i pierwszą kolumnę `ae + bg`. Masz do obliczania, pierwszą kolumnę pierwszego wiersza `ae` i `bg` każdego terminu. Tę wartość dla `ae` jest `(1 * 1) + (2 * 5) = 11`. Wartość `bg` jest `(3 * 1) + (4 * 5) = 23`. Końcowa wartość jest `11 + 23 = 34`, który jest poprawny.
 
 Aby zaimplementować ten algorytm kod:
 

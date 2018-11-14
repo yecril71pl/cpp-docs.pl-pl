@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662855"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333540"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -153,13 +153,13 @@ Jeśli chcesz obsługiwać komunikaty powiadomień Windows wysyłany przez kontr
 
 Każdy wpis mapy komunikatów ma następującą postać:
 
-**ON_** powiadomień **(**`id`, `memberFxn` **)**
+**ON\_**_powiadomień_ **(** _identyfikator_, _memberFxn_ **)**
 
-gdzie `id` Określa identyfikator okna elementu podrzędnego kontrolki wysyłania powiadomienia i `memberFxn` nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.
+gdzie *identyfikator* Określa identyfikator okna elementu podrzędnego kontrolki wysyłania powiadomienia i *memberFxn* nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.
 
 Prototyp funkcji elementu nadrzędnego jest następująca:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Potencjalne wpisy mapy komunikatów są następujące:
 

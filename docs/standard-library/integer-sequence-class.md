@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638723"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332403"
 ---
 # <a name="integersequence-class"></a>integer_sequence — klasa
 
@@ -45,7 +45,7 @@ Pakiet parametru bez typu, który reprezentuje sekwencję liczb całkowitych typ
 |||
 |-|-|
 |`static size_t size() noexcept`|Liczba elementów w sekwencji.|
-|value_type — TypeDef T|Typ każdego elementu w sekwencji. Musi być typu całkowitego.|
+|`typedef T value_type`|Typ każdego elementu w sekwencji. Musi być typu całkowitego.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -57,10 +57,9 @@ Poniższy przykład jest oparty na oryginalnym propozycji [N3658](http://open-st
 
 W `a2t` funkcji `index_sequence` jest aliasem `integer_sequence` na podstawie `size_t` typu całkowitego. `make_index_sequence` jest to w czasie kompilacji tworzy liczony od zera `index_sequence` z taką samą liczbę elementów, co tablica, który jest przekazywany przez obiekt wywołujący. `a2t` przekazuje `index_sequence` przez wartość `a2t_` , gdzie wyrażenie `a[I]...` wypakowuje `I`, a następnie elementy są są podawane w taki sposób, aby `make_tuple` co zużywa je jako oddzielne argumenty. Na przykład, jeśli sekwencja zawiera trzy elementy, następnie `make_tuple` jest wywoływana jako make_tuple — ([0], [1], a[2]). Elementy tablicy, samodzielnie kursu mogą być dowolnego typu.
 
-Funkcja Zastosuj akceptuje [std::tuple](../standard-library/tuple-class.md)i tworzy integer_sequence przy użyciu `tuple_size` Klasa pomocy. Należy pamiętać, że [std::decay_t](../standard-library/decay-class.md)_is niezbędne ponieważ [tuple_size —](../standard-library/tuple-size-class-tuple.md) nie działa w przypadku typów referencyjnych. `apply_` Funkcji wypakowuje spójnej kolekcji elementów członkowskich i przekazuje je jako oddzielne argumenty do wywołania funkcji. W tym przykładzie funkcja jest wyrażenie lambda prostą, która wyświetla wartości.
+Funkcja Zastosuj akceptuje [std::tuple](../standard-library/tuple-class.md)i tworzy `integer_sequence` przy użyciu `tuple_size` Klasa pomocy. Należy pamiętać, że [std::decay_t](../standard-library/decay-class.md) zachodzi ponieważ [tuple_size —](../standard-library/tuple-size-class-tuple.md) nie działa w przypadku typów referencyjnych. `apply_` Funkcji wypakowuje spójnej kolekcji elementów członkowskich i przekazuje je jako oddzielne argumenty do wywołania funkcji. W tym przykładzie funkcja jest wyrażenie lambda prostą, która wyświetla wartości.
 
-```
-
+```cpp
 #include <stddef.h>
 #include <iostream>
 #include <tuple>
@@ -114,7 +113,6 @@ int main()
     char c;
     cin >> c;
 }
-
 ```
 
 Zapewnienie `index_sequence` pakiet parametrów można używać `index_sequence_for` \<T... > co jest aliasem `make_index_sequence` \<sizeof... [T] >

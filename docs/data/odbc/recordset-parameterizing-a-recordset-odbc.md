@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506577"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331272"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)
 
@@ -54,7 +54,7 @@ Typowe zastosowania dla parametrów obejmują:
 
    Ciąg filtru zestawu rekordów, przechowywane w `m_strFilter`, może wyglądać następująco:
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ Typowe zastosowania dla parametrów obejmują:
 
    Przypisz wartość parametru w następujący sposób:
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ Typowe zastosowania dla parametrów obejmują:
 
    Czy chcesz skonfigurować ciągu filtru w ten sposób:
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ Typowe zastosowania dla parametrów obejmują:
 
    Wartość parametru różni się każdorazowo Requery — zestaw rekordów dla nowego identyfikatora dla uczniów.
 
-    > [!TIP]
-    >  Za pomocą parametru jest bardziej wydajne niż po prostu filtru. Dla sparametryzowane zestawu rekordów bazy danych musi przetworzyć SQL **wybierz** instrukcji tylko raz. Dla filtrowanego zestawu rekordów bez parametrów **wybierz** instrukcja musi zostać przetworzona, każdym razem `Requery` z nową wartością filtru.
+   > [!TIP]
+   > Za pomocą parametru jest bardziej wydajne niż po prostu filtru. Dla sparametryzowane zestawu rekordów bazy danych musi przetworzyć SQL **wybierz** instrukcji tylko raz. Dla filtrowanego zestawu rekordów bez parametrów **wybierz** instrukcja musi zostać przetworzona, każdym razem `Requery` z nową wartością filtru.
 
 Aby uzyskać więcej informacji na temat filtrów, zobacz [zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametryzacja zestawu rekordów klasy
 
 > [!NOTE]
->  Ta sekcja jest stosowana do obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz wiersz zbiorcze pobieranie, implementowanie parametrów jest podobny proces. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Ta sekcja jest stosowana do obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz wiersz zbiorcze pobieranie, implementowanie parametrów jest podobny proces. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić parametry potrzebne, jakie są typy danych i jak zestaw rekordów są one używane.
 
@@ -116,7 +116,7 @@ Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić p
 
 1. Modyfikowanie [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) definicji funkcji składowej w pliku .cpp. Dodaj wywołanie funkcji RFX dla każdego parametru element członkowski danych dodane do klasy. Informacje na temat pisania funkcji RFX, zobacz [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Należy poprzedzić wywołania RFX parametrów za pomocą pojedynczego wywołania do:
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić p
    W czasie wykonywania "?" symbole zastępcze są wypełniane, kolejność, według wartości parametrów możesz przekazać. Pierwszy element członkowski danych parametru ustawić po [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) wywołanie zamienia pierwszy "?"w parametrach SQL drugi element członkowski danych parametru zastępuje drugi"?", i tak dalej.
 
 > [!NOTE]
->  Ważna jest kolejność parametrów: kolejność RFX wywołuje parametrów w swojej `DoFieldExchange` funkcja musi być zgodna z kolejnością parametr symbole zastępcze w ciągu SQL.
+> Ważna jest kolejność parametrów: kolejność RFX wywołuje parametrów w swojej `DoFieldExchange` funkcja musi być zgodna z kolejnością parametr symbole zastępcze w ciągu SQL.
 
 > [!TIP]
-
->  Najbardziej prawdopodobną ciąg do pracy z jest ciągiem, o których należy określić (jeśli istnieje) dla tej klasy [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) element członkowski danych, ale niektóre sterowniki ODBC mogą zezwalać na parametry w innych klauzul SQL.
+> Najbardziej prawdopodobną ciąg do pracy z jest ciągiem, o których należy określić (jeśli istnieje) dla tej klasy [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) element członkowski danych, ale niektóre sterowniki ODBC mogą zezwalać na parametry w innych klauzul SQL.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Przekazywanie wartości parametrów w czasie wykonywania
 

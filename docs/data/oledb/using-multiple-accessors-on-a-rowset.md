@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483294"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522028"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 
@@ -20,19 +20,19 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
 
 - **Wiele odczytu/zapisu zestawów wierszy.** W tym scenariuszu masz tabelę z kluczem podstawowym. Chcesz można było odczytać wszystkie kolumny w wierszu, w tym klucza podstawowego. Należy mieć uprawnienia zapisu danych do wszystkich kolumn z wyjątkiem klucza podstawowego (ponieważ nie można zapisać kolumny klucza podstawowego). W takim przypadku można skonfigurować dwie metody dostępu:
 
-   - Akcesor 0 zawiera wszystkie kolumny.
+  - Akcesor 0 zawiera wszystkie kolumny.
 
-   - Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.
+  - Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.
 
 - **Wydajność.** W tym scenariuszu co najmniej jedna kolumna ma dużą ilość danych, na przykład grafiki, dźwięku lub wideo pliki. Za każdym razem, gdy przeniesiesz się do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużych ilości danych, ponieważ wykonanie tej tak może spowolnić wydajność aplikacji.
 
-   Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; pierwszy metody dostępu jest akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie przechowywania dużych ilości danych, ale go nie pobierać dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.
+  Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; pierwszy metody dostępu jest akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie przechowywania dużych ilości danych, ale go nie pobierać dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.
 
-   - Akcesor 0 jest automatyczne akcesora; pobiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych.
+  - Akcesor 0 jest automatyczne akcesora; pobiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych.
 
-   - Metody dostępu 1 nie jest automatyczna akcesora; pobiera kolumnę z dużych ilości danych.
+  - Metody dostępu 1 nie jest automatyczna akcesora; pobiera kolumnę z dużych ilości danych.
 
-   Argument automatycznego umożliwia określenie, czy akcesor jest akcesora automatycznie.
+  Argument automatycznego umożliwia określenie, czy akcesor jest akcesora automatycznie.
 
 - **Wiele kolumn ISequentialStream.** W tym scenariuszu masz więcej niż jedną kolumnę gospodarstwa `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdego mających jeden `ISequentialStream` wskaźnika.
 

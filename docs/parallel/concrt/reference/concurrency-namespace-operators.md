@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 49283a9a8cb85cb20b0c48635217d402697caa47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5982ae0ec3baff38b43b0ce504a47d512559390d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483905"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521612"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
@@ -18,7 +18,7 @@ ms.locfileid: "50483905"
 |-|-|-|
 |[operator!=](#operator_neq)|[Operator&amp;&amp;](#operator_amp_amp)|[Operator&gt;](#operator_gt)|
 |[Operator&gt;=](#operator_gt_eq)|[Operator&lt;](#operator_lt)|[Operator&lt;=](#operator_lt_eq)|
-|[operator==](#operator_eq_eq)|[— operator||](#operator_lor)|
+|[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
 ##  <a name="operator_lor"></a>  operator&#124; &#124; — Operator
 

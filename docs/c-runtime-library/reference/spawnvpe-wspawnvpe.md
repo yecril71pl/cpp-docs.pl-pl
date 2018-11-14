@@ -31,12 +31,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 88838352bb8c4677e8b6693811f8060f698ef47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525882"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326605"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -82,11 +82,11 @@ Wartość zwracana przez synchroniczny **_spawnvpe** lub **_wspawnvpe —** (**_
 
 |||
 |-|-|
-**E2BIG**|Argument w postaci listy przekracza 1024 bajty.
-**EINVAL**|*tryb* argument jest nieprawidłowy.
-**ENOENT**|Nie znaleziono pliku lub ścieżki.
-**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.
-**ENOMEM**|Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu.
+| **E2BIG** | Argument w postaci listy przekracza 1024 bajty. |
+| **EINVAL** | *tryb* argument jest nieprawidłowy. |
+| **ENOENT** | Nie znaleziono pliku lub ścieżki. |
+| **ENOEXEC** | Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego. |
+| **ENOMEM** | Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu. |
 
 Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 

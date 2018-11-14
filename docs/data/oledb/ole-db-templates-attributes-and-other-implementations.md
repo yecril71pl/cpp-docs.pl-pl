@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596602"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520645"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Szablony i atrybuty OLE DB oraz inne implementacje
 
@@ -25,7 +25,7 @@ Ta biblioteka szablon zawiera dwie części:
 
 - **Szablony OLE DB Provider** używany do implementowania aplikacji serwera (dostawca) OLE DB.
 
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643).
+Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Aby uzyskać więcej informacji możesz wykonywać następujące czynności:
 
@@ -37,7 +37,7 @@ Aby uzyskać więcej informacji możesz wykonywać następujące czynności:
 
 - Przejrzyj listę rzeczy, [przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples).
 
-- Zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643) (w Windows SDK).
+- Zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (w Windows SDK).
 
 ## <a name="ole-db-attributes"></a>Atrybuty bazy danych OLE
 
@@ -49,7 +49,7 @@ Biblioteka MFC zawiera jedną klasę [COleDBRecordView](../../mfc/reference/cole
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB interfejsów zestawu SDK
 
-W przypadkach, w którym szablony OLE DB nie obsługują funkcji OLE DB należy użyć interfejsy OLE DB, samodzielnie. Aby uzyskać więcej informacji, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643) w zestawie Windows SDK.
+W przypadkach, w którym szablony OLE DB nie obsługują funkcji OLE DB należy użyć interfejsy OLE DB, samodzielnie. Aby uzyskać więcej informacji, zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) w zestawie Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536646"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329777"
 ---
 # <a name="binarynegate-class"></a>binary_negate — Klasa
 
@@ -49,7 +49,7 @@ Negacja binarne funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię _ obiektu binarnego funkcja *Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu **!**\_ *FUNC (lewo, prawo).*
+Klasa szablonu przechowuje kopię obiektu binarnego funkcja *Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu `!Func(left, right)`.
 
 Konstruktor obiektu `binary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not2 —](../standard-library/functional-functions.md#not2) zwykle są preferowane dla deklarowanie i użycie **binary_negator** predykatu adaptera.
 

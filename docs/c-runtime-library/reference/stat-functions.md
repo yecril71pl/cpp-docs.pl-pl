@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637284"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331207"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -228,17 +228,17 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżki* lub *buf
 
 |Pole||
 |-|-|
-**st_gid**|Identyfikator liczbowy grupy, który jest właścicielem pliku (specyficzne dla systemu UNIX) to pole jest zawsze zero w systemach Windows. Przekierowanego pliku zostanie sklasyfikowany jako pliku Windows.
-**st_atime**|Czas ostatniego dostępu do pliku. Dyskach sformatowanych prawidłowe na systemu plików NTFS, ale nie w systemie FAT.
-**st_ctime**|Godzina utworzenia pliku. Dyskach sformatowanych prawidłowe na systemu plików NTFS, ale nie w systemie FAT.
-**st_dev**|Numer dysku z plikiem dysku (taka sama jak **st_rdev**).
-**st_ino**|Liczba węzłów informacje ( **węzeł i**) dla pliku (specyficzne dla systemu UNIX). W systemach plików systemu UNIX **węzeł i** opisuje Data pliku i sygnatury czasowe, uprawnienia i zawartości. Jeśli pliki są twarde połączone ze sobą, mogą współużytkować ten sam **węzeł i**. **Węzeł i**i w związku z tym **st_ino**, nie ma znaczenia w systemach plików FAT, HPFS lub NTFS.
-**st_mode**|Maska bitów informacji tryb pliku. **_S_IFDIR** Jeśli ustawiono bit *ścieżki* Określa katalog; **_S_IFREG** Jeśli ustawiono bit *ścieżki* określa to zwykły plik lub urządzenia. Użytkownik odczytu/zapisu bity są ustawione zgodnie z trybu uprawnienia pliku; Użytkownik wykonać bity są ustawione zgodnie z rozszerzeniem nazwy pliku.
-**st_mtime**|Czas ostatniej modyfikacji pliku.
-**st_nlink**|Zawsze 1 w systemach plików niż NTFS.
-**st_rdev**|Numer dysku z plikiem dysku (taka sama jak **st_dev**).
-**st_size**|Rozmiar pliku w bajtach; 64-bitową liczbę całkowitą dla zmian za pomocą **i64** sufiks.
-**st_uid**|Identyfikator liczbowy użytkownika będącego właścicielem pliku (specyficzne dla systemu UNIX). To pole będzie zawsze zero w systemach Windows. Przekierowanego pliku zostanie sklasyfikowany jako pliku Windows.
+| **st_gid** | Identyfikator liczbowy grupy, który jest właścicielem pliku (specyficzne dla systemu UNIX) to pole jest zawsze zero w systemach Windows. Przekierowanego pliku zostanie sklasyfikowany jako pliku Windows. |
+| **st_atime** | Czas ostatniego dostępu do pliku. Dyskach sformatowanych prawidłowe na systemu plików NTFS, ale nie w systemie FAT. |
+| **st_ctime** | Godzina utworzenia pliku. Dyskach sformatowanych prawidłowe na systemu plików NTFS, ale nie w systemie FAT. |
+| **st_dev** | Numer dysku z plikiem dysku (taka sama jak **st_rdev**). |
+| **st_ino** | Liczba węzłów informacje ( **węzeł i**) dla pliku (specyficzne dla systemu UNIX). W systemach plików systemu UNIX **węzeł i** opisuje Data pliku i sygnatury czasowe, uprawnienia i zawartości. Jeśli pliki są twarde połączone ze sobą, mogą współużytkować ten sam **węzeł i**. **Węzeł i**i w związku z tym **st_ino**, nie ma znaczenia w systemach plików FAT, HPFS lub NTFS. |
+| **st_mode** | Maska bitów informacji tryb pliku. **_S_IFDIR** Jeśli ustawiono bit *ścieżki* Określa katalog; **_S_IFREG** Jeśli ustawiono bit *ścieżki* określa to zwykły plik lub urządzenia. Użytkownik odczytu/zapisu bity są ustawione zgodnie z trybu uprawnienia pliku; Użytkownik wykonać bity są ustawione zgodnie z rozszerzeniem nazwy pliku. |
+| **st_mtime** | Czas ostatniej modyfikacji pliku. |
+| **st_nlink** | Zawsze 1 w systemach plików niż NTFS. |
+| **st_rdev** | Numer dysku z plikiem dysku (taka sama jak **st_dev**). |
+| **st_size** | Rozmiar pliku w bajtach; 64-bitową liczbę całkowitą dla zmian za pomocą **i64** sufiks. |
+| **st_uid** | Identyfikator liczbowy użytkownika będącego właścicielem pliku (specyficzne dla systemu UNIX). To pole będzie zawsze zero w systemach Windows. Przekierowanego pliku zostanie sklasyfikowany jako pliku Windows. |
 
 Jeśli *ścieżki* odwołuje się do urządzenia, **st_size**, różnych pól godziny **st_dev**, i **st_rdev** pola w **_stat**  struktury są bez znaczenia. Ponieważ STAT. Zastosowań H [_dev_t](../../c-runtime-library/standard-types.md) typ typów zdefiniowanych w. Godz., musi zawierać typy. Godz. przed STAT. H w kodzie.
 

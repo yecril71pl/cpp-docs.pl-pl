@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551713"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329855"
 ---
 # <a name="base-base-address"></a>/BASE (Adres podstawowy)
 
@@ -46,7 +46,7 @@ Konsolidator generuje błąd, jeśli *adres* nie jest wielokrotnością 64 KB. O
 
 W wierszu polecenia innym sposobem określenia adres podstawowy jest przy użyciu pliku odpowiedzi z adresu podstawowego. Adres podstawowy plik odpowiedzi jest plik tekstowy, który zawiera adres podstawowy i opcjonalnie rozmiarów wszystkie biblioteki dll będzie używać programu i klucz unikatowy tekst dla każdego adresu podstawowego. Aby określić adres bazowy przy użyciu pliku odpowiedzi, należy użyć znakiem (**\@**) i nazwa pliku odpowiedzi *filename*, a następnie przecinek, a następnie *klucz*wartość dla podstawowego adresu do użycia w pliku. Konsolidator szuka *filename* w obu określonej ścieżce, lub jeśli ścieżka nie zostanie określona w katalogach określonych w zmiennej środowiskowej LIB. Każdy wiersz w *filename* reprezentuje jedną bibliotekę DLL, a ma następującą składnię:
 
-> *klucz* *adres* [*rozmiar*] **;** *komentarz*
+> *klucz* *adres* [*rozmiar*] **;** *komentarz*
 
 *Klucz* ciąg znaków alfanumerycznych i nie jest uwzględniana wielkość liter. Zazwyczaj jest to nazwa biblioteki dll, ale nie muszą być. *Klucz* następuje podstawowej *adres* w notacji języka C, szesnastkowym lub dziesiętną i opcjonalnie maksymalnie *rozmiar*. Wszystkie trzy argumenty są oddzielone tabulacji lub spacji. Konsolidator generuje ostrzeżenie, jeśli określony *rozmiar* jest mniejsza niż wirtualnej przestrzeni adresowej wymagane przez program. A *komentarz* określono za pomocą średnika (**;**) i może być na tym samym lub w osobnym wierszu. Konsolidator ignoruje cały tekst z średnik z powrotem do końca wiersza. W tym przykładzie przedstawiono część tego pliku:
 

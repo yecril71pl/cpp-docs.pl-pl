@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643446"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326502"
 ---
 # <a name="iterators"></a>Iteratory
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Istnieje pięć kategorii iteratorów. W kolejności power zwiększenia dostępne są następujące kategorie:
 
-- **Dane wyjściowe**. *Iteratora wyjściowego* `X` może przejść do przodu przez sekwencję przy użyciu **++** operatora i można zapisać elementu tylko raz przy użyciu **&ast;** operatora.
+- **Dane wyjściowe**. *Iteratora wyjściowego* `X` może przejść do przodu przez sekwencję przy użyciu **++** operatora i można zapisać elementu tylko raz przy użyciu __\*__ operatora.
 
 - **Dane wejściowe**. *Iterator danych wejściowych* `X` może przejść do przodu przez sekwencję przy użyciu ++ operatora i może odczytać element dowolną liczbę razy za pomocą **&ast;** operatora. Możesz porównać Iteratory danych wejściowych za pomocą **++** i **! =** operatorów. Po zwiększa się wszystkie kopie iterator danych wejściowych, brak pozostałe kopie bezpiecznie można porównywać, wyłuskiwany lub zwiększona po tej dacie.
 

@@ -2,12 +2,12 @@
 title: Jawnie domyślne i usunięte funkcje
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662608"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327021"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Jawnie domyślne i usunięte funkcje
 
@@ -36,12 +36,12 @@ Jest to wygodne dla typów prostych, ale typy złożone często definiują jedn�
    - Żaden operator przypisywania przenoszenia, jest generowany automatycznie.
 
 > [!NOTE]
->  Ponadto, standard C++11 określa następujące reguły dodatkowe:
+> Ponadto, standard C++11 określa następujące reguły dodatkowe:
 >
 > - Jeśli konstruktor kopiujący lub destruktor jest zadeklarowany w sposób jawny, to automatyczne generowanie operatora przypisania kopiowania jest uznawane za przestarzałe.
 > - Jeśli operator przypisania kopiowania lub destruktor jest zadeklarowany w sposób jawny, to automatyczne generowanie konstruktora kopiującego jest uznawane za przestarzałe.
 >
->  W obu przypadkach, program Visual Studio kontynuuje automatyczne generowanie niezbędnych funkcji niejawnie i nie emituje ostrzeżenia.
+> W obu przypadkach, program Visual Studio kontynuuje automatyczne generowanie niezbędnych funkcji niejawnie i nie emituje ostrzeżenia.
 
 Konsekwencje tych reguł mogą również wyciec do hierarchii obiektów. Na przykład, jeśli z jakiegokolwiek powodu klasa bazowa nie będzie mieć domyślnego konstruktora, który jest wywoływany z Klasa pochodna — oznacza to, że **publicznych** lub **chronione** Konstruktor, który nie przyjmuje żadnych parametrów — następnie klasy który pochodzi od klasy nie może automatycznie wygenerować własnego konstruktora domyślnego.
 

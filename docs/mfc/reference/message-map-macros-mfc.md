@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474272"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327450"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -250,27 +250,8 @@ Nazwa funkcji obsługi wiadomości, na który jest mapowany polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozszerzone rodzaj procedury obsługi komunikatów polecenia jest dostępna dla wykorzystuje zaawansowane. ON_COMMAND_EX — makro jest używana do obsługi takich komunikatów i stanowi nadzbiór funkcji [ON_COMMAND] (#on_command).  Rozszerzona procedura obsługi polecenia elementów członkowskich przyjmować jeden parametr, UINT, zawierający identyfikator polecenia i zwracać wartość LOGICZNĄ. Wartość zwracana powinna dotyczyć wartość TRUE
-
-To makro mapuje rozszerzoną procedurę obsługi poleceń składowa komunikatem polecenia.
-
-### <a name="syntax"></a>Składnia
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parametry
-
-*id*<br/>
-Identyfikator polecenia.
-
-*memberFxn*<br/>
-Nazwa funkcji obsługi wiadomości, na który jest mapowany polecenia.
-
-### <a name="remarks"></a>Uwagi
-
 Rozszerzone rodzaj procedury obsługi komunikatów polecenia jest dostępna dla wykorzystuje zaawansowane. ON_COMMAND_EX — makro jest używana do obsługi takich komunikatów i zapewnia nadzbiorem [ON_COMMAND](message-map-macros-mfc.md#on_command) funkcji. Rozszerzona procedura obsługi polecenia elementów członkowskich przyjmować jeden parametr, UINT, zawierający identyfikator polecenia i zwracać wartość LOGICZNĄ. Wartość zwracana powinna być PRAWDA w celu wskazania, że polecenie został obsłużony; w przeciwnym razie routingu będzie innych obiektów docelowych polecenia.
+
 Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów] tm006-komunikat maps.md).
 
 ### <a name="requirements"></a>Wymagania

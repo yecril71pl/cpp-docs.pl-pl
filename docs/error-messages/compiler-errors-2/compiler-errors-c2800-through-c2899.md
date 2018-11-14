@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601113"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332078"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Błędy kompilatora od C2800 C2899
 
@@ -74,7 +74,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2812](compiler-error-c2812.md)|#import nie jest obsługiwany z/CLR: pure i/CLR: Safe|
 |[Błąd kompilatora C2813](compiler-error-c2813.md)|#import nie jest obsługiwany z /MP|
 |[Błąd kompilatora C2814](compiler-error-c2814.md)|"*elementu członkowskiego*": typ natywny nie może być zagnieżdżona w ramach typu zarządzanego WinRT "*klasy*"|
-|[Błąd kompilatora C2815](compiler-error-c2815.md)|"operator delete": pierwszy formalny parametr musi być "void *", ale "* typ *" został użyty|
+|[Błąd kompilatora C2815](compiler-error-c2815.md)|"operator delete": pierwszy formalny parametr musi być "void \*", ale "*typu*" został użyty|
 |C2816 błąd kompilatora|Nieaktualne.|
 |[Błąd kompilatora C2817](compiler-error-c2817.md)|typem zwracanym dla "operator delete" musi być "void"|
 |[Błąd kompilatora C2818](compiler-error-c2818.md)|Aplikacja przeciążonego "operator ->" jest rekursywna za pośrednictwem typu "*klasy*"|
@@ -83,7 +83,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2821](compiler-error-c2821.md)|pierwszy formalny parametr dla "operator new" musi być "size_t"|
 |C2822 błąd kompilatora|lokalne rozwinięcie nie jest obsługiwana na tej platformie|
 |[Błąd kompilatora C2823](compiler-error-c2823.md)|Szablon typedef/ogólnego jest niedozwolony|
-|[Błąd kompilatora C2824](compiler-error-c2824.md)|typem zwracanym dla "operator new" musi być "void *"|
+|[Błąd kompilatora C2824](compiler-error-c2824.md)|typem zwracanym dla "operator new" musi być "void \*"|
 |[Błąd kompilatora C2825](compiler-error-c2825.md)|'*identyfikator*": musi być klasą lub przestrzenią nazw, gdy następuje '::'|
 |C2826 błąd kompilatora|Nieaktualne.|
 |[Błąd kompilatora C2827](compiler-error-c2827.md)|"operator *operator*" nie może być przesłaniany globalnie przez jednoargumentowy formularz|

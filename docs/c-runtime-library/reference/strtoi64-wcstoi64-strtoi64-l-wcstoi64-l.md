@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490782"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331701"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -112,7 +112,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource **;* Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje, które mają przyrostka _l używają bieżących ustawień regionalnych; **_strtoi64_l —** i **_wcstoi64_l —** są identyczne z odpowiednimi funkcjami bez **_l** sufiks z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje, które mają przyrostka _l używają bieżących ustawień regionalnych; **_strtoi64_l —** i **_wcstoi64_l —** są identyczne z odpowiednimi funkcjami bez **_l** sufiks z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywany w lokalizacji wskazywanej przez *endptr*.
 

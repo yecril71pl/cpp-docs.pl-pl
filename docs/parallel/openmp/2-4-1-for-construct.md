@@ -2,12 +2,12 @@
 title: 2.4.1 — dla konstrukcji
 ms.date: 11/04/2016
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-ms.openlocfilehash: adf2d5d0580f3b65f90ab68ca21885be12abf678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6cd1733677a6211055a9b06231fb1686c8e2fde
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496515"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329502"
 ---
 # <a name="241-for-construct"></a>2.4.1 — dla konstrukcji
 
@@ -71,11 +71,11 @@ Zmienna liczba całkowita ze znakiem. Jeśli ta zmienna, w przeciwnym razie mog�
 *op logiczne*<br/>
 Jeden z poniższych:
 
-<
+\<
 
 \<=
 
->
+\>
 
 \>=
 

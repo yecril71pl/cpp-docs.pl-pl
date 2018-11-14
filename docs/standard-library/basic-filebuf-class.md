@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500532"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332650"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf — Klasa
 
@@ -504,11 +504,11 @@ Znak do wstawienia do określonego bufora lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie zwraca **traits_type::**[not_eof —](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie zwraca **traits_type::**[not_eof —](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego przywraca element do buforu wejściowego i udostępnia je po bieżącego elementu (wskazywany przez wskaźnik następnej). Jeśli _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkcję można odłożyć element na różne sposoby:
+Funkcja chroniony element członkowski wirtualnego przywraca element do buforu wejściowego i udostępnia je po bieżącego elementu (wskazywany przez wskaźnik następnej). Jeśli  *\_Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Funkcję można odłożyć element na różne sposoby:
 
 - Jeśli pozycja putback — i element tam przechowywane w porównaniu równa `ch`, jego dekrementacja wskaźnik następnej dla buforu danych wejściowych.
 

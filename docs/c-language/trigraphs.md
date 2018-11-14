@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523908"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331623"
 ---
 # <a name="trigraphs"></a>Trigramy
 
@@ -34,29 +34,29 @@ Poniższa tabela pokazuje dziewięć sekwencji trójznaków. Wszystkie wystąpie
 
 ### <a name="trigraph-sequences"></a>Sekwencje trójznakowe
 
-|Trójznak|Znak interpunkcyjny|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trójznak | Znak interpunkcyjny |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Trójznak jest zawsze traktowany jako pojedynczy znak źródłowy. Tłumaczenie trójznaków zachodzi odbywa się w pierwszym [fazie tłumaczenia](../preprocessor/phases-of-translation.md), przed rozpoznawaniem znaków ucieczki w literałach ciągu i stałych znakowych. Rozpoznawane jest tylko dziewięć trójznaków pokazanych w powyższej tabeli. Wszystkie inne sekwencje znaków są pozostawiane nieprzetłumaczone.
 
 Znak sekwencji ucieczki  **\\?**, zapobiega błędnej interpretacji sekwencji znaków trójznaków. (Aby uzyskać informacje dotyczące sekwencji ucieczki, zobacz [sekwencje ucieczki](../c-language/escape-sequences.md).) Na przykład, jeśli spróbujesz wydrukować ciąg `What??!` za pomocą instrukcji `printf`
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 ciąg zostanie wydrukowany `What|` ponieważ `??!` jest sekwencją trójznaku zamienianą `|` znaków. Napisz instrukcję w następujący sposób, aby poprawnie wydrukować ciąg:
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

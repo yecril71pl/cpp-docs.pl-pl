@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582614"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520117"
 ---
 # <a name="compiler-error-c2143"></a>Błąd kompilatora C2143
 
@@ -33,7 +33,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 Domyślnie C++ założono, że `Ty::PutFuncType` nie jest szablonem; w związku z tym, że `<` jest interpretowany jako mniej-niż logowania.  Musisz poinformować kompilator jawnie, `PutFuncType` jest szablon, aby go można poprawnie przeanalizować nawiasu ostrego. Aby rozwiązać ten problem, należy użyć `template` słów kluczowych dotyczących nazwy typ zależny, jak pokazano poniżej:
@@ -46,7 +45,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 C2143 może wystąpić, gdy **/CLR** jest używany i `using` dyrektywy występuje błąd składni:

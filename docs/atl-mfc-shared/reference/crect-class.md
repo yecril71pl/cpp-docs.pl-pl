@@ -1,6 +1,6 @@
 ---
 title: CRect, klasa
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471490"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520039"
 ---
 # <a name="crect-class"></a>CRect, klasa
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|Określa, czy `CRect` nie jest równa prostokąta.|
 |[CRect::operator &amp;](#operator_amp)|Tworzy punkt przecięcia `CRect` i prostokąt i zwraca wynikowy `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Zestawy `CRect` równą część wspólną `CRect` i prostokąt.|
-|[CRect::operator |](#operator_or)|Tworzy złożenie `CRect` i prostokąt i zwraca wynikowy `CRect`.|
-|[CRect::operator |=](#operator_or_eq)|Zestawy `CRect` równa sumę `CRect` i prostokąt.|
+|[CRect::operator&#124;](#operator_or)|Tworzy złożenie `CRect` i prostokąt i zwraca wynikowy `CRect`.|
+|[CRect::operator &#124;=](#operator_or_eq)|Zestawy `CRect` równa sumę `CRect` i prostokąt.|
 |[CRect::operator +](#operator_add)|Dodaje dany przesunięcia do `CRect` lub zwiększa `CRect` i zwraca wynikowy `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Dodaje określonego przesunięcia do `CRect` lub zwiększa `CRect`.|
 |[CRect::operator =](#operator_eq)|Kopiuje wymiary prostokąta do `CRect`.|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 A `CRect` obiekt może być przekazywany jako parametr funkcji wszędzie tam, gdzie `RECT` struktury `LPCRECT`, lub `LPRECT` mogą być przekazywane.
 
 > [!NOTE]
->  Ta klasa jest pochodną `tagRECT` struktury. (Nazwa `tagRECT` jest mniej — najczęściej używanych nazwę `RECT` struktury.) Oznacza to, że elementy członkowskie danych (`left`, `top`, `right`, i `bottom`) z `RECT` struktury są elementami członkowskimi dane dostępne `CRect`.
+> Ta klasa jest pochodną `tagRECT` struktury. (Nazwa `tagRECT` jest mniej — najczęściej używanych nazwę `RECT` struktury.) Oznacza to, że elementy członkowskie danych (`left`, `top`, `right`, i `bottom`) z `RECT` struktury są elementami członkowskimi dane dostępne `CRect`.
 
 Element `CRect` zawiera zmienne elementu członkowskiego, które określa punkty lewym górnym rogu i prawym dolnym rogu prostokąta.
 
@@ -443,11 +443,11 @@ Wartość różną od zera, jeśli dwa prostokąty mają tego samego początku, 
 ### <a name="example"></a>Przykład
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ Wartość wynikowa może być ujemna.
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ Przecięcie jest największy prostokąt, które są zawarte w obu istniejących 
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ Prostokąt jest pusta, jeśli szerokość lub wysokość 0 lub ujemna. Różni s
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ Różni się od `IsRectEmpty`, która określa, czy prostokąta jest pusty.
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ Bezwzględny współrzędną x do lewego górnego rogu prostokąta.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ A `POINT` struktury, określając bezwzględne lewego górnego rogu prostokąta.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

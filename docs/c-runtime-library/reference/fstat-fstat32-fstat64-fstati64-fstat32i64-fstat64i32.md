@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331246"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ Zwraca wartość 0, jeżeli uzyskano informacje o stanie pliku. Zwracana wartoś
 
 |Pole|Znaczenie|
 |-|-|
-**st_atime**|Czas ostatniego dostępu do plików.
-**st_ctime**|Godzina utworzenia pliku.
-**st_dev**|Jeśli urządzenie, *fd*; w przeciwnym razie 0.
-**st_mode**|Maska bitów informacji tryb pliku. **_S_IFCHR** Jeśli ustawiono bit *fd* odwołuje się do urządzenia. **_S_IFREG** Jeśli ustawiono bit *fd* odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. **_S_IFCHR** i inne stałe są definiowane w SYS\Stat.h.
-**st_mtime**|Czas ostatniej modyfikacji pliku.
-**st_nlink**|Zawsze 1 w systemach plików niż NTFS.
-**st_rdev**|Jeśli urządzenie, *fd*; w przeciwnym razie 0.
-**st_size**|Rozmiar pliku w bajtach.
+| **st_atime** | Czas ostatniego dostępu do plików. |
+| **st_ctime** | Godzina utworzenia pliku. |
+| **st_dev** | Jeśli urządzenie, *fd*; w przeciwnym razie 0. |
+| **st_mode** | Maska bitów informacji tryb pliku. **_S_IFCHR** Jeśli ustawiono bit *fd* odwołuje się do urządzenia. **_S_IFREG** Jeśli ustawiono bit *fd* odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. **_S_IFCHR** i inne stałe są definiowane w SYS\Stat.h. |
+| **st_mtime** | Czas ostatniej modyfikacji pliku. |
+| **st_nlink** | Zawsze 1 w systemach plików niż NTFS. |
+| **st_rdev** | Jeśli urządzenie, *fd*; w przeciwnym razie 0. |
+| **st_size** | Rozmiar pliku w bajtach. |
 
 Jeśli *fd* odwołuje się do urządzenia, **st_atime**, **st_ctime**, **st_mtime**, i **st_size** pola są nie ma istotnego znaczenia.
 

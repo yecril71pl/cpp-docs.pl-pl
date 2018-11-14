@@ -92,12 +92,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 32d21b310d8a7826fd1d95f806d470a1fb7e492e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518511"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329452"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -170,9 +170,9 @@ Jeśli to się powiedzie, zwraca wartość 0. W przeciwnym razie zwraca wartoś�
 
 |errno wartość|Warunek|
 |-|-|
-**EINVAL**|Nieprawidłowy parametr: *fileinfo* został **NULL**. Lub system operacyjny zwrócił nieoczekiwany błąd.
-**ENOENT**|Znaleziono już zgodnych plików.
-**ENOMEM**|Nie ma wystarczającej ilości pamięci lub długość nazwy pliku **MAX_PATH**.
+| **EINVAL** | Nieprawidłowy parametr: *fileinfo* został **NULL**. Lub system operacyjny zwrócił nieoczekiwany błąd. |
+| **ENOENT** | Znaleziono już zgodnych plików. |
+| **ENOMEM** | Nie ma wystarczającej ilości pamięci lub długość nazwy pliku **MAX_PATH**. |
 
 Jeśli podano nieprawidłowy parametr jest przekazywany w, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 

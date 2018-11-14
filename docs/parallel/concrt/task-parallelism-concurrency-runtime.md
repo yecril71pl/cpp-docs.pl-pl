@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630428"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331220"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Równoległość zadania (współbieżność środowiska wykonawczego)
 
@@ -22,8 +22,7 @@ W środowisku uruchomieniowym współbieżności *zadań* jest jednostką pracy,
 Zadania są używane podczas pisania kodu asynchronicznego i chcesz niektóre operacje wystąpiły po zakończeniu operacji asynchronicznej. Na przykład można użyć zadania do asynchronicznego odczytania z pliku, a następnie użyć innego zadania — *zadanie kontynuacji*, co jest opisane w dalszej części tego dokumentu — do przetwarzania danych, gdy stanie się dostępny. Z drugiej strony można użyć grup zadań do rozkładu pracy równolegle na mniejsze części. Na przykład załóżmy, że masz algorytm cykliczny, która dzieli pozostałą pracę na dwie partycje. Grupy zadań umożliwia jednoczesne uruchamianie tych partycji, a następnie poczekaj na zakończenie pracy podzielonej.
 
 > [!TIP]
-
->  Jeśli chcesz stosować taką samą procedurę dla każdego elementu kolekcji równolegle, Użyj algorytmu równoległego, takich jak [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), a nie zadania lub grupy zadań. Aby uzyskać więcej informacji dotyczących algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+> Jeśli chcesz stosować taką samą procedurę dla każdego elementu kolekcji równolegle, Użyj algorytmu równoległego, takich jak [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), a nie zadania lub grupy zadań. Aby uzyskać więcej informacji dotyczących algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="key-points"></a>Kwestie kluczowe
 
@@ -205,7 +204,6 @@ Należy wziąć pod uwagę aplikacji platformy uniwersalnej systemu Windows, kt�
 1. W pliku MainPage.xaml.cpp zaimplementuj `WriteFilesAsync` jak pokazano w przykładzie.
 
 > [!TIP]
-
 > `when_all` jest funkcją bez blokowania tworzącego `task` jako wynik. W odróżnieniu od [Task::wait —](reference/task-class.md#wait), można bezpiecznie wywołać tę funkcję w aplikacji platformy uniwersalnej systemu Windows w wątku ASTA (aplikacja STA).
 
 ###  <a name="when-any"></a> When_any — funkcja
@@ -229,14 +227,14 @@ Podobnie jak w przypadku `when_all`, jest często używa się kontynuacji wraz z
 W tym przykładzie można również określić `task<pair<int, size_t>>` do wygenerowania kontynuacji opartej na zadaniach.
 
 > [!NOTE]
->  Podobnie jak w przypadku `when_all`, zadania, które są przekazywane do `when_any` musi zwracać tego samego typu.
+> Podobnie jak w przypadku `when_all`, zadania, które są przekazywane do `when_any` musi zwracać tego samego typu.
 
 Można również użyć `||` Składnia służąca do tworzenia zadania, które kończy się po zakończeniu pierwszego zadania w zestawie zadań, jak pokazano w poniższym przykładzie.
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  Podobnie jak w przypadku `when_all`, `when_any` jest bez blokowania i jest bezpieczny do wywołania w aplikacji platformy uniwersalnej systemu Windows w wątku ASTA.
+> Podobnie jak w przypadku `when_all`, `when_any` jest bez blokowania i jest bezpieczny do wywołania w aplikacji platformy uniwersalnej systemu Windows w wątku ASTA.
 
 ##  <a name="delayed-tasks"></a> Wykonanie opóźnionego zadania
 
@@ -257,8 +255,7 @@ PPL korzysta [concurrency::task_group](reference/task-group-class.md) i [concurr
 PPL dzieli grupy zadań na dwie kategorie: *grupy zadań bez struktury* i *ze strukturą grup zadań*. PPL korzysta `task_group` klasy do reprezentowania grup zadań bez struktury i `structured_task_group` klasy do reprezentowania grup zadań strukturalnych.
 
 > [!IMPORTANT]
-
->  PPL definiuje również [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu, który używa `structured_task_group` klasy do wykonywania zestawu zadań równolegle. Ponieważ `parallel_invoke` algorytm ma bardziej zwięzłą składnię, zaleca się używać go zamiast `structured_task_group` klasy miarę. Temat [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md) opisuje `parallel_invoke` bardziej szczegółowo.
+> PPL definiuje również [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu, który używa `structured_task_group` klasy do wykonywania zestawu zadań równolegle. Ponieważ `parallel_invoke` algorytm ma bardziej zwięzłą składnię, zaleca się używać go zamiast `structured_task_group` klasy miarę. Temat [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md) opisuje `parallel_invoke` bardziej szczegółowo.
 
 Użyj `parallel_invoke` kiedy masz kilka niezależnych zadań, które mają zostać zrealizowane w tym samym czasie i musisz poczekać na zakończenie przed kontynuowaniem wszystkich zadań. Ta technika jest często nazywany *rozwidlenia i sprzężenia* równoległości. Użyj `task_group` kiedy masz kilka niezależnych zadań, które mają zostać zrealizowane w tym samym czasie, ale chcesz czekać na zadania zakończyć w późniejszym czasie. Na przykład można dodać zadania do `task_group` obiektu i poczekaj na zakończenie innej funkcji lub z innego wątku zadań.
 

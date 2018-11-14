@@ -1,15 +1,15 @@
 ---
 title: Tworzenie prostego konsumenta
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608055"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326644"
 ---
 # <a name="creating-a-simple-consumer"></a>Tworzenie prostego konsumenta
 
@@ -51,18 +51,18 @@ Następnie użyj **OLE DB Kreator konsumenta ATL** Aby dodać obiekt konsumenta 
 
 1. W **właściwości Linku danych** okna dialogowego pole, wykonaj następujące czynności:
 
-    1. Na **dostawcy** karcie, określ dostawcę OLE DB.
+   1. Na **dostawcy** karcie, określ dostawcę OLE DB.
 
-    1. Na **połączenia** kartę, należy określić wymagane informacje, takie jak nazwa serwera, identyfikator logowania i hasło dla źródła danych i bazy danych na serwerze.
+   1. Na **połączenia** kartę, należy określić wymagane informacje, takie jak nazwa serwera, identyfikator logowania i hasło dla źródła danych i bazy danych na serwerze.
 
-       > [!NOTE]
-       > Występuje problem z zabezpieczeniami z **Zezwalaj na zapisywanie hasła** funkcji **właściwości Linku danych** okno dialogowe. W **wprowadź informacje, aby zalogować się do serwera**, istnieją dwa przyciski radiowe: **Użyj Windows NT zintegrowane zabezpieczenia** i **Użyj określonej nazwy użytkownika i hasła**.
+      > [!NOTE]
+      > Występuje problem z zabezpieczeniami z **Zezwalaj na zapisywanie hasła** funkcji **właściwości Linku danych** okno dialogowe. W **wprowadź informacje, aby zalogować się do serwera**, istnieją dwa przyciski radiowe: **Użyj Windows NT zintegrowane zabezpieczenia** i **Użyj określonej nazwy użytkownika i hasła**.
 
-       > [!NOTE]
-       > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu **Zezwalaj na zapisywanie hasła** pole wyboru); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja używa systemu Windows NT, aby zweryfikować swoją tożsamość.
+      > [!NOTE]
+      > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu **Zezwalaj na zapisywanie hasła** pole wyboru); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja używa systemu Windows NT, aby zweryfikować swoją tożsamość.
 
-       > [!NOTE]
-       > Jeśli nie mogą używać zabezpieczeń zintegrowanych w systemu Windows NT, należy użyć aplikacji warstwy środkowej monitować użytkownika o podanie hasła lub hasło są przechowywane w lokalizacji za pomocą mechanizmów zabezpieczeń, aby go lepiej chronić (a nie w kodzie źródłowym).
+      > [!NOTE]
+      > Jeśli nie mogą używać zabezpieczeń zintegrowanych w systemu Windows NT, należy użyć aplikacji warstwy środkowej monitować użytkownika o podanie hasła lub hasło są przechowywane w lokalizacji za pomocą mechanizmów zabezpieczeń, aby go lepiej chronić (a nie w kodzie źródłowym).
 
    1. Po wybraniu dostawcy i inne ustawienia, kliknij przycisk **Testuj połączenie** Aby zweryfikować wybranych na stronach poprzednie okno dialogowe. Jeśli **wyniki** polu raporty `Test connection succeeded`, kliknij przycisk **OK** do utworzenia linku danych.
 

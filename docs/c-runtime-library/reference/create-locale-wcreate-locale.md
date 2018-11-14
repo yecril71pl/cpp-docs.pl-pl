@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545928"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326566"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -70,16 +70,16 @@ Jeśli jest to prawidłowy *ustawień regionalnych* i *kategorii* otrzymują, zw
 
 **_wcreate_locale** to wersja znaku dwubajtowego **_create_locale**; *ustawień regionalnych* argument **_wcreate_locale** jest ciągiem znaku dwubajtowego. **_wcreate_locale** i **_create_locale** zachowują się identycznie.
 
-*Kategorii* argument określa części zachowania specyficzne dla ustawień regionalnych, których to dotyczy. Flagi używane do *kategorii* i części programu, które wpływają na to, jak pokazano w poniższej tabeli.
+*Kategorii* argument określa części zachowania specyficzne dla ustawień regionalnych, których to dotyczy. Flagi używane do *kategorii* i części program wpływają na to, jak pokazano w poniższej tabeli:
 
-|*Kategoria* flagi|Dotyczy|
-|-|-|
-**LC_ALL**|Wszystkie kategorie, wymienione poniżej.
-**LC_COLLATE**|**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji.
-**LC_CTYPE**|Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian).
-**LC_MONETARY**|Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji.
-**LC_NUMERIC**|Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md).
-**LC_TIME**|**Strftime** i **wcsftime** funkcji.
+| *Kategoria* flagi | Dotyczy |
+|-----------------|---------|
+| **LC_ALL** |Wszystkie kategorie, wymienione poniżej. |
+| **LC_COLLATE** |**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji. |
+| **LC_CTYPE** | Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian). |
+| **LC_MONETARY** | Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji. |
+| **LC_NUMERIC** | Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md). |
+| **LC_TIME** | **Strftime** i **wcsftime** funkcji. |
 
 Ta funkcja sprawdza poprawność *kategorii* i *ustawień regionalnych* parametrów. Jeśli parametr kategorii nie jest jedną z wartości podanych w powyższej tabeli lub *ustawień regionalnych* jest **NULL**, funkcja zwraca **NULL**.
 

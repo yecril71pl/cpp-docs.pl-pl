@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615064"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329303"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Model obsługi wyjątku)
 
@@ -29,12 +29,17 @@ Określa rodzaj obsługi wyjątku przez kompilator, gdy Optymalizacja odkładani
 
 ## <a name="arguments"></a>Argumenty
 
-|||
-|-|-|
-**a**|Model obsługi wyjątków, który wyłapuje asynchroniczne (strukturalne) i synchronicznej wyjątków (C++) przy użyciu języka c++ `catch(...)` składni.
-**s**|Model obsługi wyjątków, który przechwytuje synchronicznej wyjątków (C++) i informuje kompilator, aby założył, że funkcje zadeklarowane jako **extern "C"** może zgłosić wyjątek.
-**c**|Jeśli używane **s** (**/ehsc**), wychwytuje tylko wyjątki C++ i informuje kompilator, aby założył, że funkcje zadeklarowane jako **extern "C"** nigdy nie zgłaszają wyjątków C++. **/ EHca** jest odpowiednikiem **/eha**.
-**r**|Informuje kompilator, aby zawsze Generuj operacje sprawdzania zakończenia środowiska uruchomieniowego dla wszystkich **noexcept** funkcji. Domyślnie środowisko uruchomieniowe sprawdza, czy **noexcept** może optymalizacji Jeśli kompilator określa funkcja wywołuje tylko niezgłaszające funkcje.
+**a**<br/>
+Model obsługi wyjątków, który wyłapuje asynchroniczne (strukturalne) i synchronicznej wyjątków (C++) przy użyciu języka c++ `catch(...)` składni.
+
+**s**<br/>
+Model obsługi wyjątków, który przechwytuje synchronicznej wyjątków (C++) i informuje kompilator, aby założył, że funkcje zadeklarowane jako **extern "C"** może zgłosić wyjątek.
+
+**c**<br/>
+Jeśli używane **s** (**/ehsc**), wychwytuje tylko wyjątki C++ i informuje kompilator, aby założył, że funkcje zadeklarowane jako **extern "C"** nigdy nie zgłaszają wyjątków C++. **/ EHca** jest odpowiednikiem **/eha**.
+
+**r**<br/>
+Informuje kompilator, aby zawsze Generuj operacje sprawdzania zakończenia środowiska uruchomieniowego dla wszystkich **noexcept** funkcji. Domyślnie środowisko uruchomieniowe sprawdza, czy **noexcept** może optymalizacji Jeśli kompilator określa funkcja wywołuje tylko niezgłaszające funkcje.
 
 ## <a name="remarks"></a>Uwagi
 

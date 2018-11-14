@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: d2ebba551d9b848a3a59944f7efb5f0f39af95e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34c72fa8a2c5108a20065041c5cb7ea461e501a8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602166"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330596"
 ---
 # <a name="appearance-atl-control-wizard"></a>Wygląd, Kreator kontrolki ATL
-
-Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.
 
 Ta strona kreatora umożliwia zidentyfikowanie dodatkowego użytkownika elementu Opcje dla formantu. Ta strona jest dostępna dla kontrolki zidentyfikowane jako **standardowych kontrolek** w obszarze **kontrolowanie typu** na [opcji, Kreator kontrolki ATL](../../atl/reference/options-atl-control-wizard.md) strony.
 

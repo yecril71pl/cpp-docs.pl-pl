@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447791"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332637"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray —&gt;
 
@@ -21,12 +21,11 @@ Definiuje valarray klasy szablonu i wiele pomocniczych szablonu klasy i funkcje.
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Te klasy szablonów i funkcje są dozwolone nietypowe szerokości geograficznej w celu poprawy wydajności. W szczególności żadnej funkcji, zwracająca typ **valarray\<** T1**>** może zwrócić obiekt innego typu T2. W takim przypadku funkcji, które przyjmuje jeden lub więcej argumentów typu **valarray\<** T2**>** musi mieć przeciążenia, które akceptują dowolnej kombinacji tych argumentów, każdy zastąpione argumentu typu T2.
+Te klasy szablonów i funkcje są dozwolone nietypowe szerokości geograficznej w celu poprawy wydajności. W szczególności żadnej funkcji, zwracająca typ `valarray<T1>` może zwrócić obiekt innego typu T2. W takim przypadku funkcji, które przyjmuje jeden lub więcej argumentów typu `valarray<T2>` musi mieć przeciążenia, które akceptują dowolnej kombinacji tych argumentów, każdy zastąpiona argumentu typu T2.
 
 ### <a name="functions"></a>Funkcje
 

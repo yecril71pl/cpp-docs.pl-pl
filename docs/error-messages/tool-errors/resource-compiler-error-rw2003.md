@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583173"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520611"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Błąd kompilatora zasobów RW2003
 
@@ -51,10 +51,10 @@ Błąd generowania
 
    Dla Windows 3.1 zasobu nie może przekroczyć około 65000 bajtów. Jeśli zasób jest, następnie nie można skompilować je przy użyciu języka Visual C++ i kompilator zasobów wiersza polecenia. To ograniczenie nie ma zastosowania do kursorów, ikony, mapy bitowe lub inne zasoby oparte na plikach.
 
-9. **Plik zasobu nie jest w formacie 3.00**
+1. **Plik zasobu nie jest w formacie 3.00**
 
    Kursor lub ikonę wcześniej niż w wersji 3.00 używany format. Zasób musi być przekonwertowany lub ponownie, wystawione przy użyciu formatu dla wersji 3.00 lub nowszej.
 
-10. **Nie można otworzyć pliku tymczasowego**
+1. **Nie można otworzyć pliku tymczasowego**
 
    Nie można otworzyć pliku tymczasowego zasobu kompilatora/Visual C++. Prawdopodobna przyczyna to, że katalog nie istnieje albo nie masz uprawnień do zapisu dla katalogu. Zasób kompilatora/Visual C++ podejmują próbę użycia tych plików w katalogu określonym przez **TMP** zmiennej środowiskowej lub bieżącego katalogu, jeśli nie określono.

@@ -1,6 +1,6 @@
 ---
 title: Określanie poziomów funkcjonalności
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - CObject class [MFC], adding functionality to derived classes
 - runtime [MFC], class information
@@ -10,27 +10,26 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-ms.openlocfilehash: 3fb9b18712b24046e05f05834caaac2819fb73dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2588a3b2a55ebfca4b57be875e26bb0348db83a0
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494656"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326215"
 ---
 # <a name="specifying-levels-of-functionality"></a>Określanie poziomów funkcjonalności
 
 W tym artykule opisano sposób dodawania następujące poziomy funkcjonalności do Twojej [CObject](../mfc/reference/cobject-class.md)-klasy pochodnej:
 
-- [Informacje o klasie czasu wykonywania](#_core_to_add_run.2d.time_class_information)
+- Informacje o klasie czasu wykonywania
 
-- [Obsługa dynamicznego tworzenia](#_core_to_add_dynamic_creation_support)
+- Obsługa dynamicznego tworzenia
 
-- [Obsługa serializacji](#_core_to_add_serialization_support)
+- Obsługa serializacji
 
 Aby uzyskać ogólny opis `CObject` funkcji, zapoznaj się z artykułem [wyprowadzanie klasy z obiektu CObject](../mfc/deriving-a-class-from-cobject.md).
 
-- [Informacje o klasie czasu wykonywania](#_core_to_add_run.2d.time_class_information)
-#### <a name="_core_to_add_run.2d.time_class_information"></a> Aby dodać informacje o klasie czasu wykonywania
+## <a name="to-add-run-time-class-information"></a>Aby dodać informacje o klasie czasu wykonywania
 
 1. Pochodzi z klasy `CObject`, zgodnie z opisem w [wyprowadzanie klasy z obiektu CObject](../mfc/deriving-a-class-from-cobject.md) artykułu.
 
@@ -43,9 +42,9 @@ Aby uzyskać ogólny opis `CObject` funkcji, zapoznaj się z artykułem [wyprowa
    [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
->  Zawsze umieszczaj IMPLEMENT_DYNAMIC w pliku implementacji (. CPP) dla swojej klasy. IMPLEMENT_DYNAMIC — makro powinna być oceniana tylko raz podczas kompilacji i w związku z tym nie należy używać w pliku interfejsu (. H) które może potencjalnie być zawarte w więcej niż jeden plik.
+> Zawsze umieszczaj IMPLEMENT_DYNAMIC w pliku implementacji (. CPP) dla swojej klasy. IMPLEMENT_DYNAMIC — makro powinna być oceniana tylko raz podczas kompilacji i w związku z tym nie należy używać w pliku interfejsu (. H) które może potencjalnie być zawarte w więcej niż jeden plik.
 
-#### <a name="_core_to_add_dynamic_creation_support"></a> Aby dodać obsługa dynamicznego tworzenia
+## <a name="to-add-dynamic-creation-support"></a>Aby dodać obsługa dynamicznego tworzenia
 
 1. Pochodzi z klasy `CObject`.
 
@@ -55,14 +54,14 @@ Aby uzyskać ogólny opis `CObject` funkcji, zapoznaj się z artykułem [wyprowa
 
 1. Użyj IMPLEMENT_DYNCREATE — makro w pliku implementacji klasy.
 
-#### <a name="_core_to_add_serialization_support"></a> Aby dodać obsługę serializacji
+## <a name="to-add-serialization-support"></a>Aby dodać obsługę serializacji
 
 1. Pochodzi z klasy `CObject`.
 
 1. Zastąp `Serialize` funkcja elementu członkowskiego.
 
-    > [!NOTE]
-    >  Jeśli wywołasz `Serialize` bezpośrednio, oznacza to, że nie ma do serializacji obiektu za pomocą wskaźnika polimorficznych, pomiń kroki od 3 do 5.
+   > [!NOTE]
+   > Jeśli wywołasz `Serialize` bezpośrednio, oznacza to, że nie ma do serializacji obiektu za pomocą wskaźnika polimorficznych, pomiń kroki od 3 do 5.
 
 1. Użyj DECLARE_SERIAL — makro w deklaracji klasy.
 
@@ -71,7 +70,7 @@ Aby uzyskać ogólny opis `CObject` funkcji, zapoznaj się z artykułem [wyprowa
 1. Użyj IMPLEMENT_SERIAL — makro w pliku implementacji klasy.
 
 > [!NOTE]
->  "Wskaźnik polimorficznego" wskazuje na obiekt klasy (mu A) lub do obiektu klasy pochodne (np. B). Do serializacji, za pomocą wskaźnika polimorficznych, struktura należy określić klasy środowiska wykonawczego obiektów wykonuje serializację (B), ponieważ może to być obiekt klasy pochodne niektóre klasy bazowej (A).
+> "Wskaźnik polimorficznego" wskazuje na obiekt klasy (mu A) lub do obiektu klasy pochodne (np. B). Do serializacji, za pomocą wskaźnika polimorficznych, struktura należy określić klasy środowiska wykonawczego obiektów wykonuje serializację (B), ponieważ może to być obiekt klasy pochodne niektóre klasy bazowej (A).
 
 Aby uzyskać więcej informacji o sposobie włączania serializacji, po utworzeniu klasy pochodnej klasy z `CObject`, zobacz artykuły [pliki w MFC](../mfc/files-in-mfc.md) i [serializacji](../mfc/serialization-in-mfc.md).
 

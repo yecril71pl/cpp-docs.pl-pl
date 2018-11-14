@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558733"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327424"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 
@@ -90,13 +90,12 @@ Poniższy przykład pokazuje pierwszy podstawowy wzorzec anulowania zadania. Tre
 `cancel_current_task` Funkcja zgłasza wyjątek; w związku z tym, nie trzeba jawnie zwrócona przez bieżącą pętlę lub funkcji.
 
 > [!TIP]
-
->  Ewentualnie możesz wywołać [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) zamiast funkcji `cancel_current_task`.
+> Ewentualnie możesz wywołać [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) zamiast funkcji `cancel_current_task`.
 
 Ważne jest, aby wywołać `cancel_current_task` po użytkownik reagowanie na operację anulowania ponieważ nastąpi przejście zadania do stanu Anulowano. Jeśli wcześniej zwrócisz zamiast wywołać `cancel_current_task`, operacja przechodzi do stanu ukończenia i wszelkie kontynuacje na podstawie wartości są uruchamiane.
 
 > [!CAUTION]
->  Nigdy nie zgłaszają `task_canceled` w kodzie. Wywołaj `cancel_current_task` zamiast tego.
+> Nigdy nie zgłaszają `task_canceled` w kodzie. Wywołaj `cancel_current_task` zamiast tego.
 
 Jeśli zadanie zakończy się ze stanem anulowane, [CONCURRENCY::Task](reference/task-class.md#get) metoda zgłasza wyjątek [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (I odwrotnie, [CONCURRENCY::Task](reference/task-class.md#wait) zwraca [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) i nie generuje.) Poniższy przykład ilustruje takie zachowanie dla kontynuacji opartej na zadaniach. Kontynuacja oparta na zadaniach zawsze jest wywoływany, nawet wtedy, gdy zadanie poprzedzające zostało anulowane.
 
@@ -107,8 +106,7 @@ Ponieważ na podstawie wartości kontynuacji dziedziczyć token swoje zadania po
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Jeśli nie przekażesz token anulowania do `task` konstruktora lub [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkcji, to zadanie nie jest możliwe. Ponadto należy przekazać ten sam token odwołania do konstruktora żadnych zadań zagnieżdżonych (oznacza to, zadania, które są tworzone w treści innego zadania) aby anulować wszystkie zadania jednocześnie.
+> Jeśli nie przekażesz token anulowania do `task` konstruktora lub [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkcji, to zadanie nie jest możliwe. Ponadto należy przekazać ten sam token odwołania do konstruktora żadnych zadań zagnieżdżonych (oznacza to, zadania, które są tworzone w treści innego zadania) aby anulować wszystkie zadania jednocześnie.
 
 Można uruchomić dowolny kod, gdy token anulowania jest anulowane. Na przykład, jeśli użytkownik wybierze **anulować** przycisku w interfejsie użytkownika, aby anulować operację, można wyłączyć ten przycisk, dopóki użytkownik rozpocznie wykonywanie innej operacji. Poniższy przykład pokazuje, jak używać [CONCURRENCY::cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) metodę, aby zarejestrować funkcji wywołania zwrotnego, który jest uruchamiany, gdy token anulowania, zostanie anulowane.
 
@@ -123,11 +121,10 @@ Dokument [równoległość zadań](../../parallel/concrt/task-parallelism-concur
 Takie zachowanie nie dotyczy uszkodzoną zadania, (oznacza to, że jeden, która zgłosiła wyjątek). W takim przypadku kontynuacja oparta na wartościach zostało anulowane; kontynuacja oparta na zadaniach nie zostało anulowane.
 
 > [!CAUTION]
->  Zadanie, które jest tworzony w innym zadaniu (innymi słowy, zadanie zagnieżdżone) nie dziedziczy token anulowania zadania nadrzędnego. Tylko kontynuacja oparta na wartościach dziedziczy token anulowania zadania poprzedzającego.
+> Zadanie, które jest tworzony w innym zadaniu (innymi słowy, zadanie zagnieżdżone) nie dziedziczy token anulowania zadania nadrzędnego. Tylko kontynuacja oparta na wartościach dziedziczy token anulowania zadania poprzedzającego.
 
 > [!TIP]
-
->  Użyj [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) metody podczas wywołania konstruktora lub funkcji, która przyjmuje `cancellation_token` obiektu i chcesz, aby być można anulować, operacja.
+> Użyj [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) metody podczas wywołania konstruktora lub funkcji, która przyjmuje `cancellation_token` obiektu i chcesz, aby być można anulować, operacja.
 
 Możesz też podać token anulowania do konstruktora obiektu `task_group` lub `structured_task_group` obiektu. Ważnym aspektem to to, że grupy zadań podrzędnych dziedziczyć ten token anulowania. Na przykład, który pokazuje tę koncepcję przy użyciu [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) uruchamianie do wywołania funkcji `parallel_for`, zobacz [anulowanie algorytmów równoległych](#algorithms) później w tym dokument.
 

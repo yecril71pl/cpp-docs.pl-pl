@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523818"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327047"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Liczba bajtów do zablokowania.
 
 |errno wartość|Warunek|
 |-|-|
-**EACCES**|Blokowanie naruszenie (plik już zablokowana, czy odblokowana).
-**EBADF**|Nieprawidłowego deskryptora pliku.
-**EDEADLOCK**|Naruszenie zasad blokowania. Zwracane, jeśli **_LK_LOCK** lub **_LK_RLCK** flaga zostanie określona, plik nie może być zablokowany po 10 próbach.
-**EINVAL**|Podano nieprawidłowy argument do **_locking —**.
+| **EACCES** | Blokowanie naruszenie (plik już zablokowana, czy odblokowana). |
+| **EBADF** | Nieprawidłowego deskryptora pliku. |
+| **EDEADLOCK** | Naruszenie zasad blokowania. Zwracane, jeśli **_LK_LOCK** lub **_LK_RLCK** flaga zostanie określona, plik nie może być zablokowany po 10 próbach. |
+| **EINVAL** | Podano nieprawidłowy argument do **_locking —**. |
 
 W przypadku awarii ze względu na nieprawidłowe parametry, takie jak nieprawidłowego deskryptora pliku, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ W przypadku awarii ze względu na nieprawidłowe parametry, takie jak nieprawid�
 
 |*tryb* wartość|Efekt|
 |-|-|
-**_LK_LOCK**|Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, program natychmiast próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, stała zwraca błąd.
-**_LK_NBLCK**|Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, stała zwraca błąd.
-**_LK_NBRLCK**|Taki sam jak **_LK_NBLCK**.
-**_LK_RLCK**|Taki sam jak **_LK_LOCK**.
-**_LK_UNLCK**|Odblokowuje określonych bajtów, które musisz wcześniej zablokowane.
+| **_LK_LOCK** | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, program natychmiast próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, stała zwraca błąd. |
+| **_LK_NBLCK** | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, stała zwraca błąd. |
+| **_LK_NBRLCK** | Taki sam jak **_LK_NBLCK**. |
+| **_LK_RLCK** | Taki sam jak **_LK_LOCK**. |
+| **_LK_UNLCK** | Odblokowuje określonych bajtów, które musisz wcześniej zablokowane. |
 
 Można zablokować pliku wielu regionów, które nie nakładają się. Region trwa musi mieć wcześniej zablokowane. **_locking —** nie regionów sąsiadujących scalania; Jeśli sąsiadujących ze sobą dwa regiony zablokowane każdego regionu, musi być odblokowany oddzielnie. Regiony powinny być zablokowane krótko i powinien zostać odblokowany przed zamknięciem pliku lub zakończenia programu.
 

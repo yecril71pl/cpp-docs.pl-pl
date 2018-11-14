@@ -1,12 +1,12 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620600"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333592"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -56,7 +56,7 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (r29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i r29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej zarejestrować aave, które obszary są umieszczone na górze stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<r29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
 
-1. Tworzenie łańcucha #localsz < = 512
+1. Tworzenie łańcucha #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29, lr > wskazuje na poprzedniej ramki. Rozmiar ramki < = 512, "Sub-sp,..." może być w celu optymalizacji gdy obszar regs zapisany jest przenoszony do dolnej części stosu. Wadą tego jest nie jest spójna z innymi układów powyżej i zapisane regs brać zakresu dla pary regs i przed i po indeksowanych przesunięcia Tryb adresowania.
+   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29, lr > wskazuje na poprzedniej ramki. Rozmiar ramki \<= 512, "Sub-sp,..." może być w celu optymalizacji gdy obszar regs zapisany jest przenoszony do dolnej części stosu. Wadą tego jest nie jest spójna z innymi układów powyżej i zapisane regs brać zakresu dla pary regs i przed i po indeksowanych przesunięcia Tryb adresowania.
 
 1. Funkcje unchained, elementu członkowskiego typu liść (lr został zapisany w obszarze zapisane Int)
 
@@ -131,7 +131,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 
    Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29 > wskazuje na poprzedniej ramki.
 
-1. Tworzenie łańcucha #framesz < = 512, #outsz = 0
+1. Tworzenie łańcucha #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Jeśli wyjątki były tylko musi wystąpić w treści funkcji (i nigdy nie przy 
 
 Kody unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kodów odwinięcia są pojedynczy/podwójny bajt, z wyjątkiem tego, który przydziela dużego stosu. Są całkowicie 21 kodu unwind. Każdy unwind kodu mapy dokładnie jeden instrukcji w prologu/epilogu w celu umożliwienia odwijanie prologs częściowo wykonane i epilogs.
 
-Kodzie operacji unwind|Usługa BITS i interpretacji
+|Kodzie operacji unwind|Usługa BITS i interpretacji|
 |-|-|
-`alloc_s`|000xxxxx: przydzielania małych stosu za pomocą rozmiar < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: Zapisz \<r19, 20 > pary w [Z dodatkiem sp # * 8]!, wstępnie indeksowanych przesunięcie > =-248
-`save_fplr`|        01zzzzzz: Zapisz \<r29, lr > pair u [sp + #Z * 8], offset < = 504.
-`save_fplr_x`|        10zzzzzz: Zapisz \<r29, lr > pair w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512
-`alloc_m`|        11000xxx\|xxxxxxxx: alokacji stosu dużych o rozmiarze < 16 k (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz: Zapisz pary r(19+#X) u [sp + #Z * 8], offset < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz: Zapisz r(19+#X) pary w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512
-`save_reg`|        110100xx\|xxzzzzzz: Zapisz r(19+#X) reg w [sp + #Z * 8], offset < = 504
-`save_reg_x`|        1101010 x\|xxxzzzzz: Zapisz r(19+#X) reg w [sp — (#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256
-`save_lrpair`|         1101011 x\|xxzzzzzz: Zapisz pary \<r19 + 2 *#X, lr > u [sp + #Z*8], offset < = 504
-`save_fregp`|        1101100 x\|xxzzzzzz: Zapisz d(8+#X) pary w [sp + #Z * 8], offset < = 504
-`save_fregp_x`|        1101101 x\|xxzzzzzz: w zapisywać d(8+#X) pary [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512
-`save_freg`|        1101110 x\|xxzzzzzz: Zapisz d(8+#X) reg w [sp + #Z * 8], offset < = 504
-`save_freg_x`|        11011110\|xxxzzzzz: Zapisz d(8+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: alokacji stosu dużych o rozmiarze < 256 M (2 ^ 24 * 16)
-`set_fp`|        11100001: Konfigurowanie r29: za pomocą: mov r29 sp
-`add_fp`|        11100010\|xxxxxxxx: Konfigurowanie r29 z: Dodawanie r29 sp #x * 8
-`nop`|            11100011: nie operacji unwind operacji jest wymagany.
-`end`|            11100100: koniec unwind kodu. Oznacza ret w epilogu.
-`end_c`|        11100101: koniec unwind kodu w bieżącym zakresie łańcuchowych.
-`save_next`|        11100110: Zapisz dalej trwałej Int lub FP Zarejestruj pary.
-`arithmetic(add)`|    11100111\| 000zxxxx: Dodaj reg(z) pliku cookie do lr (0 = x28, 1 = sp); Dodaj lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub reg(z) pliku cookie z lr (0 = x28, 1 = sp); Sub-lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: lr równorzędną za pomocą plików cookie reg(z) (0 = x28, 1 = sp); równorzędną lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: symulowane roli programu lr za pomocą plików cookie reg (x28); xip0 = minus x28; ror lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: lr ror za pomocą plików cookie reg(z) (0 = x28, 1 = sp); ror lr, lr, reg(z)
-||            11100111: xxxz---:---zarezerwowane
-||              11101xxx: zarezerwowane dla niestandardowych stosu przypadki przedstawione poniżej generowane tylko dla procedur asm
-||              11101001: stos niestandardowe dla MSFT_OP_TRAP_FRAME
-||              11101010: stos niestandardowe dla MSFT_OP_MACHINE_FRAME
-||              11101011: stos niestandardowe dla MSFT_OP_CONTEXT
-||              1111xxxx: zarezerwowane
+|`alloc_s`|000xxxxx: przydzielić mały stos o rozmiarze \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Zapisz \<r19, 20 > pary w [Z dodatkiem sp # * 8]!, wstępnie indeksowanych przesunięcie > =-248 |
+|`save_fplr`|        01zzzzzz: Zapisz \<r29, lr > pair u [sp + #Z * 8], offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Zapisz \<r29, lr > pair w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`alloc_m`|        11000xxx "xxxxxxxx: alokacji stosu dużych o rozmiarze \< 16 KB (2 ^ 11 * 16). |
+|`save_regp`|        110010xx "xxzzzzzz: Zapisz pary r(19+#X) u [sp + #Z * 8], offset \<= 504 |
+|`save_regp_x`|        110011xx "xxzzzzzz: Zapisz r(19+#X) pary w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`save_reg`|        110100xx "xxzzzzzz: Zapisz r(19+#X) reg w [sp + #Z * 8], offset \<= 504 |
+|`save_reg_x`|        1101010 x "xxxzzzzz: Zapisz r(19+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256 |
+|`save_lrpair`|         1101011 x "xxzzzzzz: Zapisz pary \<r19 + 2 *#X, lr > u [sp + #Z*8], offset \<= 504 |
+|`save_fregp`|        1101100 x "xxzzzzzz: Zapisz d(8+#X) pary w [sp + #Z * 8], offset \<= 504 |
+|`save_fregp_x`|        1101101 x "xxzzzzzz: Zapisz d(8+#X) pary w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`save_freg`|        1101110 x "xxzzzzzz: Zapisz d(8+#X) reg w [sp + #Z * 8], offset \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz: Zapisz d(8+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256 |
+|`alloc_l`|         xxxxxxxx "xxxxxxxx" xxxxxxxx 11100000': alokacji stosu dużych o rozmiarze \< 256 M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: Konfigurowanie r29: za pomocą: mov r29 sp |
+|`add_fp`|        11100010' xxxxxxxx: Konfigurowanie r29 z: Dodawanie r29 sp #x * 8 |
+|`nop`|            11100011: nie operacji unwind operacji jest wymagany. |
+|`end`|            11100100: koniec unwind kodu. Oznacza ret w epilogu. |
+|`end_c`|        11100101: koniec unwind kodu w bieżącym zakresie łańcuchowych. |
+|`save_next`|        11100110: Zapisz dalej trwałej Int lub FP Zarejestruj pary. |
+|`arithmetic(add)`|    11100111' 000zxxxx: Dodaj reg(z) pliku cookie do lr (0 = x28, 1 = sp); Dodawanie lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) pliku cookie z lr (0 = x28, 1 = sp); Sub-lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: lr równorzędną za pomocą plików cookie reg(z) (0 = x28, 1 = sp); równorzędną lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: symulowane roli programu lr za pomocą plików cookie reg (x28); xip0 = minus x28; RoR lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: lr ror za pomocą plików cookie reg(z) (0 = x28, 1 = sp); RoR lr, lr, reg(z) |
+| |            11100111: xxxz---:---zarezerwowane |
+| |              11101xxx: zarezerwowane dla niestandardowych stosu przypadki przedstawione poniżej generowane tylko dla procedur asm |
+| |              11101001: stos niestandardowe dla MSFT_OP_TRAP_FRAME |
+| |              11101010: stos niestandardowe dla MSFT_OP_MACHINE_FRAME |
+| |              11101011: stos niestandardowe dla MSFT_OP_CONTEXT |
+| |              1111xxxx: zarezerwowane |
 
 W instrukcjach o dużych wartościach obejmujących wiele bajtów najbardziej znaczące bity są przechowywane najpierw. Kody unwind powyżej zaprojektowano tak, po prostu wyszukiwanie do pierwszego bajtu kodu to możliwość sprawdzenia, całkowity rozmiar w bajtach kodu unwind. Biorąc pod uwagę, że każdy kod unwind dokładnie jest mapowany na instrukcję w prologu i epilogu, do obliczenia rozmiaru prologu i epilogu, należy wykonać jest przeprowadzenie od samego początku sekwencji-to-end, przy użyciu tabeli odnośników lub podobne urządzenie, aby określić, jak długo Core jest opcode działa prawidłowo.
 
@@ -382,7 +382,7 @@ Krok #|Wartości flagi|Liczba instrukcji|OpCode|Kodzie operacji unwind
 5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: Jeśli **CR** == 01 i **RegI** jest liczbą nieparzystą kroku 2, a ostatni save_rep w kroku 1 są scalane w jeden save_regp.
+\* Jeśli **CR** == 01 i **RegI** jest liczbą nieparzystą kroku 2, a ostatni save_rep w kroku 1 są scalane w jeden save_regp.
 
 \*\* Jeśli **RegI** == **CR** == 0, a **RegF** ! = 0 i pierwszy stp dla liczb zmiennoprzecinkowych jest operacja predekrementacji.
 

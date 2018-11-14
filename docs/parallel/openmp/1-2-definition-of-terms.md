@@ -2,12 +2,12 @@
 title: 1.2 Definicje terminów
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597213"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326033"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definicje terminów
 
@@ -63,7 +63,7 @@ W tym dokumencie są używane następujące terminy:
 
 - Blok strukturalny
 
-   Blok strukturalny jest instrukcją (pojedyncze lub złożone) zawierający pojedynczy wpis i pojedynczego wyjścia. Oświadczenia jest blok strukturalny w przypadku skok do lub z którymi instrukcja (w tym wywołaniu **longjmp**(3 C) lub korzystanie z **throw**, ale wywołanie **wyjść** jest dozwolona). Instrukcja złożona jest strukturalnego bloku, jeśli jego zawsze zaczyna się od otwarcia **{** i zawsze kończy się zamykającym **}**. Instrukcja wyrażeń, wybór instrukcji, instrukcji iteracji lub **spróbuj** blok jest blok strukturalny uzyskane odpowiedniej instrukcji złożonej, umieszczając go w **{** i **}** będzie strukturalnego bloku. Instrukcja skoku, instrukcja labeled lub instrukcji deklaracji nie jest strukturalnego bloku.
+   Blok strukturalny jest instrukcją (pojedyncze lub złożone) zawierający pojedynczy wpis i pojedynczego wyjścia. Oświadczenia jest blok strukturalny w przypadku skok do lub z którymi instrukcja (w tym wywołaniu **longjmp**(3 C) lub korzystanie z **throw**, ale wywołanie **wyjść** jest dozwolona). Instrukcja złożona jest strukturalnego bloku, jeśli jego zawsze zaczyna się od otwarcia **{** i zawsze kończy się zamykającym **}**. Instrukcja wyrażeń, wybór instrukcji, instrukcji iteracji lub **spróbuj** blok jest blok strukturalny uzyskane odpowiedniej instrukcji złożonej, umieszczając go w **{** i **}**  będzie strukturalnego bloku. Instrukcja skoku, instrukcja labeled lub instrukcji deklaracji nie jest strukturalnego bloku.
 
 - Zespół
 

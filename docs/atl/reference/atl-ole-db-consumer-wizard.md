@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499570"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524134"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
@@ -84,13 +84,13 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
       **Inne:** w **limit czasu połączenia**, określ czas w sekundach czas bezczynności, zanim zostanie przekroczony limit czasu. W **uprawnień dostępu**, określanie uprawnień dostępu w ramach połączenia danych.
 
-       Aby uzyskać więcej informacji na temat zaawansowanych właściwości inicjujących zapoznaj się z dokumentacją dostarczoną z każdego dostawcy OLE DB.
+      Aby uzyskać więcej informacji na temat zaawansowanych właściwości inicjujących zapoznaj się z dokumentacją dostarczoną z każdego dostawcy OLE DB.
 
    - **Wszystkie** kartę
 
       Ta karta przedstawia podsumowanie właściwości inicjowania dla źródła danych i połączenia, które zostały określone. Możesz edytować te wartości.
 
-   Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę, widoku lub procedury składowanej, która będzie używana przez konsumenta.
+      Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę, widoku lub procedury składowanej, która będzie używana przez konsumenta.
 
 - **Class**
 

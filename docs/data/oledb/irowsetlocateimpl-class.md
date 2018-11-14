@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c4f3ba26fd2b4d6c33b6ba63e501c4011c32a09a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e43f9c1761e92120a577f097fb3303a6641f5b5f
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552167"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556962"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl — Klasa
 
-Implementuje OLE DB [irowsetlocate —](/previous-versions/windows/desktop/ms721190) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy.
+Implementuje OLE DB [irowsetlocate —](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85)) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,7 +76,7 @@ Jednostki magazynu na potrzeby `HROW`.
 Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.
 
 *BookmarkKeyType*<br/>
-Typ zakładki, takie jak DŁUGA lub ciąg. Zwykłe zakładki musi mieć długość co najmniej dwa bajty. (Pojedynczych bajtów długości jest zarezerwowany dla OLE DB [standardowa zakładki](/previous-versions/windows/desktop/ms712954)`DBBMK_FIRST`, `DBBMK_LAST`, i `DBBMK_INVALID`.)
+Typ zakładki, takie jak DŁUGA lub ciąg. Zwykłe zakładki musi mieć długość co najmniej dwa bajty. (Pojedynczych bajtów długości jest zarezerwowany dla OLE DB [standardowa zakładki](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`, i `DBBMK_INVALID`.)
 
 *BookmarkType*<br/>
 Mechanizm mapowania dotyczące utrzymania relacji zakładki do danych.
@@ -107,13 +107,13 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy w posiadaniu zakła
 
 ## <a name="remarks"></a>Uwagi
 
-`IRowsetLocateImpl` jest to implementacja szablony OLE DB [irowsetlocate —](/previous-versions/windows/desktop/ms721190) interfejsu. `IRowsetLocate` Służy do pobrania dowolnych wierszy w zestawie wierszy. Zestaw wierszy, który nie implementuje ten interfejs jest `sequential` zestawu wierszy. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumny 0 jest zakładki dla wierszy; odczytu w tej kolumnie osiągnie wartość zakładki, który może służyć do zmiany położenia na tym samym wierszu.
+`IRowsetLocateImpl` jest to implementacja szablony OLE DB [irowsetlocate —](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85)) interfejsu. `IRowsetLocate` Służy do pobrania dowolnych wierszy w zestawie wierszy. Zestaw wierszy, który nie implementuje ten interfejs jest `sequential` zestawu wierszy. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumny 0 jest zakładki dla wierszy; odczytu w tej kolumnie osiągnie wartość zakładki, który może służyć do zmiany położenia na tym samym wierszu.
 
 `IRowsetLocateImpl` Służy do implementowania Obsługa zakładek w dostawcy. Zakładki są symbolami zastępczymi (indeksów w zestawie wierszy), które umożliwiają odbiorcę, aby szybko powrócić do wiersza, umożliwiające szybki dostęp do danych. Określa dostawcę, co zakładek może jednoznacznie zidentyfikować wiersz. Za pomocą `IRowsetLocateImpl` metod, można porównać zakładek, wiersze pobierania przez przesunięcie zakładki, wierszy i pobierania i zwracania wartości skrótów dla zakładek.
 
 Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.
 
-Aby uzyskać informacji dotyczących implementowania Obsługa zakładek, zobacz [dostawca obsługuje dla zakładek](../../data/oledb/provider-support-for-bookmarks.md) w *Visual C++ przewodnik* i [zakładki](/previous-versions/windows/desktop/ms709728) w *OLE DB Podręcznik programisty* w zestaw SDK platformy.
+Aby uzyskać informacji dotyczących implementowania Obsługa zakładek, zobacz [dostawca obsługuje dla zakładek](../../data/oledb/provider-support-for-bookmarks.md) w *Visual C++ przewodnik* i [zakładki](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85)) w *OLE DB Podręcznik programisty* w zestaw SDK platformy.
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 
@@ -132,11 +132,11 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jedną z zakładek może być standardowego zdefiniowane OLE DB [standardowa zakładki](/previous-versions/windows/desktop/ms712954) (`DBBMK_FIRST`, `DBBMK_LAST`, lub `DBBMK_INVALID`). Wartość zwracana w `pComparison` określa relację pomiędzy dwoma zakładek:
+Jedną z zakładek może być standardowego zdefiniowane OLE DB [standardowa zakładki](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST`, `DBBMK_LAST`, lub `DBBMK_INVALID`). Wartość zwracana w `pComparison` określa relację pomiędzy dwoma zakładek:
 
 - DBCOMPARE_LT (`cbBookmark1` przed `cbBookmark2`.)
 
@@ -167,11 +167,11 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetLocate::GetRowsAt](/previous-versions/windows/desktop/ms723031) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetLocate::GetRowsAt](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
-Fetch od pozycji kursora zamiast tego użyj [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031).
+Fetch od pozycji kursora zamiast tego użyj [IRowset::GetRowsAt](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85)).
 
 `IRowsetLocateImpl::GetRowsAt` nie zmienia pozycji kursora.
 
@@ -193,13 +193,13 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametr [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420).
+[in] Odnosi się do *hChapter* parametr [IRowsetLocate::GetRowsByBookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85)).
 
-Dla innych parametrów, zobacz [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420) w *OLE DB Podręcznik programisty*.
+Dla innych parametrów, zobacz [IRowsetLocate::GetRowsByBookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
-Zakładki może być wartością zdefiniujesz lub OLE DB [standardowa zakładki](/previous-versions/windows/desktop/ms712954) (`DBBMK_FIRST` lub `DBBMK_LAST`). nie zmienia pozycji kursora.
+Zakładki może być wartością zdefiniujesz lub OLE DB [standardowa zakładki](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` lub `DBBMK_LAST`). nie zmienia pozycji kursora.
 
 ## <a name="hash"></a> IRowsetLocateImpl::Hash
 
@@ -219,9 +219,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry
 
 *hReserved*<br/>
-[in] Odnosi się do *hChapter* parametr [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697).
+[in] Odnosi się do *hChapter* parametr [IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85)).
 
-Dla innych parametrów, zobacz [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697) w *OLE DB Podręcznik programisty*.
+Dla innych parametrów, zobacz [IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
 
@@ -237,6 +237,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190)
+[IRowsetLocate:IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))
 [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[Zakładki](/previous-versions/windows/desktop/ms709728)
+[Zakładki](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))

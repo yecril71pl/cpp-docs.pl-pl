@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462028"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329647"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf — Klasa
 
@@ -183,7 +183,7 @@ Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ *Meta* porównuje równa **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chronionych wirtualna funkcja składowa próbuje Wstaw element **traits_type::** [ to_char_type —](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
+Jeśli  *\_Meta* porównuje równa **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chronionych wirtualna funkcja składowa próbuje Wstaw element  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
 
 - W przypadku pozycji zapisu jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 

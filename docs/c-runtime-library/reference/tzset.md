@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661763"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330258"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ void _tzset( void );
 
 |Parametr|Opis|
 |-|-|
-*tzn*|Nazwa strefy czasowej trzyliterowy, taka jak PDT. Należy określić poprawne przesunięcie od lokalnego czasu na czas UTC.
-*hh*|Różnica w godzinach między czasem UTC i czasem lokalnym. Znak (+) opcjonalny wartości dodatnich.
-*mm*|Minuty. Oddzielony od *hh* za pomocą dwukropka (**:**).
-*ss*|Liczba sekund. Oddzielony od *mm* za pomocą dwukropka (**:**).
-*dzn*|Trzyliterowe strefy zmiany czasu takie jak PDT. Jeśli czas letni nigdy nie jest włączone w tej lokalizacji, ustaw **TZ** bez wartości dla *dzn*. Biblioteki wykonawczej C zakłada zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego (DST).
+| *tzn* | Nazwa strefy czasowej trzyliterowy, taka jak PDT. Należy określić poprawne przesunięcie od lokalnego czasu na czas UTC. |
+| *hh* | Różnica w godzinach między czasem UTC i czasem lokalnym. Znak (+) opcjonalny wartości dodatnich. |
+| *mm* | Minuty. Oddzielony od *hh* za pomocą dwukropka (**:**). |
+| *ss* | Liczba sekund. Oddzielony od *mm* za pomocą dwukropka (**:**). |
+| *dzn* | Trzyliterowe strefy zmiany czasu takie jak PDT. Jeśli czas letni nigdy nie jest włączone w tej lokalizacji, ustaw **TZ** bez wartości dla *dzn*. Biblioteki wykonawczej C zakłada zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego (DST). |
 
 > [!NOTE]
 > Ostrożny przy obliczaniu znaku różnicy czasu. Ponieważ różnica czasu jest przesunięta względem czasu lokalnego do UTC (a nie odwrotnie), jej znak może być przeciwieństwem co można intuicyjnie oczekiwać. Dla stref czasowych przed UTC różnica czasu jest ujemna; dla tych za UTC różnica jest dodatnia.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512388"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327307"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf — Klasa
 
@@ -186,11 +186,11 @@ Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
+Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli  *\_Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca  *\_Meta*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ *Meta* ! = `EOF`, próbuje Wstaw element chronionych wirtualnej funkcji składowej ( `char`)\_ *Meta* do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
+Jeśli  *\_Meta* ! = `EOF`, chronionych wirtualna funkcja składowa próbuje Wstaw element `(char)_Meta` do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
 
 - W przypadku pozycji zapisu jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 
@@ -211,13 +211,13 @@ Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
+Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli  *\_Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca  *\_Meta*.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja chroniony element członkowski wirtualnego próbuje odłożyć element do buforu wejściowego, a następnie bieżącego elementu (wskazywany przez wskaźnik następnej).
 
-Jeśli _ *Meta* == `EOF`, element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **ch** = ( `char`)\_ *Meta*. Funkcję można odłożyć element na różne sposoby:
+Jeśli  *\_Meta* == `EOF`, element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony `ch = (char)_Meta`. Funkcję można odłożyć element na różne sposoby:
 
 - Jeśli pozycja putback — i element tam przechowywane w porównaniu równa `ch`, jego dekrementacja wskaźnik następnej dla buforu danych wejściowych.
 
@@ -289,15 +289,15 @@ Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni
 
 Nowa pozycja jest określany w następujący sposób:
 
-- Jeśli `_Way`  ==  `ios_base::beg`, nowe położenie jest na początku strumienia oraz _ *poza*.
+- Jeśli `_Way == ios_base::beg`, nowe położenie jest na początku strumienia plus *_Off*.
 
-- Jeśli `_Way`  ==  `ios_base::cur`, nowe położenie jest bieżącą pozycję w strumieniu oraz _ *poza*.
+- Jeśli `_Way == ios_base::cur`, nowe położenie jest bieżącą pozycję w strumieniu oraz *_Off*.
 
-- Jeśli `_Way`  ==  `ios_base::end`, nowe położenie jest na końcu strumienia oraz _ *poza*.
+- Jeśli `_Way == ios_base::end`, nowe położenie jest koniec strumienia plus *_Off*.
 
-Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  **ios_base::out** również jest różna od zera, `_Way` ! = **ios_base::cur**i istnieje bufor wyjściowy, funkcja ustawia również następnej pozycji, aby zapisać dopasowania następnej pozycji do odczytu.
+Jeśli `_Which & ios_base::in` jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which & ios_base::out` również jest różna od zera, `_Way != ios_base::cur`i istnieje bufor wyjściowy, funkcja ustawia również następnej pozycji, aby zapisać dopasowania następnej pozycji, aby odczytać.
 
-W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja zmienia następnej pozycji, aby zapisać w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja została wykonana pomyślnie wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
+W przeciwnym razie, jeśli `_Which & ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja zmienia następnej pozycji, aby zapisać w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja została wykonana pomyślnie wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Jeśli funkcja się powiedzie, w jednej zmiany lub strumienia obie pozycje, zwra
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji strumienia składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero wskazuje pierwszego elementu w kontrolowanej sekwencji. Nowa pozycja jest określana przez _ *Sp*.
+Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji strumienia składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero wskazuje pierwszego elementu w kontrolowanej sekwencji. Nowa pozycja jest określana przez *_Sp*.
 
 Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja ustawia również następnej pozycji, aby zapisać dopasowania następnej pozycji, aby odczytać. W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja zmienia następnej pozycji, aby zapisać w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja została wykonana pomyślnie wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
 
@@ -398,7 +398,7 @@ Bufor używany dla danych wyjściowych.
 
 Pierwszy Konstruktor przechowuje wskaźnik zerowy w wszystkie wskaźniki kontrolowanie buforu wejściowego, buforu wyjściowego i strstreambuf — alokacji. Ustawia tryb przechowywanych strstreambuf — aby argumentami modyfikowalnymi i rozszerzalnej kontrolowanej sekwencji. Również akceptuje *liczba* jako sugerowane początkowy rozmiar alokacji.
 
-Drugi Konstruktor zachowuje się jak pierwsza strona, z tą różnicą, że przechowuje _ *Allocfunc* jako wskaźnik do funkcji do wywołania do przydzielania pamięci i \_ *Freefunc* jako wskaźnik do funkcji wywołania z bezpłatnymi tego magazynu.
+Drugi Konstruktor zachowuje się jak pierwsza strona, z tą różnicą, że przechowuje  *\_Allocfunc* jako wskaźnik do funkcji do wywołania do przydzielania pamięci i  *\_Freefunc* jak wskaźnik Aby funkcja do wywołania, aby zwolnić tego magazynu.
 
 Trzy konstruktory:
 

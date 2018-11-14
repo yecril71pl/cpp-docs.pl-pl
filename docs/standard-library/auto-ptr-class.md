@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620951"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327125"
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 
@@ -282,11 +282,11 @@ Obiekt typu `auto_ptr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu typu `auto_ptr` \< **typu**>.
+Odwołanie do obiektu typu `auto_ptr<Type>`.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisanie oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy przechowywany wskaźnik `myptr` zmiany wyniku przypisania. Następnie przekazuje własność wskaźnika, przechowywane w _ *po prawej stronie*, przechowując \_ *po prawej stronie*. [Zwolnij](#release) w `myptr`. Funkcja zwraca  **\*to**.
+Przypisanie oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy przechowywany wskaźnik `myptr` zmiany wyniku przypisania. Następnie przekazuje własność wskaźnika przechowywania w *prawo*, przechowując *prawo*.[ Zwolnij](#release) w `myptr`. Funkcja zwraca  __\*to__.
 
 ### <a name="example"></a>Przykład
 

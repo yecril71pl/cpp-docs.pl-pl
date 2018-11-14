@@ -10,12 +10,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: f8ceb25f7ccdd10ff2b6dc7529563616b2fd0da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1281b578435086dc7de04c7962145c2b265277a
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452185"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329471"
 ---
 # <a name="debug-routines"></a>Procedury debugowania
 
@@ -63,7 +63,7 @@ Aby użyć tych procedur [_DEBUG](../c-runtime-library/debug.md) flagi musi być
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Przydziel określoną liczbę bloków pamięci na stosie przy użyciu dodatkowego miejsca dla nagłówka debugowania i zastąpienia buforów|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Zmień rozmiar określony blok pamięci na stosie przez rozszerzanie lub zawierania bloku|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Wolny blok pamięci na stosie|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Utwórz nazwę określoną ścieżką względną ścieżkę bezwzględną, lub pełną nazwę, za pomocą [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) można przydzielić pamięci.|[System::IO::File:: tworzenie](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Utwórz nazwę określoną ścieżką względną ścieżkę bezwzględną, lub pełną nazwę, za pomocą [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) można przydzielić pamięci.|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Pobieranie bieżącego katalogu roboczego przy użyciu [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) można przydzielić pamięci.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Przydzielają blok pamięci na stosie przy użyciu dodatkowego miejsca dla nagłówka debugowania i zastąpienia buforów|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Oblicz rozmiar bloku pamięci na stosie|

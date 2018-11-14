@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548542"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327138"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -96,12 +96,12 @@ Użyj **setlocale** funkcję, aby ustawić, zmienić lub sprawdzić niektóre lu
 
 |*Kategoria* flagi|Dotyczy|
 |-|-|
-**LC_ALL**|Wszystkie kategorie, wymienione poniżej.
-**LC_COLLATE**|**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji.
-**LC_CTYPE**|Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian).
-**LC_MONETARY**|Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji.
-**LC_NUMERIC**|Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md).
-**LC_TIME**|**Strftime** i **wcsftime** funkcji.
+| **LC_ALL** | Wszystkie kategorie, wymienione poniżej. |
+| **LC_COLLATE** | **Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji. |
+| **LC_CTYPE** | Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian). |
+| **LC_MONETARY** | Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji. |
+| **LC_NUMERIC** | Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md). |
+| **LC_TIME** | **Strftime** i **wcsftime** funkcji. |
 
 Ta funkcja sprawdza poprawność parametru kategorii. Jeśli parametr kategorii nie jest jedną z wartości podanych w powyższej tabeli, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** do **EINVAL** i zwraca **NULL**.
 

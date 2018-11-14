@@ -2,12 +2,12 @@
 title: Atrybuty w języku C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471828"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520793"
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -45,16 +45,16 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
 
 - `[[nodiscard]]` **Visual Studio 2017 w wersji 15.3 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracaną przez funkcję nie jest przeznaczony do usunięcia. Generuje ostrzeżenia C4834, jak pokazano w poniższym przykładzie:
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 w wersji 15.3 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że zmiennej, funkcji, klasy, — typedef, element członkowski danych niestatyczna, enum lub specjalizacja szablonu celowo nie mogą być używane. Kompilator nie ostrzega, gdy jednostki oznaczone `[[maybe_unused]]` nie jest używany. Później można ponownie zadeklarować jednostki, która jest zadeklarowana bez atrybutu, za pomocą atrybutu i na odwrót. Jednostki jest traktowany jako oznaczony po jego pierwszej deklaracji, która jest oznaczona są analizowane, a w pozostałej części tłumaczenia w bieżącej jednostce tłumaczenia.
 
@@ -75,12 +75,12 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
     }
     ```
 
-   Przykład wywołuje te ostrzeżenia:
+  Przykład wywołuje te ostrzeżenia:
 
-   - 26494 (typ reguły 5: zawsze Inicjuj obiekt.)
+  - 26494 (typ reguły 5: zawsze Inicjuj obiekt.)
 
-   - 26485 (granice zasady 3: nie zanikania tablicy do wskaźnika.)
+  - 26485 (granice zasady 3: nie zanikania tablicy do wskaźnika.)
 
-   - 26481 (granice reguła 1: nie używaj arytmetyki wskaźnika. Użyj zakresu.)
+  - 26481 (granice reguła 1: nie używaj arytmetyki wskaźnika. Użyj zakresu.)
 
-   Pierwsze dwa ostrzeżenia uruchamiał się po skompilować ten kod za pomocą narzędzia analizy kodu CppCoreCheck zainstalowane i aktywowane. Ale trzecie ostrzeżenie nie zostanie wyzwolony, ze względu na ten atrybut. Cały profil granic można pominąć, pisząc [[gsl::suppress(bounds)]] bez uwzględniania numer określonej reguły. Podstawowych wytycznych dotyczących języka C++ mają na celu pomóc w pisaniu lepiej i bezpieczniejszego kodu. Ten atrybut Pomiń ułatwia wyłączyć ostrzeżenia, gdy nie chcieli.
+  Pierwsze dwa ostrzeżenia uruchamiał się po skompilować ten kod za pomocą narzędzia analizy kodu CppCoreCheck zainstalowane i aktywowane. Ale trzecie ostrzeżenie nie zostanie wyzwolony, ze względu na ten atrybut. Cały profil granic można pominąć, pisząc [[gsl::suppress(bounds)]] bez uwzględniania numer określonej reguły. Podstawowych wytycznych dotyczących języka C++ mają na celu pomóc w pisaniu lepiej i bezpieczniejszego kodu. Ten atrybut Pomiń ułatwia wyłączyć ostrzeżenia, gdy nie chcieli.

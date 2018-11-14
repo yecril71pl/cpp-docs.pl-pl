@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533877"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327346"
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 
@@ -80,13 +80,13 @@ Jeśli chcesz obsługiwać Windows powiadomienia wysyłane przez pole listy do e
 
 Każdy wpis mapy komunikatów ma następującą postać:
 
-**ON_** powiadomień **(**`id`, `memberFxn` **)**
+**ON\_**_powiadomień_ **(** _identyfikator_, _memberFxn_ **)**
 
 gdzie `id` Określa identyfikator okna elementu podrzędnego kontrolki wysyłania powiadomienia i `memberFxn` nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.
 
 Prototyp funkcji elementu nadrzędnego jest następująca:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Istnieje tylko jeden wpis mapy komunikatów, które odnoszą się specjalnie do `CCheckListBox` (ale również wyświetlane wpisy mapy komunikatów dla [CListBox](../../mfc/reference/clistbox-class.md)):
 

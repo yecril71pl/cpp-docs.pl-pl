@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441863"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327333"
 ---
 # <a name="numput-class"></a>num_put — Klasa
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 zachowuje się taka sama jak pierwsza strona, z tą różnicą, że generuje pola logicznych dane wyjściowe z *val*.
 
-Pola logicznych danych wyjściowych ma jedną z dwóch form. Jeśli **iosbase**. **flagi** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) jest **false**, funkcja elementu członkowskiego zwraca `do_put`(_ *dalej*, \_ *Iosbase*, \_ *wypełnienia*, ( **długie**) `val`), która zazwyczaj tworzy sekwencję wygenerowanego albo 0 (dla **false**) lub 1 (dla **true**). W przeciwnym razie wygenerowany sekwencji jest **fac**. [falsename —](../standard-library/numpunct-class.md#falsename) `)` (dla **false**), lub **fac**. [truename —](../standard-library/numpunct-class.md#truename) (dla **true**).
+Pola logicznych danych wyjściowych ma jedną z dwóch form. Jeśli `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) jest **false**, funkcja elementu członkowskiego zwraca `do_put(_Next, _Iosbase, _Fill, (long)val)`, która zazwyczaj tworzy sekwencję wygenerowanego albo 0 (dla **false**) lub 1 (dla **true**). W przeciwnym razie wygenerowany sekwencji jest *fac*.[ falsename —](../standard-library/numpunct-class.md#falsename) (dla **false**), lub *fac*.[ truename —](../standard-library/numpunct-class.md#truename) (dla **true**).
 
 Siódmego chronionych funkcja wirtualna elementu członkowskiego:
 

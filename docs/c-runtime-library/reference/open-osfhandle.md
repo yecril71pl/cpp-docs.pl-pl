@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519460"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327866"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ Te stałe manifestu są zdefiniowane w \<fcntl.h >:
 
 |||
 |-|-|
-**\_O\_DOŁĄCZANIA**|Umieszcza wskaźnik pliku na koniec pliku przed każdej operacji zapisu.
-**\_O\_RDONLY**|Otwiera plik do odczytu tylko.
-**\_O\_TEXT**|Otwiera plik w trybie tekstowym (tłumaczonym).
-**\_O\_WTEXT**|Otwiera plik w trybie Unicode (przetłumaczone UTF-16).
+| **\_O\_DOŁĄCZANIA** | Umieszcza wskaźnik pliku na koniec pliku przed każdej operacji zapisu. |
+| **\_O\_RDONLY** | Otwiera plik do odczytu tylko. |
+| **\_O\_TEXT** | Otwiera plik w trybie tekstowym (tłumaczonym). |
+| **\_O\_WTEXT** | Otwiera plik w trybie Unicode (przetłumaczone UTF-16). |
 
 **_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —**, wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**, więc nie jest konieczne wywołać funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, następnie wywoływania [fclose —](fclose-fcloseall.md) na tym **pliku &#42;**  strumień zostanie zamknięty deskryptor pliku i podstawowego dojścia. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku.
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482865"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331506"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -66,7 +66,7 @@ Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, każda z tych funkcji zwraca znak argumentu *c*. Jeśli *c* nie może zostać przesunięty lub jeśli został odczytany żaden znak, strumień wejściowy pozostaje niezmieniony i **_ungetc_nolock —** zwraca ** EOF`; **_ungetwc_nolock` zwraca **WEOF**. Jeśli *strumienia* jest **NULL**, **EOF** lub **WEOF** zwróceniem i **errno** jest ustawiona na  **EINVAL**.
+Jeśli operacja się powiedzie, każda z tych funkcji zwraca znak argumentu *c*. Jeśli *c* nie może zostać przesunięty lub jeśli został odczytany żaden znak, strumień wejściowy pozostaje niezmieniony i **_ungetc_nolock —** zwraca **EOF**; **_ungetwc_nolock —** zwraca **WEOF**. Jeśli *strumienia* jest **NULL**, **EOF** lub **WEOF** zwróceniem i **errno** jest ustawiona na  **EINVAL**.
 
 Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

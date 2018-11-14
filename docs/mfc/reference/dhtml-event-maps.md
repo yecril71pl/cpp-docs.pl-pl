@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547202"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519872"
 ---
 # <a name="dhtml-event-maps"></a>Mapy zdarzeń DHTML
 
@@ -441,7 +441,6 @@ Obsługuje (na poziomie dokumentu) `ondatasetcomplete` pochodzi zdarzenie przez 
 
 ```
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -514,7 +513,6 @@ Obsługuje (na poziomie dokumentu) `onerrorupdate` pochodzi zdarzenie przez elem
 
 ```
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -540,7 +538,6 @@ Obsługuje (na poziomie dokumentu) `onfilterchange` pochodzi zdarzenie przez ele
 ```
 
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -566,7 +563,6 @@ Obsługuje (na poziomie elementu) `onfocus` zdarzeń. Jest to nonbubbling zdarze
 ```
 
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -592,7 +588,6 @@ Obsługuje (na poziomie dokumentu) `onhelp` pochodzi zdarzenie przez element HTM
 ```
 
 DHTML_EVENT_ONHELP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -618,7 +613,6 @@ Obsługuje (na poziomie dokumentu) `onkeydown` pochodzi zdarzenie przez element 
 ```
 
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -644,7 +638,6 @@ Obsługuje (na poziomie dokumentu) `onkeypress` pochodzi zdarzenie przez element
 ```
 
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -670,7 +663,6 @@ Obsługuje (na poziomie dokumentu) `onkeyup` pochodzi zdarzenie przez element HT
 ```
 
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -696,7 +688,6 @@ Obsługuje (na poziomie dokumentu) `onmousedown` pochodzi zdarzenie przez elemen
 ```
 
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -722,7 +713,6 @@ Obsługuje (na poziomie dokumentu) `onmousemove` pochodzi zdarzenie przez elemen
 ```
 
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -748,7 +738,6 @@ Obsługuje (na poziomie dokumentu) `onmouseout` pochodzi zdarzenie przez element
 ```
 
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -774,7 +763,6 @@ Obsługuje (na poziomie dokumentu) `onmouseover` pochodzi zdarzenie przez elemen
 ```
 
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -800,7 +788,6 @@ Obsługuje (na poziomie dokumentu) `onmouseup` pochodzi zdarzenie przez element 
 ```
 
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -826,7 +813,6 @@ Obsługuje (na poziomie elementu) `onresize` zdarzeń. Jest to nonbubbling zdarz
 ```
 
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -852,7 +838,6 @@ Obsługuje (na poziomie dokumentu) `onrowenter` pochodzi zdarzenie przez element
 ```
 
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -878,7 +863,6 @@ Obsługuje (na poziomie dokumentu) `onrowexit` pochodzi zdarzenie przez element 
 ```
 
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -904,7 +888,6 @@ Obsługuje (na poziomie dokumentu) `onselectstart` pochodzi zdarzenie przez elem
 ```
 
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -972,7 +955,6 @@ Uruchamia definicji mapy zdarzeń DHTML i adres URL w okno wielostronicowe kolej
 
 ```
 BEGIN_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Uwagi
@@ -993,7 +975,6 @@ Uruchamia definicji osadzone mapy zdarzeń DHTML w okno wielostronicowe kolejno.
 
 ```
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1026,7 +1007,6 @@ Uruchamia definicji mapy zapis zdarzenia adresu URL w okno wielostronicowe kolej
 
 ```
 BEGIN_URL_ENTRIES(className)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1052,7 +1032,6 @@ Deklaruje mapy zdarzeń DHTML i adres URL w definicji klasy.
 
 ```
 DECLARE_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Uwagi
@@ -1071,7 +1050,6 @@ Oznacza koniec mapy zdarzeń DHTML i adres URL.
 
 ```
 END_DHTML_URL_EVENT_MAP(className)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1093,7 +1071,6 @@ Oznacza koniec osadzone Mapa zdarzeń DHTML.
 
 ```
 END_EMBED_DHTML_EVENT_MAP()
-
 ```
 
 ### <a name="example"></a>Przykład
@@ -1110,7 +1087,6 @@ Oznacza koniec wpisu mapy zdarzeń adresu URL.
 
 ```
 END_URL_ENTRIES()
-
 ```
 
 ### <a name="example"></a>Przykład

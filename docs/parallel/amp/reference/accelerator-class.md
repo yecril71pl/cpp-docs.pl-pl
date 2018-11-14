@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 5cf3cbb0cbff10deb029e81945f63921495bd0de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522280"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523926"
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 
@@ -282,7 +282,6 @@ Zwraca ilość pamięci dedykowanej dla `accelerator`, w kilobajtach.
 
 ```
 size_t get_dedicated_memory() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -295,7 +294,6 @@ Pobiera domyślny atrybut access_type procesora dla buforów utworzonych w tym a
 
 ```
 access_type get_default_cpu_access_type() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -308,7 +306,6 @@ Zwraca domyślny `accelerator_view` obiekt, który jest skojarzony z `accelerato
 
 ```
 accelerator_view get_default_view() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -321,7 +318,6 @@ Zwraca krótki opis `accelerator` urządzenia.
 
 ```
 std::wstring get_description() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -334,7 +330,6 @@ Zwraca ścieżkę akceleratora. Ścieżka jest unikatowa w systemie.
 
 ```
 std::wstring get_device_path() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -347,7 +342,6 @@ Zwraca wartość logiczną wskazującą, czy `accelerator` może zapewniać dane
 
 ```
 bool get_has_display() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -360,7 +354,6 @@ Określa, czy `accelerator` ma włączoną warstwę debugowanie dla obszernego r
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -373,7 +366,6 @@ Określa, czy `accelerator` jest emulowany.
 
 ```
 bool get_is_emulated() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -386,7 +378,6 @@ Zwraca wartość logiczną wskazującą, czy akcelerator obsługuje pamięć dos
 
 ```
 bool get_supports_cpu_shared_memory() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -399,7 +390,6 @@ Zwraca wartość, należy pomnożyć wartość logiczną, wskazującą, czy akce
 
 ```
 bool get_supports_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -412,7 +402,6 @@ Zwraca wartość logiczną wskazującą, czy akcelerator ma ograniczoną obsług
 
 ```
 bool get_supports_limited_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -425,7 +414,6 @@ Zwraca wersję `accelerator`.
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -462,7 +450,6 @@ Porównuje ten `accelerator` obiekt z innym i zwraca **false** jeśli są one ta
 
 ```
 bool operator!= (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -497,7 +484,6 @@ Porównuje ten `accelerator` obiekt z innym i zwraca **true** jeśli są one tak
 
 ```
 bool operator== (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -636,7 +622,6 @@ Zwraca `accelerator` dla obiektu [accelerator_view](accelerator-view-class.md) o
 
 ```
 accelerator get_accelerator() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -649,7 +634,6 @@ Zwraca wartość logiczną wskazującą, czy środowisko wykonawcze automatyczni
 
 ```
 bool get_is_auto_selection() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -662,7 +646,6 @@ Zwraca wartość logiczną wskazującą, czy [accelerator_view](accelerator-view
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -675,7 +658,6 @@ Zwraca tryb kolejkowania dla [accelerator_view](accelerator-view-class.md) obiek
 
 ```
 queuing_mode get_queuing_mode() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -688,7 +670,6 @@ Zwraca wersję [accelerator_view](accelerator-view-class.md).
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -717,7 +698,6 @@ Porównuje ten [accelerator_view](accelerator-view-class.md) obiekt z innym i zw
 
 ```
 bool operator!= (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -752,7 +732,6 @@ Porównuje ten [accelerator_view](accelerator-view-class.md) obiekt z innym i zw
 
 ```
 bool operator== (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry

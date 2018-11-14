@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648191"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326020"
 ---
 # <a name="unarynegate-class"></a>unary_negate — Klasa
 
@@ -44,7 +44,7 @@ Negacja funkcję jednoargumentową.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię _ obiektu funkcji jednoargumentowe *Func.* Definiuje jej funkcji członkowskiej `operator()` powrotu **!**\_ *FUNC(LEFT).*
+Klasa szablonu przechowuje kopię obiektu funkcyjnego jednoargumentowe  *\_Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu `!_Func(left)`.
 
 Konstruktor obiektu `unary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowanie i użycie **unary_negator** predykatu adaptera.
 

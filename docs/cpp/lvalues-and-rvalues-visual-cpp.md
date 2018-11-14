@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 301e6140699c921ee1b1229b9183c8555992f716
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546357"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330615"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues i Rvalues (Visual C++)
 
@@ -20,7 +20,7 @@ C ++ 17 standardowa definiuje kategorie wartości wyrażenia w następujący spo
 
 - A *glvalue* jest wyrażeniem, którego oceny określa tożsamość obiektu, pole bitowe lub funkcji.
 - A *prvalue* jest wyrażeniem, którego oceny inicjuje obiekt lub pole bitowe lub oblicza wartość operand operatora, jak określone przez kontekst, w którym jest wyświetlana.
-- *Xvalue* jest glvalue, który wskazuje obiekt lub pola bitowego, którego zasoby mogą być ponownie używane (zazwyczaj, ponieważ jest osiągnie koniec okresu jego istnienia). [Przykład: niektóre rodzaje wyrażeń zawierających odwołania rvalue (8.3.2) uzyskanie xvalues, takie jak wywołania funkcji, którego typem zwracanym jest odwołaniem rvalue lub Rzutowanie na typ odwołania rvalue. ]
+- *Xvalue* jest glvalue, który wskazuje obiekt lub pola bitowego, którego zasoby mogą być ponownie używane (zazwyczaj, ponieważ jest osiągnie koniec okresu jego istnienia). Przykład: Niektóre rodzaje wyrażeń zawierających odwołania rvalue (8.3.2) przynieść xvalues, takie jak wywołania funkcji, którego typem zwracanym jest odwołaniem rvalue lub Rzutowanie na typ odwołania rvalue.
 - *L-wartości* jest glvalue, który nie jest xvalue.
 - *Rvalue* prvalue lub xvalue.
 

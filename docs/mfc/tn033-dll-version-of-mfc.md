@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 89a9fddd6f12f92d18bcd6fc75f117beb14746f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571824"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523971"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: wersja DLL biblioteki MFC
 
@@ -174,7 +174,6 @@ protected: \
     public: \
     static AFX_DATA CRuntimeClass class##class_name; \
     virtual CRuntimeClass* GetRuntimeClass() const; \
-
 ```
 
 Wiersz zaczynający "statyczne `AFX_DATA`" jest deklarowania obiektu statycznego wewnątrz klasy. Aby poprawnie eksportu tej klasy i uzyskać dostęp do informacji środowisko uruchomieniowe z klienta. Plik EXE, należy wyeksportować tego obiektu statycznego. Ponieważ obiektu statycznego jest zadeklarowana za pomocą modyfikatora `AFX_DATA`, musisz zdefiniować `AFX_DATA` jako `__declspec(dllexport)` podczas kompilowania biblioteki DLL i zdefiniuj go w formie `__declspec(dllimport)` podczas kompilowania pliku wykonywalnego klienta.

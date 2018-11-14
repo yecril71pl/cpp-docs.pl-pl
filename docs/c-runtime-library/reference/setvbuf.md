@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445776"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328100"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ Tryb musi mieć wartość **_IOFBF**, **_IOLBF**, lub **_IONBF**. Jeśli *tryb* 
 
 |*tryb* wartość|Znaczenie|
 |-|-|
-**_IOFBF**|Pełne buforowanie; oznacza to, że *buforu* służy jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *buforu* jest **NULL**, automatycznie przydzielonego buforu *rozmiar* bajtów jest używany.
-**_IOLBF**|W przypadku niektórych systemów zapewnia buforowanie wiersza. Jednak dla Win32, zachowanie jest taka sama jak **_IOFBF** — pełna buforowania.
-**_IONBF**|Bufor nie jest używane, niezależnie od tego, *buforu* lub *rozmiar*.
+| **_IOFBF** | Pełne buforowanie; oznacza to, że *buforu* służy jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *buforu* jest **NULL**, automatycznie przydzielonego buforu *rozmiar* bajtów jest używany. |
+| **_IOLBF** | W przypadku niektórych systemów zapewnia buforowanie wiersza. Jednak dla Win32, zachowanie jest taka sama jak **_IOFBF** — pełna buforowania. |
+| **_IONBF** | Bufor nie jest używane, niezależnie od tego, *buforu* lub *rozmiar*. |
 
 ## <a name="requirements"></a>Wymagania
 

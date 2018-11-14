@@ -17,12 +17,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 95449937dda62d8ef127d41625553f0e4294cf77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574253"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328906"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
@@ -91,7 +91,7 @@ Ta funkcja działa w taki sam, jak funkcja liczbowa standardowej biblioteki jęz
 
 Oblicza sumę mnożenia elementów z dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sumowania i danych binarnych są zastępowane przez inne określone operacje binarne.
 
-###<a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 template<class _InIt1, class _InIt2, class _Ty> inline

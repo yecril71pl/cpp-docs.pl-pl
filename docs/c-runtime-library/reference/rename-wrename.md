@@ -34,12 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463989"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326143"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -72,9 +72,9 @@ Każda z tych funkcji zwraca wartość 0, jeśli to się powiodło. W przypadku 
 
 |errno wartość|Warunek|
 |-|-|
-**EACCES**|Pliku lub katalogu określonym przez *newname* już istnieje albo nie można utworzyć (Nieprawidłowa ścieżka); lub *StaraNazwa* jest katalogiem i *newname* Określa inną ścieżkę.
-**ENOENT**|Plik lub ścieżka określona przez plik *StaraNazwa* nie można odnaleźć.
-**EINVAL**|Nazwa zawiera nieprawidłowe znaki.
+| **EACCES** | Pliku lub katalogu określonym przez *newname* już istnieje albo nie można utworzyć (Nieprawidłowa ścieżka); lub *StaraNazwa* jest katalogiem i *newname* Określa inną ścieżkę. |
+| **ENOENT** | Plik lub ścieżka określona przez plik *StaraNazwa* nie można odnaleźć. |
+| **EINVAL** | Nazwa zawiera nieprawidłowe znaki. |
 
 Dla innych możliwych wartości zwracanych [_doserrno, _errno, syserrlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

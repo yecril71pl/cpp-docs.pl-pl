@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584460"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327164"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ Deskryptory przekazywane do pliku **_fdopen —** należą przez zwrócony **pli
 
 *Tryb* ciąg znaków określa rodzaj dostępu do plików wnioskowany dla pliku:
 
-|*Tryb*|Access|
-|-|-|
-**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem.
-**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.
-**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie). Tworzy plik, jeśli nie istnieje.
-**"r +"**|Otwiera Odczyt i zapis. Plik musi istnieć.
-**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona.
-**"+"**|Otwiera do odczytu i dołączania. Tworzy plik, jeśli nie istnieje.
+| *Tryb* | Access |
+|--------|--------|
+| **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem. |
+| **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
+| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie). Tworzy plik, jeśli nie istnieje. |
+| **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
+| **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
+| **"+"** | Otwiera do odczytu i dołączania. Tworzy plik, jeśli nie istnieje. |
 
 Po otwarciu pliku za pomocą **""** lub **"+"** uzyskiwać dostępu do typu, wszystkie operacje zapisu występują na końcu pliku. Wskaźnik pliku może być przeniesiony za pomocą [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale on jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacji jest przeprowadzane. W związku z tym nie można zastąpić istniejące dane. Gdy **"r +"**, **"w +"**, lub **"+"** jest określony typ dostępu, Odczyt i zapis są dozwolone (plik jest określany jako otwarty do "aktualizacji"). Jednak podczas przełączania się między Odczyt i zapis, musi istnieć interwencyjne [fflush —](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), lub [rewind](rewind.md) Operacja. Można określić bieżące położenie [fsetpos](fsetpos.md) lub [fseek](fseek-fseeki64.md) operacji, jeśli chcesz.
 
 Oprócz powyższych wartości następujące znaki mogą być zawarte w *tryb* określić tryb translacji znaków nowego wiersza:
 
-|*tryb* modyfikator|Zachowanie|
-|-|-|
-**t**|Otwórz w tekście (tłumaczonym) trybu. W tym trybie karetki kanał wiersza powrotu (CR-LF) kombinacji są tłumaczone na jeden wiersz źródła (LF) na dane wejściowe, a znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto Ctrl + Z jest interpretowany jako znak końca pliku na wejściu.
-**b**|Otwórz w trybie binarnym (nieprzetłumaczonym). Wszelkie tłumaczeń z **t** tryb są pomijane.
-**c**|Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana.
-**N**|Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem Commode.obj. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z plikiem Commode.obj.
+| *tryb* modyfikator | Zachowanie |
+|-----------------|----------|
+| **t** | Otwórz w tekście (tłumaczonym) trybu. W tym trybie karetki kanał wiersza powrotu (CR-LF) kombinacji są tłumaczone na jeden wiersz źródła (LF) na dane wejściowe, a znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto Ctrl + Z jest interpretowany jako znak końca pliku na wejściu. |
+| **b** | Otwórz w trybie binarnym (nieprzetłumaczonym). Wszelkie tłumaczeń z **t** tryb są pomijane. |
+| **c** | Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana. |
+| **N** | Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem Commode.obj. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z plikiem Commode.obj. |
 
 **t**, **c**, i **n** *tryb* opcje są rozszerzeniami firmy Microsoft dla **fopen —** i **_fdopen —**. Nie należy ich używać, jeśli chcesz zachować przenośność kodowania ANSI.
 

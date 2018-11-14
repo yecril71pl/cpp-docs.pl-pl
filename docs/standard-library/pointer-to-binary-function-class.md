@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 42e57c9fd5dafb60a866b24a7a5b8496643d1c76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd96aa1bf7f1f19b84e2e83e3ab5b33c4a0c5bfc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487090"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332104"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function — Klasa
 
@@ -45,7 +45,7 @@ Po prawej stronie obiektu, który  *\*pfunc* jest wywoływana w.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Klasa szablonu przechowuje kopię `pfunc`. Definiuje jej funkcji członkowskiej `operator()` powrotu (\* **pfunc**) (_ *po lewej stronie*, \_ *po prawej stronie*).
+Klasa szablonu przechowuje kopię `pfunc`. Definiuje jej funkcji członkowskiej `operator()` powrotu `(* pfunc)(Left, right)`.
 
 ## <a name="remarks"></a>Uwagi
 

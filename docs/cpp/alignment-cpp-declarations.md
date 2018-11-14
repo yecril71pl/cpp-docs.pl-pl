@@ -2,12 +2,12 @@
 title: Wyrównanie (deklaracje języka C++)
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 644a1f5d476fc35093c99b26e2d0685ad041b0af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563114"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522873"
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
 
@@ -35,7 +35,6 @@ struct x_
    short c;    // 2 bytes
    char d;     // 1 byte
 } MyStruct;
-
 ```
 
 Kompilator dopełnia tej struktury, aby wymusić wyrównanie naturalnie.
