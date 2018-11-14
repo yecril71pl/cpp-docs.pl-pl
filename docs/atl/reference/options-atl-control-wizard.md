@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443761"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522314"
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator kontrolki ATL
-
-Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.
 
 Ta strona kreatora służy do definiowania typu formantu, który tworzysz, i zawiera poziom obsługi interfejsu.
 
@@ -29,17 +27,17 @@ Rodzaj kontrolki, którą chcesz utworzyć.
 
 - **Kontrolki złożonej**: formant ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formanty Windows. Kontrolki złożonej obejmuje następujące funkcje:
 
-   - Szablon dla okna dialogowego, który implementuje złożonego formantu.
+  - Szablon dla okna dialogowego, który implementuje złożonego formantu.
 
-   - Zasób niestandardowy, rejestru, co powoduje automatyczne zarejestrowanie złożonego formantu po wywołaniu.
+  - Zasób niestandardowy, rejestru, co powoduje automatyczne zarejestrowanie złożonego formantu po wywołaniu.
 
-   - Klasy języka C++, który implementuje złożonego formantu.
+  - Klasy języka C++, który implementuje złożonego formantu.
 
-   - Interfejs COM udostępnianych przez złożonego formantu.
+  - Interfejs COM udostępnianych przez złożonego formantu.
 
-   - Testową stronę HTML zawierający złożonego formantu.
+  - Testową stronę HTML zawierający złożonego formantu.
 
-   Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu. Implementuje mapę ujścia. Aby uzyskać więcej informacji, zobacz [obsługę kontrolki DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu. Implementuje mapę ujścia. Aby uzyskać więcej informacji, zobacz [obsługę kontrolki DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Kontrolki DHTML**: kontrolki DHTML ATL określa interfejs użytkownika, za pomocą kodu HTML. Klasa interfejsu użytkownika DHTML zawiera mapę COM. Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu.
 

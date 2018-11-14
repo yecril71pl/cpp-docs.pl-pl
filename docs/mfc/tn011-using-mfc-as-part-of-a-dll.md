@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517655"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326208"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: używanie MFC jako części biblioteki DLL
 
@@ -33,7 +33,7 @@ regularne biblioteki DLL MFC mają kilka zalet:
 
 - Za pomocą regularne biblioteki DLL MFC, które będą statycznie łączyć się z MFC rozmiar pliku dll zależy od tylko procedury czasu wykonywania MFC i C, które są używane i połączone.
 
-- Za pomocą regularne biblioteki DLL MFC, która łączy dynamicznie MFC oszczędności pamięci wynikające z wykorzystania udostępnionej wersja MFC mogą być znaczące. Jednakże, należy go rozesłać udostępnionych bibliotek DLL Mfc*\<wersji >*.dll i Msvvcrt*\<wersji >*.dll z biblioteką DLL.
+- Za pomocą regularne biblioteki DLL MFC, która łączy dynamicznie MFC oszczędności pamięci wynikające z wykorzystania udostępnionej wersja MFC mogą być znaczące. Jednakże, należy go rozesłać udostępnionych bibliotek DLL Mfc\<*wersji*> .dll i Msvvcrt\<*wersji*> .dll z biblioteką DLL.
 
 - Projekt DLL jest niezależny od implementacji klasy. Projekt DLL eksportuje tylko do interfejsów API mają. W wyniku implementacji zmiany zwykłych bibliotekach MFC DLL są nadal ważne.
 

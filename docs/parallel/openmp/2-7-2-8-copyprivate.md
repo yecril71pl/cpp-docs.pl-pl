@@ -2,12 +2,12 @@
 title: 2.7.2.8 — prywatna kopia
 ms.date: 11/04/2016
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-ms.openlocfilehash: d4df1b4216014d3cd15be1480d2f83334fddb72d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f46b8ae1d42083c770bbc84c46d13b02d5227498
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622914"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521859"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 — prywatna kopia
 
@@ -20,7 +20,6 @@ Składnia **copyprivate** klauzula jest w następujący sposób:
 copyprivate(
 variable-list
 )
-
 ```
 
 Efekt **copyprivate** klauzuli zmiennych na swojej liście zmiennych występuje po wykonaniu strukturalnego bloku skojarzone z **pojedynczego** konstruowania i przed jakąkolwiek wątki zespół pozostało barierę na końcu konstrukcja. Następnie w innych wątków w zespole, dla każdej zmiennej w *liście zmiennych*, zmienna staje się definicją (tak, jakby przypisanie) z wartością odpowiadającego zmiennej w wątku, który jest wykonywany konstrukcja użytkownika ze strukturą blok.

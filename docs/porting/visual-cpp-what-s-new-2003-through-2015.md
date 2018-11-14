@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499622"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520185"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -260,7 +260,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
    Załóżmy, że Twój kod określa zarówno **umieszczania nowych** i **delete umieszczania**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
    są teraz więcej zgodność ze standardem. Poprzednie wersje kompilatora generowane jawny Konstruktor i destruktor związki anonimowe. Zostaną one usunięte w programie Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Powyższy kod generuje następujący błąd w programie Visual Studio 2015:
@@ -328,14 +328,14 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     }
    ```
 
-  —lub—
+  \-lub —
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Ponadto mimo że kompilator nie zapewnia określonych diagnostyczne, nowy operator wbudowane są uznawane za źle sformułowane.
 
 - **Wywołanie "operator *typu*()" (konwersja zdefiniowana przez użytkownika) na typach klasy korporacyjnej** poprzednie wersje kompilatora mogą "operator *typu*()" do wywoływania na typach klasy korporacyjnej, natomiast w trybie dyskretnym zostaną zignorowane. To zachowanie starej utworzony ryzyko wygenerowanie dyskretnej złego kodu, co środowisko uruchomieniowe nieprzewidywalne zachowanie. Kompilator nie akceptuje kodu napisanego w ten sposób i generuje błąd kompilatora C2228 zamiast tego.
 
@@ -1673,10 +1673,10 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 - Obsługa wyliczeń objętych zakresem. C++ wyliczenia enum klucz klasy jest teraz obsługiwane. Poniższy kod demonstruje, jak ten klucz wyliczenia różni się od poprzedniego zachowania wyliczenia.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Obsługa projektowania aplikacji środowiska wykonawczego Windows

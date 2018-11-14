@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570719"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525525"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -64,19 +64,19 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    Funkcje, które zostały przeniesione:
 
-   - podwójne abs(float) abs(double) i zmiennoprzecinkowych
+  - podwójne abs(float) abs(double) i zmiennoprzecinkowych
 
-   - Double pow (double, int), float pow (float, float), float pow (float, int), liczba typu double pow (double, double), liczba typu double pow (double, int)
+  - Double pow (double, int), float pow (float, float), float pow (float, int), liczba typu double pow (double, double), liczba typu double pow (double, int)
 
-   - zmiennoprzecinkowych i typu long double wersje pływających punktu funkcje acos, acosh, asin, asinh, atan, atanh, atan2, cbrt —, ceil —, copysign —, cos, cosh erf, erfc, exp, exp2 —, expm1 —, fabs —, fdim —, floor, fma, fmax, fmin, fmod, frexp —, hypot —, ilogb —, ldexp —, lgamma —, llrint, llround —, dziennika , log10, log1p —, log2, lrint, lround —, modf —, nearbyint —, nextafter —, nexttoward, pozostałą, remquo —, rukuj, round, scalbln, scalbn —, sin, sinh, sqrt, tan, tanh, tgamma —, trunc
+  - zmiennoprzecinkowych i typu long double wersje pływających punktu funkcje acos, acosh, asin, asinh, atan, atanh, atan2, cbrt —, ceil —, copysign —, cos, cosh erf, erfc, exp, exp2 —, expm1 —, fabs —, fdim —, floor, fma, fmax, fmin, fmod, frexp —, hypot —, ilogb —, ldexp —, lgamma —, llrint, llround —, dziennika , log10, log1p —, log2, lrint, lround —, modf —, nearbyint —, nextafter —, nexttoward, pozostałą, remquo —, rukuj, round, scalbln, scalbn —, sin, sinh, sqrt, tan, tanh, tgamma —, trunc
 
-   Jeśli masz kod, że abs korzysta ze swobodnym punktu typ, który zawiera tylko w nagłówku math.h, zmiennoprzecinkowy będzie wersje nie będą już dostępne, więc wywołanie, a nawet w przypadku liczb zmiennoprzecinkowych punktu argumentu, teraz jest rozpoznawana jako abs(int). To powoduje błąd:
+  Jeśli masz kod, że abs korzysta ze swobodnym punktu typ, który zawiera tylko w nagłówku math.h, zmiennoprzecinkowy będzie wersje nie będą już dostępne, więc wywołanie, a nawet w przypadku liczb zmiennoprzecinkowych punktu argumentu, teraz jest rozpoznawana jako abs(int). To powoduje błąd:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   Poprawkę dotyczącą tego ostrzeżenia jest Zastąp wywołanie `abs` ze swobodnym wersję punktu `abs`, takich jak `fabs` argumentu double lub `fabsf` dla argumentu typu float, lub obejmują cmath — nagłówek i nadal używać `abs`.
+  Poprawkę dotyczącą tego ostrzeżenia jest Zastąp wywołanie `abs` ze swobodnym wersję punktu `abs`, takich jak `fabs` argumentu double lub `fabsf` dla argumentu typu float, lub obejmują cmath — nagłówek i nadal używać `abs`.
 
 - **Ruchomy punkt zgodności**
 
@@ -116,7 +116,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    Aby dodać tę bibliotekę dane wejściowe konsolidatora w środowisku IDE, otwórz menu kontekstowe dla węzła projektu, wybierz polecenie **właściwości**, a następnie w obszarze **właściwości projektu** okna dialogowego wybierz **konsolidatora**i edytować **dane wejściowe konsolidatora** dodać `legacy_stdio_definitions.lib` do listy rozdzielanej średnikami naczepa.
 
-   Jeśli projekt łączy się z biblioteki statyczne, które zostały skompilowane przy użyciu programu Visual Studio w wersji wcześniejszej niż 2015, konsolidator może raportować nierozpoznany symbol zewnętrzny. Te błędy mogą odwoływać się do wewnętrznej stdio — definicje _iob —, _iob_func lub powiązane Import dla niektórych funkcji stdio — w formie\_*. Firma Microsoft zaleca zrekompilować wszystkie biblioteki statyczne z najnowszą wersją kompilatora języka C++ i bibliotekami po uaktualnieniu projektu. Jeśli biblioteka jest biblioteką innych firm, dla którego źródło jest niedostępne, należy zażądać zaktualizowanego pliku binarnego od innych firm lub hermetyzują użycie tej biblioteki do oddzielnych biblioteki DLL, która skompilować przy użyciu starszej wersji kompilatora i biblioteki .
+   Jeśli projekt łączy się z biblioteki statyczne, które zostały skompilowane przy użyciu programu Visual Studio w wersji wcześniejszej niż 2015, konsolidator może raportować nierozpoznany symbol zewnętrzny. Te błędy mogą odwoływać się do wewnętrznej stdio — definicje `_iob`, `_iob_func`, lub powiązanych Import dla niektórych funkcji stdio — w formie _imp_\*. Firma Microsoft zaleca zrekompilować wszystkie biblioteki statyczne z najnowszą wersją kompilatora języka C++ i bibliotekami po uaktualnieniu projektu. Jeśli biblioteka jest biblioteką innych firm, dla którego źródło jest niedostępne, należy zażądać zaktualizowanego pliku binarnego od innych firm lub hermetyzują użycie tej biblioteki do oddzielnych biblioteki DLL, która skompilować przy użyciu starszej wersji kompilatora i biblioteki .
 
     > [!WARNING]
     > W przypadku łączenia z Windows SDK 8.1 lub starszym mogą wystąpić następujące błędy nierozpoznany symbol zewnętrzny. W takim przypadku należy rozwiązać problem, dodając legacy_stdio_definitions.lib do konsolidatora, danych wejściowych, zgodnie z wcześniejszym opisem.
@@ -139,27 +139,27 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    W poprzednich wersjach nieskończoności i NaNs będą formatowane przy użyciu zestaw określonych MSVC wartownik ciągów.
 
-   - Infinity: 1. #INF
+  - Infinity: 1. #INF
 
-   - Quiet NaN: 1.#QNAN
+  - Quiet NaN: 1.#QNAN
 
-   - Sygnalizowanie NaN: 1. #SNAN
+  - Sygnalizowanie NaN: 1. #SNAN
 
-   - Nieokreślony NaN: 1. #IND
+  - Nieokreślony NaN: 1. #IND
 
-   Żadnego z tych może być poprzedzona znakiem i może zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładność (czasami z niezwykłych rzeczy, np. `printf("%.2f\n", INFINITY)` przetwarzającej 1. #J ponieważ #INF będzie "zaokrąglony" dokładności 2 cyfry). C99 wprowadzono nowe wymagania na jak nieskończoności i NaNs powinny być sformatowane. Teraz za pomocą implementacji MSVC jest zgodny z tych wymagań. Nowe parametry są następujące:
+  Żadnego z tych może być poprzedzona znakiem i może zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładność (czasami z niezwykłych rzeczy, np. `printf("%.2f\n", INFINITY)` przetwarzającej 1. #J ponieważ #INF będzie "zaokrąglony" dokładności 2 cyfry). C99 wprowadzono nowe wymagania na jak nieskończoności i NaNs powinny być sformatowane. Teraz za pomocą implementacji MSVC jest zgodny z tych wymagań. Nowe parametry są następujące:
 
-   - Infinity: plik inf
+  - Infinity: plik inf
 
-   - Quiet NaN: nan
+  - Quiet NaN: nan
 
-   - Sygnalizowanie NaN: nan(snan)
+  - Sygnalizowanie NaN: nan(snan)
 
-   - Nieokreślony NaN:nan(ind)
+  - Nieokreślony NaN:nan(ind)
 
-   Dowolny z nich może być poprzedzony znakiem. Jeśli specyfikator formatu kapitałowych jest używana (%F zamiast %f), a następnie ciągi są napisane wielkimi literami (INF zamiast pliku inf), w jakim są wymagane.
+  Dowolny z nich może być poprzedzony znakiem. Jeśli specyfikator formatu kapitałowych jest używana (%F zamiast %f), a następnie ciągi są napisane wielkimi literami (INF zamiast pliku inf), w jakim są wymagane.
 
-   [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkcje zostały zmodyfikowane w celu analizy tych nowych parametrów, więc zostanie wyrównana za pośrednictwem funkcji printf i scanf, te ciągi.
+  [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkcje zostały zmodyfikowane w celu analizy tych nowych parametrów, więc zostanie wyrównana za pośrednictwem funkcji printf i scanf, te ciągi.
 
 - **Liczba zmiennoprzecinkowa formatowanie i analizowanie**
 
@@ -171,8 +171,16 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Stare dane wyjściowe:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Nowe dane wyjściowe:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Stary algorytmów analizy zakwalifikowany tylko do 17 cyfr znaczących w ciągu wejściowym i czy odrzucić pozostałe cyfry. Jest to wystarczające do generowania bardzo bliskie zbliżenia wartość reprezentowany przez ciąg, a wynik jest zazwyczaj bardzo blisko poprawnie zaokrąglony wynik. Nowa implementacja uwzględnia wszystkie cyfry obecne i daje wynik poprawnie zaokrąglone wszystkich danych wejściowych (maksymalnie 768 znaków długości). Ponadto te funkcje teraz respektują trybu zaokrąglania (sterowane za pośrednictwem fesetround).  Jest to istotne potencjalnie zmienić zachowanie, ponieważ te funkcje mogą danych wyjściowych różne wyniki. Nowe wyniki są zawsze prawidłowe niż stare wyniki.
@@ -641,7 +649,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
    Załóżmy, że Twój kod określa zarówno **umieszczania nowych** i **delete umieszczania**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523273"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522495"
 ---
 # <a name="ccomvariant-class"></a>Klasa CComVariant
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-[in] Wskazuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) dołączony do obiektu.
+[in] Wskazuje [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) dołączony do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-[in] Wskaźnik do [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) do skopiowania.
+[in] Wskaźnik do [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-[in] `CComVariant` Lub [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) ma być przypisane do `CComVariant` obiektu. Zawartość wariant źródła są kopiowane do lokalizacji docelowej bez konwersji.
+[in] `CComVariant` Lub [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) ma być przypisane do `CComVariant` obiektu. Zawartość wariant źródła są kopiowane do lokalizacji docelowej bez konwersji.
 
 *bstrSrc*<br/>
 [in] BSTR ma być przypisane do `CComVariant` obiektu. Typ `CComVariant` obiekt będzie VT_BSTR.
