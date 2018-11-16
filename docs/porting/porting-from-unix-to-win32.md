@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467785"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694091"
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
 
@@ -61,7 +61,7 @@ Innej lokacji w firmie zapewnienie im programów obsługi przenoszenia systemu U
 
 Innym rozwiązaniem jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych bibliotek kompilator C, wiele tradycyjny system, który wywołuje opiera się na aplikacji systemu UNIX są dostępne w aplikacji Win32.
 
-Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).
+Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
 
 Aplikacje oparte na gniazdo Berkeley muszą bardzo kilka zmian, aby pracować w aplikacji Win32. Interfejsu Windows Sockets został zaprojektowany do celów przenośności przy użyciu gniazd BSD, przy minimalnych zmianach, które zostały wymienione w sekcjach wprowadzające specyfikacji interfejsu WinSock.
 
@@ -69,7 +69,7 @@ Windows obsługuje CLS DCE RPC, tak aby łatwo można używać aplikacji oparteg
 
 Jest jednym z największych obszarów różnica w modelu procesów. Ma UNIX `fork`; Win32 — nie. W zależności od użycia `fork` i kodzie podstawowym, Win32 ma dwa interfejsy API, które mogą być używane: `CreateProcess` i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wielu kopii sam można przekształcił w systemie Win32 wiele procesów lub jeden proces w wielu wątkach. Wiele procesów są używane, dostępnych jest wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie aktualizowania kodu i danych nowego procesu jako element nadrzędny, np. Jeśli funkcjonalność, `fork` zapewnia jest potrzebny). Aby uzyskać więcej informacji o IPC, zobacz [komunikacji międzyprocesowej](/windows/desktop/ipc/interprocess-communications).
 
-Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](https://msdn.microsoft.com/library/windows/desktop/dd183553) informacji z użyciem interfejsu GDI.
+Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](/windows/desktop/gdi/device-contexts) informacji z użyciem interfejsu GDI.
 
 Podstawowe aplikacji systemu UNIX, w tym wiele aplikacji CGI, powinien portu łatwe do programu Visual C++ w systemie Windows. Funkcje, takie jak `open`, `fopen`, `read`, `write` i inne są dostępne w bibliotece środowiska wykonawczego Visual C++. Ponadto istnieje mapowanie jeden do jednego między interfejsów API systemu UNIX C i Win32: `open` do `CreateFile`, `read` do `ReadFile`, `write` do `WriteFile`, `ioctl` do `DeviceIOControl`, `close` do `CloseFile`i tak dalej.
 

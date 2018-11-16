@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 1b109a3f85ffd3311d08c3d749d543b1e625e77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694715"
 ---
 # <a name="message-handling-and-mapping"></a>Obsługa i mapowanie komunikatów
 
@@ -23,7 +23,7 @@ Wm_command — komunikaty — zwykle generowane przez menu, przyciski paska narz
 
 Mapy komunikatów również podać sposób aktualizowania obiektów interfejsu użytkownika (takich jak menu i przycisków paska narzędzi), włączając lub wyłączając je do potrzeb bieżącego kontekstu.
 
-Aby uzyskać ogólne informacje dotyczące wiadomości i kolejki komunikatów w Windows, zobacz [wiadomości i kolejki komunikatów](https://msdn.microsoft.com/library/windows/desktop/ms632590) w zestawie Windows SDK.
+Aby uzyskać ogólne informacje dotyczące wiadomości i kolejki komunikatów w Windows, zobacz [wiadomości i kolejki komunikatów](/windows/desktop/winmsg/messages-and-message-queues) w zestawie Windows SDK.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452718"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694728"
 ---
 # <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
 
@@ -67,7 +67,7 @@ Ta kontrolka (i w związku z tym `CHotKeyCtrl` klasy) jest dostępna tylko dla p
 
 Po użytkownik wybierze kombinację klawiszy, aplikacja może pobrać określonej kombinacji klawiszy z formantu i komunikat WM_SETHOTKEY umożliwia ustawianie klawisza dostępu w systemie. Zawsze, gdy użytkownik naciśnie klawisz skrótu, z dowolnej części systemu, okna określony w komunikacie WM_SETHOTKEY odbiera komunikat WM_SYSCOMMAND, określając SC_HOTKEY. Ten komunikat uaktywnia okna, które otrzymuje go. Klawisz skrótu pozostanie ważny aż do aplikacji, która umożliwia zamknięcie WM_SETHOTKEY wywołana.
 
-Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funkcji.
+Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkcji.
 
 Aby uzyskać więcej informacji na temat korzystania z `CHotKeyCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

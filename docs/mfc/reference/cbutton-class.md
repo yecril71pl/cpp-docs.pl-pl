@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333540"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694806"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -384,7 +384,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIDEALSIZE zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIDEALSIZE zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIMAGELIST zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIMAGELIST zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -617,7 +617,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETTEXTMARGIN zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETTEXTMARGIN zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
 ##  <a name="setbitmap"></a>  CButton::SetBitmap
 
@@ -870,7 +870,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETIMAGELIST zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETIMAGELIST zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1112,7 +1112,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETTEXTMARGIN zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETTEXTMARGIN zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 

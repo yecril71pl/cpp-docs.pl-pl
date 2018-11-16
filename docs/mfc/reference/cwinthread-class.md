@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477327"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694195"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -90,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty zanim osiągną one aplikację.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie nieobsługiwane wyjątki rzucane przez komunikat dla wątku i programy obsługi poleceń.|
-|[CWinThread::PumpMessage](#pumpmessage)|Zawiera pętli komunikatów dla wątku.|
+|[CWinThread::PumpMessage](#pumpmessage)|zawiera pętli komunikatów dla wątku.|
 |[CWinThread::ResumeThread](#resumethread)|Zmniejsza wątku zawiesić count.|
 |[CWinThread::Run](#run)|Kontrolowanie funkcji dla wątków, za pomocą "pompy komunikatów". Przesłoń, aby dostosować domyślną pętlę komunikatów.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Ustawia priorytet bieżącego wątku.|
@@ -445,7 +445,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 Ogłoszony komunikat jest mapowany do obsługi właściwego wiadomości za pomocą makra mapy komunikatów ON_THREAD_MESSAGE.
 
 > [!NOTE]
-> Gdy wywołujesz [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), komunikat jest umieszczana w kolejce komunikatów dla wątku. Jednak ponieważ komunikaty publikowane w ten sposób nie są skojarzone z oknem, MFC nie wyśle je do obsługi komunikatów lub polecenie. Aby umożliwić obsługę tych komunikatów, należy zastąpić `PreTranslateMessage()` funkcji usługi CWinApp klasy pochodnej klasy, a następnie ręcznie obsługi wiadomości.
+> Gdy wywołujesz [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), komunikat jest umieszczana w kolejce komunikatów dla wątku. Jednak ponieważ komunikaty publikowane w ten sposób nie są skojarzone z oknem, MFC nie wyśle je do obsługi komunikatów lub polecenie. Aby umożliwić obsługę tych komunikatów, należy zastąpić `PreTranslateMessage()` funkcji usługi CWinApp klasy pochodnej klasy, a następnie ręcznie obsługi wiadomości.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -535,7 +535,7 @@ Ta funkcja członkowska jest używany tylko w wątki, które zawierają "pompy k
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-Zawiera pętli komunikatów dla wątku.
+zawiera pętli komunikatów dla wątku.
 
 ```
 virtual BOOL PumpMessage();

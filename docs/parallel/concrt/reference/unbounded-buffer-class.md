@@ -19,13 +19,15 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: 79bab3c41df2f3cbc5b11522b394a2785e64cddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495241"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694754"
 ---
+# <a name="unboundedbuffer-class"></a>Klasa unbounded_buffer
+
 `unbounded_buffer` Blok komunikatów jest ona lokalizacją docelową wielu, wielu źródeł, uporządkowanych `propagator_block` można przechowywać nieograniczoną liczbę komunikatów.
 
 ## <a name="syntax"></a>Składnia

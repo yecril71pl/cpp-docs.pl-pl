@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693717"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn — Funkcje
 
@@ -139,7 +139,7 @@ Nowego procesu utworzonego przez wywołania `_spawn` procedury nie zachowuj usta
 
 W przypadku wywołania `_spawn` z biblioteki DLL lub graficznego interfejsu użytkownika aplikacji i chcesz przekierować dane wyjściowe do potoku, masz dwie opcje:
 
-- Tworzenie potoku za pomocą interfejsu API Win32 następnie wywołać [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), ustaw wartości dojście w strukturze uruchamiania i wywołania [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Tworzenie potoku za pomocą interfejsu API Win32 następnie wywołać [AllocConsole](/windows/console/allocconsole), ustaw wartości dojście w strukturze uruchamiania i wywołania [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
 
 - Wywołaj [_popen —, _wpopen —](../c-runtime-library/reference/popen-wpopen.md) której utworzysz potok i invoke aplikację za pomocą **cmd.exe /c** (lub **command.exe /c**).
 

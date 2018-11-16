@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8cbe9849e16e8bfa9c0d0ce1f96e846bffaab2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c35a1efb1c93aecf17e8f57b9e96c033aa4334a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621835"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693187"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Przetwarzanie komunikatów powiadomień w formancie paska pomocniczego
 
@@ -38,7 +38,7 @@ Następujące powiadomienia mogą być wysyłane przez obiekt formantu paska pom
 
 - RBN_LAYOUTCHANGED wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik zmienia układ pasm kontrolki.
 
-Aby uzyskać więcej informacji na temat tych powiadomień, zobacz [odwołanie do formantu paska pomocniczego](https://msdn.microsoft.com/library/windows/desktop/bb774375) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat tych powiadomień, zobacz [odwołanie do formantu paska pomocniczego](/windows/desktop/controls/rebar-control-reference) w zestawie Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 

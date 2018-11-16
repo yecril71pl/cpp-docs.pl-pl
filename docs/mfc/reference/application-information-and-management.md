@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694338"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parametry
 
 *lpWndClass*<br/>
-Wskaźnik do [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury zawierający informacje na temat klasy okna do zarejestrowania. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.
+Wskaźnik do [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury zawierający informacje na temat klasy okna do zarejestrowania. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametry
 
 *nClassStyle*<br/>
-Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;**) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:
+Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;**) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:
 
 - Ustawia styl myszy CS_DBLCLKS, które wysyła kliknij dwukrotnie wiadomości do procedury okna, gdy użytkownik kliknie dwukrotnie myszy.
 

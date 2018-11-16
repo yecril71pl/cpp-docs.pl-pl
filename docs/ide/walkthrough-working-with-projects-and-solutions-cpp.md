@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6cbd4cf86e6828d637430c468afd1306665746a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459738"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519234"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Wskazówki: praca z projektami i rozwiązaniami (C++)
 
@@ -70,7 +70,7 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
 1. Edytuj plik Cardgame.h i wprowadzić te zmiany:
 
    - Dodaj dwie prywatne składowe danych po nawiasie klamrowym otwierającym definicję klasy.
-      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
+     <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
 
       ```cpp
       int players;
@@ -92,18 +92,19 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
    Plik Cardgame.h powinien wyglądać podobnie poniższy kod, po zmianach przypominać:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
-   ```cpp
-   #pragma once
-   class Cardgame
-   {
-       int players;
-       static int totalParticipants;
-   public:
-       Cardgame(int players);
-       ~Cardgame();
-       static int GetParticipants() { return totalParticipants; }
-   };
-   ```
+
+    ```cpp
+    #pragma once
+    class Cardgame
+    {
+        int players;
+        static int totalParticipants;
+    public:
+        Cardgame(int players);
+        ~Cardgame();
+        static int GetParticipants() { return totalParticipants; }
+    };
+    ```
 
    Wiersz `#pragma once` nakazuje kompilatorowi dołączenie pliku nagłówkowym tylko jeden raz. Aby uzyskać więcej informacji, zobacz [po](../preprocessor/once.md). Aby uzyskać informacje dotyczące innych słów kluczowych języka C++, w pliku nagłówkowym powyżej, zobacz [klasy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statyczne](../cpp/storage-classes-cpp.md), i [publicznych](../cpp/public-cpp.md).
 
@@ -112,27 +113,28 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
 1. Usuń całą zawartość pliku i Zamień kod:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
-   ```cpp
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
 
-   using namespace std;
+    ```cpp
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   int Cardgame::totalParticipants = 0;
+    using namespace std;
 
-   Cardgame::Cardgame(int players)
-       : players(players)
-   {
-       totalParticipants += players;
-       cout << players << " players have started a new game.  There are now "
-            << totalParticipants << " players in total." << endl;
-   }
+    int Cardgame::totalParticipants = 0;
 
-   Cardgame::~Cardgame()
-   {
-   }
-   ```
+    Cardgame::Cardgame(int players)
+        : players(players)
+    {
+        totalParticipants += players;
+        cout << players << " players have started a new game.  There are now "
+             << totalParticipants << " players in total." << endl;
+    }
+
+    Cardgame::~Cardgame()
+    {
+    }
+    ```
 
    > [!NOTE]
    > Podczas wprowadzania kodu można użyć funkcji autouzupełniania. Na przykład, jeśli ten kod, za pomocą klawiatury, można wprowadzić *pl* lub *tot* , a następnie naciśnij klawisz **Ctrl**+**spacja**. Automatyczne uzupełnianie wprowadza `players` lub `totalParticipants` dla Ciebie.
@@ -146,31 +148,33 @@ Dodawanie kodu do aplikacji, który umożliwia sprawdzenie, nowych funkcji.
 1. W **Game.cpp** okna edytora Zastąp istniejący kod składnią:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
-   ```cpp
-   // Game.cpp : Defines the entry point for the console application.
-   //
 
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
+    ```cpp
+    // Game.cpp : Defines the entry point for the console application.
+    //
 
-   using namespace std;
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   void PlayGames()
-   {
-       Cardgame bridge(4);
-       Cardgame blackjack(8);
-       Cardgame solitaire(1);
-       Cardgame poker(5);
-   }
+    using namespace std;
 
-   int main()
-   {
-       PlayGames();
-       return 0;
-   }
-   ```
-Ten kod dodaje funkcję testową, `PlayGames`, aby kod źródłowy i wywołania w `main`.
+    void PlayGames()
+    {
+        Cardgame bridge(4);
+        Cardgame blackjack(8);
+        Cardgame solitaire(1);
+        Cardgame poker(5);
+    }
+
+    int main()
+    {
+        PlayGames();
+        return 0;
+    }
+    ```
+
+   Ten kod dodaje funkcję testową, `PlayGames`, aby kod źródłowy i wywołania w `main`.
 
 ## <a name="build-and-run-your-app-project"></a>Skompiluj i uruchom projekt aplikacji
 
@@ -182,15 +186,15 @@ Następnie skompilować projekt i uruchomić aplikację.
 
    Dane wyjściowe z kompilacji są wyświetlane w **dane wyjściowe** okna. Jeśli kompilacja zakończy się pomyślnie, dane wyjściowe powinny przypominać:
 
-   ```Output
-   1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>pch.cpp
-   1>Cardgame.cpp
-   1>Game.cpp
-   1>Generating Code...
-   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
-   ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-   ```
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>pch.cpp
+    1>Cardgame.cpp
+    1>Game.cpp
+    1>Generating Code...
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
 
    **Dane wyjściowe** okna może pokazywać różne kroki, w zależności od konfiguracji kompilacji, ale jeśli kompilacja projektu zakończy się pomyślnie, ostatni wiersz powinien być podobny wyświetlone dane wyjściowe.
 
@@ -198,13 +202,14 @@ Następnie skompilować projekt i uruchomić aplikację.
 
 1. Aby uruchomić projekt, na pasku menu, wybierz opcję **debugowania** > **Rozpocznij bez debugowania**. Okno konsoli powinna zostać wyświetlona, a dane wyjściowe powinny przypominać:
 
-   ```Output
-   4 players have started a new game.  There are now 4 players in total.
-   8 players have started a new game.  There are now 12 players in total.
-   1 players have started a new game.  There are now 13 players in total.
-   5 players have started a new game.  There are now 18 players in total.
-   ```
-Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
+    ```Output
+    4 players have started a new game.  There are now 4 players in total.
+    8 players have started a new game.  There are now 12 players in total.
+    1 players have started a new game.  There are now 13 players in total.
+    5 players have started a new game.  There are now 18 players in total.
+    ```
+
+   Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
 
 Gratulacje, pomyślnie skompilowane rozwiązanie i projekt aplikacji. Nadal przewodnika, aby dowiedzieć się więcej o tym, jak tworzyć projekty kodu C++ w programie Visual Studio.
 

@@ -1,10 +1,6 @@
 ---
-title: unordered_multimap — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: unordered_multimap — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -52,8 +48,6 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_multimap
 - std::unordered_multimap::allocator_type
@@ -143,16 +137,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bae7d94c7e92ea52a6f34172d0d339d813684725
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060110"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519935"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap — Klasa
 
@@ -282,7 +272,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -349,7 +338,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -406,7 +394,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -481,7 +468,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -500,7 +486,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="bucket_size"></a>  unordered_multimap::bucket_size
@@ -551,7 +536,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -669,7 +653,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -719,7 +702,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -767,7 +749,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -815,7 +796,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -862,7 +842,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -915,7 +894,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -976,7 +954,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1101,7 +1078,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1176,7 +1152,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1248,7 +1223,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1349,7 +1323,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1390,7 +1363,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1428,7 +1400,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1467,7 +1438,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1584,7 +1554,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1624,7 +1593,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1665,7 +1633,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1721,7 +1688,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1795,7 +1761,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ## <a name="local_iterator"></a>  unordered_multimap::local_iterator
@@ -1839,7 +1804,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1895,7 +1859,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1969,7 +1932,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1988,7 +1950,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_load_factor"></a>  unordered_multimap::max_load_factor
@@ -2064,7 +2025,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2083,7 +2043,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_size"></a>  unordered_multimap::max_size
@@ -2115,7 +2074,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2219,7 +2177,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2266,7 +2223,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2334,7 +2290,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2407,7 +2362,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2450,7 +2404,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2521,7 +2474,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2722,7 +2674,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ```Output
@@ -2780,7 +2731,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output

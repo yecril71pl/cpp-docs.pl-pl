@@ -1,30 +1,21 @@
 ---
-title: Nawigacja w strukturze klas (Visual C++)
-ms.date: 11/04/2016
+title: Przejdź w strukturze klas
+ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.classes.structure
 helpviewer_keywords:
 - classes [C++], structure
 - Object Browser, navigating
 ms.assetid: 3bd9427d-c920-41fd-b27c-3063dd924e0c
-ms.openlocfilehash: 1273604038c28240e16d2f2003de00e63d4426d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b9dffb5738d85899b832694c534eb13f5a57339
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537725"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693038"
 ---
-# <a name="navigating-the-class-structure-visual-c"></a>Nawigacja w strukturze klas (Visual C++)
+# <a name="navigate-the-class-structure"></a>Przejdź w strukturze klas
 
-Możesz przejść struktury klasy projektu, łącznie z funkcjami, dziedziczenie i interfejsy, za pomocą **Widok klas** lub **przeglądarki obiektów**. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).
+Struktura klas projektów można przejść za pomocą **Widok klas** lub **przeglądarki obiektów**. Struktura klas projektów może obejmować funkcje, dziedziczenie i interfejsy. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).
 
-Możesz przejść do deklaracji funkcji przez dwukrotne kliknięcie nazwy funkcji w widoku klas. Możesz przejść do definicji klasy, klikając dwukrotnie nazwę klasy, w widoku klas.
-
-## <a name="see-also"></a>Zobacz też
-
-[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
-[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+Aby przejść do deklaracji funkcji, kliknij dwukrotnie nazwę funkcji, w widoku klas. Aby przejść do definicji klasy, kliknij dwukrotnie nazwę klasy, w widoku klas.

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-ms.openlocfilehash: ccdd4c05537991ab7605d29c6d2eba1a22851a10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 236fafccc4174401b76965753a78180ec39f659c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663934"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692950"
 ---
 # <a name="porting-data-applications"></a>Przenoszenie aplikacji danych
+
 W ciągu lat Visual C++ udostępnia kilka metod do pracy z bazami danych. W 2011 r. Firma Microsoft ogłosiła, że jest ona wyrównywanie na ODBC jako preferowaną technologię do uzyskiwania dostępu do produktów SQL Server z kodu natywnego. ODBC jest standardem branżowym, a za jej pomocą uzyskasz uzyskania maksymalnej przenośności kodu na wielu platformach i źródeł danych. Większość produktów bazy danych SQL i wielu produktów NoSQL obsługują ODBC. Można użyć ODBC bezpośrednio, wywołując niskiego poziomu interfejsy API ODBC lub można użyć klasy otoki MFC ODBC lub innej biblioteki otoki języka C++.
 
 OLE DB to interfejs API niskiego poziomu, wysokiej wydajności na podstawie specyfikacji modelu COM i jest obsługiwane tylko dla Windows. Użyj OLE DB, jeśli program uzyskuje dostęp do [serwery połączone](/sql/relational-databases/linked-servers/linked-servers-database-engine). ATL zawiera szablony OLE DB, które ułatwiają tworzenie niestandardowych dostawców OLE DB i konsumentów. Najbardziej aktualną wersję OLE DB dostarczane w macierzystym 11 klienta SQL.

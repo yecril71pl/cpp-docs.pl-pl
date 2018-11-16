@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669082"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694390"
 ---
 # <a name="cview-class"></a>Cview — klasa
 
@@ -548,7 +548,7 @@ Domyślna implementacja jest nic nie rób i zwracać wartości (-1) aby wskazać
 
 Należy przesłonić tę funkcję, aby zaimplementować efekt prawym przyciskiem myszy przeciągania i upuszczania. Prawym przyciskiem myszy, przeciągnij i upuść zwykle wyświetla menu opcji po zwolnieniu prawego przycisku myszy.
 
-Zastąpienie metody `OnDropEx` należy szukać prawego przycisku myszy. Możesz wywołać [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) ani nie przechowują stanu prawym przyciskiem myszy z Twojej [ondragenter —](#ondragenter) programu obsługi.
+Zastąpienie metody `OnDropEx` należy szukać prawego przycisku myszy. Możesz wywołać [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) ani nie przechowują stanu prawym przyciskiem myszy z Twojej [ondragenter —](#ondragenter) programu obsługi.
 
 - Jeśli prawy przycisk myszy jest wciśnięty, przesłonięcia powinien być wyświetlany w menu podręczne, która oferuje obsługę efekty listy według miejsca źródłowego.
 

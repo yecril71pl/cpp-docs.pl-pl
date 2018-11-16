@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532941"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693575"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie
 
@@ -22,7 +22,7 @@ Zestaw równoległy może być współużytkowany lub prywatny. [Współużytkow
 
 ## <a name="manifests-and-search-order"></a>Manifesty i kolejność wyszukiwania
 
-Zarówno aplikacje izolowane, jak i zestawów side-by-side są opisane przez [manifesty](https://msdn.microsoft.com/library/aa375365). Manifest to dokument XML, który może być plikiem zewnętrznym, może też być osadzony w aplikacji lub zestawie jako zasób. Plik manifestu aplikacji izolowanej jest używany do zarządzania nazwami i wersjami współużytkowanych zestawów równoległych, z którymi aplikacja powinna być związana w czasie wykonywania. Manifest zestawu równoległego określa nazwy, wersje, zasoby i zestawy zależne zestawów równoległych. Manifest współużytkowanego zestawu równoległego jest zainstalowany w folderze %WINDIR%\WinSxS\Manifests\. W przypadku zestawu prywatnego zaleca się włączenie jego manifestu do biblioteki DLL jako zasobu, którego identyfikator jest równy 1. Możesz również nadać zestawowi prywatnemu taką samą nazwę, jaką ma biblioteka DLL. Aby uzyskać więcej informacji, zobacz [o zestawy prywatne](/windows/desktop/SbsCs/about-private-assemblies-).
+Zarówno aplikacje izolowane, jak i zestawów side-by-side są opisane przez [manifesty](/windows/desktop/sbscs/manifests). Manifest to dokument XML, który może być plikiem zewnętrznym, może też być osadzony w aplikacji lub zestawie jako zasób. Plik manifestu aplikacji izolowanej jest używany do zarządzania nazwami i wersjami współużytkowanych zestawów równoległych, z którymi aplikacja powinna być związana w czasie wykonywania. Manifest zestawu równoległego określa nazwy, wersje, zasoby i zestawy zależne zestawów równoległych. Manifest współużytkowanego zestawu równoległego jest zainstalowany w folderze %WINDIR%\WinSxS\Manifests\. W przypadku zestawu prywatnego zaleca się włączenie jego manifestu do biblioteki DLL jako zasobu, którego identyfikator jest równy 1. Możesz również nadać zestawowi prywatnemu taką samą nazwę, jaką ma biblioteka DLL. Aby uzyskać więcej informacji, zobacz [o zestawy prywatne](/windows/desktop/SbsCs/about-private-assemblies-).
 
 W czasie wykonywania system Windows używa informacji o zestawie z manifestu aplikacji, aby wyszukać i załadować odpowiedni zestaw równoległy. Jeśli aplikacja izolowana określa zależność od zestawu, system operacyjny najpierw szuka zestawu wśród zestawów współużytkowanych w pamięci podręcznej macierzystego zestawu w folderze %WINNDIR%\WinSxS\. Jeśli wymagany zestaw nie zostanie znaleziony, system operacyjny wyszukuje zestaw prywatny w folderze struktury katalogów aplikacji. Aby uzyskać więcej informacji, zobacz [kolejność wyszukiwania zestawu](/windows/desktop/SbsCs/assembly-searching-sequence).
 

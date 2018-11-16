@@ -32,12 +32,12 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 8eca18795fac96e5cbddb404b901eb35da2de4b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 105e438a9ed3e8f7de7edc813fec516c0e99700a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585981"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694689"
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
 
@@ -57,21 +57,21 @@ W takim przypadku można użyć [cclientdc —](../mfc/reference/cclientdc-class
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 
-- [Konteksty urządzenia (definicja)](https://msdn.microsoft.com/library/windows/desktop/dd183553)
+- [Konteksty urządzenia (definicja)](/windows/desktop/gdi/device-contexts)
 
 - [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
 
 - [Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Linii i krzywych](https://msdn.microsoft.com/library/windows/desktop/dd145028)
+- [Linii i krzywych](/windows/desktop/gdi/lines-and-curves)
 
-- [Wypełnione kształty](https://msdn.microsoft.com/library/windows/desktop/dd162714)
+- [Wypełnione kształty](/windows/desktop/gdi/filled-shapes)
 
 - [Czcionki i tekst](/windows/desktop/gdi/fonts-and-text)
 
-- [Kolory](https://msdn.microsoft.com/library/windows/desktop/dd183450)
+- [Kolory](/windows/desktop/gdi/colors)
 
-- [Współrzędnych miejsca do magazynowania i przekształcenia](https://msdn.microsoft.com/library/windows/desktop/dd183475)
+- [Współrzędnych miejsca do magazynowania i przekształcenia](/windows/desktop/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Zobacz też
 

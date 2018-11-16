@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523492"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694312"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA — Struktura
 
@@ -259,10 +259,10 @@ Użyj [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) met
 [in] Wskaźnik do kontekstu urządzenia.
 
 *iPartId*<br/>
-[in] Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.
+[in] Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](/windows/desktop/controls/parts-and-states). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.
 
 *iStateId*<br/>
-[in] Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] Tekst do rysowania.
@@ -293,7 +293,7 @@ Motyw definiuje stylu wizualnego w aplikacji. Motyw nie jest używany do rysowan
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Części i Stany](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Parametry
 
 *Informacje o*<br/>
-[out w] A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.
+[out w] A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -439,7 +439,7 @@ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie w
 
 ### <a name="see-also"></a>Zobacz też
 
-[Struktura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

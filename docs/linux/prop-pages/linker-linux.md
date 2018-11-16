@@ -2,12 +2,12 @@
 title: Właściwości konsolidatora (Linux C++)
 ms.date: 9/26/2017
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580677"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678343"
 ---
 # <a name="linker-properties-linux-c"></a>Właściwości konsolidatora (Linux C++)
 
@@ -35,7 +35,7 @@ Kopiuj dane wyjściowe | Określa, czy można skopiować pliku danych wyjściowy
 Właściwość | Opis | Opcje
 --- | ---| ---
 Ignoruj określone biblioteki domyślne | Określa jedną lub więcej nazw bibliotek domyślnych do zignorowania. (--exclude-libs lib, lib)
-Ignoruj biblioteki domyślne | Ignoruj biblioteki domyślne i wyszukuj tylko biblioteki określone.
+Ignoruj biblioteki domyślne | Ignoruj biblioteki domyślne i przeszukiwać tylko biblioteki określone jawnie.
 Wymuszaj odwołania do niezdefiniowanych symboli | Symbol wymuszania do można wpisać w pliku wyjściowym jako niezdefiniowanego symbolu. (- u symbol--undefined = symbol)
 Zależności biblioteki | Ta opcja umożliwia określenie dodatkowych bibliotek, które mają zostać dodane do wiersza polecenia konsolidatora. Dodatkowa biblioteka zostanie dodany na końcu wiersza polecenia konsolidatora z prefiksem "lib" i kończyć się rozszerzeniem ".a".  (-lFILE)
 {1&gt;Dodatkowe zależności&lt;1} | Określa dodatkowe elementy do dodania do wiersza polecenia konsolidacji.

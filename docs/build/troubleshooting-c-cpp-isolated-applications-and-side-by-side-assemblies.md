@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: a9d1e3638df46f9a60af54ae4c402337710c7561
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693948"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
 
@@ -37,7 +37,7 @@ Jeśli aplikacja jest wdrażana na komputerze, na którym nie zainstalowano opro
 
 1. Jeśli Twoja aplikacja jest zależna od zestawów side-by-side i nie ma manifestu, należy upewnić się, że konsolidator generuje manifest dla projektu. Zaznacz opcję konsolidatora **Generuj manifest** w **właściwości projektu** okno dialogowe dla projektu.
 
-1. Jeśli manifest jest osadzony w pliku binarnym, upewnij się, że identyfikator RT_MANIFEST jest prawidłowy dla tego typu pliku binarnego. Aby uzyskać więcej informacji na temat którego Identyfikatora zasobu, aby użyć zobacz [używanie zestawów Side-by-Side jako zasób (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Jeśli manifest znajduje się w oddzielnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](https://msdn.microsoft.com/library/aa375365).
+1. Jeśli manifest jest osadzony w pliku binarnym, upewnij się, że identyfikator RT_MANIFEST jest prawidłowy dla tego typu pliku binarnego. Aby uzyskać więcej informacji na temat którego Identyfikatora zasobu, aby użyć zobacz [używanie zestawów Side-by-Side jako zasób (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Jeśli manifest znajduje się w oddzielnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](/windows/desktop/sbscs/manifests).
 
    > [!NOTE]
    > Jeśli obecne są oba wbudowanym manifeście i oddzielny plik manifestu, moduł ładujący systemu operacyjnego korzysta z manifestu osadzonego i ignoruje oddzielnym pliku. Jednak w systemie Windows XP, przeciwieństwo ma wartość true, jest używany oddzielny plik manifestu i manifestu osadzonego jest ignorowany.

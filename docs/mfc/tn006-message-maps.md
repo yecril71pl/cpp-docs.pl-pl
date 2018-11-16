@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463311"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693678"
 ---
 # <a name="tn006-message-maps"></a>TN006: mapy komunikatów
 
@@ -237,7 +237,7 @@ Zaawansowane wykorzystanie [ON_CONTROL_RANGE](reference/message-map-macros-mfc.m
 > [!NOTE]
 > ClassWizard nie obsługuje tworzenia nieprawidłowego ON_CONTROL lub ON_CONTROL_RANGE w interfejsie użytkownika. Należy ręcznie wprowadzić je za pomocą edytora tekstów. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich tak samo jak inne wpisy mapy komunikatów.
 
-Wspólnych formantów Windows użyj bardziej wydajne [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) dla powiadomień dotyczących formantów złożonych. Ta wersja programu MFC ma bezpośrednią obsługę tę nową wiadomość przy użyciu makr komunikaty ON_NOTIFY i ON_NOTIFY_RANGE. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
+Wspólnych formantów Windows użyj bardziej wydajne [WM_NOTIFY](/windows/desktop/controls/wm-notify) dla powiadomień dotyczących formantów złożonych. Ta wersja programu MFC ma bezpośrednią obsługę tę nową wiadomość przy użyciu makr komunikaty ON_NOTIFY i ON_NOTIFY_RANGE. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
 
 ## <a name="see-also"></a>Zobacz także
 

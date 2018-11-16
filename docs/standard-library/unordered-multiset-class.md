@@ -1,10 +1,6 @@
 ---
-title: unordered_multiset — klasa | Dokumentacja firmy Microsoft
-ms.custom: ''
+title: unordered_multiset — Klasa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -51,8 +47,6 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_multiset
 - std::unordered_multiset::allocator_type
@@ -140,16 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b3e7697eea7ae6fddf2abafaacef1ddc13c1137
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069691"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519790"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset — Klasa
 
@@ -1856,7 +1846,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_load_factor"></a>  unordered_multiset::max_load_factor
@@ -1950,7 +1939,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_size"></a>  unordered_multiset::max_size

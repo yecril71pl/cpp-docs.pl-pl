@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 28850211fc43e162c227a8bb55da9cf92178ae41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465536"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694299"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
 
@@ -57,7 +57,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
 - **Obsługa Menedżera ponownego uruchamiania**
 
-   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](https://msdn.microsoft.com/vstudio/ee886407).
+   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Zaawansowane okienka ramki**
 

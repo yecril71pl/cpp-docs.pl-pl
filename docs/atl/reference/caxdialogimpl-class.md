@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 1814d95ae4346706c8f78125903e26fca8136d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544602"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694234"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 
@@ -177,7 +177,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.
+[in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funkcję Win32.
 
 *dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499698"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694546"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 
@@ -258,7 +258,7 @@ Aby użyć `CFileDialog` obiektów, należy najpierw utworzyć obiekt przy użyc
 Po inicjowania formantów okna dialogowego wywołać [CFileDialog::DoModal](#domodal) metodę, aby wyświetlić okno dialogowe pola tak, aby użytkownik może wpisać ścieżkę i nazwę pliku. `DoModal` Zwraca, czy użytkownik kliknął przycisk anulowania (IDCANCEL) lub OK (IDOK). Jeśli `DoModal` zwraca IDOK, możesz użyć jednej z `CFileDialog` publiczne funkcje Członkowskie można pobrać informacji o umieszczenie w przez użytkownika.
 
 > [!NOTE]
-> W obszarze Windows Vista lub nowszym, wiele wywołań [IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980) powoduje błąd. Drugie wywołanie `SetFileTypes` dla każdego wystąpienia programu `CFileDialog` zwróci wartość E_UNEXPECTED w systemie Windows Vista lub nowszym. Niektóre `CFileDialog` metody funkcji wywołanie `SetFileTypes`. Na przykład dwa wywołania `CFileDialog::DoModal` dla tego samego wystąpienia `CFileDialog` generuje [ASERCJA](diagnostic-services.md#assert).
+> W obszarze Windows Vista lub nowszym, wiele wywołań [IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) powoduje błąd. Drugie wywołanie `SetFileTypes` dla każdego wystąpienia programu `CFileDialog` zwróci wartość E_UNEXPECTED w systemie Windows Vista lub nowszym. Niektóre `CFileDialog` metody funkcji wywołanie `SetFileTypes`. Na przykład dwa wywołania `CFileDialog::DoModal` dla tego samego wystąpienia `CFileDialog` generuje [ASERCJA](diagnostic-services.md#assert).
 
 `CFileDialog` obejmuje kilka chronionych elementów członkowskich, które pozwalają na wykonywanie niestandardową obsługę naruszenia udostępniania, sprawdzanie poprawności nazwy pliku i powiadomienia o zmianie pola listy. Te elementy chronione są funkcji wywołania zwrotnego, które nie mają większości aplikacji do użycia, ponieważ domyślna obsługa odbywa się automatycznie. Wpisy mapy komunikatów dla tych funkcji nie są wymagane, ponieważ są one standardowych funkcji wirtualnych.
 
@@ -851,7 +851,7 @@ Wskaźnik do wewnętrznego obiektu COM dla `CFileDialog`. Odpowiada za zwolnieni
 
 Funkcja ta jest tylko w Windows Vista lub nowszym z obiektu, który ma *bVistaStyle* ustawiona na wartość TRUE. Ta funkcja zwraca wartość NULL, jeśli `CFileDialog` nie **Otwórz** okno dialogowe lub jeśli *bVistaStyle* jest ustawiona na wartość FALSE. W tym ostatnim przypadku funkcja tylko zwraca wartość NULL w trybie wydania — w trybie debugowania go spowoduje zgłoszenie potwierdzenie.
 
-Aby uzyskać więcej informacji na temat `IFileOpenDialog` interfejsu, zobacz [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834).
+Aby uzyskać więcej informacji na temat `IFileOpenDialog` interfejsu, zobacz [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Przykład
 

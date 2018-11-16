@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484022"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693298"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: Przerywanie wątków w MFC
 
@@ -34,7 +34,7 @@ Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istn
 
 W przypadku wątku roboczego zakończenie zwykłych wątków jest proste: zamknij funkcję kontrolującą i zwróć wartość, która oznacza powód zakończenia. Można użyć dowolnego [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkcji lub **zwracają** instrukcji. Typowo 0 oznacza pomyślne ukończenie, ale która zależy od użytkownika.
 
-Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.
+Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.
 
 ##  <a name="_core_premature_thread_termination"></a> Przedwczesne zakończenie wątku
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: da8bd6d583d6f9d714853e545979d54ddcb79ce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694156"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie
 
-Visual C++ obsługuje model wdrażania dla aplikacji klienckich Windows oparte na pomysł [izolowanych](/windows/desktop/SbsCs/isolated-applications) i [zestawów side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Domyślnie program Visual C++ kompiluje wszystkich natywnych aplikacji C/C++ izolowana aplikacje, które używają [manifesty](https://msdn.microsoft.com/library/aa375365) do opisania ich zależności bibliotek Visual C++.
+Visual C++ obsługuje model wdrażania dla aplikacji klienckich Windows oparte na pomysł [izolowanych](/windows/desktop/SbsCs/isolated-applications) i [zestawów side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Domyślnie program Visual C++ kompiluje wszystkich natywnych aplikacji C/C++ izolowana aplikacje, które używają [manifesty](/windows/desktop/sbscs/manifests) do opisania ich zależności bibliotek Visual C++.
 
 Kompilowanie programów C/C++, które aplikacje izolowane przedstawia szereg korzyści. Na przykład aplikacji izolowanej jest nienaruszona, gdy innych aplikacji C/C++, instalowanie i odinstalowywanie bibliotek języka Visual C++. Biblioteki Visual C++, używane przez aplikacje izolowane nadal może być rozpowszechniany w lokalnym folderze w aplikacji lub za pomocą instalacji do pamięci podręcznej zestawu macierzystego (folderze WinSxS); jednak obsługa bibliotek języka Visual C++ dla już wdrożonej aplikacji można uprościć za pomocą [plik konfiguracyjny wydawcy](/windows/desktop/SbsCs/publisher-configuration). Model wdrażania aplikacji izolowanej ułatwia zapewnienie, że aplikacji C/C++, które są uruchomione na określonym komputerze używać najnowszą wersję bibliotek języka Visual C++, pozostawiając nadal otwarte możliwości dla administratorów systemów i autorzy aplikacji do sterowania wiązanie jawne wersji aplikacji w celu ich zależne biblioteki dll.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694052"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -132,7 +132,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
    W tej funkcji możesz pisać kod obsługujący *wiadomości* które aplikacja otrzyma od Windows po *zdarzenia* wystąpić. Na przykład, jeśli użytkownik wybierze przycisk OK w aplikacji, Windows wyśle do Ciebie wiadomość i można napisać kod wewnątrz swojej `WndProc` funkcję, która nie jest pracę. Jest on nazywany *obsługi* zdarzenie. Można obsługiwać zdarzenia, które są istotne dla twojej aplikacji.
 
-   Aby uzyskać więcej informacji, zobacz [procedury okna](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Aby uzyskać więcej informacji, zobacz [procedury okna](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Aby dodać funkcje do funkcji WinMain
 
@@ -157,7 +157,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
    Aby uzyskać informacje o polach powyżej struktury, zobacz [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Zarejestruj `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
+1. Zarejestruj `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    return (int) msg.wParam;
    ```
 
-   Aby uzyskać więcej informacji dotyczących struktur i funkcji w pętli komunikatów, zobacz [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), i [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Aby uzyskać więcej informacji dotyczących struktur i funkcji w pętli komunikatów, zobacz [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), i [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    W tym momencie `WinMain` funkcja powinna przypominać następujący kod.
 

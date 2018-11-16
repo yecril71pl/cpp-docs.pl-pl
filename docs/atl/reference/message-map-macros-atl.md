@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 5502dae40392679f47b691a822260accbf597dc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694377"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 
@@ -607,7 +607,7 @@ Ustawia mapy wiadomości `bHandled` na wartość TRUE, przed `MessageHandler` je
 > [!NOTE]
 >  Zawsze zaczynają się mapy komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować mapy kolejnych komunikatów alternatywny z [ALT_MSG_MAP](#alt_msg_map). [END_MSG_MAP](#end_msg_map) — makro oznacza koniec mapie komunikatów. Mapy komunikatów, co musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
-Oprócz MESSAGE_HANDLER, można użyć [COMMAND_HANDLER](#command_handler) i [NOTIFY_HANDLER](#notify_handler) do mapowania [WM_COMMAND](/windows/desktop/menurc/wm-command) i [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości , odpowiednio.
+Oprócz MESSAGE_HANDLER, można użyć [COMMAND_HANDLER](#command_handler) i [NOTIFY_HANDLER](#notify_handler) do mapowania [WM_COMMAND](/windows/desktop/menurc/wm-command) i [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości , odpowiednio.
 
 Aby uzyskać więcej informacji o korzystaniu z mapy komunikatów w ATL, zobacz [mapy wiadomości](../../atl/message-maps-atl.md).
 
@@ -644,7 +644,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
 
-Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie powiadomień kodu.
+Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości tylko na podstawie powiadomień kodu.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -683,7 +683,7 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="remarks"></a>Uwagi
 
-Mapuje NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu.
+Mapuje NOTIFY_HANDLER [WM_NOTIFY](/windows/desktop/controls/wm-notify) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu.
 
 Żadnej funkcji, które określono w makrze NOTIFY_HANDLER musi być zdefiniowany w następujący sposób:
 
@@ -708,7 +708,7 @@ Aby uzyskać więcej informacji o korzystaniu z mapy komunikatów w ATL, zobacz 
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie kontroli identyfikatora.
+Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości tylko na podstawie kontroli identyfikatora.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -728,7 +728,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-Podobnie jak [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.
+Podobnie jak [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -758,7 +758,7 @@ Ten zakres jest oparty na identyfikator kontrolki, wysyłania wiadomości.
 
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
 
-Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.
+Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

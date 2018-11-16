@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594522"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520482"
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
@@ -110,29 +110,29 @@ Właściwości w sekcji Projekt domyślny reprezentują domyślne właściwości
 
 - **Typ konfiguracji**
 
-   Istnieje kilka typów konfiguracji do wyboru:
+  Istnieje kilka typów konfiguracji do wyboru:
 
-   - **Aplikacja (.exe)**
+  - **Aplikacja (.exe)**
 
-      Wyświetla zestaw narzędzi konsolidatora (kompilator C/C++, MIDL, kompilator zasobów, konsolidator, BSCMake, Generator serwera Proxy usługi sieci Web XML, niestandardowej kompilacji, wydarzenia przedkompilacyjne, wydarzenie i postkompilacyjne).
+     Wyświetla zestaw narzędzi konsolidatora (kompilator C/C++, MIDL, kompilator zasobów, konsolidator, BSCMake, Generator serwera Proxy usługi sieci Web XML, niestandardowej kompilacji, wydarzenia przedkompilacyjne, wydarzenie i postkompilacyjne).
 
-   - **Biblioteka dynamiczna (dll)**
+  - **Biblioteka dynamiczna (dll)**
 
-      Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/dll i dodaje _windll, aby zdefiniować CL.
+     Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/dll i dodaje _windll, aby zdefiniować CL.
 
-   - **Plik reguł programu make**
+  - **Plik reguł programu make**
 
-      Wyświetla zestaw narzędzi pliku reguł programu make (NMake).
+     Wyświetla zestaw narzędzi pliku reguł programu make (NMake).
 
-   - **Biblioteka statyczna (lib)**
+  - **Biblioteka statyczna (lib)**
 
-      Wyświetla zestaw narzędzi bibliotekarza (taki sam, jak zestaw narzędzi konsolidatora, z wyjątkiem podstawenia bibliotekarza na konsolidatora i pominięcia generatora serwera Proxy usługi sieci Web XML).
+     Wyświetla zestaw narzędzi bibliotekarza (taki sam, jak zestaw narzędzi konsolidatora, z wyjątkiem podstawenia bibliotekarza na konsolidatora i pominięcia generatora serwera Proxy usługi sieci Web XML).
 
-   - **Narzędzie**
+  - **Narzędzie**
 
-      Wyświetla zestaw narzędzi (MIDL, niestandardowej kompilacji, wydarzenia przedkompilacyjne i postkompilacyjne).
+     Wyświetla zestaw narzędzi (MIDL, niestandardowej kompilacji, wydarzenia przedkompilacyjne i postkompilacyjne).
 
-   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Użycie MFC**
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694858"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -892,7 +892,7 @@ Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość
 |DACL_SECURITY_INFORMATION|Ustawia klucz poufnej-listy kontroli dostępu (DACL). Klucz musi mieć dostęp WRITE_DAC lub proces wywołujący musi być właścicielem obiektu.|
 |GROUP_SECURITY_INFORMATION|Ustawia identyfikator zabezpieczeń grupy podstawowej klucza (SID). Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu.|
 |OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|
-|SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](https://msdn.microsoft.com/library/windows/desktop/aa379306) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|
+|SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](/windows/desktop/secauthz/privileges) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|
 
 *PSD*<br/>
 Wskaźnik do [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.

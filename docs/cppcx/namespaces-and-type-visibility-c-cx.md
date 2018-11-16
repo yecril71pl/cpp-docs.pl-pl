@@ -2,12 +2,12 @@
 title: Przestrzenie nazw i widoczność typów (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693897"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Przestrzenie nazw i widoczność typów (C + +/ CX)
 
@@ -40,7 +40,7 @@ Użyj następujące modyfikatory dostępu, aby kontrolować widoczność metadan
 
 ## <a name="windows-runtime-namespaces"></a>Przestrzenie nazw Windows Runtime
 
-Interfejs API Windows składa się z typami, które są zadeklarowane w Windows::\* przestrzeni nazw. Te przestrzenie nazw są zarezerwowane dla Windows i typów nie można dodać do nich. W **przeglądarki obiektów**, możesz wyświetlić te przestrzenie nazw w pliku windows.winmd. Aby uzyskać dokumentację te przestrzenie nazw, zobacz [interfejsu Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).
+Interfejs API Windows składa się z typami, które są zadeklarowane w Windows::\* przestrzeni nazw. Te przestrzenie nazw są zarezerwowane dla Windows i typów nie można dodać do nich. W **przeglądarki obiektów**, możesz wyświetlić te przestrzenie nazw w pliku windows.winmd. Aby uzyskać dokumentację te przestrzenie nazw, zobacz [interfejsu Windows API](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>C + +/ CX w przestrzeni nazw
 

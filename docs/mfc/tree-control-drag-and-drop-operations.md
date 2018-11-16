@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519369"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693311"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania kontrolki drzewa
 
@@ -19,7 +19,7 @@ Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powi
 
 Uzyskanie obrazu do wyświetlenia w czasie trwania operacji przeciągania, wywołując [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) funkcja elementu członkowskiego. Kontrolka drzewa tworzy mapę bitową przeciągania na podstawie etykiety elementu przeciąganie. Następnie tworzy listy obrazów kontrolki drzewa, dodaje mapę bitową i zwraca wskaźnik do [CImageList](../mfc/reference/cimagelist-class.md) obiektu.
 
-Należy podać kod, który faktycznie przeciągnięty element. Zazwyczaj wiąże się to przy użyciu funkcji przeciągania funkcji listy obrazów i przetwarzanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) i [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (lub [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) Komunikaty wysyłane po rozpoczęciu operacji przeciągania. Aby uzyskać więcej informacji na temat funkcji listy obrazów, zobacz [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC* i [listy obrazów](https://msdn.microsoft.com/library/windows/desktop/bb761389) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat przeciągania elementu kontrolki drzewa, zobacz [przeciągnięcie elementu widoku drzewa](/windows/desktop/Controls/tree-view-controls), również w zestawie Windows SDK.
+Należy podać kod, który faktycznie przeciągnięty element. Zazwyczaj wiąże się to przy użyciu funkcji przeciągania funkcji listy obrazów i przetwarzanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) i [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (lub [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) Komunikaty wysyłane po rozpoczęciu operacji przeciągania. Aby uzyskać więcej informacji na temat funkcji listy obrazów, zobacz [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC* i [listy obrazów](/windows/desktop/controls/image-lists) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat przeciągania elementu kontrolki drzewa, zobacz [przeciągnięcie elementu widoku drzewa](/windows/desktop/Controls/tree-view-controls), również w zestawie Windows SDK.
 
 W przypadku elementów kontrolki drzewa jako obiekty docelowe operacji przeciągania i upuszczania, musisz wiedzieć, gdy wskaźnik myszy znajduje się na element docelowy. Możesz dowiedzieć się, wywołując [hitTest —](../mfc/reference/ctreectrl-class.md#hittest) funkcja elementu członkowskiego. Określ punkt i liczby całkowitej lub adres [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) strukturę, która zawiera bieżące współrzędne kursora myszy. Po powrocie z tej funkcji liczby całkowitej lub struktura zawiera flagę wskazującą położenie kursora myszy względem kontrolki drzewa. Jeśli kursor znajduje się nad elementem w drzewie, struktura zawiera dojście także elementu.
 

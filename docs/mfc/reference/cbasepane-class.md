@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525421"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694793"
 ---
 # <a name="cbasepane-class"></a>Klasa CBasePane
 
@@ -1566,7 +1566,7 @@ Dojście do struktury położenie okna odroczonego lub wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku przekazania wartości NULL jako *hdwp* parametru tej metody zwykle przesuwa okno. Jeśli przekażesz uchwyt, ta metoda przeprowadza przejście odroczonego okna. Dojście można uzyskać wywołując [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) lub umieszczając wartość zwracaną przez poprzednie wywołanie tej metody.
+W przypadku przekazania wartości NULL jako *hdwp* parametru tej metody zwykle przesuwa okno. Jeśli przekażesz uchwyt, ta metoda przeprowadza przejście odroczonego okna. Dojście można uzyskać wywołując [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) lub umieszczając wartość zwracaną przez poprzednie wywołanie tej metody.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

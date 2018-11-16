@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604284"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693441"
 ---
 # <a name="idle-loop-processing"></a>Przetwarzanie pętli bezczynności
 
 Wiele aplikacji przetwarzania długich "w tle." Czasami zagadnienia związane z wydajnością dyktowania, za pomocą wielowątkowości dla tych prac. Wątki obejmują rozwoju dodatkowe obciążenie, więc nie są zalecane dla prostych zadań, takich jak praca czas bezczynności (%), który wykonuje MFC, w [OnIdle](../mfc/reference/cwinthread-class.md#onidle) funkcji. Ten artykuł koncentruje się na przetwarzanie w stanie bezczynności. Aby uzyskać więcej informacji o wielowątkowości, zobacz [tematy o wielowątkowości](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Niektóre rodzaje przetwarzania w tle odpowiednio są wykonywane podczas interwałów, które użytkownik nie jest w przeciwnym razie interakcji z aplikacją. W aplikacji dla systemu operacyjnego Microsoft Windows aplikacja może wykonywać przetwarzanie w czasie bezczynności (%), dzieląc długotrwałym procesem na wiele małych fragmentów. Po przetworzeniu każdego fragmentu, aplikacja przekazuje sterowanie wykonywania za pomocą Windows [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) pętli.
+Niektóre rodzaje przetwarzania w tle odpowiednio są wykonywane podczas interwałów, które użytkownik nie jest w przeciwnym razie interakcji z aplikacją. W aplikacji dla systemu operacyjnego Microsoft Windows aplikacja może wykonywać przetwarzanie w czasie bezczynności (%), dzieląc długotrwałym procesem na wiele małych fragmentów. Po przetworzeniu każdego fragmentu, aplikacja przekazuje sterowanie wykonywania za pomocą Windows [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) pętli.
 
 W tym artykule opisano bezczynności przetwarzania w aplikacji na dwa sposoby:
 
@@ -37,7 +37,7 @@ W tym artykule opisano bezczynności przetwarzania w aplikacji na dwa sposoby:
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage w pętli komunikatów MFC
 
-W aplikacji opracowanych przez MFC, głównym komunikat pętli w `CWinThread` klasa zawiera pętlę komunikatów, który wywołuje [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) interfejsu API systemu Win32. Pętla wywołania `OnIdle` funkcji składowej typu `CWinThread` między komunikatami. Aplikacja może przetwarzać komunikatów w tym okresie bezczynności przez zastąpienie `OnIdle` funkcji.
+W aplikacji opracowanych przez MFC, głównym komunikat pętli w `CWinThread` klasa zawiera pętlę komunikatów, który wywołuje [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) interfejsu API systemu Win32. Pętla wywołania `OnIdle` funkcji składowej typu `CWinThread` między komunikatami. Aplikacja może przetwarzać komunikatów w tym okresie bezczynności przez zastąpienie `OnIdle` funkcji.
 
 > [!NOTE]
 >  `Run`, `OnIdle`, i niektórych innych funkcji Członkowskich są teraz elementów członkowskich klasy `CWinThread` , a nie klasy `CWinApp`. `CWinApp` jest tworzony na podstawie `CWinThread`.

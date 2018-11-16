@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572107"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693684"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -93,7 +93,7 @@ gdzie `MyDlg` jest **krótką nazwę** wprowadzona w kreatorze **nazwy** strony.
 |Tworzenie formantów|[ALT — samouczek](../../atl/active-template-library-atl-tutorial.md)|
 |Za pomocą okien dialogowych w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|
-|Okna dialogowe|[Okna dialogowe](https://msdn.microsoft.com/library/windows/desktop/ms632588) i kolejnych tematów w zestawie Windows SDK|
+|Okna dialogowe|[Okna dialogowe](/windows/desktop/dlgbox/dialog-boxes) i kolejnych tematów w zestawie Windows SDK|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.
+[in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funkcję Win32.
 
 *dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.

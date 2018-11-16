@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576634"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694457"
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna. Powinna być równa NULL dla standardowego `CMDIChildWnd`.
+Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna. Powinna być równa NULL dla standardowego `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
 Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna. Używane jako tekst, na pasku tytułu.

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501637"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694247"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 
@@ -247,7 +247,7 @@ Liczba elementów, które pozostały w formancie. Jeśli *iIndex* jest nieprawid
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), zgodnie z opisem w zestawie Windows SDK. Gdy wywołujesz DeleteItem, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z powiadomieniem CBEN_DELETEITEM będą wysyłane do okna nadrzędnego.
+Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), zgodnie z opisem w zestawie Windows SDK. Gdy wywołujesz DeleteItem, [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości z powiadomieniem CBEN_DELETEITEM będą wysyłane do okna nadrzędnego.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ Indeks, w którym dodano nowy element w przypadku powodzenia; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy wywołujesz `InsertItem`, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatu o [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) zostanie wysłane powiadomienie do okna nadrzędnego.
+Gdy wywołujesz `InsertItem`, [WM_NOTIFY](/windows/desktop/controls/wm-notify) komunikatu o [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) zostanie wysłane powiadomienie do okna nadrzędnego.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

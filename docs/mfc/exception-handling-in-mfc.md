@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694559"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
@@ -103,7 +103,7 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki dostarczonych 
 |[Klasa CUserException](../mfc/reference/cuserexception-class.md)|Wyjątek, który powiadomi użytkownika o okno komunikatu, a następnie zgłasza ogólny [cexception — klasa](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  Biblioteka MFC obsługuje makr wyjątków MFC i wyjątków języka C++. MFC nie obsługuje bezpośrednio obsługi wyjątków systemu Windows NT strukturalnych (SEH), zgodnie z opisem w [obsługi wyjątków strukturalnych](https://msdn.microsoft.com/library/windows/desktop/ms680657).
+>  Biblioteka MFC obsługuje makr wyjątków MFC i wyjątków języka C++. MFC nie obsługuje bezpośrednio obsługi wyjątków systemu Windows NT strukturalnych (SEH), zgodnie z opisem w [obsługi wyjątków strukturalnych](/windows/desktop/debug/structured-exception-handling).
 
 ##  <a name="_core_further_reading_about_exceptions"></a> Dalsze informacje o wyjątkach
 

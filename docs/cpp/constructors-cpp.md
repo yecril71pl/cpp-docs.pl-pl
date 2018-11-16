@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523159"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694065"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -70,7 +70,7 @@ int main()
 
 Konstruktor opcjonalnie może mieć listy inicjatorów składowej, który inicjuje elementy członkowskie klasy przed ciele konstruktora. (Należy pamiętać, że listy inicjatorów składowej nie jest tak samo jak *listy inicjatorów* typu [std::initializer_list\<T >](../standard-library/initializer-list-class.md).)
 
-Za pomocą listy inicjatora składowej jest preferowana nad przypisywaniem wartości w treści konstruktora, ponieważ bezpośrednio inicjuje element członkowski. W poniższym przykładzie przedstawiono inicjator składowej lista zawiera wszystkie **identifier(argument)** wyrażeń po dwukropku:
+Przy użyciu listy inicjatorów składowej jest preferowana nad przypisywaniem wartości w treści konstruktora, ponieważ bezpośrednio inicjuje elementu członkowskiego. W poniższym przykładzie przedstawiono inicjator składowej lista zawiera wszystkie **identifier(argument)** wyrażeń po dwukropku:
 
 ```cpp
     Box(int width, int length, int height)
@@ -571,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 
