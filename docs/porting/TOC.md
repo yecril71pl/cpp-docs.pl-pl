@@ -4,7 +4,7 @@
 ## [C++ — zgodność binarna między rokiem 2015 a 2017](binary-compat-2015-2017.md)
 ## [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [Przenoszenie bibliotek innych firm](porting-third-party-libraries.md)
-## [Przenoszenie aplikacji danych](porting-data-applications.md)
+## [Przenoszenie aplikacji danych](../data/data-access-programming-mfc-atl.md)
 ## [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](porting-and-upgrading-examples-and-case-studies.md)
 ### [Przewodnik przenoszenia: Aplikacja Scribble MFC](porting-guide-mfc-scribble.md)
 ### [Przewodnik przenoszenia: narzędzie Spy modelu COM](porting-guide-com-spy.md)
