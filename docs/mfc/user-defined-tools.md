@@ -1,15 +1,15 @@
 ---
 title: Narzędzia zdefiniowane przez użytkownika
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607080"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175733"
 ---
 # <a name="user-defined-tools"></a>Narzędzia zdefiniowane przez użytkownika
 
@@ -17,7 +17,8 @@ Biblioteka MFC obsługuje narzędzia zdefiniowane przez użytkownika. Narzędzia
 
 Jeśli włączona jest obsługa narzędzi zdefiniowane przez użytkownika, w oknie dialogowym dostosowywania automatycznie uwzględnia **narzędzia** kartę. Poniższa ilustracja przedstawia **narzędzia** strony.
 
-![Narzędzia karty w oknie dialogowym Dostosuj](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") Karta narzędzi okna dialogowego Dostosowywanie
+![Narzędzia karty w oknie dialogowym Dostosuj](../mfc/media/custdialogboxtoolstab.png "narzędzia karta w oknie dialogowym Dostosuj") <br/>
+Karta narzędzia okna dialogowego Dostosowywanie
 
 ## <a name="enabling-user-defined-tools-support"></a>Włączanie użytkownika narzędzia pomocy technicznej
 
@@ -57,4 +58,3 @@ Jeśli chcesz wstępnie niektóre narzędzia podczas uruchamiania aplikacji, kon
 [Klasa CUserTool](../mfc/reference/cusertool-class.md)<br/>
 [Klasa CUserToolsManager](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [Klasa CWinAppEx](../mfc/reference/cwinappex-class.md)
-

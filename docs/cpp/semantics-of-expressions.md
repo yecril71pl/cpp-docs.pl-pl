@@ -1,18 +1,18 @@
 ---
 title: Semantyka wyrażeń
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490964"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175794"
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Kolejność obliczania w wyrażeniach](../cpp/media/vc38zv1.gif "vc38ZV1") kolejność obliczania wyrażenia
+![Kolejność obliczania w wyrażeniach](../cpp/media/vc38zv1.gif "kolejność obliczania w wyrażeniach") <br/>
+Kolejność obliczania wyrażenia
 
 Kolejność, w jakiej są oceniane wyrażenia pokazano na rysunku powyżej jest określana przez pierwszeństwo i łączność operatorów:
 
@@ -55,7 +56,8 @@ Kolejność, w jakiej są oceniane wyrażenia pokazano na rysunku powyżej jest 
 
 Gdy nawiasy są używane do grupowania podwyrażenia, zmieniają pierwszeństwo, a także kolejności, w którym wyrażenie jest obliczane, jak pokazano na poniższej ilustracji.
 
-![Kolejność obliczania wyrażenia w nawiasach](../cpp/media/vc38zv2.gif "vc38ZV2") kolejność oceny wyrażenia w nawiasach
+![Kolejność obliczania wyrażenia w nawiasach](../cpp/media/vc38zv2.gif "kolejność obliczania wyrażenia w nawiasach") <br/>
+Kolejność oceny wyrażenia w nawiasach
 
 Wyrażenia, takich jak na rysunku powyżej są obliczane wyłącznie na ich efektów ubocznych — w tym przypadku do przekazywania informacji na urządzeniu standardowe dane wyjściowe.
 
@@ -68,7 +70,7 @@ Język C++ określa niektóre możliwości podczas określania argumentów opera
 |Oczekiwano typu|Dozwolone typy|
 |-------------------|-------------------|
 |*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
-|*Typ*\*|*Typ*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|
+|*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
 |`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
 |`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
 

@@ -1,14 +1,14 @@
 ---
 title: System typów języka C++ (Modern C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521095"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176344"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 
@@ -59,7 +59,7 @@ Podstawowe typy są rozpoznawane przez kompilator, który posiada wbudowane regu
 
 Na poniższej ilustracji przedstawiono względne wielkości typów wbudowanych:
 
-![Rozmiar w bajtach wbudowane&#45;w typach](../cpp/media/built-intypesizes.png "inTYpeSizes wbudowana")
+![Rozmiar w bajtach wbudowane&#45;w typach](../cpp/media/built-intypesizes.png "wbudowane rozmiar w bajtach&#45;w typach")
 
 Poniższa tabela wymienia najczęściej używane typy podstawowe:
 
@@ -70,13 +70,13 @@ Poniższa tabela wymienia najczęściej używane typy podstawowe:
 |bool|1 bajt|Przedstawia wartości, które mogą być prawdziwe lub fałszywe.|
 |char|1 bajt|Używaj dla znaków ASCII w starszych ciągach typu C lub obiektach std::string, które nigdy nie będą musiały zostać skonwertowane na UNICODE.|
 |wchar_t|2 bajty|Przedstawia wartości znaku „szerokiego”, które mogą być zakodowane w formacie UNICODE (UTF-16 w systemie Windows, inne systemy operacyjne mogą się różnić). Jest to typ znaku, który jest używany w ciągach typu `std::wstring`.|
-|unsigned char|1 bajt|C++ nie ma wbudowanej `byte` typu.  Używaj unsigned char, aby reprezentować wartość bajtową.|
+|niepodpisane&nbsp;char|1 bajt|C++ nie ma wbudowanej `byte` typu.  Używaj unsigned char, aby reprezentować wartość bajtową.|
 |unsigned int|4 bajty|Wybór domyślny dla flag bitowych.|
 |long long|8 bajtów|Przedstawia bardzo duże wartości całkowitoliczbowe.|
 
 ## <a name="the-void-type"></a>Typ void (pusty).
 
-**Void** typ to specjalny typ; nie można zadeklarować zmiennej typu **void**, ale można zadeklarować zmienną typu `void *` (wskaźnik do **void**), czyli Czasami konieczne przy alokacji pamięci (bez typu). Jednakże wskaźniki do **void** są nie bezpieczne, a ich stosowanie jest zdecydowanie odradzane w nowoczesnym języku C++. W deklaracji funkcji **void** zwracana wartość oznacza, że funkcja nie zwraca wartości; jest to typowe i dopuszczalne wykorzystanie z **void**. Podczas gdy język C wymagał funkcji, które posiadają parametry zero do zadeklarowania **void** na liście parametrów, na przykład `fou(void)`, te praktyki są odradzane w nowoczesnym C++ i powinny być zadeklarowane `fou()`. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+**Void** typ to specjalny typ; nie można zadeklarować zmienną typu **void**, ale można zadeklarować zmienną typu __void \*__  (wskaźnik do **void**), co jest czasami konieczne przy alokacji pamięci (bez typu). Jednakże wskaźniki do **void** są nie bezpieczne, a ich stosowanie jest zdecydowanie odradzane w nowoczesnym języku C++. W deklaracji funkcji **void** zwracana wartość oznacza, że funkcja nie zwraca wartości; jest to typowe i dopuszczalne wykorzystanie z **void**. Podczas gdy język C wymagał funkcji, które posiadają parametry zero do zadeklarowania **void** na liście parametrów, na przykład `fou(void)`, te praktyki są odradzane w nowoczesnym C++ i powinny być zadeklarowane `fou()`. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>kwalifikator typu const
 

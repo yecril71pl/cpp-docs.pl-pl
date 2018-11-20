@@ -1,6 +1,6 @@
 ---
 title: Klasa CNetAddressCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654687"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176241"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -64,7 +64,7 @@ Formant adresu sieciowego sprawdza, czy format adresu, wprowadzanych przez użyt
 
 Poniższa ilustracja przedstawia okno dialogowe, który zawiera formant adresu sieciowego. Tekst pola (1) dla formant adresu sieciowego zawiera nieprawidłowy adres sieciowy. Zostanie wyświetlony komunikat Porada (2), jeśli adres sieciowy jest nieprawidłowy.
 
-![Okno dialogowe z formant adresu sieciowego i porady. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Okno dialogowe z formant adresu sieciowego i porady. ](../../mfc/reference/media/cnetaddctrl.png "Okna dialogowego z formantem adresu sieciowego i porady.")
 
 ## <a name="example"></a>Przykład
 

@@ -1,18 +1,18 @@
 ---
 title: Pochodne mapy komunikatów
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662530"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175606"
 ---
 # <a name="derived-message-maps"></a>Pochodne mapy komunikatów
 
@@ -20,7 +20,8 @@ Podczas komunikatów, obsługa, sprawdzanie komunikatów tej klasy mapy jest kon
 
 Należy pamiętać, że `CView`, klasa bazowa `CMyView`, z kolei pochodzi od `CWnd`. Ten sposób `CMyView` *jest* `CView` i *jest* `CWnd`. Każda z tych klas ma swój własny mapy komunikatów. Rysunek "Widok hierarchii" poniżej przedstawia hierarchiczną relację klasy, ale należy pamiętać, że `CMyView` obiekt jest pojedynczy obiekt, który ma właściwości wszystkich trzech klasach.
 
-![Hierarchia widoku](../mfc/media/vc38621.gif "vc38621") Wyświetl hierarchię
+![Hierarchia widoku](../mfc/media/vc38621.gif "hierarchii to widok") <br/>
+Wyświetl hierarchię
 
 Jeśli komunikat nie można dopasować w klasie `CMyView`w mapie komunikatów, struktura wyszukuje również mapę komunikatów w klasie bazowej natychmiastowe. `BEGIN_MESSAGE_MAP` — Makro na początku mapy komunikatów określa nazwy dwóch klas jako jego argumenty:
 

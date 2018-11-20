@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCColorPickerCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519057"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176929"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
 
@@ -97,7 +97,7 @@ Wybrano standardowe kolory z palety kolorów (sześciokąt), a kolorów niestand
 
 Poniższa ilustracja przedstawia kilka `CMFCColorPickerCtrl` obiektów.
 
-![Okno dialogowe CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")
+![Okno dialogowe CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "CMFCColorPickerCtrl, okno dialogowe")
 
 `CMFCColorPickerCtrl` Obsługuje dwie pary stylów. Style HEX i HEX_GREYSCALE są odpowiednie dla zaznaczenia kolor standardowy. Wybór i JASNOŚCI style są odpowiednie do wyboru koloru niestandardowego.
 

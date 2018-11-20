@@ -1,6 +1,6 @@
 ---
 title: try-finally — instrukcja
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326926"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175928"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
@@ -68,7 +68,8 @@ Jeśli wystąpi wyjątek w **__try** bloku, system operacyjny musi odnaleźć pr
 
 Załóżmy na przykład, serii wywołań funkcji łącza funkcji A działać D, jak pokazano na poniższej ilustracji. Każda funkcja ma jednego programu obsługi zakończenia. Jeśli wyjątek jest zgłaszany w funkcji D i obsłużony a, programy obsługi zakończenia są nazywane w podanej kolejności, jak system rozwija stos: D, C, B.
 
-![Kolejność zakończenia&#45;wykonanie procedury obsługi](../cpp/media/vc38cx1.gif "vc38CX1") kolejność wykonywania programu obsługi zakończenia
+![Kolejność zakończenia&#45;wykonanie procedury obsługi](../cpp/media/vc38cx1.gif "kolejność zakończenia&#45;wykonanie procedury obsługi") <br/>
+Kolejność wykonywania programu obsługi zakończenia
 
 > [!NOTE]
 > Zachowanie try-finally, różni się od innych języków, które obsługują korzystanie z **na koniec**, takich jak C#.  Pojedynczy **__try** może znajdować albo, ale nie oba **__finally** i **__except**.  Jeśli oba mają być używane razem, spróbuj zewnętrznym — z wyjątkiem instrukcji należy ująć wewnętrznej instrukcji try-finally.  Reguły, określając podczas każdego bloku wykonuje też są różne.

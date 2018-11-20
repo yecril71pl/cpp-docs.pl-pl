@@ -1,24 +1,24 @@
 ---
 title: Projektant wstążki (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521401"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175837"
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
 
 Projektant wstążki pozwala tworzyć i dostosowywać wstążki w aplikacjach MFC. Wstążka jest element interfejsu użytkownika, który organizuje polecenia w logiczne grupy. Te grupy są wyświetlane na osobnych kartach w górnej części okna. Wstążka zastępuje pasek menu i paski narzędzi. Wstążka może znacznie zwiększyć użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](/windows/desktop/uxguide/cmd-ribbons). Na poniższej ilustracji pokazano Wstążkę.
 
-![Kontrola zasobów wstążki MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Kontrola zasobów wstążki MFC](../mfc/media/ribbon_no_callouts.png "kontrolę zasobów wstążki MFC")
 
 We wcześniejszych wersjach programu Visual Studio, wstążki musiały być utworzone przez pisanie kodu, który używa klasy wstążek MFC, takich jak [klasa CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). W programie Visual Studio 2010 i nowszych Projektant wstążki oferuje alternatywną metodę tworzenia wstążki. Najpierw utwórz i Dostosuj Wstążkę jako zasób. Następnie załaduj zasób wstążki z kodu w aplikacji MFC. Możesz nawet użyć zasobów Wstążki i klas wstążki MFC. Na przykład można utworzyć zasób wstążki, a następnie programowo dodać więcej elementów do niej w czasie wykonywania za pomocą kodu.
 
@@ -71,7 +71,7 @@ Aby otworzyć Wstążkę w Projektancie wstążki, kliknij dwukrotnie zasób wst
 
 Na poniższej ilustracji przedstawiono różne składniki w Projektancie wstążki.
 
-![Projektant wstążki MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Projektant wstążki MFC](../mfc/media/ribbon_designer.png "Projektant wstążki MFC")
 
 - **Przybornik:** zawiera formanty, które mogą być przeciągnięte na powierzchnię projektanta.
 
@@ -95,7 +95,7 @@ W następujących tematach opisano sposób korzystania z funkcji w Projektancie 
 
 ## <a name="definitions-of-ribbon-elements"></a>Definicje elementów wstążki
 
-![Wstążki MFC](../mfc/media/ribbon.png "wstążki")
+![Wstążki MFC](../mfc/media/ribbon.png "wstążki MFC")
 
 - **Przycisk aplikacji:** przycisk, który pojawia się w lewym górnym rogu wstążki. Przycisk aplikacji zastępuje menu Plik i jest widoczny nawet wtedy, gdy Wstążka jest zminimalizowana. Po kliknięciu przycisku menu, który zawiera listę poleceń jest wyświetlany.
 

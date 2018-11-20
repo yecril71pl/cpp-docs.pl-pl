@@ -1,13 +1,13 @@
 ---
 title: Użycie fragmentów
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588520"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176097"
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 
@@ -27,7 +27,7 @@ Aby skorzystać z fragmentacji, algorytm musi podzielić domenę obliczeniową n
 
 Poniższy diagram przedstawia macierz 8 x 9, danych, które są ułożone WE fragmenty 2 x 3.
 
-![8&#45;przez&#45;9 tabela jest podzielona na 2&#45;przez&#45;3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;przez&#45;9 tabela jest podzielona na 2&#45;przez&#45;3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "8&#45;przez&#45;9 tabela jest podzielona na 2&#45;przez&#45;3 kafelków")
 
 Poniższy przykład wyświetla globalne, a lokalnych wskaźników to sąsiadująco w macierzy. `array_view` Obiekt jest tworzony przy użyciu elementów typu `Description`. `Description` Przechowuje globalną, Kafelek, fragmentaryczne oraz lokalne elementów macierzy. Kod w wywołaniu `parallel_for_each` ustawia wartości globalnych, Kafelek fragmentarycznych oraz lokalnych każdego elementu. Dane wyjściowe wyświetlają wartości w `Description` struktury.
 

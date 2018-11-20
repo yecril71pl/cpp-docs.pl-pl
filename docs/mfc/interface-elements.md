@@ -1,16 +1,16 @@
 ---
 title: Elementy interfejsu
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668692"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175902"
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
 
@@ -18,7 +18,7 @@ W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w prog
 
 Na poniższej ilustracji przedstawiono aplikację, która została skompilowana przy użyciu nowych elementów interfejsu.
 
-![MFC Feature Pack Przykładowa aplikacja](../mfc/media/mfc_featurepack.png "mfc_featurepack")
+![MFC Feature Pack Przykładowa aplikacja](../mfc/media/mfc_featurepack.png "MFC Feature Pack przykładowej aplikacji")
 
 ## <a name="window-docking"></a>Dokowanie okien
 

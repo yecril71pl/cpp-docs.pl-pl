@@ -1,16 +1,16 @@
 ---
 title: Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333335"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176955"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 
@@ -124,7 +124,7 @@ Metody te za pomocą `async` i `await` słów kluczowych, aby zaktualizować int
 
 Poniższa ilustracja przedstawia `Primes` aplikacji po każdej opcji została wybrana.
 
-![Aplikacja Windows Runtime blokad](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Środowisko uruchomieniowe Windows zapór aplikacji](../../parallel/concrt/media/concrt_windows_primes.png "Windows Runtime blokad aplikacji")
 
 Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
@@ -186,7 +186,7 @@ Modyfikowanie `MainPage` konstruktora, aby utworzyć łańcuch połączonych zad
 
 Na poniższej ilustracji przedstawiono wyniki `CommonWords` aplikacji.
 
-![Aplikacja Windows Runtime CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Aplikacja CommonWords środowiska wykonawczego Windows](../../parallel/concrt/media/concrt_windows_common_words.png "Windows Runtime CommonWords aplikacji")
 
 W tym przykładzie jest to możliwe zapewnić obsługę anulowania, ponieważ `task` obiekty, które obsługują `create_async` Użyj tokenu anulowanie niejawne. Definiowanie funkcji pracy do wykonania `cancellation_token` obiektu, jeśli konieczne reagowanie na operację anulowania w sposób współpracujący zadań. Aby uzyskać więcej informacji na temat anulowanie w PPL, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md)
 

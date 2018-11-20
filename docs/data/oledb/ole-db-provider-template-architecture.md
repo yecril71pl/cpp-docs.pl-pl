@@ -1,17 +1,17 @@
 ---
 title: Architektura szablonu dostawcy OLE DB
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557040"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175642"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557040"
 
 Architektura dostawcy OLE DB zawiera obiekt źródła danych i co najmniej jednej sesji. Obiekt źródła danych jest początkowa obiekt, który każdy dostawca musi utworzyć wystąpienie. Gdy aplikacja konsumenta musi danych, wspólnie tworzy obiekt źródła danych można uruchomić dostawcy. Obiekt źródła danych tworzy obiekt sesji (za pomocą `IDBCreateSession` interfejsu) za pomocą której użytkownik łączy się z obiektu źródła danych. Programiści ODBC można traktować obiektu źródła danych jako równoważne `HENV` i obiektu sesji jako odpowiednik `HDBC`.
 
-![Architektura dostawcy](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![Architektura dostawcy](../../data/oledb/media/vc4twb1.gif "architektura dostawcy")
 
 Wraz z plików źródłowych, utworzone przez **OLE DB Provider kreatora**, szablony OLE DB implementacji obiektu źródła danych. Sesja jest obiektem, który odpowiada OLE DB `TSession`.
 

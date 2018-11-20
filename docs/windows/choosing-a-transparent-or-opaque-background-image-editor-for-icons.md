@@ -1,6 +1,6 @@
 ---
 title: Wybieranie tła przezroczystego lub nieprzezroczystego (Edytor obrazów dla ikon)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653534"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175434"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Wybieranie tła przezroczystego lub nieprzezroczystego (Edytor obrazów dla ikon)
 
@@ -21,7 +21,7 @@ Podczas przenoszenia lub skopiowane z obrazu wszystkie piksele w zaznaczeniu, kt
 
 Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło nieprzezroczyste i z powrotem. Korzystając z narzędzia zaznaczania **przezroczyste tło** i **tło nieprzezroczyste** opcje są wyświetlane na **opcji** selektor na **edytora obrazów** paska narzędzi (jak pokazano poniżej).
 
-![Opcje w tle &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Opcje w tle &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "opcje w tle &#45; przezroczystości")<br/>
 **Opcje przezroczystości i nieprzezroczyste** na **paska narzędzi edytora obrazów**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Aby przełączać się między tło przezroczyste i nieprzezroczyste
@@ -32,9 +32,9 @@ Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło ni
 
    - `Transparent Background (T)`: Istniejący obraz pokazuje fragmenty zaznaczenia, które odpowiadają bieżącym kolorem tła.
 
-\- lub —
+   \- lub —
 
-- Na **obraz** menu, zaznacz lub wyczyść **Rysowanie nieprzezroczystych**.
+1. Na **obraz** menu, zaznacz lub wyczyść **Rysowanie nieprzezroczystych**.
 
 Możesz zmienić kolor tła zaznaczenia już w trakcie efekt zmiany, które części obrazu są niewidoczne.
 

@@ -1,6 +1,6 @@
 ---
 title: 'Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518492"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175811"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
@@ -30,7 +30,8 @@ Jest jednym z zastosowań bardziej zaawansowanych kontrolek ActiveX powiązania 
 
 W tym artykule opisano strony kontroli zadania. Implementowanie danych wiązaniu interakcji z bazą danych jest obowiązkiem kontener formantu. W jaki sposób zarządzasz interakcji bazy danych w kontenerze wykracza poza zakres tej dokumentacji. Jak przygotować kontroli dla powiązania danych zostało wyjaśnione w dalszej części tego artykułu.
 
-![Diagram koncepcyjny danych&#45;formant powiązany z](../mfc/media/vc374v1.gif "vc374v1") Diagram pojęciowy kontrolki powiązania danych
+![Diagram koncepcyjny danych&#45;formant powiązany z](../mfc/media/vc374v1.gif "diagram koncepcyjny danych&#45;formant powiązany z") <br/>
+Diagram pojęciowy kontrolki powiązania danych
 
 `COleControl` Klasy zapewnia dwie funkcje Członkowskie, wchodzące w łatwy do zaimplementowania powiązanie danych. Pierwsza funkcja [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), jest używany do zażądania uprawnień do zmiany wartości właściwości. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druga funkcja jest wywoływana po wartość właściwości została zmieniona.
 

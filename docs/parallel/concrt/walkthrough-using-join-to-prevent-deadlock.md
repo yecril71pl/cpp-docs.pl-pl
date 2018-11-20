@@ -1,18 +1,18 @@
 ---
 title: 'Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498831"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175924"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
 
@@ -48,7 +48,7 @@ Ten przewodnik zawiera następujące sekcje:
 
 Problem ucztujących filozofów ilustruje, jak zakleszczenia odbywa się w aplikacji. W ten problem ucztujących pięć znajdują się w tabeli działanie. Każdy philosopher przełącza między myśl i pochłaniając. Każdy philosopher musi udostępnić chopstick sąsiada się po lewej stronie, a drugi chopstick z sąsiedniej po prawej stronie. Poniższa ilustracja przedstawia ten układ.
 
-![Problem Ucztujących jadalni](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![Problem Ucztujących Filozofów](../../parallel/concrt/media/dining_philosophersproblem.png "Problem Ucztujących Filozofów")
 
 Do spożycia, philosopher musi zawierać dwa chopsticks. Jeśli każdy philosopher przechowuje tylko jedną chopstick i oczekuje na inną, następnie można jeść nie philosopher i nie pozbawi wszystkie.
 

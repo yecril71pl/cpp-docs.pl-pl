@@ -1,13 +1,13 @@
 ---
 title: 'Wskazówki: mnożenie macierzy'
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327112"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176162"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 
@@ -41,13 +41,13 @@ Przed rozpoczęciem:
 
 W tej sekcji należy wziąć pod uwagę mnożenie dwóch macierzy, A i B, które są zdefiniowane w następujący sposób:
 
-![3&#45;przez&#45;2 macierzy](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")
+![3&#45;przez&#45;macierzy 2 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;przez&#45;macierzy 2 A")
 
-![2&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")
+![2&#45;przez&#45;macierzy 3 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;przez&#45;macierzy 3 B")
 
 Jest tabela 3, 2 i B jest tabela 2, 3. Produkt multiplikujący a, B jest następujący macierzy 3 x 3. Produkt jest obliczane przez pomnożenie wierszy A według kolumn B elementów.
 
-![3&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;przez&#45;macierzy 3")
+![3&#45;przez&#45;macierzy 3 produktu](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;przez&#45;macierzy 3 produktu")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Aby pomnożyć bez korzystania z C++ AMP
 
@@ -159,21 +159,21 @@ Fragmentacji to technika partycjonowanie danych na równe wielkości podzestawy,
 
 Aby skorzystać z fragmentacji w mnożenie macierzy, algorytm musi podzielić macierzy na kafelkach i następnie skopiuj dane kafelka do `tile_static` zmienne szybszy dostęp. W tym przykładzie macierzy zostanie poddana partycjonowaniu na submatrices taki sam rozmiar. Produktu znajduje się przez pomnożenie submatrices. Są dwa macierzy, a ich produktów, w tym przykładzie:
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;przez&#45;macierzy 4 A")
+![4&#45;przez&#45;macierzy 4 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;przez&#45;macierzy 4 A")
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixbtiled.png "4&#45;przez&#45;macierzy 4 B")
+![4&#45;przez&#45;macierzy 4 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;przez&#45;macierzy 4 B")
 
-![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;przez&#45;produktu macierzy 4")
+![4&#45;przez&#45;macierzy 4 produktu](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;przez&#45;macierzy 4 produktu")
 
 Macierze są partycjonowane na macierzy cztery 2 x 2, które są zdefiniowane w następujący sposób:
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
+![4&#45;przez&#45;macierzy 4 A poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;przez&#45;macierzy 4 A poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
+![4&#45;przez&#45;macierzy 4 B poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;przez&#45;macierzy 4 B poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
 
 Produkt A i B mogą teraz zapisywane i obliczana w następujący sposób:
 
-![4&#45;przez&#45;macierzy 4 poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;przez&#45;4 macierz iloczynu A i B")
+![4&#45;przez&#45;macierzy 4 B poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;przez&#45;macierzy 4 B poddana partycjonowaniu na 2&#45;przez&#45;2 sub&#45;macierzy")
 
 Ponieważ macierzy `a` za pośrednictwem `h` macierzy 2 x 2, wszystkie produkty i sum z nich są również macierzy 2 x 2. Również wynika, że produkt A i B jest macierzy 4 x 4, zgodnie z oczekiwaniami. Można szybko sprawdzić algorytm, należy obliczyć wartość elementu w pierwszym wierszu, w pierwszej kolumnie w produkcie. W przykładzie, który byłby wartość elementu w pierwszym wierszu i pierwszą kolumnę `ae + bg`. Masz do obliczania, pierwszą kolumnę pierwszego wiersza `ae` i `bg` każdego terminu. Tę wartość dla `ae` jest `(1 * 1) + (2 * 5) = 11`. Wartość `bg` jest `(3 * 1) + (4 * 5) = 23`. Końcowa wartość jest `11 + 23 = 34`, który jest poprawny.
 

@@ -2,16 +2,16 @@
 title: Instalowanie obsługi języka C++ w programie Visual Studio 2017
 description: Instalowanie obsługi programu Visual Studio dla języka Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507240"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175746"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
@@ -45,7 +45,7 @@ Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2
 
 1. Znajdź plik Instalatora został pobrany i uruchom go. Może być wyświetlany w przeglądarce lub może okazać się w folderze pobrane. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlony **Kontrola konta użytkownika** okno dialogowe z monitem o nadanie uprawnień umożliwiających Instalatora, wprowadzić zmiany do systemu; wybierz **tak**. Jeśli występują problemy, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy na ikonie Instalatora, a następnie wybierz **Uruchom jako Administrator** z menu kontekstowego.
 
-   ![Uruchom Instalatora programu Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "uruchom Instalatora programu Visual Studio")
+   ![Pobierz i zainstaluj Instalator programu Visual Studio](../build/media/vscpp-concierge-run-installer.gif "pobranie i zainstalowanie Instalatora programu Visual Studio")
 
 1. Instalator przedstawia listy obciążeń, powiązane opcje obszary rozwoju określonych grup. Podpora androidu Pro C++ jest teraz częścią opcjonalne obciążeń, które nie są instalowane domyślnie.
 

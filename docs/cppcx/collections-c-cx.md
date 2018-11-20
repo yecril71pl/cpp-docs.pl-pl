@@ -1,13 +1,13 @@
 ---
 title: Kolekcje (C + +/ CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531597"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176396"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 
@@ -15,7 +15,7 @@ W języku C + +/ CX programu, aby włączyć bezpłatne korzystanie z konteneró
 
 Środowisko wykonawcze Windows definiuje interfejsach dla kolekcji powiązanych typów i C + +/ CX zapewnia konkretnych implementacji C++ w pliku nagłówkowym collection.h. Ta ilustracja przedstawia relacje między tymi typami kolekcji:
 
-![C&#43;&#43;&#47;CX drzewo dziedziczenia dla typów kolekcji](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;CX drzewo dziedziczenia dla typów kolekcji](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX drzewo dziedziczenia dla typów kolekcji")
 
 - [Platform::Collections:: Vector, klasa](../cppcx/platform-collections-vector-class.md) przypomina [klasy std::vector](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ Kiedy używasz `range for` pętli `IVector` kontenery, użyj `auto&&` umożliwia
 
 Poniższa ilustracja przedstawia `range for` pętli `IVector<Person^>`. Należy zauważyć, że wykonanie zostanie zatrzymana w punkt przerwania w wierszu 64. **QuickWatch** okno pokazuje, że zmienna sterująca `p` jest w rzeczywistości `VectorProxy<Person^>` zawierający `m_v` i `m_i` zmiennych Członkowskich. Jednak jeśli wywołasz `GetType` w tej zmiennej zwraca typ identyczne `Person` wystąpienia `p2`. Wnioskiem jest to, że chociaż `VectorProxy` i `ArrowProxy` może się pojawić **QuickWatch**, debuger niektórych błędów kompilatora lub z innych miejsc, zwykle nie trzeba jawnie kodu dla nich.
 
-![VectorProxy w zakresie&#45;na podstawie pętli for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy w zakresie&#45;na podstawie pętli for](../cppcx/media/vectorproxy-1.png "VectorProxy w zakresie&#45;na podstawie pętli for")
 
 Jeden scenariusz, w którym zostały do kodu wokół obiektu serwera proxy jest, gdy trzeba wykonać `dynamic_cast` od elementów — na przykład podczas szukania dla obiektów określonego typu w XAML `UIElement` kolekcji elementów. W takim przypadku należy najpierw rzutować elementu [Platform::Object](../cppcx/platform-object-class.md)^, a następnie wykonaj rzutowanie dynamicznych:
 

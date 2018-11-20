@@ -1,6 +1,6 @@
 ---
 title: Pojedyncze dziedziczenie
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461857"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175629"
 ---
 # <a name="single-inheritance"></a>Pojedyncze dziedziczenie
 
 W "pojedyncze dziedziczenie," wspólnej formy dziedziczenie, klasy mają tylko jedną klasę bazową. Należy wziąć pod uwagę relację przedstawiono na poniższej ilustracji.
 
-![Jednym z podstawowych&#45;Wykres dziedziczenia](../cpp/media/vc38xj1.gif "vc38XJ1") prostą Grafową pojedyncze dziedziczenie
+![Jednym z podstawowych&#45;Wykres dziedziczenia](../cpp/media/vc38xj1.gif "podstawowe pojedynczego&#45;Wykres dziedziczenia") <br/>
+Prostą Grafową pojedyncze dziedziczenie
 
 Należy pamiętać, postępu z ogólnych do określonych na rysunku. Inny wspólny atrybut znaleziono w projekcie większość hierarchie klasy to klasa pochodna zawiera "rodzaju" relacji z klasy bazowej. Na rysunku `Book` jest rodzajem elementu `PrintedDocument`i `PaperbackBook` jest rodzajem elementu `book`.
 
@@ -47,12 +48,13 @@ W powyższym przykładzie specyfikatora dostępu **publicznych** jest używany. 
 
 Klasa może służyć jako klasa bazowa dla wielu określonych klas, jak pokazano na poniższej ilustracji.
 
-![Grafie acyklicznym wskazówkami](../cpp/media/vc38xj2.gif "vc38XJ2") próbki z kierowane grafie Acyklicznym
+![Grafie acyklicznym wskazówkami](../cpp/media/vc38xj2.gif "grafie acyklicznym wskazówkami") <br/>
+Przykładowe skierowanym grafie Acyklicznym
 
 Na diagramie powyżej o nazwie "skierowanym grafie acyklicznym" (lub "DAG"), niektóre z klas są klasy bazowe dla klasy pochodnej więcej niż jeden. Jednakże, odwrotna sytuacja nie jest wartość true: istnieje tylko jeden bezpośrednią klasą bazową dla dowolnej podanej klasy pochodnej. Wykres na rysunku przedstawiono strukturę "pojedyncze dziedziczenie".
 
 > [!NOTE]
->  Grafy acykliczne ukierunkowanej nie są unikatowe dla pojedyncze dziedziczenie. Służą one również opisujący wykresy dziedziczenia wielokrotnego.
+> Grafy acykliczne ukierunkowanej nie są unikatowe dla pojedyncze dziedziczenie. Służą one również opisujący wykresy dziedziczenia wielokrotnego.
 
 W dziedziczenie Klasa pochodna zawiera elementy członkowskie klasy bazowej, a także nowych elementów członkowskich, które można dodać. W rezultacie klasy pochodnej może odwoływać się do elementów członkowskich klasy podstawowej, (chyba że te elementy członkowskie są ponownie zdefiniowana w klasie pochodnej). Operator rozpoznawania zakresu (`::`) może służyć do odwoływania się do elementów członkowskich bezpośredniej lub pośredniej klasy bazowej, gdy tych członków mają został ponownie zdefiniowana w klasie pochodnej. Rozważmy następujący przykład:
 

@@ -1,15 +1,15 @@
 ---
 title: 'Porady: tworzenie wystąpień shared_ptr i korzystanie z nich'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606651"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176279"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Porady: tworzenie wystąpień shared_ptr i korzystanie z nich
 
@@ -17,33 +17,33 @@ Typ `shared_ptr` jest inteligentnym wskaźnikiem w standardowej bibliotece języ
 
 Na ilustracji poniżej widać kilka wystąpień wskaźnika `shared_ptr`, które wskazują jedną lokalizację w pamięci.
 
-[![Wskaźnik współdzielona](../cpp/media/shared_ptr.png "shared_ptr")]
+![Diagram wskaźnika współdzielona](../cpp/media/shared_ptr.png "Shared wskaźnika diagramu")
 
-## <a name="example"></a>Przykład
+## <a name="example-1"></a>Przykład 1
 
 Możliwe, używaj [make_shared](../standard-library/memory-functions.md#make_shared) funkcji, aby utworzyć `shared_ptr` podczas tworzenia zasobu pamięci po raz pierwszy. Funkcja `make_shared` jest bezpieczna pod względem wyjątków. Używa tego samego wywołania w celu przydzielenia pamięci blokowi sterującemu i zasobowi, w związku z czym mniej obciąża system podczas konstruowania. Jeśli funkcja `make_shared` nie będzie używana, należy za pomocą jawnego nowego wyrażenia utworzyć obiekt, a następnie przekazać go do konstruktora `shared_ptr`. Poniższy przykład pokazuje różne sposoby deklarowania i inicjowania wskaźnika `shared_ptr` razem z nowym obiektem.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-2"></a>Przykład 2
 
 W przykładzie poniżej pokazano sposób deklarowania i inicjowania wystąpień wskaźnika `shared_ptr`, które przyjmują współwłasność obiektu przydzielonego wcześniej przez inny wskaźnik `shared_ptr`. Załóżmy, że zainicjowanym wskaźnikiem `sp2` jest `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-3"></a>Przykład 3
 
 `shared_ptr` jest również przydatne w przypadku kontenerów standardowej biblioteki języka C++, gdy są używane algorytmy kopiujące elementy. We wskaźniku `shared_ptr` można opakować elementy, po czym skopiować go do innych kontenerów przy założeniu, że bazowa pamięć jest zajęta tylko przez niezbędny czas, nie dłużej. Poniższy przykład pokazuje, jak używać algorytmu `replace_copy_if` do wystąpień wskaźnika `shared_ptr` w wektorze.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-4"></a>Przykład 4
 
 Za pomocą funkcji `dynamic_pointer_cast`, `static_pointer_cast` i `const_pointer_cast` można rzutować wskaźnik `shared_ptr`. Funkcje te przypominają operatory `dynamic_cast`, `static_cast` i `const_cast`. W przykładzie poniżej pokazano, jak przetestować typ pochodny każdego elementu w wektorze wskaźnika `shared_ptr` klas bazowych, a następnie skopiować elementy i wyświetlić o nich informacje.
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-5"></a>Przykład 5
 
 Wskaźnik `shared_ptr` można przekazać do innej funkcji w następujące sposoby:
 
@@ -59,7 +59,7 @@ Wskaźnik `shared_ptr` można przekazać do innej funkcji w następujące sposob
 
 - Czasami, na przykład w konstrukcji `std:vector<shared_ptr<T>>`, może być konieczne przekazanie każdego wskaźnika `shared_ptr` do treści wyrażenia lambda lub do nazwanego obiektu funkcji. Jeśli wyrażenie lambda lub funkcja nie przechowuje wskaźnika, należy przekazać wskaźnik `shared_ptr` wg odwołania, tak aby uniknąć wywoływania konstruktora kopiującego dla każdego elementu.
 
-## <a name="example"></a>Przykład
+## <a name="example-6"></a>Przykład 6
 
 W przykładzie poniżej pokazano, jak wskaźnik `shared_ptr` przeciąża różne operatory porównania, aby umożliwić porównywanie wskaźników w pamięci, której właścicielami są wystąpienia wskaźnika `shared_ptr`.
 

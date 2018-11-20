@@ -1,18 +1,18 @@
 ---
 title: Jak kontrola konta użytkownika (UAC) wpływa na aplikację?
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04bfc16f2d82863faca806d4cb8d5295104a0cc9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556965"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177046"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak kontrola konta użytkownika (UAC) wpływa na aplikację?
 
@@ -34,7 +34,7 @@ Drugą opcją jest osadzaj fragmentu funkcji Kontrola konta użytkownika do mani
 
 Następujące schemat blokowy opisano, jak aplikacja jest uruchamiana w zależności od tego, czy jest włączona funkcja Kontrola konta użytkownika i tego, czy aplikacja ma manifestu kontroli konta użytkownika:
 
-![Windows Vista Loader zachowanie](media/uacflowchart.png "UACflowchart")
+![Zachowanie modułu ładującego Windows](media/uacflowchart.png "zachowanie modułu ładującego Windows")
 
 ## <a name="see-also"></a>Zobacz też
 

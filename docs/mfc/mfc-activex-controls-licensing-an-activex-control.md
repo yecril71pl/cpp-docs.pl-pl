@@ -1,6 +1,6 @@
 ---
 title: 'Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465627"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176366"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 
 Licencjonowanie pomocy technicznej, opcjonalna funkcja formantów ActiveX pozwala na kontrolowanie, kto ma możliwość używania i rozpowszechniania formantu. (Dodatkowe Omówienie licencjonowania problemów, można znaleźć w temacie licencjonowania problemy w [Uaktualnianie istniejącego kontrolki ActiveX](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
 
 W tym artykule omówiono następujące tematy:
@@ -43,13 +43,15 @@ Aby zapewnić obsługę licencjonowania formantów ActiveX [COleObjectFactory](.
 
 Na poniższym rysunku przedstawiono weryfikacji licencji formantu ActiveX, który będzie używany podczas tworzenia aplikacji kontenera. Jak wspomniano wcześniej, Deweloper aplikacji kontenera musi być prawidłowe. Plik — Umowa licencyjna zainstalowane na komputerze deweloperskim, aby utworzyć wystąpienie kontrolki.
 
-![Licencjonowany formant ActiveX zweryfikowanych w rozwoju](../mfc/media/vc374d1.gif "vc374d1") weryfikacji licencjonowane ActiveX sterowania podczas programowania
+![Licencjonowany formant ActiveX zweryfikowanych w rozwoju](../mfc/media/vc374d1.gif "formantu ActiveX licencji, które zweryfikowanych w rozwoju") <br/>
+Weryfikacja licencjonowany formant ActiveX podczas programowania
 
 Następny proces, pokazano na poniższym rysunku, występuje, gdy użytkownik końcowy uruchamia aplikację kontenera.
 
 Po uruchomieniu aplikacji wystąpienie kontrolki zwykle musi zostać utworzona. Kontener rozwiązanie to wywołuje element `CreateInstanceLic`, przekazując klucz licencji osadzony jako parametr. Porównanie ciągów jest podejmowana między kluczem licencji osadzone i własne kontrolki kopię klucza licencji. Jeśli dopasowanie się powiedzie, tworzone jest wystąpienie kontrolki, a aplikacja kontynuuje wykonywanie normalnie. Należy pamiętać, że. Plik — Umowa licencyjna nie muszą być obecne na komputerze użytkownika kontroli.
 
-![Licencjonowany formant ActiveX zweryfikowany w ramach wykonywania](../mfc/media/vc374d2.gif "vc374d2") weryfikacji licencji ActiveX kontrolowanie podczas wykonywania
+![Licencjonowany formant ActiveX zweryfikowany w ramach wykonywania](../mfc/media/vc374d2.gif "formantu ActiveX licencjonowane zweryfikowany w ramach wykonywania") <br/>
+Weryfikacja licencjonowany formant ActiveX w czasie wykonywania
 
 Licencjonowania formantów składa się z dwóch podstawowych składników: określony kod w celu wykonania formantu biblioteki DLL i pliku licencji. Kod składa się z dwóch (lub prawdopodobnie trzy) wywołania funkcji i ciąg znaków, zwanych "licencji ciąg", zawierający informacje o prawach autorskich. Te wywołania i ciąg licencji znajdują się w implementacji kontroli (. Plik CPP). Plik licencji, generowane przez kreatora kontrolek ActiveX, jest plikiem tekstowym o prawach autorskich. Jest on nazwany przy użyciu nazwy projektu za pomocą. Rozszerzenie — Umowa licencyjna, na przykład próbki. — UMOWA LICENCYJNA. Licencjonowany formant musi towarzyszyć przy użyciu pliku licencji, jeśli są potrzebne podczas projektowania.
 

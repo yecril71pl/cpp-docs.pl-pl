@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCTasksPaneTaskGroup
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539610"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176591"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 Poniższa ilustracja przedstawia grupę zadań rozszerzonej:
 
-![Grupy zadań, rozwinięte](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Grupy zadań, rozwinięte](../../mfc/reference/media/nexttaskgrpexpand.png "rozwinięta Grupa zadań")
 
 Poniższa ilustracja przedstawia grupę zwinięty zadań:
 
-![Grupa zadań zwinięty](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Grupa zadań zwinięte](../../mfc/reference/media/nexttaskgrpcollapse.png "zwinięte grupy zadań")
 
 Na poniższej ilustracji przedstawiono grupy zadań bez podpisu:
 
-![Grupy zadań bez podpisu](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Grupy zadań bez podpisu](../../mfc/reference/media/nexttaskgrpnocapt.png "grupy zadań bez podpisu")
 
 Poniższa ilustracja przedstawia dwa grup zadań. Pierwsza grupa zadania jest oznaczony jako specjalne, ustawiając `m_bIsSpecial` Flaga o wartości TRUE, podczas gdy druga grupa zadań nie jest specjalne. Należy zwrócić uwagę, jak podpis dla pierwszej grupy zadań jest ciemniejsze od drugiej grupy zadań:
 
-![Grupa zadań specjalnych](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Grupa zadań specjalnych](../../mfc/reference/media/nexttaskgrpspecial.png "specjalna grupa zadań")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

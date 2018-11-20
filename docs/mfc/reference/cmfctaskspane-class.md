@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCTasksPane
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563660"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176812"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 
@@ -350,11 +350,11 @@ Aby użyć `CMFCTasksPane` kontrolkę w aplikacji, wykonaj następujące kroki:
 
 Poniższa ilustracja przedstawia typowe zadania w okienku kontrolki. Pierwsza grupa jest *specjalne* grupy i jego podpis jest ciemniejszy. Trzecia grupa jest zwinięta. Ostatnia grupa jest wyrównane do dolnej części okienka zadań i nie ma podpisu, a ostatnim zadaniem w grupie jest proste etykiety:
 
-![Przykład okienka zadań](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Przykład okienka zadań](../../mfc/reference/media/nexttaskpane.png "przykład okienka zadań")
 
 Można dostosować wygląd okienka zadań, zmieniając różne marginesy i przesunięcia. Na poniższej ilustracji wyjaśnia znaczenie tych zmiennych:
 
-![Grupy niestandardowe zadanie](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Grupy niestandardowe zadanie](../../mfc/reference/media/nexttaskgrpcustom.png "niestandardowe grupy zadań")
 
 ## <a name="example"></a>Przykład
 

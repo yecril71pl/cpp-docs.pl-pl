@@ -1,6 +1,6 @@
 ---
 title: Tworzenie nowych dokumentów, okien i widoków
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643901"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175395"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Tworzenie nowych dokumentów, okien i widoków
 
@@ -37,11 +37,14 @@ Następujące dane liczbowe zapewniają Przegląd procesu tworzenia dokumentów,
 
 Po zakończeniu tego procesu współpracujących obiektów istnieje i Zapisz wskaźniki do siebie nawzajem. Poniższe rysunki pokazują kolejność, w którym tworzony jest obiekt. Rysunek rysunek można wykonać sekwencji.
 
-![Sekwencja tworzenia dokumentu](../mfc/media/vc387l1.gif "vc387l1") sekwencji przy tworzeniu dokumentu
+![Sekwencja tworzenia dokumentu](../mfc/media/vc387l1.gif "sekwencji tworzenia dokumentu") <br/>
+Sekwencja przy tworzeniu dokumentu
 
-![Sekwencja tworzenia okna ramki](../mfc/media/vc387l2.png "vc387l2") Sekwencja tworzenia okna ramki
+![Sekwencja tworzenia okna ramki](../mfc/media/vc387l2.png "Sekwencja tworzenia okna ramki") <br/>
+Sekwencja tworzenia okna ramki
 
-![Kolejność potrzeby tworzenia widoku](../mfc/media/vc387l3.gif "vc387l3") sekwencję w tworzeniu widoku
+![Kolejność potrzeby tworzenia widoku](../mfc/media/vc387l3.gif "sekwencji na potrzeby tworzenia widoku") <br/>
+Sekwencja w tworzeniu widoku
 
 Informacje, jak struktura inicjuje nowy dokument, widok i okien ramowych obiektów, zobacz klasy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), i [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) w odwołanie do biblioteki MFC. Zobacz też [techniczne 22 Uwaga](../mfc/tn022-standard-commands-implementation.md), co wyjaśnia procesów tworzenia i inicjowania bardziej szczegółowo w obszarze dyskusji w ramach standardowych poleceń dla **New** i **Otwórz** elementów na **pliku** menu.
 

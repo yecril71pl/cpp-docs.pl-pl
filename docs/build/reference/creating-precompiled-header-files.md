@@ -1,6 +1,6 @@
 ---
 title: Tworzenie prekompilowanych plików nagłówka
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482618"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176435"
 ---
 # <a name="creating-precompiled-header-files"></a>Tworzenie prekompilowanych plików nagłówka
 
@@ -42,8 +42,6 @@ W tym temacie omówiono następujące zagadnienia prekompilowanego nagłówka:
 
 Aby uzyskać informacje na temat opcji kompilatora związane z wstępnie skompilowanych nagłówków, zobacz [/Y (prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md).
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>Kiedy przeprowadzać prekompilowanie kodu źródłowego
 
 Wstępnie skompilowany kod jest przydatne podczas cyklu rozwoju, aby skrócić czas kompilacji, zwłaszcza wtedy, gdy:
@@ -57,11 +55,9 @@ Pierwszy kompilacji — ten, który tworzy plik prekompilowanego nagłówka (PCH
 Można prekompilowanie programów C i C++. W programowaniu C++ jest powszechną praktyką, aby oddzielić klasy interfejsu informacji w plikach nagłówkowych. Te pliki nagłówkowe objęte później programów, które używają tej klasy. Przez prekompilowanie tych nagłówków, można zmniejszyć czas program kompilacji.
 
 > [!NOTE]
->  Chociaż można używać tylko jednego pliku prekompilowanego pliku nagłówkowego (.pch) dla pliku źródłowego, można użyć wielu .pch — pliki w projekcie.
+> Chociaż można używać tylko jednego pliku prekompilowanego pliku nagłówkowego (.pch) dla pliku źródłowego, można użyć wielu .pch — pliki w projekcie.
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>Dwa wybory dla wstępnej kompilacji kodu
+## <a name="two-choices-for-precompiling-code"></a>Dwa wybory dla wstępnej kompilacji kodu
 
 Visual c++ można wstępnej kompilacji kodu języka C lub C++; nie są ograniczone do kompilacji wstępnej tylko pliki nagłówkowe.
 
@@ -73,13 +69,9 @@ Dostępne są opcje prekompilowanego nagłówka [/Yc (Utwórz prekompilowany pli
 
 Tematy referencyjne — opcja kompilatora dla **/Yu** i **/Yc** omówiono, jak uzyskać dostęp do tej funkcji w środowisku programistycznym.
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>Zasady spójności prekompilowanego nagłówka
 
 Ponieważ pliki PCH zawierają informacje o środowisku komputera, a także informacji na temat programu, informacje o adresie pamięci, należy używać tylko plik PCH na komputerze, w której został utworzony.
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Zasady spójności dla stosowanych dla prekompilowanych plików nagłówka
 
@@ -134,8 +126,6 @@ Te dyrektywy pragma są przechowywane jako część prekompilowanego nagłówka 
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>Zasady spójności dla /Yc i /Yu
 
 Używając prekompilowanego nagłówka, utworzony za pomocą /Yc i /Yu, kompilator porównuje bieżącego środowiska kompilacji, który, które istniały podczas tworzenia pliku PCH. Pamiętaj określić środowisko, które są zgodne z poprzedniego (przy użyciu opcji kompilatora spójne, pragm i tak dalej) dla bieżącej kompilacji. Jeśli kompilator wykryje niespójność, generuje ostrzeżenie i identyfikuje niespójności, jeśli jest to możliwe. Takie ostrzeżenia nie musi oznaczać problem z plików PCH; oni po prostu ostrzega o potencjalnych konfliktów. W poniższych sekcjach opisano wymagania spójności wstępnie skompilowanych nagłówków.
@@ -155,15 +145,11 @@ Poniższa tabela zawiera listę opcji kompilatora, który może wyzwalać ostrze
 > [!NOTE]
 >  Funkcji prekompilowanego pliku nagłówkowego jest przeznaczony do użytku tylko w plikach źródłowych C i C++.
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>Stosowanie w projekcie prekompilowanych nagłówków
 
 Poprzednie sekcje zawierają omówienie wstępnie skompilowanych nagłówków: /Yc i /Yu z opcją/FP i [hdrstop](../../preprocessor/hdrstop.md) pragmy. W tej sekcji opisano metody przy użyciu ręcznych opcji wstępnie skompilowanego nagłówka w projekcie; kończy się ona przykład pliku reguł programu make i kod, który zarządza.
 
 Dla innego podejścia do przy użyciu ręcznych opcji wstępnie skompilowanego nagłówka w projekcie badanie jeden z plików reguł programu make znajduje się w katalogu MFC\SRC, który jest tworzony podczas instalacji domyślnej w Visual c++. Te pliki reguł programu make zastosować podejście podobne do przedstawionego znajdujące się w tej sekcji, ale większe wykorzystanie makr firmy Microsoft Program obsługi narzędzia (NMAKE) i oferują większą kontrolę nad procesem kompilacji.
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>Pliki PCH w procesie kompilacji
 
@@ -171,8 +157,8 @@ Podstawa kodu z projektem oprogramowania jest zwykle zawarty w wielu C lub C++ p
 
 Rysunek używa trzech urządzeń diagramu, aby pokazać przepływ procesu kompilacji. O nazwie prostokąty reprezentują każdego pliku lub makro; trzy makra reprezentuje jeden lub więcej plików. Zacieniony obszary reprezentują każde działanie kompilacji lub łącza. Strzałki oznaczają, które pliki i makra są łączone podczas kompilacji lub proces łączenia.
 
-![Plik reguł programu make, która korzysta z prekompilowanego pliku nagłówka](../../build/reference/media/vc30ow1.gif "strukturę pliku reguł programu make, który używa Prekompilowanego pliku nagłówka")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Struktura pliku reguł programu make, która korzysta z Prekompilowanego pliku nagłówka
+![Struktura pliku reguł programu make, która korzysta z prekompilowanego pliku nagłówka](../../build/reference/media/vc30ow1.gif "strukturę pliku reguł programu make, która korzysta z prekompilowanego pliku nagłówka") <br/>
+Struktura pliku reguł programu make, która korzysta z Prekompilowanego pliku nagłówka
 
 Począwszy od góry diagramu STABLEHDRS i GRANICZNY są makra NMAKE, w których możesz wyświetlić listę plików, prawdopodobnie nie będzie ponownej kompilacji. Te pliki są kompilowane przez ciąg polecenia
 
@@ -187,8 +173,6 @@ Trwając w dół na diagramie, APPLIB.obj reprezentuje kod pomocy technicznej, u
 MYAPP.obj reprezentuje końcowego aplikacji. Jest tworzona na podstawie MYAPP.cpp, plików wymienionych w makrze UNSTABLEHDRS i wstępnie skompilowany kod z prekompilowanego pliku nagłówkowego.
 
 Na koniec pliku wykonywalnego (MYAPP. Z rozszerzeniem EXE) jest tworzony przez łączenie plików wymienionych w makrze OBJS (APPLIB.obj i MYAPP.obj).
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>Przykładowy plik pliku reguł programu Make dla PCH
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 Aby uzyskać więcej informacji na temat plików reguł programu make, zobacz [odwołanie NMAKE](../../build/nmake-reference.md). Zobacz też [opcje kompilatora](../../build/reference/compiler-options.md) i [opcje konsolidatora](../../build/reference/linker-options.md).
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>Przykład kodu dla PCH
 

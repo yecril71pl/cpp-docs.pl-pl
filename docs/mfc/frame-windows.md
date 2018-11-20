@@ -1,6 +1,6 @@
 ---
 title: Okna ramowe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619937"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175382"
 ---
 # <a name="frame-windows"></a>Okna ramowe
 
@@ -30,7 +30,8 @@ Po uruchomieniu aplikacji w obszarze Windows, użytkownik wchodzi w interakcję 
 
 Struktura MFC używa okien ramowych do zawierają widoki. Dwa składniki — ramki i zawartości — są reprezentowane i zarządza dwoma różnymi klasami w MFC. Klasy okien ramowych zarządza ramki, a klasa widoku zarządza zawartość. Okno Widok jest elementem podrzędnym ramki okna. Rysowanie i innych interakcji użytkownika z dokumentem miejsce w obszar klienta tego widoku, nie obszaru klienckiego okna ramki. Okno ramowe zawiera widoczne ramkę wokół widoku, wraz z pasek podpisu i standardowego okna kontrolek, takich jak kontrolki menu, przyciski, aby zminimalizować i zmaksymalizuj okno i kontroluje do zmiany rozmiaru okna. "Zawartość" składają się z obszaru klienckiego okna, w pełni jest zajęta przez okno podrzędne — widok. Na poniższej ilustracji przedstawiono relację między oknem ramki i widokiem.
 
-![Ramka okna widoku](../mfc/media/vc37fx1.gif "vc37fx1") ramki okna i widoku
+![Ramka okna widoku](../mfc/media/vc37fx1.gif "ramki okna widoku") <br/>
+Okno ramek i widoku
 
 ## <a name="frame-windows-and-splitter-windows"></a>Ramka Windows i Windows rozdzielacza
 

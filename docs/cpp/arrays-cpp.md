@@ -1,17 +1,17 @@
 ---
 title: Tablice (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550673"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176882"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Określa on tablicę typu **int**, koncepcyjnie ułożoną w dwuwymiarowej macierzy pięciu wierszy i siedmiu kolumn, jak pokazano na poniższej ilustracji:
 
-![Koncepcyjny układ wielu&#45;tablicą wielowymiarową](../cpp/media/vc38rc1.gif "vc38RC1") koncepcyjny układ wielowymiarowej tablicy
+![Koncepcyjny układ wielu&#45;tablicą wielowymiarową](../cpp/media/vc38rc1.gif "koncepcyjny układ wielu&#45;tablicą wielowymiarową") <br/>
+Koncepcyjny układ tablicy wielowymiarowej
 
 W deklaracjach inicjującą tablic, które posiadają listę (zgodnie z opisem w [inicjatory](../cpp/initializers.md)), można pominąć wyrażenie stałe, które określają granice dla pierwszego wymiaru. Na przykład:
 

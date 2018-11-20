@@ -1,17 +1,17 @@
 ---
 title: Przeładowywanie funkcji
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333374"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176305"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 
@@ -280,7 +280,8 @@ Kolejność, w którym są próby konwersji jest następująca:
 
    - Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej daje lepsze dopasowanie bliżej klasa bazowa ma bezpośrednią klasą bazową. Załóżmy, że jest hierarchii klas, jak pokazano na poniższej ilustracji.
 
-![Preferowane konwersje](../cpp/media/vc391t1.gif "vc391T1") wykres pokazujący preferowane konwersje
+![Wykres preferowanych konwersje](../cpp/media/vc391t1.gif "wykres preferowanych konwersje") <br/>
+Wykres przedstawiający preferowanych konwersje
 
 Konwersja z typu `D*` na typ `C*` jest konwersja z typu `D*` na typ `B*`. Podobnie, konwersja z typu `D*` na typ `B*` jest konwersja z typu `D*` na typ `A*`.
 
@@ -290,7 +291,8 @@ Ta sama zasada dotyczy konwersje wskaźników do elementów członkowskich. Konw
 
 Poprzedni reguła ma zastosowanie tylko na ścieżce danego pochodnym. Należy wziąć pod uwagę wykres pokazano na poniższej ilustracji.
 
-![Wiele&#45;dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "vc391T2") dziedziczenia wielokrotnego wykres pokazujący preferowanych konwersje
+![Wiele&#45;dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "wielu&#45;dziedziczenia, pokazujący preferowanych konwersje") <br/>
+Wykres dziedziczenia wielokrotnego, który pokazuje preferowaną konwersje
 
 Konwersja z typu `C*` na typ `B*` jest konwersja z typu `C*` na typ `A*`. Przyczyną jest to, że znajdują się w tej samej ścieżce i `B*` zbliżonej. Jednak konwersja z typu `C*` na typ `D*` nieodpowiednim do konwersji na typ `A*`; jest Brak preferencji, ponieważ konwersje postępuj zgodnie z różnych ścieżek.
 

@@ -1,21 +1,22 @@
 ---
 title: Przegląd deklaratorów
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326761"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177085"
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przekazują właściwości, takie jak typ i Klasa magazynu. Modyfikatory omówione w tej sekcji i w [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md), modyfikowania deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.
 
-![Modyfikatory, Specyfikatory i deklaratory](../cpp/media/vc38qy1.gif "vc38QY1") Specyfikatory, Modyfikatory i deklaratory
+![Modyfikatory, Specyfikatory i deklaratory](../cpp/media/vc38qy1.gif "modyfikatorów, Specyfikatory i deklaratory") <br/>
+Specyfikatory, Modyfikatory i deklaratory
 
 **Microsoft Specific**
 

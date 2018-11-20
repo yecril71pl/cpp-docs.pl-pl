@@ -1,17 +1,17 @@
 ---
 title: Operator dynamic_cast
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529158"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176968"
 ---
 # <a name="dynamiccast-operator"></a>Operator dynamic_cast
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Klasy hierarchii, który pokazuje wielokrotne dziedziczenie](../cpp/media/vc39011.gif "vc39011") klasy hierarchii przedstawiający dziedziczenie wielokrotne
+![Klasy hierarchii, który pokazuje wielokrotne dziedziczenie](../cpp/media/vc39011.gif "klasy hierarchii, który pokazuje dziedziczenie wielokrotne") <br/>
+Hierarchia klas, który pokazuje dziedziczenie wielokrotne
 
 Wskaźnik do obiektu typu `D` może być bezpiecznie rzutowany `B` lub `C`. Jednak jeśli `D` jest rzutowany na wskaż `A` obiektu, którego wystąpienia `A` spowodowałoby? Spowoduje to błąd rzutowania niejednoznaczne. Aby obejść ten problem, można wykonać dwa rzutowania jednoznaczne. Na przykład:
 
@@ -141,13 +142,15 @@ void f() {
 
 Mogą zostać wprowadzone dalsze niejasności, korzystając z wirtualnej klasy bazowej. Rozważmy hierarchię klas pokazaną na poniższym rysunku.
 
-![Klasa hierarchii, która zawiera wirtualne klasy bazowe](../cpp/media/vc39012.gif "vc39012") klasy hierarchii przedstawiający wirtualne klasy bazowe
+![Klasa hierarchii, która zawiera wirtualne klasy bazowe](../cpp/media/vc39012.gif "klasy hierarchii, która zawiera wirtualne klasy bazowe") <br/>
+Hierarchia klas, który pokazuje wirtualne klasy bazowe
 
 W tej hierarchii `A` jest wirtualnej klasy bazowej. Biorąc pod uwagę wystąpienie klasy `E` i wskaźnik `A` podobiektu, **dynamic_cast** na wskaźnik do `B` zakończy się niepowodzeniem z powodu niejednoznaczności. Najpierw należy rzutować na pełną `E` obiektu, a następnie sposobu pracy użytkownika Utwórz kopię zapasową hierarchii jednoznacznie, aby dotrzeć do prawidłowego `B` obiektu.
 
 Rozważmy hierarchię klas pokazaną na poniższym rysunku.
 
-![Klasa hierarchii, która zawiera zduplikowane klas bazowych](../cpp/media/vc39013.gif "vc39013") klasy hierarchii wyświetlane zduplikowane klas bazowych
+![Klasa hierarchii, która zawiera zduplikowane klas bazowych](../cpp/media/vc39013.gif "klasy hierarchii, która zawiera zduplikowane klas bazowych") <br/>
+Hierarchii klas, która zawiera zduplikowane klas bazowych
 
 Danego obiektu typu `E` i wskaźnik `D` podobiektu przejść z `D` podobiektu się najdalej po lewej stronie `A` podobiektów, można wprowadzić trzy konwersje. Można wykonać **dynamic_cast** konwersja `D` wskaźnik do `E` wskaźnika, a następnie konwersji (albo **dynamic_cast** lub niejawną konwersję) z `E`do `B`, a na koniec niejawna konwersja z `B` do `A`. Na przykład:
 

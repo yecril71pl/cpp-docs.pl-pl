@@ -1,13 +1,13 @@
 ---
 title: Optymalizacja sterowana profilem w Centrum Wydajności i Diagnostyki
-ms.date: 03/14/2018
+ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8c0467e1a3051609f52053894ea59064e40a3ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580859"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176201"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Optymalizacja sterowana profilem w Visual Studio 2013 Centrum wydajności i diagnostyki
 
@@ -45,21 +45,21 @@ Następnie ustaw dla konfiguracji kompilacji aplikacji do wersji na "gotowy" on 
 
 Otwórz Centrum wydajności i diagnostyki, na pasku menu wybierz **analizy**, **wydajności i diagnostyki**. Spowoduje to otwarcie strony sesji diagnostyki, która dysponuje narzędziami analizy, które są dostępne dla danego typu projektu.
 
-![PGO w Centrum wydajności i diagnostyki](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![PGO w Centrum wydajności i diagnostyki](../../build/reference/media/pgofig0hub.png "PGO w Centrum wydajności i diagnostyki")
 
 W **dostępnych narzędzi**, wybierz opcję **profilowana Optymalizacja** pole wyboru. Wybierz **Start** przycisk, aby uruchomić dodatek typu plug-in PGO.
 
-![Strona wprowadzenia PGO](../../build/reference/media/pgofig1start.png "PGOFig1Start")
+![Strona wprowadzenia PGO](../../build/reference/media/pgofig1start.png "strona wprowadzenia PGO")
 
 **Profilowana Optymalizacja** strony opisano kroki, używa wtyczki, aby zwiększyć wydajność aplikacji. Wybierz **Start** przycisku.
 
-![Strona Instrumentacji PGO](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
+![Strona Instrumentacji PGO](../../build/reference/media/pgofig2instrument.png "PGO Instrumentacji strony")
 
 W **Instrumentacji** sekcji, możesz użyć **szkolenia początkowo jest włączona** opcję, aby wybrać, czy mają zostać dołączone do fazy uruchamiania aplikacji w ramach szkolenia. Jeśli ta opcja nie jest zaznaczone, dane szkoleniowe nie została zarejestrowana w uruchomionej aplikacji instrumentowanych, aż jawnie włączyć szkolenia.
 
 Wybierz **Instrument** przycisk, aby utworzyć aplikację przy użyciu specjalnego zestawu opcji kompilatora. Kompilator wstawia sondy instrukcje w wygenerowanym kodzie. Te instrukcje rejestrowania danych profilowania w fazie szkolenia.
 
-![Strona kompilację instrumentowaną PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![Strona kompilację instrumentowaną PGO](../../build/reference/media/pgofig3build.PNG "PGO kompilację instrumentowaną strony")
 
 Aplikacja jest uruchomiane automatycznie po zakończeniu kompilacji instrumentowanej aplikacji.
 
@@ -67,22 +67,22 @@ Jeśli występują błędy lub ostrzeżenia podczas kompilowania, popraw je, a n
 
 Gdy aplikacja jest uruchomiona, można użyć **Rozpocznij szkolenie** i **szkolenia Wstrzymaj** linki w **szkolenia** sekcji, aby kontrolować podczas profilowania informacje są rejestrowane. Możesz użyć **Zatrzymaj aplikację** i **Uruchom aplikację** łącza, aby zatrzymać i ponownie uruchom aplikację.
 
-![Strony szkolenia PGO](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
+![Strony szkolenia PGO](../../build/reference/media/pgofig4training.PNG "strony szkolenia PGO")
 
 Podczas szkolenia, przechodzą przez scenariuszy użytkownika do przechwytywania informacji profilowania, wymagającym PGO wtyczka do optymalizacji kodu. Po zakończeniu szkolenia, zamknij aplikację, lub wybierz **Zatrzymaj aplikację** łącza. Wybierz **analizy** przycisk, aby rozpocząć krok analizy.
 
 Po zakończeniu analizy **analizy** sekcji przedstawiono raport z informacjami profilowania, przechwyconą w fazie szkolenia scenariusza użytkownika. Ten raport służy do sprawdzenia, które funkcje aplikacji o nazwie większość i wydano najwięcej czasu w. Wtyczka PGO informacje są używane do określenia aplikacji, która działa pod kątem szybkości i którego ma zostać Optymalizuj pod kątem rozmiaru. Wtyczka PGO konfiguruje optymalizacje kompilacji do utworzenia aplikacji najmniejsza, fastest dla scenariuszy użytkowników, które rejestrowane podczas szkolenia.
 
-![Strona analizy PGO](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
+![Strona analizy PGO](../../build/reference/media/pgofig5analyze.png "strona analizy PGO")
 
 Jeśli szkolenia przechwytywane oczekiwane informacje profilowania, możesz wybrać **Zapisz zmiany** można zapisać danych profilu przeanalizowany w projekcie, aby zoptymalizować kompilacji w przyszłości. Aby odrzucić dane profilu i szkolenie za pośrednictwem są uruchamiane od początku, wybierz opcję **ponownie przeprowadzić szkolenia**.
 
 Plik danych profilu jest zapisywany w projekcie w **dane szkoleniowe PGO** folderu. Te dane są używane do kontrolowania ustawień optymalizacji kompilatora kompilacji w swojej aplikacji.
 
-![Plik danych PGO w Eksploratorze rozwiązań](../../build/reference/media/pgofig6data.png "PGOFig6Data")
+![Plik danych PGO w Eksploratorze rozwiązań](../../build/reference/media/pgofig6data.png "PGO pliku danych w Eksploratorze rozwiązań")
 
 Po analizie usługa PGO wtyczka Ustawia opcje kompilacji w projekt, aby użyć danych profilowych selektywnie zoptymalizować aplikację, podczas kompilacji. Można modyfikować i tworzenie aplikacji przy użyciu tych samych danych profilu. Podczas kompilowania aplikacji, dane wyjściowe kompilacji raporty, jak wiele funkcji i instrukcje, które zostały zoptymalizowane przy użyciu danych profilu.
 
-![PGO dane wyjściowe diagnostyki](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
+![PGO dane wyjściowe diagnostyki](../../build/reference/media/pgofig7diagnostics.png "PGO dane wyjściowe diagnostyki")
 
 Po wprowadzeniu zmian w kodzie istotne podczas projektowania może być konieczne ponowne szkolenie aplikację, aby uzyskać najlepszą optymalizację. Firma Microsoft zaleca ponowne szkolenie aplikację, kiedy dane wyjściowe kompilacji, mniej niż 80 procent, funkcji lub instrukcje zostały zoptymalizowane przy użyciu danych profilu.

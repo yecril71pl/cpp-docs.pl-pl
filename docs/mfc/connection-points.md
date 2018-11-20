@@ -1,6 +1,6 @@
 ---
 title: Punkty połączenia
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517640"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175486"
 ---
 # <a name="connection-points"></a>Punkty połączenia
 
@@ -30,7 +30,8 @@ W przeszłości Component Object Model (COM) zdefiniowany mechanizm ogólnego (`
 
 Połączenie ma dwie części: obiekt wywołujący interfejs o nazwie źródło i obiekt implementujący interfejs o nazwie ujścia. Punkt połączenia jest interfejs udostępnianych przez źródło. Dzięki uwidocznieniu działania punktu połączenia, źródłem umożliwia ujścia do nawiązywania połączeń z samym sobą (źródło). Przez połączenie punktu mechanizm ( `IConnectionPoint` interface), wskaźnik do interfejsu ujścia jest przekazywany do obiektu źródłowego. This, wskaźnik zawiera źródła dzięki dostępowi do implementacji obiektu sink zestaw elementów członkowskich. Na przykład aby wyzwolić zdarzenie implementowany przez obiekt sink, źródła można wywołać odpowiedniej metody wdrożenia ujścia. Na poniższym rysunku pokazano połączenie punktu właśnie opisanego.
 
-![Zaimplementowane punktu połączenia](../mfc/media/vc37lh1.gif "vc37lh1") zaimplementowane punktu połączenia
+![Zaimplementowane punktu połączenia](../mfc/media/vc37lh1.gif "zaimplementowane punktu połączenia") <br/>
+Punkt połączenia z zaimplementowaną
 
 MFC implementuje ten model w [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) i [CCmdTarget](../mfc/reference/ccmdtarget-class.md) klasy. Klasy pochodne `CConnectionPoint` zaimplementować `IConnectionPoint` interfejsu, używany do udostępnienia punkty połączenia do innych obiektów. Klasy pochodne `CCmdTarget` zaimplementować `IConnectionPointContainer` interfejs, który można wymieniać wszystkich obiektów dostępnych punktów połączenia lub znajdowania punktu określonego połączenia.
 
@@ -54,7 +55,8 @@ Na koniec należy dodać wywołanie `EnableConnections` w konstruktorze klasy. N
 
 Po wstawieniu ten kod swojej `CCmdTarget`-klasy pochodnej udostępnia punkt połączenia dla `ISampleSink` interfejsu. Na poniższym rysunku przedstawiono w tym przykładzie.
 
-![Punkt połączenia z implementowane za pomocą MFC](../mfc/media/vc37lh2.gif "vc37lh2") połączenia punktu implementowane za pomocą MFC
+![Punkt połączenia z implementowane za pomocą MFC](../mfc/media/vc37lh2.gif "punktu połączenia implementowane za pomocą MFC") <br/>
+Punkt połączenia implementowane za pomocą MFC
 
 Zazwyczaj punkty połączenia obsługi "multiemisji" — możliwość emisji do wielu ujść podłączone do tego samego interfejsu. Poniższy fragment przykład pokazuje, jak do obsługi multiemisji przez iterację każdy obiekt sink dla punktu połączenia:
 

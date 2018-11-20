@@ -1,29 +1,34 @@
 ---
 title: Menedżer wizualizacji
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521375"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175577"
 ---
 # <a name="visualization-manager"></a>Menedżer wizualizacji
 
 Menedżer visual jest obiektem, który steruje wyglądem całej aplikacji. Działa ona jako pojedyncza klasa gdzie umieścić kod rysowania dla swojej aplikacji. Biblioteka MFC zawiera kilka menedżerów wizualnych. Można również utworzyć visual menedżera, aby utworzyć widok niestandardowy dla swojej aplikacji. Na poniższych ilustracjach przedstawiono tej samej aplikacji, gdy włączone są różnych menedżerów wizualnych:
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp, który używa Menedżera visual CMFCVisualManagerWindows
+![MyApp w postaci wyświetlanej przez CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerWindows") <br/>
+MyApp, który używa Menedżera visual CMFCVisualManagerWindows
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp, który używa Menedżera visual CMFCVisualManagerVS2005
+![MyApp w postaci wyświetlanej przez CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerVS2005") <br/>
+MyApp, który używa Menedżera visual CMFCVisualManagerVS2005
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp, który używa Menedżera visual CMFCVisualManagerOfficeXP
+![MyApp w postaci wyświetlanej przez CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOfficeXP") <br/>
+MyApp, który używa Menedżera visual CMFCVisualManagerOfficeXP
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp, który używa Menedżera visual CMFCVisualManagerOffice2003
+![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2003") <br/>
+MyApp, który używa Menedżera visual CMFCVisualManagerOffice2003
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp, który używa Menedżera visual CMFCVisualManagerOffice2007
+![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2007") <br/>
+MyApp, który używa Menedżera visual CMFCVisualManagerOffice2007
 
 Domyślnie visual manager przechowuje kod rysowania dla kilku elementów graficznego interfejsu użytkownika. Aby przekazać niestandardowe elementy interfejsu użytkownika, należy zastąpić powiązane metody rysowania visual menedżera. Aby uzyskać listę tych metod, zobacz [klasa CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Metody, które można przesłonić, aby zapewnić niestandardowy wygląd są wszystkie metody, które zaczyna się `OnDraw`.
 

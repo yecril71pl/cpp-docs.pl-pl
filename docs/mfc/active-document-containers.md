@@ -1,18 +1,18 @@
 ---
 title: Kontenery dokumentów aktywnych
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510841"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176786"
 ---
 # <a name="active-document-containers"></a>Kontenery dokumentów aktywnych
 
@@ -54,7 +54,7 @@ Obiekt w ramce, wyświetlanie obiektów i obiekt kontenera może opcjonalnie zai
 
 Na poniższej ilustracji pokazano koncepcyjny relacje między kontenerem i jego składników (po lewej), a aktywny dokument i widokach (po prawej). Aktywny dokument zarządza magazynem i danymi, a widok wyświetla lub opcjonalnie wyświetla te dane. Interfejsy wytłuszczonym drukiem są wymagane do uczestnictwa w aktywnym dokumencie; pogrubiony i kursywę są opcjonalne. Wszystkie inne interfejsy są wymagane.
 
-![Interfejsy kontenera dokumentów aktywnych](../mfc/media/vc37gj1.gif "vc37gj1")
+![Interfejsy kontenera dokumentów aktywnych](../mfc/media/vc37gj1.gif "interfejsy kontenera dokumentów aktywnych")
 
 Dokument, który obsługuje tylko jeden widok można implementować składniki widoku oraz dokument (oznacza to, że ich odpowiednich interfejsów) na jednej klasy konkretnej. Ponadto witryny kontenera, który obsługuje tylko jeden widok w czasie, można połączyć z witryny dokumentów i wyświetlanie witryny w klas konkretnych w jednej lokacji. Obiekt w ramce kontenera, jednak należy w dalszym ciągu odrębne i składników dokumentu kontenera jedynie znajduje się w tym miejscu można nadać pełny obraz architektury; nie występuje według architektury zawierania dokumentów aktywnych.
 

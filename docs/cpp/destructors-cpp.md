@@ -1,6 +1,6 @@
 ---
 title: Destruktory (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586020"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175876"
 ---
 # <a name="destructors-c"></a>Destruktory (C++)
 
@@ -152,9 +152,8 @@ B1 dtor
 
 Destruktory dla wirtualnych klas bazowych są wywoływane w odwrotnej kolejności ich występowania w skierowanym grafie acyklicznym (pierwszy głębi, od lewej do prawej, postorder przechodzenia). Poniższa ilustracja przedstawia Wykres dziedziczenia.
 
-![Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe](../cpp/media/vc392j1.gif "vc392J1")
-
-Wirtualne klasy bazowe Wykres dziedziczenia
+![Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe](../cpp/media/vc392j1.gif "Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe") <br/>
+Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe
 
 Poniższa lista zawiera głowic klasy dla klasy pokazano na rysunku.
 

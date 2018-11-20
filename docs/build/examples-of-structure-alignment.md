@@ -1,16 +1,16 @@
 ---
 title: Przykłady wyrównania struktury
-ms.date: 03/26/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4b3ae29674e9c4fc27e8e175867339001b9a0d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466251"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175343"
 ---
 # <a name="examples-of-structure-alignment"></a>Przykłady wyrównania struktury
 
@@ -26,7 +26,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Przykład konwersji AMD](../build/media/vcamd_conv_ex_1_block.png "vcAmd_conv_ex_1")
+![Układ struktury przykład 1 konwersji AMD](../build/media/vcamd_conv_ex_1_block.png "AMD konwersji przykład 1 struktury układu")
 
 ## <a name="example-2"></a>Przykład 2
 
@@ -40,7 +40,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Przykład konwersji AMD](../build/media/vcamd_conv_ex_2_block.png "vcAmd_conv_ex_2")
+![Układ struktury przykład 2 konwersji AMD](../build/media/vcamd_conv_ex_2_block.png "AMD konwersji przykład 2 struktury układu")
 
 ## <a name="example-3"></a>Przykład 3
 
@@ -55,7 +55,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Przykład konwersji AMD](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
+![Układ struktury przykład 2 konwersji AMD](../build/media/vcamd_conv_ex_3_block.png "AMD konwersji przykład 2 struktury układu")
 
 ## <a name="example-4"></a>Przykład 4
 
@@ -69,7 +69,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Przykład konwersji AMD](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
+![AMD konwersji przykład 4 złożenia layouit](../build/media/vcamd_conv_ex_4_block.png "AMD konwersji przykład 4 złożenia layouit")
 
 ## <a name="see-also"></a>Zobacz także
 

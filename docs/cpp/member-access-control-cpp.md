@@ -1,17 +1,17 @@
 ---
 title: Kontrola dostępu do elementów członkowskich (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611422"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176228"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
@@ -234,7 +234,8 @@ W poprzednim przykładzie, wywołanie funkcji wirtualnej `GetState` za pomocą w
 
 W lattices dziedziczenia wielokrotnego obejmujących wirtualne klasy bazowe Podaj imię można uzyskać dostęp przez więcej niż jedną ścieżkę. Ponieważ może być stosowana kontroli dostępu w różnych wzdłuż tych różnych ścieżek, kompilator wybiera ścieżką, która pozwala na większości dostępu. Zobacz poniższą ilustrację.
 
-![Dostęp wzdłuż ścieżek Wykres dziedziczenia](../cpp/media/vc38v91.gif "vc38V91") wzdłuż ścieżek dostępu wykresu dziedziczenia
+![Dostęp wzdłuż ścieżek Wykres dziedziczenia](../cpp/media/vc38v91.gif "dostępu wzdłuż ścieżek Wykres dziedziczenia") <br/>
+Dostęp wzdłuż ścieżek Wykres dziedziczenia
 
 Na rysunku, nazwa zadeklarowana w klasie `VBase` zawsze zostanie osiągnięty za pośrednictwem klasy `RightPath`. Właściwym rozwiązaniem jest bardziej dostępny ponieważ `RightPath` deklaruje `VBase` jako publiczne klasy bazowej, natomiast `LeftPath` deklaruje `VBase` jako prywatny.
 

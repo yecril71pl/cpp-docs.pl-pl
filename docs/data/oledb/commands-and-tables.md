@@ -1,6 +1,6 @@
 ---
 title: Polecenia i tabele
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB consumer templates, table support
 - CCommand class, OLE DB consumer templates
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: 0baa388fc1667769892c841a4cc5d68a1b9d0255
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94581339353866d78faf7e20335c80250fb6027b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543484"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175317"
 ---
 # <a name="commands-and-tables"></a>Polecenia i tabele
 
 Zezwalaj na dostęp do zestawów wierszy; polecenia i tabele oznacza to należy otworzyć zestawów wierszy, wykonaj polecenia i powiązać kolumny. [CCommand](../../data/oledb/ccommand-class.md) i [CTable](../../data/oledb/ctable-class.md) klasy wystąpienia obiektów polecenia i tabeli, odpowiednio. Te klasy pochodzić od [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) jak pokazano na poniższej ilustracji.
 
-![CCommand i CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")<br/>
+![CCommand i CTable](../../data/oledb/media/vccommandstables.gif "CCommand i CTable")<br/>
 Polecenie i klasy tabeli
 
 W poprzedniej tabeli `TAccessor` mogą być dowolnego typu metody dostępu na liście [typy metod dostępu](../../data/oledb/accessors-and-rowsets.md). `TRowset` może być dowolnego typu zestawu wierszy na liście [typów w zestawie wierszy](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Określa typ wyniku (jednej lub wielu zestawu wyników).

@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCPropertySheet
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531615"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176409"
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 
@@ -112,15 +112,15 @@ Wykonaj poniższe kroki, aby użyć `CMFCPropertySheet` klasy w aplikacji:
 
 Poniższa ilustracja przedstawia arkusza właściwości, który jest w stylu osadzonym pasku narzędzi programu Microsoft Outlook. Narzędzi programu Outlook pojawia się po lewej stronie arkusza właściwości.
 
-![Formanty kolor CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Formanty kolor CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet kolor kontrolki")
 
 Poniższa ilustracja przedstawia arkusza właściwości, która zawiera [klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) obiektu. Ten obiekt jest w stylu standardowego wspólnego arkusza właściwości kontrolki arkusza właściwości.
 
-![Kontrolki listy i właściwości CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Kontrolki listy i właściwości CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet listy i właściwości kontrolek")
 
 Poniższa ilustracja przedstawia w stylu formantu drzewa arkusza właściwości.
 
-![Drzewo](../../mfc/reference/media/proptree.png "proptree")
+![Właściwość drzewa](../../mfc/reference/media/proptree.png "drzewa właściwości")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

@@ -1,6 +1,6 @@
 ---
 title: Implementacja paska stanu w MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496287"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175378"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementacja paska stanu w MFC
 
@@ -33,7 +33,8 @@ Począwszy od wersji 4.0 MFC, paski stanu są implementowane za pomocą klasy [C
 
 Na poniższej ilustracji przedstawiono pasek stanu, który wyświetla kilka wskaźniki.
 
-![Pasek stanu](../mfc/media/vc37dy1.gif "vc37dy1") paska stanu
+![Pasek stanu](../mfc/media/vc37dy1.gif "paska stanu") <br/>
+Pasek stanu
 
 Pasek narzędzi, np. obiekt pasek stanu jest osadzony w jej nadrzędnej ramki okna i jest tworzony automatycznie, gdy okno ramowe jest konstruowany. Na pasku stanu, podobnie jak wszystkie paski sterowania, jest niszczony, automatycznie także kiedy niszczony jest nadrzędnej ramki.
 

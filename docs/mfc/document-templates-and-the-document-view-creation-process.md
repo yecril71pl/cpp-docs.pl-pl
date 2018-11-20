@@ -1,6 +1,6 @@
 ---
 title: Szablony dokumentów i proces tworzenia dokumentu widoku
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606352"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174901"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Szablony dokumentów i proces tworzenia dokumentu/widoku
 
@@ -24,7 +24,8 @@ Aby zarządzać złożony proces tworzenia dokumentów wraz z ich skojarzonych w
 
 Niektóre aplikacje obsługują wiele typów dokumentów. Na przykład aplikacja może obsługiwać dokumenty tekstowe i grafiki dokumentów. W aplikacji gdy użytkownik wybierze polecenie Nowy w menu Plik, okno dialogowe pokazuje listę możliwych typów dokumentu nowy, aby otworzyć. Dla każdego typu obsługiwanego dokumentu aplikacja używa obiektu szablonu dokumentu distinct. Na poniższym rysunku przedstawiono konfigurację aplikacji MDI, która obsługuje dwa typy dokumentów i pokazuje kilka otwartych dokumentów.
 
-![Aplikacja MDI, która ma dwa typy dokumentów](../mfc/media/vc387h1.gif "vc387h1") aplikacji MDI za pomocą dwóch typów dokumentów
+![Aplikacja MDI, która ma dwa typy dokumentów](../mfc/media/vc387h1.gif "aplikacja MDI, która ma dwa typy dokumentów") <br/>
+Aplikacja MDI za pomocą dwóch typów dokumentów
 
 Szablony dokumentów są tworzone i konserwowane przez obiekt aplikacji. Jedną z kluczowych zadań wykonywanych podczas aplikacji `InitInstance` funkcja jest do konstruowania co najmniej jeden szablon dokumentu, tego rodzaju odpowiedniej. Ta funkcja jest opisana w [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md). Obiekt aplikacja przechowuje wskaźnik do każdego szablonu dokumentu na liście szablonów i udostępnia interfejs umożliwiający dodanie szablonów dokumentów.
 

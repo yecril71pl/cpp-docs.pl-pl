@@ -1,6 +1,6 @@
 ---
 title: Zakres (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506616"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176760"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
@@ -41,7 +41,8 @@ Istnieje sześć rodzaje zakresów:
 
 Nazwę można ukryć, deklarując go w zamkniętej bloku. Na poniższej ilustracji `i` jest ponownie zadeklarowany w ramach wewnętrznego bloku, w tym samym ukrywanie zmienną związaną z `i` w zakresie zewnętrznym bloku.
 
-![Blok&#45;zakresu ukrywaniem nazwy](../cpp/media/vc38sf1.png "vc38SF1") zasięgu bloku i ukrywanie nazw
+![Blok&#45;zakresu ukrywaniem nazwy](../cpp/media/vc38sf1.png "bloku&#45;zakresu ukrywaniem nazwy") <br/>
+Zasięg bloku i ukrywaniem nazwy
 
 Dane wyjściowe programu pokazano na rysunku przedstawiono:
 

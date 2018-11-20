@@ -1,15 +1,15 @@
 ---
 title: Implementowanie strony właściwości (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669095"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176474"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 
@@ -58,7 +58,7 @@ Kliknij przycisk **OK** aby Kreator Generuj stronę właściwości.
 
 Teraz, gdy Twoja strona właściwości został wygenerowany, należy dodać kilka formantów do okna dialogowego reprezentujący stronę sieci. Dodaj pole edycji, formant statyczny tekst i pola wyboru i ustaw ich identyfikatory, jak pokazano poniżej:
 
-![Edytowanie zasobu okna dialogowego](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Edytowanie zasobu okna dialogowego](../atl/media/ppgresourcelabeled.gif "edycji zasobu okna dialogowego")
 
 Te kontrolki będzie służyć do wyświetlania nazwa pliku dokumentu oraz jego statusu tylko do odczytu.
 

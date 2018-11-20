@@ -1,6 +1,6 @@
 ---
 title: Klasa CDC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CDC
 - AFXWIN/CDC
@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 40de8b3aca3cca7acb2fefa352f9358a16f43e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492085"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176918"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -3242,7 +3242,7 @@ Wskaźnik do `CBrush` obiektu, jeśli operacja się powiedzie; w przeciwnym razi
 
 Pędzel półtonów pokazuje piksele, które są też kolorach pierwszoplanowych i tła, aby utworzyć szarych wzorca. Oto przykład wzorca szarych utworzone przez pędzla półtonów.
 
-![Szczegółowe informacje na temat pociągnięcia pióra szarych](../../mfc/reference/media/vc318s1.gif "vc318s1")
+![Szczegółowe informacje na temat pociągnięcia pióra szarych](../../mfc/reference/media/vc318s1.gif "szczegółowe informacje na temat pociągnięcia pióra szarych")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 

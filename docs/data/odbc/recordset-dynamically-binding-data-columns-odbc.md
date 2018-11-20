@@ -1,6 +1,6 @@
 ---
 title: 'Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469684"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175668"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)
 
@@ -78,7 +78,7 @@ Dynamiczne powiązanie dodane kolumny w czasie wykonywania wymaga wykonania nast
 
    Jedno z podejść jest kompilacja jedną lub więcej list dynamiczne, jeden dla nazwy nowych kolumn, innej wartości wyników i trzecią ich typów danych (w razie potrzeby). Te listy szczególnie listę wartości, podaj informacje i niezbędne magazynu dla powiązania. Na poniższym rysunku przedstawiono tworzenie listy.
 
-   ![Tworzenie listy kolumn, które można powiązać dynamicznie](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Tworzenie listy kolumn, które można powiązać dynamicznie](../../data/odbc/media/vc37w61.gif "tworzenia listy kolumn, które można powiązać dynamicznie")<br/>
    Tworzenie listy kolumn, które można powiązać dynamicznie
 
 1. Dodaj wywołanie funkcji RFX w głównym zestawie rekordów `DoFieldExchange` funkcji dla poszczególnych dodanych kolumn. Te wywołania RFX wykonują pracę pobieranie rekord, w tym dodatkowe kolumny i powiązania do elementów członkowskich danych zestawu rekordów lub dynamicznie podane magazynu kolumn dla nich.

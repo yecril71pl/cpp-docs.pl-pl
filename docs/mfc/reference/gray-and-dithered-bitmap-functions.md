@@ -1,6 +1,6 @@
 ---
 title: Funkcje szarych i symulowanych map bitowych
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490899"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176734"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkcje szarych i symulowanych map bitowych
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490899"
 
 Biblioteka MFC zawiera dwie funkcje do udzielania mapy bitowej wyglądu formantu wyłączone.
 
-![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikonę oryginalnego i symulowanych map bitowych")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ Biblioteka MFC zawiera dwie funkcje do udzielania mapy bitowej wyglądu formantu
 
 MFC udostępnia także dwie funkcje zastępując tła mapy bitowej szarych wzorca.
 
-![Porównanie wersji ikonę szarych a wersją z oryginalnego](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Porównanie wersji ikonę szarych a wersją z oryginalnego](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji szarych a wersją z oryginalnego ikony")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Nowy kolor tła (zazwyczaj szary, takie jak COLOR_MENU).
 
 Mapę bitową z `AfxDrawGrayBitmap` będzie miał wyglądu formantu wyłączone.
 
-![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikonę oryginalnego i symulowanych map bitowych")
 
 ### <a name="example"></a>Przykład
 
@@ -110,7 +110,7 @@ Nowy kolor tła (zazwyczaj szary, takie jak COLOR_MENU).
 
 Skopiowany z mapy bitowej `AfxGetGrayBitmap` będzie miał wyglądu formantu wyłączone.
 
-![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porównanie wersji oryginalnego i symulowanych map bitowych ikonę](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikonę oryginalnego i symulowanych map bitowych")
 
 ### <a name="example"></a>Przykład
 
@@ -158,7 +158,7 @@ Inne symulacji kolor, zwykle światła szary (COLOR_MENU).
 
 Źródłową mapę bitową jest rysowana na docelowy kontroler domeny z dwóch kolorów (*cr1* i *cr2*) szachownicą wzorzec, zastępując tła mapy bitowej. Tło źródłową mapę bitową jest zdefiniowany jako jego białe pikseli i wszystkie piksele dopasowanie koloru piksela w lewym górnym rogu mapy bitowej.
 
-![Porównanie wersji ikonę szarych a wersją z oryginalnego](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Porównanie wersji ikonę szarych a wersją z oryginalnego](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji szarych a wersją z oryginalnego ikony")
 
 ### <a name="example"></a>Przykład
 

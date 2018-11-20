@@ -1,17 +1,17 @@
 ---
 title: Wyrażenia lambda w języku C++
-ms.date: 07/19/2017
+ms.date: 11/19/2018
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493811"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176266"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -43,7 +43,7 @@ void abssort(float* x, unsigned n) {
 
 Ta ilustracja przedstawia części wyrażenia lambda:
 
-![Elementy strukturalne wyrażenia lambda](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")
+![Elementy strukturalne wyrażenia lambda](../cpp/media/lambdaexpsyntax.png "elementy strukturalne wyrażenia lambda")
 
 1. *Klauzula przechwytywania* (znany także jako *lambda-introducer* w specyfikacji języka C++.)
 

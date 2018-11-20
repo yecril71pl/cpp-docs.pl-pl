@@ -1,6 +1,6 @@
 ---
 title: Crecttracker — klasa
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473375"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176513"
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
 
@@ -237,7 +237,7 @@ Uchwytami zmiany rozmiaru są wyświetlane na stronach i narożników prostokąt
 
 Prostokąt ma 8 uchwytami zmiany rozmiaru numerowane 0-7. Uchwyt zmiany rozmiaru, każdy jest reprezentowany przez z nieco maski; wartość ten bit jest równa 2 ^ *n*, gdzie *n* jest liczbą uchwyt zmiany rozmiaru. Usługa BITS 0 – 3 odpowiadają rogu uchwytów zmiany rozmiaru, od lewego górnego rogu przenoszenie do ruchu wskazówek zegara. Usługa BITS 4 – 7 odnoszą się do strony zmiany rozmiaru uchwyty, począwszy od góry z ruchem wskazówek zegara. Na poniższej ilustracji przedstawiono uchwyty zmiany rozmiaru prostokąt i odpowiadające im Zmień rozmiar uchwytu liczby i wartości:
 
-![Zmień rozmiar uchwytu numery](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Zmień rozmiar uchwytu numery](../../mfc/reference/media/vc35dp1.gif "numery uchwyt zmiany rozmiaru")
 
 Domyślna implementacja klasy `GetHandleMask` zwraca maski bitów, tak aby były wyświetlane uchwytami zmiany rozmiaru. Jeśli pojedynczy bit jest włączona, będą rysowane odpowiedniego uchwyt zmiany rozmiaru.
 

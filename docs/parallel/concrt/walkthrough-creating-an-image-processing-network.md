@@ -1,16 +1,16 @@
 ---
 title: 'Wskazówki: tworzenie sieci przetwarzania obrazów'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643641"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176175"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Wskazówki: tworzenie sieci przetwarzania obrazów
 
@@ -134,7 +134,7 @@ Jeśli aplikacja wymaga wielu wiadomość blokuje proces wiadomości, a nie po p
 
 Poniższa ilustracja przedstawia sieci przetwarzania obrazów:
 
-![Sieci przetwarzania obrazów](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Sieci przetwarzania obrazów](../../parallel/concrt/media/concrt_imageproc.png "sieci przetwarzania obrazów")
 
 `countdown_event` Obiekt w tym przykładzie umożliwia sieci przetwarzania obrazów, aby poinformować aplikacji głównej, gdy zostaną przetworzone wszystkie obrazy. `countdown_event` Klasy używa [concurrency::event](../../parallel/concrt/reference/event-class.md) obiekt do sygnalizowania, gdy wartość licznika osiągnie zero. Zwiększa wartość licznika głównej aplikacji, za każdym razem, gdy jej wysyła nazwę pliku do sieci. Terminalu węzeł zmniejsza sieci licznika po przetworzeniu każdego obrazu. Po aplikacji głównej przechodzi przez określony katalog, czeka `countdown_event` obiekt do sygnalizowania, że jego licznik osiągnęła wartość zero.
 
@@ -152,7 +152,7 @@ Poniższy kod przedstawia kompletny przykład. `wmain` Funkcja zarządza GDI + b
 
 Poniższa ilustracja przedstawia przykładowe dane wyjściowe. Każdy obraz źródłowy przekracza jego odpowiedniego zmodyfikowany obraz.
 
-![Przykładowe dane wyjściowe na przykład](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Przykładowe dane wyjściowe na przykład](../../parallel/concrt/media/concrt_imageout.png "przykładowe dane wyjściowe na przykład")
 
 `Lighthouse` składowe, została utworzona przez Tom Alphin i dlatego jest konwertowany na skali szarości. `Chrysanthemum`, `Desert`, `Koala`, i `Tulips` ma czerwony jako dominującego koloru i w związku z tym składników kolor niebieski i zielony, usunięte i są przyciemniony. `Hydrangeas`, `Jellyfish`, i `Penguins` spełniających kryteria domyślne, dlatego sepia toned.
 

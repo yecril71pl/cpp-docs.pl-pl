@@ -1,6 +1,6 @@
 ---
 title: Rzutowanie
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560800"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175551"
 ---
 # <a name="casting"></a>Rzutowanie
 
@@ -23,11 +23,13 @@ Język C++ zapewnia, że jeśli klasa dziedziczy po klasie bazowej, zawierające
 
 Ponieważ klasa pochodna zawiera definicje wszystkich klas bazowych, po których dziedziczy, bezpieczne jest rzutowanie wskaźnika w górę hierarchii na jedną z tych klas bazowych. Podając wskaźnik do klasy bazowej, rzutowanie wskaźnika w dół hierarchii może być bezpieczne. Jest to bezpieczne, jeśli wskazywany obiekt jest rzeczywiście typu dziedziczonego z klasy bazowej. W takim przypadku faktyczny obiekt jest określany jako „obiekt kompletny”. Wskaźnik do klasy bazowej jest nazywany wskaźnikiem do „podobiektu” obiektu kompletnego. Na przykład, rozważmy hierarchię klas pokazaną na poniższym rysunku.
 
-![Hierarchia klas](../cpp/media/vc38zz1.gif "vc38ZZ1") hierarchii klas
+![Hierarchia klas](../cpp/media/vc38zz1.gif "klasy hierarchii") <br/>
+Hierarchia klas
 
 Obiekt typu `C` może zostać zwizualizowany jak pokazano na poniższym rysunku.
 
-![Klasa C z sub&#45;obiekty B i A](../cpp/media/vc38zz2.gif "vc38ZZ2") klasy C z Podobiektem B i Podobiektem A
+![Klasa C z sub&#45;obiekty B i A](../cpp/media/vc38zz2.gif "klasy C z sub&#45;obiekty B i A") <br/>
+Klasa C za pomocą obiektów podrzędnych, B i A
 
 Biorąc pod uwagę wystąpienie klasy `C`, istnieje podobiekt `B` i podobiekt `A`. Wystąpienie klasy `C`, oraz podobiekty `A` i `B` to „obiekt kompletny”.
 

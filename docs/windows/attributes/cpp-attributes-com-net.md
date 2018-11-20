@@ -1,17 +1,17 @@
 ---
 title: Atrybuty C++ dla modelu COM i .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589283"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175775"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
 
@@ -55,7 +55,7 @@ Jako wcześniej, gdy projekt jest kompilowany, w którym kompilator analizuje ka
 
 Na poniższym rysunku pokazano relację między kompilatora i dostawcy atrybutu.
 
-![Atrybut komunikacji](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Atrybut komunikacji](../media/vccompattrcomm.gif "komunikacji atrybutu")
 
 > [!NOTE]
 > Użycie atrybutu nie zmienia zawartość pliku źródłowego. Jedyną sytuacją, w których atrybut wygenerowanego kodu jest widoczny jest podczas sesji debugowania. Ponadto dla każdego pliku źródłowego w projekcie można wygenerować plik tekstowy, który wyświetla wyniki podstawienia atrybutu. Aby uzyskać więcej informacji na temat tej procedury, zobacz [/Fx (Scal wprowadzony kod)](../../build/reference/fx-merge-injected-code.md) i [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).

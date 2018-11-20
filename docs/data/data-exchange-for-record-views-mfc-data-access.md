@@ -1,6 +1,6 @@
 ---
 title: Wymiana danych dla widoków rekordów (dostęp do danych MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - RFX (record field exchange), data exchange mechanism
 - RFX (record field exchange), record views
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: d3b1c5b997baa0938c532c7a2806d5e65eb125a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf9f32e970becd1ef8dc4e347512dcfaa7cf62ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546480"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175417"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Wymiana danych dla widoków rekordów (dostęp do danych MFC)
 
@@ -23,7 +23,7 @@ DDX dla widoków rekordów działa w połączeniu z [RFX](../data/odbc/record-fi
 
 Na poniższej ilustracji przedstawiono relację między DDX i RFX dla widoków rekordów.
 
-![Okno dialogowe&#45;wymiany danych i rejestrowanie&#45;wymiana pól](../data/media/vc37xt1.gif "vc37xt1")<br/>
+![Okno dialogowe&#45;wymiany danych i rejestrowanie&#45;wymiana pól](../data/media/vc37xt1.gif "okna dialogowego&#45;wymiany danych i rejestrowanie&#45;wymiana pól")<br/>
 Wymiana danych okna dialogowego i wymiana pól rekordów
 
 Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać więcej informacji na temat RFX zobacz [wymiany pól rekordu (RFX)](../data/odbc/record-field-exchange-rfx.md).

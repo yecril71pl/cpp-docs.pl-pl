@@ -1,6 +1,6 @@
 ---
 title: Metody dostępu i zestawy wierszy
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651259"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175722"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 
@@ -34,7 +34,7 @@ Wszystkie metody dostępu pochodzi od [caccessorbase —](../../data/oledb/cacce
 
 Na poniższej ilustracji przedstawiono typy metod dostępu.
 
-![Typy metod dostępu](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Typy metod dostępu](../../data/oledb/media/vcaccessortypes.gif "typy metod dostępu")<br/>
 Metoda dostępu do klasy
 
 - [CAccessor](../../data/oledb/caccessor-class.md) Użyj tej metody dostępu, gdy wiesz struktury źródłowej bazy danych w czasie projektowania. `CAccessor` statycznie wiąże rekordu bazy danych, który zawiera buforu, źródła danych.
@@ -63,7 +63,7 @@ Szablony OLE DB obsługuje trzy rodzaje zestawów wierszy (patrz rysunek poprzed
 
 Na poniższej ilustracji pokazano typy w zestawie wierszy.
 
-![Grafika RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Grafika RowsetType](../../data/oledb/media/vcrowsettypes.gif "RowsetType — grafika")<br/>
 Klasy zestawów wierszy
 
 [Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego uzyskać dostępu do informacji o magazynie danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.

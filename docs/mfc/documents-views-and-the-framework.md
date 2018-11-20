@@ -1,6 +1,6 @@
 ---
 title: Dokumenty, widoki i struktura
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662374"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175759"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, widoki i struktura
 
@@ -59,7 +59,8 @@ Obiekty kluczy w uruchomionej aplikacji są:
 
 W uruchomionej aplikacji te obiekty wspólne reagować na działania użytkownika związane ze sobą polecenia i inne komunikaty. Obiekt pojedynczej aplikacji zarządza co najmniej jeden szablon dokumentu. Każdy szablon dokumentu, tworzy i zarządza jednego lub wielu dokumentów (w zależności od tego, czy aplikacja jest SDI lub MDI). Użytkownik przegląda i manipuluje dokumentu za pośrednictwem widoku zawarte wewnątrz okna ramki. Na poniższej ilustracji przedstawiono relacje między tymi obiektami dla aplikacji interfejsu SDI.
 
-![Obiekty w uruchomionej aplikacji interfejsu SDI](../mfc/media/vc386v1.gif "vc386v1") obiektów w aplikacji SDI uruchamiania
+![Obiekty w uruchomionej aplikacji interfejsu SDI](../mfc/media/vc386v1.gif "obiektów w uruchomionej aplikacji interfejsu SDI") <br/>
+Obiekty w uruchomionej aplikacji interfejsu SDI
 
 Pozostała część tej rodziny artykuły wyjaśniono, jak narzędzia framework, Kreator aplikacji MFC i edytory zasobów, utworzyć te obiekty, jak one współdziałają ze sobą i sposób ich używania w programowaniu usługi. Dokumentów, widoków i okien ramowych zostały omówione bardziej szczegółowo w [obiektów okien](../mfc/window-objects.md) i [architektury dokument/widok](../mfc/document-view-architecture.md).
 

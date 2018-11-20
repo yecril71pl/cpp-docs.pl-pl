@@ -1,15 +1,15 @@
 ---
 title: 'Porady: tworzenie wystąpień unique_ptr i korzystanie z nich'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610252"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174895"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Porady: tworzenie wystąpień unique_ptr i korzystanie z nich
 
@@ -17,7 +17,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) nie udostępnia swojego 
 
 Poniższy diagram ilustruje przeniesienie prawa własności między dwoma `unique_ptr` wystąpień.
 
-![Przenoszenie własności unikatową&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![Przenoszenie własności unikatową&#95;ptr](../cpp/media/unique_ptr.png "przeniesienie własności unikatową&#95;ptr")
 
 `unique_ptr` jest zdefiniowany w `<memory>` nagłówka w standardowej biblioteki języka C++. Jest dokładnie tak wydajna, jak wskaźnik surowy i mogą być używane w przypadku kontenerów standardowej biblioteki języka C++. Dodanie `unique_ptr` wystąpień kontenerów standardowej biblioteki języka C++ jest efektywne ponieważ Konstruktor przenoszący `unique_ptr` eliminuje potrzebę operacji kopiowania.
 

@@ -1,13 +1,13 @@
 ---
 title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539766"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175655"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 
@@ -31,7 +31,7 @@ Należy pamiętać, że można również uruchomić devenv, w wierszu polecenia 
 
 Po otwarciu stary plik projektu w programie Visual Studio 2017, Visual Studio oferuje przekonwertować plik projektu do najnowszej wersji, firma Microsoft zaakceptowane. Pojawiły się następujące okno dialogowe:
 
-![Przegląd zmian projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Przegląd zmian projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "przegląd zmian projektu i rozwiązania")
 
 Wystąpił błąd powiadamiania nam, że docelowy Itanium nie jest dostępny i nie można przekonwertować.
 
@@ -43,7 +43,7 @@ W czasie, utworzony poprzedni projekt Bazgroły Itanium było ważne docelowej p
 
 Program Visual Studio wyświetlony raport migracji w przypadku wszystkich problemów za pomocą starego pliku projektu.
 
-![Raport o uaktualnieniu](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Raport o uaktualnieniu](../porting/media/scribblemigrationreport.PNG "raport o uaktualnieniu")
 
 W tym przypadku problemy zostały wszystkie ostrzeżenia, a program Visual Studio wprowadził odpowiednie zmiany w pliku projektu. Istotną różnicą chodzi projektu jest to, że narzędzia do kompilowania zmieniła się z program vcbuild do programu msbuild. Ta zmiana została wprowadzona w programie Visual Studio 2010. Inne zmiany obejmują niektóre zmiany w przepisach sekwencję elementów w samym pliku projektu. Brak problemów wymagane dalsze uwagi dla tego prostego projektu.
 

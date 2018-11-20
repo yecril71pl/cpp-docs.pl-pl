@@ -1,6 +1,6 @@
 ---
 title: Paski dialogowe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, control bars
 - CDialogBar class [MFC], dialog bars
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 3a3276e9b5d0e1ab8d8e77fae983d24ff1e4b4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557411"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175356"
 ---
 # <a name="dialog-bars"></a>Paski dialogowe
 
@@ -21,7 +21,8 @@ Pasek dialogowy jest pasek narzędzi, rodzajem z [pasek sterowania](../mfc/contr
 
 Istnieje kilka podstawowych różnic między paska narzędzi i `CDialogBar` obiektu. A `CDialogBar` obiekt zostanie utworzony z szablonu okna dialogowego zasobu, który można utworzyć za pomocą edytora okien dialogowych Visual C++ i które mogą zawierać dowolny rodzaj kontrolki Windows. Użytkownik może z kontrolki karty do kontroli. I możesz określić style wyrównania wyrównać paska dialogowego z dowolnej części nadrzędnej ramki okna, a nawet pozostawić na miejscu, jeśli element nadrzędny jest rozmiar. Na poniższej ilustracji przedstawiono paska dialogowego z wielu kontrolek.
 
-![Pasek dialogowy VC](../mfc/media/vc378t1.gif "vc378t1") paska dialogowego
+![Pasek dialogowy VC](../mfc/media/vc378t1.gif "Pasek dialogowy VC") <br/>
+Paska dialogowego
 
 Pod innymi względami pracę `CDialogBar` obiekt jest tak jak w przypadku niemodalnego okna dialogowego. Edytor okien dialogowych umożliwia projektowanie i tworzenie zasobu okna dialogowego.
 

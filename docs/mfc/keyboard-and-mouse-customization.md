@@ -1,16 +1,16 @@
 ---
 title: Dostosowywanie klawiatury i myszy
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487392"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175685"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 
@@ -22,7 +22,8 @@ W **dostosowywania** okno dialogowe, użytkownik może zmienić niestandardowe f
 
 Poniższa ilustracja przedstawia **klawiatury** karcie **dostosowywania** okno dialogowe.
 
-![Karta klawiatury w oknie dialogowym Dostosuj](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") kartę dostosowania klawiatury
+![Karta klawiatury w oknie dialogowym Dostosuj](../mfc/media/mfcnextkeyboardtab.png "klawiatury karty w oknie dialogowym Dostosuj") <br/>
+Karta dostosowywania klawiatury
 
 Użytkownik wchodzi w interakcję z kartą klawiatury, aby przypisać jeden lub więcej skrótów klawiaturowych do polecenia. Dostępne polecenia są wyświetlane po lewej stronie karty. Użytkownik może wybrać dowolne polecenie dostępne z menu. Tylko polecenia menu można skojarzyć za pomocą skrótów klawiaturowych. Gdy użytkownik wprowadzi nowy skrót **przypisać** przycisk staje się dostępny. Po kliknięciu tego przycisku aplikacji powoduje skojarzenie skrót wybranego polecenia.
 
@@ -36,7 +37,8 @@ Jeśli używasz kreatora do tworzenia aplikacji, Kreator będzie inicjował Mene
 
 Poniższa ilustracja przedstawia **myszy** karcie **dostosowywania** okno dialogowe.
 
-![Karta myszy w oknie dialogowym Dostosuj](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") karta dostosowywania myszy
+![Karta myszy w oknie dialogowym Dostosuj](../mfc/media/mfcnextmousetab.png "myszy karty w oknie dialogowym Dostosuj") <br/>
+Karta dostosowywania myszy
 
 Użytkownik wchodzi w interakcję z tę kartę, aby przypisać menu polecenie, aby przycisk myszy, kliknij dwukrotnie działanie. Użytkownik wybiera widok z lewej strony okna i następnie używa formanty po prawej stronie, aby skojarzyć polecenia za pomocą akcji kliknij dwukrotnie plik. Po użytkownik klika **Zamknij**, aplikacja wykonuje polecenie skojarzone zawsze wtedy, gdy użytkownik kliknie dwukrotnie dowolne miejsce w widoku.
 

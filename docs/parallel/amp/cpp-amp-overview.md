@@ -1,6 +1,6 @@
 ---
 title: Przegląd C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663791"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176994"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -362,7 +362,7 @@ W typowych aplikacjach elementy we fragmencie są powiązane w jakiś sposób, a
 
 Poniższy diagram przedstawia dwuwymiarową tablicę danych próbkowania, które są ułożone WE fragmenty.
 
-![Indeks wartości w stopniu fragmentacji](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![Indeks wartości w stopniu fragmentacji](../../parallel/amp/media/camptiledgridexample.png "indeks wartości w stopniu fragmentacji")
 
 Poniższy przykład kodu używa danych próbkowania, z poprzedniego diagramu. Kod zastępuje każdą wartość we fragmencie średnią wartości we fragmencie.
 

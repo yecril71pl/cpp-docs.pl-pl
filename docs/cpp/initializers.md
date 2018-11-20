@@ -1,6 +1,6 @@
 ---
 title: Inicjatory
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544667"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176292"
 ---
 # <a name="initializers"></a>Inicjatory
 
@@ -528,7 +528,8 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
 
 Podczas inicjowania zmiennej typu odwołania, kompilator używa wykresu decyzji pokazanego na poniższym rysunku, aby wybrać między utworzeniem odwołania do obiektu a tymczasowym obiektem, który wskazuje odwołanie.
 
-![Wykres decyzji dla inicjowania typów ref](../cpp/media/vc38s71.gif "vc38S71") wykres decyzji dla inicjowania typów referencyjnych
+![Wykres decyzji dla inicjowania typów referencyjnych](../cpp/media/vc38s71.gif "wykres decyzji dla inicjowania typów referencyjnych") <br/>
+Wykres decyzji dla inicjowania typów referencyjnych
 
 Odwołuje się do **volatile** typów (zadeklarowane jako **volatile** *typename* <strong>&</strong> *identyfikator*) mogą być zainicjowane z **volatile** obiektów tego samego typu lub z obiektami, które nie zostały zadeklarowane jako **volatile**. Mogą jednak nie, można zainicjować za pomocą **const** obiektów tego typu. Podobnie, odwołania do **const** typów (zadeklarowane jako **const** *typename* <strong>&</strong> *identyfikator* ) mogą być zainicjowane z **const** obiektów tego samego typu (lub wszystko, co ma konwersję do tego typu lub z obiektami, które nie zostały zadeklarowane jako **const**). Mogą jednak nie, można zainicjować za pomocą **volatile** obiektów tego typu.
 

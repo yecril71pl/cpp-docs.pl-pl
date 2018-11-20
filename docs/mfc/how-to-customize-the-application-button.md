@@ -1,21 +1,21 @@
 ---
 title: 'Porady: dostosowywanie przycisku Aplikacja'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592793"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175330"
 ---
 # <a name="how-to-customize-the-application-button"></a>Porady: dostosowywanie przycisku Aplikacja
 
 Po kliknięciu przycisku aplikacja, jest wyświetlany menu poleceń. Zazwyczaj menu zawiera polecenia związane z plików takich jak **Otwórz**, **Zapisz**, **drukowania**, i **zakończenia**.
 
-![Przycisk aplikacji wstążki MFC](../mfc/media/application_button.png "application_button")
+![Przycisk aplikacji wstążki MFC](../mfc/media/application_button.png "przycisku aplikacja wstążki MFC")
 
 Dostosowywanie przycisku aplikacja, otwórz go w **właściwości** , zmodyfikuj jego właściwości, a następnie Wyświetl podgląd formantu wstążki.
 
@@ -57,4 +57,3 @@ W menu aplikacji nie jest wyświetlana na powierzchni projektowej. Aby ją wyśw
 ## <a name="see-also"></a>Zobacz też
 
 [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
-

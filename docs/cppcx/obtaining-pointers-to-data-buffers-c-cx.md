@@ -1,13 +1,13 @@
 ---
 title: Uzyskiwanie wskaźników do buforów danych (C + +/ CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514273"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175109"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Uzyskiwanie wskaźników do buforów danych (C + +/ CX)
 
@@ -15,7 +15,7 @@ W środowisku uruchomieniowym Windows [Windows::Storage::Streams::IBuffer](https
 
 Na poniższym diagramie przedstawiono XAML elementu obrazu, którego źródłem jest [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Aplikacja kliencka, która jest napisana w dowolnym języku można przekazać odwołanie do `WriteableBitmap` języka c++ kodu, a następnie C++ można użyć odwołania można pobrać w podstawowej buforu. W aplikacji Universal Windows Platform, która jest napisana w języku C++ można użyć funkcji w poniższym przykładzie bezpośrednio w kodzie źródłowym, bez pakowanie w składniku Windows w czasie wykonywania.
 
-![C&#43; &#43; kodu bezpośrednio dostęp do danych pikseli](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43; kod, który uzyskuje dostęp do danych pikseli bezpośrednio](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; kod, który uzyskuje dostęp do danych pikseli bezpośrednio")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 

@@ -1,6 +1,6 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 04/05/2018
+ms.date: 11/19/2018
 apiname:
 - erff
 - erfl
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c64a7ac6c3a4d79c221ff1ca5f9460e9e6bdea6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450067"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176828"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -86,7 +86,7 @@ Wartość zmiennoprzecinkowa.
 
 **Erf** funkcje obliczają wartość funkcji błędu Gaussa z *x*, która została zdefiniowana jako:
 
-![Funkcję błędu x](media/crt_erf_formula.PNG "CRT_erf_formula")
+![Funkcję błędu x](media/crt_erf_formula.PNG "funkcję błędu x")
 
 Uzupełniająca funkcja błędu Gaussa jest zdefiniowana jako 1 – erf(x). **Erf** funkcje zwracają wartość z zakresu od – 1,0 do 1,0. Nie będzie zwrotu błędu. **Erfc** funkcje zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **erfc**, **errno** zmienna jest ustawiona na **ERANGE**.
 

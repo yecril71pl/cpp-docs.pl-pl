@@ -1,6 +1,6 @@
 ---
 title: 'Kontrolki ActiveX MFC: używanie czcionek'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608947"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175824"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 
@@ -204,7 +204,8 @@ W większości przypadków formant musi wiedzieć, kiedy zostały zmodyfikowane 
 
 Jeśli kontrolka używa właściwości czcionki zasobów, jego powiadomienia są obsługiwane przez `OnFontChanged` funkcji składowej typu `COleControl`. Po dodaniu właściwości niestandardowej czcionki, może mieć ich używać tego samego wdrożenia. W przykładzie w poprzedniej sekcji, to było wykonywane przez przekazanie &*m_xFontNotification* podczas inicjowania *m_fontHeading* zmiennej składowej.
 
-![Implementowanie wielu interfejsów obiektów czcionek](../mfc/media/vc373q1.gif "vc373q1") Implementowanie wielu interfejsów obiektów czcionek
+![Implementowanie wielu interfejsów obiektów czcionek](../mfc/media/vc373q1.gif "Implementowanie wielu interfejsów obiektów czcionek") <br/>
+Implementowanie wielu interfejsów obiektów czcionek
 
 Linie ciągłe na powyższej ilustracji pokazano, że oba obiekty czcionki są przy użyciu tego samego wdrożenia `IFontNotification`. Może to powodować problemy, jeśli chce się rozróżnienia zmienione czcionki, która.
 

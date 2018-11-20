@@ -1,18 +1,18 @@
 ---
 title: Wiele klas podstawowych
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483463"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176368"
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 
@@ -52,11 +52,13 @@ Podczas deklarowania wirtualnej klasy bazowej, **wirtualnego** — słowo kluczo
 
 Należy uwzględnić hierarchię klas na poniższym rysunku, który ilustruje symulowaną kolejkę po obiad.
 
-![Wykres symulowanej obiad](../cpp/media/vc38xp1.gif "vc38XP1") symulowanej kolejki po obiad wykresu
+![Wykres symulowanej obiad](../cpp/media/vc38xp1.gif "Wykres symulowanej kolejkę po obiad") <br/>
+Wykres symulowanej kolejki po obiad
 
 Na rysunku `Queue` jest klasą bazową dla `CashierQueue` i `LunchQueue`. Jednakże, gdy obie klasy są połączone, tworząc `LunchCashierQueue`, pojawia się następujący problem: nowa klasa zawiera dwa podobiekty typu `Queue`, jeden `CashierQueue`, a drugi `LunchQueue`. Na poniższej ilustracji pokazano koncepcyjny układ pamięci (rzeczywisty układ pamięci może być zoptymalizowany).
 
-![Symulowane obiad&#45;obiektu wiersza](../cpp/media/vc38xp2.gif "vc38XP2") symulował obiekt kolejki po obiad
+![Symulowane obiad&#45;obiektu wiersza](../cpp/media/vc38xp2.gif "symulowane obiad&#45;obiektu wiersza") <br/>
+Obiekt symulowanej kolejki po obiad
 
 Należy zauważyć, że istnieją dwa podobiekty `Queue` w obiekcie `LunchCashierQueue`. W poniższym kodzie `Queue` zadeklarowano jako wirtualną klasę bazową:
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 **Wirtualnego** — słowo kluczowe gwarantuje, że tylko jedna kopia podobiektu `Queue` wchodzi (patrz poniższy rysunek).
 
-![Symulowane obiad&#45;obiektu wiersza, wirtualne klasy bazowe](../cpp/media/vc38xp3.gif "vc38XP3") symulował obiekt kolejki po obiad z wirtualnymi klasami bazowymi
+![Symulowane obiad&#45;obiektu wiersza, wirtualne klasy bazowe](../cpp/media/vc38xp3.gif "symulowane obiad&#45;obiektu wiersza, wirtualne klasy bazowe") <br/>
+Obiekt symulowanej kolejki po obiad z wirtualnymi klasami bazowymi
 
 Klasa może mieć zarówno wirtualny jak i niewirtualny składnik danego typu. Tak się dzieje w warunkach przedstawionych na poniższej ilustracji.
 
-![Wirtualne i niewirtualne składniki klasy](../cpp/media/vc38xp4.gif "vc38XP4") wirtualne i niewirtualne składniki tej samej klasy
+![Wirtualny i innych niż&#45;składniki wirtualnej klasy](../cpp/media/vc38xp4.gif "wirtualnych i innych niż&#45;składniki wirtualnej klasy") <br/>
+Składniki wirtualnej i niewirtualnej tej samej klasy
 
 Na rysunku `CashierQueue` i `LunchQueue` używają `Queue` jako wirtualnej klasy bazowej. Jednak `TakeoutQueue` określa `Queue` jako klasę bazową, a nie wirtualną klasę bazową. W związku z tym `LunchTakeoutCashierQueue` posiada dwa podobiekty typu `Queue`: jeden ze ścieżki dziedziczenia, która zawiera `LunchCashierQueue` a drugi ze ścieżki, która zawiera `TakeoutQueue`. To zostało zilustrowane na poniższym rysunku.
 
-![Dziedziczenie wirtualne i niewirtualne w układ obiektu](../cpp/media/vc38xp5.gif "vc38XP5") układ obiektu z wirtualne i niewirtualne dziedziczenie
+![Wirtualne i inne niż&#45;dziedziczenie wirtualne w układzie obiektu](../cpp/media/vc38xp5.gif "Wirtua & bez&#45;dziedziczenie wirtualne w układzie obiektów") <br/>
+Układ obiektu z wirtualnym i niewirtualną dziedziczenia
 
 > [!NOTE]
 >  Dziedziczenie wirtualne zapewnia znaczące korzyści dotyczące rozmiaru w porównaniu do dziedziczenia niewirtualnego. Jednak może to wprowadzić dodatkowe obciążenie dotyczące przetwarzania.
@@ -187,7 +192,8 @@ Jawne i niejawne konwersje z wskaźników lub odwołań do typów klasy może po
 
 - Efekt jawnej konwersji wskaźnika uzyskany przy użyciu operatora address-of na typ klasy bazowej `A`. Należy pamiętać, coercing adresu obiektu na typ `A*` nie zawsze zawiera kompilator o wystarczającej ilości informacji na temat których podobiektu typu `A` wybrać; w tym przypadku istnieją dwa podobiekty.
 
-![Niejednoznaczna konwersja wskaźniki do klas bazowych](../cpp/media/vc38xt1.gif "vc38XT1") niejednoznaczne konwersję wskaźniki do klas bazowych
+![Niejednoznaczna konwersja wskaźniki do klas bazowych](../cpp/media/vc38xt1.gif "niejednoznaczne konwersję wskaźniki do klas bazowych") <br/>
+Niejednoznaczna konwersja wskaźniki do klas bazowych
 
 Konwersja na typ `A*` (wskaźnik do `A`) jest niejednoznaczny, ponieważ nie istnieje sposób do określenia, które podobiektu typu na `A` jest poprawne. Należy zwrócić uwagę na to, że można uniknąć niejednoznaczności, jawnie ustawiając podobiektów, który miał zostać użyty w następujący sposób:
 
@@ -202,7 +208,8 @@ Wirtualne klasy bazowe są używane, funkcji, obiekty, typy i moduły wyliczają
 
 Poniższy rysunek przedstawia sposób obiekty są złożone, wirtualnej, a dziedziczenia niewirtualnego.
 
-![Wyprowadzanie wirtualne i niewirtualne informacje](../cpp/media/vc38xr1.gif "vc38XR1") wirtualne programu vs. Niewirtualne informacje
+![Dziedziczenia wirtualnego i innych niż&#45;dziedziczenia wirtualnego](../cpp/media/vc38xr1.gif "pochodnym wirtualnych i innych niż&#45;dziedziczenia wirtualnego") <br/>
+Wirtualne a niewirtualną tworzenie wartości pochodnych
 
 Na rysunku, uzyskiwanie dostępu do dowolnego elementu członkowskiego klasy `A` za pośrednictwem niewirtualnych klas podstawowych przyczyn wiadomość niejednoznaczności; kompilator nie ma informacji o który objaśnia, czy ma być używany podobiektu skojarzone z `B` lub podobiektów skojarzone z `C`. Jednak gdy `A` jest określony jako wirtualnej klasy bazowej, nie ma żadnych pytanie podobiektów, który jest dostępny.
 

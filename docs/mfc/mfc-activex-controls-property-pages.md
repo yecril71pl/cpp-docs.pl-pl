@@ -1,6 +1,6 @@
 ---
 title: 'Kontrolki ActiveX MFC: strony właściwości'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656186"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176461"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
 
@@ -32,7 +32,8 @@ Strony właściwości kontrolki ActiveX są wyświetlane na dwa sposoby:
 
 Okno dialogowe właściwości (zilustrowane na poniższym rysunku) składa się z obszaru wyświetlania bieżącej strony właściwości karty do przełączania między stronami właściwości i zbiór przyciski umożliwiające wykonywanie typowych zadań, takich jak zamyka okno dialogowe strony właściwości anulowanie wszelkich zmian wprowadzonych, lub od razu stosowania zmian do formantu ActiveX.
 
-![Okno dialogowe właściwości Circ3](../mfc/media/vc373i1.gif "vc373i1") okno dialogowe właściwości
+![Okno dialogowe właściwości Circ3](../mfc/media/vc373i1.gif "okno dialogowe właściwości Circ3") <br/>
+Okno dialogowe właściwości
 
 W tym artykule opisano tematów związanych z używanie stron właściwości formantu ActiveX. Należą do nich następujące elementy:
 

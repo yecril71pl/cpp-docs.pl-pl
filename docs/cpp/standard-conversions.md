@@ -1,17 +1,17 @@
 ---
 title: Konwersje standardowe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575451"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176981"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -189,7 +189,8 @@ Pierwszy przypadek jest, gdy określona klasa bazowa jest dostępny i jednoznacz
 
 Czy klasa bazowa jest niedostępna, zależy od rodzaju dziedziczenia używany podczas wyprowadzania. Należy wziąć pod uwagę dziedziczenia zilustrowane na poniższym rysunku.
 
-![Wykres dziedziczenia, przedstawiający podstawowy&#45;klasy ułatwień dostępu](../cpp/media/vc38xa1.gif "vc38XA1") Wykres dziedziczenia ilustracji klasa bazowa ułatwień dostępu
+![Wykres dziedziczenia, przedstawiający podstawowy&#45;klasy ułatwień dostępu](../cpp/media/vc38xa1.gif "Wykres dziedziczenia, przedstawiający podstawowy&#45;klasy ułatwień dostępu") <br/>
+Wykres dziedziczenia opisano klasy podstawowej w ułatwienia dostępu
 
 W poniższej tabeli przedstawiono dostępność klasy podstawowej w sytuacji, przedstawione na rysunku.
 

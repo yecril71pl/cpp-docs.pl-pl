@@ -1,6 +1,6 @@
 ---
 title: Klasa CSmartDockingInfo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524667"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176773"
 ---
 # <a name="csmartdockinginfo-class"></a>Klasa CSmartDockingInfo
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Uchwyty framework inteligentne znaczniki dokowania wewnętrznie. Poniższa ilustracja przedstawia standardowych znaczników inteligentnego dokowania:
 
-![Standardowa znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Standardowa znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkers.png "standardowych znaczników inteligentnego dokowania")
 
 Na tym rysunku obraz po lewej stronie zawiera grupy centralnej inteligentnego dokowania znacznik bez dokowanie karty włączone. Na ilustracji w środku przedstawiono znacznik inteligentnego dokowania prawej krawędzi. Obraz po prawej stronie pokazuje centralna grupa inteligentnego dokowania znacznik mających dokowanie karty włączone. Znacznika inteligentnego dokowania centralna grupa ma głównej mapy bitowej i pięć inteligentnego dokowania bitmap znacznika.
 
@@ -93,7 +93,7 @@ Można dostosować następujące parametry znaczników inteligentnego dokowania.
 
 Na poniższej ilustracji przedstawiono przykład znaczników inteligentnego dokowania, które zostały dostosowane:
 
-![Niestandardowych znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Niestandardowych znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkerscustom.png "niestandardowych znaczników inteligentnego dokowania")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
