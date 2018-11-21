@@ -1,16 +1,16 @@
 ---
 title: Identyfikowanie elementów projektu kontrolki DHTML
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533695"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175714"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identyfikowanie elementów projektu kontrolki DHTML
 
@@ -26,7 +26,7 @@ Kontrolki DHTML jest podobny do dowolnego formantu biblioteki ATL z wyjątkiem:
 
 Poniższa ilustracja przedstawia relację między biblioteką DLL, kontrolki DHTML, przeglądarki sieci Web i zasobu HTML.
 
-![Elementy projektu kontrolki DHTML](../atl/media/vc52en1.gif "vc52en1")
+![Elementy projektu kontrolki DHTML](../atl/media/vc52en1.gif "elementów projektu kontrolki DHTML")
 
 > [!NOTE]
 >  W tym grafiki są symbole zastępcze. Nazwy zasobu HTML i interfejsów udostępnianych na formant są oparte na nazwy, które można przypisać w Kreatorze formantu ATL.
@@ -47,7 +47,7 @@ W tej grafiki dostępne są następujące elementy:
 
 Kreator kontrolki ATL generuje formantu za pomocą domyślnego kodu, zarówno w przypadku zasobu HTML, jak i plik .cpp. Możesz skompilować i uruchomić kontrolki, ponieważ generowane przez kreatora i następnie wyświetlanie kontroli w przeglądarce sieci Web lub kontener testu kontrolki ActiveX. Obraz poniżej przedstawia domyślne kontrolki ATL DHTML z trzy przyciski wyświetlane na kontener testu:
 
-![Kontrolki ATL DHTML](../atl/media/vc52en2.gif "vc52en2")
+![Kontrolki ATL DHTML](../atl/media/vc52en2.gif "kontrolki ATL DHTML")
 
 Zobacz [tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md) do rozpoczęcia tworzenia kontrolki DHTML. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 
