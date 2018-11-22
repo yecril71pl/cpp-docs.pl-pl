@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: 23b7d0237562324ddae2207435b2071e8d66e572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb3cd3447b500517150f0c7f50a5431730b414b
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596823"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281964"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass — Klasa
 
@@ -52,7 +52,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ### <a name="parameters"></a>Parametry
 
 *classFlags*<br/>
-Opcjonalny parametr. Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia. `__WRL_CONFIGURATION_LEGACY__` Makr można zdefiniować, aby zmienić domyślną wartość classFlags dla wszystkich klas środowiska uruchomieniowego w projekcie. Jeśli zdefiniowane, RuntimeClass wystąpienia są inne niż agile domyślnie. Jeśli nie zostanie zdefiniowana, RuntimeClass wystąpienia są elastyczne domyślnie. Aby uniknąć niejednoznaczności należy zawsze określić `Microsoft::WRL::FtmBase` w `TInterfaces` lub `RuntimeClassType::InhibitFtmBase`. Uwaga: Jeżeli InhibitFtmBase i FtmBase jest używany zarówno obiekt będzie agile.
+Parametr opcjonalny. Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia. `__WRL_CONFIGURATION_LEGACY__` Makr można zdefiniować, aby zmienić domyślną wartość classFlags dla wszystkich klas środowiska uruchomieniowego w projekcie. Jeśli zdefiniowane, RuntimeClass wystąpienia są inne niż agile domyślnie. Jeśli nie zostanie zdefiniowana, RuntimeClass wystąpienia są elastyczne domyślnie. Aby uniknąć niejednoznaczności należy zawsze określić `Microsoft::WRL::FtmBase` w `TInterfaces` lub `RuntimeClassType::InhibitFtmBase`. Uwaga: Jeżeli InhibitFtmBase i FtmBase jest używany zarówno obiekt będzie agile.
 
 *TInterfaces*<br/>
 Na liście interfejsów obiekt implementuje poza `IUnknown`, `IInspectable` lub innych interfejsów w wartości clientauthtrustmode [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Również może go wyświetlać innych klas pochodzących z, szczególnie `Microsoft::WRL::FtmBase` na obiekt agile i spowodować, tak aby implementował `IMarshal`.

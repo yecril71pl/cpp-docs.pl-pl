@@ -2,12 +2,12 @@
 title: Zmień podpis
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 97f70f7fdf6cb8a130427d8920152d44c1cb1349
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693539"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281951"
 ---
 # <a name="change-signature"></a>Zmień podpis
 
@@ -38,7 +38,7 @@ ms.locfileid: "51693539"
    | Przycisk | Opis
    | ------ | ---
    | **Góra/dół**    | Przenieś wybrany parametr w górę i w dół listy
-   | **Add**        | Dodaj nowy parametr do listy
+   | **Add**        | Dodano nowy parametr do listy
    | **Usuń**     | Usuń wybrany parametr z listy
    | **Modyfikowanie**     | Zmodyfikuj wybrany parametr, zmieniając jej typ nazwy i czy jest to opcjonalne, a wartością wprowadzonego kodu, co będzie
    | **Przywróć**     | Przywrócić oryginalny stan wybrany parametr
