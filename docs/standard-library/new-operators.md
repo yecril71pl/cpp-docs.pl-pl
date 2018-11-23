@@ -16,8 +16,8 @@ ms.locfileid: "50570537"
 
 ||||
 |-|-|-|
-|[Usuwanie operatora](#op_delete)|[Usuwanie operatora]](#op_delete_arr)|[nowy operator](#op_new)|
-|[nowy operator]](#op_new_arr)|
+|[Usuwanie operatora](#op_delete)|[usuwanie operatora[]](#op_delete_arr)|[nowy operator](#op_new)|
+|[nowy operator[]](#op_new_arr)|
 
 ## <a name="op_delete"></a>  Usuwanie operatora
 
