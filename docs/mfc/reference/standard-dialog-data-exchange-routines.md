@@ -22,24 +22,24 @@ Ten temat zawiera standardowe procedury wymiany danych w (DDX) używany dla typo
 
 |||
 |-|-|
-|[Ddx_cbindex —](#ddx_cbindex)|Inicjuje lub pobiera indeks bieżącego zaznaczenia kontrolki pola kombi.|
-|[Ddx_cbstring —](#ddx_cbstring)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
-|[Ddx_cbstringexact —](#ddx_cbstringexact)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
-|[Ddx_check —](#ddx_check)|Inicjuje lub pobiera bieżący stan kontrolkę pola wyboru.|
-|[Ddx_control —](#ddx_control)|Podklasy określonej kontrolki w oknie dialogowym.|
-|[Ddx_datetimectrl —](#ddx_datetimectrl)|Inicjuje lub pobiera dane daty i godziny kontrolki selektora daty i godziny.|
-|[Ddx_ipaddress —](#ddx_ipaddress)|Inicjuje lub pobiera bieżącą wartość formant adresu IP.|
-|[Ddx_lbindex —](#ddx_lbindex)|Inicjuje lub pobiera indeks bieżącego zaznaczenia formant pola listy.|
-|[Ddx_lbstring —](#ddx_lbstring)|Inicjuje lub pobiera bieżące zaznaczenie w kontrolce pola listy.|
-|[Ddx_lbstringexact —](#ddx_lbstringexact)|Inicjuje lub pobiera bieżące zaznaczenie w kontrolce pola listy.|
-|[Ddx_managedcontrol —](#ddx_managedcontrol)|Tworzy formant .NET dopasowania identyfikator formantu zasobu.|
-|[Ddx_monthcalctrl —](#ddx_monthcalctrl)|Inicjuje lub pobiera bieżącą wartość kontrolki kalendarza miesięcznego.|
-|[Ddx_radio —](#ddx_radio)|Inicjuje lub pobiera indeks oparty na 0 kontrolce przycisku radiowego, który aktualnie jest ewidencjonowany w grupie sterowania opcji.|
-|[Ddx_scroll —](#ddx_scroll)|Inicjuje lub pobiera bieżące położenie kontrolki przewijania thumb.|
-|[Ddx_slider —](#ddx_slider)|Inicjuje lub pobiera bieżącej pozycji przycisku przewijania suwaka.|
-|[Ddx_text —](#ddx_text)|Inicjuje lub pobiera bieżącą wartość kontrolki edycji.|
+|[DDX_CBIndex](#ddx_cbindex)|Inicjuje lub pobiera indeks bieżącego zaznaczenia kontrolki pola kombi.|
+|[DDX_CBString](#ddx_cbstring)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
+|[DDX_CBStringExact](#ddx_cbstringexact)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
+|[DDX_Check](#ddx_check)|Inicjuje lub pobiera bieżący stan kontrolkę pola wyboru.|
+|[DDX_Control](#ddx_control)|Podklasy określonej kontrolki w oknie dialogowym.|
+|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inicjuje lub pobiera dane daty i godziny kontrolki selektora daty i godziny.|
+|[DDX_IPAddress](#ddx_ipaddress)|Inicjuje lub pobiera bieżącą wartość formant adresu IP.|
+|[DDX_LBIndex](#ddx_lbindex)|Inicjuje lub pobiera indeks bieżącego zaznaczenia formant pola listy.|
+|[DDX_LBString](#ddx_lbstring)|Inicjuje lub pobiera bieżące zaznaczenie w kontrolce pola listy.|
+|[DDX_LBStringExact](#ddx_lbstringexact)|Inicjuje lub pobiera bieżące zaznaczenie w kontrolce pola listy.|
+|[DDX_ManagedControl](#ddx_managedcontrol)|Tworzy formant .NET dopasowania identyfikator formantu zasobu.|
+|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inicjuje lub pobiera bieżącą wartość kontrolki kalendarza miesięcznego.|
+|[DDX_Radio](#ddx_radio)|Inicjuje lub pobiera indeks oparty na 0 kontrolce przycisku radiowego, który aktualnie jest ewidencjonowany w grupie sterowania opcji.|
+|[DDX_Scroll](#ddx_scroll)|Inicjuje lub pobiera bieżące położenie kontrolki przewijania thumb.|
+|[DDX_Slider](#ddx_slider)|Inicjuje lub pobiera bieżącej pozycji przycisku przewijania suwaka.|
+|[DDX_Text](#ddx_text)|Inicjuje lub pobiera bieżącą wartość kontrolki edycji.|
 
-##  <a name="ddx_cbindex"></a>  Ddx_cbindex —
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex
 
 `DDX_CBIndex` Funkcja zarządza transferem **int** danych między kontrolki pola kombi w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** element członkowski danych okno dialogowe, widok formularza lub formantu Obiekt widoku.
 
@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_cbstring"></a>  Ddx_cbstring —
+##  <a name="ddx_cbstring"></a>  DDX_CBString
 
 `DDX_CBString` Funkcja zarządza transferem `CString` danych między kontrolki edycji z kontrolki pola kombi w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i `CString` element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -106,7 +106,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_cbstringexact"></a>  Ddx_cbstringexact —
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
 
 `DDX_CBStringExact` Funkcja zarządza transferem `CString` danych między kontrolki edycji z kontrolki pola kombi w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i `CString` element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -141,7 +141,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_check"></a>  Ddx_check —
+##  <a name="ddx_check"></a>  DDX_Check
 
 `DDX_Check` Funkcja zarządza transferem **int** danych pomiędzy kontrolce pola wyboru w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** element członkowski danych okno dialogowe, widok formularza lub formantu Obiekt widoku.
 
@@ -173,7 +173,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_control"></a>  Ddx_control —
+##  <a name="ddx_control"></a>  DDX_Control
 
 `DDX_Control` Funkcji podklasy kontrolki, określonej przez *nIDC*, okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -205,7 +205,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_datetimectrl"></a>  Ddx_datetimectrl —
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
 
 `DDX_DateTimeCtrl` Funkcja zarządza transferem danych daty i godziny między kontrolkę selektora daty i godziny ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) w okna dialogowego pole lub formularza obiektem widoku, a następnie [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) element członkowski danych z obiektu okna dialogowego pole lub formularza widoku.
 
@@ -249,7 +249,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-## <a name="ddx_managedcontrol"></a>  Ddx_managedcontrol —
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 
 Tworzy formant .NET dopasowania identyfikator formantu zasobu.
 
@@ -289,7 +289,7 @@ Aby uzyskać więcej informacji, zobacz [porady: wykonaj powiązanie danych DDX/
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
-##  <a name="ddx_ipaddress"></a>  Ddx_ipaddress —
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
 `DDX_IPAddress` Funkcja zarządza przesyłaniem danych między formantem adresu IP, a element członkowski danych obiektu widoku kontroli.
 
@@ -330,7 +330,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_lbindex"></a>  Ddx_lbindex —
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex
 
 `DDX_LBIndex` Funkcja zarządza transferem **int** danych między pole listy w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** element członkowski danych okno dialogowe, widok formularza lub formantu Obiekt widoku.
 
@@ -362,7 +362,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_lbstring"></a>  Ddx_lbstring —
+##  <a name="ddx_lbstring"></a>  DDX_LBString
 
 `DDX_LBString` Funkcja zarządza transferem `CString` danych między pole listy w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i `CString` element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -386,7 +386,7 @@ Odwołanie do zmiennej składowej, okno dialogowe, widok formularza lub formantu
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_LBString` jest wywoływana w celu przesyłania danych do kontrolki pola listy, pierwszy element w kontrolce, którego początek jest zgodna *wartość* jest zaznaczone. (Aby dopasować cały element, a nie po prostu prefiks, użyj [ddx_lbstringexact —](#ddx_lbstringexact).) Jeśli nie ma żadnych dopasowań, nie wybrano elementów. Dopasowanie jest rozróżniana wielkość liter.
+Gdy `DDX_LBString` jest wywoływana w celu przesyłania danych do kontrolki pola listy, pierwszy element w kontrolce, którego początek jest zgodna *wartość* jest zaznaczone. (Aby dopasować cały element, a nie po prostu prefiks, użyj [DDX_LBStringExact](#ddx_lbstringexact) Jeśli nie ma żadnych dopasowań, nie wybrano elementów. Dopasowanie jest rozróżniana wielkość liter.
 
 Gdy `DDX_LBString` jest wywoływana, aby przenieść dane z formantu pola listy *wartość* jest ustawiona na bieżące zaznaczenie w polu listy. Jeśli żaden element nie jest zaznaczone, *wartość* jest ustawiony na ciąg o zerowej długości.
 
@@ -399,7 +399,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_lbstringexact"></a>  Ddx_lbstringexact —
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
 
 `DDX_CBStringExact` Funkcja zarządza transferem `CString` danych między kontrolki edycji formantu pola listy, w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i `CString` element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -436,7 +436,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_monthcalctrl"></a>  Ddx_monthcalctrl —
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl
 
 `DDX_MonthCalCtrl` Funkcja zarządza transferem danych Data między formant kalendarza miesięcznego ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) w okno dialogowe, widok formularza lub kontrolki widoku obiektu i albo [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
@@ -476,7 +476,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_radio"></a>  Ddx_radio —
+##  <a name="ddx_radio"></a>  DDX_Radio
 
 `DDX_Radio` Funkcja zarządza transferem **int** dane między grupą radiowych formantu w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** element członkowski danych okno dialogowe, widok formularza lub formantu Obiekt widoku. Wartość **int** element członkowski danych jest określana zgodnie z opcji, które wybrano znajdującego się w grupie.
 
@@ -510,7 +510,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_scroll"></a>  Ddx_scroll —
+##  <a name="ddx_scroll"></a>  DDX_Scroll
 
 `DDX_Scroll` Funkcja zarządza transferem **int** danych pomiędzy kontrolce paska przewijania w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** element członkowski danych okno dialogowe, widok formularza lub formantu Obiekt widoku.
 
@@ -542,7 +542,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_slider"></a>  Ddx_slider —
+##  <a name="ddx_slider"></a>  DDX_Slider
 
 `DDX_Slider` Funkcja zarządza transferem **int** danych pomiędzy kontrolce suwaka w widoku okna dialogowego pole lub formularza i **int** element członkowski danych z obiektu okna dialogowego pole lub formularza widoku.
 
@@ -574,7 +574,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-##  <a name="ddx_text"></a>  Ddx_text —
+##  <a name="ddx_text"></a>  DDX_Text
 
 `DDX_Text` Funkcja zarządza transferem **int**, **UINT**, **długie**, DWORD, `CString`, **float**, lub **double** danych między formant edycji w oknie dialogowym widok formularza lub kontroli widoku i [CString](../../atl-mfc-shared/reference/cstringt-class.md) element członkowski danych okno dialogowe, widok formularza lub formantu obiekt widoku.
 
