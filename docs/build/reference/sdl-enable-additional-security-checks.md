@@ -1,15 +1,15 @@
 ---
 title: /sdl (Włącz dodatkowe kontrole zabezpieczeń)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587463"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389945"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Włącz dodatkowe kontrole zabezpieczeń)
 
@@ -49,7 +49,17 @@ Gdy **/SDL** jest włączone, kompilator generuje kod do wykonywania tych sprawd
 
 - Wykonuje oczyszczania ograniczone wskaźnika. W wyrażeniach, które nie wymagają wyłuskań, i na typy, które mają nie destruktor zdefiniowany przez użytkownika, wskaźnik odwołania są ustawione na nie jest prawidłowym adresem po wywołaniu `delete`. Pomaga to zapobiec ponownemu użyciu starych wskaźnik odwołania.
 
-- Wykonuje inicjowanie składowej klasy. Automatycznie inicjuje wszystkie elementy klas na zero dla tworzenia wystąpienia obiektu (przed uruchomieniem Konstruktora). Pozwala to zapobiec użycie niezainicjowanej danych skojarzonych z członków klasy, które nie jawnie zainicjować konstruktora.
+- Wykonuje inicjowanie wskaźnika składowej klasy. Automatycznie inicjuje klasy elementy członkowskie typu wskaźnika do **nullptr** na tworzenia wystąpienia obiektu (przed uruchomieniem Konstruktora). Pozwala to zapobiec użycie niezainicjowanej wskaźników, które nie jawnie zainicjować konstruktora. Inicjowanie wskaźników generowanych przez kompilator składowej jest wywoływana tak długo, jak:
+
+  - Obiekt nie jest przydzielony przy użyciu niestandardowego (zdefiniowane przez użytkownika) `operator new`
+
+  - Obiekt nie jest przydzielony jako część tablicy (na przykład `new A[x]`)
+
+  - Klasa nie jest zarządzany lub zaimportowany
+
+  - Klasa ma Konstruktor zdefiniowany przez użytkownika.
+
+  Mają być inicjowane przez funkcję inicjowania klasy generowane przez kompilator, członek musi być wskaźnikiem, a nie właściwości lub — stała.
 
 ## <a name="remarks"></a>Uwagi
 
