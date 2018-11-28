@@ -1,6 +1,6 @@
 ---
 title: /Oy (Pominięcie wskaźnika ramki)
-ms.date: 09/22/2017
+ms.date: 11/19/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OmitFramePointers
 - /oy
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: d6d896079c08ed2cf595b95ed41045885c83b5bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 343b0e026c2932e97d4a8d4472ba2035d6302661
+ms.sourcegitcommit: 3da2cb3ec85e77ddfd4d2a55edb133d580ce4f18
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431736"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330393"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Pominięcie wskaźnika ramki)
 
@@ -32,9 +32,9 @@ Pomija tworzenie wskaźników ramek na stosie wywołań.
 
 Ta opcja przyspiesza wywołania funkcji, ponieważ nie trzeba definiować i usuwać żadnych wskaźników ramek. Uwalnia jeden lub więcej rejestrów do użytku ogólnego.
 
-**/Oy** umożliwia pominięcie wskaźnika ramki i **/Oy-** wyłącza pominięcie. **/Oy** jest dostępna tylko w x86 kompilatory.
+**/Oy** umożliwia pominięcie wskaźnika ramki i **/Oy-** wyłącza pominięcie. W x64 kompilatorów **/Oy** i **/Oy-** nie są dostępne.
 
-Jeśli kod wymaga adresowania opartego na EBP, możesz określić **/Oy-** po opcji **ox** lub użyć [zoptymalizować](../../preprocessor/optimize.md) za pomocą "**y**" i **poza** argumenty, aby uzyskać maksymalną optymalizację z systemem adresowania opartym na EBP. Kompilator wykrywa większość sytuacji, w których wymagane jest adresowanie oparte na EBP (na przykład z `_alloca` i `setjmp` funkcje i obsługą wyjątków strukturalnych).
+Jeśli kod wymaga adresowania opartego na ramce, możesz określić **/Oy-** po opcji **ox** lub użyć [zoptymalizować](../../preprocessor/optimize.md) za pomocą "**y**"i **poza** argumenty, aby uzyskać maksymalną optymalizację z systemem adresowania opartym na ramki. Kompilator wykrywa większość sytuacji, w których wymagane jest adresowanie oparte na ramki (na przykład z `_alloca` i `setjmp` funkcje i obsługą wyjątków strukturalnych).
 
 [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md) i [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opcje oznaczają **/Oy**. Określanie **/Oy-** po **ox**, **/O1**, lub **/O2** wyłącza opcję **/Oy**, czy jest ono jawnych ani dorozumianych.
 
@@ -44,11 +44,9 @@ Jeśli kod wymaga adresowania opartego na EBP, możesz określić **/Oy-** po op
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **optymalizacji** stronę właściwości.
 
-1. Kliknij przycisk **optymalizacji** stronę właściwości.
-
-1. Modyfikowanie **Pomiń wskaźniki ramki** właściwości. Właściwość ta dodaje lub usuwa tylko **/Oy** opcji. Jeśli chcesz dodać **/Oy-** kliknij przycisk **wiersza polecenia** i modyfikować **dodatkowe opcje**.
+1. Modyfikowanie **Pomiń wskaźniki ramki** właściwości. Właściwość ta dodaje lub usuwa tylko **/Oy** opcji. Jeśli chcesz dodać **/Oy-** wybierz **wiersza polecenia** właściwości strony i zmodyfikuj **dodatkowe opcje**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -56,8 +54,6 @@ Jeśli kod wymaga adresowania opartego na EBP, możesz określić **/Oy-** po op
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
-
-[Opcje kompilatora](../../build/reference/compiler-options.md)
-
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
