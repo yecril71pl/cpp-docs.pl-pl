@@ -8,9 +8,9 @@ Dokumentacja dla języka Visual Basic i Visual C# znajdują się w osobnym repoz
 
 ## <a name="contributing-to-the-documentation"></a>Współtworzenie dokumentacji
 
-Chętnie poznamy wkład w taki sposób, aby pomóc nam ulepszyć dokumentację Visual C++. Aby uzyskać kompletny przewodnik dotyczący współtworzenia zawartości witryny docs.microsoft.com, zobacz [przewodnik współautora Microsoft Docs — omówienie](https://docs.microsoft.com/contribute). Aby uzyskać więcej informacji na temat sposobu przyczynić się do dokumentacji języka Visual C++, zobacz [Dodawanie](CONTRIBUTING.md) przewodnik.
+Chętnie poznamy wkład w taki sposób, aby pomóc nam ulepszyć dokumentację Visual C++. Aby uzyskać kompletny przewodnik dotyczący współtworzenia zawartości witryny docs.microsoft.com, zobacz [przewodnik współautora Microsoft Docs — omówienie](https://docs.microsoft.com/contribute). Aby uzyskać więcej informacji na temat sposobu przyczynić się do dokumentacji języka Visual C++, zobacz [przewodnik Dodawanie](CONTRIBUTING.md).
 
-Kilka obszarów funkcji środowiska Visual C++ ma własnych folderów w tym repozytorium, takich jak `standard-library` tematów w standardowej biblioteki C++ `ide` tematy specyficznych dla języka C++ w Visual Studio opracowywanie interakcyjne środowiska (IDE) i tak dalej. `/media` Podfolderu w każdym folderze znajdują się pliki grafika tematy. [Dodawanie](CONTRIBUTING.md) przewodnik zawiera więcej informacji.
+Kilka obszarów funkcji środowiska Visual C++ ma własnych folderów w tym repozytorium, takich jak `standard-library` tematów w standardowej biblioteki C++ `ide` tematy specyficznych dla języka C++ w Visual Studio opracowywanie interakcyjne środowiska (IDE) i tak dalej. `/media` Podfolderu w każdym folderze znajdują się pliki grafika tematy. [Przewodnik Dodawanie](CONTRIBUTING.md) zawiera więcej informacji.
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open źródła Kodeks postępowania
 
