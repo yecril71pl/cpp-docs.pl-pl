@@ -32,7 +32,7 @@ Implementacja biblioteki wykonawczej C firmy Microsoft obsługuje również nast
 |CHH|zh-HK|
 |CHI|zh-SG|
 |Chiński|nazwy zh|
-|chiński — hongkong|zh-HK|
+|chiński — SRA Hongkong|zh-HK|
 |chiński uproszczony|zh-CN|
 |chiński — Singapur|zh-SG|
 |chiński tradycyjny|zh-TW|
