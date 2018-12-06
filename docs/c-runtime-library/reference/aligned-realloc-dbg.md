@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545954"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977774"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ Jest to błąd, ponownego przydzielenia pamięci i zmienić wyrównanie bloku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_realloc_dbg —** jest wersją debugowania [_aligned_realloc —](aligned-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_realloc_dbg —** jest ograniczone do wywołania **_aligned_realloc —**. Zarówno **_aligned_realloc —** i **_aligned_realloc_dbg —** ponownie przydzielić blok pamięci na stosie podstawowym, ale **_aligned_realloc_dbg —** obsługuje kilka funkcji debugowania : bufory po obu stronach część użytkownika bloku do testowania przecieków, parametr typu blok do śledzenia określonych typów alokacji i *filename*/*linenumber* informacje w celu ustalenia źródła pochodzenia żądania alokacji.
+**_aligned_realloc_dbg —** jest wersją debugowania [_aligned_realloc —](aligned-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_realloc_dbg —** jest ograniczone do wywołania **_aligned_realloc —**. Zarówno **_aligned_realloc —** i **_aligned_realloc_dbg —** ponownie przydzielić blok pamięci na stosie podstawowym, ale **_aligned_realloc_dbg —** obsługuje kilka funkcji debugowania : bufory po obu stronach części bloku do testowania przecieków, użytkownika i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji. Śledzenie określonych typów alokacji z parametrem typu blok nie jest obsługiwane debugowania funkcji alokacji wyrównane. Alokacje wyrównany pojawi się jako typ _normal_block — blok.
 
 **_aligned_realloc_dbg —** przydzieli blok określonego pamięci z nieco większą ilością miejsca niż żądane *newSize*. *newSize* może być większa lub mniejsza niż rozmiar bloku pamięci pierwotnie przydzielone. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponownej alokacji może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmiana rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszona, zawartość oryginalnego bloku zostaną zastąpione.
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625865"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977826"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ Numer wiersza w pliku źródłowym gdzie **aligned_offset_realloc —** zażąda
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_offset_realloc_dbg —** jest wersją debugowania [_aligned_offset_realloc —](aligned-offset-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_offset_realloc_dbg —** jest ograniczone do wywołania **_aligned_offset_realloc —**. Zarówno **_aligned_offset_realloc —** i **_aligned_offset_realloc_dbg —** ponownie przydzielić blok pamięci na stosie podstawowym, ale **_aligned_offset_realloc_dbg —** obsługuje kilka funkcji debugowania: bufory po obu stronach część użytkownika bloku do testowania przecieków, parametr typu blok do śledzenia określonych typów alokacji i *filename*/*numer wiersza*  informacji do ustalenia źródła pochodzenia żądania alokacji.
+**_aligned_offset_realloc_dbg —** jest wersją debugowania [_aligned_offset_realloc —](aligned-offset-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_offset_realloc_dbg —** jest ograniczone do wywołania **_aligned_offset_realloc —**. Zarówno **_aligned_offset_realloc —** i **_aligned_offset_realloc_dbg —** ponownie przydzielić blok pamięci na stosie podstawowym, ale **_aligned_offset_realloc_dbg —** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku do testowania przecieków, użytkownika i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji. Śledzenie określonych typów alokacji z parametrem typu blok nie jest obsługiwane debugowania funkcji alokacji wyrównane. Alokacje wyrównany pojawi się jako typ _normal_block — blok.
 
 Podobnie jak [_aligned_offset_malloc —](aligned-offset-malloc.md), **_aligned_offset_realloc_dbg —** umożliwia struktury wyrównać na przesunięcie w obrębie struktury.
 

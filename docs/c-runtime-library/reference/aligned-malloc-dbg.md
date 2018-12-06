@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631874"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977813"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Wskaźnik do bloku pamięci, która została przydzielona lub wartość NULL, je
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_malloc_dbg —** jest wersją debugowania [_aligned_malloc](aligned-malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_malloc_dbg —** jest ograniczone do wywołania `_aligned_malloc`. Zarówno `_aligned_malloc` i **_aligned_malloc_dbg —** przydzielają blok pamięci w stosie podstawowym, ale **_aligned_malloc_dbg —** oferuje kilka funkcji debugowania: bufory po obu stronach część użytkownika blok do testowania przecieków, i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji.
+**_aligned_malloc_dbg —** jest wersją debugowania [_aligned_malloc](aligned-malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_malloc_dbg —** jest ograniczone do wywołania `_aligned_malloc`. Zarówno `_aligned_malloc` i **_aligned_malloc_dbg —** przydzielają blok pamięci w stosie podstawowym, ale **_aligned_malloc_dbg —** oferuje kilka funkcji debugowania: bufory po obu stronach część użytkownika blok do testowania przecieków, i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji. Śledzenie określonych typów alokacji z parametrem typu blok nie jest obsługiwane debugowania funkcji alokacji wyrównane. Alokacje wyrównany pojawi się jako typ _normal_block — blok.
 
 **_aligned_malloc_dbg —** przydziela blok pamięci z nieco większą ilością miejsca niż żądane *rozmiar*. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.
 
