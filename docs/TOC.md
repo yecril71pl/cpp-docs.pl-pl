@@ -1,6 +1,6 @@
 # [Visual C++ w programie Visual Studio 2017](visual-cpp-in-visual-studio.md)
 # [Co nowego w języku Visual C++ w programie Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Samouczek języka Visual C++](build/vscpp-step-0-installation.md)
+# Samouczek języka Visual C++
 ## [Instalowanie obsługi języka C++ w programie Visual Studio](build/vscpp-step-0-installation.md)
 ## [Tworzenie projektu aplikacji konsoli w języku C++](build/vscpp-step-1-create.md)
 ## [Kompilowanie i uruchamianie projektu aplikacji konsoli w języku C++](build/vscpp-step-2-build.md)
