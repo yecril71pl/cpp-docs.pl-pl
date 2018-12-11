@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528664"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177878"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 
@@ -110,7 +110,7 @@ Każdy `CEditView` tekst kontrolki jest przechowywana w obiekcie własnej global
 
 Tworzenie obiektów typu `CEditView` okno edycji o dodatkowe funkcje wymienione powyżej, lub jeśli chcesz, aby funkcje prostego edytora tekstu. Element `CEditView` obiektu mogą zajmować całego obszaru klienta okna. Pochodzi własnych klas z `CEditView` do dodawania lub modyfikowania podstawowych funkcji lub aby zadeklarować klasy, które można dodać do szablonu dokumentu.
 
-Domyślna implementacja klasy `CEditView` obsługuje następujące polecenia: id_edit_select_all — id_edit_find —, id_edit_replace —, id_edit_repeat — i ID_FILE_PRINT.
+Domyślna implementacja klasy `CEditView` obsługuje następujące polecenia: Id_edit_select_all — id_edit_find —, id_edit_replace —, id_edit_repeat — i ID_FILE_PRINT.
 
 Domyślny limit znaków `CEditView` jest (1024 \* 1024-1 = 1048575). Można to zmienić, wywołując funkcję EM_LIMITTEXT podstawowej kontrolki edycji. Jednak ograniczenia są różne w zależności od systemu operacyjnego i typu pole edycji (pojedyncze lub wielowierszowy). Aby uzyskać więcej informacji na temat tych ograniczeń, zobacz [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Wskaźnik do kontekstu urządzenia drukarki.
 
 *rectLayout*<br/>
-Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](../../mfc/reference/rect-structure1.md) Określanie prostokąt, w którym ma być renderowany tekstu.
+Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) Określanie prostokąt, w którym ma być renderowany tekstu.
 
 *nIndexStart*<br/>
 Indeks w buforze pierwszego znaku do renderowania.

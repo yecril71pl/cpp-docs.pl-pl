@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500766"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178593"
 ---
 # <a name="cimagelist-class"></a>Cimagelist — klasa
 
@@ -694,7 +694,7 @@ Liczony od zera indeks obrazu do narysowania.
 A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędnych x i y miejsca będzie rysowania obrazu.
 
 *Sz*<br/>
-A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) wskazujący rozmiar obraz, który ma być rysowany struktury.
+A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) wskazujący rozmiar obraz, który ma być rysowany struktury.
 
 *ptOrigin*<br/>
 A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędnych x i y Określanie lewy górny róg operacji rysowania w odniesieniu do samego obrazu. Piksele obrazu, które są po lewej stronie współrzędnej x lub nowszym współrzędną y nie są rysowane.

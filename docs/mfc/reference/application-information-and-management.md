@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694338"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178346"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -164,7 +164,7 @@ Usuwa obiekt ciągu z pamięci.
 
 Musi być wywołana z wewnątrz wątku, który ma zostać zakończony.
 
-Aby uzyskać więcej informacji na temat `AfxEndThread`, zapoznaj się z artykułem [wielowątkowość: Kończenie wątków](../../parallel/multithreading-terminating-threads.md).
+Aby uzyskać więcej informacji na temat `AfxEndThread`, zapoznaj się z artykułem [wielowątkowość: Przerywanie wątków](../../parallel/multithreading-terminating-threads.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -567,9 +567,9 @@ Jeśli ścieżka nie zostanie określona, a rozszerzenie nazwy pliku jest pomini
 
 - Bieżący katalog.
 
-- **Windows 95/98:** katalogu systemu Windows. **Windows NT:** katalogu 32-bitowego systemu Windows. Nazwa katalogu jest SYSTEM32.
+- **Windows 95/98:** Katalog systemu Windows. **Windows NT:** Katalog systemu Windows 32-bitowych. Nazwa katalogu jest SYSTEM32.
 
-- **Tylko Windows NT:** katalogu systemu Windows 16-bitowych. Brak żadnej funkcji Win32, który uzyskuje ścieżki tego katalogu, ale przeszukiwany jest. Nazwa katalogu jest systemu.
+- **Tylko Windows NT:** Katalog systemu Windows 16-bitowych. Brak żadnej funkcji Win32, który uzyskuje ścieżki tego katalogu, ale przeszukiwany jest. Nazwa katalogu jest systemu.
 
 - Katalog Windows.
 
@@ -715,7 +715,7 @@ Ta nazwa jest zarejestrowana dla klasy przez `AfxRegisterWndClass` zależy wył�
 
 Jeśli wywołasz `AfxRegisterWndClass` dla wielu klas pochodnych CWnd z identycznymi parametrami zamiast klasy oddzielne okno dla każdej klasy, każda klasa udostępnia tej samej klasy okna. Może to spowodować problemy, jeśli CS_CLASSDC stylu klasy jest używany. Zamiast wielu klas okna CS_CLASSDC na końcu jedną klasę okna CS_CLASSDC i wszystkich okien języka C++ korzystających z tego udziału klasy tego samego kontrolera domeny. Aby uniknąć tego problemu, należy wywołać [afxregisterclass —](#afxregisterclass) można zarejestrować klasy.
 
-Zapoznaj się Uwaga techniczna [TN001: Rejestracja klas okien](../../mfc/tn001-window-class-registration.md) więcej informacji na temat rejestrowanie klasy okna dla i `AfxRegisterWndClass` funkcji.
+Zapoznaj się Uwaga techniczna [TN001: Rejestrowanie klasy okna](../../mfc/tn001-window-class-registration.md) więcej informacji na temat rejestrowanie klasy okna i `AfxRegisterWndClass` funkcji.
 
 ### <a name="example"></a>Przykład
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpwsaData*<br/>
-Wskaźnik do [WSADATA](../../mfc/reference/wsadata-structure.md) struktury. Jeśli *lpwsaData* nie jest równa NULL, a następnie adres `WSADATA` struktury jest wypełniana przez wywołanie metody `WSAStartup`. Funkcja ta również zapewnia, że `WSACleanup` jest wywoływana dla Ciebie, zanim aplikacja zakończy.
+Wskaźnik do [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struktury. Jeśli *lpwsaData* nie jest równa NULL, a następnie adres `WSADATA` struktury jest wypełniana przez wywołanie metody `WSAStartup`. Funkcja ta również zapewnia, że `WSACleanup` jest wywoływana dla Ciebie, zanim aplikacja zakończy.
 
 ### <a name="return-value"></a>Wartość zwracana
 

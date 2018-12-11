@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524673"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178970"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -519,7 +519,7 @@ Aby włączyć usługę `CMFCToolBar` obiektu w aplikacji, wykonaj następujące
 
 1. Wywołaj [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) do określania stylu dokowania.
 
-Aby wstawić specjalny przycisk, takie jak pola kombi lub rozwijany pasek narzędzi, zastrzec fikcyjnego przycisku w zasobie nadrzędnym i Zamień zastępczy przycisku w czasie wykonywania za pomocą [CMFCToolBar::ReplaceButton](#replacebutton). Aby uzyskać więcej informacji, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../walkthrough-putting-controls-on-toolbars.md).
+Aby wstawić specjalny przycisk, takie jak pola kombi lub rozwijany pasek narzędzi, zastrzec fikcyjnego przycisku w zasobie nadrzędnym i Zamień zastępczy przycisku w czasie wykonywania za pomocą [CMFCToolBar::ReplaceButton](#replacebutton). Aby uzyskać więcej informacji, zobacz [instruktażu: Umieszczanie formantów na paskach narzędzi](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` jest klasą bazową dla klas biblioteki MFC [klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [klasa CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), i [klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 Wywołaj tę metodę, aby włączyć polecenia odbicia dla przycisków paska narzędzi, który zawiera osadzony formanty, takie jak pola kombi.
 
-Aby uzyskać więcej informacji na temat polecenia odbicia zobacz [TN062: odbicie komunikatu dla formantów Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Aby uzyskać więcej informacji na temat polecenia odbicia zobacz [TN062: Komunikat odbicie dla formantów Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ Wartość TRUE, jeśli ostatnie polecenie zostało wysłane z przycisku, *pButto
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda uzyskuje wskaźnik do [struktura MSG](../../mfc/reference/msg-structure1.md) przez wywołanie metody `CWnd::GetCurrentMessage`. Następnie porównuje HWND przycisku z `MSG::lParam` i `MSG::hwnd` elementy członkowskie, aby ustalić, czy przycisk pochodzi polecenia.
+Ta metoda uzyskuje wskaźnik do [struktura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) przez wywołanie metody `CWnd::GetCurrentMessage`. Następnie porównuje HWND przycisku z `MSG::lParam` i `MSG::hwnd` elementy członkowskie, aby ustalić, czy przycisk pochodzi polecenia.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [Klasa CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Wskazówki: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

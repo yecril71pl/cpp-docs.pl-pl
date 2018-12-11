@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333270"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178782"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCompareItemStruct*<br/>
-Długie wskaźnik do [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) struktury.
+Długie wskaźnik do [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 Określa styl pola kombi. Zastosuj dowolną kombinację [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) do pola.
 
 *Rect*<br/>
-Wskazuje położenie i rozmiar pola kombi. Może być [struktura RECT](../../mfc/reference/rect-structure1.md) lub `CRect` obiektu.
+Wskazuje położenie i rozmiar pola kombi. Może być [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub `CRect` obiektu.
 
 *pParentWnd*<br/>
 Określa pole kombi okna nadrzędnego (zazwyczaj `CDialog`). Nie może być równa NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDeleteItemStruct*<br/>
-Długie wskaźnik do Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) strukturę, która zawiera informacje na temat usuniętego elementu. Zobacz [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) opis tej struktury.
+Długie wskaźnik do Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) strukturę, która zawiera informacje na temat usuniętego elementu. Zobacz [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) opis tej struktury.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysowania wymagane.
+Wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturę, która zawiera informacje o typie rysowania wymagane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [struktura RECT](../../mfc/reference/rect-structure1.md) to uzyskanie współrzędnych.
+Wskazuje [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) to uzyskanie współrzędnych.
 
 ### <a name="example"></a>Przykład
 
@@ -1028,7 +1028,7 @@ Jeśli operacja się powiedzie, maksymalna liczba elementów, które mogą być 
 
 Wywołaj tę funkcję, przed dodaniem dużą liczbę elementów do pola listy części `CComboBox`.
 
-Windows 95/98: *wParam* parametru jest ograniczona do wartości 16-bitowych. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, całkowity rozmiar elementów w polu listy jest ograniczony tylko ilością dostępnej pamięci.
+Windows 95/98 tylko: *WParam* parametru jest ograniczona do wartości 16-bitowych. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, całkowity rozmiar elementów w polu listy jest ograniczony tylko ilością dostępnej pamięci.
 
 Ta funkcja pomaga w szybszym inicjowania pola listy, które mają dużą liczbę elementów (ponad 100). Jego preallocates określonej ilości pamięci, dlatego oznacza kolejne [addstring —](#addstring), [InsertString](#insertstring), i [Dir](#dir) funkcje podejmują najkrótszym czasie. Można użyć szacunki dla parametrów. Jeśli overestimate, niektóre dodatkowe pamięć została przydzielona; Jeśli zaniżają, normalne alokacji jest używany dla elementów, które przekraczają kwotę przydzielony wstępnie.
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.
+Długie wskaźnik do [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struktury.
 
 ### <a name="remarks"></a>Uwagi
 

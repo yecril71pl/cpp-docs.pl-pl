@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694195"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178424"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -126,7 +126,7 @@ Aby utworzyć wątek, wywołaj [AfxBeginThread](application-information-and-mana
 
 Zamiast wywoływać metodę `AfxBeginThread`, możesz utworzyć `CWinThread`-pochodzi z obiektu, a następnie wywołać następnie `CreateThread`. Ta metoda dwuetapowa konstrukcja jest przydatna, jeśli chcesz ponownie użyć `CWinThread` obiektu między kolejnymi stworzeniem i zakończeń wykonań wątku.
 
-Aby uzyskać więcej informacji na temat `CWinThread`, zobacz artykuły [wielowątkowość z C++ i MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [wielowątkowość: Tworzenie wątków interfejsu użytkownika](../../parallel/multithreading-creating-user-interface-threads.md), [wielowątkowość: tworzenie procesów roboczych Wątki](../../parallel/multithreading-creating-worker-threads.md), i [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat `CWinThread`, zobacz artykuły [wielowątkowość z C++ i MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [wielowątkowość: Tworzenie wątków interfejsu użytkownika](../../parallel/multithreading-creating-user-interface-threads.md), [wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md), i [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Wskazuje [struktura MSG](../../mfc/reference/msg-structure1.md) zawierający komunikat do przetworzenia.
+Wskazuje [struktura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) zawierający komunikat do przetworzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Określa kod punktów zaczepienia. Ta funkcja członkowska używa kodu, aby określić sposób przetwarzania *lpMsg.*
 
 *lpMsg*<br/>
-Wskaźnik do Windows [struktura MSG](../../mfc/reference/msg-structure1.md).
+Wskaźnik do Windows [struktura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Wskazuje nieobsługiwany wyjątek.
 
 *pMsg*<br/>
-Wskazuje [struktura MSG](../../mfc/reference/msg-structure1.md) zawierające informacje dotyczące komunikatów systemu windows, które spowodowało platformę, aby zgłosić wyjątek.
+Wskazuje [struktura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) zawierające informacje dotyczące komunikatów systemu windows, które spowodowało platformę, aby zgłosić wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 

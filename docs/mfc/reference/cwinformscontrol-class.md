@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178242"
 ---
 # <a name="cwinformscontrol-class"></a>Klasa CWinFormsControl
 
@@ -114,7 +114,7 @@ Typ danych formantu, który ma zostać utworzony. Musi być [typu](https://msdn.
 Styl okna, które dotyczą kontrolki. Określ kombinację [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles). Obecnie obsługiwane są tylko następujące style: WS_TABSTOP, WS_VISIBLE, WS_DISABLED i WS_GROUP.
 
 *Rect*<br/>
-A [struktura RECT](../../mfc/reference/rect-structure1.md) definiujący współrzędne lewym i prawym dolnym rogu formantu (pierwsze przeciążenie tylko).
+A [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) definiujący współrzędne lewym i prawym dolnym rogu formantu (pierwsze przeciążenie tylko).
 
 *nPlaceHolderID*<br/>
 Uchwyt formant zastępczy statyczne miejsce umieszczone w edytorze zasobów. Nowo utworzonego formantu Windows Forms zastępuje statyczną kontrolkę, zakładając, że jego położenie, porządek i style (drugie przeciążenie tylko).

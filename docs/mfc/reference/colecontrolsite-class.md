@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437807"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178927"
 ---
 # <a name="colecontrolsite-class"></a>Klasa COleControlSite
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>Parametry
 
 *bWłączenie*<br/>
-Określa, czy włączać lub wyłączać okna: wartość TRUE, jeśli dane wejściowe z okna, które ma być włączone, w przeciwnym razie wartość FALSE.
+Określa, czy włączać lub wyłączać okna: Wartość TRUE, jeśli dane wejściowe z okna, które ma być włączone, w przeciwnym razie wartość FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parametry
 
 *lpmsg*<br/>
-Wskaźnik do [struktura MSG](../../mfc/reference/msg-structure1.md). Ta struktura zawiera wyzwolenie wiadomości Windows `SetFocus` żądania dla formantu zawartego w bieżącej witrynie formant.
+Wskaźnik do [struktura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Ta struktura zawiera wyzwolenie wiadomości Windows `SetFocus` żądania dla formantu zawartego w bieżącej witrynie formant.
 
 ### <a name="return-value"></a>Wartość zwracana
 

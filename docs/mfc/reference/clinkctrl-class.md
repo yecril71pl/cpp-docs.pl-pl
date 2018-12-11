@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597564"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178048"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 
@@ -134,7 +134,7 @@ Wskaźnik na ciąg zakończony zerem, zawierający oznaczone tekst do wyświetle
 Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w `Windows SDK` Aby uzyskać więcej informacji.
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.
+Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki łącza. Nie może być równa NULL.
@@ -196,7 +196,7 @@ Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone sty
 Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.
+Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki łącza. Nie może być równa NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Parametr|Opis|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] Maksymalna szerokość łącza, w pikselach.|
-|[out] \* *pSize*|Wskaźnik do Windows [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|
+|[out] \* *pSize*|Wskaźnik do Windows [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

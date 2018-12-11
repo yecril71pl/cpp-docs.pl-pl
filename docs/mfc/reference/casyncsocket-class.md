@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 29fe705292b223a0ae367d34d67a99aa60fb719c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179035"
 ---
 # <a name="casyncsocket-class"></a>Klasa CAsyncSocket
 
@@ -160,12 +160,12 @@ Klasa `CAsyncSocket` hermetyzuje Windows gniazda funkcji interfejsu API, zapewni
 
 Ta klasa opiera się na założeniu, że rozumiesz komunikacji sieciowej. Jesteś odpowiedzialny za obsługę, blokowanie, różnice w kolejności bajtów i konwersji między Unicode i multibyte character Ustaw ciągów (znaków MBCS). Jeśli chcesz bardziej wygodne interfejs, który zarządza tymi problemami, zobacz klasę [CSocket](../../mfc/reference/csocket-class.md).
 
-Do użycia `CAsyncSocket` obiektu, wywołaj jej konstruktora, następnie wywołać [Utwórz](#create) funkcja służąca do tworzenia podstawowego dojścia do gniazda (typ `SOCKET`), z wyjątkiem gniazda akceptowane. Połączenie gniazda serwera [nasłuchiwania](#listen) funkcja elementu członkowskiego i połączenia gniazda klienta [Connect](#connect) funkcja elementu członkowskiego. Gniazda serwera powinien wywoływać [Akceptuj](#accept) funkcji po otrzymaniu żądania połączenia. Użyj pozostałe `CAsyncSocket` funkcje do przeprowadzania komunikacji między gniazda. Po zakończeniu zniszczyć `CAsyncSocket` obiektu, jeśli został utworzony na stercie; destruktor automatycznie wywołuje [Zamknij](#close) funkcji. Typ danych GNIAZDA jest opisany w artykule [Windows Sockets: tła](../../mfc/windows-sockets-background.md).
+Do użycia `CAsyncSocket` obiektu, wywołaj jej konstruktora, następnie wywołać [Utwórz](#create) funkcja służąca do tworzenia podstawowego dojścia do gniazda (typ `SOCKET`), z wyjątkiem gniazda akceptowane. Połączenie gniazda serwera [nasłuchiwania](#listen) funkcja elementu członkowskiego i połączenia gniazda klienta [Connect](#connect) funkcja elementu członkowskiego. Gniazda serwera powinien wywoływać [Akceptuj](#accept) funkcji po otrzymaniu żądania połączenia. Użyj pozostałe `CAsyncSocket` funkcje do przeprowadzania komunikacji między gniazda. Po zakończeniu zniszczyć `CAsyncSocket` obiektu, jeśli został utworzony na stercie; destruktor automatycznie wywołuje [Zamknij](#close) funkcji. Typ danych GNIAZDA jest opisany w artykule [Windows Sockets: Tło](../../mfc/windows-sockets-background.md).
 
 > [!NOTE]
 >  Korzystając z MFC gniazd w pomocnicze wątki w statycznie połączonym aplikacji MFC, należy wywołać `AfxSocketInit` w każdy wątek, który używa gniazda można zainicjować biblioteki gniazda. Domyślnie `AfxSocketInit` jest wywoływana tylko w wątku głównym.
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu klasy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) i powiązanych artykułach., a także [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Używanie klasy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) i powiązanych artykułach., a także [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -194,7 +194,7 @@ virtual BOOL Accept(
 Odwołanie identyfikuje nowe gniazdo, który jest dostępny dla połączenia.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która otrzymuje adres nawiązywaniu połączenia gniazda znane w sieci. Dokładny format *lpSockAddr* argument jest określana przez Rodzina adresów ustalone podczas tworzenia gniazda. Jeśli *lpSockAddr* i/lub *lpSockAddrLen* są równe NULL, zwracana jest żadnych informacji dotyczących adresów zdalnych akceptowane gniazda.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która otrzymuje adres nawiązywaniu połączenia gniazda znane w sieci. Dokładny format *lpSockAddr* argument jest określana przez Rodzina adresów ustalone podczas tworzenia gniazda. Jeśli *lpSockAddr* i/lub *lpSockAddrLen* są równe NULL, zwracana jest żadnych informacji dotyczących adresów zdalnych akceptowane gniazda.
 
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach. *LpSockAddrLen* jest parametrem wynik wartości: początkowo powinien on zawierać ilość miejsca, do których prowadzą *lpSockAddr*; przy powrocie będzie zawierać rzeczywista długość (w bajtach) zwrócony adres.
@@ -207,7 +207,7 @@ Wartość różną od zera, jeśli funkcja się powiedzie; w przeciwnym razie 0 
 
 - Implementacja WSAENETDOWN Windows Sockets wykrył, że podsystem sieci nie powiodło się.
 
-- WSAEFAULT *lpSockAddrLen* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury).
+- WSAEFAULT *lpSockAddrLen* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury).
 
 - WSAEINPROGRESS który wywołania blokowania Windows Sockets jest w toku.
 
@@ -268,7 +268,7 @@ Wartość różną od zera, jeśli funkcja się powiedzie; w przeciwnym razie 0 
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest używana do określenia, które funkcje MFC wywołania zwrotnego powiadomień zostanie wywołana dla gniazda. `AsyncSelect` automatycznie ustawia tryb nieblokujących tego gniazda. Aby uzyskać więcej informacji, zobacz artykuł [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Ta funkcja jest używana do określenia, które funkcje MFC wywołania zwrotnego powiadomień zostanie wywołana dla gniazda. `AsyncSelect` automatycznie ustawia tryb nieblokujących tego gniazda. Aby uzyskać więcej informacji, zobacz artykuł [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="attach"></a>  CAsyncSocket::Attach
 
@@ -330,7 +330,7 @@ Port identyfikowanie aplikacji gniazda.
 Adres sieciowy liczbą kropkowana, takie jak "128.56.22.8". Przekazanie wartości NULL ciągu dla tego parametru oznacza `CAsyncSocket` wystąpienia powinna nasłuchiwać aktywność klienta na wszystkich interfejsach sieciowych.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która zawiera adres, który zostanie przypisany do tego gniazda.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która zawiera adres, który zostanie przypisany do tego gniazda.
 
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
@@ -345,7 +345,7 @@ Wartość różną od zera, jeśli funkcja się powiedzie; w przeciwnym razie 0 
 
 - WSAEADDRINUSE określony adres jest już używana. (Zobacz opcję gniazda SO_REUSEADDR w obszarze [SetSockOpt](#setsockopt).)
 
-- WSAEFAULT *nSockAddrLen* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury).
+- WSAEFAULT *nSockAddrLen* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury).
 
 - WSAEINPROGRESS który wywołania blokowania Windows Sockets jest w toku.
 
@@ -410,7 +410,7 @@ Adres sieciowy gniazda, do którego jest podłączony tego obiektu: Nazwa maszyn
 Port identyfikowanie aplikacji gniazda.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która zawiera adres połączone gniazdo.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która zawiera adres połączone gniazdo.
 
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
@@ -535,7 +535,7 @@ Wartość różną od zera, jeśli funkcja się powiedzie; w przeciwnym razie 0 
 > [!IMPORTANT]
 > `Create` jest **nie** metodą o bezpiecznych wątkach.  Jeśli wywołujesz ją w środowisku wielowątkowych go może zostać przywołane jednocześnie przez inne wątki, pamiętaj chronić każdego wywołania elementu mutex lub innych lock synchronizacji.
 
-Aby uzyskać więcej informacji na temat usługi stream i datagram gniazda, zobacz artykuły [Windows Sockets: tła](../../mfc/windows-sockets-background.md) i [Windows Sockets: porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md) i [interfejsu API Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Aby uzyskać więcej informacji na temat usługi stream i datagram gniazda, zobacz artykuły [Windows Sockets: Tło](../../mfc/windows-sockets-background.md) i [Windows Sockets: Porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md) i [interfejsu Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ##  <a name="detach"></a>  CAsyncSocket::Detach
 
@@ -607,7 +607,7 @@ Odwołanie do `CString` obiekt, który odbiera kropkowana numer adresu IP.
 Odwołanie do UINT, która przechowuje portu.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury, która otrzymuje nazwę gniazda elementów równorzędnych.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury, która otrzymuje nazwę gniazda elementów równorzędnych.
 
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach. Przy powrocie *lpSockAddrLen* argument zawiera rzeczywisty rozmiar *lpSockAddr* zwracany w bajtach.
@@ -693,7 +693,7 @@ Odwołanie do `CString` obiekt, który odbiera kropkowana numer adresu IP.
 Odwołanie do UINT, która przechowuje portu.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która otrzymuje adres gniazda.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która otrzymuje adres gniazda.
 
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach.
@@ -954,7 +954,7 @@ Ostatni błąd gniazda. Następujące kody błędów ma zastosowanie do `OnAccep
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onclose"></a>  CAsyncSocket::OnClose
 
@@ -979,7 +979,7 @@ Ostatni błąd gniazda. Następujące kody błędów dotyczą `OnClose` funkcja 
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onconnect"></a>  CAsyncSocket::OnConnect
 
@@ -1029,7 +1029,7 @@ Ostatni błąd gniazda. Następujące kody błędów dotyczą `OnConnect` funkcj
 > [!NOTE]
 >  W [CSocket](../../mfc/reference/csocket-class.md), `OnConnect` nigdy nie jest wywoływana funkcja powiadamiania. W przypadku połączeń, należy po prostu wywołać `Connect`, co spowoduje zwrócenie zakończeniu połączenie (pomyślnie lub w wyniku błędu). Sposób obsługi powiadomień połączenia jest szczegółowo opisuje implementacja MFC.
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Przykład
 
@@ -1056,7 +1056,7 @@ Ostatni błąd gniazda. Następujące kody błędów dotyczą `OnOutOfBandData` 
 
 Out-of-band dane są logicznie niezależny od kanału, który jest skojarzony z każdej pary połączonych sockets typu SOCK_STREAM. Kanał jest zazwyczaj używane do wysyłania pilnych danych.
 
-Biblioteka MFC obsługuje dane poza pasmem, ale użytkownicy klasy `CAsyncSocket` są odradzane korzystanie z niego. Jest łatwiejszy sposób utworzyć drugi gniazda przekazywania tych danych. Aby uzyskać więcej informacji na temat danych out-of-band zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Biblioteka MFC obsługuje dane poza pasmem, ale użytkownicy klasy `CAsyncSocket` są odradzane korzystanie z niego. Jest łatwiejszy sposób utworzyć drugi gniazda przekazywania tych danych. Aby uzyskać więcej informacji na temat danych out-of-band zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onreceive"></a>  CAsyncSocket::OnReceive
 
@@ -1077,7 +1077,7 @@ Ostatni błąd gniazda. Następujące kody błędów dotyczą `OnReceive` funkcj
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Przykład
 
@@ -1102,7 +1102,7 @@ Ostatni błąd gniazda. Następujące kody błędów dotyczą `OnSend` funkcja e
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../../mfc/windows-sockets-socket-notifications.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Gniazda powiadomienia](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Przykład
 
@@ -1213,7 +1213,7 @@ Jeśli typ SOCK_STREAM to gniazdo i strony zdalnej ma zamknięcie połączenia, 
 
 ##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom
 
-Wywołaj tę funkcję elementu członkowskiego, aby otrzymywać datagram i Zapisz adres źródłowy w [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury lub *rSocketAddress*.
+Wywołaj tę funkcję elementu członkowskiego, aby otrzymywać datagram i Zapisz adres źródłowy w [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury lub *rSocketAddress*.
 
 ```
 int ReceiveFrom(
@@ -1246,7 +1246,7 @@ Odwołanie do `CString` obiekt, który odbiera kropkowana numer adresu IP.
 Odwołanie do UINT, która przechowuje portu.
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która przechowuje adres źródła po powrocie.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która przechowuje adres źródła po powrocie.
 
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adres źródłowy w *lpSockAddr* w bajtach.
@@ -1298,13 +1298,13 @@ Gniazda typu SOCK_STREAM zwracany jest jak najwięcej informacji jest obecnie do
 
 Do przesyłania datagramów dane są wyodrębniane z pierwszego datagram umieszczonych w kolejce, rozmiarze dostarczonego buforu. Jeśli datagram jest większy niż rozmiar buforu przekazanego, rozmiar buforu jest wypełniany w pierwszej części komunikatu, nadmiarowe dane zostaną utracone, a `ReceiveFrom` zwraca WSAEMSGSIZE ustawiona wartość SOCKET_ERROR, podając mu kod błędu.
 
-Jeśli *lpSockAddr* jest różna od zera i gniazda jest typu SOCK_DGRAM, adres sieciowy gniazda, w których zostały one wysyłane dane są kopiowane do odpowiednich [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury. Wartość wskazywana przez *lpSockAddrLen* jest inicjowany do rozmiaru tej struktury, a jest modyfikowana przy powrocie do wskazania rzeczywisty rozmiar adresu tam przechowywane. Jeśli w gnieździe, są dostępne żadne dane przychodzące `ReceiveFrom` wywołania oczekuje na dane do odbierania, chyba że gniazdo jest nieblokujących. W tym przypadku jest zwracana wartość SOCKET_ERROR, podając mu kod błędu równa WSAEWOULDBLOCK. `OnReceive` Wywołania zwrotnego może służyć do określenia po nadejściu większej ilości danych.
+Jeśli *lpSockAddr* jest różna od zera i gniazda jest typu SOCK_DGRAM, adres sieciowy gniazda, w których zostały one wysyłane dane są kopiowane do odpowiednich [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury. Wartość wskazywana przez *lpSockAddrLen* jest inicjowany do rozmiaru tej struktury, a jest modyfikowana przy powrocie do wskazania rzeczywisty rozmiar adresu tam przechowywane. Jeśli w gnieździe, są dostępne żadne dane przychodzące `ReceiveFrom` wywołania oczekuje na dane do odbierania, chyba że gniazdo jest nieblokujących. W tym przypadku jest zwracana wartość SOCKET_ERROR, podając mu kod błędu równa WSAEWOULDBLOCK. `OnReceive` Wywołania zwrotnego może służyć do określenia po nadejściu większej ilości danych.
 
 Jeśli typ SOCK_STREAM to gniazdo i strony zdalnej ma zamknięcie połączenia, `ReceiveFrom` zostanie zakończony i natychmiast 0 bajtów odebranych.
 
 ##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx
 
-Wywołaj tę funkcję elementu członkowskiego, aby otrzymywać datagram i Zapisz adres źródłowy w [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury lub *rSocketAddress* (obsługuje adresy IPv6).
+Wywołaj tę funkcję elementu członkowskiego, aby otrzymywać datagram i Zapisz adres źródłowy w [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury lub *rSocketAddress* (obsługuje adresy IPv6).
 
 ```
 int ReceiveFromEx(
@@ -1376,7 +1376,7 @@ Gniazda typu SOCK_STREAM zwracany jest jak najwięcej informacji jest obecnie do
 
 Do przesyłania datagramów dane są wyodrębniane z pierwszego datagram umieszczonych w kolejce, rozmiarze dostarczonego buforu. Jeśli datagram jest większy niż rozmiar buforu przekazanego, rozmiar buforu jest wypełniany w pierwszej części komunikatu, nadmiarowe dane zostaną utracone, a `ReceiveFromEx` zwraca WSAEMSGSIZE ustawiona wartość SOCKET_ERROR, podając mu kod błędu.
 
-Jeśli *lpSockAddr* jest różna od zera i gniazda jest typu SOCK_DGRAM, adres sieciowy gniazda, w których zostały one wysyłane dane są kopiowane do odpowiednich [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury. Wartość wskazywana przez *lpSockAddrLen* jest inicjowany do rozmiaru tej struktury, a jest modyfikowana przy powrocie do wskazania rzeczywisty rozmiar adresu tam przechowywane. Jeśli w gnieździe, są dostępne żadne dane przychodzące `ReceiveFromEx` wywołania oczekuje na dane do odbierania, chyba że gniazdo jest nieblokujących. W tym przypadku jest zwracana wartość SOCKET_ERROR, podając mu kod błędu równa WSAEWOULDBLOCK. `OnReceive` Wywołania zwrotnego może służyć do określenia po nadejściu większej ilości danych.
+Jeśli *lpSockAddr* jest różna od zera i gniazda jest typu SOCK_DGRAM, adres sieciowy gniazda, w których zostały one wysyłane dane są kopiowane do odpowiednich [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury. Wartość wskazywana przez *lpSockAddrLen* jest inicjowany do rozmiaru tej struktury, a jest modyfikowana przy powrocie do wskazania rzeczywisty rozmiar adresu tam przechowywane. Jeśli w gnieździe, są dostępne żadne dane przychodzące `ReceiveFromEx` wywołania oczekuje na dane do odbierania, chyba że gniazdo jest nieblokujących. W tym przypadku jest zwracana wartość SOCKET_ERROR, podając mu kod błędu równa WSAEWOULDBLOCK. `OnReceive` Wywołania zwrotnego może służyć do określenia po nadejściu większej ilości danych.
 
 Jeśli typ SOCK_STREAM to gniazdo i strony zdalnej ma zamknięcie połączenia, `ReceiveFromEx` zostanie zakończony i natychmiast 0 bajtów odebranych.
 
@@ -1444,7 +1444,7 @@ W przypadku braku błędów `Send` zwraca całkowitą liczbę znaków wysyłane.
 
 ### <a name="remarks"></a>Uwagi
 
-`Send` używany do zapisywania danych wychodzących na połączonych strumienia lub do przesyłania datagramów. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](../../mfc/reference/wsadata-structure.md) zwracany przez strukturę `AfxSocketInit`. Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, WSAEMSGSIZE zwracany jest błąd za pośrednictwem `GetLastError`, i są przesyłane żadne dane.
+`Send` używany do zapisywania danych wychodzących na połączonych strumienia lub do przesyłania datagramów. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) zwracany przez strukturę `AfxSocketInit`. Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, WSAEMSGSIZE zwracany jest błąd za pośrednictwem `GetLastError`, i są przesyłane żadne dane.
 
 Należy zauważyć, że dla datagramu gniazda pomyślne zakończenie `Send` nie wskazuje, że danych zostało pomyślnie dostarczone.
 
@@ -1496,7 +1496,7 @@ Określa sposób, w którym jest nawiązywane połączenie. Semantyka tej funkcj
 - Wyślij MSG_OOB out-of-band dane (tylko SOCK_STREAM).
 
 *lpSockAddr*<br/>
-Wskaźnik do [SOCKADDR](../../mfc/reference/sockaddr-structure.md) strukturę, która zawiera adres gniazda docelowego.
+Wskaźnik do [SOCKADDR](/windows/desktop/winsock/sockaddr-2) strukturę, która zawiera adres gniazda docelowego.
 
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
@@ -1513,7 +1513,7 @@ W przypadku braku błędów `SendTo` zwraca całkowitą liczbę znaków wysyłan
 
 - Blokowanie operacji Windows Sockets WSAEINPROGRESS A jest w toku.
 
-- WSAEFAULT *lpBuf* lub *lpSockAddr* parametry nie są częścią przestrzeni adresowej użytkowników lub *lpSockAddr* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury).
+- WSAEFAULT *lpBuf* lub *lpSockAddr* parametry nie są częścią przestrzeni adresowej użytkowników lub *lpSockAddr* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury).
 
 - WSAEINVAL nazwa hosta jest nieprawidłowa.
 
@@ -1547,7 +1547,7 @@ W przypadku braku błędów `SendTo` zwraca całkowitą liczbę znaków wysyłan
 
 ### <a name="remarks"></a>Uwagi
 
-`SendTo` jest używana na sockets datagram lub strumienia i używany do zapisywania danych wychodzących dla gniazda. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](../../mfc/reference/wsadata-structure.md) struktury wypełnione przez [afxsocketinit —](../../mfc/reference/application-information-and-management.md#afxsocketinit). Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, ten błąd jest zwracany WSAEMSGSIZE i są przesyłane żadne dane.
+`SendTo` jest używana na sockets datagram lub strumienia i używany do zapisywania danych wychodzących dla gniazda. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struktury wypełnione przez [afxsocketinit —](../../mfc/reference/application-information-and-management.md#afxsocketinit). Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, ten błąd jest zwracany WSAEMSGSIZE i są przesyłane żadne dane.
 
 Należy pamiętać, że pomyślne zakończenie `SendTo` nie wskazuje, że danych zostało pomyślnie dostarczone.
 
@@ -1603,7 +1603,7 @@ W przypadku braku błędów `SendToEx` zwraca całkowitą liczbę znaków wysył
 
 - Blokowanie operacji Windows Sockets WSAEINPROGRESS A jest w toku.
 
-- WSAEFAULT *lpBuf* lub *lpSockAddr* parametry nie są częścią przestrzeni adresowej użytkowników lub *lpSockAddr* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struktury).
+- WSAEFAULT *lpBuf* lub *lpSockAddr* parametry nie są częścią przestrzeni adresowej użytkowników lub *lpSockAddr* argument jest za mały (mniejszą niż rozmiar [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struktury).
 
 - WSAEINVAL nazwa hosta jest nieprawidłowa.
 
@@ -1639,7 +1639,7 @@ W przypadku braku błędów `SendToEx` zwraca całkowitą liczbę znaków wysył
 
 Ta metoda jest taka sama jak [CAsyncSocket::SendTo](#sendto) z tą różnicą, że ta obsługuje protokół IPv6 rozwiązuje również jako starszych protokołów.
 
-`SendToEx` jest używana na sockets datagram lub strumienia i używany do zapisywania danych wychodzących dla gniazda. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](../../mfc/reference/wsadata-structure.md) struktury wypełnione przez [afxsocketinit —](../../mfc/reference/application-information-and-management.md#afxsocketinit). Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, ten błąd jest zwracany WSAEMSGSIZE i są przesyłane żadne dane.
+`SendToEx` jest używana na sockets datagram lub strumienia i używany do zapisywania danych wychodzących dla gniazda. Do przesyłania datagramów, należy uważać, aby nie przekracza maksymalny rozmiar pakietów IP podsieci źródłowej określonej przez `iMaxUdpDg` element [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struktury wypełnione przez [afxsocketinit —](../../mfc/reference/application-information-and-management.md#afxsocketinit). Jeśli dane są zbyt długo niepodzielne przekazywania podstawowych protokołów, ten błąd jest zwracany WSAEMSGSIZE i są przesyłane żadne dane.
 
 Należy pamiętać, że pomyślne zakończenie `SendToEx` nie wskazuje, że danych zostało pomyślnie dostarczone.
 
@@ -1699,7 +1699,7 @@ Wartość różną od zera, jeśli funkcja się powiedzie; w przeciwnym razie 0 
 
 `SetSockOpt` Ustawia bieżącą wartość dla opcji gniazda skojarzone z gniazda dowolnego typu, w dowolnym stanie. Chociaż opcje może istnieć na różnych poziomach protokołu, ta specyfikacja definiuje tylko opcje, które istnieją na poziomie najwyższym "gniazda". Opcje mają wpływ na operacje gniazda, takie jak tego, czy odebrano przyspieszone dane w strumieniu zwykłych danych czy komunikatów rozgłaszanych mogą być wysyłane w gnieździe i tak dalej.
 
-Istnieją dwa typy opcji gniazda: logiczna opcje, które włączać lub wyłączać funkcją lub zachowaniem oraz opcje, które wymagają wartość całkowitą lub struktury. Aby włączyć opcję Boolean, *lpOptionValue* wskazuje całkowitą różną od zera. Aby wyłączyć opcję *lpOptionValue* wskazuje na liczbę całkowitą równą zero. *nOptionLen* powinna być taka sama jak `sizeof(BOOL)` opcji Boolean. Inne opcje *lpOptionValue* wskazuje całkowitą lub struktura zawierająca żądaną wartość dla opcji, a *nOptionLen* jest to liczba całkowita lub struktury.
+Istnieją dwa typy opcji gniazda: Logiczna opcje, które włączać lub wyłączać funkcją lub zachowaniem i opcje, które wymagają wartość całkowitą lub struktury. Aby włączyć opcję Boolean, *lpOptionValue* wskazuje całkowitą różną od zera. Aby wyłączyć opcję *lpOptionValue* wskazuje na liczbę całkowitą równą zero. *nOptionLen* powinna być taka sama jak `sizeof(BOOL)` opcji Boolean. Inne opcje *lpOptionValue* wskazuje całkowitą lub struktura zawierająca żądaną wartość dla opcji, a *nOptionLen* jest to liczba całkowita lub struktury.
 
 Określa akcję podejmowaną po niewysłanych danych znajduje się w kolejce na gniazdo, SO_LINGER i `Close` funkcja jest wywoływana, aby zamknąć gniazda.
 
@@ -1707,7 +1707,7 @@ Domyślnie nie można powiązać gniazda (zobacz [powiązać](#bind)) do lokalne
 
 Informowanie implementację Windows Sockets, `Bind` wywołanie gniazda nie powinien niedozwolone, ponieważ żądany adres jest już używany przez inny gniazda, aplikacji, należy ustawić opcję gniazda SO_REUSEADDR dla gniazda przed wystawieniem `Bind` wywołania. Należy pamiętać, interpretację opcję tylko w momencie `Bind` wywołania: jest konieczne (ale nieszkodliwe) Ustawianie opcji dla gniazda, które nie może być powiązane z istniejącego adresu i ustawiania lub resetowania opcji po `Bind` wywołanie ma nie wpływa na to lub inne gniazda.
 
-Aplikacja może zażądać, że implementacja Windows Sockets korzystanie z pakietów "keep-alive" w przypadku połączeń protokołu Transmission Control Protocol (TCP), włączając opcję gniazda SO_KEEPALIVE. Implementacja Windows Sockets muszą nie obsługują utrzymywania aktywności: Jeśli tak jest, dokładne semantyki są specyficzne dla implementacji, ale powinny być zgodne z sekcji 4.2.3.6 RFC 1122: "wymagania dla hostów internetowych — warstwami komunikacyjnymi." Jeśli połączenie zostało przerwane w wyniku elementu "utrzymywania aktywności" Kod błędu: WSAENETRESET jest zwracane żadnym wywołaniom w toku w gnieździe, a WSAENOTCONN niepowodzenie kolejnych wywołań.
+Aplikacja może zażądać, że implementacja Windows Sockets korzystanie z pakietów "keep-alive" w przypadku połączeń protokołu Transmission Control Protocol (TCP), włączając opcję gniazda SO_KEEPALIVE. Implementacja Windows Sockets muszą nie obsługują utrzymywania aktywności: Jeśli tak jest, dokładne semantyki są specyficzne dla implementacji, ale powinny być zgodne z sekcji 4.2.3.6 RFC 1122: "Wymagania dla hostów internetowych — warstwami komunikacyjnymi." Jeśli połączenie zostało przerwane w wyniku elementu "utrzymywania aktywności" Kod błędu: WSAENETRESET jest zwracane żadnym wywołaniom w toku w gnieździe, a WSAENOTCONN niepowodzenie kolejnych wywołań.
 
 Opcja TCP_NODELAY wyłącza algorytm Nagle'a. Algorytm Nagle'a jest używana do zmniejszenia liczby małe pakiety wysyłane przez hosta przez buforowanie danych niepotwierdzonych wysyłania, dopóki nie można wysłać pakietu w pełnym rozmiarze. Jednak w niektórych aplikacjach ten algorytm może utrudniać wydajności i TCP_NODELAY można je wyłączyć. Autorzy aplikacji nie należy ustawić TCP_NODELAY, chyba że wpływ spowoduje więc przejrzyste i żądany, ponieważ ustawienie TCP_NODELAY może mieć znaczący wpływ na wydajność sieci. TCP_NODELAY to jedyny obsługiwany opcję gniazda, która korzysta z poziomu IPPROTO_TCP; wszystkie inne opcje Użyj poziomu SOL_SOCKET.
 

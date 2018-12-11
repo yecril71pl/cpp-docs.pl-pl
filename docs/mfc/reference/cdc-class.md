@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176918"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179061"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -913,7 +913,7 @@ Określa współrzędną y punktu, który definiuje endpoint łuku (w jednostkac
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać albo lprect — lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *ptStart*<br/>
-Określa, że współrzędnych x i y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa, że współrzędnych x i y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 *ptEnd*<br/>
 Określa współrzędne x i y punktu, który definiuje łuku punkt końcowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać `POINT` struktury lub `CPoint` obiektu dla tego parametru.
@@ -980,10 +980,10 @@ Określa współrzędną x punktu, który definiuje endpoint łuku (w jednostkac
 Określa współrzędną y punktu, który definiuje endpoint łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
 *lprect —*<br/>
-Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
+Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *ptStart*<br/>
-Określa, że współrzędnych x i y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa, że współrzędnych x i y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 *ptEnd*<br/>
 Określa współrzędne x i y punktu, który definiuje łuku punkt końcowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać `POINT` struktury danych lub `CPoint` obiektu dla tego parametru.
@@ -1169,7 +1169,7 @@ Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać al
 Określa, że współrzędnych x i y punktu, który definiuje skrót użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na skrót. Można przekazać `POINT` struktury lub `CPoint` obiektu dla tego parametru.
 
 *ptEnd*<br/>
-Określa współrzędne x i y punktu, który definiuje skrót punkt końcowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na skrót. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa współrzędne x i y punktu, który definiuje skrót punkt końcowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na skrót. Można przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
+Wskazuje [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektów.
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektów.
 
 *nCount*<br/>
 Liczba punktów w tablicy.
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku prostych konwersji prostokąt jednego z punktów na urządzenie logiczne punktów.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku prostych konwersji prostokąt jednego z punktów na urządzenie logiczne punktów.
 
 *lpSize*<br/>
-Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
+Wskazuje [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
+Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *clrTopLeft*<br/>
 Określa kolor górnej i lewej strony trójwymiarowej prostokąta.
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta — w tym przypadku pozycja końcowa prostokąta jest narysowany ponownie.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta — w tym przypadku pozycja końcowa prostokąta jest narysowany ponownie.
 
 *Rozmiar*<br/>
 Określa przesunięcie w lewym górnym rogu zewnętrznej krawędzi do lewego górnego rogu wewnętrznego obramowania prostokąta (czyli grubość obramowania).
 
 *lpRectLast*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa współrzędne logiczne pozycja prostokąta — w tym przypadku początkowe położenie prostokąt, odświeżana, trwa.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa współrzędne logiczne pozycja prostokąta — w tym przypadku początkowe położenie prostokąt, odświeżana, trwa.
 
 *sizeLast*<br/>
 Określa przesunięcie w lewym górnym rogu zewnętrznej krawędzi do lewego górnego rogu wewnętrznego obramowania (czyli grubość obramowania) oryginalnego prostokąta jest narysowany ponownie.
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta do narysowania.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta do narysowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1675,7 +1675,7 @@ Określa logiczną współrzędną y lewego górnego rogu ikony.
 Identyfikuje uchwyt ikony do narysowania.
 
 *Punkt*<br/>
-Określa logiczną - współrzędnych x i y lewego górnego rogu ikony. Możesz przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa logiczną - współrzędnych x i y lewego górnego rogu ikony. Możesz przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1833,7 +1833,7 @@ Wskazuje ciąg znaków do rysowania. Jeśli *nCount* wynosi -1, ciąg musi być 
 Określa liczbę znaków w ciągu. Jeśli *nCount* jest -1, następnie *lpszString* zakłada, że długie wskaźnik na ciąg zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera określony znaki do rysowania.
@@ -1890,7 +1890,7 @@ Wskazuje ciąg znaków do rysowania. Jeśli *nCount* wynosi -1, ciąg musi być 
 Określa liczbę znaków w ciągu. Jeśli *nCount* jest -1, następnie *lpszString* zakłada, że długie wskaźnik na ciąg zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera określony znaki do rysowania.
@@ -2301,7 +2301,7 @@ Określa typ prostokąta. Ten parametr może być jeden, zarówno lub żadnego z
 - ETO_OPAQUE Określa, czy bieżący kolor tła wypełnia prostokąta. (Można ustaw i kwerendy bieżący kolor tła z [SetBkColor](#setbkcolor) i [GetBkColor](#getbkcolor) funkcji elementów członkowskich.)
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która określa wymiary prostokąta. Ten parametr może mieć wartości NULL. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która określa wymiary prostokąta. Ten parametr może mieć wartości NULL. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *lpszString*<br/>
 Wskazuje ciąg znaków określony do narysowania. Można również przekazać [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu dla tego parametru.
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która zawiera logiczne współrzędnych prostokąta do wypełnienia. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która zawiera logiczne współrzędnych prostokąta do wypełnienia. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *pBrush*<br/>
 Identyfikuje pędzel używany do wypełniania prostokąta.
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) struktury danych lub `CRect` obiektu dla tego parametru.
+Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury danych lub `CRect` obiektu dla tego parametru.
 
 *CLR* Określa kolor, który ma być używany, aby wypełnić prostokąt.
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu prostokąta. Można również przekazać `CRect` obiektu dla tego parametru.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu prostokąta. Można również przekazać `CRect` obiektu dla tego parametru.
 
 *pBrush*<br/>
 Identyfikuje pędzla, który ma służyć do ramek prostokąta.
@@ -2767,10 +2767,10 @@ Określa pierwszy znak z zakresu znaków od bieżącej czcionki, dla którego s�
 Określa ostatni znak zakresu znaków od bieżącej czcionki, dla którego są zwracane szerokości znaków.
 
 *lpabc*<br/>
-Wskazuje na tablicę [ABC](../../mfc/reference/abc-structure.md) struktur, które odbierają szerokości znaków, gdy funkcja zwraca. Tablica musi zawierać co najmniej tyle `ABC` struktury jak znaków znajduje się w zakresie określonym przez *nFirstChar* i *nLastChar* parametrów.
+Wskazuje na tablicę [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) struktur, które odbierają szerokości znaków, gdy funkcja zwraca. Tablica musi zawierać co najmniej tyle `ABC` struktury jak znaków znajduje się w zakresie określonym przez *nFirstChar* i *nLastChar* parametrów.
 
 *lpABCF*<br/>
-Wskazuje buforu aplikacja dostarczona z tablicą [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) struktury, aby otrzymywać szerokości znaków, gdy funkcja zwraca. Szerokości zwrócona przez tę funkcję, są w formacie zmiennoprzecinkowych IEEE.
+Wskazuje buforu aplikacja dostarczona z tablicą [ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat) struktury, aby otrzymywać szerokości znaków, gdy funkcja zwraca. Szerokości zwrócona przez tę funkcję, są w formacie zmiennoprzecinkowych IEEE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który ma otrzymać wymiary prostokąta.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który ma otrzymać wymiary prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Wskazuje [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) struktury danych, aby odbierać wartości dostosowanie kolorów.
+Wskazuje [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) struktury danych, aby odbierać wartości dostosowanie kolorów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych lub `CPoint` obiekty, których punkty końcowe linii i krzywych kontrolować punkty są umieszczane.
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur danych lub `CPoint` obiekty, których punkty końcowe linii i krzywych kontrolować punkty są umieszczane.
 
 *lpTypes*<br/>
 Wskazuje na tablicę bajtów, gdzie są umieszczone typy wierzchołka. Wartości są jedną z następujących czynności:
@@ -3531,7 +3531,7 @@ Typy PT_BEZIERTO zawsze wykonywane w trzech zestawów. Punkt w ścieżce, bezpo�
 - PT_CLOSEFIGURE Określa, że rysunku zostanie automatycznie zamknięte po odpowiednim wierszu lub krzywą wzorcową. Rysunek jest zamknięty za pomocą rysowania linii z punktu końcowego linii lub krzywej do punktu, odpowiadający ostatniej PT_MOVETO.
 
 *nCount*<br/>
-Określa łączną liczbę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które mogą być umieszczane w *lpPoints* tablicy. Ta wartość musi być taka sama jak liczba bajtów, które mogą być umieszczane w *lpTypes* tablicy.
+Określa łączną liczbę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur danych, które mogą być umieszczane w *lpPoints* tablicy. Ta wartość musi być taka sama jak liczba bajtów, które mogą być umieszczane w *lpTypes* tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3578,7 +3578,7 @@ Punkt musi znajdować się w regionie wycinka. Jeśli punkt nie ma obszaru przyc
 
 Nie wszystkie urządzenia obsługują `GetPixel` funkcji. Aby uzyskać więcej informacji, zobacz możliwości rastrowych rastercaps w obszarze [GetDeviceCaps](#getdevicecaps) funkcja elementu członkowskiego.
 
-`GetPixel` Funkcja elementu członkowskiego ma dwie formy. Pierwszy przyjmuje dwie wartości współrzędnych. drugi zajmuje albo [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.
+`GetPixel` Funkcja elementu członkowskiego ma dwie formy. Pierwszy przyjmuje dwie wartości współrzędnych. drugi zajmuje albo [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3841,7 +3841,7 @@ Wskaźnik na liczbę całkowitą, która odbiera liczbę maksymalną liczbę zna
 Wskaźnik do tablicy liczb całkowitych, odbierająca częściowe symbol zakresów. Każdy element w tablicy zapewnia odległość, w jednostkach logicznych, od początku tabeli indeksów symbol do jednego glify, która pasuje w miejscu określonym przez *nMaxExtent*. Chociaż ta tablica powinien mieć co najmniej tyle elementów, jak indeksy symbolu, określony przez *cgi*, funkcja wypełnia tablicę z zakresów, tylko w przypadku dowolną liczbę indeksów symbol określone przez *lpnFit*. Jeśli *lpnDx* ma wartość NULL, funkcja nie może obliczyć szerokości częściowe ciągu.
 
 *lpSize*<br/>
-Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.
+Wskaźnik do [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3871,7 +3871,7 @@ Wskaźnik do tablicy wskaźników symbol, dla których mają być pobierane zakr
 Określa liczbę symboli w tablicy, do których prowadzą *pgiIn*.
 
 *lpSize*<br/>
-Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.
+Wskaźnik do [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
+Wskazuje [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
+Wskazuje [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje tablicy punktów. Każdy punkt w tablicy jest [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.
+Wskazuje tablicy punktów. Każdy punkt w tablicy jest [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.
 
 *nCount*<br/>
 Liczba punktów w tablicy.
 
 *lprect —*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku typowych mapowanie prostokąt, od logicznych jednostek urządzenia.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku typowych mapowanie prostokąt, od logicznych jednostek urządzenia.
 
 *lpSize*<br/>
-Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
+Wskazuje [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4713,7 +4713,7 @@ Określa współrzędną y punktu końcowego łuku (w jednostkach logicznych). T
 Określa prostokąt otaczający. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.
 
 *ptStart*<br/>
-Określa punkt początkowy łuku. Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa punkt początkowy łuku. Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 *ptEnd*<br/>
 Określa punkt końcowy łuku. Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać `POINT` struktury lub `CPoint` obiektu dla tego parametru.
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które zawierają punkty końcowe i kontrolować punktów spline(s).
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur danych, które zawierają punkty końcowe i kontrolować punktów spline(s).
 
 *nCount*<br/>
 Określa liczbę punktów w *lpPoints* tablicy. Ta wartość musi mieć jedną więcej niż trzy razy liczba krzywe do rysowania, ponieważ każdy krzywej składanej Bzier wymaga dwóch punktów kontrolnych i punktu końcowego i początkowego z krzywymi składanymi wymaga dodatkowy punkt początkowy.
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) wskazuje struktur danych, które zawiera punkty końcowe i kontroli.
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) wskazuje struktur danych, które zawiera punkty końcowe i kontroli.
 
 *nCount*<br/>
 Określa liczbę punktów w *lpPoints* tablicy. Ta wartość musi być trzy razy liczba krzywe do rysowania, ponieważ każdy krzywej składanej Bzier wymaga dwóch punktów kontrolnych i punkt końcowy.
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które zawierają punkty końcowe dla każdego wiersza segmentu i punktów końcowych i kontrolować punktów dla poszczególnych Bzier krzywej składanej.
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur danych, które zawierają punkty końcowe dla każdego wiersza segmentu i punktów końcowych i kontrolować punktów dla poszczególnych Bzier krzywej składanej.
 
 *lpTypes*<br/>
 Wskazuje na tablicy, który określa, w jaki sposób każda wskazuje w *lpPoints* tablica jest używana. Może to być jeden z następujących wartości:
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Wskazuje na tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które zawiera wierzchołki wiersza.
+Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktur danych, które zawiera wierzchołki wiersza.
 
 *nCount*<br/>
 Określa liczbę punktów w tablicy.
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Wskazuje [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) struktury danych, zawierające wartości dostosowanie kolorów.
+Wskazuje [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) struktury danych, zawierające wartości dostosowanie kolorów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6219,7 +6219,7 @@ Określa współrzędną y w jednostkach logicznych, punktu, który ma być usta
 Określa kolor, który ma być używany do malowania w punkcie.
 
 *Punkt*<br/>
-Określa logiczną - współrzędnych x i y punktu, który ma być ustawiona. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
+Określa logiczną - współrzędnych x i y punktu, który ma być ustawiona. Można przekazać [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6328,10 +6328,10 @@ Określa tryb rozciągania. Może być dowolną z następujących wartości:
 |COLORONCOLOR|Usuwa pikseli. W tym trybie usuwa wszystkie usunięte wiersze pikseli bez próby zachować swoje informacje.|
 |PÓŁTONÓW|Mapuje pikseli z prostokąta źródłowego na bloki pikseli prostokąta docelowego. Średnia kolor przez blok docelowy pikseli przybliża kolor źródłowych.|
 ||Po ustawieniu PÓŁTONÓW rozciąganie trybu, aplikacja musi wywołać funkcję Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) można ustawić źródła pędzla. Jeśli nie powiedzie się w tym celu, wystąpi niezgodność pędzla.|
-|STRETCH_ANDSCANS|**Windows 95/98**: taki sam jak BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**: taki sam jak COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**: taki sam jak PÓŁTONÓW.|
-|STRETCH_ORSCANS|**Windows 95/98**: taki sam jak WHITEONBLACK|
+|STRETCH_ANDSCANS|**Windows 95/98**: Takie same jak BLACKONWHITE|
+|STRETCH_DELETESCANS|**Windows 95/98**: Takie same jak COLORONCOLOR|
+|STRETCH_HALFTONE|**Windows 95/98**: Taka sama jak PÓŁTONÓW.|
+|STRETCH_ORSCANS|**Windows 95/98**: Takie same jak WHITEONBLACK|
 |WHITEONBLACK|Wykonuje operację logiczną lub przy użyciu wartości kolorów pikseli usunięte i istniejące. Mapy bitowej w przypadku monochromatycznych map bitowych, w tym trybie zachowuje białe piksele kosztem czarne pikseli.|
 
 ### <a name="return-value"></a>Wartość zwracana

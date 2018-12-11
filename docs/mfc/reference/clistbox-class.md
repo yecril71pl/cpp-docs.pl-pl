@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656095"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178619"
 ---
 # <a name="clistbox-class"></a>Clistbox — klasa
 
@@ -339,7 +339,7 @@ Długie wskaźnik do `COMPAREITEMSTRUCT` struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskazuje względne położenie dwa elementy, które opisano w [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) struktury. Może to być dowolny z następujących wartości:
+Wskazuje względne położenie dwa elementy, które opisano w [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struktury. Może to być dowolny z następujących wartości:
 
 |Wartość|Znaczenie|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDeleteItemStruct*<br/>
-Długie wskaźnik do Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) strukturę, która zawiera informacje na temat usuniętego elementu.
+Długie wskaźnik do Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) strukturę, która zawiera informacje na temat usuniętego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Długie wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysowania wymagane.
+Długie wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturę, która zawiera informacje o typie rysowania wymagane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Określa liczony od zera indeks elementu.
 
 *lprect —*<br/>
-Określa długie wskaźnik [struktura RECT](../../mfc/reference/rect-structure1.md) odbierająca współrzędne klienta pole listy elementu.
+Określa długie wskaźnik [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) odbierająca współrzędne klienta pole listy elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -991,7 +991,7 @@ Wywołaj tę funkcję, przed dodaniem dużą liczbę elementów do `CListBox`.
 
 Ta funkcja pomaga w szybszym inicjowania pola listy, które mają dużą liczbę elementów (ponad 100). Jego preallocates określonej ilości pamięci, dlatego oznacza kolejne [addstring —](#addstring), [InsertString](#insertstring), i [Dir](#dir) funkcje podejmują najkrótszym czasie. Można użyć szacunki dla parametrów. Jeśli overestimate, niektóre dodatkowe pamięć została przydzielona; Jeśli zaniżają, normalne alokacji jest używany dla elementów, które przekraczają kwotę przydzielony wstępnie.
 
-Windows 95/98: *nItems* parametru jest ograniczona do wartości 16-bitowych. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, całkowity rozmiar elementów w polu listy jest ograniczony tylko ilością dostępnej pamięci.
+Windows 95/98 tylko: *NItems* parametru jest ograniczona do wartości 16-bitowych. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, całkowity rozmiar elementów w polu listy jest ograniczony tylko ilością dostępnej pamięci.
 
 ### <a name="example"></a>Przykład
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.
+Długie wskaźnik do [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struktury.
 
 ### <a name="remarks"></a>Uwagi
 

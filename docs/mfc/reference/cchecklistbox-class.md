@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327346"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177839"
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 
@@ -146,7 +146,7 @@ virtual BOOL Create(
 Określa styl pola listy kontrolnej. Styl musi być LBS_HASSTRINGS i LBS_OWNERDRAWFIXED (wszystkie elementy na liście są sama wysokość) lub LBS_OWNERDRAWVARIABLE (elementy na liście są o różnej wysokości). Ten styl można łączyć z innymi [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) LBS_USETABSTOPS, z wyjątkiem.
 
 *Rect*<br/>
-Określa pole listy kontrolnej, rozmiar i położenie. Może być [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.
+Określa pole listy kontrolnej, rozmiar i położenie. Może być [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Określa pole listy kontrolnej okna nadrzędnego (zazwyczaj `CDialog` obiektu). Nie może być równa NULL.
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Długie wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysowania wymagane.
+Długie wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturę, która zawiera informacje o typie rysowania wymagane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.
+Długie wskaźnik do [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struktury.
 
 ### <a name="remarks"></a>Uwagi
 

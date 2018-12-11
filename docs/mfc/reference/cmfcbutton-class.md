@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547319"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178466"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in] Odwołanie do prostokąt, który granic przycisku.
 
 *uiState*<br/>
-[in] Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tematu.
+[in] Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tematu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Odwołanie do prostokąt, który granic przycisku.
 
 *uiState*<br/>
-[in] Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tematu.
+[in] Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tematu.
 
 ### <a name="remarks"></a>Uwagi
 

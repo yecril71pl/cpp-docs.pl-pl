@@ -1,5 +1,5 @@
 ---
-title: 'TN014: formanty niestandardowe'
+title: 'TN014: Formanty niestandardowe'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178411"
 ---
-# <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
+# <a name="tn014-custom-controls"></a>TN014: Formanty niestandardowe
 
 Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. Ponadto w tym artykule opisano podklasy dynamiczne i opisuje relację między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.
 
@@ -88,7 +88,7 @@ Przy użyciu własnym rysowania formantów możesz tworzyć klasy kontrolek wiel
     // insert code to delete an item from this combo box
     ```
 
-Aby uzyskać szczegółowe informacje na temat struktury rysowania przez właściciela ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), i [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) można znaleźć w dokumentacji MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, i `CWnd::OnDeleteItem` odpowiednio.
+Aby uzyskać szczegółowe informacje na temat struktury rysowania przez właściciela ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), i [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) można znaleźć w dokumentacji MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, i `CWnd::OnDeleteItem` odpowiednio.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Przy użyciu własnym rysowania formantów i menu
 

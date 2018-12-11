@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467989"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178554"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Zestawy `CRgn` obiekt jest odpowiednikiem sumę dwóch określonych `CRgn` obiektów.|
 |[CRgn::CopyRgn](#copyrgn)|Zestawy `CRgn` obiekt jest kopię określonego `CRgn` obiektu.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicjuje `CRgn` obiektu z regionem elipsy.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje `CRgn` obiektu z regionem eliptycznego zdefiniowane przez [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje `CRgn` obiektu z regionem eliptycznego zdefiniowane przez [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury.|
 |[CRgn::CreateFromData](#createfromdata)|Tworzy obszar z danego regionu i przekształcania danych.|
 |[CRgn::CreateFromPath](#createfrompath)|Tworzy obszar ze ścieżki, który wybrano w kontekście danego urządzenia.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicjuje `CRgn` obiektu za pomocą wielokątne obszaru. System wielokąta zostanie automatycznie zamknięte, jeśli to konieczne, za pomocą rysowania linii z ostatnim wierzchołku do pierwszej.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicjuje `CRgn` obiektu z regionem składający się z szeregu zamkniętych wielokątów. Wielokąty mogą być rozłączne lub mogą się nakładać.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inicjuje `CRgn` obiektu z prostokątny obszar.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicjuje `CRgn` obiektu z prostokątny obszar zdefiniowany przez [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicjuje `CRgn` obiektu z prostokątny obszar zdefiniowany przez [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicjuje `CRgn` obiektu z prostokątny obszar z zaokrąglonymi rogami.|
 |[CRgn::EqualRgn](#equalrgn)|Sprawdza, czy dwa `CRgn` obiektów, aby ustalić, czy są równoważne.|
 |[CRgn::FromHandle](#fromhandle)|Zwraca wskaźnik do `CRgn` obiektu, kiedy podane dojście do regionu Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parametry
 
 *lpXForm*<br/>
-Wskazuje [XFORM](../../mfc/reference/xform-structure.md) strukturę danych, która definiuje przekształcenie do wykonania w regionie. Jeśli ten wskaźnik ma wartość NULL, używana jest przekształcania tożsamości.
+Wskazuje [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) strukturę danych, która definiuje przekształcenie do wykonania w regionie. Jeśli ten wskaźnik ma wartość NULL, używana jest przekształcania tożsamości.
 
 *nCount*<br/>
 Określa liczbę bajtów wskazywany przez *pRgnData*.
 
 *pRgnData*<br/>
-Wskazuje [RGNDATA](../../mfc/reference/rgndata-structure.md) struktura danych, która zawiera dane regionu.
+Wskazuje [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) struktura danych, która zawiera dane regionu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametry
 
 *lpRgnData*<br/>
-Wskazuje [RGNDATA](../../mfc/reference/rgndata-structure.md) struktury danych, która otrzymuje informacje. Jeśli ten parametr ma wartość NULL, wartość zwracana zawiera liczbę bajtów potrzebnych danych regionu.
+Wskazuje [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) struktury danych, która otrzymuje informacje. Jeśli ten parametr ma wartość NULL, wartość zwracana zawiera liczbę bajtów potrzebnych danych regionu.
 
 *nCount*<br/>
 Określa rozmiar w bajtach, *lpRgnData* buforu.

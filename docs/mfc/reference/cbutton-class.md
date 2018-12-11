@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694806"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178646"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Długie wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struktury. Struktura zawiera informacje dotyczące elementu do rysowania i typ rysunku, wymagane.
+Długie wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struktury. Struktura zawiera informacje dotyczące elementu do rysowania i typ rysunku, wymagane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pSize*|[out] Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera opis prostokąt.|
+|*pSize*|[out] Wskaźnik do [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury, która odbiera opis prostokąt.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pSize*|[in] Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która opisuje prostokąt otaczający.|
+|*pSize*|[in] Wskaźnik do [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) strukturę, która opisuje prostokąt otaczający.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

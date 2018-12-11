@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471815"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178307"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc — klasa
 
@@ -186,7 +186,7 @@ Identyfikuje urządzenie odwołanie rozszerzony metaplik.
 Wskazuje ciąg znaków zakończony znakiem null. Określa nazwę pliku dla rozszerzony metaplik ma zostać utworzony. Jeśli ten parametr ma wartość NULL, rozszerzony metaplik jest pamięci na podstawie i jego zawartość, utraty, gdy obiekt zostanie zniszczony lub Win32 `DeleteEnhMetaFile` funkcja jest wywoływana.
 
 *lpBounds*<br/>
-Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który określa wymiarów w jednostkach HIMETRIC (wielokrotność.01 milimetra) obraz ma być przechowywany w rozszerzony metaplik.
+Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który określa wymiarów w jednostkach HIMETRIC (wielokrotność.01 milimetra) obraz ma być przechowywany w rozszerzony metaplik.
 
 *lpszDescription*<br/>
 Wskazuje ciąg zakończony zerem, określający nazwę aplikacji, która utworzyła obraz, a także tytuł obrazu.

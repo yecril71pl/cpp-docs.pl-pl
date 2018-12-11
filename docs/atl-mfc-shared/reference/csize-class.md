@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9bbd23fe793946dc0f081f4d19b9f6e26fcfda82
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178372"
 ---
 # <a name="csize-class"></a>CSize, klasa
 
-Podobnie jak Windows [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która implementuje współrzędne względne lub pozycję.
+Podobnie jak Windows [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury, która implementuje współrzędne względne lub pozycję.
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,10 +87,10 @@ Zestawy `cx` członka `CSize`.
 Zestawy `cy` członka `CSize`.
 
 *initSize*<br/>
-[ROZMIAR](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub `CSize` obiektu użytego do zainicjowania `CSize`.
+[ROZMIAR](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub `CSize` obiektu użytego do zainicjowania `CSize`.
 
 *initPt*<br/>
-[PUNKT](../../mfc/reference/point-structure.md) struktury lub `CPoint` obiektu użytego do zainicjowania `CSize`.
+[PUNKT](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub `CPoint` obiektu użytego do zainicjowania `CSize`.
 
 *niezerowego*<br/>
 DWORD używane do zainicjowania `CSize`. Word niskiego rzędu jest `cx` elementu członkowskiego i word wyższego rzędu jest `cy` elementu członkowskiego.
@@ -179,11 +179,11 @@ Zobacz poniższe opisy poszczególnych operatorach:
 
 - **Operator + (** *punktu* **)**
 
-  Ta operacja powoduje przesunięcie (ruch) [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) (lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) wartość to `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są dodawane do `x` i `y` elementów członkowskich danych `POINT` wartość. Jest ono odpowiednikiem wersję [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) przyjmującej [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+  Ta operacja powoduje przesunięcie (ruch) [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) (lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) wartość to `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są dodawane do `x` i `y` elementów członkowskich danych `POINT` wartość. Jest ono odpowiednikiem wersję [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) przyjmującej [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
 
 - **Operator + (** *lprect —* **)**
 
-   Ta operacja powoduje przesunięcie (ruch) [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) (lub [CRect](../../atl-mfc-shared/reference/crect-class.md)) wartość to `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są dodawane do `left`, `top`, `right`, i `bottom` elementów członkowskich danych `RECT` wartość. Jest ono odpowiednikiem wersję [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) przyjmującej [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+   Ta operacja powoduje przesunięcie (ruch) [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) (lub [CRect](../../atl-mfc-shared/reference/crect-class.md)) wartość to `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są dodawane do `left`, `top`, `right`, i `bottom` elementów członkowskich danych `RECT` wartość. Jest ono odpowiednikiem wersję [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) przyjmującej [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -210,11 +210,11 @@ Czwarty operatora jednoargumentowego znaku minusa, zmienia znak `CSize` wartoś�
 
 - **Operator-(** *punktu* **)**
 
-  Ta operacja powoduje przesunięcie (ruch) [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) wartość przez odwrotność dodatku `CSize` wartość. `cx` i `cy` tego `CSize` wartości są odejmowane od `x` i `y` elementów członkowskich danych `POINT` wartość. Jest ono odpowiednikiem wersję [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) przyjmującej [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+  Ta operacja powoduje przesunięcie (ruch) [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) wartość przez odwrotność dodatku `CSize` wartość. `cx` i `cy` tego `CSize` wartości są odejmowane od `x` i `y` elementów członkowskich danych `POINT` wartość. Jest ono odpowiednikiem wersję [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) przyjmującej [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
 
 - **Operator-(** *lprect —* **)**
 
-  Ta operacja powoduje przesunięcie (ruch) [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) wartość przez odwrotność dodatku `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są odejmowane od `left`, `top`, `right`, i `bottom` elementów członkowskich danych `RECT` wartość. Jest ono odpowiednikiem wersję [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) przyjmującej [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+  Ta operacja powoduje przesunięcie (ruch) [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) wartość przez odwrotność dodatku `CSize` wartość. `cx` i `cy` członków tego `CSize` wartości są odejmowane od `left`, `top`, `right`, i `bottom` elementów członkowskich danych `RECT` wartość. Jest ono odpowiednikiem wersję [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) przyjmującej [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
 
 - **operator-)**
 

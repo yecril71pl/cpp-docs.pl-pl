@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179009"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-[in] Wskaźnik do [struktura CREATESTRUCT](../../mfc/reference/createstruct-structure.md) dla nowej ramki.
+[in] Wskaźnik do [struktura CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) dla nowej ramki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] Krawędzi ramki, który jest przenoszony. Zobacz parametr *wParam* w [powiadomień WM_SIZING](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[out w] Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która zawiera współrzędne ramki.
+[out w] Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która zawiera współrzędne ramki.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Parametry
 
 *lpwndpos*<br/>
-[in] Wskaźnik do [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) strukturę, która zawiera nowy rozmiar i położenie.
+[in] Wskaźnik do [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) strukturę, która zawiera nowy rozmiar i położenie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-[in] Wskaźnik do [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat, który ma przetwarzać.
+[in] Wskaźnik do [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) strukturę, która zawiera komunikat, który ma przetwarzać.
 
 ### <a name="return-value"></a>Wartość zwracana
 

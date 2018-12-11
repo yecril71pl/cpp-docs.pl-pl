@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476632"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178743"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
@@ -787,7 +787,7 @@ virtual void OnFindNext(
 Ciąg do znalezienia.
 
 *bDalej*<br/>
-Kierunek wyszukiwania: wartość TRUE wskazuje; "False" działa.
+Kierunek wyszukiwania: Wartość TRUE wskazuje "False" działa.
 
 *bCase*<br/>
 Wskazuje, czy wyszukiwanie ma być uwzględniana wielkość liter.
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 Tekst, który ma zostać zastąpione.
 
 *bDalej*<br/>
-Wskazuje kierunek wyszukiwania: wartość PRAWDA jest wyłączony; "False" działa.
+Wskazuje kierunek wyszukiwania: Wartość TRUE jest wyłączony; "False" działa.
 
 *bCase*<br/>
 Wskazuje, jeśli w wyszukiwaniu jest uwzględniana wielkość liter.
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Wskaźnik do kontekstu urządzenia dla obszaru danych wyjściowych.
 
 *rectLayout*<br/>
-[Prostokąt](../../mfc/reference/rect-structure1.md) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) definiujący obszaru wyjściowego.
+[Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) definiujący obszaru wyjściowego.
 
 *nIndexStart*<br/>
 Liczony od zera indeks pierwszego wystąpienia znaku do sformatowania.

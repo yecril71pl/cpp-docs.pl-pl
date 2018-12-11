@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693221"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177912"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Zmienianie stylów okna utworzonego przez MFC
 
@@ -46,7 +46,7 @@ W systemie windows głównej ramki można również określić, czy okno ma Menu
 
 Jeśli zmieniasz atrybutów okna w istniejącej aplikacji, postępuj zgodnie z instrukcjami wyświetlanymi w dalszej części tego artykułu.
 
-Aby zmienić atrybuty okna domyślne, które są używane przez utworzenie aplikacji framework za pomocą Kreatora aplikacji, należy zastąpić okna [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funkcja wirtualna elementu członkowskiego. `PreCreateWindow` umożliwia aplikacji dostęp do procesu tworzenia, zwykle zarządza wewnętrznie [CDocTemplate](../mfc/reference/cdoctemplate-class.md) klasy. Struktura wywołuje `PreCreateWindow` tuż przed utworzenie okna. Modyfikując [CREATESTRUCT](../mfc/reference/createstruct-structure.md) struktury przekazany do `PreCreateWindow`, aplikacja może zmienić atrybuty użyty do utworzenia okna. Na przykład w celu zapewnienia okna nie używa podpis, należy użyć następującej operacji bitowej:
+Aby zmienić atrybuty okna domyślne, które są używane przez utworzenie aplikacji framework za pomocą Kreatora aplikacji, należy zastąpić okna [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funkcja wirtualna elementu członkowskiego. `PreCreateWindow` umożliwia aplikacji dostęp do procesu tworzenia, zwykle zarządza wewnętrznie [CDocTemplate](../mfc/reference/cdoctemplate-class.md) klasy. Struktura wywołuje `PreCreateWindow` tuż przed utworzenie okna. Modyfikując [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury przekazany do `PreCreateWindow`, aplikacja może zmienić atrybuty użyty do utworzenia okna. Na przykład w celu zapewnienia okna nie używa podpis, należy użyć następującej operacji bitowej:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

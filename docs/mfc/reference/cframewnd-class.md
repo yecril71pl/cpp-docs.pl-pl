@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481448"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178795"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 
@@ -844,7 +844,7 @@ Zawiera jedną z następujących wartości z `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który określa współrzędne obramowania.
+Wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który określa współrzędne obramowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Parametry
 
 *LPC*<br/>
-Wskaźnik do Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.
+Wskaźnik do Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury.
 
 *pContext*<br/>
 Wskaźnik do [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury.
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parametry
 
 *tbpFlags*<br/>
-Flagi sterujące bieżący stan przycisku postępu. Określ tylko jedną z następujących flag, ponieważ wszystkie stany wykluczają się wzajemnie: TBPF_NOPROGRESS TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Flagi sterujące bieżący stan przycisku postępu. Należy określić tylko jeden z następujących flag, ponieważ wykluczają się wzajemnie wszystkie stany: TBPF_NOPROGRESS TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593248"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178541"
 ---
 # <a name="ctoolbar-class"></a>Klasa CToolBar
 
@@ -141,7 +141,7 @@ Tworzy przycisk pola wyboru, należy ją przypisać stylu TBBS_CHECKBOX lub uży
 
 Aby utworzyć przycisk radiowy, wywołaj [CCmdUI](../../mfc/reference/ccmdui-class.md) obiektu [setradio —](../../mfc/reference/ccmdui-class.md#setradio) funkcji składowej z nieprawidłowego ON_UPDATE_COMMAND_UI. Przekaż `SetRadio` argument 0 unchecked lub wartość różną od zera, aby sprawdzić. Aby zapewnić zachowanie wzajemnie wykluczających się grupą radio, musi mieć ON_UPDATE_COMMAND_UI obsługi wszystkie przyciski w grupie.
 
-Aby uzyskać więcej informacji na temat korzystania z `CToolBar`, zapoznaj się z artykułem [MFC — implementacja paska narzędzi](../../mfc/mfc-toolbar-implementation.md) i [techniczne Uwaga 31: paski sterowania](../../mfc/tn031-control-bars.md).
+Aby uzyskać więcej informacji na temat korzystania z `CToolBar`, zapoznaj się z artykułem [MFC — implementacja paska narzędzi](../../mfc/mfc-toolbar-implementation.md) i [techniczne 31 Uwaga: Paski sterowania](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 Indeks elementu (przycisk lub separatorem), którego współrzędne prostokąt, które mają być pobierane.
 
 *lprect —*<br/>
-Adres [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która będzie zawierać współrzędne elementu.
+Adres [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która będzie zawierać współrzędne elementu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -565,7 +565,7 @@ Nowy indeks obrazu na przycisku w mapie bitowej.
 Separatorami, których styl TBBS_SEPARATOR, funkcja ta Ustawia szerokość separatora w pikselach na wartość przechowywaną w *iImage*.
 
 > [!NOTE]
->  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonInfo` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiektów interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.
+>  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonInfo` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak aktualizowanie obiektów interfejsu użytkownika](../../mfc/how-to-update-user-interface-objects.md) i [TN031: Paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.
 
 Aby uzyskać informacje na temat obrazy bitmapowe i przyciski, zobacz [CToolBar](../../mfc/reference/ctoolbar-class.md) Przegląd i [CToolBar::LoadBitmap](#loadbitmap).
 
@@ -640,7 +640,7 @@ Styl przycisku określa sposób wyświetlania przycisku i sposobu odpowiedzi na 
 Przed wywołaniem `SetButtonStyle`, wywołaj [GetButtonStyle](#getbuttonstyle) funkcję elementu członkowskiego, aby pobrać styl przycisku lub separatora.
 
 > [!NOTE]
->  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonStyle` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiektów interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.
+>  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonStyle` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak aktualizowanie obiektów interfejsu użytkownika](../../mfc/how-to-update-user-interface-objects.md) i [TN031: Paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 

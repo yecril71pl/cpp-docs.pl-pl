@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178177"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 
@@ -155,7 +155,7 @@ Mimo że nie można bezpośrednio wybrać mapę bitową do wyświetlania na urz�
 
 Po zakończeniu pracy z `CBitmap` obiekt utworzony przez `CreateBitmap` funkcji, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiektu.
 
-Aby uzyskać więcej informacji, zobacz opis `bmBits` pole `BITMAP` struktury. [Mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) struktura została opisana w sekcji [CBitmap::CreateBitmapIndirect](#createbitmapindirect) funkcja elementu członkowskiego.
+Aby uzyskać więcej informacji, zobacz opis `bmBits` pole `BITMAP` struktury. [Mapy BITOWEJ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) struktura została opisana w sekcji [CBitmap::CreateBitmapIndirect](#createbitmapindirect) funkcja elementu członkowskiego.
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parametry
 
 *lpBitmap*<br/>
-Wskazuje [mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) strukturę, która zawiera informacje o mapy bitowej.
+Wskazuje [mapy BITOWEJ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) strukturę, która zawiera informacje o mapy bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parametry
 
 *pBitMap*<br/>
-Wskaźnik do [struktury map BITOWYCH](../../mfc/reference/bitmap-structure.md) struktury, który będzie otrzymywał właściwości obrazu. Ten parametr nie może być równa NULL.
+Wskaźnik do [mapy BITOWEJ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) struktury, który będzie otrzymywał właściwości obrazu. Ten parametr nie może być równa NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 

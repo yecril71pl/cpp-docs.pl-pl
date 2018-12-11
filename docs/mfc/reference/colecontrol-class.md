@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534137"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179022"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 
@@ -556,7 +556,7 @@ W kontrolce, należy zawsze używać `COleControl` zamiast odpowiednich element�
 
 Tylko wtedy, gdy staną się aktywne, ale rośnie ilość pracy wymaganej dla przejścia nieaktywne aktywny i prędkość przejścia ulegnie awarii, obiekty kontrolek OLE można również utworzyć okno. Istnieją przypadki, gdy jest to problem: na przykład należy wziąć pod uwagę siatka pól tekstowych. Po ów w górę i w dół za pośrednictwem kolumnie, każdy formant musi być w miejscu aktywowany, a następnie zdezaktywowane. Prędkość przejścia nieaktywne/aktywny bezpośredni wpływ na szybkość przewijania.
 
-Aby uzyskać więcej informacji na temat tworzenia platforma sterowania OLE, zobacz artykuły [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) i [omówienie: tworzenie programu kontrolki ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Aby uzyskać informacje dotyczące optymalizacji formantów OLE, w tym kontrolek bez okien i pozbawionej migotania, zobacz [kontrolki ActiveX MFC: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Aby uzyskać więcej informacji na temat tworzenia platforma sterowania OLE, zobacz artykuły [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) i [omówienie: Tworzenie programu kontrolki ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Aby uzyskać informacje dotyczące optymalizacji formantów OLE, w tym kontrolek bez okien i pozbawionej migotania, zobacz [kontrolki ActiveX MFC: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect —*<br/>
-W danych wejściowych, wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która zawiera obszar karetkę do skorygowania. Na dane wyjściowe, obszaru skorygowany karetki lub wartość NULL, jeśli prostokąt daszka jest całkowicie objęty.
+W danych wejściowych, wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która zawiera obszar karetkę do skorygowania. Na dane wyjściowe, obszaru skorygowany karetki lub wartość NULL, jeśli prostokąt daszka jest całkowicie objęty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -934,7 +934,7 @@ void DoClick();
 
 Overridable `COleControl::OnClick` składowa zostanie wywołana i kliknij zdarzenie zostanie wyzwolone, jeśli jest obsługiwany przez kontrolkę zasobów.
 
-Ta funkcja jest obsługiwana przez `COleControl` klasy bazowej jako podstawowe metody o nazwie DoClick. Aby uzyskać więcej informacji, zobacz artykuł [kontrolek ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Ta funkcja jest obsługiwana przez `COleControl` klasy bazowej jako podstawowe metody o nazwie DoClick. Aby uzyskać więcej informacji, zobacz artykuł [kontrolek ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ Wskaźnik do `CPropExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 
 Ta funkcja jest zwykle wykonywania wywołań do **PX_** rodziny funkcji do załadowania lub zapisania określonych zdefiniowanych przez użytkownika właściwości kontrolki OLE.
 
-Jeśli Kreator kontrolek został użyty do utworzenia projektu kontrolki OLE, zastąpiona wersja tej funkcji będzie serializować właściwości podstawowe obsługiwane przez `COleControl` z wywołaniem do funkcji klasy bazowej `COleControl::DoPropExchange`. W miarę dodawania właściwości zdefiniowane przez użytkownika do kontrolki OLE, musisz zmodyfikować tę funkcję, aby serializować nowej właściwości. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [kontrolek ActiveX: serializacja](../../mfc/mfc-activex-controls-serializing.md).
+Jeśli Kreator kontrolek został użyty do utworzenia projektu kontrolki OLE, zastąpiona wersja tej funkcji będzie serializować właściwości podstawowe obsługiwane przez `COleControl` z wywołaniem do funkcji klasy bazowej `COleControl::DoPropExchange`. W miarę dodawania właściwości zdefiniowane przez użytkownika do kontrolki OLE, musisz zmodyfikować tę funkcję, aby serializować nowej właściwości. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [kontrolek ActiveX: Serializacja](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -1099,7 +1099,7 @@ Wartość różną od zera funkcja zakończyła się pomyślnie; w przeciwnym ra
 
 Zazwyczaj jest to pierwsza funkcja wywoływane przez formant zastępowania metody `COleControl::DoPropExchange`. Podczas ładowania, ta funkcja odczytuje numer wersji trwałych danych i ustawia atrybut wersji [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiekt odpowiednio. Podczas zapisywania, funkcja ta zapisuje numer wersji trwałych danych.
 
-Aby uzyskać więcej informacji na temat stanu trwałego i przechowywania wersji, zobacz artykuł [kontrolek ActiveX: serializacja](../../mfc/mfc-activex-controls-serializing.md).
+Aby uzyskać więcej informacji na temat stanu trwałego i przechowywania wersji, zobacz artykuł [kontrolek ActiveX: Serializacja](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1808,7 +1808,7 @@ Wskaźnik do interfejs ekspedycji czcionki zasobów formantu właściwość czci
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, że obiekt wywołujący musi zwolnić obiekt po zakończeniu. W ramach implementacji kontrolki, należy użyć `InternalGetFont` dostępu do podstawowego obiektu czcionki formantu. Aby uzyskać więcej informacji na temat korzystania z czcionek w kontrolce, zobacz artykuł [kontrolek ActiveX: przy użyciu czcionek w kontrolce ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Należy pamiętać, że obiekt wywołujący musi zwolnić obiekt po zakończeniu. W ramach implementacji kontrolki, należy użyć `InternalGetFont` dostępu do podstawowego obiektu czcionki formantu. Aby uzyskać więcej informacji na temat korzystania z czcionek w kontrolce, zobacz artykuł [kontrolek ActiveX: Używanie czcionek w kontrolce ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest obsługiwana przez `COleControl` klasy bazowej jako podstawowe metody o nazwie odświeżania. Dzięki temu użytkownicy kontrolki OLE do odświeżenia formantu o określonej godzinie. Aby uzyskać więcej informacji na temat tej metody, zobacz artykuł [kontrolek ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Ta funkcja jest obsługiwana przez `COleControl` klasy bazowej jako podstawowe metody o nazwie odświeżania. Dzięki temu użytkownicy kontrolki OLE do odświeżenia formantu o określonej godzinie. Aby uzyskać więcej informacji na temat tej metody, zobacz artykuł [kontrolek ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwości są: wygląd, kolor tła, BorderStyle, podpis, włączone, czcionki, ForeColor, hWnd i tekst. Aby uzyskać opis właściwości podstawowe, zobacz [kontrolek ActiveX: Dodawanie właściwości podstawowe](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Dostępne są następujące właściwości: Wygląd, kolor tła, BorderStyle, podpis, włączone, czcionki, ForeColor, hWnd i tekst. Aby uzyskać opis właściwości podstawowe, zobacz [kontrolek ActiveX: Dodawanie właściwości standardowych](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Możesz poprawić wydajność binarne inicjowanie kontrolki za pomocą `ResetStockProps` i `ResetVersion` do zastąpienia `COleControl::OnResetState`. Zobacz przykład poniżej. Aby uzyskać dodatkowe informacje dotyczące optymalizacji inicjowania zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Możesz poprawić wydajność binarne inicjowanie kontrolki za pomocą `ResetStockProps` i `ResetVersion` do zastąpienia `COleControl::OnResetState`. Zobacz przykład poniżej. Więcej informacji na temat optymalizowania inicjalizacji, zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Przykład
 
@@ -3659,7 +3659,7 @@ Numer wersji, która ma być przypisany do kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz poprawić wydajność binarne inicjowanie kontrolki za pomocą `ResetVersion` i `ResetStockProps` do zastąpienia `COleControl::OnResetState`. Zobacz przykład w [ResetStockProps](#resetstockprops). Aby uzyskać dodatkowe informacje dotyczące optymalizacji inicjowania zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Możesz poprawić wydajność binarne inicjowanie kontrolki za pomocą `ResetVersion` i `ResetStockProps` do zastąpienia `COleControl::OnResetState`. Zobacz przykład w [ResetStockProps](#resetstockprops). Więcej informacji na temat optymalizowania inicjalizacji, zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ Element `CArchive` obiektu do zserializowania do lub z.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeExtent`, `SerializeStockProps`, i `SerializeVersion` do zastąpienia `COleControl::Serialize`. Zobacz przykład poniżej. Aby uzyskać dodatkowe informacje dotyczące optymalizacji inicjowania zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeExtent`, `SerializeStockProps`, i `SerializeVersion` do zastąpienia `COleControl::Serialize`. Zobacz przykład poniżej. Więcej informacji na temat optymalizowania inicjalizacji, zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Przykład
 
@@ -3749,7 +3749,7 @@ Możesz poprawić wydajność binarne trwałości formantu za pomocą `Serialize
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Serializuje i inicjuje stan `COleControl` podstawowy właściwości: wygląd, kolor tła, BorderStyle, podpis, włączone, czcionki, ForeColor i tekst.
+Serializuje i inicjuje stan `COleControl` podstawowy właściwości: Wygląd, kolor tła, BorderStyle, podpis, włączone, czcionki, ForeColor i tekst.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ Element `CArchive` obiektu do zserializowania do lub z.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać opis właściwości podstawowe, zobacz [kontrolek ActiveX: Dodawanie właściwości podstawowe](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Aby uzyskać opis właściwości podstawowe, zobacz [kontrolek ActiveX: Dodawanie właściwości standardowych](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeStockProps`, `SerializeExtent`, i `SerializeVersion` do zastąpienia `COleControl::Serialize`. Na przykład wyświetlić kod w [SerializeExtent](#serializeextent). Aby uzyskać dodatkowe informacje dotyczące optymalizacji inicjowania zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeStockProps`, `SerializeExtent`, i `SerializeVersion` do zastąpienia `COleControl::Serialize`. Na przykład wyświetlić kod w [SerializeExtent](#serializeextent). Więcej informacji na temat optymalizowania inicjalizacji, zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ Numer wersji kontroli. W przypadku ładowania określonego archiwum `SerializeVe
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeVersion`, `SerializeExtent`, i `SerializeStockProps` do zastąpienia `COleControl::Serialize`. Na przykład wyświetlić kod w [SerializeExtent](#serializeextent). Aby uzyskać dodatkowe informacje dotyczące optymalizacji inicjowania zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Możesz poprawić wydajność binarne trwałości formantu za pomocą `SerializeVersion`, `SerializeExtent`, i `SerializeStockProps` do zastąpienia `COleControl::Serialize`. Na przykład wyświetlić kod w [SerializeExtent](#serializeextent). Więcej informacji na temat optymalizowania inicjalizacji, zobacz [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ A **krótki** wartości (VT_I2), która zostanie użyta wyglądu kontrolki. Wart
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji o właściwości podstawowe, zobacz [kontrolek ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Aby uzyskać więcej informacji o właściwości podstawowe, zobacz [kontrolek ActiveX: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ Wartość OLE_COLOR ma być używany w tle rysowania kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Więcej informacji na temat korzystania z tej właściwości i innych związanych z właściwości, zobacz artykuł [kontrolek ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Więcej informacji na temat korzystania z tej właściwości i innych związanych z właściwości, zobacz artykuł [kontrolek ActiveX: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3952,7 +3952,7 @@ Wartość OLE_COLOR służący do pierwszego planu rysunku kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Więcej informacji na temat korzystania z tej właściwości i innych związanych z właściwości, zobacz artykuł [kontrolek ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Więcej informacji na temat korzystania z tej właściwości i innych związanych z właściwości, zobacz artykuł [kontrolek ActiveX: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja określa dwa formaty: CF_METAFILEPICT i trwałe właściwości ustawione.
+Domyślna implementacja określa dwa formaty: Ustaw CF_METAFILEPICT i trwałe właściwości.
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 

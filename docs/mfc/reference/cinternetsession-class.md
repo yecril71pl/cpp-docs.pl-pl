@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519296"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178164"
 ---
 # <a name="cinternetsession-class"></a>Klasa CInternetSession
 
@@ -98,10 +98,10 @@ Jeśli otworzysz na adres URL na serwerze Internetu za pomocą `OpenURL`, można
 
 `CInternetSession` Funkcje Członkowskie [SetCookie](#setcookie), [GetCookie](#getcookie), i [GetCookieLength](#getcookielength) zapewniają środki do zarządzania bazą danych pliku cookie Win32, za pomocą których obsługa serwerów i skrypty informacje o stanie dotyczących stacji roboczej użytkownika.
 
-Aby uzyskać więcej informacji na temat podstawowe zadania programowania Internet, zobacz artykuł [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md). Aby uzyskać ogólne informacje dotyczące używania klas MFC WinInet, zobacz artykuł [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Aby uzyskać więcej informacji na temat podstawowe zadania programowania Internet, zobacz artykuł [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md). Aby uzyskać ogólne informacje dotyczące używania klas MFC WinInet, zobacz artykuł [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` zgłosi [afxthrownotsupportedexception —](exception-processing.md#afxthrownotsupportedexception) dla typów nieobsługiwana usługa. Obecnie obsługiwane są tylko następujące typy usługi: protokołu FTP, HTTP, gopher i plików.
+> `CInternetSession` zgłosi [afxthrownotsupportedexception —](exception-processing.md#afxthrownotsupportedexception) dla typów nieobsługiwana usługa. Obecnie obsługiwane są tylko następujące typy usługi: FTP, HTTP, gopher i plików.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -223,7 +223,7 @@ Zdefiniowane przez aplikację kontekst identyfikatora.
 
 [Onstatuscallback —](#onstatuscallback) używa identyfikator kontekstu zwrócony przez `GetContext` zgłoszenia stanu określonej aplikacji. Na przykład gdy użytkownik aktywuje żądania internetowego, który obejmuje zwracania informacji o stanie, wywołanie zwrotne stanu używa identyfikator kontekstu, aby zgłosić stan dla tego konkretnego żądania. Jeśli użytkownik aktywuje dwa oddzielne żądania internetowe zarówno obejmują zwracania informacji o stanie, `OnStatusCallback` używa identyfikatorów kontekstu, zostać zwrócony stan o ich odpowiednie żądania. W związku z tym identyfikator kontekstu jest używana dla wszystkich operacji wywołania zwrotnego stanu i jest on skojarzony z sesji do czasu, sesja zostanie zakończona.
 
-Aby uzyskać więcej informacji na temat operacji asynchronicznych, zobacz artykuł [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md).
+Aby uzyskać więcej informacji na temat operacji asynchronicznych, zobacz artykuł [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -457,7 +457,7 @@ Najpierw musisz wywołać [EnableStatusCallback](#enablestatuscallback) z zalet 
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Wyszukiwanie adresu IP, nazwy zawarte w *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Pomyślnie odnaleziono adres IP o nazwie zawarte w *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Nawiązywanie połączenia z adresu gniazda ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) wskazywany przez *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Nawiązywanie połączenia z adresu gniazda ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) wskazywany przez *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Pomyślnie połączono z adresu gniazda (SOCKADDR), wskazywana przez *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Prośba o informacje dotyczące wysyłania do serwera. *LpvStatusInformation* parametr ma wartość NULL.|
 |INTERNET_STATUS_ REQUEST_SENT|Pomyślnie wysłano żądanie informacji, na serwerze. *LpvStatusInformation* parametr ma wartość NULL.|
@@ -475,7 +475,7 @@ Zastąp tę funkcję elementu członkowskiego, aby wymagać niektóre akcje, prz
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-Aby uzyskać więcej informacji na temat operacji asynchronicznych, zobacz artykuł [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md).
+Aby uzyskać więcej informacji na temat operacji asynchronicznych, zobacz artykuł [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="openurl"></a>  CInternetSession::OpenURL
 

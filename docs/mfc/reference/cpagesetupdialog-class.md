@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544888"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178085"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -142,7 +142,7 @@ Co najmniej jeden flagi używane do dostosowywania ustawień w oknie dialogowym.
 
 - PSD_DISABLEORIENTATION wyłącza formantu okna dialogowego orientacja strony.
 
-- Powoduje, że PSD_RETURNDEFAULT `CPageSetupDialog` do zwrócenia [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktur, które są inicjowane dla domyślną drukarkę systemu bez wyświetlania okna dialogowego. Zakłada się, że oba `hDevNames` i `hDevMode` mają wartość NULL; w przeciwnym razie funkcja zwraca błąd. Jeśli zostanie użyta drukarka domyślna systemu jest obsługiwany przez stary sterownika drukarki (starszych niż Windows w wersji 3.0 lub nowszej), tylko `hDevNames` jest zwracana; `hDevMode` ma wartość NULL.
+- Powoduje, że PSD_RETURNDEFAULT `CPageSetupDialog` do zwrócenia [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktur, które są inicjowane dla domyślną drukarkę systemu bez wyświetlania okna dialogowego. Zakłada się, że oba `hDevNames` i `hDevMode` mają wartość NULL; w przeciwnym razie funkcja zwraca błąd. Jeśli zostanie użyta drukarka domyślna systemu jest obsługiwany przez stary sterownika drukarki (starszych niż Windows w wersji 3.0 lub nowszej), tylko `hDevNames` jest zwracana; `hDevMode` ma wartość NULL.
 
 - PSD_DISABLEPAPER wyłącza kontrolkę wyboru papieru.
 
@@ -171,7 +171,7 @@ Użyj [DoModal](../../mfc/reference/cdialog-class.md#domodal) funkcję, aby wyś
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Tworzy kontekst urządzenia drukarki z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.
+Tworzy kontekst urządzenia drukarki z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Wskaźnik do [Prostokąt](rect-structure.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który opisuje (w calach 1/1000 lub mm 1/100) marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
+Wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który opisuje (w calach 1/1000 lub mm 1/100) marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
 
 *lpRectMinMargins*<br/>
 Wskaźnik do `RECT` struktury lub `CRect` obiekt, który opisuje (w calach 1/1000 lub mm 1/100), minimalna marginesów wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowany prostokąta.
@@ -341,7 +341,7 @@ Określa komunikat, wskazujący obszarze strony obecnie rysowania. Może to być
 - Obszar WM_PSD_YAFULLPAGERECT dla reprezentacji adres zwrotny. Rozszerza ten obszar do krawędzi obszaru przykładowej strony.
 
 *lprect —*<br/>
-Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](rect-structure.md) obiekt, który zawiera współrzędne obszaru.
+Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) obiekt, który zawiera współrzędne obszaru.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463014"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178983"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parametry
 
 *pSize*<br/>
-Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która odbiera rozmiar elementów.
+Wskaźnik do [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) strukturę, która odbiera rozmiar elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1247,7 +1247,7 @@ Przycisk informacje o stanie w przypadku powodzenia lub - 1, w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest szczególnie przydatne, jeśli chcesz pobrać więcej niż jednego Stany przycisku. Aby pobrać tylko jednego stanu, użyj jednej z następujących funkcji elementów członkowskich: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), lub [IsButtonIndeterminate](#isbuttonindeterminate). Jednak `GetState` funkcja członkowska jest jedynym sposobem, aby wykryć TBSTATE_WRAP stanu przycisku.
+Ta funkcja jest szczególnie przydatne, jeśli chcesz pobrać więcej niż jednego Stany przycisku. Aby pobrać tylko jednego stanu, użyj jednej z następujących funkcji elementów członkowskich: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), lub [IsButtonIndeterminate](#isbuttonindeterminate). Jednak `GetState` funkcja członkowska jest jedynym sposobem, aby wykryć TBSTATE_WRAP stanu przycisku.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartoś
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest szczególnie przydatne, jeśli chcesz ustawić więcej niż jeden Stany przycisku. Można ustawić tylko jednego stanu, użyj jednej z następujących funkcji elementów członkowskich: [enablebutton —](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [nieokreślone](#indeterminate), lub [PressButton](#pressbutton).
+Ta funkcja jest szczególnie przydatne, jeśli chcesz ustawić więcej niż jeden Stany przycisku. Można ustawić tylko jednego stanu, użyj jednej z następujących funkcji elementów członkowskich: [Enablebutton —](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [nieokreślony](#indeterminate), lub [PressButton](#pressbutton).
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 
