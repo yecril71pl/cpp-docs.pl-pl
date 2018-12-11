@@ -21,7 +21,7 @@ ms.locfileid: "50662348"
 ## <a name="syntax"></a>Składnia
 
 *instrukcji iteracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**gdy (***wyrażenie***)***— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**gdy (**  *wyrażenie*  **)**  *instrukcja*
 
 *Wyrażenie* musi mieć typ arytmetyczny lub wskaźnika. Wykonanie działa w następujący sposób:
 
