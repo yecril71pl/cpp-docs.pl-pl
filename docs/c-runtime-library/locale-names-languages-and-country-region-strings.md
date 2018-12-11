@@ -1,6 +1,6 @@
 ---
 title: Nazwy lokalne, języki i ciągi Kraj / Region
-ms.date: 08/13/2018
+ms.date: 12/10/2018
 f1_keywords:
 - c.strings
 helpviewer_keywords:
@@ -10,24 +10,29 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 8776cdc37cc816151db6e7f441df5686da5c1ae0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df36aafde9a61a1fd590a7f60b3c17131aadbb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601737"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248549"
 ---
-# <a name="locale-names-languages-and-countryregion-strings"></a>Nazwy lokalne, języki i ciągi kraj/region
+# <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Nazwy UCRT lokalne, języki i Kraj/Region ciągów
 
-*Ustawień regionalnych* argument `setlocale` i `_create_locale` funkcje można ustawić za pomocą nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych, które są obsługiwane przez Windows NLS API. *Ustawień regionalnych* argument ma następującą postać:
+*Ustawień regionalnych* argument [setlocale, \_wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md), [ \_tworzenie\_ustawień regionalnych](../c-runtime-library/reference/create-locale-wcreate-locale.md), i [ \_wcreate\_ustawień regionalnych](../c-runtime-library/reference/create-locale-wcreate-locale.md) funkcje można ustawić za pomocą nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych, które są obsługiwane przez Windows NLS API. *Ustawień regionalnych* argument ma następującą postać:
 
-> *Ustawienia regionalne* :: "*nazwa_ustawienia_regionalnego*" &nbsp; &nbsp; &nbsp; &nbsp;| "*języka*\[\_*kraj / region*]\[. *code_page*]] " &nbsp; &nbsp; &nbsp; &nbsp;| ". *code_page*" &nbsp; &nbsp; &nbsp; &nbsp;| "C" &nbsp; &nbsp; &nbsp; &nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| WARTOŚĆ NULL
+> *Ustawienia regionalne* :: "*nazwy ustawień regionalnych*"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| "*języka*\[**\_**_kraj / region_\[__.__ *strony kodowej*]] "<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| "__.__  *strony kodowej*"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| "C"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| WARTOŚĆ NULL
 
-Forma nazwy ustawień regionalnych jest preferowana; na przykład użyć `en-US` dla języka angielskiego (Stany Zjednoczone) lub `bs-Cyrl-BA` dla bośniackiego (cyrylica, Bośnia i Hercegowina). Zestaw nazw ustawień regionalnych jest opisany w [nazw ustawień regionalnych](/windows/desktop/Intl/locale-names). Aby uzyskać listę nazw ustawień regionalnych obsługiwanych przez wersję systemu operacyjnego Windows, zobacz **tagu języka** kolumny tabeli w [dodatek A: produktu zachowanie](https://msdn.microsoft.com/library/cc233982.aspx) w [MS-LCID]: Windows języka kodu identyfikator (LCID) Odwołanie. Ten zasób zawiera listę obsługiwanych części nazw ustawień regionalnych: języka, alfabetu i regionu. Aby uzyskać informacje o obsługiwanych nazw ustawień regionalnych, które mają inne niż domyślne, zobacz **nazwy ustawień regionalnych** kolumny w [identyfikatory kolejności sortowania](/windows/desktop/Intl/sort-order-identifiers). W obszarze Windows 10 lub nowszym nazwy ustawień regionalnych, które odpowiadają prawidłowych tagów języka BCP 47 są dozwolone. Na przykład `jp-US` jest poprawny tag BCP 47, ale jest efektywne tylko `US` dla funkcji ustawień regionalnych.
+*Nazwy ustawień regionalnych* formularz jest krótka, standaryzowane IETF ciągu, na przykład `en-US` dla języka angielskiego (Stany Zjednoczone) lub `bs-Cyrl-BA` dla bośniackiego (cyrylica, Bośnia i Hercegowina). Te formularze są preferowane. Aby uzyskać listę nazw ustawień regionalnych obsługiwanych przez wersję systemu operacyjnego Windows, zobacz **tagu języka** kolumny tabeli w [dodatek A: Zachowanie produktu](https://msdn.microsoft.com/library/cc233982.aspx) w [MS-LCID]: Dokumentacja identyfikator (LCID) Windows języka kodu. Ten zasób zawiera listę obsługiwanych części nazw ustawień regionalnych: języka, alfabetu i regionu. Aby uzyskać informacje o obsługiwanych nazw ustawień regionalnych, które mają inne niż domyślne, zobacz **nazwy ustawień regionalnych** kolumny w [identyfikatory kolejności sortowania](/windows/desktop/Intl/sort-order-identifiers). W obszarze nazw 10 lub nowszym, ustawienia regionalne systemu Windows, które odpowiadają na prawidłowe [BCP 47](https://tools.ietf.org/html/bcp47) tagów języka są dozwolone. Na przykład `jp-US` jest poprawny tag BCP 47, ale jest efektywne tylko `US` dla funkcji ustawień regionalnych.
 
-*Języka*[*_country_region*[. *code_page*]] formularza są przechowywane w ustawieniach regionalnych dla kategorii, gdy ciąg języka lub ciąg języka i ciąg kraju/regionu jest używany do tworzenia ustawień regionalnych. Zestaw obsługiwanych ciągów języka jest opisany w [Language Strings](../c-runtime-library/language-strings.md), i listę ciągów obsługiwanych kraju/regionu znajduje się w [ciągi Kraj/Region](../c-runtime-library/country-region-strings.md). Jeśli określony język nie jest skojarzony z określonym krajem/regionem, język domyślny dla określonego kraju/regionu jest przechowywany w ustawieniach regionalnych. Nie zaleca się tej formy dla ciągów ustawień regionalnych osadzonych w kodzie lub szeregowanych w pamięci, ponieważ jest bardziej prawdopodobne, że aktualizacja systemu operacyjnego je zmieni, w przeciwieństwie do formy nazwy ustawień regionalnych.
+*Języka*\[**\_**_kraj / region_\[__.__ *strony kodowej*]] formularza są przechowywane w ustawieniach regionalnych dla kategorii, gdy ciąg języka lub ciąg języka i ciąg kraju lub regionu, służy do tworzenia ustawień regionalnych. Zestaw obsługiwanych ciągów języka jest opisany w [Language Strings](../c-runtime-library/language-strings.md), a lista obsługiwanych ciągów kraju i regionu znajduje się w [ciągi Kraj/Region](../c-runtime-library/country-region-strings.md). Jeśli określony język nie jest skojarzony z określonym kraju lub regionu, język domyślny dla określonego kraju lub regionu jest przechowywany w ustawieniach regionalnych. Nie zaleca się tej formy dla ciągów ustawień regionalnych osadzonych w kodzie lub szeregowanych w pamięci, ponieważ jest bardziej prawdopodobne, że aktualizacja systemu operacyjnego je zmieni, w przeciwieństwie do formy nazwy ustawień regionalnych.
 
-Strona kodowa to strona kodowa ANSI/OEM skojarzona z ustawieniami regionalnymi. Strona kodowa jest określana automatycznie po określeniu ustawień regionalnych za pomocą wyłącznie języka lub języka i kraju/regionu. Specjalna wartość `.ACP` Określa stronę kodową ANSI dla kraju/regionu. Specjalna wartość `.OCP` Określa stronę kodową OEM dla kraju/regionu. Na przykład, jeśli określisz `"Greek_Greece.ACP"` jako ustawienie regionalne, ustawienie regionalne jest przechowywane jako `Greek_Greece.1253` (na stronę kodową ANSI dla języka greckiego), a jeśli określisz `"Greek_Greece.OCP"` jako ustawienie regionalne, jest przechowywany jako `Greek_Greece.737` (stronę kodową OEM dla języka greckiego). Aby uzyskać więcej informacji dotyczących stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md). Aby uzyskać listę stron kodowych obsługiwanych w Windows, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).
+*Strony kodowej* jest strona kodowa ANSI/OEM, który jest skojarzony z ustawieniami regionalnymi. Strona kodowa jest określana automatycznie po określeniu ustawień regionalnych za pomocą wyłącznie języka lub języka i kraju/regionu. Specjalna wartość `.ACP` Określa stronę kodową ANSI dla kraju/regionu. Specjalna wartość `.OCP` Określa stronę kodową OEM dla kraju/regionu. Na przykład, jeśli określisz `"Greek_Greece.ACP"` jako ustawienie regionalne, ustawienie regionalne jest przechowywane jako `Greek_Greece.1253` (na stronę kodową ANSI dla języka greckiego), a jeśli określisz `"Greek_Greece.OCP"` jako ustawienie regionalne, jest przechowywany jako `Greek_Greece.737` (stronę kodową OEM dla języka greckiego). Aby uzyskać więcej informacji dotyczących stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md). Aby uzyskać listę stron kodowych obsługiwanych w Windows, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).
 
 Jeśli używasz tylko strony kodowej Aby określić ustawienia regionalne, domyślny język i kraj/region użytkownika zgłoszonej przez [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) są używane. Na przykład, jeśli określisz `".1254"` (turecki ANSI) jako ustawienie regionalne dla użytkownika, który jest skonfigurowany dla języka angielskiego (Stany Zjednoczone), ustawienia regionalne, który jest przechowywany jest `English_United States.1254`. Nie zaleca się tej formy, ponieważ może to prowadzić do niespójnego zachowania.
 
@@ -35,7 +40,8 @@ A *ustawień regionalnych* wartość argumentu `C` określa minimalne środowisk
 
 Można określić wszystkie kategorie ustawień regionalnych, w tym samym czasie dla `setlocale` i `_wsetlocale` funkcji przy użyciu `LC_ALL` kategorii. Kategorie można ustawić na te same ustawienia regionalne lub każdą kategorię można ustawić indywidualnie przy użyciu argumentu ustawień regionalnych, który ma tę formę:
 
-> LC_ALL_specifier:: ustawienia regionalne &nbsp; &nbsp; &nbsp; &nbsp;| [LC_COLLATE ustawienia regionalne =] [; LC_CTYPE ustawienia regionalne =] [; LC_MONETARY ustawienia regionalne =] [; LC_NUMERIC ustawienia regionalne =] [; LC_TIME ustawienia regionalne =]
+> *LC-ALL-specifier* :: *ustawień regionalnych*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| \[**LC_COLLATE =**_ustawień regionalnych_]\[**; LC_CTYPE =**_ustawień regionalnych_]\[**; LC_MONETARY =**_ustawień regionalnych_]\[**; LC_NUMERIC =**_ustawień regionalnych_]\[**; LC_TIME =**_ustawień regionalnych_]
 
 Można określić wiele typów kategorii, oddzielając je średnikami. Typy kategorii, które nie są określone, używają bieżących ustawień regionalnych. Na przykład, następujący fragment kodu ustawia bieżące ustawienia regionalne dla wszystkich kategorii na `de-DE`, a następnie ustawia kategorie `LC_MONETARY` do `en-GB` i `LC_TIME` do `es-ES`:
 

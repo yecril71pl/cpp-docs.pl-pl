@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598824"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248575"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -62,7 +62,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/ homeparams](homeparams-copy-register-parameters-to-stack.md)|Wymusza zapisanie parametrów przekazanych w rejestrach były zapisywane do ich lokalizacji na stosie wejściu do funkcji. Ta opcja kompilatora jest tylko w przypadku x64 kompilatory (kompilacja natywna i krzyżowa).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz hotpatchable.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generuje fast transcendentals.|
-|[QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji pomocnika `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagany. (tylko x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji pomocnika `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagany. (tylko x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia wewnątrz `try` bloków.|
 |[/Qpar](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętli.|
 |[/ Qpar raport](qpar-report-auto-parallelizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznego przetwarzania równoległego.|
@@ -207,7 +207,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Przestarzałe. Umożliwia szybkie testy. Użyj [rtc1](rtc-run-time-error-checks.md) zamiast tego.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
-|[QIfist](qifist-suppress-ftol.md)|Przestarzałe. Gdy jest używany do określenia jak konwertować z typu zmiennoprzecinkowego na typ całkowity.|
+|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Gdy jest używany do określenia jak konwertować z typu zmiennoprzecinkowego na typ całkowity.|
 |[/V](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji pliku .obj.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Nieaktualne. Wykrywa problemy przenośności w programowaniu 64-bitowych.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje debugowania we wszystkich plikach obiektu. Użyj [/zi](z7-zi-zi-debug-information-format.md) zamiast tego.|
