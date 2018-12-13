@@ -162,7 +162,7 @@ class array;
 |Operator|Opis|
 |-|-|
 |[Array::operator =](#op_eq)|Zastępuje kontrolowanej sekwencji.|
-|[Array::operator]](#op_at)|Uzyskuje dostęp do elementu na określonej pozycji.|
+|[Array::operator[]](#op_at)|Uzyskuje dostęp do elementu na określonej pozycji.|
 
 ## <a name="remarks"></a>Uwagi
 

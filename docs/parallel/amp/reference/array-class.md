@@ -77,7 +77,7 @@ Ranga tablicy.
 |----------|-----------------|
 |[Operator std::vector&lt;value_type&gt;](#operator_vec)|Używa `copy(*this, vector)` można niejawnie przekonwertować tablicę do std::[wektor](../../../standard-library/vector-class.md) obiektu.|
 |[operator()](#operator_call)|Zwraca wartość elementu, która jest określona przez parametry.|
-|[Operator]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
+|[Operator[]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `array` obiektu do wskazanego.|
 
 ### <a name="public-constants"></a>Publiczne stałe

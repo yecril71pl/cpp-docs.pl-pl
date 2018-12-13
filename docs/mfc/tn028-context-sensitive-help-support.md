@@ -20,7 +20,7 @@ ms.locfileid: "51520159"
 Ta uwaga opisuje zasady przypisywania identyfikatorów kontekstów pomocy i innych problemów pomocy w MFC. Obsługa pomocy kontekstowej wymaga kompilatora plików pomocy, które są dostępne w programie Visual C++.
 
 > [!NOTE]
->  Oprócz wykonywania za pomocą WinHelp pomocy kontekstowej, biblioteka MFC obsługuje korzystanie z pomocy HTML. Aby uzyskać więcej informacji na temat tej pomocy technicznej i programowania, korzystając z pomocy HTML, zobacz [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Oprócz wykonywania za pomocą WinHelp pomocy kontekstowej, biblioteka MFC obsługuje korzystanie z pomocy HTML. Aby uzyskać więcej informacji na temat tej pomocy technicznej i programowania, korzystając z pomocy HTML, zobacz [Pomoc HTML: pomoc kontekstowa do programów](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Typy obsługiwane pomocy
 

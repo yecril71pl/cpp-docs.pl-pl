@@ -21,7 +21,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Generuje zestaw plików pomocy dla pomocy kontekstowej, dostępnej za pomocą menu Pomoc i F1 lub klikając **pomocy** przycisku w oknie dialogowym. Obsługa pomocy wymaga kompilatora plików pomocy. Jeśli nie masz kompilatora plików pomocy, o zainstaluj go, uruchamiając ponownie Instalatora.
 
-   Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.
+   Zobacz [Pomoc HTML: pomoc kontekstowa do programów](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.
 
 - **Drukowanie i Podgląd wydruku**
 

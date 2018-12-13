@@ -94,7 +94,7 @@ Ranga `array_view` obiektu.
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator()](#operator_call)|Zwraca wartość elementu, który jest określony przez parametr lub parametry.|
-|[Operator]](#operator_at)|Zwraca element, który jest określony przez parametry.|
+|[operator[]](#operator_at)|Zwraca element, który jest określony przez parametry.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `array_view` obiektu do wskazanego.|
 
 ### <a name="public-constants"></a>Publiczne stałe
