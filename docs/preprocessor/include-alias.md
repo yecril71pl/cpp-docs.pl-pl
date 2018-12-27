@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573174"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587879"
 ---
 # <a name="includealias"></a>include_alias
 
-Określa, że *short_filename* ma być używany jako alias *long_filename*.
+Określa, że w przypadku *alias_filename* znajduje się w `#include` zastępuje dyrektywy, kompilator *actual_filename* w tym miejscu.
 
 ## <a name="syntax"></a>Składnia
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias ("*alias_filename*","*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
 
 ## <a name="remarks"></a>Uwagi
 
-Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Gdy kompilator napotka *long_filename* ciągu, zastępuje *short_filename*, a szuka pliku nagłówka *short_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
+**Include_alias** dyrektywa pragmy pozwala zastąpić pliki, które mają różne nazwy lub ścieżki do nazwy pliku dołączane przez pliki źródłowe. Na przykład niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Gdy kompilator napotka *alias_filename* ciągu, zastępuje *actual_filename*, a szuka pliku nagłówka *actual_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ Ponadto, następująca dyrektywa generuje błąd:
 Należy pamiętać, że nazwa pliku zgłaszana w komunikatach o błędach lub jako wartość wstępnie zdefiniowanego `__FILE__` makro, to nazwa pliku, po wykonaniu podstawienia. Na przykład wyświetlić dane wyjściowe po następujących dyrektywach:
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 Błąd w VERYLONGFILENAME. H generuje następujący komunikat o błędzie:
@@ -101,7 +101,7 @@ Należy również zauważyć, że przechodniość nie jest obsługiwana. Biorąc
 #include "one.h"
 ```
 
-kompilator wyszuka plik TWO.H zamiast THREE.H.
+Kompilator wyszuka plik two.h zamiast three.h.
 
 ## <a name="see-also"></a>Zobacz też
 

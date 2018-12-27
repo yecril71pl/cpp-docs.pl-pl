@@ -2,12 +2,12 @@
 title: alignof i alignas (C++)
 ms.date: 11/04/2016
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-ms.openlocfilehash: e5d023d7969764bdd36030a508abdd94068e48b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 825df25494497e13d29212f7f951be8247b6f136
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493655"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411926"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof i alignas (C++)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50493655"
 
 ## <a name="example"></a>Przykład
 
-Możesz użyć **alignas** na klasę uderzeniu lub Unii, lub na poszczególnych elementów członkowskich. Gdy wiele **alignas** specyfikatory zostaną napotkane, kompilator wybierze najbardziej rygorystyczne z nich (jedna o największej wartości).
+Możesz użyć **alignas** na klasy, struktury lub Unii lub na poszczególnych elementów członkowskich. Gdy wiele **alignas** specyfikatory zostaną napotkane, kompilator wybierze najbardziej rygorystyczne z nich (jedna o największej wartości).
 
 ```cpp
 // alignas_alignof.cpp

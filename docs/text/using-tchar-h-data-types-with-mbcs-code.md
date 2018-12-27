@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510711"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626672"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 
@@ -43,7 +43,7 @@ Poniżej przedstawiono trzy rozwiązania do zapobiegania ten konflikt typu (i os
     #define _USE_INLINING
     ```
 
-   Ta metoda powoduje, że thunk funkcji wbudowanych, podany w pliku Tchar.h procedury — zwykły tekst bezpośrednio mapować do odpowiedniej procedury MBCS. W poniższym fragmencie kodu z pliku Tchar.h przykład jak to zrobić.
+   Ta metoda powoduje, że thunk funkcji wbudowanych, podany w pliku tchar.h procedury — zwykły tekst bezpośrednio mapować do odpowiedniej procedury MBCS. W poniższym fragmencie kodu z pliku tchar.h przykład jak to zrobić.
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -58,7 +58,7 @@ Poniżej przedstawiono trzy rozwiązania do zapobiegania ten konflikt typu (i os
     #define _MB_MAP_DIRECT
     ```
 
-   To podejście oferuje szybkie alternatywna, jeśli nie mają być używane domyślne zachowanie lub nie można użyć ze śródwierszowaniem. Powoduje procedury zwykłego tekstu mają być mapowane przez makro bezpośrednio do wersji MBCS standardowego, jak w poniższym przykładzie z Tchar.h.
+   To podejście oferuje szybkie alternatywna, jeśli nie mają być używane domyślne zachowanie lub nie można użyć ze śródwierszowaniem. Powoduje procedury zwykłego tekstu mają być mapowane przez makro bezpośrednio do wersji MBCS standardowego, jak w poniższym przykładzie z tchar.h.
 
     ```cpp
     #define _tcschr _mbschr
@@ -68,4 +68,4 @@ Poniżej przedstawiono trzy rozwiązania do zapobiegania ten konflikt typu (i os
 
 ## <a name="see-also"></a>Zobacz też
 
-[Mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Mapowania typ ogólny tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: wdrażanie Twojego programu (C++)'
+title: 'Przewodnik: Wdrażanie Twojego programu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496437"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657516"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Wskazówki: wdrażanie Twojego programu (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Przewodnik: Wdrażanie Twojego programu (C++)
 
 Teraz, gdy utworzono aplikację wykonując wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), ostatnim krokiem jest utworzenie Instalatora, tak aby inni użytkownicy mogą Zainstaluj program na swoich komputerach. Dla Instalatora dodasz nowy projekt do istniejącego rozwiązania. Dane wyjściowe tego nowego projektu to plik setup.exe, który zainstaluje twoją aplikację na innym komputerze.
 
@@ -62,7 +62,7 @@ Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. 
 
 1. W **Eksploratora rozwiązań**, wybierz opcję **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
 
-1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http://www.contoso.com* dla **SupportUrl**.
+1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http\:/ / www.contoso.com* dla **SupportUrl**.
 
 1. Na pasku menu wybierz **kompilacji** > **programu Configuration Manager**. W **projektu** tabeli, w obszarze **kompilacji** kolumny, zaznacz pole **Instalator gry**. Kliknij przycisk **Zamknij**.
 
@@ -72,7 +72,7 @@ Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. 
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Poprzednie:** [Przewodnik: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Zobacz też
 

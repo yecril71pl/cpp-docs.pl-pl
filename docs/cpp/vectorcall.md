@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507227"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627455"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Microsoft Specific**
 
-**__Vectorcall** konwencji wywoływania Określa, że argumenty funkcji są przekazywane do rejestrów, gdy jest to możliwe. **__vectorcall** używa więcej rejestrów dla argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md) użycia. **__Vectorcall** konwencja wywołania jest obsługiwana tylko w kodzie macierzystym na procesorach x86 i x64, obejmujących Streaming SIMD Extensions 2 (SSE2) i nowszych. Użyj **__vectorcall** przyspieszyć funkcje, które wychodzą za kilka zmiennoprzecinkowego lub argumentów wektora SIMD i wykonywać operacje, które wykorzystują argumenty załadowane w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 **__vectorcall**. Różnice zostały wyjaśnione w dalszej części tego artykułu.
+**__Vectorcall** konwencji wywoływania Określa, że argumenty funkcji są przekazywane do rejestrów, gdy jest to możliwe. **__vectorcall** używa więcej rejestrów dla argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/x64-calling-convention.md) użycia. **__Vectorcall** konwencja wywołania jest obsługiwana tylko w kodzie macierzystym na procesorach x86 i x64, obejmujących Streaming SIMD Extensions 2 (SSE2) i nowszych. Użyj **__vectorcall** przyspieszyć funkcje, które wychodzą za kilka zmiennoprzecinkowego lub argumentów wektora SIMD i wykonywać operacje, które wykorzystują argumenty załadowane w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 **__vectorcall**. Różnice zostały wyjaśnione w dalszej części tego artykułu.
 
 |Element|Implementacja|
 |-------------|--------------------|

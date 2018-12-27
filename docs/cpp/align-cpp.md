@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440446"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627335"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Jak dopasować pakowania danych](#vclrfhowalignworkswithdatapacking)
 
-- [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) — x64 określonych 64
+- [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) — x64 określonych 64
 
-##  <a name="vclrfalignexamples"></a> Wyrównaj przykłady
+## <a name="vclrfalignexamples"></a> Wyrównaj przykłady
 
 W poniższych przykładach pokazano sposób `__declspec(align(#))` wpływa na rozmiar i wyrównanie struktur danych. W przykładach założono następujące definicje:
 
@@ -171,7 +171,7 @@ void fn() {
 
 Wyrównanie, jeśli pamięć została przydzielona na stosie, zależy od tego, która funkcja alokacji jest wywoływana.  Na przykład, jeśli używasz `malloc`, wynik zależy od wielkości operandu. Jeśli *arg* > = 8, pamięć, zwracany jest wyrównany 8 bajtów. Jeśli *arg* < 8, wyrównanie pamięci, zwracany jest pierwszy potęgą liczby 2 mniej niż *arg*. Na przykład jeśli korzystasz z malloc(7), wyrównanie wynosi 4 bajty.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Definiowanie nowych typów z __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> Definiowanie nowych typów z __declspec(align(#))
 
 Można zdefiniować typ za pomocą właściwości wyrównania.
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Teraz `aType` i `bType` są samej wielkości (8 bajtów), ale zmienne typu `bType` są wyrównane do 32 bajtów.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Wyrównywanie danych w pamięci lokalnej wątku
+## <a name="vclrfthreadlocalstorageallocation"></a> Wyrównywanie danych w pamięci lokalnej wątku
 
 Statyczne lokalny magazyn wątków (TLS) utworzone za pomocą `__declspec(thread)` atrybutu i umieścić w sekcji TLS w obrazie działa w przypadku wyrównania dokładnie tak samo jak normalne dane statyczne. Aby utworzyć dane TLS, system operacyjny przydziela pamięć rozmiarze sekcji TLS i uwzględnia atrybut wyrównania sekcji TLS.
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak dopasować pakowania danych
+## <a name="vclrfhowalignworkswithdatapacking"></a> Jak dopasować pakowania danych
 
 `/Zp` — Opcja kompilatora i `pack` pragma zapewniają efekt pakowania danych dla członków struktur i związków. Ten przykład pokazuje, jak `/Zp` i `__declspec(align(#))` współpracują ze sobą:
 
@@ -244,4 +244,4 @@ Przesunięcie obiektu bazuje na przesunięciu poprzedniego obiektu i bieżącemu
 
 [__declspec](../cpp/declspec.md)<br/>
 [Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)
+[x64 konwencje kodowania](../build/x64-software-conventions.md)

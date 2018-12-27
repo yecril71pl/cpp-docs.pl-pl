@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437952"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627270"
 ---
 # <a name="unicode-programming-summary"></a>Podsumowanie programowania Unicode
 
@@ -22,11 +22,11 @@ Aby móc korzystać z pomocy technicznej czasu wykonywania MFC i C obsługi stan
 
 - Określ punkt wejścia.
 
-   Na **dane wyjściowe** strony **konsolidatora** folderu w projekcie [stron właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe, zestaw **punktu wejścia** symbol `wWinMainCRTStartup`.
+   Na **zaawansowane** strony **konsolidatora** folderu w projekcie [stron właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe, zestaw **punktu wejścia** symbol `wWinMainCRTStartup`.
 
 - Użyj przenośne funkcji wykonawczej i typów.
 
-   Odpowiednie funkcje języka C w czasie wykonywania na użytek obsługi ciąg Unicode. Możesz użyć `wcs` rodzinę funkcji, możesz preferować przenośna pełni (w wielu krajach włączone) `_TCHAR` makra. Te makra są poprzedzone z `_tcs`; mogą zastąpić, jeden do jednego, dla `str` rodziny funkcji. Te funkcje są szczegółowo opisane w [internacjonalizacji](../c-runtime-library/internationalization.md) części *odwołanie do biblioteki wykonawczej*. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   Odpowiednie funkcje języka C w czasie wykonywania na użytek obsługi ciąg Unicode. Możesz użyć `wcs` rodzinę funkcji, możesz preferować przenośna pełni (w wielu krajach włączone) `_TCHAR` makra. Te makra są poprzedzone z `_tcs`; mogą zastąpić, jeden do jednego, dla `str` rodziny funkcji. Te funkcje są szczegółowo opisane w [internacjonalizacji](../c-runtime-library/internationalization.md) części *odwołanie do biblioteki wykonawczej*. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Użyj `_TCHAR` i powiązane przenośne typy danych opisanych w [Obsługa formatu Unicode](../text/support-for-unicode.md).
 
@@ -87,7 +87,7 @@ Aby podsumować, MFC i biblioteki wykonawczej zapewniają obsługę programowani
 
 - Biblioteka środowiska uruchomieniowego dostarcza wersje wszystkich funkcji obsługi ciągów Unicode. (Biblioteki wykonawczej dostarcza również wersje przenośnym odpowiednie dla Unicode lub MBCS. Są to `_tcs` makra.)
 
-- Tchar.h dostarcza przenośne typy danych i `_T` makra do tłumaczenia ciągów literałów i znaków. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Tchar.h dostarcza przenośne typy danych i `_T` makra do tłumaczenia ciągów literałów i znaków. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - Biblioteka środowiska uruchomieniowego zawiera wersja znaków dwubajtowych `main`. Użyj `wmain` aplikacji obsługujących Unicode.
 

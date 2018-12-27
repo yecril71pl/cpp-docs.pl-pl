@@ -1,6 +1,6 @@
 ---
 title: /Zp (Wyrównanie członka struktury)
-ms.date: 04/30/2018
+ms.date: 12/17/2018
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: 7b9176d42b2dac0082b6627f5338799660ded1f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518225"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627530"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Wyrównanie członka struktury)
 
@@ -53,7 +53,7 @@ Można również użyć [pakiet](../../preprocessor/pack.md) do sterowania struk
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Przykłady wyrównania struktury](../../build/examples-of-structure-alignment.md) — x64 określonych 64
+- [Przykłady wyrównania struktury](../../build/x64-software-conventions.md#examples-of-structure-alignment) — x64 określonych 64
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 

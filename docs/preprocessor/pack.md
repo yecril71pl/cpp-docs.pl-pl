@@ -1,6 +1,6 @@
 ---
 title: pakiet
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507604"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627517"
 ---
 # <a name="pack"></a>pakiet
 Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.
@@ -57,7 +57,7 @@ Aby uzyskać więcej informacji na temat sposobu modyfikowania wyrównania zobac
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) — x64 określonych 64
+- [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) — x64 określonych 64
 
    > [!WARNING]
    > Należy pamiętać, że w programie Visual Studio 2015 i nowszych można użyć operatory alignof i alignas standardowa którego, w przeciwieństwie do `__alignof` i `declspec( align )` można przenosić między kompilatory. C++ standard nie opisano kwestii pakowania, dlatego należy nadal używać **pakiet** (lub odpowiedniego rozszerzenia na inne kompilatory) do określenia wyrównania jest mniejszy niż rozmiar word architektury docelowej.

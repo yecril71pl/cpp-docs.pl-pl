@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486596"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657542"
 ---
 # <a name="texture-class"></a>texture — Klasa
 
@@ -76,7 +76,7 @@ Ranga tekstury.
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator()](#operator_call)|Zwraca wartość elementu, która jest określona przez parametry.|
-|[Operator]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
+|[Operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator=](#operator_eq)|Kopiuje określony [tekstury](texture-class.md) obiektu do wskazanego.|
 
 ### <a name="public-constants"></a>Publiczne stałe
@@ -103,7 +103,7 @@ Ranga tekstury.
 
 **Nagłówek:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="dtor"></a> ~ tekstury
 

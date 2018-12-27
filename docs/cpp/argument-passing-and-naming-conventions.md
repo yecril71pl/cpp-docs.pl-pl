@@ -1,6 +1,6 @@
 ---
 title: Przekazywanie argumentów i konwencje nazewnictwa
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473297"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627244"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Przekazywanie argumentów i konwencje nazewnictwa
 
@@ -31,11 +31,11 @@ Na x86 platformach wszystkie argumenty są rozszerzone do 32 bitów, gdy są prz
 Kompilator generuje prologu i epilogu do zapisywania i przywracania rejestrów ESI, EDI, EBX i EBP rejestruje, jeśli są one używane w funkcji.
 
 > [!NOTE]
->  Gdy struktura, Unia lub klasa jest zwracany przez funkcję według wartości, wszystkie definicje tego typu muszą być takie same, w przeciwnym razie program może zakończyć się niepowodzeniem w czasie wykonywania.
+> Gdy struktura, Unia lub klasa jest zwracany przez funkcję według wartości, wszystkie definicje tego typu muszą być takie same, w przeciwnym razie program może zakończyć się niepowodzeniem w czasie wykonywania.
 
 Aby uzyskać informacje dotyczące sposobu definiowania własnego kodu prologu i epilogu funkcji, zobacz [wywołania funkcji "naked"](../cpp/naked-function-calls.md).
 
-Aby uzyskać informacje o domyślnych konwencjach wywoływania w kodzie, które elementy docelowe x64 platform, zobacz [Przegląd x64 Konwencje wywoływania](../build/overview-of-x64-calling-conventions.md). Aby uzyskać informacje o problemach z Konwencją wywoływania w kodzie, który jest przeznaczony dla platform ARM, zobacz [typowe Visual C++ ARM problemy przy migracji](../build/common-visual-cpp-arm-migration-issues.md).
+Aby uzyskać informacje o domyślnych konwencjach wywoływania w kodzie, które elementy docelowe x64 platform, zobacz [x64 konwencji wywoływania](../build/x64-calling-convention.md). Aby uzyskać informacje o problemach z Konwencją wywoływania w kodzie, który jest przeznaczony dla platform ARM, zobacz [typowe Visual C++ ARM problemy przy migracji](../build/common-visual-cpp-arm-migration-issues.md).
 
 Poniższe konwencje wywoływania są obsługiwane przez kompilator Visual C/C++.
 

@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501754"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657568"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector — Klasa
 
@@ -121,7 +121,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Operator]](#operator_at)|Przeciążone. Zapewnia dostęp do elementu pod danym indeksem współbieżnego wektora. Ta metoda jest bezpieczna pod kątem współbieżności dla operacji odczytu, a także podczas powiększania wektora, tak długo, jak upewnieniu się, że wartość `_Index` jest mniejszy niż rozmiar współbieżnego wektora.|
+|[Operator\[\]](#operator_at)|Przeciążone. Zapewnia dostęp do elementu pod danym indeksem współbieżnego wektora. Ta metoda jest bezpieczna pod kątem współbieżności dla operacji odczytu, a także podczas powiększania wektora, tak długo, jak upewnieniu się, że wartość `_Index` jest mniejszy niż rozmiar współbieżnego wektora.|
 |[operator=](#operator_eq)|Przeciążone. Przypisuje zawartość innego `concurrent_vector` obiektu do wskazanego. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ## <a name="remarks"></a>Uwagi

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514637"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627466"
 ---
 # <a name="international-enabling"></a>Włączanie internacjonalizacji
 
@@ -27,7 +27,7 @@ Założeń dotyczących znakowe i manipulowania, które nie będą działać dob
 
    - Użyj tych samych funkcji wykonawczej przenośne wchodzące w MFC przenośne w ramach jednego środowiska.
 
-   - Wprowadzić ciągi literałów i znaki przenośne w ramach jednego środowiska za pomocą `_T` makra. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Wprowadzić ciągi literałów i znaki przenośne w ramach jednego środowiska za pomocą `_T` makra. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Podczas analizowania ciągów, w obszarze MBCS, należy zachować środki ostrożności. Te środki ostrożności nie są potrzebne w ramach standardu Unicode. Aby uzyskać więcej informacji, zobacz [porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md).
 

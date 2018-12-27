@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 29f60748f8ff0681a3a73e31cbb049c27c3a45be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e9b49bca6b94595186e69a900a28fe5e38522c
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656174"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657620"
 ---
 # <a name="cmapstringtoob-class"></a>Klasa CMapStringToOb
 
@@ -81,7 +81,7 @@ class CMapStringToOb : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[[] CMapStringToOb::operator](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
+|[CMapStringToOb::operator \[ \]](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 
 ## <a name="remarks"></a>Uwagi
 

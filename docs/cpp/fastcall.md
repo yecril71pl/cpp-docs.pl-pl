@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480044"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627367"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ ms.locfileid: "50480044"
 |Konwencja translacji wielkości liter|Translacja wielkości liter nie jest wykonywana.|
 
 > [!NOTE]
->  Przyszłe wersje kompilatora mogą używać innych rejestrów do przechowywania parametrów.
+> Przyszłe wersje kompilatora mogą używać innych rejestrów do przechowywania parametrów.
 
 Za pomocą [GR](../build/reference/gd-gr-gv-gz-calling-convention.md) — opcja kompilatora powoduje, że każda funkcja w module jest skompilowana jako **__fastcall** chyba że funkcja jest zadeklarowana przez użycie z atrybutem sprzecznych lub nazwą funkcji jest `main` .
 
-**__Fastcall** — słowo kluczowe jest akceptowane i ignorowane przez kompilatory, których platformą docelową ARM i x64 architektury; x64 mikroukładu, według Konwencji pierwsze cztery argumenty są przekazywane w rejestrach, jeżeli jest to możliwe, a dodatkowe argumenty są przekazywane na stosie. Aby uzyskać więcej informacji, zobacz [Przegląd x64 Konwencje wywoływania](../build/overview-of-x64-calling-conventions.md). W układzie ARM maksymalnie cztery liczby całkowitej argumentów i osiem argumentów zmiennoprzecinkowych może być przekazywane w rejestrach, a dodatkowe argumenty są przekazywane na stosie.
+**__Fastcall** — słowo kluczowe jest akceptowane i ignorowane przez kompilatory, których platformą docelową ARM i x64 architektury; x64 mikroukładu, według Konwencji pierwsze cztery argumenty są przekazywane w rejestrach, jeżeli jest to możliwe, a dodatkowe argumenty są przekazywane na stosie. Aby uzyskać więcej informacji, zobacz [x64 konwencji wywoływania](../build/x64-calling-convention.md). W układzie ARM maksymalnie cztery liczby całkowitej argumentów i osiem argumentów zmiennoprzecinkowych może być przekazywane w rejestrach, a dodatkowe argumenty są przekazywane na stosie.
 
 W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Biorąc pod uwagę tę definicję klasy:
 

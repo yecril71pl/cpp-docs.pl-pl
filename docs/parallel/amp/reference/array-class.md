@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523731"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657555"
 ---
 # <a name="array-class"></a>array — Klasa
 
@@ -77,7 +77,7 @@ Ranga tablicy.
 |----------|-----------------|
 |[Operator std::vector&lt;value_type&gt;](#operator_vec)|Używa `copy(*this, vector)` można niejawnie przekonwertować tablicę do std::[wektor](../../../standard-library/vector-class.md) obiektu.|
 |[operator()](#operator_call)|Zwraca wartość elementu, która jest określona przez parametry.|
-|[Operator[]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
+|[Operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `array` obiektu do wskazanego.|
 
 ### <a name="public-constants"></a>Publiczne stałe
@@ -121,7 +121,7 @@ Tablice są logicznie uznawane za typy wartości, ponieważ gdy tablica jest kop
 
 **Nagłówek:** amp.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ##  <a name="dtor"></a> ~ array
 

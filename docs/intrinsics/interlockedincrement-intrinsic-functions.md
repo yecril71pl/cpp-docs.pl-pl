@@ -1,6 +1,6 @@
 ---
 title: Funkcje wewnętrzne _interlockedincrement
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: aaa5918862c75c20fd6271109b3e8975709712b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509086"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626936"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedincrement
 
@@ -138,4 +138,4 @@ Przykład sposobu użycia `_InterlockedIncrement`, zobacz [_InterlockedDecrement
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+[Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: a72e6f1905bad81fc0d79c1f90e88e96fe8b110b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85bfa6cb82b4b1825ae9b9a9a0f3a9f06e579499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487805"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626711"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurowanie Visual C++ x64 64-bitowy, obiektów docelowych
 
@@ -21,13 +21,13 @@ Ta sekcja zawiera tematy dotyczące określania wartości docelowej x64 64-bitow
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Instrukcje: konfigurowanie projektów programu Visual C ++ dla wersji 64-bitowych, platformy docelowe x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Instrukcje: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Instrukcje: włączanie 64-bitowego zestawu narzędzi języka Visual C++ w wierszu polecenia](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Instrukcje: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Typowe problemy przy migracji Visual C++ w wersji 64-bitowej](../build/common-visual-cpp-64-bit-migration-issues.md)
 
-- [Konwencje kodowania x64](../build/x64-software-conventions.md)
+- [x64 konwencje kodowania](../build/x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

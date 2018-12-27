@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437273"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627348"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 
@@ -46,7 +46,7 @@ Obsługa biblioteki wykonawczej C i MFC MBCS, Unicode i jednobajtowych programow
 
 ### <a name="mbcsunicode-portability"></a>Przenośność MBCS/Unicode
 
-Przy użyciu pliku nagłówka w pliku Tchar.h, tworzyć MBCS, Unicode i jednobajtowych aplikacji z tego samego źródła. Tchar.h definiuje makra prefiksem *_tcs* , które mapowania na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Domyślnie `_MBCS` jest zdefiniowana dla aplikacji MFC. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Przy użyciu pliku nagłówka w pliku tchar.h, tworzyć MBCS, Unicode i jednobajtowych aplikacji z tego samego źródła. Tchar.h definiuje makra prefiksem *_tcs* , które mapowania na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Domyślnie `_UNICODE` jest zdefiniowana dla aplikacji MFC. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Zachowanie jest niezdefiniowane, jeśli zdefiniujesz zarówno `_UNICODE` i `_MBCS`.

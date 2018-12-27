@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAdd — funkcje wewnętrzne
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461597"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626909"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd — funkcje wewnętrzne
 
 **Microsoft Specific**
 
-Wykonaj dodatek atomic gwarantuje, że operacja zakończy się pomyślnie po wielu wątków mają dostęp do udostępnionej zmiennej.
+Te funkcje wykonać dodatek atomic upewnia się, że operacja zakończy się pomyślnie po więcej niż jeden wątek ma dostęp do udostępnionej zmiennej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -105,13 +105,13 @@ Obie funkcje zwracają wynik dodawania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wersje tych funkcji `_acq` lub `_rel` sufiksy przeprowadzić Dodawanie blokowane, zgodnie z semantyką nabywania lub wersji. Uzyskiwanie oznacza semantyki wynik operacji są widoczne we wszystkich wątkach i procesorów przed wszystkie kolejne pamięci operacji odczytu i zapisu. Uzyskiwanie jest przydatne w przypadku wprowadzania sekcję krytyczną. Semantyka wydania oznacza, że wszystkie pamięci, odczytów i zapisów wymuszono były widoczne dla wszystkich wątków i procesorów, zanim wynik operacji stają się widoczne dla samego. Wersja jest przydatne podczas opuszczania sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.
+Wersje tych funkcji `_acq` lub `_rel` sufiksy przeprowadzić Dodawanie blokowane, zgodnie z semantyką nabywania lub wersji. *Semantyka nabycia* oznacza, że wynik operacji stają się widoczne dla wszystkich wątków i procesorów przed wszystkie nowsze pamięci operacji odczytu i zapisu. Uzyskiwanie jest przydatne w przypadku wprowadzania sekcję krytyczną. *Zwolnij semantyki* wymuszenie były widoczne dla wszystkich wątków i procesorów, zanim wynik operacji stają się widoczne dla samego oznacza, że wszystkie pamięci operacji odczytu i zapisu. Wersja jest przydatne podczas opuszczania sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.
 
 Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+[Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

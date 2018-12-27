@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638233"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587892"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optymalizacje)
 
@@ -67,7 +67,7 @@ Domyślnie **/OPT:LBR** opcja jest ustawiona, gdy łączenie przyrostowe nie jes
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia, w wierszu polecenia, konsolidator wartość domyślna to **LBR/OPT: REF, ICF,**. Jeśli **/DEBUG** jest określony, wartością domyślną jest **NOLBR /OPT:NOREF, NOICR,**.
+W przypadku użycia, w wierszu polecenia, konsolidator wartość domyślna to **LBR/OPT: REF, ICF,**. Jeśli **/DEBUG** jest określony, wartością domyślną jest **NOLBR /OPT:NOREF, NOICF,**.
 
 **/OPT** optymalizacje ogólnie zmniejszają rozmiar obrazu i zwiększają szybkość programu. Te ulepszenia mogą być istotne w przypadku większych programów, dlatego są one włączone domyślnie dla sprzedaży detalicznej.
 

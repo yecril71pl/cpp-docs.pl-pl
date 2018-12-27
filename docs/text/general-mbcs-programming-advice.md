@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501845"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626698"
 ---
 # <a name="general-mbcs-programming-advice"></a>Ogólne porady dotyczące programowania MBSC
 
 Użyj następujących wskazówek:
 
-- Elastyczność, użyj makra w czasie wykonywania takich jak `_tcschr` i `_tcscpy` gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Elastyczność, użyj makra w czasie wykonywania takich jak `_tcschr` i `_tcscpy` gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - Użyj środowiska wykonawczego języka C `_getmbcp` funkcję, aby uzyskać informacje o bieżącej stronie kodowej.
 

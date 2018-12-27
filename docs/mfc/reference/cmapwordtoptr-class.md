@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-ms.openlocfilehash: 5df8d9e853d934d8c83398cc266c6f49634fa9e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33cea9e7c88b8018af544e129e88349f5b83e78c
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605143"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657451"
 ---
 # <a name="cmapwordtoptr-class"></a>Klasa CMapWordToPtr
 
@@ -89,7 +89,7 @@ na przykład przekłada się na
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 
 ## <a name="remarks"></a>Uwagi
 
