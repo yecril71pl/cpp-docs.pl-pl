@@ -220,7 +220,7 @@ move_iterator operator+(difference_type _Off) const;
 
 Operator zwraca `move_iterator(*this) +=` `_Off`.
 
-## <a name="op_at"></a>  move_iterator::operator]
+## <a name="op_at"></a>  move_iterator::operator\[\]
 
 Umożliwia dostęp do indeksu tablicy elementów w zakresie `move iterator`.
 
