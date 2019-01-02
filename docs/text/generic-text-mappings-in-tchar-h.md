@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627510"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978299"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny tekst w pliku tchar.h
 
 Aby uprościć transport kodu do użytku międzynarodowego, biblioteki wykonawczej Microsoft przewiduje mapowania typ ogólny tekst specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Możesz użyć tych mapowań, które są zdefiniowane w pliku tchar.h, aby napisać kod ogólny, który może być kompilowane dla pojedynczych bajtów, wielobajtowego, lub zestawy znaków Unicode, w zależności od stała manifestu, który zdefiniujesz przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
 
-Za pomocą tchar.h, można utworzyć zestawu znaków wielobajtowych (MBCS), aplikacji nieobsługujących kodu Unicode z tego samego źródła i jednobajtowych. Tchar.h definiuje makra (które mają prefiks `_tcs`), za pomocą prawidłowe definicje preprocesora, mapowanie na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Aby skompilować aplikację jednobajtowych, zdefiniuj ani (ustawienie domyślne). Domyślnie `_MBCS` jest zdefiniowana dla aplikacji MFC.
+Za pomocą tchar.h, można utworzyć zestawu znaków wielobajtowych (MBCS), aplikacji nieobsługujących kodu Unicode z tego samego źródła i jednobajtowych. Tchar.h definiuje makra (które mają prefiks `_tcs`), za pomocą prawidłowe definicje preprocesora, mapowanie na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Aby skompilować aplikację jednobajtowych, zdefiniuj ani (ustawienie domyślne). Domyślnie `_UNICODE` jest zdefiniowana dla aplikacji MFC.
 
 `_TCHAR` Typ danych jest zdefiniowany w pliku tchar.h w warunkowo. Jeśli symbol `_UNICODE` jest zdefiniowany dla kompilacji, `_TCHAR` jest zdefiniowany jako **wchar_t**; w przeciwnym razie jednobajtowe i MBCS kompilacji jest zdefiniowana jako **char**. (**wchar_t**, podstawowy typ danych szerokich znaków Unicode jest odpowiednikiem 16-bitowych do 8-bitowej podpisanej **char**.) Aplikacje międzynarodowe, można użyć `_tcs` rodziny funkcji, które działają w `_TCHAR` jednostek, nie w bajtach. Na przykład `_tcsncpy` kopie `n` `_TCHARs`, a nie `n` bajtów.
 

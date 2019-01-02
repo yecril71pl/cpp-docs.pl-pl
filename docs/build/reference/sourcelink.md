@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480993"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978286"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink obejmują pliki w pliku PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (zawierają Link źródłowy plik w pliku PDB)
 
-Określa plik konfiguracji SourceLink do uwzględnienia w pliku PDB wygenerowany przez konsolidator.
+Określa Link źródłowy plik konfiguracji do uwzględnienia w pliku PDB wygenerowany przez konsolidator.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ Określa sformatowanego JSON konfiguracji pliku, który zawiera prostego mapowan
 
 ## <a name="remarks"></a>Uwagi
 
-SourceLink jest systemem niezależny od języka i kontroli źródła, zapewniające debugowanie źródła dla danych binarnych. SourceLink jest obsługiwany dla natywnych plików binarnych języka C++, począwszy od programu Visual Studio 2017 w wersji 15.8. Aby zapoznać się z omówieniem SourceLink, zobacz [Linku źródłowego](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informacje na temat sposobu używania SourceLink w swoich projektach i jak można wygenerować pliku SourceLink jako część projektu, zobacz [przy użyciu SourceLink](https://github.com/dotnet/sourcelink#using-sourcelink).
+Link źródłowy jest systemem niezależny od języka i kontroli źródła zapewniające debugowanie źródła dla danych binarnych. Link źródłowy jest obsługiwana dla natywnych plików binarnych języka C++, począwszy od programu Visual Studio 2017 w wersji 15.8. Aby uzyskać omówienie Linku źródłowego, zobacz [Linku źródłowego](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informacje na temat sposobu używania Linku źródłowego w projektach i jak można wygenerować pliku SourceLink jako część projektu, zobacz [przy użyciu Linku źródłowego](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Aby ustawić opcję konsolidatora/sourcelink w programie Visual Studio
 

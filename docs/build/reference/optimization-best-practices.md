@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 67a071ecd457495510b2015f05466e1aa9bfc989
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da493ceb1a0b751e302d296a9840b668e446ff62
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477353"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978338"
 ---
 # <a name="optimization-best-practices"></a>Najlepsze rozwiązania dotyczące optymalizacji
 
@@ -34,7 +34,7 @@ Jeśli to możliwe ostateczna wersja kompilacji powinna być skompilowana przy u
 
 Łączenie w 64-bitowego środowiska, zaleca się używanie **/OPT: REF, ICF** — opcja konsolidatora i w środowisku 32-bitowych **/OPT: REF** jest zalecane. Aby uzyskać więcej informacji, zobacz [od (optymalizacje)](../../build/reference/opt-optimizations.md).
 
-Zalecane jest również zdecydowanie Generuj symbole debugowania, nawet w przypadku kompilacji wydania zoptymalizowane. Nie efektu, wygenerowany kod, a jego sprawia, że dużo łatwiejszy do debugowania aplikacji, jeśli muszą być.
+Zalecane jest również zdecydowanie Generuj symbole debugowania, nawet w przypadku kompilacji wydania zoptymalizowane. Nie ma wpływu na wygenerowany kod, a jego sprawia, że dużo łatwiejszy do debugowania aplikacji, jeśli muszą być.
 
 ### <a name="floating-point-switches"></a>Przełączniki zmiennoprzecinkowych
 

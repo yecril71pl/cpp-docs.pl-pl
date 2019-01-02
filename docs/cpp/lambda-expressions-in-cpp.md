@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176266"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978312"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -55,7 +55,7 @@ Ta ilustracja przedstawia części wyrażenia lambda:
 
 1. *trailing-return-type* atrybut opcjonalny.
 
-1. *Treść lambda*)
+1. *Treść lambda*.
 
 ### <a name="capture-clause"></a>Klauzula przechwytywania
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Aby używać wyrażeń lambda w treści metody klasy, należy przekazać **to** wskaźnik do klauzuli przechwytywania, aby zapewnić dostęp do metod i składowych danych otaczającej klasy.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **to** wskaźnik mogą być przechwytywane przez wartość, określając `*this` w klauzuli przechwytywania. Przechwytywania przez wartość oznacza, że cały *zamknięcia*, które jest obiektem funkcja anonimowa tego encapulates Wyrażenie lambda, jest kopiowany do każdej lokacji wywołania, gdy wyrażenie lambda jest wywoływana. Przechwytywania przez wartość jest przydatne, gdy wyrażenie lambda będzie wykonywany w operacji równoległych lub asynchroniczny, zwłaszcza w przypadku niektórych architektur sprzętu, takich jak architektura NUMA.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **To** wskaźnik mogą być przechwytywane przez wartość, określając `*this` w klauzuli przechwytywania. Przechwytywania przez wartość oznacza, że cały *zamknięcia*, które jest obiektem funkcja anonimowa tego encapulates Wyrażenie lambda, jest kopiowany do każdej lokacji wywołania, gdy wyrażenie lambda jest wywoływana. Przechwytywania przez wartość jest przydatne, gdy wyrażenie lambda będzie wykonywany w operacji równoległych lub asynchroniczny, zwłaszcza w przypadku niektórych architektur sprzętu, takich jak architektura NUMA.
 
-Na przykład, który pokazuje, jak używać wyrażeń lambda z metodami klasy, zobacz "Przykład: przy użyciu Lambda wyrażenia w metody" w [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).
+Na przykład, który pokazuje, jak używać wyrażeń lambda z metodami klasy, zobacz "przykład: Użycie wyrażenia Lambda w metodzie"w [przykłady wyrażeń Lambda](../cpp/examples-of-lambda-expressions.md).
 
 Użycie klauzuli przechwytywania, zaleca się utrzymywanie tych punktów należy pamiętać, szczególnie w przypadku, gdy używasz wyrażeń lambda z wielowątkowością:
 
@@ -324,7 +324,7 @@ Aby uzyskać więcej informacji, zobacz [generate_n](../standard-library/algorit
 
 ## <a name="constexpr-lambda-expressions"></a>wyrażenia constexpr, wyrażenia lambda
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako `constexpr` lub używany w wyrażeniu stałym podczas inicjowania każdy element członkowski danych jej Przechwytuje lub wprowadza jest dozwolona w wyrażeniu stałym.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako `constexpr` lub używany w wyrażeniu stałym, podczas inicjowania każdej składowej danych, który przechwytuje, lub wprowadza jest dozwolona w wyrażeniu stałym.
 
 ```cpp
     int y = 32;
