@@ -12,5 +12,6 @@
 ## [Właściwości języka C/C++ (Linux)](prop-pages/c-cpp-linux.md)
 ## [Właściwości konsolidatora (Linux)](prop-pages/linker-linux.md)
 ## [Właściwości zdarzenia kompilacji (Linux)](prop-pages/build-events-linux.md)
-## [Właściwości niestandardowego kroku kompilacji (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Właściwości niestandardowego kroku kompilacji (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Właściwości projektu pliku reguł programu make (Linux)](prop-pages/makefile-linux.md)
+## [Właściwości archiwum zdalnego (Linux)](prop-pages/remote-ar-linux.md)
