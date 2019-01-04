@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333231"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031294"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -97,7 +97,7 @@ W poniższej tabeli podsumowano tryby, które są używane dla różnych **ccs**
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Kodowania używane na podstawie ccs flagę i znaku BOM
 
-|flagi ccs|Nie znaku BOM (lub nowy plik)|BOM: UTF-8|ZNAK BOM: UTF-16|
+|flagi ccs|Nie znaku BOM (lub nowy plik)|ZNAK BOM: UTF-8|ZNAK BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -160,25 +160,25 @@ Poniższe opcje, które można dołączać do *tryb* Aby określić dodatkowe za
 
 Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty, które są używane w [_otwórz](open-wopen.md) i [_sopen](sopen-wsopen.md), wykonując następujące czynności.
 
-|Znaki w *tryb* ciągu|Równoważne *oflag* wartość _otwórz/_sopen|
+|Znaki w *tryb* ciągu|Równoważne *oflag* wartość \_Otwórz /\_sopen —|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (zazwyczaj **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (zazwyczaj **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (zazwyczaj **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (zazwyczaj **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (zazwyczaj  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
+|**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (zazwyczaj  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (zazwyczaj  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (zazwyczaj  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
+|**t**|**\_O\_TEXT**|
 |**c**|Brak|
 |**N**|Brak|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = UTF-8**|**_O_UTF8**|
-|**ccs = UTF-16LE**|**_O_UTF16**|
+|**S**|**\_O\_SEKWENCYJNEGO**|
+|**R**|**\_O\_RANDOM**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_TYMCZASOWEGO**|
+|**ccs = UNICODE**|**\_O\_WTEXT**|
+|**ccs = UTF-8**|**\_O\_UTF8**|
+|**ccs = UTF-16LE**|**\_O\_UTF16**|
 
 Jeśli używasz **rb** tryb, nie trzeba przyłącz kod, a jeśli chcą odczytywana większość dużego pliku lub nie jest istotna wydajność sieci, możesz też rozważyć, czy do użycia pamięci plików Win32 mapowanych jako opcję.
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617441"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031281"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz
 
 **_Setmode —** funkcja ustawia *tryb* tryb translacji pliku przez *fd*. Przekazywanie **_O_TEXT** jako *tryb* ustawia tekst (tłumaczonym) trybu. Kombinacji (CR-LF) kanału informacyjnego wiersza powrotu karetki są tłumaczone na jednym wierszu znaku wysuwu na dane wejściowe. Znaki kanału informacyjnego wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie **_O_BINARY** ustawia binarnym (nieprzetłumaczonym) tryb, w którym te tłumaczenia są pomijane.
 
-Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu. **_setmode —** jest zwykle używane do modyfikowania domyślny tryb translacji **stdin** i **stdout**, ale służy dowolny plik. Jeśli zastosujesz **_setmode —** deskryptor pliku dla strumienia, wywołać **_setmode —** przed wykonaniem jakiejkolwiek operacji na strumieniu danych wejściowych lub wyjściowych.
+Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
+
+> [!CAUTION]
+> Tryb Unicode jest szeroki drukowania funkcji (na przykład `wprintf`) i nie jest obsługiwana dla wąskie funkcji drukowania. Użyj wąskie funkcji drukowania w trybie strumienia Unicode wyzwala assert.
+
+**_setmode —** jest zwykle używane do modyfikowania domyślny tryb translacji **stdin** i **stdout**, ale służy dowolny plik. Jeśli zastosujesz **_setmode —** deskryptor pliku dla strumienia, wywołać **_setmode —** przed wykonaniem jakiejkolwiek operacji na strumieniu danych wejściowych lub wyjściowych.
 
 > [!CAUTION]
 > Jeśli piszesz danych w strumieniu plików jawnie opróżnić kodu za pomocą [fflush —](fflush.md) przed użyciem **_setmode —** Aby zmienić tryb. Jeśli kod nie jest opróżnienia, możesz otrzymać nieoczekiwane zachowanie. W przypadku niezapisania danych w strumieniu ma opróżniania kodu.
