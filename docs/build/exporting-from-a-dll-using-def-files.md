@@ -1,25 +1,25 @@
 ---
 title: Eksportowanie z biblioteki DLL przy użyciu plików DEF
-ms.date: 11/04/2016
+ms.date: 01/09/2018
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: e4351d8eca6c6c580430aa8988344bf7f57e0a9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f485353d344b17dabbf0f56a4c7ded2cbccce76
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553910"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220715"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Eksportowanie z biblioteki DLL przy użyciu plików DEF
 
-Plik definicji modułu (.def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty pliku DLL. Jeśli nie używasz **__declspec(dllexport)** — słowo kluczowe do eksportowania funkcji DLL, biblioteka DLL wymaga pliku .def.
+Definicji modułu lub plik DEF (*.def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty pliku DLL. Jeśli nie używasz **__declspec(dllexport)** — słowo kluczowe do eksportowania funkcji DLL, biblioteka DLL wymaga pliku rozdzielczości.
 
-Minimalny pliku .def musi zawierać następujące instrukcje definicji modułów:
+Minimalny plik DEF musi zawierać następujące instrukcje definicji modułów:
 
-- Pierwsza instrukcja w pliku musi być instrukcją LIBRARY. Ta instrukcja identyfikuje plik .def jako należący do DLL. Po instrukcji LIBRARY następuje nazwa biblioteki DLL. Program łączący umieszcza tę nazwę w bibliotece importu biblioteki DLL.
+- Pierwsza instrukcja w pliku musi być instrukcją LIBRARY. Ta instrukcja identyfikuje plik DEF jako należący do DLL. Po instrukcji LIBRARY następuje nazwa biblioteki DLL. Program łączący umieszcza tę nazwę w bibliotece importu biblioteki DLL.
 
 - Instrukcja EXPORTS Wyświetla listę nazw i, opcjonalnie, wartości porządkowe funkcji eksportowanych przez DLL. Przypisujesz funkcji wartość porządkową przez następujące nazwy funkcji za pomocą znakiem (@) i numer. Kiedy określasz wartości porządkowe, muszą być z zakresu od 1 do N, gdzie N to liczba funkcji eksportowanych przez DLL. Jeśli chcesz wyeksportować funkcje według liczby porządkowej, zobacz [eksportowanie funkcji z biblioteki DLL według liczby porządkowej zamiast nazwy](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) a także w tym temacie.
 
@@ -34,11 +34,11 @@ EXPORTS
    Min   @4
 ```
 
-Jeśli używasz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy plik .def szkieletu i automatycznie dodaje do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. DLL bez MFC, należy samodzielnie utworzyć plik .def i dodać go do projektu.
+Jeśli używasz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy szkielet pliku DEF i automatycznie dodaje do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. DLL bez MFC, Utwórz plik DEF, samodzielnie i dodać go do projektu. Następnie przejdź do **projektu** > **właściwości** > **konsolidatora** > **dane wejściowe**  >  **Plik definicji modułu** i wprowadź nazwę pliku rozdzielczości. Powtórz ten krok dla każdej konfiguracji i platformy lub zrobił wszystko naraz, wybierając **Configuration = wszystkie konfiguracje**, i **platformy = wszystkich platform**.
 
-Jeśli eksportujesz funkcje w pliku C++, musisz umieścić nazwy dekorowane w pliku .def lub zdefiniować funkcje eksportowania ze standardowym sprzężeniem C za pomocą funkcji extern "C". Jeśli musisz umieścić nazwę uzupełnioną w pliku .def, możesz je uzyskać, korzystając z [DUMPBIN](../build/reference/dumpbin-reference.md) narzędzia lub przy użyciu konsolidator [/MAP](../build/reference/map-generate-mapfile.md) opcji. Należy zauważyć, że nazwy dekoracyjne wytworzone przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz nazwy dekoracyjne wytworzone przez kompilator języka Visual C++ w pliku .def, aplikacje, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji programu Visual C++, nazwy dekorowane w aplikacji wywołującej odpowiadały nazwom eksportowanym w regionalne biblioteki DLL Plik f.
+Jeśli eksportujesz funkcje w pliku C++, musisz umieścić nazwy dekorowane w pliku DEF lub zdefiniować funkcje eksportowania ze standardowym sprzężeniem C za pomocą funkcji extern "C". Jeśli musisz umieścić nazwę uzupełnioną w pliku DEF, możesz je uzyskać, korzystając z [DUMPBIN](../build/reference/dumpbin-reference.md) narzędzia lub przy użyciu konsolidator [/MAP](../build/reference/map-generate-mapfile.md) opcji. Należy zauważyć, że nazwy dekoracyjne wytworzone przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz nazwy dekoracyjne wytworzone przez kompilator Visual C++ do pliku DEF, aplikacje, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji programu Visual C++, nazwy dekorowane w aplikacji wywołującej odpowiadały nazwom eksportowanym w f DEF biblioteki DLL plik.
 
-Jeśli tworzysz [biblioteki DLL rozszerzenia](../build/extension-dlls-overview.md), i eksportujesz używając pliku .def, umieść następujący kod na początku i końcu plików nagłówka zawierających eksportowane klasy:
+Jeśli tworzysz [biblioteki DLL rozszerzenia](../build/extension-dlls-overview.md), i eksportujesz używając pliku DEF, umieść następujący kod na początku i końcu plików nagłówka zawierających eksportowane klasy:
 
 ```
 #undef AFX_DATA
@@ -50,9 +50,9 @@ Jeśli tworzysz [biblioteki DLL rozszerzenia](../build/extension-dlls-overview.m
 
 Linie te zapewniają, że zmienne MFC używane wewnętrznie lub dodawane do Twoich klas są eksportowane (lub importowane) z Twojego DLL rozszerzenia MFC. Na przykład kiedy uzyskujesz klasę za pomocą `DECLARE_DYNAMIC`, makro rozszerza się, aby dodać `CRuntimeClass` zmiennej składowej do swojej klasy. Pomijając tych czterech linii może spowodować bibliotekę DLL do kompilacji lub niepoprawne łączenie lub spowodować wystąpienie błędu, gdy aplikacja kliencka łączy do biblioteki DLL.
 
-Podczas kompilowania biblioteki DLL, konsolidator używa fliku.def, aby utworzyć plik eksportowy (.exp) i plik importu biblioteki (.lib). Program łączący następnie używa pliku eksportu do tworzenia pliku DLL. Pliki wykonywalne, zawierające niejawne łącze do łącza biblioteki DLL do biblioteki importu, jeśli zostały one utworzone.
+Podczas kompilowania biblioteki DLL, konsolidator używa plik DEF, aby utworzyć plik eksportowy (.exp) i plik importu biblioteki (.lib). Program łączący następnie używa pliku eksportu do tworzenia pliku DLL. Pliki wykonywalne, zawierające niejawne łącze do łącza biblioteki DLL do biblioteki importu, jeśli zostały one utworzone.
 
-Należy pamiętać, że MFC sam używa plików .def, aby wyeksportować funkcje i klasy z MFCx0.dll.
+Należy pamiętać, że MFC sam używa plików DEF, aby wyeksportować funkcje i klasy z MFCx0.dll.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 

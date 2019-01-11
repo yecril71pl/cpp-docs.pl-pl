@@ -3,12 +3,12 @@ title: Błędy w obsłudze wyjątków (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523291"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220572"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Wyjątki w języku C++ przypominają wyjątki w językach takich jak C# i Java. W **spróbuj** zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy związany **catch** blok, którego typ jest zgodny z typem wyjątek. Innymi słowy, wykonywanie przeskakuje z **throw** instrukcję, aby **catch** instrukcji. Jeśli zostanie znalezione nie bloku catch można używać, `std::terminate` jest wywoływany i program jest zamykany. W języku C++ można wygenerować dowolny typ; Jednak firma Microsoft zaleca generowanie typu, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie, typ wyjątku [invalid_argument](../standard-library/invalid-argument-class.md), jest zdefiniowany w bibliotece standardowej w [ \<stdexcept >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga **na koniec** bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek jest zgłaszany. Pobieranie źródeł to idiom inicjalizacji (RAII), który wykorzystuje inteligentne wskaźniki, zapewnia wymaganą funkcję czyszczenia źródeł. Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Aby uzyskać informacje o mechanizmie odwracania stosu C++, zobacz [wyjątków i rozwijania stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Wyjątki w języku C++ przypominają wyjątki w językach takich jak C# i Java. W **spróbuj** zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy związany **catch** blok, którego typ jest zgodny z typem wyjątek. Innymi słowy, wykonywanie przeskakuje z **throw** instrukcję, aby **catch** instrukcji. Jeśli zostanie znalezione nie bloku catch można używać, `std::terminate` jest wywoływany i program jest zamykany. W języku C++ można wygenerować dowolny typ; Jednak firma Microsoft zaleca generowanie typu, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie, typ wyjątku [invalid_argument](../standard-library/invalid-argument-class.md), jest zdefiniowany w bibliotece standardowej w [ \<stdexcept >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga **na koniec** bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek jest zgłaszany. Pobieranie źródeł to idiom inicjalizacji (RAII), który wykorzystuje inteligentne wskaźniki, zapewnia wymaganą funkcję czyszczenia źródeł. Aby uzyskać więcej informacji, zobacz [jak: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Aby uzyskać informacje o mechanizmie odwracania stosu C++, zobacz [wyjątków i rozwijania stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Podstawowe wytyczne
 
@@ -70,7 +70,7 @@ Obsługa błędów grubych jest trudna w dowolnym języku programowania. Chocia�
 
 - Użyj wyjątków, kiedy kod obsługujący błąd może być oddzielony od kodu, który wykrywa błąd przez jeden lub więcej interweniujących wywołań funkcji. Rozważ, czy używać kodów błędów zamiast w pętli wydajność krytycznych, gdy kod, który obsłuży błąd jest sprzężona ściśle do kodu, który wykrywa go.
 
-- Dla każdej funkcji, która może zgłosić lub propagować wyjątek, należy podać jedną z trzech gwarancji wyjątku: silną gwarancję, podstawową gwarancję lub gwarancję nothrow (noexcept). Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).
+- Dla każdej funkcji, która może zgłosić lub propagować wyjątek, należy podać jedną z trzech gwarancji wyjątku: silną gwarancję, podstawową gwarancję lub gwarancję nothrow (noexcept). Aby uzyskać więcej informacji, zobacz [jak: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).
 
 - Wyzwalaj wątki według wartości, wyłapuj je przez odwołanie. Nie Złap, czego nie możesz obsłużyć.
 
@@ -100,7 +100,7 @@ Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

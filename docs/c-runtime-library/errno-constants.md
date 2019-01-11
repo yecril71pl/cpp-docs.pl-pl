@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645604"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220611"
 ---
 # <a name="errno-constants"></a>errno — Stałe
 
 ## <a name="syntax"></a>Składnia
 
 ```
-
 #include <errno.h>
 ```
 
@@ -73,7 +72,7 @@ Następujące **errno** wartości są obsługiwane:
 |**EAGAIN**|Brak procesów. Próba utworzenia nowego procesu nie powiodło się, ponieważ nie ma żadnych kolejnych gniazd procesu, nie ma wystarczającej ilości pamięci lub osiągnięto maksymalny poziom zagnieżdżenia.|
 |**E2BIG**|Lista argumentów jest za długa.|
 |**EACCES**|Odmowa uprawnień. Ustawienie uprawnienia pliku zezwalają na dostęp określonym. Ten błąd oznacza, że podjęto próbę uzyskania dostępu do pliku (lub w niektórych przypadkach katalogu) w sposób niezgodny z atrybutami plików.<br/><br/>Na przykład ten błąd może wystąpić, gdy podejmowana jest próba odczytu z pliku, który nie jest otwarty, otwórz istniejący plik tylko do odczytu do zapisu lub otwórz katalog, a nie plikiem. W obszarze MS-DOS systemu operacyjnego wersji 3.0 lub nowszej **EACCES** może również wskazywać blokowanie lub naruszenie zasad współużytkowania.<br/><br/>Ten błąd może również wystąpić podczas próby zmiany nazwy pliku lub katalogu lub usuń istniejący katalog.|
-|**EBADF**|Zły numer pliku. Istnieją dwie możliwe przyczyny: 1) deskryptora określony plik nie jest prawidłową wartością lub odwołuje się do otwartego pliku. (2) podjęto można zapisać do pliku lub urządzenia, na dostęp tylko do odczytu.|
+|**EBADF**|Zły numer pliku. Istnieją dwie możliwe przyczyny: (1) w deskryptorze określony plik nie jest prawidłową wartością lub odwołuje się do otwartego pliku. (2) podjęto można zapisać do pliku lub urządzenia, na dostęp tylko do odczytu.|
 |**EDEADLOCK**|Wystąpiłoby zakleszczenie zasobu. Argument funkcji matematycznych, nie znajduje się w domenie funkcji.|
 |**EDOM**|Argument matematyczny.|
 |**EEXIST**|Pliki istnieją. Podjęta próba utworzenia pliku, który już istnieje. Na przykład **_O_CREAT** i **_O_EXCL** flagi są określone w **_otwórz** wywołanie, ale plik o nazwie już istnieje.|

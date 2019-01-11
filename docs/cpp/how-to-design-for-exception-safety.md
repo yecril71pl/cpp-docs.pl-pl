@@ -1,17 +1,17 @@
 ---
-title: 'Porady: projektowanie pod kątem bezpieczeństwa wyjątków'
+title: 'Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327008"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220557"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Porady: projektowanie pod kątem bezpieczeństwa wyjątków
+# <a name="how-to-design-for-exception-safety"></a>Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków
 
 Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danymi o wyjątku, przechodzi bezpośrednio z instrukcji generującej wyjątek do pierwszej instrukcji „catch” zdolnej go obsłużyć. Program obsługi może się znajdować o dowolną liczbę poziomów wyżej w stosie wywołań. Funkcje wywoływane między instrukcjami „try” i „throw” nie muszą nic wiedzieć o zgłaszanym wyjątku.  Muszą jednak być zaprojektowane w taki sposób, aby mogły wykroczyć poza zakres „niespodziewanie” w każdym momencie, gdy istnieje ryzyko rozpowszechnienia wyjątku z niższego poziomu, nie pozostawiając przy tym za sobą żadnych częściowo utworzonych obiektów, przecieków pamięci ani struktur danych w bezużytecznych stanach.
 
@@ -95,7 +95,7 @@ Zazwyczaj bezpieczeństwa wyjątków jest rozważane w kontekście trzech gwaran
 
 Gwarancja braku niepowodzenia (lub „braku zgłaszania wyjątków”) jest najsilniejszą gwarancją, jaką może zapewnić funkcja. Stwierdza, że funkcja nie będzie generować wyjątków ani nie pozwoli ich rozpowszechnianie. Gwarancji takiej można wiarygodnie udzielić tylko w przypadku, gdy (a) wiadomo, że wszystkie funkcje wywoływane przez tę funkcję również zapewniają brak niepowodzeń, lub (b) wiadomo, że wszystkie zgłaszane wyjątki są przechwytywane zanim dotrą do tej funkcji, lub (c) wiadomo, jak poprawnie przechwytywać i obsługiwać wszystkie wyjątki mogące docierać do tej funkcji.
 
-Zarówno gwarancja silna, jak i gwarancja podstawowa bazują na założeniu, że destruktory gwarantują brak niepowodzenia. Wszystkie kontenery i typy w bibliotece standardowej gwarantują, że ich destruktory nie zgłaszają wyjątków. Istnieje również wymóg przeciwny: biblioteka standardowa wymaga, aby przekazywane do niej typy zdefiniowane przez użytkownika, na przykład jako argumenty szablonu, zawierały destruktory niezgłaszające wyjątków.
+Zarówno gwarancja silna, jak i gwarancja podstawowa bazują na założeniu, że destruktory gwarantują brak niepowodzenia. Wszystkie kontenery i typy w bibliotece standardowej gwarantują, że ich destruktory nie zgłaszają wyjątków. Istnieje również wymóg przeciwny: Biblioteka standardowa wymaga, że typy zdefiniowane przez użytkownika, mających do niego — na przykład jako argumenty szablonu — musi mieć destruktory niezgłaszające wyjątków.
 
 ### <a name="strong-guarantee"></a>Silna gwarancja
 
@@ -121,5 +121,5 @@ Wszystkie typy wbudowane gwarantują brak niepowodzenia, a typy w bibliotece sta
 
 ## <a name="see-also"></a>Zobacz także
 
-[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Błędy w obsłudze wyjątków (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

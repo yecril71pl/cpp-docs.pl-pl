@@ -3,12 +3,12 @@ title: Ciągów i we / wy formatowanie (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326189"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220507"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatowanie ciągów i we/wy (Modern C++)
 
@@ -42,11 +42,11 @@ Może to być zbyt kłopotliwe w wielu przypadkach. Jako alternatywę można uż
 
 Niektóre zalety Boost.Format są:
 
-- Bezpieczny: Typ bezpieczny i zgłasza wyjątek dla błędów — na przykład Specyfikacja zbyt małej lub zbyt wiele elementów.
+- Bezpieczny: Bezpieczny i zgłasza wyjątek dla błędów — na przykład Specyfikacja zbyt małej lub zbyt wiele elementów.
 
-- Rozszerzalne: Działa dowolny typ, który może być przesyłany strumieniowo.
+- Rozszerzalne: Działa w przypadku dowolnego typu, który może być przesyłany strumieniowo.
 
-- Wygoda: Standard Posix i podobne ciągi formatów.
+- Wygodne: Standard Posix i podobne ciągi formatów.
 
 Chociaż Boost.Format jest zbudowany na C++ [iostreams](../standard-library/iostream-programming.md), które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Jeśli potrzebujesz, aby zoptymalizować wydajność, należy wziąć pod uwagę C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani pozbawione luk w zabezpieczeniach. (Istnieją wersje bezpieczne, ale mogą spowodować zmniejszenie wydajności niewielkie. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
@@ -64,7 +64,7 @@ Poniższy kod ilustruje część zwiększenia funkcji formatowania.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

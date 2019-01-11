@@ -3,12 +3,12 @@ title: Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609940"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220636"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 
@@ -22,7 +22,7 @@ Ważne w okresie istnienia obiektu zarządzania jest hermetyzacja — osoba uży
 
 Kolejnym ważnym pojęciem w zarządzanie okresem istnienia: destruktorów. Destruktory hermetyzacji zasobu wersji.  (Często użyty mnemonik jest RRID, zniszczenia jest wersji zasobu).  Zasób jest coś, co można uzyskać od "system" i konieczne jest nadanie ponownie później.  Pamięć jest najbardziej typowych zasobów, ale istnieją również pliki, gniazda, tekstury i inne zasoby bez pamięci. Zasób "właścicielem" oznacza, można go użyć, gdy ich potrzebujesz, ale musisz też zwolnij go po zakończeniu pracy z nim.  Gdy obiekt jest niszczony, jego destruktor zwalnia zasoby, które jego właścicielem.
 
-Końcowe koncepcja jest DAG (przekierowanie acykliczne wykresy).  Struktury własności w programie stanowi grupy DAG. Żaden obiekt nie może należeć do samego siebie — to nie tylko możliwe, ale również natury jest bez znaczenia. Jednak dwa obiekty można współwłaścicielem trzeci obiekt.  Kilka rodzajów łącza są możliwe w grupie DAG, takich jak to: element jest elementem członkowskim B (B jest właścicielem A), magazynów C `vector<D>` (C należą do każdego elementu D), magazynów E `shared_ptr<F>` (E udostępnia własności F, prawdopodobnie z innymi obiektami), itd.  Tak długo, jak istnieją żadne cykle i każde łącze na grafie DAG jest reprezentowany przez obiekt ma destruktor (zamiast surowy wskaźnik, dojście lub inny mechanizm), a następnie przeciekom zasobów jest niemożliwe, ponieważ język uniemożliwia ich. Zasoby są zwalniane, natychmiast po zakończeniu nie są już potrzebne, bez modułu zbierającego elementy bezużyteczne uruchomiona. Okres istnienia śledzenia jest bezpłatne obciążenie dla zakresu stosu, podstaw, członków i pokrewnych przypadków i tanią `shared_ptr`.
+Końcowe koncepcja jest DAG (przekierowanie acykliczne wykresy).  Struktury własności w programie stanowi grupy DAG. Żaden obiekt nie może należeć do samego siebie — to nie tylko możliwe, ale również natury jest bez znaczenia. Jednak dwa obiekty można współwłaścicielem trzeci obiekt.  Kilka rodzajów łącza są możliwe w grupie DAG w następujący sposób: Element jest elementem członkowskim B (B jest właścicielem A), magazynów C `vector<D>` (C należą do każdego elementu D), magazynów E `shared_ptr<F>` (E udostępnia własności F, prawdopodobnie z innymi obiektami), itd.  Tak długo, jak istnieją żadne cykle i każde łącze na grafie DAG jest reprezentowany przez obiekt ma destruktor (zamiast surowy wskaźnik, dojście lub inny mechanizm), a następnie przeciekom zasobów jest niemożliwe, ponieważ język uniemożliwia ich. Zasoby są zwalniane, natychmiast po zakończeniu nie są już potrzebne, bez modułu zbierającego elementy bezużyteczne uruchomiona. Okres istnienia śledzenia jest bezpłatne obciążenie dla zakresu stosu, podstaw, członków i pokrewnych przypadków i tanią `shared_ptr`.
 
 ### <a name="heap-based-lifetime"></a>Oparte na stosie okresu istnienia
 
@@ -85,6 +85,6 @@ Oszczędnie korzystać statyczny okres istnienia (globalne statyczne, funkcji lo
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -3,12 +3,12 @@ title: Konwersje i bezpieczeństwo typów (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332624"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220650"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Konwersje i bezpieczeństwo typów (Modern C++)
 
@@ -178,7 +178,7 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
 
 ## <a name="see-also"></a>Zobacz także
 
-[System typów języka C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[System typów języka C++ (Modern C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

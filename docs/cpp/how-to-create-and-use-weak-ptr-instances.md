@@ -1,17 +1,17 @@
 ---
-title: 'Porady: tworzenie wystąpień weak_ptr i korzystanie z nich'
+title: 'Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: c3f788a23acf30fac84757f8cd4430f128df67af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478198"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220325"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Porady: tworzenie wystąpień weak_ptr i korzystanie z nich
+# <a name="how-to-create-and-use-weakptr-instances"></a>Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie
 
 Czasami obiekt musi przechowywać sposób dostępu do podstawowego obiektu z obiektu `shared_ptr` bez zwiększania licznika odwołań rośnie. Zazwyczaj ta sytuacja występuje kiedy istnieją cykliczne odwołania między `shared_ptr` wystąpień.
 
@@ -86,4 +86,4 @@ Jako eksperyment, należy zmodyfikować wektor `others` jako `vector<shared_ptr<
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md)
+[Wskaźniki inteligentne (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

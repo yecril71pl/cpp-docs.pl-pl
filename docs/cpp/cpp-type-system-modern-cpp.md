@@ -3,12 +3,12 @@ title: System typów języka C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176344"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220676"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 
@@ -18,9 +18,9 @@ Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmi
 
 **Zmienna**: Symboliczna nazwa ilości danych, aby nazwa może służyć do uzyskania dostępu do danych odwołuje się do w całym zakresie kodu, w którym jest zdefiniowana. W języku C++ *zmiennej* jest zazwyczaj używane do odwoływania się do wystąpienia skalarnych typów danych, natomiast instancje innych typów są zwykle nazywane *obiektów*.
 
-**Obiekt**: dla uproszczenia i zachowania spójności, w tym artykule używany jest termin *obiektu* do odwoływania się do dowolnego wystąpienia klasy lub struktury, a gdy jest używany w ogólnym sensie, obejmuje wszystkie typy, nawet zmienne skalarne.
+**Obiekt**: Dla uproszczenia i zachowania spójności, w tym artykule używany jest termin *obiektu* do odwoływania się do dowolnego wystąpienia klasy lub struktury, a gdy jest używany w ogólnym sensie, obejmuje wszystkie typy, nawet zmienne skalarne.
 
-**Typ POD** (zwykłe stare dane): ta nieformalna kategoria typów danych języka C++ odnosi się do typów, które są skalarne (patrz sekcja: typy podstawowe) lub *klasy POD*. Klasa POD nie ma żadnych statycznych składowych danych, które nie są również POD, i nie ma zdefiniowanych przez użytkownika konstruktorów, zdefiniowanych przez użytkownika destruktorów ani zdefiniowanych przez użytkownika operatorów przypisania. Klasa POD nie ma też żadnych funkcji wirtualnych, nie ma klasy podstawowej ani żadnych prywatnych lub chronionych niestatycznych składowych danych. Typy POD są często używane do wymiany danych zewnętrznych, na przykład przy użyciu modułu napisanego w języku C (który ma tylko typy POD).
+**Typ POD** (zwykłe stare dane): Ta nieformalna kategoria typów danych języka C++ odnosi się do typów, które są skalarne (patrz sekcja: typy podstawowe) lub *klasy POD*. Klasa POD nie ma żadnych statycznych składowych danych, które nie są również POD, i nie ma zdefiniowanych przez użytkownika konstruktorów, zdefiniowanych przez użytkownika destruktorów ani zdefiniowanych przez użytkownika operatorów przypisania. Klasa POD nie ma też żadnych funkcji wirtualnych, nie ma klasy podstawowej ani żadnych prywatnych lub chronionych niestatycznych składowych danych. Typy POD są często używane do wymiany danych zewnętrznych, na przykład przy użyciu modułu napisanego w języku C (który ma tylko typy POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Określanie typów zmiennych i funkcji
 
@@ -170,6 +170,6 @@ Aby uzyskać więcej informacji dotyczących typu systemu C++, zobacz następuj�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
