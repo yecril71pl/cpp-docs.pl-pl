@@ -3,12 +3,12 @@ title: Wskaźniki inteligentne (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616908"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220663"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 
@@ -68,23 +68,23 @@ Poniższa sekcja podsumowuje różne rodzaje inteligentnych wskaźników, które
 Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji wskaźników jako zwykłych starych obiektów C++ (Plain Old C++ Objects — POCO).
 
 - `unique_ptr`<br/>
-   Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Użyj jako domyślnego wyboru dla POCO, chyba że wiesz, w przypadku niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj `boost::scoped_ptr`. `unique_ptr` jest mały i wydajny; rozmiar to jeden wskaźnik i obsługuje odwołania rvalue dla ostatniego wstawienia i wydobycia z kolekcji standardowej biblioteki języka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
+   Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Użyj jako domyślnego wyboru dla POCO, chyba że wiesz, w przypadku niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj `boost::scoped_ptr`. `unique_ptr` jest mały i wydajny; rozmiar to jeden wskaźnik i obsługuje odwołania rvalue dla ostatniego wstawienia i wydobycia z kolekcji standardowej biblioteki języka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
-   Inteligentny wskaźnik zliczonych odwołań. Użyj, jeżeli chcesz przypisać jeden surowy wskaźnik wielu właścicielom, na przykład, kiedy zwracasz kopię wskaźnika z kontenera, ale chcesz zatrzymać oryginał. Surowy wskaźnik nie jest usuwana, dopóki wszystkie `shared_ptr` właściciele zniknie z zakresu lub w inny sposób zrezygnują własności. Rozmiar to dwa wskaźniki; jeden dla obiektu i jeden dla współdzielonego bloku kontroli, który zawiera licznik odwołań. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień shared_ptr i korzystanie](../cpp/how-to-create-and-use-shared-ptr-instances.md) i [shared_ptr — klasa](../standard-library/shared-ptr-class.md).
+   Inteligentny wskaźnik zliczonych odwołań. Użyj, jeżeli chcesz przypisać jeden surowy wskaźnik wielu właścicielom, na przykład, kiedy zwracasz kopię wskaźnika z kontenera, ale chcesz zatrzymać oryginał. Surowy wskaźnik nie jest usuwana, dopóki wszystkie `shared_ptr` właściciele zniknie z zakresu lub w inny sposób zrezygnują własności. Rozmiar to dwa wskaźniki; jeden dla obiektu i jeden dla współdzielonego bloku kontroli, który zawiera licznik odwołań. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie wystąpień shared_ptr i korzystanie](../cpp/how-to-create-and-use-shared-ptr-instances.md) i [shared_ptr — klasa](../standard-library/shared-ptr-class.md).
 
 - `weak_ptr`<br/>
-    Szczególny inteligentny wskaźnik używany w połączeniu z `shared_ptr`. A `weak_ptr` zapewnia dostęp do obiektu, który jest własnością jednego lub więcej `shared_ptr` wystąpienia, ale nie uczestniczy w zliczaniu odwołań. Używaj, jeżeli chcesz obserwować obiekt, ale nie wymagasz, aby pozostał aktywny. Wymagane w niektórych przypadkach, aby złamać odwołania cykliczne między `shared_ptr` wystąpień. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień weak_ptr i korzystanie](../cpp/how-to-create-and-use-weak-ptr-instances.md) i [weak_ptr, klasa](../standard-library/weak-ptr-class.md).
+    Szczególny inteligentny wskaźnik używany w połączeniu z `shared_ptr`. A `weak_ptr` zapewnia dostęp do obiektu, który jest własnością jednego lub więcej `shared_ptr` wystąpienia, ale nie uczestniczy w zliczaniu odwołań. Używaj, jeżeli chcesz obserwować obiekt, ale nie wymagasz, aby pozostał aktywny. Wymagane w niektórych przypadkach, aby złamać odwołania cykliczne między `shared_ptr` wystąpień. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie wystąpień weak_ptr i korzystanie](../cpp/how-to-create-and-use-weak-ptr-instances.md) i [weak_ptr, klasa](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>{1&gt;Inteligentne wskaźniki dla obiektów COM (klasyczne programowanie Windows)&lt;1}
 
 Kiedy pracujesz z obiektami COM, zawiń wskaźniki interfejsu w odpowiedni typ inteligentnego wskaźnika. Active Template Library (ATL) definiuje kilka inteligentnych wskaźników do różnych celów. Można również użyć `_com_ptr_t` typ inteligentnego wskaźnika, której kompilator używa podczas tworzenia klas otoki z plików .tlb. To najlepszy wybór, jeśli nie chcesz dołączyć plików nagłówkowych ATL.
 
 [Klasa CComPtr](../atl/reference/ccomptr-class.md)<br/>
-Użyj tego, jeżeli nie możesz użyć ATL. Wykonuje liczenia odwołań przy użyciu `AddRef` i `Release` metody. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Użyj tego, jeżeli nie możesz użyć ATL. Wykonuje liczenia odwołań przy użyciu `AddRef` i `Release` metody. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i używanie CComPtr i CComQIPtr wystąpienia](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [Klasa CComQIPtr](../atl/reference/ccomqiptr-class.md)<br/>
-Przypomina `CComPtr` , ale także zapewnia uproszczoną składnię do wywoływania `QueryInterface` obiektów COM. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Przypomina `CComPtr` , ale także zapewnia uproszczoną składnię do wywoływania `QueryInterface` obiektów COM. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i używanie CComPtr i CComQIPtr wystąpienia](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [Klasa CComHeapPtr](../atl/reference/ccomheapptr-class.md)<br/>
 Inteligentny wskaźnik do obiektów, które używają `CoTaskMemFree` aby zwolnić pamięć.
@@ -116,6 +116,6 @@ Klasa, która hermetyzuje metody do manipulowania listą `CAutoPtr` węzłów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Porady: interfejs między kodem obsługi wyjątków a innym kodem'
+title: 'Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576686"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220631"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Porady: interfejs między kodem obsługi wyjątków a innym kodem
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem
 
 W tym artykule opisano, jak wdrożyć spójne obsługi wyjątków w module języka C++, a także tłumaczenie tych wyjątków do i z kodów błędów na granicach wyjątków.
 
@@ -19,7 +19,7 @@ Czasami moduł C++ ma interfejs z kodem, który nie używa wyjątków (kod bez w
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Wywoływanie funkcji Niewyjątkowych z języka C++
 
-Po wywołaniu funkcji niewyjątkowych z języka C++, ideą jest zwinięcie tej funkcji w funkcji języka C++, który wykrywa błędy i ewentualnie zgłasza wyjątek. Podczas projektowania takiej funkcji otoku, najpierw zdecyduj jaki rodzaj gwarancji wyjątek zapewnić: nie wyrzucający, silny lub podstawowy. Po drugie zaprojektuj własną funkcję tak, aby wszystkie zasoby, na przykład, dojścia do plików, są poprawnie zwolnione jeśli zostanie zgłoszony wyjątek. Zazwyczaj oznacza to, że używasz inteligentnych wskaźników lub podobne menedżerów zasobów do własnych zasobów. Aby uzyskać więcej informacji na temat zagadnień projektowych, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).
+Po wywołaniu funkcji niewyjątkowych z języka C++, ideą jest zwinięcie tej funkcji w funkcji języka C++, który wykrywa błędy i ewentualnie zgłasza wyjątek. Podczas projektowania takiej funkcji otoku, najpierw zdecyduj jaki rodzaj gwarancji wyjątek zapewnić: nie wyrzucający, silny lub podstawowy. Po drugie zaprojektuj własną funkcję tak, aby wszystkie zasoby, na przykład, dojścia do plików, są poprawnie zwolnione jeśli zostanie zgłoszony wyjątek. Zazwyczaj oznacza to, że używasz inteligentnych wskaźników lub podobne menedżerów zasobów do własnych zasobów. Aby uzyskać więcej informacji na temat zagadnień projektowych, zobacz [jak: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Przykład
 
@@ -236,5 +236,5 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lam
 
 ## <a name="see-also"></a>Zobacz także
 
-[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Błędy w obsłudze wyjątków (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md)<br/>
