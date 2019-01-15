@@ -75,7 +75,7 @@ Element `move_iterator` może być zdolny do operacji, które nie są zdefiniowa
 |[move_iterator::operator--](#operator--)|Dekrementuje przechowywany iterator. Dokładne zachowanie zależy od tego, czy jest to operacja predekrementacji, czy postdekrementacji.|
 |[move_iterator::operator-&gt;](#op_arrow)|Zwraca `&**this`.|
 |[move_iterator::operator-](#operator-)|Zwraca `move_iterator(*this) -=` przez odjęcie najpierw wartości po prawej stronie od bieżącej pozycji.|
-|[move_iterator::operator]](#op_at)|Zwraca `(reference)*(*this + off)`. Pozwala określić przesunięcie od aktualnej podstawy, aby uzyskać wartość w tej lokalizacji.|
+|[move_iterator::operator[]](#op_at)|Zwraca `(reference)*(*this + off)`. Pozwala określić przesunięcie od aktualnej podstawy, aby uzyskać wartość w tej lokalizacji.|
 |[move_iterator::operator+](#op_add)|Zwraca `move_iterator(*this) +=` wartość. Pozwala dodać przesunięcie do aktualnej podstawy, aby uzyskać wartość w tej lokalizacji.|
 |[move_iterator::operator+=](#op_add_eq)|Dodaje wartości po prawej stronie przechowywanego iteratora i zwraca `*this`.|
 |[move_iterator::operator-=](#operator-_eq)|Odejmuje wartość po prawej stronie od przechowywanego iteratora i zwraca `*this`.|
