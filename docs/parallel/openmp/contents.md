@@ -2,28 +2,16 @@
 title: Spis treści
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: f9fffab938735421429c53cc760ad0db16484577
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620587"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397293"
 ---
 # <a name="contents"></a>Spis treści
 
 [1. Wprowadzenie](../../parallel/openmp/1-introduction.md)
-
-[1.1 Zakres](../../parallel/openmp/1-1-scope.md)
-
-[1.2 Definicje terminów](../../parallel/openmp/1-2-definition-of-terms.md)
-
-[1.3 Model wykonania](../../parallel/openmp/1-3-execution-model.md)
-
-[1.4 Zgodność](../../parallel/openmp/1-4-compliance.md)
-
-[1.5 Odwołania normatywne](../../parallel/openmp/1-5-normative-references.md)
-
-[1.6 Organizacja](../../parallel/openmp/1-6-organization.md)
 
 [2. Dyrektywy](../../parallel/openmp/2-directives.md)
 
@@ -131,14 +119,6 @@ ms.locfileid: "50620587"
 
 [4. Zmienne środowiskowe](../../parallel/openmp/4-environment-variables.md)
 
-[4.1 OMP_SCHEDULE](../../parallel/openmp/4-1-omp-schedule.md)
-
-[4.2 OMP_NUM_THREADS](../../parallel/openmp/4-2-omp-num-threads.md)
-
-[4.3 OMP_DYNAMIC](../../parallel/openmp/4-3-omp-dynamic.md)
-
-[4.4 OMP_NESTED](../../parallel/openmp/4-4-omp-nested.md)
-
 [A. Przykłady](../../parallel/openmp/a-examples.md)
 
 [A.1 wykonywanie równoległe prostej pętli](../../parallel/openmp/a-1-executing-a-simple-loop-in-parallel.md)
@@ -206,10 +186,6 @@ ms.locfileid: "50620587"
 [B. Wycinki funkcji bibliotek wykonawczych](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)
 
 [C. OpenMP C i gramatyka C++](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)
-
-[C.1 Notacja](../../parallel/openmp/c-1-notation.md)
-
-[C.2 Reguły](../../parallel/openmp/c-2-rules.md)
 
 [D. Użycie klauzuli harmonogramu](../../parallel/openmp/d-using-the-schedule-clause.md)
 
