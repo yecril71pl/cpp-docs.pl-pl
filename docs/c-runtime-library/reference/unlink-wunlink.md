@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544202"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417619"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ Nazwa pliku do usunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli kończy się pomyślnie. W przeciwnym razie funkcja zwraca wartość -1 i ustawia **errno** do **EACCES**, co oznacza, że ścieżka Określa plik tylko do odczytu lub **ENOENT**, co oznacza plik lub ścieżka nie zostanie znaleziony lub Ścieżka określona w katalogu.
+Każda z tych funkcji zwraca wartość 0, jeśli kończy się pomyślnie. W przeciwnym razie funkcja zwraca wartość -1 i ustawia **errno** do **EACCES**, co oznacza, że ścieżka określa tylko do odczytu pliku lub katalogu, lub **ENOENT**, co oznacza plik lub ścieżka Nie można odnaleźć.
 
 Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 
@@ -73,7 +73,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tunlink —**|**_unlink**|**_unlink**|**_wunlink**|
+|**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
 ## <a name="requirements"></a>Wymagania
 

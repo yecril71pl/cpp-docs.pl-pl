@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597541"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417645"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/FP (określenie zachowania zmiennoprzecinkowego)
 
@@ -71,13 +71,13 @@ Wiele **/FP** opcje można określić w tym samym wierszu polecenia kompilatora.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Za pomocą pragmy do kontroli zachowania zmiennoprzecinkowego
 
-Kompilator udostępnia trzy directivess pragma, aby zastąpić zachowanie liczb zmiennopozycyjnych, określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), i [fp_contract](../../preprocessor/fp-contract.md). Te dyrektywy pragma umożliwia kontrolować zachowanie liczb zmiennopozycyjnych na poziomie funkcji, nie w obrębie danej funkcji. Należy pamiętać, że te dyrektywy pragma nie odpowiadają bezpośrednio do **/FP** opcje. W poniższej tabeli przedstawiono sposób, w jaki **/FP** opcje i pragmy mapowanie między sobą. Aby uzyskać więcej informacji zobacz dokumentację dla poszczególnych opcji i pragmy.
+Kompilator udostępnia trzy dyrektyw pragma, aby zastąpić zachowanie liczb zmiennopozycyjnych, określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), i [fp_contract](../../preprocessor/fp-contract.md). Te dyrektywy pragma umożliwia kontrolować zachowanie liczb zmiennopozycyjnych na poziomie funkcji, nie w obrębie danej funkcji. Należy pamiętać, że te dyrektywy pragma nie odpowiadają bezpośrednio do **/FP** opcje. W poniższej tabeli przedstawiono sposób, w jaki **/FP** opcje i pragmy mapowanie między sobą. Aby uzyskać więcej informacji zobacz dokumentację dla poszczególnych opcji i pragmy.
 
 ||float_control(Precise)|float_control(EXCEPT)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**Fast**|Wyłączone|Wyłączone|Wyłączone|on|
-|**/ FP: precise**|on|Wyłączone|Wyłączone|on|
-|**/ FP: except**|on|on|on|Wyłączone|
+|**Fast**|wyłączone|wyłączone|wyłączone|on|
+|**/ FP: precise**|on|wyłączone|wyłączone|on|
+|**/ FP: except**|on|on|on|wyłączone|
 
 ### <a name="the-default-floating-point-environment"></a>Domyślne środowisko punktu zmiennoprzecinkowego
 
