@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520185"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894357"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -1733,7 +1733,7 @@ Oprócz **zadań równoległych** okna i **stosów równoległych** okna program
 
 **C++/CLI IntelliSense.** C + +/ CLI ma teraz pełną obsługę technologii IntelliSense. Funkcja IntelliSense funkcje takie jak szybka podpowiedź, parametr pomocy, listę elementów członkowskich i automatyczne uzupełnianie teraz działa dla C + +/ interfejsu wiersza polecenia. Oprócz innych technologii IntelliSense i środowisko IDE rozszerzenia wymienione w niniejszym dokumencie są również działać C + +/ interfejsu wiersza polecenia.
 
-**Bardziej rozbudowane etykietki narzędzi IntelliSense.** Informacje dotyczące stylu etykietki szybka podpowiedź funkcji IntelliSense języka C++ teraz zawierać bogatsze komentarze dokumentacji XML. Jeśli używasz interfejsu API z poziomu biblioteki — na przykład, C++ AMP — ma komentarze dokumentacji XML, a następnie etykietka funkcji IntelliSense zawiera więcej informacji, niż tylko deklaracji. Ponadto jeśli kod ma komentarze dokumentacji XML, etykietki narzędzi IntelliSense pokaże bogatsze informacje.
+**Richer IntelliSense Tooltips.** Informacje dotyczące stylu etykietki szybka podpowiedź funkcji IntelliSense języka C++ teraz zawierać bogatsze komentarze dokumentacji XML. Jeśli używasz interfejsu API z poziomu biblioteki — na przykład, C++ AMP — ma komentarze dokumentacji XML, a następnie etykietka funkcji IntelliSense zawiera więcej informacji, niż tylko deklaracji. Ponadto jeśli kod ma komentarze dokumentacji XML, etykietki narzędzi IntelliSense pokaże bogatsze informacje.
 
 **Konstrukcje kodu w języku C++.** Szkielet kodu jest dostępna dla przełącznika if-else, pętli i innych konstrukcji kodu podstawowego, na liście rozwijanej listę elementów członkowskich. Wybierz fragment kodu z listy, aby wstawić je do kodu, a następnie wprowadź wymagane logiki. Można również utworzyć własne niestandardowe fragmenty kodu do użycia w edytorze.
 
@@ -1781,11 +1781,11 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 
 **decltype — Specyfikator typu.** **Decltype** Specyfikator typu zwraca typ określonego wyrażenia. Użyj **decltype** Specyfikator typu w połączeniu z **automatycznie** — słowo kluczowe do deklarowania typu złożonego lub znanego tylko w kompilatorze. Na przykład użyć kombinacji do deklarowania funkcji szablonu, którego typem zwracanym jest zależna od typów argumentów szablonu. Można również zadeklarować funkcji szablonu, który wywołuje inną funkcję, a następnie zwraca typ zwracany funkcji o nazwie.
 
-**Wyrażenia lambda.** Funkcje lambda mają treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i obiektów funkcyjnych. Użycie funkcji lambda przez siebie, jako parametr funkcji szablonu zamiast obiektu funkcyjnego lub wraz z **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest wyrażeniem lambda.
+**Lambda Expressions.** Funkcje lambda mają treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i obiektów funkcyjnych. Użycie funkcji lambda przez siebie, jako parametr funkcji szablonu zamiast obiektu funkcyjnego lub wraz z **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest wyrażeniem lambda.
 
 **Odwołanie Rvalue.** Deklarator odwołania do r-wartości (& &) deklaruje odwołanie rvalue. Umożliwia odwołanie rvalue, których możesz użyć przenoszenie semantyki i doskonałe przekazywanie do pisania konstruktorów bardziej wydajne, funkcji i szablony.
 
-**static_assert deklaracji.** A **static_assert** deklaracji testuje asercję oprogramowania w czasie kompilacji, w przeciwieństwie do innych mechanizmów potwierdzenia, które testują w czasie wykonywania. Jeśli potwierdzenie nie powiedzie się, kompilacja nie powiedzie się i wystawiono określony komunikat o błędzie.
+**static_assert Declaration.** A **static_assert** deklaracji testuje asercję oprogramowania w czasie kompilacji, w przeciwieństwie do innych mechanizmów potwierdzenia, które testują w czasie wykonywania. Jeśli potwierdzenie nie powiedzie się, kompilacja nie powiedzie się i wystawiono określony komunikat o błędzie.
 
 **nullptr i __nullptr słów kluczowych.** Kompilator języka Visual C++ pozwala na używanie **nullptr** — słowo kluczowe z kodu macierzystego lub kodu zarządzanego. **Nullptr** słowo kluczowe wskazuje, że dojście do obiektu, posługiwanie się nimi wskaźnika lub typu wskaźnik natywny nie wskazuje obiektu. Kompilator interpretuje **nullptr** jako kodu zarządzanego, gdy używasz `/clr` — opcja kompilatora i kodu natywnego, gdy nie używasz `/clr` opcji.
 Specyficzne dla firmy Microsoft **__nullptr** — słowo kluczowe ma takie samo znaczenie jak **nullptr**, ale dotyczy ona tylko kodu natywnego. Jeśli kompilujesz natywnego kodu C/C++ za pomocą `/clr` — opcja kompilatora, kompilator nie może określić czy **nullptr** — słowo kluczowe jest natywny lub terminów zarządzanych. Aby zamiaru Wyczyść, aby kompilator, użyj nullptr — słowo kluczowe, aby określić termin zarządzanych i **__nullptr** Aby określić termin natywnych.
@@ -1797,7 +1797,7 @@ Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) nas
 
 **Nowe /clr:nostdlib opcji środowiska uruchomieniowego języka wspólnego (CLR).** Nowa opcja jest dodawany do `/clr` (kompilacja języka wspólnego środowiska uruchomieniowego). Jeśli dołączono różne wersje tego samego bibliotek, zgłaszany jest błąd kompilacji. Nowa opcja umożliwia wykluczenie domyślne biblioteki środowiska CLR, tak aby program może użyć określonej wersji.
 
-**Nowe detect_mistmatch dyrektywy pragma.** Detect_mismatch dyrektywy pragma umożliwia Umieść znacznik w plikach, które są porównywane do innych tagów, które mają taką samą nazwę. W przypadku wielu wartości dla tej samej nazwie, konsolidator generuje błąd.
+**Nowe detect_mismatch dyrektywy pragma.** Detect_mismatch dyrektywy pragma umożliwia Umieść znacznik w plikach, które są porównywane do innych tagów, które mają taką samą nazwę. W przypadku wielu wartości dla tej samej nazwie, konsolidator generuje błąd.
 
 **Funkcje wewnętrzne XOP FMA4 funkcje wewnętrzne i LWP funkcje wewnętrzne.** Nowe funkcje wewnętrzne zostały dodane do obsługi XOP dodane funkcje wewnętrzne dla programu Visual Studio 2010 z dodatkiem SP1, dodano funkcje wewnętrzne FMA4 dla programu Visual Studio 2010 z dodatkiem SP1 i dodaje funkcje wewnętrzne LWP dla technologii programu Visual Studio 2010 SP1 procesora. Użyj __cpuid, __cpuidex, aby określić technologii procesora, które są obsługiwane na określonym komputerze.
 
@@ -1836,7 +1836,7 @@ Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) nas
 
 **Informowanie o wysokiej rozdzielczości DPI.** Domyślnie aplikacjach MFC są wysoka-obsługującą ustawienia DPI. W przypadku aplikacji o wysokiej rozdzielczości (o dużej liczbie punktów na cal) wiedzieć, systemu operacyjnego można skalować system windows, tekst i inne elementy interfejsu użytkownika dla bieżącej rozdzielczości ekranu. Oznacza to, że skalowany obraz jest bardziej prawdopodobne rozmieszczony prawidłowo i nie jest przycinana lub podzielony na piksele.
 
-**Ponownie uruchom Menedżera.** Menedżera ponownego uruchamiania zapisuje dokumenty i automatycznie spowoduje ponowne uruchomienie aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Na przykład można użyć Menedżera ponownego uruchamiania, aby uruchomić aplikację po zamknięciu, automatycznych aktualizacji. Aby uzyskać więcej informacji o sposobie konfigurowania aplikacji do użycia Menedżera ponownego uruchamiania, zobacz **porady: Dodawanie obsługi Menedżera ponownego uruchomienia**.
+**Ponownie uruchom Menedżera.** Menedżera ponownego uruchamiania zapisuje dokumenty i automatycznie spowoduje ponowne uruchomienie aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Na przykład można użyć Menedżera ponownego uruchamiania, aby uruchomić aplikację po zamknięciu, automatycznych aktualizacji. Aby uzyskać więcej informacji o sposobie konfigurowania aplikacji do użycia Menedżera ponownego uruchamiania, zobacz **jak: Dodawanie obsługi Menedżera ponownego uruchamiania**.
 
 **CTaskDialog.** `CTaskDialog` Klasa może być używana zamiast standardowego `AfxMessageBox` okno komunikatu. `CTaskDialog` Klasy Wyświetla i zbiera więcej informacji, niż w polu standardową wiadomość.
 
@@ -1854,7 +1854,7 @@ Większość `/analyze` ostrzeżenia (analiza kodu przedsiębiorstwa) zostały u
 
 #### <a name="animation-and-d2d-support"></a>Animacja i D2D pomocy technicznej
 
-Biblioteka MFC obsługuje teraz animacji i grafiki Direct2D. Biblioteka MFC zawiera kilka nowych klas MFC i funkcje, aby obsługiwać tę funkcję. Istnieją również dwa nowe wypróbowanie pokazują, jak dodawanie obiektu D2D i obiekt animacji do projektu. Te wskazówki są **wskazówki: Dodawanie obiektu D2D do projektu MFC** i **wskazówki: Dodawanie animacji do projektu MFC**.
+Biblioteka MFC obsługuje teraz animacji i grafiki Direct2D. Biblioteka MFC zawiera kilka nowych klas MFC i funkcje, aby obsługiwać tę funkcję. Istnieją również dwa nowe wypróbowanie pokazują, jak dodawanie obiektu D2D i obiekt animacji do projektu. Te wskazówki są **instruktażu: Dodawanie obiektu D2D do projektu MFC** i **instruktażu: Dodawanie animacji do projektu MFC**.
 
 ### <a name="ide"></a>IDE
 
@@ -1906,7 +1906,7 @@ Dodanie ymmword — typ danych obsługuje 256-bitowego multimedialnych argumenty
 
 - Visual C++ zawiera teraz biblioteki STL/CLR. Biblioteka STL/CLR to opakowanie standardowych szablon biblioteki (STL), podzbiór standardowej biblioteki C++, do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). STL/CLR można teraz użyć wszystkich kontenerów, iteratorów i algorytmów STL w zarządzanym środowisku.
 
-#### <a name="mfc-library"></a>Biblioteki MFC
+#### <a name="mfc-library"></a>MFC Library
 
 - Windows Vista obsługuje formanty standardowe. Ponad 150 metod 18 klas nowego lub istniejącego dodano do obsługi funkcji Windows Vista lub do poprawienia funkcji w bieżącym klas MFC.
 - Nowy `CNetAddressCtrl` klasy umożliwia wprowadzania i sprawdzania poprawności adresów IPv4 i IPv6 lub nazwy DNS.
@@ -1926,7 +1926,7 @@ Dodanie ymmword — typ danych obsługuje 256-bitowego multimedialnych argumenty
 
 ### <a name="visual-c-compiler-and-linker"></a>Kompilator języka Visual C++ i Konsolidatorze
 
-#### <a name="compiler-changes"></a>Zmiany w kompilatorze
+#### <a name="compiler-changes"></a>Compiler Changes
 
 - Kompilator obsługuje zarządzane kompilacje przyrostowe. Gdy ta opcja jest określona, kompilator nie będzie ponownie kompilować kodu, gdy ulegnie zmianie przywoływanego zestawu. Zamiast tego zostanie przeprowadzone kompilacji przyrostowej. Pliki są ponownie kompilowane tylko wtedy, gdy zmiany wpływają na kod zależny od.
 - Atrybuty powiązane z aplikacji serwera ATL. nie są już obsługiwane. Kompilator nie obsługuje już kilka atrybutów, które zostały bezpośrednio z aplikacji serwera ATL. Aby uzyskać pełną listę atrybutów, które usunięto Zobacz fundamentalne zmiany.
@@ -1938,7 +1938,7 @@ Dodanie ymmword — typ danych obsługuje 256-bitowego multimedialnych argumenty
 - `/Qfast_transcendentals` generuje kod wbudowanej funkcji przestępne.
 - `/Qimprecise_fwaits` Usuwa polecenia fwait wewnętrzny, aby spróbować bloków, korzystając z `/fp:except` — opcja kompilatora.
 
-### <a name="linker-changes"></a>Zmiany konsolidatora
+### <a name="linker-changes"></a>Linker Changes
 
 - Informacje o kontroli konta użytkownika jest teraz osadzona w plikach manifestu dla plików wykonywalnych przez Visual C++ łączący (link.exe). Ta funkcja jest włączona domyślnie. Aby uzyskać więcej informacji na temat sposobu wyłączania tej funkcji lub jak zmodyfikować zachowanie domyślne, zobacz `/MANIFESTUAC` (osadza informacje UAC w manifeście).
 - Konsolidator ma teraz `/DYNAMICBASE` opcję, aby włączyć funkcję randomizacji układu przestrzeni adresowej systemu Windows Vista. Ta opcja modyfikuje nagłówek pliku wykonywalnego, aby wskazać, czy aplikacja powinna być losowo przebazowanych w czasie ładowania.
@@ -2197,7 +2197,7 @@ Kompilator zawiera istotne zmiany w tej wersji.
 
 - Informacje na temat sposobu uruchamiania zarządzanych rozszerzeń dla aplikacji C++ za pomocą bieżącej wersji kompilatora w oparciu poprzednią wersję środowiska uruchomieniowego.
 - Rozszerzenia Managed Extensions for C++ często zadawane pytania.
-- Przewodnik został dodany prezentujący do portu istniejącego, natywnego aplikacji na potrzeby zarządzanych rozszerzeń języka C++: przewodnik: Przenoszenie istniejących aplikacji natywnej języka C++ do Interoperate za pomocą składników .NET Framework.
+- Dodano przewodnik pokazujący sposób portu istniejącego, natywnego aplikacji na potrzeby zarządzanych rozszerzeń języka C++: Przewodnik: Przenoszenie istniejących aplikacji natywnych języka C++ pod kątem współdziałania z składników .NET Framework.
 - Teraz można utworzyć delegata dla metody typu wartości.
 - Znacznie rozszerzono kompilatora zgodności ze standardem C++ dla Visual C++ .NET 2003.
 - `/arch` — Opcja kompilatora jest dodawany.

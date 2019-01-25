@@ -1,5 +1,5 @@
 ---
-title: Klasa CComControlBase
+title: CComControlBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComControlBase
@@ -80,14 +80,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694585"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894435"
 ---
-# <a name="ccomcontrolbase-class"></a>Klasa CComControlBase
+# <a name="ccomcontrolbase-class"></a>CComControlBase Class
 
 Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Konstruktor.|
-|[CComControlBase:: ~ CComControlBase](#dtor)|Destruktor.|
+|[CComControlBase::~CComControlBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Sprawdza, czy *iVerb* parametr używany przez `IOleObjectImpl::DoVerb` powoduje, że kontrolki interfejsu użytkownika, aby aktywować i zwraca wartość TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Wyświetla strony właściwości formantu.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Wywołanie tej metody, kontener, by narysować ponownie kontrolki lub powiadomić ujść Porada zarejestrowanych, które kontrolki widok został zmieniony.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Pobiera DISPID_AMBIENT_APPEARANCE, wygląd bieżące ustawienie dla formantu: 0, dla płaskiej i 1 dla 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Pobiera DISPID_AMBIENT_APPEARANCE, wygląd bieżące ustawienie dla formantu: 0 stosowana jest stała i 1 dla 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Pobiera DISPID_AMBIENT_AUTOCLIP, flagę wskazującą, czy kontener obsługuje automatyczne wycinka obszaru wyświetlania kontrolki.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Pobiera DISPID_AMBIENT_BACKCOLOR, kolor tła otoczenia dla wszystkich kontrolek, zdefiniowane przez kontener.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Pobiera DISPID_AMBIENT_CHARSET, otoczenia zestaw znaków dla wszystkich kontrolek, zdefiniowane przez kontener.|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Pobiera DISPID_AMBIENT_SHOWGRABHANDLES, flagę wskazującą, czy kontener zezwala na formant, aby wyświetlić położenie uchwytów dla siebie, gdy jest ona aktywna.|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Pobiera DISPID_AMBIENT_SHOWHATCHING, flagę wskazującą, czy kontener zezwala na formant, aby wyświetlić sam wzorem kreskowanym, gdy interfejs użytkownika jest aktywny.|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Pobiera DISPID_AMBIENT_SUPPORTSMNEMONICS, flagę wskazującą, czy kontener obsługuje klawiszy skrótu klawiatury.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 dla Wyrównanie ogólne (numery lewej po prawej stronie tekstu), 1 dla wyrównanie do lewej, 2-wyrównanie do środka i 3-wyrównanie do prawej.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 w przypadku Wyrównanie ogólne (numery lewej po prawej stronie tekstu), 1 dla wyrównanie do lewej, 2-wyrównanie do środka i 3-wyrównanie do prawej.|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Pobiera DISPID_AMBIENT_TOPTOBOTTOM, kierunek, w którym zawartość jest wyświetlana przez kontener.|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|Pobiera DISPID_AMBIENT_UIDEAD, flagę wskazującą, czy kontener wymagane formant aby reagować na działania interfejsu użytkownika.|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|Pobiera DISPID_AMBIENT_USERMODE, flagę wskazującą, czy kontener jest w trybie wykonywania (PRAWDA) lub tryb projektowania (FALSE).|
@@ -235,7 +235,7 @@ Dojście do okna skojarzonego z kontrolką.
 
 Inicjuje rozmiaru kontrolki na jednostkach HIMETRIC 5080 X 5080 (2 "X 2") i inicjuje `CComControlBase` wartości elementów członkowskich danych na wartość NULL lub wartość FALSE.
 
-##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase
+##  <a name="dtor"></a>  CComControlBase::~CComControlBase
 
 Destruktor.
 
@@ -358,7 +358,7 @@ Jeśli kontrolka jest aktywny (składowa danych klasy kontrolki [CComControlBase
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-Pobiera DISPID_AMBIENT_APPEARANCE, wygląd bieżące ustawienie dla formantu: 0, dla płaskiej i 1 dla 3D.
+Pobiera DISPID_AMBIENT_APPEARANCE, wygląd bieżące ustawienie dla formantu: 0 stosowana jest stała i 1 dla 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor tła*<br/>
+*BackColor*<br/>
 Właściwość DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parametry
 
 *ppFont*<br/>
-Wskaźnik do kontenera jego otoczenia [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interfejs ekspedycji.
+Wskaźnik do kontenera jego otoczenia [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) interfejs ekspedycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator właściwości kontenera, które mają zostać pobrane.
 
 *var*<br/>
@@ -704,7 +704,7 @@ Jedna z wartości HRESULT standardowych.
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 dla Wyrównanie ogólne (numery lewej po prawej stronie tekstu), 1 dla wyrównanie do lewej, 2-wyrównanie do środka i 3-wyrównanie do prawej.
+Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 w przypadku Wyrównanie ogólne (numery lewej po prawej stronie tekstu), 1 dla wyrównanie do lewej, 2-wyrównanie do środka i 3-wyrównanie do prawej.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -1217,7 +1217,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 
 W poniższej tabeli przedstawiono sposób, w jaki `m_spInPlaceSite` zależy od typu wskaźnika [m_bWndLess](#m_bwndless) i [m_bInPlaceSiteEx](#m_binplacesiteex) flagi element członkowski danych:
 
-|m_spInPlaceSite typu|m_bWndLess wartość|m_bInPlaceSiteEx wartość|
+|m_spInPlaceSite Type|m_bWndLess wartość|m_bInPlaceSiteEx wartość|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|WARTOŚĆ TRUE|Wartość PRAWDA lub FAŁSZ|
 |`IOleInPlaceSiteEx`|FAŁSZ|WARTOŚĆ TRUE|
