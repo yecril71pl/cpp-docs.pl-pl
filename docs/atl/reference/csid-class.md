@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465367"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894318"
 ---
 # <a name="csid-class"></a>Klasa CSid
 
@@ -54,7 +54,7 @@ class CSid
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Konstruktor.|
-|[CSid:: ~ CSid](#dtor)|Destruktor.|
+|[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -232,7 +232,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) w zestawie Windows SDK, aby uzyskać więcej informacji.
+Zobacz [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 

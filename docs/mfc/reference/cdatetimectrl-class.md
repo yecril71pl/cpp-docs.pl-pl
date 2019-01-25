@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178528"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894344"
 ---
 # <a name="cdatetimectrl-class"></a>Klasa CDateTimeCtrl
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 W pierwszej wersji odwołania do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego. W drugiej wersji odwołania do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego.
 
 *pTimeDest*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierającą obiekt, do której formant zostanie ustawiony.
 
 *pTimeNew*<br/>
-W drugiej wersji powyżej aby wskazywał [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający czas, do którego zostanie ustawiona formantu. W trzeciej wersji powyżej aby wskazywał [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej czasu, do którego zostanie ustawiona formantu.
+W drugiej wersji powyżej aby wskazywał [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający czas, do którego zostanie ustawiona formantu. W trzeciej wersji powyżej aby wskazywał [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej czasu, do którego zostanie ustawiona formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -599,7 +599,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [DT
 
 ## <a name="see-also"></a>Zobacz też
 
-[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)

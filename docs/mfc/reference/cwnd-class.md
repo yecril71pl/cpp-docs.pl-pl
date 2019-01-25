@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179087"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894539"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -1475,7 +1475,7 @@ BOOL AnimateWindow(
 *dwTime*<br/>
 Określa, jak długo trwa odtwarzanie animacji, w milisekundach. Zwykle animacji trwa 200 MS, aby odtworzyć.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa typ animacji. Aby uzyskać pełną listę możliwych wartości, zobacz [AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 Określa przycisk, który ma zostać zmodyfikowana.
 
-*nSprawdź*<br/>
+*nCheck*<br/>
 Określa akcję do wykonania. Jeśli *nSprawdź* jest różna od zera, `CheckDlgButton` funkcja członkowska umieszcza znacznik wyboru obok przycisku, który; jeśli jest to 0, znacznik wyboru zostanie usunięte. W przypadku przycisków trójstanowy Jeśli *nSprawdź* wynosi 2, stan przycisku jest nieokreślony.
 
 ### <a name="remarks"></a>Uwagi
@@ -1853,10 +1853,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Wskazuje [struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint) lub `CPoint` obiekt, który zawiera klienta służy do koordynowania ma zostać przekonwertowany.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub `CRect` obiekt, który zawiera klienta służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -2437,7 +2437,7 @@ Określa atrybuty, które pliki mają być wyświetlane. Może być dowolną kom
 
 - Archiwa DDL_ARCHIVE.
 
-- Flaga DDL_POSTMSGS LB_DIR. Jeśli jest ustawiona flaga LB_DIR, Windows umieszcza komunikaty generowane przez `DlgDirList` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.
+- DDL_POSTMSGS LB_DIR flag. Jeśli jest ustawiona flaga LB_DIR, Windows umieszcza komunikaty generowane przez `DlgDirList` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.
 
 - DDL_DRIVES dysków. Jeśli jest ustawiona flaga DDL_DRIVES, Flaga DDL_EXCLUSIVE jest ustawiana automatycznie. W związku z tym, aby utworzyć listę katalogów, która zawiera dysków i plików, należy wywołać `DlgDirList` dwa razy: jeden raz z DDL_DRIVES flagą zestawu, a drugi raz z użyciem flag w pozostałej części listy.
 
@@ -2505,7 +2505,7 @@ Określa atrybuty pliku DOS plików, które mają być wyświetlane. Może być 
 
 - Archiwa DDL_ARCHIVE.
 
-- Flaga DDL_POSTMSGS CB_DIR. Jeśli jest ustawiona flaga CB_DIR, Windows umieszcza komunikaty generowane przez `DlgDirListComboBox` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.
+- DDL_POSTMSGS CB_DIR flag. Jeśli jest ustawiona flaga CB_DIR, Windows umieszcza komunikaty generowane przez `DlgDirListComboBox` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.
 
 - DDL_DRIVES dysków. Jeśli jest ustawiona flaga DDL_DRIVES, Flaga DDL_EXCLUSIVE jest ustawiana automatycznie. W związku z tym, aby utworzyć listę katalogów, która zawiera dysków i plików, należy wywołać `DlgDirListComboBox` dwa razy: jeden raz z DDL_DRIVES flagą zestawu, a drugi raz z użyciem flag w pozostałej części listy.
 
@@ -2711,7 +2711,7 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia. Funkcja rysuje tytuł okna, w tym kontekście urządzenia.
 
 *lprc*<br/>
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Parametry
 
-*Nwynik*<br/>
+*nResult*<br/>
 Zawiera wartość zwracaną do obiektu wywołującego [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Uwagi
@@ -3086,7 +3086,7 @@ Dojście do okna nadrzędnego, w których okna podrzędne są do wyszukania.
 Dojście do okna podrzędnego. Wyszukiwanie rozpoczyna się od następnego okna podrzędne w kolejności. Okno podrzędne muszą być bezpośrednie podrzędne *hwndParent*, nie tylko podrzędne okna.
 
 *lpszClass*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa nazwę klasy lub atom klasy, utworzony przez poprzednie wywołanie [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) lub [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Wskaźnik na ciąg zakończony znakiem null, który określa nazwę klasy lub atom klasy, utworzony przez poprzednie wywołanie [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) lub [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę okna (tytuł okna). Jeśli ten parametr ma wartość NULL, Dopasuj wszystkie nazwy okna.
@@ -3143,7 +3143,7 @@ BOOL FlashWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa stan flash. Aby uzyskać pełną listę wartości, zobacz [FLASHWINFO](/windows/desktop/api/winuser/ns-winuser-flashwinfo) struktury.
 
 *uCount*<br/>
@@ -3709,7 +3709,7 @@ void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub `CRect` obiektu do odbierania współrzędne klienta. `left` i `top` elementów członkowskich będzie równa 0. `right` i `bottom` będzie zawierać elementy członkowskie, szerokość i wysokość okna.
 
 ### <a name="remarks"></a>Uwagi
@@ -4354,7 +4354,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Usuń flagę ze*<br/>
+*nFlag*<br/>
 Określa, czy funkcja zwraca wskaźnik do okna następnego lub poprzedniego okna. Może to być albo GW_HWNDNEXT, która zwraca okna, który następuje po `CWnd` obiekt na liście Menedżera okien lub GW_HWNDPREV, która zwraca poprzednie okno na liście Menedżera okien.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4863,7 +4863,7 @@ BOOL GetUpdateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `CRect` obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) to do odbierania współrzędne klienta aktualizacji, która otacza region aktualizacji.
 
 Ten parametr jest ustawiony na wartość NULL, aby ustalić, czy region aktualizacji istnieje w ramach `CWnd`. Jeśli *lprect —* ma wartość NULL, `GetUpdateRect` funkcja elementu członkowskiego zwraca wartość różną od zera, jeśli istnieje z regionu aktualizacji i nie jest równa 0, jeśli jest to jeden. Zapewnia to możliwość określenia, czy komunikat WM_PAINT korzystaniem przez nieprawidłowy obszar. Nie należy ustawiać ten parametr na wartość NULL w Windows w wersji 3.0 i wcześniejszych.
@@ -5062,7 +5062,7 @@ void GetWindowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `CRect` obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) , otrzyma współrzędne ekranu narożników lewej górnej i dolnej prawej.
 
 ### <a name="remarks"></a>Uwagi
@@ -5079,7 +5079,7 @@ int GetWindowRgn(HRGN hRgn)const;
 
 ### <a name="parameters"></a>Parametry
 
-*hrgn —*<br/>
+*hRgn*<br/>
 Dojście do regionu okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -5285,7 +5285,7 @@ void InvalidateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `CRect` obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) zawierający prostokąt (w współrzędne klienta) mają zostać dodane do obszaru aktualizacji. Jeśli *lprect —* ma wartość NULL, całego obszaru klienta jest dodawany do regionu.
 
 *bErase*<br/>
@@ -5645,10 +5645,10 @@ void MapWindowPoints(
 *pwndTo*<br/>
 Identyfikuje okna, do której są konwertowane punktów. Jeśli ten parametr ma wartość NULL, punkty są konwertowane na współrzędne ekranu.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt, w których punkty są ma zostać przekonwertowany. Pierwsza wersja ta funkcja jest dostępna tylko w przypadku wersji Windows 3.1 lub nowszy.
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Wskaźnik do tablicy [struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint) zawierające zestaw punktów, które ma zostać przekonwertowany.
 
 *nCount*<br/>
@@ -5673,7 +5673,7 @@ Wskazuje `CString` obiekt lub ciąg zakończony znakiem null, zawierający komun
 *lpszCaption*<br/>
 Wskazuje `CString` obiekt lub ciąg przerwany wartością null ma być używany dla podpisu okno komunikatu. Jeśli *lpszCaption* ma wartość NULL, podpis domyślną "Error" jest używany.
 
-*nNie*<br/>
+*nType*<br/>
 Określa zawartość i zachowanie w oknie komunikatu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -5826,7 +5826,7 @@ Określa wysokość nowe `CWnd`.
 *bRepaint*<br/>
 Określa, czy `CWnd` jest odświeżana. W przypadku opcji TRUE `CWnd` odbiera [WM_PAINT](/windows/desktop/gdi/wm-paint) komunikatu w jego [OnPaint](#onpaint) komunikatu obsługi w zwykły sposób. Jeśli ten parametr ma wartość FALSE, nie ponownego rysowania dowolnego rodzaju występuje. Dotyczy obszaru klienta, obszar niekliencki (w tym tytuł i pasków przewijania) oraz dowolnej części okna nadrzędnego, niewykrytych na `CWnd`przez przenoszenie. Jeśli ten parametr ma wartość FALSE, aplikacja musi jawnie unieważnienie lub odświeżyć częściami `CWnd` i okna nadrzędnego, który musi być narysowany ponownie.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) , który określa nowy rozmiar i położenie.
 
 ### <a name="remarks"></a>Uwagi
@@ -5878,7 +5878,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa, czy `CWnd` jest aktywowany lub dezaktywowany. Może to być jedna z następujących wartości:
 
 - Trwa dezaktywowanie WA_INACTIVE okna.
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Wskaźnik do witryny formant, który zażądał właściwości otoczenia.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator alokacji żądanej właściwości otoczenia.
 
 *pvar*<br/>
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Jeśli `CWnd` obiekt ma fokus, jego `OnCancelMode` funkcja członkowska jest wywoływana, gdy jest wyświetlane okno dialogowe lub okno komunikatu. Dzięki temu `CWnd` anulować tryby, takich jak przechwytywanie myszy.
 
-Domyślna implementacja odpowiada przez wywołanie metody [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) funkcji Windows. Zastąpienie tej funkcji elementu członkowskiego w klasie pochodnej do obsługi innych trybów.
+Domyślna implementacja odpowiada przez wywołanie metody [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) funkcji Windows. Zastąpienie tej funkcji elementu członkowskiego w klasie pochodnej do obsługi innych trybów.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ Wskaźnik do okna, aby uzyskać przechwytywania myszy
 
 ### <a name="remarks"></a>Uwagi
 
-Okno odbiera ten komunikat, nawet wtedy, gdy wywołuje [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) sam. Aplikacja, nie należy próbować ustawić przechwytywanie myszy w odpowiedzi na tę wiadomość. Po odebraniu tego komunikatu, okno powinno narysowania, jeśli to konieczne odzwierciedlić nowe stan przechwytywanie myszy.
+Okno odbiera ten komunikat, nawet wtedy, gdy wywołuje [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) sam. Aplikacja, nie należy próbować ustawić przechwytywanie myszy w odpowiedzi na tę wiadomość. Po odebraniu tego komunikatu, okno powinno narysowania, jeśli to konieczne odzwierciedlić nowe stan przechwytywanie myszy.
 
 Zobacz zestaw SDK Windows, aby uzyskać informacje na `ReleaseCapture` funkcji Windows.
 
@@ -6476,7 +6476,7 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Zawiera wskaźnik do kontekst wyświetlania okna podrzędnego. Mogą być tymczasowe.
 
 *pWnd*<br/>
@@ -6710,7 +6710,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Określa kontekst urządzenia.
 
 *Rect*<br/>
@@ -6896,7 +6896,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Określa obiekt kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda otrzymuje [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) powiadomienie, które opisano w zestawie Windows SDK. Ten komunikat zostanie umieszczony na początku kolejki komunikatów skojarzonych z wątkiem, który zarejestrował klawisza dostępu. Użyj [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) funkcję, aby zarejestrować klawisza dostępu całego systemu.
+Ta metoda otrzymuje [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) powiadomienie, które opisano w zestawie Windows SDK. Ten komunikat zostanie umieszczony na początku kolejki komunikatów skojarzonych z wątkiem, który zarejestrował klawisza dostępu. Użyj [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) funkcję, aby zarejestrować klawisza dostępu całego systemu.
 
 > [!NOTE]
 > Ta funkcja członkowska jest wywoływana przez platformę, by umożliwić aplikacji w taki sposób, by obsłużyć komunikat Windows. Parametry przekazane do funkcji odzwierciedlają parametry odebrane przez platformę, gdy wiadomość została odebrana. Jeśli chcesz wywołać implementacji klasy podstawowej w tej funkcji, tę implementację użyje parametry pierwotnie przekazana z komunikatem i nie parametry, których dostarczenie funkcji.
@@ -7158,7 +7158,7 @@ Określa, że kod paska przewijania, który wskazuje użytkownika przewijanym ż
 
 - Przeciągnij SB_THUMBTRACK pole przewijania do określonej pozycji. Bieżące położenie jest określona przez *npos —* parametru.
 
-*npos —*<br/>
+*nPos*<br/>
 Określa położenie pola przewijania, jeśli kod pasek przewijania jest SB_THUMBPOSITION lub SB_THUMBTRACK; w przeciwnym razie nie jest używany. W zależności od zakresu początkowej przewijania *npos —* może być ujemny i powinny być rzutowane na **int** w razie potrzeby.
 
 *pScrollBar*<br/>
@@ -7212,7 +7212,7 @@ Określa jedno z poniższych kodów pasek przewijania w programie word niskiego 
 
 - Przewiń SB_TOP w lewym górnym rogu.
 
-*npos —*<br/>
+*nPos*<br/>
 Zawiera pozycja pola przewijania, jeśli kod pasek przewijania jest SB_THUMBPOSITION; w przeciwnym razie nieużywane.
 
 ### <a name="remarks"></a>Uwagi
@@ -7232,7 +7232,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Określa obiekt kontekstu urządzenia ikony. Mogą być tymczasowe i nie powinny być przechowywane do późniejszego użycia.
 
 ### <a name="remarks"></a>Uwagi
@@ -7786,7 +7786,7 @@ afx_msg UINT OnMenuDrag(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*npos —*|[in] Indeks elementu menu, po rozpoczęciu operacji przeciągania.|
+|*nPos*|[in] Indeks elementu menu, po rozpoczęciu operacji przeciągania.|
 |*pMenu*|[in] Wskaźnik do [CMenu](../../mfc/reference/cmenu-class.md) obiekt, który zawiera element menu.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7845,7 +7845,7 @@ afx_msg void OnMenuRButtonUp(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*npos —*|[in] Indeks elementu menu prawego przycisku myszy został wydany.|
+|*nPos*|[in] Indeks elementu menu prawego przycisku myszy został wydany.|
 |*pMenu*|[in] Wskaźnik do [CMenu](../../mfc/reference/cmenu-class.md) obiekt, który zawiera element menu.|
 
 ### <a name="remarks"></a>Uwagi
@@ -8148,7 +8148,7 @@ afx_msg void OnMoving(
 *nSide*<br/>
 Krawędź okna do przeniesienia.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) który będzie zawierał współrzędne elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -8597,7 +8597,7 @@ void OnNcXButtonDblClk(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nHitTest*|[in] Testowania trafienia wartość zwrócona przez obiekt [CWnd::DefWindowProc](#defwindowproc) funkcji wyniku przetwarzania [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) wiadomości.|
-|*Nprzycisk*|[in] Wartość XBUTTON1 przypadku dwukrotnego kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi przycisk X jest dwukrotnym kliknięciu.|
+|*nButton*|[in] Wartość XBUTTON1 przypadku dwukrotnego kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi przycisk X jest dwukrotnym kliknięciu.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu obszaru klienta.|
 
 ### <a name="remarks"></a>Uwagi
@@ -8623,7 +8623,7 @@ afx_msg void OnNcXButtonDown(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nHitTest*|[in] Testowania trafienia wartość zwrócona przez obiekt [CWnd::DefWindowProc](#defwindowproc) funkcji wyniku przetwarzania [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) wiadomości.|
-|*Nprzycisk*|[in] Wartość XBUTTON1, jeśli pierwszy przycisk myszy X jest wciśnięty lub XBUTTON2 Jeśli drugi przycisk X jest wciśnięty.|
+|*nButton*|[in] Wartość XBUTTON1, jeśli pierwszy przycisk myszy X jest wciśnięty lub XBUTTON2 Jeśli drugi przycisk X jest wciśnięty.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu ekranu.|
 
 ### <a name="remarks"></a>Uwagi
@@ -8649,7 +8649,7 @@ afx_msg void OnNcXButtonUp(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nHitTest*|[in] Testowania trafienia wartość zwrócona przez obiekt [CWnd::DefWindowProc](#defwindowproc) funkcji wyniku przetwarzania [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) wiadomości.|
-|*Nprzycisk*|[in] Wartość XBUTTON1 Jeśli zwolnieniu przycisku myszy X pierwszy lub XBUTTON2 Jeśli drugi przycisk X zostanie zwolniony.|
+|*nButton*|[in] Wartość XBUTTON1 Jeśli zwolnieniu przycisku myszy X pierwszy lub XBUTTON2 Jeśli drugi przycisk X zostanie zwolniony.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu ekranu.|
 
 ### <a name="remarks"></a>Uwagi
@@ -8732,7 +8732,7 @@ afx_msg UINT OnNotifyFormat(
 |Parametr|Opis|
 |---------------|-----------------|
 |*pWnd*|[in] Wskaźnik do `CWnd` obiekt reprezentujący okno Wysyłanie [WM_NOTIFY](/windows/desktop/controls/wm-notify) wiadomości.<br /><br /> Ten parametr jest wskaźnik do kontrolki, jeśli *Npolecenie* parametr jest NF_QUERY lub wskaźnik do okno nadrzędne kontrolki, jeśli *Npolecenie* jest NF_REQUERY.|
-|*Npolecenie*|[in] Wartość polecenia, który specjalizuje się wm_notify — komunikat. Możliwe wartości to:<br /><br /> -NF_QUERY-<br />     Komunikat jest zapytanie w celu określenia, czy w komunikatach WM_NOTIFY powinien być używany ANSI lub struktury Unicode. Ta wiadomość jest wysyłana za pomocą formantu do okna nadrzędnego, podczas tworzenia kontrolki, a w odpowiedzi na formularz NF_REQUERY tego komunikatu.<br />-NF_REQUERY-<br />     Komunikat jest żądaniem kontrolki do wysyłania formularza NF_QUERY tej wiadomości do okna nadrzędnego. To żądanie zostało wysłane przez okno nadrzędne i prosi formantu do kwerendy element nadrzędny o typie strukturę do użycia w wiadomości WM_NOTIFY. Jeśli *Npolecenie* parametr to NF_REQUERY, wartość zwracana jest wynikiem operacji ponawiania kwerendy.|
+|*nCommand*|[in] Wartość polecenia, który specjalizuje się wm_notify — komunikat. Możliwe wartości to:<br /><br /> -NF_QUERY-<br />     Komunikat jest zapytanie w celu określenia, czy w komunikatach WM_NOTIFY powinien być używany ANSI lub struktury Unicode. Ta wiadomość jest wysyłana za pomocą formantu do okna nadrzędnego, podczas tworzenia kontrolki, a w odpowiedzi na formularz NF_REQUERY tego komunikatu.<br />- NF_REQUERY -<br />     Komunikat jest żądaniem kontrolki do wysyłania formularza NF_QUERY tej wiadomości do okna nadrzędnego. To żądanie zostało wysłane przez okno nadrzędne i prosi formantu do kwerendy element nadrzędny o typie strukturę do użycia w wiadomości WM_NOTIFY. Jeśli *Npolecenie* parametr to NF_REQUERY, wartość zwracana jest wynikiem operacji ponawiania kwerendy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nNie*<br/>
+*nType*<br/>
 Określa typ zmiany rozmiaru żądanie. Ten parametr może być jedną z następujących wartości:
 
 - Zmaksymalizowany SIZE_MAXIMIZED okna.
@@ -9350,10 +9350,10 @@ Określa typ zmiany rozmiaru żądanie. Ten parametr może być jedną z następ
 
 - SIZE_MAXSHOW wiadomość jest wysyłana do wszystkich okien wyskakujących, gdy niektóre inne okna został przywrócony do poprzedniego rozmiaru.
 
-*CX*<br/>
+*cx*<br/>
 Określa nową szerokość obszaru klienta.
 
-*CY*<br/>
+*cy*<br/>
 Określa nową wysokość obszaru klienta.
 
 ### <a name="remarks"></a>Uwagi
@@ -9409,7 +9409,7 @@ afx_msg void OnSizing(
 *nSide*<br/>
 Krawędź okna do przeniesienia.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) który będzie zawierał współrzędne elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -9468,7 +9468,7 @@ Określa, czy okno rozszerzone style nonextended uległy zmianie. Ten parametr m
 - GWL_STYLE nonextended Style okna uległy zmianie.
 
 *lpStyleStruct*<br/>
-Wskazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturę, która zawiera nowe style okna. Aplikację można sprawdzić style, ale nie można zmienić ich.
+Wskazuje [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) strukturę, która zawiera nowe style okna. Aplikację można sprawdzić style, ale nie można zmienić ich.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -9495,7 +9495,7 @@ Określa, czy okno rozszerzone style nonextended uległy zmianie. Ten parametr m
 - GWL_STYLE nonextended Style okna uległy zmianie.
 
 *lpStyleStruct*<br/>
-Wskazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturę, która zawiera nowe style okna. Aplikację można zbadać stylów i je zmienić.
+Wskazuje [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) strukturę, która zawiera nowe style okna. Aplikację można zbadać stylów i je zmienić.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -10110,7 +10110,7 @@ Określa, że kod paska przewijania, który wskazuje użytkownika przewijanym ż
 
 - SB_TOP przewiń do góry.
 
-*npos —*<br/>
+*nPos*<br/>
 Zawiera bieżące położenie pola przewijania, jeśli kod pasek przewijania jest SB_THUMBPOSITION lub SB_THUMBTRACK; w przeciwnym razie nieużywane. W zależności od zakresu początkowej przewijania *npos —* może być ujemny i powinny być rzutowane na **int** w razie potrzeby.
 
 *pScrollBar*<br/>
@@ -10160,7 +10160,7 @@ Określa jedno z następujących wartości pasek przewijania:
 
 - SB_TOP przewiń do góry.
 
-*npos —*<br/>
+*nPos*<br/>
 Zawiera pozycja pola przewijania, jeśli kod pasek przewijania jest SB_THUMBPOSITION; w przeciwnym razie *npos —* nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
@@ -10311,7 +10311,7 @@ afx_msg void OnXButtonDblClk(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nFlags*|[in] Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące, które są naciśnięte przyciski. Na przykład flaga MK_CONTROL wskazuje, że zostanie naciśnięty klawisz CTRL.|
-|*Nprzycisk*|[in] Wartość XBUTTON1 przypadku dwukrotnego kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi przycisk X jest dwukrotnym kliknięciu.|
+|*nButton*|[in] Wartość XBUTTON1 przypadku dwukrotnego kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi przycisk X jest dwukrotnym kliknięciu.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu obszaru klienta.|
 
 ### <a name="remarks"></a>Uwagi
@@ -10349,7 +10349,7 @@ afx_msg void OnXButtonDown(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nFlags*|[in] Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące, które są naciśnięte przyciski. Na przykład flaga MK_CONTROL wskazuje, że zostanie naciśnięty klawisz CTRL.|
-|*Nprzycisk*|[in] Wartość XBUTTON1 Jeśli kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi został kliknięty przycisk X.|
+|*nButton*|[in] Wartość XBUTTON1 Jeśli kliknięcia pierwszego przycisku Microsoft Intellimouse X lub XBUTTON2 Jeśli drugi został kliknięty przycisk X.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu obszaru klienta.|
 
 ### <a name="remarks"></a>Uwagi
@@ -10387,7 +10387,7 @@ afx_msg void OnXButtonUp(
 |Parametr|Opis|
 |---------------|-----------------|
 |*nFlags*|[in] Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące, które są naciśnięte przyciski. Na przykład flaga MK_CONTROL wskazuje, że zostanie naciśnięty klawisz CTRL.|
-|*Nprzycisk*|[in] Wartość XBUTTON1, jeśli pierwszy przycisk Microsoft Intellimouse X dwukrotnym kliknięciu lub XBUTTON2 Jeśli drugi przycisk X był dwukrotnym kliknięciu.|
+|*nButton*|[in] Wartość XBUTTON1, jeśli pierwszy przycisk Microsoft Intellimouse X dwukrotnym kliknięciu lub XBUTTON2 Jeśli drugi przycisk X był dwukrotnym kliknięciu.|
 |*Punkt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu, który określa *x* i *y* współrzędne kursora względem lewego górnego rogu obszaru klienta.|
 
 ### <a name="remarks"></a>Uwagi
@@ -10483,7 +10483,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Kontekst urządzenia, na którym do rysowania kontrolek bez okien.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -10615,10 +10615,10 @@ void Print(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa opcje rysowania. Ten parametr może być co najmniej jeden z tych flag:
 
 - PRF_CHECKVISIBLE narysować okno tylko wtedy, gdy jest on widoczny.
@@ -10661,10 +10661,10 @@ void PrintClient(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa opcje rysowania. Ten parametr może być co najmniej jeden z tych flag:
 
 - PRF_CHECKVISIBLE narysować okno tylko wtedy, gdy jest on widoczny.
@@ -10691,7 +10691,7 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia, które ma zostać wydrukowany do.
 
 *nFlags*<br/>
@@ -10841,7 +10841,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Identyfikuje kontekst urządzenia, które mogą być wprowadzane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -10879,7 +10879,7 @@ Identyfikator ostatniego w zakresie paski sterowania zmienić położenie i rozm
 *nIDLeftOver*<br/>
 Określa identyfikator okienko, który wypełnia pozostałą część obszaru klienckiego.
 
-*Usuń flagę ze*<br/>
+*nFlag*<br/>
 Może mieć jedną z następujących wartości:
 
 - `CWnd::reposDefault` Wykonuje układ pasków sterowania. *lpRectParam* nie jest używany i może mieć wartości NULL.
@@ -10911,7 +10911,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa Windows komunikat do wysłania. Może być jednym z następujących wartości:
 
 - Wysyłanie nie MLF_NOIDLEMSG [wm_enteridle, gdy](/windows/desktop/dlgbox/wm-enteridle) wiadomości do elementu nadrzędnego.
@@ -10938,10 +10938,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Wskazuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu lub [struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint) zawierający współrzędne ekranu, który ma zostać przekonwertowany.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) zawierający współrzędne ekranu, który ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -10972,7 +10972,7 @@ Określa, w urządzeniu jednostek przewijanie w poziomie. Ten parametr musi być
 *yAmount*<br/>
 Określa, w urządzeniu jednostek przewijanie w pionie. Ten parametr musi być wartością ujemną, aby przewijać w górę.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) określający część obszaru klienckiego, aby być przewijane. Jeśli *lprect —* ma wartość NULL, jest przewijane całego obszaru klienta. Daszek zostaje przeniesiony, jeśli prostokąt kursora przecina prostokąt przewijania.
 
 *lpClipRect*<br/>
@@ -11005,7 +11005,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Określa, w urządzeniu jednostek przewijanie w poziomie. Ten parametr musi mieć wartość ujemną, przewiń w lewo.
 
 *dy*<br/>
@@ -11044,7 +11044,7 @@ Jeśli [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) i
 
 Jeśli okno ma [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) styl, zwrócone obszarów, określony przez *prgnUpdate* i *lpRectUpdate* całkowity obszar przewijane okno, które musi reprezentować można zaktualizować, w tym wszystkie obszary w okien podrzędnych, które wymagają aktualizacji.
 
-Jeśli [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) flaga zostanie określona, Windows nie będzie odpowiednio aktualizowana ekranu jest przewijane część okna podrzędnego. Część okna podrzędnego przewinięte, który znajduje się poza prostokąta źródłowego nie zostaną usunięte i będzie nie być narysowany ponownie prawidłowo w jego nowego miejsca docelowego. Użyj [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows funkcji przenoszenia okien podrzędnych, które nie znajdują się całkowicie w ramach *lpRectScroll* prostokąta. Kursor zostaje przeniesiony, jeśli jest ustawiona flaga SW_SCROLLCHILDREN i prostokąt karetki przecina prostokąt przewijania.
+Jeśli [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) flaga zostanie określona, Windows nie będzie odpowiednio aktualizowana ekranu jest przewijane część okna podrzędnego. Część okna podrzędnego przewinięte, który znajduje się poza prostokąta źródłowego nie zostaną usunięte i będzie nie być narysowany ponownie prawidłowo w jego nowego miejsca docelowego. Użyj [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows funkcji przenoszenia okien podrzędnych, które nie znajdują się całkowicie w ramach *lpRectScroll* prostokąta. Kursor zostaje przeniesiony, jeśli jest ustawiona flaga SW_SCROLLCHILDREN i prostokąt karetki przecina prostokąt przewijania.
 
 Wszystkie przychodzące i wychodzące współrzędne (dla *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, i *prgnUpdate*) są rozpatrywane w współrzędne klienta, niezależnie od tego, czy okno ma styl klasy CS_OWNDC lub CS_CLASSDC. Użyj [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) i [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) funkcji Windows do konwersji do i z logiczną współrzędne, jeśli to konieczne.
 
@@ -11247,7 +11247,7 @@ Wskaźnik do obiektu okna, na który otrzymali wcześniej myszy wszystkich danyc
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `CWnd` nie wymaga już wszystkie myszy dane wejściowe, aplikacja powinna wywołać [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) funkcji, dzięki czemu inne okna mogą odbierać wprowadzanie za pomocą myszy.
+Gdy `CWnd` nie wymaga już wszystkie myszy dane wejściowe, aplikacja powinna wywołać [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) funkcji, dzięki czemu inne okna mogą odbierać wprowadzanie za pomocą myszy.
 
 Podczas przechwytywania myszy dane wejściowe nie WM_NCHITTEST lub WM_SETCURSOR komunikaty są wysyłane do aktywnego okna.
 
@@ -11482,7 +11482,7 @@ Wskaźnik na wartość COLORREF, która określa klucz kolor przezroczystość m
 *bAlpha*<br/>
 Wartości alfa używany do opisania nieprzezroczystość warstwowej okna. Aby uzyskać więcej informacji, zobacz `SourceConstantAlpha` członkiem [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struktury. Gdy *bAlpha* wynosi 0, okno jest całkowicie przezroczysty. Gdy *bAlpha* wynosi 255, okno jest nieprzezroczysta.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa akcję do wykonania. Ten parametr może być co najmniej jeden z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -11672,7 +11672,7 @@ Określa pasek przewijania, należy ustawić. Ten parametr może być jedną z n
 
 - SB_VERT Ustawia położenie paska przewijania na pasku przewijania pionowego okna.
 
-*npos —*<br/>
+*nPos*<br/>
 Określa nowe położenie suwaka. Musi ona należeć do zakresu przewijania.
 
 *bRedraw*<br/>
@@ -11852,10 +11852,10 @@ Określa nowe położenie w lewej części okna.
 *y*<br/>
 Określa nowe położenie w górnej części okna.
 
-*CX*<br/>
+*cx*<br/>
 Określa nową szerokość okna.
 
-*CY*<br/>
+*cy*<br/>
 Określa nową wysokość okna.
 
 *nFlags*<br/>
@@ -11935,7 +11935,7 @@ int SetWindowRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*hrgn —*<br/>
+*hRgn*<br/>
 Dojście do regionu.
 
 *bRedraw*<br/>
@@ -12266,7 +12266,7 @@ Wskaźnik na wartość COLORREF, która określa klucz kolor przezroczystość m
 *pblend*<br/>
 Wskaźnik do [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) strukturę, która określa wartość przezroczystości, który będzie używany podczas tworzenia warstwowego okna.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa akcję do wykonania. Ten parametr może być co najmniej jeden z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -12303,7 +12303,7 @@ void ValidateRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) zawierający współrzędne klienta prostokąta do usunięcia z regionu znajdującego się aktualizacji. Jeśli *lprect —* ma wartość NULL, jest weryfikowane całe okno.
 
 ### <a name="remarks"></a>Uwagi

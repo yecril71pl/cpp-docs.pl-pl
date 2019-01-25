@@ -1,5 +1,5 @@
 ---
-title: 'TN006: mapy komunikatów'
+title: 'TN006: Mapy komunikatów'
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693678"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894084"
 ---
-# <a name="tn006-message-maps"></a>TN006: mapy komunikatów
+# <a name="tn006-message-maps"></a>TN006: Mapy komunikatów
 
 Ta uwaga opisuje funkcja mapy komunikatów MFC.
 
@@ -121,7 +121,7 @@ Zakres komunikatów zdefiniowanych przez użytkownika, korzystających z tej met
 
 ## <a name="registered-windows-messages"></a>Windows zarejestrowanych komunikatów
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkcja służy do definiowania nowego komunikatu w oknie, która może być unikatowy w całym systemie. Makro ON_REGISTERED_MESSAGE jest używane do obsługi komunikatów. To makro akceptuje nazwę *UINT NIEMAL* zmiennej, która zawiera identyfikator komunikatu zarejestrowanych systemu windows. Na przykład
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funkcja służy do definiowania nowego komunikatu w oknie, która może być unikatowy w całym systemie. Makro ON_REGISTERED_MESSAGE jest używane do obsługi komunikatów. To makro akceptuje nazwę *UINT NIEMAL* zmiennej, która zawiera identyfikator komunikatu zarejestrowanych systemu windows. Na przykład
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ Przykłady z poniższych metod:
     }
     ```
 
-Zaawansowani użytkownicy mogą obsługiwać szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) lub ON_COMMAND_RANGE_EX. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
+Użytkownicy zaawansowani obsługują szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) lub ON_COMMAND_RANGE_EX. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
 
 > [!NOTE]
 > ClassWizard obsługuje tworzenie obsługi ON_COMMAND i ON_UPDATE_COMMAND_UI, ale nie obsługuje tworzenia ON_COMMAND_EX lub ON_COMMAND_RANGE programów obsługi. Jednak Kreator klas przeanalizować i pozwalają na przeglądanie wszystkich wariantów obsługi cztery polecenia.

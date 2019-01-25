@@ -1,5 +1,5 @@
 ---
-title: Klasa CGopherFileFind
+title: CGopherFileFind Class
 ms.date: 11/04/2016
 f1_keywords:
 - CGopherFileFind
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662413"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894500"
 ---
-# <a name="cgopherfilefind-class"></a>Klasa CGopherFileFind
+# <a name="cgopherfilefind-class"></a>CGopherFileFind Class
 
 Pomoc Internetowych plikach wyszukiwania serwerów gopher.
 
@@ -123,7 +123,7 @@ Identyfikator kontekstu dla tej operacji. Zobacz **uwagi** Aby uzyskać więcej 
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CGopherFileFind` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CGopherFileFind` obiektu. Podczas konstruowania `CGopherFileFind` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CGopherFileFind` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CGopherFileFind` obiektu. Podczas konstruowania `CGopherFileFind` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -148,7 +148,7 @@ Odwołanie do [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obie
 *pstrString*<br/>
 Wskaźnik do ciągu zawierającego nazwę pliku.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi opisujące sposób obsługi tej sesji. Prawidłowe flagi są:
 
 - INTERNET_FLAG_RELOAD uzyskać danych z serwera zdalnego, nawet jeśli jest ona buforowana lokalnie.
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas utworzenia pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas utworzenia pliku.
 
 *refTime*<br/>
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego dostępu do pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas ostatniego dostępu do pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas do ostatniego zapisania pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas do ostatniego zapisania pliku.
 
 *refTime*<br/>
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.

@@ -1,5 +1,5 @@
 ---
-title: Klasa CFileFind
+title: CFileFind Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFileFind
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462160"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894058"
 ---
-# <a name="cfilefind-class"></a>Klasa CFileFind
+# <a name="cfilefind-class"></a>CFileFind Class
 
 Wykonuje wyszukiwanie plików lokalnych i jest klasą bazową dla [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) i [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), które wykonują internetowych plikach wyszukiwania.
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas utworzenia pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas utworzenia pliku.
 
 *refTime*<br/>
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego dostępu do pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas ostatniego dostępu do pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas do ostatniego zapisania pliku.
+Wskaźnik do [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury zawierającej czas do ostatniego zapisania pliku.
 
 *refTime*<br/>
 Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.

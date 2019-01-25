@@ -1,5 +1,5 @@
 ---
-title: CFileTime, klasa
+title: CFileTime Class
 ms.date: 10/18/2018
 f1_keywords:
 - CFileTime
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614230"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893941"
 ---
-# <a name="cfiletime-class"></a>CFileTime, klasa
+# <a name="cfiletime-class"></a>CFileTime Class
 
 Ta klasa dostarcza metody do zarządzania skojarzonych z plikiem wartości daty i godziny.
 
@@ -59,7 +59,7 @@ class CFileTime :  public FILETIME
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFileTime::operator-](#operator_-)|Ten operator jest używany do przeprowadzania odejmowania `CFileTime` lub `CFileTimeSpan` obiektu.|
+|[CFileTime::operator -](#operator_-)|Ten operator jest używany do przeprowadzania odejmowania `CFileTime` lub `CFileTimeSpan` obiektu.|
 |[CFileTime::operator! =](#operator_neq)|Ten operator porównuje dwa `CFileTime` obiekty pod kątem nierówności.|
 |[CFileTime::operator +](#operator_add)|Ten operator jest używany podczas dodawania `CFileTimeSpan` obiektu.|
 |[CFileTime::operator +=](#operator_add_eq)|Ten operator jest używany podczas dodawania `CFileTimeSpan` obiektu i przypisz wynik do bieżącego obiektu.|
@@ -92,7 +92,7 @@ Następujące statyczny const zmienne Członkowskie są dostarczane do uproszcze
 
 |Zmienna składowa|Liczbę 100-nanosekundowych interwałów|
 |---------------------|-----------------------------------------|
-|Milisekundy|10 000|
+|Millisecond|10 000|
 |Sekunda|Milisekunda \* 1000|
 |Minuta|Drugi \* 60|
 |Godzina|Minuty \* 60|
@@ -124,7 +124,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="parameters"></a>Parametry
 
 *FT*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury.
 
 *nTime*<br/>
 Data i godzina wyrażonej w postaci wartości 64-bitowych.
@@ -475,7 +475,7 @@ Zobacz przykład [CFileTime::Millisecond](#millisecond).
 
 ## <a name="see-also"></a>Zobacz też
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan, klasa](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

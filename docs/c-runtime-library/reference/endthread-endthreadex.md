@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597486"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893304"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,7 +62,7 @@ Możesz wywołać **_endthread** lub **_endthreadex** jawnie, aby zakończyć w�
 > [!NOTE]
 > Dla pliku wykonywalnego połączonego z Libcmt.lib Nie wywołuj Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API, uniemożliwia to systemowi środowiska wykonawczego odzyskiwanie przydzielone zasoby. **_endthread** i **_endthreadex** odzyskiwania zasobów przydzielonych wątku, a następnie wywołać **ExitThread**.
 
-**_endthread** automatycznie zamyka uchwyt do wątku. (To zachowanie różni się od Win32 **ExitThread** interfejsu API.) W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API.
+**_endthread** automatycznie zamyka uchwyt do wątku. (To zachowanie różni się od Win32 **ExitThread** interfejsu API.) W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) interfejsu API.
 
 Win32, takich jak **ExitThread** interfejsu API, **_endthreadex** nie zamyka dojście wątku. W związku z tym, kiedy używasz **_beginthreadex** i **_endthreadex**, należy zamknąć uchwytu wątku poprzez wywołanie Win32 **funkcja CloseHandle** interfejsu API.
 
@@ -73,8 +73,8 @@ Win32, takich jak **ExitThread** interfejsu API, **_endthreadex** nie zamyka doj
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_endthread**|\<process.h >|
-|**_endthreadex**|\<process.h >|
+|**_endthread**|\<process.h>|
+|**_endthreadex**|\<process.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

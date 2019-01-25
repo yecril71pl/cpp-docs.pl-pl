@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327450"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893668"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -135,7 +135,7 @@ To makro jest podobny do [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_mes
 
 W sekcji implementacji metody klasy rozpoczynać mapy komunikatów makro BEGIN_TEMPLATE_MESSAGE_MAP; następnie dodać wpisy — makro dla poszczególnych metod obsługi wiadomości, podobnie jak w przypadku mapy komunikatów standardowych. Zgodnie z BEGIN_MESSAGE_MAP — makro, należy wykonać szablon mapy komunikatów za pomocą [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) makra.
 
-Aby uzyskać więcej informacji dotyczących implementowania mapy komunikatów dla klasy szablonów, zobacz [porady: Tworzenie mapy komunikatów dla klasy szablonów](../how-to-create-a-message-map-for-a-template-class.md).
+Aby uzyskać więcej informacji dotyczących implementowania mapy komunikatów dla klasy szablonów, zobacz [jak: Tworzenie mapy komunikatów dla klasy szablonów](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -252,16 +252,16 @@ Nazwa funkcji obsługi wiadomości, na który jest mapowany polecenia.
 
 Rozszerzone rodzaj procedury obsługi komunikatów polecenia jest dostępna dla wykorzystuje zaawansowane. ON_COMMAND_EX — makro jest używana do obsługi takich komunikatów i zapewnia nadzbiorem [ON_COMMAND](message-map-macros-mfc.md#on_command) funkcji. Rozszerzona procedura obsługi polecenia elementów członkowskich przyjmować jeden parametr, UINT, zawierający identyfikator polecenia i zwracać wartość LOGICZNĄ. Wartość zwracana powinna być PRAWDA w celu wskazania, że polecenie został obsłużony; w przeciwnym razie routingu będzie innych obiektów docelowych polecenia.
 
-Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów] tm006-komunikat maps.md).
+Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: Mapy komunikatów] tm006-komunikat maps.md).
 
 ### <a name="requirements"></a>Wymagania
 
-Plik nagłówka: afxmsg_.h
+Header file: afxmsg_.h
 
 ### <a name="see-also"></a>Zobacz też
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: mapy komunikatów](../tn006-message-maps.md)
+[TN006: Mapy komunikatów](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,97 +383,97 @@ Identyfikator menu, pasek narzędzi identyfikator, identyfikator przycisku lub i
 
 `IOleCommandTarget` Polecenia standardowe menu zostały zaimplementowane przez MFC w następujące makra:
 
-**ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 Wywołuje polecenie Edytuj czyszczenia. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Wywołuje polecenie Edytuj kopię. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Wywołuje polecenia Wytnij edycji. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Wywołuje polecenie Nowy plik. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN)**
+**ON_OLECMD_OPEN( )**
 
 Wywołuje polecenia Otwórz plik. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Wywołuje polecenie Ustawienia strony pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Wywołuje polecenie Paste edycji. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Wywołuje polecenie Edytuj Wklej specjalne. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Wywołuje polecenia drukowania pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Wywołuje polecenie Podgląd wydruku z pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Wywołuje polecenie Edytuj wykonaj ponownie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Wywołuje polecenie Zapisz plik. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Wywołuje polecenie Zapisz jako plik. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Wywołuje plik polecenia Zapisz jako. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Wywołuje polecenie Edytuj Zaznacz wszystko. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Wywoła polecenie Cofnij edycji. Zaimplementowane jako:
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>Zobacz też
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [Programy obsługi zdefiniowane przez użytkownika](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -627,10 +627,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*ID1*<br/>
+*id1*<br/>
 Identyfikator polecenia na początku ciągły zakres identyfikatorów poleceń.
 
-*Identyfikator 2*<br/>
+*id2*<br/>
 Identyfikator polecenia na końcu ciągły zakres identyfikatorów poleceń.
 
 *memberFxn*<br/>
@@ -682,10 +682,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*ID1*<br/>
+*id1*<br/>
 Identyfikator polecenia na początku ciągły zakres identyfikatorów poleceń.
 
-*Identyfikator 2*<br/>
+*id2*<br/>
 Identyfikator polecenia na końcu ciągły zakres identyfikatorów poleceń.
 
 *memberFxn*<br/>
@@ -716,10 +716,10 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 *wNotifyCode*<br/>
 Kod powiadomienia, do którego odpowiada programu obsługi.
 
-*ID1*<br/>
+*id1*<br/>
 Identyfikator polecenia na początku ciągły zakres kontroli identyfikatorów.
 
-*Identyfikator 2*<br/>
+*id2*<br/>
 Identyfikator polecenia na końcu ciągły zakres kontroli identyfikatorów.
 
 *memberFxn*<br/>

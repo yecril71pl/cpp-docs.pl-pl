@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509595"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894201"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu. Odbiera bieżący czas.
 
 *pDateTime*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie aktualnie wybrany. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury, który będzie otrzymywać informacje o dacie aktualnie wybrany. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -579,12 +579,12 @@ Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.m
 Odwołanie do `COleDateTime` lub `CTime` obiekt zawierający maksymalna dozwolona data.
 
 *pMinRange*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty przy najniższe koniec zakresu.
 
 *pMaxRange*<br/>
 Wskaźnik do `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Wartość określająca zakres limitów zasięgu, które mają zostać pobrane. Ta wartość musi być jedną z następujących czynności.
 
 |Wartość|Znaczenie|
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.
+Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty przy najniższe koniec zakresu.
 
 *pMaxRange*<br/>
-Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty na najwyższym koniec zakresu.
+Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty na najwyższym koniec zakresu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -674,7 +674,7 @@ Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.m
 Odwołanie do `COleDateTime` lub `CTime` obiekt zawierający maksymalna dozwolona data.
 
 *pMinRange*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty przy najniższe koniec zakresu.
 
 *pMaxRange*<br/>
 Wskaźnik do `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) wskazujące dzień bieżącego obiektu.
 
 *pDateTime*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury, który będzie otrzymywać informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ID_kalendarza*|[in] Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|
+|*calid*|[in] Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*dwNewView*|[in] Jedną z następujących wartości, które określa, co miesiąc, co rok, dekadę lub wieku widoku.<br /><br /> MCMV_MONTH: Widok miesięczny<br /><br /> MCMV_YEAR: Widok roczny<br /><br /> MCMV_DECADE: Wyświetlanie ostatniej dekady<br /><br /> MCMV_CENTURY: Wyświetl wieku|
+|*dwNewView*|[in] Jedną z następujących wartości, które określa, co miesiąc, co rok, dekadę lub wieku widoku.<br /><br /> MCMV_MONTH: Widok miesięczny<br /><br /> MCMV_YEAR: Wyświetl roczne<br /><br /> MCMV_DECADE: Wyświetlanie ostatniej dekady<br /><br /> MCMV_CENTURY: Wyświetl wieku|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) wskazujący formant kalendarza miesięcznego aktualnie wybrany obiekt.
 
 *pDateTime*<br/>
-Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera datę można ustawić jako bieżący wybór.
+Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która zawiera datę można ustawić jako bieżący wybór.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parametry
 
-*nmaks.*<br/>
+*nMax*<br/>
 Wartość, która zostanie ustawiona do reprezentowania maksymalną liczbę dni można wybierać.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1104,7 +1104,7 @@ int SetMonthDelta(int iDelta);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu iDelta*<br/>
+*iDelta*<br/>
 Liczba miesięcy, które można ustawić jako współczynnik przewijania formantu. Jeśli ta wartość wynosi zero, różnicowej miesiącu jest resetowana do domyślna, czyli liczbę miesięcy, wyświetlany w formancie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.
+Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty przy najniższe koniec zakresu.
 
 *pMaxRange*<br/>
 Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.
+Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury zawierającej daty przy najniższe koniec zakresu.
 
 *pMaxRange*<br/>
 Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt, który zawiera bieżącą datę.
 
 *pDateTime*<br/>
-W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający informacje o bieżącej daty. W trzeciej wersji, wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera informacje o bieżącej daty.
+W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający informacje o bieżącej daty. W trzeciej wersji, wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która zawiera informacje o bieżącej daty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1290,7 +1290,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lprect —*|[in] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|
+|*lpRect*|[in] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1304,7 +1304,7 @@ Ta metoda wysyła [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerecttomi
 
 ## <a name="see-also"></a>Zobacz też
 
-[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

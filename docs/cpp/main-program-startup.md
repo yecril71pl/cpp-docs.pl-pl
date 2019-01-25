@@ -1,5 +1,5 @@
 ---
-title: 'main: uruchamianie programu'
+title: 'główne: Uruchamianie programu'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603284"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894305"
 ---
-# <a name="main-program-startup"></a>main: uruchamianie programu
+# <a name="main-program-startup"></a>główne: Uruchamianie programu
 
 Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna z modelu programowania Unicode, możesz użyć `wmain`, która jest wersją znaków dwubajtowych z **głównego**.
 
@@ -51,7 +51,7 @@ lub, opcjonalnie,
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Można również użyć `_tmain`, która została zdefiniowana w TCHAR.h. `_tmain` jest rozpoznawana jako **głównego** , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.
+Można również użyć `_tmain`, która została zdefiniowana w tchar.h. `_tmain` jest rozpoznawana jako **głównego** , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.
 
 Alternatywnie **głównego** i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz **głównego** lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy **głównego** lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.
 

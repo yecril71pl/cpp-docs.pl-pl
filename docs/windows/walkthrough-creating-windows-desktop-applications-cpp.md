@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694052"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893902"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -26,7 +26,7 @@ Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows D
 
 - Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepszego komfortu programowania.
 
-- Kopia programu Visual Studio 2017. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
+- A copy of Visual Studio 2017. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
 
    ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
@@ -107,7 +107,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    );
    ```
 
-   Aby uzyskać informacje dotyczące parametrów i wartość zwracana przez tę funkcję, zobacz [punktu wejścia WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   Aby uzyskać informacje dotyczące parametrów i wartość zwracana przez tę funkcję, zobacz [punktu wejścia WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
    > Co to są wszystkich tych dodatkowych słów, takich jak `CALLBACK`, lub `HINSTANCE`, lub `_In_`? Tradycyjne interfejsu Windows API używa definicji typów i makra preprocesora często przeniesienia na poziom abstrakcji natychmiast niektórych szczegółów typów i specyficzne dla platformy kodu, np. Konwencje wywoływania, **__declspec** deklaracje i pragmy kompilatora. W programie Visual Studio, można użyć funkcji IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) funkcję, aby sprawdzić, co zdefiniować definicji typów i makra. Umieść kursor nad wyraz zainteresowania, lub wybierz ją i naciśnij klawisz **Ctrl**+**K**, **Ctrl**+**I** dla niewielkie okno podręczne, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i zwracane typy często używają *adnotacji SAL* ułatwiające catch błędy programowania. Aby uzyskać więcej informacji, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
@@ -136,7 +136,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Aby dodać funkcje do funkcji WinMain
 
-1. W `WinMain` funkcji, możesz wypełnić struktury typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Struktura zawiera informacje dotyczące okna, przykładowo, ikony aplikacji, koloru tła okna, nazwę aby wyświetlić na pasku tytułu, a co ważniejsze, wskaźnik funkcji do odpowiedniej procedury okna. W poniższym przykładzie przedstawiono typowe `WNDCLASSEX` struktury.
+1. W `WinMain` funkcji, możesz wypełnić struktury typu [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). Struktura zawiera informacje dotyczące okna, przykładowo, ikony aplikacji, koloru tła okna, nazwę aby wyświetlić na pasku tytułu, a co ważniejsze, wskaźnik funkcji do odpowiedniej procedury okna. W poniższym przykładzie przedstawiono typowe `WNDCLASSEX` struktury.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Aby uzyskać informacje o polach powyżej struktury, zobacz [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Aby uzyskać informacje o polach powyżej struktury, zobacz [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
 
 1. Zarejestruj `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
 
@@ -237,7 +237,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    return (int) msg.wParam;
    ```
 
-   Aby uzyskać więcej informacji dotyczących struktur i funkcji w pętli komunikatów, zobacz [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), i [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Aby uzyskać więcej informacji dotyczących struktur i funkcji w pętli komunikatów, zobacz [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), i [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    W tym momencie `WinMain` funkcja powinna przypominać następujący kod.
 

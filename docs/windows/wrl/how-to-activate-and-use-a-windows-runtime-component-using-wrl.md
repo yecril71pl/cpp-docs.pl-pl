@@ -3,12 +3,12 @@ title: 'Instrukcje: Uaktywnianie składnika środowiska wykonawczego Windows, za
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 4b8ce40e6c28f952596cab48848873be91b73c95
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: ccc64769ca319e8aba141ce95a00eb876cc051f3
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334828"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893967"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Instrukcje: Uaktywnianie składnika środowiska wykonawczego Windows, za pomocą biblioteki WRL i korzystanie
 
@@ -36,7 +36,7 @@ Następujące kroki użycia `Windows::Foundation::IUriRuntimeClass` interfejs po
 
    Firma Microsoft zaleca używanie `using namespace` dyrektywy w pliku .cpp, aby zwiększyć czytelność kodu.
 
-2. Zainicjuj wątku, w którym aplikacja wykonuje. Każda aplikacja musi zostać zainicjowany jego wątku i modelu wątkowości. W tym przykładzie użyto [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) klasy można zainicjować aparatu plików wykonywalnych Windows i określa [RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx) jako modelu wątkowości. `RoInitializeWrapper` Klasy wywołania `Windows::Foundation::Initialize` w konstrukcji, i `Windows::Foundation::Uninitialize` kiedy zostanie zniszczony.
+2. Zainicjuj wątku, w którym aplikacja wykonuje. Każda aplikacja musi zostać zainicjowany jego wątku i modelu wątkowości. W tym przykładzie użyto [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) klasy można zainicjować aparatu plików wykonywalnych Windows i określa [RO_INIT_MULTITHREADED](/windows/desktop/api/roapi/ne-roapi-ro_init_type) jako modelu wątkowości. `RoInitializeWrapper` Klasy wywołania `Windows::Foundation::Initialize` w konstrukcji, i `Windows::Foundation::Uninitialize` kiedy zostanie zniszczony.
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -66,7 +66,7 @@ Następujące kroki użycia `Windows::Foundation::IUriRuntimeClass` interfejs po
 
    [!code-cpp[wrl-consume-component#9](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx) funkcja pobiera podstawowej postaci Unicode ciąg identyfikatora URI.
+   [WindowsGetStringRawBuffer](/windows/desktop/api/winstring/nf-winstring-windowsgetstringrawbuffer) funkcja pobiera podstawowej postaci Unicode ciąg identyfikatora URI.
 
 Oto kompletny przykład:
 

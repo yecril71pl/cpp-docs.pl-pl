@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614386"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894019"
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Konstruktor.|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Destruktor.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -180,7 +180,7 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hFile —*<br/>
+*hFile*<br/>
 Dojście do pliku, z którego można utworzyć obiektu mapowania. *hFile* musi być prawidłowy i nie można ustawić INVALID_HANDLE_VALUE.
 
 *nMappingSize*<br/>
@@ -193,7 +193,7 @@ Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia 
 Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) w zestawie Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
+Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -201,7 +201,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu mapowania pliku, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania pliku. Jeśli tak jest, nie wszystkie jego zawartość będzie dostępne na potrzeby udostępniania. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) i [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
+Po utworzeniu obiektu mapowania pliku, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania pliku. Jeśli tak jest, nie wszystkie jego zawartość będzie dostępne na potrzeby udostępniania. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) i [funkcja MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -239,7 +239,7 @@ Wskaźnik do `SECURITY_ATTRIBUTES` strukturę, która określa, czy zwracany uch
 Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w `CreateFileMapping` w zestawie Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
+Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -273,7 +273,7 @@ Rozmiar mapowania. Jeśli jest to 0, maksymalny rozmiar obiektu mapowania pliku 
 Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.
 
 *dwViewDesiredAccess*<br/>
-Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
+Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -314,7 +314,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) w zestawie Windows SDK, aby uzyskać więcej informacji.
+Zobacz [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
 ## <a name="see-also"></a>Zobacz też
 

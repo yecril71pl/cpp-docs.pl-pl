@@ -1,5 +1,5 @@
 ---
-title: CFileTimeSpan, klasa
+title: CFileTimeSpan Class
 ms.date: 10/18/2018
 f1_keywords:
 - CFileTimeSpan
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468929"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894162"
 ---
-# <a name="cfiletimespan-class"></a>CFileTimeSpan, klasa
+# <a name="cfiletimespan-class"></a>CFileTimeSpan Class
 
 Ta klasa dostarcza metody do zarządzania względne wartości daty i godziny skojarzonych z plikiem.
 
@@ -47,7 +47,7 @@ class CFileTimeSpan
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFileTimeSpan::operator-](#operator_-)|Wykonuje odejmowanie `CFileTimeSpan` obiektu.|
+|[CFileTimeSpan::operator -](#operator_-)|Wykonuje odejmowanie `CFileTimeSpan` obiektu.|
 |[CFileTimeSpan::operator! =](#operator_neq)|Porównuje dwa `CFileTimeSpan` obiekty pod kątem nierówności.|
 |[CFileTimeSpan::operator +](#operator_add)|Wykonuje dodawanie na `CFileTimeSpan` obiektu.|
 |[CFileTimeSpan::operator +=](#operator_add_eq)|Wykonuje dodawanie na `CFileTimeSpan` obiektu i przypisz wynik do bieżącego obiektu.|
@@ -307,7 +307,7 @@ Nowa wartość dla zakresu czasu w milisekundach.
 
 ## <a name="see-also"></a>Zobacz też
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime, klasa](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

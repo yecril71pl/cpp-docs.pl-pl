@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609422"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893616"
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 
@@ -106,7 +106,7 @@ Wartość TRUE, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie 
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Ta metoda implementuje funkcję Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Ta metoda implementuje funkcję Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - W menu Widok paska narzędzi lub w podmenu Wyświetl menu kontekstowe w okienku wyników można wstawiać CCM_INSERTIONALLOWED_VIEW elementów.
 
-*Typ*<br/>
+*type*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Ta metoda implementuje funkcję Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Ta metoda implementuje funkcję Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 [in] Określa identyfikator polecenia elementu menu.
 
-*Typ*<br/>
+*type*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Ta metoda implementuje funkcję Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Ta metoda implementuje funkcję Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -183,13 +183,13 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in] Wskaźnik do `IPropertySheetCallback` interfejsu.
 
-*uchwyt*<br/>
+*handle*<br/>
 [in] Określa dojście przekierowywać MMCN_PROPERTY_CHANGE komunikatu powiadomienia do klasy odpowiednie dane.
 
 *pUnk*<br/>
 [in] Wskaźnik do `IExtendPropertySheet` interfejsu na obiekt, który zawiera informacje o kontekście dotyczące węzła.
 
-*Typ*<br/>
+*type*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -218,7 +218,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 [in] Format (tekst, tekst sformatowany lub tekstu sformatowanego przy użyciu elementów OLE) ze Schowka.
 
 *pStream*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) strukturę obiektu danych przystawki.
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) strukturę obiektu danych przystawki.
 
 ```
 RESULTDATAITEM m_resultDataItem;
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *pComponent*<br/>
 [out] Wskaźnik do obiektu, który implementuje `IComponent`. Ten parametr ma wartość NULL, jeśli powiadomienia nie są przekazywane z `IComponent::Notify`.
 
-*Typ*<br/>
+*type*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.

@@ -1,5 +1,5 @@
 ---
-title: Klasa CSocketAddr
+title: CSocketAddr Class
 ms.date: 10/22/2018
 f1_keywords:
 - CSocketAddr
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570459"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893356"
 ---
-# <a name="csocketaddr-class"></a>Klasa CSocketAddr
+# <a name="csocketaddr-class"></a>CSocketAddr Class
 
 Ta klasa dostarcza metody do konwertowania nazwy hostów na adresy hosta, obsługa formatów IPv4 i IPV6.
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Odwołanie do określonego elementu w [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) listy.
+Odwołanie do określonego elementu w [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do połączonej listy co najmniej jednego `addrinfo` struktury zawierające odpowiedzi informacje o hoście. Aby uzyskać więcej informacji, zobacz [struktury addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+Wskaźnik do połączonej listy co najmniej jednego `addrinfo` struktury zawierające odpowiedzi informacje o hoście. Aby uzyskać więcej informacji, zobacz [struktury addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
 
 ## <a name="see-also"></a>Zobacz też
 

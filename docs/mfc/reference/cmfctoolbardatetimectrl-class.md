@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 570611c335130039495b13624737b820144cb7f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545837"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893685"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Klasa CMFCToolBarDateTimeCtrl
 
@@ -87,7 +87,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Zwraca wskaźnik do kontrolki selektora daty i godziny.|
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Pobiera uchwyt okna, który jest skojarzony z przycisku paska narzędzi. (Przesłania [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Pobiera zaznaczony czas w kontrolce selektora daty i godziny i umieszcza go w określonej [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Pobiera zaznaczony czas w kontrolce selektora daty i godziny i umieszcza go w określonej [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.|
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Zwraca zaznaczony czas od przycisku kontrolki selektora czasu, który ma identyfikator określonego polecenia.|
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Określa, czy obramowanie przycisku jest wyświetlany, gdy użytkownik wybierze przycisk. (Przesłania [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
 |[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Określa, czy przycisk przetwarza [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości. (Przesłania [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|
@@ -110,7 +110,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ## <a name="remarks"></a>Uwagi
 
-Na przykład jak używać kontrolkę selektora daty i godziny Zobacz ToolbarDateTimePicker przykładowy projekt. Aby uzyskać informacje dotyczące sposobu dodawania przycisków kontrolnych paski narzędzi, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Na przykład jak używać kontrolkę selektora daty i godziny Zobacz ToolbarDateTimePicker przykładowy projekt. Aby uzyskać informacje dotyczące sposobu dodawania przycisków kontrolnych paski narzędzi, zobacz [instruktażu: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Przycisk menu*<br/>
+*menuButton*<br/>
 [in] Odwołanie do docelowego przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -269,7 +269,7 @@ Ta metoda zastępuje [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolba
 
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime
 
-Pobiera zaznaczony czas z skojarzone daty i czasu kontrolkę selektora i umieszcza go w określonej [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury
+Pobiera zaznaczony czas z skojarzone daty i czasu kontrolkę selektora i umieszcza go w określonej [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -283,7 +283,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 [out] W pierwsze przeciążenie [COleDateTime, klasa](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego. W drugie przeciążenie [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego.
 
 *pTimeDest*<br/>
-[out] Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
+[out] Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -320,7 +320,7 @@ static DWORD GetTimeAll(
 [out] W pierwsze przeciążenie [COleDateTime, klasa](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego. W drugie przeciążenie [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu, który będzie otrzymywać informacji dotyczących czasu systemowego.
 
 *pTimeDest*<br/>
-[out] Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
+[out] Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę do odbierania informacji o czasie systemu. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -438,7 +438,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *nCtlColor*<br/>
@@ -564,7 +564,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 [in] W pierwszej wersji odwołania do [COleDateTime, klasa](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt, który zawiera godzinę, do której formant zostanie ustawiony. W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt, który zawiera godzinę, do której formant zostanie ustawiony.
 
 *pTimeNew*<br/>
-[in] Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera godzinę, do której formant zostanie ustawiony.
+[in] Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która zawiera godzinę, do której formant zostanie ustawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -601,7 +601,7 @@ static BOOL SetTimeAll(
 [in] W pierwszej wersji [COleDateTime, klasa](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt, który zawiera godzinę, do której formant zostanie ustawiony. W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt, który zawiera godzinę, do której formant zostanie ustawiony.
 
 *pTimeNew*<br/>
-[in] Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera godzinę, do której formant zostanie ustawiony.
+[in] Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która zawiera godzinę, do której formant zostanie ustawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -616,5 +616,5 @@ Wyszukuje dla przycisku kontrolki toolbar przy użyciu polecenie o określonym i
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326111"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893343"
 ---
 # <a name="struct-c"></a>struktura (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "51326111"
 ## <a name="syntax"></a>Składnia
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ ms.locfileid: "51326111"
 
 #### <a name="parameters"></a>Parametry
 
-*specyfikacje szablonu*<br/>
+*template-spec*<br/>
 Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [specyfikacje szablonu](templates-cpp.md).
 
 *struct*<br/>
 **Struktury** — słowo kluczowe.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.
 
 *Tag*<br/>
 Nazwa typu nadana strukturze. Znacznik staje się słowem zastrzeżonym w obrębie struktury. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana anonimowa struktura. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
-*Lista podstawowego*<br/>
+*base-list*<br/>
 Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.
 
 *Lista elementów członkowskich*<br/>
 Lista składników struktury. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji. Jedyną różnicą jest to, że **struktury** jest używana zamiast **klasy**.
 
 *deklaratory*<br/>
-Lista deklaratora określająca nazwy klasy. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie składowe danych klasy są **publicznych**. Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **publicznych** domyślnie.  Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.
+Lista deklaratora określająca nazwy struktury. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie elementy członkowskie danych struktury są **publicznych**. Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **publicznych** domyślnie.  Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.
 
 ## <a name="remarks"></a>Uwagi
 

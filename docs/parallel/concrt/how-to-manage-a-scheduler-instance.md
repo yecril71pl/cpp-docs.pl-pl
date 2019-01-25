@@ -1,22 +1,22 @@
 ---
-title: 'Porady: zarządzanie przypadkiem planisty'
+title: 'Instrukcje: Zarządzanie wystąpieniem harmonogramu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437820"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893993"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Porady: zarządzanie przypadkiem planisty
+# <a name="how-to-manage-a-scheduler-instance"></a>Instrukcje: Zarządzanie wystąpieniem harmonogramu
 
 Wystąpienia harmonogramu umożliwiają kojarzenie określone zasady planowania z różnego rodzaju obciążeń. Ten temat zawiera dwa przykłady pokazujące, jak utworzyć i Zarządzanie wystąpieniem harmonogramu.
 
-Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu. Aby uzyskać przykład tworzenia harmonogramu, który korzysta z zasad niestandardowych, zobacz [porady: Określanie zasad harmonogramu określonego](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu. Aby uzyskać przykład tworzenia harmonogramu, który korzysta z zasad niestandardowych, zobacz [jak: Określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Aby zarządzać przypadkiem planisty w aplikacji
 
@@ -38,7 +38,7 @@ Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu.
 
 1. Przekaż dojście do zdarzenia w celu [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkcję, aby czekać na harmonogram zamknąć.
 
-1. Wywołaj [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) funkcję, aby zamknąć dojście do obiektu zdarzenia.
+1. Wywołaj [funkcja CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkcję, aby zamknąć dojście do obiektu zdarzenia.
 
 ## <a name="example"></a>Przykład
 

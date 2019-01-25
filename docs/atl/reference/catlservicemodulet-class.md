@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619144"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893538"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa CAtlServiceModuleT
 
@@ -414,7 +414,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bUsługa*<br/>
+*bService*<br/>
 Muszą być spełnione, aby zarejestrować się jako usługa.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.
+Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji. Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
+Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
+Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

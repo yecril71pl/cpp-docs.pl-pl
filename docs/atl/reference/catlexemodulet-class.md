@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601412"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893443"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
@@ -52,7 +52,7 @@ Klasa jest pochodną `CAtlExeModuleT`.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor.|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Destruktor.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -254,7 +254,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 *dwClsContext*<br/>
 Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.
+Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji. Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
+Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

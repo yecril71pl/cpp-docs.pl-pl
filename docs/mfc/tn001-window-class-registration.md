@@ -1,5 +1,5 @@
 ---
-title: 'TN001: rejestracja klas okien'
+title: 'TN001: Rejestrowanie klasy okna'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693872"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894266"
 ---
-# <a name="tn001-window-class-registration"></a>TN001: rejestracja klas okien
+# <a name="tn001-window-class-registration"></a>TN001: Rejestrowanie klasy okna
 
 Ta uwaga opisuje procedury MFC, które rejestrują specjalne [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es wymagane przez program Microsoft Windows. Określone `WNDCLASS` omówiono atrybuty używane przez MFC i Windows.
 
@@ -31,7 +31,7 @@ To `WNDCLASS` musi być zarejestrowana za pomocą jednego z czterech sposobów:
 
 - Jawnie, wywołując MFC [afxregisterwndclass —](../mfc/reference/application-information-and-management.md#afxregisterwndclass) lub [afxregisterclass —](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Jawnie, wywołując procedurę Windows [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586).
+- Jawnie, wywołując procedurę Windows [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa).
 
 ## <a name="wndclass-fields"></a>Pola WNDCLASS
 
@@ -61,7 +61,7 @@ Dwie ikony obsługuje aplikacje MDI za pomocą pojedynczego dokumentu typów: je
 
 - style klasy: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- Ikona AFX_IDI_STD_FRAME
+- icon AFX_IDI_STD_FRAME
 
 - Strzałka kursora
 
@@ -73,7 +73,7 @@ Wartości koloru tła i kursora dla [CMDIFrameWnd](../mfc/reference/cmdiframewnd
 
 Jeśli możesz podklasy lub superklasie Windows kontrolować (na przykład [CButton](../mfc/reference/cbutton-class.md)), a następnie automatycznie pobiera klasy `WNDCLASS` atrybutów w implementacji Windows tej kontrolki.
 
-## <a name="the-afxregisterwndclass-function"></a>Afxregisterwndclass — funkcja
+## <a name="the-afxregisterwndclass-function"></a>The AfxRegisterWndClass Function
 
 MFC udostępnia funkcję pomocnika dla rejestrowanie klasy okna. Biorąc pod uwagę zestaw atrybutów (styl klasy okna, kursor, Pędzel tła i ikony), zostanie wygenerowana nazwa syntetycznych, a wynikowe klasy okna jest zarejestrowany. Na przykład
 

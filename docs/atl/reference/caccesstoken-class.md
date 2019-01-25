@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694533"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894249"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Wskaźnik do nowego `CAccessToken` obiektu.
 
-*Program Sil*<br/>
+*sil*<br/>
 Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji nowy token.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -224,7 +224,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateImpersonationToken` wywołania [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) do utworzenia nowego tokenu personifikacji.
+`CreateImpersonationToken` wywołania [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) do utworzenia nowego tokenu personifikacji.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) funkcję Win32.
+Wywołania [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) funkcję Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1056,7 +1056,7 @@ Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabe
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
 
-*Program Sil*<br/>
+*sil*<br/>
 Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji tokenów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1093,7 +1093,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `PrivilegeCheck` zwraca, `Attributes` z każdej [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struktury jest ustawiona na SE_PRIVILEGE_USED_FOR_ACCESS, jeśli włączono odpowiednie uprawnienia. Ta metoda wywołuje [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) funkcję Win32.
+Gdy `PrivilegeCheck` zwraca, `Attributes` z każdej [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struktury jest ustawiona na SE_PRIVILEGE_USED_FOR_ACCESS, jeśli włączono odpowiednie uprawnienia. Ta metoda wywołuje [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) funkcję Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

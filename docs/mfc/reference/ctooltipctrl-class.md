@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500415"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894149"
 ---
 # <a name="ctooltipctrl-class"></a>Ctooltipctrl — klasa
 
@@ -287,7 +287,7 @@ Jeśli wartość różną od zera `CToolTipCtrl` obiekt jest pomyślnie utworzon
 
 Konstruowanie `CToolTipCtrl` w dwóch krokach. Po pierwsze wywołanie konstruktora do konstruowania `CToolTipCtrl` obiektu, a następnie wywołaj `Create` tworzenie formantem etykietki narzędzia i dołącz ją do `CToolTipCtrl` obiektu.
 
-*DwStyle* parametr może być dowolną kombinacją [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles). Ponadto formantem etykietki narzędzia ma dwa style swoiste dla klas: TTS_ALWAYSTIP i TTS_NOPREFIX.
+*DwStyle* parametr może być dowolną kombinacją [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles). Ponadto formantem etykietki narzędzia ma dwa style właściwe dla klasy: TTS_ALWAYSTIP i TTS_NOPREFIX.
 
 |Styl|Znaczenie|
 |-----------|-------------|
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Wskaźnik do [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera do przekazywania wiadomości.
+Wskaźnik do [MSG](/windows/desktop/api/winuser/ns-winuser-msg) strukturę, która zawiera do przekazywania wiadomości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Nowy kolor tła.
 
 ### <a name="remarks"></a>Uwagi
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Nowy kolor tekstu.
 
 ### <a name="remarks"></a>Uwagi
@@ -866,7 +866,7 @@ Wskaźnik do okna, które zawiera narzędzia.
 *nIDTool*<br/>
 Identyfikator narzędzia.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając nowy prostokąt otaczający.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme

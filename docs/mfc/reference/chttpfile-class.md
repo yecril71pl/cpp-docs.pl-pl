@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564466"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893655"
 ---
 # <a name="chttpfile-class"></a>Klasa CHttpFile
 
@@ -107,7 +107,7 @@ BOOL AddRequestHeaders(
 *pstrHeaders*<br/>
 Wskaźnik do ciągu zawierającego nagłówek lub nagłówki, aby dołączyć do żądania. Każdy nagłówek musi się kończyć znakiem pary CR/LF.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Zmienia semantykę nowe nagłówki. Może to być jeden z następujących elementów:
 
 - Scala HTTP_ADDREQ_FLAG_COALESCE nagłówki o takiej samej nazwie, przy użyciu flagi, aby dodać pierwszy nagłówek się kolejne nagłówka. Na przykład "Akceptuj: tekst /\*" następuje "Akceptuj: audio /\*" powoduje utworzenie pojedynczego nagłówka "Akceptuj: tekst /\*audio /\*". Jest aplikacji wywołującej, aby zapewnić spójny schemat w odniesieniu do danych otrzymywanych przez żądań wysyłanych z nagłówkami połączonych lub oddzielne.
@@ -157,7 +157,7 @@ CHttpFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hFile —*<br/>
+*hFile*<br/>
 Dojście do pliku Internet.
 
 *hSession*<br/>
@@ -182,7 +182,7 @@ Wskaźnik do [CHttpConnection](../../mfc/reference/chttpconnection-class.md) obi
 
 Nigdy nie konstruowania `CHttpFile` obiektu bezpośrednio, zamiast zaproszenia [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) zamiast tego.
 
-Wartością domyślną dla `dwContext` są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz `CInternetSession::OpenURL` lub `CHttpConnection` do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla `dwContext` są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz `CInternetSession::OpenURL` lub `CHttpConnection` do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -197,7 +197,7 @@ BOOL EndRequest(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi opisujące wykonać operację. Aby uzyskać listę flag odpowiednie zobacz [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) w zestawie Windows SDK.
 
 *lpBuffIn*<br/>
@@ -212,7 +212,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Jeś
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zobacz artykuł [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zobacz artykuł [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ Kombinacja atrybutu do zapytania i następujące flagi określające typ żądan
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS zwykle aplikacja wykonuje zapytania nagłówki odpowiedzi, ale aplikacji można także badać nagłówki żądania przy użyciu tej flagi.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME dla tych nagłówków, którego wartość jest ciągiem daty/godziny, np. "Ostatniej modyfikacji — czas," Flaga ta zwraca wartość nagłówka w jako standardowa Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która nie wymaga aplikacji przeanalizować dane. Jeśli używasz tej flagi, warto użyć `SYSTEMTIME` przesłonić funkcji.
+- HTTP_QUERY_FLAG_SYSTEMTIME dla tych nagłówków, którego wartość jest ciągiem daty/godziny, np. "Ostatniej modyfikacji — czas," Flaga ta zwraca wartość nagłówka w jako standardowa Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która nie wymaga aplikacji przeanalizować dane. Jeśli używasz tej flagi, warto użyć `SYSTEMTIME` przesłonić funkcji.
 
 - Ta flaga HTTP_QUERY_FLAG_NUMBER dla tych nagłówków, którego wartość jest liczbą, np. kod stanu zwraca dane jako wartość liczby 32-bitowej.
 
@@ -315,7 +315,7 @@ Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt
 Wartość indeksu. Zobacz *lpdwIndex*.
 
 *pSysTime*<br/>
-Wskaźnik do systemu Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.
+Wskaźnik do systemu Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -484,7 +484,7 @@ BOOL SendRequestEx(
 *dwTotalLen*<br/>
 Liczba bajtów do wysłania w żądaniu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi opisujące wykonać operację. Aby uzyskać listę flag odpowiednie zobacz [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) w zestawie Windows SDK.
 
 *dwContext*<br/>
@@ -506,7 +506,7 @@ Ta funkcja pozwala aplikacji na przesyłanie danych przy użyciu [zapisu](../../
 
 Po zapisaniu zawartość do pliku, należy wywołać [EndRequest](#endrequest) o zakończeniu operacji.
 
-Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CHttpFile` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Gdy wywołujesz [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do konstruowania `CHttpFile` obiektu, można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ### <a name="example"></a>Przykład
 

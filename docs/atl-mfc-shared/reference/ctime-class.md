@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178125"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893980"
 ---
 # <a name="ctime-class"></a>CTime, klasa
 
@@ -57,7 +57,7 @@ class CTime
 |[CTime::Format](#format)|Konwertuje `CTime` obiekt na ciąg sformatowany — oparte na podstawie lokalnej strefy czasowej.|
 |[CTime::FormatGmt](#formatgmt)|Konwertuje `CTime` obiekt na ciąg sformatowany — oparty na czasie UTC.|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Konwertuje czas informacji przechowywanych w `CTime` obiektu do struktury odcisk CZASOWY zgodnego z Win32.|
-|[CTime::GetAsSystemTime](#getassystemtime)|Konwertuje czas informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|
+|[CTime::GetAsSystemTime](#getassystemtime)|Konwertuje czas informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.|
 |[CTime::GetCurrentTime](#getcurrenttime)|Tworzy `CTime` obiekt, który reprezentuje bieżący czas (statyczny element członkowski funkcji).|
 |[CTime::GetDay](#getday)|Zwraca reprezentują dnia przez `CTime` obiektu.|
 |[CTime::GetDayOfWeek](#getdayofweek)|Zwraca dzień tygodnia, reprezentowane przez `CTime` obiektu.|
@@ -168,11 +168,11 @@ Wskazuje, czy czas letni jest aktywna. Może mieć jedną z trzech wartości:
 *wDosDate*, *wDosTime*<br/>
 Wartości daty i godziny może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego systemu MS-DOS `CTime` obiektu.
 
-*St*<br/>
-A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `CTime` obiektu.
+*st*<br/>
+A [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `CTime` obiektu.
 
 *FT*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `CTime` obiektu.
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `CTime` obiektu.
 
 *znacznika dbts*<br/>
 Odwołanie do struktury odcisk CZASOWY zawierającej bieżący czas lokalny.
@@ -193,10 +193,10 @@ Poniżej opisano każdy Konstruktor:
    |---------------|-----------|
    |*nYear*|1970-3000|
    |*nMonth*|1-12|
-   |*nbłędny dzień*|1-31|
-   |*Ngodzina*|0-23|
-   |*Nmin.*|0-59|
-   |*rekordy nSec*|0-59|
+   |*nDay*|1-31|
+   |*nHour*|0-23|
+   |*nMin*|0-59|
+   |*nSec*|0-59|
 
    Ten konstruktor sprawia, że odpowiednie konwersji na czas UTC. Wersję debugowania biblioteki klas Microsoft Foundation potwierdzenia, jeśli jeden lub więcej składników czasu są poza zakresem. Należy sprawdzić, argumenty przed wywołaniem. Ten konstruktor oczekuje, że czas lokalny.
 
@@ -209,7 +209,7 @@ Poniżej opisano każdy Konstruktor:
    > [!NOTE]
    > Za pomocą konstruktora `DBTIMESTAMP` parametr jest dostępna tylko, gdy OLEDB.h jest dołączony.
 
-Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) i [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury w zestawie Windows SDK. Zobacz też [MS-DOS daty i godziny](/windows/desktop/SysInfo/ms-dos-date-and-time) wejścia w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) i [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury w zestawie Windows SDK. Zobacz też [MS-DOS daty i godziny](/windows/desktop/SysInfo/ms-dos-date-and-time) wejścia w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -304,7 +304,7 @@ Zapisuje wynikowy czas w występujących w odwołaniu *znacznika dbts* struktury
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-Wywołaj tę funkcję elementu członkowskiego, aby przekonwertować czasu informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.
+Wywołaj tę funkcję elementu członkowskiego, aby przekonwertować czasu informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>Parametry
 
 *timeDest*<br/>
-Odwołanie do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która będzie przechowywać wartość daty/godziny przekonwertowanego `CTime` obiektu.
+Odwołanie do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę, która będzie przechowywać wartość daty/godziny przekonwertowanego `CTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -586,7 +586,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Przedział czasu*<br/>
+*timeSpan*<br/>
 `CTimeSpan` Obiekt, aby być dodawane lub odejmowane.
 
 *czas*<br/>

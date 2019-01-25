@@ -1,5 +1,5 @@
 ---
-title: Klasa CHotKeyCtrl
+title: CHotKeyCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHotKeyCtrl
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178138"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894513"
 ---
-# <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
+# <a name="chotkeyctrl-class"></a>CHotKeyCtrl Class
 
 Oferuje funkcje Windows formantu typowego klawisza dostępu.
 
@@ -67,7 +67,7 @@ Ta kontrolka (i w związku z tym `CHotKeyCtrl` klasy) jest dostępna tylko dla p
 
 Po użytkownik wybierze kombinację klawiszy, aplikacja może pobrać określonej kombinacji klawiszy z formantu i komunikat WM_SETHOTKEY umożliwia ustawianie klawisza dostępu w systemie. Zawsze, gdy użytkownik naciśnie klawisz skrótu, z dowolnej części systemu, okna określony w komunikacie WM_SETHOTKEY odbiera komunikat WM_SYSCOMMAND, określając SC_HOTKEY. Ten komunikat uaktywnia okna, które otrzymuje go. Klawisz skrótu pozostanie ważny aż do aplikacji, która umożliwia zamknięcie WM_SETHOTKEY wywołana.
 
-Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkcji.
+Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) i [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkcji.
 
 Aby uzyskać więcej informacji na temat korzystania z `CHotKeyCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -300,17 +300,17 @@ Tablica flagi, który określa nieprawidłowy kombinacje klawiszy. Może być ko
 
 - HKCOMB_C CTRL
 
-- HKCOMB_CA KLAWISZE CTRL + ALT
+- HKCOMB_CA CTRL+ALT
 
 - Niezmodyfikowane HKCOMB_NONE kluczy
 
 - HKCOMB_S SHIFT
 
-- HKCOMB_SA SHIFT + ALT
+- HKCOMB_SA SHIFT+ALT
 
-- HKCOMB_SC SHIFT + CTRL
+- HKCOMB_SC SHIFT+CTRL
 
-- HKCOMB_SCA SHIFT + KLAWISZE CTRL + ALT
+- HKCOMB_SCA SHIFT+CTRL+ALT
 
 *wModifiers*<br/>
 Tablica flagi, która określa kombinację klawiszy do użycia, gdy użytkownik wprowadzi nieprawidłowe połączenie. Aby uzyskać więcej informacji na temat flagi modyfikatora, zobacz [GetHotKey](#gethotkey).

@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694598"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894461"
 ---
 # <a name="cwindow-class"></a>Klasa CWindow
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) w Windows SDK.
+Zobacz [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) w Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) w Windows SDK.
+Zobacz [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) w Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -1456,7 +1456,7 @@ Jeśli tekst jest pomyślnie skopiowany, wartość zwracana jest wartość PRAWD
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [getwindowtext —](https://msdn.microsoft.com/library/windows/desktop/ms633520) w Windows SDK.
+Zobacz [getwindowtext —](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) w Windows SDK.
 
 Druga wersja ta metoda służy do przechowywania tekstu w ciąg BSTR; trzecia wersja służy do przechowywania wyników w [CString](../../atl-mfc-shared/reference/cstringt-class.md), ponieważ `CSimpleString` jest klasa bazowa `CString`.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 [in] Jeśli wartość TRUE (wartość domyślna), okno zostanie zablokowane. W przeciwnym razie będzie można odblokować.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2008,10 +2008,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 [in] Dojście do kontekstu urządzenia.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Określa opcje rysowania. Można połączyć co najmniej jeden z następujących flag:
 
 - PRF_CHECKVISIBLE narysować okno tylko wtedy, gdy jest on widoczny.
@@ -2036,10 +2036,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 [in] Dojście do kontekstu urządzenia.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Określa opcje rysowania. Można połączyć co najmniej jeden z następujących flag:
 
 - PRF_CHECKVISIBLE narysować okno tylko wtedy, gdy jest on widoczny.
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) w Windows SDK.
+Zobacz [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 

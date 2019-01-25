@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626788"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894214"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ Bezpieczniej jest używać **_beginthreadex** niż **_beginthread**. Jeśli wąt
 
 Możesz wywołać [_endthread](endthread-endthreadex.md) lub **_endthreadex** jawnie, aby zakończyć wątek; jednak **_endthread** lub **_endthreadex** nosi nazwę automatycznie kiedy wątek wraca z procedury, która jest przekazywana jako parametr. Zakończenie wątku z wywołaniem **_endthread** lub **_endthreadex** pomaga zapewnić poprawny odzysk zasobów, które są przydzielane do wątku.
 
-**_endthread** automatycznie zamyka uchwyt do wątku, natomiast **_endthreadex** nie. W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API.
+**_endthread** automatycznie zamyka uchwyt do wątku, natomiast **_endthreadex** nie. W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) interfejsu API. To zachowanie różni się od Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API.
 
 > [!NOTE]
 > Dla pliku wykonywalnego połączonego z Libcmt.lib Nie wywołuj Win32 **ExitThread** interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. **_endthread** i **_endthreadex** odzyskiwania zasobów przydzielonych wątku, a następnie wywołać **ExitThread**.
@@ -138,8 +138,8 @@ Aby uzyskać **/CLR** kodu, **_beginthread** i **_beginthreadex** mają po dwa p
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_beginthread**|\<process.h >|
-|**_beginthreadex**|\<process.h >|
+|**_beginthread**|\<process.h>|
+|**_beginthreadex**|\<process.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

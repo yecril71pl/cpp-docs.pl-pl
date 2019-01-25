@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570615"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893525"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -25,7 +25,7 @@ Określa blok biblioteki w pliku .idl.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 (Opcjonalnie) Może być jedną z następujących czynności:
 
 - `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.
@@ -95,17 +95,17 @@ Jeden blok biblioteki jest dozwolona w pliku .idl. Wiele wpisów modułu w kodzi
 
 Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Oprócz powyższych zachowanie atrybutu są wstawiane obiektów globalnych (o nazwie `_AtlModule`) poprawnego typu i kodu dodatkowej pomocy technicznej. Jeśli ten atrybut jest autonomiczna, wstawia klasa pochodzi od typu modułu. Jeśli ten atrybut jest stosowany do klasy, dodaje klasę bazową typu modułu. Niepoprawny typ jest określana przez wartość *typu* parametru:
 
-- `type` = **biblioteki dll**
+- `type` = **dll**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) służy jako klasa podstawowa i standardowa wejścia biblioteki DLL punktów wymaganych dla serwera COM. Te punkty wejścia są [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), i [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
-- `type` = **plik exe**
+- `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **Usługa**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **Nie określono tego parametru**
 
