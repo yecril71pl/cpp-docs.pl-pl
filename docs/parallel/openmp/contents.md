@@ -1,5 +1,5 @@
 ---
-title: Zawartość
+title: Spis treści
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
 ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55064986"
 ---
-# <a name="contents"></a>Zawartość
+# <a name="contents"></a>Spis treści
 
 [1. Wprowadzenie](../../parallel/openmp/1-introduction.md)
 
