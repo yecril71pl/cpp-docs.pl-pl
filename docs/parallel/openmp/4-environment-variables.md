@@ -2,12 +2,12 @@
 title: 4. Zmienne środowiskowe
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397332"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087200"
 ---
 # <a name="4-environment-variables"></a>4. Zmienne środowiskowe
 
@@ -46,14 +46,14 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- [Aby uzyskać](2-4-1-for-construct.md) — dyrektywa
-- [równoległe w](2-5-1-parallel-for-construct.md) — dyrektywa
+- [Aby uzyskać](2-directives.md#241-for-construct) — dyrektywa
+- [równoległe w](2-directives.md#251-parallel-for-construct) — dyrektywa
 
 ## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS` Zmiennej środowiskowej ustawia domyślną liczbę wątków używanych podczas wykonywania. `OMP_NUM_THREADS` jest ignorowana, jeśli ta liczba jest jawnie zmieniona przez wywołanie metody `omp_set_num_threads` procedury biblioteki. Również jest pomijany, jeśli występuje jawna `num_threads` klauzuli w `parallel` dyrektywy.
 
-Wartość `OMP_NUM_THREADS` zmiennej środowiskowej musi być dodatnią liczbą całkowitą. Jego efektem zależy od tego, czy włączona jest dynamiczne Dostosowywanie liczby wątków. Aby uzyskać kompleksowy zestaw reguł o interakcji między `OMP_NUM_THREADS` środowiska zmiennych i dynamicznego dostosowania wątków, patrz sekcja 2.3.
+Wartość `OMP_NUM_THREADS` zmiennej środowiskowej musi być dodatnią liczbą całkowitą. Jego efektem zależy od tego, czy włączona jest dynamiczne Dostosowywanie liczby wątków. Aby uzyskać kompleksowy zestaw reguł o interakcji między `OMP_NUM_THREADS` środowiska zmiennych i dynamicznego dostosowania wątków, zobacz [sekcji 2.3](2-directives.md#23-parallel-construct).
 
 Liczba wątków używanych jest zdefiniowane w implementacji jeśli:
 
@@ -69,9 +69,9 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- [num_threads](2-3-parallel-construct.md) — klauzula
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) — funkcja
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) — funkcja
+- [num_threads](2-directives.md#23-parallel-construct) — klauzula
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) — funkcja
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) — funkcja
 
 ## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 
@@ -87,8 +87,8 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- [Regionów równoległych](2-3-parallel-construct.md)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) — funkcja
+- [Regionów równoległych](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) — funkcja
 
 ## <a name="44-ompnested"></a>4.4 OMP_NESTED
 
@@ -102,4 +102,4 @@ setenv OMP_NESTED TRUE
 
 ### <a name="cross-reference"></a>Cross-reference
 
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) — funkcja
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) — funkcja

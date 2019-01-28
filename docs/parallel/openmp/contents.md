@@ -1,98 +1,36 @@
 ---
 title: Spis treści
-ms.date: 11/04/2016
+ms.date: 01/25/2019
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: d1af1386a8d022fbee2f5485b412e699cf567944
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55064986"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087252"
 ---
 # <a name="contents"></a>Spis treści
 
-[1. Wprowadzenie](../../parallel/openmp/1-introduction.md)
+[1. Wprowadzenie](1-introduction.md)
 
-[2. Dyrektywy](../../parallel/openmp/2-directives.md)
+[2. Dyrektywy](2-directives.md)
 
-[3. Funkcje bibliotek wykonawczych](../../parallel/openmp/3-run-time-library-functions.md)
+[3. Funkcje biblioteki czasu wykonywania](3-run-time-library-functions.md)
 
-[4. Zmienne środowiskowe](../../parallel/openmp/4-environment-variables.md)
+[4. Zmienne środowiskowe](4-environment-variables.md)
 
-[A. Przykłady](../../parallel/openmp/a-examples.md)
+[A. Przykłady](a-examples.md)
 
-[A.1 wykonywanie równoległe prostej pętli](../../parallel/openmp/a-1-executing-a-simple-loop-in-parallel.md)
+[B. Wycinki funkcji bibliotek wykonawczych](b-stubs-for-run-time-library-functions.md)
 
-[A.2 Określanie kompilacji warunkowej](../../parallel/openmp/a-2-specifying-conditional-compilation.md)
+[C. Gramatyka OpenMP C i C++](c-openmp-c-and-cpp-grammar.md)
 
-[A.3 użycie regionów równoległych](../../parallel/openmp/a-3-using-parallel-regions.md)
+[D. W klauzuli harmonogramu](d-using-the-schedule-clause.md)
 
-[A.4 użycie klauzuli nowait](../../parallel/openmp/a-4-using-the-nowait-clause.md)
+[E. Zachowania zdefiniowane w implementacji programie OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-[A.5 użycie dyrektywy critical](../../parallel/openmp/a-5-using-the-critical-directive.md)
+[F. Nowe funkcje i wyjaśnienia w wersji 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 
-[A.6 użycie klauzuli lastprivate](../../parallel/openmp/a-6-using-the-lastprivate-clause.md)
+## <a name="see-also"></a>Zobacz także
 
-[A.7 użycie klauzuli reduction](../../parallel/openmp/a-7-using-the-reduction-clause.md)
-
-[A.8 określanie sekcji równoległych](../../parallel/openmp/a-8-specifying-parallel-sections.md)
-
-[A.9 użycie pojedynczej dyrektywy](../../parallel/openmp/a-9-using-single-directives.md)
-
-[A.10 określenie porządku sekwencyjnego](../../parallel/openmp/a-10-specifying-sequential-ordering.md)
-
-[A.11 Określanie stałej liczby wątków](../../parallel/openmp/a-11-specifying-a-fixed-number-of-threads.md)
-
-[A.12 użycie dyrektywy niepodzielnej](../../parallel/openmp/a-12-using-the-atomic-directive.md)
-
-[A.13 użycie dyrektywy flush z listą](../../parallel/openmp/a-13-using-the-flush-directive-with-a-list.md)
-
-[A.14 użycie dyrektywy flush bez listy](../../parallel/openmp/a-14-using-the-flush-directive-without-a-list.md)
-
-[A.15 Określanie liczby wykorzystywanych wątków](../../parallel/openmp/a-15-determining-the-number-of-threads-used.md)
-
-[A.16 użycie blokad](../../parallel/openmp/a-16-using-locks.md)
-
-[A.17 użycie Zagnieżdżalnych blokad](../../parallel/openmp/a-17-using-nestable-locks.md)
-
-[A.18 zagnieżdżenia dla dyrektyw](../../parallel/openmp/a-18-nested-for-directives.md)
-
-[A.19 przykłady pokazujące nieprawidłowe zagnieżdżanie dyrektyw podziału pracy](../../parallel/openmp/a-19-examples-showing-incorrect-nesting-of-work-sharing-directives.md)
-
-[A.20 powiązanie dyrektyw bariery](../../parallel/openmp/a-20-binding-of-barrier-directives.md)
-
-[A.21 zmienne zakresowe z klauzulą prywatną](../../parallel/openmp/a-21-scoping-variables-with-the-private-clause.md)
-
-[A.22 przy użyciu default(none) — klauzula](../../parallel/openmp/a-22-using-the-default-none-clause.md)
-
-[A.23 przykłady dyrektyw uporządkowanych](../../parallel/openmp/a-23-examples-of-the-ordered-directive.md)
-
-[A.24 przykład klauzuli prywatnej](../../parallel/openmp/a-24-example-of-the-private-clause.md)
-
-[A.25 przykłady klauzuli atrybutu danych prywatnej kopii](../../parallel/openmp/a-25-examples-of-the-copyprivate-data-attribute-clause.md)
-
-[A.26 użycie dyrektywy threadprivate](../../parallel/openmp/a-26-using-the-threadprivate-directive.md)
-
-[A.27 Użycie tablic C99 o zmiennej długości](../../parallel/openmp/a-27-use-of-c99-variable-length-arrays.md)
-
-[A.28 użycie klauzuli num_threads](../../parallel/openmp/a-28-use-of-num-threads-clause.md)
-
-[A.29 podziału Użyj pracy konstrukcje w konstrukcji krytycznej](../../parallel/openmp/a-29-use-of-work-sharing-constructs-inside-a-critical-construct.md)
-
-[A.30 użycie reprywatyzacji](../../parallel/openmp/a-30-use-of-reprivatization.md)
-
-[A.31 funkcje blokady](../../parallel/openmp/a-31-thread-safe-lock-functions.md)
-
-[B. Wycinki funkcji bibliotek wykonawczych](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)
-
-[C. OpenMP C i gramatyka C++](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)
-
-[D. Użycie klauzuli harmonogramu](../../parallel/openmp/d-using-the-schedule-clause.md)
-
-[E. Zachowania zdefiniowane w implementacji in programie OpenMP C/C++](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-
-[F. Nowe funkcje i wyjaśnienia w wersji 2.0](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)
-
-## <a name="see-also"></a>Zobacz też
-
-[Interfejs aplikacji C++ i C](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)
+[C i C++ interfejs aplikacji](openmp-c-and-cpp-application-program-interface.md)

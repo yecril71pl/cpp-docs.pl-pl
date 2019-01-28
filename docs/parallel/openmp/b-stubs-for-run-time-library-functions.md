@@ -1,24 +1,24 @@
 ---
 title: B. Wycinki funkcji bibliotek wykonawczych
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551453"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087265"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Wycinki funkcji bibliotek wykonawczych
 
 Ta sekcja zawiera wycinki funkcji bibliotek wykonawczych zdefiniowanych w OpenMP C i C++ interfejsu API. Wycinki są podane w celu włączenia przenoszenia do platform, które nie obsługują OpenMP C i C++ interfejsu API. Na tych platformach programy OpenMP musi być połączony z biblioteką te funkcje klasy zastępczej. Funkcje klasy zastępczej przyjęto założenie, że dyrektywy w programie OpenMP są ignorowane. W efekcie one emulować semantyki szeregowe.
 
 > [!NOTE]
->  Zmienna blokady, która jest wyświetlana w funkcje blokady muszą być dostępne wyłącznie w ramach tych funkcji. Go nie należy zainicjować ani modyfikować w inny sposób, w programie użytkownika. Użytkownicy nie powinna dokonywać założeń dotyczących mechanizmów używaną przez implementacje OpenMP C i C++ do zaimplementowania blokad oparty na schemacie przez funkcje klasy zastępczej.
+> Zmienna blokady, która jest wyświetlana w funkcje blokady muszą być dostępne wyłącznie w ramach tych funkcji. Go nie należy zainicjować ani modyfikować w inny sposób, w programie użytkownika. Użytkownicy nie powinna dokonywać założeń dotyczących mechanizmów używaną przez implementacje OpenMP C i C++ do zaimplementowania blokad oparty na schemacie przez funkcje klasy zastępczej.
 
-### <a name="code"></a>Kod
+## <a name="code"></a>Kod
 
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include "omp.h"

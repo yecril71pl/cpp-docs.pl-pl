@@ -2,12 +2,12 @@
 title: 2. Dyrektyw
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894251"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087343"
 ---
 # <a name="2-directives"></a>2. Dyrektyw
 
@@ -60,7 +60,7 @@ Następująca dyrektywa definiuje równoległego regionu, czyli obszarem program
 - `default(shared | none)`
 - `shared(` *Lista zmiennych* `)`
 - `copyin(` *Lista zmiennych* `)`
-- `reduction(` *operator* `:` *liście zmiennych*  `)`
+- `reduction(` *operator* `:` *liście zmiennych* `)`
 - `num_threads(` *wyrażenie całkowite* `)`
 
 Kiedy wątek uzyskuje się konstrukcja równoległa, zespół wątków jest tworzone, jeśli jest spełniony jeden z następujących przypadkach:
@@ -111,12 +111,12 @@ Ograniczenia `parallel` dyrektywy jest następująca:
 ### <a name="cross-references"></a>Odsyłacze
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, i `reduction` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) zmiennej środowiskowej
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) funkcja biblioteki
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) zmiennej środowiskowej
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) — funkcja
-- [OMP_NESTED](4-4-omp-nested.md) zmiennej środowiskowej
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) funkcja biblioteki
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) zmiennej środowiskowej
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkcja biblioteki
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) zmiennej środowiskowej
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) — funkcja
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) zmiennej środowiskowej
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) funkcja biblioteki
 
 ## <a name="24-work-sharing-constructs"></a>2.4 konstrukcje podziału pracy
 
@@ -227,7 +227,7 @@ Ograniczenia `for` dyrektywy jest następująca:
 #### <a name="cross-references"></a>Odsyłacze
 
 - `private`, `firstprivate`, `lastprivate`, i `reduction` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) zmiennej środowiskowej
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) zmiennej środowiskowej
 - [uporządkowane](#266-ordered-construct) konstruowania
 - [Harmonogram](d-using-the-schedule-clause.md) — klauzula
 
@@ -250,7 +250,7 @@ Klauzula jest jedną z następujących czynności:
 - `private(` *Lista zmiennych* `)`
 - `firstprivate(` *Lista zmiennych* `)`
 - `lastprivate(` *Lista zmiennych* `)`
-- `reduction(` *operator* `:` *liście zmiennych*  `)`
+- `reduction(` *operator* `:` *liście zmiennych* `)`
 - `nowait`
 
 Każda sekcja jest poprzedzony `section` dyrektywy, mimo że `section` dyrektywa jest opcjonalna w pierwszej sekcji. `section` Dyrektywy musi znajdować się w obrębie zakresu leksykalne `sections` dyrektywy. Na końcu ma niejawne barierę `sections` konstruowania, chyba że `nowait` jest określony.
@@ -520,7 +520,7 @@ Ograniczenia `ordered` dyrektywy jest następująca:
 
 W tej sekcji przedstawiono dyrektywy i kilka klauzul do kontrolowania środowiska danych podczas wykonywania równoległego regionów, w następujący sposób:
 
-- A `threadprivate` — dyrektywa (zobacz w poniższej sekcji) znajduje się zakres pliku, zakresie przestrzeni nazw lub zakresie bloku statyczne zmienne lokalne do wątku.
+- A [threadprivate](#271-threadprivate-directive) dyrektywy znajduje się zakres pliku, zakresie przestrzeni nazw lub zakresie bloku statyczne zmienne lokalne do wątku.
 
 - Klauzule, które mogą być określone dla dyrektywy do kontrolowania udostępniania atrybutów zmienne w czasie trwania konstrukcje równoległego lub podziału pracy zostały opisane w [sekcji 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- [dynamiczne wątków](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) zmiennej środowiskowej
+- [dynamiczne wątków](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) zmiennej środowiskowej
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 klauzule atrybutu udostępniania danych
 
