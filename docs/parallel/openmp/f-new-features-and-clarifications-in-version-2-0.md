@@ -1,40 +1,40 @@
 ---
 title: F. Nowe funkcje i wyjaśnienia w wersji 2.0
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-ms.openlocfilehash: c8a597c6af397bd162d92a945d96409b1839e2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657157"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087213"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Nowe funkcje i wyjaśnienia w wersji 2.0
 
 Ten dodatek zawiera podsumowanie kluczowych zmiany wprowadzone do specyfikacji OpenMP C/C++ podczas przenoszenia w wersji 1.0 do wersji 2.0. Nowe funkcje dodane do specyfikacji są następujące elementy:
 
-- Przecinki są dozwolone w OpenMP — dyrektywy ([sekcji 2.1](../../parallel/openmp/2-1-directive-format.md) na stronie 7).
+- Przecinki są dozwolone w OpenMP [dyrektywy](2-directives.md#21-directive-format).
 
-- Dodanie `num_threads` klauzuli. Ta klauzula pozwala użytkownikowi na żądanie po upływie określonej liczby wątków równoległych konstrukcji ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8).
+- Dodanie `num_threads` klauzuli. Ta klauzula pozwala użytkownikowi na określoną liczbę wątków dla żądania [konstrukcja równoległa](2-directives.md#23-parallel-construct).
 
-- `threadprivate` Dyrektywa został rozszerzony o zaakceptowanie zmiennych statycznych zasięgiem bloku ([sekcji 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na stronie 23).
+- [Threadprivate](2-directives.md#271-threadprivate-directive) dyrektywa został rozszerzony o zaakceptowanie zmiennych statycznych zakres bloku.
 
-- C99 zmiennej długości tablice są typami pełnymi i ten sposób można określić dowolnym typami pełnymi są dozwolone, na przykład na liście `private`, `firstprivate`, i `lastprivate` klauzule ([sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25).
+- C99 zmiennej długości tablice są typami pełnymi i może być określony dowolnym typami pełnymi są dozwolone, takie jak listy `private`, `firstprivate`, i `lastprivate` klauzule (zobacz [sekcji 2.7.2](2-directives.md#272-data-sharing-attribute-clauses)).
 
-- Prywatna zmienna w regionie równoległe mogą zostać oznaczone jako prywatne ponownie w ramach zagnieżdżonych — dyrektywa ([sekcji 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stronie 25).
+- Prywatna zmienna w regionie równoległe mogą zostać oznaczone jako [prywatnej](2-directives.md#2721-private) ponownie w dyrektywie zagnieżdżonych.
 
-- `copyprivate` Klauzuli został dodany. Zapewnia mechanizm na potrzeby emisji wartości z jednego członka zespołu do innych członków zmienną prywatną. Jest to alternatywa dla użycia w udostępnionej zmiennej wartości, gdy dostarczanie w udostępnionej zmiennej może sprawiać trudności (na przykład w rekursji, wymagających inną zmienną na każdym poziomie). `copyprivate` Klauzuli może się pojawić tylko **pojedynczego** — dyrektywa ([sekcji 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stronie 32).
+- `copyprivate` Klauzuli został dodany. Zapewnia mechanizm na potrzeby emisji wartości z jednego członka zespołu do innych członków zmienną prywatną. Jest to alternatywa dla użycia w udostępnionej zmiennej wartości, gdy dostarczanie w udostępnionej zmiennej może sprawiać trudności (na przykład w rekursji, wymagających inną zmienną na każdym poziomie). [Copyprivate](2-directives.md#2728-copyprivate) klauzuli może się pojawić tylko `single` dyrektywy.
 
-- Dodawanie procedury chronometrażu `omp_get_wtick` i `omp_get_wtime` podobna do procedury MPI. Te funkcje są niezbędne do wykonywania chronometrażu zegara tablicy ([sekcji 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) na stronie 44 i [sekcji 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) na stronie 45 dni).
+- Dodawanie procedury chronometrażu [omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) i [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) podobna do procedury MPI. Te funkcje są niezbędne do wall chronometrażu zegara.
 
-- Dodano załącznik z listą zachowania zdefiniowane w implementacji programie OpenMP C/C++. Implementacja jest wymagana do definiowania i zarządzania dokumentami jego zachowanie w takich przypadkach ([dodatku E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) na stronie 97).
+- Dodatek z listą [zachowania zdefiniowane w implementacji](e-implementation-defined-behaviors-in-openmp-c-cpp.md) programie OpenMP C/C++ zostały dodane. Implementacja jest wymagana do definiowania i zarządzania dokumentami jego zachowanie w takich przypadkach.
 
 - Następujące zmiany służą do wyjaśnienia lub Popraw funkcji w poprzednim specyfikacji OpenMP API dla języka C/C++:
 
-   - Wyjaśniono, że zachowanie `omp_set_nested` i `omp_set_dynamic` podczas `omp_in_parallel` zwraca wartość różną od zera jest niezdefiniowana ([sekcji 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stronie 39 i [sekcji 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na stronie 40).
+  - Wyjaśniono, że zachowanie [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) i [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) podczas `omp_in_parallel` zwraca wartość różną od zera jest niezdefiniowana.
 
-   - Wyjaśniono zagnieżdżanie dyrektywy stosowania zagnieżdżonych równoległego ([2.9 sekcji](../../parallel/openmp/2-9-directive-nesting.md) na stronie 33).
+  - Wyjaśniono [zagnieżdżanie dyrektywy](2-directives.md#29-directive-nesting) podczas równoległego zagnieżdżone jest używany.
 
-   - Funkcje zniszczenie inicjowania i blokadę przy użyciu blokady może zostać wywołany w równoległego regionu ([sekcji 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na stronie 42 i [sekcji 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) na stronie 42).
+  - [Zablokować inicjowania](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) i [zablokować zniszczenie](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) funkcji może zostać wywołany w równoległego regionu.
 
-   - Dodano nowe przykłady ([dodatek a.](../../parallel/openmp/a-examples.md) na stronie 51).
+  - Dodano nowe przykłady [dodatek a](a-examples.md).
