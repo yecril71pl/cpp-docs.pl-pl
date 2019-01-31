@@ -28,7 +28,7 @@ ms.locfileid: "54220377"
 
 *Stała ułamkowe*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*  **.**
 
 *wykładnik część*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*<br/>
