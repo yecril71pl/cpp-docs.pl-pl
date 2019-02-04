@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677022"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702937"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -61,10 +62,10 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*Dysk*<br/>
+*drive*<br/>
 Nieujemna liczba całkowita, określająca dysk (0 = dysk domyślny, 1 = A, 2 = B i tak dalej).
 
-Jeśli określony dysk nie jest dostępny, lub rodzaju dysku (na przykład, wymienny, stały, CD-ROM, dysk RAM lub dysk sieciowy) nie można ustalić, obsługi nieprawidłowy parametr, który jest opisany w [Parameter Validation](../../c-runtime-library/parameter-validation.md), jest wywoływane.
+Jeśli określony dysk nie jest dostępny, lub rodzaju dysku (na przykład, wymienny, stały, CD-ROM, dysk RAM lub dysk sieciowy) nie można ustalić, zostanie wywołany nieprawidłowy parametr uchwytu. Aby uzyskać więcej informacji, zobacz [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Lokalizacja magazynu dla ścieżki, lub **NULL**.
@@ -74,13 +75,13 @@ Jeśli **NULL** jest określona, ta funkcja przydziela bufor o co najmniej *maxl
 *maxlen*<br/>
 Wartość różną od zera dodatnia liczba całkowita, określająca maksymalną długość ścieżki w znakach: **char** dla **_getdcwd —** i **wchar_t** dla **_wgetdcwd —**.
 
-Jeśli *maxlen* nie jest większa niż zero, obsługi nieprawidłowy parametr, który jest opisany w [Parameter Validation](../../c-runtime-library/parameter-validation.md), zostanie wywołana.
+Jeśli *maxlen* jest mniejszy niż lub równy zero, obsługi parametru zostanie wywołana. Aby uzyskać więcej informacji, zobacz [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do ciągu, który reprezentuje pełną ścieżkę bieżącego katalogu roboczego na określonym dysku lub **NULL**, który wskazuje na błąd.
 
-Jeśli *buforu* jest określony jako **NULL** i ma za mało pamięci do przydzielenia *maxlen* znaków, wystąpi błąd i **errno** jest Ustaw **ENOMEM**. Jeśli długość ścieżki, która obejmuje kończący znak null, przekracza *maxlen*, wystąpi błąd i **errno** ustawiono **ERANGE**. Aby uzyskać więcej informacji na temat tych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli *buforu* jest określony jako **NULL** i ma za mało pamięci do przydzielenia *maxlen* znaków, wystąpi błąd i **errno** jest Ustaw **ENOMEM**. Jeśli długość ścieżki, w tym kończącego znaku null przekroczy *maxlen*, wystąpi błąd, i **errno** ustawiono **ERANGE**. Aby uzyskać więcej informacji na temat tych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 

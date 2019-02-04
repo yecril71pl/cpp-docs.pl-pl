@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031294"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702911"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Zawsze sprawdzać zwracaną wartość, aby zobaczyć, czy wskaźnik ma wartość
 
 **fopen —** obsługuje strumienie pliku Unicode. Aby otworzyć plik w formacie Unicode, należy przekazać **ccs** flagę, która określa wymagane kodowanie do **fopen —**, wykonując następujące czynności.
 
-> **PLIK *fp = fopen — ("NowyPlik.txt", "rt + ccs =**_kodowanie_**");**
+> **PLIK \*fp = fopen — ("NowyPlik.txt", "rt + ccs =**_kodowanie_**");**
 
 Dozwolone wartości parametru *kodowanie* są **UNICODE**, **UTF-8**, i **UTF-16LE**.
 
@@ -97,7 +97,7 @@ W poniższej tabeli podsumowano tryby, które są używane dla różnych **ccs**
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Kodowania używane na podstawie ccs flagę i znaku BOM
 
-|flagi ccs|Nie znaku BOM (lub nowy plik)|ZNAK BOM: UTF-8|ZNAK BOM: UTF-16|
+|flagi ccs|Nie znaku BOM (lub nowy plik)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -111,7 +111,7 @@ Jeśli *tryb* jest **", ccs =**_kodowanie_**"**, **fopen —** po raz pierwszy p
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfopen —**|**fopen —**|**fopen —**|**_wfopen**|
+|**_tfopen**|**fopen —**|**fopen —**|**_wfopen**|
 
 Ciąg znaków *tryb* określa rodzaj dostępu, który jest wnioskowany dla pliku, w następujący sposób.
 
@@ -119,7 +119,7 @@ Ciąg znaków *tryb* określa rodzaj dostępu, który jest wnioskowany dla pliku
 |-|-|
 | **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem. |
 | **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
-| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
+| **"a"** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
 | **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
 | **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
 | **"+"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |
@@ -150,35 +150,35 @@ Poniższe opcje, które można dołączać do *tryb* Aby określić dodatkowe za
 |*tryb* modyfikator|Zachowanie|
 |-|-|
 | **c** | Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana. |
-| **N** | Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem COMMODE.OBJ. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)). |
+| **n** | Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem COMMODE.OBJ. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)). |
 | **N** | Określa, że plik nie jest dziedziczony przez procesy podrzędne. |
 | **S** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku. |
 | **R** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku. |
 | **T** | Określa plik jako tymczasowy. Jeśli to możliwe, nie jest on opróżniany do dysku. |
 | **D** | Określa plik jako tymczasowy. Jest usuwany po zamknięciu ostatniego wskaźnika do pliku. |
-| **ccs =**_kodowania_ | Określa zakodowany zestaw znaków używany (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz, aby kodowania ANSI. |
+| **ccs=**_encoding_ | Określa zakodowany zestaw znaków używany (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz, aby kodowania ANSI. |
 
 Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty, które są używane w [_otwórz](open-wopen.md) i [_sopen](sopen-wsopen.md), wykonując następujące czynności.
 
 |Znaki w *tryb* ciągu|Równoważne *oflag* wartość \_Otwórz /\_sopen —|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (zazwyczaj  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
-|**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (zazwyczaj  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**a+**|**\_O\_RDWR** &#124; **\_O\_APPEND** (usually **\_O\_RDWR** &#124; **\_O\_APPEND** &#124; **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (zazwyczaj  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (zazwyczaj  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|Brak|
-|**N**|Brak|
+|**n**|Brak|
 |**S**|**\_O\_SEKWENCYJNEGO**|
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_TYMCZASOWEGO**|
-|**ccs = UNICODE**|**\_O\_WTEXT**|
-|**ccs = UTF-8**|**\_O\_UTF8**|
-|**ccs = UTF-16LE**|**\_O\_UTF16**|
+|**D**|**\_O\_TEMPORARY**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Jeśli używasz **rb** tryb, nie trzeba przyłącz kod, a jeśli chcą odczytywana większość dużego pliku lub nie jest istotna wydajność sieci, możesz też rozważyć, czy do użycia pamięci plików Win32 mapowanych jako opcję.
 

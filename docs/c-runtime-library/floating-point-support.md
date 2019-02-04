@@ -1,6 +1,6 @@
 ---
 title: Matematyczne i Obsługa liczb zmiennoprzecinkowych
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558239"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703132"
 ---
 # <a name="math-and-floating-point-support"></a>Matematyczne i Obsługa liczb zmiennoprzecinkowych
 
@@ -34,14 +34,14 @@ Poprzednie 16-bitowymi wersjami Microsoft C/C++ i Microsoft Visual C++ obsługuj
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Oblicza arcus sinus hiperboliczny
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Oblicza arcus tangens
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Oblicza arcus tangens hiperboliczny
-[_atodbl —, _atodbl_l —](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg na specyficzną dla ustawień regionalnych **double**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg na specyficzną dla ustawień regionalnych **double**
 [atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje ciąg na **double**
 [_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg na specyficzną dla ustawień regionalnych **float** lub **typu long double**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Oblicza głównego modułu
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Oblicza Zaokrąglenie w górę
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Oblicza odwrotność dodatku
 [_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)|Pobiera i usuwa z rejestru stanu zmiennoprzecinkowego
-[_control87 —, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Pobiera i ustawia słowo sterujące zmiennoprzecinkowe
+[_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Pobiera i ustawia słowo sterujące zmiennoprzecinkowe
 [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Bezpieczna wersja **_controlfp**
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Zwraca wartość, która ma wielkość jednego z argumentów i znak innego
 [COS cosf —, cosl —](../c-runtime-library/reference/cos-cosf-cosl.md)|Oblicza sinus
@@ -69,7 +69,6 @@ Poprzednie 16-bitowymi wersjami Microsoft C/C++ i Microsoft Visual C++ obsługuj
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Ustawia określony tryb zaokrąglania zmiennoprzecinkowych
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Określa, które wyjątek zmiennoprzecinkowy, którego stan flagi są ustawione
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Przywraca środowisko zmiennoprzecinkowych, a następnie zgłasza wyjątki poprzedniej
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Określa, czy wartość jest wartością skończoną
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Oblicza Zaokrąglenie w dół
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Oblicza kolei mnożeniem
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Oblicza maksymalną liczbę argumentów
@@ -87,7 +86,11 @@ Poprzednie 16-bitowymi wersjami Microsoft C/C++ i Microsoft Visual C++ obsługuj
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Oblicza wykładnik base 2 liczba całkowita
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Oblicza wartość bezwzględną typu Liczba całkowita
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Oblicza iloraz i resztę dwóch liczb całkowitych
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Określa, czy wartość jest wartością skończoną
+[isgreater isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Porównywanie kolejności z dwóch wartości zmiennoprzecinkowych
+[isinf —](../c-runtime-library/reference/isinf.md)|Określa, czy wartość zmiennoprzecinkowa jest nieskończony
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Sprawdza czy wartość zmiennoprzecinkowa NaN
+[isnormal —](../c-runtime-library/reference/isnormal.md)|Sprawdza, czy wartość zmiennoprzecinkowa jest ograniczone i nie subnormal
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Oblicza wartość funkcji Bessela
 [ldexp —, ldexpf —, ldexpl](../c-runtime-library/reference/ldexp.md)|Oblicza x * 2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Oblicza wartość bezwzględną liczby funkcja gamma logarytm naturalny
@@ -114,10 +117,11 @@ Poprzednie 16-bitowymi wersjami Microsoft C/C++ i Microsoft Visual C++ obsługuj
 [rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|Zaokrągla wartość zmiennoprzecinkową
 [_rotl, _rotl64, _rotr, _rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|Obracanie bitów typów całkowitych
 [round, roundf, roundl](../c-runtime-library/reference/round-roundf-roundl.md)|Zaokrągla wartość zmiennoprzecinkową
-[_scalb —, _scalbf](../c-runtime-library/reference/scalb.md)|Argument skali przez potęgą liczby 2
+[_scalb, _scalbf](../c-runtime-library/reference/scalb.md)|Argument skali przez potęgą liczby 2
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Mnoży liczbę zmiennoprzecinkową przez całkowite możliwości **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Ustawia słowo sterujące zmiennoprzecinkowe
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Włącza lub wyłącza instrukcje SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Testy z bitem wartości zmiennoprzecinkowych
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Oblicza sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Oblicza sinus hiperboliczny
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Oblicza pierwiastek kwadratowy
@@ -134,3 +138,4 @@ Poprzednie 16-bitowymi wersjami Microsoft C/C++ i Microsoft Visual C++ obsługuj
 ## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Zmiennoprzecinkowe elementów podstawowych](../c-runtime-library/reference/floating-point-primitives.md)<br/>

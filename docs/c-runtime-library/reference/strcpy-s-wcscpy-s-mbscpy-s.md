@@ -1,9 +1,10 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s, wcscpy_s —, _mbscpy_s — _mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -22,30 +23,32 @@ apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616609"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702716"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s —, _mbscpy_s — _mbscpy_s_l
 
 Kopiuje ciąg. Te wersje [strcpy wcscpy —, _mbscpy —](strcpy-wcscpy-mbscpy.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s —** i **_mbscpy_s_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,6 +67,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,6 +93,12 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -96,6 +111,9 @@ Rozmiar buforu miejsca docelowego ciągu w **char** jednostki dla funkcji wąski
 
 *src*<br/>
 Bufor ciągu źródła zakończony znakiem null.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -113,7 +131,7 @@ Zero, jeśli to się powiedzie; w przeciwnym razie błąd.
 
 **Strcpy_s** funkcja kopiuje zawartość adresu *src*, łącznie z końcowym znakiem zerowym, do lokalizacji, która jest określona przez *dest*. Ciąg docelowy musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jego kończącego znaku null. Zachowanie **strcpy_s** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
 
-**wcscpy_s —** jest wersją znaków dwubajtowych **strcpy_s**, i **_mbscpy_s —** jest wersją znaków wielobajtowych. Argumenty **wcscpy_s —** są znakami dwubajtowymi ciągów; te z **_mbscpy_s —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
+**wcscpy_s —** jest wersją znaków dwubajtowych **strcpy_s**, i **_mbscpy_s —** jest wersją znaków wielobajtowych. Argumenty **wcscpy_s —** są znakami dwubajtowymi ciągów; te z **_mbscpy_s —** i **_mbscpy_s_l** są ciągami znaków wielobajtowych. Funkcje te zachowują się identycznie. **_mbscpy_s_l** jest taka sama jak **_mbscpy_s —** z tą różnicą, że używa ustawień regionalnych parametrów zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 Jeśli *dest* lub *src* jest wskaźnikiem typu null, lub jeśli miejsce docelowe ciągu rozmiaru *dest_size* jest zbyt mały, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL** podczas *dest* lub  *SRC* jest wskaźnikiem typu null, a także zwracają **ERANGE** i ustaw **errno** do **ERANGE** kiedy ciąg docelowy jest za mały.
 
@@ -127,7 +145,7 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscpy_s —**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
+|**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -205,8 +223,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp —, wcscmp —, _mbscmp — _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

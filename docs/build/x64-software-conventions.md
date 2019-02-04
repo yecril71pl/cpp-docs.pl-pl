@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627309"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702071"
 ---
 # <a name="x64-software-conventions"></a>x64 konwencje kodowania
 
@@ -54,12 +54,12 @@ Chociaż dostęp do danych z każdego wyrównania, zaleca się wyrównanie danyc
 |**INT32**|**int**, **długi**|4|Bitowego|
 |**UINT32**|**unsigned int, niepodpisane długa**|4|Bitowego|
 |**INT64**|**__int64**|8|Quadword|
-|**UINT64 —**|**__int64 bez znaku**|8|Quadword|
+|**UINT64**|**__int64 bez znaku**|8|Quadword|
 |**FP32 (Pojedyncza precyzja)**|**float**|4|Bitowego|
 |**FP64 (Podwójna precyzja)**|**double**|8|Quadword|
 |**WSKAŹNIK**|__\*__|8|Quadword|
 |**__m64**|**__m64 — struktura**|8|Quadword|
-|**__m128**|**__m128 — struktura**|16|Octaword|
+|**__m128**|**struct __m128**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregacje i unie
 
@@ -89,12 +89,12 @@ W poniższej tabeli przedstawiono silnie sugerowane wyrównanie skalarne element
 |**INT32**|**int**, **długi**|Bitowego|
 |**UINT32**|**unsigned int, niepodpisane długa**|Bitowego|
 |**INT64**|**__int64**|Quadword|
-|**UINT64 —**|**__int64 bez znaku**|Quadword|
+|**UINT64**|**__int64 bez znaku**|Quadword|
 |**FP32 (Pojedyncza precyzja)**|**float**|Bitowego|
 |**FP64 (Podwójna precyzja)**|**double**|Quadword|
 |**WSKAŹNIK**|<strong>\*</strong>|Quadword|
 |**__m64**|**__m64 — struktura**|Quadword|
-|**__m128**|**__m128 — struktura**|Octaword|
+|**__m128**|**struct __m128**|Octaword|
 
 Obowiązują następujące reguły wyrównanie agregacji:
 
@@ -141,7 +141,7 @@ _declspec(align(8)) struct {
 #### <a name="example-3"></a>Przykład 3
 
 ```C
-// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+// Total size = 12 bytes, alignment = 4 bytes (doubleword).
 
 _declspec(align(4)) struct {
     char a;       // +0; size = 1 byte
@@ -206,7 +206,7 @@ W poniższej tabeli opisano, jak każdy rejestr jest używany dla wywołań funk
 |RBX|Nieulotnej|Muszą być chronione przez wywoływanego|
 |RBP|Nieulotnej|Może być używana jako wskaźnik ramki; muszą być chronione przez wywoływanego|
 |RSP|Nieulotnej|Wskaźnik stosu|
-|XMM0, Z YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu wektor podczas `__vectorcall` jest używany|
+|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu wektor podczas `__vectorcall` jest używany|
 |XMM1, YMM1|Volatile|Drugi argument FP; drugi argument Typ wektora podczas `__vectorcall` jest używany|
 |XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument Typ wektora podczas `__vectorcall` jest używany|
 |XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument Typ wektora podczas `__vectorcall` jest używany|

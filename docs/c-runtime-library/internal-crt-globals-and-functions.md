@@ -1,6 +1,6 @@
 ---
 title: Wewnętrzne zmienne globalne CRT i funkcji
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -44,6 +44,7 @@ apiname:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -208,6 +209,7 @@ apiname:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -335,6 +337,7 @@ f1_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -499,6 +502,7 @@ f1_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -609,6 +613,7 @@ helpviewer_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -773,6 +778,7 @@ helpviewer_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -841,12 +847,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70b6036befb1f5da012375475a00d4f771c0e5cb
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485621"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703171"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Wewnętrzne zmienne globalne CRT i funkcji
 
@@ -859,7 +865,7 @@ Te zmienne globalne i makra definicje są używane do implementowania CRT.
 |Nazwa|
 |----------|
 |__badioinfo|
-|[_acmdln —](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
+|[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
 |_commode|
 |_crtAssertBusy|
 |_crtBreakAlloc|
@@ -868,7 +874,7 @@ Te zmienne globalne i makra definicje są używane do implementowania CRT.
 |[__mb_cur_max](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
 |__pioinfo|
 |__unguarded_readlc_active|
-|[_wcmdln —](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
+|[_wcmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
 |__winitenv|
 
 ## <a name="internal-crt-functions-and-function-macros"></a>Funkcje wewnętrzne CRT i makra — funkcja
@@ -926,6 +932,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__crtCreateEventExW|
 |__crtCreateSemaphoreExW|
 |__crtCreateSymbolicLinkW|
+|_crt_debugger_hook|
 |__crtEnumSystemLocalesEx|
 |__crtFlsAlloc|
 |__crtFlsFree|
@@ -993,11 +1000,11 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__FrameUnwindFilter|
 |_fread_nolock_s|
 |_free_base|
-|__free_locale —|
+|__free_locale|
 |_freea_s|
 |_freefls|
 |_ftol|
-|__get_current_locale —|
+|__get_current_locale|
 |__get_flsindex|
 |_get_initial_narrow_environment|
 |_get_initial_wide_environment|
@@ -1069,7 +1076,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |_malloc_base|
 |[___mb_cur_max_func](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
 |[___mb_cur_max_l_func](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
-|_mbctype —|
+|_mbctype|
 |_NLG_Dispatch2|
 |_NLG_Return|
 |_NLG_Return2|
@@ -1079,7 +1086,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |[__p&#95;&#95;_mb_cur_max](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
 |__p&#95;&#95;_wargv|
 |__p&#95;&#95;_winitenv|
-|__p\__acmdln —|
+|__p\__acmdln|
 |[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|
@@ -1089,21 +1096,22 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__p\__environ|
 |[__p\__fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob —|
-|__p\__mbcasemap —|
-|__p\__mbctype —|
+|__p\__mbcasemap|
+|__p\__mbctype|
 |__p\__pctype —|
 |__p\__pgmptr —|
 |__p\__pwctype —|
 |__p\__timezone|
 |__p\__tzname|
-|__p\__wcmdln —|
+|__p\__wcmdln|
 |__p\__wenviron|
-|__p\__wpgmptr —|
+|__p\__wpgmptr|
 |_pctype —|
 |[__pctype_func](../c-runtime-library/pctype-func.md)|
 |_pwctype —|
 |__pwctype_func|
 |__pxcptinfoptrs|
+|_query_app_type|
 |_realloc_base|
 |[_register_onexit_function](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|
 |_register_thread_local_exe_atexit_callback|
