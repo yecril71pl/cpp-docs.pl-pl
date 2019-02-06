@@ -1,6 +1,6 @@
 ---
 title: '&lt;Pamięć&gt; funkcji'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,22 +74,22 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519181"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763937"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;Pamięć&gt; funkcji
 
 ||||
 |-|-|-|
-|[AddressOf](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|
+|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|
 |[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|
-|[make_unique](#make_unique)|[owner_less —](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|
+|[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|
 |[static_pointer_cast](#static_pointer_cast)|[swap (standardowa biblioteka C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|
@@ -135,10 +135,10 @@ Wyrównanie powiązane z próbą.
 *Rozmiar*<br/>
 Rozmiar w bajtach dla wyrównanej pamięci.
 
-*PTR*<br/>
+*Ptr*<br/>
 Adres początkowy dostępnej puli ciągłej pamięci, która ma być użyta. Ten parametr to również parametr wyjściowy, a jest równa zawiera nowy adres początkowy, jeśli wyrównanie zakończy się pomyślnie. Jeśli `align()` się nie powiedzie, ten parametr nie jest modyfikowany.
 
-*miejsce*<br/>
+*Space*<br/>
 Całkowita ilość miejsca dostępna do `align()` w celu utworzenia wyrównanej pamięci. Ten parametr to również parametr wyjściowy, zawiera skorygowane miejsce pozostawione w buforze pamięci po odjęciu wyrównanej pamięci i wszystkich powiązanych obciążeń.
 
 Jeśli `align()` się nie powiedzie, ten parametr nie jest modyfikowany.
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Parametr|Opis|
 |---------------|-----------------|
 |*ptr*|Adres pierwszy znak, który nie zawiera już wskaźników mogących podlegać śledzeniu.|
-|*_Rozmiar*|Rozmiar bloku, który rozpoczyna się od *ptr* który nie zawiera żadnych wskaźników mogących podlegać śledzeniu.|
+|*_Size*|Rozmiar bloku, który rozpoczyna się od *ptr* który nie zawiera żadnych wskaźników mogących podlegać śledzeniu.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Wskaźnik do obiektu do usunięcia.
 
 *Inne*<br/>
@@ -370,7 +370,7 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter —
+## <a name="get_deleter"></a>  get_deleter
 
 Pobieranie programu usuwającego z shared_ptr.
 
@@ -647,13 +647,13 @@ Liczba elementów do przydzielenia miejsca dla w nowej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze przeciążenie jest wykorzystywane dla pojedynczych obiektów, drugie przeciążenie jest wywoływane dla tablic, a trzecie przeciążenie uniemożliwia uniemożliwia określenie rozmiaru tablicy w argument typu (make_unique\<T [N] >); ta konstrukcja nie jest obsługiwana. przez bieżące normy. Kiedy używasz `make_unique` utworzyć `unique_ptr` do tablicy, musisz oddzielnie zainicjować elementy tablicy. Jeżeli rozważasz to przeciążenie, być może lepszym rozwiązaniem jest użycie [std::vector](../standard-library/vector-class.md).
+Pierwsze przeciążenie jest wykorzystywane dla pojedynczych obiektów, drugie przeciążenie jest wywoływane dla tablic, a trzecie przeciążenie uniemożliwia określenie rozmiaru tablicy w argument typu (make_unique\<T [N] >); ta konstrukcja nie jest obsługiwana przez bieżącą Standard. Kiedy używasz `make_unique` utworzyć `unique_ptr` do tablicy, musisz oddzielnie zainicjować elementy tablicy. Jeżeli rozważasz to przeciążenie, być może lepszym rozwiązaniem jest użycie [std::vector](../standard-library/vector-class.md).
 
 Ponieważ `make_unique` jest dokładnie zaimplementowano pod kątem bezpieczeństwa wyjątków, firma Microsoft zaleca użycie `make_unique` zamiast bezpośredniego wywoływania `unique_ptr` konstruktorów.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `make_unique`. Aby uzyskać więcej przykładów, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+Poniższy przykład pokazuje, jak używać `make_unique`. Aby uzyskać więcej przykładów, zobacz [jak: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -956,7 +956,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie źródłowym.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie źródłowym.
 
 *dest*<br/>
@@ -1101,7 +1101,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 *pierwszy*<br/>
 Iterator postępujący odnosi się do pierwszego elementu w zakresie docelowym, który ma zostać zainicjowane.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator do przodu, odnoszący się do ostatniego elementu w zakresie docelowym, który ma zostać zainicjowane.
 
 *Val*<br/>

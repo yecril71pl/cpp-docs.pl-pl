@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481825"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764015"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 
@@ -38,17 +38,17 @@ W tym temacie wymieniono funkcje ddx_field — umożliwia wymianę danych międz
 
 |||
 |-|-|
-|[Ddx_fieldcbindex —](#ddx_fieldcbindex)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i indeks bieżącego zaznaczenia w polu kombi w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i indeks bieżącego zaznaczenia w polu kombi w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
 |[Ddx_fieldcbstring —](#ddx_fieldcbstring)|Transfery `CString` danych między element członkowski danych pola zestawu rekordów i kontrolki edycji kombi pole w `CRecordView` lub `CDaoRecordView`. Podczas przenoszenia danych w zestawie do kontrolki, ta funkcja wybiera element w polu kombi, które zaczyna się od znaków w ciągu określonej.|
 |[Ddx_fieldcbstringexact —](#ddx_fieldcbstringexact)|Transfery `CString` danych między element członkowski danych pola zestawu rekordów i kontrolki edycji kombi pole w `CRecordView` lub `CDaoRecordView`. Podczas przenoszenia danych w zestawie do kontrolki, ta funkcja wybiera element w polu kombi, który dokładnie pasuje do określonego ciągu.|
-|[Ddx_fieldcheck —](#ddx_fieldcheck)|Transfer danych logicznych między element członkowski danych pola zestawu rekordów i pola wyboru w `CRecordView` lub `CDaoRecordView`.|
-|[Ddx_fieldlbindex —](#ddx_fieldlbindex)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i indeks bieżącego zaznaczenia w polu listy, w `CRecordView` lub `CDaoRecordView`.|
+|[DDX_FieldCheck](#ddx_fieldcheck)|Transfer danych logicznych między element członkowski danych pola zestawu rekordów i pola wyboru w `CRecordView` lub `CDaoRecordView`.|
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i indeks bieżącego zaznaczenia w polu listy, w `CRecordView` lub `CDaoRecordView`.|
 |[Ddx_fieldlbstring —](#ddx_fieldlbstring)|Zarządza transferem [CString](../../atl-mfc-shared/reference/cstringt-class.md) danych pomiędzy kontrolce pola listy i elementy członkowskie danych pola zestawu rekordów. Podczas przenoszenia danych w zestawie do kontrolki, ta funkcja wybiera element w polu listy, który zaczyna się od znaków w ciągu określonej.|
 |[Ddx_fieldlbstringexact —](#ddx_fieldlbstringexact)|Zarządza transferem `CString` danych pomiędzy kontrolce pola listy i elementy członkowskie danych pola zestawu rekordów. Podczas przenoszenia danych w zestawie do kontrolki, ta funkcja wybiera pierwszy element, który dokładnie pasuje do określonego ciągu.|
-|[Ddx_fieldradio —](#ddx_fieldradio)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i Grupa przycisków radiowych w `CRecordView` lub `CDaoRecordView`.|
-|[Ddx_fieldscroll —](#ddx_fieldscroll)|Ustawia lub pobiera jego położenie przewijania pasek przewijania w `CRecordView` lub `CDaoRecordView`. Wywoływanie z Twojej [dofieldexchange —](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funkcji.|
-|[Ddx_fieldslider —](#ddx_fieldslider)|Synchronizuje pozycji przycisku przewijania kontrolki suwaka w widoku rekordu i `int` pole składowej danych zestawu rekordów. |
-|[Ddx_fieldtext —](#ddx_fieldtext)|Przeciążone wersje są dostępne do przesyłania `int`, **UINT**, **długie**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **double**, **krótki**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między element członkowski danych pola zestawu rekordów i edytowanie pole w `CRecordView` lub `CDaoRecordView`.|
+|[DDX_FieldRadio](#ddx_fieldradio)|Transfer danych liczb całkowitych między element członkowski danych pola zestawu rekordów i Grupa przycisków radiowych w `CRecordView` lub `CDaoRecordView`.|
+|[DDX_FieldScroll](#ddx_fieldscroll)|Ustawia lub pobiera jego położenie przewijania pasek przewijania w `CRecordView` lub `CDaoRecordView`. Wywoływanie z Twojej [dofieldexchange —](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funkcji.|
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizuje pozycji przycisku przewijania kontrolki suwaka w widoku rekordu i `int` pole składowej danych zestawu rekordów. |
+|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne do przesyłania `int`, **UINT**, **długie**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **double**, **krótki**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między element członkowski danych pola zestawu rekordów i edytowanie pole w `CRecordView` lub `CDaoRecordView`.|
 
 ##  <a name="ddx_fieldcbindex"></a>  Ddx_fieldcbindex —
 
@@ -476,7 +476,7 @@ Zobacz [ddx_fieldtext —](#ddx_fieldtext) przykład ogólne funkcje DDX_Field. 
 
   **Nagłówek** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>Nazwa = "ddx_fieldslider —" ></a> ddx_fieldslider —
+  ## <a name="ddx_fieldslider"></a>  Ddx_fieldslider —
 `DDX_FieldSlider` Funkcja synchronizuje pozycji przycisku przewijania kontrolki suwaka w widoku rekordu i **int** pole składowej danych zestawie rekordów skojarzonych z widoków rekordów (lub ze zmienną liczbą całkowitą, niezależnie od chcesz zamapować na).
 
 ### <a name="syntax"></a>Składnia

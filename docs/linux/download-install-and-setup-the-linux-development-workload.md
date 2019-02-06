@@ -1,14 +1,14 @@
 ---
 title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441928"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763892"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
@@ -16,7 +16,7 @@ Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania proje
 
 ## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
-1. W polu wyszukiwania Windows wpisz "Instalator programu Visual Studio": ![Windows pole wyszukiwania](media/visual-studio-installer-search.png)
+1. Wpisz "Instalator programu Visual Studio" w polu wyszukiwania Windows: ![Pole wyszukiwania Windows](media/visual-studio-installer-search.png)
 2. Wyszukaj Instalatora w obszarze **aplikacje** wyniki, a następnie kliknij go dwukrotnie. Po otwarciu Instalatora wybierz **Modyfikuj**, a następnie kliknij polecenie **obciążeń** kartę. Przewiń w dół do **inne zestawy narzędzi** i wybierz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia.
 
    ![Visual C++ dla obciążenia programowanie dla systemu Linux](media/linuxworkload.png)
@@ -27,7 +27,7 @@ Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania proje
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opcje tworzenia środowiska systemu Linux
 
-Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wirtualną z systemem Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki Start: tworzenie maszyny wirtualnej systemu Linux w witrynie Azure portal](/azure/virtual-machines/linux/quick-create-portal).
+Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wirtualną z systemem Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki Start: Utwórz maszynę wirtualną systemu Linux w witrynie Azure portal](/azure/virtual-machines/linux/quick-create-portal).
 
 Innym rozwiązaniem, w systemie Windows 10 jest aktywacja podsystemu Windows dla systemu Linux. Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows 10](/windows/wsl/install-win10).
 
@@ -53,7 +53,7 @@ Używa docelowej maszynie Fedora **dnf** pakiet Instalatora. Aby pobrać **opens
 
 1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    Może zostać wyświetlony o podanie hasła głównego ze względu na polecenia "sudo".  Jeśli tak, wprowadź go i kontynuować. Po wykonaniu tych czynności, wymagane usługi i narzędzia są zainstalowane.
 
