@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327502"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850262"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parametry
 
-*Zachowane*<br/>
+*pReserved*<br/>
 Wskaźnik zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -348,7 +348,7 @@ Przydzielonej przez obiekt wywołujący bufor odbioru przekonwertowany ciąg.
 *nDestLen*<br/>
 Długość w znakach buforu przydzielonej przez obiekt wywołujący.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi ATL_ESC opisujące, jak ma być wykonywane konwersji.
 
 - ATL_ESC_FLAG_NONE domyślne zachowanie. Cudzysłów znaków i apostrofy nie są przekształcane.
@@ -500,7 +500,7 @@ inline BOOL QPDecode(
 *pnDestLen*<br/>
 [out] Wskaźnik do zmiennej, która zawiera długość w bajtach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczba bajtów zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -559,7 +559,7 @@ Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 *pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
 
 - ATLSMTP_QPENCODE_DOT Jeśli okres pojawia się na początku wiersza, jego jest dodawane do wyników, a także zakodowany.
@@ -683,7 +683,7 @@ Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funk
 *lpszFile*<br/>
 Plik, który ma zostać dodany do nagłówka, gdy ATLSMTP_UUENCODE_HEADER jest określona w *Flagidw*.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi sterujące zachowaniem tej funkcji.
 
 - ATLSMTP_UUENCODE_HEADE nagłówek będzie zakodowany.
@@ -721,7 +721,7 @@ Liczbę znaków wymaganą dla buforu, który może przechowywać dane zakodowane
 
 Ta implementacja uuencoding zgodna ze specyfikacją modelu POSIX P1003.2b/D11.
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../../atl/active-template-library-atl-concepts.md)<br/>
-[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)
+[Pojęcia](../active-template-library-atl-concepts.md)<br/>
+[Składniki ATL COM pulpitu](../atl-com-desktop-components.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764015"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850038"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 
@@ -527,10 +527,6 @@ Zobacz [ddx_fieldtext —](#ddx_fieldtext) przykład ogólne funkcje DDX_Field. 
 
 **Nagłówek:** afxdao.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)
-
 ##  <a name="ddx_fieldtext"></a>  Ddx_fieldtext —
 
 `DDX_FieldText` Funkcja zarządza transferem **int**, **krótki**, **długie**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, lub **BAJTÓW** danych między formant pola edycji i elementy członkowskie danych pola zestawu rekordów.
@@ -679,4 +675,4 @@ Następujące `DoDataExchange` działać w ramach [CRecordView](../../mfc/refere
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i funkcje globalne](mfc-macros-and-globals.md)

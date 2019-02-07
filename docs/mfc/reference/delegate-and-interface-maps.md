@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524654"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850206"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Makra mapy delegat, interfejs
 
@@ -21,7 +21,7 @@ MFC obsługuje te makra delegata i mapy interfejsu:
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Rozpoczyna się mapa delegata.|
 |[BEGIN_INTERFACE_MAP](#begin_interface_map)|Rozpoczyna się definicji podłączony mapy.|
-|[Commandhandler — obiekt delegowany](#commandhandler)|Rejestruje metody wywołania zwrotnego z źródło polecenia.  |
+|[CommandHandler Delegate](#commandhandler)|Rejestruje metody wywołania zwrotnego z źródło polecenia.  |
 |[END_DELEGATE_MAP](#end_delegate_map)|Kończy się mapa delegata.|
 |[END_INTERFACE_MAP](#end_interface_map)|Kończy się mapę interfejsu w pliku implementacji. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Tworzy wpis w mapie delegata.|
@@ -51,10 +51,6 @@ To makro oznacza początek listy zapisów delegatów, które tworzą mapę deleg
 
 **Nagłówek:** msclr\event.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
 Rozpoczyna się definicji podłączony mapy, gdy są używane w pliku implementacji.
@@ -83,7 +79,7 @@ Aby uzyskać więcej informacji na temat mapy interfejsu, zobacz [techniczne 38 
 
 **Nagłówek:** afxwin.h
 
-##  <a name="commandhandler"></a>Commandhandler — obiekt delegowany
+##  <a name="commandhandler"></a>CommandHandler Delegate
 
 Rejestruje metody wywołania zwrotnego z źródło polecenia.
 
@@ -102,17 +98,13 @@ Identyfikator polecenia.
 
 Ten delegat rejestruje metody wywołania zwrotnego z źródło polecenia. Po dodaniu delegata do obiektu źródła polecenia, metody wywołania zwrotnego staje się procedury obsługi dla poleceń z określonego źródła.
 
-Aby uzyskać więcej informacji, zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Aby uzyskać więcej informacji, zobacz [jak: Dodaj polecenie routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
-
-### <a name="see-also"></a>Zobacz też
-
-[Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>Commanduihandler — obiekt
 
@@ -142,11 +134,6 @@ Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za
 
 **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 
-### <a name="see-also"></a>Zobacz też
-
-[Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 Kończy się mapa delegata.
@@ -165,10 +152,6 @@ To makro oznacza koniec listy wpisów delegata, które tworzą mapę delegata. A
 
 **Nagłówek:** msclr\event.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Kończy się mapę interfejsu w pliku implementacji.
@@ -186,11 +169,6 @@ Aby uzyskać więcej informacji na temat mapy interfejsu zobacz [techniczne 38 U
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxwin.h
-
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -219,7 +197,7 @@ Każdy wpis w mapie delegata odnosi się do delegata obsługi zdarzeń zarządza
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje jak utworzyć wpis w mapowaniu delegata dla za pomocą EVENT_DELEGATE_ENTRY `OnClick` programu obsługi zdarzeń; a także zobacz przykładowy kod z MAKE_DELEGATE. Aby uzyskać więcej informacji, zobacz [jak: ujścia zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Poniższy przykład kodu pokazuje jak utworzyć wpis w mapowaniu delegata dla za pomocą EVENT_DELEGATE_ENTRY `OnClick` programu obsługi zdarzeń; a także zobacz przykładowy kod z MAKE_DELEGATE. Aby uzyskać więcej informacji, zobacz [jak: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** msclr\event.h
-
-### <a name="see-also"></a>Zobacz też
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -290,7 +262,7 @@ To makro tworzy delegata obsługi zdarzeń zarządzanego typu *DELEGOWAĆ* i naz
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje sposób wywoływania `MAKE_DELEGATE` można dołączyć `OnClick` procedurę obsługi zdarzeń do kontrolki MFC `MyControl`. Szerszy wyjaśnienie sposobu działania tego makra w aplikacji MFC, zobacz [jak: ujścia zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Poniższy przykład kodu pokazuje sposób wywoływania `MAKE_DELEGATE` można dołączyć `OnClick` procedurę obsługi zdarzeń do kontrolki MFC `MyControl`. Szerszy wyjaśnienie sposobu działania tego makra w aplikacji MFC, zobacz [jak: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **Nagłówek:** msclr\event.h
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>

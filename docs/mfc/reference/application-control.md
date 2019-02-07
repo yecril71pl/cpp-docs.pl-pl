@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518921"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850314"
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
 
@@ -21,16 +21,16 @@ OLE wymaga znacznej kontroli nad aplikacjami i ich obiektami. OLE systemowych bi
 
 |||
 |-|-|
-|[Afxolecanexitapp —](#afxolecanexitapp)|Wskazuje, czy aplikacja może zakończyć.|
-|[Afxolegetmessagefilter —](#afxolegetmessagefilter)|Pobiera bieżący filtr komunikatów aplikacji.|
-|[Afxolegetuserctrl —](#afxolegetuserctrl)|Pobiera bieżące flagi kontrolki użytkownika.|
-|[Afxolesetuserctrl —](#afxolesetuserctrl)|Ustawia lub czyści flagi kontrolki użytkownika.|
+|[AfxOleCanExitApp](#afxolecanexitapp)|Wskazuje, czy aplikacja może zakończyć.|
+|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Pobiera bieżący filtr komunikatów aplikacji.|
+|[AfxOleGetUserCtrl](#afxolegetuserctrl)|Pobiera bieżące flagi kontrolki użytkownika.|
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|Ustawia lub czyści flagi kontrolki użytkownika.|
 |[AfxOleLockApp](#afxolelockapp)|Zwiększa liczbę globalnego struktury liczby aktywnych obiektów w aplikacji.|
-|[Afxolelockcontrol —](#afxolelockcontrol)| Blokuje fabryki klas z określoną kontrolkę. |
+|[AfxOleLockControl](#afxolelockcontrol)| Blokuje fabryki klas z określoną kontrolkę. |
 |[AfxOleUnlockApp](#afxoleunlockapp)|Dekrementuje struktury liczbę obiektów aktywnych w aplikacji.|
-|[Afxoleunlockcontrol —](#afxoleunlockcontrol)| Odblokowuje fabryki klas z określoną kontrolkę. |
-|[Afxoleregisterserverclass —](#afxoleregisterserverclass)|Rejestruje serwer w rejestrze systemowym OLE.|
-|[Afxoleseteditmenu —](#afxoleseteditmenu)|Implementuje interfejs użytkownika dla *typename* obiekt polecenia.|
+|[AfxOleUnlockControl](#afxoleunlockcontrol)| Odblokowuje fabryki klas z określoną kontrolkę. |
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Rejestruje serwer w rejestrze systemowym OLE.|
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementuje interfejs użytkownika dla *typename* obiekt polecenia.|
 
 ##  <a name="afxolecanexitapp"></a>  Afxolecanexitapp —
 
@@ -82,7 +82,7 @@ Wywołaj tę funkcję, aby dostęp do bieżącego `COleMessageFilter`-pochodnych
 
 **Nagłówek**: afxwin.h
 
-##  <a name="afxolegetuserctrl"></a>  Afxolegetuserctrl —
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl
 
 Pobiera bieżące flagi kontrolki użytkownika.
 
@@ -102,7 +102,7 @@ Użytkownik znajduje się w kontroli aplikacji, gdy użytkownik ma jawnie otworz
 
 **Nagłówek**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>  Afxolesetuserctrl —
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl
 
 Ustawia lub czyści flagi kontrolki użytkownika, które wyjaśniono w odwołaniu do `AfxOleGetUserCtrl`.
 
@@ -212,12 +212,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Nagłówek:** afxwin.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[Afxoleunlockcontrol —](#afxoleunlockcontrol)
-
-##  <a name="afxoleregisterserverclass"></a>  Afxoleregisterserverclass —
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
 Ta funkcja umożliwia zarejestrować serwer w rejestrze systemowym OLE.
 
@@ -287,7 +282,7 @@ Symbole są wypełnione w następujący sposób:
 
 **Nagłówek**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>  Afxoleseteditmenu —
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu
 
 Implementuje interfejs użytkownika dla *typename* obiekt polecenia.
 
@@ -333,11 +328,7 @@ Musi mieć następującą instrukcję w skrypcie zasobów aplikacji klienta (. P
 
 **Nagłówek**: afxole.h
 
-## <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
-
-## <a name="afxoleunlockcontrol"></a> Afxoleunlockcontrol —
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
 Odblokowuje fabryki klas z określoną kontrolkę.
 
@@ -376,8 +367,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Nagłówek:** afxwin.h
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[Afxolelockcontrol —](#afxolelockcontrol)
-

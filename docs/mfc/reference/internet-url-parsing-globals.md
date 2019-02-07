@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477158"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850137"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet adresu URL funkcje globalne do analizowania i pomocnikami
 
@@ -22,17 +22,17 @@ Gdy klient wysyła zapytanie do serwera internetowego, można użyć jednego adr
 
 |||
 |-|-|
-|[Afxparseurl —](#afxparseurl)|Analizuje ciąg adresu URL i zwraca typ usługi i jego składników.|
-|[Afxparseurlex —](#afxparseurlex)|Analizuje ciąg adresu URL i zwraca typ usługi i jego składników, a także podanie nazwy użytkownika i hasła.|
+|[AfxParseURL](#afxparseurl)|Analizuje ciąg adresu URL i zwraca typ usługi i jego składników.|
+|[AfxParseURLEx](#afxparseurlex)|Analizuje ciąg adresu URL i zwraca typ usługi i jego składników, a także podanie nazwy użytkownika i hasła.|
 
 ## <a name="other-internet-helpers"></a>Inne pomocników Internet
 
 |||
 |-|-|
-|[Afxthrowinternetexception —](#afxthrowinternetexception)|Zgłasza wyjątek związane połączenie z Internetem.|
-|[Afxgetinternethandletype —](#afxgetinternethandletype)|Określa typ dojścia internetowego.|
+|[AfxThrowInternetException](#afxthrowinternetexception)|Zgłasza wyjątek związane połączenie z Internetem.|
+|[AfxGetInternetHandleType](#afxgetinternethandletype)|Określa typ dojścia internetowego.|
 
-##  <a name="afxparseurl"></a>  Afxparseurl —
+##  <a name="afxparseurl"></a>  AfxParseURL
 
 Tym globalnego jest używany w [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -186,7 +186,7 @@ Odwołanie do `CString` obiekt zawierający nazwę użytkownika.
 *strPassword*<br/>
 Odwołanie do `CString` obiekt zawierający hasło użytkownika.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi, kontrolowanie sposobu analizowania adresu URL. Może być kombinacją następujących wartości:
 
 |Wartość|Znaczenie|
@@ -213,10 +213,6 @@ On analizuje ciąg adresu URL i zwraca typ usługi i jego składników, a także
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxinet.h
-
-## <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxgetinternethandletype"></a>  Afxgetinternethandletype —
 
@@ -274,12 +270,7 @@ Poniższa lista zawiera możliwe typy internetowych zwracany przez `AfxGetIntern
 
 **Nagłówek:** afxinet.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[Afxparseurl —](internet-url-parsing-globals.md#afxparseurl)
-
-## <a name="afxthrowinternetexception"></a>  Afxthrowinternetexception —
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Zgłasza wyjątek Internet.
 
@@ -308,9 +299,9 @@ Odpowiedzialność za ustalenie jego przyczyny, w oparciu o kod błędu systemu 
 
 **Nagłówek:** afxinet.h
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [Klasa CInternetException](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

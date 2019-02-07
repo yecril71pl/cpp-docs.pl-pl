@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178346"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850301"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -24,33 +24,33 @@ Biblioteki klas Microsoft Foundation udostępnia następujące funkcje globalne,
 |||
 |-|-|
 |[AfxBeginThread](#afxbeginthread)|Tworzy nowy wątek.|
-|[Afxcontextmenumanager —](#afxcontextmenumanager)|Wskaźnik do globalnego [Menedżera menu kontekstowe](ccontextmenumanager-class.md).|
+|[AfxContextMenuManager](#afxcontextmenumanager)|Wskaźnik do globalnego [Menedżera menu kontekstowe](ccontextmenumanager-class.md).|
 |[AfxEndThread](#afxendthread)|Kończy działanie bieżącego wątku.|
 |[AfxFindResourceHandle](#afxfindresourcehandle)|Zawiera łańcuch zasobów, a następnie zlokalizuj identyfikator zasobu, zasób i typu zasobu. |
 |[AfxFreeLibrary](#afxfreelibrary)|Dekrementuje liczbę odwołań modułu załadować biblioteki dołączanej (dynamicznie DLL); Gdy licznik odwołań osiągnie zero, moduł jest niezamapowany.|
-|[Afxgetapp —](#afxgetapp)|Zwraca wskaźnik do aplikacji przez jednego `CWinApp` obiektu.|
-|[Afxgetappname —](#afxgetappname)|Zwraca ciąg zawierający nazwę aplikacji.|
-|[Afxgetinstancehandle —](#afxgetinstancehandle)|Zwraca HINSTANCE, reprezentujące tego wystąpienia aplikacji.|
-|[Afxgetmainwnd —](#afxgetmainwnd)|Zwraca wskaźnik do bieżącego okna "główny" aplikacji innych niż OLE lub okno ramowe w miejscu aplikacji serwera.|
-|[Afxgetperuserregistration —](#afxgetperuserregistration)|Ta funkcja służy do określenia, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
-|[Afxgetresourcehandle —](#afxgetresourcehandle)|Zwraca HINSTANCE źródłem zasoby domyślne aplikacji. Umożliwia bezpośredni dostęp do zasobów aplikacji.|
-|[Afxgetthread —](#afxgetthread)|Pobiera wskaźnik do bieżącego [CWinThread](../../mfc/reference/cwinthread-class.md) obiektu.|
-|[Afxinitrichedit —](#afxinitrichedit)|Inicjuje w wersji 1.0 tekstu sformatowanego sterowania dla aplikacji.|
-|[Afxinitrichedit2 —](#afxinitrichedit2)|Inicjuje w wersji 2.0 i nowsze wersje kontrolki tekstu sformatowanego sterowania dla aplikacji.|
-|[Afxisextendedframeclass —](#afxisextendedframeclass)|Określa, czy dany okna jest obiekt w ramce rozszerzonej.|
+|[AfxGetApp](#afxgetapp)|Zwraca wskaźnik do aplikacji przez jednego `CWinApp` obiektu.|
+|[AfxGetAppName](#afxgetappname)|Zwraca ciąg zawierający nazwę aplikacji.|
+|[AfxGetInstanceHandle](#afxgetinstancehandle)|Zwraca HINSTANCE, reprezentujące tego wystąpienia aplikacji.|
+|[AfxGetMainWnd](#afxgetmainwnd)|Zwraca wskaźnik do bieżącego okna "główny" aplikacji innych niż OLE lub okno ramowe w miejscu aplikacji serwera.|
+|[AfxGetPerUserRegistration](#afxgetperuserregistration)|Ta funkcja służy do określenia, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
+|[AfxGetResourceHandle](#afxgetresourcehandle)|Zwraca HINSTANCE źródłem zasoby domyślne aplikacji. Umożliwia bezpośredni dostęp do zasobów aplikacji.|
+|[AfxGetThread](#afxgetthread)|Pobiera wskaźnik do bieżącego [CWinThread](../../mfc/reference/cwinthread-class.md) obiektu.|
+|[AfxInitRichEdit](#afxinitrichedit)|Inicjuje w wersji 1.0 tekstu sformatowanego sterowania dla aplikacji.|
+|[AfxInitRichEdit2](#afxinitrichedit2)|Inicjuje w wersji 2.0 i nowsze wersje kontrolki tekstu sformatowanego sterowania dla aplikacji.|
+|[AfxIsExtendedFrameClass](#afxisextendedframeclass)|Określa, czy dany okna jest obiekt w ramce rozszerzonej.|
 |[Afxismfctoolbar —](#afxismfctoolbar)|Określa, czy dany okna jest obiekt paska narzędzi.|
-|[Afxkeyboardmanager —](#afxkeyboardmanager)|Wskaźnik do globalnego [Menedżera klawiatury](ckeyboardmanager-class.md).|
+|[AfxKeyboardManager](#afxkeyboardmanager)|Wskaźnik do globalnego [Menedżera klawiatury](ckeyboardmanager-class.md).|
 |[AfxLoadLibrary](#afxloadlibrary)|Mapuje modułu DLL i zwraca uchwyt, który może służyć w celu uzyskania adresu funkcji DLL.|
-|[Afxmenutearoffmanager —](#afxmenutearoffmanager)|Wskaźnik do globalnego [Menedżera menu odrywania](cmenutearoffmanager-class.md).|
-|[Afxmousemanager —](#afxmousemanager)|Wskaźnik do globalnego [Menedżera myszy](cmousemanager-class.md).|
-|[Afxregisterclass —](#afxregisterclass)|Rejestruje klasę okna w bibliotece DLL, która używa biblioteki MFC.|
-|[Afxregisterwndclass —](#afxregisterwndclass)|Rejestruje klasę okna Windows, aby uzupełnić te automatycznie zarejestrować przez MFC.|
-|[Afxsetperuserregistration —](#afxsetperuserregistration)|Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
-|[Afxsetresourcehandle —](#afxsetresourcehandle)|Ustawia uchwyt HINSTANCE załadunku domyślnych zasobów aplikacji.|
-|[Afxshellmanager —](#afxshellmanager)|Wskaźnik do globalnego [Menedżera powłoki](cshellmanager-class.md). |
-|[Afxsocketinit —](#afxsocketinit)|Wywoływane w `CWinApp::InitInstance` należy przesłonić, aby zainicjować Windows Sockets.|
-|[Afxusertoolsmanager —](#afxusertoolsmanager)|Wskaźnik do globalnego [Menedżera narzędzi](cusertoolsmanager-class.md).|
-|[Afxwininit —](#afxwininit)|Wywoływane przez podany MFC `WinMain` funkcji jako część [CWinApp](../../mfc/reference/cwinapp-class.md) inicjowania aplikacji Graficznym interfejsem użytkownika, można zainicjować biblioteki MFC. Musi być wywoływana bezpośrednio do aplikacji konsoli, które używają MFC.|
+|[AfxMenuTearOffManager](#afxmenutearoffmanager)|Wskaźnik do globalnego [Menedżera menu odrywania](cmenutearoffmanager-class.md).|
+|[AfxMouseManager](#afxmousemanager)|Wskaźnik do globalnego [Menedżera myszy](cmousemanager-class.md).|
+|[AfxRegisterClass](#afxregisterclass)|Rejestruje klasę okna w bibliotece DLL, która używa biblioteki MFC.|
+|[AfxRegisterWndClass](#afxregisterwndclass)|Rejestruje klasę okna Windows, aby uzupełnić te automatycznie zarejestrować przez MFC.|
+|[AfxSetPerUserRegistration](#afxsetperuserregistration)|Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.|
+|[AfxSetResourceHandle](#afxsetresourcehandle)|Ustawia uchwyt HINSTANCE załadunku domyślnych zasobów aplikacji.|
+|[AfxShellManager](#afxshellmanager)|Wskaźnik do globalnego [Menedżera powłoki](cshellmanager-class.md). |
+|[AfxSocketInit](#afxsocketinit)|Wywoływane w `CWinApp::InitInstance` należy przesłonić, aby zainicjować Windows Sockets.|
+|[AfxUserToolsManager](#afxusertoolsmanager)|Wskaźnik do globalnego [Menedżera narzędzi](cusertoolsmanager-class.md).|
+|[AfxWinInit](#afxwininit)|Wywoływane przez podany MFC `WinMain` funkcji jako część [CWinApp](../../mfc/reference/cwinapp-class.md) inicjowania aplikacji Graficznym interfejsem użytkownika, można zainicjować biblioteki MFC. Musi być wywoływana bezpośrednio do aplikacji konsoli, które używają MFC.|
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **Nagłówek:** afxcontextmenumanager.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CContextMenuManager](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 Wywołaj tę funkcję, aby zakończyć aktualnie wykonywany wątek.
@@ -157,7 +153,7 @@ void AFXAPI AfxEndThread(
 *nExitCode*<br/>
 Określa kod wyjścia wątku.
 
-*bUsuń*<br/>
+*bDelete*<br/>
 Usuwa obiekt ciągu z pamięci.
 
 ### <a name="remarks"></a>Uwagi
@@ -210,10 +206,6 @@ Moduły są przeszukiwane w następującej kolejności:
 
 **Nagłówek:** afxwin.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)
-
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
 Zarówno `AfxFreeLibrary` i `AfxLoadLibrary` Obsługa licznika odwołań dla każdego modułu załadować biblioteki.
@@ -249,7 +241,7 @@ Zobacz przykład [AfxLoadLibrary](#afxloadlibrary).
 
   **Nagłówek** afxdll_.h
 
-##  <a name="afxgetapp"></a>  Afxgetapp —
+##  <a name="afxgetapp"></a>  AfxGetApp
 
 Wskaźnik zwracany przez tę funkcję może służyć do dostępu do aplikacji informacje, takie jak kod głównego wysyłania komunikatu lub w oknie najwyższego poziomu.
 
@@ -273,7 +265,7 @@ Jeśli ta metoda zwraca wartość NULL, może to oznaczać, że okno główne ap
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxgetappname"></a>  Afxgetappname —
+##  <a name="afxgetappname"></a>  AfxGetAppName
 
 Ciągu zwracanego przez tę funkcję może służyć jako główny lub komunikaty diagnostyczne dla tymczasowych ciągów nazwy.
 
@@ -293,7 +285,7 @@ Ciąg zakończony wartością null zawierający nazwę aplikacji.
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxgetinstancehandle"></a>  Afxgetinstancehandle —
+##  <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle
 
 Ta funkcja pozwala pobrać dojście wystąpienia w bieżącej aplikacji.
 
@@ -345,7 +337,7 @@ Jeśli aplikacja nie jest serwerem OLE, a następnie wywołaniu tej funkcji jest
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxgetperuserregistration"></a>  Afxgetperuserregistration —
+##  <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration
 
 Ta funkcja służy do określenia, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.
 
@@ -367,7 +359,7 @@ Aby określić, czy aplikacja przekierowuje dostęp do rejestru, należy użyć 
 
   **Nagłówek** afxstat_.h
 
-##  <a name="afxgetresourcehandle"></a>  Afxgetresourcehandle —
+##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
 
 Użyj obsługi HINSTANCE zwracane przez tę funkcję, aby uzyskać dostęp do zasobów aplikacji bezpośrednio, na przykład w wywołaniach Windows funkcji `FindResource`.
 
@@ -387,7 +379,7 @@ Dojście HINSTANCE, w których domyślne zasoby aplikacji są ładowane.
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxgetthread"></a>  Afxgetthread —
+##  <a name="afxgetthread"></a>  AfxGetThread
 
 Wywołaj tę funkcję, aby uzyskać wskaźnik do [CWinThread](../../mfc/reference/cwinthread-class.md) obiekt reprezentujący aktualnie wykonywany wątek.
 
@@ -436,7 +428,7 @@ Ta funkcja inicjuje również biblioteki formantów wspólnych, jeśli bibliotek
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxinitrichedit2"></a>  Afxinitrichedit2 —
+##  <a name="afxinitrichedit2"></a>  AfxInitRichEdit2
 
 Wywołaj tę funkcję, aby zainicjować kontrolki edycji wzbogaconej (w wersji 2.0 lub nowszej) dla aplikacji.
 
@@ -490,11 +482,6 @@ Ta metoda jest przydatna, gdy konieczne jest sprawdzenie, czy parametr funkcji l
 
 **Nagłówek:** afxpriv.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CWnd](cwnd-class.md)<br/>
-[Klasa CFrameWndEx](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> Afxismfctoolbar —
 
 Określa, czy dany okna jest obiekt paska narzędzi.
@@ -522,12 +509,7 @@ Ta metoda zwraca `TRUE` Jeśli *pWnd* pochodzi od klasy `CMFCToolBar`. Ta metoda
 
 **Nagłówek:** afxpriv.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CWnd](cwnd-class.md)<br/>
-[Klasa CMFCToolBar](cmfctoolbar-class.md)
-
-## <a name="afxkeyboardmanager"></a> Afxkeyboardmanager —
+## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Wskaźnik do globalnego [Menedżera klawiatury](ckeyboardmanager-class.md).
 
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>Zobacz też
-
-[Makra, funkcje globalne i zmienne globalne](mfc-macros-and-globals.md)<br/>
-[Klasa CKeyboardManager](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **Nagłówek:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CMenuTearOffManager](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  Afxmousemanager —
 
 Wskaźnik do globalnego [Menedżera myszy](cmousemanager-class.md).
@@ -631,11 +604,7 @@ CMouseManager* afxMouseManager;
 
 **Nagłówek:** afxmousemanager.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CMouseManager](cmousemanager-class.md)
-
-##  <a name="afxregisterclass"></a>  Afxregisterclass —
+##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
 Ta funkcja umożliwia rejestrowanie klas okien w bibliotece DLL, która używa biblioteki MFC.
 
@@ -666,7 +635,7 @@ W kompilacjach-DLL `AfxRegisterClass` identyfikator nie został zdefiniowany jak
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxregisterwndclass"></a>  Afxregisterwndclass —
+##  <a name="afxregisterwndclass"></a>  AfxRegisterWndClass
 
 Umożliwia rejestrowanie własnych klas okien.
 
@@ -725,7 +694,7 @@ Zapoznaj się Uwaga techniczna [TN001: Rejestrowanie klasy okna](../../mfc/tn001
 
   **Nagłówek** afxwin.h
 
-##  <a name="afxsetperuserregistration"></a>  Afxsetperuserregistration —
+##  <a name="afxsetperuserregistration"></a>  AfxSetPerUserRegistration
 
 Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** ( **HKCU**) węzła.
 
@@ -752,7 +721,7 @@ Domyślna implementacja uzyskuje dostęp do kluczu HKCR rejestru.
 
   **Nagłówek** afxstat_.h
 
-##  <a name="afxsetresourcehandle"></a>  Afxsetresourcehandle —
+##  <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle
 
 Ta funkcja służy do ustawiania uchwytu HINSTANCE, który określa, gdzie są ładowane domyślnych zasobów aplikacji.
 
@@ -787,11 +756,7 @@ CShellManager* afxShellManager;
 
 **Nagłówek:** afxshellmanager.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CShellManager](cshellmanager-class.md)
-
-##  <a name="afxsocketinit"></a>  Afxsocketinit —
+##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 Wywołaj tę funkcję w swojej `CWinApp::InitInstance` należy przesłonić, aby zainicjować Windows Sockets.
 
@@ -816,7 +781,7 @@ Korzystając z MFC gniazd w pomocnicze wątki w statycznie połączonym aplikacj
 
   **Nagłówek** afxsock.h
 
-## <a name="afxusertoolsmanager"></a>  Afxusertoolsmanager —
+## <a name="afxusertoolsmanager"></a>  AfxUserToolsManager
 
 Wskaźnik do globalnego [Menedżera narzędzi](cusertoolsmanager-class.md).
 
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>Zobacz też
-
-[Klasa CUserToolsManager](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  Afxwininit —
 
@@ -877,7 +838,16 @@ Jeśli wywołasz `AfxWinInit` samodzielnie, należy zadeklarować wystąpienie `
 
   **Nagłówek** afxwin.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Klasa CWinApp](../../mfc/reference/cwinapp-class.md)
+[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
+[Klasa CWinApp](cwinapp-class.md)<br/>
+[Klasa CContextMenuManager](ccontextmenumanager-class.md)<br/>
+[Klasa CWnd](cwnd-class.md)<br/>
+[Klasa CFrameWndEx](cframewndex-class.md)<br/>
+[Klasa CMFCToolBar](cmfctoolbar-class.md)<br/>
+[Klasa CKeyboardManager](ckeyboardmanager-class.md)<br/>
+[Klasa CMenuTearOffManager](cmenutearoffmanager-class.md)<br/>
+[Klasa CMouseManager](cmousemanager-class.md)<br/>
+[Klasa CShellManager](cshellmanager-class.md)<br/>
+[Klasa CUserToolsManager](cusertoolsmanager-class.md)

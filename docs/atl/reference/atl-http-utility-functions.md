@@ -2,12 +2,12 @@
 title: Funkcje pomocnicze protokołu HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481721"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849651"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje pomocnicze protokołu HTTP ATL
 
@@ -51,7 +51,7 @@ Przydzielonej przez obiekt wywołujący bufor odbioru adres URL w postaci kanoni
 *pdwMaxLength*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szCanonicalized*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi ATL_URL sterowania zachowaniem tej funkcji.
 
 - Nie ATL_URL_BROWSER_MODE kodowania lub dekodowania znaków po "#" lub "?", a nie powoduje usunięcia odstępu po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zaszyfrowana i końcowe biały znak zostanie usunięta.
@@ -75,10 +75,6 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 ### <a name="remarks"></a>Uwagi
 
 Zachowuje się jak bieżąca wersja [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.
-
-### <a name="see-also"></a>Zobacz też
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -107,7 +103,7 @@ Przydzielonej przez obiekt wywołujący bufor odbioru adres URL w postaci kanoni
 *pdwMaxLength*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szBuffer*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi sterujące zachowaniem tej funkcji. Zobacz [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -152,7 +148,7 @@ Wskaźnik do zmiennej typu DWORD. Jeśli funkcja się powiedzie, *pdwStrLen* odb
 *dwMaxLength*<br/>
 Rozmiar buforu *lpszStringOut*.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi ATL_URL sterowania zachowaniem tej funkcji. Zobacz [ATLCanonicalizeUrl](#atlcanonicalizeurl) uzyskać odpowiednie wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parametry
 
-*St*<br/>
+*st*<br/>
 Czas systemowy, które mają zostać uzyskane w postaci ciągu formatu HTTP.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Odwołanie do zmiennej ciągu, aby otrzymać HTTP Data i godzina, zgodnie z defi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../../atl/active-template-library-atl-concepts.md)<br/>
-[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)
+[Pojęcia](../active-template-library-atl-concepts.md)<br/>
+[Składniki ATL COM pulpitu](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

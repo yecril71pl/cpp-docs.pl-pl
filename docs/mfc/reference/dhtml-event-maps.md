@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519872"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850340"
 ---
 # <a name="dhtml-event-maps"></a>Mapy zdarzeń DHTML
 
@@ -165,7 +165,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator DISPID zdarzenia, które mają być obsługiwane.
 
 *elemName*<br/>
@@ -192,10 +192,10 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzeń do obsłużenia.
 
-*Nazwa formantu*<br/>
+*controlName*<br/>
 LPCWSTR zawierający identyfikator HTML formantu wyzwoleniem zdarzenia.
 
 *memberFxn*<br/>
@@ -219,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzeń do obsłużenia.
 
 *elemName*<br/>
@@ -246,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzeń do obsłużenia.
 
 *elemName*<br/>
@@ -916,7 +916,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzeń do obsłużenia.
 
 *elemName*<br/>
@@ -1148,6 +1148,6 @@ Należy używać w połączeniu z [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_ev
 
 **Nagłówek:** afxdhtml.h
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz też
 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)

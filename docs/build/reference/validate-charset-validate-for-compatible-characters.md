@@ -1,18 +1,18 @@
 ---
 title: / Validate-Charset (Zweryfikuj zgodność znaków)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
 - validate-charset
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b43b603ef4711e1acc0bd612e0e1c949722dc9
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590492"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850081"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-Charset (Zweryfikuj zgodność znaków)
 
@@ -38,7 +38,7 @@ Visual Studio używa UTF-8 jako wewnętrzne kodowanie znaków podczas konwersji 
 
 1. Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.
 
-1. W **zaawansowane opcje**, Dodaj **/Validate-Charset** opcji, a następnie określ preferowany kodowania.
+1. W **dodatkowe opcje**, Dodaj **/Validate-Charset** opcji, a następnie określ preferowany kodowania.
 
 1. Wybierz **OK** Aby zapisać zmiany.
 

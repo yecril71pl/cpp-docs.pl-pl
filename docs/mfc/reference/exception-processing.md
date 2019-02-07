@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522093"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851685"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -54,13 +54,13 @@ Aby uzyskać szczegółowe informacje i przykłady, zobacz artykuł [wyjątki](.
 
 |||
 |-|-|
-|[Afxthrowarchiveexception —](#afxthrowarchiveexception)|Zgłasza wyjątek archiwum.|
-|[Afxthrowfileexception —](#afxthrowfileexception)|Zgłasza wyjątek plików.|
+|[AfxThrowArchiveException](#afxthrowarchiveexception)|Zgłasza wyjątek archiwum.|
+|[AfxThrowFileException](#afxthrowfileexception)|Zgłasza wyjątek plików.|
 |[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|Zgłasza wyjątek nieprawidłowego argumentu.|
-|[Afxthrowmemoryexception —](#afxthrowmemoryexception)|Zgłasza wyjątek pamięci.|
-|[Afxthrownotsupportedexception —](#afxthrownotsupportedexception)|Zgłasza wyjątek nieobsługiwane.|
-|[Afxthrowresourceexception —](#afxthrowresourceexception)|Zgłasza wyjątek zasobu nie można odnaleźć Windows.|
-|[Afxthrowuserexception —](#afxthrowuserexception)|Zgłasza wyjątek w działaniu programu zainicjowanego przez użytkownika.|
+|[AfxThrowMemoryException](#afxthrowmemoryexception)|Zgłasza wyjątek pamięci.|
+|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|Zgłasza wyjątek nieobsługiwane.|
+|[AfxThrowResourceException](#afxthrowresourceexception)|Zgłasza wyjątek zasobu nie można odnaleźć Windows.|
+|[AfxThrowUserException](#afxthrowuserexception)|Zgłasza wyjątek w działaniu programu zainicjowanego przez użytkownika.|
 
 Biblioteka MFC zawiera dwie funkcje wyrzucające wyjątki OLE specjalnie z myślą:
 
@@ -68,8 +68,8 @@ Biblioteka MFC zawiera dwie funkcje wyrzucające wyjątki OLE specjalnie z myśl
 
 |||
 |-|-|
-|[Afxthrowoledispatchexception —](#afxthrowoledispatchexception)|Zgłasza wyjątek w funkcji automatyzacji OLE.|
-|[Afxthrowoleexception —](#afxthrowoleexception)|Zgłasza wyjątek OLE.|
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Zgłasza wyjątek w funkcji automatyzacji OLE.|
+|[AfxThrowOleException](#afxthrowoleexception)|Zgłasza wyjątek OLE.|
 
 Aby obsługiwać wyjątki bazy danych, klasy bazy danych zapewniają dwie klasy wyjątku, `CDBException` i `CDaoException`i funkcje globalne do obsługi typów wyjątków:
 
@@ -77,8 +77,8 @@ Aby obsługiwać wyjątki bazy danych, klasy bazy danych zapewniają dwie klasy 
 
 |||
 |-|-|
-|[Afxthrowdaoexception —](#afxthrowdaoexception)|Zgłasza [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.|
-|[Afxthrowdbexception —](#afxthrowdbexception)|Zgłasza [CDBException](../../mfc/reference/cdbexception-class.md) z własnego kodu.|
+|[AfxThrowDAOException](#afxthrowdaoexception)|Zgłasza [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.|
+|[AfxThrowDBException](#afxthrowdbexception)|Zgłasza [CDBException](../../mfc/reference/cdbexception-class.md) z własnego kodu.|
 
 Biblioteka MFC zawiera następującą funkcję zakończenia:
 
@@ -86,9 +86,9 @@ Biblioteka MFC zawiera następującą funkcję zakończenia:
 
 |||
 |-|-|
-|[Afxabort —](#afxabort)|Wywołuje się, aby zakończyć aplikację, jeśli błąd krytyczny występuje.|
+|[AfxAbort](#afxabort)|Wywołuje się, aby zakończyć aplikację, jeśli błąd krytyczny występuje.|
 
-##  <a name="try"></a>  WYPRÓBUJ
+##  <a name="try"></a>  TRY
 
 Konfiguruje **SPRÓBUJ** bloku.
 
@@ -314,7 +314,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>Parametry
 
-*Przyczyna*<br/>
+*cause*<br/>
 Określa całkowitą, która wskazuje przyczynę, dla wyjątku. Aby uzyskać listę możliwych wartości, zobacz [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
@@ -337,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>Parametry
 
-*Przyczyna*<br/>
+*cause*<br/>
 Określa całkowitą, która wskazuje przyczynę, dla wyjątku. Aby uzyskać listę możliwych wartości, zobacz [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).
 
 *lOsError*<br/>
@@ -372,12 +372,6 @@ Ta funkcja jest wywoływana, gdy używane są nieprawidłowe argumenty.
 
 **Nagłówek:** afx.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[Klasa CInvalidArgException](cinvalidargexception-class.md)<br/>
-[THROW](#throw)
-
 ##  <a name="afxthrowmemoryexception"></a>  Afxthrowmemoryexception —
 
 Zgłasza wyjątek pamięci.
@@ -394,7 +388,7 @@ Wywołaj tę funkcję, jeśli wywołania do bazowego buforów pamięci systemu (
 
   **Nagłówek** afx.h
 
-##  <a name="afxthrownotsupportedexception"></a>  Afxthrownotsupportedexception —
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException
 
 Zgłasza wyjątek, który jest wynikiem żądania nieobsługiwanej funkcji.
 
@@ -406,7 +400,7 @@ void AfxThrowNotSupportedException();
 
   **Nagłówek** afx.h
 
-##  <a name="afxthrowresourceexception"></a>  Afxthrowresourceexception —
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException
 
 Wyjątek zasobu.
 
@@ -438,7 +432,7 @@ Ta funkcja jest zazwyczaj wywoływana bezpośrednio po `AfxMessageBox` zgłosił
 
   **Nagłówek** afx.h
 
-##  <a name="afxthrowoledispatchexception"></a>  Afxthrowoledispatchexception —
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException
 
 Ta funkcja umożliwia zgłoszenie wyjątku w funkcji automatyzacji OLE.
 
@@ -456,7 +450,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>Parametry
 
-*Wcode —*<br/>
+*wCode*<br/>
 Kod błędu określony dla twojej aplikacji.
 
 *lpszDescription*<br/>
@@ -505,7 +499,7 @@ Wersja, która przyjmuje wartość HRESULT jako argument konwertuje kod wyniku o
 
   **Nagłówek** afxdao.h
 
-##  <a name="afxthrowdaoexception"></a>  Afxthrowdaoexception —
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException
 
 Wywołaj tę funkcję, aby zgłosić wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.
 
@@ -527,7 +521,7 @@ Kod błędu OLE z DAO typu SCODE. Aby uzyskać informacje, zobacz [CDaoException
 
 Struktura również wywołuje `AfxThrowDaoException`. W swojej rozmowy można przekazać jeden z parametrów lub obu. Na przykład, jeśli chcesz wywołać jedną z błędy są zdefiniowane w **CDaoException::nAfxDaoError** , ale nie interesujące Cię *scode* parametru, Przekaż prawidłowy kod w *nAfxDaoError* parametru i zaakceptuj wartość domyślną dla *scode*.
 
-Dla informacji dotyczących wyjątków związanych z klas MFC DAO, zobacz klasę `CDaoException` w tej książce i artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
+Dla informacji dotyczących wyjątków związanych z klas MFC DAO, zobacz klasę `CDaoException` w tej książce i artykuł [wyjątków: Baza danych wyjątki](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -549,7 +543,7 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Wartości typu RETCODE, definiujący typ błędu, który spowodował zgłoszenie wyjątku.
 
-*plik PDB*<br/>
+*pdb*<br/>
 Wskaźnik do `CDatabase` obiekt, który reprezentuje połączenie źródła danych, z którym skojarzony jest wyjątek.
 
 *hstmt*<br/>
@@ -587,5 +581,6 @@ Zobacz przykład [CATCH](#catch).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Klasa CException](../../mfc/reference/cexception-class.md)
+[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
+[Klasa CException](cexception-class.md)<br/>
+[Klasa CInvalidArgException](cinvalidargexception-class.md)

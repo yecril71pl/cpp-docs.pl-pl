@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521388"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849479"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ Wewnętrznie `__fastfail` jest implementowany przy użyciu kilku mechanizmów ar
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|OpCode 0xDEFB|r0|
+|ARM64|OpCode 0xF003|x0|
 
 Żądanie szybkiego niepowodzenie jest niezależna i zazwyczaj wymaga zaledwie dwóch instrukcji do wykonania. Po awarii szybkie żądanie zostało wykonane przez jądro następnie podejmuje odpowiednie działanie. W kodzie w trybie użytkownika występują żadne zależności pamięci poza wskaźnika instrukcji, sam, gdy zostanie wywołane zdarzenie szybkie kończyć się niepowodzeniem. Maksymalizuje jej niezawodności, nawet jeśli pamięci poważne uszkodzenie.
 
@@ -56,7 +57,7 @@ Obsługa mechanizmu natywnej awarii szybkie rozpoczął się w systemie Windows 
 
 |Wewnętrzne|Architektura|
 |---------------|------------------|
-|`__fastfail`|x86 x 64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Plik nagłówkowy** \<intrin.h >
 

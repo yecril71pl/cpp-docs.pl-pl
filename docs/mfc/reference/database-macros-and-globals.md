@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536555"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849756"
 ---
 # <a name="database-macros-and-globals"></a>Makra i funkcje globalne bazy danych
 
@@ -38,10 +38,10 @@ Przed 4.2 MFC, makra `AFX_SQL_ASYNC` i `AFX_SQL_SYNC` udostępniła możliwość
 
 |||
 |-|-|
-|[Afxdbinitmodule —](#afxdbinitmodule)|Dodaje obsługę bazy danych dla zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC.|
-|[Afxgethenv —](#afxgethenv)|Pobranie dojścia środowiska ODBC, obecnie w użyciu przez MFC. Przy użyciu tego uchwytu w bezpośrednie wywołania ODBC.|
+|[AfxDbInitModule](#afxdbinitmodule)|Dodaje obsługę bazy danych dla zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC.|
+|[AfxGetHENV](#afxgethenv)|Pobranie dojścia środowiska ODBC, obecnie w użyciu przez MFC. Przy użyciu tego uchwytu w bezpośrednie wywołania ODBC.|
 
-## <a name="afxdbinitmodule"></a> Afxdbinitmodule —
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
 Baza danych MFC (lub DAO) dotyczących pomocy technicznej od zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC, dodaj wywołanie tej funkcji w swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance` funkcji, aby zainicjować MFC bazy danych biblioteki DLL.
 
@@ -57,11 +57,7 @@ Upewnij się, to wywołanie występuje przed wywołaniem dowolnej klasy podstawo
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<afxdll_.h >
-
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)
+**Header:** \<afxdll_.h>
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519212"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850288"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 
@@ -25,7 +25,7 @@ Dynamiczne tworzenie obiektów umożliwia utworzenie obiektu klasy określonej w
 
 W poniższej tabeli wymieniono makr MFC, które obsługuje informacje o klasie czasu wykonywania serializacji i dynamiczne tworzenie.
 
-Aby uzyskać więcej informacji na temat tych obiektów czasu wykonywania usług i serializacji, zobacz artykuł [klasa CObject: uzyskiwanie dostępu do środowiska wykonawczego informacji o klasie](../../mfc/accessing-run-time-class-information.md).
+Aby uzyskać więcej informacji na temat tych obiektów czasu wykonywania usług i serializacji, zobacz artykuł [klasa CObject: Uzyskiwanie dostępu do informacji o klasie czasu wykonywania](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="run-time-object-model-services-macros"></a>Makra usługi modelu obiektów czasu wykonywania
 
@@ -79,11 +79,6 @@ Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji o
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Zobacz też
-
-[Izolacja biblioteki formantów wspólnych MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 Określa, czy biblioteki formantów wspólnych implementuje określony interfejs API (to jest wersja Unicode [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
@@ -106,11 +101,6 @@ Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji o
 ### <a name="requirements"></a>Wymagania
 
 afxcomctl32.h, afxcomctl32.inl
-
-### <a name="see-also"></a>Zobacz też
-
-[Izolacja biblioteki formantów wspólnych MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -200,10 +190,6 @@ Nazwa klasy kontrolki.
 
 **Nagłówek:** afxctl.h
 
-### <a name="see-also"></a>Zobacz też
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Deklaruje, że formant OLE zawiera listę stron właściwości, aby wyświetlić jego właściwości.
@@ -223,16 +209,11 @@ Nazwa klasy kontrolki, która jest właścicielem strony właściwości.
 
 Użyj `DECLARE_PROPPAGEIDS` — makro na końcu deklaracją klasy. Następnie w pliku .cpp, który definiuje funkcji elementów członkowskich klasy, należy użyć `BEGIN_PROPPAGEIDS` makr, makro wpisy dla każdej strony właściwości formantu, a `END_PROPPAGEIDS` makra, aby zadeklarować na końcu listy strony właściwości.
 
-Aby uzyskać więcej informacji na stronach właściwości, zobacz artykuł [kontrolek ActiveX: strony właściwości](../mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na stronach właściwości, zobacz artykuł [kontrolek ActiveX: Strony właściwości](../mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxctl.h
-
-### <a name="see-also"></a>Zobacz też
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -382,12 +363,6 @@ Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowego dla obiektu
 
 **Nagłówek:** afxdisp.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[Identyfikator CLSID klucza](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementuje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontrolki.
@@ -416,16 +391,11 @@ Oprócz IMPLEMENT_OLECTLTYPE należy dodać DECLARE_OLECTLTYPE — makro do ster
 `GetUserTypeNameID` Funkcja elementu członkowskiego zwraca ciąg zasobu, który identyfikuje klasy kontrolki. `GetMiscStatus` Zwraca bitów OLEMISC kontrolki. To wyliczenie określa zbiór ustawień opisujących różne właściwości kontrolki. Aby uzyskać pełny opis ustawienia OLEMISC zobacz [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) w zestawie Windows SDK.
 
 > [!NOTE]
->  Domyślne ustawienia używane przez ActiveX ControlWizard są: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE i OLEMISC_RECOMPOSEONRESIZE.
+>  Ustawieniami domyślnymi używanymi przez ActiveX ControlWizard są następujące: OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE i OLEMISC_RECOMPOSEONRESIZE.
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxctl.h
-
-### <a name="see-also"></a>Zobacz też
-
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -547,7 +517,9 @@ Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowego dla obiektu
 
 **Nagłówek**: afxdisp.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
+[Izolacja biblioteki formantów wspólnych MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[Identyfikator CLSID klucza](/windows/desktop/com/clsid-key-hklm)
 

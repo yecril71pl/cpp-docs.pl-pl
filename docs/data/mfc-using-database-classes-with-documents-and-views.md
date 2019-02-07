@@ -1,5 +1,5 @@
 ---
-title: 'MFC: używanie klas baz danych z dokumentami i widokami'
+title: 'MFC: Używanie klas baz danych z dokumentami i widokami'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624838"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849750"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: używanie klas baz danych z dokumentami i widokami
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Używanie klas baz danych z dokumentami i widokami
 
 Można użyć klas baz danych MFC, z lub bez architektury dokument/widok. Praca z dokumentami i widokami kładzie nacisk na ten temat. Wyjaśniono:
 
@@ -31,7 +31,7 @@ Można użyć klas baz danych MFC, z lub bez architektury dokument/widok. Praca 
 
 - [Inne zagadnienia](#_core_other_factors).
 
-Dla rozwiązań alternatywnych, zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
+Dla rozwiązań alternatywnych, zobacz [MFC: Używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> Zapisywanie aplikacji opartej na formularzu
 
@@ -63,14 +63,14 @@ Wiele prostych aplikacji opartych na formularzach nie ma potrzeby dokumentów. J
 
 ##  <a name="_core_other_factors"></a> Inne czynniki
 
-Aplikacje oparte na formularzach często nie znają każde użycie dla struktury dokumentu mechanizm serializacji, dzięki czemu możesz chcieć usunąć, wyłączyć lub Zastąp **New** i **Otwórz** poleceń na **Pliku** menu. Zapoznaj się z artykułem [serializacja: serializacja a. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
+Aplikacje oparte na formularzach często nie znają każde użycie dla struktury dokumentu mechanizm serializacji, dzięki czemu możesz chcieć usunąć, wyłączyć lub Zastąp **New** i **Otwórz** poleceń na **Pliku** menu. Zapoznaj się z artykułem [serializacji: Serializacja programu vs. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Można także wprowadzić korzystanie z wielu możliwości interfejsu użytkownika, obsługujące platformę. Na przykład, można użyć wielu `CRecordView` obiektów okna dzielącego, otworzyć wiele zestawów rekordów w różnych, wiele okien podrzędnych (MDI) interfejsu dokumencie i tak dalej.
 
 Warto wdrożyć drukowanie niezależnie od rodzaju znajduje się w danym widoku, czy jest ono formularza implementowane za pomocą `CRecordView` lub coś innego. Jak klasy pochodne `CFormView`, `CRecordView` jest obsługuje drukowanie, ale można zastąpić `OnPrint` funkcję elementu członkowskiego, aby zezwolić na drukowanie. Aby uzyskać więcej informacji, zobacz klasy [CFormView](../mfc/reference/cformview-class.md).
 
-Nie można użyć dokumentów i widoków w ogóle. W takim przypadku zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
+Nie można użyć dokumentów i widoków w ogóle. W takim przypadku zobacz [MFC: Używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klas baz danych MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+[Klasy bazy danych MFC](../data/mfc-database-classes-odbc-and-dao.md)

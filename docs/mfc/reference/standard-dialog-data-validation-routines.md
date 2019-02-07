@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513948"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850167"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardowe procedury walidacji danych okna dialogowego
 
@@ -18,24 +18,24 @@ Ten temat zawiera procedury sprawdzania poprawności (DDV) danych standardowe ok
 > [!NOTE]
 >  Procedury wymiany danych w standardowe okno dialogowe, są definiowane w afxdd_.h pliku nagłówka. Jednak aplikacje powinny zawierać afxwin.h.
 
-### <a name="ddv-functions"></a>Funkcje DDV
+### <a name="ddv-functions"></a>DDV Functions
 
 |||
 |-|-|
-|[Ddv_maxchars —](#ddv_maxchars)|Sprawdza, czy liczba znaków w wartości danej kontrolki nie przekracza maksymalnej danego.|
-|[Ddv_minmaxbyte —](#ddv_minmaxbyte)|Sprawdza wartość danej kontrolki nie przekracza danego **BAJTÓW** zakresu.|
-|[Ddv_minmaxdatetime —](#ddv_minmaxdatetime)|Sprawdza, czy wartość danej kontrolki nie przekracza zakres danym momencie.|
-|[Ddv_minmaxdouble —](#ddv_minmaxdouble)|Sprawdza wartość danej kontrolki nie przekracza danego **double** zakresu.|
-|[Ddv_minmaxdword —](#ddv_minmaxdword)|Sprawdza wartość danej kontrolki nie przekracza danego **DWORD** zakresu.|
-|[Ddv_minmaxfloat —](#ddv_minmaxfloat)|Sprawdza wartość danej kontrolki nie przekracza danego **float** zakresu.|
-|[Ddv_minmaxint —](#ddv_minmaxint)|Sprawdza wartość danej kontrolki nie przekracza danego **int** zakresu.|
-|[Ddv_minmaxlong —](#ddv_minmaxlong)|Sprawdza wartość danej kontrolki nie przekracza danego **długie** zakresu.|
+|[DDV_MaxChars](#ddv_maxchars)|Sprawdza, czy liczba znaków w wartości danej kontrolki nie przekracza maksymalnej danego.|
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|Sprawdza wartość danej kontrolki nie przekracza danego **BAJTÓW** zakresu.|
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Sprawdza, czy wartość danej kontrolki nie przekracza zakres danym momencie.|
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Sprawdza wartość danej kontrolki nie przekracza danego **double** zakresu.|
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|Sprawdza wartość danej kontrolki nie przekracza danego **DWORD** zakresu.|
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Sprawdza wartość danej kontrolki nie przekracza danego **float** zakresu.|
+|[DDV_MinMaxInt](#ddv_minmaxint)|Sprawdza wartość danej kontrolki nie przekracza danego **int** zakresu.|
+|[DDV_MinMaxLong](#ddv_minmaxlong)|Sprawdza wartość danej kontrolki nie przekracza danego **długie** zakresu.|
 |[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Sprawdza wartość danej kontrolki nie przekracza danego **LONGLONG** zakresu.|
-|[Ddv_minmaxmonth —](#ddv_minmaxmonth)|Sprawdza, czy wartość danej kontrolki nie przekracza w danym zakresie dat.|
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Sprawdza, czy wartość danej kontrolki nie przekracza w danym zakresie dat.|
 |[DDV_MinMaxShort](#ddv_minmaxshort)|Sprawdza wartość danej kontrolki nie przekracza danego **krótki** zakresu.|
-|[Ddv_minmaxslider —](#ddv_minmaxslider)|Sprawdza, czy wartości kontrolki suwaka danego mieści się w danym zakresie.|
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|Sprawdza, czy wartości kontrolki suwaka danego mieści się w danym zakresie.|
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Sprawdza wartość danej kontrolki nie przekracza danego **UINT** zakresu.|
-|[Ddv_minmaxunsigned —](#ddv_minmaxuint)|Sprawdza, czy wartość danej kontrolki mieści się między dwiema określonymi wartościami.|
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Sprawdza, czy wartość danej kontrolki mieści się między dwiema określonymi wartościami.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Sprawdza wartość danej kontrolki nie przekracza danego **ULONGLONG** zakresu.|
 
 ##  <a name="ddv_maxchars"></a>  Ddv_maxchars —
@@ -522,11 +522,6 @@ Aby uzyskać więcej informacji na temat DDV zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-## <a name="see-also"></a>Zobacz też
-
-[Standardowe procedury wymiany danych w oknie dialogowym](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
 Wywołaj `DDV_MinMaxUnsigned` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* przypada między *minVal* i *maxVal*.
@@ -563,9 +558,10 @@ Aby uzyskać więcej informacji na temat DDV zobacz [wymiana danych okna dialogo
 
 **Nagłówek:** afxdd_.h
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
+[Standardowe procedury wymiany danych w oknie dialogowym](standard-dialog-data-exchange-routines.md)<br/>
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
-[Ddx_slider —](#ddx_slider)<br/>
-[Ddx_fieldslider —](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

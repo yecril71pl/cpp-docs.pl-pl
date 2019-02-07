@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694312"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850327"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA — Struktura
 
@@ -154,11 +154,6 @@ Większość danych w `AFX_GLOBAL_DATA` struktury jest inicjowany podczas urucha
 
 **Nagłówek:** afxglobals.h
 
-### <a name="see-also"></a>Zobacz też
-
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Wskazuje, czy system operacyjny obsługuje przenikaniem alfa.
@@ -198,7 +193,7 @@ Kąt obrotu w prawo w stopniach.
 *Centrum*<br/>
 Punkt o tym, które wymiany.
 
-*Macierz*<br/>
+*matrix*<br/>
 Po powrocie z tej metody zawiera nowe przekształcenie obrotu. Należy przydzielić pamięci masowej dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -221,10 +216,10 @@ BOOL DrawParentBackground(
 *pWnd*<br/>
 [in] Wskaźnik do kontrolki okna.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Wskaźnik do granic obszaru, aby narysować prostokąt. Wartością domyślną jest NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -255,7 +250,7 @@ BOOL DrawTextOnGlass(
 
 Użyj [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodę w celu utworzenia HTHEME.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *iPartId*<br/>
@@ -270,7 +265,7 @@ Użyj [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) met
 *Rect*<br/>
 [in] Granica obszaru, w którym jest rysowana określony tekst.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Bitowa kombinacja (lub) flagi określające, jak jest rysowana określony tekst.
 
 Jeśli *hTheme* parametr jest `NULL` czy motywy nie są obsługiwane i włączony, *nFormat* parametru [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda opisuje prawidłowe flagi. Jeśli są obsługiwane motywy, *Flagidw* parametru [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda opisuje prawidłowe flagi.
@@ -288,16 +283,6 @@ Wartość TRUE, jeśli motywu jest używany do rysowania określonego tekstu. w 
 ### <a name="remarks"></a>Uwagi
 
 Motyw definiuje stylu wizualnego w aplikacji. Motyw nie jest używany do rysowania tekstu, jeśli *hTheme* parametr ma wartość NULL, lub jeśli [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda nie jest obsługiwana, lub jeśli [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) składu (DWM) jest wyłączona.
-
-### <a name="see-also"></a>Zobacz też
-
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Części i Stany](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)<br/>
-[Włącz i kontroluj skład Menedżera okien pulpitu](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility jest technologii opartych na modelu COM, zwiększający programy sposób i pracy systemu operacyjnego Windows wraz z produktów technologii pomocniczej. Zapewnia niezawodne metody do ujawnienia informacji na temat elementów interfejsu użytkownika. Jednakże nowy model dostępności o nazwie automatyzacji interfejsu użytkownika firmy Microsoft jest teraz dostępna. Dla porównania dwóch technologii, zobacz [automatyzacji interfejsu użytkownika a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
 Użyj [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) metodę pozwala ustalić, czy jest włączona obsługa Microsoft Active Accessibility.
-
-### <a name="see-also"></a>Zobacz też
-
-[Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -366,7 +346,7 @@ Kodowanie zestawu znaków ucieczki w buforze określony za pomocą tych symboli 
 |_T ("\\\r")|_T("\r")|
 |_T ("\\\b")|_T("\b")|
 |_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
+|_T("GT")|_T(">")|
 |_T("AMP")|_T("&AMP;")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
@@ -389,12 +369,6 @@ Wartość koloru RGB element interfejsu użytkownika. Aby uzyskać więcej infor
 ### <a name="remarks"></a>Uwagi
 
 Jeśli *nColor* parametr znajduje się poza zakresem, wartość zwracana wynosi zero. Ponieważ zero jest również prawidłowej wartości RGB, nie można użyć tej metody, aby ustalić, czy kolor, który system jest obsługiwana przez bieżący system operacyjny. Zamiast tego należy użyć [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) metody, która zwraca wartość NULL, jeśli kolor nie jest obsługiwana.
-
-### <a name="see-also"></a>Zobacz też
-
-[GetSysColor — funkcja](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -430,16 +404,12 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parametry
 
-*Informacje o*<br/>
+*info*<br/>
 [out w] A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.
-
-### <a name="see-also"></a>Zobacz też
-
-[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility była wcześniej umożliwiająca ułatwianie dost
 
 Użyj [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) metodę, aby włączyć lub wyłączyć obsługę Active Accessibility.
 
-### <a name="see-also"></a>Zobacz też
-
-[Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Określa, czy D2D został zainicjowany.
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość TRUE, jeśli [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) składu (DWM) jest włączone; w przeciwnym razie wartość FALSE.
-
-### <a name="see-also"></a>Zobacz też
-
-[Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)<br/>
-[Włącz i kontroluj skład Menedżera okien pulpitu](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ Kwalifikowana nazwa klasy zarejestrowane, jeśli ta metoda zakończy się powodz
 
 Wartość zwracana jest listę rozdzielonych średnikami *lpszClassNamePrefix* ciąg parametru i reprezentacje szesnastkowym uchwytów bieżącego wystąpienia aplikacji; kursora aplikacji, czyli strzałkę kursor, którego identyfikator jest IDC_ARROW; i Pędzel tła. Aby uzyskać więcej informacji na temat rejestrowanie klas okien MFC, zobacz [afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-### <a name="see-also"></a>Zobacz też
-
-[Afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[Afxthrowresourceexception —](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Ponownie inicjuje wskaźniki funkcji wewnętrznej, uzyskujących dostęp do metody, które obsługują Windows kompozycje i style wizualne.
@@ -787,17 +743,12 @@ BOOL SetLayeredAttrib(
 *bAlpha*<br/>
 [in] Wartość alfa używany do opisania nieprzezroczystość warstwowej okna.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Bitowa kombinacja (lub) flagi określające, które parametry metody do użycia. Określ LWA_COLORKEY używać *crKey* parametru jako przezroczysty kolor. Określ LWA_ALPHA używać *bAlpha* parametru do określenia nieprzezroczystość warstwowej okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.
-
-### <a name="see-also"></a>Zobacz też
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość całkowitą z użyciem flag zakodowany, które określają położenie automatyczne ukrywanie pasków. Może on połączyć następujące wartości: AFX_AUTOHIDE_BOTTOM AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.
+Wartość całkowitą z użyciem flag zakodowany, które określają położenie automatyczne ukrywanie pasków. Może on połączyć się z następujących wartości: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ Odwołanie do identyfikatora interfejsu.
 
 Zwraca wartość S_OK w przypadku powodzenia; w przeciwnym razie wartość błędu.
 
+## <a name="see-also"></a>Zobacz także
+
+[Wykres hierarchii](../hierarchy-chart.md)<br/>
+[Struktury, style, wywołania zwrotne i mapy komunikatów](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[Części i Stany](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)<br/>
+[Włącz i kontroluj skład Menedżera okien pulpitu](/windows/desktop/dwm/composition-ovw)<br/>
+[Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor Function](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

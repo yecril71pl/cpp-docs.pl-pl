@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618312"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850180"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 
@@ -24,7 +24,7 @@ Ten temat zawiera standardowe procedury wymiany danych w (DDX) używany dla typo
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|Inicjuje lub pobiera indeks bieżącego zaznaczenia kontrolki pola kombi.|
 |[DDX_CBString](#ddx_cbstring)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
-|[DDX_CBStringExact](#ddx_cbstringexact)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
+|[Ddx_cbstringexact —](#ddx_cbstringexact)|Inicjuje lub pobiera bieżącą zawartość pola edycji kontrolki pola kombi.|
 |[DDX_Check](#ddx_check)|Inicjuje lub pobiera bieżący stan kontrolkę pola wyboru.|
 |[DDX_Control](#ddx_control)|Podklasy określonej kontrolki w oknie dialogowym.|
 |[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inicjuje lub pobiera dane daty i godziny kontrolki selektora daty i godziny.|
@@ -278,16 +278,11 @@ Odwołanie do [klasa CWinFormsControl](cwinformscontrol-class.md) obiektu.
 
 `DDX_ManagedControl` wywołania [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) utworzyć kontrolkę dopasowania identyfikatora zasobu formantu. Użyj `DDX_ManagedControl` do tworzenia kontrolek z identyfikatorów zasobów w [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Dla danych programu exchange nie musisz funkcje DDX/DDV za pomocą kontrolek formularzy Windows Forms.
 
-Aby uzyskać więcej informacji, zobacz [porady: wykonaj powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Aby uzyskać więcej informacji, zobacz [jak: Powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxwinforms.h
-
-### <a name="see-also"></a>Zobacz też
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -656,5 +651,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
 ## <a name="see-also"></a>Zobacz też
 
-[Standardowe procedury walidacji danych okna dialogowego](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Standardowe procedury walidacji danych okna dialogowego](standard-dialog-data-validation-routines.md)<br/>
+[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

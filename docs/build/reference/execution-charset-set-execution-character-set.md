@@ -1,6 +1,6 @@
 ---
 title: / Execution-Charset (Ustaw zestaw znaków wykonywania)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663973"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849612"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (Ustaw zestaw znaków wykonywania)
 
@@ -47,7 +47,7 @@ Jeśli chcesz ustawić zestaw znaków źródła i wykonania zestawu znaków na U
 
 1. Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.
 
-1. W **zaawansowane opcje**, Dodaj **/Execution-Charset** opcji, a następnie określ preferowany kodowania.
+1. W **dodatkowe opcje**, Dodaj **/Execution-Charset** opcji, a następnie określ preferowany kodowania.
 
 1. Wybierz **OK** Aby zapisać zmiany.
 
