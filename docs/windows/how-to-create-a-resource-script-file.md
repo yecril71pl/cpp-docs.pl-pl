@@ -3,6 +3,7 @@ title: 'Instrukcje: Tworzenie pliku skryptu zasobów (C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.resource
+- vc.resvw.add.MFC
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
@@ -14,20 +15,24 @@ helpviewer_keywords:
 - resource script files [C++], opening in text format
 - .rc files [C++], opening in text format
 - rc files [C++], opening in text format
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
+- MFC, adding support to resource scripts files
+- resource script files [C++], adding MFC support
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: f3f0adff256742c98a672e40e6b31de9bd7a84ed
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 9055e0f787c238276d3134c2fa6a8afae0102433
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849961"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905683"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>Instrukcje: Tworzenie pliku skryptu zasobów (C++)
 
 > [!NOTE]
 > **Edytor zasobów** nie jest dostępny w wersji Express.
 >
-> W tym materiale dotyczy aplikacje pulpitu Windows. Projekty w językach .NET, nie używaj plików skryptu zasobu. Aby uzyskać więcej informacji, zobacz [pliki zasobów](../windows/resource-files-visual-studio.md), aby uzyskać więcej informacji.
+> W tym materiale dotyczy aplikacje pulpitu Windows. Projekty w językach .NET, nie używaj plików skryptu zasobu. Aby uzyskać więcej informacji, zobacz [pliki zasobów](../windows/resource-files-visual-studio.md).
 
 ## <a name="to-create-a-new-resource-script-rc-file"></a>Aby utworzyć nowego pliku zasobu skryptu (.rc)
 
@@ -120,11 +125,39 @@ Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.r
 
 1. Z menu skrótów wybierz polecenie **Otwórz za pomocą...** , a następnie wybierz **Edytor kodu źródłowego (tekst)**.
 
+## <a name="to-add-mfc-support-to-resource-script-files"></a>Aby dodać obsługę MFC do plików skryptu zasobu
+
+Zwykle podczas kompilowania aplikacji MFC dla Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje zestaw podstawowych plików (w tym pliku zasobu skryptu (.rc)), który zawiera podstawowe funkcje programu Microsoft Foundation klasy (MFC). Jednak jeśli edytujesz plik .rc dla aplikacji Windows, który nie jest oparty na bibliotece MFC, następujące funkcje specyficzne dla platformy MFC nie są dostępne:
+
+- Kreatorzy kodu MFC
+
+- Ciągi menu podpowiedzi
+
+- Zawartość list dla formantów pola kombi
+
+- Obsługa formantu ActiveX
+
+Można jednak dodać obsługę MFC do istniejących plików .rc, które go nie masz.
+
+> [!NOTE]
+> Te kroki wymagają MFC.
+
+### <a name="to-add-mfc-support-to-rc-files"></a>Aby dodać obsługę MFC do plików .rc
+
+1. Otwórz pliku skryptu zasobu.
+
+1. W [widok zasobów](../windows/resource-view-window.md), wyróżnij folder zasobów (na przykład MFC.rc).
+
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **tryb MFC** właściwości **True**.
+
+   > [!NOTE]
+   > Oprócz ustawienia tej flagi, plik .rc musi być częścią projektu MFC. Na przykład, ustawienie tylko **tryb MFC** do **True** w pliku .rc w systemie Win32 projektu nie daje żadnych funkcji MFC.
+
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Edytory zasobów](../windows/resource-editors.md)

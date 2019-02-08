@@ -1,5 +1,5 @@
 ---
-title: Tworzenie Menu (C++)
+title: Tworzenie menu (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.menu
@@ -10,15 +10,28 @@ helpviewer_keywords:
 - menus [C++], adding items
 - commands [C++], adding to menus
 - menu items, adding to menus
+- submenus
+- submenus [C++], creating
+- menus [C++], creating
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
+- pop-up menus [C++], connecting to applications
+- context menus [C++], connecting to applications
+- shortcut menus [C++], connecting to applications
+- pop-up menus
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: 438480032f1fe9208e406b4ee499267e42148a48
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702807"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905774"
 ---
-# <a name="creating-a-menu-c"></a>Tworzenie Menu (C++)
+# <a name="creating-menus-c"></a>Tworzenie menu (C++)
 
 > [!NOTE]
 > **Okno zasobów** nie jest dostępny w wersji Express.
@@ -45,6 +58,14 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
 
    > [!NOTE]
    > Aby utworzyć pojedynczą pozycją menu na pasku menu, ustaw **okno podręczne** właściwości **False**.
+
+## <a name="to-create-a-submenu"></a>Aby utworzyć podmenu
+
+1. Wybierz polecenie menu, dla której chcesz utworzyć podmenu.
+
+1. W **nowy element** pole, które pojawia się po prawej stronie, wpisz nazwę nowego polecenia menu. To nowe polecenie pojawią się najpierw z menu podmenu.
+
+1. Dodawanie dodatkowych poleceń do menu podmenu.
 
 ## <a name="to-insert-a-new-menu-between-existing-menus"></a>Aby wstawić nowego menu między istniejącymi menu
 
@@ -83,10 +104,57 @@ Kliknij prawym przyciskiem myszy na pasku menu, a następnie wybierz **Wstaw now
 
    Nowe pole elementu jest zaznaczone, aby można było utworzyć menu dodatkowych poleceń.
 
+## <a name="to-create-pop-up-menus"></a>Aby utworzyć menu wyskakujących
+
+[Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowo lokalizacji wskaźnika. Używanie wyskakujących menu w aplikacji wymaga tworzenia samo menu, a następnie nawiąż połączenie z kodu aplikacji.
+
+Po utworzeniu zasobu menu, kod aplikacji musi załadować zasobu menu i używać [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) aby spowodować, że są wyświetlane w menu. Po użytkownik został odrzucony wyskakujących menu, wybierając poza nim lub została wybrana polecenie, funkcja zwróci. Jeśli użytkownik wybierze polecenie, komunikat tego polecenia będą wysyłane do okna, w których uchwyt został przekazany.
+
+### <a name="to-create-a-pop-up-menu"></a>Aby utworzyć menu podręcznego
+
+1. [Tworzenie menu](../windows/creating-a-menu.md) z pustym tytułem (nie zapewniają **podpis**).
+
+1. [Dodać polecenie menu do menu Nowy](../windows/adding-commands-to-a-menu.md). Przenieś do pierwszego polecenia menu poniżej tytułu menu puste (mówi tymczasowe podpis `Type Here`). Wpisz **podpis** i inne informacje.
+
+   Powtórz ten proces dla innych poleceń menu w menu podręcznym.
+
+1. Zapisz zasób menu.
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Aby nawiązać połączenie aplikacji menu podręcznego
+
+1. Dodaj program obsługi komunikatów dla WM_CONTEXTMENU (na przykład). Aby uzyskać więcej informacji, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Dodaj następujący kod do obsługi komunikatów:
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) przekazywane przez komunikat program obsługi jest we współrzędnych ekranu.
+
+   > [!NOTE]
+   > Łączenie menu wyskakującego z Twoją aplikacją wymaga MFC.
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Aby wyświetlić zasobów menu jako menu podręcznego
+
+Zwykle podczas pracy **Menu** edytora, zasobu menu jest wyświetlana jako pasek menu. Jednak może być zasobów menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.
+
+Kliknij prawym przyciskiem myszy menu, a następnie wybierz **Pokaż jako menu podręczne** z menu skrótów.
+
+   Ta opcja jest tylko preferencji wyświetlania i nie umożliwia modyfikowania menu.
+
+   > [!NOTE]
+   > Aby zmienić widok paska menu, kliknij przycisk **Pokaż jako menu podręczne** ponownie (który spowoduje usunięcie znacznika wyboru i zwraca widok pasek menu).
+
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytor menu](../windows/menu-editor.md)
