@@ -1,23 +1,23 @@
 ---
 title: Kompilator ostrzeżenie (poziom 2) C4275
-ms.date: 11/04/2016
+ms.date: 02/08/2019
 f1_keywords:
 - C4275
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 985a622e2c89306c453ae6c860d21e6265d0fff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987030"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Kompilator ostrzeżenie (poziom 2) C4275
 
-inne niż - classkey interfejsu biblioteki DLL 'Identyfikator' używany jako bazowy classkey interfejsu biblioteki DLL 'Identyfikator'
+> inne niż - klasy interfejsu biblioteki DLL*class_1*"używany jako podstawowa dla klasy interfejsu biblioteki DLL"*class_2*"
 
-Wyeksportowanej klasy pochodzi od klasy, która nie została wyeksportowana.
+Wyeksportowanej klasy pochodzi z klasy, która nie została wyeksportowana.
 
 Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy za pomocą [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), upewnij się, że:
 
@@ -25,17 +25,17 @@ Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy 
 
 - Nie śródwierszowych metody klasy można modyfikować danych statycznych.
 
-- Nie śródwierszowych metody, klasy za pomocą funkcji CRT lub inne funkcje biblioteki używają danych statycznych.
+- Żadne śródwierszowych metody klasy, użyj funkcji CRT lub inne jego funkcje biblioteki, które używają danych statycznych.
 
-- Brak funkcji śródwierszowych klasy, użyj funkcji CRT lub inne funkcje biblioteki where, na przykład, uzyskujesz dostęp do statycznych danych.
+- Brak funkcji śródwierszowych klasy, użyj funkcji CRT lub inne funkcje biblioteki gdzie uzyskujesz dostęp do danych statycznych.
 
 - Nie metody klasy (niezależnie od wartości inlining) można używać typów, których wystąpienia w pliku EXE i DLL mają różnice statyczne dane.
 
 Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
 
-C4275 można zignorować w programie Visual C++, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
+C4275 można zignorować w programie Visual C++, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i gdzie komunikat o błędzie kompilatora odnosi się do `_Container_base`.
 
-```
+```cpp
 // C4275.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

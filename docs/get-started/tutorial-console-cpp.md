@@ -6,16 +6,16 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: c47298b0432936b39de9658d93b815ec30fd8786
-ms.sourcegitcommit: 235d974c14ad3ffa7a3b29dec3e320a52fb291b2
+ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53440365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987064"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
-Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja, która jest uruchamiana w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym kroku.
+Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja, która jest uruchamiana w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym artykule.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -383,7 +383,7 @@ Umożliwia dzielenie przez zero bardziej bezpiecznie obsłużyć, dzięki czemu 
 
 Gratulacje! Ukończysz kodu dla aplikacji Kalkulator i wbudowane i debugować go w programie Visual Studio.
 
-   ![Aplikacja konsolowa Kalkulator](./media/calculator-app.gif "Kalkulator aplikacji konsoli")
+![Aplikacja konsolowa Kalkulator](./media/calculator-app.gif "Kalkulator aplikacji konsoli")
 
 ## <a name="next-steps"></a>Następne kroki
 
