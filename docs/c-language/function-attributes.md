@@ -7,12 +7,12 @@ helpviewer_keywords:
 - functions [C], attributes
 - function attributes
 ms.assetid: f0c03e20-94f2-47b5-a166-993a949a1a40
-ms.openlocfilehash: 792f8d3d89d28613c7a357224cfaede5e2db234f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22eb4cd4a1750c3006146ba1377e8e472d89d4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467876"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149534"
 ---
 # <a name="function-attributes"></a>Atrybuty funkcji
 
@@ -22,6 +22,6 @@ Opcjonalny *atrybutu seq* nieterminalnych umożliwia wybranie konwencji wywoływ
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

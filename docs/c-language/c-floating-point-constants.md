@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220377"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148702"
 ---
 # <a name="c-floating-point-constants"></a>Stałe zmiennoprzecinkowe języka C
 
@@ -24,10 +24,10 @@ ms.locfileid: "54220377"
 
 *Floating point-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ułamkowe — stała* *część wykładnik*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *część wykładnik* *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
 
 *Stała ułamkowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *digit-sequence*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*  **.**
 
 *wykładnik część*:<br/>
@@ -37,9 +37,9 @@ ms.locfileid: "54220377"
 *znak*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*sekwencja cyfr*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cyfra*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *cyfra*
+*digit-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *sufiks liczb zmiennoprzecinkowych*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**f, g F, G**
@@ -76,6 +76,6 @@ Jak pokazano w poniższych przykładach, można pominąć część całkowitą s
 75e-2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe języka C](../c-language/c-constants.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: dd396cb182aeae9ef587ab58f04893cf0283a8a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507214"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147688"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
 
@@ -27,7 +27,7 @@ Definicja funkcji Określa nazwę funkcji, typy i liczbę parametrów, które oc
 
 *jednostki translacji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja zewnętrzne* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jednostki translacji* *deklaracji zewnętrzne*
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *Deklaracja zewnętrzne*: /\* dozwolone tylko w zakresie zewnętrzne (plik) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
@@ -59,14 +59,14 @@ Prototyp parametry są następujące:
 Lista parametrów w definicji używa następującej składni:
 
 *listy parametrów typu*: /\* listy parametrów \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
 
-*Lista parametrów*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,***deklaracji parametru*
+*parameter-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
 
-*Deklaracja parametru*:<br/>
+*parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *deklaratora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *abstrakcyjny declarator*<sub>zoptymalizowany pod kątem</sub>
 
@@ -93,6 +93,6 @@ A *deklaracji* w *lista deklaracji* w funkcji nie może zawierać definicje *sto
 
 Sekcje [atrybuty funkcji](../c-language/function-attributes.md), [klasę magazynu](../c-language/storage-class.md), [typie zwracanym](../c-language/return-type.md), [parametry](../c-language/parameters.md), i [treści funkcji](../c-language/function-body.md) składników definicji funkcji szczegółowo opisano.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../c-language/functions-c.md)

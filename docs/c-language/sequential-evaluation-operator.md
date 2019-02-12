@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527195"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149131"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 
@@ -19,8 +19,8 @@ Operator obliczania sekwencyjnego, nazywany również "operator przecinka," ocen
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
 
 Lewy operand operator obliczania sekwencyjnego zostało ocenione jako `void` wyrażenia. Wynik operacji ma ten sam wartość i typ jako prawy operand. Każdy argument może być dowolnego typu. Operator obliczania sekwencyjnego nie wykonuje konwersje typów swoich argumentów, a nie przekazuje on l wartością. Po pierwszego operandu, co oznacza, że wszystkie efekty uboczne z oceny lewy operand odbywa się przed rozpoczęciem obliczania prawy operand jest punkt sekwencji. Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.
@@ -46,6 +46,6 @@ func_two( (x--, y + 2), z );
 
 W funkcji wywołanie `func_one`, trzech argumentów, oddzielając je średnikami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, nawiasy wymuszają na kompilatorze interpretowanie przecinkiem jako operator obliczania sekwencyjnego. Wywołanie tej funkcji przekazuje dwa argumenty `func_two`. Pierwszy argument jest wynikiem operacji obliczania sekwencyjnego `(x--, y + 2)`, który ma wartość i typ wyrażenia `y + 2`; drugi argument funkcji jest `z`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator przecinkowy: ,](../cpp/comma-operator.md)

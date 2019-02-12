@@ -8,12 +8,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 426bf816b988730530ba52c3f995aa2b0a8f0140
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650318"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151393"
 ---
 # <a name="extern-storage-class-specifier"></a>extern — specyfikator klasy magazynowania
 
@@ -63,6 +63,6 @@ W tym przykładzie zmienna `i` jest zdefiniowany w Source1.c o początkowej wart
 
 W `func` funkcji, adres zmiennej globalnej `i` służy do inicjowania **statyczne** zmiennej wskaźnikowej `external_i`. To działa, ponieważ zmienna globalna ma **statyczne** okres istnienia, co oznacza jego adres nie zmienia się podczas wykonywania programu. Następnie, zmienna `i` jest zdefiniowany w zakresie `func` jako zmienna lokalna o wartości początkowej 16. Ta definicja nie ma wpływu na wartość poziomu zewnętrznego `i`, który jest ukryty przy użyciu jego nazwy zmiennej lokalnej. Wartość globalna `i` jest teraz dostępna wyłącznie za pośrednictwem wskaźnik `external_i`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

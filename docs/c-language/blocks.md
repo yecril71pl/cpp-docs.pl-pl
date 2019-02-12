@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-ms.openlocfilehash: c7ae46278fa76f2ca1a6f24a376f84dd77a97b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f308864e6e85f74e40d9c9df200a0254fea366a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477899"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152628"
 ---
 # <a name="blocks"></a>Bloki
 
@@ -20,6 +20,6 @@ Sekwencja deklaracje, definicje i instrukcji ujętych w nawiasy klamrowe (**{}**
 
 Należy pamiętać, że gdy wszystkie instrukcje złożone są ujęte w nawiasy klamrowe, nie wszystkie czynności, ujęte w nawiasy klamrowe stanowi instrukcję złożonego. Na przykład specyfikacje elementów tablicy, struktury lub wyliczenie może znajdować się w obrębie nawiasów klamrowych, nie są one instrukcje złożone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

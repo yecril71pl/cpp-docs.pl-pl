@@ -7,12 +7,12 @@ helpviewer_keywords:
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-ms.openlocfilehash: 0359ef3037a44ed50326d19d1c184c463adcaa5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563582"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146882"
 ---
 # <a name="integer-types"></a>Typy całkowite
 
@@ -48,6 +48,6 @@ Typ przypisany do stałej zależy od wartości reprezentowanej przez stałą. St
 
 - Typem przypisanym do stałych z **u** lub **U** i **l** lub **L** sufiks jest **unsigned long int**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe całkowite języka C](../c-language/c-integer-constants.md)

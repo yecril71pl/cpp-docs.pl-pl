@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
-ms.openlocfilehash: 85fa3258b69aacd094501b1bb1599190eb0487df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579729"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147935"
 ---
 # <a name="initializing-strings"></a>inicjowanie ciągów
 
@@ -52,6 +52,6 @@ W Microsoft C literałów ciągów może być maksymalnie 2048 bajtów długośc
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Inicjowanie](../c-language/initialization.md)

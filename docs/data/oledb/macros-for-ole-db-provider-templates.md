@@ -1,6 +1,6 @@
 ---
 title: Makra dla szablonów dostawców OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557054"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151120"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 
@@ -266,7 +266,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *vt*<br/>
 [in] `VARTYPE` Tego wpisu właściwości. (Zdefiniowanymi w wtypes.h)
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] A [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) wartości opisujące ten wpis właściwości.
 
 *value*<br/>
@@ -342,7 +342,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
 ### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -383,7 +383,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *Liczba porządkowa*<br/>
 [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.
 
-*Atrybut DbType*<br/>
+*dbtype*<br/>
 [in] Typ danych w [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Element członkowski*<br/>
@@ -395,7 +395,7 @@ Pozwala określić typ danych kolumny.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
 ### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -421,13 +421,13 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] Rozmiar kolumny.
 
-*Atrybut DbType*<br/>
+*dbtype*<br/>
 [in] Wskazuje typ danych wartości. Zobacz `wType` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Precyzja*<br/>
+*precision*<br/>
 [in] Wskazuje dokładności do użycia podczas pobierania danych, jeśli *dbType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bPrecision` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Skala*<br/>
+*scale*<br/>
 [in] Wskazuje skalowania do użycia podczas pobierania danych, jeśli atrybut dbType jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bScale` opis [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *Identyfikator GUID*<br/>
@@ -467,7 +467,7 @@ Pozwala określić rozmiar kolumny.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
 ### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -496,7 +496,7 @@ Użyj tego makra, gdy danych kolumny zakłada się, że [typem DBTYPE_STR](https
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
 ### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -516,7 +516,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *Liczba porządkowa*<br/>
 [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.
 
-*Atrybut DbType*<br/>
+*dbtype*<br/>
 [in] Typ danych w [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Rozmiar*<br/>
@@ -583,9 +583,9 @@ Oznacza koniec Mapa schematu.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Zobacz też
+#### <a name="remarks"></a>Uwagi
 
-[IDBSchemaRowsetImpl, klasa](../../data/oledb/idbschemarowsetimpl-class.md)
+Aby uzyskać więcej informacji, zobacz [idbschemarowsetimpl — klasa](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
@@ -603,7 +603,7 @@ SCHEMA_ENTRY(guid,
 *Identyfikator GUID*<br/>
 Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.
 
-*RowsetClass*<br/>
+*rowsetClass*<br/>
 Klasa, która zostanie utworzona do reprezentowania zestawu wierszy schematu.
 
 #### <a name="remarks"></a>Uwagi
@@ -626,7 +626,7 @@ To `Execute` funkcja wypełnia zestawu wierszy danych. Tworzy kreator projektów
 
 Kreator dodaje także trzy odpowiednie pozycje w mapie schematu. Zobacz [Tworzenie dostawcy OLE DB szablonu](../../data/oledb/creating-an-ole-db-provider.md) Aby uzyskać więcej informacji na temat za pomocą kreatora Utwórz dostawcę usługi.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

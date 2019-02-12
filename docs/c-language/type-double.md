@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-ms.openlocfilehash: 42f8ed943fd9d034d5cae8cb057e094363b27d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e6cc444f4d6a973fc58b5ce550e468066aca1b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532265"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151861"
 ---
 # <a name="type-double"></a>Typ double
 
@@ -20,10 +20,10 @@ Wartości podwójnej precyzji z typem double muszą 8 bajtów. Format jest podob
 
 **Microsoft Specific**
 
-Typ double zawiera 64 bitów: 1 znaku, 11 dla wykładnik i 52 dla mantysa. Jej zakres jest +/-1.7E308 z dokładnością co najmniej 15 cyfr.
+Typ double zawiera 64-bitowy: 1 znaku, 11 dla wykładnik i 52 dla mantysa. Jej zakres jest +/-1.7E308 z dokładnością co najmniej 15 cyfr.
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

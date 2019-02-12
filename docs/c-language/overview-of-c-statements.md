@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 906beb7c5c2edfc448daadb1f4c5a111f7877b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613723"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147051"
 ---
 # <a name="overview-of-c-statements"></a>Przegląd instrukcji C
 
@@ -23,17 +23,17 @@ Instrukcji C składają się z tokenów, wyrażenia i inne instrukcje. Instrukcj
 
 *Instrukcja*: [etykietą instrukcji](../c-language/goto-and-labeled-statements-c.md)
 
-[Compound-statement](../c-language/compound-statement-c.md)
+[compound-statement](../c-language/compound-statement-c.md)
 
-[Instrukcja wyrażeń](../c-language/expression-statement-c.md)
+[expression-statement](../c-language/expression-statement-c.md)
 
-[Wybór — instrukcja](../c-language/if-statement-c.md)
+[selection-statement](../c-language/if-statement-c.md)
 
-[instrukcji iteracji](../c-language/do-while-statement-c.md)
+[iteration-statement](../c-language/do-while-statement-c.md)
 
 [Instrukcja skoku](../c-language/break-statement-c.md)
 
-[Spróbuj except — instrukcja](../c-language/try-except-statement-c.md)
+[try-except-statement](../c-language/try-except-statement-c.md)
 
 / * Microsoft Specific \* / [try finally instrukcji](../c-language/try-finally-statement-c.md)  / \* Specific firmy Microsoft \*/
 
@@ -43,6 +43,6 @@ Instrukcja wyrażeń zawiera wyrażenie C, który może zawierać operacji arytm
 
 Każda instrukcja języka C można rozpocząć etykietą identyfikujące składający się z nazwy i dwukropka. Ponieważ tylko `goto` instrukcji rozpoznaje etykiety instrukcji, etykiet instrukcji zostały omówione z `goto`. Zobacz [goto i Labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje](../c-language/statements-c.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d2de646d9ad3082c43ce896fdf4bc3c7e55a4405
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505306"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151665"
 ---
 # <a name="type-cast-conversions"></a>Konwersje rzutowania typów
 
@@ -22,12 +22,12 @@ Rzutowania typów umożliwia jawne konwertowanie typów.
 
 **Składnia**
 
-*wyrażenie CAST*:<br/>
+*cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(***nazwy typu***)***wyrażenie cast*
 
 *Nazwa typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator kwalifikator listy* *abstrakcyjny declarator*<sub>zoptymalizowany pod kątem</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
 
 *Nazwy typu* jest typem i *wyrażenie cast* wartość ma zostać przekonwertowany do tego typu. Wyrażenia z rzutowanie typu nie jest l wartością. *Wyrażenie cast* jest konwertowany tak, jakby były przypisane do zmiennej typu *nazwy typu*. Reguły konwersji dla przypisania (opisane w temacie [konwersje przypisań](../c-language/assignment-conversions.md)) dotyczą również rzutowania typu. W poniższej tabeli przedstawiono typy, które mogą być rzutowane do dowolnego typu.
 
@@ -54,6 +54,6 @@ Rzutowanie typu może być wyrażeniem l wartością, tak długo, jak rozmiar id
 
 Można przekonwertować wyrażenia na typ `void` z rzutowania, ale wyrażenie wynikowe mogą być używane tylko wtedy, gdy wartość nie jest wymagane. Wskaźnik do obiektu jest konwertowana na **void** <strong>\*</strong> i powrót do oryginalnego typu powróci do oryginalnej wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersje typów](../c-language/type-conversions-c.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [C++], addition
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
-ms.openlocfilehash: 78dc559a83626057603027e30742435b1128e31c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e2d802a77c56b8f458b614b29e86e2e1d30a55e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557693"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151432"
 ---
 # <a name="using-the-additive-operators"></a>Używanie dodatkowych operatorów
 
@@ -37,6 +37,6 @@ j = &x[i] - &x[i-2];
 
 W tym przykładzie adres trzeci element `x` (przez `x[i-2]`) jest odejmowany od adres piąty element `x` (przez `x[i]`). Różnica jest podzielona przez długość **float**; wynik jest wartością całkowitą 2.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory dodawania języka C](../c-language/c-additive-operators.md)

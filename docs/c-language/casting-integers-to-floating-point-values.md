@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - integers, casting to floating-point values
 ms.assetid: 81fd5b7d-15eb-4c11-a8c8-e1621ff54fd3
-ms.openlocfilehash: d19544e3b4f0bf3978d296c996c204fc9d60fa0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fa013668278fae82bcb2bb9eb1f2aec3cb61581
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667353"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152875"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>Rzutowanie liczb całkowitych na wartości zmiennoprzecinkowe
 
@@ -19,6 +19,6 @@ Gdy liczbą całkowitą jest rzutowany na wartość zmiennoprzecinkową, która 
 
 Na przykład rzutowanie **unsigned long** (z 32-bitowy precyzji) na **float** (których mantysy ma 23 bitów precyzji) Zaokrągla liczbę do najbliższej wielokrotności 256. **Długie** 4,294,966,913 do 4,294,967,167 wartości są zaokrąglane do **float** wartość 4,294,967,040.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obliczenia matematyczne na liczbach zmiennoprzecinkowych](../c-language/floating-point-math.md)

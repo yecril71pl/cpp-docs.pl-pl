@@ -1,6 +1,6 @@
 ---
 title: Makra i funkcje globalne dla szablonów konsumentów OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557118"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149001"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra i funkcje globalne dla szablonów konsumentów OLE DB
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Uwagi
 
-Jeśli *hErr* nie jest S_OK, `AtlTraceErrorRecords` Zrzuca informacje OLE DB rekordu błędu na urządzeniu zrzutu ( **debugowania** karty w oknie danych wyjściowych lub pliku). Rekord błędu informacje uzyskane od dostawcy zawiera numer wiersza, źródło, opis, pliku pomocy, kontekstu i identyfikator GUID dla każdego wpisu rekordów błędów. `AtlTraceErrorRecords` Zrzuca te informacje tylko w kompilacjach do debugowania. W kompilacjach do wydania jest pusty odcinek, który jest zoptymalizowany pod kątem out.
-
-#### <a name="see-also"></a>Zobacz też
-
-[CDBErrorInfo, klasa](../../data/oledb/cdberrorinfo-class.md)
+Jeśli *hErr* nie jest S_OK, `AtlTraceErrorRecords` Zrzuca informacje OLE DB rekordu błędu na urządzeniu zrzutu ( **debugowania** karty w oknie danych wyjściowych lub pliku). Rekord błędu informacje uzyskane od dostawcy zawiera numer wiersza, źródło, opis, pliku pomocy, kontekstu i identyfikator GUID dla każdego wpisu rekordów błędów. `AtlTraceErrorRecords` Zrzuca te informacje tylko w kompilacjach do debugowania. W kompilacjach do wydania jest pusty odcinek, który jest zoptymalizowany pod kątem out. Aby uzyskać więcej informacji, zobacz [cdberrorinfo — klasa](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -385,7 +381,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="example"></a>Przykład
@@ -413,7 +409,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -450,7 +446,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -484,7 +480,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -515,7 +511,7 @@ BLOB_NAME(pszName, IID, flags, data )
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="example"></a>Przykład
@@ -543,7 +539,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -570,7 +566,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -600,7 +596,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 *flagi*<br/>
 [in] Tryb przechowywania flagi zgodnie z definicją w modelu magazynu strukturalnego OLE (na przykład `STGM_READ`).
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Zobacz też
-
-[CBookmark, klasa](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Aby uzyskać więcej informacji, zobacz [przy użyciu zakładki](using-bookmarks.md) i [klasa CBookmark](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -691,7 +684,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nOrdinal*<br/>
 [in] Numer kolumny.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -737,7 +730,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nScale*<br/>
 [in] Skalowanie do użycia podczas pobierania danych i *wType* jest `DBTYPE_NUMERIC` lub `DBTYPE_DECIMAL`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -777,7 +770,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nOrdinal*<br/>
 [in] Numer kolumny, zaczynając od jednej. Zakładka odnosi się do kolumny zero.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -810,7 +803,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nOrdinal*<br/>
 [in] Numer kolumny.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -852,7 +845,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -888,7 +881,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -927,7 +920,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -969,7 +962,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -1002,7 +995,7 @@ Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/
 *nOrdinal*<br/>
 [in] Numer kolumny.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -1036,7 +1029,7 @@ COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 *wType*<br/>
 [in] Typ danych kolumny wpisu.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1064,7 +1057,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 *nLength*<br/>
 [in] Rozmiar zapisu kolumny w bajtach.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1086,7 +1079,7 @@ COLUMN_NAME(pszName, data)
 *pszName*<br/>
 [in] Wskaźnik na nazwę kolumny. Nazwa musi być ciąg Unicode. Można to zrobić poprzez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1126,7 +1119,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *nScale*<br/>
 [in] Skalowanie do użycia podczas pobierania danych i *wType* jest `DBTYPE_NUMERIC` lub `DBTYPE_DECIMAL`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -1154,7 +1147,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 *pszName*<br/>
 [in] Wskaźnik na nazwę kolumny. Nazwa musi być ciąg Unicode. Można to zrobić poprzez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -1179,7 +1172,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *pszName*<br/>
 [in] Wskaźnik na nazwę kolumny. Nazwa musi być ciąg Unicode. Można to zrobić poprzez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -1213,7 +1206,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1241,7 +1234,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -1272,7 +1265,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *Długość*<br/>
@@ -1306,7 +1299,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *nScale*<br/>
 [in] Skala kolumny, którą chcesz powiązać.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -1331,7 +1324,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *pszName*<br/>
 [in] Wskaźnik na nazwę kolumny. Nazwa musi być ciąg Unicode. Można to zrobić poprzez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 *status*<br/>
@@ -1359,7 +1352,7 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 *wType*<br/>
 [in] Typ danych.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1390,7 +1383,7 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 *nScale*<br/>
 [in] Skalowanie do użycia podczas pobierania danych i *wType* jest `DBTYPE_NUMERIC` lub `DBTYPE_DECIMAL`.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1418,7 +1411,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 *nLength*<br/>
 [in] Rozmiar danych w bajtach.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1446,7 +1439,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 *status*<br/>
 [in] Zmienna, która może być powiązane z stan kolumny.
 
-*Dane*<br/>
+*data*<br/>
 [in] Odpowiedni element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
@@ -1469,7 +1462,7 @@ Jest używany z jednej metody dostępu w zestawie wierszy. BEGIN_COLUMN_MAP — 
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+See [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
 ### <a name="define_command"></a> DEFINE_COMMAND
 
@@ -1579,7 +1572,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 [in] Typ, który można ustawić dla parametru.
 
 #### <a name="remarks"></a>Uwagi
@@ -1640,7 +1633,7 @@ END_COLUMN_MAP()
 
 **Nagłówek:** atldbcli.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne dla szablonów konsumentów OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

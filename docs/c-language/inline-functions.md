@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline functions, __inline keyword
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
-ms.openlocfilehash: 2f2ed8ccff0ecbdeff7f3ebac94d5e19ec8042f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452640"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147261"
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 
@@ -37,7 +37,6 @@ Funkcje przy użyciu `__inline` nie należy mylić z kodem wbudowanego asemblera
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [w tekście, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
-

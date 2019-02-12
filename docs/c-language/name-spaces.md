@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: ebf1961d83d14bf95633d4248c2f970c54923274
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325994"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148416"
 ---
 # <a name="name-spaces"></a>Przestrzenie nazw
 
@@ -48,6 +48,6 @@ struct student {
 
 Gdy `student` pojawia się po **struktury** — słowo kluczowe, kompilator rozpoznaje je jako tag struktury. Gdy `student` pojawia się po operatorze wyboru składowej (**->** lub **.**), nazwa odnosi się do elementu członkowskiego struktury. W innych kontekstach `student` odwołuje się do zmiennej struktury. Jednakże przeładowanie tagu przestrzeni nazw nie jest zalecane, ponieważ następuje ukrycie znaczenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktura programu](../c-language/program-structure.md)

@@ -2,12 +2,12 @@
 title: Bity na znak
 ms.date: 11/04/2016
 ms.assetid: ce317fce-67bf-4963-9e6d-13682cda5f3f
-ms.openlocfilehash: b2c5e03fbf420441d71d88349cfe3bf1f67504c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46dadfcc1be68ccf2c33a1b2fd9ee41b2cc8ac8e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453443"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147207"
 ---
 # <a name="bits-per-character"></a>Bity na znak
 
@@ -15,6 +15,6 @@ ms.locfileid: "50453443"
 
 Liczba bitów w znaku jest reprezentowane przez stałe manifestu **CHAR_BIT**. LIMITY. Plik H definiuje **CHAR_BIT** jako 8.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Znaki](../c-language/characters.md)

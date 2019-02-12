@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - null values, appended to binary stream
 ms.assetid: bca3fc78-0347-41bd-9e3e-94d646104bad
-ms.openlocfilehash: dd4b5d8199eeb6d3eaa905aa65ee7976c44d2c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329e20451394923f8ecb97cae853dde2fdf8017f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523243"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152121"
 ---
 # <a name="null-characters"></a>Znaki Null
 
@@ -17,6 +17,6 @@ ms.locfileid: "50523243"
 
 Dowolny ciąg znaków o wartości null można dołączać do strumienia danych binarnych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje bibliotek](../c-language/library-functions.md)

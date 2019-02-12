@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 5dc58b71c8b2032342b6604112673086dc94649b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ca0f4a367abf939ed4307611517a883d8b82e0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429825"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152667"
 ---
 # <a name="c-abstract-declarators"></a>Deklaratory abstrakcyjne języka C
 
@@ -45,6 +45,6 @@ int (*const []) ( unsigned int, ... )
 > [!NOTE]
 >  Abstrakcyjnym deklaratorze zawierający zestaw pustych nawiasów **()**, nie jest dozwolone, ponieważ jest ona niejednoznaczna. Jest to niemożliwe do należy określić, czy identyfikator dorozumianych należy w nawiasach (w takim przypadku jest typem niezmodyfikowanego) lub przed nawiasy (w takim przypadku jest typem funkcji).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

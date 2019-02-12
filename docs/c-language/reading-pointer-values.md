@@ -2,12 +2,12 @@
 title: Odczytywanie wartości wskaźnika
 ms.date: 11/04/2016
 ms.assetid: 3dd1cf15-30ac-4dec-9b14-258d20501fcf
-ms.openlocfilehash: 0b8451399813d48db16d5d52205b25757b039af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 164192eba57208af0f771c0af01b6f9b38a1b9b3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479511"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148286"
 ---
 # <a name="reading-pointer-values"></a>Odczytywanie wartości wskaźnika
 
@@ -15,6 +15,6 @@ ms.locfileid: "50479511"
 
 Gdy **%p** formatem znaku jest określony, `fscanf` funkcja konwertuje wskaźników z wartości szesnastkowych ASCII na prawidłowy adres.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje bibliotek](../c-language/library-functions.md)

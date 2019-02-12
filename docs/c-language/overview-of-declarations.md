@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 4e6c166763afd18db79798024d8b2f159ffed76d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582759"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148351"
 ---
 # <a name="overview-of-declarations"></a>Przegląd deklaracji
 
@@ -19,7 +19,7 @@ ms.locfileid: "50582759"
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *init-declarator-list*<sub>zoptymalizowany pod kątem</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
 
 /\* *Atrybut seq*<sub>zoptymalizowany pod kątem</sub> zależy od firmy Microsoft * /
 
@@ -65,7 +65,7 @@ Specyfikatory typu podanie pewnych informacji o typach danych identyfikatorów. 
 
 Istnieją dwa *kwalifikator typu* terminale: **const** i `volatile`. Kwalifikatory określić dodatkowe właściwości typów, które mają zastosowanie tylko wtedy, gdy dostęp do obiektów tego typu za pośrednictwem l wartościami. Aby uzyskać więcej informacji na temat **const** i `volatile`, zobacz [kwalifikatory typów](../c-language/type-qualifiers.md). Aby uzyskać pełną definicję l wartości, zobacz [wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)<br/>
 [Deklaracje i typy](../c-language/declarations-and-types.md)<br/>

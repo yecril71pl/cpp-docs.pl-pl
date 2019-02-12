@@ -9,12 +9,12 @@ helpviewer_keywords:
 - function arguments
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
-ms.openlocfilehash: f8177630af438d1f9fc04795ac91428f83dfe496
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550361"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148728"
 ---
 # <a name="arguments"></a>Argumenty
 
@@ -77,6 +77,6 @@ Adres `x` jest przechowywany w `num1`, a adres `y` jest przechowywany w `num2`. 
 
 Kompilator przeprowadza kontrolę typów dla argumentów `swap`, ponieważ prototyp `swap` zawiera typy argumentów dla każdego parametru. Identyfikatory między nawiasami prototypu i definicji mogą być takie same lub różne. Ważne jest, aby typy tych argumentów odpowiadały tym z list parametrów prototypu i definicji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wywołania funkcji](../c-language/function-calls.md)

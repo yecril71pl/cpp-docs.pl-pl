@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654505"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152576"
 ---
 # <a name="string-literal-concatenation"></a>Łączenie literałów ciągu
 
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 Na etapie translacji 6, sekwencje znaków wielobajtowych określone przez dowolne sekwencje sąsiadujących literałów ciągu lub literałów ciągów dwubajtowych, są łączone do pojedynczej sekwencji znaków wielobajtowych. W związku z tym, nie projektuj programów w sposób pozwalający na modyfikację literałów ciągu podczas wykonywania. Standard ANSI C określa, że wynik modyfikacji ciągu jest niezdefiniowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Literały ciągu języka C](../c-language/c-string-literals.md)

@@ -2,12 +2,12 @@
 title: Zakres wartości całkowitych
 ms.date: 11/04/2016
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
-ms.openlocfilehash: bcf79877ed1bbd261a70b56d60df86adc31c897b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e34e700df203004388cd912089711b5849e00fd7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632049"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152524"
 ---
 # <a name="range-of-integer-values"></a>Zakres wartości całkowitych
 
@@ -22,6 +22,6 @@ Liczby całkowite zawiera 32-bitowy (czterech bajtach). Oznaczone liczby całkow
 |`unsigned long`|0, 4294967295|
 |**podpisana długo**|-2147483648 do 2147483647|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Liczby całkowite](../c-language/integers.md)

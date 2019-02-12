@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: d0873e3975e69bbfac01d437006561f0bf88ee31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485361"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150418"
 ---
 # <a name="bitwise-shift-operators"></a>Operatory przesunięcia bitowego
 
@@ -20,8 +20,8 @@ Operatory przesunięcia shift ich pierwszego operandu w lewo (**&lt;&lt;**) lub 
 
 ## <a name="syntax"></a>Składnia
 
-*SHIFT-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression*<br/>
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **&lt; &lt;** *additive-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
 
@@ -60,6 +60,6 @@ Przesunięcie wartości ujemnej po prawej stronie daje połowa wartość pierwot
 
 Przesunięcia w prawo zachować bitu znaku. Liczba całkowita ze znakiem przenosi bezpośrednio, ustaw pozostaje najbardziej znaczący bit. Gdy liczbą całkowitą bez znaku przenosi bezpośrednio, najbardziej znaczący bit jest wyczyszczone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory przesunięcia w lewo i w prawo (>> i <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

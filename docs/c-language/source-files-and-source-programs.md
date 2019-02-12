@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637153"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152537"
 ---
 # <a name="source-files-and-source-programs"></a>Pliki źródłowe i programy źródłowe
 
@@ -22,7 +22,7 @@ Program źródłowy można podzielić na jeden lub więcej „plików źródłow
 
 *jednostki translacji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja zewnętrzne* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jednostki translacji* *deklaracji zewnętrzne*
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *Deklaracja zewnętrzne*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
@@ -39,6 +39,6 @@ Składniki jednostki translacji są deklaracjami zewnętrznymi, do których nale
 
 Pliki źródłowe nie muszą zawierać instrukcji wykonywalnych. Na przykład, może okazać się przydatne, aby umieszczać definicje zmiennych w jednym pliku źródłowym, a następnie deklarować odwołania do tych zmiennych w innych plikach źródłowych, które z nich korzystają. Ta technika sprawia, że definicje są łatwe do znalezienia i uaktualnienia w razie potrzeby. Z tego samego powodu stałe i makra są często organizowane w osobnych plikach nazywanych „plikami dołączanymi” lub „plikami nagłówkowymi”, do których można odwołać się w kodzie źródłowym, gdy jest to wymagane. Zobacz *Preprocessor Reference* uzyskać informacji na temat [makra](../preprocessor/macros-c-cpp.md) i [pliki dołączane](../preprocessor/hash-include-directive-c-cpp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktura programu](../c-language/program-structure.md)

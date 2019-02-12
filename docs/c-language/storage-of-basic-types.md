@@ -21,12 +21,12 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: fe6d3fb861143a44047e01f338282dbb0d10ffae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555002"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152251"
 ---
 # <a name="storage-of-basic-types"></a>Magazyn typów podstawowych
 
@@ -46,6 +46,6 @@ Poniższa tabela zawiera podsumowanie magazynu skojarzone z poszczególnymi typa
 
 Typy danych C można podzielić na kategorie ogólne. "Typów całkowitych" obejmują `char`, `int`, **krótki**, **długie**, **podpisany**, `unsigned`, i `enum`. Obejmują "Typy zmiennoprzecinkowe" **float**, **double**, i `long double`. "Typy arytmetyczne" to wszystkich typów całkowitych i zmiennoprzecinkowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [C], subtraction
 - subtraction operator, syntax
 ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
-ms.openlocfilehash: 369096025a67c67775584928d1ee3264a5a10d94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c9510cf3708ef049b5dac213fa3de894fcd4a07
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480057"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147610"
 ---
 # <a name="subtraction--"></a>Odejmowania (-)
 
@@ -20,6 +20,6 @@ Gdy dwa wskaźniki są odejmowane, różnica jest konwertowana na wartość cał
 
 Gdy wartość jest odejmowany od wartości wskaźnika, operator odejmowania konwertuje wartość całkowitą (*i*) mnożąc przez rozmiar wartości, odnoszący się do wskaźnika. Po konwersji na wartość całkowitą reprezentuje *i* pozycji pamięci, w którym każdej pozycji ma długość określona przez typ wskaźnika. Gdy wartość przekonwertowana liczba całkowita jest odejmowany od wartości wskaźnika, wynik jest adres pamięci *i* pozycji przed oryginalnego adresu. Nowy wskaźnik wskazuje na wartość typu opisany w oryginalnej wartości wskaźnika.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory dodawania języka C](../c-language/c-additive-operators.md)

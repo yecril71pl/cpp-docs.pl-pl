@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151783"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 W tym przykładzie istnieją cztery poziomy widoczności: poziomie zewnętrznym i blok trzy poziomy. Wartości są drukowane na ekranie, jak wspomniano w komentarzach po każdej instrukcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)

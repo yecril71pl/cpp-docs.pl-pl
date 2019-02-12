@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522462"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146895"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Microsoft Specific**
 
-Zlicza jednej usługi bits (liczba populacji) w 16-, 32- lub 64-bajtowych całkowitą bez znaku.
+Zlicza jednej usługi bits (liczba populacji) w 16-, 32- lub 64-bitowej nieoznaczonej liczby całkowitej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,7 +59,7 @@ Liczba bitów co `value` parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wewnętrznych generuje `popcnt` instrukcji.  Rozmiar wartości, `popcnt` instrukcji daje w wyniku jest taki sam jak rozmiar argumentu.  W trybie 32-bitowym istnieją Brak 64-bitowych ogólnego przeznaczenia rejestrów, dlatego nie 64-bitowych `popcnt`.
+Każda z tych funkcji wewnętrznych generuje `popcnt` instrukcji. W trybie 32-bitowym istnieją Brak 64-bitowych ogólnego przeznaczenia rejestrów, dlatego nie 64-bitowych `popcnt`.
 
 Aby określić, pomoc techniczna dotycząca sprzętu dla `popcnt` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001` i sprawdź bit 23 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana lub 0. Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `popcnt` instrukcji, wyniki są nieprzewidywalne.
 

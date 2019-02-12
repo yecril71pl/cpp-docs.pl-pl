@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessing directives, C
 - preprocessing directives
 ms.assetid: b27d7444-8f84-4c31-b2fa-03335412d5e6
-ms.openlocfilehash: 4f03f07f323ad4289b333f23e6729f4fd30b74e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10231e27f44fc6a3dc2546c711c185056dea3df5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640404"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146589"
 ---
 # <a name="preprocessing-directives"></a>Dyrektywy przetwarzania wstępnego
 
@@ -26,6 +26,6 @@ ms.locfileid: "50640404"
 
 - [Domyślne data i godzina](../c-language/default-date-and-time.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

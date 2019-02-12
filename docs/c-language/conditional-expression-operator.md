@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: b93e99aef4b7d8a1b20373fda1e4d9672b416b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506148"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150626"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 
@@ -19,8 +19,8 @@ C ma jeden operator trójargumentowy: operator wyrażenia warunkowego (**?:**).
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenia warunkowego*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**  *wyrażenie***:***wyrażenia warunkowego*
 
 *Wyrażenie logiczne OR* musi być typu całkowitego, zmiennoprzecinkowego lub wskaźnika. Jego jest oceniany pod względem jego odpowiednik na 0. Następuje punktu sekwencji *wyrażenie logiczne OR*. Ocena argumenty rozpoczynające się w następujący sposób:
@@ -68,6 +68,6 @@ int y;
 
 W tym przykładzie dwie funkcje `f1` i `f2`, a dwie zmienne `x` i `y`, są zadeklarowane. W dalszej części programu, jeśli dwie zmienne mają taką samą wartość, funkcja `f1` jest wywoływana. W przeciwnym razie `f2` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator warunkowy: ? :](../cpp/conditional-operator-q.md)

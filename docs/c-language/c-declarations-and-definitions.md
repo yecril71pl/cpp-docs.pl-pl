@@ -2,12 +2,12 @@
 title: Deklaracje i definicje języka C
 ms.date: 11/04/2016
 ms.assetid: 575f0c9b-5554-4346-be64-b2129ca9227f
-ms.openlocfilehash: d0dbd74dd54b6ee80fc1f02cf1cb07379a778be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3be9cd72e9f4dbad4d279cc1bb65dfb92a61cd42
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427966"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150522"
 ---
 # <a name="c-declarations-and-definitions"></a>Deklaracje i definicje języka C
 
@@ -28,6 +28,6 @@ int count( double f ) {}
 
 Zmienne `var` i `val` mogą być używane w `find` i `count` funkcje; są wymagane nie dalsze deklaracji. Jednak te nazwy są niewidoczne (nie są dostępne) `main`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

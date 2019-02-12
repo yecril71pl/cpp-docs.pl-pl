@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 2e1d168cd3b6f3a5ca29cf9e6d981430d5bf671a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd3b495483a460f01fe1951ee4c8b5ac3b447701
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506265"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147640"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
 
@@ -59,6 +59,6 @@ Na przykład, załóżmy, że identyfikator `line` odwołuje się do tablicy `in
 
 Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie z adresu reprezentowanego przez `line` wynosi 0. Podobnie, wyrażenie, takie jak `line[5]` odwołuje się do pozycji przesunięcia pięciu elementu z wiersza lub szóstego elementu tablicy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator indeksu dolnego:](../cpp/subscript-operator.md)

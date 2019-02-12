@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615322"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149989"
 ---
 # <a name="simple-variable-declarations"></a>Proste deklaracje zmiennej
 
@@ -23,11 +23,11 @@ Klasy magazynu lub typów (lub obie) są wymagane w deklaracji zmiennej. Bez typ
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
 
-*deklarator bezpośrednio*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
 
 *Identyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *nie cyfrą*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *cyfra*
 
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 W tym przykładzie oba zmienne, `reply` i `flag`, mają `unsigned long` wpisz i przechowywania wartości całkowitych bez znaku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

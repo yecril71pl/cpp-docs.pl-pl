@@ -2,12 +2,12 @@
 title: Struktury, złożenia, wyliczenia i pola bitowe
 ms.date: 11/04/2016
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
-ms.openlocfilehash: 08811ecfc682faeb28dccba8531d1779b9ad92d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27f5d919fbbbd96ba87e2ea41b5dcc05cfa80c6a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462201"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148364"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Struktury, złożenia, wyliczenia i pola bitowe
 
@@ -21,6 +21,6 @@ ms.locfileid: "50462201"
 
 - [Typ wyliczenia](../c-language/enum-type.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

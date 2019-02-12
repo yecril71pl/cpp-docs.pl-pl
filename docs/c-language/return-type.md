@@ -1,5 +1,5 @@
 ---
-title: Zwracany typ
+title: Typ zwracany
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function return types
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 4a4f3392f340fbe3ef1f5cf0a22a1a55f98e9384
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497051"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148143"
 ---
-# <a name="return-type"></a>Zwracany typ
+# <a name="return-type"></a>Typ zwracany
 
 Zwracany typ funkcji ustanawia rozmiar i typ wartości zwracanej przez funkcję i odpowiada specyfikatorowi typu w poniższej składni:
 
@@ -36,7 +36,7 @@ Zwracany typ funkcji ustanawia rozmiar i typ wartości zwracanej przez funkcję 
 *Specyfikator typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Krótka**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Int**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specyficzne dla firmy Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specyficzne dla firmy Microsoft \*/<br/>
@@ -44,12 +44,12 @@ Zwracany typ funkcji ustanawia rozmiar i typ wartości zwracanej przez funkcję 
 &nbsp;&nbsp;&nbsp;&nbsp;**__int64**  / \* specyficzne dla firmy Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**długi**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Podwójne**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator struktury lub Unii*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa TypeDef*
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 *Specyfikator typu* można określić wszelkie podstawowego, struktury lub Unii. Jeśli nie dołączysz *Specyfikator typu*, zwracany typ `int` zakłada, że.
 
@@ -97,6 +97,6 @@ W tym przykładzie definiuje funkcji zwracającej wskaźnik do tablicy znaków. 
 
 Nie należy deklarować funkcji z `int` zwracany typ przed wywołaniem, mimo że prototypy są zalecane, tak aby był włączony poprawny typ sprawdzania argumentów i zwracanych wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

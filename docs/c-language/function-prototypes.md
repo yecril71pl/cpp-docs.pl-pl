@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: b424f07fb139e3ece48da7bfb5cff94f7b84334c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148807"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 
@@ -22,7 +22,7 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany, 
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *init-declarator-list*<sub>zoptymalizowany pod kątem</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
 /\* *Atrybut seq*<sub>zoptymalizowany pod kątem</sub> jest Specific dla Microsoft \*/
 
@@ -33,7 +33,7 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany, 
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list***,***init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 W obszarze **/Ze**, tagu jest nadal wprowadzony w zakresie globalnym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../c-language/functions-c.md)

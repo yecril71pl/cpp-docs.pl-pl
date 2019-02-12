@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: 8161d724dbd21297bb3beef2cf9406ddd2484ff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522437"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151211"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C
 
@@ -35,7 +35,7 @@ Kod uruchamiający Microsoft C używa następujących reguł interpretując argu
 
 Ta lista ilustruje reguły powyżej, pokazując interpretowanych wynik przekazany do `argv` kilka przykładów dotyczących argumenty wiersza polecenia. Dane wyjściowe są wyświetlane w drugim, trzeci, a czwarty kolumn jest argumenty. Program C, który następuje po liście.
 
-|Dane wejściowe wiersza polecenia|ARGV [1]|ARGV [2]|ARGV [3]|
+|Dane wejściowe wiersza polecenia|ARGV [1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
@@ -97,6 +97,6 @@ Environment variables:
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

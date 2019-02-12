@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 1b14f7a7d0c1d682c641ab441dc3e40c23688392
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463261"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152498"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 
@@ -37,7 +37,7 @@ W poniższej tabeli przedstawiono pierwszeństwo i kojarzenie (kolejność, w kt
 |**&#124;**|Bitwise-inclusive-OR|Od lewej do prawej|
 |**&&**|Logiczny — i|Od lewej do prawej|
 |**&#124;&#124;**|Logiczne OR|Od lewej do prawej|
-|**? :**|Wyrażenia warunkowego|Od prawej do lewej|
+|**? :**|Conditional-expression|Od prawej do lewej|
 |**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Przypisanie proste i złożone <sup>2</sup>|Od prawej do lewej|
 |**,**|Kolejne oceny|Od lewej do prawej|
 
@@ -61,9 +61,9 @@ Na poniższej liście przedstawiono, jak kompilator automatycznie wiąże kilka 
 
 |Wyrażenie|Powiązanie automatyczne|
 |----------------|-----------------------|
-|& b &#124; &#124; c|(& (b). &#124; &#124; c|
-|= b &#124; &#124; c|= (b &#124; &#124; c).|
-|q & & r &#124; &#124; s--|(q & & r) &#124; &#124; s--|
+|a & b &#124;&#124; c|(& (b). &#124; &#124; c|
+|= b &#124; &#124; c|a = (b &#124;&#124; c)|
+|q && r &#124;&#124; s--|(q & & r) &#124; &#124; s--|
 
 W pierwszym wyrażeniu operatora testu koniunkcji — i operatora (**&**) mają wyższy priorytet niż operator logiczny OR (**||**), więc `a & b` formularzy pierwszy argument operacji operator logiczny lub operacji.
 
@@ -75,12 +75,12 @@ Poniższe wyrażenie jest niedozwolone i tworzy komunikat diagnostyczny w czasie
 
 |Niedozwolone wyrażenie|Domyślnie, grupowanie|
 |------------------------|----------------------|
-|p == 0? p += 1: p += 2|(p == 0? p += 1: p) += 2|
+|p == 0 ? p += 1: p += 2|(p == 0? p += 1 : p ) += 2|
 
 W tym wyrażeniu operator równości (**==**) ma najwyższy priorytet, więc `p == 0` są grupowane jako argument. Operator wyrażenia warunkowego (**?:**) następnej najwyższy priorytet. Pierwszy argument operacji jest `p == 0`, a drugim argumentem `p += 1`. Jednak ostatni argument operacji operatora wyrażenia warunkowego jest uważany za `p` zamiast `p += 2`, ponieważ tego wystąpienia `p` dokładniej wiąże operator wyrażenia warunkowego niż jego operator przypisania złożone. Występuje błąd składni, ponieważ `+= 2` nie ma lewostronny operand. Należy użyć nawiasów, aby zapobiegać błędom tego rodzaju i przedstawić bardziej czytelny kod. Na przykład wystarczą nawiasów pokazany poniżej poprawiać i wyjaśnienia w poprzednim przykładzie:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory języka C](../c-language/c-operators.md)

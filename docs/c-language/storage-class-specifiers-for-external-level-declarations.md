@@ -16,12 +16,12 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-ms.openlocfilehash: 35b8b3082841c14f1cb82778978a84c89a17618d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587879"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152082"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym (C)
 
@@ -125,6 +125,6 @@ Wszystkie trzy funkcje `main`, `next` i `other`, wykonują to samo zadanie: zwi�
 
 Jeśli zmienna `i` nie była zainicjowana, to zostanie automatycznie ustawiona na 0. W tym przypadku byłyby wypisane wartości 1, 2 i 3. Zobacz [inicjowania](../c-language/initialization.md) uzyskać informacji na temat inicjalizacji zmiennej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy magazynu w języku C](../c-language/c-storage-classes.md)

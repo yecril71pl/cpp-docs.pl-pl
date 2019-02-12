@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: 7de6a9c8b72d2beced071939989973d8948cf34f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663895"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151367"
 ---
 # <a name="structure-and-union-members"></a>Elementy członkowskie struktury i złożenia
 
@@ -80,6 +80,6 @@ list[8].b = 12;
 
 Ta instrukcja pokazuje, jak wybrać dany element członkowski struktury z tablicy struktur.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory dostępu do składowych: . i ->](../cpp/member-access-operators-dot-and.md)

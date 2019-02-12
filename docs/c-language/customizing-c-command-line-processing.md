@@ -12,12 +12,12 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 9f7bc78c20aee4b91bf00fefd2615ba1a6611010
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623603"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147038"
 ---
 # <a name="customizing-c-command-line-processing"></a>Dostosowywanie przetwarzania w wierszu polecenia języka C
 
@@ -27,6 +27,6 @@ Podobnie jeśli nigdy nie dostępu do tabeli środowiska za pomocą `envp` argum
 
 Jeśli program wykonywania wywołań do **_spawn** lub **_exec** rodziny procedury biblioteki wykonawczej C, użytkownik powinien pomija procedura przetwarzania w środowisku, ponieważ ta procedura służy do przekazywania środowisko z procesu ikrę do nowego procesu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

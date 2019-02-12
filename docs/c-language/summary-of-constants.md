@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-ms.openlocfilehash: 1da2a7434ced7f38fa199e5911e01709983fda91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f927d977d818bed28c5fd7392f7933cd1a63ced3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547865"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150028"
 ---
 # <a name="summary-of-constants"></a>Podsumowanie dotyczące stałych
 
 *stałe*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Floating point — stała*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stała całkowita*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*integer-constant*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Stała wyliczenia*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Stała znakowa*
 
 *Floating point-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ułamkowe — stała* *część wykładnik*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *część wykładnik* *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
 
 *Stała ułamkowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*  **.**
 
 *wykładnik część*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*<br/>
@@ -34,9 +34,9 @@ ms.locfileid: "50547865"
 *znak*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*sekwencja cyfr*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cyfra*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *cyfra*
+*digit-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *sufiks liczb zmiennoprzecinkowych*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**f, g F, G**
@@ -49,7 +49,7 @@ ms.locfileid: "50547865"
 
 *decimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *cyfra*
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *plik binarny constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0b** *cyfra binarna*<br/>
@@ -57,12 +57,12 @@ ms.locfileid: "50547865"
 
 *stałej ósemkowej*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stałej ósemkowej* *cyfrą ósemkową*
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
 
-*stałą szesnastkową*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0 x***cyfry szesnastkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0 X***cyfry szesnastkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stałą szesnastkową* *cyfry szesnastkowe*
+*hexadecimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0X**  *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *cyfry niezerowych*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
@@ -82,38 +82,38 @@ ms.locfileid: "50547865"
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
 *stałej znakowej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *c char sekwencji* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L "** *c char sekwencji* **"**
+&nbsp;&nbsp;&nbsp;&nbsp;**'** *c-char-sequence* **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L'** *c-char-sequence* **'**
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long-suffix* *unsigned-suffix*<sub>zoptymalizowany pod kątem</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub>
 
-*c char sekwencji*:<br/>
+*c-char-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*c-char*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*c char sekwencji* *c-char*
+&nbsp;&nbsp;&nbsp;&nbsp;*c-char-sequence* *c-char*
 
 *c-char*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem pojedynczego cudzysłowu (**"**), ukośnika odwrotnego (**\\**), lub sekwencje znaków nowego wiersza
 
 *Sekwencja unikowa*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*proste sekwencje*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ósemkowa sekwencja unikowa*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*szesnastkowe sekwencje*
+&nbsp;&nbsp;&nbsp;&nbsp;*simple-escape-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-escape-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence*
 
 *proste sekwencje*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \v**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**\\' \\" \\\ \\?**
 
-*ósemkowa sekwencja unikowa*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *cyfrą ósemkową*<br/>
+*octal-escape-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**\\** *cyfrą systemu ósemkowego* *cyfrą ósemkową*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *cyfrą systemu ósemkowego* *cyfrą systemu ósemkowego* *cyfrą ósemkową*
+&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit* *octal-digit*
 
-*szesnastkowe sekwencje*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\x** *cyfry szesnastkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*szesnastkowe sekwencje* *cyfry szesnastkowe*
+*hexadecimal-escape-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\x** *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence* *hexadecimal-digit*
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gramatyka leksykalna](../c-language/lexical-grammar.md)<br/>

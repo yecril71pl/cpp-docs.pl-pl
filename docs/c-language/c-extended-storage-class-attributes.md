@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: aa1f1b5d8fa62d12651c32724f06e8bd3f0ec53e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658279"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146960"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
 
@@ -29,14 +29,14 @@ Składnia atrybutów rozszerzonych służących do określania informacji klasy 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
 
-*rozszerzony decl modyfikator seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* Specific firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator seq* *extended-decl — modyfikator*
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specyficzne dla firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*rozszerzony decl modyfikator*:&nbsp; &nbsp; &nbsp; &nbsp; / \* Specific firmy Microsoft \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specyficzne dla firmy Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Wątek**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"naked"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 Spacja oddziela Modyfikatory deklaracji. Należy pamiętać, że *extended-decl modyfikator seq* może być pusta; w takim przypadku __declspec nie ma wpływu.
@@ -45,6 +45,6 @@ Wątek "naked" dllimport i dllexport atrybuty klasy magazynu są właściwości 
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

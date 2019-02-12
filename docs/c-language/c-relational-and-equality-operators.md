@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: fb33fd051c7639ccb77c59c5f88f46e45be58d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507291"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149651"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatory relacyjne i porównania języka C
 
@@ -21,15 +21,15 @@ Plik binarny relacyjne i operatory równości porównać ich pierwszego operandu
 
 **Składnia**
 
-*wyrażenie relacyjne*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression*<br/>
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **&lt; =** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>=** *shift-expression*<br/>
 
 *wyrażenie równości*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **==** *wyrażenie relacyjne*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **! =** *wyrażenie relacyjne*
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 Te instrukcje deklarują zmienną wyliczenie o nazwie `col` ze znacznikiem `color`. W dowolnym momencie zmienna może zawierać wartość 0, 1 lub 2, który reprezentuje jeden z elementów zestawu wyliczenie `color`: kolor czerwony, biały lub zielonego, odpowiednio. Jeśli `col` zawiera 0 po **Jeśli** instrukcja jest wykonywana, dowolnej instrukcji w zależności od **Jeśli** zostaną wykonane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory relacyjne: \<, >, \<= i > =](../cpp/relational-operators-equal-and-equal.md)<br/>
 [Operatory porównania: == i !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

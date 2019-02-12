@@ -5,12 +5,12 @@ helpviewer_keywords:
 - no linkage
 - linkage [C++], none
 ms.assetid: 5a413082-1034-4e04-b76b-8d14668bf434
-ms.openlocfilehash: 9775270c5c1fb0b6758f994c432104d75e19d38d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80cb814145ac986864fe351e664d8472f3bf880
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505082"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152849"
 ---
 # <a name="no-linkage"></a>Brak połączenia
 
@@ -26,6 +26,6 @@ Następujące identyfikatory są bez połączenia:
 
 Jeśli identyfikator ma bez połączenia, Zadeklarowanie tej samej nazwie ponownie (w deklarator lub Specyfikator typu), w tym samym poziomie zakresu generuje błąd zmiana definicji symbolu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

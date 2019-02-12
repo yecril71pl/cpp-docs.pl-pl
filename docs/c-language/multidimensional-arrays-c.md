@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: cd17eb060a6151417cbbe8dfdbfdc42ffe88ce98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623941"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151016"
 ---
 # <a name="multidimensional-arrays-c"></a>Tablice wielowymiarowe (C)
 
@@ -68,6 +68,6 @@ W pierwszej z tych instrukcji wyrażenie `prop[2][1]` jest prawidłowym odwołan
 
 Podobnie, wynik wyrażenia `prop[2]` w drugiej instrukcji `ipp = prop[2];` jest wartością wskaźnika adresującą tablicę dwuwymiarową.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator indeksu dolnego:](../cpp/subscript-operator.md)

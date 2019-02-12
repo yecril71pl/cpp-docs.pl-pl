@@ -2,12 +2,12 @@
 title: Specyfikator automatycznej klasy magazynowania
 ms.date: 11/04/2016
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
-ms.openlocfilehash: 926322fa55a14cc736dc41fbebd5c276ad61f020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bd36fd534602a5a4df95047a830058e8c5ef163
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619911"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147012"
 ---
 # <a name="auto-storage-class-specifier"></a>Specyfikator automatycznej klasy magazynowania
 
@@ -15,6 +15,6 @@ ms.locfileid: "50619911"
 
 Wewnętrznego **statyczne** zmiennej (statycznej zmiennej lokalnej lub zakresie bloku) mogą być inicjowane przy użyciu adresu żadnych zewnętrznych lub **statyczne** elementu, ale nie z adresu innego **automatycznie**  elementu, ponieważ adres **automatycznie** element nie jest stałą.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Auto, słowo kluczowe](../cpp/auto-keyword.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - register variables
 - register storage class
 ms.assetid: 7577bf48-88ec-4191-873c-ef4217a4034e
-ms.openlocfilehash: 339a96e33e186ddcc0615f89ff68a7f87b0bfdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fac6db2254a909d0ec558a7e76f7ccf32aa7ac3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668653"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147350"
 ---
 # <a name="register-storage-class-specifier"></a>rejestracja specyfikatora klasy magazynowania
 
@@ -20,6 +20,6 @@ Kompilator Microsoft C/C++ nie uznaje żądania użytkownika, register zmiennych
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

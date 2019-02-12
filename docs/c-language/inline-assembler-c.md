@@ -5,12 +5,12 @@ helpviewer_keywords:
 - __asm keyword [C]
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
-ms.openlocfilehash: 08507c7ce0c1163e8768ed3551cd7053503058e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb2a1dd3e87ef452083935e23048d80b4cdc8c3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549685"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152030"
 ---
 # <a name="inline-assembler-c"></a>Asembler wbudowany (C)
 
@@ -49,6 +49,6 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty funkcji](../c-language/function-attributes.md)

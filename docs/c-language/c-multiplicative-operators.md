@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: debda69d693286aef03363eafd450b5aa531e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506928"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147754"
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 
@@ -91,6 +91,6 @@ W każdym przypadku `50` i `2` mają taki sam znak.
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory mnożenia i Operator modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

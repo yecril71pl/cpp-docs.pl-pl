@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: ebc7f6185c8115df6e6b77a034307f8998b1c2ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530311"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151497"
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 
@@ -21,9 +21,9 @@ ms.locfileid: "50530311"
 
 ## <a name="syntax"></a>Składnia
 
-*Inicjator*:<br/>
+*initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***}** / * dla inicjowania agregacji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***,}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicjator*<br/>
@@ -150,6 +150,6 @@ union
 
 Zmienna złożenia `y`, w tym przykładzie jest zainicjowany. Pierwszy element Unii jest tablicą, więc inicjator jest inicjatorów agregacji. Na liście inicjatora `{'1'}` przypisuje wartości do pierwszego wiersza w tablicy. Ponieważ tylko jedną wartość pojawia się na liście, element w pierwszej kolumnie jest inicjowany do znaku `1`, a pozostałe dwa elementy w wierszu są inicjowane na wartość 0, domyślnie. Podobnie, pierwszy element drugiego wiersza `x` jest inicjowany do znaku `4`, a pozostałe dwa elementy w tym wierszu są inicjowane na wartość 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Inicjowanie](../c-language/initialization.md)

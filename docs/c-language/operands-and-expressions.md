@@ -1,19 +1,19 @@
 ---
-title: Operandy i wyrażenia
+title: Argumenty i wyrażenia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], syntax
 - operands, definition
 - operands
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
-ms.openlocfilehash: 457565e2a29035224b42937e251db2926be7d0c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7e389279c943d6343b28184e6933b62535daae0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650271"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150717"
 ---
-# <a name="operands-and-expressions"></a>Operandy i wyrażenia
+# <a name="operands-and-expressions"></a>Argumenty i wyrażenia
 
 "Argument" jest jednostką, na którym działa operatora. "Wyrażenie" jest sekwencji operatorów i argumentów operacji, który wykonuje dowolną kombinację tych akcji:
 
@@ -25,6 +25,6 @@ ms.locfileid: "50650271"
 
 Argumenty operacji w języku C obejmują stałe, identyfikatory, ciągi, wywołania funkcji, wyrażenia indeksu dolnego, wyrażeń wyboru elementów członkowskich i złożonych wyrażeń sformułowany, łącząc operandy przy użyciu operatorów lub umieszczając operandy w nawiasach. Składnia służąca do tych operandów jest podawany w [wyrażenia podstawowe](../c-language/c-primary-expressions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

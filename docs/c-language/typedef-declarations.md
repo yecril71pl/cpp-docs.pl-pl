@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468903"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149625"
 ---
 # <a name="typedef-declarations"></a>Deklaracje typedef
 
@@ -35,16 +35,16 @@ Deklaracji typedef jest interpretowany w taki sam sposób, jak zmienna lub dekla
 *Specyfikator typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Krótka**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Int**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**długi**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Podwójne**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator struktury lub Unii*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa TypeDef*
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 *Nazwa TypeDef*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
@@ -146,6 +146,6 @@ jest równoważna z deklaracją
 void box( int, int );
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: dc4e13d82c03a30023f72759ecacb798aedec0ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532304"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152160"
 ---
 # <a name="compound-statement-c"></a>Instrukcja złożona (C)
 
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 W tym przykładzie Jeśli `i` jest większa niż 0, wszystkie instrukcje wewnątrz instrukcji złożonej zostały wykonane w porządku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje](../c-language/statements-c.md)

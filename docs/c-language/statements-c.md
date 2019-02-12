@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-ms.openlocfilehash: b9fafec9b37499551943b51f55172cf64c97636e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb6a9c3742efd414581124e56d01356e4448614
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463729"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151926"
 ---
 # <a name="statements-c"></a>Instrukcje (C)
 
@@ -27,6 +27,6 @@ Instrukcje programu w języku C sterowanie przepływem wykonania programu. W ję
 |[For — instrukcja](../c-language/for-statement-c.md)|[try-finally — instrukcja](../c-language/try-finally-statement-c.md)|
 |[goto i labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md)|[while — instrukcja](../c-language/while-statement-c.md)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

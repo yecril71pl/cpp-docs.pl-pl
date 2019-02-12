@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: 0b58ed2483b404df957b8e9e95e41442403036c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505550"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149352"
 ---
 # <a name="expressions-in-parentheses"></a>Wyrażenia w nawiasach
 
@@ -39,6 +39,6 @@ Kompilator jest bezpłatny do oceny partnerami mnożenia w dowolnej kolejności.
 
 Wyjątki wynikłe ze efekty uboczne są omówione w [efekty uboczne](../c-language/side-effects.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

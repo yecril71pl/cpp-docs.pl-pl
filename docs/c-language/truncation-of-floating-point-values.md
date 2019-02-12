@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - floating-point numbers, truncation
 ms.assetid: 051a6e22-c636-4af8-9ac4-40160f4affca
-ms.openlocfilehash: 15f3ab62ad89ab5b571c528160b9ccd86ab93c5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc46577c5ab304346d88f8522e584d1e54ca265
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430813"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152459"
 ---
 # <a name="truncation-of-floating-point-values"></a>Obcięcie wartości zmiennoprzecinkowych
 
@@ -17,6 +17,6 @@ ms.locfileid: "50430813"
 
 W przypadku niedopełnienie wartości zmiennoprzecinkowych zmiennej jest zaokrąglona w dół zero. Przepełnienie może spowodować błąd czasu wykonywania, lub może tworzyć, nieprzewidywalne wartość, w zależności od optymalizacji określony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obliczenia matematyczne na liczbach zmiennoprzecinkowych](../c-language/floating-point-math.md)

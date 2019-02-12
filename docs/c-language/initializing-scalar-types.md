@@ -12,12 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641093"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151146"
 ---
 # <a name="initializing-scalar-types"></a>Inicjowanie typów skalarnych
 
@@ -26,7 +26,7 @@ Podczas inicjowania skalarnych typów, wartości *wyrażenia przypisania* jest p
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *init-declarator-list*<sub>zoptymalizowany pod kątem</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *Specyfikatory deklaracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> <br/>
@@ -41,8 +41,8 @@ Podczas inicjowania skalarnych typów, wartości *wyrażenia przypisania* jest p
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjatora*  / \* inicjowania skalarne \*/
 
-*Inicjator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*
+*initializer*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*
 
 Można zainicjować zmienne dowolnego typu, pod warunkiem, że należy przestrzegać następujących zasad:
 
@@ -104,6 +104,6 @@ int function( void )
 
 Zmienna globalna `GLOBAL` zadeklarowane na poziomie zewnętrznym, dlatego ma globalny okres istnienia. Zmienna lokalna `LOCAL` ma **automatycznie** klasę magazynu i adres jest tylko podczas wykonywania funkcji, w którym jest zdeklarowana. W związku z tym, podejmuje próbę zainicjowania **statyczne** zmiennej wskaźnikowej `lp` adresem `LOCAL` nie jest dozwolone. **Statyczne** zmiennej wskaźnikowej `gp` mogą być inicjowane jako adres `GLOBAL` ponieważ ten adres jest zawsze taki sam. Podobnie `*rp` mogą być zainicjowane, ponieważ `rp` jest zmienną lokalną i może mieć inicjatora stałymi. Każdorazowo po wprowadzeniu bloku `LOCAL` ma nowego adresu, który jest przypisywany do `rp`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Inicjowanie](../c-language/initialization.md)

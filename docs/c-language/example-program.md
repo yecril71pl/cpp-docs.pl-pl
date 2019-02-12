@@ -2,12 +2,12 @@
 title: Program przykładowy
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: 31e8f822462dad7b3935548c9c25e7334a82b377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608626"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147129"
 ---
 # <a name="example-program"></a>Program przykładowy
 
@@ -73,6 +73,6 @@ FILE1.C używa deklaracji definiujących do inicjowania zmiennych globalnych `a`
 
 Okres istnienia i widoczność identyfikatorów omówiono w [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md). Aby uzyskać więcej informacji na temat funkcji, zobacz [funkcji](../c-language/functions-c.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

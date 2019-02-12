@@ -6,12 +6,12 @@ helpviewer_keywords:
 - external linkage, about external linkage
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
-ms.openlocfilehash: 87e9e16eb115df8d100450f7f0dc44961886ab20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b0fda1f501755640123f5181454a5c36b7e986
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466264"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148780"
 ---
 # <a name="external-linkage"></a>Połączenie zewnętrzne
 
@@ -21,6 +21,6 @@ Jeśli nie ma deklarację identyfikatora dla funkcji *storage-class-specifier*, 
 
 Identyfikator nazwy za pomocą zewnętrznego powiązania wyznacza tej samej funkcji lub obiektu danych jako nie żadnej innej deklaracji dla tej samej nazwie, za pomocą zewnętrznego powiązania. Dwie deklaracje może być w tej samej jednostce translacji, czy w jednostkach różnych tłumaczeń. Jeśli obiekt lub funkcja również ma globalny okres istnienia, obiekt lub funkcja jest współużytkowana przez całego programu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

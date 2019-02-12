@@ -2,12 +2,12 @@
 title: Niemożliwe do przedstawienia stałe znakowe
 ms.date: 11/04/2016
 ms.assetid: 5a710a1c-dba1-49b4-a183-ed94a00a5358
-ms.openlocfilehash: 56a70a06741449909bb9eb4faa4f8dee28f5423b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41275c226f80faffefd773ff8bb45cd8f2d390d3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503367"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151406"
 ---
 # <a name="unrepresented-character-constants"></a>Niemożliwe do przedstawienia stałe znakowe
 
@@ -15,6 +15,6 @@ ms.locfileid: "50503367"
 
 Wszystkie znaki stałej lub sekwencje ucieczki mogą być reprezentowane w zestawie znaków rozszerzonych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Znaki](../c-language/characters.md)

@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - structure members, padding and alignment
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
-ms.openlocfilehash: a560c7b9491c22d16866c4fa32f80d16ca38d90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9c70ed074a11800b707aa48ec8e0e2f8b4f999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541287"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148117"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Wypełnienie i wyrównanie struktur członkowskich
 
@@ -23,6 +23,6 @@ Każdy obiekt danych posiada wymóg wyrównania. Wymóg wyrównania dla wszystki
 
 Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

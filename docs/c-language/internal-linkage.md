@@ -5,12 +5,12 @@ helpviewer_keywords:
 - internal linkage
 - linkage [C++], internal
 ms.assetid: 80be7b51-c930-43db-94d6-4f09a64077bf
-ms.openlocfilehash: 857badd1284378a066c6c19c7159c1535e313593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79601af27f847a3afe7e8bdaefa926cd45459847
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452369"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150743"
 ---
 # <a name="internal-linkage"></a>Połączenie wewnętrzne
 
@@ -18,6 +18,6 @@ Jeśli zawiera deklaracji z zakresem pliku identyfikator obiektu lub funkcji *st
 
 W ramach jednej jednostki translacji każde wystąpienie identyfikatora z wewnętrznym powiązaniem wskazuje ten sam identyfikator lub funkcji. Wewnętrznie połączone identyfikatory są unikatowe dla jednostki translacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

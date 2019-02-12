@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: 123ccf583fe5e07d9f2610ec621b48d8a8c39be8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622032"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150561"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Reguły i ograniczenia dotyczące atrybutów dllimport/dllexport
 
@@ -96,6 +96,6 @@ ms.locfileid: "50622032"
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Importowanie bibliotek DLL i eksportowanie funkcji](../c-language/dll-import-and-export-functions.md)

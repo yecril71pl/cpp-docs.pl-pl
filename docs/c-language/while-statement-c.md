@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C]
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
-ms.openlocfilehash: d774971910fe69ed707bc545e4c0e022282a1d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662348"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151900"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 
@@ -45,6 +45,6 @@ while ( i >= 0 )
 
 W tym przykładzie kopiuje znaków ze zbioru `string2` do `string1`. Jeśli `i` jest większa niż lub równa 0, `string2[i]` jest przypisany do `string1[i]` i `i` zostanie zmniejszony. Gdy `i` osiągnie lub spadnie poniżej 0, wykonywanie `while` kończy się.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [while, instrukcja (C++)](../cpp/while-statement-cpp.md)

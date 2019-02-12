@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 6391e167ad214bb793b8d6b3b62637a113039afc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437196"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150015"
 ---
 # <a name="type-int"></a>Typ int
 
@@ -29,6 +29,6 @@ Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najba
 > [!NOTE]
 >  Specyfikatory typu int i unsigned int są szeroko używane w programach języka C, ponieważ umożliwiają obsługę wartości całkowitych przez komputer w najbardziej efektywny sposób. Jednak ponieważ rozmiar int i unsigned int może być różny, programy zależące od konkretnego rozmiaru int mogą nie być przenoszone na inne komputery. Aby programy były bardziej przenośne, można użyć wyrażenia z operatorem sizeof (zgodnie z opisem w [sizeof Operator](../c-language/sizeof-operator-c.md)) zamiast ilości zakodowanych danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

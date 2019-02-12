@@ -2,12 +2,12 @@
 title: Argumenty dla metody main
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
-ms.openlocfilehash: 52361c4347ee7c55b98bcacb4759bb79d53cb73e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638792"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150262"
 ---
 # <a name="arguments-to-main"></a>Argumenty dla metody main
 
@@ -33,6 +33,6 @@ Wywoływane bez argumentów wiersza polecenia programu otrzyma wartość 1 dla *
 
 Parametry **argc —** i **argv** można modyfikować i zachowują swoje wartości znajdujących się w ostatniej między programów, uruchamianie i kończenie działania programu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko](../c-language/environment.md)

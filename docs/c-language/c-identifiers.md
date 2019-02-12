@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 6ec1fc7303a6f5600837e919d96904abde7987e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474144"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152589"
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 
@@ -39,7 +39,7 @@ Specjalnym rodzajem identyfikatora, zwanego etykiety instrukcji, mogą być uży
 ## <a name="syntax"></a>Składnia
 
 *Identyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *nie cyfrą*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *cyfra*
 
@@ -96,6 +96,6 @@ Konsolidator firmy Microsoft jest uwzględniana wielkość liter. Należy okreś
 
 Identyfikator ma "scope", czyli region programu, w którym jest znany i "powiązanie", który określa, czy tej samej nazwie w innym zakresie odwołuje się do tego samego identyfikatora. Te tematy zostały wyjaśnione w [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy języka C](../c-language/elements-of-c.md)

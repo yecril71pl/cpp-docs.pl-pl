@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432482"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152004"
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 
@@ -23,14 +23,14 @@ A *deklaracji wskaźnika* nazwy zmiennej wskaźnika i określa typ obiektu, na k
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
 
-*deklarator bezpośrednio*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *deklaratora* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**
 
-*wskaźnik*:<br/>
+*pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub> *wskaźnika*
 
@@ -114,6 +114,6 @@ struct id
 
 Zmienna *rekordu* ma typ struktury *identyfikator*. Należy pamiętać, że *pname* jest zadeklarowany jako wskaźnik do innego typu struktury o nazwie *nazwa*. Ta deklaracja może następować przed elementem *nazwa* typ jest zdefiniowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577635"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149560"
 ---
 # <a name="sizeof-operator-c"></a>sizeof — operator (C)
 
@@ -51,7 +51,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 
 W tym przykładzie `strings` jest tablicą wskaźników do `char`. Liczbą wskaźników jest liczba elementów w tablicy, ale nie jest ona określona. Łatwo jest określić liczbę wskaźników za pomocą operatora `sizeof`, aby obliczyć liczbę elementów w tablicy. **Const** wartość całkowitą `string_no` jest zainicjowana na ten numer. Ponieważ jest on **const** wartość `string_no` nie może być modyfikowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory języka C](c-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 8751889124c7c621ae1d4dad5a523762e7190ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580729"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150314"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -21,7 +21,7 @@ ms.locfileid: "50580729"
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|
 |**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**register**|**Element TypeDef**|
+|**case**|**enum**|**register**|**typedef**|
 |**char**|**extern**|**return**|**Unia**|
 |**const**|**float**|**short**|**Bez znaku**|
 |**continue**|**for**|**Podpisany**|**void**|
@@ -38,7 +38,7 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 
 |||||
 |-|-|-|-|
-|**__asm**<sup>3</sup>|**DllImport**<sup>2</sup>|**__int8**<sup>3</sup>|**"naked"**<sup>2</sup>|
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**"naked"**<sup>2</sup>|
 |**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
 |**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**Wątek**<sup>2</sup>|
 |**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
@@ -56,6 +56,6 @@ Po włączeniu rozszerzeń Microsoft, możesz używać słów kluczowych wymieni
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy języka C](../c-language/elements-of-c.md)

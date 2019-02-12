@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializing variables
 - initializers
 ms.assetid: f009ee12-3df6-4260-b7e4-a6149ebb95aa
-ms.openlocfilehash: 58f35f4026a543af100bb075b066ddfa3b7f6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3e8951e4d1900746cc71215df665ad27d3f329f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441083"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149072"
 ---
 # <a name="initialization"></a>Inicjalizacja
 
@@ -20,6 +20,6 @@ ms.locfileid: "50441083"
 
 W poniższych sekcjach opisano sposób inicjowania zmiennych [skalarne](../c-language/initializing-scalar-types.md), [agregacji](../c-language/initializing-aggregate-types.md), i [ciąg](../c-language/initializing-strings.md) typów. "Typów skalarnych" te obejmują wszystkie typy arytmetyczne oraz wskaźników. "Typy agregacji" to tablice, struktur i Unii.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

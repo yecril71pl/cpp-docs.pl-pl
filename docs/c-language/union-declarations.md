@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: af51f184c199cc7f93f25f95fd4ef5c613e5f017
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524786"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149261"
 ---
 # <a name="union-declarations"></a>Deklaracje złożeń
 
@@ -24,24 +24,24 @@ ms.locfileid: "50524786"
 &nbsp;&nbsp;&nbsp;&nbsp;*struktury lub Unii* *identyfikator*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**— Struktura**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Unia**
 
 *struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja — struktura*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura deklaracji listy* *deklaracji struktury*
 
 Złożenia zawartości jest definiowany jako
 
 *struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator kwalifikator listy* *struktury declarator-list***;**
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
 
 *specifier-qualifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikator kwalifikator listy*<sub>zoptymalizowany pod kątem</sub> <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikator kwalifikator listy*<sub>zoptymalizowany pod kątem</sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator — struktura*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list***,***deklaratora — struktura*
 
 Zmienna o **Unii** typ przechowuje jedną z wartości zdefiniowanych przez tego typu. Te same zasady określają deklaracje struktur i związków. Unie może również mieć pól bitowych.
@@ -121,6 +121,6 @@ Zobacz [składowe struktury i złożenia](../c-language/structure-and-union-memb
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

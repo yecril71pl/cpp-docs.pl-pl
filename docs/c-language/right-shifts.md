@@ -2,12 +2,12 @@
 title: Przesunięcia w prawo
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
-ms.openlocfilehash: f39c1f2f49f5a8a1f3bb5eb3f21736eedf32077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c34373f69a41ad65031753cd352098dce7e98ef4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518212"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149482"
 ---
 # <a name="right-shifts"></a>Przesunięcia w prawo
 
@@ -19,6 +19,6 @@ Przesunięcia w prawo zachować bitu znaku podpisanych typów całkowitych. Licz
 
 Gdy liczbą całkowitą bez znaku przenosi bezpośrednio, najbardziej znaczący bit jest wyczyszczone. Na przykład jeśli 0xF000 jest podpisany, wynik jest 0x7800. Przesunięcie `unsigned` lub być liczbami dodatnimi `int` bezpośrednio 32 godziny tworzy 0x00000000.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Liczby całkowite](../c-language/integers.md)

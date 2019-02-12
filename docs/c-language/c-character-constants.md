@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, character
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
-ms.openlocfilehash: 684763b5ce3983b6efc44db9499c139c84f6e3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d87b57726f741cc96f2180de33cae01403786ec
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507197"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152771"
 ---
 # <a name="c-character-constants"></a>Stałe znakowe języka C
 
@@ -28,15 +28,15 @@ ms.locfileid: "50507197"
 
 *c char sekwencji c-char*
 
-*c-char*: każdy członek znak źródłowy zestawu z wyjątkiem pojedynczego cudzysłowu (**"**), ukośnika odwrotnego (**\\**), lub znak nowego wiersza
+*c-char*: Każdy członek znak źródłowy zestawu z wyjątkiem pojedynczego cudzysłowu (**"**), ukośnika odwrotnego (**\\**), lub znak nowego wiersza
 
-*Sekwencja unikowa*
+*escape-sequence*
 
 *Sekwencja unikowa*: *sekwencji unikowej prosty*
 
-*ósemkowa sekwencja unikowa*
+*octal-escape-sequence*
 
-*szesnastkowe sekwencje*
+*hexadecimal-escape-sequence*
 
 *proste sekwencje*: jeden z **\a \b \f \n \r \t \v**
 
@@ -50,8 +50,8 @@ ms.locfileid: "50507197"
 
 *szesnastkowe sekwencje*: **\x***cyfry szesnastkowe*
 
-*szesnastkowe sekwencje szesnastkowe cyfrowy*
+*hexadecimal-escape-sequence hexadecimal-digit*
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe języka C](../c-language/c-constants.md)

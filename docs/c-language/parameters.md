@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 2b4b549ae6059cddf3ab868950cda215fb043d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506941"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147233"
 ---
 # <a name="parameters"></a>Parametry
 
@@ -38,14 +38,14 @@ Argumenty są nazwy wartości przekazanych do funkcji przez wywołanie funkcji. 
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
 
 *listy parametrów typu*: /\* listy parametrów \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
 
-*Lista parametrów*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,***deklaracji parametru*
+*parameter-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
 
-*Deklaracja parametru*:<br/>
+*parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *deklaratora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *abstrakcyjny declarator*<sub>zoptymalizowany pod kątem</sub>
 
@@ -74,6 +74,6 @@ Kolejność i typ parametrów, łącznie z jakimkolwiek użyciem Notacja wielokr
 
 Kompilator niezależnie wykonuje zwykle konwersje arytmetyczne dla każdego parametru i dla każdego argumentu, jeśli to konieczne. Po konwersji nie parametrze jest krótszy niż `int`, a nie parametrze ma **float** typu, chyba że typ parametru jest jawnie określona jako **float** w prototypie. Oznacza to, na przykład deklarowania jako parametru `char` ma taki sam skutek jak deklarowania go jako `int`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)
