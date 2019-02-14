@@ -3,6 +3,7 @@ title: Rozmieszczenie kontrolek w oknach dialogowych (C++) | Dokumentacja firmy 
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
@@ -57,13 +58,34 @@ helpviewer_keywords:
 - Tabstop property for controls
 - controls [C++], focus
 - dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 210fbf8e062b4dd8c469f9c40a015bbc19bc2843
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152745"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264884"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Rozmieszczenie kontrolek w oknach dialogowych (C++)
 
@@ -116,7 +138,7 @@ Uchwyty zmiany rozmiaru kontrolek przyciąganie do prowadnic formanty są przeno
 
 Znaczniki w linijki, określające odstępów przewodniki i formanty są definiowane przez jednostki okna dialogowego (Dlu). DLU opiera się na rozmiar czcionki okno dialogowe, zwykle 8-punktowy MS Shell Dlg. Poziomy DLU jest średniej szerokości czcionki okno dialogowe podzielona przez cztery. DLU pionowe jest średnią wysokość czcionki podzielić przez 8.
 
-#### <a name="to-size-a-group-of-controls-with-guides"></a>Rozmiar grupy formantów z liniami
+Rozmiar grupy formantów z przewodnikami:
 
 1. Przyciągaj obok kontrolki (lub formantów) do przewodnika.
 
@@ -126,7 +148,7 @@ Znaczniki w linijki, określające odstępów przewodniki i formanty są definio
 
 1. Przenieś albo przewodnika, aby rozmiar kontrolki (lub kontrolki).
 
-#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Aby zmienić interwałów znaczników
+Aby zmienić interwałów znaczników:
 
 1. Z **Format** menu, wybierz **ustawienia prowadnic**.
 
@@ -136,32 +158,23 @@ Znaczniki w linijki, określające odstępów przewodniki i formanty są definio
 
 Klawisze specjalne w połączeniu z myszy umożliwia wyłączanie przyciągania efekt prowadnice. Za pomocą **Alt** klucz wyłącza przyciągania skutki przewodnik wybrane. Przenoszenie Przewodnik z **Shift** klucz uniemożliwia przyciągniętą posuwał się z przewodnikiem.
 
-#### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Aby wyłączyć przyciąganie efekt prowadnice
+- Aby wyłączyć przyciąganie efekt prowadnice, przeciągnij formant, przytrzymując naciśnięty **Alt** klucza.
 
-Przeciągnij formant, przytrzymując naciśnięty **Alt** klucza.
+- Aby przenieść przewodniki bez przenoszenia przyciągniętą, przeciągnij przewodnika, przytrzymując naciśnięty **Shift** klucza.
 
-#### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Aby przenieść przewodniki bez przenoszenia przyciągniętą
-
-Przeciągnij przewodnika, przytrzymując naciśnięty **Shift** klucza.
-
-#### <a name="to-turn-off-the-guides"></a>Aby wyłączyć prowadnice
-
-1. Z **Format** menu, wybierz **ustawienia prowadnic**.
-
-1. W **ustawienia prowadnic** dialogowego **prowadnic układu**, wybierz opcję **Brak**.
+- Aby wyłączyć prowadnice, z **Format** menu, wybierz **ustawienia prowadnic**. Następnie w **ustawienia prowadnic** dialogowego **prowadnic układu**, wybierz opcję **Brak**.
 
    > [!NOTE]
    > Możesz także dwukrotnie kliknąć na pasku linijkę, aby uzyskać dostęp do **ustawienia prowadnic** okno dialogowe.
 
-\- lub —
-
-Na **Format** menu, wybierz opcję **Przełącz prowadnice**.
+> [!TIP]
+> Skrót, aby wyłączyć prowadnice znajduje się na **Format** menu, wybierz opcję **Przełącz prowadnice**.
 
 ### <a name="modify-the-layout-grid"></a>Modyfikowanie siatki układu
 
 Podczas wprowadzania lub rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu do bardziej precyzyjne pozycjonowania. Po włączeniu siatki "przyciągane do" linii kropkowanej siatki tak, jakby namagnesować pojawiają się formanty. Możesz włączyć tę funkcję "przyciągania do siatki" i wyłączyć i zmienianie rozmiaru komórek siatki układu.
 
-#### <a name="to-turn-the-layout-grid-on-or-off"></a>Aby włączyć siatki układu lub wyłączyć
+Aby włączyć siatki układu lub wyłączyć:
 
 1. Z **Format** menu, wybierz **ustawienia prowadnic**.
 
@@ -169,11 +182,120 @@ Podczas wprowadzania lub rozmieszczanie formantów w oknie dialogowym, można u�
 
    Możesz nadal kontrolować siatki w poszczególnych **okna dialogowego** okna edytora za pomocą **Przełącz siatkę** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-#### <a name="to-change-the-size-of-the-layout-grid"></a>Aby zmienić rozmiar siatki układu
+Aby zmienić rozmiar siatki układu:
 
 1. Z **Format** menu, wybierz **ustawienia prowadnic**.
 
 1. W **ustawienia prowadnic** okna dialogowego wpisz wysokość i szerokość w Dlu komórek w siatce. Minimalna wysokość lub szerokość jest Dlu 4.
+
+## <a name="selecting-controls"></a>Zaznaczanie kontrolek
+
+Zaznacz formanty do rozmiaru, wyrównanie, przenieść, skopiować, lub je usunąć, a następnie ukończ operację, którą chcesz. W większości przypadków należy wybrać więcej niż jeden formant na korzystanie z narzędzia określania rozmiaru i wyrównanie [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Po wybraniu formantu, ma przyciemnione obramowanie wokół niej z niezawodnej (aktywny) lub pusty (nieaktywny) "uchwytów," małe kwadraty, są wyświetlane w krawędź zaznaczenia. Po wybraniu wielu formantów formantu dominującego ma uchwyty zmiany rozmiaru stałych i wszystkich innych wybranych kontrolek mają uchwyty zmiany rozmiaru pusty.
+
+Podczas zmiany rozmiaru lub wyrównywanie formantów wielu **okna dialogowego** Edytor używa "formantu dominującego" Aby określić, jak rozmiar lub wyrównane do innych kontrolek. Domyślnie formant dominujący jest pierwszy formant wybrane.
+
+### <a name="to-select-multiple-controls"></a>Aby wybrać wiele formantów
+
+1. W [okno przybornika](/visualstudio/ide/reference/toolbox), wybierz opcję **wskaźnik** narzędzia.
+
+1. Można dokonać wyboru, użyj jednej z następujących czynności:
+
+   - Przeciągnij wskaźnik, aby narysować pole zaznaczenia wokół formanty, które chcesz zaznaczyć w oknie dialogowym. Po zwolnieniu przycisku myszy kontroluje wszystkie wewnątrz i przecinające się są zaznaczone pola wyboru.
+
+   - Naciśnij i przytrzymaj **Shift** klucza, a następnie wybierz kontrolki, czy chcesz uwzględnić w zaznaczeniu.
+
+   - Naciśnij i przytrzymaj **Ctrl** klucza, a następnie wybierz kontrolki, czy chcesz uwzględnić w zaznaczeniu.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Aby usunąć formant z grupą wybranych kontrolek lub dodać kontrolkę z grupą wybranych kontrolek
+
+Z grupą wybrano kontrolki, naciśnij i przytrzymaj **Shift** klucza, a następnie wybierz kontrolkę, która do usuwania lub Dodaj do istniejącego zaznaczenia.
+
+   > [!NOTE]
+   > Przytrzymanie **Ctrl** klucza i wybierając polecenie Kontrolki wyboru spowoduje, że, które kontrolują formantu dominującego w ramach tego zaznaczenia.
+
+### <a name="to-specify-the-dominant-control"></a>Aby określić formant dominujący
+
+Naciśnij i przytrzymaj **Ctrl** klucza i wybierz formant, którego chcesz użyć do wywierania wpływu na rozmiar lub lokalizację innych formantów *pierwszy*.
+
+> [!NOTE]
+> Uchwyty zmiany rozmiaru formantu dominującego są stałe, podczas gdy uchwyty kontrolek podrzędnych są puste. Dalsze zmiany rozmiaru lub wyrównanie opiera się na formant dominujący.
+
+### <a name="to-change-the-dominant-control"></a>Aby zmienić kontrolki dominującej
+
+1. Wyczyść bieżący wybór, klikając poza wszystkie obecnie wybrane formanty.
+
+1. Powtórz poprzedniej procedury, wybierając najpierw innej kontrolki.
+
+## <a name="sizing-controls"></a>Formanty rozmiaru
+
+Zmień rozmiar kontrolki za pomocą uchwytów zmiany rozmiaru. Po umieszczeniu wskaźnika na uchwyt zmiany rozmiaru, zmienia kształt, aby wskazać kierunki, w których kontrolki można zmienić rozmiar. Uchwyty zmiany rozmiaru Active są wypełnione; Jeśli uchwyt zmiany rozmiaru jest pusty, formant nie można zmienić rozmiaru na tej osi.
+
+Możesz również zmienić rozmiar formantu przez przyciągania formant do prowadnic i marginesów lub przenosząc jeden przypięty kontroli i przewodnik od innego.
+
+### <a name="to-size-an-individual-control"></a>Rozmiar poszczególnych kontrolek
+
+1. Zaznacz formant.
+
+1. Przeciągnij uchwyty zmiany rozmiaru, aby zmienić rozmiar formantu:
+
+   - Uchwyty zmiany rozmiaru u góry i strony Zmień rozmiar poziomej lub pionowej.
+
+   - Uchwyty zmiany rozmiaru w rogach Zmień rozmiar zarówno w poziomie, jak i w pionie.
+
+   > [!TIP]
+   > Możesz zmienić rozmiar formantu jednostki jednego okna dialogowego (DLU) w danym momencie, przytrzymując **Shift** kluczy i korzystać z funkcji **Strzałka w prawo** i **strzałkę w dół** kluczy.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Aby automatycznie rozmiar formantu do tekstu w nim
+
+Wybierz **rozmiar do zawartości** z **Format** menu lub kliknij prawym przyciskiem myszy formant i wybierz pozycję **rozmiar do zawartości** z menu skrótów.
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Aby wprowadzić kontroluje tej samej szerokości, wysokości lub rozmiar
+
+Można zmienić rozmiar grupy formantów, w zależności od rozmiaru formantu dominującego.
+
+1. Zaznacz formanty, które chcesz zmienić.
+
+   Wcześniej w tej serii jest dominującym kontrolka. Końcowe rozmiaru formantów w grupie zależy od rozmiaru formantu dominującego.
+
+1. Z **Format** menu, wybierz **Wyrównaj rozmiar**, następnie wybierz **zarówno**, **wysokość**, lub **szerokość**.
+
+### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Aby ustawić rozmiar kombi pola i jego listy rozwijanej
+
+Po dodaniu do okna dialogowego, można rozmiar pola kombi. Można również określić rozmiar pola listy rozwijanej. Aby uzyskać więcej informacji, zobacz [dodanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md).
+
+#### <a name="to-size-a-combo-box"></a>Rozmiar pola kombi
+
+1. Zaznacz formant pola kombi w oknie dialogowym.
+
+   Początkowo tylko uchwyty zmiany rozmiaru lewej i prawej są aktywne.
+
+1. Ustaw szerokość pola kombi za pomocą uchwytów zmiany rozmiaru.
+
+Można również ustawić pionowy rozmiar część rozwijana pola kombi.
+
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Aby ustawić rozmiar kombi pole listy rozwijanej
+
+1. Wybierz przycisk ze strzałką listy rozwijanej z prawej strony pola kombi.
+
+   ![Strzałka na pola kombi w projekcie MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   Zarys zmian kontroli do wyświetlenia rozmiaru pola kombi z listy rozwijanej obszarem rozszerzony.
+
+1. Użyj dolnej uchwyt zmiany rozmiaru, aby zmienić początkowy rozmiar obszaru listy rozwijanej.
+
+   ![Pole kombi&#45;rozmiaru pola w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. Wybierz strzałkę ponownie, aby zamknąć część listy rozwijanej pola kombi.
+
+### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Ustawianie szerokości poziomego paska przewijania i są wyświetlane
+
+Po dodaniu pola listy z poziomy pasek przewijania w oknie dialogowym przy użyciu klas MFC pasek przewijania nie będzie automatycznie wyświetlane w aplikacji.
+
+Ustaw maksymalną szerokość elementu najszerszego, wywołując [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) w kodzie.
+
+   Bez ustawienia tej wartości pasek przewijania nie będzie wyświetlane, nawet jeśli elementy w polu listy są większe niż okno.
 
 ## <a name="group-radio-buttons-on-a-dialog-box"></a>Grupa przycisków radiowych w oknie dialogowym
 
@@ -208,29 +330,22 @@ Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym, a
 
 1. Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
 
-## <a name="align-groups-of-controls"></a>Wyrównaj do grup formantów
+## <a name="to-align-groups-of-controls"></a>Dopasowanie grup formantów
 
-Poniższe procedury pokazują, jak wyrównać formanty:
-
-### <a name="to-align-groups-of-controls"></a>Dopasowanie grup formantów
-
-1. [Zaznacz formanty](../windows/selecting-multiple-controls.md) pożądane dopasowanie. Pamiętaj o wybraniu formantu, który ma być formantu dominującego najpierw lub ustaw go jako formant dominujący przed przystąpieniem do wykonywania wyrównanie lub zmiany rozmiaru polecenia.
+1. Zaznacz formanty, które mają zostać wyrównane. Pamiętaj o wybraniu formantu, który ma być formantu dominującego najpierw lub ustaw go jako formant dominujący przed przystąpieniem do wykonywania wyrównanie lub zmiany rozmiaru polecenia.
 
    Ostateczne stanowisko grupy formantów, zależy od położenie formantu dominującego. Aby uzyskać więcej informacji dotyczących zaznaczania formantu dominującego zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).
 
 1. Z **Format** menu, wybierz **Wyrównaj**, a następnie wybierz jedną z następujących wyrównanie:
 
-   - `Lefts`: wyrównuje wybranych kontrolek wzdłuż ich po lewej stronie.
-
-   - `Centers`: wyrównuje wybranych kontrolek w poziomie wzdłuż ich punkty Centrum.
-
-   - `Rights`: wyrównuje wybranych kontrolek wzdłuż jego prawej stronie.
-
-   - `Tops`: wyrównuje wybranych kontrolek wzdłuż górnej krawędzi.
-
-   - `Middles`: wyrównuje wybranych kontrolek w pionie wzdłuż punktom środkowej.
-
-   - `Bottoms`: wyrównuje wybranych kontrolek wzdłuż dolnej krawędzi.
+   |Wartość|Opis|
+   |-----|-----------|
+   |`Lefts`|Wyrównuje wybranych kontrolek wzdłuż ich po lewej stronie.|
+   |`Centers`|Wyrównuje wybranych kontrolek w poziomie wzdłuż ich punkty Centrum.|
+   |`Rights`|Wyrównuje wybranych kontrolek wzdłuż jego prawej stronie.|
+   |`Tops`|Wyrównuje wybranych kontrolek wzdłuż górnej krawędzi.|
+   |`Middles`|Wyrównuje wybranych kontrolek w pionie wzdłuż punktom środkowej.|
+   |`Bottoms`|Wyrównuje wybranych kontrolek wzdłuż dolnej krawędzi.|
 
 ### <a name="to-even-the-spacing-between-controls"></a>Nawet odstępów między formantami
 
@@ -265,55 +380,6 @@ Poniższe procedury pokazują, jak wyrównać formanty:
    - `Bottom`: wyrównuje przycisków wzdłuż dolnej krawędzi okna dialogowego.
 
        Wybranie kontrolki niż przycisku polecenia, nie ma wpływu na jego położenie.
-
-## <a name="change-the-tab-order-of-controls"></a>Zmiana kolejności kart kontrolek
-
-Kolejność tabulacji tkwi w kolejności, w którym **kartę** klucz przenosi fokus wprowadzania z jednego formantu do drugiego w oknie dialogowym. Zwykle kolejność tabulacji rozpoczynające się od lewej do prawej i od góry do dołu w oknie dialogowym. Każda kontrolka ma **Tabstop** właściwość, która określa, czy formant uzyskuje fokus wprowadzania.
-
-### <a name="to-set-input-focus-for-a-control"></a>Aby ustawić fokus wprowadzania kontrolki
-
-W [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **True** lub **False** w **Tabstop** właściwości.
-
-Nawet formantów, które nie mają **Tabstop** właściwością **True** muszą być częścią kolejności tabulacji. Kolejność tabulacji jest ważna, na przykład, gdy użytkownik [Definiowanie kluczy dostępu (Mnemonik)](../windows/defining-mnemonics-access-keys.md) dla formantów, które nie mają podpisy. Statyczny tekst, który zawiera klucz dostępu dla kontrolki powiązane musi bezpośrednio poprzedzać pokrewnej kontrolki w kolejności tabulacji.
-
-> [!NOTE]
-> Jeśli Twoje okno dialogowe zawiera nakładające się formanty, zmiana kolejności kart może zmienić sposób wyświetlania kontrolki. Formanty, które później w kolejności tabulacji są zawsze wyświetlane na górze nakładające się formanty, które je poprzedzają w kolejności tabulacji.
-
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Aby wyświetlić bieżące kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
-
-Na **Format** menu, wybierz opcję **kolejność tabulacji**.
-
-\- lub —
-
-- Naciśnij klawisz **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Aby zmienić kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
-
-1. Na **Format** menu, wybierz opcję **kolejność tabulacji**.
-
-   Liczba w lewym górnym rogu każdej kontrolki zawiera jej miejscu w kolejności tabulacji w bieżącym.
-
-1. Ustawianie kolejności tabulacji, klikając pozycję każdej kontrolki w kolejności ma **kartę** klucza do wykonania.
-
-1. Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.
-
-   > [!TIP]
-   > Po wprowadzeniu **kolejność tabulacji** tryb, możesz nacisnąć przycisk **Esc** lub **Enter** wyłączyć możliwość zmiany kolejności tabulacji.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Aby zmienić kolejność tabulacji dla co najmniej dwóch formantów
-
-1. Z **Format** menu, wybierz **kolejność tabulacji**.
-
-1. Określ, gdzie rozpoczyna się zmiany w kolejności. Najpierw naciśnij i przytrzymaj **Ctrl** klucza i wybierz kontrolkę, a następnie wybierz subskrypcję, w którym zmiany kolejności do rozpoczęcia.
-
-   Na przykład, jeśli chcesz zmienić kolejność formantów `7` za pośrednictwem `9`, naciśnij i przytrzymaj **Ctrl**, następnie wybierz kontrolkę `6` pierwszy.
-
-   > [!NOTE]
-   > Aby ustawić numer określonej kontrolki `1` (pierwszy w kolejności tabulacji), kliknij dwukrotnie formant.
-
-1. Wersja **Ctrl** klucza, a następnie wybierz kontrolki, w kolejności, ma **kartę** klawisz, aby wykonać kroki od tego momentu.
-
-1. Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.
 
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 

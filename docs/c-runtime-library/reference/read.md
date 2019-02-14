@@ -1,6 +1,6 @@
 ---
 title: _read
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 apiname:
 - _read
 apilocation:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658448"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264793"
 ---
 # <a name="read"></a>_read
 
@@ -41,9 +41,9 @@ Odczytuje dane z pliku.
 
 ```C
 int _read(
-   int fd,
-   void *buffer,
-   unsigned int count
+   int const fd,
+   void * const buffer,
+   unsigned const buffer_size
 );
 ```
 
@@ -55,22 +55,22 @@ Deskryptor pliku odnoszące się do otwartego pliku.
 *buffer*<br/>
 Lokalizacja magazynowa danych.
 
-*Liczba*<br/>
-Maksymalna liczba bajtów.
+*buffer_size*<br/>
+Maksymalna liczba bajtów do odczytania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_przeczytaj** zwraca liczbę bajtów odczytanych, który może być mniejsza niż *liczba* w przypadku mniej niż *liczba* bajtów pozostałych w pliku, lub jeśli plik został otwarty w trybie tekstowym, w takim przypadku każdy powrót karetki LF pary "\r\n" jest zastępowany znaku wysuwu wiersza pojedynczego '\n'. Tylko znak wysuwu wiersza pojedynczego jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnik pliku.
+**_przeczytaj** zwraca liczbę bajtów odczytanych, który może być mniejsza niż *buffer_size* w przypadku mniej niż *buffer_size* bajtów pozostałych w pliku, czy plik został otwarty w trybie tekstowym. W trybie tekstowym wierszami powrotu karetki kanału informacyjnego pary `\r\n` jest zastępowany znaku wysuwu wiersza pojedynczego `\n`. Tylko znak wysuwu wiersza pojedynczego jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnik pliku.
 
 Jeśli funkcja próbuje odczytać na końcu pliku, zwraca wartość 0. Jeśli *fd* jest nieprawidłowa, plik nie jest otwarty do odczytu, lub plik jest zablokowany, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EBADF**.
 
-Jeśli *buforu* jest **NULL**, zostanie wywołany nieprawidłowy parametr uchwytu. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i **errno** ustawiono **EINVAL**.
+Jeśli *buforu* jest **NULL**, lub jeśli *buffer_size* > **INT_MAX**, zostanie wywołany nieprawidłowy parametr uchwytu. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i **errno** ustawiono **EINVAL**.
 
 Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Przeczytaj** funkcja odczytuje maksymalnie *liczba* bajtów do *buforu* z pliku skojarzone z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzone z danym pliku. Po zakończeniu operacji odczytu wskaźnik pliku wskazuje na następny znak jako nieprzeczytane.
+**_Przeczytaj** funkcja odczytuje maksymalnie *buffer_size* bajtów do *buforu* z pliku skojarzone z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzone z danym pliku. Po zakończeniu operacji odczytu wskaźnik pliku wskazuje na następny znak jako nieprzeczytane.
 
 Jeśli plik został otwarty w trybie tekstowym, odczytu skończy się, gdy **_przeczytaj** napotka znaku CTRL + Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek —](lseek-lseeki64.md) wyczyść wskaźnik końca pliku.
 
@@ -106,18 +106,18 @@ char buffer[60000];
 
 int main( void )
 {
-   int fh;
-   unsigned int nbytes = 60000, bytesread;
+   int fh, bytesread;
+   unsigned int nbytes = 60000;
 
    /* Open file for input: */
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   if ( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ))
    {
       perror( "open failed on input file" );
       exit( 1 );
    }
 
    /* Read in input: */
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+   if (( bytesread = _read( fh, buffer, nbytes )) <= 0 )
       perror( "Problem reading file" );
    else
       printf( "Read %u bytes from file\n", bytesread );

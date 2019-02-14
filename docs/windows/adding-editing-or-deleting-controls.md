@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742755"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264871"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Dodawanie, edytowanie lub usuwanie kontrolek
 
@@ -51,44 +57,6 @@ Za pomocą **okna dialogowego** edytora, możesz dodać, zmienić rozmiar, edyto
 **Edytor okien dialogowych** karta jest wyświetlana w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy **okna dialogowego** edytora. Można również dostosować **przybornika** okna do użytku łatwiejsze. Aby uzyskać więcej informacji, zobacz [korzystanie z przybornika](/visualstudio/ide/using-the-toolbox) i [Pokaż lub Ukryj okno przybornika](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 Możesz użyć menu skrótów w **okna dialogowego** edytora, aby szybko dodać zarejestrowany kontrolek ActiveX do okna dialogowego i można dodać formanty ActiveX do **przybornika** Aby uzyskać szybki dostęp.
-
-Formanty standardowe dostępne w **przybornika** z domyślną zdarzenia są:
-
-|Nazwa kontrolki|Domyślne zdarzenia|
-|---|---|
-|[Kontrolka przycisku](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Kontrolka pola wyboru](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Kontrolka pola kombi](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Edytuj kontrolkę](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Pole grupy|(Nie dotyczy)|
-|[Kontrolka pola listy](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Kontrolka przycisku radiowego](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Kontrolka tekstu statycznego](../mfc/reference/cstatic-class.md)|(Nie dotyczy)|
-|[Formant obrazu](../mfc/reference/cpictureholder-class.md)|(Nie dotyczy)|
-|[Kontrolka 2.0 edycji wzbogaconej](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Pasek przewijania](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Aby uzyskać więcej informacji na temat korzystania z **RichEdit 1.0** kontrolką MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) i [przykłady formantów edycji wzbogaconej](../mfc/rich-edit-control-examples.md).
-
-[Wspólnych formantów Windows](../mfc/controls-mfc.md) dostępne w **przybornika** zapewniają większą funkcjonalność w aplikacji. Obejmują one:
-
-|Nazwa kontrolki|Domyślne zdarzenia|
-|---|---|
-|[Kontrolka suwaka](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Kontrolki pokrętła](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Kontrolki postępu](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Formantu klawisza dostępu](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY —|
-|[Kontrolka listy](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Kontrolka drzewa](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Kontrolki karty](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Kontrolki animacji](../mfc/using-an-animation-control.md)|ACN_START|
-|[Kontrolka czasu selektora daty](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Kontrolowanie kalendarza miesięcznego](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Formant adresu IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Rozszerzone formant pola kombi](../mfc/creating-an-extended-combo-box-control.md)||
-|[Kontrolka niestandardowa](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Aby uzyskać więcej informacji, zobacz [klasy kontrolek](../mfc/control-classes.md), [klasy okien dialogowych](../mfc/dialog-box-classes.md), i [Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ Na **Edytuj** menu, wybierz opcję **Usuń**.
    > [!TIP]
    > Podczas korzystania z **okna dialogowego** edytora w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.
 
+## <a name="known-issue"></a>Znany problem
+
+Po dodaniu wspólne kontrolki lub kontrolki edycji wzbogaconej w oknie dialogowym, nie będzie on widoczny podczas testowania okna dialogowego lub nie będzie wyświetlane okno dialogowe, sam.
+
+Aby zobaczyć przykład problemu:
+
+1. Utwórz projekt systemu Win32, modyfikując ustawienia aplikacji, dzięki czemu można utworzyć aplikację Windows (nie Aplikacja konsoli).
+
+1. W [widok zasobów](../windows/resource-view-window.md), kliknij dwukrotnie plik .rc.
+
+1. W obszarze opcji okno dialogowe, kliknij dwukrotnie **o** pole.
+
+1. Dodaj **formant adresu IP** do okna dialogowego.
+
+1. Zapisz i **ponowna kompilacja**.
+
+1. Wykonywanie programu.
+
+1. W oknie dialogowym **pomocy** menu, kliknij przycisk **o** polecenia; nie okno dialogowe zostanie wyświetlone okno.
+
+Obecnie **okna dialogowego** edytora nie dodaje automatycznie kodu do projektu podczas przeciągania i upuszczania następujące formanty standardowe lub formanty edycji wzbogaconej na okno dialogowe. Ani Visual Studio zapewnia błąd lub ostrzeżenie w przypadku wystąpienia tego problemu. Aby rozwiązać problem, należy ręcznie dodać kodu dla formantu.
+
+||||
+|-|-|-|
+|Kontrolka suwaka|Kontrolka drzewa|Wybór daty i godziny|
+|Kontrolki pokrętła|Kontrolki karty|Kalendarza miesięcznego|
+|Kontrolki postępu|Kontrolki animacji|Formant adresu IP|
+|Klawisz skrótu|Formantu edycji wzbogaconej|Pole kombi rozszerzone|
+|Kontrolka listy|Formantu edycji wzbogaconej w wersji 2.0|Kontrolka niestandardowa|
+
+Aby używać wspólnych formantów w oknie dialogowym, należy wywołać [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) lub `AFXInitCommonControls` przed utworzeniem okna dialogowego.
+
+Aby używać kontrolki RichEdit, należy wywołać `LoadLibrary`. Aby uzyskać więcej informacji, zobacz [o Zaawansowane formanty edycji](/windows/desktop/Controls/about-rich-edit-controls) w zestawie Windows SDK i [Omówienie formantu edycji rozbudowane](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Aby używać kontrolki RichEdit z MFC, należy najpierw wywołać [afxinitrichedit2 —](../mfc/reference/application-information-and-management.md#afxinitrichedit2) można załadować kontrolki 2.0 RichEdit (RICHED20. Biblioteka DLL), lub zadzwoń [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) załadować starszej kontrolki RichEdit 1.0 (RICHED32. BIBLIOTEKA DLL).
+>
+> Może używać bieżącego [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy za pomocą starszej kontrolki RichEdit 1.0, ale `CRichEditCtrl` jest przeznaczona wyłącznie do obsługi formantu RichEdit w wersji 2.0. Ponieważ RichEdit 1.0 i RichEdit 2.0 są podobne, większość metod będzie działać. Jednak należy pamiętać, że istnieją pewne różnice między kontrolkami 1.0 i 2.0, więc niektóre metody mogą nie działać prawidłowo lub nie działać w ogóle.
+
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
 ## <a name="see-also"></a>Zobacz także
 
+[Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Kontrolki w oknach dialogowych](controls-in-dialog-boxes.md)<br/>
-[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links
