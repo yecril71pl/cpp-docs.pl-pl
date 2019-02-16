@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Zarządzanie zasobami (C++)'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150795"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320630"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-copy-resources"></a>Aby umożliwić kopiowanie zasobów
+## <a name="copy-resources"></a>Zasoby dotyczące kopiowania
 
 Możesz skopiować zasoby z jednego pliku do innego bez ich zmieniania lub zmienić języka lub warunku zasobu podczas kopiowania go.
 
@@ -77,7 +75,7 @@ Metodą przeciągania i upuszczania między plikami .rc, które są otwarte [poz
    > [!NOTE]
    > Aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku, Visual C++ może ulec zmianie wartości symboli zasobu przeniesionych lub nazwy symbolu i wartości po skopiuj go do nowego pliku.
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>Aby zmiana języka lub warunku zasobu podczas kopiowania
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>Zmiana języka lub warunku zasobu podczas kopiowania
 
 Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub właściwości warunku.
 
@@ -91,23 +89,21 @@ Język i warunku zasobu są wyświetlane w nawiasie po nazwie zasobu w **obszaru
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Aby skopiować istniejący zasób i zmień jego języka lub warunku:
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmień jego języka lub warunku
 
 1. W pliku .rc, lub w [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, którego chcesz skopiować.
 
-1. Wybierz **Wstaw kopiowania** z menu skrótów.
-
-1. W **Wstaw kopię zasobu** okno dialogowe:
+1. Wybierz **Wstaw kopiowania** z menu skrótów i ustaw następujące czynności:
 
    - Aby uzyskać **języka** pola listy, wybierz język.
 
    - W **warunek** wpisz warunek.
 
-## <a name="to-edit-managed-resource-files"></a>Edytowanie zarządzanych plików zasobów
+## <a name="edit-resources"></a>Edytowanie zasobów
 
 Zarządzanych plików zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
 
-## <a name="to-import-and-export-resources"></a>Importowanie i eksportowanie zasobów
+## <a name="import-and-export-resources"></a>Importowanie i eksportowanie zasobów
 
 Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować te same typy plików z projektu języka Visual C++ w oddzielnych plikach, które mogą być używane poza środowiskiem programowania.
 
@@ -131,9 +127,7 @@ Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pask
 
 1. W **zasobów** wyświetlić, kliknij prawym przyciskiem myszy zasób, którą chcesz wyeksportować.
 
-1. Wybierz **wyeksportować** w menu skrótów.
-
-1. W **Eksportuj zasób** okna dialogowego pole, zaakceptuj nazwę bieżącego pliku lub wpisać nową.
+1. Wybierz **wyeksportować** menu skrótów i akceptować bieżącej nazwy pliku lub wpisać nową.
 
 1. Przejdź do folderu, w którym chcesz zapisać plik i wybierz polecenie **wyeksportować**.
 
@@ -141,7 +135,8 @@ Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pask
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
-[Edytory zasobów](../windows/resource-editors.md)
+[Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)<br/>

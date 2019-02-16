@@ -1,6 +1,6 @@
 ---
-title: 'Symbole: Identyfikatory zasobów (C++)'
-ms.date: 11/04/2016
+title: Identyfikatory zasobów (symbolom) (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530003"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320500"
 ---
-# <a name="symbols-resource-identifiers-c"></a>Symbole: Identyfikatory zasobów (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identyfikatory zasobów (symbolom) (C++)
 
 Symbol jest identyfikatorem zasobu (identyfikator), który składa się z dwóch części: ciąg tekstowy (nazwa symbolu) zamapowany na wartość całkowitą (wartość symbolu). Na przykład:
 
@@ -36,27 +36,11 @@ Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows
 
 W miarę wzrostu aplikacji w rosnąca liczba i rozmiar, co powoduje jego ilość zasobów oraz symbole. Śledzenie dużą liczbę symboli, rozproszone w wielu plików może być trudne. [Okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) upraszcza zarządzanie symboli, oferując narzędzie centralnego za pomocą którego można:
 
-- [Wyświetlanie symboli zasobów](../windows/viewing-resource-symbols.md)
+- [Tworzenie symboli](../windows/creating-new-symbols.md)
 
-- [Tworzenie nowych symboli](../windows/creating-new-symbols.md)
-
-- [Zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md)
-
-- [Usuwanie nieprzypisanych symboli](../windows/deleting-unassigned-symbols.md)
-
-- [Otwieranie Edytora zasobów dla podanego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [Zmiana symbolu lub nazwy symbolu (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [Zmiana wartości numerycznej symbolu](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [Zmiana nazw symboli plików nagłówkowych](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [Obejmują udostępnionych (tylko do odczytu) lub obliczonych symboli](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [Zarządzanie symboli](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Wyświetl wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Instrukcje: wyszukiwanie symboli w zasobach](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
+[Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Edytory zasobów](../windows/resource-editors.md)<br/>
-[Pliki zasobów](../windows/resource-files-visual-studio.md)

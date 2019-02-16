@@ -1,5 +1,5 @@
 ---
-title: Używanie narzędzia do rysowania (Edytor obrazów dla ikon)
+title: Używanie narzędzia do rysowania
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.image.drawing
@@ -7,15 +7,23 @@ helpviewer_keywords:
 - Image editor [C++], selecting drawing tools
 - Image editor [C++], toolbar
 - drawing tools
+- Image editor [C++], drawing lines
+- shapes, drawing
+- colors [C++], brush
+- brushes, colors
+- brushes, creating custom
+- images [C++], creating custom brushes
+- graphics [C++], custom brushes
+- custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: de6308ad396a9f9e355ecefdecca444c551d51f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677087"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320552"
 ---
-# <a name="using-a-drawing-tool-image-editor-for-icons"></a>Używanie narzędzia do rysowania (Edytor obrazów dla ikon)
+# <a name="using-a-drawing-tool"></a>Używanie narzędzia do rysowania
 
 **Obraz** odręcznej do rysowania i wymazywanie wszystkich działają tak samo jak narzędzia przez Edytor: Wybierz narzędzie i, jeśli to konieczne, [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje rozmiaru i kształtu. Następnie przesuń wskaźnik do obrazu i kliknięciu lub przeciągnij, aby narysować i wymazać.
 
@@ -26,9 +34,9 @@ Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **Aerograf** narzęd
 
 Możesz wybrać narzędzi do rysowania za pomocą albo **edytora obrazów** paska narzędzi lub **obraz** menu.
 
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania na pasku narzędzi edytora obrazów
+## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania na pasku narzędzi edytora obrazów
 
-1. Kliknij przycisk **edytora obrazów** paska narzędzi.
+1. Wybierz przycisk na **edytora obrazów** paska narzędzi.
 
    - **Gumka** narzędzie farby obraz z bieżącym kolorem tła po naciśnięciu lewego przycisku myszy.
 
@@ -41,21 +49,94 @@ Możesz wybrać narzędzi do rysowania za pomocą albo **edytora obrazów** pask
         > [!TIP]
         >  Etykietki narzędzi są wyświetlane po umieszczeniu kursora przyciski na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md). Te wskazówki pomoże zidentyfikować określone przyciski zostały tu wymienione.
 
-2. Jeśli to konieczne, wybierz kolory i pędzla:
+1. Jeśli to konieczne, wybierz kolory i pędzla:
 
-   - W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), kliknij przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.
+   - W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), wybierz przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.
 
-   - W [Selektor opcji](../windows/toolbar-image-editor-for-icons.md), kliknij kształt reprezentujący pędzla, którego chcesz użyć.
+   - W [Selektor opcji](../windows/toolbar-image-editor-for-icons.md), wybierz kształt reprezentujący pędzla, którego chcesz użyć.
 
-3. Wskaż miejsce na obrazu, w którym chcesz uruchomić, rysowania lub malowania. Kursor zmienia kształt zgodnie z wybranego narzędzia.
+1. Wskaż miejsce na obrazu, w którym chcesz uruchomić, rysowania lub malowania. Kursor zmienia kształt zgodnie z wybranego narzędzia.
 
-4. Naciśnij klawisze lewy przycisk myszy (kolor pierwszego planu) lub prawym przyciskiem myszy (na kolor tła) i przytrzymaj go podczas rysowania.
+1. Naciśnij klawisze lewy przycisk myszy (kolor pierwszego planu) lub prawym przyciskiem myszy (na kolor tła) i przytrzymaj go podczas rysowania.
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Aby wybrać i użyj narzędzia do rysowania menu obrazu
 
-1. Kliknij przycisk **obraz** menu, a następnie wybierz **narzędzia** polecenia.
+1. Wybierz **obraz** menu, a następnie wybierz **narzędzia** polecenia.
 
-2. Kaskadowe podmenu wybierz narzędzie którego chcesz użyć.
+1. Kaskadowe podmenu wybierz narzędzie którego chcesz użyć.
+
+## <a name="drawing-lines-or-closed-figures"></a>Linie rysunku lub zamkniętych figur
+
+Edytor obrazów narzędzi do rysowania linii i zamkniętych figur wszystkie działają tak samo jak: Umieść punkt wstawiania w jednym punkcie i przeciągnij pola do innego. W przypadku wierszy te punkty są punkty końcowe. W przypadku zamkniętych figur te punkty są przeciwny narożników prostokąta blokujących na rysunku.
+
+Wiersze są rysowane w szerokości ustalany na podstawie bieżącego zaznaczenia pędzla, a ramce rysunki są rysowane w szerokości ustalany na podstawie bieżącego zaznaczenia szerokość. Linie i wszystkie dane, zarówno w ramce, jak i wypełnione, są rysowane w bieżącym kolorem po naciśnięciu lewego przycisku myszy, lub w bieżącym kolorem tła po naciśnięciu prawego przycisku myszy.
+
+### <a name="to-draw-a-line"></a>Aby narysować linię
+
+1. Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) (lub **obraz** menu **narzędzia** polecenie), wybierz **wiersza** narzędzia.
+
+1. Jeśli to konieczne, wybierz kolory i pędzla:
+
+   - W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), wybierz przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.
+
+   - W [Selektor opcji](../windows/toolbar-image-editor-for-icons.md), wybierz kształt reprezentujący pędzla, którego chcesz użyć.
+
+1. Umieść wskaźnik myszy na punkt początkowy dla wiersza.
+
+1. Przeciągnij do endpoint dla wiersza.
+
+### <a name="to-draw-a-closed-figure"></a>Aby narysować figurę zamkniętą
+
+1. Na **edytora obrazów** narzędzi (lub z **obrazu** menu **narzędzia** polecenie), wybierz opcję **rysunek rysunek zamknięte** narzędzia.
+
+   **Rysunek rysunek zamknięte** narzędzia Tworzenie figur zgodnie z informacjami zawartymi w ich odpowiednich przycisków.
+
+1. Jeśli to konieczne, zaznacz kolorów i szerokości linii.
+
+1. Przesuń wskaźnik do jednego rogu prostokątny obszar, w którym chcesz rysować na rysunku.
+
+1. Przeciągnij kursor po przekątnej przeciwległego rogu.
+
+## <a name="create-a-custom-brush"></a>Tworzenie pędzla niestandardowego
+
+Niestandardowy obiekt brush jest prostokątny fragment obrazu, które przejmą i używać jak jeden z **obraz** edytora pędzle gotowych do użycia. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na niestandardowy obiekt brush także.
+
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Aby utworzyć niestandardowy obiekt brush z części obrazu
+
+1. [Wybierz część obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , którą chcesz używać dla pędzla.
+
+1. Przytrzymanie **Shift** klucza w dół, wybierz w zaznaczeniu i przeciągnij go na obrazie.
+
+   \- lub —
+
+1. Z **obraz** menu, wybierz **Użyj zaznaczenia jako pędzla**.
+
+   Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone.
+
+   > [!NOTE]
+   > Wybieranie **Użyj zaznaczenia jako pędzla** bez polega na wybraniu część obrazu użyje całego obrazu jako pędzla. Wynik za pomocą niestandardowy obiekt brush również będzie zależeć od tego, czy wybrano [tła nieprzezroczyste lub przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+
+Niestandardowy obiekt brush pikseli, które odpowiadają bieżącym kolorem tła są zwykle przezroczyste: nie malowanie istniejącego obrazu. Można zmienić to zachowanie, tak aby pikseli kolor tła malować przez istniejący obraz.
+
+Niestandardowy obiekt brush sygnaturę lub wzornika umożliwia tworzenie różnych efekty specjalne.
+
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Do rysowania kształtów niestandardowy obiekt brush kolor tła
+
+1. [Wybierz tło nieprzezroczyste lub przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+
+1. [Ustaw kolor tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) kolor, w której chcemy narysować.
+
+1. Ustaw niestandardowy obiekt brush, w której chcemy narysować.
+
+1. Wybierz prawego przycisku myszy. Wszelkie nieprzezroczyste regionów niestandardowy obiekt brush są rysowane w kolor tła.
+
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Dwukrotnie lub połowę rozmiar niestandardowy obiekt brush
+
+Naciśnij klawisz **znak Plus** (**+**) klucz dwukrotnie rozmiar pędzla lub **znak Minus** (**-**) kluczem o połowę go .
+
+### <a name="to-cancel-the-custom-brush"></a>Aby anulować niestandardowy obiekt brush
+
+Naciśnij klawisz **Esc** lub innego narzędzia do rysowania.
 
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -63,7 +144,7 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
 
 Brak
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>

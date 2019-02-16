@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558785"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320695"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
@@ -99,7 +99,7 @@ Wskazówki należy użyć następującej składni.
 
 |Składnia|Znaczenie|
 |------------|-------------|
-|`#define` *Wskazówka dotycząca nazwy* *ciąg zastępujący*<br /><br /> `#define` *Wskazówka dotycząca nazwy* `(` *parametru*,... `)` *ciąg zastępujący*|Dyrektywy preprocesora, definiuje wskazówkę dotyczącą nowych lub ponownie wskazówką istniejących. Po dyrektywie preprocesora zamienia każde wystąpienie *nazw wskazówka* w kodzie źródłowym za pomocą *ciąg zastępujący*.<br /><br /> Druga forma składni definiuje funkcyjne wskazówkę. W przypadku wskazówką funkcyjne w kodzie źródłowym, preprocesor najpierw zamienia każde wystąpienie *parametru* w *ciąg zastępujący* za pomocą odnośnego argumentu w kodzie źródłowym, a następnie zastępuje *nazw wskazówka* z *ciąg zastępujący*.|
+|`#define` *Wskazówka dotycząca nazwy* *ciąg zastępujący*<br /><br /> `#define` *Wskazówka dotycząca nazwy* `(` *parametru*,... `)` *ciąg zastępujący*|Dyrektywy preprocesora definiuje wskazówkę dotyczącą nowych lub ponownie wskazówką istniejących. Po dyrektywie preprocesora zamienia każde wystąpienie *nazw wskazówka* w kodzie źródłowym za pomocą *ciąg zastępujący*.<br /><br /> Druga forma składni definiuje funkcyjne wskazówkę. W przypadku wskazówką funkcyjne w kodzie źródłowym, preprocesor najpierw zamienia każde wystąpienie *parametru* w *ciąg zastępujący* za pomocą odnośnego argumentu w kodzie źródłowym, a następnie zastępuje *nazw wskazówka* z *ciąg zastępujący*.|
 |`@<`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza początek zbiór elementów mapy.|
 |`@=`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza element pośredni mapy. Mapy może mieć wielu elementów mapy.|
 |`@>`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza koniec zbiór elementów mapy.|
@@ -123,7 +123,7 @@ W poniższym kodzie źródłowym, wpisz parametr `FormatWindowClassName()` funkc
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```
 
-**Strategia:** Null definicji
+**Strategia:** Definicja wartości null
 
 Strategia w tej sytuacji jest przetwarzanie adnotacji SAL tak, jakby nie istniał. Aby to zrobić, należy określić wskazówki, w której ciąg zastępujący ma wartość null. W związku z tym, podczas analizowania system ignoruje adnotacje i **Widok klas** przeglądarki te nie są wyświetlane. (Visual C++ w tym pliku podpowiedzi wbudowanych, która ukrywa adnotacji SAL.)
 
@@ -145,7 +145,7 @@ W poniższym kodzie źródłowym `START_NAMESPACE` — makro ukrywa niesparowane
 #define START_NAMESPACE namespace MyProject {
 ```
 
-**Strategia:** bezpośrednie kopiowania
+**Strategia:** Bezpośrednie kopiowania
 
 Jeżeli semantyka makra są krytyczne dla działania przeglądarki, należy utworzyć wskazówkę, która jest taka sama jak makra. Podczas analizowania systemu jest rozpoznawany jako makra definicję w pliku podpowiedzi.
 
@@ -175,7 +175,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }
 ```
 
-**Strategia:** identyfikowanie elementów mapy
+**Strategia:** Identyfikowanie elementów mapy
 
 Określanie wskazówki dotyczące rozpoczęcia, drugie (jeśli istnieje) i zakończenia elementy mapy. Użyć ciągów zastępczych specjalne mapy, `@<`, `@=`, i `@>`. Aby uzyskać więcej informacji, zobacz `Syntax` w tym temacie.
 
@@ -204,7 +204,7 @@ Poniższy kod źródłowy zawiera `START_NAMESPACE` makra, która określa pocz�
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
 ```
 
-**Strategia:** bezpośrednie kopiowania
+**Strategia:** Bezpośrednie kopiowania
 
 Wskazówki dotyczące tworzenia `START_NAMESPACE` i `BEGIN_CATEGORY_MAP` makra, a następnie Utwórz podpowiedź dotyczącą `NSandMAP` makra, która jest taka sama, jak pokazano wcześniej kodu źródłowego. Alternatywnie Jeśli złożone — makro składa się tylko z makra uciążliwe i biały znak, można zdefiniować wskazówkę, którego ciąg zastępujący jest definicją o wartości null.
 
@@ -226,7 +226,7 @@ Niektóre makra mogą być interpretowane przez system analizy, ale kod źródł
 #define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
 ```
 
-**Strategia:** uproszczenia
+**Strategia:** Uproszczenie
 
 Utworzyć wskazówkę wyświetlającą prostsze definicji makra.
 

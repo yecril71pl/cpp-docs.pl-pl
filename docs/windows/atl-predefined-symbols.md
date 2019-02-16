@@ -1,16 +1,16 @@
 ---
 title: Wstępnie zdefiniowane symbole ATL
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654405"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320461"
 ---
 # <a name="atl-predefined-symbols"></a>Wstępnie zdefiniowane symbole ATL
 
@@ -18,16 +18,16 @@ Te symbole są zdefiniowane w plikach nagłówkowych ATL, ale obsługują standa
 
 |||
 |-|-|
-|IDABORT|Sterowania: Przycisk Przerwij pola okna dialogowego|
+|IDABORT|Kontrolki: Przycisk Przerwij pola okna dialogowego|
 |IDC_STATIC|Kontrolki: Formant statyczny|
-|IDCANCEL|Sterowania: Przycisk Anuluj okno dialogowe|
-|IDIGNORE|Sterowania: Przycisk Ignoruj pola dialogowe|
-|IDNO|Sterowania: Okno dialogowe ma przycisku|
-|IDOK|Sterowania: Przycisk pola OK okno dialogowe|
-|IDR_ACCELERATOR1|Zasobów: Tabela akceleratora|
-|IDRETRY|Sterowania: Przycisk Ponów okno dialogowe|
-|IDS_PROJNAME|Ciąg: Bieżąca nazwa aplikacji|
-|IDYES|Kontrola: Okno dialogowe tak przycisku.|
+|IDCANCEL|Kontrolki: Przycisk Anuluj okno dialogowe|
+|IDIGNORE|Kontrolki: Przycisk Ignoruj okno dialogowe|
+|IDNO|Kontrolki: Okno dialogowe ma przycisku|
+|IDOK|Kontrolki: Przycisk pola OK w oknie dialogowym|
+|IDR_ACCELERATOR1|Zasób: Tabela akceleratora|
+|IDRETRY|Kontrolki: Przycisk Ponów okno dialogowe|
+|IDS_PROJNAME|String: Bieżąca nazwa aplikacji|
+|IDYES|Kontrolki: Przycisk Tak okno dialogowe|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -36,4 +36,5 @@ ATL
 ## <a name="see-also"></a>Zobacz też
 
 [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)<br/>
-[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+[Wstępnie zdefiniowane symbole MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Wstępnie zdefiniowane symbole Win32](../windows/win32-predefined-symbols.md)<br/>

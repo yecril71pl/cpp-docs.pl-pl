@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905774"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320526"
 ---
 # <a name="creating-menus-c"></a>Tworzenie menu (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905774"
 
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Aby utworzyć menu standardowe
+## <a name="create-a-standard-menu"></a>Utwórz standardowe menu
 
 1. Z **widoku** menu, wybierz opcję **widok zasobów** , a następnie kliknij prawym przyciskiem myszy **Menu** nagłówka, a następnie wybierz **Dodaj zasób**. Wybierz **Menu**.
 
@@ -59,7 +69,7 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
    > [!NOTE]
    > Aby utworzyć pojedynczą pozycją menu na pasku menu, ustaw **okno podręczne** właściwości **False**.
 
-## <a name="to-create-a-submenu"></a>Aby utworzyć podmenu
+## <a name="create-a-submenu"></a>Tworzenie podmenu
 
 1. Wybierz polecenie menu, dla której chcesz utworzyć podmenu.
 
@@ -75,7 +85,7 @@ Wybierz istniejące nazwy menu i naciśnij klawisz **Wstaw** klucza. **Nowy elem
 
 Kliknij prawym przyciskiem myszy na pasku menu, a następnie wybierz **Wstaw nowy** z menu skrótów.
 
-## <a name="to-add-commands-to-a-menu"></a>Aby dodać polecenia do menu
+## <a name="add-commands-to-a-menu"></a>Dodawanie poleceń do menu
 
 1. Tworzenie menu.
 
@@ -104,7 +114,7 @@ Kliknij prawym przyciskiem myszy na pasku menu, a następnie wybierz **Wstaw now
 
    Nowe pole elementu jest zaznaczone, aby można było utworzyć menu dodatkowych poleceń.
 
-## <a name="to-create-pop-up-menus"></a>Aby utworzyć menu wyskakujących
+## <a name="create-pop-up-menus"></a>Tworzenie menu wyskakujących
 
 [Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowo lokalizacji wskaźnika. Używanie wyskakujących menu w aplikacji wymaga tworzenia samo menu, a następnie nawiąż połączenie z kodu aplikacji.
 
@@ -150,6 +160,52 @@ Kliknij prawym przyciskiem myszy menu, a następnie wybierz **Pokaż jako menu p
 
    > [!NOTE]
    > Aby zmienić widok paska menu, kliknij przycisk **Pokaż jako menu podręczne** ponownie (który spowoduje usunięcie znacznika wyboru i zwraca widok pasek menu).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Edytuj kilku menu lub poleceń menu
+
+### <a name="to-select-multiple-menu-commands"></a>Aby wybrać wiele poleceń menu
+
+Możesz wybrać wiele nazw menu lub poleceń menu przeprowadzić operacje zbiorcze, takie jak usuwanie lub zmiana właściwości.
+
+Przytrzymując naciśnięty **Ctrl** klucza, wybierz menu lub poleceń z podmenu ma.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Przenoszenie i kopiowanie menu i poleceń menu
+
+Można przenosić i kopiować, menu i poleceń menu przy użyciu metody przeciągania i upuszczania lub za pomocą poleceń w menu skrótów (kliknij prawym przyciskiem myszy menu).
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Do przeniesienia lub skopiowania menu lub poleceń menu przy użyciu metody przeciągania i upuszczania
+
+1. Przeciągnij lub skopiuj element, który chcesz przenieść do:
+
+   - Nowa lokalizacja bieżącego menu.
+
+   - Inne menu. (Można przejść do innych menu, przeciągając wskaźnik myszy nad nimi.)
+
+1. Pomijać polecenia menu, gdy prowadnicę wstawiania pokazuje pozycji, które chcesz.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Do przeniesienia lub skopiowania menu lub poleceń za pomocą polecenia menu skrótów
+
+1. Kliknij prawym przyciskiem myszy jednego lub kilku menu lub poleceń menu.
+
+1. Z menu skrótów wybierz polecenie **Wytnij** (Aby przenieść) lub **kopiowania**.
+
+1. Jeśli przenosisz elementy do menu inny zasób lub pliku skryptu zasobu, [otwórz go w innym oknie](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Wybierz pozycję menu lub polecenia menu, który chcesz przenieść lub skopiować do.
+
+1. Z menu skrótów wybierz polecenie **Wklej**. Element przenoszone lub kopiowane jest umieszczany przed elementem, którą wybierzesz.
+
+   > [!NOTE]
+   > Można również przeciągnąć, skopiuj i Wklej do innych menu w innych oknach menu.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Aby usunąć menu lub poleceń menu
+
+1. Kliknij prawym przyciskiem myszy nazwę menu lub poleceń.
+
+1. Wybierz **Usuń** z menu skrótów.
+
+   > [!NOTE]
+   > Podobnie można użyć menu skrótów do wykonywania innych akcji, takich jak kopiowanie, wycinanie, wklejanie, Wstaw nowy, Wstaw Separator edycji identyfikatorów Pokaż jako okno podręczne, sprawdź mnemonik itp.
 
 ## <a name="requirements"></a>Wymagania
 

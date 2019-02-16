@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Zarządzanie symboli'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226374"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320591"
 ---
 # <a name="how-to-manage-symbols"></a>Instrukcje: Zarządzanie symboli
 
@@ -49,8 +49,6 @@ Podczas tworzenia nowego zasobu lub obiektu zasobu, środowisko programistyczne 
 Dla symboli skojarzone z pojedynczego zasobu, można również użyć **właściwości** okna, aby zmienić wartość symbol. Możesz użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) zmianę wartości symboli nie jest aktualnie przypisany do zasobu.
 
 Zwykle symbol wszystkie definicje są zapisywane w `Resource.h`. Może jednak może być konieczna zmiana to zawierać nazwę pliku na przykład korzystania z więcej niż jeden plik zasobów w tym samym katalogu.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
 
 > [!NOTE]
 > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
@@ -142,7 +140,7 @@ Aby uzyskać więcej informacji na temat zakresów liczb, zobacz [TN023: Standar
 
 Nowa wartość są przechowywane w pliku nagłówkowym symboli podczas następnego zapisany projekt. Tylko nazwa symbolu pozostaje widoczna w polu Identyfikator; znak równości i wartości nie są wyświetlane po ich są weryfikowane.
 
-## <a name="change-or-delete-unassigned-symbols"></a>Zmienianie lub usuwanie nieprzypisanych symboli
+## <a name="change-or-delete-symbols"></a>Zmień lub Usuń symbole
 
 W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), edytować lub usunąć istniejące symboli, które nie są już przypisane do zasobu lub obiektu.
 
@@ -162,7 +160,7 @@ W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), 
    > [!NOTE]
    > Przed usunięciem nieużywane symboli w pliku zasobów, upewnij się, że nie jest on używany gdzie indziej w programie lub plików zasobów znajdujących się w czasie kompilacji.
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>Obejmują udostępnionych (tylko do odczytu) lub obliczonych symboli
+## <a name="include-symbols"></a>Dołączać symbole
 
 Środowisko projektowe odczytuje plik zasobów utworzony przez inną aplikację po raz pierwszy oznacza wszystkie pliki nagłówkowe dołączone jako tylko do odczytu. Chociaż można użyć [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md) można dodać dodatkowe symboli tylko do odczytu plików nagłówkowych.
 
@@ -215,8 +213,8 @@ Umożliwia także pliki symboli uwzględnione Jeśli masz istniejące zasoby dzi
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
+[Tworzenie symboli](../windows/creating-new-symbols.md)<br/>
 [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)<br/>
-[Wyświetlanie symboli zasobów](../windows/viewing-resource-symbols.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: Klawisze skrótów (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232126"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320513"
 ---
 # <a name="accelerator-keys-c"></a>Klawisze skrótów (C++)
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
 
 ## <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
 
@@ -79,7 +77,7 @@ Istnieje kilka wstępnie zdefiniowane klawisze skrótów, które mogą być czę
 |VK_XBUTTON1|W systemie Windows: X1 myszy przycisk|
 |VK_XBUTTON2|W systemie Windows: X2 myszy przycisk|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Kojarzenie klawisza skrótu z elementem menu
+## <a name="accelerator-key-association"></a>Skojarzenie klucza klawiszy skrótów
 
 Wiele razy potrzebujesz element menu i kombinacja klawiszy, aby Wydaj to samo polecenie program. Możesz to zrobić, przypisując tego samego identyfikatora zasobu (identyfikator), element menu oraz wpis w tabeli akceleratora aplikacji. Następnie Edytuj podpis elementu menu, aby wyświetlić nazwę akceleratora. Aby uzyskać więcej informacji na temat elementów menu oraz klawiszy skrótów, zobacz [Kojarzenie elementów Menu z klawiszem skrótu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Zobacz też
 
 [Edytor klawiszy skrótów](../windows/accelerator-editor.md)<br/>
-[Edytory zasobów](../windows/resource-editors.md)

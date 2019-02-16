@@ -1,6 +1,6 @@
 ---
 title: Edytor plików binarnych (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
 - vc.editors.binary
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 06c4a224b745f5aba8c9105d32489f8ca3109e1c
-ms.sourcegitcommit: b488462a6e035131121e6f32d8f3b108cc798b5e
+ms.openlocfilehash: 2a3ff3d89c809f57ea3ddbd70d5664fc8d13cec4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293601"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320825"
 ---
 # <a name="binary-editor-c"></a>Edytor plików binarnych (C++)
 
@@ -35,33 +35,33 @@ ms.locfileid: "55293601"
 
 W edytorze binarnym służy do edytowania dowolnego zasobu w poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Należy używać **binarne** edytora tylko wtedy, gdy należy wyświetlić lub wprowadzić drobne zmiany zasoby niestandardowe lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio.
 
-Aby otworzyć **Edytor plików binarnych**, należy najpierw wybrać **pliku** > **nowy** > **pliku** wybierz z menu głównego plik który chcesz edytować, a następnie kliknij strzałkę listy obok **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
+Aby otworzyć **Edytor plików binarnych**, należy najpierw wybrać **pliku** > **nowy** > **pliku** wybierz z menu głównego plik który chcesz edytować, a następnie wybierz strzałkę obok listy pola **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
 
 > [!CAUTION]
 > Edytowanie zasobów, takich jak okna dialogowe, obrazów lub menu w edytorze binarnym jest niebezpieczne. Niepoprawne edytowanie może spowodować uszkodzenie zasobów, dzięki czemu można odczytać w edytorze natywnych.
 
+![Edytor plików binarnych](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+Dane binarne dla okna dialogowego wyświetlany w edytorze pliku binarnego
+
+Tylko niektóre wartości ASCII są reprezentowane w edytorze binarnym (0x20 za pośrednictwem 0x7E). Rozszerzone znaki są wyświetlane jako okresy w sekcji wartość ASCII w edytorze binarnym (prawy panel). "Drukowalnych" znaki są wartości ASCII 32 za pośrednictwem 126.
+
 > [!TIP]
 > Podczas korzystania z **binarne** edytora w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Dostępne polecenia zależą od tego, co kursor wskazuje. Na przykład jeśli klikniesz podczas wskazujący **binarne** Edytor przy użyciu wybranej wartości szesnastkowych, pokazuje, w menu skrótów **Wytnij**, **kopiowania**, i **wklejania**  poleceń.
 
-## <a name="binary-editor-how-to"></a>Edytor plików binarnych porad
+## <a name="how-to"></a>Instrukcje
 
-Za pomocą **binarne** edytora, zobacz następujące akcje:
+**Binarne** Edytor pozwala:
 
-### <a name="to-open-a-resource-for-binary-editing"></a>Aby otworzyć zasób do edycji plików binarnych
-
-#### <a name="to-open-a-windows-desktop-resource"></a>Aby otworzyć zasób pulpitu Windows
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Aby otworzyć zasób pulpitu Windows do edycji plików binarnych
 
 1. W [widok zasobów](../windows/resource-view-window.md), wybierz plik określonego zasobu, który chcesz edytować.
-
-   > [!NOTE]
-   > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
 1. Kliknij prawym przyciskiem myszy zasób, a następnie kliknij przycisk **otwartej obsługi danych binarnych** z menu skrótów.
 
    > [!NOTE]
    > Jeśli używasz [widok zasobów](../windows/resource-view-window.md) okna, aby otworzyć zasobu w formacie, że Visual Studio nie może rozpoznać (na przykład RCDATA lub zasobów niestandardowych), zasób zostanie automatycznie otwarty w **binarne** edytora.
 
-#### <a name="to-open-a-managed-resource"></a>Aby otworzyć zasób zarządzany
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>Aby otworzyć zarządzanych zasobów do edycji plików binarnych
 
 1. W **Eksploratora rozwiązań**, wybierz plik określonego zasobu, który chcesz edytować.
 
@@ -72,15 +72,10 @@ Za pomocą **binarne** edytora, zobacz następujące akcje:
    > [!NOTE]
    > Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-![Edytor plików binarnych](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-Dane binarne dla okna dialogowego wyświetlany w edytorze pliku binarnego
-
-Tylko niektóre wartości ASCII są reprezentowane w edytorze binarnym (0x20 za pośrednictwem 0x7E). Rozszerzone znaki są wyświetlane jako okresy w sekcji wartość ASCII w edytorze binarnym (prawy panel). "Drukowalnych" znaki są wartości ASCII 32 za pośrednictwem 126.
-
 > [!NOTE]
 > Jeśli chcesz używać **binarne** edytora w zasobie już poddane edycji w innym oknie edytora najpierw zamknąć pozostałe okna edytora.
 
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>Edytowanie zasobów w edytorze binarnym
+### <a name="to-edit-a-resource"></a>Aby edytować zasobu
 
 1. Wybierz bajtów, którą chcesz edytować.
 
@@ -101,9 +96,7 @@ Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład, aby wyszuk
 
 1. W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub typu danych, którą chcesz znaleźć.
 
-1. Wybierz dowolny z **znaleźć** opcje.
-
-1. Wybierz **Znajdź następny**.
+1. Wybierz dowolny z **znaleźć** opcje, a następnie wybierz **Znajdź następny**.
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Aby utworzyć nowy zasób niestandardowy lub danych
 
@@ -129,12 +122,6 @@ Innym sposobem tworzenia niestandardowego zasobu jest do zaimportowania pliku ze
 
 > [!NOTE]
 > Tworzenie nowych zasobów niestandardowych lub danych wymaga systemu Win32.
-
-## <a name="managed-resources"></a>Zarządzane zasoby
-
-Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i **binarne** edytora, aby pracować z plikami zasobów w zarządzanych projektów. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Wymagania
 

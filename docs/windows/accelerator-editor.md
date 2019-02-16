@@ -1,6 +1,6 @@
 ---
 title: Edytor klawiszy skrótów (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226348"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320643"
 ---
 # <a name="accelerator-editor-c"></a>Edytor klawiszy skrótów (C++)
 
@@ -55,8 +55,6 @@ Aby uzyskać listę predefiniowanych klawiszy skrótów, zobacz [wstępnie zdefi
 
    > [!NOTE]
    > Windows nie pozwalają na tworzenie tabel akceleratora puste. Jeśli utworzenia tabeli akceleratora żadnych wpisów, zostanie usunięta automatycznie po zapisaniu tabeli.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="accelerator-properties"></a>Właściwości klawiszy skrótów
 
@@ -123,9 +121,6 @@ Poniżej znajdują się wpisy prawne **klucz** właściwości w tabeli akcelerat
 W projekcie w języku C++ możesz edytować bezpośrednio za pomocą edycji w miejscu, w tabeli akceleratora **akceleratora** edytora.
 
 Poniższe procedury dotyczą używanie stron właściwości standardowych, jednak zarówno edycji w miejscu, jak i metody strony właściwości mają ten sam wynik. Zmiany wprowadzone za pomocą stron właściwości lub edycji w miejscu są natychmiast odzwierciedlane w tabeli klawiszy skrótu.
-
-> [!NOTE]
-> Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Edytowanie w tabeli akceleratora
 
@@ -209,9 +204,7 @@ Można następnie przejrzyj listę i znajdź pozycję.
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Edytory zasobów](../windows/resource-editors.md)
-
-[Edytowanie w tabeli klawiszy skrótu](../windows/editing-in-an-accelerator-table.md)<br/>
+[Edytory zasobów](../windows/resource-editors.md)<br/>
 [Wstępnie zdefiniowane klawisze skrótów](../windows/predefined-accelerator-keys.md)<br/>
