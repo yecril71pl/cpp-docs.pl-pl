@@ -1,6 +1,6 @@
 ---
-title: Używanie narzędzia do rysowania
-ms.date: 11/04/2016
+title: 'Instrukcje: Użyj narzędzia do rysowania'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320552"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336556"
 ---
-# <a name="using-a-drawing-tool"></a>Używanie narzędzia do rysowania
+# <a name="how-to-use-a-drawing-tool"></a>Instrukcje: Użyj narzędzia do rysowania
 
 **Obraz** odręcznej do rysowania i wymazywanie wszystkich działają tak samo jak narzędzia przez Edytor: Wybierz narzędzie i, jeśli to konieczne, [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje rozmiaru i kształtu. Następnie przesuń wskaźnik do obrazu i kliknięciu lub przeciągnij, aby narysować i wymazać.
+
+## <a name="drawing-tools"></a>Narzędzia do rysowania
 
 Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **Aerograf** narzędzia Selektor opcji Wyświetla opcje tego narzędzia.
 
@@ -34,7 +36,7 @@ Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **Aerograf** narzęd
 
 Możesz wybrać narzędzi do rysowania za pomocą albo **edytora obrazów** paska narzędzi lub **obraz** menu.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania na pasku narzędzi edytora obrazów
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania na pasku narzędzi edytora obrazów
 
 1. Wybierz przycisk na **edytora obrazów** paska narzędzi.
 
@@ -65,7 +67,7 @@ Możesz wybrać narzędzi do rysowania za pomocą albo **edytora obrazów** pask
 
 1. Kaskadowe podmenu wybierz narzędzie którego chcesz użyć.
 
-## <a name="drawing-lines-or-closed-figures"></a>Linie rysunku lub zamkniętych figur
+## <a name="lines-or-closed-figures"></a>Linie lub zamkniętych figur
 
 Edytor obrazów narzędzi do rysowania linii i zamkniętych figur wszystkie działają tak samo jak: Umieść punkt wstawiania w jednym punkcie i przeciągnij pola do innego. W przypadku wierszy te punkty są punkty końcowe. W przypadku zamkniętych figur te punkty są przeciwny narożników prostokąta blokujących na rysunku.
 
@@ -97,7 +99,7 @@ Wiersze są rysowane w szerokości ustalany na podstawie bieżącego zaznaczenia
 
 1. Przeciągnij kursor po przekątnej przeciwległego rogu.
 
-## <a name="create-a-custom-brush"></a>Tworzenie pędzla niestandardowego
+## <a name="custom-brushes"></a>Pędzle niestandardowe
 
 Niestandardowy obiekt brush jest prostokątny fragment obrazu, które przejmą i używać jak jeden z **obraz** edytora pędzle gotowych do użycia. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na niestandardowy obiekt brush także.
 
@@ -105,11 +107,7 @@ Niestandardowy obiekt brush jest prostokątny fragment obrazu, które przejmą i
 
 1. [Wybierz część obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , którą chcesz używać dla pędzla.
 
-1. Przytrzymanie **Shift** klucza w dół, wybierz w zaznaczeniu i przeciągnij go na obrazie.
-
-   \- lub —
-
-1. Z **obraz** menu, wybierz **Użyj zaznaczenia jako pędzla**.
+1. Przytrzymaj **Shift** klucza w dół, wybierz w zaznaczeniu i przeciągnij go na obrazie. Lub z **obraz** menu, wybierz **Użyj zaznaczenia jako pędzla**.
 
    Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone.
 
@@ -138,13 +136,11 @@ Naciśnij klawisz **znak Plus** (**+**) klucz dwukrotnie rozmiar pędzla lub **z
 
 Naciśnij klawisz **Esc** lub innego narzędzia do rysowania.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Wymagania
 
 Brak
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>

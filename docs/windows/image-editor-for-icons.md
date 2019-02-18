@@ -1,6 +1,6 @@
 ---
-title: Edytor obrazów dla ikon
-ms.date: 10/17/2018
+title: Edytor obrazów dla ikon (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320708"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336582"
 ---
-# <a name="image-editor-for-icons"></a>Edytor obrazów dla ikon
+# <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
 Po kliknięciu pliku obrazu (na przykład .ico, bmp, PNG) w Eksploratorze rozwiązań obraz, który zostanie otwarty w edytorze obrazu w taki sam sposób, który otwartych plików kodu w edytorze kodu. Gdy karta edytora obrazów jest aktywna, zostanie wyświetlony pasków narzędzi za pomocą wielu narzędzi do tworzenia i edycji obrazów. Wraz z map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń w **obraz** menu i narzędzi na **edytora obrazów** paska narzędzi.
 
@@ -232,13 +232,11 @@ Możesz pobrać bezpłatnie **Visual Studio Image Library** zawierającą wiele 
 
 Możesz użyć **obraz** edytora i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Wymagania
 
 Brak
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Ikony](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

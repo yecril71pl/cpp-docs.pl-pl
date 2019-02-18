@@ -1,6 +1,6 @@
 ---
 title: Edytor okien dialogowych (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264897"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336699"
 ---
 # <a name="dialog-editor-c"></a>Edytor okien dialogowych (C++)
 
@@ -38,28 +38,18 @@ Jednym z pierwszych kroków w tworzeniu nowego okna dialogowego (lub szablonu ok
 
 Okno dialogowe można przechowywać jako szablon w celu ponownego użycia. Można także łatwo przełączyć się między projektowaniem okna dialogowego a edycją kodu, który go implementuje.
 
-Jest również możliwe edytowanie właściwości jednego lub wielu formantów w edytorze okien dialogowych. Możesz zmienić kolejność tabulacji, czyli kolejność, w której formanty uzyskują Skoncentruj się kiedy **kartę** naciśnięcia klawisza lub zdefiniować klawisza dostępu (kombinację klawiszy), który umożliwia użytkownikom na wybór formantu przy użyciu klawiatury. Aby uzyskać listę predefiniowanych klawiszy dostępu, zobacz [klucze akceleratora dla edytora okien dialogowych](../windows/accelerator-keys-for-the-dialog-editor.md).
+Jest również możliwe edytowanie właściwości jednego lub wielu formantów w edytorze okien dialogowych. Możesz zmienić kolejność tabulacji, czyli kolejność, w której formanty uzyskują Skoncentruj się kiedy **kartę** naciśnięcia klawisza lub zdefiniować klawisza dostępu (kombinację klawiszy), który umożliwia użytkownikom na wybór formantu przy użyciu klawiatury.
 
 **Okna dialogowego** Edytor umożliwia także używanie niestandardowych formantów, w tym formantów ActiveX. Ponadto można edytować [widok formularza](../mfc/reference/cformview-class.md), [widoków rekordów](../data/record-views-mfc-data-access.md), lub [paski dialogowe](../mfc/dialog-bars.md).
 
 Począwszy od programu Visual Studio 2015, służy Edytor okien dialogowych do definiowania dynamicznych układy, które określają, jak formanty, przenoszenie i zmienianie rozmiaru, gdy użytkownik zmienia rozmiar okna dialogowego. Aby uzyskać więcej informacji, zobacz [układ dynamiczny](../mfc/dynamic-layout.md).
 
-- [Tworzenie nowego okna dialogowego](../windows/creating-a-new-dialog-box.md)
-
-- [Tworzenie okna dialogowego, którego nie można zamknąć w czasie wykonywania](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [Instrukcje: Tworzenie okna dialogowego](../windows/creating-a-new-dialog-box.md)
 
 - [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
 
-- [Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Testowanie okna dialogowego](../windows/testing-a-dialog-box.md)
-
-- [Rozwiązywanie problemów z Edytorem okien dialogowych](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Podczas korzystania z **okna dialogowego** edytora w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+   > Podczas korzystania z **okna dialogowego** edytora, w wielu przypadkach można wybrać przycisk prawym przyciskiem myszy, aby wyświetlić menu skrótów z najczęściej używanymi poleceniami.
 
 ## <a name="dialog-editor-toolbar"></a>Pasek narzędzi edytora okien dialogowych
 
@@ -132,7 +122,7 @@ Poniżej przedstawiono domyślną klawiszy skrótów dla poleceń edytora okna d
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>

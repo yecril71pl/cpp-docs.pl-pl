@@ -1,6 +1,6 @@
 ---
-title: Dodawanie, edytowanie lub usuwanie kontrolek
-ms.date: 11/04/2016
+title: 'Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.controls.activex
@@ -43,44 +43,39 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 87acb2c8356508358f68c1ae4c8d5deaa94ecd9a
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264871"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336569"
 ---
-# <a name="adding-editing-or-deleting-controls"></a>Dodawanie, edytowanie lub usuwanie kontrolek
+# <a name="how-to-add-edit-or-delete-controls"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek
 
 Za pomocą **okna dialogowego** edytora, możesz dodać, zmienić rozmiar, edytowanie i usuwanie kontrolki w oknach dialogowych. Można również edytować właściwości kontrolki, takie jak jego identyfikator lub czy jest początkowo widoczne w czasie wykonywania.
 
 **Edytor okien dialogowych** karta jest wyświetlana w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy **okna dialogowego** edytora. Można również dostosować **przybornika** okna do użytku łatwiejsze. Aby uzyskać więcej informacji, zobacz [korzystanie z przybornika](/visualstudio/ide/using-the-toolbox) i [Pokaż lub Ukryj okno przybornika](showing-or-hiding-the-dialog-editor-toolbar.md).
 
-Możesz użyć menu skrótów w **okna dialogowego** edytora, aby szybko dodać zarejestrowany kontrolek ActiveX do okna dialogowego i można dodać formanty ActiveX do **przybornika** Aby uzyskać szybki dostęp.
+> [!TIP]
+> Podczas korzystania z **okna dialogowego** edytora, w wielu przypadkach można wybrać przycisk prawym przyciskiem myszy, aby wyświetlić menu skrótów z najczęściej używanymi poleceniami.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-add-a-control"></a>Aby dodać kontrolkę
+## <a name="add-controls"></a>Dodawanie formantów
 
 Aby dodać formanty do Twojego nowego okna dialogowego, przeciągnij formanty z **przybornika** do okna dialogowego, który tworzysz. Możesz przenosić kontrolki lub zmieniać ich rozmiar i kształt.
 
 Można dodać niestandardowe formanty do okna dialogowego wybierając **kontrolki niestandardowej** ikonę **przybornika** i przeciągając je do swojej okna dialogowego. Aby dodać **Syslink** , Dodaj formant niestandardowy, a następnie zmienić formant **klasy** właściwości **Syslink**. Ta akcja spowoduje, że właściwości, aby odświeżyć i Pokaż **Syslink** właściwości formantu. Aby uzyskać informacji na temat klasy otoki MFC, zobacz [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
-### <a name="to-add-a-control-to-a-dialog-box"></a>Aby dodać formant do okna dialogowego
+### <a name="to-add-a-control"></a>Aby dodać kontrolkę
 
 1. Upewnij się, że z kartami okno dialogowe bieżącego dokumentu w ramce edytora. Jeśli okno dialogowe nie jest bieżącym dokumencie, nie będziesz widzieć **Karta Edytor okien dialogowych** w **przybornika**.
 
-1. Na **Edytor okien dialogowych** karcie **przybornika** okna, wybierz kontrolkę, należy następnie:
+1. Na **Edytor okien dialogowych** karcie **przybornika** okna, wybierz formant, a następnie:
 
-   Wybierz okno dialogowe, w lokalizacji, w którym chcesz umieścić formant. Ten formant jest widoczny, gdy wybrano.
+   - Wybierz okno dialogowe, w lokalizacji, w którym chcesz umieścić formant. Ten formant jest widoczny, gdy wybrano.
 
-   \- lub —
+   - Przeciąganie i upuszczanie formantu z **przybornika** okna do lokalizacji na Twoje okno dialogowe.
 
-   Przeciąganie i upuszczanie formantu z **przybornika** okna do lokalizacji na Twoje okno dialogowe.
-
-   \- lub —
-
-   Kliknij dwukrotnie formant w **przybornika** okna (jest wyświetlana na dialogowym), a następnie zmiana położenia kontrolki do lokalizacji, użytkownik sobie tego życzy.
+   - Kliknij dwukrotnie formant w **przybornika** okna (jest wyświetlana na dialogowym), następnie zmienić położenie formantu do lokalizacji, użytkownik sobie tego życzy.
 
 ### <a name="to-add-multiple-controls"></a>Aby dodać wiele kontrolek
 
@@ -106,40 +101,7 @@ Można dodać niestandardowe formanty do okna dialogowego wybierając **kontrolk
    > [!TIP]
    > Można zmienić rozmiar formantu po upuszczenie na okno dialogowe, przenosząc uchwytów zmiany rozmiaru w obramowania formantu. Aby uzyskać więcej informacji, zobacz [ustalanie rozmiaru pojedynczych formantów](../windows/sizing-individual-controls.md).
 
-### <a name="to-add-an-activex-control"></a>Aby dodać formant ActiveX
-
-Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md) i [kontenery kontrolek ActiveX](../mfc/activex-control-containers.md).
-
-**Wstawianie formantu ActiveX** okno dialogowe umożliwia wstawianie kontrolki ActiveX dialogowym podczas korzystania z [Edytor okien dialogowych](../windows/dialog-editor.md). To okno dialogowe zawiera następujące właściwości:
-
-|Właściwość|Opis|
-|---|---|
-|**ActiveX Control**|Wyświetla listę formantów ActiveX. Wstawianie kontrolki z tego okna dialogowego nie generuje klasę otoki. Klasa otoki, należy użyć [Widok klas](/visualstudio/ide/viewing-the-structure-of-code) ją utworzyć (Aby uzyskać więcej informacji, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)). Jeśli formant ActiveX nie pojawia się w tym oknie dialogowym, spróbuj zainstalować kontroli zgodnie z instrukcjami dostawcy.|
-|**Path**|Wyświetla plik, w którym znajduje się Kontrolka ActiveX.|
-
-#### <a name="to-see-the-activex-controls-available"></a>Aby wyświetlić dostępne kontrolki ActiveX
-
-1. Otwórz okno dialogowe, w edytorze okien dialogowych.
-
-1. Kliknij prawym przyciskiem myszy w dowolnym miejscu w treści okno dialogowe.
-
-1. W menu skrótów wybierz **Wstawianie formantu ActiveX**.
-
-   **Wstawianie formantu ActiveX** pojawi się okno dialogowe, przedstawiający wszystkie formanty ActiveX w Twoim systemie. W dolnej części okna dialogowego jest wyświetlana ścieżka do pliku formantu ActiveX.
-
-#### <a name="to-add-an-activex-control-to-a-dialog-box"></a>Aby dodać formant ActiveX do okna dialogowego
-
-1. W **Wstawianie formantu ActiveX** okna dialogowego wybierz kontrolkę, o których chcesz dodać do swojej okno dialogowe, a następnie wybierz pozycję **OK**.
-
-   Formant ma być wyświetlany w oknie dialogowym, w którym można go edytować lub tworzyć programy obsługi dla niego tak samo, jak dowolną inną kontrolką.
-
-   > [!NOTE]
-   > Można dodać formanty ActiveX do **przybornika** okna, aby mieć łatwy dostęp.
-
-   > [!CAUTION]
-   > Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z firmą oprogramowania.
-
-## <a name="to-edit-a-control"></a>Aby edytować kontrolkę
+## <a name="edit-controls"></a>Formanty edycji
 
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Edytowanie właściwości kontrolki lub kontrolki
 
@@ -158,21 +120,6 @@ Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego
 1. Upewnij się, że kontrolka ma fokus w **okna dialogowego** edytora.
 
 1. Wybierz **Cofnij** z **Edytuj** menu (Jeśli fokus jest na kontrolki, **Cofnij** polecenie jest niedostępne).
-
-### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX
-
-Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposażone w ich własnych właściwości i właściwości. Właściwości formantów ActiveX są wyświetlane w **właściwości** okna. Ponadto żadnych stron właściwości utworzone przez autorów formantu ActiveX są wyświetlane w **strony właściwości** okno dialogowe (Aby wyświetlić **strona właściwości** określonej kontrolki ActiveX, kliknij przycisk **Strona właściwości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window)).
-
-Na stronie właściwości dla formantu ActiveX, w zależności od arkuszy właściwości, które pochodzą z formantu ActiveX w ramach będą wyświetlane różne karty.
-
-> [!NOTE]
-> Poniższa procedura ma zastosowanie przy użyciu strony właściwości, aby edytować kontrolki ActiveX. Możesz również przeglądać i edytować właściwości formantu ActiveX w nowym **właściwości** okna.
-
-1. Wybierz **ActiveX** kontroli.
-
-1. Na **widoku** menu, wybierz opcję **strona właściwości** i Wyświetl właściwości.
-
-1. W razie potrzeby na stronie właściwości, należy wprowadzić zmiany.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Aby zdefiniować zmienną składową formantu pola okna dialogowego (inne niż przycisk)
 
@@ -196,22 +143,17 @@ Aby zdefiniować zmienną składową dla dowolnego formantu pola okna dialogoweg
 
 Można również użyć **zmienne Członkowskie** karcie [Kreator klas MFC](../mfc/reference/mfc-class-wizard.md) do dodawania nowych zmiennych Członkowskich dla określonej klasy i wyświetlanie zmiennych składowych, które zostały już zdefiniowane.
 
-## <a name="to-delete-a-control"></a>Aby usunąć formant
+## <a name="delete-controls"></a>Usuwanie kontrolek
 
-W oknie dialogowym Wybierz formant, a następnie naciśnij klawisz **Usuń** klucza.
+W oknie dialogowym wybierz kontrolkę, naciśnij klawisz **Usuń** klucza lub przejdź do **Edytuj** menu, a następnie wybierz **Usuń**.
 
-   \- lub —
+## <a name="other-issues"></a>Inne problemy
 
-Na **Edytuj** menu, wybierz opcję **Usuń**.
-
-   > [!TIP]
-   > Podczas korzystania z **okna dialogowego** edytora w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.
-
-## <a name="known-issue"></a>Znany problem
+### <a name="troubleshooting"></a>Rozwiązywanie problemów
 
 Po dodaniu wspólne kontrolki lub kontrolki edycji wzbogaconej w oknie dialogowym, nie będzie on widoczny podczas testowania okna dialogowego lub nie będzie wyświetlane okno dialogowe, sam.
 
-Aby zobaczyć przykład problemu:
+Na przykład problem:
 
 1. Utwórz projekt systemu Win32, modyfikując ustawienia aplikacji, dzięki czemu można utworzyć aplikację Windows (nie Aplikacja konsoli).
 
@@ -225,7 +167,7 @@ Aby zobaczyć przykład problemu:
 
 1. Wykonywanie programu.
 
-1. W oknie dialogowym **pomocy** menu, kliknij przycisk **o** polecenia; nie okno dialogowe zostanie wyświetlone okno.
+1. W oknie dialogowym **pomocy** menu, wybierz opcję **o** polecenie i sprawdź, czy nie pojawia się okno dialogowe.
 
 Obecnie **okna dialogowego** edytora nie dodaje automatycznie kodu do projektu podczas przeciągania i upuszczania następujące formanty standardowe lub formanty edycji wzbogaconej na okno dialogowe. Ani Visual Studio zapewnia błąd lub ostrzeżenie w przypadku wystąpienia tego problemu. Aby rozwiązać problem, należy ręcznie dodać kodu dla formantu.
 
@@ -245,6 +187,52 @@ Aby używać kontrolki RichEdit, należy wywołać `LoadLibrary`. Aby uzyskać w
 > Aby używać kontrolki RichEdit z MFC, należy najpierw wywołać [afxinitrichedit2 —](../mfc/reference/application-information-and-management.md#afxinitrichedit2) można załadować kontrolki 2.0 RichEdit (RICHED20. Biblioteka DLL), lub zadzwoń [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) załadować starszej kontrolki RichEdit 1.0 (RICHED32. BIBLIOTEKA DLL).
 >
 > Może używać bieżącego [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy za pomocą starszej kontrolki RichEdit 1.0, ale `CRichEditCtrl` jest przeznaczona wyłącznie do obsługi formantu RichEdit w wersji 2.0. Ponieważ RichEdit 1.0 i RichEdit 2.0 są podobne, większość metod będzie działać. Jednak należy pamiętać, że istnieją pewne różnice między kontrolkami 1.0 i 2.0, więc niektóre metody mogą nie działać prawidłowo lub nie działać w ogóle.
+
+### <a name="activex-controls"></a>Kontrolki ActiveX
+
+Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md) i [kontenery kontrolek ActiveX](../mfc/activex-control-containers.md).
+
+Możesz użyć menu skrótów w **okna dialogowego** edytora, aby szybko dodać zarejestrowany kontrolek ActiveX do okna dialogowego i można dodać formanty ActiveX do **przybornika** Aby uzyskać szybki dostęp.
+
+**Wstawianie formantu ActiveX** okno dialogowe umożliwia wstawianie kontrolki ActiveX dialogowym podczas korzystania z [Edytor okien dialogowych](../windows/dialog-editor.md). To okno dialogowe zawiera następujące właściwości:
+
+|Właściwość|Opis|
+|---|---|
+|**ActiveX Control**|Wyświetla listę formantów ActiveX. Wstawianie kontrolki z tego okna dialogowego nie generuje klasę otoki. Klasa otoki, należy użyć [Widok klas](/visualstudio/ide/viewing-the-structure-of-code) ją utworzyć (Aby uzyskać więcej informacji, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)). Jeśli formant ActiveX nie pojawia się w tym oknie dialogowym, spróbuj zainstalować kontroli zgodnie z instrukcjami dostawcy.|
+|**Path**|Wyświetla plik, w którym znajduje się Kontrolka ActiveX.|
+
+> [!CAUTION]
+> Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z firmą oprogramowania.
+
+#### <a name="to-add-an-activex-control"></a>Aby dodać formant ActiveX
+
+1. Otwórz okno dialogowe **okna dialogowego** edytora.
+
+1. Kliknij prawym przyciskiem myszy w dowolnym miejscu w treści, okno dialogowe i w menu skrótów wybierz **Wstawianie formantu ActiveX**.
+
+   **Wstawianie formantu ActiveX** pojawi się okno dialogowe, przedstawiający wszystkie formanty ActiveX w Twoim systemie. W dolnej części okna dialogowego jest wyświetlana ścieżka do pliku formantu ActiveX.
+
+1. Wybierz kontrolkę chcesz dodać do swojej okno dialogowe, a następnie wybierz **OK**.
+
+   Formant ma być wyświetlany w oknie dialogowym, w którym można go edytować lub tworzyć programy obsługi dla niego tak samo, jak dowolną inną kontrolką.
+
+> [!NOTE]
+> Można dodać formanty ActiveX do **przybornika** okna, aby mieć łatwy dostęp.
+
+#### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX
+
+Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposażone w ich własnych właściwości i właściwości. Właściwości formantów ActiveX są wyświetlane w **właściwości** okna. Ponadto żadnych stron właściwości utworzone przez autorów formantu ActiveX są wyświetlane w **strony właściwości** okno dialogowe (Aby wyświetlić **strona właściwości** określonej kontrolki ActiveX, kliknij przycisk **Strona właściwości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window)).
+
+Na stronie właściwości dla formantu ActiveX, w zależności od arkuszy właściwości, które pochodzą z formantu ActiveX w ramach będą wyświetlane różne karty.
+
+> [!NOTE]
+> Poniższa procedura ma zastosowanie przy użyciu strony właściwości, aby edytować kontrolki ActiveX. Możesz również przeglądać i edytować właściwości formantu ActiveX w nowym **właściwości** okna.
+
+1. Wybierz **ActiveX** kontroli.
+
+1. Na **widoku** menu, wybierz opcję **strona właściwości** i Wyświetl właściwości.
+
+1. W razie potrzeby na stronie właściwości, należy wprowadzić zmiany.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -1,6 +1,6 @@
 ---
 title: Definiowanie wartości i kontrola dostępu
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
 helpviewer_keywords:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264858"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336491"
 ---
 # <a name="defining-control-access-and-values"></a>Definiowanie wartości i kontrola dostępu
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="change-the-tab-order-of-controls"></a>Zmiana kolejności kart kontrolek
 
@@ -48,11 +46,7 @@ Nawet formantów, które nie mają **Tabstop** właściwością **True** muszą 
 
 ### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Aby wyświetlić bieżące kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
 
-Na **Format** menu, wybierz opcję **kolejność tabulacji**.
-
-\- lub —
-
-- Naciśnij klawisz **Ctrl** + **D**.
+Przejdź do **Format** menu, a następnie wybierz **kolejność tabulacji**, lub naciśnij **Ctrl** + **D**.
 
 ### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Aby zmienić kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
 
@@ -60,7 +54,7 @@ Na **Format** menu, wybierz opcję **kolejność tabulacji**.
 
    Liczba w lewym górnym rogu każdej kontrolki zawiera jej miejscu w kolejności tabulacji w bieżącym.
 
-1. Ustawianie kolejności tabulacji, klikając pozycję każdej kontrolki w kolejności ma **kartę** klucza do wykonania.
+1. Ustaw kolejność tabulacji, wybierając każdy formant w kolejności, mają **kartę** klucza do wykonania.
 
 1. Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.
 
@@ -90,9 +84,9 @@ Zazwyczaj użytkownicy klawiatury przeniesienie fokusu wprowadzania z jednego fo
 
 1. Wybierz kontrolkę w oknie dialogowym.
 
-2. W [okno właściwości](/visualstudio/ide/reference/properties-window)w **podpis** właściwości, wpisz nową nazwę dla formantu, wpisując handlowe "i" (`&`) przed litery mają jako klucz dostępu dla tej kontrolki. Na przykład `&Radio1`.
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window)w **podpis** właściwości, wpisz nową nazwę dla formantu, wpisując handlowe "i" (`&`) przed litery mają jako klucz dostępu dla tej kontrolki. Na przykład `&Radio1`.
 
-3. Naciśnij klawisz **wprowadź**.
+1. Naciśnij klawisz **wprowadź**.
 
    Podkreślenie pojawia się w wyświetlana nazwa, aby wskazać klawisz dostępu, na przykład **R**adio1.
 
@@ -100,17 +94,14 @@ Zazwyczaj użytkownicy klawiatury przeniesienie fokusu wprowadzania z jednego fo
 
 1. Tworzenie podpisów dla formantu przy użyciu **tekst statyczny** w kontrolce [przybornika](/visualstudio/ide/reference/toolbox).
 
-2. W podpisie tekst statyczny, wpisz znak (`&`) przed litery mają jako klucz dostępu.
+1. W podpisie tekst statyczny, wpisz znak (`&`) przed litery mają jako klucz dostępu.
 
-3. Upewnij się, że formant statyczny tekst bezpośrednio poprzedza formant, który go etykiety w kolejności tabulacji.
+1. Upewnij się, że formant statyczny tekst bezpośrednio poprzedza formant, który go etykiety w kolejności tabulacji.
 
-Klucze dostępu w oknie dialogowym powinny być unikatowe.
+> [!NOTE]
+> Klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić, czy zduplikowany klucz dostępu, przejdź do **Format** menu, a następnie wybierz **Sprawdź mnemonik**.
 
-### <a name="to-check-for-duplicate-access-keys"></a>Aby sprawdzić, czy zduplikowany klucz dostępu
-
-1. Na **Format** menu, kliknij przycisk **Sprawdź mnemonik**.
-
-## <a name="add-values-to-a-combo-box-control"></a>Dodawanie wartości do kontrolki pola kombi
+## <a name="combo-box-values"></a>Wartości pola kombi
 
 Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **okna dialogowego** edytorze.
 
@@ -119,7 +110,7 @@ Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **okna di
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Aby wprowadzić wartości do kontrolki pola kombi
 
-1. Zaznacz formant pola kombi, klikając ją.
+1. Wybierz formant pola kombi, wybierając ją.
 
 1. W [okno właściwości](/visualstudio/ide/reference/properties-window), przewiń w dół do **danych** właściwości.
 
@@ -129,7 +120,7 @@ Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **okna di
 1. Wybierz obszar wartość dla **danych** właściwości i wpisz wartości danych, oddzielając je średnikami.
 
    > [!NOTE]
-   > Nie umieszczaj spacji między wartościami, ponieważ zakłócać w kolejności alfabetycznej na liście rozwijanej miejsc do magazynowania.
+   > Nie należy umieszczać spacji między wartościami, ponieważ zakłócać w kolejności alfabetycznej na liście rozwijanej miejsc do magazynowania.
 
 1. Naciśnij klawisz **Enter** po zakończeniu dodawania wartości.
 
@@ -146,11 +137,45 @@ Po wprowadzeniu wartości w **danych** wybierz **testu** znajdujący się na [pa
 
    Naciśnij klawisz **Esc** aby powrócić do **okno dialogowe** edytora.
 
+   Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
+Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
+
+## <a name="radio-button-values"></a>Przycisk radiowy wartości
+
+Po dodaniu przycisków radiowych w oknie dialogowym je traktować jako grupa, ustawiając **grupy** właściwość **właściwości** okna dla pierwszego przycisku w grupie. Pojawi się w polu Identyfikator kontrolki, dla tego przycisku radiowego [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), co pozwala dodać zmienną członkowską, grupy przycisków radiowych.
+
+Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym. Dodaj każdej grupy, korzystając z następującej procedury.
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Aby dodać grupę przycisków radiowych w oknie dialogowym
+
+1. Zaznacz formant przycisku radiowego w [okno przybornika](/visualstudio/ide/reference/toolbox) i wybierz lokalizację znajdującą się w oknie dialogowym, gdzie umieścić formant.
+
+1. Powtórz powyższy krok, aby dodać dowolną liczbę przyciski radiowe, ile potrzebujesz. Upewnij się, że przyciski radiowe w grupie są następujące po sobie w kolejności tabulacji.
+
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **grupy** właściwość *pierwszy* przycisku radiowego w kolejności tabulacji na **True**.
+
+   Zmiana **grupy** właściwości **True** dodaje WS_GROUP styl do przycisku wpis obiektu okna dialogowego skryptu zasobu i uniemożliwia wybranie więcej niż jednego przycisku radiowego w danym momencie przez użytkownika mogą Grupa przycisków (Jeśli użytkownik wybiera jeden przycisk radiowy, inne osoby w grupie zostaną wyczyszczone).
+
+   > [!NOTE]
+   > Tylko pierwszy przycisk radiowy w grupie powinny mieć **grupy** właściwością **True**. Jeśli masz dodatkowe formanty, które nie są częścią grupy przycisk, ustaw **grupy** właściwość pierwszy formant *jest spoza grupy* do **True** także. Można szybko określić pierwszą kontrolkę spoza grupy za pomocą **Ctrl**+**D** Aby wyświetlić kolejność tabulacji.
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmiennej składowej w grupie przycisków radiowych
+
+1. Kliknij prawym przyciskiem myszy pierwszą kontrolkę przycisku radiowego w kolejności tabulacji (formant dominujący i z **grupy** właściwością **True**) i wybierz polecenie **Dodaj zmienną** z menu skrótów.
+
+1. W [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), wybierz opcję **zmienna sterująca** pole wyboru, a następnie wybierz **wartość** przycisku radiowego.
+
+1. W **nazwa zmiennej** wpisz nazwę dla nowej zmiennej elementu członkowskiego.
+
+1. W **typ zmiennej** pola listy, wybierz opcję **int** lub typ *int*.
+
+   Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
+
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

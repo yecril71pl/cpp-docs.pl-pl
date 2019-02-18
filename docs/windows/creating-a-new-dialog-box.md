@@ -1,6 +1,6 @@
 ---
-title: Tworzenie okna dialogowego (C++)
-ms.date: 11/04/2016
+title: 'Instrukcje: Tworzenie okna dialogowego (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264819"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336478"
 ---
-# <a name="creating-a-dialog-box-c"></a>Tworzenie okna dialogowego (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Instrukcje: Tworzenie okna dialogowego (C++)
 
 Lokalizacja i rozmiar okno dialogowe z C++ i położenie i rozmiar formantów, to są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po ich wybraniu stanu programu Visual Studio.
 
@@ -39,8 +39,6 @@ Podczas projektowania okna dialogowego, można symulować i testować jej zachow
    > Połączenia do kodu pola dialogowego przy użyciu kreatorów nie są objęte symulacją.
 
 Podczas testowania okna dialogowego, zwykle wyświetla się ono w lokalizacji, która jest określana względem okna głównego programu. Jeśli ustawiono okno dialogowe **bezwzględnie Wyrównaj** właściwości **True**, okno dialogowe jest wyświetlane w położeniu względem lewego górnego rogu ekranu.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe
 
@@ -82,7 +80,7 @@ Istnieją trzy właściwości, które można ustawić w [okno właściwości](/v
 
 1. Gdy **okna dialogowego** edytora jest aktywnym oknem, na pasku menu, wybierz polecenie **Format** > **Test dialogowy**.
 
-1. Aby zakończyć symulację, naciśnij klawisz **Esc**, lub po prostu wybierz **Zamknij** przycisku w oknie dialogowym, które testujesz.
+1. Aby zakończyć symulację, naciśnij klawisz **Esc** lub wybierz **Zamknij** przycisku w oknie dialogowym, które testujesz.
 
 ## <a name="requirements"></a>Wymagania
 

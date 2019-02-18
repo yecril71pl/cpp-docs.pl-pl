@@ -1,6 +1,6 @@
 ---
 title: Formanty w oknach dialogowych (C++) | Dokumentacja firmy Microsoft
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264845"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336517"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Formanty w oknach dialogowych (C++)
 
@@ -30,25 +30,11 @@ Podczas dodawania kontrolki do okna dialogowego lub zmienić jej położenie, je
 
 Po dodaniu kontrolki do okna dialogowego, można zmienić właściwości, takie jak jego podpis w [okno właściwości](/visualstudio/ide/reference/properties-window). Można wybrać wiele kontrolek i zmiany ich właściwości wszystkie na raz.
 
-- [Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)
+- [Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)
 
-- [Zaznaczanie kontrolek](../windows/selecting-controls.md)
+- [Instrukcje: Rozmieszczanie formantów](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Ustalanie rozmiaru pojedynczych kontrolek](../windows/sizing-individual-controls.md)
-
-- [Tworzenie kontrolek o tej samej szerokości, wysokości lub o tym samym rozmiarze](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Ustawianie rozmiaru pola kombi i jego listy rozwijanej](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Dodawanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Ustawianie szerokości poziomego paska przewijania](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Definiowanie mnemonik (klucze dostępu)](../windows/defining-mnemonics-access-keys.md)
-
-- [Określanie lokalizacji i rozmiaru okna dialogowego](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [Instrukcje: Definiowanie wartości i kontrola dostępu](../windows/defining-mnemonics-access-keys.md)
 
 Formanty standardowe dostępne w **przybornika** z domyślną zdarzenia są:
 
@@ -110,8 +96,6 @@ W przypadku kontrolek niestandardowych są ograniczone do:
 - Wpisując wartość szesnastkową 32-bitowe i ustawia styl formantu.
 
 - Ustawianie rozszerzonego stylu.
-
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Wymagania
 

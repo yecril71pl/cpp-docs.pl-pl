@@ -1,6 +1,6 @@
 ---
-title: Edytowanie obrazu
-ms.date: 11/04/2016
+title: 'Instrukcje: Edytowanie obrazu'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320682"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336533"
 ---
-# <a name="editing-an-image"></a>Edytowanie obrazu
+# <a name="how-to-edit-an-image"></a>Instrukcje: Edytowanie obrazu
 
 Narzędzia wyboru służy do definiowania obszar obrazu, który ma być wycinanie, kopiowanie, wyczyść, zmienić rozmiar, Odwróć lub przenoszenie. Za pomocą **prostokąta zaznaczenia** narzędzie można definiować i wybierz prostokątny obszar obrazu. Za pomocą **kształt** narzędzia można narysować freehand konspektu obszaru, który chcesz wybrać opcjami wycinania, kopiowania lub inna operacja.
 
@@ -56,9 +56,7 @@ Narzędzia wyboru służy do definiowania obszar obrazu, który ma być wycinani
 
 Można również utworzyć niestandardowy obiekt brush z zaznaczenia. Aby uzyskać więcej informacji, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="selecting-an-image"></a>Wybieranie obrazu
+## <a name="select-an-image"></a>Wybierz obraz
 
 1. Na **edytora obrazów** paska narzędzi (lub z **obraz** menu **narzędzia** polecenie), wybierz narzędzie wyboru, które ma.
 
@@ -72,7 +70,7 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
 
 1. Wybierz obraz poza bieżącym zaznaczeniu. Krawędź zaznaczenia zmienia fokus i obejmuje cały obraz jeszcze raz.
 
-## <a name="editing-parts-of-an-image"></a>Edytowanie części obrazu
+## <a name="edit-parts-of-an-image"></a>Edytowanie części obrazu
 
 Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenie i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)na to, czy zaznaczenie jest całego obrazu lub po prostu jego część. Ponieważ **obraz** Edytor używa **Schowka Windows**, mogą przesyłać obrazy między **obraz** edytora i inne aplikacje dla Windows.
 
@@ -119,7 +117,7 @@ Z **Edytuj** menu, wybierz **Usuń**.
 
 Aby uzyskać więcej informacji na temat rysowanie przy zaznaczeniem, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="flipping-an-image"></a>Przerzucanie obrazu
+## <a name="flip-an-image"></a>Przerzucanie obrazu
 
 Można obracać lub obraz, aby utworzyć obraz lustrzany oryginał, nogami obrazu lub obrócić obraz w prawo o 90 stopni w danym momencie.
 
@@ -132,7 +130,7 @@ Można obracać lub obraz, aby utworzyć obraz lustrzany oryginał, nogami obraz
    > [!NOTE]
    > Można również użyć [klawisze skrótów (skrót)](../windows/accelerator-keys-image-editor-for-icons.md) dla tych poleceń lub uzyskać dostęp do poleceń menu skrótów (kliknij poza obrazu, który znajduje się w edytorze obrazów).
 
-## <a name="resizing-an-image"></a>Zmiana rozmiaru obrazu
+## <a name="resize-an-image"></a>Zmiana rozmiaru obrazu
 
 Zachowanie **obraz** edytora podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.
 
@@ -185,7 +183,7 @@ Zwykle **obraz** edytora Przycina lub powiększenie obrazu przy zmianie rozmiaru
 
 1. Przeciągnij jeden z uchwytów zmiany rozmiaru, dopóki nie obowiązuje wielkości.
 
-## <a name="editing-an-image-outside-of-a-project"></a>Edytowanie obrazu spoza projektu
+## <a name="edit-an-image-outside-of-a-project"></a>Edytowanie obrazu spoza projektu
 
 Możesz otwierać i edytować obrazy w środowisku programistycznym, tak samo jak w dowolnej aplikacji grafiki. Obrazów, z którymi pracujesz nie muszą być częścią projektu programu Visual Studio do edycji autonomicznych.
 
@@ -197,7 +195,7 @@ Możesz otwierać i edytować obrazy w środowisku programistycznym, tak samo ja
 
 1. Znajdź i Otwórz obraz, który chcesz edytować.
 
-## <a name="changing-image-properties"></a>Zmiana właściwości obrazu
+## <a name="change-image-properties"></a>Zmiana właściwości obrazu
 
 Można ustawić lub zmodyfikować właściwości obrazu, użyj [okno właściwości](/visualstudio/ide/reference/properties-window).
 

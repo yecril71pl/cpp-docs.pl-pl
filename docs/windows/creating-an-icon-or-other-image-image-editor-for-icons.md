@@ -1,6 +1,6 @@
 ---
-title: Tworzenie ikony lub innego obrazu
-ms.date: 11/04/2016
+title: 'Instrukcje: Tworzenie ikony lub innego obrazu'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320734"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336595"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Tworzenie ikony lub innego obrazu
+# <a name="how-to-create-an-icon-or-other-image"></a>Instrukcje: Tworzenie ikony lub innego obrazu
 
 Możesz utworzyć nowy obraz (mapa bitowa, ikony, kursor lub narzędzi), a następnie użyć edytora obrazów w celu dostosowania jego wyglądu. Można również tworzyć nowe mapę bitową z deseniem po [szablonu](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Podczas tworzenia nowej ikony lub zasobu kursora **obraz** edytora najpierw twor
 
 Po otwarciu ikony zasobu w [edytora obrazów](../windows/image-editor-for-icons.md), obraz, większość ściśle dopasowując bieżące urządzenie wyświetlające jest domyślnie otwierany.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Nowe &lt;urządzenia&gt; okno dialogowe typu obrazu
-
 **New &lt;urządzenia&gt; typ obrazu** okno dialogowe umożliwia utworzenie nowego obrazu urządzenia o określonym typie. Aby otworzyć **New \<urządzenia > obraz** okno dialogowe, wybierz opcję **nowy typ obrazu** na **obraz** menu. Następujące właściwości zawarte są **typ obrazu docelowego** i **niestandardowe**.
 
-##### <a name="target-image-type"></a>Docelowy typ obrazu
-
-Wyświetla listę typów dostępnych obrazów. Wybierz typ obrazu, który chcesz otworzyć:
+**Typ obrazu docelowego** właściwość zawiera listę typów dostępnych obrazów. Wybierz typ obrazu, który chcesz otworzyć:
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Wyświetla listę typów dostępnych obrazów. Wybierz typ obrazu, który chcesz
 > [!NOTE]
 > Żadnych istniejących obrazów, nie pojawi się na tej liście.
 
-##### <a name="custom"></a>Niestandardowe
-
-Otwiera **obrazu niestandardowego** okno dialogowe, w którym można utworzyć nowy obraz niestandardowy rozmiar i liczba kolorów.
+**Niestandardowe** Otwiera właściwości **obrazu niestandardowego** okno dialogowe, w którym można utworzyć nowy obraz niestandardowy rozmiar i liczba kolorów.
 
 **Obrazu niestandardowego** okno dialogowe umożliwia utworzenie nowego obrazu z niestandardowy rozmiar i liczba kolorów. Następujące właściwości zawarte są:
 
@@ -164,8 +158,6 @@ Otwiera **obrazu niestandardowego** okno dialogowe, w którym można utworzyć n
 |**Szerokość**|Miejsce na wprowadź szerokość obrazu niestandardowego w pikselach (1-512 limit 2048).|
 |**Wysokość**|Miejsce na Wprowadź wysokość obrazu niestandardowego w pikselach (1-512 limit 2048).|
 |**Kolory**|Miejsce na wybierz liczbę kolorów dla niestandardowego obrazu: 2, 16 lub 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Otwórz &lt;urządzenia&gt; okno dialogowe obrazu
 
 Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obrazach urządzeń w projektach C++. Wyświetla listę istniejących obrazów urządzeń w bieżącym (obrazy, które są częścią bieżącego zasobu). Następująca właściwość włączone jest:
 
@@ -184,13 +176,13 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
    Jeśli znak plus (**+**) pojawia się obok typ zasobu obrazu w **Wstaw zasobów** okno dialogowe, oznacza to, narzędzi szablony są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie wybierz **New**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Dodawanie obrazu wyświetlania na różnych urządzeniach
+### <a name="to-add-an-image-for-a-different-display-device"></a>Aby dodać obraz wyświetlania na różnych urządzeniach
 
 1. Na **obraz** menu, wybierz opcję **nowy obraz urządzenia** (lub kliknij prawym przyciskiem myszy **edytora obrazów** okienka i wybierz polecenie **nowy obraz urządzenia** z menu skrótów).
 
 1. Wybierz typ obrazu, który chcesz dodać. Możesz również wybrać **niestandardowe** do utworzenia ikony, którego rozmiar nie jest dostępna na liście domyślnej.
 
-### <a name="copy-a-device-image"></a>Kopiowanie obrazu urządzenia
+### <a name="to-copy-a-device-image"></a>Aby skopiować obrazu urządzenia
 
 1. Na **obraz** menu, wybierz opcję **Otwieranie obrazu urządzenia** i wybierzesz obraz z bieżącej listy obrazów. Na przykład wybierz 32 x 32, 16 kolorów wersja ikony.
 
@@ -200,14 +192,14 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
 1. Wklej obraz ikony (**Ctrl**+**V**) z jednego **edytora obrazów** okna do innego. Jeśli wklejasz większy rozmiar do mniejszego rozmiaru, można użyć uchwytów ikony zmiany rozmiaru obrazu.
 
-### <a name="delete-a-device-image"></a>Usuwanie obrazu urządzenia
+### <a name="to-delete-a-device-image"></a>Aby usunąć obrazu urządzenia
 
 Gdy obraz ikony są wyświetlane w **obraz** edytora, wybierz opcję **usuwanie obrazu urządzenia** z **obraz** menu. Po usunięciu ostatniego obraz ikony w zasobie zasobu są także usuwane.
 
    > [!NOTE]
    > Po naciśnięciu klawisza **Del** klucza, obrazy i kolorów ma być rysowany ikonę są usuwane, ale pozostaje ikonę; możesz teraz ponownie zaprojektować go. Jeśli użytkownik naciśnie klawisz **Del** przez pomyłkę, możesz nacisnąć przycisk **Ctrl**+**Z** cofnięcie akcji.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Aby utworzyć przezroczystych lub odwróconych w obrazach urządzeń
 
 W [edytora obrazów](../windows/image-editor-for-icons.md), początkowego obrazu ikony ma atrybut przezroczysty. Mimo że prostokątny znajdują się obrazy ikon i kursorów, wiele nie pojawiają się więc ponieważ przezroczysty; części obrazu Pokazuje obrazu podstawowego na ekranie za pomocą ikony lub kursor. Podczas przeciągania ikony części obrazu może pojawić się w kolorze odwrócony. Ten efekt, ustawiając kolor ekranu i odwracanie kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md).
 
@@ -344,13 +336,11 @@ Możesz otworzyć obrazów GIF lub JPEG w **obraz** edytora i zapisz je jako map
    > [!NOTE]
    > Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych. Aby uzyskać więcej informacji, zobacz [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) w *przewodniku dewelopera .NET Framework*.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Wymagania
 
 Brak
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwertowanie map bitowych na paski narzędzi](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Tworzenie nowych pasków narzędzi](../windows/creating-new-toolbars.md)<br/>
