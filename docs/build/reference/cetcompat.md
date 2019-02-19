@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (zgodny z technologia wymuszania przepływu sterowania)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703367"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418695"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (zgodny z technologia wymuszania przepływu sterowania)
 
@@ -24,7 +24,7 @@ Określa, czy należy oznaczyć obrazu wykonywalnego jako niezgodny z technologi
 ## <a name="arguments"></a>Argumenty
 
 **BRAK**<br/>
-Określa, że executalbe nie powinien być oznaczony zgodny z CET.
+Określa, że plik wykonywalny nie powinien być oznaczony zgodny z CET.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -44,7 +44,7 @@ Technologia wymuszania przepływu sterowania (CET) jest funkcją procesora kompu
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Ta opcja nie ma programowy odpowiednik.
+Ta opcja nie ma programowy odpowiednik.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678473"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418721"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -179,8 +179,8 @@ W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `s
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy `multiset`.|
 |[Liczba](#count)|Zwraca liczbę elementów w `multiset` których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin](#crbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie.|
-|[crend —](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do `multiset`.|
+|[crend](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `multiset`.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `multiset`, ze wskazówką położenia.|
 |[pusty](#empty)|Sprawdza, czy `multiset` jest pusty.|
 |[koniec](#end)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w `multiset`.|
@@ -188,12 +188,12 @@ W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `s
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w `multiset` z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|
 |[Znajdź](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w `multiset` ma klucz równy określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` obiektu, który służy do konstruowania `multiset`.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do `multiset`.|
+|[insert](#insert)|Wstawia element lub zakres elementów do `multiset`.|
 |[key_comp](#key_comp)|Dostarcza obiekt funkcji, która może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w `multiset`.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w `multiset` z kluczem, który jest równy lub większy od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość `multiset`.|
 |[rbegin](#rbegin)|Zwraca iterator, który wskazuje na pierwszy element w odwróconej `multiset`.|
-|[rend —](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconej `multiset`.|
+|[rend](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconej `multiset`.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `multiset`.|
 |[swap](#swap)|Zamienia elementy z dwóch `multiset`s.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w `multiset` przy użyciu klucza, który jest większy od określonego klucza.|
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
