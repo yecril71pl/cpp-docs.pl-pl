@@ -36,127 +36,102 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: dbb1d1d4b865380abde189ae6a72a1bfc3755840
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 768675a878891ebb75c7f42c12eae8dfcfa3510b
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320851"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676490"
 ---
 # <a name="how-to-create-resources-c"></a>Instrukcje: Tworzenie zasobów (C++)
 
-**Widok zasobów** okno wyświetla plików zasobów znajdujących się w Twoich projektów. Rozwijanie folderu najwyższego poziomu (na przykład *Project1.rc*) zawiera typy zasobów w, że plik i rozwijanie każdego typu zasobu zawiera poszczególnych zasobów tego typu.
+Można utworzyć zasobów dla Twojego projektu przez:
 
-> [!TIP]
-> Aby otworzyć okno Widok zasobów, wybierz **widok zasobów** na **widoku** menu (lub użyj **Ctrl** + **Shift**  +  **E**).
->
-> Można również użyć kliknij prawym przyciskiem myszy na **widok zasobów** okna do uruchamiania poleceń menu skrótów, lub kliknij dwukrotnie pasek tytułu, aby zadokować lub oddokować okno. Kliknij prawym przyciskiem myszy pasek tytułu zawiera dodatkowe polecenia, które pozwalają na kontrolę zachowania okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+- Przy użyciu pliku skryptu zasobu. Ten krok jest niezbędny, aby dodać zasoby.
 
-**Widok zasobów** system windows zawiera **Dodaj zasób** okno dialogowe z następującymi właściwościami, aby dodać zasoby do projektu aplikacji pulpitu Windows C++:
+- Dodawanie zasobów do projektu. W tym kroku przedstawiono sposób użycia **widok zasobów**.
 
-|Właściwość|Opis|
-|--|----|
-|**Typ zasobu**|Określa rodzaj zasobu, który chcesz utworzyć.<br/><br/>Można rozwinąć kursora i okna dialogowego pole zasobów kategorie, aby ujawnić dodatkowe zasoby. Te zasoby znajdują się w programie Visual Studio ...\Microsoft \<wersji\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct. Jeśli dodasz .rct — pliki, umieść je w tym katalogu lub określić inny [ścieżki dołączania](../windows/how-to-specify-include-directories-for-resources.md). Zasoby w tych plikach są następnie wyświetlane na drugim poziomie do odpowiedniej kategorii. Nie ma żadnych wstępnie limitu liczby .rct — pliki, które można dodać.<br/><br/>Zasoby pokazane na najwyższym poziomie w drzewie są domyślne zasoby, które są dostarczane przez program Visual Studio.|
-|**Nowy**|Tworzy zasób, w zależności od typu wybranego w **typ zasobu** pole, a następnie otwiera zasobu w odpowiedniego edytora. Na przykład, jeśli tworzysz zasobu okna dialogowego, zostanie on otwarty w [Edytor okien dialogowych](../windows/dialog-editor.md).|
-|**Importujuj**|Otwiera **zaimportować** okno dialogowe, w której można przejść do tego zasobu można mają zostać zaimportowane do bieżącego projektu. Możesz zaimportować mapy bitowej, ikony, kursor, HTML, dźwięku (. WAV) lub plik zasobów niestandardowych.|
-|**Custom**|Otwiera **nowy niestandardowy zasób** okno dialogowe, w której utworzono zasób niestandardowy. Zasoby niestandardowe są jedynie edytować w edytorze binarnym.|
-
-**Dodaj zasób** okno dialogowe zawiera **nowy niestandardowy zasób** okno dialogowe z następującą właściwość, aby utworzyć nowy niestandardowy zasób w projekcie C++:
-
-|Właściwość|Opis|
-|--|----|
-|**Typ zasobu**|Umożliwia wprowadzenie nazwy niestandardowy typ zasobu w polu tekstowym. Visual C++ automatycznie powoduje rozpoczynanie nazwę podczas zamykania **nowy zasób niestandardowy** okno dialogowe.|
+- Tworzenie niestandardowych zasobów przy użyciu szablonu usługi resource
 
 > [!NOTE]
-> **Edytor zasobów** lub **widok zasobów** nie jest dostępny w wersji Express.
+> **Edytor zasobów** i **widok zasobów** nie są dostępne w wersji Express.
 
-## <a name="resource-scripts"></a>Skrypty zasobów
+## <a name="use-resource-script-files"></a>Użyj plików skryptu zasobu
 
-Przed utworzeniem i dodawania nowych zasobów do projektu, należy najpierw utworzyć skrypt zasobu (plik .rc).
+Przed utworzeniem i dodawania nowych zasobów do projektu, należy najpierw utworzyć pliku zasobu skryptu (.rc).
 
 > [!NOTE]
-> Skrypt zasobu (plik .rc) można dodać tylko do istniejącego projektu, który jest ładowany do środowiska IDE programu Visual Studio. Nie można utworzyć autonomiczny skrypt zasobu (spoza projektu). Szablony zasobów (.rct — pliki) mogą być tworzone w dowolnym momencie.
+> Skrypt zasobu można dodać tylko do istniejącego projektu załadowana do środowiska IDE programu Visual Studio. Nie można utworzyć skrypt zasobu autonomicznych, poza projektem, chociaż szablony zasobów (.rct — pliki) mogą być tworzone w dowolnym momencie.
 
-### <a name="to-create-a-resource-script"></a>Aby utworzyć skrypt zasobów
+### <a name="to-create-a-resource-script-file"></a>Aby utworzyć plik skryptu zasobu
 
 1. Umieść fokus na istniejący folder projektu w taki sposób, w **Eksploratora rozwiązań**, na przykład *MyProject*.
 
    > [!NOTE]
-   > Nie należy mylić folderze projektu z folderu rozwiązania w **Eksploratora rozwiązań**. Jeśli fokus jest umieszczony na **rozwiązania** folderu, wyborów dokonanych w **Dodaj nowy element** okno dialogowe będzie różna.
+   > Nie należy mylić folderze projektu z folderu rozwiązania w **Eksploratora rozwiązań**. Jeśli fokus jest umieszczony na **rozwiązania** folderu, nie będzie mieć taką samą **Dodaj nowy element** wyborów.
 
-1. Na **projektu** menu, wybierz opcję **Dodaj nowy element**.
+1. W menu, przejdź do **projektu** > **Dodaj nowy element**.
 
-1. Wybierz **Visual C++** folderu, wybierz **pliku zasobów (.rc)** w okienku po prawej stronie.
+1. Wybierz **Visual C++** folder i wybierz polecenie **pliku zasobów (.rc)** w okienku po prawej stronie.
 
-1. Podaj nazwę dla Twojego skryptu zasobu w **nazwa** pola tekstowego, a następnie wybierz **Otwórz**.
+1. Podaj nazwę pliku skryptu zasobu w **nazwa** pola tekstowego, a następnie wybierz **Otwórz**.
 
-### <a name="to-open-a-resource-script"></a>Aby otworzyć skrypt zasobów
+### <a name="to-open-a-resource-script-file"></a>Można otworzyć pliku skryptu zasobu
 
-Zasoby można wyświetlić w skrypcie zasobów bez konieczności otwierania projektu. Plik skryptu zostanie otwarty w oknie dokumentu, w przeciwieństwie do **widok zasobów** okna.
-
-> [!NOTE]
-> Niektóre polecenia są dostępne tylko w przypadku, gdy plik jest otwarty autonomiczny (spoza projektu). Otwieranie autonomicznego pliku oznacza, otwierając go bez pierwszego ładowania projektu.
->
-> Na przykład, aby zapisać plik w innym formacie lub inną nazwę pliku (jako **Zapisz jako** polecenie jest niedostępne dla pliku w projekcie). Jeśli otworzysz pierwszy projekt za pomocą **pliku** > **Otwórz** > **projektu**, te polecenia są niedostępne.
-
-#### <a name="to-open-a-resource-script-outside-of-a-project"></a>Aby otworzyć skryptu zasobu spoza projektu
-
-1. Z **pliku** menu, wybierz opcję **Otwórz**, następnie wybierz **pliku**.
-
-1. Przejdź do pliku skryptu zasobu, zaznacz plik i wybierz polecenie **Otwórz**.
-
-#### <a name="to-open-multiple-resource-scripts-outside-of-a-project"></a>Aby otworzyć wiele skryptów zasobu spoza projektu
-
-1. Otwórz zarówno autonomiczne pliki zasobów. Na przykład otworzyć *Source1.rc* i *Source2.rc*.
-
-1. Z **pliku** menu, wybierz **Otwórz**, a następnie wybierz **pliku**.
-
-1. Przejdź do pierwszego pliku skryptu zasobu, który chcesz otworzyć (*Source1.rc*), zaznacz plik i wybierz **Otwórz**.
-
-1. Powtórz poprzedni krok, aby otworzyć drugiego pliku .rc (*Source2.rc*).
-
-   Oba pliki .rc są teraz otwarte w oddzielnych dokumentów w systemie windows.
-
-1. Użyj **okna** menu lub kliknij prawym przyciskiem myszy jeden z plików .rc i wybierz polecenie **nową grupę karta pozioma** lub **nowej grupie pionowej karcie**.
-
-   Teraz są sąsiadująco systemu windows, dzięki czemu można je wyświetlić, jednocześnie.
-
-Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.rc) zasobu projektu bez konieczności otwierania zasobu, np. okno dialogowe wewnątrz jego Edytor określonego zasobu. Na przykład można wyszukać ciąg we wszystkich oknach dialogowych w pliku zasobów bez konieczności otwierania każdej z nich osobno.
-
-Łatwo można otworzyć pliku zasobów, w formacie tekstowym, aby wyświetlić wszystkie zasoby, które zawiera i ukończyć globalne operacje obsługiwane przez Edytor tekstu.
+Bez konieczności otwierania projektu, można wyświetlić zasobów w pliku skryptu zasobu. Otwiera plik skryptu w oknie dokumentu, w przeciwieństwie do **widok zasobów**.
 
 > [!NOTE]
-> Edytory zasobów bezpośrednio odczytu nie .rc lub `resource.h` plików. Kompilator zasobów kompiluje je na .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne. Jak zwykłym skompilować procesu, informacje symboliczne (na przykład komentarzy) jest pomijany w procesie kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z pliku .rc, zostanie ponownie wygenerowany plik .rc (na przykład, gdy zapisujesz, Edytor zasobów zastępuje plik .rc i `resource.h` pliku). Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostaną utracone w przypadku, gdy plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).
+> Niektóre polecenia są dostępne tylko jeśli plik jest otwarty autonomicznej, co oznacza spoza projektu lub bez niej pierwszy podczas ładowania projektu. Na przykład, aby użyć **Zapisz jako** polecenia, aby zapisać plik pod inną nazwą pliku lub formatu, plik musi być otwarty autonomicznych.
 
-### <a name="to-open-a-resource-script-file-in-text-format"></a>Można otworzyć pliku skryptu zasobu w formacie tekstowym
+- Aby otworzyć pliku skryptu zasobu spoza projektu, w menu, przejdź do **pliku** > **Otwórz**i wybierz polecenie **pliku**. Następnie przejdź do pliku skryptu zasobu, zaznacz plik i wybierz polecenie **Otwórz**.
 
-1. Z **pliku** menu wybierz opcję **Otwórz**, następnie wybierz **pliku**.
+  - Można otworzyć pliku skryptu zasobu w formacie tekstowym, użyj strzałki listy rozwijanej w prawej części **Otwórz** znajdujący się w kroku powyżej i wybierz **Otwórz za pomocą**. Następnie wybierz pozycję **Edytor kodu źródłowego (tekst)** i **Otwórz jako** listy rozwijanej wybierz **tekstu**, i zasobów zostanie otwarty w **kod źródłowy**edytora.
 
-1. W **Otwórz plik** okno dialogowe, przejdź do pliku skryptu zasobów, którą chcesz wyświetlić w formacie tekstowym.
+    > [!NOTE]
+    > Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu zasobu projektu bez użycia edytory zasobów, aby otworzyć zasobu. Na przykład można wyszukać ciąg we wszystkich oknach dialogowych w pliku zasobów bez konieczności otwierania każdej z nich osobno. Łatwo można otworzyć pliku zasobów, w formacie tekstowym, aby wyświetlić wszystkie zasoby, które zawiera i ukończyć globalne operacje obsługiwane przez Edytor tekstu.
 
-1. Zaznacz plik, a następnie wybierz strzałkę listy rozwijanej na **Otwórz** przycisk (po prawej stronie przycisku).
-
-1. Wybierz **Otwórz za pomocą** z listy rozwijanej i wybierz przycisk **Edytor kodu źródłowego (tekst)**.
-
-1. Z **Otwórz jako** listy rozwijanej wybierz **tekstu**.
-
-   Zasób, który zostanie otwarty w **kod źródłowy** edytora.
+- Do otwarcia wielu zasobu skrypty wykonaj powyższe kroki dla każdego pliku, który chcesz otworzyć, na przykład *Source1.rc* i *Source2.rc*. Następnie, gdy oba pliki .rc są otwarte w oddzielnym dokumenty w systemie windows, albo użyć **okna** menu lub kliknij prawym przyciskiem myszy jeden z plików .rc i wybierz pozycję **nową grupę karta pozioma** lub **nowe tabulator pionowy Grupa**. Teraz są sąsiadująco systemu windows, dzięki czemu można je wyświetlić, jednocześnie.
 
 > [!TIP]
-> W tym miejscu skrót jest kliknięcie prawym przyciskiem myszy plik .rc w **Eksploratora rozwiązań**, wybierz **Otwórz za pomocą...**  i wybierz **Edytor kodu źródłowego (tekst)**.
+> Pliki skryptów zasobów można również otworzyć, klikając prawym przyciskiem myszy plik .rc w **Eksploratora rozwiązań**, wybierając **Otwórz za pomocą...**  i wybierając polecenie **Edytor kodu źródłowego (tekst)**.
 
-## <a name="resources"></a>Resources
+### <a name="to-edit-a-resource-script-file"></a>Aby edytować pliku skryptu zasobu
 
-Jako nowego zasobu domyślnego (zasób, który nie jest oparty na szablonie) lub jako zasób deseniem po szablonu, można utworzyć zasobu.
+- Aby przekonwertować istniejącego pliku zasobów do szablonu, za pomocą pliku skryptu zasobu otwarty, w menu, przejdź do **pliku** > **Zapisz \< *filename*> jako**. Następnie określ lokalizację i wybierz polecenie **OK**.
+
+Podczas tworzenia aplikacji Microsoft Foundation Class (MFC) dla Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje zestaw podstawowych plików w tym pliku zasobu skryptu (.rc)) zawiera podstawowe funkcje MFC. Jednak te funkcje specyficzne dla MFC nie są dostępne, edytując plik .rc dla aplikacji Windows, które nie są oparte na bibliotece MFC. W tym kreatorów kodu, ciągi menu podpowiedzi, zawartość list dla formantów pola kombi i formantu ActiveX.
+
+- Aby dodać obsługę MFC z po otwarciu pliku skryptu zasobu w **widok zasobów**, wyróżnij folder zasobów (na przykład *MFC.rc*). Następnie w [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **tryb MFC** do **True**.
+
+  > [!NOTE]
+  > Oprócz ustawienia **tryb MFC**, plik .rc musi być częścią projektu MFC. Ustawienie tylko **tryb MFC** do **True** na .rc pliku w projekcie systemu Win32 nie daje funkcji MFC.
+
+## <a name="create-resources"></a>Tworzenie zasobów
+
+Można utworzyć zasobu, jako zasób domyślne czyli zasób, który nie jest oparty na szablonie, lub jako zasób deseniem po szablonu.
+
+Użyj **widok zasobów** okno, aby wyświetlić pliki zasobów zawarte w swoich projektach. Rozwijanie folderu najwyższego poziomu, na przykład *Project1.rc*, zawiera typy zasobów, w tym pliku. Rozwiń każdego typu zasobu, aby wyświetlić poszczególne zasoby tego typu.
+
+> [!TIP]
+> Aby otworzyć **widok zasobów** okna, przejdź do menu **widoku** > **widok zasobów** lub naciśnij **Ctrl** +  **SHIFT**+**E**.
+
+Kliknij prawym przyciskiem myszy można używać na **widok zasobów** okna do uruchamiania poleceń menu skrótów, lub kliknij dwukrotnie pasek tytułu, aby zadokować i oddokować okno. Kliknij prawym przyciskiem myszy pasek tytułu, aby uzyskać dodatkowe polecenia, które kontrolują zachowanie okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+**Widok zasobów** system windows zawiera **Dodaj zasób** okno dialogowe z następującymi właściwościami, aby dodać zasoby do projektu aplikacji pulpitu Windows C++:
+
+| Właściwość | Opis |
+|---|---|
+| **Typ zasobu** | Określ rodzaj zasobu, który chcesz utworzyć.<br/><br/>Można rozwinąć kursora i okna dialogowego pole zasobów kategorie, aby ujawnić dodatkowe zasoby, które znajdują się w programie Visual Studio ...\Microsoft \<wersji\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct. Jeśli potrzebujesz dodać .rct — pliki, umieść je w tym miejscu lub określić inny [ścieżki dołączania](../windows/how-to-specify-include-directories-for-resources.md).<br/><br/>Zasobów, jak pokazano na najwyższym poziomie w drzewie są zasoby domyślne, dostarczone przez program Visual Studio. Zasoby w plikach .rct są wyświetlane na drugim poziomie do odpowiedniej kategorii. Nie ma żadnych wstępnie limitu liczby .rct — pliki, które można dodać.<br/><br/> |
+| **Nowy** | Utwórz zasób, w zależności od typu wybranego w **typ zasobu** pole, a następnie otwórz zasób w odpowiedniego edytora.<br/><br/>Na przykład, jeśli tworzysz zasobu okna dialogowego, zostanie ona otwarta zasobu w [Edytor okien dialogowych](../windows/dialog-editor.md). |
+| **Importujuj** | Otwórz **zaimportować** okno dialogowe, przejdź do zasobu, który chcesz zaimportować do bieżącego projektu.<br/><br/>Możesz zaimportować mapy bitowej, ikony, kursor, HTML, dźwięku (. WAV) lub plik zasobów niestandardowych. |
+| **Custom** | Otwórz **nowy niestandardowy zasób** okno dialogowe, aby utworzyć zasób niestandardowy.<br/><br/>Zawiera również **typ zasobu** właściwość, która zawiera pole tekstowe do wprowadzenia Nazwa typu zasobu niestandardowego. Visual C++ powoduje automatyczne rozpoczynanie nazwę podczas zamykania.<br/><br/>Zasoby niestandardowe są jedynie edytować w edytorze binarnym. |
 
 Podczas tworzenia nowego zasobu, Visual C++ przypisze unikatową nazwę, na przykład `IDD_Dialog1`. Tego Identyfikatora zasobu można dostosować, edytując właściwości zasobu w edytorze skojarzonego zasobu lub w [okno właściwości](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
-> Określać nazwy zasobu lub identyfikator, który jest zarezerwowany przez program Visual Studio. Zarezerwowane nazwy to DESIGNINFO, HWB i TEXTINCLUDE, a zarezerwowany identyfikator to 255.
+> Określać nazwy zasobu lub identyfikator, który jest zarezerwowany przez program Visual Studio. Zarezerwowane nazwy to `DESIGNINFO`, `HWB`, i `TEXTINCLUDE`, a zarezerwowany identyfikator to `255`.
 
-### <a name="to-create-a-resource"></a>Aby utworzyć zasób
-
-Można utworzyć nowy zasób, przy użyciu jednej z następujących czynności:
+Aby utworzyć wykorzystanie zasobów, jedną z następujących czynności:
 
 - W **widok zasobów**, wybierz swój plik .rc, a następnie użyć **Edytuj** > **Dodaj zasób** i wybierz typ zasobów do dodania do projektu.
 
@@ -170,36 +145,21 @@ Można utworzyć nowy zasób, przy użyciu jednej z następujących czynności:
 
 - W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy klasy, wybierz **Dodaj** > **Dodaj zasób** i wybierz typ zasobów do dodania do projektu.
 
-- W **projektu** menu, wybierz opcję **Dodaj zasób**.
+- Użyj menu **projektu** > **Dodaj zasób**.
 
-### <a name="support-for-mfc"></a>Obsługa MFC
-
-Normalnie Jeśli tworzenia aplikacji Microsoft Foundation Class (MFC) dla Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje zestaw podstawowych plików (w tym pliku zasobu skryptu (.rc)), które zawiera podstawowe funkcje MFC. Jednakże edytując plik .rc dla aplikacji Windows, nie jest oparty na bibliotece MFC, następujące funkcje specyficzne dla MFC nie są dostępne: Kreatorzy kodu MFC, ciągi menu podpowiedzi, wyświetlanie zawartości dla formantów pola kombi i formantu ActiveX.
-
-#### <a name="to-add-mfc-support-to-a-resource-script-file"></a>Aby dodać obsługę MFC do pliku skryptu zasobów
-
-1. Otwórz pliku skryptu zasobu.
-
-1. W **widok zasobów**, wyróżnij folder zasobów (na przykład *MFC.rc*).
-
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **tryb MFC** właściwości **True**.
-
-   > [!NOTE]
-   > Oprócz ustawienia tej właściwości, plik .rc musi być częścią projektu MFC. Na przykład, ustawienie tylko **tryb MFC** do **True** na .rc pliku w projekcie systemu Win32 nie daje funkcji MFC.
-
-## <a name="resource-templates"></a>Szablony zasobów
+## <a name="use-resource-templates"></a>Użycie szablonów zasobów
 
 Szablon zasobu jest dostosowane zasób, który został zapisany jako plik .rct. Szablonu usługi resource następnie służy jako punkt wyjścia do tworzenia zasobów. Szablony zasobów oszczędzić czas podczas opracowywania dodatkowe zasoby lub grupy zasobów, które udostępnianie funkcje, takie jak formanty standardowe lub powtarzające się elementy. Na przykład jeśli chcesz dołączyć przycisk Pomoc, za pomocą ikony logo firmy kilka okien dialogowych, Utwórz nowy szablon okno dialogowe i dostosować ją przy użyciu przycisku pomocy i logo.
 
-Po dostosowaniu szablonu zasobów, należy zapisać te zmiany w folderze szablonu (lub w lokalizacji określonej w ścieżki dołączania) tak, że nowy szablon zasobu pojawią się w jego typ zasobu w **Dodaj zasób** okno dialogowe. Można teraz używać nowego szablonu zasobu tak często, zgodnie z potrzebami.
+Po dostosowaniu szablonu usługi resource, Zapisz zmiany w folderze szablonu lub w lokalizacji określonej w polu Ścieżka include, tak, że nowy szablon zasobu pojawią się w jego typ zasobu w **Dodaj zasób** okno dialogowe. Można teraz używać nowego szablonu zasobu tak często, zgodnie z potrzebami.
 
 > [!NOTE]
 > Edytor zasobów automatycznie zapewnia identyfikator unikatowy zasób Możesz poprawić [właściwości zasobu](../windows/changing-the-properties-of-a-resource.md) zgodnie z potrzebami.
 
 > [!NOTE]
-> Podkatalogi katalogu głównego szablonu, należy umieścić pliki szablonów specyficzne dla języka. Na przykład umieścić pliki szablonów angielskiej w... \\< katalog szablonu zasobów\>\1033. Visual Studio wyszukuje nowe pliki śledzenia RCT w programie Visual Studio \Program Files\Microsoft \<wersji\>\VC\VCResourceTemplates w programie Visual Studio \Program Files\Microsoft \<wersji > \VC\VCResourceTemplates\\< LCID\> (na przykład 1033 dla języka angielskiego), *lub* dowolnym miejscu [ścieżki dołączania](../windows/how-to-specify-include-directories-for-resources.md). Jeśli chcesz przechowywać pliki śledzenia RCT w innej lokalizacji, na przykład folder Moje dokumenty, musisz dodać ten folder do ścieżki dołączania, aby program Visual Studio można znaleźć pliku RCT.
+> Podkatalogi katalogu głównego szablonu, należy umieścić pliki szablonów specyficzne dla języka. Na przykład pliki szablonów angielskiej go w programie... \\< katalog szablonu zasobów\>\1033. Program Visual Studio wyszukuje nowe pliki .rct w programie Visual Studio \Program Files\Microsoft \<wersji\>\VC\VCResourceTemplates, \Program Files\Microsoft programu Visual Studio \<wersji > \VC\VCResourceTemplates\\< LCID\> (np. LCID 1033 dla języka angielskiego), lub w dowolnym miejscu [ścieżki dołączania](../windows/how-to-specify-include-directories-for-resources.md). Jeśli chcesz przechowywać pliki .rct w innej lokalizacji, należy dodać lokalizację do ścieżki dołączania.
 
-### <a name="to-create-a-resource-template"></a>Aby utworzyć szablon zasobu
+### <a name="to-create-and-use-a-resource-template"></a>Tworzenie i używanie szablonu usługi resource
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt.
 
@@ -213,25 +173,15 @@ Po dostosowaniu szablonu zasobów, należy zapisać te zmiany w folderze szablon
 
 1. Kliknij dwukrotnie plik .rct, aby otworzyć go w oknie dokumentu. Aby dodać zasoby, kliknij prawym przyciskiem myszy plik w oknie dokumentu, a następnie wybierz **Dodaj zasób**.
 
-   Można dostosować te zasoby i Zapisz plik .rct.
+   Można dostosować dodano zasobów i Zapisz plik .rct.
 
-### <a name="to-create-a-new-resource-from-a-template"></a>Aby utworzyć nowy zasób z szablonu
+1. W **widok zasobów** okienku kliknij prawym przyciskiem myszy plik .rc i wybierz polecenie **Dodaj zasób**.
 
-1. W **widok zasobów** okienku kliknij prawym przyciskiem myszy plik .rc i wybierz polecenie **Dodaj zasób** z menu skrótów.
-
-1. Wybierz znak plus (**+**) obok zasobu, aby rozwinąć węzeł zasobów i wyświetlić wszystkie szablony dostępne dla tego zasobu.
+1. Wybierz znak plus (**+**) obok zasobu, aby rozwinąć węzeł zasobów i wyświetlić szablonów dostępnych dla tego zasobu.
 
 1. Dwukrotnie kliknij szablon, który chcesz użyć.
 
-1. Zmodyfikuj dodano zasobów zgodnie z potrzebami w edytorze zasobów.
-
-### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Aby przekonwertować istniejącego pliku zasobów do szablonu
-
-1. Otwórz plik .rc, jako autonomiczny plik.
-
-1. Na **pliku** menu, wybierz opcję **Zapisz \< *filename*> jako**.
-
-1. Określ lokalizację, a następnie wybierz **OK**.
+   Dodano zasobów można zmodyfikować zgodnie z potrzebami w edytorze zasobów.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -240,5 +190,5 @@ Win32
 ## <a name="see-also"></a>Zobacz też
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
-[Zarządzanie zasobami](../windows/how-to-copy-resources.md)<br/>
-[Dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Instrukcje: Zarządzaj zasobami](../windows/how-to-copy-resources.md)<br/>
+[Instrukcje: dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)<br/>

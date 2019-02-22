@@ -1,6 +1,6 @@
 ---
 title: /Za, /Ze (Wyłącz rozszerzenia językowe)
-ms.date: 11/04/2016
+ms.date: 02/19/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
 - /za
@@ -18,36 +18,34 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: a3d25f71739f9948f2c0237efbaeaf8fa89f2114
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d24affdf92222ac50ffe72b3a1606d3f7030de60
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549724"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676477"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Wyłącz rozszerzenia językowe)
 
-**/Za** kompilator generuje błąd dla konstrukcji języka, które nie są zgodne z ANSI C89 lub ISO C ++ 11. **/Ze** opcji kompilatora, która jest domyślnie włączona, umożliwia korzystanie z rozszerzeń firmy Microsoft.
+**/Za** — opcja kompilatora wyłącza i emituje błędów dla rozszerzenia Microsoft do C, które nie są zgodne z ANSI, C90 C89/ISO. Przestarzała **/Ze** — opcja kompilatora umożliwia korzystanie z rozszerzeń firmy Microsoft. Rozszerzenia Microsoft są domyślnie włączone.
 
 ## <a name="syntax"></a>Składnia
 
-```
-/Za
-/Ze
-```
+> **/Za**<br/>
+> **/Ze**
 
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
->  **/Ze** opcja jest przestarzały, ponieważ jego zachowanie jest domyślnie włączone. Zalecane jest użycie [/Zc (zgodność)](../../build/reference/zc-conformance.md) opcje kompilatora do kontrolowania funkcji rozszerzenia języka. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** sekcji [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+> Korzystanie z **/Za** podczas kompilowania kodu C++ nie jest zalecane. **/Ze** opcja jest przestarzały, ponieważ jego zachowanie jest domyślnie włączone. Aby uzyskać listę opcji kompilatora przestarzałe zobacz [opcje kompilatora usunięte i przestarzałe](compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
 
-Kompilator języka Visual C++ oferuje pewną liczbę funkcji przekracza określoną w normach ANSI C89, ISO C99 lub ISO C++. Te funkcje są określane zbiorczo jako rozszerzenia Microsoft do C i C++. Te rozszerzenia są domyślnie dostępne i nie jest dostępna podczas **/Za** określono opcję. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Extensions firmy Microsoft do C i C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).
+Kompilator Microsoft C/C++ obsługuje kompilowanie kodu C na dwa sposoby:
 
-Firma Microsoft zaleca, wyłącz rozszerzenia językowe, określając **/Za** opcję, jeśli planujesz portu program do innych środowisk. Gdy **/Za** jest określony, kompilator traktuje rozszerzone słów kluczowych jako identyfikatorów proste firmy Microsoft, wyłącza rozszerzenia Microsoft i automatycznie definiuje `__STDC__` wstępnie zdefiniowane makro dla programów C.
+- Kompilator używa trybu kompilacji C domyślnie, gdy plik źródłowy ma *.c* rozszerzenia, lub gdy [TP](tc-tp-tc-tp-specify-source-file-type.md) lub [TP](tc-tp-tc-tp-specify-source-file-type.md) określono opcję. Kompilator języka C jest kompilatora C89/C90, która domyślnie umożliwia korzystanie z rozszerzeń firmy Microsoft dla języka C. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Extensions firmy Microsoft do C i C++](microsoft-extensions-to-c-and-cpp.md). Gdy oba kompilacji C i **/Za** opcja jest określona, kompilator języka C, jest ściśle zgodny ze standardem C89/C90. Kompilator traktuje rozszerzone słów kluczowych jako identyfikatorów proste firmy Microsoft wyłącza rozszerzenia Microsoft i automatycznie definiuje [ \_ \_STDC\_ \_ ](../../preprocessor/predefined-macros.md) wstępnie zdefiniowane makra dla programów C.
 
-Inne opcje kompilatora, używane z **/Za** mogą mieć wpływ na sposób kompilator zapewnia zgodność ze standardami.
+- Kompilator może skompilować kod C w trybie kompilacji C++. To zachowanie jest ustawieniem domyślnym dla plików źródłowych, które nie mają *.c* rozszerzenia i kiedy [/Tp](tc-tp-tc-tp-specify-source-file-type.md) lub [/TP](tc-tp-tc-tp-specify-source-file-type.md) określono opcję. W trybie kompilacji C++ kompilator obsługuje te części, które zostały włączone do C++ standard standardów ISO C99 i C11. Prawie cały kod języka C jest również poprawny kod C++. Niewielka liczba słowa kluczowe języka C i konstrukcji kodu nie są prawidłowy kod języka C++ lub jest interpretowana inaczej w języku C++. Kompilator zachowuje się zgodnie ze standardem w tych przypadkach C++. W trybie kompilacji C++ **/Za** opcji może spowodować nieoczekiwane zachowanie i nie jest zalecane.
 
-Sposoby, aby określić ustawienia zachowania określonych zgodność standardy, można zobaczyć [/Zc](../../build/reference/zc-conformance.md) — opcja kompilatora.
+Inne opcje kompilatora może mieć wpływ na sposób kompilator zapewnia zgodność ze standardami. Aby poznać sposoby Określ określonych standardowych języków C i C++ zachowania ustawień, zobacz [/Zc](zc-conformance.md) — opcja kompilatora. Aby uzyskać dodatkowe ustawienia zgodności standard C++, zobacz [/ permissive-](permissive-standards-conformance.md) i [/STD](std-specify-language-standard-version.md) opcje kompilatora.
 
 Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
@@ -55,16 +53,18 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. W okienku nawigacji wybierz **właściwości konfiguracji**, **C/C++**, **języka**.
+1. W okienku nawigacji wybierz **właściwości konfiguracji** > **C/C++** > **języka**.
 
 1. Modyfikowanie **Wyłącz rozszerzenia języka** właściwości.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
+Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)
+[Opcje kompilatora](compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](setting-compiler-options.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
+[/permissive- (Zgodność ze standardami)](permissive-standards-conformance.md)<br/>
+[/std (Określ wersję standardu języka)](std-specify-language-standard-version.md)<br/>

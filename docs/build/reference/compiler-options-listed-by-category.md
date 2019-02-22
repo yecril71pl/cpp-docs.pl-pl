@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248575"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676503"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
 Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzyskać alfabetyczną listę, zobacz [kompilatora wymienione opcje alfabetycznie](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Optymalizacja
+## <a name="optimization"></a>Optymalizacja
 
 |Opcja|Cel|
 |------------|-------------|
@@ -24,21 +24,21 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/Ob](ob-inline-function-expansion.md)|Kontroluje wbudowane rozwijanie.|
 |[/Od](od-disable-debug.md)|Wyłącza optymalizację.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
-|[/OI](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
+|[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
 |[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
 |[/OT](os-ot-favor-small-code-favor-fast-code.md)|Preferuje szybki kod.|
 |[/Ox](ox-full-optimization.md)|Używa maksymalnej optymalizacji (/ Ob2gity/GS).|
 |[/Oy](oy-frame-pointer-omission.md)|Pomija wskaźnik ramki. (tylko x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Generuje kod, który jest zoptymalizowany dla określonej architektury lub dla zakresu architektur.|
 
-### <a name="code-generation"></a>Generowanie kodu
+## <a name="code-generation"></a>Generowanie kodu
 
 |Opcja|Cel|
 |------------|-------------|
 |[/ arch](arch-x86.md)|Użyj instrukcji SSE lub SSE2 przy generowaniu kodu. (tylko x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
 |[/EH](eh-exception-handling-model.md)|Określa model obsługi wyjątków.|
-|[/ FP](fp-specify-floating-point-behavior.md)|Określa zachowanie liczb zmiennopozycyjnych.|
+|[/fp](fp-specify-floating-point-behavior.md)|Określa zachowanie liczb zmiennopozycyjnych.|
 |[/GA](ga-optimize-for-windows-application.md)|Optymalizuje dla aplikacji Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Używa `__cdecl` konwencji wywoływania. (tylko x86)|
 |[/Ge](ge-enable-stack-probes.md)|Przestarzałe. Uaktywnia sondy stosu.|
@@ -65,29 +65,29 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji pomocnika `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagany. (tylko x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia wewnątrz `try` bloków.|
 |[/Qpar](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętli.|
-|[/ Qpar raport](qpar-report-auto-parallelizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznego przetwarzania równoległego.|
+|[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznego przetwarzania równoległego.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Używa całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycyjnych i wyłącza niektóre ładowania zmiennopozycyjnego.|
 |[/Qspectre](qspectre.md)|Włącz spectre dla CVE 2017-5753 dla klasy z krokami zaradczymi dla luki ataków.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Wybiera, jaki volatile — słowo kluczowe jest interpretowany.|
 
-### <a name="output-files"></a>Pliki wyjściowe
+## <a name="output-files"></a>Pliki wyjściowe
 
 |Opcja|Cel|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Przetwarza komentarze dokumentacji do pliku XML.|
 |[/FA](fa-fa-listing-file.md)|Konfiguruje plik listy zestawu.|
 |[/Fa](fa-fa-listing-file.md)|Tworzy plik listy zestawu.|
-|[/FD](fd-program-database-file-name.md)|Zmienia nazwę pliku bazy danych programu.|
+|[/Fd](fd-program-database-file-name.md)|Zmienia nazwę pliku bazy danych programu.|
 |[/Fe](fe-name-exe-file.md)|Zmienia nazwę pliku wykonywalnego.|
 |[/Fi](fi-preprocess-output-file-name.md)|Określa nazwę pliku wstępnie przetworzone produkty wyjściowe.|
 |[/Fm](fm-name-mapfile.md)|Tworzy plik mapy.|
-|[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
+|[/Fo](fo-object-file-name.md)|Tworzy plik obiektu.|
 |[/ FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówka.|
 |[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Wygenerowana nazwa SBR, pliki przeglądarki.|
 
-### <a name="preprocessor"></a>Preprocesor
+## <a name="preprocessor"></a>Preprocesor
 
 |Opcja|Cel|
 |------------|-------------|
@@ -105,7 +105,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/u](u-u-undefine-symbols.md)|Usuwa wszystkie wstępnie zdefiniowane makra.|
 |[/X](x-ignore-standard-include-paths.md)|Ignoruje Standardowy katalog plików dołączanych.|
 
-### <a name="language"></a>Język
+## <a name="language"></a>Język
 
 |Opcja|Cel|
 |------------|-------------|
@@ -125,11 +125,11 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w bazie danych programu zgodne z funkcją Edytuj i Kontynuuj. (tylko x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje kompletne informacje debugowania.|
 |[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku .obj.|
-|[/ ZP](zp-struct-member-alignment.md) *n*|Pakuje elementy członkowskie struktury.|
+|[/Zp](zp-struct-member-alignment.md) *n*|Pakuje elementy członkowskie struktury.|
 |[/Zs](zs-syntax-check-only.md)|Sprawdza tylko składnię.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia na środowiska wykonawczego Windows.|
 
-### <a name="linking"></a>Konsolidacja
+## <a name="linking"></a>Konsolidacja
 
 |Opcja|Cel|
 |------------|-------------|
@@ -141,9 +141,9 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/MD](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL przy użyciu biblioteki MSVCRT.lib.|
 |[/MDd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć debugowania wielowątkową bibliotekę DLL przy użyciu biblioteki MSVCRTD.lib.|
 |[/MT](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowy plik wykonywalny przy użyciu biblioteki LIBCMT.lib.|
-|[/ MTd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowy plik wykonywalny debugowania, przy użyciu biblioteki LIBCMTD.lib.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowy plik wykonywalny debugowania, przy użyciu biblioteki LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Różne
+## <a name="miscellaneous"></a>Różne
 
 |Opcja|Cel|
 |------------|-------------|
@@ -159,25 +159,25 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/HELP](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny `char` typu.|
-|[/ JMC](jmc.md)|Obsługuje debugowanie natywne C++ tylko mój kod.|
+|[/JMC](jmc.md)|Obsługuje debugowanie natywne C++ tylko mój kod.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Kompilator i konsolidator utworzą plik binarny, który może zostać wykonany w jądrze Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Kompiluje jednocześnie wiele plików źródłowych.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie transparentu logowania.|
-|[/ SDL](sdl-enable-additional-security-checks.md)|Umożliwia dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
-|[/ showincludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich obejmują pliki, podczas kompilacji.|
+|[/sdl](sdl-enable-additional-security-checks.md)|Umożliwia dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
+|[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich obejmują pliki, podczas kompilacji.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe znajdują się C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe C++.|
 |[/V](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji.|
 |[/w](compiler-option-warning-level.md)|Wyłącza wszystkie ostrzeżenia.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Zestawy danych wyjściowych poziom ostrzeżeń.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń dla określone ostrzeżenie.|
 |[/Wall](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, łącznie z ostrzeżeniami, które są domyślnie wyłączone.|
-|[/WD](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
+|[/wd](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
 |[/we](compiler-option-warning-level.md)|Traktuje określone ostrzeżenie jako błąd.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę dla błędów i komunikaty ostrzegawcze podczas kompilowania kodu źródłowego języka C++ z poziomu wiersza polecenia.|
-|[/WO](compiler-option-warning-level.md)|Wyświetla określoną ostrzeżenie tylko raz.|
+|[/wo](compiler-option-warning-level.md)|Wyświetla określoną ostrzeżenie tylko raz.|
 |[/Wv](compiler-option-warning-level.md)|Wyłącza ostrzeżenia wprowadzone w nowszych wersjach kompilatora.|
 |[/WX](compiler-option-warning-level.md)|Traktuje ostrzeżeń jako błędy.|
 |[/Yc](yc-create-precompiled-header-file.md)|Utwórz. Plik PCH.|
@@ -195,7 +195,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/ permissive-](permissive-standards-conformance.md)|Ustaw tryb zgodności standard.|
 |[/ STD](std-specify-language-standard-version.md)|Selektor zgodności wersję standardu języka C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Opcje kompilatora przestarzałe i usunięte
+## <a name="deprecated-and-removed-compiler-options"></a>Opcje kompilatora przestarzałe i usunięte
 
 |Opcja|Cel|
 |------------|-------------|
