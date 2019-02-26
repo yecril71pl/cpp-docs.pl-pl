@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334654"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809701"
 ---
 # <a name="platformguid-value-class"></a>Klasa wartości Platform::Guid
 
@@ -38,7 +38,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać przykład sposobu generowania nowego `Platform::Guid` przy użyciu funkcji Windows [funkcji CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), zobacz [składnika WinRT: Jak można wygenerować identyfikatora GUID?](https://www.eternalcoding.com/?p=383)
+Aby wygenerować nowy `Platform::Guid`, użyj [Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) metody statycznej.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -141,6 +141,10 @@ Drugi `Platform::Guid` do porównania.
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość true, jeśli dwa `Platform::Guid` wystąpień są takie same.
+
+### <a name="remarks"></a>Uwagi
+
+Preferuj przy użyciu `==` operator zamiast [Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals) metody statycznej.
 
 ## <a name="operator-inequality"></a> GUID::operator! = — Operator
 

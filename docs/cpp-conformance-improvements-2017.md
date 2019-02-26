@@ -1,17 +1,16 @@
 ---
 title: Ulepszenia zgodności języka C++
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694403"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809753"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
@@ -35,7 +34,7 @@ Wyrażenia zadeklarowany jako constexpr teraz mogą zawierać niektórych rodzaj
 
 ## <a name="c17"></a>C++17
 
-### <a name="terse-staticassert"></a>Zwięzła static_assert
+### <a name="terse-staticassert"></a>Terse static_assert
 
 Parametr komunikat static_assert jest opcjonalny. Aby uzyskać więcej informacji, zobacz [rozszerzanie static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf).
 
@@ -317,7 +316,7 @@ void bar(A<0> *p)
 
 [P0030R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf) dodaje trzy pomocy nowych przeciążeń `std::hypot`, dla typów **float**, **double**, i **typu long double**, z których każdy ma trzy parametry wejściowe.
 
-### <a name="c17-filesystem"></a>C ++ 17 \<filesystem >
+### <a name="c17-filesystem"></a>C++17 \<filesystem>
 
 [P0218R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html) przyjmuje usług terminalowych systemu plików w postaci standardowych za pomocą niewielkiej modyfikacji treść.
 
@@ -548,7 +547,7 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 // correct:  template <class T, ListNodeMember<T> M> class ListHead;
 ```
 
-### <a name="expression-sfinae"></a>Wyrażenie SFINAE
+### <a name="expression-sfinae"></a>Expression-SFINAE
 
 Aby zapewnić obsługę wyrażenie SFINAE, kompilator teraz analizuje decltype argumentów podczas szablony są deklarowane, a nie uruchomiony. W związku z tym jeśli specjalizacji zależne od innych znajduje się w argumencie decltype, nie jest odroczone do czasu wystąpienia i są przetwarzane od razu i wszystkie wynikowe błędy są zdiagnozować w danym momencie.
 
@@ -865,7 +864,7 @@ To ostrzeżenie jest wyłączone domyślnie w 15.3, ale na przez domyślne w wer
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype i wywołania usunięte destruktorów
 
-W poprzednich wersjach programu Visual Studio kompilator nie wykrył po wywołaniu destruktora usunięto błąd wystąpił w kontekście wyrażenia skojarzony z "decltype". W programie Visual Studio 2017 w wersji 15.3, poniższy kod generuje "Błąd C2280:" A\<T >:: ~ A(void) ": próba odwania do usuniętej funkcji do":
+W poprzednich wersjach programu Visual Studio kompilator nie wykrył po wywołaniu destruktora usunięto błąd wystąpił w kontekście wyrażenia skojarzony z "decltype". W programie Visual Studio 2017 w wersji 15.3, poniższy kod generuje "Błąd C2280: "A\<T >:: ~ A(void)": próba odwania do usuniętej funkcji do ":
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Niezainicjowane zmienne const
 
-Visual Studio 2017 w wersji RTW wersji miał regresji, w którym kompilator języka C++ może nie wystawiać diagnostyki, jeśli nie można zainicjować zmienną "const". Regresja ten został rozwiązany w programie Visual Studio 2017 w wersji 15.3. Poniższy kod generuje teraz "ostrzeżenie C4132:"Value": obiekt const powinien być inicjowany jako":
+Visual Studio 2017 w wersji RTW wersji miał regresji, w którym kompilator języka C++ może nie wystawiać diagnostyki, jeśli nie można zainicjować zmienną "const". Regresja ten został rozwiązany w programie Visual Studio 2017 w wersji 15.3. Poniższy kod generuje teraz "ostrzeżenie C4132: "Value": obiekt const powinien być inicjowany jako ":
 
 ```cpp
 const int Value; //C4132
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 Aby naprawić błąd, zmień `return` instrukcję, aby `return this->base_value;`.
 
-**Uwaga:** w Boost biblioteka języka python, nastąpiło przez długi czas rozwiązania specyficzne dla MSVC szablon deklaracji do przodu w [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). W obszarze [/ permissive-](build/reference/permissive-standards-conformance.md) trybu, począwszy od programu Visual Studio 2017 w wersji 15.8 (_MSC_VER = 1915), za pomocą kompilatora MSVC jest poprawnie wyszukiwania do nazwy zależnej od argumentu (ADL) i jest spójne za pomocą innych kompilatorów, dzięki czemu ochrona tego rozwiązania niepotrzebne. Aby uniknąć tego błędu *C3861: "unwind_type": nie odnaleziono identyfikatora*, zobacz [229 żądania Ściągnięcia](https://github.com/boostorg/python/pull/229) w repozytorium Boostorg można zaktualizować pliku nagłówka. Firma Microsoft ma już zastosować poprawki względem jakiegokolwiek [vcpkg](vcpkg.md) Boost pakietu, więc jeśli pobieranie lub uaktualnienie źródła Boost z vcpkg nie należy zastosować poprawkę oddzielnie.
+**Uwaga:** W bibliotece python Boost wprowadzono przez długi czas obejście MSVC specyficzne dla szablonu deklaracji do przodu w [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). W obszarze [/ permissive-](build/reference/permissive-standards-conformance.md) trybu, począwszy od programu Visual Studio 2017 w wersji 15.8 (_MSC_VER = 1915), za pomocą kompilatora MSVC jest poprawnie wyszukiwania do nazwy zależnej od argumentu (ADL) i jest spójne za pomocą innych kompilatorów, dzięki czemu ochrona tego rozwiązania niepotrzebne. Aby uniknąć tego błędu *C3861: "unwind_type": nie odnaleziono identyfikatora*, zobacz [229 żądania Ściągnięcia](https://github.com/boostorg/python/pull/229) w repozytorium Boostorg można zaktualizować pliku nagłówka. Firma Microsoft ma już zastosować poprawki względem jakiegokolwiek [vcpkg](vcpkg.md) Boost pakietu, więc jeśli pobieranie lub uaktualnienie źródła Boost z vcpkg nie należy zastosować poprawkę oddzielnie.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>do przodu, deklaracje i definicje w przestrzeni nazw std
 
@@ -1685,7 +1684,7 @@ C++ standard nie zezwala na użytkownika do dodania do przodu deklaracji lub def
 
 W czasie w przyszłości Microsoft zostanie przesunięty w lokalizacji, gdzie są zdefiniowane typy niektóre STL. W takim przypadku, spowoduje to przerwanie istniejący kod, który dodaje deklaracje przechodzenia do przodu do przestrzeni nazw `std`. Nowe ostrzeżenie C4643, pomaga w identyfikowaniu problemów takich źródła. To ostrzeżenie jest włączone w **/wartość domyślna** tryb i jest domyślnie wyłączona. Będzie miało wpływ na programy, które są kompilowane przy użyciu **/Wall** lub **/WX**.
 
-Poniższy kod zgłasza teraz C4643: *do przodu deklarowanie "vector" w przestrzeni nazw std nie jest dozwolona przez C++ Standard*.
+Poniższy kod zgłasza teraz C4643: *Do przodu deklarowanie "vector" w przestrzeni nazw std nie jest dozwolona przez C++ Standard*.
 
 ```cpp
 namespace std {
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-Kompilator generuje C5050 dla obu tych przypadkach: *ostrzeżenie C5050: jestem możliwe niezgodne środowisko podczas importowania modułu ": niezgodność wersji języka C++.  Bieżąca wersja "201402" module "201703"*.
+Kompilator generuje C5050 dla obu tych przypadkach: *ostrzeżenie C5050: Jestem możliwe niezgodne środowisko podczas importowania modułu ": niezgodność wersji języka C++.  Bieżąca wersja "201402" module "201703"*.
 
-Ponadto kompilator wywołuje C7536 zawsze wtedy, gdy plik .ifc zostały naruszone. Nagłówek interfejsu modułu zawiera algorytmu SHA2 skrót zawartości poniżej. Przy imporcie plik .ifc jest skrótu w taki sam sposób i następnie porównywany wyznaczania wartości skrótu, podany w nagłówku; Jeśli nie są one zgodne C7536 jest zgłaszany błąd: *ifc sprawdzania integralności nie powiodło się.  Oczekiwano algorytmu SHA2: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"*.
+Ponadto kompilator wywołuje C7536 zawsze wtedy, gdy plik .ifc zostały naruszone. Nagłówek interfejsu modułu zawiera algorytmu SHA2 skrót zawartości poniżej. Przy imporcie plik .ifc jest skrótu w taki sam sposób i następnie porównywany wyznaczania wartości skrótu, podany w nagłówku; Jeśli nie są one zgodne C7536 jest zgłaszany błąd: *ifc sprawdzania integralności nie powiodło się.  Oczekiwano algorytmu SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Częściowe szeregowania obejmujące aliasów i konteksty — ustalona
 

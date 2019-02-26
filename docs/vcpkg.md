@@ -3,16 +3,15 @@ title: vcpkg — C++ Menedżer pakietów dla Windows, Linux i MacOS
 description: vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozyskiwanie i Instalacja bibliotek C++ typu open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518687"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809714"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS
 
@@ -32,11 +31,11 @@ Jeśli tworzysz klonowania vcpkg prywatne biblioteki w kolekcji portów można d
 
 ## <a name="installation"></a>Instalacja
 
-Sklonuj repozytorium vcpkg z witryny GitHub: https://github.com/Microsoft/vcpkg. Możesz pobrać do dowolnej lokalizacji folderu, który użytkownik sobie tego życzy.
+Sklonuj repozytorium vcpkg z witryny GitHub: [ https://github.com/Microsoft/vcpkg ](https://github.com/Microsoft/vcpkg). Możesz pobrać do dowolnej lokalizacji folderu, który użytkownik sobie tego życzy.
 
 Uruchom program inicjujący w folderze głównym:
 
-- **Usługa ładowania początkowego vcpkg.bat** (Windows)
+- **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Przeszukaj listę dostępnych bibliotek
@@ -106,7 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="integrate-with-visual-studio-windows"></a>Integracja z programem Visual Studio (Windows)
 
-### <a name="per-user"></a>Na użytkownika
+### <a name="per-user"></a>Per-user
 
 Uruchom **vcpkg integracji instalacji** skonfigurować program Visual Studio, aby zlokalizować wszystkie vcpkg pliki nagłówkowe i pliki binarne na poszczególnych użytkowników, bez konieczności ręcznej edycji ścieżek katalogi VC ++. W przypadku wielu klonach klonowania, w którym jest Uruchom to polecenie staje się nową lokalizację domyślną.
 

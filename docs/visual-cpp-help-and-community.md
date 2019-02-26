@@ -1,17 +1,16 @@
 ---
 title: Pomoc i społeczność Visual C++
 ms.date: 11/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978260"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809675"
 ---
 # <a name="visual-c-help-and-community"></a>Pomoc i społeczność Visual C++
 
@@ -43,6 +42,6 @@ Wiele sekcji dokumentacji są również dostępne w postaci pliku PDF. Te sekcje
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Blog zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Zawiera wpisy w różnych dziedzinach przez specjalistów członkami zespołu produktu Visual C++.|
-|[Witryna Channel 9](https://channel9.msdn.com/)|Zawiera wywiady wideo i wykładów. Użyj pola wyszukiwania na stronie głównej witryny Channel 9, aby znaleźć zawartości C++.|
+|[Channel 9](https://channel9.msdn.com/)|Zawiera wywiady wideo i wykładów. Użyj pola wyszukiwania na stronie głównej witryny Channel 9, aby znaleźć zawartości C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Zawiera artykuły i aktualności na temat programu Visual Studio i narzędzi programistycznych powiązane.|
 |[Fora MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) i [społeczność deweloperów](https://developercommunity.visualstudio.com)|Oficjalna fora Microsoft gdzie publikowanie pytań dotyczących języka C++ i Uzyskaj odpowiedzi od firmy Microsoft i ekspertami w społeczności.|

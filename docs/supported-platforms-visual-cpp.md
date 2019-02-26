@@ -1,20 +1,19 @@
 ---
 title: Obsługiwane platformy (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a077ae90078e4157c154cae2821e67642eff64a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8bd090acf94876ee7939b5d1d80613f688b89d7
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459439"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809636"
 ---
 # <a name="supported-platforms-visual-c"></a>Obsługiwane platformy (Visual C++)
 
@@ -27,21 +26,21 @@ Aplikacje utworzone przy użyciu programu Visual Studio mogą być kierowane do 
 |Windows Vista|X|X||
 |Windows Server 2008|X|X||
 |Windows 7|X|X||
-|Windows Server 2012 z dodatkiem R2|X|X||
+|Windows Server 2012 R2|X|X||
 |Windows 8|X|X|X|
 |Windows 8.1|X|X|X|
 |Windows 10|X|X|X|
-|System android \*\*|X|X|X|
-|dla systemu iOS \*\*|X|X|X|
+|Android \*\*|X|X|X|
+|iOS \*\*|X|X|X|
 |Linux \*\*\*|X|X|X|
 
-\* Możesz użyć zestawu narzędzi platformy Windows XP, które zostały zawarte w Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 i Visual Studio 2012 Update 1 lub nowszej, aby kompilować projekty Windows XP i Windows Server 2003. Aby uzyskać informacje na temat korzystania z tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów systemu Windows XP](build/configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat Zmiana zestawu narzędzi platformy, zobacz [porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy](build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* Możesz użyć zestawu narzędzi platformy Windows XP, które zostały zawarte w Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 i Visual Studio 2012 Update 1 lub nowszej, aby kompilować projekty Windows XP i Windows Server 2003. Aby uzyskać informacje na temat korzystania z tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów systemu Windows XP](build/configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat Zmiana zestawu narzędzi platformy, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 \*\* Możesz zainstalować **opracowywania aplikacji mobilnych w języku C++** obciążeniem w Instalatorze programu Visual Studio 2017 (lub opcjonalnego **Visual C++ for Cross Platform Mobile Development** składnika w Instalatorze programu Visual Studio 2015) do docelowej platformy iOS lub Android. Aby uzyskać instrukcje, zobacz [zainstalować Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Aby utworzyć kod dla systemu iOS, konieczne jest posiadanie komputera Mac oraz on spełniać inne wymagania. Aby uzyskać listę wymagań wstępnych i instrukcje dotyczące instalacji, zobacz [Instalowanie i Konfigurowanie narzędzi do kompilacji przy użyciu systemu iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Możesz tworzyć x86 lub kodu ARM, aby dopasować sprzętu docelowego. Użyj x86 konfiguracje do skompilowania symulatora systemu iOS, programu Microsoft Visual Studio Emulator for Android i niektóre urządzenia z systemem Android. Użyj konfiguracji ARM, aby tworzyć dla urządzeń z systemem iOS i większość urządzeń z systemem Android.
 
 \*\*\* Możesz zainstalować **programowanie dla systemu Linux przy użyciu języka C++** obciążeniem w Instalatorze programu Visual Studio 2017 do platform firmy Microsoft w systemie Linux. Aby uzyskać instrukcje, zobacz [pobieranie, instalowanie i konfigurowanie obciążenia Linux](linux/download-install-and-setup-the-linux-development-workload.md). Ten zestaw narzędzi kompiluje plik wykonywalny na komputerze docelowym, dzięki czemu można tworzyć dla dowolnej obsługiwanej architektury.
 
-Aby uzyskać informacje o tym, jak ustawić konfigurację platformy docelowej, zobacz [jak: Konfigurowanie projektów Visual C++ do docelowego 64-bitowej, x64 platform](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+Aby uzyskać informacje o tym, jak ustawić konfigurację platformy docelowej, zobacz [jak: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platform](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 
 ## <a name="see-also"></a>Zobacz także
 
