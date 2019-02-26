@@ -42,7 +42,7 @@ Złożenia zawartości jest definiowany jako
 
 *struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list***,***deklaratora — struktura*
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list* **,** *deklaratora — struktura*
 
 Zmienna o **Unii** typ przechowuje jedną z wartości zdefiniowanych przez tego typu. Te same zasady określają deklaracje struktur i związków. Unie może również mieć pól bitowych.
 

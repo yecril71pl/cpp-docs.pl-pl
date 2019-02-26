@@ -24,7 +24,7 @@ Rzutowania typów umożliwia jawne konwertowanie typów.
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(***nazwy typu***)***wyrażenie cast*
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *nazwy typu* **)** *wyrażenie cast* 
 
 *Nazwa typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>

@@ -42,7 +42,7 @@ ms.locfileid: "56149118"
 &nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *nie cyfrą*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*numer strony***e***logowania*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*numer strony***E***logowania*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony* **.**
 
 ## <a name="see-also"></a>Zobacz także
 

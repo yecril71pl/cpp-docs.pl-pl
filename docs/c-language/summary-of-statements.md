@@ -22,7 +22,7 @@ ms.locfileid: "56152758"
 &nbsp;&nbsp;&nbsp;&nbsp;*Spróbuj na koniec instrukcji*  / \* Specific firmy Microsoft \*/
 
 *Instrukcja skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do***identyfikator***;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do** *identyfikator* **;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Kontynuuj;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Przerwij;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Zwróć** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;**
@@ -44,23 +44,23 @@ ms.locfileid: "56152758"
 *instrukcji iteracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**gdy (**  *wyrażenie*  **)**  *instrukcja*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**czy***instrukcji***podczas (***wyrażenie***);**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać (***wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać (** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja*
 
 *Wybór instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (** *wyrażenie* **)** *— instrukcja*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (***wyrażenie***)***— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator***:***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek***wyrażenie_stałe***:***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:** *— instrukcja* 
 
 *instrukcji z wyjątkiem try*: /\* Specific firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__except (***wyrażenie***)***compound-statement* 
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except (** *wyrażenie* **)** *compound-statement*  
 
 *Spróbuj na koniec instrukcji*: /\* Specific firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__finally***compound-statement* 
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement* 
 
 ## <a name="see-also"></a>Zobacz także
 

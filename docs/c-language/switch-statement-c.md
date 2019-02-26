@@ -23,8 +23,8 @@ ms.locfileid: "56148195"
 &nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek***wyrażenie_stałe***:***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:** *— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:** *— instrukcja*
 
 Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* odpowiada wartości **przełącznika (** *wyrażenie* **)**. `switch` Instrukcji może zawierać dowolną liczbę **przypadek** wystąpień, ale nie dwie stałe wielkości liter, w tym samym `switch` instrukcja może mieć taką samą wartość. Wykonanie treści instrukcji rozpoczyna się od wybranej instrukcji i jest kontynuowane do czasu zakończenia treści lub do momentu **podziału** instrukcji przenosi sterowanie na zewnątrz treści.
 

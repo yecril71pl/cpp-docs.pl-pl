@@ -20,9 +20,9 @@ ms.locfileid: "56151835"
 
 `try-finally` Instrukcja jest rozszerzeniem firmy Microsoft dla języka C, umożliwiającą aplikacjom gwarantuje wykonywanie czyszczenia kodu, gdy działanie zostanie zakłócone wykonanie bloku kodu. Oczyszczanie składa się z zadania, takie jak cofanie przydziału pamięci, zamykanie plików i zwalniania dojścia do plików. `try-finally` Instrukcji jest szczególnie przydatne dla procedur, które mają w kilku miejscach, w którym dokonuje błędu, który może spowodować przedwczesne zwracają rutynowych.
 
-*Spróbuj na koniec instrukcji*: **__try***compound-statement* 
+*Spróbuj na koniec instrukcji*: **__try** *compound-statement* 
 
-**__finally***compound-statement* 
+**__finally** *compound-statement* 
 
 Instrukcja złożona po `__try` klauzula jest sekcja chroniona. Instrukcja złożona po `__finally` klauzula jest programu obsługi zakończenia. Kod obsługi wyjątku określa zestaw akcji, które są wykonywane podczas Sekcja chroniona jest został zakończony, czy sekcja chroniona jest został zakończony przez wyjątek (Nienormalne zakończenie) lub standardowy poniżej (normalne zakończenie).
 

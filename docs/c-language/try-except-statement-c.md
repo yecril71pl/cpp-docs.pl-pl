@@ -27,9 +27,9 @@ Wyjątki mogą być dowolnego sprzętu lub oprogramowania oparte. Nawet wtedy, g
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji z wyjątkiem try*: **__try***compound-statement* 
+*instrukcji z wyjątkiem try*: **__try** *compound-statement*  
 
-**__except (***wyrażenie***)***compound-statement* 
+**__except (** *wyrażenie* **)** *compound-statement* 
 
 Instrukcja złożona po `__try` klauzula jest sekcja chroniona. Złożone wyrażenie po klauzuli `__except` to program obsługi wyjątków. Kod obsługi wyjątku określa zestaw akcji do wykonania, jeśli wyjątek jest zgłaszany podczas wykonywania sekcji chronionej. Wykonanie działa w następujący sposób:
 
