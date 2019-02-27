@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 7c7c9d572dcb8e1323df003e15e44adc8491c058
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567794"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954942"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 
@@ -90,7 +90,7 @@ Exception raised: Unable to establish the connection!
 
 **Nagłówek:** \<comdef.h >
 
-**Lib:** Jeśli **wchar_t jest typem natywnym** — opcja kompilatora jest włączona, użyj comsuppw.lib lub comsuppwd.lib. Jeśli **wchar_t jest typem natywnym** jest wyłączone, użyj comsupp.lib. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Biblioteki:** Jeśli **/Zc:** określono opcję kompilatora (ustawienie domyślne), użyj comsuppw.lib lub comsuppwd.lib. Jeśli **/Zc:wchar_t-** — opcja kompilatora jest określony, użyj comsupp.lib. Aby uzyskać więcej informacji, w tym jak ustawić tę opcję w IDE, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Zobacz także
 
