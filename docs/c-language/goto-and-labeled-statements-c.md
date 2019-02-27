@@ -26,10 +26,10 @@ ms.locfileid: "56151952"
 &nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja skoku*
 
 *Instrukcja skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do***identyfikator***;**
+&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do** *identyfikator* **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator***:***— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*
 
 Etykieta instrukcji jest istotny tylko `goto` instrukcję w dowolnym kontekście instrukcji oznaczonej etykietą jest wykonywane, bez względu na etykietę.
 

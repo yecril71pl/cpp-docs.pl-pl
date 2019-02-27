@@ -50,9 +50,9 @@ Deklaratory umożliwia deklarują tablice wartości, wskaźniki do wartości i f
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(***deklaratora***)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***[***wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub><br/>
