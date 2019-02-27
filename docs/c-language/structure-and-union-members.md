@@ -23,7 +23,7 @@ ms.locfileid: "56151367"
 „Wyrażenie wyboru elementu członkowskiego” dotyczy elementów członkowskich struktur i unii. Takie wyrażenie ma wartość i typ wybranego elementu członkowskiego.
 
 > *wyrażeniem przyrostkowym* **.** *Identyfikator*
-> *wyrażeniem przyrostkowym* ** -> ** *identyfikator*
+> *wyrażeniem przyrostkowym* **->** *identyfikator*
 
 Poniższa lista opisuje dwie formy wyrażeń wyboru elementów członkowskich:
 

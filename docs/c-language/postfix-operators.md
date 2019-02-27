@@ -21,9 +21,9 @@ Operatory przyrostkowe ma najwyższy priorytet (najbardziej restrykcyjne metody 
 *postfix-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia podstawowe*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***(***argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***.**  *Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***->***identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **(** *argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **.**  *Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **->** *identyfikator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **++**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **--**
 
