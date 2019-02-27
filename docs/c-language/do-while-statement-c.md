@@ -20,7 +20,7 @@ ms.locfileid: "56147506"
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji iteracji*: &nbsp; &nbsp; &nbsp; &nbsp; **czy***instrukcji***podczas (** *wyrażenie***);**
+*instrukcji iteracji*: &nbsp; &nbsp; &nbsp; &nbsp; **czy** *instrukcji* **podczas (** *wyrażenie* **);**
 
 *Wyrażenie* w *czy-podczas* instrukcji jest oceniane, po wykonaniu treść pętli. W związku z tym treść pętli jest zawsze wykonywana co najmniej raz.
 

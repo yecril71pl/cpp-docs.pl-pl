@@ -34,8 +34,8 @@ Argumenty są nazwy wartości przekazanych do funkcji przez wywołanie funkcji. 
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
 
 *deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy parametrów typu***)**  / \* deklaratora nowy styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**  / \* deklaratora nowy styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
 
 *listy parametrów typu*: /\* listy parametrów \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>

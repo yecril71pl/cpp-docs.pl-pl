@@ -20,7 +20,7 @@ A *wywołania funkcji* jest wyrażeniem, która zawiera nazwę wywoływanej funk
 ## <a name="syntax"></a>Składnia
 
 *postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***(***argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **(** *argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**
 
 *argument-expression-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>

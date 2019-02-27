@@ -22,12 +22,12 @@ ms.locfileid: "56151497"
 ## <a name="syntax"></a>Składnia
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***}** / * dla inicjowania agregacji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *listy inicjatorów* **}** / * dla inicjowania agregacji \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicjator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów***,***inicjatora*
+&nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów* **,** *inicjatora*
 
 *Listy inicjatorów* znajduje się lista inicjatorów rozdzielonych przecinkami. Każdego inicjatora na liście jest wyrażeniem stałym lub listy inicjalizatora. W związku z tym można zagnieżdżać listy inicjatorów. Ten formularz jest przydatne w przypadku inicjowanie agregacji elementów członkowskich typu agregacji, jak pokazano w przykładach w tej sekcji. Jednak jeśli inicjator dla automatycznemu identyfikatorowi jest pojedyncze wyrażenie, go nie musi być wyrażeniem stałym; jedynie musi ona mieć odpowiedni typ w celu przypisania do identyfikatora.
 

@@ -24,9 +24,9 @@ ms.locfileid: "56152615"
 
 ## <a name="syntax"></a>Składnia
 
-*Wybór instrukcji*: **Jeśli (***wyrażenie***)***— instrukcja*
+*Wybór instrukcji*: **Jeśli (** *wyrażenie* **)** *— instrukcja*
 
-**Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja*
+**Jeśli (** *wyrażenie* **)** *instrukcji* **else** *— instrukcja*
 
 W obu formach **Jeśli** instrukcji i wyrażeń, które mogą mieć dowolną wartość z wyjątkiem struktury, są oceniane, łącznie ze wszystkimi efektami ubocznymi.
 

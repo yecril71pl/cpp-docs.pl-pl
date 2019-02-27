@@ -43,8 +43,8 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany, 
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
 
 *deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy parametrów typu***)**   / \* deklaratora nowy styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**   / \* deklaratora nowy styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
 
 Prototyp ma tę samą postać co definicji funkcji, z tą różnicą, że jest zakończona średnikiem, natychmiast po zamykającym i dlatego ma bez treści. W obu przypadkach typ zwracany należy uzgodnić z typem zwracanym, określonym w definicji funkcji.
 
