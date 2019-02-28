@@ -1,21 +1,21 @@
 ---
 title: binder1st — Klasa
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439640"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006633"
 ---
 # <a name="binder1st-class"></a>binder1st — Klasa
 
-Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość.
+Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość. Przestarzałe w C ++ 11 uzyskać [powiązania](functional-functions.md#bind)i usuwane w języku C ++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*<br/>
+*binary_fn*<br/>
 Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
 
 *left*<br/>
@@ -58,9 +58,9 @@ Obiekt funkcji Jednoelementowy, będącą wynikiem powiązanie pierwszy argument
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię obiektu binarnego funkcja *Func* w `op`, a kopia *po lewej stronie* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu **op**( **wartość**, `right`).
+Klasa szablonu przechowuje kopię obiektu binarnego funkcja *binary_fn* w `op`, a kopia *po lewej stronie* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu `op( value, right )`.
 
-Jeśli *Func* jest obiektem typu `Operation` i `c` jest stałą, następnie [bind1st —](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) jest odpowiednikiem `binder1st` konstruktora klasy `binder1st` \< **Operacji**> ( `Func`, `c` ) i wygodniejsze.
+Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, następnie `bind1st( binary_fn, c )` jest bardziej wygodne odpowiednikiem `binder1st<Operation>( binary_fn, c )`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Przykład
 

@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun1_t — Klasa
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_t
+- functional/std::const_mem_fun1_t
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 53724c3d9b795d8cbde7a4bcda3531e43d41c4a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548791"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006360"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t — Klasa
 
-Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.
+Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,21 +23,21 @@ Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, kt
 template <class Result, class Type, class Arg>
 class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 {
-    explicit const_mem_fun1_t(Result (Type::* _Pm)(Arg) const);
-    Result operator()(const Type* _Pleft, Arg right) const;
+    explicit const_mem_fun1_t(Result (Type::* member_ptr)(Arg) const);
+    Result operator()(const Type* left, Arg right) const;
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*<br/>
+*member_ptr*<br/>
 Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*_Pleft*<br/>
-**Const** obiekt *_Pm* wywoływana jest funkcja elementu członkowskiego.
+*left*<br/>
+**Const** obiekt *member_ptr* wywoływana jest funkcja elementu członkowskiego.
 
 *right*<br/>
-Argument, który jest umożliwiającej *_Pm*.
+Argument, który jest umożliwiającej *member_ptr*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -45,11 +45,11 @@ Dostosowywalne funkcja binarnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię *_Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( *_Pleft*->\*<em>Pm</em>) ( *prawo* ) **const**.
+Klasa szablonu przechowuje kopię *member_ptr*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu `(left->member_ptr)(right) const`.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `const_mem_fun1_t` nie jest zazwyczaj używana bezpośrednio; funkcja Pomocnika `mem_fun` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun —](../standard-library/functional-functions.md#mem_fun) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
+Konstruktor obiektu `const_mem_fun1_t` jest rzadko używana bezpośrednio. `mem_fn` Umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fn —](../standard-library/functional-functions.md#mem_fn) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
 
 ## <a name="requirements"></a>Wymagania
 

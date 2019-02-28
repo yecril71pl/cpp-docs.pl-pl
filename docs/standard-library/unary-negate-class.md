@@ -1,21 +1,21 @@
 ---
 title: unary_negate — Klasa
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::unary_negate
+- functional/std::unary_negate
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 96d70a24b87a84275f17813e76473a82fbff90da
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326020"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006711"
 ---
 # <a name="unarynegate-class"></a>unary_negate — Klasa
 
-Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony.
+Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony. Przestarzała w języku C ++ 17 zastąpiona ceną [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*<br/>
+*Func*<br/>
 Funkcja jednoargumentowe być ujemna.
 
 *left*<br/>

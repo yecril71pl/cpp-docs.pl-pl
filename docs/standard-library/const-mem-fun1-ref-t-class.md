@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun1_ref_t — Klasa
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516450"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006451"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t — Klasa
 
-Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania.
+Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
 
 ## <a name="syntax"></a>Składnia
 

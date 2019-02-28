@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514689"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006732"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Określa szablony, które zapewniają, że stałe kompilacji, które podają informacje o właściwościach ich argumentów typu tworzą lub wykorzystują przekształcane typów.
+Definiuje szablonów dla stałych kompilacji, które podają informacje o właściwościach ich argumentów typu lub wygenerować typy przekształcone.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,29 +26,33 @@ Określa szablony, które zapewniają, że stałe kompilacji, które podają inf
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy i szablonów w \<type_traits > są używane do obsługi wnioskowanie o typie, klasyfikacji i transformacji, w czasie kompilacji, do wykrywania błędów dotyczących typu i ułatwiające optymalizację kodu ogólnego. Te klasy i szablony obejmują jednoargumentowe cech typu, które opisują właściwości typu, cech typu binary, które opisują relację między typami i cechy przekształcenie, które modyfikować właściwości typu.
+Klasy i szablonów w \<type_traits > są używane do obsługi wnioskowanie o typie, klasyfikacji i transformacji, w czasie kompilacji. Są również używane do wykrywania błędów dotyczących typu i ułatwiające optymalizację kodu ogólnego. Cech typu jednoelementowego opisywania właściwości typu, cech typu binary opisywania relacji między tymi typami i cechy przekształcania modyfikowania właściwości typu.
 
-Aby obsługiwać cech typu, klasę pomocy `integral_constant`, jest zdefiniowana. Ma ona specjalizacjami `true_type` i `false_type` , tworzą klas bazowych dla typu predykatów. A *predykatu typów* jest szablon, który przyjmuje jeden lub więcej argumentów typu. Jeśli predykat typów *prawdziwe*, publicznie pochodzi, bezpośrednio lub pośrednio z [true_type](../standard-library/type-traits-typedefs.md#true_type). Jeśli predykat typów *przechowuje wartość false*, publicznie pochodzi, bezpośrednio lub pośrednio z [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Klasa Pomocnika `integral_constant` i jego specjalizacji szablonu `true_type` i `false_type` tworzą klas bazowych dla typu predykatów. A *predykatu typów* jest szablon, który przyjmuje jeden lub więcej argumentów typu. Jeśli predykat typów *prawdziwe*, publicznie pochodzi, bezpośrednio lub pośrednio z [true_type](../standard-library/type-traits-typedefs.md#true_type). Jeśli predykat typów *przechowuje wartość false*, publicznie pochodzi, bezpośrednio lub pośrednio z [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 A *modyfikatora typu* lub *cech przekształcania* jest szablon, który przyjmuje jeden lub więcej argumentów szablonu, a ma jeden element członkowski, `type`, co jest synonimem typu zmodyfikowane.
 
 ### <a name="alias-templates"></a>Szablony aliasów
 
-Aby uprościć typ cechy wyrażeń, [szablony aliasów](../cpp/aliases-and-typedefs-cpp.md) dla `typename some_trait<T>::type` znajdują się, gdzie " `some_trait`" jest nazwą klasy szablonu. Na przykład [add_const —](../standard-library/add-const-class.md) ma szablonie aliasu dla tego typu `add_const_t`, zdefiniowany jako:
+Aby uprościć typ cechy wyrażeń, [szablony aliasów](../cpp/aliases-and-typedefs-cpp.md) dla `typename some_trait<T>::type` są dostarczane, gdy *some_trait* jest nazwą klasy szablonu. Na przykład [add_const —](../standard-library/add-const-class.md) ma szablonie aliasu dla tego typu `add_const_t`, zdefiniowany jako:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+Oto aliasy podana dla `type` elementy członkowskie:
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>Klasy
 
@@ -64,7 +68,7 @@ Kategorie typu podstawowego
 
 |||
 |-|-|
-|[is_void —](../standard-library/is-void-class.md)|Sprawdza, czy typ jest **void**.|
+|[is_void](../standard-library/is-void-class.md)|Sprawdza, czy typ jest **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Sprawdza, czy typ jest `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Sprawdza, czy typ jest integralną częścią.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Sprawdza, czy typ jest zmiennoprzecinkowych.|
@@ -88,7 +92,7 @@ Typ złożony kategorii
 |[is_fundamental](../standard-library/is-fundamental-class.md)|Sprawdza, czy typ jest **void** lub arytmetyczne.|
 |[is_object](../standard-library/is-object-class.md)|Sprawdza, czy typ jest typem obiektu.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Sprawdza, czy typ jest skalarna.|
-|[is_compound —](../standard-library/is-compound-class.md)|Sprawdza, czy określony typ nie jest skalarny.|
+|[is_compound](../standard-library/is-compound-class.md)|Sprawdza, czy określony typ nie jest skalarny.|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|Sprawdza, czy typ jest wskaźnik do elementu członkowskiego.|
 
 Właściwości typu
@@ -133,13 +137,17 @@ Właściwości typu
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przeniesienia, przypisanie wiadomo, że nie zostać zgłoszony.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych, destruktor wiadomo, że nie zostać zgłoszony.|
 |`has_virtual_destructor`|Sprawdza, czy typ ma destruktor wirtualny.|
+| [is_invocable](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określone typy argumentów.<br/> Dodane w języku C ++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określone typy argumentów i wynik jest konwertowany na typ określony.<br/> Dodane w języku C ++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określonego argumentu typów, wiadomo, nie zgłasza wyjątków.<br/> Dodane w języku C ++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określone typy argumentów, wiadomo, nie generują wyjątki, a wynik jest konwertowany na określony typ.<br/> Dodane w języku C ++ 17. |
 
 Zapytania dotyczące właściwości typu
 
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Pobiera wyrównania tekstu.|
-|[Ranga](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
+|[rank](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
 |[extent](../standard-library/extent-class.md)|Pobiera liczbę elementów w wymiarze określonej tablicy.|
 
 Typ relacji
@@ -154,8 +162,8 @@ Modyfikacje Const-volatile
 
 |||
 |-|-|
-|[add_const —](../standard-library/add-const-class.md)|Tworzy **const** typu z typu.|
-|[add_volatile —](../standard-library/add-volatile-class.md)|Tworzy **volatile** typu z typu.|
+|[add_const](../standard-library/add-const-class.md)|Tworzy **const** typu z typu.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Tworzy **volatile** typu z typu.|
 |[add_cv](../standard-library/add-cv-class.md)|Tworzy **const volatile** typu z typu.|
 |[remove_const](../standard-library/remove-const-class.md)|Tworzy typ niestały z typu.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Tworzy typ-volatile z typu.|
@@ -180,7 +188,7 @@ Modyfikacje tablicy
 
 |||
 |-|-|
-|[remove_all_extents —](../standard-library/remove-all-extents-class.md)|Tworzy typ inny niż tablica z typu tablicy.|
+|[remove_all_extents](../standard-library/remove-all-extents-class.md)|Tworzy typ inny niż tablica z typu tablicy.|
 |[remove_extent](../standard-library/remove-extent-class.md)|Tworzy typ elementu z typu tablicy.|
 
 Wskaźnik zmiany
@@ -200,7 +208,8 @@ Inne przekształcenia
 |[warunkowe](../standard-library/conditional-class.md)|Jeśli warunek jest spełniony, tworzy pierwszego określonego typu, w przeciwnym razie drugiego określonego typu.|
 |[decay](../standard-library/decay-class.md)|Tworzy typ, jak przekazać przez wartość. Tworzy typ niebędący odniesieniem, niestały lub trwałej lub tworzy wskaźnik do typu.|
 |[enable_if](../standard-library/enable-if-class.md)|Jeśli warunek jest spełniony, tworzy określonego typu, w przeciwnym razie bez typu.|
-|[result_of](../standard-library/result-of-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów.|
+|[invoke_result](invoke-result-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów. <br/>Dodane w języku C ++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów. <br/>Dodane w języku C ++ 14, uznane za przestarzałe w języku C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Tworzy podstawowy typ całkowitą typ wyliczenia.|
 
 ## <a name="see-also"></a>Zobacz także

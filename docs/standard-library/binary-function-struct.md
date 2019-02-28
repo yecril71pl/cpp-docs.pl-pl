@@ -1,21 +1,21 @@
 ---
 title: binary_function — Struktura
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466771"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006270"
 ---
 # <a name="binaryfunction-struct"></a>binary_function — Struktura
 
-Pusty podstawowej struktury, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, który dostarcza obiekt funkcji binarnego.
+Pusty podstawowej struktury, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, który dostarcza obiekt funkcji binarnego. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
 
 ## <a name="syntax"></a>Składnia
 
