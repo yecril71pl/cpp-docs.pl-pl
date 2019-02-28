@@ -22,7 +22,7 @@ Rzutowanie typu udostępnia metodę jawnej konwersji typu obiektu w konkretnej s
 
 *wyrażenie CAST*: *jednoargumentowe wyrażenie*
 
-**(***nazwy typu***)***wyrażenie cast*
+**(** *nazwy typu* **)** *wyrażenie cast*
 
 Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do konwersji obiektów o dowolnym typie skalarnym do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez te same zasady, które określają skutki konwersje niejawne omówione w [konwersje przypisań](../c-language/assignment-conversions.md). Dodatkowe ograniczenia na rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentację określonych typów. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na temat rozmiarów rzeczywistych typów całkowitych. Aby uzyskać więcej informacji na temat rzutowania typów, zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md).
 

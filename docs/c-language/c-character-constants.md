@@ -48,7 +48,7 @@ ms.locfileid: "56152771"
 
 **\\**  *cyfrą ósemkową cyfrą ósemkową cyfrą systemu ósemkowego*
 
-*szesnastkowe sekwencje*: **\x***cyfry szesnastkowe*
+*szesnastkowe sekwencje*: **\x** *cyfry szesnastkowe*
 
 *hexadecimal-escape-sequence hexadecimal-digit*
 

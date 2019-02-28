@@ -21,7 +21,7 @@ C ma jeden operator trójargumentowy: operator wyrażenia warunkowego (**?:**).
 
 *conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**  *wyrażenie***:***wyrażenia warunkowego*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR* **?**   *wyrażenie* **:** *wyrażenia warunkowego*
 
 *Wyrażenie logiczne OR* musi być typu całkowitego, zmiennoprzecinkowego lub wskaźnika. Jego jest oceniany pod względem jego odpowiednik na 0. Następuje punktu sekwencji *wyrażenie logiczne OR*. Ocena argumenty rozpoczynające się w następujący sposób:
 

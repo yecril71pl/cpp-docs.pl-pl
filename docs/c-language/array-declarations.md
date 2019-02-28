@@ -34,7 +34,7 @@ ms.locfileid: "56147779"
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
 
 *deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***[***wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** 
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** 
 
 Ponieważ *wyrażenie_stałe* jest opcjonalne, składnia ma dwie formy:
 

@@ -26,9 +26,9 @@ Operatory jednoargumentowe są wyświetlane przed ich operand i skojarz od prawe
 
 *wyrażenie cast operator jednoargumentowy*
 
-**Operator sizeof***jednoargumentowe wyrażenie*
+**Operator sizeof** *jednoargumentowe wyrażenie*
 
-**Operator sizeof (***nazwy typu***)**
+**Operator sizeof (** *nazwy typu* **)** 
 
 *operator jednoargumentowy*: jeden z  **&  \* + -** `~` **!**
 
