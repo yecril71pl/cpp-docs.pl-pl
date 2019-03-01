@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncat_l
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 6d44ec9f75ef1c6677c2f6053746592ba6e86382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574281"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210266"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat — _strncat_l, wcsncat —, _wcsncat_l, _mbsncat —, _mbsncat_l —
 
@@ -158,7 +159,7 @@ W języku C++ funkcje te mają przeciążenia szablonu. Aby uzyskać więcej inf
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncat —**|**strncat**|**_mbsnbcat**|**wcsncat —**|
-|**_tcsncat_l —**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
 > **_strncat_l** i **_wcsncat_l** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_tcsncat_l —**.
@@ -169,7 +170,7 @@ W języku C++ funkcje te mają przeciążenia szablonu. Aby uzyskać więcej inf
 |-------------|---------------------|
 |**strncat**|\<string.h>|
 |**wcsncat —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsncat —**|\<mbstring.h>|
+|**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - mbsset
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: c123ef70dd99c503c38a2f71e355e20e57778d73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 486e53a38f5b91732a422f01dce9dbd5c1b36c3d
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574957"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211046"
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -135,18 +136,18 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsset —**|**_strset**|**_mbsset —**|**_wcsset**|
-|**_tcsset_l —**|**_strset_l**|**_mbsset_l**|**_wcsset_l**|
+|**_tcsset —**|**_strset**|**_mbsset**|**_wcsset**|
+|**_tcsset_l**|**_strset_l**|**_mbsset_l**|**_wcsset_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strset**|\<string.h>|
-|**_strset_l**|\<tchar.h >|
+|**_strset_l**|\<tchar.h>|
 |**_wcsset**|\<Włącz String.h > lub \<wchar.h >|
-|**_wcsset_l**|\<tchar.h >|
-|**_mbsset —**, **_mbsset_l —**|\<mbstring.h>|
+|**_wcsset_l**|\<tchar.h>|
+|**_mbsset**, **_mbsset_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - towupper
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608916"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210617"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -104,8 +105,8 @@ Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isas
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper —**|**toupper**|**_mbctoupper —**|**towupper —**|
-|**_totupper_l**|**_toupper_l —**|**_mbctoupper_l —**|**_towupper_l —**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper —**|
+|**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l —**|
 
 > [!NOTE]
 > **_toupper_l —** i **_towupper_l —** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totupper_l**.
@@ -115,7 +116,7 @@ Aby **toupper** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isas
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**toupper**|\<ctype.h>|
-|**_toupper —**|\<ctype.h>|
+|**_toupper**|\<ctype.h>|
 |**towupper —**|\<CType.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

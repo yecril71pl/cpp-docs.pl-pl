@@ -19,6 +19,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsspn
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd3f27387fa180c7de9260e7cf8b7f6102915049
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477321"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210630"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -103,7 +104,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsspn —**|**strspn**|**_mbsspn**|**wcsspn**|
+|**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
 |**n/d**|**n/d**|**_mbsspn_l**|**n/d**|
 
 ## <a name="requirements"></a>Wymagania
@@ -112,7 +113,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |-------------|---------------------|
 |**strspn**|\<string.h>|
 |**wcsspn**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsspn —**, **_mbsspn_l —**|\<mbstring.h>|
+|**_mbsspn**, **_mbsspn_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

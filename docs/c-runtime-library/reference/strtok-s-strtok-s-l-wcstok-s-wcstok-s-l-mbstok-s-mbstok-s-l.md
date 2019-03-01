@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcstok_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a945742f3db82e41f662a337eef1f79ef13bd6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517458"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210591"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -151,7 +152,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|
 |**wcstok_s —**,<br />**_wcstok_s_l**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbstok_s —**,<br />**_mbstok_s_l**|\<mbstring.h>|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -159,8 +160,8 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 |Procedura TCHAR.H|\_UNICODE & \_MBCS niezdefiniowana|\_MBCS zdefiniowany|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstok_s —**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
-|**_tcstok_s_l —**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
+|**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
+|**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
 
 ## <a name="example"></a>Przykład
 

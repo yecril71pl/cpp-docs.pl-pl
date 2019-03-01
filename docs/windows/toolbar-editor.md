@@ -50,56 +50,60 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 7ef08551960c9308a84b9838249a3d9ff4950d98
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320617"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211085"
 ---
 # <a name="toolbar-editor-c"></a>Edytor paska narzędzi (C++)
 
-**Narzędzi** Edytor pozwala na tworzenie zasobów narzędzi języka C++ i konwertowanie map bitowych na zasoby paska narzędzi. **Narzędzi** Edytor używa graficzne przedstawienie, aby pokazać pasek narzędzi i przyciski, które przypominają, jak będzie wyglądać w ukończonej aplikacji.
+**Edytor paska narzędzi** pozwala na tworzenie zasobów narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. **Edytor paska narzędzi** wykorzystuje graficzny widok, aby pokazać pasek narzędzi i przyciski, które przypominają, jak będzie wyglądać w ukończonej aplikacji.
 
-**Narzędzi** okna edytora wyświetla dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyższe dwa widoki obrazu jest narzędzi podmiotu.
+**Edytor paska narzędzi** okna wyświetla dwa widoki obrazu przycisku, taka sama jak **edytora obrazów** okna. Pasek podziału rozdziela dwa okienka, a następnie można przeciągnąć pasek podziału ze strony, aby zmieniać względne rozmiary okienek. Aktywne okienko Wyświetla krawędź wyboru i ponad dwa widoki obrazu jest narzędzi podmiotu.
 
-![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") Edytor paska narzędzi
+![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
+**Edytor paska narzędzi**
 
-**Narzędzi** edytora jest podobny do **obraz** edytora w działaniu. Elementy menu, Narzędzia grafiki i mapy bitowej siatki są takie same jak w **obraz** edytora. Polecenia menu **obraz** menu, aby możliwe było przełączać się między **narzędzi** edytora i **obraz** edytora. Aby uzyskać więcej informacji na temat korzystania z **grafiki** narzędzi **kolory** palety, lub **obraz** menu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).
+**Edytor paska narzędzi** przypomina **edytora obrazów** w funkcje i elementy menu Narzędzia grafiki i siatki mapy bitowej między nimi są takie same. W znajduje się polecenie menu **obraz** menu, aby przełączać się między **Edytor paska narzędzi** i **edytora obrazów**. Aby uzyskać więcej informacji na temat korzystania z **grafiki** narzędzi **kolory** palety, lub **obraz** menu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).
 
-Aby utworzyć nowy pasek narzędzi w projektu w języku C++, konwertowania mapy bitowej. Konwertuje grafiki z mapy bitowej obrazy przycisków na pasku narzędzi. Zazwyczaj mapy bitowej zawiera kilka obrazów przycisku w postaci bitmapy z jednego obrazu dla każdego przycisku. Jako wartość domyślna to 16 pikseli szerokości i wysokości obrazu, obrazy mogą być dowolnego rozmiaru. Można określić rozmiar obrazów przycisku w **nowy zasób paska narzędzi** okno dialogowe, w przypadku wybrania **Edytor paska narzędzi** z **obraz** menu znajduje się w edytorze obrazu.
+Aby utworzyć nowy pasek narzędzi w projektu w języku C++, konwertowania mapy bitowej. Konwertuje grafiki z mapy bitowej obrazy przycisków na pasku narzędzi. Zazwyczaj mapy bitowej zawiera kilka obrazów przycisku w postaci bitmapy z jednego obrazu dla każdego przycisku. Jako wartość domyślna to 16 pikseli szerokości i wysokości obrazu, obrazy mogą być dowolnego rozmiaru. Można określić rozmiar obrazów przycisku w **nowy zasób paska narzędzi** okno dialogowe, w przypadku wybrania **Edytor paska narzędzi** z **obraz** menu podczas  **Edytor obrazów**.
 
 **Nowy zasób paska narzędzi** okno dialogowe umożliwia określenie szerokości i wysokości przyciski dodawania zasobu paska narzędzi w projekcie C++. Wartość domyślna to 16 x 15 pikseli.
 
-Mapa bitowa, który jest używany do tworzenia paska narzędzi ma maksymalną szerokość 2048. Jeśli ustawisz **szerokość przycisku** do 512, możesz mieć tylko cztery przyciski. Ustaw szerokość 513, może mieć tylko trzy przyciski.
+Mapa bitowa, który jest używany do tworzenia paska narzędzi ma maksymalną szerokość 2048, więc jeśli ustawisz **szerokość przycisku** do *512*, może mieć tylko cztery przyciski. Jeśli równa szerokości *513*, może mieć tylko trzy przyciski.
 
-Okno dialogowe ma następujące właściwości:
+**Nowy zasób paska narzędzi** okno dialogowe ma następujące właściwości:
 
 |Właściwość|Opis|
-|---|---|
-|**Szerokość przycisku.**|Miejsce na wprowadź szerokość przycisków paska narzędzi, które konwertowania zasób mapy bitowej do zasobu paska narzędzi. Obrazy są obcinane do szerokości i wysokości określone i kolory są dostosowane by wykorzystywały standardowe kolory paska narzędzi (16 kolorów).|
-|**Wysokość przycisku**|Miejsce na Wprowadź wysokość przycisków paska narzędzi, które konwertowania zasób mapy bitowej do zasobu paska narzędzi. Obrazy są obcinane do szerokości i wysokości określone i kolory są dostosowane by wykorzystywały standardowe kolory paska narzędzi (16 kolorów).|
+|---|---------------|
+|**Szerokość przycisku.**|Miejsce na wprowadź szerokość przycisków paska narzędzi, które konwertowania zasób mapy bitowej do zasobu paska narzędzi.|
+|**Wysokość przycisku**|Miejsce na Wprowadź wysokość przycisków paska narzędzi, które konwertowania zasób mapy bitowej do zasobu paska narzędzi.|
+
+> [!NOTE]
+> Obrazy są obcinane do szerokości i wysokości określone i kolory są dostosowane by wykorzystywały standardowe kolory paska narzędzi (16 kolorów).
 
 Domyślnie przycisk Nowy lub pusty jest wyświetlany po prawej stronie paska narzędzi. Możesz przenieść ten przycisk, przed jego edycji. Podczas tworzenia nowego przycisku po prawej stronie przycisku edycji pojawi się kolejny przycisk puste. Pasek narzędzi, pusty przycisk nie jest zapisywany.
 
-Właściwości przycisku paska narzędzi są:
+Przycisk paska narzędzi ma następujące właściwości:
 
 |Właściwość|Opis|
 |--------------|-----------------|
 |**Identyfikator**|Określa identyfikator przycisku. Listy rozwijanej udostępnia typowe **identyfikator** nazwy.|
 |**Szerokość**|Określa szerokość przycisku. zalecane jest 16 pikseli.|
 |**Wysokość**|Określa wysokość przycisku. Wysokość jednego przycisku zmienia wysokość wszystkie przyciski na pasku narzędzi. Zaleca się 15 pikseli.|
-|**wiersz**|Określa komunikat wyświetlany na pasku stanu. Dodawanie \n i nazwę dodaje etykietkę narzędzia do tego przycisku paska narzędzi. Aby uzyskać więcej informacji, zobacz [tworzeniem etykietki narzędzi](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**wiersz**|Określa komunikat wyświetlany na pasku stanu. Dodawanie *\n* i dodaje nazwę **etykietki narzędzia** do tego przycisku paska narzędzi. Aby uzyskać więcej informacji, zobacz [tworzeniem etykietki narzędzi](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
-**Szerokość** i **wysokość** dotyczą wszystkich przycisków. Mapa bitowa, który jest używany do tworzenia paska narzędzi ma maksymalną szerokość 2048. Dlatego jeśli szerokość przycisku równa 512, może mieć tylko cztery przyciski i jeśli szerokość równa 513, może mieć tylko trzy przyciski.
+**Szerokość** i **wysokość** dotyczą wszystkich przycisków. Mapa bitowa, który jest używany do tworzenia paska narzędzi ma maksymalną szerokość 2048, więc jeśli równa szerokość przycisku *512*, może mieć tylko czterech przycisków i Ustaw szerokość na *513*, może mieć tylko trzy przyciski.
 
 ## <a name="how-to"></a>Instrukcje
 
-**Narzędzi** Edytor pozwala:
+**Edytor paska narzędzi** umożliwia:
 
 ### <a name="to-create-new-toolbars"></a>Aby utworzyć nowych pasków narzędzi
 
-1. W **zasobów** wyświetlić, kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Dodaj zasób** z menu skrótów. (Jeśli masz istniejący pasek narzędzi w pliku .rc, użytkownik może po prostu kliknij prawym przyciskiem myszy **narzędzi** i wybierz polecenie **Wstaw narzędzi** z menu skrótów.)
+1. W **zasobów** wyświetlić, kliknij prawym przyciskiem myszy plik .rc i wybierz **Dodaj zasób**. Jeśli masz istniejący pasek narzędzi w pliku .rc, możesz kliknąć prawym przyciskiem myszy **narzędzi** i wybierz polecenie **Wstaw narzędzi**.
 
 1. W **Dodaj zasób** okno dialogowe, wybierz opcję **narzędzi** w **typ zasobu** , a następnie wybierz **New**.
 
@@ -107,38 +111,34 @@ Właściwości przycisku paska narzędzi są:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Aby przekonwertować mapy bitowe zasoby paska narzędzi
 
-1. Otwórz istniejący zasób mapy bitowej w [edytora obrazów](../windows/image-editor-for-icons.md). (Jeśli mapa bitowa nie jest już w pliku .rc, kliknij prawym przyciskiem myszy plik .rc, wybierz polecenie **importu** z menu skrótów, przejdź do mapy bitowej, które chcesz dodać do pliku .rc, a następnie wybierz **Otwórz**.)
+1. Otwórz istniejący zasób mapy bitowej w [edytora obrazów](../windows/image-editor-for-icons.md). Jeśli mapa bitowa nie jest już w pliku .rc, kliknij prawym przyciskiem myszy plik .rc i wybierz polecenie **importu**, a następnie przejdź do mapy bitowej, aby dodać do pliku .rc, a następnie wybierz pozycję **Otwórz**.
 
-1. Z **obraz** menu, wybierz **Edytor paska narzędzi**.
+1. Przejdź do menu **obraz** > **Edytor paska narzędzi**.
 
-   **Nowy zasób paska narzędzi** pojawi się okno dialogowe. Można zmienić szerokość i wysokość obrazy ikon, aby dopasować mapę bitową. Obraz paska narzędzi są następnie wyświetlane na pasku narzędzi edytora.
+   **Nowy zasób paska narzędzi** pojawi się okno dialogowe. Można zmienić szerokość i wysokość obrazy ikon, aby dopasować mapę bitową. Obraz paska narzędzi są następnie wyświetlane na **Edytor paska narzędzi**.
 
-1. Aby zakończyć konwersję, zmień polecenie **identyfikator** za pomocą przycisku [okno właściwości](/visualstudio/ide/reference/properties-window). Wpisz nowy **identyfikator** lub wybierz **identyfikator** z listy rozwijanej.
+1. Aby zakończyć konwersję, zmień polecenie **identyfikator** za pomocą przycisku [okno właściwości](/visualstudio/ide/reference/properties-window). Wpisz nowy *identyfikator* lub wybierz **identyfikator** z listy rozwijanej.
 
    > [!TIP]
-   > **Właściwości** okno zawiera przycisk pinezki na pasku tytułu. Wybranie tego przycisku Włącza lub wyłącza **Autoukrywanie** okna. Aby szybko przechodzić przez wszystkie właściwości przycisku paska narzędzi bez konieczności ponownie otworzyć windows pojedynczej właściwości, należy wyłączyć **Autoukrywanie** wyłączyć tak **właściwości** okna pozostaje stacjonarnych.
+   > **Właściwości** okno zawiera przycisk pinezki na pasku tytułu, a wybranie tej włącza lub wyłącza **Autoukrywanie** okna. Aby przechodzić między wszystkie właściwości przycisku paska narzędzi, bez konieczności ponownie otworzyć windows pojedynczej właściwości, należy wyłączyć **Autoukrywanie** wyłączyć tak **właściwości** okna pozostaje stacjonarnych.
 
-Możesz również zmienić identyfikatory poleceń przyciski na nowy pasek narzędzi, za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window).
+   Możesz również zmienić identyfikatory poleceń przyciski na nowy pasek narzędzi, za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-### <a name="to-create-move-and-edit-toolbar-buttons"></a>Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi
+### <a name="to-manage-toolbar-buttons"></a>Aby zarządzać przycisków paska narzędzi
 
-Można łatwo utworzyć, przenoszenie, kopiowanie i edytowanie przycisków paska narzędzi:
-
-#### <a name="to-create-a-new-toolbar-button"></a>Aby utworzyć nowego przycisku paska narzędzi
+Aby utworzyć nowego przycisku paska narzędzi:
 
 1. W [widok zasobów](../windows/resource-view-window.md) rozwiń folder zasobów (na przykład *Project1.rc*).
 
-1. Rozwiń **narzędzi** folder i wybierz pasek narzędzi do edycji.
+1. Rozwiń **narzędzi** folder i wybierz pasek narzędzi do edytowania, wykonaj jedną z następujących czynności:
 
-1. Identyfikator należy przypisać pusty przycisk po prawej stronie paska narzędzi. Możesz to zrobić, edytując **identyfikator** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window). Na przykład można podać tej samej opcji menu przycisku paska narzędzi. W tym przypadku użyj pola listy rozwijanej, aby wybrać **identyfikator** opcji menu.
+   - Identyfikator należy przypisać pusty przycisk po prawej stronie paska narzędzi. Możesz to zrobić, edytując **identyfikator** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window). Na przykład można podać tej samej opcji menu przycisku paska narzędzi. W tym przypadku użyj pola listy rozwijanej, aby wybrać **identyfikator** opcji menu.
 
-   —lub—
-
-   Wybierz pusty przycisk po prawej stronie paska narzędzi (w **pasek narzędzi widoku** okienko) i rozpocząć rysowania. Domyślny przycisk polecenia identyfikator jest przypisywany (ID_BUTTON\<n >).
+   - Wybierz pusty przycisk po prawej stronie paska narzędzi (w **pasek narzędzi widoku** okienko) i rozpocząć rysowania. Domyślny przycisk polecenia identyfikator jest przypisywany (ID_BUTTON\<n >).
 
 Można również skopiuj i Wklej obraz jest jako nowego przycisku paska narzędzi.
 
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Aby dodać obraz do paska narzędzi, jak przycisk
+Aby dodać obraz do paska narzędzi, jak przycisk:
 
 1. W [widok zasobów](../windows/resource-view-window.md), Otwórz pasek narzędzi, klikając go dwukrotnie.
 
@@ -155,23 +155,15 @@ Można również skopiuj i Wklej obraz jest jako nowego przycisku paska narzędz
 
    Obraz pojawi się na pasku narzędzi jako nowy przycisk.
 
-#### <a name="to-move-a-toolbar-button"></a>Aby przenieść przycisk paska narzędzi
+Aby przenieść przycisk paska narzędzi:
 
 W **pasek narzędzi widoku** okienku przeciągnij przycisk, który ma zostać przeniesiony do nowej lokalizacji, na pasku narzędzi.
 
-#### <a name="to-copy-buttons-from-a-toolbar"></a>Kopiowanie przycisków z paska narzędzi
+Aby skopiować przycisków z paska narzędzi, przytrzymaj wciśnięty **Ctrl** klucza i w **pasek narzędzi widoku** okienku przeciągnij przycisk do jednej nowej lokalizacji na pasku narzędzi lub do lokalizacji na inny pasek narzędzi.
 
-1. Naciśnij i przytrzymaj **Ctrl** klucza.
+Usuwanie przycisku paska narzędzi, wybierz przycisk paska narzędzi i przeciągnij go poza pasek narzędzi.
 
-1. W **pasek narzędzi widoku** okienku przeciągnij przycisk do jednej nowej lokalizacji na pasku narzędzi lub do lokalizacji na inny pasek narzędzi.
-
-#### <a name="to-delete-a-toolbar-button"></a>Aby usunąć przycisku paska narzędzi
-
-Wybierz przycisk paska narzędzi i przeciągnij go poza pasek narzędzi.
-
-#### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Aby wstawić lub usuwanie odstępów między przyciskami na pasku narzędzi
-
-Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, przeciągnij je od siebie nawzajem na pasku narzędzi. Aby usunąć przestrzeń, przeciągnij je do siebie nawzajem.
+Aby wstawić lub usuwanie odstępów między przyciskami na pasku narzędzi, przeciągnij je do siebie lub od na pasku narzędzi.
 
 |Akcja|Krok|
 |------|------|
@@ -181,36 +173,31 @@ Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, przeciągnij je
 |Aby usunąć odstępów między przyciskami na pasku narzędzi|Przeciągnij przycisk na jednej stronie miejsca kierunku przycisku po drugiej stronie miejsca, dopóki nie nakłada się przycisk Następny temat w połowie.|
 
 > [!NOTE]
-> Jeśli nie ma już miejsca obok przycisku, który przeciąga opuszczenie i przycisk przeciągnąć ponad połowie ostatnie sąsiadujących przycisku **narzędzi** edytora również jest wstawiana w przeciwną stronę przycisku, który masz przeciąganie.
+> Jeśli nie ma już miejsca obok przycisku, który przeciąga opuszczenie i przycisk przeciągnąć ponad połowie ostatnie sąsiadujących przycisku **Edytor paska narzędzi** jest wstawiana w przeciwną stronę przycisku, który jest przeciągania.
 
-#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Aby zmienić właściwości przycisku paska narzędzi
+Aby zmienić właściwości przycisku paska narzędzi:
 
 1. W projekcie w języku C++ kliknij przycisk paska narzędzi.
 
 1. Wpisz nowy identyfikator w **identyfikator** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window), lub użyj listy rozwijanej, aby wybrać nowy **identyfikator**.
 
-#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Aby utworzyć etykietki narzędzia dla przycisku kontrolki toolbar
+Aby utworzyć etykietki narzędzia dla przycisku paska narzędzi:
 
 1. Wybierz przycisk paska narzędzi.
 
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window)w **monitu** właściwość pola, Dodaj opis przycisku na pasek stanu; po wiadomości, dodać `\n` i nazwa Porada narzędzia.
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window)w **monitu** pola, Dodaj opis przycisku na pasku stanu i po wiadomości, dodać `\n` i nazwa Porada narzędzia.
 
-Typowym przykładem etykietki narzędzia jest **drukowania** znajdujący się w **WordPad**:
+Na przykład zobacz etykietki narzędzia dla **drukowania** znajdujący się w **WordPad**:
 
 1. Otwórz **WordPad**.
 
-1. Umieść wskaźnik myszy nad **drukowania** przycisku paska narzędzi.
+1. Umieść wskaźnik myszy nad **drukowania** przycisku paska narzędzi i zwróć uwagę, wyraz `Print` teraz zmiennoprzecinkowych pod wskaźnika myszy.
 
-1. Należy zauważyć, że wyraz `Print` teraz zmiennoprzecinkowych pod wskaźnika myszy.
+1. Przyjrzyj się pasek stanu u dołu **WordPad** okna i zwróć uwagę, że teraz zawiera tekst `Prints the active document`.
 
-1. Spójrz na pasku stanu (w dolnej części **WordPad** okna)-Zwróć uwagę, że teraz zawiera tekst `Prints the active document`.
+`Print` jest nazwą Porada narzędzia i `Prints the active document` znajduje się opis przycisk na pasku stanu.
 
-`Print` w **kroku 3** nazywa się "narzędzia poradę," i `Prints the active document` z **kroku 4** "Opis przycisk na pasku stanu."
-
-Jeśli chcesz, aby ten efekt przy użyciu **narzędzi** edytorze ustaw **monitu** właściwość `Prints the active document\nPrint`.
-
-> [!NOTE]
-> Możesz edytować tekst monitu przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).
+Jeśli chcesz, aby ten efekt przy użyciu **Edytor paska narzędzi**ustaw **monitu** właściwość `Prints the active document\nPrint`.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -218,6 +205,7 @@ ATL i MFC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytory zasobów](../windows/resource-editors.md)<br/>
-[Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>
+[Edytory zasobów](../windows/resource-editors.md)
+<!--
+[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
+[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->

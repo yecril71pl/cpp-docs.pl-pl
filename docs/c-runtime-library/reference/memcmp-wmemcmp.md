@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - memcmp
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4feaa692ced7777d757b579c1b131b541dccea66
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610476"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210240"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -80,7 +81,7 @@ Porównuje pierwszy *liczba* znaków *buffer1* i *buffer2* i zwraca wartość ws
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**memcmp**|\<Memory.h > lub \<string.h >|
-|**wmemcmp —**|\<WChar.h >|
+|**wmemcmp**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

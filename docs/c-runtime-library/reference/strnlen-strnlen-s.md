@@ -23,6 +23,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wcsnlen
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960d57ed8c2b1d1dbc6843932b8c76fef35c34a0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602569"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210669"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen — strnlen_s —, wcsnlen —, wcsnlen_s —, _mbsnlen —, _mbsnlen_l —, _mbstrnlen —, _mbstrnlen_l —
 
@@ -144,8 +145,8 @@ Każda z tych funkcji zwraca liczbę znaków w *str*, bez uwzględniania kończ�
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnlen —**|**strnlen**|**strnlen**|**wcsnlen**|
-|**_tcscnlen —**|**strnlen**|**_mbsnlen**|**wcsnlen**|
+|**_tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
+|**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l —**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
 **_mbsnlen —** i **_mbstrnlen —** zwracają liczbę znaków wielobajtowych w ciągu znaków wielobajtowych. **_mbsnlen —** rozpoznaje sekwencje znaków wielobajtowych według stronę kodu wielobajtowego, jest obecnie w użyciu lub w zależności od ustawień regionalnych, który jest przekazywany; nie sprawdza poprawność znaków wielobajtowych. **_mbstrnlen —** sprawdza ważność znaków wielobajtowych i rozpoznaje sekwencje znaków wielobajtowych. Jeśli ciąg, który jest przekazywany do **_mbstrnlen —** zawiera nieprawidłowy znak wielobajtowy **errno** ustawiono **EILSEQ**.
@@ -158,8 +159,8 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |-------------|---------------------|
 |**strnlen —**, **strnlen_s —**|\<string.h>|
 |**wcsnlen —**, **wcsnlen_s —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsnlen —**, **_mbsnlen_l —**|\<mbstring.h>|
-|**_mbstrnlen —**, **_mbstrnlen_l —**|\<stdlib.h>|
+|**_mbsnlen**, **_mbsnlen_l**|\<mbstring.h>|
+|**_mbstrnlen**, **_mbstrnlen_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

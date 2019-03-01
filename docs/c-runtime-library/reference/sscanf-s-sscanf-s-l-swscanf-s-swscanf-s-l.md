@@ -17,6 +17,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stscanf_s
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07911b7254e74c28310669a697c7492b69567b7f
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538141"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210903"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -86,7 +87,7 @@ Przechowywane dane
 *Format*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -141,14 +142,14 @@ Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnic
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stscanf_s —**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
-|**_stscanf_s_l —**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
+|**_stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**sscanf_s —**, **_sscanf_s_l —**|\<stdio.h>|
-|**swscanf_s —**, **_swscanf_s_l —**|\<stdio.h > lub \<wchar.h >|
+|**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
+|**swscanf_s**, **_swscanf_s_l**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

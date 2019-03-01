@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tstoi
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 5c03f2766701f7e360ad0bf4f0fc701d2a7e983c
-ms.sourcegitcommit: b401a05c5c0f5cc4b32893d7382c05a51e4ab783
+ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50999989"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210695"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -100,15 +101,15 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstoi —**|**atoi**|**atoi**|**_wtoi**|
-|**_ttoi —**|**atoi**|**atoi**|**_wtoi**|
+|**_tstoi**|**atoi**|**atoi**|**_wtoi**|
+|**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**_atoi_l —**, **_wtoi —**, **_wtoi_l —**|\<stdlib.h > lub \<wchar.h >|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<stdlib.h> or \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 

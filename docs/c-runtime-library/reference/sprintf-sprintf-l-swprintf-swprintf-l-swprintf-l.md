@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stprintf_l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 875cd5eca56511c2b421584766584c0c974cd775
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521872"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210851"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -115,7 +116,7 @@ Maksymalna liczba znaków do przechowywania w wersji Unicode tej funkcji.
 *Format*<br/>
 Ciąg formantu formatu
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -147,13 +148,13 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf —**|**sprintf**|**sprintf**|**_swprintf**|
-|**_stprintf_l —**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
+|**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**sprintf**, **_sprintf_l —**|\<stdio.h>|
+|**sprintf**, **_sprintf_l**|\<stdio.h>|
 |**swprintf**, **_swprintf_l —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

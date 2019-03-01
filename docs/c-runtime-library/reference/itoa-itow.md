@@ -27,6 +27,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464095"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210539"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa — _itoa —, ltoa —, _ltoa —, ultoa —, _ultoa —, _i64toa —, _ui64toa —, _itow —, _ltow —, _ultow —, _i64tow —, _ui64tow —
 
@@ -187,7 +188,7 @@ Każda z tych funkcji zwraca wskaźnik do *buforu*. Nie będzie zwrotu błędu.
 > [!IMPORTANT]
 > Te funkcje można napisać poza końcem bufor, który jest za mały. Aby uniknąć przepełnienia buforu, upewnij się, że *buforu* jest wystarczająco duży, aby pomieścić cyfr przekonwertowany znak plus końcowego znaku null, a znak. Niewłaściwe korzystanie z tych funkcji może spowodować problemy z powodu poważnego naruszenia zabezpieczeń w kodzie.
 
-Ze względu na ich ryzyko związane z zabezpieczeniami, domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **tej funkcji lub zmienna może być niebezpieczne. Należy rozważyć użycie** *safe_function* **zamiast tego. Aby wyłączyć wycofywania, należy użyć _CRT_SECURE_NO_WARNINGS.** Firma Microsoft zaleca zmianę kodu źródłowego do użycia *safe_function* zaproponowana przez komunikat ostrzegawczy. Funkcje bardziej bezpieczne nie zapisują więcej znaków niż określony rozmiar buforu. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
+Ze względu na ich ryzyko związane z zabezpieczeniami, domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Ta funkcja lub zmienna może być niebezpieczne. Należy rozważyć użycie** *safe_function* **zamiast tego. Aby wyłączyć wycofywania, należy użyć _CRT_SECURE_NO_WARNINGS.** Firma Microsoft zaleca zmianę kodu źródłowego do użycia *safe_function* zaproponowana przez komunikat ostrzegawczy. Funkcje bardziej bezpieczne nie zapisują więcej znaków niż określony rozmiar buforu. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
 
 Aby korzystać z tych funkcji bez ostrzeżenie o zakończeniu obsługi, należy zdefiniować **_CRT_SECURE_NO_WARNINGS** makro preprocesora, przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dla deweloperów, dodając **/D_CRT_SECURE_NO_WARNINGS** opcji kompilatora **cl** polecenia. W przeciwnym razie zdefiniuj makro w plikach źródłowych. Jeśli używasz wstępnie skompilowanych nagłówków, zdefiniuj makro, które w górnej części prekompilowanego pliku nagłówkowego dołączyć plik, zwykle w pliku stdafx.h. Aby zdefiniować makro w kodzie źródłowym, należy użyć **#define** dyrektywy przed wprowadzeniem dowolny nagłówek CRT, jak w poniższym przykładzie:
 
@@ -198,7 +199,7 @@ Aby korzystać z tych funkcji bez ostrzeżenie o zakończeniu obsługi, należy 
 
 W języku C++ funkcje te mają przeciążenia szablonu, które wywołują ich bezpieczniejsze odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
-POSIX — nazwy **itoa —**, **ltoa —**, i **ultoa —** istnieje jako aliasów **_itoa —**, **_ltoa —**, i **_ultoa —** funkcji. Nazw Posix są przestarzałe, ponieważ nie podlegają Konwencji nazwy funkcji specyficzne dla implementacji ISO C. Domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX nazwę dla tego elementu jest przestarzałe. Zamiast tego należy użyć nazwy zgodność ISO C i C++:** *nowa_nazwa*. Firma Microsoft zaleca zmianę kodu źródłowego do użycia bezpieczniejsze wersje tych funkcji, **_itoa_s —**, **_ltoa_s —**, lub **_ultoa_s —**. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
+POSIX — nazwy **itoa —**, **ltoa —**, i **ultoa —** istnieje jako aliasów **_itoa —**, **_ltoa —**, i **_ultoa —** funkcji. Nazw Posix są przestarzałe, ponieważ nie podlegają Konwencji nazwy funkcji specyficzne dla implementacji ISO C. Domyślnie, te funkcje spowodować, że ostrzeżenie o zakończeniu obsługi [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć nazwy zgodność ISO C i C++:** *nowa_nazwa*. Firma Microsoft zaleca zmianę kodu źródłowego do użycia bezpieczniejsze wersje tych funkcji, **_itoa_s —**, **_ltoa_s —**, lub **_ultoa_s —**. Aby uzyskać więcej informacji, zobacz [_itoa_s —, funkcje _itow_s —](itoa-s-itow-s.md).
 
 Przenośność kodu źródłowego możesz zachować nazw Posix w kodzie. Aby korzystać z tych funkcji bez ostrzeżenie o zakończeniu obsługi, zdefiniuj zarówno **_CRT_NONSTDC_NO_WARNINGS** i **_CRT_SECURE_NO_WARNINGS** makra preprocesora, przed dołączeniem wszelkie nagłówki CRT. Można to zrobić w wierszu polecenia w wierszu polecenia dla deweloperów, dodając **/D_CRT_SECURE_NO_WARNINGS** i **/D_CRT_NONSTDC_NO_WARNINGS** opcji kompilatora, aby **cl**polecenia. W przeciwnym razie zdefiniuj makr w plikach źródłowych. Jeśli używasz wstępnie skompilowanych nagłówków, zdefiniuj plik, zwykle w pliku stdafx.h dostępne są następujące makra w górnej części prekompilowany plik nagłówkowy. Aby zdefiniować makra w kodzie źródłowym, należy użyć **#define** dyrektyw przed wprowadzeniem dowolny nagłówek CRT, jak w poniższym przykładzie:
 
@@ -241,17 +242,17 @@ int main()
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_itot —**|**_itoa**|**_itoa**|**_itow**|
 |**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
-|**_ultot —**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
-|**_ui64tot**|**_ui64toa —**|**_ui64toa —**|**_ui64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**itoa —**, **ltoa —**, **ultoa —**|\<stdlib.h>|
-|**_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, **_ui64toa —**|\<stdlib.h>|
-|**_itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, **_ui64tow —**|\<stdlib.h > lub \<wchar.h >|
+|**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> or \<wchar.h>|
 
 Te funkcje i makra są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

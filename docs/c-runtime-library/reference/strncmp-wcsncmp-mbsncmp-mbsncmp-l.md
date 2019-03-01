@@ -20,6 +20,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsnccmp
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523777"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210916"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -129,18 +130,18 @@ Zachowanie porównania **_mbsncmp —** i **_mbsncmp_l —** jest zależna od us
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnccmp —**|**strncmp —**|**_mbsncmp —**|**wcsncmp —**|
-|**_tcsncmp —**|**strncmp —**|**_mbsnbcmp —**|**wcsncmp —**|
-|**_tccmp**|Mapy i makro lub funkcja śródwierszowa|**_mbsncmp —**|Mapy i makro lub funkcja śródwierszowa|
-|**Nie dotyczy**|**Nie dotyczy**|**_mbsncmp_l —**|**Nie dotyczy**|
+|**_tcsnccmp —**|**strncmp**|**_mbsncmp**|**wcsncmp —**|
+|**_tcsncmp —**|**strncmp**|**_mbsnbcmp**|**wcsncmp —**|
+|**_tccmp**|Mapy i makro lub funkcja śródwierszowa|**_mbsncmp**|Mapy i makro lub funkcja śródwierszowa|
+|**Nie dotyczy**|**Nie dotyczy**|**_mbsncmp_l**|**Nie dotyczy**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncmp —**|\<string.h>|
+|**strncmp**|\<string.h>|
 |**wcsncmp —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsncmp —**, **_mbsncmp_l —**|\<mbstring.h>|
+|**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

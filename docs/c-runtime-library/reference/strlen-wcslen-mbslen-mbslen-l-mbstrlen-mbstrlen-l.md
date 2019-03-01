@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbstrlen
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: a2ae174d81ea074f7200461c3f3622501dbc437b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562074"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210864"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen — wcslen —, _mbslen —, _mbslen_l —, _mbstrlen —, _mbstrlen_l —
 
@@ -109,8 +110,8 @@ Każda z tych funkcji zwraca liczbę znaków w *str*, z wyłączeniem terminalu 
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcslen —**|**strlen**|**strlen**|**wcslen**|
-|**_tcsclen**|**strlen**|**_mbslen —**|**wcslen**|
+|**_tcslen**|**strlen**|**strlen**|**wcslen**|
+|**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
 **_mbslen —** i **_mbslen_l —** zwracają liczbę znaków wielobajtowych w ciągu znaków wielobajtowych, ale nie należy testować poprawność znaków wielobajtowych. **_mbstrlen —** i **_mbstrlen_l —** sprawdzić ważność znaków wielobajtowych i rozpoznaje sekwencje znaków wielobajtowych. Jeśli ciąg przekazany do **_mbstrlen —** lub **_mbstrlen_l —** zawiera nieprawidłowy znak wielobajtowy dla strony kodowej, funkcja zwraca wartość -1 i ustawia **errno** do **EILSEQ**.
@@ -123,8 +124,8 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbslen —**, **_mbslen_l —**|\<mbstring.h>|
-|**_mbstrlen —**, **_mbstrlen_l —**|\<stdlib.h>|
+|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

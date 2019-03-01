@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wmakepath_s
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471919"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210656"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 
@@ -88,7 +89,7 @@ Rozmiar buforu w słowach.
 *sizeInBytes*<br/>
 Rozmiar buforu w bajtach.
 
-*Dysk*<br/>
+*drive*<br/>
 Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. **_makepath_s —** wstawia dwukropkiem w ścieżce złożonego przypadku jej braku. Jeśli *dysku* jest **NULL** lub punktów na pusty ciąg, litera nie zostanie wyświetlony w złożonego *ścieżki* ciągu.
 
 *dir*<br/>
@@ -121,7 +122,7 @@ Jeśli wystąpi dowolne z powyższych warunków błędów, funkcje te wywołują
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s —**|
+|**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
 *Ścieżki* argumentu musi wskazywać na pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. Złożonego *ścieżki* nie może być większa niż **_MAX_PATH** stałą, zdefiniowane w Stdlib.h.
 
@@ -136,7 +137,7 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_makepath_s**|\<stdlib.h>|
-|**_wmakepath_s —**|\<stdlib.h > lub \<wchar.h >|
+|**_wmakepath_s**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

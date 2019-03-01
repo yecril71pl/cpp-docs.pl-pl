@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wcstombs
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: 0396230454636759f58881a44a5ef7f7093415fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d102cd74061faeb0c41823e6cf5c9a8ef335294f
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573566"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210734"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -106,7 +107,7 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**wcstombs —**|\<stdlib.h>|
-|**_wcstombs_l —**|\<stdlib.h>|
+|**_wcstombs_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

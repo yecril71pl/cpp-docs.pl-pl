@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507743"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210435"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -190,7 +191,7 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncpy —**|**strncpy**|**_mbsnbcpy**|**wcsncpy —**|
-|**_tcsncpy_l —**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
 > **_strncpy_l —** i **_wcsncpy_l —** ma zależność od nie ustawień regionalnych; są one udostępniane wyłącznie dla **_tcsncpy_l —** i nie są przeznaczone do bezpośredniego wywoływania.
@@ -201,7 +202,7 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsncpy —**, **_mbsncpy_l —**|\<mbstring.h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
 
 Platforma dodatkowe informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
