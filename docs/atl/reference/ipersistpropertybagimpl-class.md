@@ -1,5 +1,5 @@
 ---
-title: Klasa IPersistPropertyBagImpl
+title: IPersistPropertyBagImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 644f26ffbfb29003780eb2fc7acf3471d101ec57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297180"
 ---
-# <a name="ipersistpropertybagimpl-class"></a>Klasa IPersistPropertyBagImpl
+# <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl Class
 
 Ta klasa implementuje `IUnknown` i zezwala na obiekt zapisać właściwości zbioru właściwości dostarczonych przez klienta.
 
@@ -125,7 +125,7 @@ ATL używa map właściwości obiektu do przechowywania tych informacji. Domyśl
 
 Zobacz [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

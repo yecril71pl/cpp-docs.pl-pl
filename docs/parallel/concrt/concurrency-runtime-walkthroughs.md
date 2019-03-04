@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519493"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296413"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Współbieżność środowiska wykonawczego — Wskazówki
 
@@ -52,4 +52,3 @@ W tym artykule opisano sposób tworzenia komunikatów niestandardowy typ bloku, 
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 Wprowadza platformy programowania współbieżnego dla języka Visual C++.
-

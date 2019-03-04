@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296978"
 ---
 # <a name="coledatasource-class"></a>Klasa COleDataSource
 
@@ -130,7 +130,7 @@ Podaj dane za pomocą [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgme
 
 Po wywołaniu `CacheData` `ptd` członkiem `lpFormatEtc` i zawartość *lpStgMedium* należą do obiektu danych, nie przez obiekt wywołujący.
 
-Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktur w zestawie Windows SDK.
 
@@ -152,7 +152,7 @@ void CacheGlobalData(
 *cfFormat*<br/>
 Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
 
-*wartości hGlobal*<br/>
+*hGlobal*<br/>
 Dojście do bloku pamięci globalnej, zawierające dane w formacie określonym.
 
 *lpFormatEtc*<br/>
@@ -162,7 +162,7 @@ Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisuj�
 
 Ta funkcja udostępnia dane za pomocą natychmiastowej renderowania, dzięki czemu dane należy podać podczas wywoływania funkcji; dane są buforowane, dopóki nie jest wymagane. Użyj `CacheData` funkcja elementu członkowskiego, jeśli są podawania dużej ilości danych lub jeśli potrzebujesz nośnika magazynowania ze strukturą.
 
-Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
 
@@ -198,7 +198,7 @@ Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisuj�
 
 Ta funkcja udostępnia dane za pomocą opóźnione renderowanie, dzięki czemu dane nie są dostarczane bezpośrednio. [OnRenderData](#onrenderdata) lub [OnRenderGlobalData](#onrenderglobaldata) funkcja członkowska jest wywoływana w celu żądania danych.
 
-Użyj tej funkcji, jeśli nie chcesz podać dane za pomocą `CFile` obiektu. Jeśli źródło danych za pośrednictwem `CFile` obiektu, wywołaj [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Użyj tej funkcji, jeśli nie chcesz podać dane za pomocą `CFile` obiektu. Jeśli źródło danych za pośrednictwem `CFile` obiektu, wywołaj [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Umożliwia renderowanie bezpośredniego, należy wywołać [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) funkcja elementu członkowskiego.
 
@@ -228,7 +228,7 @@ Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisuj�
 
 Ta funkcja udostępnia dane za pomocą opóźnione renderowanie, dzięki czemu dane nie są dostarczane bezpośrednio. [OnRenderFileData](#onrenderfiledata) funkcja członkowska jest wywoływana w celu żądania danych.
 
-Użyj tej funkcji, jeśli zamierzasz używać `CFile` obiektu jako źródło danych. Jeśli nie zamierzasz używać `CFile` obiektu, wywołaj [DelayRenderData](#delayrenderdata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Użyj tej funkcji, jeśli zamierzasz używać `CFile` obiektu jako źródło danych. Jeśli nie zamierzasz używać `CFile` obiektu, wywołaj [DelayRenderData](#delayrenderdata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Umożliwia renderowanie bezpośredniego, należy wywołać [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) funkcja elementu członkowskiego.
 
@@ -310,7 +310,7 @@ Czas opóźnienia jest określona przez ustawienie klucza rejestru. Możesz zmie
 
 Dla przeciągnij więcej informacji o tym, jak opóźnienie informacje są przechowywane w rejestrze albo lub. Plik INI, zobacz [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) w zestawie Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie źródłowego porzucić](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie miejsca źródłowego](../../mfc/drag-and-drop-implementing-a-drop-source.md).
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji będzie wywoływać [OnRenderFileData](#onrenderfiledata) lub [OnRenderGlobalData](#onrenderglobaldata) przypadku nośnik dostarczony plik lub pamięć, odpowiednio. Jeśli żadna z tych formatów jest podany, domyślna implementacja będzie zwracają 0 i nic nie rób. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji będzie wywoływać [OnRenderFileData](#onrenderfiledata) lub [OnRenderGlobalData](#onrenderglobaldata) przypadku nośnik dostarczony plik lub pamięć, odpowiednio. Jeśli żadna z tych formatów jest podany, domyślna implementacja będzie zwracają 0 i nic nie rób. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Jeśli *lpStgMedium*-> *tymed* jest TYMED_NULL, `STGMEDIUM` powinny być przydzielny i wypełnione określony przez *lpFormatEtc -> tymed*. Jeśli nie jest TYMED_NULL, `STGMEDIUM` powinno być wypełnione w miejscu z danymi.
 
@@ -408,7 +408,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji, po prostu zwraca wartość FALSE.
 
-Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić `OnRenderFileData`. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić `OnRenderFileData`. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) w zestawie Windows SDK.
 
@@ -440,7 +440,7 @@ Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu
 
 Jeśli *phGlobal* ma wartość NULL, a następnie nowe wartości HGLOBAL powinien być przydzielony i zwracane w *phGlobal*. W przeciwnym razie wartości HGLOBAL określony przez *phGlobal* powinno być wypełnione przy użyciu danych. Ilość danych, umieszczone w wartości HGLOBAL nie może przekraczać bieżący rozmiar bloku pamięci. Ponadto nie można ponownie przydzielane bloku, na większy rozmiar.
 
-Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić [OnRenderFileData](#onrenderfiledata). Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić [OnRenderFileData](#onrenderfiledata). Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) w zestawie Windows SDK.
 
@@ -486,7 +486,7 @@ Umieszcza dane zawarte w `COleDataSource` obiektu w Schowku po wywołaniu jednej
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>

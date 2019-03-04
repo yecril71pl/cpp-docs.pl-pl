@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525947"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297076"
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 
@@ -62,13 +62,13 @@ Jeśli nie zaimplementowano zbiorcze pobieranie z wiersza do klas na podstawie O
 
 Funkcje wymiany pól rekordów transferu danych w każdym struktura wywołuje `DoFieldExchange` lub `DoBulkFieldExchange`. Każda funkcja przesyła dane określonego typu.
 
-Aby uzyskać więcej informacji na temat używania tych funkcji, zobacz artykuły [wymiana pól rekordów: jak działa RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Aby uzyskać więcej informacji na temat używania tych funkcji, zobacz artykuły [wymiana pól rekordów: Jak działa RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-W przypadku kolumn danych, które można powiązać dynamicznie, można również wywołać funkcje RFX lub DFX samodzielnie, jak wyjaśniono w artykułach [zestaw rekordów: dynamiczne powiązanie danych kolumn (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Ponadto można napisać własne niestandardowe procedury RFX lub DFX, jak wyjaśniono w Uwaga techniczna [43](../../mfc/tn043-rfx-routines.md) (dla ODBC) i Uwaga techniczna [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (w przypadku DAO).
+W przypadku kolumn danych, które można powiązać dynamicznie, można również wywołać funkcje RFX lub DFX samodzielnie, jak wyjaśniono w artykułach [zestaw rekordów: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Ponadto można napisać własne niestandardowe procedury RFX lub DFX, jak wyjaśniono w Uwaga techniczna [43](../../mfc/tn043-rfx-routines.md) (dla ODBC) i Uwaga techniczna [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (w przypadku DAO).
 
 Na przykład RFX i zbiorcze RFX funkcje, w jakiej występują w `DoFieldExchange` i `DoBulkFieldExchange` funkcji, zobacz [rfx_text —](#rfx_text) i rfx_text_bulk — # [rfx_text_bulk —]). Funkcje DFX są bardzo podobne do funkcji RFX.
 
-### <a name="rfx-functions-odbc"></a>Funkcje RFX (ODBC)
+### <a name="rfx-functions-odbc"></a>RFX Functions (ODBC)
 
 |||
 |-|-|
@@ -77,41 +77,41 @@ Na przykład RFX i zbiorcze RFX funkcje, w jakiej występują w `DoFieldExchange
 |[Rfx_byte —](#rfx_byte)|Przesyła jednego bajtu danych.|
 |[Rfx_date —](#rfx_date)|Przesyła czasu i daty, używając [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub TIMESTAMP_STRUCT.|
 |[Rfx_double —](#rfx_double)|Przesyła dane zmiennoprzecinkowe podwójnej precyzji.|
-|[Rfx_int —](#rfx_int)|Przesyłanie danych liczb całkowitych.|
-|[Rfx_long —](#rfx_long)|Transfery długie danych liczb całkowitych.|
-|[Rfx_longbinary —](#rfx_longbinary)|Przesyła dane dużych obiektów binarnych (BLOB) dla obiektu [CLongBinary](clongbinary-class.md) klasy.|
-|[Rfx_single —](#rfx_single)|Transfery float danych.|
-|[Rfx_text —](#rfx_text)|Dane ciągowe transferu.|
+|[RFX_Int](#rfx_int)|Przesyłanie danych liczb całkowitych.|
+|[RFX_Long](#rfx_long)|Transfery długie danych liczb całkowitych.|
+|[RFX_LongBinary](#rfx_longbinary)|Przesyła dane dużych obiektów binarnych (BLOB) dla obiektu [CLongBinary](clongbinary-class.md) klasy.|
+|[RFX_Single](#rfx_single)|Transfery float danych.|
+|[RFX_Text](#rfx_text)|Dane ciągowe transferu.|
 
 ### <a name="bulk-rfx-functions-odbc"></a>Funkcje zbiorczej wymiany RFX (ODBC)
 
 |||
 |-|-|
 |[Rfx_binary_bulk —](#rfx_binary_bulk)|Przesyła tablic bajtów danych.|
-|[Rfx_bool_bulk —](#rfx_bool_bulk)|Przesyła tablic danych logicznych.|
-|[Rfx_byte_bulk —](#rfx_byte_bulk)|Przesyła tablice bajtów jednego.|
-|[Rfx_date_bulk —](#rfx_date_bulk)|Przesyła tablic danych typu TIMESTAMP_STRUCT.|
+|[RFX_Bool_Bulk](#rfx_bool_bulk)|Przesyła tablic danych logicznych.|
+|[RFX_Byte_Bulk](#rfx_byte_bulk)|Przesyła tablice bajtów jednego.|
+|[RFX_Date_Bulk](#rfx_date_bulk)|Przesyła tablic danych typu TIMESTAMP_STRUCT.|
 |[Rfx_double_bulk —](#rfx_double_bulk)|Przesyła tablic danych podwójnej precyzji, zmiennoprzecinkowych.|
-|[Rfx_int_bulk —](#rfx_int_bulk)|Przesyła tablic danych liczb całkowitych.|
-|[Rfx_long_bulk —](#rfx_long_bulk)|Przesyła tablic danych Liczba całkowita typu long.|
-|[Rfx_single_bulk —](#rfx_single_bulk)|Przesyła tablic danych zmiennoprzecinkowych.|
-|[Rfx_text_bulk —](#rfx_text_bulk)|Przesyła tablic danych typu LPSTR.|
+|[RFX_Int_Bulk](#rfx_int_bulk)|Przesyła tablic danych liczb całkowitych.|
+|[RFX_Long_Bulk](#rfx_long_bulk)|Przesyła tablic danych Liczba całkowita typu long.|
+|[RFX_Single_Bulk](#rfx_single_bulk)|Przesyła tablic danych zmiennoprzecinkowych.|
+|[RFX_Text_Bulk](#rfx_text_bulk)|Przesyła tablic danych typu LPSTR.|
 
-### <a name="dfx-functions-dao"></a>Funkcje DFX (DAO)
+### <a name="dfx-functions-dao"></a>DFX Functions (DAO)
 
 |||
 |-|-|
 |[Dfx_binary —](#dfx_binary)|Przesyła tablice bajtów typu [CByteArray](cbytearray-class.md).|
-|[Dfx_bool —](#dfx_bool)|Przesyłanie danych logicznych.|
-|[Dfx_byte —](#dfx_byte)|Przesyła jednego bajtu danych.|
-|[Dfx_currency —](#dfx_currency)|Transfery danych walutowych, typu [COleCurrency](colecurrency-class.md).|
+|[DFX_Bool](#dfx_bool)|Przesyłanie danych logicznych.|
+|[DFX_Byte](#dfx_byte)|Przesyła jednego bajtu danych.|
+|[DFX_Currency](#dfx_currency)|Transfery danych walutowych, typu [COleCurrency](colecurrency-class.md).|
 |[Dfx_datetime —](#dfx_datetime)|Transfery danych Data i godzina, o typie [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|
 |[Dfx_double —](#dfx_double)|Przesyła dane zmiennoprzecinkowe podwójnej precyzji.|
-|[Dfx_long —](#dfx_long)|Transfery długie danych liczb całkowitych.|
-|[Dfx_longbinary —](#dfx_longbinary)|Przesyła dane dużych obiektów binarnych (BLOB) dla obiektu `CLongBinary` klasy. DAO, zalecane jest użycie [dfx_binary —](#dfx_binary) zamiast tego.|
-|[Dfx_short —](#dfx_short)|Transfery krótkie danych liczb całkowitych.|
-|[Dfx_single —](#dfx_single)|Transfery float danych.|
-|[Dfx_text —](#dfx_text)|Dane ciągowe transferu.|
+|[DFX_Long](#dfx_long)|Transfery długie danych liczb całkowitych.|
+|[DFX_LongBinary](#dfx_longbinary)|Przesyła dane dużych obiektów binarnych (BLOB) dla obiektu `CLongBinary` klasy. DAO, zalecane jest użycie [dfx_binary —](#dfx_binary) zamiast tego.|
+|[DFX_Short](#dfx_short)|Transfery krótkie danych liczb całkowitych.|
+|[DFX_Single](#dfx_single)|Transfery float danych.|
+|[DFX_Text](#dfx_text)|Dane ciągowe transferu.|
 
 =============================================
 
@@ -131,8 +131,8 @@ void RFX_Binary(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -170,8 +170,8 @@ void RFX_Bool(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -202,8 +202,8 @@ void RFX_Byte(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -244,8 +244,8 @@ void RFX_Date(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -284,8 +284,8 @@ void RFX_Double(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -316,8 +316,8 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -349,8 +349,8 @@ value );
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -381,8 +381,8 @@ void RFX_LongBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -413,8 +413,8 @@ void RFX_Single(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -448,8 +448,8 @@ void RFX_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy `CFieldExchange`. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy `CFieldExchange`. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -513,8 +513,8 @@ void RFX_Binary_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -537,7 +537,7 @@ Jeśli inicjowania *prgByteVals* i *prgLengths* na wartość NULL, a następnie 
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby można było wprowadzić rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -563,8 +563,8 @@ void RFX_Bool_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -584,7 +584,7 @@ Jeśli inicjowania *prgBoolVals* i *prgLengths* na wartość NULL, a następnie 
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -610,8 +610,8 @@ void RFX_Byte_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -631,7 +631,7 @@ Jeśli inicjowania *prgByteVals* i *prgLengths* na wartość NULL, a następnie 
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -657,8 +657,8 @@ void RFX_Date_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -678,7 +678,7 @@ Jeśli inicjowania *prgTSVals* i *prgLengths* na wartość NULL, a następnie ta
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -704,8 +704,8 @@ void RFX_Double_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -725,7 +725,7 @@ Jeśli inicjowania *prgDblVals* i *prgLengths* na wartość NULL, a następnie t
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -750,8 +750,8 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` można określić obiektu, zapoznaj się z artykułem [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -783,8 +783,8 @@ void RFX_Long_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -804,7 +804,7 @@ Jeśli inicjowania *prgLongVals* i *prgLengths* na wartość NULL, a następnie 
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -830,8 +830,8 @@ void RFX_Single_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -851,7 +851,7 @@ Jeśli inicjowania *prgFltVals* i *prgLengths* na wartość NULL, a następnie t
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -861,7 +861,7 @@ Zobacz [rfx_text_bulk —](#rfx_text_bulk).
 
 **Nagłówek:** afxdb.h
 
-## <a name="rfx_text_bulk"></a>  Rfx_text_bulk —
+## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 Przesyła wiele wierszy danych znakowych z kolumną źródła danych ODBC do odpowiedniej tablicy w `CRecordset`-pochodnych obiektu.
 
@@ -878,8 +878,8 @@ void RFX_Text_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
-Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Wskaźnik do [CFieldExchange](cfieldexchange-class.md) obiektu. Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -902,7 +902,7 @@ Jeśli inicjowania *prgStrVals* i *prgLengths* na wartość NULL, a następnie t
 > [!NOTE]
 >  Zbiorcza wymiana pól rekordów tylko przesyła dane ze źródła danych do obiektu zestawu rekordów. Aby rekordów można aktualizować, należy użyć funkcji interfejsu API ODBC `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz artykuły [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [(RFX). wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -944,7 +944,7 @@ void AFXAPI DFX_Binary(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -990,7 +990,7 @@ void AFXAPI DFX_Bool(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1033,7 +1033,7 @@ void AFXAPI DFX_Byte(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1060,7 +1060,7 @@ Zobacz [dfx_text —](#dfx_text).
 
 **Nagłówek:** afxdao.h
 
-## <a name="dfx_currency"></a>  Dfx_currency —
+## <a name="dfx_currency"></a>  DFX_Currency
 
 Transfer danych walutowych między elementy członkowskie danych pola z [CDaoRecordset](cdaorecordset-class.md) obiektu i kolumn rekordu w źródle danych.
 
@@ -1076,7 +1076,7 @@ void AFXAPI DFX_Currency(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1119,7 +1119,7 @@ void AFXAPI DFX_DateTime(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1165,7 +1165,7 @@ void AFXAPI DFX_Double(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1208,7 +1208,7 @@ void AFXAPI DFX_Long(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1252,7 +1252,7 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1298,7 +1298,7 @@ void AFXAPI DFX_Short(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1344,7 +1344,7 @@ void AFXAPI DFX_Single(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1388,7 +1388,7 @@ void AFXAPI DFX_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten obiekt zawiera informacje, aby zdefiniować kontekst dla każdego wywołania funkcji.
 
 *szName*<br/>
@@ -1434,10 +1434,9 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 **Nagłówek:** afxdao.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-

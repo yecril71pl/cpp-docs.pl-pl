@@ -1,5 +1,5 @@
 ---
-title: Klasa CComQIPtr
+title: CComQIPtr Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtr
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: c231d4d83a3030ea63e781e6f3d185270a483ccc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298818"
 ---
-# <a name="ccomqiptr-class"></a>Klasa CComQIPtr
+# <a name="ccomqiptr-class"></a>CComQIPtr Class
 
 Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.
 
@@ -111,7 +111,7 @@ Wskaźnik do identyfikatora IID z *T*.
 
 Zwraca wskaźnik do zaktualizowanego `CComQIPtr` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
 [CComQIPtr::CComQIPtr](#ccomqiptr)<br/>

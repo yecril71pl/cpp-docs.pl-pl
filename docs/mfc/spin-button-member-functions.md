@@ -5,12 +5,12 @@ helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-ms.openlocfilehash: ffd07377d54fcfff93ab4ab3771515a90ccf2785
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542600"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298402"
 ---
 # <a name="spin-button-member-functions"></a>Funkcje członkowskie przycisku pokrętła
 
@@ -26,8 +26,7 @@ Brak dostępnych kilka elementów członkowskich dla kontrolki pokrętła ([CSpi
 
 - **Zakres** można zmienić położenie maksymalne i minimalne dla przycisku pokrętła. Domyślnie maksymalna jest ustawiona na 0, a minimalna jest równa 100. Ponieważ domyślna wartość maksymalna jest mniejsza niż minimalna domyślne, akcje przycisków strzałek jest counter-intuitive. Zazwyczaj spowoduje ustawienie przy użyciu zakresu [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) funkcja elementu członkowskiego. Do wykonywania zapytań Użyj zakresu [getrange —](../mfc/reference/cspinbuttonctrl-class.md#getrange).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie ze CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

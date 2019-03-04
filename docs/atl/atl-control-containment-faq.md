@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630818"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296569"
 ---
 # <a name="atl-control-containment-faq"></a>Zawieranie kontrolek ALT — Często zadawane pytania
 
@@ -100,12 +100,12 @@ Poniżej przedstawiono podsumowanie:
 |4|Okno główne|Jeden krok|AtlAxCreateControlEx|
 |5|Okno podrzędne|Wiele kroków|CreateControlLic|
 |6|Okno główne|Wiele kroków|AtlAxCreateControlLic|
-|7|Okno podrzędne|Wiele kroków|CreateControl —|
+|7|Okno podrzędne|Wiele kroków|CreateControl|
 |8|Okno główne|Wiele kroków|AtlAxCreateControl|
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zawieranie kontrolek — często zadawane pytania](../atl/atl-control-containment-faq.md)<br/>
 [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>

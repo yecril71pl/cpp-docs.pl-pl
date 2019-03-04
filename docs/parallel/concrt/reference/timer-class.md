@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298155"
 ---
 # <a name="timer-class"></a>Klasa czasomierza
 
@@ -54,7 +54,7 @@ Typ ładunku komunikatów wyjściowych w tym bloku.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Wstrzymaj](#pause)|Zatrzymuje `timer` Blok obsługi wiadomości. Jeśli jest powtarzanej `timer` komunikatów bloku, je można ponownie uruchomić z kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma taki sam skutek jak `stop` wywołania.|
+|[pause](#pause)|Zatrzymuje `timer` Blok obsługi wiadomości. Jeśli jest powtarzanej `timer` komunikatów bloku, je można ponownie uruchomić z kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma taki sam skutek jak `stop` wywołania.|
 |[start](#start)|Uruchamia `timer` Blok obsługi wiadomości. Nosi nazwę określoną liczbę milisekund, po to, określona wartość będzie propagowane podrzędnego jako `message`.|
 |[Zatrzymaj](#stop)|Zatrzymuje `timer` Blok obsługi wiadomości.|
 
@@ -271,6 +271,6 @@ Niszczy `timer` Blok obsługi wiadomości.
 ~timer();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

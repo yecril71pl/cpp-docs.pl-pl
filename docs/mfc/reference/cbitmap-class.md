@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296738"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 
@@ -195,7 +195,7 @@ BOOL CreateCompatibleBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Określa kontekst urządzenia.
 
 *nWidth*<br/>
@@ -233,7 +233,7 @@ BOOL CreateDiscardableBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Określa kontekst urządzenia.
 
 *nWidth*<br/>
@@ -519,9 +519,8 @@ Poprzednie wymiary mapy bitowej. Wysokość znajduje się w `cy` zmienną elemen
 
 Interfejs GDI nie używa tych wartości, z wyjątkiem sytuacji, aby przywrócić je po uruchomieniu [GetBitmapDimension](#getbitmapdimension) funkcja elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 57bbd009bbcbe0ea3352ab27c5d6fbb630b7d050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b68198c17d7bd030b88bc78ad4de1367c914703
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299157"
 ---
 # <a name="cdynamicchain-class"></a>Klasa CDynamicChain
 
@@ -175,7 +175,7 @@ BOOL SetChainEntry(
 *dwChainID*<br/>
 [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów.
 
-*Obiekt*<br/>
+*pObject*<br/>
 [in] Wskaźnik do obiektu łańcuchowych, deklarowanie mapie komunikatów. Ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -189,7 +189,7 @@ Wartość TRUE, jeśli Mapa komunikat został pomyślnie dodany do kolekcji. W p
 
 Jeśli *dwChainID* wartość już istnieje w kolekcji, jego skojarzonego obiektu i mapy komunikatów, które są zastępowane przez *obiekt* i *dwMsgMapID*, odpowiednio. W przeciwnym razie jest dodawany nowy wpis.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

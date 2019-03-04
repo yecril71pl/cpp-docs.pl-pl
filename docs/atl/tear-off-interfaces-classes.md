@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, tear-off
 - tear-off interfaces classes
 ms.assetid: 14e4ab01-9213-43e5-bef5-78af1e6206ff
-ms.openlocfilehash: 7d1a6a8a7067d7f7520f84a188fbb6a9b7a9f186
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 964e4f10cb70fc239bcefb8009e3ecfc9bca22dc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297479"
 ---
 # <a name="tear-off-interfaces-classes"></a>Klasy interfejsy odrywania
 
@@ -23,7 +23,6 @@ Następujące klasy obsługi interfejsy odrywania:
 
 - [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "buforowane" interfejsu odrywania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)
-

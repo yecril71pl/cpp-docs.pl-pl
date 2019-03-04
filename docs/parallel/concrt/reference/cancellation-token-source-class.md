@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296790"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source — Klasa
 
@@ -177,6 +177,6 @@ Argument operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

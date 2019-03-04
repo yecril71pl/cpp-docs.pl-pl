@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: ff924f0e0d599d447ef7dea0039de788d388d759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297644"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicjowanie i kończenie działania aparatu bazy danych DAO
 
@@ -22,10 +22,10 @@ Korzystając z obiektów MFC DAO, aparat bazy danych DAO muszą najpierw być za
 
 |||
 |-|-|
-|[Afxdaoinit —](#afxdaoinit)|Inicjuje aparat bazy danych DAO.|
-|[Afxdaoterm —](#afxdaoterm)|Kończy się z aparatem bazy danych DAO.|
+|[AfxDaoInit](#afxdaoinit)|Inicjuje aparat bazy danych DAO.|
+|[AfxDaoTerm](#afxdaoterm)|Kończy się z aparatem bazy danych DAO.|
 
-##  <a name="afxdaoinit"></a>  Afxdaoinit —
+##  <a name="afxdaoinit"></a>  AfxDaoInit
 
 Ta funkcja inicjuje aparat bazy danych DAO.
 
@@ -46,7 +46,7 @@ Aby uzyskać powiązane informacje i przykład wywołania metody `AfxDaoInit`, z
 
   **Nagłówek** afxdao.h
 
-##  <a name="afxdaoterm"></a>  Afxdaoterm —
+##  <a name="afxdaoterm"></a>  AfxDaoTerm
 
 Ta funkcja kończy się z aparatem bazy danych DAO.
 
@@ -67,6 +67,6 @@ Aby uzyskać powiązane informacje, zobacz [techniczne 54 Uwaga](../../mfc/tn054
 
   **Nagłówek** afxdao.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

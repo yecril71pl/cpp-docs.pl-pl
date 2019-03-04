@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297596"
 ---
 # <a name="caxwindow-class"></a>Klasa CAxWindow
 
@@ -44,7 +44,7 @@ class CAxWindow : public CWindow
 |-|-|
 |[AttachControl](#attachcontrol)|Dołącza do istniejącego kontrolki ActiveX `CAxWindow` obiektu.|
 |[CAxWindow](#caxwindow)|Konstruuje `CAxWindow` obiektu.|
-|[CreateControl —](#createcontrol)|Tworzy formant ActiveX, inicjuje go i umieszcza w `CAxWindow` okna.|
+|[CreateControl](#createcontrol)|Tworzy formant ActiveX, inicjuje go i umieszcza w `CAxWindow` okna.|
 |[CreateControlEx](#createcontrolex)|Tworzy formant ActiveX i pobiera wskaźnika interfejsu (lub wskaźniki) z formantu.|
 |[GetWndClassName](#getwndclassname)|(Statyczny) Pobiera nazwę klasy wstępnie zdefiniowanych `CAxWindow` obiektu.|
 |[QueryControl](#querycontrol)|Pobiera `IUnknown` hostowanej formantu ActiveX.|
@@ -291,7 +291,7 @@ HRESULT QueryControl(Q** ppUnk);
 *ppUnk*<br/>
 [out] Wskaźnik do interfejsu formantu. W wersji szablonu tej metody nie ma potrzeby dla Identyfikatora odwołania tak długo, jak wpisane interfejsu z skojarzony identyfikator UUID jest przekazywany.
 
-*PYTANIA I ODPOWIEDZI*<br/>
+*Q*<br/>
 [in] Interfejs, którego dotyczy zapytanie dla.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -316,7 +316,7 @@ HRESULT QueryHost(Q** ppUnk);
 *ppUnk*<br/>
 [out] Wskaźnik do interfejsu na hoście. W wersji szablonu tej metody nie ma potrzeby dla Identyfikatora odwołania tak długo, jak wpisane interfejsu z skojarzony identyfikator UUID jest przekazywany.
 
-*PYTANIA I ODPOWIEDZI*<br/>
+*Q*<br/>
 [in] Interfejs, którego dotyczy zapytanie dla.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -365,11 +365,10 @@ Standardowe wartości HRESULT.
 
 Zewnętrzne `IDocHostUIHandlerDispatch` interfejs jest wykorzystywany przez formanty, które tworzą zapytania dotyczące witryny hosta dla `IDocHostUIHandlerDispatch` interfejsu. WebBrowser — formant jest jeden formant, który wykonuje to.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe ATLCON](../../visual-cpp-samples.md)<br/>
 [Klasa CWindow](../../atl/reference/cwindow-class.md)<br/>
 [Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Zawieranie kontrolek — często zadawane pytania](../../atl/atl-control-containment-faq.md)
-

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297258"
 ---
 # <a name="cwin32heap-class"></a>Klasa CWin32Heap
 
@@ -43,7 +43,7 @@ class CWin32Heap : public IAtlMemMgr
 |Nazwa|Opis|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Konstruktor.|
-|[CWin32Heap:: ~ CWin32Heap](#dtor)|Destruktor.|
+|[CWin32Heap::~CWin32Heap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -142,7 +142,7 @@ CWin32Heap(
 *hHeap*<br/>
 Istniejący obiekt sterty.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi używane do tworzenia sterty.
 
 *nInitialSize*<br/>
@@ -267,7 +267,7 @@ Zwraca wskaźnik do bloku pamięci nowo przydzielone.
 
 Jeśli *p* ma wartość NULL, zakłada się, że blok pamięci nie jest jeszcze przydzielone i [CWin32Heap::Allocate](#allocate) jest wywoływana z argumentem *nBytes*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>

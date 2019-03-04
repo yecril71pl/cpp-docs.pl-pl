@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299105"
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*osobisty token dostępu*<br/>
+*pAT*<br/>
 Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie
 
 ### <a name="remarks"></a>Uwagi
@@ -84,7 +84,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*osobisty token dostępu*<br/>
+*pAT*<br/>
 Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie.
 
 ### <a name="remarks"></a>Uwagi
@@ -135,7 +135,7 @@ Adres wcześniej skojarzony [CAccessToken](../../atl/reference/caccesstoken-clas
 
 Jeśli ta metoda jest wywoływana dla celów, które zawierają operacja cofania personifikacji z `CAccessToken` obiektu [Odłącz](#detach) metoda powinna być używana zamiast tego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe ATLSecurity](../../visual-cpp-samples.md)<br/>
 [Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>

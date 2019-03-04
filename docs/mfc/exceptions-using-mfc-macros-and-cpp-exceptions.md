@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: używanie makr MFC i wyjątków języka C++'
+title: 'Wyjątki: Używanie makr MFC i wyjątków języka C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297713"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Wyjątki: używanie makr MFC i wyjątków języka C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Wyjątki: Używanie makr MFC i wyjątków języka C++
 
 W tym artykule omówiono zagadnienia dotyczące pisania kodu, który używa zarówno makra obsługi wyjątków MFC i słów kluczowych obsługi wyjątków języka C++.
 
@@ -35,7 +35,7 @@ W tym artykule omówiono następujące tematy:
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> Mieszanie słowa kluczowe wyjątków i makra
 
-Można łączyć z makr wyjątków MFC a słowa kluczowe wyjątków języka C++, w tym samym programie. Ale nie można mieszać makr MFC z słowa kluczowe wyjątków języka C++, w tym samym bloku, ponieważ makra obiektów wyjątków automatycznie usuwać gdy wykraczają poza zakres, natomiast nie ma kodu za pomocą słów kluczowych obsługi wyjątków. Aby uzyskać więcej informacji, zobacz artykuł [wyjątki: wyjątki połowowe i usuwanie](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Można łączyć z makr wyjątków MFC a słowa kluczowe wyjątków języka C++, w tym samym programie. Ale nie można mieszać makr MFC z słowa kluczowe wyjątków języka C++, w tym samym bloku, ponieważ makra obiektów wyjątków automatycznie usuwać gdy wykraczają poza zakres, natomiast nie ma kodu za pomocą słów kluczowych obsługi wyjątków. Aby uzyskać więcej informacji, zobacz artykuł [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 Główna różnica między makra i słów kluczowych jest, że makra "automatycznie" Usuń zgłoszony wyjątek, gdy wyjątek wykracza poza zakres. Kod przy użyciu słów kluczowych nie; wyjątki przechwytywane w bloku catch muszą zostać jawnie usunięte. Mieszania makr i słowa kluczowe wyjątków języka C++ może spowodować przecieki pamięci, gdy nieusunięty obiekt wyjątku lub uszkodzenie sterty, gdy wyjątek został usunięty dwa razy.
 
@@ -53,9 +53,8 @@ Nie można ponownie wygenerować bieżący wyjątek z poziomu **spróbuj** blok,
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [wyjątki: badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md).
+Aby uzyskać więcej informacji, zobacz [wyjątków: Badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

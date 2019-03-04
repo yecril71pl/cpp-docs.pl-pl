@@ -90,32 +90,32 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297349"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>CONCURRENCY::precise_math, funkcje przestrzeni nazw
 
 ||||
 |-|-|-|
-|[ACOS](#acos)|[acosf](#acosf)|[ACOSH —](#acosh)|
+|[ACOS](#acos)|[acosf](#acosf)|[acosh](#acosh)|
 |[acoshf](#acoshf)|[ASIN](#asin)|[asinf —](#asinf)|
 |[ASINH —](#asinh)|[asinhf](#asinhf)|[atan](#atan)|
 |[atan2](#atan2)|[atan2f](#atan2f)|[atanf](#atanf)|
 |[atanh](#atanh)|[atanhf](#atanhf)|[cbrt](#cbrt)|
 |[cbrtf](#cbrtf)|[Ceil —](#ceil)|[ceilf](#ceilf)|
-|[copysign —](#copysign)|[copysignf](#copysignf)|[COS](#cos)|
-|[cosf](#cosf)|[COSH](#cosh)|[coshf](#coshf)|
-|[cospi —](#cospi)|[cospif](#cospif)|[erf](#erf)|
+|[copysign —](#copysign)|[copysignf](#copysignf)|[cos](#cos)|
+|[cosf](#cosf)|[cosh](#cosh)|[coshf](#coshf)|
+|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|
 |[ERFC —](#erfc)|[erfcf](#erfcf)|[erfcinv —](#erfcinv)|
 |[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv —](#erfinv)|
-|[erfinvf](#erfinvf)|[EXP](#exp)|[exp10](#exp10)|
+|[erfinvf](#erfinvf)|[exp](#exp)|[exp10](#exp10)|
 |[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
-|[expf](#expf)|[expm1 —](#expm1)|[expm1f —](#expm1f)|
-|[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)|
+|[expf](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|
+|[fabs —](#fabs)|[fabsf —](#fabsf)|[floor](#floor)|
 |[fdim](#fdim)|[fdimf](#fdimf)||
 |[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
 [fmax](#fmax)|[fmaxf](#fmaxf)||
@@ -123,7 +123,7 @@ ms.locfileid: "50469358"
 |[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|
 |[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|
 |[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|
-|[isinf —](#isinf)|[isNaN —](#isnan)|[isnormal —](#isnormal)|
+|[isinf](#isinf)|[isNaN —](#isnan)|[isnormal](#isnormal)|
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|
 |[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|
 |[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|
@@ -131,20 +131,20 @@ ms.locfileid: "50469358"
 |[logbf](#logbf)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[nan](#nan)|[nanf](#nanf)|
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|
-|[nextafterf](#nextafterf)|[Phi](#phi)|[phif](#phif)|
-|[Pow](#pow)|[powf](#powf)|[probit —](#probit)|
-|[probitf —](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
+|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|
+|[Pow](#pow)|[powf](#powf)|[probit](#probit)|
+|[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
 |[Pozostała](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|
 |[remquof](#remquof)|[ROUND](#round)|[roundf](#roundf)|
 |[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|
 |[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|
-|[signbit](#signbit)|[signbitf](#signbitf)|[SIN](#sin)|
-|[sincos —](#sincos)|[sincosf](#sincosf)|[sinf](#sinf)|
-|[SINH](#sinh)|[sinhf](#sinhf)|[sinpi —](#sinpi)|
+|[signbit](#signbit)|[signbitf](#signbitf)|[sin](#sin)|
+|[sincos](#sincos)|[sincosf](#sincosf)|[sinf](#sinf)|
+|[SINH](#sinh)|[sinhf](#sinhf)|[sinpi](#sinpi)|
 |[sinpif](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|
-|[tan](#tan)|[tanf —](#tanf)|[TANH](#tanh)|
-|[tanhf](#tanhf)|[tanpi —](#tanpi)|[tanpif —](#tanpif)|
-|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[TRUNC —](#trunc)|
+|[tan](#tan)|[tanf —](#tanf)|[tanh](#tanh)|
+|[tanhf](#tanhf)|[tanpi](#tanpi)|[tanpif —](#tanpif)|
+|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[trunc](#trunc)|
 |[truncf](#truncf)|
 
 ##  <a name="acos"></a>  ACOS
@@ -1492,7 +1492,7 @@ Wartość całkowita, wykładnicza
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf —
 
@@ -1514,7 +1514,7 @@ Wartość całkowita, wykładnicza
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="lgamma"></a>  lgamma —
 
@@ -2431,7 +2431,7 @@ Wartość zmiennoprzecinkowa
 *_S*<br/>
 Zwraca wartość funkcji sinus _X
 
-*_KOŃCE*<br/>
+*_C*<br/>
 Zwraca wartość funkcji cosinus z _X
 
 ##  <a name="sincosf"></a>  sincosf —
@@ -2453,7 +2453,7 @@ Wartość zmiennoprzecinkowa
 *_S*<br/>
 Zwraca wartość funkcji sinus _X
 
-*_KOŃCE*<br/>
+*_C*<br/>
 Zwraca wartość funkcji cosinus z _X
 
 ##  <a name="sinh"></a>  SINH
@@ -2475,7 +2475,7 @@ Wartość zmiennoprzecinkowa
 
 Zwraca sinus hiperboliczny wartość argumentu
 
-##  <a name="sinhf"></a>  sinhf —
+##  <a name="sinhf"></a>  sinhf
 
 Oblicza wartość funkcji sinus hiperboliczny dla argumentu
 
@@ -2744,6 +2744,6 @@ Wartość zmiennoprzecinkowa
 
 Zwraca liczbę całkowitą argumentu
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)

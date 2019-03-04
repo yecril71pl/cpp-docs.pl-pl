@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-ms.openlocfilehash: ea04e42730b0e7d1f0fafe5d3139d2b1a6aed970
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 392fc8e842d86a17013502ffc68c89eb65ba23db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299988"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
 
@@ -43,6 +43,6 @@ Biblioteki wykonawczej LIBCMT i MSVCRT C zapewniają następujące funkcje do tw
 
 [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md) funkcja kończy się wątek, który został utworzony przez `_beginthread` (USA i podobnie `_endthreadex` kończy się wątek, który został utworzony przez `_beginthreadex`). Wątki obowiązywać automatycznie po ich zakończeniu. `_endthread` i `_endthreadex` są przydatne w przypadku warunkowego zakończenia z w ramach wątku. Na przykład wątku dedykowanego dla usługi komunikacji przetwarzania może Zamknij, jeśli nie może uzyskać kontrolę portu komunikacyjnego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

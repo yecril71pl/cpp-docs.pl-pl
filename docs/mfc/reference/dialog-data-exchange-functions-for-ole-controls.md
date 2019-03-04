@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298259"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 
@@ -33,20 +33,20 @@ W tym temacie wymieniono funkcje DDX_OC umożliwia wymianę danych między wła�
 
 |||
 |-|-|
-|[Ddx_ocbool —](#ddx_ocbool)|Zarządza transferem **BOOL** danych między właściwości kontrolki OLE i **BOOL** element członkowski danych.|
-|[Ddx_ocboolro —](#ddx_ocboolro)|Zarządza transferem **BOOL** danych między tylko do odczytu właściwości kontrolki OLE i **BOOL** element członkowski danych.|
-|[Ddx_occolor —](#ddx_occolor)|Zarządza transferem **OLE_COLOR** danych między właściwości kontrolki OLE i **OLE_COLOR** element członkowski danych.|
-|[Ddx_occolorro —](#ddx_occolorro)|Zarządza transferem **OLE_COLOR** danych między tylko do odczytu właściwości kontrolki OLE i **OLE_COLOR** element członkowski danych.|
-|[Ddx_ocfloat —](#ddx_ocfloat)|Zarządza transferem **float** (lub **double**) dane między właściwości kontrolki OLE i **float** (lub **double**) element członkowski danych.|
-|[Ddx_ocfloatro —](#ddx_ocfloatro)|Zarządza transferem **float** (lub **double**) dane między tylko do odczytu właściwości kontrolki OLE i **float** (lub **double**) danych element członkowski.|
-|[Ddx_ocint —](#ddx_ocint)|Zarządza transferem **int** (lub **długie**) dane między właściwości kontrolki OLE i **int** (lub **długie**) element członkowski danych.|
-|[Ddx_ocintro —](#ddx_ocintro)|Zarządza transferem **int** (lub **długie**) dane między tylko do odczytu właściwości kontrolki OLE i **int** (lub **długie**) element członkowski danych.|
-|[Ddx_ocshort —](#ddx_ocshort)|Zarządza transferem **krótki** danych między właściwości kontrolki OLE i **krótki** element członkowski danych.|
-|[Ddx_ocshortro —](#ddx_ocshortro)|Zarządza transferem **krótki** danych między tylko do odczytu właściwości kontrolki OLE i **krótki** element członkowski danych.|
-|[Ddx_octext —](#ddx_octext)|Zarządza transferem **CString** danych między właściwości kontrolki OLE i **CString** element członkowski danych.|
-|[Ddx_octextro —](#ddx_octextro)|Zarządza transferem **CString** danych między tylko do odczytu właściwości kontrolki OLE i **CString** element członkowski danych.|
+|[DDX_OCBool](#ddx_ocbool)|Zarządza transferem **BOOL** danych między właściwości kontrolki OLE i **BOOL** element członkowski danych.|
+|[DDX_OCBoolRO](#ddx_ocboolro)|Zarządza transferem **BOOL** danych między tylko do odczytu właściwości kontrolki OLE i **BOOL** element członkowski danych.|
+|[DDX_OCColor](#ddx_occolor)|Zarządza transferem **OLE_COLOR** danych między właściwości kontrolki OLE i **OLE_COLOR** element członkowski danych.|
+|[DDX_OCColorRO](#ddx_occolorro)|Zarządza transferem **OLE_COLOR** danych między tylko do odczytu właściwości kontrolki OLE i **OLE_COLOR** element członkowski danych.|
+|[DDX_OCFloat](#ddx_ocfloat)|Zarządza transferem **float** (lub **double**) dane między właściwości kontrolki OLE i **float** (lub **double**) element członkowski danych.|
+|[DDX_OCFloatRO](#ddx_ocfloatro)|Zarządza transferem **float** (lub **double**) dane między tylko do odczytu właściwości kontrolki OLE i **float** (lub **double**) danych element członkowski.|
+|[DDX_OCInt](#ddx_ocint)|Zarządza transferem **int** (lub **długie**) dane między właściwości kontrolki OLE i **int** (lub **długie**) element członkowski danych.|
+|[DDX_OCIntRO](#ddx_ocintro)|Zarządza transferem **int** (lub **długie**) dane między tylko do odczytu właściwości kontrolki OLE i **int** (lub **długie**) element członkowski danych.|
+|[DDX_OCShort](#ddx_ocshort)|Zarządza transferem **krótki** danych między właściwości kontrolki OLE i **krótki** element członkowski danych.|
+|[DDX_OCShortRO](#ddx_ocshortro)|Zarządza transferem **krótki** danych między tylko do odczytu właściwości kontrolki OLE i **krótki** element członkowski danych.|
+|[DDX_OCText](#ddx_octext)|Zarządza transferem **CString** danych między właściwości kontrolki OLE i **CString** element członkowski danych.|
+|[DDX_OCTextRO](#ddx_octextro)|Zarządza transferem **CString** danych między tylko do odczytu właściwości kontrolki OLE i **CString** element członkowski danych.|
 
-##  <a name="ddx_ocbool"></a>  Ddx_ocbool —
+##  <a name="ddx_ocbool"></a>  DDX_OCBool
 
 `DDX_OCBool` Funkcja zarządza transferem **BOOL** danych między właściwości kontrolki OLE w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **BOOL** element członkowski danych okna dialogowego widok formularza lub Obiekt widoku formantu.
 
@@ -66,7 +66,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek:** afxdisp.h
 
-##  <a name="ddx_ocboolro"></a>  Ddx_ocboolro —
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO
 
 `DDX_OCBoolRO` Funkcja zarządza transferem **BOOL** danych między tylko do odczytu właściwości kontrolki OLE w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **BOOL** element członkowski danych okna dialogowego Widok formularza lub formantu obiekt widoku.
 
@@ -100,7 +100,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -114,7 +114,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_occolor"></a>  Ddx_occolor —
+##  <a name="ddx_occolor"></a>  DDX_OCColor
 
 `DDX_OCColor` Funkcja zarządza transferem danych OLE_COLOR między właściwości kontrolki OLE w oknie dialogowym, widok formularza lub kontrolki widoku obiektu i element członkowski danych OLE_COLOR okna dialogowego widok formularza lub kontrolować obiekt widoku.
 
@@ -134,7 +134,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -148,7 +148,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_occolorro"></a>  Ddx_occolorro —
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO
 
 `DDX_OCColorRO` Funkcja zarządza transferem danych OLE_COLOR między tylko do odczytu właściwości kontrolki OLE w oknie dialogowym, widok formularza lub kontrolki widoku obiektu i element członkowski danych OLE_COLOR okna dialogowego widok formularza lub kontrolować obiekt widoku.
 
@@ -168,7 +168,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -182,7 +182,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_ocfloat"></a>  Ddx_ocfloat —
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat
 
 `DDX_OCFloat` Funkcja zarządza transferem **float** (lub **double**) dane między właściwości kontrolki OLE w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **float** (lub **double**) okno dialogowe, widok formularza lub formantu obiekt widoku element członkowski danych.
 
@@ -208,7 +208,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -222,7 +222,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_ocfloatro"></a>  Ddx_ocfloatro —
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO
 
 `DDX_OCFloatRO` Funkcja zarządza transferem **float** (lub **double**) dane między tylko do odczytu właściwości kontrolki OLE w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i  **float** (lub **double**) okno dialogowe, widok formularza lub formantu obiekt widoku element członkowski danych.
 
@@ -248,7 +248,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -288,7 +288,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -302,7 +302,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_ocintro"></a>  Ddx_ocintro —
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO
 
 `DDX_OCIntRO` Funkcja zarządza transferem **int** (lub **długie**) dane między tylko do odczytu właściwości kontrolki OLE w oknie dialogowym, formularz widoku lub obiekt widoku kontroli i **int** (lub **długie**) okno dialogowe, widok formularza lub formantu obiekt widoku element członkowski danych.
 
@@ -328,7 +328,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -362,7 +362,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -376,7 +376,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-##  <a name="ddx_ocshortro"></a>  Ddx_ocshortro —
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO
 
 `DDX_OCShortRO` Funkcja zarządza transferem danych krótki między tylko do odczytu właściwości kontrolki OLE w oknie dialogowym, widok formularza lub kontrolki widoku obiektu i element członkowski danych krótki, okno dialogowe widok formularza lub kontrolować obiekt widoku.
 
@@ -396,7 +396,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -430,7 +430,7 @@ Wskaźnik do **CDataExchange** obiektu. Struktura dostarcza tego obiektu w celu 
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -464,7 +464,7 @@ Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu us
 *nIDC*<br/>
 Identyfikator kontrolki OLE w okno dialogowe, widok formularza lub formantu obiekt widoku.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *value*<br/>
@@ -478,6 +478,6 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdisp.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

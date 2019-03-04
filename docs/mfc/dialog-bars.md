@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b4f8975cb67f754778280f84ece98de2ef949c1a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297765"
 ---
 # <a name="dialog-bars"></a>Paski dialogowe
 
@@ -30,8 +30,7 @@ Jest jedną z zalet programu paski dialogowe, mogą zawierać formanty innych ni
 
 Mimo że jest to normalne do wyprowadzenia własne klasy okien dialogowych z `CDialog`, nie zazwyczaj pochodną klasy dla paska dialogowego. Paski dialogowe są rozszerzenia do głównego okna i komunikaty paska dialogowego powiadamianie kontrolki, takie jak **BN_CLICKED** lub **EN_CHANGE**, będą wysyłane do nadrzędnego okna dialogowego paska głównego okna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Próbki](../visual-cpp-samples.md)
-

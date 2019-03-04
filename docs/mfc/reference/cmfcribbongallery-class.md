@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298636"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
 
@@ -167,7 +167,7 @@ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonGall
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonPaletteGallery.h
+**Header:** afxRibbonPaletteGallery.h
 
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup
 
@@ -599,7 +599,7 @@ virtual void OnDrawPaletteIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, który jest używany do rysowania.
 
 *rectIcon*<br/>
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Okno nadrzędne okna Galerii wstążki.
 
-*Dane*<br/>
+*data*<br/>
 [out] A `CAccessibilityData` obiekt, który odbiera dane dostępności z galerii wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -816,7 +816,7 @@ void SetPaletteID(UINT nID);
 
 Aby ustalić konkretny element, który użytkownik zaznaczył w galerii, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metody statycznej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

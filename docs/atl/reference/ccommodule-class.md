@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589452"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298935"
 ---
 # <a name="ccommodule-class"></a>Ccommodule — klasa
 
@@ -352,7 +352,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 *nDescID*<br/>
 [in] Identyfikator zasobu ciągu opisu obiektu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Określa model wątkowy wprowadzenia w rejestrze. Możliwe wartości to THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -378,7 +378,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 *dwClsContext*<br/>
 [in] Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Aby uzyskać opis tych wartości, zobacz [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) w zestawie Windows SDK.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Aby uzyskać opis tych wartości, zobacz [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -573,7 +573,7 @@ Identyfikator zasobu ciągu opisu obiektu.
 *szDesc*<br/>
 Ciąg zawierający opis obiektu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa model wątkowy wprowadzenia w rejestrze. Możliwe wartości to THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
 
 *bRegister*<br/>
@@ -688,6 +688,6 @@ Podobnie jak [UpdateRegistryFromResourceD](#updateregistryfromresourced) z wyją
 
 Aby uzyskać więcej informacji na temat parametrów zastępowalnych i skryptów, zobacz artykuł [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

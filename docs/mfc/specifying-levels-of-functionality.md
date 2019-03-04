@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-ms.openlocfilehash: 2588a3b2a55ebfca4b57be875e26bb0348db83a0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3b4ecb38054748f36d75ca43e32d6447d3d2428
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326215"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299920"
 ---
 # <a name="specifying-levels-of-functionality"></a>Określanie poziomów funkcjonalności
 
@@ -74,6 +74,6 @@ Aby uzyskać ogólny opis `CObject` funkcji, zapoznaj się z artykułem [wyprowa
 
 Aby uzyskać więcej informacji o sposobie włączania serializacji, po utworzeniu klasy pochodnej klasy z `CObject`, zobacz artykuły [pliki w MFC](../mfc/files-in-mfc.md) i [serializacji](../mfc/serialization-in-mfc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyprowadzanie klasy z obiektu CObject](../mfc/deriving-a-class-from-cobject.md)

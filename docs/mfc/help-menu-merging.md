@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578532"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296853"
 ---
 # <a name="help-menu-merging"></a>Scalanie menu Pomoc
 
@@ -37,7 +37,7 @@ Oba elementy menu są kaskadowych menu, w których wszelkie dodatkowe elementy m
 
 Do utworzenia tego scalone **pomocy** menu architektura zawierania dokumentów aktywnych modyfikuje normalnej procedury dokumenty OLE. Zgodnie z dokumentów OLE, na pasku menu scalone może mieć sześć grup menu, a mianowicie **pliku**, **Edytuj**, **kontenera**, **obiektu**,  **Okno**, **pomocy**, w tej kolejności. W każdej grupie można menu zero lub więcej. Grupy **pliku**, **kontenera**, i **okna** należą do grup i kontener **Edytuj**, **Object,** i **pomocy** należy do obiektu. Gdy obiekt chce wykonać scalanie menu, tworzy pasek menu puste i przekazuje je do kontenera. Kontener wstawia jego menu, wywołując `IOleInPlaceFrame::InsertMenus`. Obiekt przekazuje strukturę, która jest tablicą sześć długie wartości (**OLEMENUGROUPWIDTHS**). Po wstawieniu menu, kontener oznacza menu ile ono dodane w każdej z jej grupy, a następnie zwraca. Następnie obiekt wstawia jego menu, zwracając uwagę na liczbę menu w każdej grupy kontenerów. Na koniec obiekt przekazuje pasek menu scalonych i tablicy (co zawiera liczbę menu w każdej grupie) OLE, co powoduje zwrócenie wiadomość nieprzezroczysty "menu deskryptora" obsługi. Później obiekt przekazuje dojścia i pasek menu scalone z kontenerem przy użyciu `IOleInPlaceFrame::SetMenu`. W tej chwili kontenera jest wyświetlany pasek menu scalone i przekazuje dojście do OLE, tak, aby OLE można wykonać odpowiednie wysyłania komunikatów menu.
 
-W procedurze zmodyfikowane aktywnego dokumentu najpierw należy zainicjować obiekt **OLEMENUGROUPWIDTHS** elementy do zera przed przekazaniem go do kontenera. I wykona kontenera wstawiania normalne menu, z jednym wyjątkiem: wstawia kontenera **pomocy** menu jako ostatni element i zapisuje wartość 1 w ostatni wpis (szóstego) **OLEMENUGROUPWIDTHS** tablicy (oznacza to szerokość [5], która należy do grupy pomocy obiektu). To **pomocy** menu będzie mieć tylko jeden element, który jest podmenu, "**kontenera pomocy** >" menu cascade, jak opisano wcześniej.
+W procedurze zmodyfikowane aktywnego dokumentu najpierw należy zainicjować obiekt **OLEMENUGROUPWIDTHS** elementy do zera przed przekazaniem go do kontenera. Następnie kontenera wykonuje wstawiania normalne menu, z jednym wyjątkiem: Wstawia kontenera **pomocy** menu jako ostatni element i zapisuje wartość 1 w ostatni wpis (szóstego) **OLEMENUGROUPWIDTHS** tablicy (oznacza to szerokość [5], która należy do grupy pomocy obiektu). To **pomocy** menu będzie mieć tylko jeden element, który jest podmenu, "**kontenera pomocy** >" menu cascade, jak opisano wcześniej.
 
 Obiekt jest następnie wykonuje jego kod wstawiania menu normalne, chyba że przed wstawieniem jego **pomocy** menu sprawdza szóstego wpis **OLEMENUGROUPWIDTHS** tablicy. Jeśli wartość wynosi 1, a nazwa ostatniego menu jest **pomocy** (lub odpowiedniego zlokalizowany ciąg), a następnie obiekt wstawia jego **pomocy** menu jako podmenu kontenera **pomocy** menu.
 
@@ -49,7 +49,6 @@ Kiedy wywołuje obiekt `IOleInPlaceFrame::SetMenu`, zanim czy wyświetlanie scal
 
 Na koniec, gdy nadejdzie czas, aby zdemontować menu, obiekt usuwa wstawionego **pomocy** menu oprócz usunięcie z drugiej dodaje menu. Gdy kontener usuwa jego menu, spowoduje usunięcie jej **pomocy** menu oprócz menu, które go został wstawiony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)
-

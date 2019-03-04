@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 4965e5e371bd96903cad4d7f1e2b0ce3216107ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24b65d54fe303e33e100299cf8a95d22ebc72cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299208"
 ---
 # <a name="connection-points-classes"></a>Klasy punktów połączenia
 
@@ -41,9 +41,8 @@ Następujące klasy obsługi punkty połączeń:
 
 [Obsługa zdarzeń i ATL](../atl/event-handling-and-atl.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
 [Makra punktów połączenia](../atl/reference/connection-point-macros.md)<br/>
 [Funkcje globalne punktu połączenia](../atl/reference/connection-point-global-functions.md)
-

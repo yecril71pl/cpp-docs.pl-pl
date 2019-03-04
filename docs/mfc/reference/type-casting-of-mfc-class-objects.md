@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299364"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Rzutowanie typów obiektów klas MFC
 
@@ -65,14 +65,14 @@ STATIC_DOWNCAST(class_name, pobject)
 *class_name*<br/>
 Nazwa klasy rzutowany.
 
-*obiekt*<br/>
+*pobject*<br/>
 Wskaźnik, aby być rzutowany na wskaźnik do *class_name* obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
 *obiekt* musi mieć wartość NULL albo wskazać obiekt klasy, która pochodzi bezpośrednio lub pośrednio z *class_name*. W kompilacjach do aplikacji za pomocą symbol preprocesora _DEBUG zdefiniowane makro będzie potwierdzenia, jeśli *obiekt* nie ma wartości NULL, lub jeśli wskazuje na obiekt, który nie jest "rodzaju" klasa określona w *class_name*parametr (zobacz [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). W non - **_DEBUG** kompilacje, makro wykonuje rzutowanie bez sprawdzania typu.
 
-Klasa określona w *class_name* parametru musi pochodzić od `CObject` i musi być DECLARE_DYNAMIC i IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE i IMPLEMENT_DYNCREATE, lub DECLARE_SERIAL i IMPLEMENT_ SERIAL makra, jak wyjaśniono w artykule [klasa CObject: wyprowadzanie klasy z obiektu CObject](../../mfc/deriving-a-class-from-cobject.md).
+Klasa określona w *class_name* parametru musi pochodzić od `CObject` i musi być DECLARE_DYNAMIC i IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE i IMPLEMENT_DYNCREATE, lub DECLARE_SERIAL i IMPLEMENT_ SERIAL makra, jak wyjaśniono w artykule [klasa CObject: Wyprowadzanie klasy z obiektu CObject](../../mfc/deriving-a-class-from-cobject.md).
 
 Na przykład może rzutować wskaźnik do `CMyDoc`, co jest nazywane `pMyDoc`, wskaźnik do `CDocument` za pomocą następującego wyrażenia:
 
@@ -80,6 +80,6 @@ Na przykład może rzutować wskaźnik do `CMyDoc`, co jest nazywane `pMyDoc`, w
 
 Jeśli `pMyDoc` nie wskazuje na obiekt, który pochodzi bezpośrednio lub pośrednio z `CDocument`, makro będzie potwierdzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298139"
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 
@@ -49,11 +49,10 @@ Użyj [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-clas
 
 ## <a name="example"></a>Przykład
 
-Aby zbadać przykłady z zastosowaniem specjalnych zasad harmonogramu do sterowania zachowaniem harmonogramu, zobacz [jak: Określ konkretne zasady harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) i [jak: tworzenie agentów tego używać określonych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Aby zbadać przykłady z zastosowaniem specjalnych zasad harmonogramu do sterowania zachowaniem harmonogramu, zobacz [jak: Określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) i [jak: Tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [Instrukcje: tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

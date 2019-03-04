@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299312"
 ---
 # <a name="overwritebuffer-class"></a>Klasa overwrite_buffer
 
@@ -200,7 +200,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
 
 *_PScheduler*<br/>
@@ -346,8 +346,8 @@ Obciążenie komunikatu aktualnie przechowywana.
 
 Wartość przechowywana we `overwrite_buffer` można zmienić natychmiast, po powrocie z tej metody. Ta metoda czeka na zakończenie nadejścia wiadomości, jeśli żaden komunikat nie jest obecnie przechowywanych w `overwrite_buffer`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[Klasa unbounded_buffer](unbounded-buffer-class.md)<br/>
+[unbounded_buffer, klasa](unbounded-buffer-class.md)<br/>
 [single_assignment, klasa](single-assignment-class.md)

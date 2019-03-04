@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: 26667c2ad3bb2cedb42767fe42ff0ad358fa6d66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 836b19cef38549bcdf6cddeeda5bbb7fee08a1c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298441"
 ---
 # <a name="adding-an-atl-control"></a>Dodawanie kontrolki ATL
 
@@ -34,7 +34,7 @@ Za pomocą **Kreator kontrolki ATL**, można utworzyć jeden z trzech typów for
 
 Dodatkowo zmniejszyć rozmiar formantu i usuwanie interfejsów, które nie są używane przez większość kontenerów, wybierając **kontrolka minimalnego** na **opcje** strony kreatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji do kontrolek złożonych](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)

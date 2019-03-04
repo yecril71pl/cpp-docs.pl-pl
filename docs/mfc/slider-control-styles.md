@@ -7,12 +7,12 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-ms.openlocfilehash: 7b143d0d27bcb8ee975d4056cf0a307db7b330c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6765445552826b71cca278c1fbbc66e500cb75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296855"
 ---
 # <a name="slider-control-styles"></a>Style formantu suwaka
 
@@ -28,8 +28,7 @@ Kontrolki suwaka można wyświetlić wybranego zakresu, tylko wtedy, gdy styl TB
 
 Domyślnie długość suwaka kontrolki suwaka zmienia się zgodnie ze zmianami zakres wyboru. Jeśli kontrolka suwaka ma styl TBS_FIXEDLENGTH, długość suwak pozostaje taki sam, nawet w przypadku zmiany wybranego zakresu. Kontrolki suwaka, którego styl TBS_NOTHUMB nie obejmuje suwaka.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 'Wyjątki: zgłaszanie wyjątków z własnych funkcji'
+title: 'Wyjątki: Zgłaszanie wyjątków z własnych funkcji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297947"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: zgłaszanie wyjątków z własnych funkcji
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: Zgłaszanie wyjątków z własnych funkcji
 
 Jest to możliwe za pomocą modelu obsługi wyjątków MFC wyłącznie przechwytują wyjątki zgłaszane przez funkcje MFC lub inne biblioteki. Oprócz przechwytywanie wyjątków zgłaszanych przez kod biblioteki, może generować wyjątki z własnego kodu podczas pisania funkcji, które mogą występować w wyjątkowych warunkach.
 
@@ -40,7 +40,6 @@ Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymana, a 
 > [!NOTE]
 >  Biblioteki MFC domyślna obsługa wyjątków, który ma zastosowanie tylko do wskaźników do `CException` obiektów (i obiektów `CException`-klas pochodnych). W powyższym przykładzie pomija mechanizm wyjątków MFC.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

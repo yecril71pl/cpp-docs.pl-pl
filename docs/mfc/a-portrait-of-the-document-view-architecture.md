@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: a4d89189b5389685be6b69c8502ffedb8aa731e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567105"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298870"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portret architektury dokument/widok
 
@@ -45,7 +45,6 @@ W aplikacji z wielu widoków tego samego dokumentu — takich jak okna rozdziela
 
 - [Alternatywy dla architektury dokument/widok](../mfc/alternatives-to-the-document-view-architecture.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura dokument/widok](../mfc/document-view-architecture.md)
-

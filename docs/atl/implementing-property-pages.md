@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299325"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
@@ -40,12 +40,12 @@ Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
    |[Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply)|Sprawdź poprawność ustawień właściwości i zaktualizować obiektów.|Nie ma potrzeby wywoływały implementację klasy podstawowej, ponieważ nie robi nic, oprócz śledzenia wywołania.|
    |[Dezaktywuj](../atl/reference/ipropertypageimpl-class.md#deactivate)|Wyczyść elementy związane z okna.|Implementacja klasy bazowej niszczy okno dialogowe reprezentujący stronę właściwości. Jeśli musisz wyczyścić przed jest niszczony, okno dialogowe, należy dodać kod przed wywołaniem klasy bazowej.|
 
-Przykładem implementacji strony właściwości, można zobaczyć [przykład: Implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).
+Przykładem implementacji strony właściwości, można zobaczyć [przykładu: Implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
 > Chcąc formantów ActiveX hosta na stronie właściwości, należy zmienić pochodnym klasy generowane przez kreatora. Zastąp **CDialogImpl\<CYourClass >** z **CAxDialogImpl\<CYourClass >** na liście klas bazowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykładowe ATLPages](../visual-cpp-samples.md)

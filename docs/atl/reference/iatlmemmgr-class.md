@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297921"
 ---
 # <a name="iatlmemmgr-class"></a>Klasa IAtlMemMgr
 
@@ -37,7 +37,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |||
 |-|-|
 |[Przydziel](#allocate)|Wywołaj tę metodę można przydzielić bloku pamięci.|
-|[Bezpłatne](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci.|
+|[Bezpłatna](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci.|
 |[GetSize](#getsize)|Wywołaj tę metodę można pobrać rozmiaru bloku ilość przydzielonej pamięci.|
 |[Ponowne przydzielenie](#reallocate)|Wywołaj tę metodę, aby ponowne przydzielenie bloków pamięci.|
 
@@ -967,6 +967,6 @@ Zobacz [IAxWinHostWindow::CreateControlEx](#createcontrolex) opis pozostałych p
 
 Zobacz [hostingu ActiveX kontrolek przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu, który używa `IAxWinHostWindowLic::CreateControlLicEx`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

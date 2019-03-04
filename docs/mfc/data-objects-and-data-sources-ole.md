@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 09e328171657c3c6557a5d77acae0f034e517955
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298272"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Obiekty danych i źródła danych (OLE)
 
@@ -27,9 +27,9 @@ Podczas przeprowadzania transferu danych za pomocą Schowka lub przeciągnij i u
 
 W poniższych artykułach opisano sposób użycia obiekty danych i źródeł danych w aplikacjach. Te informacje dotyczą zarówno kontenera, jak i serwera aplikacji, ponieważ oba może zostać wywołana podczas kopiowania i wklejania danych.
 
-- [Obiekty danych i źródła danych: tworzenie i likwidacja](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Obiekty danych i źródeł danych: Tworzenie i likwidacja](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Obiekty danych i źródła danych: operowanie](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Obiekty danych i źródeł danych: Manipulowanie](../mfc/data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -37,7 +37,7 @@ W poniższych artykułach opisano sposób użycia obiekty danych i źródeł dan
 
 [Schowek](../mfc/clipboard.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>

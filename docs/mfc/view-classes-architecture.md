@@ -9,12 +9,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7855f152e340b488d64f01dbf290034e1bdbc9b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299416"
 ---
 # <a name="view-classes-architecture"></a>Klasy widoków (architektura)
 
@@ -68,7 +68,6 @@ Widok, który zawiera kontrolkę listy Windows (zobacz [CListCtrl](../mfc/refere
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 Widok, który zawiera formant drzewa Windows (zobacz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Kontrolka drzewa Wyświetla ikon i ciągów ułożone w hierarchii w sposób podobny do okienka po lewej stronie Eksploratora plików.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

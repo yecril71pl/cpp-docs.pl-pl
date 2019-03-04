@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: d1022d9a49e12585a6588e7b3202155f533e4706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: affa217f481cc6d9e125d526f1b97be9120e0990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298012"
 ---
 # <a name="frame-window-classes-architecture"></a>Klasy okien ramowych (architektura)
 
@@ -33,7 +33,6 @@ Klasa bazowa dla okien ramowych dokumentu w aplikacji MDI.
 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
 Udostępnia okno ramowe w celu wyświetlenia, gdy dokument serwera jest edytowany w miejscu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

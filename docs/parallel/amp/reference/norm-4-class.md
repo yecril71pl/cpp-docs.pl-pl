@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297401"
 ---
 # <a name="norm4-class"></a>norm_4 — Klasa
 
@@ -446,7 +446,7 @@ class norm_4;
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
-|norm_4::operator * =||
+|norm_4::operator*=||
 |norm_4::operator / =||
 |norm_4::operator ++||
 |norm_4::operator +=||
@@ -464,21 +464,21 @@ class norm_4;
 |Nazwa|Opis|
 |----------|-----------------|
 |norm_4::a||
-|norm_4::AB||
+|norm_4::ab||
 |norm_4::abg||
 |norm_4::abgr||
-|norm_4::ABR||
+|norm_4::abr||
 |norm_4::abrg||
-|norm_4::AG||
+|norm_4::ag||
 |norm_4::agb||
 |norm_4::agbr||
-|norm_4::AGR||
+|norm_4::agr||
 |norm_4::agrb||
 |norm_4::AR||
 |norm_4::arb||
 |norm_4::arbg||
 |norm_4::ARG||
-|norm_4::ARGB||
+|norm_4::argb||
 |norm_4::b||
 |norm_4::ba||
 |norm_4::bag||
@@ -488,7 +488,7 @@ class norm_4;
 |norm_4::bg||
 |norm_4::bga||
 |norm_4::bgar||
-|norm_4::BGR||
+|norm_4::bgr||
 |norm_4::bgra||
 |norm_4::br||
 |norm_4::bra||
@@ -497,7 +497,7 @@ class norm_4;
 |norm_4::brga||
 |norm_4::g||
 |norm_4::ga||
-|norm_4::GAB||
+|norm_4::gab||
 |norm_4::gabr||
 |norm_4::gar||
 |norm_4::garb||
@@ -533,12 +533,12 @@ class norm_4;
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
-|norm_4::Wy||
+|norm_4::wy||
 |norm_4::wyx||
 |norm_4::wyxz||
 |norm_4::wyz||
 |norm_4::wyzx||
-|norm_4::wZ||
+|norm_4::wz||
 |norm_4::wzx||
 |norm_4::wzxy||
 |norm_4::wzy||
@@ -600,7 +600,7 @@ class norm_4;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="ctor"></a> norm_4
 
@@ -690,6 +690,6 @@ Obiekt używany do inicjowania.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

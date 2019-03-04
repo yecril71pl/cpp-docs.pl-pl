@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [MFC], adding to property sheets
 - property sheets, adding controls
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
-ms.openlocfilehash: 141339bd146fec20f02e73e24bb9dae387f4e3ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07b384b2db36ae59d4de8b99d9c07396ce793979
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296309"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Dodawanie formantów do arkusza właściwości
 
@@ -18,7 +18,7 @@ Domyślnie arkusz właściwości przydziela obszaru okna stron właściwości, k
 
 Można dodać kontrolki do okna dialogowego arkusz właściwości w `OnCreate` programu obsługi. Zazwyczaj ograniczanych dodatkowe elementy sterujące wymaga rozszerzania rozmiar okna dialogowego arkusza właściwości. Po wywołaniu klasy bazowej **CPropertySheet::OnCreate**, wywołaj [getwindowrect —](../mfc/reference/cwnd-class.md#getwindowrect) można pobrać, szerokość i wysokość okna arkusza właściwości aktualnie przydzielone, rozwiń węzeł prostokąta wymiary i wywołanie [MoveWindow](../mfc/reference/cwnd-class.md#movewindow) do zmiany rozmiaru okna arkusza właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Arkusze właściwości](../mfc/property-sheets-mfc.md)<br/>
 [Klasa CPropertyPage](../mfc/reference/cpropertypage-class.md)<br/>

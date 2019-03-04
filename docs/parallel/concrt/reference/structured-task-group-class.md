@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299299"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group — Klasa
 
@@ -225,8 +225,8 @@ Po powrocie z tej funkcji `structured_task_group` obiekt jest uważana za stan k
 
 W ścieżce niewyjątkowego wykonywania masz upoważnienia do obu tę metodę należy wywołać lub `run_and_wait` metody przed destruktor `structured_task_group` wykonuje.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[task_group — klasa](task-group-class.md)<br/>
+[task_group, klasa](task-group-class.md)<br/>
 [task_handle, klasa](task-handle-class.md)

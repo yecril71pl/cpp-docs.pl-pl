@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUnknown implementation classes
 ms.assetid: 47b69bb5-69d8-4a9c-84a8-329bdde2bb3f
-ms.openlocfilehash: 0a15a256f961d35f5153c11da6690f6908e08a52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97ca30c90cb8fa85685e30aa61d954008cf7cc54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297570"
 ---
 # <a name="iunknown-implementation-classes"></a>Klasy implementacji interfejsu IUnknown
 
@@ -44,10 +44,9 @@ Następujące klasy implementacji `IUnknown` i powiązanych metod:
 
 [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
 [Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
 [Makra mapy modelu COM](../atl/reference/com-map-macros.md)<br/>
 [Funkcje globalne mapy interfejsu COM](../atl/reference/com-map-global-functions.md)
-

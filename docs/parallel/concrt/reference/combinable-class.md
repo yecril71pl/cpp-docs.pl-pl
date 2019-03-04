@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299983"
 ---
 # <a name="combinable-class"></a>combinable — Klasa
 
@@ -49,7 +49,7 @@ Typ danych scalonych wynik końcowy. Typ musi mieć Konstruktor kopiujący i dom
 |Nazwa|Opis|
 |----------|-----------------|
 |[Usuń zaznaczenie](#clear)|Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.|
-|[Łączenie](#combine)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.|
+|[combine](#combine)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.|
 |[combine_each](#combine_each)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.|
 |[local](#local)|Przeciążone. Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.|
 
@@ -102,7 +102,7 @@ Typ obiektu funktor inicjowania.
 *_FnInitialize*<br/>
 Funkcja, która zostanie wywołana w celu zainicjowania każdej nowej wartości prywatnego wątku typu `T`. Sieć VPN musi obsługiwać operatorem wywołania funkcji z podpisem `T ()`.
 
-*_Kopiuj*<br/>
+*_Copy*<br/>
 Istniejące `combinable` obiektu do skopiowania do tego.
 
 ### <a name="remarks"></a>Uwagi
@@ -188,13 +188,13 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parametry
 
-*_Kopiuj*<br/>
+*_Copy*<br/>
 Istniejące `combinable` obiektu do skopiowania do tego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do `combinable` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

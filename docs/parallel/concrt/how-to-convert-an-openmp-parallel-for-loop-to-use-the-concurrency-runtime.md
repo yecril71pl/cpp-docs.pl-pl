@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego'
+title: 'Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488568"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296140"
 ---
-# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
 
 W tym przykładzie opisano sposób konwertowania podstawowe pętli, która używa OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektywy do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.
 
@@ -49,11 +49,10 @@ Ten przykład modyfikuje poprzedni, aby działać na [std::array](../../standard
 
 Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `concrt-omp-count-primes.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**concrt/OpenMP/ehsc cl.exe-omp — liczba primes.cpp**
+**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Migrowanie z OpenMP do środowiska uruchomieniowego współbieżności](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)
-

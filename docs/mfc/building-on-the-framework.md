@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 511d66821bf23c149fafb0bfd397929077f020ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298337"
 ---
 # <a name="building-on-the-framework"></a>Opieranie się na strukturze
 
@@ -30,7 +30,6 @@ W tematach pokrewnych w poniższych tabelach opisano ogólną sekwencją operacj
 
 W większości przypadków możesz wykonać te tabele jako sekwencja procedury służące do tworzenia aplikacji MFC, mimo że niektóre kroki są alternatywne rozwiązania. Na przykład większość aplikacji używa jeden typ widoku klasy z kilku dostępnych typów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
-

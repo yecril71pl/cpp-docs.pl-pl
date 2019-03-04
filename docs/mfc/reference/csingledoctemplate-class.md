@@ -1,5 +1,5 @@
 ---
-title: Klasa CSingleDocTemplate
+title: CSingleDocTemplate Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSingleDocTemplate
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fffaa57fc6c04f051b40021c89dc6aaccb343b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299533"
 ---
-# <a name="csingledoctemplate-class"></a>Klasa CSingleDocTemplate
+# <a name="csingledoctemplate-class"></a>CSingleDocTemplate Class
 
 Określa szablon dokumentu, który implementuje interfejs dokumentu pojedynczego (SDI).
 
@@ -115,9 +115,9 @@ Dynamiczne przydzielanie `CSingleDocTemplate` obiektu i przekazać ją do `CWinA
 
 [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DOCKTOOL](../../visual-cpp-samples.md)<br/>
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>

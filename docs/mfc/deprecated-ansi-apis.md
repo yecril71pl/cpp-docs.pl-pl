@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 51d14f4cae530fe6723b04268865af1f5fac84a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298376"
 ---
 # <a name="deprecated-ansi-apis"></a>Przestarzałe interfejsy API ANSI
 
@@ -150,7 +150,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-ms.openlocfilehash: 9288ed3104d2cdf4c6938b171166de7cffd32ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298481"
 ---
 # <a name="simple-data-type-classes"></a>Proste klasy typów danych
 
@@ -57,7 +57,6 @@ Otoka dla typu automatyzacji OLE **waluty**, stałoprzecinkowa typ arytmetyczny,
 > [!NOTE]
 >  `CRect`, `CSize`, i `CPoint` można używać w aplikacjach ATL lub MFC. Ponadto `CStringT` umożliwia niezależną MFC `CString`— takich jak klasy. Aby uzyskać więcej informacji na temat narzędzia udostępnione klas, zobacz [udostępnionego klasy](../atl-mfc-shared/atl-mfc-shared-classes.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299650"
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 
@@ -24,20 +24,20 @@ Jeden możliwości formantów OLE jest właściwość trwałość (lub serializa
 |-|-|
 |[Px_blob —](#px_blob)|Zamienia właściwości kontrolki, która przechowuje dane dużych obiektów binarnych (BLOB).|
 |[Px_bool —](#px_bool)|Wymienia właściwość formantu typu **BOOL**.|
-|[Px_color —](#px_color)|Zamienia właściwość color, kontrolki.|
+|[PX_Color](#px_color)|Zamienia właściwość color, kontrolki.|
 |[Px_currency —](#px_currency)|Wymienia właściwość formantu typu **CY**.|
 |[Px_datapath —](#px_datapath)|Wymienia właściwość formantu typu `CDataPathProperty`.|
 |[Px_double —](#px_double)|Wymienia właściwość formantu typu **double**.|
 |[Px_font —](#px_font)|Zamienia właściwość czcionki formantu.|
 |[Px_float —](#px_float)|Wymienia właściwość formantu typu **float**.|
-|[Px_iunknown —](#px_iunknown)|Zamienia niezdefiniowanego typu właściwości formantu.|
+|[PX_IUnknown](#px_iunknown)|Zamienia niezdefiniowanego typu właściwości formantu.|
 |[Px_long —](#px_long)|Wymienia właściwość formantu typu **długie**.|
 |[Px_picture —](#px_picture)|Zamienia właściwość obrazu formantu.|
 |[Px_short —](#px_short)|Wymienia właściwość formantu typu **krótki**.|
-|[Px_ulong —](#px_ulong)|Wymienia właściwość formantu typu **ULONG**.|
-|[Px_ushort —](#px_ushort)|Wymienia właściwość formantu typu **USHORT**.|
+|[PX_ULong](#px_ulong)|Wymienia właściwość formantu typu **ULONG**.|
+|[PX_UShort](#px_ushort)|Wymienia właściwość formantu typu **USHORT**.|
 |[PXstring](#px_string)|Zamienia właściwość formantu w postaci ciągu znaków.|
-|[Px_vbxfontconvert —](#px_vbxfontconvert)|Zamienia właściwości powiązanych z czcionki kontrolkę VBX do właściwości czcionki kontrolki OLE.|
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Zamienia właściwości powiązanych z czcionki kontrolkę VBX do właściwości czcionki kontrolki OLE.|
 
 Ponadto `AfxOleTypeMatchGuid` funkcja globalna znajduje się do testowania TYPEDESC zgodne z podanym identyfikatorem GUID.
 
@@ -622,7 +622,7 @@ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowo
 
 Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *strValue*, odpowiednio. Jeśli *strDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.
 
-##  <a name="px_vbxfontconvert"></a>  Px_vbxfontconvert —
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
 
 Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcji elementu członkowskiego, aby zainicjować właściwość czcionki przez przekonwertowanie właściwości powiązanych z czcionki kontrolkę VBX.
 
@@ -653,6 +653,6 @@ Ta funkcja powinna być używane tylko przez kontrolkę OLE, która została zap
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

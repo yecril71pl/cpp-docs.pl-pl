@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-ms.openlocfilehash: 494ce694a4b328b5fb161444457de2ef085c81a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3ed6c347fc85504b06ce464dd479142c3bc05f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298844"
 ---
 # <a name="dual-interfaces-classes"></a>Klasy podwójnych interfejsów
 
@@ -21,7 +21,6 @@ Następujące klasy obsługuje dwa interfejsy:
 
 - [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementuje `IDispatch` część podwójnego interfejsu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)
-

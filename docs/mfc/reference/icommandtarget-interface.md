@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 830802f960cba1789c21c53efbf0ed05de3ac4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557459"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299944"
 ---
 # <a name="icommandtarget-interface"></a>Klasa Icommandtarget
 
@@ -37,7 +37,7 @@ interface class ICommandTarget
 
 Hostowanie kontrolki użytkownika w widoku MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Implementując `ICommandTarget`, podać odwołanie do formantu użytkownika [ICommandSource](../../mfc/reference/icommandsource-interface.md) obiektu.
 
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -62,10 +62,9 @@ Dojście do obiektu źródła polecenia.
 
 Hostowanie kontrolki użytkownika w widoku MFC CWinFormsView kieruje polecenia i komunikaty interfejs użytkownika polecenia aktualizacji do formantu użytkownika, aby zezwolić na obsługę jego poleceń MFC.
 
-Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z cmdSource obiektu źródłowego określonego polecenia. Powinien zostać wywołany w implementacji klasy formantu użytkownika. Podczas inicjowania należy zarejestrować programy obsługi poleceń, za pomocą obiektu źródła polecenia przez ICommandSource::AddCommandHandler wywołujący w implementacji inicjowania. Zobacz porady: Dodawanie routingu poleceń do kontrolki formularzy Windows przykład jak to zrobić za pomocą inicjowania.
+Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z cmdSource obiektu źródłowego określonego polecenia. Powinien zostać wywołany w implementacji klasy formantu użytkownika. Podczas inicjowania należy zarejestrować programy obsługi poleceń, za pomocą obiektu źródła polecenia przez ICommandSource::AddCommandHandler wywołujący w implementacji inicjowania. Zobacz jak: Dodawanie routingu poleceń do kontrolki formularzy Windows przykład jak to zrobić za pomocą inicjowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Klasa ICommandSource](../../mfc/reference/icommandsource-interface.md)
-

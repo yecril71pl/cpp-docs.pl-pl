@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299559"
 ---
 # <a name="ccomobject-class"></a>Klasa CComObject
 
@@ -32,7 +32,7 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -178,7 +178,7 @@ STDMETHOD_(ULONG, Release)();
 
 Ta funkcja zwraca nowy licznik odwołań wraz z przydzielaniem obiektu. W kompilacjach debugowania zwracana wartość może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>

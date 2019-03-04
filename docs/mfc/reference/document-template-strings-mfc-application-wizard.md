@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-ms.openlocfilehash: 24a5fcaea272924e20c55b8c1f5d58111e4eba13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 563cdf51c8104035fe29cb2e11d6c2bc8155d97b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297466"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Ciągi szablonu dokumentu, kreator aplikacji MFC
 
@@ -39,7 +39,6 @@ Na tej stronie Kreatora aplikacji MFC Podaj lub zawęzić poniższych opcji, aby
    |**Krótka nazwa nowego pliku**|Ustawia nazwę w standardowych Windows **New** okno dialogowe, jeśli istnieje więcej niż jeden nowy szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie nazwa projektu.|
    |**Długa nazwa typu pliku**|Ustawia nazwę typu pliku w rejestrze systemowym. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie nazwa projektu plus. Dokument.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
-

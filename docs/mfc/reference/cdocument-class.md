@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299078"
 ---
 # <a name="cdocument-class"></a>Klasa CDocument
 
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Określa szerokość i wysokość mapy bitowej.
 
 *phbmp*<br/>
@@ -753,7 +753,7 @@ virtual void OnDrawThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Odwołanie do kontekstu urządzenia.
 
 *lprcBounds*<br/>
@@ -1252,7 +1252,7 @@ Ta funkcja wywołuje [CView::OnUpdate](../../mfc/reference/cview-class.md#onupda
 
 [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
 [Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299182"
 ---
 # <a name="transformer-class"></a>Klasa transformatora
 
@@ -288,7 +288,7 @@ Funkcja, która zostanie wywołana dla każdego komunikatu akceptowane.
 *_PTarget*<br/>
 Wskaźnik do bloku docelowego, do łączenia za pomocą przekształcania.
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
 
 *_PScheduler*<br/>
@@ -313,7 +313,7 @@ Niszczy `transformer` Blok obsługi wiadomości.
 ~transformer();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [call, klasa](call-class.md)

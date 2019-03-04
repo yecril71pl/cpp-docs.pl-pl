@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: konwertowanie ciągów'
+title: 'Windows Sockets: Konwertowanie ciągów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], multibyte character string conversion
 - sockets [MFC], multibyte character string conversion issues
 - string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
-ms.openlocfilehash: 984554c2405bf6b8ae6a522e545bcbba6ebae529
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eaf278fc2689f0afa9ab6ff30f1294c36de5d7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298365"
 ---
-# <a name="windows-sockets-converting-strings"></a>Windows Sockets: konwertowanie ciągów
+# <a name="windows-sockets-converting-strings"></a>Windows Sockets: Konwertowanie ciągów
 
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule opisano konwersji ciągów. Inne problemy zostały omówione w [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md).
 
@@ -25,17 +25,16 @@ Jeśli komunikacji między aplikacje, które używają ciągów przechowywanych 
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
-

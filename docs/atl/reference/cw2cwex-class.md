@@ -1,5 +1,5 @@
 ---
-title: Klasa CW2CWEX
+title: CW2CWEX Class
 ms.date: 11/04/2016
 f1_keywords:
 - CW2CWEX
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: 22b031ee83e6c0e01401f6d5ed19d83532443b64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1f960f8ec94b8e573490d4e708d4240b894b5ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297162"
 ---
-# <a name="cw2cwex-class"></a>Klasa CW2CWEX
+# <a name="cw2cwex-class"></a>CW2CWEX Class
 
 Ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX i typedef CW2W.
 
@@ -42,7 +42,7 @@ Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 baj
 |Nazwa|Opis|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|Konstruktor.|
-|[CW2CWEX:: ~ CW2CWEX](#dtor)|Destruktor.|
+|[CW2CWEX::~CW2CWEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -135,7 +135,7 @@ operator LPCWSTR() const throw();
 
 Zwraca ciąg tekstowy jako typu LPCWSTR.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

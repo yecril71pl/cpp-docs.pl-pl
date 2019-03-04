@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCCustomColorsPropertyPage
+title: CMFCCustomColorsPropertyPage Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCustomColorsPropertyPage
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: b35db4d6cd322cd363a9c490283c1351fe7a7ce2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28711991835dd14929e5387709046c3867c715e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299893"
 ---
-# <a name="cmfccustomcolorspropertypage-class"></a>Klasa CMFCCustomColorsPropertyPage
+# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage Class
 
 Reprezentuje stronę właściwości, które może wybrać kolory niestandardowe w oknie dialogowym koloru.
 
@@ -95,7 +95,7 @@ void Setup(
 
 Ta metoda aktualizacji bieżący RGB i skojarzone HLS (hue, jasność i nasycenie) wartości kolorów na stronie właściwości. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda wywołuje tę metodę, gdy struktura inicjuje okno dialogowe kolorów lub naciśnięciu lewego przycisku myszy. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [klasa CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

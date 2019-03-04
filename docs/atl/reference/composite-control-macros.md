@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299118"
 ---
 # <a name="composite-control-macros"></a>Makra kontrolek złożonych
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parametry
 
-*_CLASS*<br/>
+*_class*<br/>
 [in] Określa kontrolkę.
 
 ### <a name="example"></a>Przykład
@@ -83,7 +83,7 @@ SINK_ENTRY( id, dispid, fn )
 *id*<br/>
 [in] Identyfikuje formant.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 [in] Identyfikuje określone zdarzenie.
 
 *FN*<br/>
@@ -117,7 +117,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 *piid*<br/>
 [in] Wskaźnik do interfejsu wysyłania.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 [in] Identyfikuje określone zdarzenie.
 
 *FN*<br/>
@@ -151,20 +151,20 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *piid*<br/>
 [in] Wskaźnik do identyfikatora IID, który identyfikuje interfejs ekspedycji.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 [in] Identyfikator DISPID identyfikujący określonego zdarzenia.
 
 *FN*<br/>
 [in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
 
-*Informacje o*<br/>
+*info*<br/>
 [in] Wpisz informacje o funkcji procedury obsługi zdarzeń. Informacje o tym typie znajduje się w formularzu wskaźnik do `_ATL_FUNC_INFO` struktury. CC_CDECL jest jedyną opcją, które są obsługiwane w Windows CE dla pola Konwencja WYWOŁANIA `_ATL_FUNC_INFO` struktury. Dowolna inna wartość nie jest obsługiwany związku z tym jego zachowanie jest niezdefiniowane.
 
 ### <a name="remarks"></a>Uwagi
 
 Parametry makr pierwsze cztery są takie same jak w przypadku [SINK_ENTRY_EX](#sink_entry_ex) makra. Ostatni parametr zawiera informacje o typie dla zdarzenia. Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)

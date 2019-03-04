@@ -1,5 +1,5 @@
 ---
-title: Klasa IServiceProviderImpl
+title: IServiceProviderImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IServiceProviderImpl
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609888"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298675"
 ---
-# <a name="iserviceproviderimpl-class"></a>Klasa IServiceProviderImpl
+# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl Class
 
 Ta klasa udostępnia domyślną implementację elementu `IServiceProvider` interfejsu.
 
@@ -48,7 +48,7 @@ Z klasą pochodną `IServiceProviderImpl`.
 
 `IServiceProviderImpl` rozwiązania service map, począwszy od [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) i kończąc [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-Mapa usługi zawiera dwie pozycje: [SERVICE_ENTRY](service-map-macros.md#service_entry), który wskazuje identyfikator określonej usługi (SID), obsługiwane przez obiekt, i [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), która wywołuje metodę `QueryService` do tworzenia łańcucha na inny obiekt.
+Mapa usługi zawiera dwie pozycje: [SERVICE_ENTRY](service-map-macros.md#service_entry), która wskazuje identyfikator określonej usługi (SID), obsługiwane przez obiekt, i [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), która wywołuje metodę `QueryService` do tworzenia łańcucha innego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -91,7 +91,7 @@ Zwrócona wartość HRESULT jest jedną z następujących czynności:
 |S_OK|Usługa została pomyślnie utworzone lub pobrać.|
 |E_INVALIDARG|Co najmniej jeden z argumentów jest nieprawidłowa.|
 |E_OUTOFMEMORY|Pamięć jest za mała, aby utworzyć usługę.|
-|WARTOŚĆ E_UNEXPECTED|Wystąpił nieznany błąd.|
+|E_UNEXPECTED|Wystąpił nieznany błąd.|
 |E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|
 
 ### <a name="remarks"></a>Uwagi
@@ -110,6 +110,6 @@ Obiekt, który implementuje interfejs może także implementować interfejsy, kt
 
 Dwa różne usługi, takie jak SID_SMyService i SID_SYourService, zarówno określić korzystanie z tego samego interfejsu, mimo że implementacja interfejsu może być nic wspólnego między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić obiekt inny niż `QueryService` (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie zakłada, że podczas określania identyfikatora innej usługi.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

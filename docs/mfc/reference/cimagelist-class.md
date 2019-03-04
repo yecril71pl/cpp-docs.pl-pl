@@ -1,5 +1,5 @@
 ---
-title: Cimagelist — klasa
+title: CImageList Class
 ms.date: 11/04/2016
 f1_keywords:
 - CImageList
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178593"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298923"
 ---
-# <a name="cimagelist-class"></a>Cimagelist — klasa
+# <a name="cimagelist-class"></a>CImageList Class
 
 Oferuje funkcje formantu Windows typowej listy obrazów.
 
@@ -241,7 +241,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do przeciągania.
 
 *ptHotSpot*<br/>
@@ -289,7 +289,7 @@ BOOL Copy(
 *iDst*<br/>
 Liczony od zera indeks obrazu, który ma być używany jako docelowy operacji kopiowania.
 
-*Kod*<br/>
+*iSrc*<br/>
 Liczony od zera indeks obrazu, który ma być używany jako źródło kopiowania.
 
 *uFlags*<br/>
@@ -348,10 +348,10 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Wymiary każdego obrazu w pikselach.
 
-*CY*<br/>
+*cy*<br/>
 Wymiary każdego obrazu w pikselach.
 
 *nFlags*<br/>
@@ -395,7 +395,7 @@ Odwołanie do `CImageList` obiektu.
 *nImage2*<br/>
 Indeks drugiego istniejącego obrazu.
 
-*DX*<br/>
+*dx*<br/>
 Przesunięcie osi x, drugi obrazu w stosunku do pierwszego obrazu w pikselach.
 
 *dy*<br/>
@@ -579,10 +579,10 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia docelowego.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do rysowania.
 
 *(czas pacyficzny)*<br/>
@@ -594,7 +594,7 @@ Flaga określająca styl rysowania. Może być co najmniej jeden z następujący
 |Wartość|Znaczenie|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Rysuje obraz mieszania 25 procent dzięki kolor wyróżnienia systemu. Ta wartość nie obowiązuje, jeśli listy obrazów nie zawiera maski.|
-|ILD_BLEND50 ILD_SELECTED, ILD_BLEND|Rysuje obraz mieszania 50% dzięki kolor wyróżnienia systemu. Ta wartość nie obowiązuje, jeśli listy obrazów nie zawiera maski.|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Rysuje obraz mieszania 50% dzięki kolor wyróżnienia systemu. Ta wartość nie obowiązuje, jeśli listy obrazów nie zawiera maski.|
 |ILD_MASK|Rysuje maski.|
 |ILD_NORMAL|Rysuje obraz dla listy obrazów za pomocą koloru tła. Jeśli kolor tła jest wartością CLR_NONE, obraz jest rysowana sposób niewidoczny dla użytkownika za pomocą maski.|
 |ILD_TRANSPARENT|Rysuje obraz, w sposób niewidoczny dla użytkownika przy użyciu maska, niezależnie od tego, kolor tła.|
@@ -624,16 +624,16 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia docelowego.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do rysowania.
 
 *(czas pacyficzny)*<br/>
 Lokalizację, w której do rysowania w kontekście określonego urządzenia.
 
-*Sz*<br/>
+*sz*<br/>
 Rozmiar część obrazu do rysowania względem lewego górnego rogu obrazu. Zobacz *dx* i *dy* w [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) w zestawie Windows SDK.
 
 *clrBk*<br/>
@@ -684,16 +684,16 @@ BOOL DrawIndirect(
 *pimldp*<br/>
 Wskaźnik do [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) strukturę, która zawiera informacje na temat operacji rysowania.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia docelowego. Należy usunąć ten [CDC](../../mfc/reference/cdc-class.md) obiektu, kiedy są z nią zrobić.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do narysowania.
 
 *(czas pacyficzny)*<br/>
 A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędnych x i y miejsca będzie rysowania obrazu.
 
-*Sz*<br/>
+*sz*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) wskazujący rozmiar obraz, który ma być rysowany struktury.
 
 *ptOrigin*<br/>
@@ -780,7 +780,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -873,7 +873,7 @@ static CImageList* PASCAL GetDragImage(
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera bieżącego przeciągnij pozycji.
 
 *lpPointHotSpot*<br/>
@@ -911,7 +911,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu.
 
 *pImageInfo*<br/>
@@ -1006,7 +1006,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1038,7 +1038,7 @@ int Replace(
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do zastąpienia.
 
 *pbmImage*<br/>
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 Kolor tła do ustawienia. Może to być CLR_NONE. W takim przypadku obrazy są rysowane sposób niewidoczny dla użytkownika za pomocą maski.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzeciągnij*<br/>
+*nDrag*<br/>
 Indeks nowy obraz, który ma być łączone z przeciągnij obraz.
 
 *ptHotSpot*<br/>
@@ -1150,7 +1150,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do użycia jako maska nakładki.
 
 *nOverlay*<br/>
@@ -1191,7 +1191,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

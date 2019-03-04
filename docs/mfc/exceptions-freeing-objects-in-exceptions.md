@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: zwalnianie obiektów w wyjątkach'
+title: 'Wyjątki: Zwalnianie obiektów w wyjątkach'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298138"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Wyjątki: zwalnianie obiektów w wyjątkach
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Wyjątki: Zwalnianie obiektów w wyjątkach
 
 W tym artykule opisano potrzebę oraz sposób zwalnianie obiektów w przypadku, gdy wystąpi wyjątek. Tematy obejmują:
 
@@ -62,9 +62,8 @@ Mechanizm wyjątków automatycznie zwalnia ramki obiektów; Skrót destruktor ob
 
 Jeśli chcesz wywołać funkcje, które mogą zgłosić wyjątek, możesz użyć **bloku try/catch** bloków, aby upewnić się, możesz rejestrować wyjątki i zdąży niszczy wszystkie obiekty, które zostały utworzone. W szczególności należy pamiętać, że wiele funkcji MFC mogą zgłaszać wyjątki.
 
-Aby uzyskać więcej informacji, zobacz [wyjątki: wyjątki połowowe i usuwanie](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Aby uzyskać więcej informacji, zobacz [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

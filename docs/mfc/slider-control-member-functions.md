@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CSliderCtrl class [MFC], methods
 - slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
-ms.openlocfilehash: 25414b1d98c87c67c1dc8e13bb44bdc25869db94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a88dd1a49eb928261393a4473ee7eb53628c607a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296907"
 ---
 # <a name="slider-control-member-functions"></a>Funkcje członkowskie formantu suwaka
 
@@ -34,8 +34,7 @@ Aplikacja może użyć funkcji elementów członkowskich do pobrania wymiarów k
 
 Jeśli formant suwaka ma styl TBS_ENABLESELRANGE, użytkownik może wybrać zakres sąsiadujących wartości z niego. Liczba elementów członkowskich umożliwiają wybranego zakresu dynamicznego dostosowania. [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) funkcja elementu członkowskiego ustawia początkową i końcową pozycję zaznaczenia. Gdy użytkownik zakończy, ustawienie zaznaczony zakres, aplikacja może pobrać ustawienia za pomocą [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) funkcja elementu członkowskiego. Aby wyczyścić wybranych przez użytkownika, należy użyć [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) funkcja elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

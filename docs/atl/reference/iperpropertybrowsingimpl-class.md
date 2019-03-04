@@ -1,5 +1,5 @@
 ---
-title: Klasa IPerPropertyBrowsingImpl
+title: IPerPropertyBrowsingImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPerPropertyBrowsingImpl
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-ms.openlocfilehash: ce7c581d4378cb1f6e5556d488164a9b5fd9098a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54c475e736425718e954b0e954ea2b327d938556
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585305"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299463"
 ---
-# <a name="iperpropertybrowsingimpl-class"></a>Klasa IPerPropertyBrowsingImpl
+# <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl Class
 
 Ta klasa implementuje `IUnknown` i umożliwia klientom dostęp do informacji na stronach właściwości obiektu.
 
@@ -117,7 +117,7 @@ STDMETHOD(GetPredefinedValue)(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -141,7 +141,7 @@ ATL używa obiektu właściwości mapy, aby uzyskać te informacje.
 
 Zobacz [IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)<br/>
 [Klasa ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>

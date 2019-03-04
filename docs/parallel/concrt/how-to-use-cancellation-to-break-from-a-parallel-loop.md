@@ -1,18 +1,18 @@
 ---
-title: 'Porady: użyj anulowania, aby przerwać pętlę równoległą'
+title: 'Instrukcje: Użyj anulowania aby przerwać pętlę równoległą'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-ms.openlocfilehash: 2a19c2874ce331be2d4f5840f61cabf7bca9abf6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299572"
 ---
-# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Porady: użyj anulowania, aby przerwać pętlę równoległą
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Instrukcje: Użyj anulowania aby przerwać pętlę równoległą
 
 W tym przykładzie pokazano, jak należy używać odwołania do zaimplementowania algorytmu wyszukiwania równoległego podstawowe.
 
@@ -30,9 +30,9 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc równoległych tablicy search.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)<br/>
+[parallel_for Function](reference/concurrency-namespace-functions.md#parallel_for)<br/>
 [cancellation_token_source, klasa](../../parallel/concrt/reference/cancellation-token-source-class.md)
