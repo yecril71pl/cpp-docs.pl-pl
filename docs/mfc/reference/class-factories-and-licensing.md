@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289585"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 
@@ -29,7 +29,7 @@ W poniższej tabeli wymieniono kilka makra i funkcje używane do deklarowania i 
 |[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementuje formant `GetClassID` funkcji i deklaruje wystąpienie fabryki klas.|
 |[BEGIN_OLEFACTORY](#begin_olefactory)|Rozpoczyna się deklaracji wszystkie funkcje licencjonowania.|
 |[END_OLEFACTORY](#end_olefactory)|Kończy się w deklaracji funkcji licencjonowania.|
-|[Afxverifylicfile —](#afxverifylicfile)|Sprawdza, czy formant jest licencjonowany do użycia na danym komputerze.|
+|[AfxVerifyLicFile](#afxverifylicfile)|Sprawdza, czy formant jest licencjonowany do użycia na danym komputerze.|
 
 ##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX
 
@@ -134,7 +134,7 @@ Nazwa klasy kontrolki fabryki klas, których to.
 
   **Nagłówek** afxctl.h
 
-##  <a name="afxverifylicfile"></a>  Afxverifylicfile —
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile
 
 Wywołaj tę funkcję, aby sprawdzić, czy plik licencji o nazwie określonej przez `pszLicFileName` nadaje się do sterowania OLE.
 
@@ -157,7 +157,7 @@ Wskazuje ciąg znaków zakończony znakiem null zawierający nazwę pliku licenc
 *pszLicFileContents*<br/>
 Wskazuje na sekwencję bajtów, która musi być zgodna z sekwencji znalezione na początku pliku licencji.
 
-*CCH*<br/>
+*cch*<br/>
 Liczba znaków w *pszLicFileContents*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -174,6 +174,6 @@ Jeśli *cch* wynosi -1, korzysta z tej funkcji:
 
   **Nagłówek** afxctl.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

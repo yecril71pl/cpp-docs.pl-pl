@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644395"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291629"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar — klasa
 
@@ -141,7 +141,7 @@ virtual CSize CalcDynamicLayout(
 *nMode*<br/>
 Następujące flagi wstępnie zdefiniowane są używane do określenia wysokości i szerokości paska dynamicznej kontroli. Użyj Alternatywy bitowej (&#124;) operator, aby łączyć flagi.
 
-|Flagi trybu układu|Co to znaczy|
+|Flagi trybu układu|Znaczenie|
 |-----------------------|-------------------|
 |LM_STRETCH|Wskazuje, czy pasek sterowania powinien być rozciągnięty do rozmiaru ramki. Ustaw, jeśli nie jest pasek dokowania paska (niedostępne dla dokowanie). Nie ustawiona, gdy pasek jest zadokowany lub przestawny (dostępne dla dokowanie). Jeśli ustawiona, LM_STRETCH ignoruje *nLength* i zwraca wymiarów na podstawie stanu LM_HORZ. LM_STRETCH działa podobnie jak *bStretch* parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji elementu członkowskiego, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|
 |LM_HORZ|Wskazuje, czy pasek jest zorientowany poziomo czy pionowo. Ustaw, jeśli pasek jest w orientacji poziomej i jeśli jest w orientacji pionowej, nie jest ustawiona. LM_HORZ działa podobnie jak *bHorz* parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji elementu członkowskiego, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|
@@ -236,7 +236,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia, które ma być używany do renderowania obramowania i uchwyt paska sterowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -257,7 +257,7 @@ virtual void DrawBorders(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia, które ma być używany do renderowania krawędzie paska sterowania.
 
 *Rect*<br/>
@@ -279,7 +279,7 @@ virtual void DrawGripper(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia, które ma być używany do renderowania uchwyt paska sterowania.
 
 *Rect*<br/>
@@ -517,7 +517,7 @@ Szerokość (w pikselach) prawej krawędzi paska sterowania.
 *cyBottom*<br/>
 Wysokość (w pikselach) pasek sterowania dolnej krawędzi.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera bieżący szerokość (w pikselach) każdej krawędzi obiekt paska sterowania.
 
 ### <a name="example"></a>Przykład
@@ -541,7 +541,7 @@ Wskaźnik do `CWnd` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

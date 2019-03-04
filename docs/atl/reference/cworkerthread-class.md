@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287781"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
@@ -273,7 +273,7 @@ Aby ponownie użyć obiektu, wywołaj [CWorkerThread::Initialize](#initialize) p
 
 Należy pamiętać, że wywołanie `Shutdown` inicjowane za pomocą wskaźnika do innego obiektu `CWorkerThread` obiekt nie ma wpływu i zawsze zwraca wartość S_OK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Klasy](../../atl/reference/atl-classes.md)<br/>

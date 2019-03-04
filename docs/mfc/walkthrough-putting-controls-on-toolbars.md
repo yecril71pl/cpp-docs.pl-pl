@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: umieszczanie formantów na paskach narzędzi'
+title: 'Przewodnik: Umieszczanie formantów na paskach narzędzi'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291395"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Przewodnik: Umieszczanie formantów na paskach narzędzi
 
 W tym artykule opisano sposób dodawania przycisku paska narzędzi, który zawiera formant Windows, na pasku narzędzi. W MFC, musi być przycisku paska narzędzi [klasa CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodne klasy, na przykład [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasa CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasa CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [klasa CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
@@ -98,7 +98,7 @@ Aby dodać przycisk pola kombi na pasku narzędzi, wykonaj następujące kroki:
 
 W obsłudze dostosowywania `OnViewCustomize`, wywołaj [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) zastąpić **znaleźć** przycisku (oznacza to, że przycisk z poleceniem o identyfikatorze `ID_EDIT_FIND`) z `CFindComboButton` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../mfc/hierarchy-chart.md)<br/>
 [Klasy](../mfc/reference/mfc-classes.md)<br/>

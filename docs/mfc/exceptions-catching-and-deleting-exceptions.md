@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: przechwytywanie i usuwanie wyjątków'
+title: 'Wyjątki: Przechwytywanie i usuwanie wyjątków'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 370062d3e17127e711f2b4356cbb133a6c1d20b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287207"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: przechwytywanie i usuwanie wyjątków
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: Przechwytywanie i usuwanie wyjątków
 
 Następujące instrukcje i przykłady pokazują, jak przechwytywać i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i **throw** słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).
 
@@ -49,9 +49,8 @@ Twoje **catch** bloku musi usunąć wyjątek po:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Aby uzyskać więcej informacji, zobacz [wyjątków: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287326"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -175,7 +175,7 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parametry
 
-*EXP*<br/>
+*exp*<br/>
 [in] Parametry i zmienne, aby wysyłać w oknie danych wyjściowych programu Visual C++ lub inna aplikacja te komunikaty pułapek.
 
 *category*<br/>
@@ -206,7 +206,7 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parametry
 
-*EXP*<br/>
+*exp*<br/>
 [in] Ciąg do wysyłania do okna danych wyjściowych Visual C++ lub dowolnej aplikacji, która te komunikaty pułapek.
 
 *category*<br/>
@@ -283,7 +283,7 @@ ATLTRACE i ATLTRACE2 mają takie samo zachowanie, ATLTRACE jest włączone dla z
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonBaseElement
+title: CMFCRibbonBaseElement Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonBaseElement
@@ -232,14 +232,14 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289978"
 ---
-# <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
+# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
 
 `CMFCRibbonBaseElement` Klasy jest klasą bazową dla wszystkich elementów, które można dodać do [paska wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykładowe elementy wstążki są wstążki przyciski, pola wyboru Wstążki i pola kombi wstążki.
 
@@ -577,10 +577,10 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Typ*<br/>
+*type*<br/>
 [in] Typ obrazu wyliczany wartości. Zobacz sekcję Spostrzeżenia, aby listę możliwych wartości.
 
 *rectImage*<br/>
@@ -685,7 +685,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -817,7 +817,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -848,7 +848,7 @@ virtual CRect GetKeyTipRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *bIsMenu*<br/>
@@ -872,7 +872,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1059,7 +1059,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1081,7 +1081,7 @@ virtual CSize GetSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1587,7 +1587,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 
 ### <a name="parameters"></a>Parametry
 
-*QAT*<br/>
+*qat*<br/>
 [in] Pasek narzędzi Szybki dostęp.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1606,7 +1606,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
@@ -1639,7 +1639,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
@@ -1677,7 +1677,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1697,7 +1697,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1720,7 +1720,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1748,7 +1748,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla elementu wstążki.
 
 *strText*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 W oknie nadrzędnym elementem wstążki.
 
-*Dane*<br/>
+*data*<br/>
 Dane ułatwień dostępu dla elementu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2235,7 +2235,7 @@ virtual BOOL StretchToWholeRow(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Ten parametr nie jest używany.
 
 *nHeight*<br/>
@@ -2273,7 +2273,7 @@ Wartość TRUE, jeśli element wstążki ma fokus; w przeciwnym razie wartość 
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

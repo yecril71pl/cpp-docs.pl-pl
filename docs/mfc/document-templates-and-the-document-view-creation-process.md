@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290005"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Szablony dokumentów i proces tworzenia dokumentu/widoku
 
-Aby zarządzać złożony proces tworzenia dokumentów wraz z ich skojarzonych widoków i okien ramowych, środowisko wykorzystuje dwie klasy szablonów dokumentów: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla aplikacji interfejsu SDI i [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI. Element `CSingleDocTemplate` można utworzyć i zapisać jeden dokument jeden typ w danym momencie. A `CMultiDocTemplate` przechowuje listę wiele otwartych dokumentów jednego typu.
+Aby zarządzać złożony proces tworzenia dokumentów wraz z ich skojarzonych widoków i okien ramowych, środowisko wykorzystuje dwie klasy szablonów dokumentów: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla aplikacji interfejsu SDI i [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI. Element `CSingleDocTemplate` można utworzyć i zapisać jeden dokument jeden typ w danym momencie. A `CMultiDocTemplate` przechowuje listę wiele otwartych dokumentów jednego typu.
 
 Niektóre aplikacje obsługują wiele typów dokumentów. Na przykład aplikacja może obsługiwać dokumenty tekstowe i grafiki dokumentów. W aplikacji gdy użytkownik wybierze polecenie Nowy w menu Plik, okno dialogowe pokazuje listę możliwych typów dokumentu nowy, aby otworzyć. Dla każdego typu obsługiwanego dokumentu aplikacja używa obiektu szablonu dokumentu distinct. Na poniższym rysunku przedstawiono konfigurację aplikacji MDI, która obsługuje dwa typy dokumentów i pokazuje kilka otwartych dokumentów.
 
@@ -35,11 +35,10 @@ Ikona jest zarejestrowany dla każdego szablonu dokumentu, na podstawie jego poz
 
 Na przykład szablon dokumentu jest trzeci trzech dla aplikacji. W przypadku zasobu ikony aplikacji o indeksie 3, ta ikona służy do szablonu dokumentu. W przeciwnym razie ikona pod indeksem 0 jest używany jako domyślny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
 [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)<br/>
 [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)<br/>
 [Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StringRegister method
 - scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-ms.openlocfilehash: 170eb4c29571fcec8797727f54630894c9198442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a604b6105612ad89a12026121c464028535d7df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650557"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287820"
 ---
 # <a name="invoking-scripts"></a>Wywoływanie skryptów
 
@@ -20,12 +20,12 @@ ms.locfileid: "50650557"
 
 |Metoda|Składnia/opis|
 |------------|-------------------------|
-|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Rejestruje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *nID* i *szType* zawierają odpowiednio identyfikator i typu zasobu.|
-|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Wyrejestrowuje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *nID* i *szType* zawierają odpowiednio identyfikator i typu zasobu.|
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Rejestruje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *szID* i *szType* zawierają odpowiednio identyfikator ciągu i typu zasobu.|
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Wyrejestrowuje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *szID* i *szType* zawierają odpowiednio identyfikator ciągu i typu zasobu.|
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);**<br /><br /> Rejestruje skryptu w pliku. *Nazwa pliku* jest ścieżką UNC do pliku, który zawiera (lub jest) skrypt zasobu.|
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);**<br /><br /> Wyrejestrowuje skryptu w pliku. *Nazwa pliku* jest ścieżką UNC do pliku, który zawiera (lub jest) skrypt zasobu.|
+|**ResourceRegister**|**HRESULT ResourceRegister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> Rejestruje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *nID* i *szType* zawierają odpowiednio identyfikator i typu zasobu.|
+|**ResourceUnregister**|**HRESULT ResourceUnregister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> Wyrejestrowuje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *nID* i *szType* zawierają odpowiednio identyfikator i typu zasobu.|
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> Rejestruje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *szID* i *szType* zawierają odpowiednio identyfikator ciągu i typu zasobu.|
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> Wyrejestrowuje skryptów znajdujących się w zasobie modułu. *resFileName* wskazuje ścieżkę UNC do samego modułu. *szID* i *szType* zawierają odpowiednio identyfikator ciągu i typu zasobu.|
+|**FileRegister**|**HRESULT FileRegister( LPCOLESTR**  *fileName*  **);**<br /><br /> Rejestruje skryptu w pliku. *Nazwa pliku* jest ścieżką UNC do pliku, który zawiera (lub jest) skrypt zasobu.|
+|**FileUnregister**|**HRESULT FileUnregister( LPCOLESTR**  *fileName*  **);**<br /><br /> Wyrejestrowuje skryptu w pliku. *Nazwa pliku* jest ścieżką UNC do pliku, który zawiera (lub jest) skrypt zasobu.|
 |**StringRegister**|**HRESULT StringRegister (LPCOLESTR***danych***);**<br /><br /> Rejestruje skryptu w ciągu. *dane* zawiera sam skrypt.|
 |**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***danych***);**<br /><br /> Wyrejestrowuje skryptu w ciągu. *dane* zawiera sam skrypt.|
 
@@ -33,7 +33,6 @@ ms.locfileid: "50650557"
 
 Metody **FileRegister** i **FileUnregister** są przydatne, jeśli chcesz, aby skrypt w zasobie lub jeśli chcesz, aby skrypt w jej własnym pliku. Metody **StringRegister** i **StringUnregister** pliku .rgs mają być przechowywane w ciągu przydzielany dynamicznie dozwolonych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)
-

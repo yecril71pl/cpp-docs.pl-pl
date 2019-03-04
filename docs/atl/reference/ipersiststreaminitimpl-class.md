@@ -1,5 +1,5 @@
 ---
-title: Klasa IPersistStreamInitImpl
+title: IPersistStreamInitImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStreamInitImpl
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: 472b01e169788ce3cf10f8ed9f2198c44cdeb88a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5ab433ed08b150e6c344d65657a910542856e77
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290051"
 ---
-# <a name="ipersiststreaminitimpl-class"></a>Klasa IPersistStreamInitImpl
+# <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl Class
 
 Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interfejsu.
 
@@ -93,7 +93,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -151,7 +151,7 @@ ATL używa map właściwości obiektu do przechowywania tych informacji.
 
 Zobacz [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery i strumienie](/windows/desktop/Stg/storages-and-streams)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

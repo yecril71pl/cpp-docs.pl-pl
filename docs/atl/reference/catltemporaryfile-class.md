@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288197"
 ---
 # <a name="catltemporaryfile-class"></a>Klasa CAtlTemporaryFile
 
@@ -49,7 +49,7 @@ class CAtlTemporaryFile
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Konstruktor.|
-|[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Destruktor.|
+|[CAtlTemporaryFile::~CAtlTemporaryFile](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -191,7 +191,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Pozycja w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -261,7 +261,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Pozycja w pliku, w którym ma się zacząć blokady.
 
 *nCount*<br/>
@@ -392,7 +392,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Pozycja w pliku, w którym ma się zacząć unlock.
 
 *nCount*<br/>
@@ -440,7 +440,7 @@ Wywołania [CAtlFile::Write](../../atl/reference/catlfile-class.md#write).
 
 Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CAtlFile](../../atl/reference/catlfile-class.md)

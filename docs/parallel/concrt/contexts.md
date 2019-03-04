@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285909"
 ---
 # <a name="contexts"></a>Konteksty
 
@@ -26,7 +26,7 @@ Przekazywanie 0 (zero) dla `milliseconds` parametru powoduje, że środowisko ur
 
 ### <a name="example"></a>Przykład
 
-Aby uzyskać przykład, który używa `wait` funkcji umożliwiające uzyskanie bieżącego kontekstu, a zatem umożliwiają innych kontekstach uruchomić, zobacz [porady: Użyj grup harmonogramu do wpływają na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Aby uzyskać przykład, który używa `wait` funkcji umożliwiające uzyskanie bieżącego kontekstu, a zatem umożliwiają innych kontekstach uruchomić, zobacz [jak: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>Context — klasa
 
@@ -46,7 +46,7 @@ Musi odpowiadać każdej pary wywołania `Context::Block` i `Context::Unblock`. 
 
 #### <a name="example"></a>Przykład
 
-Aby uzyskać przykład, który używa `Context::Block`, `Context::Unblock`, i `Context::Yield` metody służące do implementacji klasy kooperatywnego semafora, zobacz [porady: Korzystanie z klasy kontekstu do wdrażania semafora Cooperative](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Aby uzyskać przykład, który używa `Context::Block`, `Context::Unblock`, i `Context::Yield` metody służące do implementacji klasy kooperatywnego semafora, zobacz [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Nadsubskrypcja
 
@@ -66,12 +66,11 @@ Można włączyć nadsubskrypcję, wiele razy z bieżącego kontekstu, ale nale�
 
 ###### <a name="example"></a>Przykład
 
-Na przykład, który używa nadsubskrypcji do przesuwania opóźnienia, które jest spowodowany przez odczytywanie danych z połączenia sieciowego, zobacz [porady: Użyj Nadsubskrypcji do opóźnienia przesunięcie](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Na przykład, który używa nadsubskrypcji do przesuwania opóźnienia, które jest spowodowany przez odczytywanie danych z połączenia sieciowego, zobacz [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [Instrukcje: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Instrukcje: używanie nadsubskrypcji do przesuwania opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

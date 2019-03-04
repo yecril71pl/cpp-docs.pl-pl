@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: 00b285ba2ec1bcd7fa524d5e20190f806819947f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b967cc6dde6b4f639ef081b3821f6a7e5a2fe295
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287443"
 ---
 # <a name="using-canimatectrl"></a>Korzystanie z CAnimateCtrl
 
@@ -29,7 +29,6 @@ Formanty animacji odtwarzać tylko proste klipy AVI, a nie obsługują one dźwi
 
 - [Powiadomienia wysyłane przez kontrolki animacji](../mfc/notifications-sent-by-animation-controls.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

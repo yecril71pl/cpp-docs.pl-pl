@@ -1,5 +1,5 @@
 ---
-title: 'Obiekty danych i źródła danych: operowanie'
+title: 'Obiekty danych i źródeł danych: Manipulowanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286754"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
+# <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródeł danych: Manipulowanie
 
 Po utworzeniu obiektu danych lub źródła danych można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych, wyliczanie formaty, w której znajduje się dane, i nie tylko. W tym artykule opisano techniki konieczny do realizacji typowych operacji. Tematy obejmują:
 
@@ -67,7 +67,7 @@ Zanim aplikacja umożliwia użytkownikowi wkleić dane, trzeba wiedzieć, czy fo
 
    - Wywołanie obiektu danych `BeginEnumFormats` funkcja elementu członkowskiego rozpoczynają wyliczanie formatów dostępnych w Schowku. Następnie wywołaj `GetNextFormat` aż do momentu powrotu Schowka formatu aplikacja obsługuje lub jest nie więcej formatów.
 
-Jeśli używasz **ON_UPDATE_COMMAND_UI**, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji należy zrobić z elementami menu i when, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
+Jeśli używasz **ON_UPDATE_COMMAND_UI**, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji należy zrobić z elementami menu i when, zobacz [menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych
 
@@ -91,7 +91,7 @@ Użytkownik może teraz wstawiania danych do dokumentu, podobnie jak w przypadku
 
 - [Schowek](../mfc/clipboard.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>

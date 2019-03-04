@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290134"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry — Klasa
 
@@ -166,7 +166,7 @@ virtual ~single_link_registry();
 
 Metoda zgłasza [invalid_operation](invalid-operation-class.md) wyjątek, jeśli jest wywoływana przed usunięciem łącza.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [multi_link_registry, klasa](multi-link-registry-class.md)

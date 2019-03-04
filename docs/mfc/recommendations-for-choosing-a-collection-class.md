@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288041"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Zalecenia dotyczące wybierania klasy kolekcji
 
@@ -53,7 +53,7 @@ Poniższa tabela [kolekcji elementów kształtu](#_core_collection_shape_feature
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
 |Lista|Tak|Nie|Szybka|Powolne|Tak|
 |Tablica|Tak|Przez int|Powolne|Powolne|Tak|
-|Mapy|Nie|Według klucza|Szybka|Szybka|Tak (wartości) (kluczy)|
+|Mapa|Nie|Według klucza|Szybka|Szybka|Tak (wartości) (kluczy)|
 
 Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_mfc_collection_classes), znajduje się podsumowanie innych istotnych cech określonych klasy kolekcji MFC jako przewodnika do zaznaczenia. Wybór może zależeć od tego, czy klasa opiera się na szablonów języka C++, czy jego elementów może być Zserializowany za pośrednictwem dokumentu MCF [serializacji](../mfc/serialization-in-mfc.md) mechanizmu, czy jego elementy można utworzyć zrzutu za pomocą MFC użytkownika diagnostycznych zrzucanie mechanizmu, lub czy klasa jest bezpieczny — oznacza to, czy może zagwarantować typ elementów przechowywanych w i pobierane z kolekcji na podstawie klasy.
 
@@ -62,28 +62,28 @@ Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_
 |Class|Używa języka C++<br /><br /> szablony|Może być<br /><br /> serializacji|Może być<br /><br /> Wykonano zrzutu|jest<br /><br /> bezpieczne|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Tak|Tak 1|Tak 1|Nie|
-|`CByteArray`|Nie|Tak|Tak|Tak 3|
-|`CDWordArray`|Nie|Tak|Tak|Tak 3|
+|`CByteArray`|Nie|Yes|Tak|Tak 3|
+|`CDWordArray`|Nie|Yes|Tak|Tak 3|
 |`CList`|Tak|Tak 1|Tak 1|Nie|
 |`CMap`|Tak|Tak 1|Tak 1|Nie|
-|`CMapPtrToPtr`|Nie|Nie|Tak|Nie|
-|`CMapPtrToWord`|Nie|Nie|Tak|Nie|
-|`CMapStringToOb`|Nie|Tak|Tak|Nie|
-|`CMapStringToPtr`|Nie|Nie|Tak|Nie|
-|`CMapStringToString`|Nie|Tak|Tak|Tak 3|
-|`CMapWordToOb`|Nie|Tak|Tak|Nie|
-|`CMapWordToPtr`|Nie|Nie|Tak|Nie|
-|`CObArray`|Nie|Tak|Tak|Nie|
-|`CObList`|Nie|Tak|Tak|Nie|
-|`CPtrArray`|Nie|Nie|Tak|Nie|
-|`CPtrList`|Nie|Nie|Tak|Nie|
-|`CStringArray`|Nie|Tak|Tak|Tak 3|
-|`CStringList`|Nie|Tak|Tak|Tak 3|
-|`CTypedPtrArray`|Tak|Zależy od 2|Tak|Tak|
-|`CTypedPtrList`|Tak|Zależy od 2|Tak|Tak|
-|`CTypedPtrMap`|Tak|Zależy od 2|Tak|Tak|
+|`CMapPtrToPtr`|Nie|Nie|Yes|Nie|
+|`CMapPtrToWord`|Nie|Nie|Yes|Nie|
+|`CMapStringToOb`|Nie|Yes|Yes|Nie|
+|`CMapStringToPtr`|Nie|Nie|Yes|Nie|
+|`CMapStringToString`|Nie|Yes|Tak|Tak 3|
+|`CMapWordToOb`|Nie|Yes|Yes|Nie|
+|`CMapWordToPtr`|Nie|Nie|Yes|Nie|
+|`CObArray`|Nie|Yes|Yes|Nie|
+|`CObList`|Nie|Yes|Yes|Nie|
+|`CPtrArray`|Nie|Nie|Yes|Nie|
+|`CPtrList`|Nie|Nie|Yes|Nie|
+|`CStringArray`|Nie|Yes|Tak|Tak 3|
+|`CStringList`|Nie|Yes|Tak|Tak 3|
+|`CTypedPtrArray`|Tak|Zależy od 2|Tak|Yes|
+|`CTypedPtrList`|Tak|Zależy od 2|Tak|Yes|
+|`CTypedPtrMap`|Tak|Zależy od 2|Tak|Yes|
 |`CUIntArray`|Nie|Nie|Tak|Tak 3|
-|`CWordArray`|Nie|Tak|Tak|Tak 3|
+|`CWordArray`|Nie|Yes|Tak|Tak 3|
 
 1. Do serializacji, należy jawnie wywołać obiekt kolekcji `Serialize` funkcji; aby zrzutu, należy jawnie wywołać jej `Dump` funkcji. Nie można użyć formy `ar << collObj` do serializacji lub formularzu `dmp` `<< collObj` do zrzutu.
 
@@ -91,10 +91,9 @@ Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_
 
 3. Jeśli oznaczona tak, w tej kolumnie, klasy kolekcji nieszablonu jest bezpieczny, pod warunkiem używać zgodnie z oczekiwaniami. Na przykład, jeśli przechowujesz bajtów w `CByteArray`, tablica jest bezpieczny. Ale jeśli jest ona używana do przechowywania znaków, jego bezpieczeństwa typu jest mniej niektórych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kolekcje](../mfc/collections.md)<br/>
 [Klasy oparte na szablonach](../mfc/template-based-classes.md)<br/>
-[Instrukcje: tworzenie bezpiecznej kolekcji](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Instrukcje: Tworzenie bezpiecznej kolekcji](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Uzyskiwanie dostępu do wszystkich składowych kolekcji](../mfc/accessing-all-members-of-a-collection.md)
-

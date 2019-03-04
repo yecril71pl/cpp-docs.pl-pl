@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285584"
 ---
 # <a name="event-sink-maps"></a>Mapy wychwytywania zdarzeń
 
@@ -103,7 +103,7 @@ Klasa, do której należy ta mapa obiekt sink zdarzenia.
 *id*<br/>
 Identyfikator formantu kontrolki OLE.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzenia wywoływane przez formant.
 
 *pfnHandler*<br/>
@@ -145,7 +145,7 @@ Identyfikator formantu pierwszą kontrolkę OLE z zakresu.
 *idLast*<br/>
 Identyfikator formantu ostatnia kontrolka OLE w zakresie.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzenia wywoływane przez formant.
 
 *pfnHandler*<br/>
@@ -191,7 +191,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 *theClass*<br/>
 Klasa, do której należy ta mapa obiekt sink zdarzenia.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzenia wywoływane przez formant.
 
 *pfnHandler*<br/>
@@ -232,7 +232,7 @@ Klasa, do której należy ta mapa obiekt sink zdarzenia.
 *id*<br/>
 Identyfikator formantu kontrolki OLE.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.
 
 *pfnRequest*<br/>
@@ -271,7 +271,7 @@ Identyfikator formantu pierwszą kontrolkę OLE z zakresu.
 *idLast*<br/>
 Identyfikator formantu ostatnia kontrolka OLE w zakresie.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.
 
 *pfnRequest*<br/>
@@ -298,7 +298,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 *theClass*<br/>
 Klasa, do której należy ta mapa obiekt sink zdarzenia.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.
 
 *pfnRequest*<br/>
@@ -311,6 +311,6 @@ Wskaźnik do funkcji składowej, która obsługuje `OnChanged` powiadomienia dla
 
   **Nagłówek** afxdisp.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

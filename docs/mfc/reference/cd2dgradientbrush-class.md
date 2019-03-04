@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290979"
 ---
 # <a name="cd2dgradientbrush-class"></a>Klasa CD2DGradientBrush
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Tworzy obiekt CD2DGradientBrush.|
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla gradientów D2D.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla gradientów D2D.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -159,6 +159,6 @@ Wskaźnik do tablicy D2D1_GRADIENT_STOP struktur.
 ID2D1GradientStopCollection* m_pGradientStops;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

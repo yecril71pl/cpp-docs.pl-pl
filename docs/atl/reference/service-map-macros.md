@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290537"
 ---
 # <a name="service-map-macros"></a>Makra mapy usługi
 
@@ -131,7 +131,7 @@ Zwrócona wartość HRESULT jest jedną z następujących czynności:
 |S_OK|Usługa została pomyślnie utworzone lub pobrać.|
 |E_INVALIDARG|Co najmniej jeden z argumentów jest nieprawidłowa.|
 |E_OUTOFMEMORY|Pamięć jest za mała, aby utworzyć usługę.|
-|WARTOŚĆ E_UNEXPECTED|Wystąpił nieznany błąd.|
+|E_UNEXPECTED|Wystąpił nieznany błąd.|
 |E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|
 
 ### <a name="remarks"></a>Uwagi
@@ -150,6 +150,6 @@ Obiekt, który implementuje interfejs może także implementować interfejsy, kt
 
 Dwa różne usługi, takie jak SID_SMyService i SID_SYourService, zarówno określić korzystanie z tego samego interfejsu, mimo że implementacja interfejsu może być nic wspólnego między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić obiekt inny niż `QueryService` (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie zakłada, że podczas określania identyfikatora innej usługi.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

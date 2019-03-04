@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-ms.openlocfilehash: 041fa90b030edd9b5324c183b0153a8a062735da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e32210217321e4eb59d7d3e666a4f5494eb3642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287703"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet
 
@@ -50,7 +50,7 @@ Kroki opisane we wdrażaniu klienckich aplikacji internetowych różnią się w 
 
 - [Jak napisać aplikację klienta HTTP](../mfc/steps-in-a-typical-http-client-application.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Klasy MFC do tworzenia klienckich aplikacji internetowych](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>

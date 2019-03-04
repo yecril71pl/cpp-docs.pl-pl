@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: zmiany w makrach wyjątków w wersji 3.0'
+title: 'Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291226"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej
 
 Jest to zaawansowane tematu.
 
@@ -58,9 +58,8 @@ Na przykład, ten kod był prawidłowy w poprzednich wersjach, ale będzie mieć
 
 Za pomocą **THROW** w catch block powoduje, że wskaźnik `e` do usunięcia, tak aby witryny zewnętrznej catch, zostanie wyświetlony nieprawidłowy wskaźnik. Użyj **THROW_LAST** ponownie zgłosić `e`.
 
-Aby uzyskać więcej informacji, zobacz [wyjątki: wyjątki połowowe i usuwanie](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Aby uzyskać więcej informacji, zobacz [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

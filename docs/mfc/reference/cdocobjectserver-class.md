@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: 704d3290df89c327bcf10b9afe7acb8621165863
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509529"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289900"
 ---
 # <a name="cdocobjectserver-class"></a>Klasa CDocObjectServer
 
@@ -167,7 +167,7 @@ Stan programu może zawierać właściwości, takie jak typ widoku, współczynn
 
 Możesz użyć `OnSaveViewState` do przechowywania trwałe informacje specyficzne dla danego widoku stanu. Jeśli zastąpisz `OnSaveViewState` do przechowywania informacji, można zastąpić `OnApplyViewState` do odczytu informacji i zastosować je do widoku, gdy nowo jest aktywny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

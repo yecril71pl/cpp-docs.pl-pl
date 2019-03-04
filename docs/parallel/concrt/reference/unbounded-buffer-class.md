@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694754"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288150"
 ---
 # <a name="unboundedbuffer-class"></a>Klasa unbounded_buffer
 
@@ -207,7 +207,7 @@ Wskaźnik do blok źródłowy oferty wiadomości.
 
 A [message_status —](concurrency-namespace-enums.md#message_status) sygnał docelowy postanowiła zrobić z komunikatem.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages —
+##  <a name="propagate_output_messages"></a> propagate_output_messages
 
 Umieszcza `message` `_PMessage` w tym `unbounded_buffer` Blok obsługi wiadomości i próbuje zaoferować ją do wszystkich połączonych elementów docelowych.
 
@@ -347,7 +347,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
 
 *_PScheduler*<br/>
@@ -370,9 +370,8 @@ Niszczy `unbounded_buffer` Blok obsługi wiadomości.
 ~unbounded_buffer();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [overwrite_buffer, klasa](overwrite-buffer-class.md)<br/>
 [single_assignment, klasa](single-assignment-class.md)
-

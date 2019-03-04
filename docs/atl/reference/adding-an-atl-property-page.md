@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: ed715cd822aaf0f55b8898efc80b5514938ca8ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290022"
 ---
 # <a name="adding-an-atl-property-page"></a>Dodawanie strony właściwości ATL
 
@@ -32,7 +32,7 @@ W przypadku dodawania strony właściwości dla formantu, formant musi obsługiw
 
 Po utworzeniu strony właściwości kontrolki, należy podać [PROP_PAGE](property-map-macros.md#prop_page) wpis map właściwości dla formantu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../../atl/atl-com-property-pages.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>

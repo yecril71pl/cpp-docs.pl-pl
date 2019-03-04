@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288886"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 
@@ -480,7 +480,7 @@ Określa nowy kolor przezroczysty.
 
 Przezroczysty kolor jest wymagana, aby wyświetlić obrazy przezroczyste. Dowolne wystąpienie tego koloru na obrazie jest malowane zamiast kolorem tła.  Nie ma żadnych mieszania obrazy tła i pierwszego planu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

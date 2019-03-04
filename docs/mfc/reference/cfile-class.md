@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289883"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -195,7 +195,7 @@ CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>Parametry
 
-*hFile —*<br/>
+*hFile*<br/>
 Dojście do pliku, aby dołączyć do `CFile` obiektu.
 
 *lpszFileName*<br/>
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Liczba bajtów do przesuwania wskaźnika pliku. Wartości dodatnich, przesuń wskaźnik pliku pod koniec pliku. wartości ujemne Przesuń wskaźnik pliku na początku pliku.
 
-*nZe*<br/>
+*nFrom*<br/>
 Położenie do wyszukania z. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -916,7 +916,7 @@ Liczba bajtów, które mają zostać przeniesione z buforu. Pliki trybu tekstowe
 
 Co więcej, zapoznaj się z przykładami dla [CFile::CFile](#cfile) i [CFile::Open](#open).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>

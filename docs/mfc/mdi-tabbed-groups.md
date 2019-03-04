@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: cefd97b377c2755b158830d8e649ac40f90fee11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289523"
 ---
 # <a name="mdi-tabbed-groups"></a>Grupy z kartami MDI
 
@@ -60,7 +60,7 @@ Do zadań wykonywanych za pomocą grup z kartami MDI są następujące:
 
 - Aby zapisać układ grup z kartami MDI w aplikacji, należy wywołać `CMDIFrameWndEx::SaveMDIState`. Można załadować uprzednio zapisanego MDI z kartami profilu grupy, wywołaj `CMDIFrameWndEx::LoadMDIState`. Można również wywołać tych metod do załadowania lub zapisania listy otwartych dokumentów w aplikacji MDI. Aby uzyskać więcej informacji na temat zapisywanie i ładowanie stanu MDI, zobacz [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Klasa CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md)<br/>

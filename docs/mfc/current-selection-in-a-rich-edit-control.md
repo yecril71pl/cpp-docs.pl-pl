@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-ms.openlocfilehash: 4b4b4d0b3419201cd1243bf6f846ab0e1b5ed686
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4516c4506419169ac3ab284e6c59cae71595be59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636514"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286867"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Bieżące zaznaczenie w formancie edycji wzbogaconej
 
@@ -26,8 +26,7 @@ Aby uzyskać zaznaczonego tekstu w formancie edycji wzbogaconej, użyj [GetSelTe
 
 Możesz wyszukać ciąg znaków w kontrolce edycji wzbogaconej przy użyciu [FindText](../mfc/reference/cricheditctrl-class.md#findtext) funkcja elementu członkowskiego [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) struktury używane z tą funkcją określa zakres tekstu do wyszukiwania i ciąg do wyszukania. Można również określić opcje, takie jak tego, czy w wyszukiwaniu jest uwzględniana wielkość liter.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

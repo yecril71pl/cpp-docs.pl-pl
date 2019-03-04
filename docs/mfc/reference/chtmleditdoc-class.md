@@ -1,5 +1,5 @@
 ---
-title: Klasa CHtmlEditDoc
+title: CHtmlEditDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditDoc
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: 1398f71abaa01569c8361bf3ee72f6dc13e9d711
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285337"
 ---
-# <a name="chtmleditdoc-class"></a>Klasa CHtmlEditDoc
+# <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
 
 Za pomocą [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), zapewnia funkcję platformy edycji WebBrowser w kontekście architektury widoku dokumentu MFC.
 
@@ -106,8 +106,7 @@ Adres URL do otwarcia.
 
 Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe HTMLEdit](../../visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

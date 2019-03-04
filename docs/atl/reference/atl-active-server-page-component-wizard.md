@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 80d7eefaa4b12d5aab8970f4b3c81fc644226e07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288093"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron Active Server ATL
 
@@ -71,7 +71,7 @@ Zawiera informacje dla klasy języka C++ utworzona dla obiektu.
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-- **Klasa coclass**
+- **Coclass**
 
    Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt. Jeśli projekt lub ten obiekt korzysta z atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.
 
@@ -83,10 +83,10 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
    Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera swoje niestandardowe metody.
 
-- **Identyfikator programu**
+- **ProgID**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składnika strony Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

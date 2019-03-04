@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 7b1efb3bd574edde59f6d8845d73a51dfabea433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290511"
 ---
 # <a name="ccomenumonstl-class"></a>Klasa CComEnumOnSTL
 
@@ -32,7 +32,7 @@ CollType>,
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Moduł wyliczający COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
 *piid*<br/>
@@ -99,10 +99,10 @@ Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwość
 
 Ten kod tworzy **typedef** dla `CComEnumOnSTL` który uwidacznia wektor `CComVariant`s poprzez `IEnumVariant` interfejsu. `CVariantCollection` Klasy po prostu specjalizuje się `CreateSTLEnumerator` do pracy z obiektami modułu wyliczającego tego typu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Przykład ATLCollections: Pokazuje kopii niestandardowych zasad klas, ICollectionOnSTLImpl i CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
+[Przykład ATLCollections: Przedstawia kopii niestandardowych zasad klas, ICollectionOnSTLImpl i CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

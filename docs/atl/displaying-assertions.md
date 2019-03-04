@@ -7,12 +7,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-ms.openlocfilehash: e183f782d488c2e5b92f61cfd63627f056e1f588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb06b8f124180ed566ecf2c761deb359444fb019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289992"
 ---
 # <a name="displaying-assertions"></a>Wyświetlanie asercji
 
@@ -20,7 +20,6 @@ Jeśli klient połączony z usługą pojawi się przestanie odpowiadać, usługa
 
 Jeśli okaże się, że usługa jest wyświetlane okno komunikatu, które nie są widoczne, warto ustawić **Zezwalaj na usługę, aby interakcja z pulpitem** opcji przed ponownie przy użyciu usługi. Ta opcja jest parametr uruchamiania, który pozwala na okien komunikatów wyświetlanych przez usługę, aby wyświetlane na pulpicie. Aby ustawić tę opcję, Otwórz aplikację w Panelu sterowania, wybierz usługę, kliknij przycisk **uruchamiania**, a następnie wybierz pozycję **Zezwalaj na usługę, aby interakcja z pulpitem** opcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
-

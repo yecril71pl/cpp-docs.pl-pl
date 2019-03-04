@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonLinkCtrl
+title: CMFCRibbonLinkCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLinkCtrl
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 6e20b8fd2c8b40f907301c36f2aa3acef144d7b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287794"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
+# <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl Class
 
 Implementuje hiperłącze, które jest umieszczone na Wstążce. Hiperłącze otwiera stronę sieci Web, gdy zostanie kliknięte.
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
@@ -87,7 +87,7 @@ Po utworzeniu hiperłącze, dodaj go do panelu, wywołując [CMFCRibbonPanel::Ad
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonLinkCtrl.h
+**Header:** afxRibbonLinkCtrl.h
 
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
@@ -267,7 +267,7 @@ void SetLink(LPCTSTR lpszLink);
 *lpszLink*<br/>
 [in] Określa tekst, hiperłącze.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

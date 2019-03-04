@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288054"
 ---
 # <a name="atl-class-overview"></a>Przegląd klas ATL
 
@@ -40,12 +40,11 @@ Klasy w Active Template Library (ATL) mogą zostać podzielone w następujący s
 
 Aby uzyskać dodatkowe klas, które mogą być używane w projektach ATL, zobacz [udostępnione klasy](../atl-mfc-shared/atl-mfc-shared-classes.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../atl/reference/atl-classes.md)<br/>
 [Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)<br/>
 [Funkcje](../atl/reference/atl-functions.md)<br/>
 [Zmienne globalne](../atl/reference/atl-global-variables.md)<br/>
 [Makra](../atl/reference/atl-macros.md)<br/>
-[Definicje typów](../atl/reference/atl-typedefs.md)
-
+[Typedefs](../atl/reference/atl-typedefs.md)

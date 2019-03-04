@@ -1,5 +1,5 @@
 ---
-title: 'TN063: Debugowanie bibliotek DLL rozszerzeń Internet MFC'
+title: 'TN063: Debugowanie biblioteki DLL rozszerzeń Internet MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vs.debug.dlls
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - TN063 [MFC]
 - DLLs [MFC], Internet extension
 ms.assetid: 7012d592-9d2f-491a-b417-48e5c2a7680f
-ms.openlocfilehash: 7d1c079a045eb5f2375f206f7cfc5da4697db9b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a44e2fb0f10f387f9362cbff25252ae0a03bbf43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288808"
 ---
-# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Debugowanie bibliotek DLL rozszerzeń Internet MFC
+# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Debugowanie biblioteki DLL rozszerzeń Internet MFC
 
 Informacja ta jest przestarzały i został usunięty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

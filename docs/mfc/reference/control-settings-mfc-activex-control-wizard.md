@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289640"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 
@@ -25,12 +25,12 @@ Aby uzyskać więcej informacji o tym, jak wybrać opcje na tej stronie, aby zma
 
    Na tej liście możesz wybrać rodzaj kontrolki, z którego powinien dziedziczyć formantu. Lista jest podzbiorem klasy kontrolek, które są dostępne dla `CreateWindowEx` i dodatkowe formanty standardowe, które są określone w commctrl.h. Ten wybór decyduje styl formantu w `PreCreateWindow` działa w programach *ProjName*Ctrl.cpp pliku. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-   |Formant|Opis|
+   |formant|Opis|
    |-------------|-----------------|
-   |**PRZYCISK**|Kontrolka przycisku Windows|
-   |**POLE KOMBI COMBOBOX**|Kontrolka pola kombi Windows|
-   |**EDYTUJ**|Formant pola edycji Windows|
-   |**POLE LISTY**|Pole listy Windows|
+   |**BUTTON**|Kontrolka przycisku Windows|
+   |**COMBOBOX**|Kontrolka pola kombi Windows|
+   |**EDIT**|Formant pola edycji Windows|
+   |**LISTBOX**|Pole listy Windows|
    |**PASEK PRZEWIJANIA**|Windows pasek przewijania|
    |**STATYCZNE**|Formant statyczny Windows|
    |**msctls_hotkey32**|Formantu wspólnego klawisza dostępu|
@@ -93,9 +93,8 @@ Aby uzyskać więcej informacji o tym, jak wybrać opcje na tej stronie, aby zma
 
    Umożliwia zresetowanie wszelkie poprzednie dane asynchronicznego i inicjuje nowe obciążenie asynchronicznego właściwości formantu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Ustawienia aplikacji, kreator kontrolek ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Nazwy kontrolek, kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

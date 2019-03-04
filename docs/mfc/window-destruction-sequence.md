@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sequence [MFC]
 - windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
-ms.openlocfilehash: 07312d6c7bba219cebcfa2c73a8d66c9c97ec08e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4592e6ac0077d6bc335b50f2d67b140402b4fe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287664"
 ---
 # <a name="window-destruction-sequence"></a>Sekwencja likwidacji okna
 
@@ -26,7 +26,6 @@ W ramach MFC, gdy użytkownik zamknie okno ramowe domyślny okna [OnClose](../mf
 
 - [Odłączanie obiektu CWnd od jego właściwości HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
-

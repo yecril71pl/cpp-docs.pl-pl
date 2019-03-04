@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287339"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementacja podwójnego interfejsu
 
@@ -46,7 +46,6 @@ Możesz użyć `IDispatchImpl` klasy bazowej na dostarczać implementację dispi
 > [!NOTE]
 >  ATL udostępnia [IDispEventImpl](../atl/reference/idispeventimpl-class.md) i [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) klasy, aby pomóc w zaimplementowaniu dispinterfaces bez konieczności bibliotekę typów z definicją zgodne podwójnego interfejsu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)
-

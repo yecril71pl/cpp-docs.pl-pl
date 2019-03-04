@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288418"
 ---
 # <a name="cmfcribbonbar-class"></a>Klasa CMFCRibbonBar
 
@@ -319,7 +319,7 @@ Elementy, które pojawiają się na rozwijanie paska Wstążki i umowę najlepsz
 
 Możesz użyć `CMFCRibbonStatusBar` klasy do zaimplementowania pasek stanu podobny używaną w pakiecie Office 2007. Kategoria wstążki zawiera (i wyświetla) grupy [paneli wstążki](../../mfc/reference/cmfcribbonpanel-class.md). Każdy panel wstążki zawiera jeden lub więcej elementów wstążki, które są uzyskiwane z [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Aby uzyskać informacje o tym, jak dodać pasek wstążki do istniejącej aplikacji MFC, zobacz [wskazówki: aktualizowanie aplikacji klasa Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Aby uzyskać informacje o tym, jak dodać pasek wstążki do istniejącej aplikacji MFC, zobacz [instruktażu: Aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -703,7 +703,7 @@ BOOL DrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla przycisku menu.
 
 *pMenuItem*<br/>
@@ -2147,7 +2147,7 @@ Wartość TRUE, ponownie oblicza układ wstążki; Wartość FALSE w przeciwnym 
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
@@ -2155,5 +2155,4 @@ Wartość TRUE, ponownie oblicza układ wstążki; Wartość FALSE w przeciwnym 
 [Klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Klasa CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Klasa CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Wskazówki: Aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
+[Przewodnik: Aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

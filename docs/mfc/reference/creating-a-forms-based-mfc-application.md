@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: d95a5ddd5b8504bedc8136ae553b62b3ee6740f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6810a6c7fce91865a92d048129da29305e22abc1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518602"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291252"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Tworzenie aplikacji MFC opartej na formularzach
 
@@ -57,10 +57,9 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Opcje do wyboru przy projektowaniu aplikacji](../../mfc/application-design-choices.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Widoki formularzy](../../mfc/form-views-mfc.md)<br/>
 [Tworzenie aplikacji MFC w stylu eksploratora plików](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)<br/>
 [Tworzenie aplikacji MFC w stylu przeglądarki internetowej](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
-

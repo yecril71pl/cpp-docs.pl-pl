@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCImagePaintArea
+title: CMFCImagePaintArea Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImagePaintArea
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: af1d485d6d6281e909e33176ee1ae2b736c76600
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290755"
 ---
-# <a name="cmfcimagepaintarea-class"></a>Klasa CMFCImagePaintArea
+# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea Class
 
 Zapewnia obszar obrazu, który umożliwia modyfikowanie obrazu w okno dialogowe edytora obrazu.
 
@@ -163,7 +163,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |Parametr|Opis|
 |*Tryb*|[in] [Image_edit_mode —](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285350"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
 
@@ -647,7 +647,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pMenuButton*<br/>
@@ -677,7 +677,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pMenu*<br/>
@@ -975,7 +975,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

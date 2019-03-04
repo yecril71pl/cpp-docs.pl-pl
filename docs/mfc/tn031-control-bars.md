@@ -1,5 +1,5 @@
 ---
-title: 'TN031: paski sterowania'
+title: 'TN031: Paski sterowania'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286469"
 ---
-# <a name="tn031-control-bars"></a>TN031: paski sterowania
+# <a name="tn031-control-bars"></a>TN031: Paski sterowania
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -109,9 +109,9 @@ Kolory używane w pasku stanu są również zgodne z zaleceniem przewodnik proje
 
 |Element|Wartość KOLORU Windows|Domyślne RGB|
 |----------|-------------------------|-----------------|
-|Tło paska stanu|COLOR_BTNFACE|RGB (192 192, 192)|
+|Tło paska stanu|COLOR_BTNFACE|RGB(192, 192, 192)|
 |Tekst paska stanu|COLOR_BTNTEXT|RGB (000 000, 000)|
-|Góra/lewo krawędziach — pasek stanu|COLOR_BTNHIGHLIGHT|RGB (255, 255, 255)|
+|Góra/lewo krawędziach — pasek stanu|COLOR_BTNHIGHLIGHT|RGB(255, 255, 255)|
 |Bot/prawej krawędzi — pasek stanu|COLOR_BTNSHADOW|RGB (128, 128, 128)|
 
 **CCmdUI obsługę CStatusBar**
@@ -152,8 +152,8 @@ Ponadto przyciski z mapami narzędzi są ponownie pokolorowane tak, jakby były 
 |---------------|------------------------------------|
 |RGB (000 000, 000)|COLOR_BTNTEXT|
 |RGB (128, 128, 128)|COLOR_BTNSHADOW|
-|RGB (192 192, 192)|COLOR_BTNFACE|
-|RGB (255, 255, 255)|COLOR_BTNHIGHLIGHT|
+|RGB(192, 192, 192)|COLOR_BTNFACE|
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|
 
 Można znaleźć klasy [CToolBar](../mfc/reference/ctoolbar-class.md) *odwołanie do biblioteki klas* szczegółowe informacje na temat `CToolBar` tworzenia i dostosowywania interfejsów API. Powinna być podejmowana większość dostosowywania pasków narzędzi, przed wykonaniem pasek narzędzi jest początkowo widoczne.
 
@@ -167,9 +167,9 @@ Można wywołać procedury obsługi ON_UPDATE_COMMAND_UI:
 
 - `Enable`: Aby włączyć lub wyłączyć przycisk. Ta funkcja działa równie przycisków pole wyboru i przyciski.
 
-- `SetCheck`: Można ustawić stanu kontroli przycisku. To wywołanie dla przycisku kontrolki toolbar spowoduje wyłączenie w przycisk pola wyboru. `SetCheck` przyjmuje parametr, który może być 0 (niezaznaczone), 1 (zaznaczony) lub 2 (nieokreślone)
+- `SetCheck`: Aby ustawić stan wyboru przycisku. To wywołanie dla przycisku kontrolki toolbar spowoduje wyłączenie w przycisk pola wyboru. `SetCheck` przyjmuje parametr, który może być 0 (niezaznaczone), 1 (zaznaczony) lub 2 (nieokreślone)
 
-- `SetRadio`: Skrót dla `SetCheck`.
+- `SetRadio`: Skrócona forma funkcji `SetCheck`.
 
 Pole wyboru przyciski są przyciski pole wyboru "AUTOMATYCZNIE"; oznacza to gdy użytkownik naciśnie im one natychmiast zmianą stanu. Sprawdzane jest wyłączony lub z włączonym stanem. Nie istnieje sposób interfejsu użytkownika wbudowanych można zmienić przycisku do stanu "nieokreślone"; który musi odbywać się za pomocą kodu.
 
@@ -179,13 +179,13 @@ Wm_command — komunikaty, takie jak normalne przycisków lub elementy menu i zw
 
 Istnieją cztery narzędzi style przycisku (TBBS_ wartości) używane do stanów wyświetlania:
 
-- TBBS_CHECKED: pole wyboru jest aktualnie zaznaczone (w dół).
+- TBBS_CHECKED:   Obecnie jest zaznaczone pole wyboru (w dół).
 
-- TBBS_INDETERMINATE: pole wyboru jest obecnie nieokreślony.
+- TBBS_INDETERMINATE:   Pole wyboru jest obecnie nieokreślony.
 
-- TBBS_DISABLED: Przycisk jest obecnie wyłączona.
+- TBBS_DISABLED:   Przycisk jest obecnie wyłączona.
 
-- TBBS_PRESSED: Obecnie naciśnięciu przycisku.
+- TBBS_PRESSED:   Obecnie naciśnięciu przycisku.
 
 Sześć style przycisku oficjalny przewodnik projektowania aplikacji interfejsu Windows są reprezentowane przez następujące wartości TBBS:
 
@@ -223,8 +223,7 @@ Można wywołać procedury obsługi ON_UPDATE_COMMAND_UI:
 
 Dostosowywanie może odbywać się za pośrednictwem Menedżera okien standardowych interfejsów API.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

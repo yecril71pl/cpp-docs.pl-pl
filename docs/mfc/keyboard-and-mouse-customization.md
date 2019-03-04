@@ -5,12 +5,12 @@ helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 55eaac9d800730f3a01dcdb2eef943eb48d147b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289185"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 
@@ -66,10 +66,9 @@ Oprócz tego rodzaju ataków można pominąć zabezpieczenia interfejsu użytkow
 
 Aby zabezpieczyć się przed tego rodzaju atak, należy dodać kod do obsługi polecenia Twojej aplikacji, aby sprawdzić, czy polecenie jest prawidłowa, zanim zostanie on wykonany. Nie są zależne od interfejsu użytkownika, aby uniemożliwić polecenia wysyłane do aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dostosowywanie na potrzeby MFC](../mfc/customization-for-mfc.md)<br/>
 [Klasa CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md)<br/>
 [Klasa CMouseManager](../mfc/reference/cmousemanager-class.md)<br/>
 [Konsekwencje dostosowania związane z zabezpieczeniami](../mfc/security-implications-of-customization.md)
-

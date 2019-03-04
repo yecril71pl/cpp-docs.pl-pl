@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526427"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290433"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
 
@@ -360,7 +360,7 @@ int SetPos32(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Nowa pozycja dla formantu. Ta wartość musi być w zakresie określonym przez górny i dolny limit dla formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -397,7 +397,7 @@ Funkcja elementu członkowskiego `SetRange32` Ustawia zakres 32-bitowych dla kon
 > [!NOTE]
 >  Domyślny zakres dla przycisku pokrętła ma maksymalną wartość zero (0) i co najmniej równa 100. Ponieważ wartość maksymalna jest mniejsza niż wartość minimalna, klikając strzałkę w górę zostaną obniżone pozycję i klikając strzałkę w dół zwiększy jej. Użyj `CSpinButtonCtrl::SetRange` dostosować te wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

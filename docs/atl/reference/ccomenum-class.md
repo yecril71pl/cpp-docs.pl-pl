@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 8e0bf49b48c2c0f1a202231e67364637375f9342
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290368"
 ---
 # <a name="ccomenum-class"></a>Klasa CComEnum
 
@@ -31,7 +31,7 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
 *piid*<br/>
@@ -90,7 +90,7 @@ Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwość
 
 Ten kod tworzy **typedef** dla `CComEnum` który uwidacznia wektor wariantów za pośrednictwem `IEnumVariant` interfejsu. `CVariantArrayCollection` Klasy po prostu specjalizuje się `CreateEnumerator` do pracy z obiektami modułu wyliczającego tego typu i przekazuje wymagane argumenty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

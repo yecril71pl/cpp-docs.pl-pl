@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonProgressBar
+title: CMFCRibbonProgressBar Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonProgressBar
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608602"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285922"
 ---
-# <a name="cmfcribbonprogressbar-class"></a>Klasa CMFCRibbonProgressBar
+# <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar Class
 
 Implementuje formant, który wizualnie wskazuje postęp długiej operacji.
 
@@ -85,7 +85,7 @@ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonProg
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonProgressBar.h
+**Header:** afxRibbonProgressBar.h
 
 ##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
 
@@ -228,7 +228,7 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 [in] Określa położenie, do którego ustawiono pasek postępu.
 
 *bRedraw*<br/>
@@ -250,17 +250,17 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Określa wartość minimum zakresu.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Określa maksymalną wartość zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda umożliwia zdefiniowanie zakresu pasek postępu, ustawiając wartości minimalne i maksymalne.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

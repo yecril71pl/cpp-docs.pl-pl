@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości'
+title: 'Kontrolki ActiveX MFC: Dodawanie innego niestandardowej strony właściwości'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289556"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: Dodawanie innego niestandardowej strony właściwości
 
 Od czasu do czasu formant ActiveX ma więcej właściwości, niż jest mieści się na jednej stronie właściwości. W takim przypadku można dodać strony właściwości do kontrolki ActiveX, aby wyświetlić te właściwości.
 
-W tym artykule omówiono, dodając nowe właściwości do kontrolki ActiveX, który ma już co najmniej jedną stronę właściwości. Aby uzyskać więcej informacji na temat dodawania właściwości podstawowych stron (czcionkę, obrazu lub kolor), zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+W tym artykule omówiono, dodając nowe właściwości do kontrolki ActiveX, który ma już co najmniej jedną stronę właściwości. Aby uzyskać więcej informacji na temat dodawania właściwości podstawowych stron (czcionkę, obrazu lub kolor), zobacz artykuł [kontrolki ActiveX MFC: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 W poniższych procedurach użyto przykładowej framework formantu ActiveX utworzone przez kreatora kontrolek ActiveX. W związku z tym nazwy klas i identyfikatory są unikatowe dla tego przykładu.
 
 Aby uzyskać więcej informacji na temat używania stron właściwości w kontrolce ActiveX zobacz następujące artykuły:
 
-- [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
+- [Kontrolki ActiveX MFC: Strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Kontrolki ActiveX MFC: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  Zdecydowanie zaleca się tej nowej właściwości, które strony stosować się do rozmiaru standardem dla stron właściwości kontrolki ActiveX. Właściwości podstawowych obrazu i kolor strony miary 250 x 62 jednostki okna dialogowego (DLU). Strona właściwości czcionki standardowej jest Dlu 250 x 110. Strona właściwości domyślne utworzone przez kreatora kontrolek ActiveX używa standardu DLU 250 x 62.
@@ -107,7 +107,6 @@ Następny krok polega na utworzenie dwóch nowych zasobów ciągów, które zape
 
 Po dokonaniu niezbędnych modyfikacji ponownie skompiluj projekt i użyj kontener testu, aby przetestować nową stronę właściwości. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: 0009f73f11b1a3c57f5001269f34834c22b045c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d1a0edb356f9737aa287809dd8bca4146c1854
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655261"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287937"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Ustawianie trybu obiektu CStatusBarCtrl
 
@@ -29,8 +29,7 @@ Możesz użyć [issimple —](../mfc/reference/cstatusbarctrl-class.md#issimple)
 > [!NOTE]
 >  Jeśli obiekt paska stanu został zmieniony z nonsimple na prostej lub na odwrót okna jest od razu ponownie rysowany i, jeśli ma to zastosowanie, wszelkie zdefiniowane elementy zostaną automatycznie przywrócone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

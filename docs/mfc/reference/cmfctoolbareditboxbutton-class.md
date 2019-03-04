@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291616"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Klasa CMFCToolBarEditBoxButton
 
@@ -127,7 +127,7 @@ Aby dodać przycisk pola edycji do paska narzędzi, wykonaj następujące kroki:
 
 3. Programu obsługi wiadomości, która przetwarza komunikat AFX_WM_RESETTOOLBAR, Zamień zastępczy przycisk Nowy przycisk pola kombi przy użyciu [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Aby uzyskać więcej informacji, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Aby uzyskać więcej informacji, zobacz [instruktażu: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Przykład
 
@@ -489,7 +489,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *nCtlColor*<br/>
@@ -685,12 +685,11 @@ virtual void SetStyle(UINT nStyle);
 
 Ta metoda ustawia [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) do *nStyle* go wyłącza również pola tekstowego, gdy aplikacja jest w trybie Dostosuj i włączy ją, gdy aplikacja nie jest w trybie Dostosuj (patrz [ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) i [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Zobacz [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md) listę flag prawidłowe stylu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Wskazówki: używanie nowych formantów powłoki MFC'
+title: 'Przewodnik: Używanie nowych formantów powłoki MFC'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288795"
 ---
-# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Wskazówki: używanie nowych formantów powłoki MFC
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Przewodnik: Używanie nowych formantów powłoki MFC
 
 W tym instruktażu utworzysz aplikację, podobny Eksploratora plików. Utworzysz okno które ma dwa okienka. W okienku po lewej stronie będą przechowywane [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiekt, który wyświetla hierarchiczny widok pulpitu. W okienku po prawej stronie będzie przechowywać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) przedstawiająca pliki w folderze, który wybrano w okienku po lewej stronie.
 
@@ -168,6 +168,6 @@ W tym przewodniku przyjęto założenie, że po skonfigurowaniu programu Visual 
 
 - `CMFCShellListCtrl` Obsługuje wyświetlanie plików w różnych trybach, takich jak **duże ikony**, **małe ikony**, **listy**, i **szczegóły**. Zaktualizuj aplikację w celu zaimplementowania tej funkcji. Wskazówka: zobacz [przykłady Visual C++](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodniki](../mfc/walkthroughs-mfc.md)

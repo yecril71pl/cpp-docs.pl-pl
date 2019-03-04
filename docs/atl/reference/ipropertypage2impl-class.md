@@ -1,5 +1,5 @@
 ---
-title: Klasa IPropertyPage2Impl
+title: IPropertyPage2Impl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPage2Impl
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: fd2d53c79ee372c9997e1da2b189ef18129e67f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287508"
 ---
-# <a name="ipropertypage2impl-class"></a>Klasa IPropertyPage2Impl
+# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl Class
 
 Ta klasa implementuje `IUnknown` i dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
 
@@ -76,13 +76,13 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [Klasa ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>

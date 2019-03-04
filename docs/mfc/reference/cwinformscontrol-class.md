@@ -1,5 +1,5 @@
 ---
-title: Klasa CWinFormsControl
+title: CWinFormsControl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CWinFormsControl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289315"
 ---
-# <a name="cwinformscontrol-class"></a>Klasa CWinFormsControl
+# <a name="cwinformscontrol-class"></a>CWinFormsControl Class
 
 Oferuje podstawowe funkcje obsługi formantu Windows Forms.
 
@@ -57,8 +57,8 @@ Kontrolki formularzy Windows programu .NET Framework mają być wyświetlane w a
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|Zastępuje [CWinFormsControl::GetControl](#getcontrol) w wyrażeniach.|
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Rzutuje typu jako wskaźnik do formantu Windows Forms.|
+|[CWinFormsControl::operator -&gt;](#operator_-_gt)|Zastępuje [CWinFormsControl::GetControl](#getcontrol) w wyrażeniach.|
+|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Rzutuje typu jako wskaźnik do formantu Windows Forms.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -204,7 +204,7 @@ Ten operator miejsce wygodnej składni, która zastępuje `GetControl` w wyraże
 
 Aby uzyskać więcej informacji na formularzach Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 Rzutuje typu jako wskaźnik do formantu Windows Forms.
 
@@ -216,7 +216,7 @@ inline operator TManagedControl^() const;
 
 Ten operator przekazuje `CWinFormsControl<TManagedControl>` do funkcji, które akceptują wskaźnik do formantu Windows Forms.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWinFormsDialog](../../mfc/reference/cwinformsdialog-class.md)<br/>
 [Klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN028: obsługa pomocy kontekstowej'
+title: 'TN028: Obsługa pomocy kontekstowej'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288288"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028: obsługa pomocy kontekstowej
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Obsługa pomocy kontekstowej
 
 Ta uwaga opisuje zasady przypisywania identyfikatorów kontekstów pomocy i innych problemów pomocy w MFC. Obsługa pomocy kontekstowej wymaga kompilatora plików pomocy, które są dostępne w programie Visual C++.
 
 > [!NOTE]
->  Oprócz wykonywania za pomocą WinHelp pomocy kontekstowej, biblioteka MFC obsługuje korzystanie z pomocy HTML. Aby uzyskać więcej informacji na temat tej pomocy technicznej i programowania, korzystając z pomocy HTML, zobacz [Pomoc HTML: pomoc kontekstowa do programów](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Oprócz wykonywania za pomocą WinHelp pomocy kontekstowej, biblioteka MFC obsługuje korzystanie z pomocy HTML. Aby uzyskać więcej informacji na temat tej pomocy technicznej i programowania, korzystając z pomocy HTML, zobacz [Pomoc HTML: Pomoc kontekstowa do programów](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Typy obsługiwane pomocy
 
@@ -176,8 +176,7 @@ W pierwszym przypadku nIDHelp wartość domyślna to 0, co oznacza brak pomocy d
 
 W drugim przypadku wartość domyślną dla nIDHelp jest -1, która wskazuje, że identyfikator pomocy jest taka sama jak nIDPrompt. Pomoc będzie działać tylko wtedy, gdy aplikacja jest włączona pomoc oczywiście). Powinny zapewnić 0 nIDHelp, jeśli chcesz, że okno komunikatu ma nie pomoc techniczna. Powinien być komunikat, który ma być włączone, pomoc, ale pozwalają identyfikator pomocy innego niż nIDPrompt, po prostu Podaj dodatnią wartość nIDHelp innym niż nIDPrompt.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

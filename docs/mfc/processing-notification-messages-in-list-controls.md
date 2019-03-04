@@ -5,12 +5,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 427abe5259334588b566656abd70acf22b923809
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288077"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Przetwarzanie komunikatów powiadomień w kontrolkach listy
 
@@ -20,8 +20,7 @@ Przetwarzanie wiadomości WM_NOTIFY z formantu listy w klasie widoku lub w oknie
 
 Aby uzyskać listę powiadomień wysłać kontrolkę listy do okna nadrzędnego, zobacz [odwołania kontrolka widoku listy](/windows/desktop/Controls/list-view-control-reference) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

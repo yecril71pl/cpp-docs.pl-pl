@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: debugowanie aplikacji C++ AMP'
+title: 'Przewodnik: Debugowanie aplikacji C++ AMP'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286916"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
+# <a name="walkthrough-debugging-a-c-amp-application"></a>Przewodnik: Debugowanie aplikacji C++ AMP
 
 W tym temacie pokazano, jak można debugować aplikację, która używa C++ Accelerated Massive Parallelism (C++ AMP), aby móc korzystać z jednostki przetwarzania grafiki (GPU). Używa programu równoległych redukcji, która będzie sumować dużą tablicę liczb całkowitych. W instruktażu przedstawiono następujące zagadnienia:
 
@@ -36,7 +36,7 @@ Przed rozpoczęciem tego instruktażu:
 
 - Odczyt [Przegląd C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Upewnij się, że wiersz liczby są wyświetlane w edytorze tekstów. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie numerów wierszy w edytorze](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Upewnij się, że wiersz liczby są wyświetlane w edytorze tekstów. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie numerów wierszy w edytorze](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Upewnij się, że korzystasz z systemu Windows 8 lub Windows Server 2012, aby zapewnić obsługę debugowania na emulatorze oprogramowania.
 
@@ -335,7 +335,7 @@ Możesz oznaczyć określone wątki GPU, oznaczając je flagą **wątków GPU** 
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Zawiesza się i odblokowania wątków GPU
 
-Można zablokować (zawieszenie) i Odblokuj wątki procesora GPU (Wznów) albo **wątków GPU** okna lub **równoległego wyrażenia kontrolnego** okna. Można Zablokuj i Odblokuj wątki procesora CPU w taki sam sposób; Aby uzyskać informacje, zobacz [porady: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).
+Można zablokować (zawieszenie) i Odblokuj wątki procesora GPU (Wznów) albo **wątków GPU** okna lub **równoległego wyrażenia kontrolnego** okna. Można Zablokuj i Odblokuj wątki procesora CPU w taki sam sposób; Aby uzyskać informacje, zobacz [jak: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Blokowanie i odblokowywanie wątków GPU
 
@@ -383,10 +383,10 @@ Uruchom wszystkie wątki we fragmencie danego na wiersz zawierający kursor przy
 
    24 wątków, które wcześniej zostały zablokowane w barierę w wierszu 21 osiągnięcia postępu do wiersza 32. Jest to pokazane w **wątków GPU** okna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przegląd C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Instrukcje: korzystanie z okna wątków GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Instrukcje: korzystanie z okna równoległego wyrażenia kontrolnego](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Instrukcje: Korzystanie z okna wątków procesora GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Instrukcje: Korzystanie z okna równoległego wyrażenia kontrolnego](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analizowanie kodu C++ AMP w narzędziu Concurrency Visualizer](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

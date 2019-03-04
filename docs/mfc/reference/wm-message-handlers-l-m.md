@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290526"
 ---
 # <a name="wm-message-handlers-l---m"></a>Programy obsługi komunikatów WM_: L - M
 
@@ -68,8 +68,7 @@ Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po praw
 |ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|
 |ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, lprect —);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

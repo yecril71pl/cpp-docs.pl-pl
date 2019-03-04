@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289029"
 ---
 # <a name="multitypejoin-class"></a>multitype_join — Klasa
 
@@ -59,7 +59,7 @@ Rodzaj elementu `join` bloku jest, albo `greedy` lub `non_greedy`
 |Nazwa|Opis|
 |----------|-----------------|
 |[multitype_join](#ctor)|Przeciążone. Konstruuje `multitype_join` Blok obsługi wiadomości.|
-|[~ multitype_join — destruktor](#dtor)|Niszczy `multitype_join` Blok obsługi wiadomości.|
+|[~multitype_join Destructor](#dtor)|Niszczy `multitype_join` Blok obsługi wiadomości.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -299,7 +299,7 @@ Wstrzymuje wszystkie elementy docelowe z tego `multitype_join` Blok obsługi wia
 virtual void unlink_targets();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [choice, klasa](choice-class.md)<br/>

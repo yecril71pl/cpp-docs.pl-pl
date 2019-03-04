@@ -1,5 +1,5 @@
 ---
-title: Klasa CDaoException
+title: CDaoException Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoException
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289003"
 ---
-# <a name="cdaoexception-class"></a>Klasa CDaoException
+# <a name="cdaoexception-class"></a>CDaoException Class
 
 Przedstawia warunek wyjątku wynikający z klas baz danych MFC na podstawie obiektów dostępu do danych (DAO).
 
@@ -71,7 +71,7 @@ W MFC, wszystkie błędy DAO są wyrażane jako wyjątków typu `CDaoException`.
 
 Aby uzyskać kody błędów DAO zobacz plik DAOERR. H. Aby uzyskać powiązane informacje zobacz temat "Możliwe do wychwycenia błędami dostępu do danych" w Pomocy programu DAO.
 
-Aby uzyskać więcej informacji na temat obsługi wyjątków w ogólne lub wkrótce `CDaoException` obiektów, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md). Drugi artykuł zawiera przykładowy kod, który ilustruje wyjątków w DAO.
+Aby uzyskać więcej informacji na temat obsługi wyjątków w ogólne lub wkrótce `CDaoException` obiektów, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątków: Baza danych wyjątki](../../mfc/exceptions-database-exceptions.md). Drugi artykuł zawiera przykładowy kod, który ilustruje wyjątków w DAO.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -113,7 +113,7 @@ Jednakże można jawnie utworzyć obiekt wyjątku, jeśli wykonujesz bezpośredn
 
 1. Jeśli tworzony jest obiekt wyjątku na stosie, usuń ją za pomocą **Usuń** operator podczas kończenia pracy.
 
-Aby uzyskać więcej informacji na temat obsługi błędów w klas MFC DAO, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
+Aby uzyskać więcej informacji na temat obsługi błędów w klas MFC DAO, zobacz artykuł [wyjątków: Baza danych wyjątki](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -151,7 +151,7 @@ Indeks informacji o błędzie w kolekcji błędów aparatu bazy danych, do wyszu
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać następujące rodzaje informacji o wyjątku:
 
-- Kod błędu:
+- Kod błędu
 
 - Źródło
 
@@ -163,7 +163,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać następujące rodza
 
 `GetErrorInfo` zapisuje informacje w obiekt wyjątku `m_pErrorInfo` element członkowski danych. Aby uzyskać krótki opis zwrócone informacje, zobacz [m_pErrorInfo](#m_perrorinfo). Jeśli przechwytujesz wyjątek typu `CDaoException` zgłoszony przez MFC, `m_pErrorInfo` elementu członkowskiego już być wypełnione. Jeśli zdecydujesz się wywoływanie obiektów DAO bezpośrednio, należy wywołać obiekt wyjątku `GetErrorInfo` funkcja elementu członkowskiego sobie, aby wypełnić `m_pErrorInfo`. Aby uzyskać bardziej szczegółowy opis, zobacz [cdaoerrorinfo —](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.
 
-Aby uzyskać informacji dotyczących wyjątków DAO i przykładowy kod, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
+Aby uzyskać informacji dotyczących wyjątków DAO i przykładowy kod, zobacz artykuł [wyjątków: Baza danych wyjątki](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 
@@ -211,7 +211,7 @@ Jest to kod OLE. Rzadko będą musieli używać tej wartości, ponieważ prawie 
 
 Aby uzyskać informacje na temat SCODE, zobacz temat [struktury z OLE kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK. Typ danych SCODE mapuje na typ HRESULT.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

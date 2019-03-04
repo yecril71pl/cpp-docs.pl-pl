@@ -37,12 +37,12 @@ helpviewer_keywords:
 - ON_WM_NCMBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
-ms.openlocfilehash: 21c1ea3dfee864a4e28a0cbadfdfb73744e2d7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59fd895823ff13039e6f78b8164cd19f3eac2af9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285363"
 ---
 # <a name="wm-message-handlers-n---o"></a>Programy obsługi komunikatów WM_: N - O
 
@@ -74,8 +74,7 @@ Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po praw
 |ON_WM_NEXTMENU()|afx_msg void [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)(UINT, LPMDINEXTMENU);|
 |ON_WM_NOTIFYFORMAT()|afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)(CWnd *, UINT);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

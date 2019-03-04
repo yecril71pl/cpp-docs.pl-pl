@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonStatusBar
+title: CMFCRibbonStatusBar Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonStatusBar
@@ -50,14 +50,14 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: 068cff9ea3827e780bec886bc5d4b0e263c02e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287647"
 ---
-# <a name="cmfcribbonstatusbar-class"></a>Klasa CMFCRibbonStatusBar
+# <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar Class
 
 `CMFCRibbonStatusBar` Klasa implementuje formant paska stanu, który może wyświetlać elementy wstążki.
 
@@ -450,7 +450,7 @@ virtual void OnDrawInformation(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *strInfo*<br/>
@@ -517,7 +517,7 @@ Ta metoda umożliwia umieszczanie paska stanu w trybie informacji. W tym trybie,
 
 Gdy lpszInfo ma wartość NULL, na pasku stanu powraca do trybu normalnego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

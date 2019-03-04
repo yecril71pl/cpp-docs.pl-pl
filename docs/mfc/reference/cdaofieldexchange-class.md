@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: ef88486d14ade1d5871d614069dc1c202d6ad159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291031"
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 
@@ -155,7 +155,7 @@ Jeśli możesz zdefiniować parametry klasy zestawu rekordów, Dodaj wywołania 
 
 Ogólnie rzecz biorąc, poszczególne grupy DFX wywołania funkcji związanych z elementy członkowskie danych pola lub elementy członkowskie danych parametru musi być poprzedzona wywołanie `SetFieldType`. *NFieldType* parametru każdego `SetFieldType` wywołanie określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji DFX, które należy wykonać `SetFieldType` wywołania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285610"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Współbieżność środowiska wykonawczego — Najlepsze praktyki ogólne
 
@@ -84,7 +84,7 @@ Należy wziąć pod uwagę następującą funkcję `download`, co spowoduje pobr
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Ponieważ `GetHttpFile` funkcja wykonuje operację potencjalnie ukryte, nadsubskrypcji włączyć inne zadania do uruchomienia, ponieważ bieżące zadanie czeka na dane. Aby uzyskać pełną wersję tego przykładu, zobacz [porady: Użyj Nadsubskrypcji do przesunięcia opóźnienie](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Ponieważ `GetHttpFile` funkcja wykonuje operację potencjalnie ukryte, nadsubskrypcji włączyć inne zadania do uruchomienia, ponieważ bieżące zadanie czeka na dane. Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Górnej](#top)]
 
@@ -92,7 +92,7 @@ Ponieważ `GetHttpFile` funkcja wykonuje operację potencjalnie ukryte, nadsubsk
 
 Funkcje zarządzania pamięcią, użyj [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency::Free](reference/concurrency-namespace-functions.md#free), gdy masz szczegółowe zadania, które często przydzielania małych obiektów, które mają relatywnie krótkiego okresu istnienia. Środowisko uruchomieniowe współbieżności przechowuje w oddzielnych pamięci podręcznej dla każdego uruchomionego wątku. `Alloc` i `Free` funkcje alokują i zwalniają pamięć z tych pamięci podręcznych bez użycia blokad lub barier pamięci.
 
-Aby uzyskać więcej informacji o tych funkcje zarządzania pamięcią, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Na przykład, który używa tych funkcji, zobacz [porady: użycie Alloc i bezpłatnie do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Aby uzyskać więcej informacji o tych funkcje zarządzania pamięcią, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Na przykład, który używa tych funkcji, zobacz [jak: Używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[Górnej](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Aby uzyskać więcej przykładów, które umożliwiają zarządzanie okresem istnienia obiektów współbieżnych wzór RAII, zobacz [przewodnik: usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [porady: Korzystanie z klasy kontekstu do zaimplementowania Cooperative Semafor](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), i [porady: używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Aby uzyskać więcej przykładów, które umożliwiają zarządzanie okresem istnienia obiektów współbieżnych wzór RAII, zobacz [instruktażu: Usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), i [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Górnej](#top)]
 
@@ -148,12 +148,12 @@ Przykłady prawidłowy sposób do utworzenia `Scheduler` obiekty, zobacz [harmon
 
 [[Górnej](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Porównywanie struktur danych synchronizacji z Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
 [Instrukcje: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>

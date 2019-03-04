@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287907"
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 
@@ -52,11 +52,11 @@ class Scheduler;
 |Nazwa|Opis|
 |----------|-----------------|
 |[Attach](#attach)|Dołącza harmonogram Kontekst wywołania. Po powrocie z tej metody Kontekst wywołania odbywa się przez harmonogram i harmonogram staje się bieżącego harmonogramu.|
-|[Utwórz](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisana przez `_Policy` parametr, umieszcza odwołaniem początkowego na harmonogram i zwraca wskaźnik do niego.|
+|[Tworzenie](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisana przez `_Policy` parametr, umieszcza odwołaniem początkowego na harmonogram i zwraca wskaźnik do niego.|
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramów w obrębie harmonogramu. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w ramach grupy nowo utworzony harmonogram ukierunkowane wykonywania w lokalizacji określonej w tym parametrze.|
-|[Getnumberofvirtualprocessors —](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.|
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.|
 |[GetPolicy](#getpolicy)|Zwraca kopię obiektu zasady, które utworzono harmonogram.|
-|[Id](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|
+|[Identyfikator](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|
 |[IsAvailableLocation](#isavailablelocation)|Określa, czy danej lokalizacji jest dostępny w ramach harmonogramu zadań.|
 |[Dokumentacja](#reference)|Zwiększa liczbę odwołań harmonogramu.|
 |[RegisterShutdownEvent](#registershutdownevent)|Powoduje, że dojście zdarzenia Windows przekazanej `_Event` parametr ma być zasygnalizowany, gdy harmonogram zamyka i niszczy sam. Na czas, który jest sygnalizowane zdarzenie cała praca, który miał została zaplanowana do harmonogramu jest ukończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.|
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zasady _dziennika*<br/>
+*_Policy*<br/>
 Zasadę harmonogram, który opisuje zachowanie nowo utworzonego harmonogramu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -323,17 +323,16 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zasady _dziennika*<br/>
+*_Policy*<br/>
 Zasady można ustawić jako domyślne zasady usługi scheduler.
 
 ### <a name="remarks"></a>Uwagi
 
 Jeśli `SetDefaultSchedulerPolicy` metoda jest wywoływana, gdy domyślnego harmonogramu już istnieje w ramach procesu, środowisko uruchomieniowe wygeneruje [default_scheduler_exists —](default-scheduler-exists-class.md) wyjątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
-[Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
+[Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

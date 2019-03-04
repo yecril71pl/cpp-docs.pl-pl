@@ -2,12 +2,12 @@
 title: Używanie wyrażeń lambda, obiektów Function i funkcji z ograniczeniami
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-ms.openlocfilehash: 819605eac6408751456479fbc3daa38aac1418ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288119"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Używanie wyrażeń lambda, obiektów Function i funkcji z ograniczeniami
 
@@ -32,7 +32,7 @@ void CpuMethod() {
 }
 ```
 
-## <a name="lambda-expression"></a>Wyrażenia lambda
+## <a name="lambda-expression"></a>Lambda Expression
 
 Użycie wyrażenia lambda jest najbardziej bezpośrednim sposobem wykorzystania C++ AMP do przepisania kodu.
 
@@ -155,7 +155,7 @@ void AddArraysWithFunction() {
 
 Funkcja z ograniczeniami musi zawierać `restrict(amp)` i są zgodne z ograniczeniami które są opisane w [ograniczenie (C++ AMP)](../../cpp/restrict-cpp-amp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)<br/>

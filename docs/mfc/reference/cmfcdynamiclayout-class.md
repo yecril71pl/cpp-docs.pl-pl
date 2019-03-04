@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288405"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Klasa CMFCDynamicLayout
 
@@ -248,7 +248,7 @@ Wskaźnik do okna hosta.
 *lpResource*<br/>
 Wskaźnik do buforu, który zawiera zasób AFX_DIALOG_LAYOUT.
 
-*niezerowego*<br/>
+*dwSize*<br/>
 Rozmiar buforu w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -518,7 +518,7 @@ A [SizeSettings](#sizesettings_structure) wartość, która hermetyzuje współc
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

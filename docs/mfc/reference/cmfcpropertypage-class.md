@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCPropertyPage
+title: CMFCPropertyPage Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyPage
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: a55a1a8cd5d63a9e775038824a7bbbe91adbae01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566741"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288522"
 ---
-# <a name="cmfcpropertypage-class"></a>Klasa CMFCPropertyPage
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage Class
 
 `CMFCPropertyPage` Klasa obsługuje wyświetlanie wyskakujących menu na stronie właściwości.
 
@@ -98,7 +98,7 @@ Wskazuje nazwę szablonu dla tej strony. Nie może mieć wartości NULL.
 
 Aby uzyskać więcej informacji na temat parametrów konstruktora, zobacz [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

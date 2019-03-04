@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289146"
 ---
 # <a name="agent-class"></a>agent — Klasa
 
@@ -284,6 +284,6 @@ Zadanie agenta zostało ukończone, gdy agent wprowadza `agent_canceled` lub `ag
 
 Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, wyjątek [operation_timed_out —](operation-timed-out-class.md) jest generowany, jeśli określony przedział czasu upłynie zanim agent ukończył zadanie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

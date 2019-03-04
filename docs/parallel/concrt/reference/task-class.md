@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289302"
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
 
@@ -346,6 +346,6 @@ A `task_status` wartość, która może być `completed` lub `canceled`. Jeśli 
 > [!IMPORTANT]
 >  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait` w kodzie, który działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](invalid-operation-class.md) , ponieważ ta metoda blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać [CONCURRENCY::Task:: GET](#get) metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

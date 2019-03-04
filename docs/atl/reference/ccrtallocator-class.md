@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287365"
 ---
 # <a name="ccrtallocator-class"></a>Klasa CCRTAllocator
 
@@ -107,7 +107,7 @@ Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli pami
 
 Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [realloc](../../c-runtime-library/reference/realloc.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>

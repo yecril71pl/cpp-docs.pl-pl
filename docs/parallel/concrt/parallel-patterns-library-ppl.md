@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290719"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteka równoległych wzorców (PLL)
 
@@ -58,4 +58,3 @@ Każdej iteracji pętli wymaga inną ilość czasu, aby zakończyć. Wydajność
 |[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)|W tym artykule opisano różne równoległe kontenery oraz obiekty, które są dostarczane przez PPL.|
 |[Anulowanie w PPL](cancellation-in-the-ppl.md)|Wyjaśnia, jak można anulować pracy, która jest wykonywana przez algorytm równoległy.|
 |[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano środowisko uruchomieniowe współbieżności, upraszczający Programowanie równoległe i zawiera linki do powiązanych tematów.|
-

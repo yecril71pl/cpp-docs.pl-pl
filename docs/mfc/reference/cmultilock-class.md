@@ -1,5 +1,5 @@
 ---
-title: Klasa CMultiLock
+title: CMultiLock Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiLock
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288670"
 ---
-# <a name="cmultilock-class"></a>Klasa CMultiLock
+# <a name="cmultilock-class"></a>CMultiLock Class
 
 Przedstawia mechanizm kontroli dostępu wykorzystywany w kontrolowaniu dostępu do zasobów w programie wielowątkowym.
 
@@ -57,7 +57,7 @@ Aby użyć `CMultiLock` obiektów, należy najpierw utworzyć tablicę obiektów
 
 `CMultiLock` obiekty są najbardziej przydatne, gdy wątek ma dużą liczbę `CEvent` obiektów, które można odpowiedzieć. Utwórz tablicę zawierającą wszystkie `CEvent` wskaźników i wywołania `Lock`. Spowoduje to wątku do odczekania aż do jednego ze zdarzeń jest sygnalizowane.
 
-Aby uzyskać więcej informacji na temat sposobu użycia `CMultiLock` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat sposobu użycia `CMultiLock` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -188,7 +188,6 @@ Ta funkcja jest wywoływana `CMultiLock`przez destruktora.
 
 Pierwszy formularz `Unlock` podejmie próbę odblokowania obiektu synchronizacji zarządza `CMultiLock`. Drugiej formy `Unlock` podejmie próbę odblokowania `CSemaphore` obiektów należących do `CMultiLock`. Jeśli `CMultiLock` nie posiada zablokowane `CSemaphore` obiektu, funkcja zwraca wartość FAŁSZ; w przeciwnym razie zwraca wartość TRUE. *lCount* i *lpPrevCount* są dokładnie takie same jak parametry [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Drugiej formy `Unlock` dotyczy rzadko multilock sytuacjach.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

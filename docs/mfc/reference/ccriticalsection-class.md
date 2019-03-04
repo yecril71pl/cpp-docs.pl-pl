@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291044"
 ---
 # <a name="ccriticalsection-class"></a>Klasa CCriticalSection
 
@@ -75,7 +75,7 @@ Istnieją dwie metody przy użyciu `CCriticalSection` obiektu: autonomiczne i os
 
 - Osadzona metoda klasy można także udostępnić w wielu wątkach, dodając `CCriticalSection`— element członkowski danych typu klasy i blokowanie składowej danych, które w razie.
 
-Aby uzyskać więcej informacji na temat korzystania z `CCriticalSection` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat korzystania z `CCriticalSection` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -179,7 +179,7 @@ Jeśli `CCriticalSection` jest używana autonomiczna, `Unlock` musi zostać wywo
 
   Zobacz przykład [CCriticalSection::Lock](#lock).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

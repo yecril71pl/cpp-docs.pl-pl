@@ -1,21 +1,21 @@
 ---
-title: 'Porady: używanie transformatora w potoku danych'
+title: 'Instrukcje: Używanie transformatora w potoku danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291474"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Porady: używanie transformatora w potoku danych
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Instrukcje: Używanie transformatora w potoku danych
 
-Ten temat zawiera przykład podstawowy, który pokazuje, jak używać [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych. Aby uzyskać bardziej szczegółowy przykład, który używa potoku danych do przetwarzania obrazu, zobacz [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Ten temat zawiera przykład podstawowy, który pokazuje, jak używać [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych. Aby uzyskać bardziej szczegółowy przykład, który używa potoku danych do przetwarzania obrazu, zobacz [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *Przetwarzanie potokowe danych* jest to typowy wzorzec w programowanie współbieżne. Potok danych składa się z szeregu etapach, gdzie każdy z etapów wykonuje pracę, a następnie przekazuje wynikiem tej pracy do kolejnego etapu. `transformer` Klasy potoków kluczowym czynnikiem danych, ponieważ odbierze wartości wejściowej, wykonuje pracę na tę wartość i następnie produkuje wynik dla innego składnika do użycia.
 
@@ -54,9 +54,8 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc danych pipeline.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

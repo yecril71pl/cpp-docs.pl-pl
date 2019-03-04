@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285506"
 ---
 # <a name="catllist-class"></a>Klasa CAtlList
 
@@ -76,7 +76,7 @@ Kod używany do kopiowania lub przenoszenia elementów. Zobacz [klasa CElementTr
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Konstruktor.|
-|[CAtlList:: ~ CAtlList](#dtor)|Destruktor.|
+|[CAtlList::~CAtlList](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
+*element*<br/>
 Nowy element.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
+*element*<br/>
 Element do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -254,7 +254,7 @@ Konstruktor `CAtlList` obiektu. Rozmiar bloku jest miarą ilość pamięci przyd
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList:: ~ CAtlList
+##  <a name="dtor"></a>  CAtlList::~CAtlList
 
 Destruktor.
 
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
+*element*<br/>
 Element, który ma zostać odnaleziona na liście.
 
 *posStartAfter*<br/>
@@ -536,7 +536,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 *punktu sprzedaży*<br/>
 Wartość pozycji, po upływie którego nowy element zostanie wstawiony.
 
-*Element*<br/>
+*element*<br/>
 Element, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -564,7 +564,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 *punktu sprzedaży*<br/>
 Nowy element zostanie wstawiony do listy, zanim ta wartość pozycji.
 
-*Element*<br/>
+*element*<br/>
 Element, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -761,7 +761,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 *punktu sprzedaży*<br/>
 Odpowiadający element, aby zmienić wartość pozycji.
 
-*Element*<br/>
+*element*<br/>
 Nowa wartość elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -796,7 +796,7 @@ Zamienia elementy w dwóch miejscach określony. W kompilacjach do debugowania b
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CList](../../mfc/reference/clist-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

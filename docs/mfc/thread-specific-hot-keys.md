@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [MFC], hot keys in CHotKeyCtrl
 - access keys [MFC], hot keys
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
-ms.openlocfilehash: 68c50ec5f29dab271f9af9abc50eb72ec15157e7
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: a54aa878b0160132157879127f8335c951e91785
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893330"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290992"
 ---
 # <a name="thread-specific-hot-keys"></a>Klawisze dostępu właściwe dla wątków
 
@@ -20,8 +20,7 @@ Aplikacja ustawia klawisza dostępu właściwe dla wątków ([CHotKeyCtrl](../mf
 
 Należy zauważyć, że flagi stanu shift używane w wywołaniu `RegisterHotKey` nie są takie same, jak zwracany przez [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) funkcję członkowską; musisz tłumaczenie tych flag przed wywołaniem `RegisterHotKey`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

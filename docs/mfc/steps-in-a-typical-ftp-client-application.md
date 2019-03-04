@@ -8,12 +8,12 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
-ms.openlocfilehash: ef772438558e5d587962242fdd7f1230cc2b2f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08edf704e748767f3b566252ad328baf40b55ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560189"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285805"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Kroki wykonywane w typowej aplikacji klienckiej FTP
 
@@ -33,7 +33,7 @@ W poniższej tabeli przedstawiono kroki, które może wykonywać w typowej aplik
 |Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|
 |Kończy sesję FTP.|Usuwanie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza połączenia i uchwytów otwartego pliku.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br/>

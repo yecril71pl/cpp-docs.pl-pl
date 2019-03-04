@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290784"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkcje szarych i symulowanych map bitowych
 
@@ -26,8 +26,8 @@ Biblioteka MFC zawiera dwie funkcje do udzielania mapy bitowej wyglądu formantu
 
 |||
 |-|-|
-|[Afxdrawgraybitmap —](#afxdrawgraybitmap)|Rysuje szare wersję mapy bitowej.|
-|[Afxgetgraybitmap —](#afxgetgraybitmap)|Kopiuje szarego wersję mapy bitowej.|
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Rysuje szare wersję mapy bitowej.|
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Kopiuje szarego wersję mapy bitowej.|
 
 **Funkcje szarych mapy bitowej**
 
@@ -37,8 +37,8 @@ MFC udostępnia także dwie funkcje zastępując tła mapy bitowej szarych wzorc
 
 |||
 |-|-|
-|[Afxdrawditheredbitmap —](#afxdrawditheredbitmap)|Rysuje mapę bitową z szarych tłem.|
-|[Afxgetditheredbitmap —](#afxgetditheredbitmap)|Kopiuje mapę bitową z szarych tłem.|
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Rysuje mapę bitową z szarych tłem.|
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Kopiuje mapę bitową z szarych tłem.|
 
 ##  <a name="afxdrawgraybitmap"></a>  Afxdrawgraybitmap —
 
@@ -55,7 +55,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje docelowy kontroler domeny.
 
 *x*<br/>
@@ -84,7 +84,7 @@ Mapę bitową z `AfxDrawGrayBitmap` będzie miał wyglądu formantu wyłączone.
 
 **Nagłówek:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  Afxgetgraybitmap —
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
 
 Kopiuje szarego wersję mapy bitowej.
 
@@ -136,7 +136,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje docelowy kontroler domeny.
 
 *x*<br/>
@@ -168,7 +168,7 @@ Inne symulacji kolor, zwykle światła szary (COLOR_MENU).
 
 **Nagłówek:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  Afxgetditheredbitmap —
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 
 Kopiuje mapę bitową, zastępując tłem wzorzec szarych (sprawdzanie).
 
@@ -208,6 +208,6 @@ Inne symulacji kolor, zwykle światła szary (COLOR_MENU).
 
 **Nagłówek:** afxwin.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

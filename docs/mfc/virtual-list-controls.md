@@ -1,5 +1,5 @@
 ---
-title: Wirtualne kontrolki listy
+title: Wirtualne formanty listy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cache, virtual list control item data
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: b9da918017d300d7af61b1fd3ab27869e136bb8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7372aca9e24a554e01f7a61f43d6170e99fe34c5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288717"
 ---
-# <a name="virtual-list-controls"></a>Wirtualne kontrolki listy
+# <a name="virtual-list-controls"></a>Wirtualne formanty listy
 
 Kontrolki listy wirtualnej jest kontrolka widoku listy, którego styl LVS_OWNERDATA. Ten styl umożliwia kontrolowanie, które umożliwiają liczba elementów do **DWORD** (domyślna liczba elementów tylko rozszerza **int**). Jednak Największą zaletą udostępniane przez ten styl jest możliwość tylko podzbiór elementów danych w pamięci w dowolnym momencie. Dzięki temu kontrolkę widok listy wirtualnej przystosowany do użytku z dużych baz danych informacji, których konkretnych metod dostępu do danych znajdują się już w miejscu.
 
@@ -63,8 +63,7 @@ LVN_ODFINDITEM komunikatu powiadomienia są wysyłane przez kontrolki listy wirt
 
 Należy być przygotowanym do wyszukiwania elementu, który odpowiada informacje podane przez kontrolkę widok listy. Powinien zwrócić indeks elementu w przypadku powodzenia lub wartość -1, jeśli żadnego pasującego elementu zostanie znaleziony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

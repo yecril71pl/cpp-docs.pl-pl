@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 610a69204e5cb66f2129351ab2a04bb0915a1b4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289591"
 ---
 # <a name="ole-server-classes"></a>Klasy serwerów OLE
 
@@ -39,13 +39,12 @@ Udostępnia okno ramowe w celu wyświetlenia, gdy dokument serwera jest edytowan
 [COleResizeBar](../mfc/reference/coleresizebar-class.md)<br/>
 Udostępnia standardowy interfejs użytkownika do zmiany rozmiaru w miejscu. Obiekty tej klasy są zawsze używane w połączeniu z `COleIPFrameWnd` obiektów.
 
-[Element COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
+[COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
 Używane do tworzenia dokumentów za pomocą architektury dokument/widok struktury. A `COleTemplateServer` obiektu deleguje większość swojej pracy, aby skojarzone `CDocTemplate` obiektu.
 
 [COleException](../mfc/reference/coleexception-class.md)<br/>
 Wyjątek, wynikające z wystąpił błąd podczas przetwarzania OLE. Ta klasa jest używana zarówno kontenery i serwery.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

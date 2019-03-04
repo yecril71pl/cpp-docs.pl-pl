@@ -1,19 +1,19 @@
 ---
-title: Operacje przeciągania i upuszczania kontrolki drzewa
+title: Operacje przeciągania i upuszczania formantu drzewa
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], drag and drop operations
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c7febeec513d8004df2bd1cc42e4e97e027e9f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286312"
 ---
-# <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania kontrolki drzewa
+# <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania formantu drzewa
 
 Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiadomienie, gdy użytkownik rozpoczyna przeciągnij element. Kontrolka wysyła [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) komunikat powiadomienia, gdy użytkownik rozpoczyna przeciągania elementu z lewym przyciskiem myszy i [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) komunikat powiadomienia, gdy użytkownik rozpoczyna, przeciągając go Prawy przycisk. Kontrolka drzewa można zapobiec wysyłania powiadomień, zapewniając styl TVS_DISABLEDRAGDROP kontrolki drzewa.
 
@@ -25,8 +25,7 @@ W przypadku elementów kontrolki drzewa jako obiekty docelowe operacji przeciąg
 
 Można wskazać, że element jest obiekt docelowy operacji przeciągania i upuszczania, wywołując [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcja elementu członkowskiego, aby ustawić stan `TVIS_DROPHILITED` wartość. Element, który ma ten stan jest rysowana w stylu służy do wskazywania docelowej przeciągania i upuszczania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

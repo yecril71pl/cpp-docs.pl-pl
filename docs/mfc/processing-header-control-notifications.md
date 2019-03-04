@@ -8,12 +8,12 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: 42113b43249b87a351047ab451cb1798aec1f022
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3c5d147741123f97a53b18a854db9204738d0a2f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287690"
 ---
 # <a name="processing-header-control-notifications"></a>Przetwarzanie powiadomień dotyczących formantu karty
 
@@ -21,8 +21,7 @@ W klasie widoku lub w oknie dialogowym, użyj okna właściwości, aby utworzyć
 
 Powiadomienia związane z formantem nagłówka są wymienione w [odwołanie do formantu nagłówka](/windows/desktop/controls/header-control-reference) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

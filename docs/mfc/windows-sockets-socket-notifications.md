@@ -1,31 +1,31 @@
 ---
-title: 'Windows Sockets: powiadomienia dotyczące gniazd'
+title: 'Windows Sockets: Powiadomienia dotyczące gniazd'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], notifications
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289913"
 ---
-# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: powiadomienia dotyczące gniazd
+# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Powiadomienia dotyczące gniazd
 
 W tym artykule opisano funkcje powiadomień z klas gniazd. Te funkcje elementów członkowskich są funkcji wywołania zwrotnego, które struktura wywołuje w celu powiadomienia o ważnych zdarzeniach, obiekt gniazda. Dostępne są następujące funkcje powiadomień:
 
-- [Zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): powiadamia tego gniazda, że ma danych w buforze na jej do pobrania przez wywołanie metody [Receive](../mfc/reference/casyncsocket-class.md#receive).
+- [Zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Powiadamia tego gniazda, że ma danych w buforze na jej do pobrania przez wywołanie metody [Receive](../mfc/reference/casyncsocket-class.md#receive).
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): powiadamia tego gniazda, że teraz przesyłania danych przez wywołanie metody [wysyłania](../mfc/reference/casyncsocket-class.md#send).
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Powiadamia tego gniazda, że teraz przesyłania danych przez wywołanie metody [wysyłania](../mfc/reference/casyncsocket-class.md#send).
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): powiadamia tego gniazda nasłuchiwania, który może akceptować oczekujące żądania połączenia, wywołując [Akceptuj](../mfc/reference/casyncsocket-class.md#accept).
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Powiadamia o tym nasłuchiwania gniazda, który może akceptować oczekujące żądania połączenia, wywołując [Akceptuj](../mfc/reference/casyncsocket-class.md#accept).
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): powiadamia tego gniazda nawiązywania połączenia, które jej próby połączenia zakończone: być może pomyślnie, lub może być błąd.
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Powiadamia o tym nawiązywania połączenia z gniazdem zakończenia jego próba połączenia: być może pomyślnie, lub może być błąd.
 
-- [OnClose](../mfc/reference/casyncsocket-class.md#onclose): powiadamia tego zamknął gniazda, jest ona dołączona do gniazda.
+- [OnClose](../mfc/reference/casyncsocket-class.md#onclose): Powiadamia tego zamknął gniazda, który jest połączony gniazda.
 
     > [!NOTE]
     >  Funkcja dodatkowych powiadomień jest [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). To powiadomienie informuje gniazda odbierania, że wysyłania gniazda ma "out-of-band" dane do wysłania. Out-of-band dane są logicznie niezależny od kanału skojarzone z każdej pary gniazda strumieni połączonych. Kanał out-of-band zwykle jest używana do wysyłania danych "pilne". Biblioteka MFC obsługuje dane poza pasmem. Zaawansowani użytkownicy pracy przy użyciu klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md) może być konieczne użycie kanału poza pasmem, ale użytkownicy klasy [CSocket](../mfc/reference/csocket-class.md) są odradzane korzystanie z niego. Jest łatwiejszy sposób utworzyć drugi gniazda przekazywania tych danych. Aby uzyskać więcej informacji o danych poza pasmem zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.
@@ -47,19 +47,18 @@ Aby uzyskać szczegółowe informacje o każdej z nich powiadomień, zobacz opis
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md)
 
-- [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)
 
-- [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
-

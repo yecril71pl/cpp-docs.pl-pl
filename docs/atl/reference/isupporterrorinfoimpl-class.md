@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: b3227142d6ca31d0015411a3619281894eb5e419
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290055"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Klasa ISupportErrorInfoImpl
 
@@ -163,6 +163,6 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Zobacz [IThreadPoolConfig::GetSize](#getsize).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

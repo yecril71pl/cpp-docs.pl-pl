@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 2bca338aa2a1b18e8c9ab41a887678767cf6c8c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6da2ef1595e525bcfd407d67c806aa80cf90f1c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286767"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych
 
@@ -45,8 +45,7 @@ Wszystkie trzy protokoły nawiązać połączenie, wysyłać żądania do serwer
 
 Wiele operacji, które mogą być wykonywane przez komputer jako klienta na inne komputery w Internecie może zająć dużo czasu. Szybkość tych operacji zwykle jest ograniczona przez szybkość połączenia sieciowego, ale ich może mieć wpływ również przez innego ruchu sieciowego i złożoności wykonać operację. Na przykład nawiązywanie zdalnego serwera FTP wymaga, że na komputerze najpierw sprawdzić nazwę tego serwera, aby znaleźć jej adres. Aplikacja spróbuje połączyć się z serwerem pod tym adresem. Po otwarciu połączenia komputer i serwer zdalny zainicjuje konwersację z protokół transferu plików przed połączenie faktycznie służy do pobierania plików.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Jak MFC ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 5ca81d056ddf431b502f868f8a76959381b26260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287963"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math — Przestrzeń nazw
 
@@ -27,7 +27,7 @@ namespace fast_math;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COS](concurrency-fast-math-namespace-functions.md#cos)|Oblicza arcus cosinus argumentu|
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Oblicza arcus cosinus argumentu|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Oblicza arcus cosinus argumentu|
 |[ASIN](concurrency-fast-math-namespace-functions.md#asin)|Oblicza arcus sinus argumentu|
 |[asinf —](concurrency-fast-math-namespace-functions.md#asinf)|Oblicza arcus sinus argumentu|
@@ -37,17 +37,17 @@ namespace fast_math;
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Oblicza arcus tangens argumentu|
 |[Ceil —](concurrency-fast-math-namespace-functions.md#ceil)|Oblicza Zaokrąglenie w górę argumentu|
 |[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Oblicza Zaokrąglenie w górę argumentu|
-|[COS](concurrency-fast-math-namespace-functions.md#cos)|Oblicza cosinus argumentu|
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Oblicza cosinus argumentu|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Oblicza cosinus argumentu|
-|[COSH](concurrency-fast-math-namespace-functions.md#cosh)|Oblicza wartość funkcji cosinus hiperboliczny dla argumentu|
+|[cosh](concurrency-fast-math-namespace-functions.md#cosh)|Oblicza wartość funkcji cosinus hiperboliczny dla argumentu|
 |[coshf](concurrency-fast-math-namespace-functions.md#coshf)|Oblicza wartość funkcji cosinus hiperboliczny dla argumentu|
-|[EXP](concurrency-fast-math-namespace-functions.md#exp)|Oblicza eksponentę argumentu|
+|[exp](concurrency-fast-math-namespace-functions.md#exp)|Oblicza eksponentę argumentu|
 |[exp2](concurrency-fast-math-namespace-functions.md#exp2)|Oblicza base 2 wykładniczego argumentu|
 |[exp2f](concurrency-fast-math-namespace-functions.md#exp2f)|Oblicza base 2 wykładniczego argumentu|
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|Oblicza eksponentę argumentu|
 |[fabs —](concurrency-fast-math-namespace-functions.md#fabs)|Zwraca wartość bezwzględną argumentu|
 |[fabsf —](concurrency-fast-math-namespace-functions.md#fabsf)|Zwraca wartość bezwzględną argumentu|
-|[FLOOR](concurrency-fast-math-namespace-functions.md#floor)|Oblicza Zaokrąglenie w dół argumentu|
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|Oblicza Zaokrąglenie w dół argumentu|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|Oblicza Zaokrąglenie w dół argumentu|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Określić maksymalną wartość liczbową z podanych argumentów|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Określić maksymalną wartość liczbową z podanych argumentów|
@@ -58,7 +58,7 @@ namespace fast_math;
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Pobiera mantysę i wykładnik _X|
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Pobiera mantysę i wykładnik _X|
 |[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Określa, czy argument ma skończoną wartość|
-|[isinf —](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończony|
+|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończony|
 |[isNaN —](concurrency-fast-math-namespace-functions.md#isnan)|Określa, czy argument jest NaN.|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Oblicza liczbę rzeczywistą z mantysy i wykładnika|
 |[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Oblicza liczbę rzeczywistą z mantysy i wykładnika|
@@ -78,8 +78,8 @@ namespace fast_math;
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Zwraca odwrotność pierwiastek kwadratowy argumentu|
 |[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Zwraca znak argumentu|
 |[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Zwraca znak argumentu|
-|[SIN](concurrency-fast-math-namespace-functions.md#sin)|Oblicza wartość funkcji sinus argumentu|
-|[sincos —](concurrency-fast-math-namespace-functions.md#sincos)|Oblicza wartość funkcji sinus i cosinus z _X|
+|[sin](concurrency-fast-math-namespace-functions.md#sin)|Oblicza wartość funkcji sinus argumentu|
+|[sincos](concurrency-fast-math-namespace-functions.md#sincos)|Oblicza wartość funkcji sinus i cosinus z _X|
 |[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Oblicza wartość funkcji sinus i cosinus z _X|
 |[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Oblicza wartość funkcji sinus argumentu|
 |[SINH](concurrency-fast-math-namespace-functions.md#sinh)|Oblicza wartość funkcji sinus hiperboliczny dla argumentu|
@@ -88,17 +88,17 @@ namespace fast_math;
 |[sqrtf](concurrency-fast-math-namespace-functions.md#sqrtf)|Oblicza pierwiastek kwadratowy argumentu|
 |[tan](concurrency-fast-math-namespace-functions.md#tan)|Oblicza wartość funkcji tangens argumentu|
 |[tanf —](concurrency-fast-math-namespace-functions.md#tanf)|Oblicza wartość funkcji tangens argumentu|
-|[TANH](concurrency-fast-math-namespace-functions.md#tanh)|Oblicza wartość funkcji tangens hiperboliczny dla argumentu|
+|[tanh](concurrency-fast-math-namespace-functions.md#tanh)|Oblicza wartość funkcji tangens hiperboliczny dla argumentu|
 |[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|Oblicza wartość funkcji tangens hiperboliczny dla argumentu|
-|[TRUNC —](concurrency-fast-math-namespace-functions.md#trunc)|Obcina argument do składnika całkowitego|
+|[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Obcina argument do składnika całkowitego|
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Obcina argument do składnika całkowitego|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** amp_math.h
 
-**Namespace:** Concurrency::fast_math
+**Namespace:** CONCURRENCY::fast_math
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

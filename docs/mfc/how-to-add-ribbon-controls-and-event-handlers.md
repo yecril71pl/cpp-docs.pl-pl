@@ -1,18 +1,18 @@
 ---
-title: 'Porady: dodawanie formantów wstążki do programów obsługi zdarzeń'
+title: 'Instrukcje: Dodawanie formantów wstążki do programów obsługi zdarzeń'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291135"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Porady: dodawanie formantów wstążki do programów obsługi zdarzeń
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Instrukcje: Dodawanie formantów wstążki do programów obsługi zdarzeń
 
 Formanty wstążki są elementy, takie jak przyciski i pola kombi, które dodajesz do paneli. Panele to obszary paska wstążki, wyświetlających grupy pokrewnych formantów.
 
@@ -38,8 +38,7 @@ W tym temacie zostanie otwierania projektanta wstążki, Dodaj przycisk i nastę
     MessageBox((LPCTSTR)L"Hello World");
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przykład RibbonGadgets: Wstążki gadżetów aplikacji](../visual-cpp-samples.md)<br/>
+[Przykład RibbonGadgets: Aplikacji gadżetów wstążki](../visual-cpp-samples.md)<br/>
 [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
-

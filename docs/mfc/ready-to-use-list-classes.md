@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 6e30ff0fad945cbe44029558efc26cf60b88ac95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286403"
 ---
 # <a name="ready-to-use-list-classes"></a>Gotowe do użycia klasy list
 
@@ -28,7 +28,6 @@ Przechowuje wskaźniki do **void** (ogólnych wskaźników) na połączonej liś
 [CStringList](../mfc/reference/cstringlist-class.md)<br/>
 Magazyny `CString` obiektów w połączonej listy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

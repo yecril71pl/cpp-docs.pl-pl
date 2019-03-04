@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: tworzenie aplikacji opartej o agentów'
+title: 'Przewodnik: Tworzenie aplikacji opartej o agentów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290095"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
+# <a name="walkthrough-creating-an-agent-based-application"></a>Przewodnik: Tworzenie aplikacji opartej o agentów
 
 W tym temacie opisano sposób tworzenia podstawowych aplikacji opartej o agentów. W tym instruktażu można utworzyć agenta, który asynchronicznie odczytuje dane z pliku tekstowego. Aplikacja używa algorytmu sumy kontrolnej Adler 32 do obliczania sumy kontrolnej zawartości tego pliku.
 
@@ -180,13 +180,12 @@ Zawsze wywołuj [concurrency::agent:: gotowe](reference/agent-class.md#done) met
 
 ## <a name="next-steps"></a>Następne kroki
 
-Inny przykład aplikacji opartej o agentów, zobacz [Instruktaż: za pomocą, aby zapobiec zakleszczeniu](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Inny przykład aplikacji opartej o agentów, zobacz [instruktażu: Za pomocą, aby zapobiec zakleszczeniu](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)<br/>
 [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Przewodnik: korzystanie ze złączy w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-

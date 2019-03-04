@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290693"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra wymiany danych rejestru
 
@@ -82,7 +82,7 @@ RDX_BINARY(
 *KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*<br/>
+*subkey*<br/>
 Podklucz rejestru.
 
 *VALUENAME*<br/>
@@ -116,7 +116,7 @@ RDX_CSTRING_TEXT(
 *KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*<br/>
+*subkey*<br/>
 Podklucz rejestru.
 
 *VALUENAME*<br/>
@@ -150,7 +150,7 @@ RDX_DWORD(
 *KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*<br/>
+*subkey*<br/>
 Podklucz rejestru.
 
 *VALUENAME*<br/>
@@ -184,7 +184,7 @@ RDX_TEXT(
 *KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*<br/>
+*subkey*<br/>
 Podklucz rejestru.
 
 *VALUENAME*<br/>
@@ -200,8 +200,7 @@ Rozmiar w bajtach zmiennej składowej.
 
 To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby skojarzyć zmienną składową z wpisu rejestru danego. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, powinny być używane do wykonania wymiany danych między rejestru systemowego i zmienne Członkowskie na mapie RDX.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

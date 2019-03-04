@@ -1,19 +1,19 @@
 ---
-title: 'Kontenery: powiadomienia dotyczące elementów klienckich'
+title: 'Kontenery: Powiadomienia dotyczące elementów klienckich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291057"
 ---
-# <a name="containers-client-item-notifications"></a>Kontenery: powiadomienia dotyczące elementów klienckich
+# <a name="containers-client-item-notifications"></a>Kontenery: Powiadomienia dotyczące elementów klienckich
 
 W tym artykule omówiono funkcje możliwym do zastąpienia, które wywołuje struktura MFC, gdy aplikacje serwera modyfikować elementów w dokumencie aplikację kliencką.
 
@@ -40,15 +40,14 @@ Drugi argument do tej funkcji określa, jak element został zmieniony lub co si�
 |**OLE_CHANGED**|Określa aspekt elementu OLE, które uległy zmianie.|
 |**OLE_CHANGED_STATE**|Opisuje stan wprowadzanych (*emptyState*, *loadedState*, *openState*, *activeState*, lub  *activeUIState*).|
 
-Aby uzyskać więcej informacji na temat stanów elementu klienta, można założyć, zobacz [kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md).
+Aby uzyskać więcej informacji na temat stanów elementu klienta, można założyć, zobacz [kontenerów: Stany elementu klienckiego](../mfc/containers-client-item-states.md).
 
 Struktura wywołuje `COleClientItem::OnGetItemPosition` gdy element jest aktywowany do edycji w miejscu. Implementacja jest wymagana dla aplikacji, które obsługują edycję w miejscu. Kreator aplikacji MFC dostarcza podstawową implementację, który przypisuje współrzędne elementu do `CRect` obiektu, który jest przekazywany jako argument do `OnGetItemPosition`.
 
 Jeśli położenie i rozmiar elementu OLE zmienia się podczas edycji w miejscu, muszą zostać zaktualizowane kontenera informacji na temat elementu położenie i prostokąty przycinania, a serwer musi odebrać informacje o zmianach. Struktura wywołuje `COleClientItem::OnChangeItemPosition` do tego celu. Kreator aplikacji MFC zawiera przesłonięcie, który wywołuje funkcję klasy bazowej. Należy edytować funkcji, która zapisuje Kreatora aplikacji, dla Twojego `COleClientItem`-klasy pochodnej, tak aby funkcja aktualizuje wszystkie informacje przechowywane przez obiekt elementu klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery](../mfc/containers.md)<br/>
-[Kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md)<br/>
+[Kontenery: Stany elementu klienckiego](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286208"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set — Klasa
 
@@ -88,7 +88,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |Nazwa|Opis|
 |----------|-----------------|
 |[hash_function](#hash_function)|Zwraca przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_set` obiektu.|
+|[insert](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_set` obiektu.|
 |[key_eq](#key_eq)|Zwraca obiekt funkcji porównywania równości przechowywanych.|
 |[swap](#swap)|Zamienia zawartości dwóch `concurrent_unordered_set` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_set` określonych pozycji. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
@@ -113,7 +113,7 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_unordered_set` klasy,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concurrent_unordered_set.h
+**Header:** concurrent_unordered_set.h
 
 **Namespace:** współbieżności
 
@@ -163,7 +163,7 @@ Usuwa wszystkie elementy w kontenerze współbieżnych. Ta funkcja nie jest bezp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_set —
+##  <a name="ctor"></a> concurrent_unordered_set
 
 Tworzy równoczesny zestaw nieuporządkowany.
 
@@ -214,7 +214,7 @@ Funkcja porównania równości dla tego zestawu nieuporządkowanego.
 Alokator dla tego zestawu nieuporządkowanego.
 
 *pierwszy*<br/>
-*ostatni*<br/>
+*last*<br/>
 *_Uset*<br/>
 Źródło `concurrent_unordered_set` obiektu do kopiowania lub przenoszenia elementów z.
 
@@ -325,7 +325,7 @@ Wartość klucza do wyszukania.
 
 Iterator wskazuje lokalizację pierwszego elementu, który pasuje do klucza dostarczonego lub iteratora `end()` jeśli taki element nie istnieje.
 
-##  <a name="get_allocator"></a> get_allocator —
+##  <a name="get_allocator"></a> get_allocator
 
 Zwraca przechowywany obiekt alokatora dla tego kontenera współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
 
@@ -396,7 +396,7 @@ Począwszy od lokalizacji do wyszukiwania punkt wstawiania.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -685,7 +685,7 @@ Pozycja sterująca do wymazania z.
 Wartość klucza do wymazania.
 
 *pierwszy*<br/>
-*ostatni*<br/>
+*last*<br/>
 Iteratory.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -710,8 +710,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maksymalna liczba zasobników, w tym kontenerze.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

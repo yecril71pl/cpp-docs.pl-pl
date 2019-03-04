@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: 18350a5f4ac8056676eeb275f9fc95478b3a8e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e119b41bbca42a1cbc0dbb5e721947c5bd7f1bc8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288496"
 ---
 # <a name="using-ccomboboxex"></a>Korzystanie z CComboBoxEx
 
@@ -32,7 +32,6 @@ Aby zapewnić funkcjonalność pola kombi bez konieczności ręcznego rysowania 
 
 - [Przetwarzanie komunikatów powiadomień w kontrolkach rozszerzonego pola kombi](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

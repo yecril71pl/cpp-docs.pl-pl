@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCAutoHideBar
+title: CMFCAutoHideBar Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideBar
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291421"
 ---
-# <a name="cmfcautohidebar-class"></a>Klasa CMFCAutoHideBar
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar Class
 
 `CMFCAutoHideBar` Klasa jest klasą specjalny pasek narzędzi, który implementuje funkcję automatycznego ukrywania.
 
@@ -184,7 +184,7 @@ virtual CSize CalcFixedLayout(
 
 ## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
 
-Tworzy obiekt CMFCAutoHideBar.
+Constructs a CMFCAutoHideBar object.
 
 ```
 CMFCAutoHideBar();
@@ -404,7 +404,7 @@ void UpdateVisibleState();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

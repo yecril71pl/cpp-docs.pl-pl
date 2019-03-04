@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286026"
 ---
 # <a name="ctypedptrlist-class"></a>Ctypedptrlist — klasa
 
@@ -46,7 +46,7 @@ class CTypedPtrList : public BASE_CLASS
 
 #### <a name="parameters"></a>Parametry
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasa bazowa, klasy typizowanych wskaźników listy; musi być klasą listy wskaźnika ( `CObList` lub `CPtrList`).
 
 *TYP*<br/>
@@ -120,7 +120,7 @@ Typ elementów przechowywane na liście klas podstawowych.
 *newElement*<br/>
 Wskaźnik obiektu, który ma zostać dodany do tej listy. Wartość NULL jest dozwolona.
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasa bazowa, klasy typizowanych wskaźników listy; musi być klasą listy wskaźnika ( [CObList](../../mfc/reference/coblist-class.md) lub [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -151,7 +151,7 @@ Typ elementów przechowywane na liście klas podstawowych.
 *newElement*<br/>
 Wskaźnik obiektu, który ma zostać dodany do tej listy. Wartość NULL jest dozwolona.
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasa bazowa, klasy typizowanych wskaźników listy; musi być klasą listy wskaźnika ( [CObList](../../mfc/reference/coblist-class.md) lub [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -377,7 +377,7 @@ Należy się upewnić, że wartość pozycji reprezentuje poprawnej pozycji na l
 
 Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

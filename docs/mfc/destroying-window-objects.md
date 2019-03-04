@@ -1,5 +1,5 @@
 ---
-title: Niszczenie obiektów okien
+title: Likwidowanie obiektów okien
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], destroying
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 363ff2a4cee48b1660de87714d73c93e795017cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488815"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289848"
 ---
-# <a name="destroying-window-objects"></a>Niszczenie obiektów okien
+# <a name="destroying-window-objects"></a>Likwidowanie obiektów okien
 
 Należy uważać za pomocą okien podrzędnych do zniszczenia obiektu języka C++ w oknie po użytkownik z oknem. Jeśli te obiekty nie są niszczone, aplikacja nie zostanie odzyskana ich pamięci. Na szczęście szablon zarządza zniszczenie okna, a także tworzenie okien ramowych, widoków i okien dialogowych. Jeśli tworzysz dodatkowe okna, ponosisz odpowiedzialność za zniszczenie ich.
 
@@ -30,7 +30,6 @@ Należy uważać za pomocą okien podrzędnych do zniszczenia obiektu języka C+
 
 - [Niszczenie okien ramowych](../mfc/destroying-frame-windows.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obiekty okna](../mfc/window-objects.md)
-

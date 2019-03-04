@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
-ms.openlocfilehash: a5664a539af351051f9ae3642c089e51b54bc8cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de0b483b6b3d242ee05680c47ae29ed675d54a36
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285272"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Ciągi szablonu dokumentu, kreator dodawania klas MFC
 
@@ -71,8 +71,8 @@ Tworzy ciągi skojarzone z formularzami i dokumenty, które odczytują i używan
 
    Wskazuje, klasa dokumentów projektu. Domyślnie ta klasa jest klasa dokumentu aplikacji głównej, zgodnie z zaleceniami z [przeglądu wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) strony Kreatora aplikacji MFC. Po dodaniu innych klas dokumentu w projekcie, możesz wybrać inną klasę dokumentu z listy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator dodawania klasy MFC](../../mfc/reference/mfc-add-class-wizard.md)<br/>
-[Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

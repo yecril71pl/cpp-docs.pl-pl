@@ -1,5 +1,5 @@
 ---
-title: Klasa CSinusoidalTransitionFromVelocity
+title: CSinusoidalTransitionFromVelocity Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: 585ffcf787b2e1156b4f0b9f6444b15a4d5bfc54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286947"
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>Klasa CSinusoidalTransitionFromVelocity
+# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity Class
 
 Hermetyzuje sinusoidalną prędkość przejścia, które ma amplitudę, która zależy od prędkości początkowej zmiennej animacji.
 
@@ -121,6 +121,6 @@ Okres oscylacji sinusoidalnego wave w ciągu kilku sekund.
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

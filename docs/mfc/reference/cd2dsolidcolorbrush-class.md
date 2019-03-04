@@ -1,5 +1,5 @@
 ---
-title: Klasa CD2DSolidColorBrush
+title: CD2DSolidColorBrush Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DSolidColorBrush
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291239"
 ---
-# <a name="cd2dsolidcolorbrush-class"></a>Klasa CD2DSolidColorBrush
+# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush Class
 
 Otoka ID2D1SolidColorBrush.
 
@@ -50,16 +50,16 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Przeciążone. Tworzy obiekt CD2DSolidColorBrush.|
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla D2D.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DSolidColorBrush::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
+|[CD2DSolidColorBrush::Attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
 |[CD2DSolidColorBrush::Create](#create)|Tworzy CD2DSolidColorBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DSolidColorBrush::Destroy](#destroy)|Niszczy obiekt CD2DSolidColorBrush. (Przesłania [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DSolidColorBrush::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DSolidColorBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DSolidColorBrush::Get](#get)|Zwraca ID2D1SolidColorBrush interfejsu|
 |[CD2DSolidColorBrush::GetColor](#getcolor)|Pobiera kolor pędzel pełnego koloru|
 |[CD2DSolidColorBrush::SetColor](#setcolor)|Określa kolor tego pędzel pełnego koloru|
@@ -91,7 +91,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush:: ~ CD2DSolidColorBrush
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush
 
 Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla D2D.
 
@@ -173,7 +173,7 @@ Niszczy obiekt CD2DSolidColorBrush.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DSolidColorBrush::detach
+##  <a name="detach"></a>  CD2DSolidColorBrush::Detach
 
 Odłącza interfejsu zasobów z obiektu
 
@@ -250,6 +250,6 @@ void SetColor(D2D1_COLOR_F color);
 *Kolor*<br/>
 Kolor ten pędzel pełnego koloru
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

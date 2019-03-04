@@ -1,5 +1,5 @@
 ---
-title: Klasa CComObjectStack
+title: CComObjectStack Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectStack
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: dfe8c58803a0eb06ea17ae1b241e1e435f0263f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287164"
 ---
-# <a name="ccomobjectstack-class"></a>Klasa CComObjectStack
+# <a name="ccomobjectstack-class"></a>CComObjectStack Class
 
 Ta klasa tworzy tymczasowy obiekt COM i dostarcza mu szkieletowych implementacji `IUnknown`.
 
@@ -32,7 +32,7 @@ class CComObjectStack : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -42,14 +42,14 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|Konstruktor.|
-|[CComObjectStack:: ~ CComObjectStack](#dtor)|Destruktor.|
+|[CComObjectStack::~CComObjectStack](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComObjectStack::AddRef](#addref)|Zwraca wartość zero. W trybie debugowania, wywołuje `_ASSERTE`.|
-|[CComObjectStack::QueryInterface](#queryinterface)|Zwraca E_NOINTERFACE. W trybie debugowania, wywołuje `_ASSERTE`.|
+|[CComObjectStack::QueryInterface](#queryinterface)|Returns E_NOINTERFACE. W trybie debugowania, wywołuje `_ASSERTE`.|
 |[CComObjectStack::Release](#release)|Zwraca wartość zero. W trybie debugowania, wywołuje `_ASSERTE`. ~|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
@@ -106,7 +106,7 @@ CComObjectStack(void* = NULL);
 
 Wywołania `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) HRESULT zwracane przez `FinalConstruct`. Jeśli masz nie pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack
+##  <a name="dtor"></a>  CComObjectStack::~CComObjectStack
 
 Destruktor.
 
@@ -128,7 +128,7 @@ HRESULT    m_hResFinalConstruct;
 
 ##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
 
-Zwraca E_NOINTERFACE.
+Returns E_NOINTERFACE.
 
 ```
 HRESULT    QueryInterface(REFIID, void**);
@@ -136,7 +136,7 @@ HRESULT    QueryInterface(REFIID, void**);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOINTERFACE.
+Returns E_NOINTERFACE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -158,7 +158,7 @@ Zwraca wartość zero.
 
 W trybie debugowania, wywołuje `_ASSERTE`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>

@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288834"
 ---
 # <a name="cwinappex-class"></a>Klasa CWinAppEx
 
@@ -222,7 +222,7 @@ Wiele funkcji, dostarczanych przez szablon MFC jest zależna od `CWinAppEx` klas
 
 - Pochodną klasę aplikacji głównej, z `CWinAppEx`.
 
-Po wdrożeniu `CWinAppEx` w swojej aplikacji można zainicjować dowolną Menedżery aplikacji. Przed użyciem Menedżer aplikacji należy go zainicjować za pomocą wywołania metody odpowiednie inicjowania. Aby uzyskać wskaźnik do konkretnego menedżera, należy wywołać metodę get skojarzone. `CWinAppEx` Klasa zarządza następujących menedżerów aplikacji: [klasa CMouseManager](../../mfc/reference/cmousemanager-class.md), [klasa CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [klasa CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [ Klasa CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), i [klasa CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+Po wdrożeniu `CWinAppEx` w swojej aplikacji można zainicjować dowolną Menedżery aplikacji. Przed użyciem Menedżer aplikacji należy go zainicjować za pomocą wywołania metody odpowiednie inicjowania. Aby uzyskać wskaźnik do konkretnego menedżera, należy wywołać metodę get skojarzone. `CWinAppEx` Klasa zarządza następujących menedżerów aplikacji: [Klasa CMouseManager](../../mfc/reference/cmousemanager-class.md), [klasa CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [klasa CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [klasa CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), i [ Klasa CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -232,7 +232,7 @@ Po wdrożeniu `CWinAppEx` w swojej aplikacji można zainicjować dowolną Mened�
 
 [CWinThread](../../mfc/reference/cwinthread-class.md)
 
-[Klasa CWinApp](../../mfc/reference/cwinapp-class.md)
+[CWinApp](../../mfc/reference/cwinapp-class.md)
 
 [CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
@@ -1526,7 +1526,7 @@ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razi
 
 Jeśli klucz określony przez *lspzEntry* nie istnieje, zostanie ona utworzona przez tę metodę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

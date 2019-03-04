@@ -7,12 +7,12 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6e4defaf347f0d539ef023ee9c0e1e85dd2390db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288964"
 ---
 # <a name="active-document-containers"></a>Kontenery dokumentów aktywnych
 
@@ -83,7 +83,6 @@ Obiekt w ramce kontenera jest w większości przypadków tego samego ramki, w kt
 
 Kontener dokumentów aktywnych można rozszerzyć ramki, dodając `IOleCommandTarget`. Dzięki temu odbierania poleceń, które pochodzą z interfejsu użytkownika aktywnego dokumentu w taki sam sposób, że ten interfejs umożliwia kontener służący do wysyłania tych samych poleceń (takich jak **nowy plik**, **Otwórz**,  **Zapisz jako**, **drukowania**; **Edytuj kopię**, **Wklej**, **Cofnij**i inne) do aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [obiekty docelowe poleceń](../mfc/message-handling-and-command-targets.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
-

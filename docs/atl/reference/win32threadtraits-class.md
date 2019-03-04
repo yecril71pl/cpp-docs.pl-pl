@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: 79d4d1a4fbbd5b2bddeafeaa9ea37b43d1b8c259
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da4b8b3d5a41ab16dc2027fd632c56158afd3b97
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288743"
 ---
 # <a name="win32threadtraits-class"></a>Klasa Win32ThreadTraits
 
@@ -98,6 +98,6 @@ Zobacz [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsap
 
 Ta funkcja wywołuje `CreateThread` można utworzyć wątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

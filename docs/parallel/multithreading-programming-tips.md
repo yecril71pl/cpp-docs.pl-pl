@@ -16,12 +16,12 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290806"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Wielowątkowość: Porady dotyczące programowania MFC
 
@@ -57,8 +57,8 @@ Aby uzyskać więcej informacji na temat map uchwyt zobacz [Technical Preview 3 
 
 ##  <a name="_core_communicating_between_threads"></a> Komunikacja między wątkami
 
-Biblioteka MFC zawiera szereg klas, które umożliwiają wątków do synchronizowania dostępu do obiektów, aby zachować bezpieczeństwo wątkowe. Sposób użycia tych klas jest opisana w [wielowątkowość: jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md) i [wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat tych obiektów, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK.
+Biblioteka MFC zawiera szereg klas, które umożliwiają wątków do synchronizowania dostępu do obiektów, aby zachować bezpieczeństwo wątkowe. Sposób użycia tych klas jest opisana w [wielowątkowość: Jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md) i [wielowątkowość: Kiedy należy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat tych obiektów, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)
