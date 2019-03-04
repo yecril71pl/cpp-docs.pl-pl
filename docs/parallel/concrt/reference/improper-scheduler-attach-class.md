@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 617c71115b8a1354dbb1d9998791564f0a5d18de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271544"
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach — Klasa
 
@@ -60,7 +60,7 @@ improper_scheduler_attach() throw();
 *_Message*<br/>
 Opisowy komunikat dotyczący błędu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: 22255cc0072e6d25bc3ec70086be6ec99a59808a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270579"
 ---
 # <a name="using-cricheditctrl"></a>Korzystanie z CRichEditCtrl
 
@@ -44,7 +44,6 @@ Kontrolki edycji wzbogaconej jest to okno, w którym użytkownik może wprowadzi
 
 - [Powiadomienia z kontrolek edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

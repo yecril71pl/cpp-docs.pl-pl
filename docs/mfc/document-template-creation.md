@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-ms.openlocfilehash: f5c0691deab3d475a72cda0e86d681ea0c4ddfa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271681"
 ---
 # <a name="document-template-creation"></a>Tworzenie szablonu dokumentu
 
@@ -25,10 +25,9 @@ Konstruktor szablonu dokumentu określa, jakie typy dokumentów, okien i widokó
 
 Wskaźnik do nowego `CMultiDocTemplate` obiekt jest używany jako argument do [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argumenty `CMultiDocTemplate` Konstruktor obejmują identyfikator zasobu skojarzony z typem dokumentu menu i akceleratorami i używa trzech z [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) makra. `RUNTIME_CLASS` Zwraca [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiektu dla klasy języka C++ o nazwie jako argumentem. Trzy `CRuntimeClass` obiektów przekazany do konstruktora szablonu dokumentu, podaj informacje potrzebne do utworzenia nowych obiektów określonych klas w trakcie procesu tworzenia dokumentu. W przykładzie pokazano tworzenie szablonu dokumentu, który tworzy `CScribDoc` obiekty z `CScribView` obiektów dołączonych. Widoki jest otoczony standardowa okien ramek podrzędnych MDI.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)<br/>
 [Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271193"
 ---
 # <a name="concurrency-namespace-enums"></a>wyliczenia przestrzeni nazw współbieżności
 
@@ -26,7 +26,7 @@ ms.locfileid: "51521079"
 |[Agents_eventtype —](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|
 |[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|
 |[Schedulertype —](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|
-|[Winrtinitializationtype —](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
 |[message_status](#message_status)|[task_group_status](#task_group_status)|
 
 ##  <a name="agent_status"></a>  agent_status — wyliczenie
@@ -217,16 +217,16 @@ enum PolicyElementKey;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`ContextPriority`|Priorytet wątku systemu operacyjnego w każdym kontekście, w ramach harmonogramu zadań. Jeśli ten klucz jest ustawiony na wartość `INHERIT_THREAD_PRIORITY` kontekstów w ramach harmonogramu zadań będzie dziedziczyć priorytet wątku, który utworzony harmonogram.<br /><br /> Prawidłowe wartości: dowolne prawidłowe wartości dla Windows `SetThreadPriority` funkcji i specjalna wartość `INHERIT_THREAD_PRIORITY`<br /><br /> Wartość domyślna: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|Rozmiar stosu zarezerwowane w każdym kontekście, w ramach harmonogramu zadań w kilobajtach.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna: `0`, wskazujący, że można użyć wartości domyślnych procesu dla rozmiaru stosu.|
-|`DynamicProgressFeedback`|Określa, czy zasoby dla harmonogramu zostanie ponownie zbilansowana zgodnie z informacje statystyczne zebrane z harmonogramu lub tylko zależnie od poziomu subskrypcji źródłowej wątków sprzętu. Aby uzyskać więcej informacji, zobacz [dynamicprogressfeedbacktype —](#dynamicprogressfeedbacktype).<br /><br /> Prawidłowe wartości: członkiem `DynamicProgressFeedbackType` wyliczenia, albo `ProgressFeedbackEnabled` lub `ProgressFeedbackDisabled`<br /><br /> Wartość domyślna: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|Gdy `SchedulingProtocol` zasad jest ustawiona na wartość `EnhanceScheduleGroupLocality`, określa maksymalną liczbę kontekstów możliwy do uruchomienia, mogą być buforowane w na procesor wirtualny lokalnych kolejek. Takie kontekstów zazwyczaj będzie działał w ostatniej wejściu — pierwszy na wyjściu (LIFO) kolejności dla wirtualnego procesora, który spowodował by możliwy do uruchomienia. Należy pamiętać, że ten klucz zasad ma, nie oznacza, kiedy `SchedulingProtocol` jest ustawiona na wartość `EnhanceForwardProgress`.<br /><br /> Prawidłowe wartości: nieujemnych liczb całkowitych<br /><br /> Wartość domyślna: `8`|
-|`MaxConcurrency`|Współbieżność maksymalny poziom żądanego przez harmonogram. Usługi resource manager podejmie próbę można wstępnie przydzielić następująca liczba procesorów wirtualnych. Specjalna wartość [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności żądany jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MinConcurrency` jest większa niż liczba wątków sprzętu na komputerze i `MaxConcurrency` jest określony jako `MaxExecutionResources`, wartość `MaxConcurrency` zostanie zaokrąglona do dopasowania, co jest ustawiona dla `MinConcurrency`.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite i specjalna wartość `MaxExecutionResources`<br /><br /> Wartość domyślna: `MaxExecutionResources`|
+|`ContextPriority`|Priorytet wątku systemu operacyjnego w każdym kontekście, w ramach harmonogramu zadań. Jeśli ten klucz jest ustawiony na wartość `INHERIT_THREAD_PRIORITY` kontekstów w ramach harmonogramu zadań będzie dziedziczyć priorytet wątku, który utworzony harmonogram.<br /><br /> Prawidłowe wartości: Dowolne prawidłowe wartości dla Windows `SetThreadPriority` funkcji i specjalna wartość `INHERIT_THREAD_PRIORITY`<br /><br /> Wartość domyślna: `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|Rozmiar stosu zarezerwowane w każdym kontekście, w ramach harmonogramu zadań w kilobajtach.<br /><br /> Prawidłowe wartości: Dodatnie liczby całkowite<br /><br /> Wartość domyślna: `0`, wskazujący, że można użyć wartości domyślnych procesu dla rozmiaru stosu.|
+|`DynamicProgressFeedback`|Określa, czy zasoby dla harmonogramu zostanie ponownie zbilansowana zgodnie z informacje statystyczne zebrane z harmonogramu lub tylko zależnie od poziomu subskrypcji źródłowej wątków sprzętu. Aby uzyskać więcej informacji, zobacz [dynamicprogressfeedbacktype —](#dynamicprogressfeedbacktype).<br /><br /> Prawidłowe wartości: Członek `DynamicProgressFeedbackType` wyliczenia, albo `ProgressFeedbackEnabled` lub `ProgressFeedbackDisabled`<br /><br /> Wartość domyślna: `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|Gdy `SchedulingProtocol` zasad jest ustawiona na wartość `EnhanceScheduleGroupLocality`, określa maksymalną liczbę kontekstów możliwy do uruchomienia, mogą być buforowane w na procesor wirtualny lokalnych kolejek. Takie kontekstów zazwyczaj będzie działał w ostatniej wejściu — pierwszy na wyjściu (LIFO) kolejności dla wirtualnego procesora, który spowodował by możliwy do uruchomienia. Należy pamiętać, że ten klucz zasad ma, nie oznacza, kiedy `SchedulingProtocol` jest ustawiona na wartość `EnhanceForwardProgress`.<br /><br /> Prawidłowe wartości: Nieujemne liczby całkowite<br /><br /> Wartość domyślna: `8`|
+|`MaxConcurrency`|Współbieżność maksymalny poziom żądanego przez harmonogram. Usługi resource manager podejmie próbę można wstępnie przydzielić następująca liczba procesorów wirtualnych. Specjalna wartość [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności żądany jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MinConcurrency` jest większa niż liczba wątków sprzętu na komputerze i `MaxConcurrency` jest określony jako `MaxExecutionResources`, wartość `MaxConcurrency` zostanie zaokrąglona do dopasowania, co jest ustawiona dla `MinConcurrency`.<br /><br /> Prawidłowe wartości: Dodatnie liczby całkowite i specjalna wartość `MaxExecutionResources`<br /><br /> Wartość domyślna: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|Klucz elementu maksymalna zasad. Nie klucz prawidłowego elementu.|
-|`MinConcurrency`|Poziom minimalnej współbieżności, który jest wymagany do harmonogramu przez Menedżera zasobów. Liczba procesorów wirtualnych przypisanych do harmonogramu nigdy nie zaczną się poniżej minimum. Specjalna wartość [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności minimalna jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MaxConcurrency` jest mniejsza niż liczba wątków sprzętu na komputerze i `MinConcurrency` jest określony jako `MaxExecutionResources`, wartość `MinConcurrency` jest obniżony do dopasowania, co jest ustawiona dla `MaxConcurrency`.<br /><br /> Prawidłowe wartości: nieujemnymi liczbami całkowitymi i specjalna wartość `MaxExecutionResources`. Należy pamiętać, że harmonogram zasad używany do budowy transfery danych w środowisku uruchomieniowym współbieżności, wartość `0` jest nieprawidłowy.<br /><br /> Wartość domyślna: `1`|
-|`SchedulerKind`|Typ wątki, które używają harmonogramu dla podstawowej kontekstów wykonanie. Aby uzyskać więcej informacji, zobacz [schedulertype —](#schedulertype).<br /><br /> Prawidłowe wartości: członkiem `SchedulerType` wyliczenia, na przykład `ThreadScheduler`<br /><br /> Wartość domyślna: `ThreadScheduler`. Przekłada się to Win32 wątki we wszystkich systemach operacyjnych.|
-|`SchedulingProtocol`|W tym artykule opisano, w których planowania algorytm będzie używany przez harmonogram. Aby uzyskać więcej informacji, zobacz [schedulingprotocoltype —](#schedulingprotocoltype).<br /><br /> Prawidłowe wartości: członkiem `SchedulingProtocolType` wyliczenia, albo `EnhanceScheduleGroupLocality` lub `EnhanceForwardProgress`<br /><br /> Wartość domyślna: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|Wstępne liczba procesorów wirtualnych przypadających na wątek sprzętu. Czynnik nadsubskrypcji docelowy może być zwiększana przez Menedżera zasobów Jeśli jest to niezbędne do spełnienia `MaxConcurrency` z wątków sprzętu na komputerze.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna: `1`|
+|`MinConcurrency`|Poziom minimalnej współbieżności, który jest wymagany do harmonogramu przez Menedżera zasobów. Liczba procesorów wirtualnych przypisanych do harmonogramu nigdy nie zaczną się poniżej minimum. Specjalna wartość [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności minimalna jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MaxConcurrency` jest mniejsza niż liczba wątków sprzętu na komputerze i `MinConcurrency` jest określony jako `MaxExecutionResources`, wartość `MinConcurrency` jest obniżony do dopasowania, co jest ustawiona dla `MaxConcurrency`.<br /><br /> Prawidłowe wartości: Nieujemne liczby całkowite i specjalna wartość `MaxExecutionResources`. Należy pamiętać, że harmonogram zasad używany do budowy transfery danych w środowisku uruchomieniowym współbieżności, wartość `0` jest nieprawidłowy.<br /><br /> Wartość domyślna: `1`|
+|`SchedulerKind`|Typ wątki, które używają harmonogramu dla podstawowej kontekstów wykonanie. Aby uzyskać więcej informacji, zobacz [schedulertype —](#schedulertype).<br /><br /> Prawidłowe wartości: Członek `SchedulerType` wyliczenia, na przykład `ThreadScheduler`<br /><br /> Wartość domyślna: `ThreadScheduler`. Przekłada się to Win32 wątki we wszystkich systemach operacyjnych.|
+|`SchedulingProtocol`|W tym artykule opisano, w których planowania algorytm będzie używany przez harmonogram. Aby uzyskać więcej informacji, zobacz [schedulingprotocoltype —](#schedulingprotocoltype).<br /><br /> Prawidłowe wartości: Członek `SchedulingProtocolType` wyliczenia, albo `EnhanceScheduleGroupLocality` lub `EnhanceForwardProgress`<br /><br /> Wartość domyślna: `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|Wstępne liczba procesorów wirtualnych przypadających na wątek sprzętu. Czynnik nadsubskrypcji docelowy może być zwiększana przez Menedżera zasobów Jeśli jest to niezbędne do spełnienia `MaxConcurrency` z wątków sprzętu na komputerze.<br /><br /> Prawidłowe wartości: Dodatnie liczby całkowite<br /><br /> Wartość domyślna: `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>Wymagania
@@ -332,6 +332,6 @@ enum WinRTInitializationType;
 
 **Nagłówek:** concrt.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

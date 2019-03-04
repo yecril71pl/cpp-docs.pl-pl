@@ -1,5 +1,5 @@
 ---
-title: Klasa CRBMultiMap
+title: CRBMultiMap Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRBMultiMap
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267488"
 ---
-# <a name="crbmultimap-class"></a>Klasa CRBMultiMap
+# <a name="crbmultimap-class"></a>CRBMultiMap Class
 
 Ta klasa reprezentuje strukturę mapowania, która umożliwia każdy klucz może być skojarzony z więcej niż jedną wartość, przy użyciu drzewa binarnego Red czarny.
 
@@ -55,7 +55,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Konstruktor.|
-|[CRBMultiMap:: ~ CRBMultiMap](#dtor)|Destruktor.|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -114,7 +114,7 @@ Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-cla
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 Destruktor.
 
@@ -276,7 +276,7 @@ Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-cla
 
 Zobacz przykład [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CRBTree](../../atl/reference/crbtree-class.md)<br/>
 [Klasa CAtlMap](../../atl/reference/catlmap-class.md)<br/>

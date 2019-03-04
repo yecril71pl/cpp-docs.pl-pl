@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271917"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 
@@ -842,7 +842,7 @@ virtual BOOL DockToWindow(
 *dwAlignment*<br/>
 [in] Określa wyrównanie dokujące okienka. Może to być jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM lub CBRS_ALIGN_ANY. (Zdefiniowane w afxres.h).
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Określa dokowania prostokąt dla okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -865,7 +865,7 @@ virtual void DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Reprezentuje kontekst urządzenia używany do rysowania.
 
 *rectCaption*<br/>
@@ -1548,7 +1548,7 @@ void SetLastPercentInPaneContainer(int n);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] **Int** , który określa procent miejsca na zajmowany przez okienka w jego kontenerze.
 
 ### <a name="remarks"></a>Uwagi
@@ -1682,7 +1682,7 @@ Okienko musi oddokować, przed wykonaniem każdej operacji zewnętrznej, która 
 
 Struktura automatycznie oddokowanie okienek, zanim zostaną zniszczone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 439ff0152ec69575f21faa332d8fac4bbe779a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270335"
 ---
 # <a name="chwndrendertarget-class"></a>Klasa CHwndRenderTarget
 
@@ -233,6 +233,6 @@ Nowy rozmiar obiektu docelowego renderowania w pikselach urządzenia
 
 Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

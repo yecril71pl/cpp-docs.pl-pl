@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [MFC], backward compatibility
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
-ms.openlocfilehash: 4c02f7d547c0799e79309e2635b9ab5903a16cd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcfa11b2d7d7cd7426d0c75df71a4b0eb2d96ed6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490112"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266825"
 ---
 # <a name="using-your-old-toolbars"></a>Używanie swoich starych pasków narzędzi
 
@@ -32,7 +32,6 @@ Nie można edytować stary styl pasków narzędzi za pomocą paska narzędzi edy
 
 - [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
-

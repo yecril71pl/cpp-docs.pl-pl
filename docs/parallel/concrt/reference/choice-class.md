@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267020"
 ---
 # <a name="choice-class"></a>Klasa wyboru
 
@@ -57,7 +57,7 @@ A `tuple`— na podstawie typ reprezentujący ładunki źródeł danych wejścio
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Wybór](#ctor)|Przeciążone. Konstruuje `choice` Blok obsługi wiadomości.|
+|[choice](#ctor)|Przeciążone. Konstruuje `choice` Blok obsługi wiadomości.|
 |[~ choice — destruktor](#dtor)|Niszczy `choice` Blok obsługi wiadomości.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -359,7 +359,7 @@ Obciążenie komunikatu.
 
 Ponieważ `choice` Blok obsługi wiadomości można pobrać dane wejściowe z ładunku różnych typów, należy określić typ ładunku punkcie pobierania. Można określić typ bazując na wynik `index` metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [join, klasa](join-class.md)<br/>

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270387"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
@@ -351,7 +351,7 @@ Zwraca wartość zwracaną przez plik wykonywalny.
 
 Ta metoda może zostać zastąpiona. Jeśli zastępują [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::PostMessageLoop](#postmessageloop), lub [CAtlExeModuleT::RunMessageLoop](#runmessageloop) nie zapewnią dostateczną elastyczność , można zastąpić `WinMain` funkcji przy użyciu tej metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe ATLDuck](../../visual-cpp-samples.md)<br/>
 [Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>

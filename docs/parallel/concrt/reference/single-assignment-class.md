@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268968"
 ---
 # <a name="singleassignment-class"></a>Klasa single_assignment
 
@@ -289,7 +289,7 @@ single_assignment(
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
 
 *_PScheduler*<br/>
@@ -328,9 +328,8 @@ T const& value();
 
 Ta metoda czeka na zakończenie nadejścia wiadomości, jeśli żaden komunikat nie jest obecnie przechowywanych w `single_assignment` Blok obsługi wiadomości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [overwrite_buffer, klasa](overwrite-buffer-class.md)<br/>
-[Klasa unbounded_buffer](unbounded-buffer-class.md)
-
+[unbounded_buffer, klasa](unbounded-buffer-class.md)

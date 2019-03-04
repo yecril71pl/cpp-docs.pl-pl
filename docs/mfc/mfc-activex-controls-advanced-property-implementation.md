@@ -1,19 +1,19 @@
 ---
-title: 'Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych'
+title: 'Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266968"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych
 
 W tym artykule opisano tematy związane z implementacją zaawansowane właściwości formantu ActiveX.
 
@@ -69,11 +69,11 @@ Funkcje pomocnicze istnieje dla najbardziej typowych predefiniowanymi SCODEs, ta
 > [!NOTE]
 >  `ThrowError` jest przeznaczona do użycia wyłącznie jako środek zwróci błąd z w ramach właściwości Get lub Set funkcja lub metoda automatyzacji. Są to tylko razy, które będą znajdować się program obsługi wyjątków odpowiednie znajduje się na stosie.
 
-Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) oraz sekcję [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Zaawansowane Tematy.
+Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) oraz sekcję [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Tematy zaawansowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
-[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
+[Kontrolki ActiveX MFC: Właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
+[Kontrolki ActiveX MFC: Metody](../mfc/mfc-activex-controls-methods.md)<br/>
 [Klasa COleControl](../mfc/reference/colecontrol-class.md)

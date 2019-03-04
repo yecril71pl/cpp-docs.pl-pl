@@ -1,5 +1,5 @@
 ---
-title: Klasa CAnimationPoint
+title: CAnimationPoint Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationPoint
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271271"
 ---
-# <a name="canimationpoint-class"></a>Klasa CAnimationPoint
+# <a name="canimationpoint-class"></a>CAnimationPoint Class
 
 Implementuje funkcje punktu, którego współrzędne mogą być animowane.
 
@@ -162,7 +162,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 Po powrocie z tej funkcji zawiera wskaźniki do dwóch obiektów CAnimationVariable reprezentujący współrzędne X i Y.
 
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
@@ -300,6 +300,6 @@ Określa domyślną wartość punktu.
 
 Aby ustawić wartość domyślną obiektu animacji, należy użyć tej funkcji. To ustawienie domyślne przypisuje metody wartości współrzędnych X i Y punktu animacji. Odtwarza również obiektów COM, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

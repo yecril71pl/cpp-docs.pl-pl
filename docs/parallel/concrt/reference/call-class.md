@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271960"
 ---
 # <a name="call-class"></a>Klasa wywołania
 
@@ -112,7 +112,7 @@ call(
 *_Func*<br/>
 Funkcja, która zostanie wywołana dla każdego komunikatu akceptowane.
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
 
 *_PScheduler*<br/>
@@ -219,7 +219,7 @@ virtual bool supports_anonymous_source();
 
 **wartość true,** ponieważ bloku nie odłożyć dostępne komunikaty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [transformer, klasa](transformer-class.md)

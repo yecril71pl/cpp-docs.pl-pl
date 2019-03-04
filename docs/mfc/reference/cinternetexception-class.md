@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: e89293d7b7803cf661bce7a91ea6df72b9a06122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270266"
 ---
 # <a name="cinternetexception-class"></a>Klasa CInternetException
 
@@ -105,7 +105,7 @@ Ta wartość błędu może być systemem znaleziono w powiodło się. kod błęd
 
 Aby uzyskać listę kodów błędów systemu Win32, zobacz [kody błędów](/windows/desktop/Debug/system-error-codes). Aby uzyskać listę komunikatów o błędach specyficzne dla Internetu Zobacz. Zarówno tematy znajdują się w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

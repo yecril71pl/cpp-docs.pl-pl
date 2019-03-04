@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 67ab1620d0ad815cc070935a2b314bbfa2ef1408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266032"
 ---
 # <a name="wm-message-handlers-a---c"></a>Programy obsługi komunikatów WM_: A - C
 
@@ -67,8 +67,7 @@ Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po praw
 |ON_WM_CREATE()|afx_msg int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
 |ON_WM_CTLCOLOR()|afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, UINT);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

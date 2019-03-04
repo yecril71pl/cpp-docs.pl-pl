@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270192"
 ---
 # <a name="extent-class-c-amp"></a>extent — Klasa (C++ AMP)
 
@@ -39,7 +39,7 @@ Ranga `extent` obiektu.
 
 **Nagłówek:** amp.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -55,7 +55,7 @@ Ranga `extent` obiektu.
 |----------|-----------------|
 |[zawiera](#contains)|Sprawdza, czy określony `extent` obiekt ma określony stopień.|
 |[Rozmiar](#size)|Zwraca całkowity rozmiar liniowy zakresu (w jednostkach elementów).|
-|[Kafelek](#tile)|Tworzy `tiled_extent` obiektu z fragmentów zadanych przez określone wymiary.|
+|[tile](#tile)|Tworzy `tiled_extent` obiektu z fragmentów zadanych przez określone wymiary.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -65,7 +65,7 @@ Ranga `extent` obiektu.
 |[operator--](#operator_min_min)|Zmniejsza o jeden każdy element obiektu `extent` obiektu.|
 |[operator%=](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `extent` obiektu, gdy ten element jest dzielona przez liczbę.|
 |[operator*=](#operator_star_eq)|Mnoży każdy element obiektu `extent` przez liczbę.|
-|[operator / =](#operator_min_eq)|Dzieli każdy element obiektu `extent` przez liczbę.|
+|[operator/=](#operator_min_eq)|Dzieli każdy element obiektu `extent` przez liczbę.|
 |[Extent::operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator +](#operator_add)|Zwraca nowy `extent` obiektu, który jest tworzony przez dodanie odpowiadających im `index` i `extent` elementów.|
 |[operator++](#operator_add_add)|Zwiększa każdy element obiektu `extent` obiektu.|
@@ -77,7 +77,7 @@ Ranga `extent` obiektu.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Zwraca rangę obiektu `extent` obiektu.|
+|[rank Constant](#rank)|Zwraca rangę obiektu `extent` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -393,6 +393,6 @@ Dalej do najbardziej znaczący składnik w zakresie poddanym fragmentacji.
 *_Dim2*<br/>
 Najmniej znaczący składnik w zakresie poddanym fragmentacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

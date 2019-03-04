@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: e3040c9a91357ce9b3968729e0bf83d664c511d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266318"
 ---
 # <a name="cdialogex-class"></a>Klasa CDialogEx
 
@@ -146,7 +146,7 @@ BOOL SetBackgroundImage(
 *uiBmpResId*<br/>
 [in] Identyfikator zasobu obrazu tła.
 
-*Lokalizacja*<br/>
+*location*<br/>
 [in] Jedną z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.
 
 *bAutoDestroy*<br/>
@@ -163,7 +163,7 @@ W drugiej metodzie przeciążenia składni, wartość TRUE jeśli metoda się po
 
 Obraz, który określisz nie jest rozciągnięty do rozmiaru obszaru klienckiego okna dialogowego pole.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

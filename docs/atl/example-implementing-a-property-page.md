@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267241"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 
@@ -45,7 +45,7 @@ Najpierw utwórz nowy projekt ATL DLL serwera o nazwie `ATLPages7`. Teraz za pom
 |----------|-----------|
 |Tytuł|TextDocument|
 |Ciąg dokumentu|VCUE textdocument — właściwości|
-|HelpFile —|*\<pusty >*|
+|HelpFile —|*\<blank>*|
 
 Wartości, które można ustawić na tej stronie kreatora zostanie przywrócony do kontener strony właściwości, gdy wywołuje `IPropertyPage::GetPageInfo`. Co się stanie do ciągów, po zależy w kontenerze, ale zazwyczaj są będzie służyć do identyfikowania strony do użytkownika. Tytuł pojawi się zwykle w karcie powyżej strony i ciąg dokumentu może być wyświetlany w pasku stanu lub etykietki narzędzia (mimo że ramka właściwości standardowe nie korzysta z tego ciągu w ogóle).
 
@@ -161,7 +161,7 @@ End Module
 
 Po uruchomieniu tego makra, zostanie wyświetlona strona właściwości, przedstawiający nazwę pliku i status tylko do odczytu dokumentu tekstowego aktualnie aktywny. Stanu tylko do odczytu dokumentu przedstawiają tylko możliwość zapisu do dokumentu w środowisku programistycznym; nie wpływa na atrybut tylko do odczytu pliku na dysku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykładowe ATLPages](../visual-cpp-samples.md)

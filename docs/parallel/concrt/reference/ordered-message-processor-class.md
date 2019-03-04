@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270751"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor — Klasa
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 
 To `ordered_message_processor` nie będą planować asynchronicznego lub synchronicznego obsługi do momentu `initialize` funkcja jest wywoływana.
 
-##  <a name="dtor"></a> ~ ordered_message_processor
+##  <a name="dtor"></a> ~ordered_message_processor
 
 Niszczy `ordered_message_processor` obiektu.
 
@@ -186,6 +186,6 @@ Zaczekaj pokrętła specyficznych dla procesora, upewnij się, że wszystkie zad
 virtual void wait();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

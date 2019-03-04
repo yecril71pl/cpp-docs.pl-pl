@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614737"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269828"
 ---
 # <a name="cadapt-class"></a>Klasa CAdapt
 
@@ -185,6 +185,6 @@ Odwołanie do obiektu, który ma zostać porównane.
 
 Wynik porównania między *m_T* i *rSrc*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270205"
 ---
 # <a name="catltransactionmanager-class"></a>Klasa CAtlTransactionManager
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager destruktora.|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager destruktora.|
 |[CAtlTransactionManager](#catltransactionmanager)|Konstruktor CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -60,19 +60,19 @@ class CAtlTransactionManager;
 |----------|-----------------|
 |[Zamknij](#close)|Zamyka jeden dojście transakcji.|
 |[Zatwierdzenia](#commit)|Żądania można zatwierdzić transakcji.|
-|[Utwórz](#create)|Tworzy dojście transakcji.|
+|[Tworzenie](#create)|Tworzy dojście transakcji.|
 |[CreateFile](#createfile)|Tworzy i otwiera plik, strumienia pliku lub katalogu jako operacji transakcyjnych.|
-|[DeleteFile —](#deletefile)|Usuwa istniejący plik jako operacja transakcyjne.|
+|[DeleteFile](#deletefile)|Usuwa istniejący plik jako operacja transakcyjne.|
 |[FindFirstFile](#findfirstfile)|Przeszukuje katalog dla pliku lub podkatalog operacji transakcyjnych.|
 |[GetFileAttributes](#getfileattributes)|Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacja transakcyjne.|
-|[Funkcji GetFileAttributesEx](#getfileattributesex)|Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacja transakcyjne.|
-|[Gethandle —](#gethandle)|Zwraca uchwyt transakcji.|
+|[GetFileAttributesEx](#getfileattributesex)|Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacja transakcyjne.|
+|[GetHandle](#gethandle)|Zwraca uchwyt transakcji.|
 |[IsFallback](#isfallback)|Określa, czy rezerwowy wywołania są włączone.|
 |[MoveFile](#movefile)|Przenosi istniejący plik lub katalog, łącznie z jej funkcji podrzędnych operacji transakcyjnych.|
 |[RegCreateKeyEx](#regcreatekeyex)|Tworzy określonego klucza rejestru i kojarzy ją z transakcją. Jeśli klucz już istnieje, funkcja otwiera go.|
 |[RegDeleteKey](#regdeletekey)|Usuwa podklucz, a jego wartości z określonego widoku specyficzne dla platformy rejestru operacji transakcyjnych.|
-|[Działanie funkcji RegOpenKeyEx](#regopenkeyex)|Otwiera wskazanego klucza rejestru i kojarzy ją z transakcją.|
-|[Wycofywanie](#rollback)|Żądania, które transakcji można wycofać.|
+|[RegOpenKeyEx](#regopenkeyex)|Otwiera wskazanego klucza rejestru i kojarzy ją z transakcją.|
+|[Rollback](#rollback)|Żądania, które transakcji można wycofać.|
 |[SetFileAttributes](#setfileattributes)|Ustawia atrybuty dla pliku lub katalogu jako operacji transakcyjnych.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
@@ -191,16 +191,16 @@ inline HANDLE CreateFile(
 Nazwa obiektu do utworzenia lub otwarcia.
 
 *dwDesiredAccess*<br/>
-Dostęp do obiektu, który można podsumować w jak Odczyt, zapis, zarówno lub żadna (zero). Najczęściej używane wartości są GENERIC_READ i/lub GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
+Dostęp do obiektu, który można podsumować w jak Odczyt, zapis, zarówno lub żadna (zero). Najczęściej używanymi wartościami są GENERIC_READ i/lub GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Tryb współdzielenia obiekt, który może być Odczyt, zapis, zarówno, Usuń wszystkie te lub Brak: 0, FILE_SHARE_DELETE, flag FILE_SHARE_READ, FILE_SHARE_WRITE.
+Tryb współdzielenia obiekt, który może być Odczyt, zapis, zarówno, usuwanie, wszystkie te lub Brak: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Wskaźnik do struktury SECURITY_ATTRIBUTES, który zawiera deskryptor zabezpieczeń opcjonalny i określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Parametr może mieć wartości NULL.
 
 *dwCreationDisposition*<br/>
-Akcja do wykonania na pliki, które istnieją i nie istnieją. Ten parametr musi mieć jedną z następujących wartości, które nie mogą być łączone: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING lub TRUNCATE_EXISTING.
+Akcja do wykonania na pliki, które istnieją i nie istnieją. Ten parametr musi mieć jedną z następujących wartości, których nie można połączyć: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING lub TRUNCATE_EXISTING.
 
 *dwFlagsAndAttributes*<br/>
 Atrybuty pliku i flagi. Ten parametr może zawierać dowolną kombinację atrybutów plików (FILE_ATTRIBUTE_ *). Wszystkie inne atrybuty pliku musi zostać zastąpiona FILE_ATTRIBUTE_NORMAL. Ten parametr może również zawierać kombinacji flag (FILE_FLAG_\*) do kontroli zachowania buforowania, uzyskać dostęp do trybów i inne flagi specjalnego przeznaczenia. Ich połączenie z dowolnym FILE_ATTRIBUTE_\* wartości.
@@ -216,7 +216,7 @@ Zwraca uchwyt, który może służyć do dostępu do obiektu.
 
 Wywołuje tę otokę `CreateFileTransacted` funkcji.
 
-##  <a name="deletefile"></a>  DeleteFile —
+##  <a name="deletefile"></a>  DeleteFile
 
 Usuwa istniejący plik jako operacja transakcyjne.
 
@@ -521,6 +521,6 @@ Atrybuty pliku można ustawić dla pliku. Aby uzyskać więcej informacji, zobac
 
 Wywołuje tę otokę `SetFileAttributesTransacted` funkcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

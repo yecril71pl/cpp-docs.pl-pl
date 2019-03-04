@@ -1,5 +1,5 @@
 ---
-title: Kreator kontrolek ActiveX MFC
+title: Kreator formantów MFC ActiveX
 ms.date: 09/12/2018
 f1_keywords:
 - vc.appwiz.mfc.ctl.overview
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: d916517342bd28aaf77cdce20e2479eb80dec024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 009c7a2b0c703facf70b7a4b2706f288c4d7fd9a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267586"
 ---
-# <a name="mfc-activex-control-wizard"></a>Kreator kontrolek ActiveX MFC
+# <a name="mfc-activex-control-wizard"></a>Kreator formantów MFC ActiveX
 
 Kontrolki ActiveX jest określonego typu [serwer automatyzacji](../../mfc/automation-servers.md); jest komponentów wielokrotnego użytku. Hosting kontrolek ActiveX aplikacji jest [klienta automatyzacji](../../mfc/automation-clients.md) tej kontrolki. Jeśli do tworzenia składników wielokrotnego użytku, użyj tego kreatora do tworzenia kontrolki. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.
 
@@ -62,9 +62,8 @@ Ta strona kreatora opisuje bieżące ustawienia aplikacji dla projektu kontrolki
 
 - Formant opiera się na nie istniejące kontrolki Windows, aktywuje staje się widoczny, ma interfejs użytkownika, i obejmuje **o** okno dialogowe. Te ustawienia domyślne można zmienić na [ustawienia kontroli](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 [Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
 [Pojęcia](../../atl/active-template-library-atl-concepts.md)
-

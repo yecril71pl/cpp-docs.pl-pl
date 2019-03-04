@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd9d5c6ef1ccb86f2968b1e2d2706092b6db45e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271817"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Ustawienia aplikacji, Kreator projektów ATL
 
@@ -56,9 +56,8 @@ Wybierz jedną z trzech typów serwerów:
 
    Projekt ATL zawiera wsparcie dla składników modelu COM + 1.0, po ustawieniu tej opcji. Rejestratora składników umożliwia obiektu modelu COM + 1.0 do uzyskiwania listy składników, rejestrować składników lub wyrejestrować komponenty (pojedynczo lub wszystkie na raz).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657490"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268476"
 ---
 # <a name="arrayview-class"></a>array_view — Klasa
 
@@ -75,7 +75,7 @@ Ranga `array_view` obiektu.
 |Nazwa|Opis|
 |----------|-----------------|
 |[copy_to](#copy_to)|Kopiuje zawartość `array_view` obiekt do określonego miejsca docelowego, wywołując `copy(*this, dest)`.|
-|[Dane](#data)|Zwraca wskaźnik do danych pierwotnych `array_view`.|
+|[data](#data)|Zwraca wskaźnik do danych pierwotnych `array_view`.|
 |[discard_data](#discard_data)|Odrzuca bieżące dane temu widokowi.|
 |[get_extent](#get_extent)|Zwraca obiekt extent z obiektu array_view.|
 |[get_ref](#get_ref)|Zwraca odwołanie do elementu indeksowanego.|
@@ -101,7 +101,7 @@ Ranga `array_view` obiektu.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Przechowuje rangę `array_view` obiektu.|
+|[rank Constant](#rank)|Przechowuje rangę `array_view` obiektu.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -348,13 +348,13 @@ Zakres każdego wymiaru `array_view`.
 *_Inne*<br/>
 Obiekt typu `array_view<T,N>` z którego należy zainicjować nowy `array_view`.
 
-*_Rozmiar*<br/>
+*_Size*<br/>
 Rozmiar tablicy stylu C, z którego dane są dostarczane.
 
 *_Src*<br/>
 Wskaźnik do danych źródłowych, które mają zostać skopiowane do nowej tablicy.
 
-##  <a name="copy_to"></a> copy_to —
+##  <a name="copy_to"></a> copy_to
 
 Kopiuje zawartość `array_view` obiekt do określonego obiektu docelowego przez wywołanie metody `copy(*this, dest)`.
 
@@ -403,7 +403,7 @@ Pobiera `extent` obiekt, który definiuje kształt `array_view` obiektu.
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
 ```
 
-##  <a name="get_extent"></a> get_extent —
+##  <a name="get_extent"></a> get_extent
 
 Zwraca [zakres](extent-class.md) obiektu `array_view` obiektu.
 
@@ -795,6 +795,6 @@ Typ danych elementów w pierwotnym [tablicy](array-class.md) obiektu i zwracanym
 
 `array_view` Obiektu, który jest konstruowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

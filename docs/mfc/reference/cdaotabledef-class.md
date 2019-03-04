@@ -1,5 +1,5 @@
 ---
-title: Klasa CDaoTableDef
+title: CDaoTableDef Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoTableDef
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270231"
 ---
-# <a name="cdaotabledef-class"></a>Klasa CDaoTableDef
+# <a name="cdaotabledef-class"></a>CDaoTableDef Class
 
 Przedstawia przechowywaną definicję tabeli bazowej lub dołączonej tabeli.
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 Wskaźnik do wyrażenia ciągu, określając nazwę tego pola.
 
-*nNie*<br/>
+*nType*<br/>
 Wartość wskazująca, typ danych pola. To ustawienie może być jedną z następujących wartości:
 
 |Typ|Rozmiar (bajty)|Opis|
@@ -346,7 +346,7 @@ Wartość odpowiadającą właściwości pola i że można łączyć, używając
 |`dbUpdatableField`|Można zmienić wartość pola.|
 |`dbDescending`|Pola są sortowane malejąco (Z - A lub 0, 100) zamówienia (dotyczy tylko pól obiektu w kolekcji pól indeks obiektu). Pominięcie tej stałej pola są posortowane w kolejności rosnącej (A - Z lub 0 - 100) zamówienia (ustawienie domyślne).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odwołanie do [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 ### <a name="remarks"></a>Uwagi
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Indeks obiektu pola w tabeli liczony od zera kolekcji pól, do wyszukiwania według indeksu.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odwołanie do [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Opcje, które określają, które informacje o polu do pobrania. Dostępne opcje
 
 - `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty. Użyj tej opcji, aby uzyskać największą wydajność.
 
-- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, plus: numer pozycji, wymagane, Zezwalaj na tabeli źródłowej obcego Nazwa pola źródła zerową długość, kolejność sortowania,
+- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Zezwalaj na porządkowym wymagane, zerową długość, sortowania, kolejność, nazwa obcego, pole źródła, tabela źródłowa
 
-- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze, plus: wartość domyślna reguła sprawdzania poprawności, tekst sprawdzania poprawności
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Wartość domyślna tekst sprawdzania poprawności reguły sprawdzania poprawności
 
 *lpszName*<br/>
 Wskaźnik na nazwę obiektu pole wyszukiwania według nazwy. Nazwa jest ciągiem o długości maksymalnie 64 znaków, który unikatowej nazwy pola.
@@ -644,9 +644,9 @@ Opcje, które określają, które informacje o indeksie do pobrania. Dostępne o
 
 - `AFX_DAO_PRIMARY_INFO` Nazwa pola Info, pola. Użyj tej opcji, aby uzyskać największą wydajność.
 
-- `AFX_DAO_SECONDARY_INFO` Podstawowe informacje, a także: podstawowy, unikatowe, Clustered Ignoruj wartości null, wymagane, zagranicznych
+- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Podstawową, unikatowe, klastrowany, ignorowanie wartości null, wymagane, obcego
 
-- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze, a także: liczności unikatowych wartości
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Liczność unikatowych wartości
 
 *lpszName*<br/>
 Wskaźnik na nazwę obiektu indeksu wyszukiwania według nazwy.
@@ -865,19 +865,19 @@ W poniższej tabeli przedstawiono typy możliwe bazy danych i ich odpowiednich s
 |Bazy danych przy użyciu aparatu bazy danych Jet|"[ `database`];"|" `drive`:\\\ *ścieżki*\\\ *filename*. MDB"|
 |dBASE III|"dBASE III;"|" `drive`:\\\ *ścieżki*"|
 |dBASE IV|"dBASE IV;"|" `drive`:\\\ *ścieżki*"|
-|dBASE 5|"dBASE 5.0."|" `drive`:\\\ *ścieżki*"|
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *ścieżki*"|
 |Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *ścieżki*"|
 |Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *ścieżki*"|
 |Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *ścieżki*"|
-|Excel 3.0|"Programu Excel 3.0;"|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
-|4.0 programu Excel|"4.0 programu Excel;"|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
-|Excel w wersji 5.0 lub Excel 95|"Programu Excel 5.0".|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
-|Programu Excel 97|"Excel 8.0;"|" `drive`:\\\ *ścieżki*\ *filename*. XLS"|
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
+|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
+|Excel w wersji 5.0 lub Excel 95|"Excel 5.0;"|" `drive`:\\\ *ścieżki*\\\ *filename*. XLS"|
+|Excel 97|"Excel 8.0;"|" `drive`:\\\ *ścieżki*\ *filename*. XLS"|
 |HTML Import|"HTML Import;"|" `drive`:\\\ *ścieżki*\ *filename*"|
-|Eksportowanie kodu HTML|"HTML Export;"|" `drive`:\\\ *ścieżki*"|
+|HTML Export|"HTML Export;"|" `drive`:\\\ *ścieżki*"|
 |Tekst|"Text";|"dysk:\\\path"|
 |ODBC|"ODBC; Bazy danych = `database`; Identyfikator UID = *użytkownika*; PWD = *hasło*; Nazwa DSN = *datasourcename;* LOGINTIMEOUT = *(w sekundach);*" (To może nie być pełne parametry połączenia dla wszystkich serwerów; jest przykładowe. Jest bardzo ważne nie spacje widoczne między parametrami.)|Brak|
-|Program Exchange|"Do programu Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TYPEM = {0 &AMP;#124; 1};]<br /><br /> [Profil = *profilu*;]<br /><br /> [PWD = *hasło*;]<br /><br /> [BAZA DANYCH = `database`;] "|*"dysku*:\\\ *ścieżki*\\\ *filename*. MDB"|
+|Program Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Profil = *profilu*;]<br /><br /> [PWD= *password*;]<br /><br /> [BAZA DANYCH = `database`;] "|*"dysku*:\\\ *ścieżki*\\\ *filename*. MDB"|
 
 > [!NOTE]
 >  Btrieve nie jest już obsługiwany począwszy od DAO 3.5.
@@ -972,7 +972,7 @@ Nie można ustawić tekst sprawdzania poprawności dołączonej tabeli.
 
 Aby uzyskać powiązane informacje zobacz temat "Property komunikat" w Pomocy programu DAO.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

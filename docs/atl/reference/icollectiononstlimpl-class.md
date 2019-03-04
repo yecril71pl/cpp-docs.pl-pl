@@ -1,5 +1,5 @@
 ---
-title: Klasa ICollectionOnSTLImpl
+title: ICollectionOnSTLImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 1b76ec9840fbee53a9003ca3a6064021a0f8d751
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc1e4988237cb839cca9421b56dbcdd04067059d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266461"
 ---
-# <a name="icollectiononstlimpl-class"></a>Klasa ICollectionOnSTLImpl
+# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl Class
 
 Ta klasa udostępnia metody używane przez klasę kolekcji.
 
@@ -161,7 +161,7 @@ Ten element członkowski zawiera elementy reprezentowane przez kolekcję.
 CollType m_coll;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLCollections](../../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

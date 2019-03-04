@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266422"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Biblioteka agentów asynchronicznych — Najlepsze praktyki
 
@@ -42,7 +42,7 @@ Zazwyczaj odizolować stan agenta poprzez posiadanie elementów członkowskich d
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Aby uzyskać kompletny przykład o tym, jak zdefiniować i korzystania z agentów, zobacz [wskazówki: tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) i [wskazówki: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Aby uzyskać kompletny przykład o tym, jak zdefiniować i korzystania z agentów, zobacz [instruktażu: Tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) i [instruktażu: Tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
 [[Górnej](#top)]
 
@@ -58,7 +58,7 @@ Poniższy przykład podstawowy pokazuje, jak użyć semafor, aby ograniczyć lic
 
 Producent, w tym przykładzie wysyła komunikaty relatywnie mało konsumenta. W związku z tym w tym przykładzie nie przedstawiono tu potencjalnych warunków małej ilości pamięci lub braku pamięci. Jednak ten mechanizm jest przydatne, gdy potoku danych zawiera stosunkowo dużej liczby komunikatów.
 
-Aby uzyskać więcej informacji na temat tworzenia klasę semafora, która jest używana w tym przykładzie, zobacz [porady: Korzystanie z klasy kontekstu do wdrażania semafora Cooperative](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Aby uzyskać więcej informacji na temat tworzenia klasę semafora, która jest używana w tym przykładzie, zobacz [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[Górnej](#top)]
 
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat tworzenia klasę semafora, która jest 
 
 Biblioteka agentów jest najbardziej użyteczna, gdy pracę wykonywaną przez potok danych jest dość gruboziarnistych. Na przykład jeden składnik aplikacji może odczytywać dane z pliku lub połączenie sieciowe i od czasu do czasu wysyłania danych do innego składnika. Protokół, który używa biblioteki agentów Propagacja komunikatów powoduje, że masz większe obciążenie niż konstrukcje równoległych zadań, które są dostarczane przez mechanizm przekazywania komunikatów [biblioteki wzorców równoległych](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). W związku z tym upewnij się, że pracę wykonywaną przez potok danych jest wystarczająco długi, o które zostanie przesunięte to obciążenie.
 
-Mimo że potoku danych jest najbardziej efektywne, gdy jego zadania podrzędne są gruboziarnistych, każdy etap potoku danych można użyć konstrukcje PPL, takich jak grupy zadań i algorytmów równoległych do wykonywania bardziej szczegółowych prac. Na przykład sieci gruboziarnistych danych, który używa równoległość drobnoziarnistą na każdym etapie przetwarzania zobacz [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Mimo że potoku danych jest najbardziej efektywne, gdy jego zadania podrzędne są gruboziarnistych, każdy etap potoku danych można użyć konstrukcje PPL, takich jak grupy zadań i algorytmów równoległych do wykonywania bardziej szczegółowych prac. Na przykład sieci gruboziarnistych danych, który używa równoległość drobnoziarnistą na każdym etapie przetwarzania zobacz [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Górnej](#top)]
 
@@ -114,7 +114,7 @@ receiver2: received resource 64
 Destroying resource 64...
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
@@ -123,4 +123,3 @@ Destroying resource 64...
 [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Biblioteka wzorów równoległych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

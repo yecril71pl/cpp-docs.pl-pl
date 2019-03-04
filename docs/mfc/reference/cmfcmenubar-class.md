@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267371"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
@@ -602,7 +602,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Indeks elementu menu do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1082,7 +1082,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 Jeśli menu nie są wyświetlane wszystkie polecenia menu, powoduje ukrycie opcji poleceń, które są rzadko używane. Aby uzyskać więcej informacji na temat wyświetlania poleceń menu zobacz [klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

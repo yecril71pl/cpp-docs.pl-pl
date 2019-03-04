@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 7e1dc9c40f60dc46117ee0673a038d5a63df7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268671"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Modalne i niemodalne okna dialogowe
 
@@ -34,8 +34,7 @@ Tworzenie okna dialogowego programu wymaga wykonania następujących czynności:
 
 1. Dodaj elementy członkowskie danych skojarzonych z formantów w oknie dialogowym oraz określić [wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md) i [walidacji danych okna dialogowego](../mfc/dialog-data-validation.md) formantów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
-

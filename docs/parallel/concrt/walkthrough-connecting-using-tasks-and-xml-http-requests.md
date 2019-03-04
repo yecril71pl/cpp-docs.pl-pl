@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP'
+title: 'Przewodnik: Łączenie za pomocą zadań i żądań XML HTTP'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266513"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Przewodnik: Łączenie za pomocą zadań i żądań XML HTTP
 
 W tym przykładzie pokazano, jak używać [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfejsów oraz zadań wysyłać żądania HTTP GET i POST do usługi sieci web w Universal Windows Platform (platformy UWP ) aplikacji. Połączenie interfejsu `IXMLHTTPRequest2` z zadaniami pozwala pisać kod, który komponuje się z innymi zadaniami. Na przykład zadanie pobierania można umieścić w łańcuchu zadań. Zadanie pobierania może być również inicjowane w odpowiedzi na anulowanie pracy.
 
@@ -24,7 +24,7 @@ Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](..
 
 W tym dokumencie najpierw pokazano, jak utworzyć klasę `HttpRequest` i jej klasy pomocnicze. Następnie prezentuje sposób użycia tej klasy z aplikacji platformy uniwersalnej systemu Windows, która używa języka C++ i XAML.
 
-Aby uzyskać przykład, który używa `IXMLHTTPRequest2` , ale zadań, zobacz [szybkiego startu: łączenie za pomocą XML żądania HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Aby uzyskać przykład, który używa `IXMLHTTPRequest2` , ale zadań, zobacz [Szybki Start: Łączenie za pomocą XML żądania HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` interfejsów, które są zalecane do użycia w aplikacji platformy uniwersalnej systemu Windows. Niniejszy przykład można również przystosować do aplikacji klasycznej.
@@ -106,12 +106,12 @@ Oto działająca aplikacja:
 
 [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
 [Programowanie asynchroniczne w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Szybki Start: Łączenie się za pomocą XML żądania HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Szybki start: Łączenie za pomocą XML żądania HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [task — klasa (współbieżność środowiska wykonawczego)](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event, klasa](../../parallel/concrt/reference/task-completion-event-class.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270426"
 ---
 # <a name="cexception-class"></a>Klasa CException
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*nNie*<br/>
+*nType*<br/>
 Określa styl okna komunikatu. Zastosuj dowolną kombinację [Style okna komunikatu](styles-used-by-mfc.md#message-box-styles) do pola. Jeśli ten parametr nie jest określony, wartość domyślna to MB_OK.
 
 *nMessageID*<br/>
@@ -226,10 +226,9 @@ else
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](cobject-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)<br/>
 [Przetwarzanie wyjątków](exception-processing.md)<br/>
-[Jak: tworzenie własnych klas wyjątków niestandardowych](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Jak mogę Tworzenie własnych klas wyjątków niestandardowych](http://go.microsoft.com/fwlink/p/?linkid=128045)

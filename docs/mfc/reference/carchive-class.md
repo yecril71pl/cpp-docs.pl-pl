@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266331"
 ---
 # <a name="carchive-class"></a>CArchive — klasa
 
@@ -132,7 +132,7 @@ Przeciążona wyodrębniania ( **>>**) i wstawiania ( **<<**) operatory to wygod
 
 `CArchive` obsługuje również programowania przy użyciu klas MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) i [CSocketFile](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) funkcja elementu członkowskiego obsługuje to użycie.
 
-Aby uzyskać więcej informacji na temat `CArchive`, zobacz artykuły [serializacji](../../mfc/serialization-in-mfc.md) i [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Aby uzyskać więcej informacji na temat `CArchive`, zobacz artykuły [serializacji](../../mfc/serialization-in-mfc.md) i [Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -298,7 +298,7 @@ Ta funkcja jest dostarczany do obsługi programowania przy użyciu klas MFC Wind
 
 Przyczyna przy użyciu `IsBufferEmpty` z archiwum skojarzony `CSocketFile` obiekt jest, że bufor archiwum może zawierać więcej niż jednego komunikatu lub rekordu. Po otrzymaniu jeden komunikat, należy użyć `IsBufferEmpty` do kontrolowania pętli, który zwiększa odbierania danych, dopóki rozmiar buforu jest pusty. Aby uzyskać więcej informacji, zobacz [Receive](../../mfc/reference/casyncsocket-class.md#receive) funkcji składowej klasy typu `CAsyncSocket`, który ilustruje sposób używania `IsBufferEmpty`.
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Skrytka pocztowa*<br/>
+*pOb*<br/>
 Stały wskaźnik do obiektu są przechowywane.
 
 ### <a name="remarks"></a>Uwagi
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Wskaźnik do buforu dostarczone przez użytkownika, który ma otrzymać dane odczytywane z archiwum.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Liczba całkowita bez znaku określający liczbę bajtów do odczytu z archiwum.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -653,7 +653,7 @@ Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) po jes
 *lpsz*<br/>
 Określa wskaźnik do buforu dostarczone przez użytkownika, który będzie otrzymywał ciąg tekstowy zakończony znakiem null.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Określa maksymalną liczbę znaków do odczytania. Powinien być mniejszy niż rozmiar *lpsz* buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Wskaźnik do buforu dostarczone przez użytkownika, który zawiera dane do zapisania archiwum.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Liczba całkowita określająca liczbę bajtów do zapisania archiwum.
 
 ### <a name="remarks"></a>Uwagi
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Skrytka pocztowa*<br/>
+*pOb*<br/>
 Stały wskaźnik do obiektu są przechowywane.
 
 ### <a name="remarks"></a>Uwagi
@@ -879,7 +879,7 @@ Kończącego znaku null ('\0') nie są zapisywane do pliku. nie jest nowym wiers
 
 [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>

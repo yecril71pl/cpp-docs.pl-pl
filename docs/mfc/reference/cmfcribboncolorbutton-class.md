@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonColorButton
+title: CMFCRibbonColorButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonColorButton
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266279"
 ---
-# <a name="cmfcribboncolorbutton-class"></a>Klasa CMFCRibbonColorButton
+# <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton Class
 
 `CMFCRibbonColorButton` Klasa implementuje przycisk koloru, który można dodać do paska wstążki. Przycisk koloru wstążki Wyświetla menu rozwijane, który zawiera co najmniej jeden palet kolorów.
 
@@ -427,7 +427,7 @@ void UpdateColor(COLORREF color);
 
 `CMFCRibbonColorButton::UpdateColor` Metoda zmienia kolor aktualnie zaznaczonego przycisku i powiadamia o jego obiektu nadrzędnego, wysyłając wiadomość z powiadomieniem do standardowego BN_CLICKED WM_COMMAND. Użyj [CMFCRibbonColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

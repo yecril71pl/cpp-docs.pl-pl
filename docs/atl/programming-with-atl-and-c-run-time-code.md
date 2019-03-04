@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-ms.openlocfilehash: a14f8155545666df7ec64b15072258163f559266
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267679"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programowanie za pomocą kodu ATL i C Run-Time
 
@@ -37,7 +37,6 @@ Zawiera szczegółowe informacje o sposobie działania kodu startowego VCRuntime
 [Biblioteki wykonawczej języka C](../c-runtime-library/crt-library-features.md)<br/>
 W tym artykule omówiono różne pliki .lib, wchodzące w skład biblioteki wykonawczej C i wyświetla ich opcje kompilatora skojarzone i dyrektywy preprocesora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)
-

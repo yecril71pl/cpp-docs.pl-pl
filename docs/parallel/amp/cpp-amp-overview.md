@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269646"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -56,9 +56,9 @@ Ważne elementy kodu są następujące:
 
 - Dane: Dane składają się z trzech tablic. Wszystkie mają te same rangi (jeden) i długości (pięć).
 
-- Iteracja: Pierwsza `for` pętli udostępnia mechanizm do iteracji na elementach w tablicach. Kod, który ma zostać wykonane w celu obliczenia sum, jest zawarty w pierwszym `for` bloku.
+- Iteracja: Pierwszy `for` pętli udostępnia mechanizm do iteracji na elementach w tablicach. Kod, który ma zostać wykonane w celu obliczenia sum, jest zawarty w pierwszym `for` bloku.
 
-- Indeks: `idx` zmiennej uzyskuje dostęp do poszczególnych elementów tablic.
+- Indeks: `idx` Zmiennej uzyskuje dostęp do poszczególnych elementów tablic.
 
 Korzystanie z C++ AMP można napisać poniższy kod zamiast tego.
 
@@ -100,9 +100,9 @@ Te same elementy podstawowe są obecne, ale użyte są konstrukcje C++ AMP:
 
 - Dane: Używasz tablic C++ do konstruowania trzech C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) obiektów. Należy dostarczyć czterech wartości do konstruowania `array_view` obiektu: wartości danych, Ranking, typ elementu i długość `array_view` w każdym wymiarze. Ranga i typ są przekazywane jako parametry typu. Dane i długość są przekazywane jako parametry konstruktora. W tym przykładzie tablica C++, która jest przekazywana do konstruktora jest jednowymiarowa. Ranga i długość są używane do konstruowania prostokątnego kształtu danych w `array_view` obiektów i danych, wartości są używane do wypełnienia tablicy. Biblioteka wykonawcza obejmuje również [array, klasa](../../parallel/amp/reference/array-class.md), która posiada interfejs podobny `array_view` klasy i jest omówiona w dalszej części tego artykułu.
 
-- Iteracja: [parallel_for_each — funkcja (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) udostępnia mechanizm do iteracji na elementach danych lub *domenę obliczeniową*. W tym przykładzie domena obliczeniowa jest określona przez `sum.extent`. Kod, który chcesz wykonać, znajduje się w wyrażeniu lambda lub *funkcja jądra*. `restrict(amp)` Wskazuje, że używany jest tylko podzbiór języka C++, który C++ AMP może przyspieszyć.
+- Iteracja: [Parallel_for_each — funkcja (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) udostępnia mechanizm do iteracji na elementach danych lub *domenę obliczeniową*. W tym przykładzie domena obliczeniowa jest określona przez `sum.extent`. Kod, który chcesz wykonać, znajduje się w wyrażeniu lambda lub *funkcja jądra*. `restrict(amp)` Wskazuje, że używany jest tylko podzbiór języka C++, który C++ AMP może przyspieszyć.
 
-- Indeks: [index, klasa](../../parallel/amp/reference/index-class.md) zmiennej `idx`, jest zadeklarowana z rangą równą jeden, aby odpowiadać randze obiektu `array_view` obiektu. Korzystając z indeksu, można uzyskać dostęp do poszczególnych elementów `array_view` obiektów.
+- Indeks: [Index, klasa](../../parallel/amp/reference/index-class.md) zmiennej `idx`, jest zadeklarowana z rangą równą jeden, aby odpowiadać randze obiektu `array_view` obiektu. Korzystając z indeksu, można uzyskać dostęp do poszczególnych elementów `array_view` obiektów.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Formowanie i indeksowanie danych: indeks i zakres
 
@@ -457,11 +457,11 @@ void MathExample() {
 
 C++ AMP zawiera bibliotekę graficzną, która jest przeznaczona do przyspieszonego programowania grafiki. Ta biblioteka jest używana tylko na urządzeniach, które obsługują macierzystą funkcjonalność graficzną. Metody znajdują się w [Namespace Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) i są zawarte w \<amp_graphics.h > pliku nagłówka. Kluczowe składniki biblioteki graficznej to:
 
-- [Texture, klasa](../../parallel/amp/reference/texture-class.md): można użyć klasy texture do utworzenia tekstur z pamięci lub z pliku. Tekstury przypominają tablice, ponieważ zawierają one dane i przypominają kontenery w standardowej biblioteki języka C++ w odniesieniu do konstrukcji przydziału i kopiowania. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../../standard-library/stl-containers.md). Parametry szablonu dla `texture` klasy są typami elementu i rangi. Ranga może być 1, 2 lub 3. Typ elementu może być jednym z typów krótkich wektorów, które są opisane w dalszej części tego artykułu.
+- [Texture, klasa](../../parallel/amp/reference/texture-class.md): Można użyć klasy texture do utworzenia tekstur z pamięci lub z pliku. Tekstury przypominają tablice, ponieważ zawierają one dane i przypominają kontenery w standardowej biblioteki języka C++ w odniesieniu do konstrukcji przydziału i kopiowania. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../../standard-library/stl-containers.md). Parametry szablonu dla `texture` klasy są typami elementu i rangi. Ranga może być 1, 2 lub 3. Typ elementu może być jednym z typów krótkich wektorów, które są opisane w dalszej części tego artykułu.
 
-- [writeonly_texture_view, klasa](../../parallel/amp/reference/writeonly-texture-view-class.md): umożliwia dostęp tylko do zapisu do wszelkich tekstur.
+- [writeonly_texture_view, klasa](../../parallel/amp/reference/writeonly-texture-view-class.md): Umożliwia dostęp tylko do zapisu do wszelkich tekstur.
 
-- Biblioteka krótkich wektorów: Definiuje zestaw typów krótkich wektorów, o długości 2, 3 i 4, które są oparte na **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), lub [unorm](../../parallel/amp/reference/unorm-class.md).
+- Biblioteka krótkich wektorów: Definiuje zestaw typów krótkich wektorów, o długości 2, 3 i 4, które są oparte na **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), lub [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Universal Windows Platform (systemu Windows UWP) aplikacji
 
@@ -469,7 +469,7 @@ Podobnie jak inne biblioteki C++ można użyć C++ AMP w aplikacjach platformy u
 
 - [Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego Windows w języku C++ i wywoływanie z kodu JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Przewodnik: Tworzenie podstawowego składnika środowiska wykonawczego Windows w języku C++ i wywoływanie z kodu JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
 
 - [Zestaw Bing Maps optymalizatora podróży, app Store okna, w języku JavaScript i C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
@@ -499,7 +499,7 @@ Narzędzie Concurrency Visualizer zawiera obsługę dla analizowania wydajności
 
 Wyznaczanie modułu i dzielenie liczb całkowitych bez znaku ma znacznie lepszą wydajność niż wyznaczanie modułu i dzielenie liczb całkowitych ze znakiem. Zaleca się, że używasz możliwych liczb całkowitych bez znaku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)<br/>

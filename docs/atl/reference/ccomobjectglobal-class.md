@@ -1,5 +1,5 @@
 ---
-title: Klasa CComObjectGlobal
+title: CComObjectGlobal Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectGlobal
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267436"
 ---
-# <a name="ccomobjectglobal-class"></a>Klasa CComObjectGlobal
+# <a name="ccomobjectglobal-class"></a>CComObjectGlobal Class
 
 Ta klasa zarządza moduł zawierający licznik odwołań do Twojej `Base` obiektu.
 
@@ -32,7 +32,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -42,7 +42,7 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Konstruktor.|
-|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Destruktor.|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Jeśli masz nie pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 Destruktor.
 
@@ -162,7 +162,7 @@ W kompilacjach do debugowania `Release` zwraca wartość, która może być przy
 
 Domyślnie `Release` wywołania `_Module::Unlock`, gdzie `_Module` jest globalne wystąpienie [CComModule](../../atl/reference/ccommodule-class.md) lub klasa pochodnej od niego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
 [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>

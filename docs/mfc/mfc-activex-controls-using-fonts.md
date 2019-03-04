@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: używanie czcionek'
+title: 'Kontrolki ActiveX MFC: Używanie czcionek'
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175824"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271310"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
+# <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: Używanie czcionek
 
 Jeśli formant ActiveX jest wyświetlany tekst, możesz zezwolić użytkownikowi kontroli zmienić wygląd tekstu, zmieniając właściwość czcionki. Właściwości czcionki są implementowane jako obiekty czcionki i może być jednym z dwóch typów: podstawowy lub niestandardowy. Podstawowe właściwości czcionki są właściwości preimplemented czcionki, które można dodać za pomocą Kreatora dodawania właściwości. Właściwości czcionki niestandardowe nie są preimplemented i dewelopera kontrolek określa zachowanie i użycia właściwości.
 
@@ -42,7 +42,7 @@ Podstawowe właściwości czcionki są preimplemented przez klasę [COleControl]
 
 Dostęp do obiektu czcionki, za pośrednictwem [getfont —](../mfc/reference/colecontrol-class.md#getfont), [setfont —](../mfc/reference/colecontrol-class.md#setfont), i [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkcji `COleControl`. Kontrolka użytkownika będzie dostępu do obiektu czcionki, za pośrednictwem `GetFont` i `SetFont` funkcje w taki sam sposób jak inne właściwości Get/Set. Gdy dostęp do obiektu czcionki jest wymagana od znajdujących się pod kontrolą, przy użyciu `InternalGetFont` funkcji.
 
-Zgodnie z opisem w [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md), dodawanie właściwości standardowych jest bardzo proste dzięki [Kreator dodawania właściwości](../ide/names-add-property-wizard.md). Wybierz właściwość czcionki, a Kreator dodawania właściwości automatycznie wstawi zapasów czcionki wejścia Mapa wysyłania formantu.
+Zgodnie z opisem w [kontrolki ActiveX MFC: Właściwości](../mfc/mfc-activex-controls-properties.md), dodawanie właściwości standardowych jest bardzo proste dzięki [Kreator dodawania właściwości](../ide/names-add-property-wizard.md). Wybierz właściwość czcionki, a Kreator dodawania właściwości automatycznie wstawi zapasów czcionki wejścia Mapa wysyłania formantu.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Aby dodać właściwości czcionki zasobów za pomocą Kreatora dodawania właściwości
 
@@ -233,9 +233,8 @@ W kodzie, który inicjuje Czcionka nagłówka (w Konstruktorze sterowania), nale
 
 Po wprowadzeniu tych zmian zostały wprowadzone do projektu, należy ponownie skompilować projekt i użyj kontener testu, aby przetestować interfejs. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-
+[Kontrolki ActiveX MFC: Używanie obrazów w kontrolce ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Kontrolki ActiveX MFC: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)

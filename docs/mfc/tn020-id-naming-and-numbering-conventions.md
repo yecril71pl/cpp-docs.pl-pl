@@ -1,5 +1,5 @@
 ---
-title: 'TN020: konwencje nazewnictwa i numerowania identyfikatorów'
+title: 'TN020: Konwencje identyfikator nazewnictwa i numerowania'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267397"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: konwencje nazewnictwa i numerowania identyfikatorów
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Konwencje identyfikator nazewnictwa i numerowania
 
 Ta uwaga opisuje identyfikator nazewnictwa i numerowania Konwencji MFC 2.0 używa zasobów, polecenia, ciągów, formantów i okien podrzędnych.
 
@@ -76,7 +76,7 @@ Zdecydowanie zaleca się, że zdefiniowane wszystkie identyfikatory wewnątrz za
 |------------|-------------------|-----------------|
 |IDR_|wiele|od 1 do 0x6FFF|
 |IDD_|szablony okna dialogowego|od 1 do 0x6FFF|
-|IDB_ IDC_, IDI_,|kursory, ikony, mapy bitowe|od 1 do 0x6FFF|
+|IDC_,IDI_,IDB_|kursory, ikony, mapy bitowe|od 1 do 0x6FFF|
 |IDS_, IDP_|Parametry ogólne|od 1 do 0x7FFF|
 |ID_|polecenia|0x8000 do 0xDFFF|
 |IDC_|kontrolki|8 do 0xDFFF|
@@ -103,8 +103,7 @@ Przyczyny te limity zakres:
 
 - Zakres 0x8000 0xFFFF dla ciągów jest zarezerwowana do menu monity dotyczące poleceń.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

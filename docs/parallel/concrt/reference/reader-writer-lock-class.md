@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268658"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock — Klasa
 
@@ -38,15 +38,15 @@ class reader_writer_lock;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[reader_writer_lock::scoped_lock — klasa](#scoped_lock_class)|Wyjątek bezpieczne otoka RAII, który może służyć do uzyskania `reader_writer_lock` blokowanie obiektów jako edytor.|
-|[reader_writer_lock::scoped_lock_read — klasa](#scoped_lock_read_class)|Wyjątek bezpieczne otoka RAII, który może służyć do uzyskania `reader_writer_lock` zablokować obiekty do odczytu.|
+|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|Wyjątek bezpieczne otoka RAII, który może służyć do uzyskania `reader_writer_lock` blokowanie obiektów jako edytor.|
+|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|Wyjątek bezpieczne otoka RAII, który może służyć do uzyskania `reader_writer_lock` zablokować obiekty do odczytu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|Tworzy nowy `reader_writer_lock` obiektu.|
-|[~ reader_writer_lock — destruktor](#dtor)|Niszczy `reader_writer_lock` obiektu.|
+|[~reader_writer_lock Destructor](#dtor)|Niszczy `reader_writer_lock` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -54,7 +54,7 @@ class reader_writer_lock;
 |----------|-----------------|
 |[lock](#lock)|Uzyskuje blokadę czytnika jako edytor.|
 |[lock_read](#lock_read)|Uzyskuje blokadę czytnik do odczytu. W przypadku modułów zapisujących active czytelnicy musiały czekać na ukończenie to wszystko. Czytnik po prostu rejestruje zainteresowanie blokady i czeka na składników zapisywania do jego zwolnienia.|
-|[try_lock —](#try_lock)|Próbuje uzyskać blokadę czytnika jako edytor bez blokowania.|
+|[try_lock](#try_lock)|Próbuje uzyskać blokadę czytnika jako edytor bez blokowania.|
 |[try_lock_read](#try_lock_read)|Próbuje uzyskać blokadę czytnik do odczytu bez blokowania.|
 |[unlock](#unlock)|Odblokowuje czytnika blokadę oparte na zablokowane kto go czytnik lub składnika zapisywania.|
 
@@ -112,7 +112,7 @@ Tworzy nowy `reader_writer_lock` obiektu.
 reader_writer_lock();
 ```
 
-##  <a name="dtor"></a> ~ reader_writer_lock
+##  <a name="dtor"></a> ~reader_writer_lock
 
 Niszczy `reader_writer_lock` obiektu.
 
@@ -220,7 +220,7 @@ void unlock();
 
 W przypadku modułów zapisujących, oczekiwanie na blokadę wersji blokady zawsze przejdzie do następnego składnika zapisywania w kolejności FIFO. Ta blokada jest ukierunkowane autorzy i może zablokować czytelnicy obciążeniem ciągłe składników zapisywania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [critical_section, klasa](critical-section-class.md)

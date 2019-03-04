@@ -1,5 +1,5 @@
 ---
-title: Klasa CPagerCtrl
+title: CPagerCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPagerCtrl
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270725"
 ---
-# <a name="cpagerctrl-class"></a>Klasa CPagerCtrl
+# <a name="cpagerctrl-class"></a>CPagerCtrl Class
 
 `CPagerCtrl` Klasy opakowuje formant pagera Windows, który można przewijać w widoku okna, które nie pasuje do okna nadrzędnego.
 
@@ -612,9 +612,8 @@ void SetScrollPos(int iPos);
 
 Ta metoda wysyła [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) komunikat, który jest opisany w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Formanty pager](/windows/desktop/Controls/pager-controls)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CWindow class, about CWindow class
 - windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-ms.openlocfilehash: 7446196e9eec4b9d9236d4ab55afd9fcf859254b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a1843bfedc30e7d3b47c2916af08c8b53aaa965
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268873"
 ---
 # <a name="using-a-window"></a>Korzystanie z okna
 
@@ -21,7 +21,6 @@ Ponieważ `CWindow` ma składową danych tylko dwa (uchwyt okna i wymiary domyś
 
 Oprócz używania `CWindow` bezpośrednio, użytkownik może również pochodzić z go, aby dodać dane lub kod do klasy. ATL, sama dziedziczy trzy klasy z `CWindow`: [CWindowImpl](../atl/implementing-a-window.md), [CDialogImpl](../atl/implementing-a-dialog-box.md), i [CContainedWindowT](../atl/using-contained-windows.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy okien](../atl/atl-window-classes.md)
-

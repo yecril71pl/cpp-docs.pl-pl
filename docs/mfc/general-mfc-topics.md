@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270972"
 ---
 # <a name="general-mfc-topics"></a>Tematy ogólne dotyczące MFC
 
@@ -33,7 +33,7 @@ Struktura MFC jest wydajne podejście, które pozwala tworzyć na pracę doświa
 
 [Opieranie się na strukturze](../mfc/building-on-the-framework.md)
 
-[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ Struktura MFC jest wydajne podejście, które pozwala tworzyć na pracę doświa
 
 [Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)
+[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)
 
 [Układ dynamiczny](../mfc/dynamic-layout.md)
 
@@ -55,7 +55,6 @@ Omówienie dokumentacji MFC, zobacz [bibliotekę Microsoft Foundation Class](../
 
 Aby uzyskać informacji na temat biblioteki ATL, zobacz [odwołanie do biblioteki Active szablonu](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z obiektami okien](../mfc/working-with-window-objects.md)
-

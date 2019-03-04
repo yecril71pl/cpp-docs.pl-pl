@@ -1,5 +1,5 @@
 ---
-title: 'Aktywacja: zlecenia'
+title: 'Aktywacja: Zlecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267917"
 ---
-# <a name="activation-verbs"></a>Aktywacja: zlecenia
+# <a name="activation-verbs"></a>Aktywacja: Zlecenia
 
 W tym artykule opisano play zleceń podstawowych i pomocniczych roli w OLE [aktywacji](../mfc/activation-cpp.md).
 
@@ -29,13 +29,12 @@ Wiele typów elementów OLE obsługują tylko jeden zlecenie i edycja jest najba
 
 Inny zlecenie, często używane jest otwarte. Otwórz zlecenie jest taka sama jak edytowanie, z wyjątkiem aplikacji serwera jest uruchamiany w osobnym oknie. To zlecenie należy używać, gdy aplikacja serwera lub aplikacji kontenera nie obsługuje aktywacji w miejscu.
 
-Wszystkie zlecenia niż primary — zlecenie musi można wywołać za pomocą polecenia podmenu, gdy zaznaczony element. To podmenu zawiera wszystkie zlecenia, które są obsługiwane przez ten element i zwykle jest osiągany przez *typename* **obiektu** polecenie **Edytuj** menu. Instrukcje dotyczące *typename* **obiektu** polecenia, zobacz artykuł [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
+Wszystkie zlecenia niż primary — zlecenie musi można wywołać za pomocą polecenia podmenu, gdy zaznaczony element. To podmenu zawiera wszystkie zlecenia, które są obsługiwane przez ten element i zwykle jest osiągany przez *typename* **obiektu** polecenie **Edytuj** menu. Instrukcje dotyczące *typename* **obiektu** polecenia, zobacz artykuł [menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
 
 Zlecenia, który obsługuje aplikację serwera są wyświetlane w bazie danych rejestracji Windows. Jeśli aplikacja serwera są zapisywane przy użyciu biblioteki klas Microsoft Foundation, automatycznie zarejestrować wszystkie zlecenia, gdy serwer jest uruchomiony. Jeśli nie, należy go zarejestrować podczas fazy inicjowania aplikacji serwera. Aby uzyskać więcej informacji, zobacz artykuł [rejestracji](../mfc/registration.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aktywacja](../mfc/activation-cpp.md)<br/>
 [Kontenery](../mfc/containers.md)<br/>
 [Serwery](../mfc/servers.md)
-

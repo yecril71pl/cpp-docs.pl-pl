@@ -1,5 +1,5 @@
 ---
-title: Klasa COleSafeArray
+title: COleSafeArray Class
 ms.date: 08/27/2018
 f1_keywords:
 - COleSafeArray
@@ -60,14 +60,14 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267163"
 ---
-# <a name="colesafearray-class"></a>Klasa COleSafeArray
+# <a name="colesafearray-class"></a>COleSafeArray Class
 
 Klasa pracy z tablicami dowolnego typu i wymiar.
 
@@ -750,7 +750,7 @@ void Unlock();
 
 Ta funkcja jest wywoływana po zakończeniu dostępu do danych w tablicy. W przypadku błędu, wyniku weryfikacji zgłasza wyjątek [COleException](../../mfc/reference/coleexception-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleVariant](../../mfc/reference/colevariant-class.md)<br/>

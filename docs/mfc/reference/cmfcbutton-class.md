@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269815"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
@@ -560,7 +560,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -586,7 +586,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
@@ -611,7 +611,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
@@ -636,7 +636,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -667,7 +667,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
@@ -687,7 +687,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -998,7 +998,7 @@ A `CSize` obiekt, który zawiera nowy rozmiar przycisku.
 
 Domyślnie ta metoda oblicza nowy rozmiar, zawierający poziomy margines 10 pikseli i pionowego marginesu 5 pikseli.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

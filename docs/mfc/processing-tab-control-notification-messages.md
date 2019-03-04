@@ -8,12 +8,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 32e1b5954bc3f09f16c5516fc1c143dac716bc41
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267306"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Przetwarzanie komunikatów powiadomień dotyczących formantu karty
 
@@ -21,8 +21,7 @@ Użytkownik kliknie przycisk, karty lub przyciski, formantu karty ([CTabCtrl](..
 
 Przetwarzanie wiadomości WM_NOTIFY z kontrolki karty w klasie widoku lub w oknie dialogowym. Okno właściwości, aby utworzyć [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkcji obsługi za pomocą instrukcji switch oparte na komunikat powiadomienia, które jest obsługiwane. Aby uzyskać listę powiadomień formant karty można wysyłać do okna nadrzędnego, zobacz **powiadomienia** części [odniesienie do formantu karty](/windows/desktop/controls/tab-control-reference) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

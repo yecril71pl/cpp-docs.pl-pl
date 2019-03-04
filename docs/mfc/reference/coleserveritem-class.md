@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270556"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
 
@@ -155,7 +155,7 @@ Połączony element może reprezentować niektórych lub wszystkich dokumentów 
 
 Aby użyć `COleServerItem`dziedziczyć po nim klasę i zaimplementować [OnDraw](#ondraw) i [Serialize](../../mfc/reference/cobject-class.md#serialize) funkcji elementów członkowskich. `OnDraw` Funkcji zawiera reprezentację metaplik element, dzięki któremu będzie wyświetlana po aplikacji kontenera zostanie otwarty w dokumencie złożonym. `Serialize` Funkcji `CObject` zapewnia natywną reprezentację elementu, dzięki czemu element osadzony, należy dokonać między aplikacje kontenera i serwera. [OnGetExtent](#ongetextent) zapewnia naturalnych rozmiar elementu do kontenera, umożliwiając kontener, aby rozmiar elementu.
 
-Aby uzyskać więcej informacji na temat serwerów i materiały pokrewne, zobacz artykuł [serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md) oraz "Tworzenie kontenera/serwera aplikacji" w artykule [kontenery: funkcje zaawansowane](../../mfc/containers-advanced-features.md).
+Aby uzyskać więcej informacji na temat serwerów i materiały pokrewne, zobacz artykuł [serwerów: Implementowanie serwera](../../mfc/servers-implementing-a-server.md) oraz "Tworzenie kontenera/serwera aplikacji" w artykule [kontenerów: Zaawansowane funkcje](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -539,7 +539,7 @@ virtual BOOL OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do [CDC](../../mfc/reference/cdc-class.md) obiektu, na którym do rysowania elementu. Kontekst wyświetlania jest z nią automatycznie połączony kontekst wyświetlania atrybutu można więc wywoływać funkcje atrybutu, mimo że spowoduje to więc spowodowałoby metaplik specyficznych dla urządzenia.
 
 *rSize*<br/>
@@ -566,7 +566,7 @@ virtual BOOL OnDrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do [CDC](../../mfc/reference/cdc-class.md) obiektu, na którym do rysowania elementu. Kontroler domeny jest z nią automatycznie połączony atrybutu kontrolera domeny można więc wywoływać funkcje atrybutu, mimo że spowoduje to więc spowodowałoby metaplik specyficznych dla urządzenia.
 
 *nDrawAspect*<br/>
@@ -995,7 +995,7 @@ Wskaźnik na nazwę nowego elementu.
 
 Nazwa musi być unikatowa w obrębie dokumentu. Aplikacja serwera wywołanego do edycji połączony element aplikacja używa tej nazwy Aby znaleźć element. Nie musisz wywołać tę funkcję dla elementów osadzonych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa CDocItem](../../mfc/reference/cdocitem-class.md)<br/>

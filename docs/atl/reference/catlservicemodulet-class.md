@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270504"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa CAtlServiceModuleT
 
@@ -563,7 +563,7 @@ Zwraca wartość zwracaną z tej usługi.
 
 Ta metoda przetwarza wiersza polecenia (przy użyciu [CAtlServiceModuleT::ParseCommandLine](#parsecommandline)), a następnie uruchamia usługę (przy użyciu [CAtlServiceModuleT::Start](#start)).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

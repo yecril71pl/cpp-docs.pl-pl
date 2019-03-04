@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266812"
 ---
 # <a name="uint4-class"></a>uint_4 — Klasa
 
@@ -297,7 +297,7 @@ class uint_4;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[uint_4 — Konstruktor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[uint_4 Constructor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -446,10 +446,10 @@ class uint_4;
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
-|uint_4::operator * =||
-|uint_4::operator / =||
-|uint_4::operator ++||
-|uint_4::operator +=||
+|uint_4::operator*=||
+|uint_4::operator/=||
+|uint_4::operator++||
+|uint_4::operator+=||
 |uint_4::operator=||
 |uint_4::operator-=||
 
@@ -467,17 +467,17 @@ class uint_4;
 |uint_4::ab||
 |uint_4::abg||
 |uint_4::abgr||
-|uint_4::ABR||
+|uint_4::abr||
 |uint_4::abrg||
 |uint_4::ag||
 |uint_4::agb||
 |uint_4::agbr||
-|uint_4::AGR||
+|uint_4::agr||
 |uint_4::agrb||
-|uint_4::AR||
+|uint_4::ar||
 |uint_4::arb||
 |uint_4::arbg||
-|uint_4::ARG||
+|uint_4::arg||
 |uint_4::argb||
 |uint_4::b||
 |uint_4::ba||
@@ -600,7 +600,7 @@ class uint_4;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ## <a name="uint_4__ctor"></a> uint_4
 
@@ -667,6 +667,6 @@ Obiekt używany do inicjowania.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

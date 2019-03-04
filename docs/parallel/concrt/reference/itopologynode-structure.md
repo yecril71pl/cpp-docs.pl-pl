@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268632"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode — Struktura
 
@@ -37,7 +37,7 @@ struct ITopologyNode;
 |----------|-----------------|
 |[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Zwraca liczbę zasobów wykonywania zgrupowane razem w tym węźle.|
 |[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Zwraca pierwszy zasób wykonywania pogrupowane w tym węźle, w kolejności wyliczenia.|
-|[Itopologynode::getid —](#getid)|Zwraca unikatowy identyfikator menedżera zasobów dla tego węzła.|
+|[ITopologyNode::GetId](#getid)|Zwraca unikatowy identyfikator menedżera zasobów dla tego węzła.|
 |[Itopologynode::GETNEXT —](#getnext)|Zwraca interfejs do kolejnego węzła topologii, w kolejności wyliczenia.|
 |[Itopologynode::getnumanode —](#getnumanode)|Zwraca Windows przypisał numer węzła NUMA, do której należy ten węzeł Menedżera zasobów.|
 
@@ -125,6 +125,6 @@ Windows przypisał numer węzła NUMA, do której należy ten węzeł Menedżera
 
 Serwer proxy wątków, uruchomiony na należącym do tego węzła głównym procesorze wirtualnym, będzie miał koligacje do co najmniej poziomu węzła NUMA dla węzła NUMA zwracanego przez tę metodę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: a6129ba96cf3ac11339a8ab953e0838127f8fb3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0661a4cdde0a3a875cf27221e884f6c65b9fea55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269684"
 ---
 # <a name="marshaling"></a>marshaling
 
@@ -20,8 +20,7 @@ Technika COM marshalingu umożliwia interfejsów udostępnianych przez obiekt w 
 > [!NOTE]
 >  Marshaling zwykle nie jest konieczne po interfejsie udostępnianym przez obiekt jest używany w tym samym procesie co obiekt. Jednak przekazywanie może być potrzebny między wątkami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
 [Organizowanie informacji](/windows/desktop/com/marshaling-details)
-

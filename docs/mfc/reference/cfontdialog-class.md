@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267189"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 
@@ -148,7 +148,7 @@ Wskaźnik do [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) strukt
 *charFormat*<br/>
 Wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktura danych, która pozwala na ustawienie niektórych cech czcionki w Zaawansowane edytowanie kontrolki.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa co najmniej jeden flagi wybierz czcionkę. Co najmniej jeden wstępnie zdefiniowane wartości można łączyć przy użyciu bitowego operatora OR. Jeśli zmodyfikujesz `m_cf.Flag`s elementu członkowskiego struktury, należy użyć bitowy operator OR zmiany, aby zachować zachowanie domyślne. Aby uzyskać szczegółowe informacje na każdym z tych flag, zobacz opis [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) struktury w zestawie Windows SDK.
 
 *pdcPrinter*<br/>
@@ -202,7 +202,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 A [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury zawierającej informacje o formatowanie znaków w wybranej czcionki.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
@@ -392,9 +392,8 @@ Po konstruowanie `CFontDialog` obiektu, możesz użyć `m_cf` do modyfikowania r
 
 [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

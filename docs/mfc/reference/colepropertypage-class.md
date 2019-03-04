@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271258"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
 
@@ -89,7 +89,7 @@ Na przykład strona właściwości mogą obejmować formant edycji, który umoż
 
 Każda właściwość formantu niestandardowych lub standardowych może mieć formantu w oknie dialogowym, który umożliwia użytkownikowi kontrolki wyświetlić bieżącą wartość właściwości i zmodyfikować tę wartość, jeśli to konieczne.
 
-Aby uzyskać więcej informacji na temat korzystania z `COlePropertyPage`, zapoznaj się z artykułem [kontrolek ActiveX: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na temat korzystania z `COlePropertyPage`, zapoznaj się z artykułem [kontrolek ActiveX: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Wyślij identyfikator właściwości edytowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 Wskaźnik do ciągu zawierającego nazwę strony właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CIRC3 próbki MFC](../../visual-cpp-samples.md)<br/>
 [Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271154"
 ---
 # <a name="connection-maps"></a>Mapy połączeń
 
@@ -39,8 +39,8 @@ Następujące funkcje pomagają obiekt sink w tworzeniu i rozłączanie połącz
 
 |||
 |-|-|
-|[Afxconnectionadvise —](#afxconnectionadvise)|Ustanawia połączenie między źródłem i ujścia.|
-|[Afxconnectionunadvise —](#afxconnectionunadvise)|Przerywa połączenie między źródła i ujścia.|
+|[AfxConnectionAdvise](#afxconnectionadvise)|Ustanawia połączenie między źródłem i ujścia.|
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Przerywa połączenie między źródła i ujścia.|
 
 ##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
 
@@ -275,6 +275,6 @@ Wartość różną od zera, jeśli połączenie zostało rozłączone; w przeciw
 
 **Nagłówek:** afxctl.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

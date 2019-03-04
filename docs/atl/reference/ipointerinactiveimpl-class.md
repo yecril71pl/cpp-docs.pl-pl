@@ -1,5 +1,5 @@
 ---
-title: Klasa IPointerInactiveImpl
+title: IPointerInactiveImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPointerInactiveImpl
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-ms.openlocfilehash: 2c072dd158616b04d10e4aed091c7e26a3512ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7d9f048fceb3a569b024d7fe2b87f30a828b68e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266838"
 ---
-# <a name="ipointerinactiveimpl-class"></a>Klasa IPointerInactiveImpl
+# <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl Class
 
 Ta klasa implementuje `IUnknown` i [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) metody interfejsu.
 
@@ -78,7 +78,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -98,7 +98,7 @@ HRESULT OnInactiveMouseMove(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -119,12 +119,12 @@ HRESULT OnInactiveSetCursor(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

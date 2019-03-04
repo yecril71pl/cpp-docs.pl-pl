@@ -11,12 +11,12 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 6bddebb17663e8d22a4bf784d2a9d08a2f912e59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266656"
 ---
 # <a name="output-device-context-classes"></a>Klasy wyjściowe (kontekst urządzenia)
 
@@ -24,13 +24,13 @@ W ramach tych zajęć Hermetyzowanie różnych rodzajów konteksty urządzenia d
 
 Większość następujące klasy hermetyzować dojścia do kontekstu urządzenia Windows. Kontekst urządzenia jest obiektem Windows, który zawiera informacje o atrybuty rysowania urządzenia, takie jak drukarka lub wyświetlania. Wszystkie wywołania rysowania są wykonywane za pośrednictwem obiektów kontekstu urządzenia. Dodatkowe klasy pochodne `CDC` hermetyzacji funkcje specjalne kontekstu urządzenia, w tym obsługa metapliki Windows.
 
-[PRZECHWYTYWANIE ZMIAN DANYCH](../mfc/reference/cdc-class.md)<br/>
+[CDC](../mfc/reference/cdc-class.md)<br/>
 Klasa bazowa konteksty urządzenia. Używane bezpośrednio do uzyskania dostępu do całego ekranu oraz do uzyskiwania dostępu do nondisplay kontekstach, takich jak drukarki.
 
 [CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
 Używane w kontekście wyświetlania `OnPaint` funkcji elementów członkowskich systemu windows. Automatycznie wywołuje `BeginPaint` w konstrukcji i `EndPaint` w chwili zniszczenia.
 
-[Cclientdc —](../mfc/reference/cclientdc-class.md)<br/>
+[CClientDC](../mfc/reference/cclientdc-class.md)<br/>
 Kontekst wyświetlania obszarów klienckich systemu windows. Używany, na przykład, aby narysować w natychmiastowej reakcji na zdarzenia myszy.
 
 [CWindowDC](../mfc/reference/cwindowdc-class.md)<br/>
@@ -65,7 +65,6 @@ W tym temacie przedstawiono standardowe okno dialogowe wybierania czcionki.
 [CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
 Zawiera standardowe okno dialogowe drukowania pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-
