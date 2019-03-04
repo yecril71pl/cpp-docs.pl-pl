@@ -1,5 +1,5 @@
 ---
-title: Klasa CMapStringToOb
+title: CMapStringToOb Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMapStringToOb
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 75e9b49bca6b94595186e69a900a28fe5e38522c
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657620"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280514"
 ---
-# <a name="cmapstringtoob-class"></a>Klasa CMapStringToOb
+# <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 
 Klasa kolekcji słownika, która mapuje unikatowe `CString` obiekty do `CObject` wskaźników.
 
@@ -588,8 +588,8 @@ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **);**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (program WORD** `key` **);**|
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (program WORD** `key` **);**|
 
@@ -637,7 +637,7 @@ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, WORD** `newValue` **);**|
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void** <strong>\*</strong> `newValue` **);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt (LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (program WORD** `key` **, CObject** <strong>\*</strong> `newValue` **);**|
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (program WORD** `key` **, void** <strong>\*</strong> `newValue` **);**|
 
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

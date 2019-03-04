@@ -1,5 +1,5 @@
 ---
-title: 'Serializacja: ustawianie klasy jako możliwej do serializacji'
+title: 'Serializacja: Możliwy do serializacji klasy jako możliwej'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - serializable class [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281463"
 ---
-# <a name="serialization-making-a-serializable-class"></a>Serializacja: ustawianie klasy jako możliwej do serializacji
+# <a name="serialization-making-a-serializable-class"></a>Serializacja: Możliwy do serializacji klasy jako możliwej
 
 Pięć głównych kroków wymaganych do wybierz klasę serializacji. Są one wymienione poniżej i wyjaśnione w poniższych sekcjach:
 
@@ -92,9 +92,8 @@ Poniższy przykład pokazuje, jak używać IMPLEMENT_SERIAL dla klasy `CPerson`,
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-Po utworzeniu klasy serializacji, serializacji obiektów klasy, zgodnie z opisem w artykule [serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md).
+Po utworzeniu klasy serializacji, serializacji obiektów klasy, zgodnie z opisem w artykule [serializacji: Serializacja obiektu](../mfc/serialization-serializing-an-object.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Serializacja](../mfc/serialization-in-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: wyjątki bazy danych'
+title: 'Wyjątki: Wyjątki bazy danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492806"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285558"
 ---
-# <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
+# <a name="exceptions-database-exceptions"></a>Wyjątki: Wyjątki bazy danych
 
 W tym artykule wyjaśniono, jak obsługiwać wyjątki bazy danych. Większość materiały, w tym artykule mają zastosowanie, czy pracujesz z klas MFC Open Database Connectivity (ODBC) lub klas MFC dla obiektów Data Access (DAO). Materiał specyficzne dla jednego lub innego modelu jest jawnie oznaczona. Tematy obejmują:
 
@@ -74,7 +74,6 @@ Omówienie informacji o błędzie zwrócony przez `CDaoException` obiektu, patrz
 
 Podczas pracy z bazami danych Microsoft Jet (.mdb) i w większości przypadków podczas pracy z ODBC, będzie istnieć tylko jeden obiekt błędu. W rzadkich przypadkach, gdy używasz źródła danych ODBC, i istnieje wiele błędów można pętli za pośrednictwem DAO w kolekcji błędów na podstawie liczby błędy zwrócone przez [CDaoException::GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount). Wywołaj każdym wykonaniu pętli [CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo) uzupełnienie `m_pErrorInfo` element członkowski danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
-

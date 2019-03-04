@@ -1,5 +1,5 @@
 ---
-title: Klasa CNonStatelessWorker
+title: CNonStatelessWorker Class
 ms.date: 11/04/2016
 f1_keywords:
 - CNonStatelessWorker
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: 7aaae3728113cfd91c0655d2eac445cdd4b34246
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283158"
 ---
-# <a name="cnonstatelessworker-class"></a>Klasa CNonStatelessWorker
+# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker Class
 
 Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który jest tworzona i niszczona przy każdym żądaniu.
 
@@ -118,7 +118,7 @@ void Terminate(void* /* pvParam */) throw();
 
 Ta klasa wykonanie oczyszczania `Terminate`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)<br/>
 [Archetyp procesu roboczego](../../atl/reference/worker-archetype.md)<br/>

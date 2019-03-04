@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281164"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Ustawienia aplikacji, kreator kontrolek ActiveX MFC
 
@@ -38,9 +38,8 @@ Użyj tej strony Kreator kontrolek ActiveX MFC do projektowania i dodawanie pods
 
    - Projekt zawiera katalog HLP ma zawierać pliki map bitowych pomocy projektu i pliku tematu Pomocy (*projname*RTF). Ten plik tematu Pomocy zawiera standardowe tematy pomocy dla wspólnych właściwości, zdarzeń i metod obsługiwanych przez wiele formantów ActiveX. Możesz edytować plik RTF do dodawania lub usuwania określonych tematów Pomocy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Nazwy kontrolek, kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
 [Ustawienia kontrolki, kreator kontrolek ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-ms.openlocfilehash: 7bb5bda4a7b85ea8bb852649b20f10f0c4693188
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b358b4e92c7d9f214291b047a080f71b48183519
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284141"
 ---
 # <a name="using-slider-controls"></a>Używanie formantów suwaka
 
@@ -25,8 +25,7 @@ Typowy kontrolki suwak jest zgodny ze wzorcem poniżej:
 
 - Po wykonaniu tych czynności za pomocą kontrolki musisz upewnij się, że jest prawidłowo niszczone. Jeśli formant suwaka znajduje się w oknie dialogowym go i `CSliderCtrl` obiekt jest niszczony automatycznie. Jeśli nie, musisz upewnij się, że obie kontrolki i `CSliderCtrl` obiektu są poprawnie niszczone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

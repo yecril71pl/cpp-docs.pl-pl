@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280124"
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
 
@@ -40,7 +40,7 @@ class CDacl : public CAcl
 |Nazwa|Opis|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Konstruktor.|
-|[CDacl:: ~ CDacl](#dtor)|Destruktor.|
+|[CDacl::~CDacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -186,7 +186,7 @@ Istniejące `ACL` struktury (lista kontroli dostępu).
 
 `CDacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `ACL` struktury. Należy pamiętać, że tylko DACL (list arbitralnej kontroli dostępu), a nie SACL (systemowa lista kontroli dostępu), powinien zostać przekazany jako parametr. W kompilacjach debugowania przekazywanie SACL spowoduje, że ASERCJA. W kompilacjach do wydania przekazywanie SACL spowoduje, że wpisy kontroli dostępu (wpisy kontroli dostępu) na liście ACL są ignorowane, a błąd nie wystąpi.
 
-##  <a name="dtor"></a>  CDacl:: ~ CDacl
+##  <a name="dtor"></a>  CDacl::~CDacl
 
 Destruktor.
 
@@ -260,7 +260,7 @@ void RemoveAllAces() throw();
 
 Usuwa co `ACE` struktury (wpis kontroli dostępu) (jeśli istnieją) w `CDacl` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
 [Klasa CAcl](../../atl/reference/cacl-class.md)<br/>

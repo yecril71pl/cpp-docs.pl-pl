@@ -1,5 +1,5 @@
 ---
-title: 'Klienci automatyzacji: korzystanie z bibliotek typów'
+title: 'Klienci automatyzacji: Korzystanie z bibliotek typów'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282945"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: korzystanie z bibliotek typów
+# <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: Korzystanie z bibliotek typów
 
 Klienci automatyzacji muszą mieć informacji na temat właściwości i metod obiektów serwera, jeśli klienci znajdują się do manipulowania obiektami serwerów. Właściwości mają typy danych; metody często zwracać wartości i akceptuje parametrów. Klient wymaga informacji o typach danych wszystkich tych statycznie wiążącej typu obiektu serwera.
 
@@ -58,7 +58,6 @@ Jeśli wybrano automatyzacji podczas tworzenia projektu Visual C++ automatycznie
 
    Kreator zostanie następnie pisanie kodu dla swojej klasy wysyłania, przy użyciu określonej klasy i nazwy plików.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klienci automatyzacji](../mfc/automation-clients.md)
-

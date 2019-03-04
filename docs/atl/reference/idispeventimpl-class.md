@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524303"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283205"
 ---
 # <a name="idispeventimpl-class"></a>Klasa IDispEventImpl
 
@@ -142,7 +142,7 @@ HRESULT GetFuncInfoFromId(
 *lcid*<br/>
 [in] Ustawienia regionalne kontekstu identyfikatorem funkcji.
 
-*Informacje o*<br/>
+*info*<br/>
 [in] Struktura, wskazujący, jak wywołania funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -237,7 +237,7 @@ typedef tihclass _tihclass;
 
 Domyślnie klasa jest `CComTypeInfoHolder`. `CComTypeInfoHolder` zarządza informacji o typie klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
 [Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>

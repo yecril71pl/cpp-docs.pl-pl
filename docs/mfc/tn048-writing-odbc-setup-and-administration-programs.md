@@ -1,5 +1,5 @@
 ---
-title: 'TN048: pisanie programów instalacyjnych i administracyjnych ODBC dla aplikacji baz danych MFC'
+title: 'TN048: Pisanie programów instalacyjnych i ODBC administracyjnej dla aplikacji baz danych MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.odbc
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: b31ceb8bfc48decb5387d386ee8e8b64822f72ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2904ceb626fd1bfad0b24026deb08f2c5dcbcd4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283894"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: pisanie programów instalacyjnych i administracyjnych ODBC dla aplikacji baz danych MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Pisanie programów instalacyjnych i ODBC administracyjnej dla aplikacji baz danych MFC
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -53,8 +53,7 @@ Aby wyświetlić okno dialogowe, za pomocą której użytkownik może dodać, mo
 
 Aby uzyskać więcej informacji, zobacz ODBC SDK *odwołania programisty* działu 23, odwołanie do funkcji DLL konfiguracji i rozdział 24, odwołanie do funkcji DLL Instalatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284648"
 ---
 # <a name="index-class"></a>index — Klasa
 
@@ -46,7 +46,7 @@ Ranga lub liczba wymiarów.
 |[operator--](#operator--)|Zmniejsza o jeden każdy element obiektu `index` obiektu.|
 |[Operator(MOD) =](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `index` obiektu, gdy ten element jest dzielona przez liczbę.|
 |[operator*=](#operator_star_eq)|Mnoży każdy element obiektu `index` przez liczbę.|
-|[operator / =](#operator_div_eq)|Dzieli każdy element obiektu `index` przez liczbę.|
+|[operator/=](#operator_div_eq)|Dzieli każdy element obiektu `index` przez liczbę.|
 |[index::operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator++](#operator_add_add)|Zwiększa każdy element obiektu `index` obiektu.|
 |[operator+=](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu `index` obiektu.|
@@ -57,7 +57,7 @@ Ranga lub liczba wymiarów.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Przechowuje rangę `index` obiektu.|
+|[rank Constant](#rank)|Przechowuje rangę `index` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -71,7 +71,7 @@ Ranga lub liczba wymiarów.
 
 **Nagłówek:** amp.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ## <a name="index_ctor"></a> Indeks konstruktora
 
@@ -303,6 +303,6 @@ Obiekt indeksu.
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

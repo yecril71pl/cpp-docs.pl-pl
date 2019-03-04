@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281346"
 ---
 # <a name="crbtree-class"></a>Klasa CRBTree
 
@@ -83,7 +83,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRBTree:: ~ CRBTree](#dtor)|Destruktor.|
+|[CRBTree::~CRBTree](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -490,6 +490,6 @@ Typ używany, gdy wartość jest przekazywany jako argument danych wyjściowych.
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

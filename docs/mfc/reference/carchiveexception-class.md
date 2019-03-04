@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 6fe475ebd90ff13fec6a2835b6fdd4cf3d6034a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283569"
 ---
 # <a name="carchiveexception-class"></a>Klasa CArchiveException
 
@@ -74,7 +74,7 @@ CArchiveException(
 
 ### <a name="parameters"></a>Parametry
 
-*Przyczyna*<br/>
+*cause*<br/>
 Zmienna typu wyliczeniowego, która wskazuje przyczynę, dla wyjątku. Aby uzyskać listę modułów wyliczających, zobacz [m_cause](#m_cause) element członkowski danych.
 
 *lpszArchiveName*<br/>
@@ -128,11 +128,10 @@ Określa nazwę pliku dla tego warunku wyjątku.
 CString m_strFileName;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CArchive](../../mfc/reference/carchive-class.md)<br/>
-[Afxthrowarchiveexception —](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
+[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [Przetwarzanie wyjątków](../../mfc/reference/exception-processing.md)
-

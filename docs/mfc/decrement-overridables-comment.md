@@ -7,12 +7,12 @@ helpviewer_keywords:
 - overriding, Overridables comment in MFC source files
 - comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
-ms.openlocfilehash: 9efba74676ba118659601522fc915bf25f607116
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90d6a585f62de589299147edce87332d96c6dbb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282048"
 ---
 # <a name="-overridables-comment"></a>Komentarz // Overridables
 
@@ -29,7 +29,7 @@ W niektórych klas, może również zostać wyświetlony komentarz `// Advanced 
 > [!NOTE]
 >  Konwencje opisanych w tym artykule również działać poprawnie, ogólnie rzecz biorąc, właściwości i metod automatyzacji (wcześniej znane jako automatyzacji OLE). Metody automatyzacji są podobne do operacji MFC. Właściwości automatyzacji są podobne do atrybutów MFC. Właściwości zdarzeń automatyzacji (obsługiwane dla kontrolek ActiveX, znana wcześniej jako formantów OLE) są podobne do elementów członkowskich MFC możliwym do zastąpienia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)<br/>
 [Przykład komentarzy](../mfc/an-example-of-the-comments.md)<br/>
@@ -37,4 +37,3 @@ W niektórych klas, może również zostać wyświetlony komentarz `// Advanced 
 [Komentarz / / constructors](../mfc/decrement-constructors-comment.md)<br/>
 [Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)<br/>
 [Komentarz / / Operations](../mfc/decrement-operations-comment.md)
-

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280449"
 ---
 # <a name="ctokenprivileges-class"></a>Klasa CTokenPrivileges
 
@@ -45,7 +45,7 @@ class CTokenPrivileges
 |Nazwa|Opis|
 |----------|-----------------|
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Konstruktor.|
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Destruktor.|
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -129,7 +129,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 `CTokenPrivileges` Opcjonalnie można utworzyć obiekt przy użyciu `TOKEN_PRIVILEGES` struktury lub uprzednio zdefiniowany `CTokenPrivileges` obiektu.
 
-##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges
+##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges
 
 Destruktor.
 
@@ -330,7 +330,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 Rzutuje na wskaźnik do wartości [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>

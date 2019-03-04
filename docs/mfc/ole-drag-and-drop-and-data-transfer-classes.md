@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data transfer [MFC], OLE
 - data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
-ms.openlocfilehash: 7520881314da9568f6130f5fe2ccf0a3e0e88e2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e30a358da55b29f9519bc1ab8ee5c93ada308d98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284427"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Klasy przeciągania i upuszczania oraz transferów danych OLE
 
@@ -33,7 +33,6 @@ Reprezentuje obiekt docelowy operacji przeciągania i upuszczania. Element `COle
 [COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
 Używane jako stronie odbiorcy, aby `COleDataSource`. `COleDataObject` obiekty zapewniają dostęp do danych przechowywanych przez `COleDataSource` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

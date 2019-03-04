@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: b71ac4163c1c34fbbe686cdff05319347db521cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280735"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Klasa CAutoVectorPtrElementTraits
 
@@ -81,7 +81,7 @@ Typ danych używany do pobierania elementów z obiektu klasy kolekcji.
 typedef T*& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Klasa CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>

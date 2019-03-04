@@ -64,12 +64,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284739"
 ---
 # <a name="afx-messages"></a>Komunikaty AFX
 
@@ -156,6 +156,6 @@ W poniższej tabeli wymieniono wartości flag *lParam* parametru AFX_WM_UPDATETO
 |AFX_TOOLTIP_TYPE_TOOLBOX|0x0080|
 |AFX_TOOLTIP_TYPE_ALL|0xFFFF|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

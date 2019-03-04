@@ -1,5 +1,5 @@
 ---
-title: Klasa CFtpFileFind
+title: CFtpFileFind Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFtpFileFind
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548229"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284830"
 ---
-# <a name="cftpfilefind-class"></a>Klasa CFtpFileFind
+# <a name="cftpfilefind-class"></a>CFtpFileFind Class
 
 Pomoc Internetowych plikach wyszukiwania serwerów FTP.
 
@@ -93,7 +93,7 @@ Identyfikator kontekstu `CFtpFileFind` obiektu. Zobacz **uwagi** uzyskać więce
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CFtpFileFind` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CFtpFileFind` obiektu. Można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CFtpFileFind` obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CFtpFileFind` obiektu. Można zastąpić domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ### <a name="example"></a>Przykład
 
@@ -114,7 +114,7 @@ virtual BOOL FindFile(
 *pstrName*<br/>
 Wskaźnik do ciągu zawierającego nazwę pliku, aby znaleźć. Jeśli jest to ma wartość NULL, wywołanie zostanie przeprowadzone wyszukiwanie symbolu wieloznacznego (*).
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi opisujące sposób obsługi tej sesji. Te flagi można łączyć przy użyciu bitowego operatora OR (&#124;) i są następujące:
 
 - INTERNET_FLAG_RELOAD uzyskać danych z sieci, nawet jeśli jest ona buforowana lokalnie. Jest to flaga domyślna.
@@ -177,7 +177,7 @@ Pliku i ścieżka uniwersalnych lokalizatorów zasobów (URL).
 
 `GetFileURL` jest podobna do funkcji składowej [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), chyba że zwraca adres URL w postaci `ftp://moose/dir/file.txt`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFileFind](../../mfc/reference/cfilefind-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -3,12 +3,12 @@ title: Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: 9b8744e964274acb35c32a1ace02f71d0fed5c2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5f9f9c8fde44dd67a9a05aeae0f91fb7b5f2f4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281021"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 
@@ -64,6 +64,6 @@ Masz teraz właściwość o nazwie `Sides`. W następnym kroku zmienisz kod ryso
 
 [Wróć do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [do kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

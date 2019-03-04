@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z filtra bloku komunikatów'
+title: 'Instrukcje: Korzystanie z filtra bloku komunikatów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284297"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>Porady: korzystanie z filtra bloku komunikatów
+# <a name="how-to-use-a-message-block-filter"></a>Instrukcje: Korzystanie z filtra bloku komunikatów
 
 W tym dokumencie przedstawiono sposób użycia funkcji filtru umożliwiające blokiem komunikatów asynchronicznych akceptowanie lub odrzucanie wiadomość na podstawie ładunku tego komunikatu.
 
@@ -20,7 +20,7 @@ Podczas tworzenia obiektu bloku komunikatu takich jak [concurrency::unbounded_bu
 
 Funkcje filtra są ważne, ponieważ umożliwiają one nawiązanie połączenia bloki komunikatów do formularza *przepływu danych sieci*. W przypadku sieci przepływu danych bloki komunikatów sterowania przepływem danych przez przetwarzanie tylko tych wiadomości, które spełniają określone kryteria. To porównać do modelu przepływ sterowania, gdy przepływ danych jest regulowany przy użyciu struktury sterujące przykład instrukcje warunkowe, pętle i tak dalej.
 
-Ten dokument zawiera prosty przykład sposobu użycia filtr komunikatu. Dodatkowe przykłady, używające filtry komunikatów i model przepływu danych do łączenia bloków komunikatów, zobacz [wskazówki: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) i [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+Ten dokument zawiera prosty przykład sposobu użycia filtr komunikatu. Dodatkowe przykłady, używające filtry komunikatów i model przepływu danych do łączenia bloków komunikatów, zobacz [instruktażu: Tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) i [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Przykład
 
@@ -63,7 +63,7 @@ bool (T const &)
 
 Aby wyeliminować niepotrzebnego kopiowania danych, użyj drugiego formularza, jeśli masz typ agregacji, który jest przekazywany przez wartość.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>

@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281528"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Klasa CMFCToolBarMenuButton
 
@@ -337,7 +337,7 @@ void DrawDocumentIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectImage*<br/>
@@ -779,7 +779,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 W oknie nadrzędnym elementem wstążki.
 
-*Dane*<br/>
+*data*<br/>
 Dane ułatwień dostępu dla elementu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -874,7 +874,7 @@ Wywołaj tę metodę, aby określić identyfikator dla paskiem oderwania, który
 
 Wywołaj [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) do włączenia tej funkcji zrywalne menu w aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

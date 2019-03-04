@@ -1,18 +1,18 @@
 ---
-title: 'Kontrolki ActiveX MFC: malowanie kontrolki ActiveX'
+title: 'Kontrolki ActiveX MFC: Malowanie kontrolki ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549529"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281933"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: Malowanie kontrolki ActiveX
 
 W tym artykule opisano proces malowanie kontrolki ActiveX i jak może zmienić kod malowania, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontrolki](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysowania przez nie formantów indywidualnie Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkich formantów, kontener automatycznie przywrócić oryginalnych obiektów.)
 
@@ -31,7 +31,7 @@ Omówiono następujące tematy:
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces malowanie kontrolki ActiveX
 
-Kontrolki ActiveX początkowo są wyświetlane lub są rysowane, należy wykonać proces rysowania, podobnie jak inne aplikacje opracowane przy użyciu biblioteki MFC, z jedną istotną różnicę: formanty ActiveX może być aktywny lub nieaktywny.
+Kontrolki ActiveX początkowo są wyświetlane lub są rysowane, stosują proces rysowania, podobnie jak inne aplikacje opracowane przy użyciu biblioteki MFC, z jedną istotną różnicę: Kontrolki ActiveX może być aktywny lub nieaktywny.
 
 Aktywny formant jest reprezentowany w kontenerze kontrolek ActiveX, okno podrzędne. Podobnie jak inne okna jest odpowiedzialny za malowanie sam po odebraniu komunikat WM_PAINT. Klasa bazowa dla formantu, [COleControl](../mfc/reference/colecontrol-class.md), obsługuje ten komunikat jest jego `OnPaint` funkcji. Ta domyślna implementacja wywołuje `OnDraw` funkcja kontrolki.
 
@@ -90,7 +90,7 @@ Ponieważ domyślną implementację elementu `OnDrawMetafile` wywołuje formantu
 
 Oprócz `CDC` funkcji elementów członkowskich, istnieje kilka funkcji, które są zgodne w metaplik kontrolera domeny. Obejmują one [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)i trzy funkcje elementów członkowskich `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), i [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Funkcje, które nie są rejestrowane w metaplik: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)i [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Ponieważ metaplik kontrolera domeny nie jest faktycznie skojarzony z urządzeniem, nie można używać SetDIBits GetDIBits i CreateDIBitmap metaplik kontrolera domeny. SetDIBitsToDevice i StretchDIBits z metaplik kontrolera domeny można użyć jako miejsca docelowego. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), i [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) nie są istotne przy użyciu metaplik kontrolera domeny.
+Dostępne są następujące funkcje, które nie są rejestrowane w metaplik: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect ](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), i [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Ponieważ metaplik kontrolera domeny nie jest faktycznie skojarzony z urządzeniem, nie można używać SetDIBits GetDIBits i CreateDIBitmap metaplik kontrolera domeny. SetDIBitsToDevice i StretchDIBits z metaplik kontrolera domeny można użyć jako miejsca docelowego. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), i [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) nie są istotne przy użyciu metaplik kontrolera domeny.
 
 Inny należy wziąć pod uwagę podczas korzystania z metaplik kontroler domeny jest czy współrzędnych nie może być (w pikselach). Z tego powodu przekazywane do wszystkich swój kod rysowania powinny być dostosowane do mieści się w prostokącie `OnDraw` w *rcBounds* parametru. Zapobiega to przypadkowym malowania poza kontrolą, ponieważ *rcBounds* reprezentuje rozmiar okna formantu.
 
@@ -108,7 +108,6 @@ Po udało Ci się wdrożyć metaplik renderowania dla formantu, należy użyć k
 
    Oddzielne okno pojawia się, w którym jest wyświetlany metaplik. Można zmienić rozmiar tego okna, aby zobaczyć, jak skalowanie wpływa na metaplik formantu. Możesz zamknąć to okno, w dowolnym momencie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

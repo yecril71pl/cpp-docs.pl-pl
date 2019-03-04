@@ -1,5 +1,5 @@
 ---
-title: Klasa CComCoClass
+title: CComCoClass Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComCoClass
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282646"
 ---
-# <a name="ccomcoclass-class"></a>Klasa CComCoClass
+# <a name="ccomcoclass-class"></a>CComCoClass Class
 
 Ta klasa dostarcza metody do tworzenia wystąpienia klasy i uzyskania jej właściwości.
 
@@ -81,7 +81,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*<br/>
+*Q*<br/>
 Interfejs COM, który ma zostać zwrócone za pośrednictwem *pp*.
 
 *punkOuter*<br/>
@@ -162,7 +162,7 @@ static HRESULT Error(
 *IID*<br/>
 [in] Identyfikator IID interfejsu Definiowanie błąd lub GUID_NULL (wartość domyślna), jeśli ten błąd jest zdefiniowany przez system operacyjny.
 
-*parametrem typu HRESULT*<br/>
+*hRes*<br/>
 [in] Wartość HRESULT, które mają zwracany do obiektu wywołującego. Wartość domyślna to 0. Aby uzyskać więcej informacji na temat *parametrem typu HRESULT*, zobacz uwagi.
 
 *nID*<br/>
@@ -221,6 +221,6 @@ Domyślna implementacja zwraca wartość NULL. Mogą przesłaniać tę metodę, 
 
 Aby uzyskać więcej informacji na temat Kreator projektów ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

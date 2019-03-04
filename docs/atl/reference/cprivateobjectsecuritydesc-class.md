@@ -1,5 +1,5 @@
 ---
-title: Klasa CPrivateObjectSecurityDesc
+title: CPrivateObjectSecurityDesc Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284388"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
+# <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc Class
 
 Ta klasa reprezentuje obiekt deskryptora zabezpieczeń obiektu prywatnego.
 
@@ -36,7 +36,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Nazwa|Opis|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Konstruktor.|
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Destruktor.|
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -86,7 +86,7 @@ bool ConvertToAutoInherit(
 *pParent*<br/>
 Wskaźnik do [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) odwołuje się do obiektu nadrzędnego kontenera obiektu. W przypadku braku kontenera nadrzędnego, ten parametr ma wartość NULL.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Wskaźnik do `GUID` strukturę, która identyfikuje typ obiekt skojarzony z bieżącym obiektem. Ustaw *ObjectType* na wartość NULL, jeśli obiekt nie jest identyfikatorem GUID.
 
 *bIsDirectoryObject*<br/>
@@ -166,7 +166,7 @@ Odwołanie do [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt d
 *GenericMapping*<br/>
 Wskaźnik do [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) strukturę, która określa mapowanie z każdego ogólne prawa do określonych praw dla obiektu.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Wskaźnik do `GUID` strukturę, która identyfikuje typ obiekt skojarzony z bieżącym obiektem. Ustaw *ObjectType* na wartość NULL, jeśli obiekt nie jest identyfikatorem GUID.
 
 *bIsContainerObject*<br/>
@@ -200,7 +200,7 @@ bool Get(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*<br/>
+*si*<br/>
 Zestaw flag bitowych, które wskazują częściami deskryptor zabezpieczeń do pobrania. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flagi bitowe.
 
 *pResult*<br/>
@@ -252,7 +252,7 @@ bool Set(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*<br/>
+*si*<br/>
 Zestaw flag bitowych, które wskazują częściami deskryptor zabezpieczeń można ustawić. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flagi bitowe.
 
 *Modyfikacja*<br/>
@@ -275,7 +275,7 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 Druga metoda zezwala na określanie typu obiektu identyfikator GUID obiektu lub kontrolowania, jak wpisy kontroli dostępu są dziedziczone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

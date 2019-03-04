@@ -1,5 +1,5 @@
 ---
-title: Klasa CComSafeArray
+title: CComSafeArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComSafeArray
@@ -28,14 +28,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280683"
 ---
-# <a name="ccomsafearray-class"></a>Klasa CComSafeArray
+# <a name="ccomsafearray-class"></a>CComSafeArray Class
 
 Ta klasa jest otoką `SAFEARRAY` struktury.
 
@@ -58,7 +58,7 @@ Typ danych, które mają być przechowywane w tablicy.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Konstruktor.|
-|[CComSafeArray:: ~ CComSafeArray](#dtor)|Destruktor.|
+|[CComSafeArray::~CComSafeArray](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -121,7 +121,7 @@ Element `CComSafeArray` może zawierać następujące podzbiór typów danych VA
 |VT_UI2|ushort|
 |VT_UI4|uint|
 |VT_UI4|ulong|
-|VT_UI8|ULONGLONG|
+|VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
 |VT_DECIMAL|wskaźnik dziesiętna|
@@ -154,7 +154,7 @@ Wskaźnik do `SAFEARRAY` obiektu.
 *ulCount*<br/>
 Liczba obiektów do dodania do tablicy.
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 Wskaźnik do jednego lub kilku obiektów do dodania do tablicy.
 
 *t*<br/>
@@ -235,7 +235,7 @@ Wskaźnik do `SAFEARRAY` struktury. Konstruktor używa tego adresu do skopiowani
 
 Tworzy `CComSafeArray` obiektu.
 
-##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray
+##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
 
 Destruktor.
 
@@ -362,7 +362,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wartość lindex.*<br/>
+*lIndex*<br/>
 Numer indeksu wartości w tablicy do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -458,7 +458,7 @@ Zwraca typ danych przechowywanych w tablicy, która może być dowolny z następ
 |VT_UI2|ushort|
 |VT_UI4|uint|
 |VT_UI4|ulong|
-|VT_UI8|ULONGLONG|
+|VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
 |VT_DECIMAL|wskaźnik dziesiętna|
@@ -643,7 +643,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*wartość lindex.*<br/>
+*lIndex*<br/>
 Numer indeksu elementu tablicy, aby ustawić.
 
 *t*<br/>
@@ -660,7 +660,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 *BCopy* flaga jest brana pod uwagę podczas dodawania elementów typu BSTR lub wariant do tablicy. Domyślna wartość TRUE gwarantuje, że nowa kopia składa się z danych, gdy element zostanie dodany do tablicy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [SAFEARRAY — typ danych](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>

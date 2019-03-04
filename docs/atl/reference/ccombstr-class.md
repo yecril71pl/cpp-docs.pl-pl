@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282360"
 ---
 # <a name="ccombstr-class"></a>CComBSTR, klasa
 
@@ -53,7 +53,7 @@ class CComBSTR
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|Konstruktor.|
-|[CComBSTR:: ~ CComBSTR](#dtor)|Destruktor.|
+|[CComBSTR::~CComBSTR](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -83,7 +83,7 @@ class CComBSTR
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|Rzutowania `CComBSTR` obiekt na ciąg BSTR.|
-|[CComBSTR::operator!](#operator_not)|Zwraca wartość PRAWDA lub FAŁSZ, w zależności od tego, czy `m_str`ma wartość NULL.|
+|[CComBSTR::operator !](#operator_not)|Zwraca wartość PRAWDA lub FAŁSZ, w zależności od tego, czy `m_str`ma wartość NULL.|
 |[CComBSTR::operator! =](#operator_neq)|Porównuje `CComBSTR` przy użyciu parametrów.|
 |[CComBSTR::operator &](#operator_amp)|Zwraca adres `m_str`.|
 |[CComBSTR::operator +=](#operator_add_eq)|Dołącza `CComBSTR` do obiektu.|
@@ -320,7 +320,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *nSize*<br/>
 [in] Liczba znaków do skopiowania *sz* lub początkowy rozmiar w znakach `CComBSTR`.
 
-*Sz*<br/>
+*sz*<br/>
 [in] Ciąg do skopiowania. Wersja Unicode określa LPCOLESTR; wersji ANSI określa LPCSTR.
 
 *pSrc*<br/>
@@ -346,7 +346,7 @@ Destruktor zwalnia ciągu wskazywany przez `m_str`.
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>  CComBSTR::~CComBSTR
 
 Destruktor.
 
@@ -761,7 +761,7 @@ Można odtworzyć BSTR z zawartości strumienia z wykorzystaniem [ReadFromStream
 
 [!code-cpp[NVC_ATL_Utilities#45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [ATL i makr konwersji ciągu MFC](string-conversion-macros.md)

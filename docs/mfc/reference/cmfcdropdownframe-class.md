@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCDropDownFrame
+title: CMFCDropDownFrame Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownFrame
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: ebab76653066d6162c8068d9205cd12f3d945cab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284752"
 ---
-# <a name="cmfcdropdownframe-class"></a>Klasa CMFCDropDownFrame
+# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Class
 
 Oferuje funkcje okna ramki listy rozwijanej paski narzędzi z listy rozwijanej i przycisków na pasku narzędzi listy rozwijanej.
 
@@ -186,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Jeśli *bAutoDestroy* ma wartość PRAWDA, a następnie `CMFCDropDownFrame` destruktor niszczy okno skojarzone rozwijany pasek narzędzi. Wartość domyślna to TRUE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280319"
 ---
 # <a name="clistbox-class"></a>Clistbox — klasa
 
@@ -769,7 +769,7 @@ int GetItemRect(
 *nIndex*<br/>
 Określa liczony od zera indeks elementu.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa długie wskaźnik [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) odbierająca współrzędne klienta pole listy elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nWybierz*<br/>
+*nSelect*<br/>
 Określa liczony od zera indeks ciągu do wybrania. Jeśli *nWybierz* wynosi -1, jest równa mają Brak zaznaczenia pola listy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1536,7 +1536,7 @@ Zwracana wartość wynosząca 0 lub większy Określa indeks elementu w polu lis
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

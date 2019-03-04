@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283454"
 ---
 # <a name="worker-archetype"></a>Archetyp procesu roboczego
 
@@ -41,7 +41,7 @@ Te klasy są zgodne z tym archetype:
 |-----------|-----------------|
 |[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który jest tworzona i niszczona dla każdego żądania.|
 
-**Użyj**
+**Korzystanie**
 
 Te parametry szablonu spodziewać się klasy, która ma być zgodna z ten archetype:
 
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Parametry
 
-*Żądanie*<br/>
+*request*<br/>
 Element roboczy do przetworzenia. Element roboczy jest taki sam jak `RequestType`.
 
 *pvWorkerParam*<br/>
@@ -117,8 +117,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 Parametru niestandardowego, zrozumiałym dla klasy procesu roboczego. Również są przekazywane do `WorkerArchetype::Initialize` i `WorkerArchetype::Execute`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../../atl/active-template-library-atl-concepts.md)<br/>
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)
-

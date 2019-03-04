@@ -21,30 +21,30 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281339"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>CONCURRENCY::Direct3D funkcje przestrzeni nazw (AMP)
 
 ||||
 |-|-|-|
-|[ABS](#abs)|[Ograniczenie](#clamp)|[countbits —](#countbits)|
+|[abs](#abs)|[clamp](#clamp)|[countbits —](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh —](#firstbithigh)|
-|[firstbitlow —](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
+|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad —](#mad)|[make_array](#make_array)|[szumów](#noise)|
+|[mad —](#mad)|[make_array](#make_array)|[noise](#noise)|
 |[wartość w radianach](#radians)|[rcp](#rcp)|[reversebits —](#reversebits)|
 |[Saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
-|[Krok](#step)|[umax](#umax)|[umin](#umin)|
+|[step](#step)|[umax](#umax)|[umin](#umin)|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp.h **Namespace:** współbieżności
+**Nagłówek:** amp.h **Namespace:** Współbieżność
 
 ##  <a name="abs"></a>  ABS
 
@@ -156,7 +156,7 @@ Ta funkcja tworzy nową `accelerator_view` obiekt z istniejącego wskaźnika do 
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock —
 
-Uzyskaj blokadę na accelerator_view w celu bezpiecznego wykonywania operacji D3D na zasobach współużytkowanych wraz z accelerator_view. Obiekt accelerator_view i wszystkie zasoby C++ AMP skojarzone z tym obiektem accelerator_view wewnętrznie nakładają tę blokadę podczas wykonywania operacji i są blokowane, gdy inny wątek nałoży blokadę dostępu D3D. Ta blokada nie jest cykliczna: jest to niezdefiniowane zachowanie, aby wywołać tę funkcję z wątku, który już posiada blokadę. To zachowanie niezdefiniowane do wykonywania operacji na widoku akcelatora lub dowolnego kontenera danych skojarzonych z widokiem akcelatora z wątku, który posiada blokadę dostępu D3D. Zobacz też: scoped_d3d_access_lock, klasa stylu RAII na blokadę dostępu D3D zakresu.
+Uzyskaj blokadę na accelerator_view w celu bezpiecznego wykonywania operacji D3D na zasobach współużytkowanych wraz z accelerator_view. Obiekt accelerator_view i wszystkie zasoby C++ AMP skojarzone z tym obiektem accelerator_view wewnętrznie nakładają tę blokadę podczas wykonywania operacji i są blokowane, gdy inny wątek nałoży blokadę dostępu D3D. Ta blokada nie jest cykliczna: Jest to niezdefiniowane zachowanie, aby wywołać tę funkcję z wątku, który już posiada blokadę. To zachowanie niezdefiniowane do wykonywania operacji na widoku akcelatora lub dowolnego kontenera danych skojarzonych z widokiem akcelatora z wątku, który posiada blokadę dostępu D3D. Zobacz też: scoped_d3d_access_lock, klasa stylu RAII na blokadę dostępu D3D zakresu.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -610,6 +610,6 @@ Wartość całkowita
 
 Zwraca minimalną wartość liczbową argumentów
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::direct3d, przestrzeń nazw](concurrency-direct3d-namespace.md)

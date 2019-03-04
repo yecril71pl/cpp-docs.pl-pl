@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285155"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Instrukcje: Konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze współbieżności środowiska wykonawczego
 
@@ -58,9 +58,8 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc/OpenMP concrt-omp — exceptions.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Migrowanie z OpenMP do środowiska uruchomieniowego współbieżności](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)
-

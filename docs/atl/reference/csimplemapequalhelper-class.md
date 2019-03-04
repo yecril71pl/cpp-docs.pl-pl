@@ -1,5 +1,5 @@
 ---
-title: Klasa CSimpleMapEqualHelper
+title: CSimpleMapEqualHelper Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: a530254bbaabce723b97d21313abb81e1b375833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282776"
 ---
-# <a name="csimplemapequalhelper-class"></a>Klasa CSimpleMapEqualHelper
+# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper Class
 
 Ta klasa jest pomocnika dla [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy.
 
@@ -62,10 +62,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametry
 
-*K1*<br/>
+*k1*<br/>
 Pierwszy klucz.
 
-*K2*<br/>
+*k2*<br/>
 Drugi klucz.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -82,17 +82,17 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Parametry
 
-*w wersji 1*<br/>
+*v1*<br/>
 Pierwsza wartość.
 
-*w wersji 2*<br/>
+*v2*<br/>
 Druga wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość PRAWDA, jeśli wartości są równe, wartość false w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

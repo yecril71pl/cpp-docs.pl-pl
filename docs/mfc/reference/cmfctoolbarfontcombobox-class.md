@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCToolBarFontComboBox
+title: CMFCToolBarFontComboBox Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283725"
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>Klasa CMFCToolBarFontComboBox
+# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox Class
 
 Przycisk paska narzędzi, który zawiera formant pola kombi, która umożliwia użytkownikowi wybranie czcionkę z listy czcionek systemowych.
 
@@ -205,7 +205,7 @@ Wartość różną od zera, jeśli pomyślnie; wybrano czcionki w przeciwnym raz
 
 Jeśli *bExact* ma wartość TRUE, ta metoda wybiera czcionkę, który dokładnie pasuje do nazwy, który został określony jako *lpszName*. Jeśli *bExact* ma wartość FAŁSZ, to wybiera metoda czcionkę, która rozpoczyna się od tekstu określony jako *lpszName* i który korzysta z zestawu znaków, który został określony jako *nCharSet*. Jeśli *nCharSet* ustawiono DEFAULT_CHARSET, zestaw znaków będzie ignorowane i tylko *lpszName* będzie służyć do wybierz czcionkę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
@@ -214,5 +214,4 @@ Jeśli *bExact* ma wartość TRUE, ta metoda wybiera czcionkę, który dokładni
 [Klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [Klasa CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

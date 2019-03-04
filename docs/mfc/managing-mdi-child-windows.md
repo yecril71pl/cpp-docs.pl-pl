@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d4b4a4876f47452361b13837b0279f5bf98f8658
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283686"
 ---
 # <a name="managing-mdi-child-windows"></a>Zarządzanie oknami podrzędnymi MDI
 
@@ -36,7 +36,6 @@ Okno ramki MDI działa także w połączeniu z bieżącego okna podrzędnego MDI
 
 - [Style okna ramki](../mfc/frame-window-styles-cpp.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie okien ramowych](../mfc/using-frame-windows.md)
-

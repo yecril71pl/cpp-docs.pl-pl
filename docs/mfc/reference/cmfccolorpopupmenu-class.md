@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCColorPopupMenu
+title: CMFCColorPopupMenu Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorPopupMenu
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283400"
 ---
-# <a name="cmfccolorpopupmenu-class"></a>Klasa CMFCColorPopupMenu
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu Class
 
 Reprezentuje menu podręczne, które użytkownicy Użyj, aby wybrać kolory w dokumencie lub aplikacji.
 
@@ -127,7 +127,7 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolory*<br/>
+*colors*<br/>
 [in] Tablica kolorów wyświetlanych w menu podręcznym.
 
 *Kolor*<br/>
@@ -240,7 +240,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 *pWndList*<br/>
 [in] Wskaźnik do obiektu formantu siatki właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

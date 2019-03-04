@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCTabCtrl
+title: CMFCTabCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabCtrl
@@ -104,14 +104,14 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281684"
 ---
-# <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
+# <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
 `CMFCTabCtrl` Klasa oferuje funkcję dla formantu zakładki. Kontrolka karty wyświetla dokujące okno z płaskimi lub trójwymiarowymi kartami na górze i dole. Karty mogą wyświetlać tekst i obraz oraz zmieniać kolor, gdy jest ona aktywna.
 
@@ -177,14 +177,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wywoływane przez platformę, gdy kursor jest najpierw przeciągany do okna kontrolki karty.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Wywoływane przez platformę podczas operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem docelowego upuszczania. (Przesłania [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Wyświetla menu podręczne dla okien z zakładkami, czeka, aż użytkownik wybiera kartę i sprawia, że wybranej karty aktywną kartę.|
-|`CMFCTabCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Overrides [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Ponownie oblicza układ wewnętrznej kontrolki karty. (Przesłania [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Ustawia bieżącej karty formantu karty jako aktywną kartę w grupie kartę interfejsu wielu dokumentów.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę. (Przesłania [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
 |[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Włącza lub wyłącza użycie czcionki pogrubionej na kartach active.|
 |[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Włącza lub wyłącza drawinga ramki prostokąt wokół osadzonym pasku.|
 |[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Określa, czy rysowanie płaskiego lub 3W ramkę wokół wartości obszar karty.|
-|[CMFCTabCtrl::SetImageList](#setimagelist)|Określa listy obrazów. (Przesłania [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|
+|[CMFCTabCtrl::SetImageList](#setimagelist)|Określa listy obrazów. (Overrides [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|
 |[CMFCTabCtrl::SetResizeMode](#setresizemode)|Określa, jak można zmienić rozmiar bieżącego kontrolki karty i następnie ponownie wyświetla kontrolka.|
 |[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|Określa szerokość maksymalna karty w oknie z kartami.|
 |[CMFCTabCtrl::StopResize](#stopresize)|Kończy bieżącej operacji zmiany rozmiaru w kontrolce karty.|
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Styl*<br/>
+*style*<br/>
 [in] Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.
 
 *Rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] Identyfikator formantu karty.
 
-*Lokalizacja*<br/>
+*location*<br/>
 [in] Położenie karty. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.
 
 *bCloseBtn*<br/>
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-*Styl*<br/>
+*style*<br/>
 [in] Jedna z wartości wyliczenia, które określa wygląd kontrolki karty. Aby uzyskać więcej informacji zobacz tabelę w uwagi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 [in] Wskazuje obiekt danych, który zawiera dane, które użytkownik przeciąga.
 
 *dwKeyState*<br/>
-[in] Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).
+[in] Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).
 
 *Punkt*<br/>
 [in] Zawiera bieżącą lokalizację kursor w współrzędne klienta.
@@ -913,7 +913,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze DROPEFFECT_NONE.
+Always DROPEFFECT_NONE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Identyfikator zasobu mapy bitowej, który zawiera listy obrazów.
 
-*CX*<br/>
+*cx*<br/>
 [in] Szerokość każdej obrazu w pikselach. Wartość domyślna to 15.
 
 *clrTransp*<br/>
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametry
 
-*banulowanie*<br/>
+*bCancel*<br/>
 [in] Wartość TRUE, aby porzucić bieżącej operacji zmiany rozmiaru; Wartość FALSE, aby zakończyć bieżący rozmiar operacji. W obu przypadkach ramach zatrzymuje się Rysowanie prostokąta zmiany rozmiaru.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1135,7 +1135,7 @@ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie w
 
 Ta metoda ma wpływ tylko formant karty, który wyświetla płaską karty. Na pasku przewijania wpływa na wszystkich kartach w tym samym czasie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

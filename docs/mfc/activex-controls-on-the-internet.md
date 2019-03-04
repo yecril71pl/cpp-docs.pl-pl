@@ -1,5 +1,5 @@
 ---
-title: Kontrolki ActiveX w Internecie
+title: Formanty ActiveX w Internecie
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX controls [MFC], creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283010"
 ---
-# <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
+# <a name="activex-controls-on-the-internet"></a>Formanty ActiveX w Internecie
 
 Formanty ActiveX to zaktualizowaną wersję specyfikacji sterowania OLE.
 
@@ -191,8 +191,7 @@ W przypadku dodawania obsługi asynchronicznego właściwości do istniejącego 
 
 Spowoduje zaktualizowanie stanu gotowości, jak kod jest pobierany przez wywołanie metody [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Jednym miejscu, można wywołać `InternalSetReadyState` pochodzi z `OnProgress` zastępowania `CDataPathProperty`-klasy pochodnej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
-

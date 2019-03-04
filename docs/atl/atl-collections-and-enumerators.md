@@ -1,5 +1,5 @@
 ---
-title: Kolekcje i wyliczenia ATL
+title: Kolekcje i wyliczenia ALT
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enumerator interfaces
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 4949e8cff59a40b25c2015bf776d0844d29116a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283053"
 ---
-# <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ATL
+# <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ALT
 
 Element `collection` jest obiektem COM, który udostępnia interfejs, który umożliwia dostęp do jednej grupy elementów danych (nieprzetworzone dane lub innych obiektów). Interfejs, który następuje standardy dla zapewnienia dostępu do grupy obiektów jest znany jako *kolekcji interfejs*.
 
@@ -40,10 +40,9 @@ Przykładem rozszerzonego przeprowadzi Cię przez implementację kolekcję na po
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
-[Przykładowe ATLCollections](../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../visual-cpp-samples.md)<br/>
 Przykład demonstruje użycie `ICollectionOnSTLImpl` i `CComEnumOnSTL`i wykonania kopii niestandardowych zasad klas.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)
-

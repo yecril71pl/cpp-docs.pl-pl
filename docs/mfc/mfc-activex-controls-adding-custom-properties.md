@@ -1,18 +1,18 @@
 ---
-title: 'Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych'
+title: 'Kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284206"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
+# <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych
 
 Właściwości niestandardowe różnią się od właściwości podstawowe, w tym, że właściwości niestandardowe nie są już zaimplementowany przez `COleControl` klasy. Właściwość niestandardowa jest używana do udostępnienia określonego stanu lub wyglądu formantu ActiveX do programisty, za pomocą formantu.
 
@@ -22,7 +22,7 @@ W tym artykule opisano, jak dodać właściwość niestandardową do formantu Ac
 
 - [Dodaj Kreatora właściwości zmiany właściwości niestandardowych](#_core_classwizard_changes_for_custom_properties)
 
-Właściwości niestandardowe są dostępne w cztery różne typy wdrożenia: zmiennej składowej, składowej zmiennej za pomocą powiadomień, metod Get/Set i Parameterized.
+Właściwości niestandardowe są dostępne w cztery różne typy wdrożenia: Zmiennej składowej, zmiennej składowej, z powiadomieniem, metod Get/Set i sparametryzowanych.
 
 - Implementacja zmiennej elementu członkowskiego
 
@@ -92,9 +92,9 @@ Na koniec implementacje `GetCircleOffset` i `SetCircleOffset` funkcje są dodawa
 
 Należy pamiętać, że Kreator dodawania właściwości automatycznie dodaje połączenie, do [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), do treści funkcji Set. Wywołanie tej funkcji oznacza kontrolkę, jak modyfikacji. W przypadku modyfikowania kontrolki jego nowego stanu zostaną zapisane przy zapisywaniu kontenera. Ta funkcja powinna być wywoływana zawsze wtedy, gdy właściwość zapisane jako części kontrolki trwały stan zmieni się wartość.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
-[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
+[Kontrolki ActiveX MFC: Właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
+[Kontrolki ActiveX MFC: Metody](../mfc/mfc-activex-controls-methods.md)<br/>
 [Klasa COleControl](../mfc/reference/colecontrol-class.md)

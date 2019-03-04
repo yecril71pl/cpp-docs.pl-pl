@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 680c485241b7a377d1c6f0ec2785dbbade01ed3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283751"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Klasa CMultiPageDHtmlDialog
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Tworzy obiekt wielostronicowe okna dialogowego DHTML (stylu kreatora).|
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Niszczy obiekt wielostronicowe okna dialogowego DHTML.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Niszczy obiekt wielostronicowe okna dialogowego DHTML.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -119,6 +119,6 @@ Niszczy obiekt wielostronicowe okna dialogowego DHTML.
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 43095707718fe00a746d082d30c689dbd05292bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920301af6f660aeac010ecbf844b80ea628bbfd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285636"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo — Struktura
 
@@ -48,7 +48,7 @@ Wskazuje, czy źródło danych obsługuje transakcje — nagrywanie szereg zmian
 Wskazuje wersję aparatu bazy danych Microsoft Jet. Aby bezpośrednio pobrać wartość tej właściwości, należy wywołać obiekt bazy danych [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) funkcja elementu członkowskiego. Aby uzyskać szczegółowe informacje zobacz temat "Właściwość Version" w Pomocy programu DAO.
 
 *m_lCollatingOrder*<br/>
-Określa sekwencję porządek sortowania w tekście do porównywania ciągów i sortowania. Możliwe wartości:
+Określa sekwencję porządek sortowania w tekście do porównywania ciągów i sortowania. Możliwe wartości obejmują:
 
 - `dbSortGeneral` Użyj ogólnych kolejności sortowania (angielskim, francuskim, niemieckim, portugalskim, włoski i hiszpański nowoczesnych).
 
@@ -104,7 +104,7 @@ Informacje o pobrane przez [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/
 
 **Nagłówek:** afxdao.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Klasa CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)<br/>

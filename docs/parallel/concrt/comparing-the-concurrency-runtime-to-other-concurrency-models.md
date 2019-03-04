@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285103"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 
@@ -77,7 +77,7 @@ Windows XP i Windows Vista aplikacje, które używają środowiska uruchomieniow
 
 Windows 7 i Windows Server 2008 R2 systemu operacyjnego obsługuje współbieżność i skalowalności. Na przykład te systemy operacyjne obsługują komputerów, które mają więcej niż 64 wątków sprzętu. Istniejącą aplikację, która korzysta z interfejsu API Windows muszą zostać zmodyfikowane, aby móc korzystać z tych nowych funkcji. Jednak aplikacja, która automatycznie używa środowiska uruchomieniowego współbieżności używa tych funkcji i nie wymagają modyfikacji.
 
-[Base.user mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
 
 [[Górnej](#top)]
 
@@ -95,7 +95,7 @@ Aby uzyskać więcej informacji o tym, jak porównuje współbieżność środow
 
 [[Górnej](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Omówienie](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

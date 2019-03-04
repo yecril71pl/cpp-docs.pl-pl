@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178970"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283140"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -1058,7 +1058,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1082,7 +1082,7 @@ virtual BOOL DrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -1120,7 +1120,7 @@ virtual void DrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1751,7 +1751,7 @@ virtual void GetInvalidateItemRect(
 *nIndex*<br/>
 [in] Indeks przycisku, dla których mają być pobierane obszar klienta.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [out] Wskaźnik do obiektu Prostokąt, który odbiera region obszaru klienta.
 
 ### <a name="remarks"></a>Uwagi
@@ -1790,7 +1790,7 @@ virtual void GetItemRect(
 *nIndex*<br/>
 [in] Określa indeks przycisku paska narzędzi.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [out] Wskaźnik do `CRect` obiekt, który odbiera współrzędne obraz prostokąt ograniczający.
 
 ### <a name="remarks"></a>Uwagi
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.
 
-*Zablokowane*<br/>
+*bLocked*<br/>
 [in] Wartość TRUE, aby zablokować narzędzi; w przeciwnym razie wartość FALSE.
 
 *uiDisabledResID*<br/>
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in] Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.
 
-*Zablokowane*<br/>
+*bLocked*<br/>
 [in] Wartość logiczna określająca, czy pasek narzędzi jest zablokowany lub nie. Jeśli ten parametr jest *TRUE*, pasek narzędzi jest zablokowany. W przeciwnym razie paska narzędzi nie jest zablokowany.
 
 *uiDisabledResID*<br/>
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in] Odwołanie do `CMFCToolBarInfo` obiekt, który zawiera identyfikatory zasobu paska narzędzi obrazów.
 
-*Zablokowane*<br/>
+*bLocked*<br/>
 [in] Wartość logiczna określająca, czy pasek narzędzi jest zablokowany lub nie. Jeśli ten parametr ma wartość TRUE, pasek narzędzi jest zablokowany. W przeciwnym razie paska narzędzi nie jest zablokowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2851,7 +2851,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -3872,7 +3872,7 @@ int WrapToolBar(
 *nHeight*<br/>
 [in] Maksymalna wysokość paska narzędzi. Nie można używać, jeśli pasek narzędzi jest liczb zmiennoprzecinkowych.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia. Jeśli ma wartość NULL, używany jest kontekst urządzenia dla paska narzędzi.
 
 *nColumnWidth*<br/>
@@ -3898,12 +3898,11 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [Klasa CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Wskazówki: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

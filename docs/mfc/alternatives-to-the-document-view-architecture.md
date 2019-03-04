@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282555"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternatywy dla architektury dokument/widok
 
@@ -62,9 +62,8 @@ Zdecydowanie zaleca się użyć Kreatora aplikacji MFC do tworzenia aplikacji be
 
 - Zastąp fragmenty struktura MFC, które utworzyć dokument i widok, aby wyeliminować, tworzenia ich w ogóle. Proces tworzenia dokumentu zaczyna się od wywołania `CWinApp::AddDocTemplate`. Eliminowanie wywołania od Twojej klasy aplikacji `InitInstance` elementu członkowskiego działać, a zamiast tego utworzyć okno ramowe w `InitInstance` samodzielnie. Umieść kod zarządzania danych w swojej klasie okien ramowych. Przedstawia proces tworzenia dokumentu/widoku [tworzenia dokumentu/widoku](../mfc/document-view-creation.md). Jest więcej pracy i wymaga lepiej zrozumieć Framework, ale uwalnia użytkownika wyłącznie z obciążenie dokument/widok.
 
-Artykuł [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md) zapewnia bardziej konkretne przykłady alternatyw dokument/widok w kontekście aplikacji baz danych.
+Artykuł [MFC: Za pomocą klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md) zapewnia bardziej konkretne przykłady alternatyw dokument/widok w kontekście aplikacji baz danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura dokument/widok](../mfc/document-view-architecture.md)
-

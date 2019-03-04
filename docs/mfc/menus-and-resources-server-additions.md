@@ -1,5 +1,5 @@
 ---
-title: 'Menu i zasoby: dodatki do serwera'
+title: 'Menu i zasoby: Dodatki do serwera'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281959"
 ---
-# <a name="menus-and-resources-server-additions"></a>Menu i zasoby: dodatki do serwera
+# <a name="menus-and-resources-server-additions"></a>Menu i zasoby: Dodatki do serwera
 
 W tym artykule opisano zmiany, które należy podjąć, menu i innych zasobów w ramach visual edycji aplikacji serwera (składnik). Aplikacja serwera wymaga wielu dodatków do struktury menu i innych zasobów, ponieważ może być uruchamiany w jednym z trzech trybów: autonomiczna samodzielnie, embedded, lub w miejscu. Zgodnie z opisem w [menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md) artykułu, są maksymalnie cztery zestawy menu. Wszystkie cztery są używane dla aplikacji MDI pełny serwer, a tylko trzy są używane na potrzeby miniserver. Kreator aplikacji utworzy układ menu niezbędne dla typu serwera, który ma. Dostosowania, może być konieczne.
 
@@ -44,7 +44,7 @@ Tematy omówione w tym artykule obejmują:
 
 Aplikacje serwera (składnik) musi mieć zasobów menu dodanych do obsługi edycja wizualna OLE. Menu używany, gdy aplikacja jest uruchamiana w trybie autonomicznym nie trzeba go zmienić, ale należy dodać dwa nowe zasoby menu przed kompilacją aplikacji: jeden do obsługi aktywacji w miejscu i jeden do obsługi serwera są w pełni otwarty. Oba zasoby menu są używane przez aplikacje pełnego i miniserver.
 
-- Aby zapewnić obsługę aktywacji w miejscu, należy utworzyć zasób menu, który jest bardzo podobny do zasobu menu używana podczas uruchamiania w trybie autonomicznym. Różnica w tym menu są elementy pliku i okna (i inne elementy menu, które zajmują się aplikacji, a nie dane) Brak. Aplikacja kontenera będzie dostarczać te elementy menu. Aby uzyskać więcej informacji na temat i przykładem, ta technika scalania menu, zobacz artykuł [menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md).
+- Aby zapewnić obsługę aktywacji w miejscu, należy utworzyć zasób menu, który jest bardzo podobny do zasobu menu używana podczas uruchamiania w trybie autonomicznym. Różnica w tym menu są elementy pliku i okna (i inne elementy menu, które zajmują się aplikacji, a nie dane) Brak. Aplikacja kontenera będzie dostarczać te elementy menu. Aby uzyskać więcej informacji na temat i przykładem, ta technika scalania menu, zobacz artykuł [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
 - Aby zapewnić obsługę aktywacji pełni otwarty, należy utworzyć prawie identyczna zasobu menu używanego zasobu menu uruchamiania w trybie autonomicznym. Modyfikacja tylko do tego zasobu menu jest niektóre elementy są przeformułować odzwierciedlają fakt, że serwer działa element osadzony w dokumencie złożonym.
 
@@ -70,8 +70,7 @@ W aplikacji serwera konieczne jest dodanie tabeli tylko jeden ciąg — ciąg do
 
 Ten sam dodatki dotyczą miniservers jako wymienione powyżej dla pełnej serwerów. Ponieważ miniserver nie może działać w trybie autonomicznym, głównym menu jest znacznie mniejszy. Menu głównego tworzone przez Kreatora aplikacji ma tylko menu Plik zawierający tylko tych elementów, zakończenia i o. Menu osadzone i w miejscu i akceleratory miniservers są takie same, jak w przypadku pełnej serwerów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menu i zasoby: scalanie menu](../mfc/menus-and-resources-menu-merging.md)
-
+[Menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md)

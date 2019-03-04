@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
-ms.openlocfilehash: 89c4bba3b0df71b5ea49f4f0a975e73669fd852b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2086401bea24cdf3a7b57eb9b5b1e72560f6c9e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280722"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Dodawanie klienta MFC ODBC
 
@@ -27,7 +27,6 @@ Odbiorca MFC ODBC składa się z ODBC rekordów klasy i powiązania danych konie
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora, który powoduje wstawienie nowo utworzony kod konsumenta ODBC w projekcie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

@@ -1,18 +1,18 @@
 ---
-title: Implementowanie obszarów roboczych w kontrolkach listy
+title: Implementowanie obszarów roboczych w formantach listy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281606"
 ---
-# <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w kontrolkach listy
+# <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w formantach listy
 
 Domyślnie formant listy Rozmieszcza elementy w sposób standardowy siatki. Inną metodą jest jednak obsługiwane, praca obszary Rozmieszcza elementy listy na grupy prostokątny. W przypadku obrazu kontrolkę listy, która implementuje obszary robocze, zobacz za pomocą kontrolki widok listy w zestawie Windows SDK.
 
@@ -37,8 +37,7 @@ Następny przykład przypisuje istniejących elementów listy do każdej grupy (
 
 [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

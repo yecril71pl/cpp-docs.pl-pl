@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532603"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280471"
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
 
@@ -64,11 +64,11 @@ ATL zawiera trzy wstępnie zdefiniowane specjalizacje szablonu dla często używ
 
 - `CFrameWinTraits`
 
-   Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.
+   Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.
+   Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.
 
 Jeśli chcesz upewnić się, że określone style są ustawione dla wszystkich wystąpień klasy okna, umożliwiając innymi stylami należy ustawić na podstawie poszczególnych wystąpień [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) zamiast tego.
 
@@ -110,7 +110,7 @@ Rozszerzone style służy do tworzenia okna. Jeśli *dwExStyle* ma wartość 0, 
 
 Rozszerzone Style okna obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Opis cech okna](../../atl/understanding-window-traits.md)

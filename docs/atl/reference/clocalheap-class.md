@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 7f4fa6b6035b9f0dda35a8e989192505ccf126d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283088"
 ---
 # <a name="clocalheap-class"></a>Klasa CLocalHeap
 
@@ -150,7 +150,7 @@ Wywołaj [CLocalHeap::Free](#free) zwolnienie pamięci przydzielonej przez tę m
 
 Implementowany przy użyciu [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CComHeap](../../atl/reference/ccomheap-class.md)<br/>

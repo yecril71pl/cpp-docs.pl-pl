@@ -1,5 +1,5 @@
 ---
-title: Klasa CHtmlEditCtrl
+title: CHtmlEditCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: ce2db15b801d84ed0315345f5ab8084c437ef8ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285311"
 ---
-# <a name="chtmleditctrl-class"></a>Klasa CHtmlEditCtrl
+# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl Class
 
 Oferuje funkcje formantu WebBrowser ActiveX w oknie programu MFC.
 
@@ -135,7 +135,6 @@ Pobiera adres URL do domyślnego dokumentu do załadowania w kontrolce WebBrowse
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

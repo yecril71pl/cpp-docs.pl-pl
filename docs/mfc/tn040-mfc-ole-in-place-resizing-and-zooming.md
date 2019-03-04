@@ -1,5 +1,5 @@
 ---
-title: 'TN040: MFC / OLE w miejscu Zmienianie rozmiaru i powiększanie'
+title: 'TN040: Praca w miejscu MFC / OLE — Zmienianie rozmiaru i powiększanie'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.ole
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 072ebe0180bb44145cef694e2283e91a0cacf602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283764"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE — zmienianie rozmiaru i powiększanie w miejscu
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Praca w miejscu MFC/OLE — Zmienianie rozmiaru i powiększanie
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -84,8 +84,7 @@ Serwer można kontrolować (w pewnym stopniu), co się stanie podczas tej negocj
 
 Można zaimplementować niestandardowy zmiana rozmiaru i w dalszym ciągu używać interfejsu użytkownika dostarczonego przez `COleResizeBar` przez zastąpienie komunikatu WM_SIZECHILD w swojej `COleIPFrameWnd` klasy. Aby uzyskać więcej informacji na temat WM_SIZECHILD, zobacz [techniczne 24 Uwaga](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

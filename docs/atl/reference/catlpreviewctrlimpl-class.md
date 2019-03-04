@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283272"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Klasa CAtlPreviewCtrlImpl
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs obiekt formantu (wersja zapoznawcza).|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs obiekt formantu (wersja zapoznawcza).|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Tworzy obiekt formantu (wersja zapoznawcza).|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -166,7 +166,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hdc*<br/>
+*hdc*<br/>
 Dojście do kontekstu urządzenia dla malowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -287,7 +287,7 @@ Kolor tła okna podglądu.
 *clrText*<br/>
 Kolor tekstu w oknie podglądu.
 
-*PLF*<br/>
+*plf*<br/>
 Czcionka używana do wyświetlania tekstu w oknie podglądu.
 
 ### <a name="remarks"></a>Uwagi
@@ -310,6 +310,6 @@ Określa, czy formant powinien być narysowany ponownie.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

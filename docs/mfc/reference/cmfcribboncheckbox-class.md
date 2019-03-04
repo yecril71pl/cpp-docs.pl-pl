@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612423"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281437"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -146,7 +146,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do przechwytywania zmian danych skojarzonych z tego pola wyboru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -167,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do obiektu przechwytywania zmian danych skojarzonych z tego pola wyboru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -202,7 +202,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do przechwytywania zmian danych, w której ma zostać Rysuj pole wyboru.
 
 ### <a name="remarks"></a>Uwagi
@@ -247,7 +247,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, w której ma zostać Rysuj pole wyboru.
 
 *strText*<br/>
@@ -282,7 +282,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Okno nadrzędne pola wyboru.
 
-*Dane*<br/>
+*data*<br/>
 Dane ułatwień dostępu dla tego pola wyboru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -293,7 +293,7 @@ Zawsze zwraca wartość PRAWDA.
 
 Domyślnie ta metoda ustawia dane ułatwień dostępu dla tego pola wyboru i zawsze zwraca wartość PRAWDA. Zastępuje tę metodę do zestawu danych ułatwień dostępu i zwracają wartość, która wskazuje powodzenie lub niepowodzenie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'TN025: tworzenie dokumentów, widoków i ramek'
+title: 'TN025: Dokument, wyświetlanie i Tworzenie ramki'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284687"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025: tworzenie dokumentów, widoków i ramek
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Dokument, wyświetlanie i Tworzenie ramki
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
 
 Ta uwaga opisuje problemy z tworzeniem i własność WinApps, DocTemplates, dokumentów, ramek i widokami.
 
-## <a name="winapp"></a>Aplikacji systemu Windows
+## <a name="winapp"></a>WinApp
 
 Istnieje `CWinApp` obiektu w systemie.
 
-Jest statycznie skonstruowany i inicjowane za wykazanie wewnętrzną implementację `WinMain`. Muszą pochodzić od `CWinApp` do żadnych użytecznych czynności (wyjątek: biblioteki DLL rozszerzeń MFC nie powinny mieć `CWinApp` wystąpienia — inicjowanie odbywa się w `DllMain` zamiast).
+Jest statycznie skonstruowany i inicjowane za wykazanie wewnętrzną implementację `WinMain`. Muszą pochodzić od `CWinApp` do żadnych użytecznych czynności (wyjątek: Biblioteki DLL rozszerzeń MFC nie powinny mieć `CWinApp` wystąpienia — inicjowanie odbywa się w `DllMain` zamiast).
 
 Ten `CWinApp` obiekt posiada listę szablonów dokumentów ( `CPtrList`). Istnieje co najmniej jeden szablon dokumentu, na aplikację. DocTemplates zwykle są załadowane z pliku zasobów (czyli tablicy ciągów) w `CWinApp::InitInstance`.
 
@@ -67,8 +67,7 @@ A `CFrameWnd` (ramki) odgrywa tę samą rolę jak 1.0 z MFC, ale teraz `CFrameWn
 
 Okno ramek MDI obszaru klienta jest wypełniony formantu MDICLIENT, co z kolei jest nadrzędne względem wszystkich okien ramowych elementu podrzędnego MDI. Okno ramek SDI lub ramki okna elementu podrzędnego MDI obszaru klienta jest zwykle wypełniony `CView`-pochodzi obiekt okna. W przypadku właściwości `CSplitterWnd`, obszaru klienckiego widok jest wypełniany `CSplitterWnd` obiekt okna i `CView`— obiekty pochodne okna (po jednym dla każdej dzielone okienko) są tworzone jako okien podrzędnych `CSplitterWnd`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

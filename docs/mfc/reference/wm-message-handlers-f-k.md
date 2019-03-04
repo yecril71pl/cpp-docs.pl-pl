@@ -29,12 +29,12 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: e21889a44d26cd57ce0645e2050eeeb2839ef17d
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282087"
 ---
 # <a name="wm-message-handlers-f---k"></a>Programy obsługi komunikatów WM_: F - K
 
@@ -60,8 +60,7 @@ Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po praw
 |ON_WM_KEYUP()|afx_msg void [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT);|
 |ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

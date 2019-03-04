@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281376"
 ---
 # <a name="canimatectrl-class"></a>Klasa CAnimateCtrl
 
@@ -288,10 +288,10 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parametry
 
-*nZe*<br/>
+*nFrom*<br/>
 Liczony od zera indeks ramki, w którym rozpoczyna się odtwarzanie. Wartość musi być mniejsza niż 65536. Wartość 0 oznacza, że zaczynają się od pierwszej ramki w klip AVI.
 
-*nAby*<br/>
+*nTo*<br/>
 Liczony od zera indeks ramki, gdzie odtwarzanie kończy się. Wartość musi być mniejsza niż 65536. Wartość - 1 oznacza, że kończy się ostatniej ramki w klip AVI.
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parametry
 
-*nAby*<br/>
+*nTo*<br/>
 Liczony od zera indeks ramki do wyświetlenia. Wartość musi być mniejsza niż 65536. Wartość 0 oznacza wyświetlenie pierwszej ramki w klip AVI. Wartość -1 oznacza wyświetlenie ostatniej ramki w klip AVI.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -350,10 +350,9 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartoś
 
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

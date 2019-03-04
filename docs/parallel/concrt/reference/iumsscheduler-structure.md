@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: 0fd1ed90ca30c9c9e6815bb05b516f24b4f9a164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282308"
 ---
 # <a name="iumsscheduler-structure"></a>Struktura IUMSScheduler
 
@@ -70,7 +70,7 @@ Interfejs listy uzupełniania dla harmonogramu. Brak jednej liście według harm
 
 Menedżer zasobów spowoduje wywołanie tej metody w harmonogramie, określający, że chce wątków UMS po harmonogram zażądał początkowej alokacji zasobów. Harmonogram można użyć `IUMSCompletionList` interfejsu, aby określić, kiedy serwery proxy wątku UMS ma odblokowany. Jest on prawidłowy tylko dostęp do tego interfejsu z serwera proxy wątku działającego w głównym procesorze wirtualnym, przypisany do harmonogramu UMS.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>

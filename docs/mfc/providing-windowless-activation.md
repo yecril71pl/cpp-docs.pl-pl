@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-ms.openlocfilehash: 1e962584faa826ce87533806edc2bed1d1248286
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284713"
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
 
@@ -40,7 +40,7 @@ Po włączeniu aktywacji niepowiązanej z oknami kontenera oddeleguje komunikaty
 
 - [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)
 
-- [Getdc —](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)
+- [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)
 
 - [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)
 
@@ -54,7 +54,6 @@ Możesz chcieć kontrolce jako obiekt docelowy operacji przeciągania i upuszcza
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
-
+[Kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)

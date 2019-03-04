@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280380"
 ---
 # <a name="coledbrecordview-class"></a>Coledbrecordview — klasa
 
@@ -51,7 +51,7 @@ Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu. Wi
 Można użyć funkcji DDX z `COleDbRecordView` pobieranie danych bezpośrednio z rekordów bazy danych i wyświetlania ich w formantu w oknie dialogowym. Należy używać `DDX_*` metody (takie jak `DDX_Text`), a nie `DDX_Field*` funkcji (takich jak `DDX_FieldText`) przy użyciu `COleDbRecordView`. `DDX_FieldText` nie będzie działać z `COleDbRecordView` ponieważ `DDX_FieldText` ma dodatkowy argument typu `CRecordset*` (dla `CRecordView`) lub `CDaoRecordset*` (dla `CDaoRecordView`).
 
 > [!NOTE]
->  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy OLE DB szablon konsumenta, użyj klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).
+>  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy OLE DB szablon konsumenta, użyj klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: Baza danych programowania](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` przechowuje informacje o jego pozycja w zestawie wierszy tak, aby zaktualizować interfejs użytkownika widoku rekordu. Po użytkownik przenosi się do dowolnego końca zestawu wierszy, widoku rekordu wyłącza obiektów interfejsu użytkownika — np. w menu i przycisków paska narzędzi — przenoszenia w tym samym kierunku.
 
@@ -161,7 +161,6 @@ Kreator aplikacji umożliwia utworzenie zasobu menu z elementami menu pierwszy r
 
 Jeśli przenosisz poza ostatni rekord w zestawie, widoku rekordu to jest nadal wyświetlany ostatni rekord. Jeśli możesz przejść wstecz pierwszy rekord, widoku rekordu w dalszym ciągu wyświetlić pierwszy rekord.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

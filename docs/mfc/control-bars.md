@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: 13d457350a6a75357752556bb08a582e8a59f333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b75d9a96f091d0424592f34bdb1ed7ce76c2372
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283582"
 ---
 # <a name="control-bars"></a>Paski sterowania
 
@@ -66,6 +66,6 @@ Pasek dialogowy jest pasek sterowania, oparty na zasobu szablonu okna dialogoweg
 
 A [paska pomocniczego](../mfc/using-crebarctrl.md) jest pasek sterowania, który zawiera informacje o dokowania, układ, stanu i trwałości dla formantów rebar. Obiekt paska pomocniczego może zawierać wiele okien podrzędnych, zazwyczaj inne kontrolki, w tym pola tekstowe, paski narzędzi i pól listy. Obiekt paska pomocniczego, można wyświetlić jego okien podrzędnych za pośrednictwem określonego mapy bitowej. Jego można automatycznie lub ręcznie zmienić rozmiar, klikając lub przeciągnij jej pasek uchwytu. Można znaleźć klasy [CReBar](../mfc/reference/crebar-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

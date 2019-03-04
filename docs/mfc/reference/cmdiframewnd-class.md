@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282451"
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
 
@@ -103,11 +103,11 @@ Chociaż `MDIFrameWnd` jest tworzony na podstawie `CFrameWnd`, pochodną klasę 
 
     - ID_WINDOW_TILE_VERT —
 
-    - ID_WINDOW_TILE_HORZ —
+    - ID_WINDOW_TILE_HORZ
 
-    - ID_WINDOW_CASCADE —
+    - ID_WINDOW_CASCADE
 
-    - ID_WINDOW_ARRANGE —
+    - ID_WINDOW_ARRANGE
 
 - Okno ramki MDI ma również implementację id_window_new —, który umożliwia utworzenie nowej ramki i widok do bieżącego dokumentu. Aplikację można zastąpić te domyślnej implementacji polecenia, aby dostosować MDI okna obsługi.
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 Klasa czasu wykonywania okna podrzędnego, który ma zostać utworzony.
 
-*Zasobów*<br/>
+*nResource*<br/>
 Identyfikator skojarzony z okna podrzędnego zasobów udostępnionych.
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>Parametry
 
-*nNie*<br/>
+*nType*<br/>
 Określa flagi cascade. Można określić tylko następujące flagi: MDITILE_SKIPDISABLED, co zapobiega on kaskadowy wyłączone oknami podrzędnymi MDI.
 
 ### <a name="remarks"></a>Uwagi
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>Parametry
 
-*nNie*<br/>
+*nType*<br/>
 Określa flagi fragmentacji. Ten parametr może być jednym z następujących flag:
 
 - Oknami podrzędnymi MDI Kafelki MDITILE_HORIZONTAL, więc ten jedno okno pojawia się powyżej innym.
@@ -457,7 +457,7 @@ Pierwsza wersja `MDITile`, bez parametrów, Kafelki systemu windows w pionie, w 
 
 Zobacz przykład [CMDIFrameWnd::MDICascade](#mdicascade).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
 [Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>

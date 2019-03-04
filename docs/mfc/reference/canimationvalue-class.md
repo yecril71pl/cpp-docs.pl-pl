@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613801"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283543"
 ---
 # <a name="canimationvalue-class"></a>Klasa CAnimationValue
 
@@ -151,7 +151,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 Po powrocie z tej funkcji zawiera wskaźnik do CAnimationVariable reprezentujący wartość animowany.
 
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue
@@ -273,6 +273,6 @@ Określa domyślną wartość.
 
 Ta metoda umożliwia ustawianie wartości domyślnej. Wartość domyślna jest zwracana do aplikacji, gdy animacji nie została uruchomiona i/lub nie został utworzony obiekt COM. Jeśli już utworzono obiekt COM, zhermetyzowanych w ramach CAnimationVarible, ta metoda tworzy go ponownie, dlatego może być konieczne wywoływanie metod EnableValueChanged/EnableIntegerValueChanged ponownie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: 56da8a25261a54e952a529e93063fbe853cbf16d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284804"
 ---
 # <a name="data-types-mfc"></a>Typy danych (MFC)
 
@@ -43,7 +43,7 @@ Następujące typy danych są unikatowe dla biblioteki klas Microsoft Foundation
 
 - Lpcrect — wskaźnik 32-bitowego na stałą (niemodyfikowalnymi) `RECT` struktury.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../mfc/class-library-overview.md)<br/>
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

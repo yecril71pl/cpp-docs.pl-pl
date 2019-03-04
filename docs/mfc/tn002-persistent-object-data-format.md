@@ -1,5 +1,5 @@
 ---
-title: 'TN002: format trwałych danych obiektu'
+title: 'TN002: Format trwałych danych obiektu'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.data
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 5f5bde68d9fd4175ed97a7b61d807887d07e9e12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282013"
 ---
-# <a name="tn002-persistent-object-data-format"></a>TN002: format trwałych danych obiektu
+# <a name="tn002-persistent-object-data-format"></a>TN002: Format trwałych danych obiektu
 
 Ta uwaga opisuje procedury MFC, które obsługują obiekty trwałe C++ i format danych obiektu, gdy jest on przechowywany w pliku. Dotyczy to tylko klasach z atrybutem [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) makra.
 
@@ -107,8 +107,7 @@ Ponieważ `Serialize` jest wywoływana bezpośrednio w dokumencie, nie jest zwyk
 
 Jak wspomniano wcześniej, kodowanie wersji i informacji klasy samodzielnie po wywołaniu `Serialize` bezpośrednio, dzięki któremu można później zmienić format przy jednoczesnym zachowaniu zgodności z poprzednimi wersjami przy użyciu starszych wersji plików. `CArchive::SerializeClass` Funkcja może zostać wywołana jawnie, przed rozpoczęciem bezpośrednio serializacji obiektu lub przed wywołaniem klasy bazowej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

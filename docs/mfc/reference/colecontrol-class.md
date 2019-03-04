@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179022"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283426"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania powiązanych właściwości formantu.
 
 ### <a name="remarks"></a>Uwagi
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania powiązanych właściwości formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -847,7 +847,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 W danych wejściowych, wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która zawiera obszar karetkę do skorygowania. Na dane wyjściowe, obszaru skorygowany karetki lub wartość NULL, jeśli prostokąt daszka jest całkowicie objęty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -967,7 +967,7 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia kontenera kontrolki.
 
 *rcBounds*<br/>
@@ -991,10 +991,10 @@ void DrawContent(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
-*RC*<br/>
+*rc*<br/>
 Prostokątny obszar, aby znajdować się na środku.
 
 ### <a name="remarks"></a>Uwagi
@@ -1013,10 +1013,10 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik na kontekście urządzenia metaplików.
 
-*RC*<br/>
+*rc*<br/>
 Prostokątny obszar, aby znajdować się na środku.
 
 ##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania zdarzeń do uruchomienia.
 
 *pbParams*<br/>
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
+*nButton*<br/>
 Naciśnięty przycisk myszy wartość liczbową. Nazwa może zawierać jedną z następujących wartości:
 
 - LEFT_BUTTON lewego przycisku myszy został naciśnięty w dół.
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
+*nButton*<br/>
 Naciśnięto wartość liczbową przycisków myszy. Zawiera kombinację następujących wartości:
 
 - LEFT_BUTTON lewego przycisku myszy został naciśnięty klawisz podczas działania.
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
+*nButton*<br/>
 Wartość liczbowa przycisku myszy. Może mieć jedną z następujących wartości:
 
 - Wydano LEFT_BUTTON lewego przycisku myszy.
@@ -1635,7 +1635,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do `RECT` struktury zawierającej wymiary obszaru klienckiego kontrolki niepowiązanej z oknami, czyli rozmiar formantu minus obramowania okna, ramki, paski przewijania i tak dalej. *Lprect —* parametr wskazuje rozmiar kontrolki jego klienta, nie położenia.
 
 ##  <a name="getclientsite"></a>  COleControl::GetClientSite
@@ -1729,7 +1729,7 @@ CDC* GetDC(
 *lprcRect*<br/>
 Wskaźnik do prostokąta niepowiązanej z oknami kontroli chce, aby odświeżyć we współrzędnych klienta formantu. Wartość NULL oznacza pełną obiektu zakresu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Atrybuty rysowania kontekstu urządzenia. Dostępne są następujące opcje:
 
 - OLEDC_NODRAW wskazuje, że obiekt nie umożliwia wykonywania żadnych rysowania ale jedynie, aby uzyskać informacje na temat urządzenia wyświetlającego kontekstu urządzenia. Kontener należy po prostu przekazać DC okna bez dalszego przetwarzania.
@@ -1926,7 +1926,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do struktury prostokąt, do którego zostaną skopiowane współrzędne formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2076,7 +2076,7 @@ void InvalidateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do regionu tej kontrolki unieważnione.
 
 *bErase*<br/>
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 Wartość TRUE, jeśli aktywny w miejscu stan formantu jest zablokowany; Wartość FALSE, jeśli do odblokowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2357,7 +2357,7 @@ Wskaźnik do komunikat Windows, który spowodował zlecenia do wywołania.
 *hWndParent*<br/>
 Dojście do nadrzędnego okna kontrolki. W przypadku wykonywania zlecenie tworzy okno (lub windows), *hWndParent* powinien być używany jako element nadrzędny.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do struktury Prostokąt, do którego zostaną skopiowane współrzędne formantu względem kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2383,7 +2383,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Kontekst urządzenia, w której występuje rysunku.
 
 *rcBounds*<br/>
@@ -2408,7 +2408,7 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Kontekst urządzenia, w której występuje rysunku.
 
 *rcBounds*<br/>
@@ -2437,7 +2437,7 @@ Wskaźnik do komunikatu Windows, która wywołała zlecenie.
 *hWndParent*<br/>
 Dojście do nadrzędnego okna kontrolki.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do prostokąta używany przez formant w kontenerze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2614,7 +2614,7 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *strValue*<br/>
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *dwCookie*<br/>
@@ -2837,7 +2837,7 @@ Jedna z wartości wyliczenia stan, jeśli to się powiedzie; w przeciwnym razie 
 |-|-|
 |VIEWSTATUS_OPAQUE|Obiekt jest całkowicie nieprzezroczysty. Jeśli ten bit nie jest ustawiona, obiekt zawiera przezroczyste części. Ten bit ma zastosowanie tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.|
 |VIEWSTATUS_SOLIDBKGND|Obiekt ma jednolite tło (składający się jednolitego koloru, nie zaś wzoru pędzla). Ten bit ma znaczenie tylko wtedy, gdy VIEWSTATUS_OPAQUE ustawiono dotyczy tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.|
-|VIEWSTATUS_DVASPECTOPAQUE|Obiekt obsługuje DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx przyjmujące aspekt rysowania parametr można wywołać ten aspekt.|
+|VIEWSTATUS_DVASPECTOPAQUE|Object supports DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx przyjmujące aspekt rysowania parametr można wywołać ten aspekt.|
 |VIEWSTATUS_DVASPECTTRANSPARENT|Obiekt obsługuje DVASPECT_TRANSPARENT. Wszystkie `IViewObjectEx` metod, dla których aspekt rysowania jako parametr można wywołać ten aspekt.|
 
 ### <a name="remarks"></a>Uwagi
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości formantu.
 
 *lpclsid*<br/>
@@ -3061,7 +3061,7 @@ Wskaźnik do komunikatu Windows, która wywołała zlecenie.
 *hWndParent*<br/>
 Dojście do nadrzędnego okna kontrolki.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do prostokąta używany przez formant w kontenerze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3593,7 +3593,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Identyfikuje kontekst urządzenia kontenera do wydania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3681,7 +3681,7 @@ Określa, w urządzeniu jednostek przewijanie w poziomie. Ten parametr musi być
 *yAmount*<br/>
 Określa, w urządzeniu jednostek przewijanie w pionie. Ten parametr musi być wartością ujemną, przewiń w górę.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub struktury Prostokąt, który określa część obiektu OLE obszaru klienta, aby przewijać, we współrzędnych klienta okna nadrzędnego. Jeśli *lprect —* ma wartość NULL, jest przewijane obszaru klienckiego całego obiektu OLE.
 
 *lpClipRect*<br/>
@@ -3699,7 +3699,7 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do obiektu kontekstu urządzenia.
 
 *fontHolder*<br/>
@@ -3719,7 +3719,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Kontekst urządzenia, do którego zostanie wybrana czcionka.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3873,10 +3873,10 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Określa szerokość nowego formantu w pikselach.
 
-*CY*<br/>
+*cy*<br/>
 Określa nową wysokość formantu w pikselach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3978,10 +3978,10 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Początkowa szerokość kontrolki OLE w pikselach.
 
-*CY*<br/>
+*cy*<br/>
 Początkowa wysokość formantu OLE w pikselach.
 
 ### <a name="remarks"></a>Uwagi
@@ -4039,7 +4039,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do prostokąta zawierającego współrzędne nowego kontroli względem kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4207,7 +4207,7 @@ Wartość zwracana przez wysłanych komunikatów.
 
 Wywołaj tę funkcję, możesz wysyłać określonych wiadomości za pomocą formantu mapy komunikatów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CIRC3 próbki MFC](../../visual-cpp-samples.md)<br/>
 [Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>

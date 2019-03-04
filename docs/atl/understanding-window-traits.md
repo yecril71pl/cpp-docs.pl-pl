@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-ms.openlocfilehash: 0ab1a3c8f20a8e81304cdae68731bc70fbfc05c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29549e54051405fc3dd4d5d7ae70a382ad7a62ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647047"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280943"
 ---
 # <a name="understanding-window-traits"></a>Opis cech okna
 
@@ -36,7 +36,6 @@ W sytuacji, prawdopodobnie nie ten. wyspecjalizowanym szablonów, dostarczone pr
 
 Każda z tych funkcji zostanie przekazany jakąś wartość stylu w czasie wykonywania, którego można użyć do utworzenia nowej wartości stylu. Klasa cech okna, jest on używany jako argument szablonu do klasy okien ATL, styl przekazywana do tych funkcji statycznych spowoduje wartości niezależnie od rodzaju został przekazany jako argumenty styl [Utwórz](../atl/reference/cwindowimpl-class.md#create).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy okien](../atl/atl-window-classes.md)
-

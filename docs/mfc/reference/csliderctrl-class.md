@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666105"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283608"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
 
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Odwołanie do liczba całkowita, która otrzymuje minimalnej pozycji.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Odwołanie do liczba całkowita, która odbiera maksymalna pozycji.
 
 ### <a name="remarks"></a>Uwagi
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Odwołanie do wartości całkowitej, otrzymuje początkową bieżącego zaznaczenia.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Odwołanie do liczby całkowitej, która odbiera pozycji końcowej bieżącego zaznaczenia.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -614,7 +614,7 @@ void SetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa nowe położenie suwaka.
 
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Minimalna położenie suwaka.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Maksymalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*nmaks.*<br/>
+*nMax*<br/>
 Maksymalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Minimalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Pozycja początkowa suwaka.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Pozycja końcowa dla suwaka.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametry
 
-*Nlokalizacja*<br/>
+*nLocation*<br/>
 Wartość reprezentująca lokalizację, w której do wyświetlania kontrolki tooltip. Aby uzyskać listę możliwych wartości, zobacz komunikat Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -799,7 +799,7 @@ Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiekt za
 
 Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), zgodnie z opisem w zestawie Windows SDK. Po utworzeniu kontrolki suwaka ze stylem TBS_TOOLTIPS tworzy domyślny formant etykietki narzędzia, która pojawia się obok suwaka, wyświetlanie bieżące położenie suwaka. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

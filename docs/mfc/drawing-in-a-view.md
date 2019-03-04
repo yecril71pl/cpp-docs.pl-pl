@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: da1729834076ebc62eee9e482934f9410c03e78c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280774"
 ---
 # <a name="drawing-in-a-view"></a>Rysowanie w widoku
 
@@ -44,7 +44,6 @@ Przykład drukuje niezależnie od ciągu otrzymuje od dokumentu, a ich tematyka 
 
 Aby uzyskać więcej przykładów jak napisać `OnDraw`, zobacz [próbki MFC](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie widoków](../mfc/using-views.md)
-

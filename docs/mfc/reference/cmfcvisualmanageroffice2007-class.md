@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCVisualManagerOffice2007
+title: CMFCVisualManagerOffice2007 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2007
@@ -230,14 +230,14 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: f26aeb94bdb392040eee1ab4795e580cbce79e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660446"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282438"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>Klasa CMFCVisualManagerOffice2007
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 Class
 
 `CMFCVisualManagerOffice2007` Nadaje aplikacji wygląd programu Microsoft Office 2007.
 
@@ -396,7 +396,7 @@ Poniższy przykład pokazuje, jak za pomocą Menedżera visual Office 2007. Ten 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxvisualmanageroffice2007.h
+**Header:** afxvisualmanageroffice2007.h
 
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs
 
@@ -2387,7 +2387,7 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

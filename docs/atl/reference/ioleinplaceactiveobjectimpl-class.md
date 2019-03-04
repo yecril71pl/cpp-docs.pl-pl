@@ -1,5 +1,5 @@
 ---
-title: Klasa IOleInPlaceActiveObjectImpl
+title: IOleInPlaceActiveObjectImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: 785972af55cdf594bb45b0257e626aa5344af60a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd0bcb7bb20967128ef3b3cc62722c3b68e728d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285051"
 ---
-# <a name="ioleinplaceactiveobjectimpl-class"></a>Klasa IOleInPlaceActiveObjectImpl
+# <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl Class
 
 Ta klasa dostarcza metody obsługi komunikacji między formantem w miejscu, a jego kontenera.
 
@@ -82,7 +82,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -189,7 +189,7 @@ S_FALSE, jeśli wiadomość nie została przekonwertowana.
 
 Zobacz [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>

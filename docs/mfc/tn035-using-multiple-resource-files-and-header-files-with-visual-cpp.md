@@ -1,5 +1,5 @@
 ---
-title: 'TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++'
+title: 'TN035: Przy użyciu wielu plików zasobów i plików nagłówków z programem Visual C++'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279927"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Przy użyciu wielu plików zasobów i plików nagłówków z programem Visual C++
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -111,7 +111,7 @@ AFXRES. H definiuje standardowe symbole, takie jak `ID_FILE_NEW`, używane przez
 
 ## <a name="_mfcnotes_tn035_including"></a> Włączanie dodatkowych plików nagłówkowych
 
-Aplikacja utworzona przez AppWizard zawiera tylko dwa pliki nagłówkowe: zasobów. H i AFXRES. H. Tylko zasoby. H jest specyficzna dla aplikacji. Może być konieczne uwzględnienie dodatkowych plików nagłówkowych tylko do odczytu w następujących przypadkach:
+Aplikacja utworzona przez AppWizard zawiera tylko dwa pliki nagłówkowe: ZASÓB. H i AFXRES. H. Tylko zasoby. H jest specyficzna dla aplikacji. Może być konieczne uwzględnienie dodatkowych plików nagłówkowych tylko do odczytu w następujących przypadkach:
 
 Plik nagłówkowy jest dostarczany z zewnętrznego źródła lub chcesz współdzielić plik nagłówkowy między wieloma projektami lub wieloma częściami tego samego projektu.
 
@@ -379,8 +379,7 @@ BEGIN
 END
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

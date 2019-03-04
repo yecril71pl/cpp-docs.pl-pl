@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283257"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
 
@@ -330,7 +330,7 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolory*<br/>
+*colors*<br/>
 [in] Tablica kolorów wyświetlanych w formancie paska kolorów.
 
 *Kolor*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Parametr|Opis|
 |---------------|-----------------|
 |*arColors*|[in] Tablica kolorów.|
-|*Paleta*|[in] Palety kolorów.|
+|*palette*|[in] Palety kolorów.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -792,7 +792,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*podstawowego kontrolera domeny*|[in] Wskaźnik do kontekstu urządzenia przycisku nadrzędny bieżącego formantu paska kolorów.|
+|*pDC*|[in] Wskaźnik do kontekstu urządzenia przycisku nadrzędny bieżącego formantu paska kolorów.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -941,7 +941,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 Ta metoda wysyła komunikat WM_SETMESSAGESTRING właścicielowi kontrolki paska kolorów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

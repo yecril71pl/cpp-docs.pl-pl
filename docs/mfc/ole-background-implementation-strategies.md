@@ -1,19 +1,19 @@
 ---
-title: 'Podstawy OLE: strategie implementacji'
+title: 'Podstawy OLE: Strategie implementacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284817"
 ---
-# <a name="ole-background-implementation-strategies"></a>Podstawy OLE: strategie implementacji
+# <a name="ole-background-implementation-strategies"></a>Podstawy OLE: Strategie implementacji
 
 W zależności od aplikacji dostępne są cztery strategie możliwą implementację dodanie obsługi:
 
@@ -35,10 +35,9 @@ W zależności od aplikacji dostępne są cztery strategie możliwą implementac
 
 Po określeniu strategii, powinny albo odczytu [kontenery](../mfc/containers.md) lub [serwerów](../mfc/servers.md) artykuły (w zależności od typu aplikacji pisania), lub przejrzyj przykładowe programy i / lub. Przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md) pokazują sposób implementacji różnych aspektów kontenery i serwery, odpowiednio. W różnych punktach tych artykułów będzie odnosić się niektórych funkcji w tych przykładach jako przykładów, techniki omawiana.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawy OLE](../mfc/ole-background.md)<br/>
-[Kontenery: implementowanie kontenera](../mfc/containers-implementing-a-container.md)<br/>
-[Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
+[Kontenery: Implementowanie kontenera](../mfc/containers-implementing-a-container.md)<br/>
+[Serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
 [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md)
-

@@ -1,18 +1,18 @@
 ---
-title: 'Porady: dodawanie obsługi menedżera ponownego uruchamiania'
+title: 'Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279787"
 ---
-# <a name="how-to-add-restart-manager-support"></a>Porady: dodawanie obsługi menedżera ponownego uruchamiania
+# <a name="how-to-add-restart-manager-support"></a>Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania
 
 Menedżera ponownego uruchamiania to funkcja, dodany do programu Visual Studio for Windows Vista lub nowszych systemach operacyjnych. Menedżera ponownego uruchamiania dodaje obsługę aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Zachowanie Menedżera ponownego uruchamiania, zależy od typu aplikacji. Jeśli aplikacja jest edytora dokumentów, Menedżera ponownego uruchamiania włączone automatyczne zapisywanie stanu aplikacji i zawartości wszelkie otwarte dokumenty i uruchamia ponownie aplikację po nieoczekiwanego zamknięcia. Jeśli aplikacja nie jest edytora dokumentów, Menedżera ponownego uruchamiania spowoduje ponowne uruchomienie aplikacji, ale domyślnie nie może zapisać stanu aplikacji.
 
@@ -37,15 +37,14 @@ Domyślnie aplikacje MFC, utworzone przy użyciu Kreatora projektu w programie V
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Upewnij się, że `InitInstance` metoda aplikacji wywołuje jego element nadrzędny `InitInstance` metoda: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) lub `CWinAppEx::InitInstance`. `InitInstance` Metoda jest odpowiedzialna za sprawdzanie *m_dwRestartManagerSupportFlags* parametru.
+1. Upewnij się, że `InitInstance` metoda aplikacji wywołuje jego element nadrzędny `InitInstance` metody: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) lub `CWinAppEx::InitInstance`. `InitInstance` Metoda jest odpowiedzialna za sprawdzanie *m_dwRestartManagerSupportFlags* parametru.
 
 1. Skompiluj i uruchom aplikację.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDataRecoveryHandler](../mfc/reference/cdatarecoveryhandler-class.md)<br/>
 [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)<br/>
 [Klasa CWinApp](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

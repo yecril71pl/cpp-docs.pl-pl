@@ -1,5 +1,5 @@
 ---
-title: 'Zarządzanie pamięcią: alokacja sterty'
+title: 'Zarządzanie pamięcią: Alokacja sterty'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory [MFC], detecting leaks
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: 0c669fa611193b9a04e4854c84dec604e585991c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eee5cbfe1cd49042a9080f06657e751640de69
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281177"
 ---
-# <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: alokacja sterty
+# <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: Alokacja sterty
 
 Stos jest zastrzeżona na potrzeby alokacji pamięci programu. To obszar, oprócz kodu programu i stosu. Typowe programów C, użyj funkcji **— funkcja malloc** i **bezpłatne** można przydzielić i cofanie przydziału pamięci sterty. Wersja do debugowania MFC udostępnia zmodyfikowanej wersji wbudowanych operatorów C++ **nowe** i **Usuń** można przydzielić i cofanie przydziału obiektów w pamięci sterty.
 
@@ -26,7 +26,6 @@ Zastosowania **nowe** i **Usuń** zamiast **— funkcja malloc** i **bezpłatne*
 
 Należy pamiętać, że łączny rozmiar obiektów zaalokowanych na stosie jest ograniczona jedynie ilością dostępnej pamięci wirtualnej w systemie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie pamięcią](../mfc/memory-management.md)
-

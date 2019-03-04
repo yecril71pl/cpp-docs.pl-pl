@@ -1,5 +1,5 @@
 ---
-title: 'Porady: używanie parallel_invoke do napisania procedury sortowania równoległego'
+title: 'Instrukcje: Używanie parallel_invoke do napisania procedury sortowania równoległego'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284180"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Porady: używanie parallel_invoke do napisania procedury sortowania równoległego
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Instrukcje: Używanie parallel_invoke do napisania procedury sortowania równoległego
 
 W tym dokumencie opisano, jak używać [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algorytmu, aby zwiększyć wydajność algorytmu sortowania bitonicznego. Rekursywnie algorytmu sortowania bitonicznego sekwencji wejściowych jest podzielony na mniejsze partycje posortowany. Algorytm bitonicznego sortowania można uruchomić równolegle, ponieważ każda operacja partycja jest niezależna od wszystkich innych operacji.
 
@@ -101,8 +101,7 @@ Równoległe wersje niektóre algorytmy działać lepiej tylko wtedy, gdy pracy 
 
 Podobnie jak w przypadku dowolnego algorytmu równoległego, zaleca się, profilowanie i dostrajania kodu zgodnie z potrzebami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
-[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)
-
+[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)

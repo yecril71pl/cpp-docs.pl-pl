@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - common controls [MFC], adding
 ms.assetid: d3f9f994-7e54-4656-a545-42c204557c36
-ms.openlocfilehash: 2e75c4c86a6ee2e1969b31a2d3124a36bf8410ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88056d1c44e434e77f3f3b94976bf92516bbf3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281671"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Używanie edytora okien dialogowych do dodawania formantów
 
@@ -21,8 +21,7 @@ Po utworzeniu zasobu szablonu okna dialogowego za pomocą [Edytor okien dialogow
 
 Możesz zamiast tego [ręcznie utworzyć formanty](../mfc/adding-controls-by-hand.md) chcącym. Jest to więcej pracy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

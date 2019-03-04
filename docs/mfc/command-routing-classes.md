@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-ms.openlocfilehash: 637f2056b76b7d55933b43a8e0822ec00212301a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 264e931ba0468cdc44f27c55e5d259948c5392b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281972"
 ---
 # <a name="command-routing-classes"></a>Klasy routingu poleceń
 
@@ -26,7 +26,6 @@ Służy jako klasa bazowa dla wszystkich klas obiektów, które może odbierać 
 [CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
 Udostępnia interfejs programistyczny dla aktualizowanie obiektów interfejsu użytkownika, np. w menu i przycisków paska sterowania. Obiekt docelowy polecenia umożliwia, wyłączenie, sprawdza i/lub czyści obiekt interfejsu użytkownika z tym obiektem.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

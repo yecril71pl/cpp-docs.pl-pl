@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284219"
 ---
 # <a name="cpictureholder-class"></a>Klasa CPictureHolder
 
@@ -79,7 +79,7 @@ class CPictureHolder
 
 Za pomocą właściwości podstawowych obrazu Deweloper można określić mapy bitowej, ikona lub metaplik do wyświetlenia.
 
-Informacje na temat tworzenia właściwości niestandardowego obrazu, zobacz artykuł [kontrolki ActiveX MFC: Korzystanie z obrazów w kontrolce ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Informacje na temat tworzenia właściwości niestandardowego obrazu, zobacz artykuł [kontrolki ActiveX MFC: Używanie obrazów w kontrolce ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -202,7 +202,7 @@ BOOL CreateFromMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*HMF*<br/>
+*hmf*<br/>
 Dojście do metaplik użyty do utworzenia `CPictureHolder` obiektu.
 
 *xExt*<br/>
@@ -296,7 +296,7 @@ void Render(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu wyświetlania, w którym obraz ma być renderowany.
 
 *rcRender*<br/>
@@ -318,7 +318,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 *pDisp*<br/>
 Wskaźnik do nowego `IPictureDisp` interfejsu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFontHolder](../../mfc/reference/cfontholder-class.md)

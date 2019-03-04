@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280644"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -50,12 +50,12 @@ Klasa, której metody wdrożenia żądany model wątku. Można jawnie wybrać mo
 |||
 |-|-|
 |[CComObjectRootEx](#ccomobjectrootex)|Konstruktor.|
-|[Internaladdref —](#internaladdref)|Zwiększa liczbę odwołań dla obiektu nieagregowane.|
+|[InternalAddRef](#internaladdref)|Zwiększa liczbę odwołań dla obiektu nieagregowane.|
 |[Internalrelease —](#internalrelease)|Dekrementuje liczbę odwołań dla obiektu nieagregowane.|
 |[Blokady](#lock)|Jeśli model wątku jest wielowątkowych, uzyskuje własność obiektu sekcję krytyczną.|
-|[Odblokowywanie](#unlock)|Jeśli model wątku jest wielowątkowych, zwalnia własność obiektu sekcję krytyczną.|
+|[Unlock](#unlock)|Jeśli model wątku jest wielowątkowych, zwalnia własność obiektu sekcję krytyczną.|
 
-### <a name="ccomobjectrootbase-methods"></a>Metody CComObjectRootBase
+### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase Methods
 
 |||
 |-|-|
@@ -369,7 +369,7 @@ Aby otrzymać prawo własności, wątek musi wywołać `Lock`. Każde wywołanie
 
 W przypadku modelu wątku jednowątkowe, ta metoda nie działa.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'TN053: niestandardowe procedury DFX dla klas baz danych DAO'
+title: 'TN053: Niestandardowe procedury DFX dla klas baz danych DAO'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dfx
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282412"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: niestandardowe procedury DFX dla klas baz danych DAO
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Niestandardowe procedury DFX dla klas baz danych DAO
 
 > [!NOTE]
 >  Środowiska Visual C++ i kreatory nie obsługują DAO (mimo że uwzględniono klas DAO i nadal można użyć). Firma Microsoft zaleca się, że używasz [szablony OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. DAO należy używać tylko w zachowaniu istniejących aplikacji.
@@ -35,7 +35,7 @@ Ta uwaga techniczna zawiera:
 
 - [Jak działa DFX](#_mfcnotes_tn053_how_dfx_works)
 
-- [Jak działa Twoje procedury DFX niestandardowe](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
+- [What Your Custom DFX Routine Does](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
 
 - [Dfx_text — szczegóły](#_mfcnotes_tn053_details_of_dfx_text)
 
@@ -149,7 +149,7 @@ DAO `GetRows` może pracować na kilka sposobów.
 
 - DAO będzie również "wywołania zwrotnego" do obiektu wywołującego dla kolumn o zmiennej długości w celu umożliwienia obiekt wywołujący, aby przydzielić pamięć. Ta druga funkcja ma tę zaletę, minimalizując liczbę kopii danych, a także co bezpośredniego przechowywania danych do elementów członkowskich klasy ( `CDaoRecordset` klasy pochodnej). Ten mechanizm drugi jest metoda używa MFC, aby powiązać elementy członkowskie danych w `CDaoRecordset` klas pochodnych.
 
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> Jak działa Twoje procedury DFX niestandardowe
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> What Your Custom DFX Routine Does
 
 Jest on widoczny z tej dyskusji, który najważniejszych operacji zaimplementowane w dowolnej funkcji DFX musi być możliwość Konfigurowanie struktury danych wymagane do pomyślnego wywołania `GetRows`. Istnieje wiele innych operacji, które funkcja DFX muszą również obsługiwać, ale brak jako ważne lub złożonego, jak poprawnie przygotowania `GetRows` wywołania.
 
@@ -216,8 +216,7 @@ Wszystkie pozostałe operacje zajmować się tylko przy użyciu pamięci podręc
 > [!TIP]
 > Model swoje niestandardowe procedury DFX na istniejącej procedury DFX dla typów danych w warstwie standardowa.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

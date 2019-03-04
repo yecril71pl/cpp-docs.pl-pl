@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCVisualManagerVS2005
+title: CMFCVisualManagerVS2005 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerVS2005
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279968"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>Klasa CMFCVisualManagerVS2005
+# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 Class
 
 `CMFCVisualManagerVS2005` Nadaje aplikacji wygląd programu Microsoft Visual Studio 2005.
 
@@ -385,7 +385,7 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

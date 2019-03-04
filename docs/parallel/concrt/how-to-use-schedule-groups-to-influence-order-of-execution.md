@@ -1,18 +1,18 @@
 ---
-title: 'Porady: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania'
+title: 'Instrukcje: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284362"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Porady: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Instrukcje: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania
 
 W środowisku uruchomieniowym współbieżności kolejność, w którym podzadania są planowane jest niedeterministyczny. Jednak można użyć zasad harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania. W tym temacie pokazano, jak używanie grup harmonogramu wraz z [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zasadę harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania.
 
@@ -108,8 +108,7 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc planowania protocol.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Grupy harmonogramu](../../parallel/concrt/schedule-groups.md)<br/>
 [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)
-

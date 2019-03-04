@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: 3494920164ed3a62713298d2cafdbdc27dbb2b97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 984d95a1e0adb6835db7ca4bcabcff21f0be7beb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281320"
 ---
 # <a name="iregistrar-interface"></a>Interfejs IRegistrar
 
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie wymiennych parametrów (preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

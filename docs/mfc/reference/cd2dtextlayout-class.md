@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283972"
 ---
 # <a name="cd2dtextlayout-class"></a>Klasa CD2DTextLayout
 
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 Położenie tekstu do sprawdzenia.
 
-*TextRange*<br/>
+*textRange*<br/>
 Zakres tekstu, który ma taką samą formatowania jako tekst w miejscu określonym przez currentPosition. Oznacza to, że działanie jest dokładne formatowanie jako pozycja określony, w tym między innymi nazwę rodziny czcionek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 Położenie tekstu do wglądu.
 
-*TextRange*<br/>
+*textRange*<br/>
 Zakres tekstu, który ma taką samą formatowania jako tekst w miejscu określonym przez currentPosition. Oznacza to, że działanie jest dokładne formatowanie jako pozycja określony, w tym między innymi do nazwy ustawień regionalnych.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 Nazwa rodziny czcionek, która ma zastosowanie do cały ciąg tekstowy w zakresie określonym przez textRange
 
-*TextRange*<br/>
+*textRange*<br/>
 Zakres tekstu, którego dotyczy ta zmiana
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -287,13 +287,13 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Ciąg zakończony znakiem null ustawienia regionalne nazwy
 
-*TextRange*<br/>
+*textRange*<br/>
 Zakres tekstu, którego dotyczy ta zmiana
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586878"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279981"
 ---
 # <a name="cinternetfile-class"></a>Klasa CInternetFile
 
@@ -143,7 +143,7 @@ CInternetFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hFile —*<br/>
+*hFile*<br/>
 Dojście do pliku Internet.
 
 *pstrFileName*<br/>
@@ -261,7 +261,7 @@ virtual LPTSTR ReadString(
 *pstr*<br/>
 Wskaźnik do ciągu, który otrzyma wiersza odczytu.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Maksymalna liczba znaków do odczytania.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Przesunięcie w bajtach, aby przenieść wskaźnik odczytu/zapisu w pliku.
 
-*nZe*<br/>
+*nFrom*<br/>
 Odwołania względnego przesunięcia. Musi być jedną z następujących wartości:
 
 - `CFile::begin` Przesuń wskaźnik pliku *lOff* bajtów w przód od początku pliku.
@@ -409,7 +409,7 @@ Wskaźnik do ciągu zawierającego zawartość do zapisania.
 
 Jeśli wystąpi jakiś błąd podczas zapisywania danych, funkcja zgłasza [CInternetException](../../mfc/reference/cinternetexception-class.md) Obiekt opisujący błąd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

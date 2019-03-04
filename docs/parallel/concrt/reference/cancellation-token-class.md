@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 60028ce439dc344696bb3814efb74e0daa21f6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282295"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token — Klasa
 
@@ -86,7 +86,7 @@ cancellation_token(cancellation_token&& _Src);
 *_Src*<br/>
 Cancellation_token, które mają być kopiowane lub przeniesiony.
 
-##  <a name="deregister_callback"></a> deregister_callback —
+##  <a name="deregister_callback"></a> deregister_callback
 
 Usuwa wywołanie zwrotne wcześniej zarejestrowane przez `register` metoda oparta na `cancellation_token_registration` obiecie zwróconym w momencie rejestracji.
 
@@ -197,6 +197,6 @@ Obiekt funkcji, który zostanie wywołany ponownie po tym `cancellation_token` z
 
 A `cancellation_token_registration` obiektu, który może być wykorzystywany w `deregister` metodę, aby wyrejestrować wcześniej zarejestrowanego wywołania zwrotnego oraz zapobiegania jego wykonywane. Metoda zgłosi [invalid_operation](invalid-operation-class.md) wyjątek, jeśli jest to `cancellation_token` obiekt, który został utworzony przy użyciu [cancellation_token::none —](#none) metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

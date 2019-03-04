@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 400107a7b61ae28ca1d3ec69ee3217d58f55d9e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282061"
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 
@@ -33,7 +33,7 @@ Większość okna dialogowe są modalne, która wymaga od użytkownika zamknąć
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 
-- [Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Składniki okna dialogowego w strukturze](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -65,6 +65,6 @@ Większość okna dialogowe są modalne, która wymaga od użytkownika zamknąć
 
 - [Przykłady](../mfc/dialog-sample-list.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

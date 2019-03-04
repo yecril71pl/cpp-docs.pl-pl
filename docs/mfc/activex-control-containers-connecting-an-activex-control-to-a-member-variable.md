@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską'
+title: 'Kontenery kontrolek ActiveX: Łączenie kontrolki ActiveX ze zmienną członkowską'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 2234647e933e37ff82845c4b40dc93cefeb55575
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bc063875f2a31c582c9de32e24e7dfbc7826c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279942"
 ---
-# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: Łączenie kontrolki ActiveX ze zmienną członkowską
 
 Jest najprostszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kontenera kontrolek do skojarzenia kontrolki ActiveX ze zmienną składową klasy okna dialogowego, który będzie zawierać formantu.
 
@@ -39,7 +39,6 @@ Jest najprostszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kon
 
 1. Kliknij przycisk **Zakończ** aby zaakceptować wybór i zamknąć okno Dodaj kreatora zmiennej elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
-

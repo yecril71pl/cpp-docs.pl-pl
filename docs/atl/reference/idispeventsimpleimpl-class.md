@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-ms.openlocfilehash: b78edf44a200f31a6455c0783e90fb65f5d9af38
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1578518b8918f59b1da54f474e82cf899f3c76f6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525330"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285545"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Klasa IDispEventSimpleImpl
 
@@ -56,9 +56,9 @@ Wskaźnik do identyfikatora IID z Interfejs rozdzielania zdarzeń, zaimplementow
 |[IDispEventSimpleImpl::Advise](#advise)|Ustanawia połączenie z domyślnego źródła zdarzeń.|
 |[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Nawiązuje połączenie ze źródłem zdarzeń.|
 |[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Przerywa połączenie ze źródłem zdarzeń.|
-|[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Zwraca E_NOTIMPL.|
-|[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Zwraca E_NOTIMPL.|
-|[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Zwraca E_NOTIMPL.|
+|[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Returns E_NOTIMPL.|
+|[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Returns E_NOTIMPL.|
+|[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Returns E_NOTIMPL.|
 |[IDispEventSimpleImpl::Invoke](#invoke)|Wywołania procedur obsługi zdarzeń w zdarzeniu wymienione mapy ujścia.|
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|Przerywa połączenie z domyślnego źródła zdarzeń.|
 
@@ -275,7 +275,7 @@ Gdy połączenie zostanie przerwane, zdarzenia nie są już będą kierowane do 
 
 `Unavise` podziały połączenia z domyślnego źródła zdarzeń, otrzymuje identyfikator IID źródła zdarzeń do domyślnego obiektu zgodnie z ustaleniami [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
 [Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>

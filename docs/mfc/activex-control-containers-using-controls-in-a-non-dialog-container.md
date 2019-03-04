@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe'
+title: 'Kontenery kontrolek ActiveX: Używanie kontrolek w kontenerze innym niż okno dialogowe'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284245"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: Używanie kontrolek w kontenerze innym niż okno dialogowe
 
 W niektórych aplikacji, takich jak SDI lub MDI aplikacji należy osadzić formantu w oknie aplikacji. **Utwórz** funkcji składowej klasy otoki wstawione przez Visual C++, można utworzyć wystąpienie kontrolki dynamicznie, bez konieczności dla okna dialogowego.
 
@@ -61,7 +61,6 @@ Implementacja tej funkcji jest procesem, krok 4.
 
 1. Skompiluj ponownie projekt. Kontrolka OK zostanie utworzony dynamicznie po każdym utworzeniu widoku aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
-

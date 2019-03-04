@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284843"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeni nazw współbieżności (AMP)
 
@@ -546,7 +546,7 @@ A `future<void>` , może być oczekiwany.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort —
 
-Przerywa wykonywanie funkcji z atrybutem `restrict(amp)` klauzulą ograniczenia. Gdy środowisko wykonawcze AMP wykryje wywołanie, zgłasza [runtime_exception](runtime-exception-class.md) wyjątek z komunikatem o błędzie "odwołanie rasteryzatora: programu do cieniowania przerwać trafień instrukcji".
+Przerywa wykonywanie funkcji z atrybutem `restrict(amp)` klauzulą ograniczenia. Gdy środowisko wykonawcze AMP wykryje wywołanie, zgłasza [runtime_exception](runtime-exception-class.md) wyjątek z komunikatem o błędzie "rasteryzatora odwołania: Program do cieniowania przerwać trafień instrukcji".
 
 ```
 void direct3d_abort() restrict(amp);
@@ -674,6 +674,6 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
 *_Barrier*<br/>
 Obiekt tile_barrier.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: 564ce185758d25682a88f18a23b0b11afc84a4d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281645"
 ---
 # <a name="mapi-support-in-mfc"></a>Obsługa MAPI w MFC
 
@@ -60,7 +60,6 @@ Aby uzyskać więcej informacji na temat `CDocument` funkcji elementów członko
 
 - [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MAPI](../mfc/mapi.md)
-

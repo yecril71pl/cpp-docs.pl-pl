@@ -3,12 +3,12 @@ title: Dodawanie kontrolki (ALT — Samouczek, część 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428655"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283231"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Dodawanie kontrolki (ALT — Samouczek, część 2)
 
@@ -38,10 +38,10 @@ W tym kroku zostanie dodać formant do projektu, skompiluj go i je przetestować
 |**Class**|Nazwa klasy języka C++ utworzona w celu wdrożenia kontroli.|
 |**plik .h**|Plik utworzony, aby zawierać definicję klasy C++.|
 |**Plik CPP**|Plik utworzony, aby zawierać wdrożenie klasy C++.|
-|**Klasa coClass**|Nazwa klasy składnika dla tego formantu.|
+|**CoClass**|Nazwa klasy składnika dla tego formantu.|
 |**Interface**|Nazwa interfejsu, na którym formant będzie implementował swoje niestandardowe metody i właściwości.|
 |**Typ**|Opis formantu.|
-|**Identyfikator programu**|Czytelna nazwa, która może służyć do sprawdzania CLSID formantu.|
+|**ProgID**|Czytelna nazwa, która może służyć do sprawdzania CLSID formantu.|
 
 Musisz wprowadzić kilka dodatkowych ustawień w **kontrolka ATL** kreatora.
 
@@ -116,6 +116,6 @@ Następnie dodasz właściwość niestandardową do formantu.
 
 [Wróć do kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

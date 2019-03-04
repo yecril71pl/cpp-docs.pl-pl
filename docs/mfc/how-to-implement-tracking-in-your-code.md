@@ -1,17 +1,17 @@
 ---
-title: 'Porady: implementowanie śledzenia w kodzie'
+title: 'Instrukcje: Implementowanie śledzenia w kodzie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283985"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>Porady: implementowanie śledzenia w kodzie
+# <a name="how-to-implement-tracking-in-your-code"></a>Instrukcje: Implementowanie śledzenia w kodzie
 
 Aby śledzić elementu OLE, musi obsługiwać określonych zdarzeń związanych z elementu, na przykład klikając je lub aktualizowania widoku dokumentu. We wszystkich przypadkach jest wystarczające, aby zadeklarować tymczasowego [CRectTracker](../mfc/reference/crecttracker-class.md) obiektu i manipulowania elementem przy użyciu tego obiektu.
 
@@ -53,7 +53,6 @@ W aplikacji zdarzenia, które wymagają śledzenia kodu, takich jak wykrywanie z
 
 [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Trackery: implementowanie trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-
+[Trackery: Implementowanie Trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)

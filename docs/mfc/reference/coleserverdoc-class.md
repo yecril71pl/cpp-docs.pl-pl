@@ -1,5 +1,5 @@
 ---
-title: Klasa COleServerDoc
+title: COleServerDoc Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleServerDoc
@@ -82,14 +82,14 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285285"
 ---
-# <a name="coleserverdoc-class"></a>Klasa COleServerDoc
+# <a name="coleserverdoc-class"></a>COleServerDoc Class
 
 Klasa podstawowa dla dokumentów serwera OLE.
 
@@ -168,7 +168,7 @@ Aby obsługiwać połączone elementy `COleServerDoc` zapewnia [OnGetLinkedItem]
 
 Potrzebna jest jedna `COleServerDoc`-klasy pochodnej, dla każdego typu serwera dokumentów obsługuje Twojej aplikacji. Na przykład, jeśli aplikacja serwera obsługuje arkuszy i wykresów, potrzebne są dwa `COleServerDoc`-klas pochodnych.
 
-Aby uzyskać więcej informacji na serwerach, zobacz artykuł [serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
+Aby uzyskać więcej informacji na serwerach, zobacz artykuł [serwerów: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -644,7 +644,7 @@ Zwraca wartość S_OK w przypadku powodzenia; w przeciwnym razie, jeden z nastę
 
 |Wartość|Opis|
 |-----------|-----------------|
-|WARTOŚĆ E_UNEXPECTED|Wystąpił nieoczekiwany błąd|
+|E_UNEXPECTED|Wystąpił nieoczekiwany błąd|
 |E_FAIL|Wystąpił błąd|
 |E_NOTIMPL|Wskazuje MFC sam powinien próbować translacji i wysyłania polecenia|
 |OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* jest różna od NULL, ale nie określa grupę rozpoznawanym poleceniem|
@@ -941,7 +941,7 @@ Po użytkownik zmieni dokumentu na serwerze, zwykle Wywołaj tę funkcję. Jeśl
 
 Ta funkcja wywołuje `OnUpdate` funkcja elementu członkowskiego dla każdego z elementów dokumentu, z wyjątkiem wysyłania elementu, przekazywanie *pHint*, *lHint*, i *nDrawAspect*. Użyj tych parametrów do przekazania informacji do informacje na temat zmian wprowadzonych do dokumentu. Możesz zakodować informacje przy użyciu *lHint* lub zdefiniować `CObject`-klasy w celu przechowywania informacji na temat zmian, a następnie przekazuje obiekt tej klasy przy użyciu *pHint*. Zastąpienie `OnUpdate` funkcja elementu członkowskiego w Twojej `COleServerItem`— pochodne klasy, aby zoptymalizować aktualizowania każdego elementu w zależności od tego, czy została zmieniona jego prezentacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>

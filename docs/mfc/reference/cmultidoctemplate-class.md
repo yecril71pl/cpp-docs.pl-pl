@@ -1,5 +1,5 @@
 ---
-title: Klasa CMultiDocTemplate
+title: CMultiDocTemplate Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiDocTemplate
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 9a1b303924458ab03bc2ec42be1fbc3b2afa64ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284258"
 ---
-# <a name="cmultidoctemplate-class"></a>Klasa CMultiDocTemplate
+# <a name="cmultidoctemplate-class"></a>CMultiDocTemplate Class
 
 Określa szablon dokumentu, który implementuje interfejs dokumentu wielokrotnego (MDI).
 
@@ -119,7 +119,7 @@ Oto przykład drugi.
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

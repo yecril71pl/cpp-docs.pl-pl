@@ -11,12 +11,12 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-ms.openlocfilehash: 0c6691f37a1b0754835aba5c09d251c4986c4fb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf5013e34f262dd3bfed82941697ab9ca21e637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280202"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizowanie tekstu w okienku paska stanu
 
@@ -73,7 +73,7 @@ Po zdefiniowaniu wartość *m_nPage* zmienną członkowską (klasy `CMainFrame`)
 
 - [Aktualizowanie obiektów interfejsu użytkownika (jak zaktualizować elementy menu i przycisków na pasku narzędzi, zmianami warunków program)](../mfc/how-to-update-user-interface-objects.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Implementacja paska stanu w MFC](../mfc/status-bar-implementation-in-mfc.md)<br/>
 [Klasa CStatusBar](../mfc/reference/cstatusbar-class.md)
