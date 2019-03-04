@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259935"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Kreator konsumenta MFC ODBC
 
@@ -48,7 +48,7 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 
      Aby uzyskać więcej informacji na temat źródeł danych ODBC, zobacz [źródeł danych](/previous-versions/windows/desktop/ms711688) w zestawie SDK ODBC.
 
-  Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę lub wyświetlić, które będą używane przez konsumenta. Należy pamiętać, że przytrzymać klawisz control i klikając elementy można wybrać wiele widoków i tabel. Kliknij przycisk **OK** na zakończenie.
+  Kliknij przycisk **OK**, aby zakończyć. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę lub wyświetlić, które będą używane przez konsumenta. Należy pamiętać, że przytrzymać klawisz control i klikając elementy można wybrać wiele widoków i tabel. Kliknij przycisk **OK**, aby zakończyć.
 
 - **Class**
 
@@ -66,7 +66,7 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 
    Określa, czy zestaw rekordów jest dynamiczny (ustawienie domyślne) lub migawka.
 
-   - **Zestaw dynamiczny**: Określa, czy zestaw rekordów jest dynamiczny. Dynamiczny jest wynikiem kwerendę, która zawiera widok indeksowany do kwerendy bazy danych. Dynamiczny przechowuje tylko całkowitą indeksu do oryginalnych danych i związku z tym jest wydajność uzyskiwać za pośrednictwem migawki. Punkty indeksu bezpośrednio do każdego wybranego rekordu można odnaleźć wyniku zapytania i wskazuje, gdy rekord zostanie usunięty. Masz również dostęp do aktualnych informacji w rekordach kwerendy. Domyślnie włączone.
+   - **Dynaset**: Określa, czy zestaw rekordów jest dynamiczny. Dynamiczny jest wynikiem kwerendę, która zawiera widok indeksowany do kwerendy bazy danych. Dynamiczny przechowuje tylko całkowitą indeksu do oryginalnych danych i związku z tym jest wydajność uzyskiwać za pośrednictwem migawki. Punkty indeksu bezpośrednio do każdego wybranego rekordu można odnaleźć wyniku zapytania i wskazuje, gdy rekord zostanie usunięty. Masz również dostęp do aktualnych informacji w rekordach kwerendy. Domyślnie włączone.
 
    - **Migawka**: Określa, czy zestaw rekordów jest migawką. Migawka jest rezultat zapytania i wgląd w bazę danych w jednym punkcie w czasie. Wszystkie rekordy, które można odnaleźć wyniku kwerendy są buforowane, więc nie widzisz wszelkie zmiany, oryginalnym rekordów.
 
@@ -74,8 +74,7 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 
    Określa, czy wszystkie kolumny w tabeli są powiązane. Jeśli wybierzesz to pole (ustawienie domyślne), wszystkie kolumny są powiązane; Jeśli to pole nie jest zaznaczone, są powiązane żadne kolumny i musisz powiązać je ręcznie w klasie zestawu rekordów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

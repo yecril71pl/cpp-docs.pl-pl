@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: wdrażanie przyszłych operacji'
+title: 'Przewodnik: Wdrażanie przyszłych operacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262132"
 ---
-# <a name="walkthrough-implementing-futures"></a>Wskazówki: wdrażanie przyszłych operacji
+# <a name="walkthrough-implementing-futures"></a>Przewodnik: Wdrażanie przyszłych operacji
 
 W tym temacie przedstawiono sposób wykonania prognoz w aplikacji. Temat pokazuje, jak połączyć istniejącą funkcje w środowisku uruchomieniowym współbieżności w coś, ma większe.
 
@@ -89,9 +89,9 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc futures.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[task_group — klasa](reference/task-group-class.md)<br/>
+[task_group, klasa](reference/task-group-class.md)<br/>
 [single_assignment, klasa](../../parallel/concrt/reference/single-assignment-class.md)

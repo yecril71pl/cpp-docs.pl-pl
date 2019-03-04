@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263419"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -56,7 +56,7 @@ Klasa bazowa nowej klasie. Domyślna klasa bazowa jest [CWindow](../../atl/refer
 |[Tworzenie](#create)|Tworzy niemodalne okno dialogowe.|
 |[Destroywindow —](#destroywindow)|Niszczy niemodalnego okna dialogowego.|
 |[DoModal](#domodal)|Tworzy modalne okno dialogowe.|
-|[Zdarzenie EndDialog](#enddialog)|Niszczy okno modalne okno dialogowe.|
+|[EndDialog](#enddialog)|Niszczy okno modalne okno dialogowe.|
 
 ### <a name="cdialogimplbaset-methods"></a>Metody CDialogImplBaseT
 
@@ -262,7 +262,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `CRect` obiektu lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która będzie odbierać współrzędne klienta aktualizacji, która otacza region aktualizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -324,7 +324,7 @@ Procedurę okna.
 
 Po wywołaniu początkowej `StartDialogProc`, `DialogProc` jest ustawiona jako procedurę okna dialogowego i dalsze wywołania przejdź do tego miejsca.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

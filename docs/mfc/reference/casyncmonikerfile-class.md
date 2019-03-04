@@ -1,5 +1,5 @@
 ---
-title: Klasa CAsyncMonikerFile
+title: CAsyncMonikerFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAsyncMonikerFile
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669069"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262626"
 ---
-# <a name="casyncmonikerfile-class"></a>Klasa CAsyncMonikerFile
+# <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile Class
 
 Oferuje funkcję do użytku z monikerów asynchronicznych w kontrolkach ActiveX (dawniej kontrolka OLE).
 
@@ -87,9 +87,9 @@ Monikery asynchroniczne są używane głównie w aplikacje internetowe i formant
 
 Aby uzyskać więcej informacji o sposobie używania formantów ActiveX i monikerów asynchronicznych w aplikacjach internetowych zobacz następujące artykuły:
 
-- [Internecie pierwsze kroki: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet First Steps: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internecie pierwsze kroki: Kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -218,7 +218,7 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Priorytet, w którym odbędzie się transferu asynchronicznego. Jeden flagi priorytet wątku standardowe: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL i THREAD_PRIORITY_TIME_CRITICAL. Zobacz opis funkcji Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) opis tych wartości.
+Priorytet, w którym odbędzie się transferu asynchronicznego. Jedna z flagi priorytet wątku standardowe: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL, and THREAD_PRIORITY_TIME_CRITICAL. Zobacz opis funkcji Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) opis tych wartości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -234,7 +234,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*niezerowego*<br/>
+*dwSize*<br/>
 Zbiorcza kwota (w bajtach) dostępnych od początku powiązanie danych. Może być równy zero, wskazujący ilość danych nie jest odpowiednie do operacji lub że bez żadnej kwoty określone stały się dostępne.
 
 *bscfFlag*<br/>
@@ -330,7 +330,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 
 ### <a name="parameters"></a>Parametry
 
-*wartość HRESULT*<br/>
+*hresult*<br/>
 Błąd lub ostrzeżenie wartość HRESULT.
 
 *szErrort*<br/>
@@ -422,7 +422,7 @@ Możesz użyć adresu URL lub nazwę pliku do *lpszURL* parametru. Na przykład:
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CMonikerFile](../../mfc/reference/cmonikerfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

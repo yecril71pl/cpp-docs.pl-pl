@@ -1,18 +1,18 @@
 ---
-title: 'Porady: wysyłanie komunikatu w regularnych odstępach czasu'
+title: 'Instrukcje: Wysyłanie komunikatu w regularnych odstępach czasu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-ms.openlocfilehash: 05777b0c00f587f588a50733d5113d9a7362d247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bf5f93e2a570761874232a88a23289e59e58d94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549620"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257621"
 ---
-# <a name="how-to-send-a-message-at-a-regular-interval"></a>Porady: wysyłanie komunikatu w regularnych odstępach czasu
+# <a name="how-to-send-a-message-at-a-regular-interval"></a>Instrukcje: Wysyłanie komunikatu w regularnych odstępach czasu
 
 W tym przykładzie pokazano, jak używać współbieżność::[timer, klasa](../../parallel/concrt/reference/timer-class.md) do wysyłania komunikatu w regularnych odstępach czasu.
 
@@ -34,7 +34,7 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc raportu — progress.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

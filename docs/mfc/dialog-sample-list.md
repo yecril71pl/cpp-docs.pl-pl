@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 5560c40b6ae12488e9003612d567084226462b6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a505f9d193890c9dabdd96c2dafbbbd0104b0e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624565"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260962"
 ---
 # <a name="dialog-sample-list"></a>Lista przykładów okien dialogowych
 
@@ -17,7 +17,7 @@ Zobacz następujące przykładowe programy, które ilustrują, okna dialogowe i 
 
 *MDI przykładową aplikację przy użyciu okien dialogowych*
 
-- [KLASA SCRIBBLE](../visual-cpp-samples.md)
+- [SCRIBBLE](../visual-cpp-samples.md)
 
 *Niemodalne okno dialogowe*
 
@@ -53,7 +53,6 @@ Zobacz następujące przykładowe programy, które ilustrują, okna dialogowe i 
 
 - [DLGTEMPL](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)
-

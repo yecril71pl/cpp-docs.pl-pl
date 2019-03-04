@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)'
+title: 'Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - examples [MFC], update existing application
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481851"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258765"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
 W tym instruktażu pokazano, jak zmodyfikować istniejącą aplikację MFC przy użyciu interfejsu użytkownika wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007, jak i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](/windows/desktop/uxguide/cmd-ribbons).
 
@@ -24,7 +24,7 @@ W tym przewodniku modyfikuje klasyczny przykład klasa Scribble MFC 1.0, który 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Próbki Bazgroły MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017, zobacz [przewodnik przenoszenia: klasa Scribble MFC](../porting/porting-guide-mfc-scribble.md).
+[Próbki Bazgroły MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017, zobacz [przewodnik przenoszenia: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Sekcje
 
@@ -113,7 +113,7 @@ Czterech kolejnych krokach w tym przewodniku wymaga zasobów mapy bitowej. Może
 
 - Skopiuj plik odpowiedni zasób z innej aplikacji do projektu, a następnie zaimportuj map bitowych z tego pliku.
 
-W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [wskazówki: tworzenie Wstążki aplikacji przy użyciu MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [instruktażu: Tworzenie aplikacji wstążki za pomocą MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Dodawanie bitmap do projektu
 
@@ -169,7 +169,7 @@ Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w l
 
 1. Można dostosować **aplikacji** przycisku, modyfikując jego właściwości. Identyfikatory komunikatów, które są używane w tym kodzie są już zdefiniowane w menu Bazgroły 1.0.
 
-1. W widoku Projekt, kliknij przycisk **aplikacji** przycisk, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **obraz** do `IDB_RIBBON_MAIN`, **monitu** do `File`, **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`, i **małe obrazy** do `IDB_RIBBON_FILESMALL`.
+1. W widoku Projekt, kliknij przycisk **aplikacji** przycisk, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, **monitu** do `File`, **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **Małe obrazy** do `IDB_RIBBON_FILESMALL`.
 
 1. Wprowadzenie następujących modyfikacji utworzyć menu, który jest wyświetlany, gdy użytkownik kliknie **aplikacji** przycisku. Kliknij przycisk wielokropka (**...** ) obok pozycji **elementy główne** otworzyć **Edytor elementów**.
 
@@ -238,7 +238,7 @@ Teraz, po utworzeniu **aplikacji** przycisku, można dodać elementów do wstą�
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Aby dodać kategorię głównej i edytować panelu
 
-1. Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt w **przybornika**, kliknij dwukrotnie **kategorii** aby ją dodać i wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **podpis** do `&Home`, **duże obrazy** do `IDB_RIBBON_HOMELARGE`, **małe obrazy** do `IDB_RIBBON_HOMESMALL`.
+1. Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt w **przybornika**, kliknij dwukrotnie **kategorii** aby ją dodać i wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Podpis** do `&Home`, **duże obrazy** do `IDB_RIBBON_HOMELARGE`, **małe obrazy** do `IDB_RIBBON_HOMESMALL`.
 
 1. Każda kategoria wstążki jest podzielony na nazwanej paneli. Każdy panel zawiera zestaw kontrolek tego pełną powiązanych operacji. Ta kategoria zawiera jeden panel. Kliknij przycisk **panelu**, a następnie zmień **podpis** do `Edit`.
 
@@ -266,7 +266,7 @@ A *visual Menedżera* jest obiekt globalny, który kontroluje wszystkie rysunku 
 
 Zmodyfikowano klasycznego próbki Bazgroły MFC 1.0 do użycia **projektanta wstążki**. Teraz przejdź do [część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodniki](../mfc/walkthroughs-mfc.md)<br/>
-[Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

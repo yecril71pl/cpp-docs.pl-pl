@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 0730bad600190ed06c6f40a4a7cf396f0924a5fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 806cd8ec353e2111d249472fb9aa885e7548baab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265161"
 ---
 # <a name="catlservicemoduletstart-function"></a>Funkcja CAtlServiceModuleT::Start
 
@@ -23,8 +23,7 @@ Po uruchomieniu usługi `_tWinMain` wywołania `CAtlServiceModuleT::WinMain`, kt
 > [!NOTE]
 >  Niepowodzenie `StartServiceCtrlDispatcher` połączyć się z kontroli usług Menedżera (SCM) prawdopodobnie oznacza, że program nie jest uruchomiony jako usługa. W takim przypadku program wywołuje `CAtlServiceModuleT::Run` bezpośrednio, aby uruchomić program jako serwera lokalnego. Aby uzyskać więcej informacji na temat uruchamiania programu jako serwera lokalnego, zobacz [debugowania porady](../atl/debugging-tips.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Usługi](../atl/atl-services.md)<br/>
 [CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
-

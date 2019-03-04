@@ -1,5 +1,5 @@
 ---
-title: Klasa CInternetSession
+title: CInternetSession Class
 ms.date: 06/20/2018
 f1_keywords:
 - CInternetSession
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261300"
 ---
-# <a name="cinternetsession-class"></a>Klasa CInternetSession
+# <a name="cinternetsession-class"></a>CInternetSession Class
 
 Tworzy i inicjuje jedną lub kilka jednoczesnych sesji internetowej, a jeśli to konieczne, opisuje Twoje połączenie serwera proxy.
 
@@ -151,7 +151,7 @@ Nazwa preferowanego serwera proxy CERN Jeśli *dwAccessType* jest ustawiony jako
 *pstrProxyBypass*<br/>
 Wskaźnik do ciągu zawierającego opcjonalną listę adresów serwerów. Te adresy mogą pominąć, korzystając z dostępu do serwera proxy. Jeśli podano wartość NULL, Lista pomijania będzie można odczytać z rejestru. Ten parametr ma znaczenie tylko wtedy, gdy *dwAccessType* jest ustawiona na INTERNET_OPEN_TYPE_PROXY.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa różne opcje pamięci podręcznej. Wartość domyślna jest równa 0. Możliwe wartości:
 
 - INTERNET_FLAG_DONT_CACHE nie buforują dane, lokalnie lub w dowolne serwery bramy.
@@ -410,7 +410,7 @@ Wskaźnik do ciągu zawierającego nazwę użytkownika.
 *pstrPassword*<br/>
 Wskaźnik do ciągu zawierającego hasła dostępu.
 
-*flagidw*<br/>
+*dwflags*<br/>
 Dowolną kombinację `INTERNET_FLAG_*` flag. Zobacz tabelę w **uwagi** części [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) opis *Flagidw* wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -498,7 +498,7 @@ Wskaźnik na nazwę adresu URL, aby rozpocząć się odczyt. Tylko adresy URL ro
 *dwContext*<br/>
 Wartości zdefiniowane przez aplikację wykryto zwracany uchwyt w wywołania zwrotnego.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi opisujące sposób obsługi tego połączenia. Zobacz **uwagi** Aby uzyskać więcej informacji na temat prawidłowe flagi. Prawidłowe flagi są:
 
 - INTERNET_FLAG_TRANSFER_ASCII domyślną. Przetransferuj plik jako tekst w formacie ASCII.
@@ -529,10 +529,10 @@ Wskaźnik, `OpenURL` zależy od zwraca *pstrURL*przez typ usługi. W poniższej 
 
 |Typ adresu URL|Zwraca|
 |--------------|-------------|
-|File://|`CStdioFile*`|
+|file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |Gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -602,7 +602,7 @@ BOOL SetOption(
 *dwOption*<br/>
 Internet możliwość ustawienia. Zobacz [flagi opcji](/windows/desktop/WinInet/option-flags) w SDKfor Windows lista możliwych opcji.
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Bufor, który zawiera ustawienia opcji.
 
 *dwBufferLength*<br/>
@@ -611,7 +611,7 @@ Długość *sprawdzanie* ani rozmiaru *dwValue*.
 *dwValue*<br/>
 DWORD, który zawiera ustawienia opcji.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa różne opcje pamięci podręcznej. Wartość domyślna jest równa 0. Możliwe wartości:
 
 - INTERNET_FLAG_DONT_CACHE nie buforują dane, lokalnie lub w dowolne serwery bramy.
@@ -622,7 +622,7 @@ Określa różne opcje pamięci podręcznej. Wartość domyślna jest równa 0. 
 
 Jeśli operacja zakończyła się pomyślnie, zwracana jest wartość TRUE. Jeśli wystąpi błąd, jest zwracana wartość FAŁSZ. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-ms.openlocfilehash: ed3ede88b285f5c6a5209126e83f5364102ee154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1963c1906f3e261e0b1fc091f54c145c896d0011
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265629"
 ---
 # <a name="class-information-classes"></a>Klasy — klasy informacji
 
@@ -20,7 +20,6 @@ Następujące klasy zapewnia obsługę pobierania informacji o klasie:
 
 - [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) zapewnia dostęp do informacji o typie. Pobiera wychodzących IID dla zestawu zdarzeń domyślnego obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Klasa CBasePane
+title: CBasePane Class
 ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259818"
 ---
-# <a name="cbasepane-class"></a>Klasa CBasePane
+# <a name="cbasepane-class"></a>CBasePane Class
 
 Klasa bazowa dla wszystkich okienek w MFC.
 
@@ -730,7 +730,7 @@ Biblioteka dodaje kilka nowych stylów dla okienek. W poniższej tabeli opisano 
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Okienko można float.|
 |AFX_CBRS_AUTOHIDE|Okienka obsługuje tryb autoukrywanie|
-|AFX_CBRS_RESIZE|Można zmienić rozmiar okienka. **Ważne:** ten styl nie jest zaimplementowana.|
+|AFX_CBRS_RESIZE|Można zmienić rozmiar okienka. **Ważne:**  Ten styl nie jest zaimplementowana.|
 |AFX_CBRS_CLOSE|Okienko można zamknąć.|
 |AFX_CBRS_AUTO_ROLLUP|Okienko można rzutowana, gdy jest ona wyświetlana.|
 |AFX_CBRS_REGULAR_TABS|Gdy jedno okienko dokowane do innego okienka, który ma ten styl, zostanie utworzony regularne okien z kartami. (Aby uzyskać więcej informacji, zobacz [klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
@@ -754,7 +754,7 @@ virtual BOOL DockPane(
 *pDockBar*<br/>
 [in] Wskaźnik do innego okienka.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Określa prostokąta docelowego.
 
 *dockMethod*<br/>
@@ -802,7 +802,7 @@ virtual BOOL DockToFrameWindow(
 *dwAlignment*<br/>
 [in] Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Żądany rozmiar.
 
 *dwDockFlags*<br/>
@@ -857,7 +857,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1089,7 +1089,7 @@ Kombinacja CBRS_ALIGN_ style. W poniższej tabeli przedstawiono możliwe style:
 |----------|-----------------------|
 |CBRS_ALIGN_LEFT|Po lewej stronie.|
 |CBRS_ALIGN_RIGHT|Po prawej stronie.|
-|CBRS_ALIGN_TOP|Do góry.|
+|CBRS_ALIGN_TOP|Top.|
 |CBRS_ALIGN_BOTTOM|Do dołu.|
 |CBRS_ALIGN_ANY|Kombinacja flag.|
 
@@ -1806,7 +1806,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1925,10 +1925,10 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Określa położenie górnej części okna.
 
-*CX*<br/>
+*cx*<br/>
 [in] Określa szerokość okna.
 
-*CY*<br/>
+*cy*<br/>
 [in] Określa wysokość okna.
 
 *nFlags*<br/>
@@ -2014,7 +2014,7 @@ Wywołanie tej metody do manipulowania stan okienka lub wykluczyć okienka z uk�
 
 Jeśli chcesz nadal używać w tym okienku, wywołaj albo [CBasePane::DockPane](#dockpane) lub [CBasePane::FloatPane](#floatpane) przed wywołaniem tej metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Klasa CBaseTabbedPane
+title: CBaseTabbedPane Class
 ms.date: 11/04/2016
 f1_keywords:
 - CBaseTabbedPane
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259298"
 ---
-# <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
+# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
 
 Rozszerza funkcjonalność [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) aby obsługiwać tworzenie okien z zakładkami.
 
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Ta klasa jest klasą abstrakcyjną i nie można utworzyć wystąpienia. Implementuje usługi, które są wspólne dla wszystkich rodzajów okienka z zakładkami.
 
-Obecnie biblioteki zawiera dwie klasy pochodne okienka z zakładkami: [klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md) i [klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+Obecnie biblioteki zawiera dwie klasy pochodne okienko z kartami: [Klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md) i [klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 A `CBaseTabbedPane` obiektu otacza wskaźnik do [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. [Klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) staje się oknem podrzędnym okienka z zakładkami.
 
@@ -153,7 +153,7 @@ Aby uzyskać więcej informacji o sposobie tworzenia okienka z zakładkami, zoba
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxBaseTabbedPane.h
+**Header:** afxBaseTabbedPane.h
 
 ##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
@@ -476,7 +476,7 @@ virtual void GetPaneList(
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 [out] A `CObList` , jest wypełniany okienek, które są zawarte w okienku z kartami.
 
 *pRTCFilter*<br/>
@@ -700,7 +700,7 @@ Autoukrywanie tryb jest ustawiony dla każdego odłączane okienka, w okienku z 
 
 Wywołaj tę metodę, aby włączyć tryb automatyczne ukrywanie okienka z zakładkami programowo. Musi być zadokowane okienka w oknie głównym ramki ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) musi zwracać ważnym wskaźnik do [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

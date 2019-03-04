@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ee6ab07ee72155acae552da933167b56af72a17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263848"
 ---
 # <a name="category-macros"></a>Makra kategorii
 
@@ -99,7 +99,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator catID*<br/>
+*catID*<br/>
 [in] CATID stałą lub zmienną zawierający Unikatowy identyfikator globalny (GUID) dla kategorii zaimplementowano. Adres *catID* zostanie wykonane i dodany do mapy. Zobacz tabelę poniżej w przypadku wyboru akcji kategorii.
 
 ### <a name="remarks"></a>Uwagi
@@ -118,7 +118,7 @@ Aby uzyskać więcej informacji na temat kategorii składników, zobacz [co to s
 |Bezpieczny w zakresie inicjowania|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
 |Proste ramki lokacji zawierania|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|Zaawansowane powiązania danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Od kontrolek bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
 |Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](/windows/desktop/com/internet-aware-objects) w zestawie Windows SDK dla lista przykładów.||
 
@@ -136,7 +136,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator catID*<br/>
+*catID*<br/>
 [in] CATID stałą lub zmienną zawierający Unikatowy identyfikator globalny (GUID) dla kategorii wymagane. Adres *catID* zostanie wykonane i dodany do mapy. Zobacz tabelę poniżej w przypadku wyboru akcji kategorii.
 
 ### <a name="remarks"></a>Uwagi
@@ -155,7 +155,7 @@ Aby uzyskać więcej informacji na temat kategorii składników, takich jak list
 |Bezpieczny w zakresie inicjowania|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
 |Proste ramki lokacji zawierania|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|Zaawansowane powiązania danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Od kontrolek bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
 |Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](/windows/desktop/com/internet-aware-objects) w zestawie Windows SDK dla lista przykładów.||
 
@@ -163,6 +163,6 @@ Aby uzyskać więcej informacji na temat kategorii składników, takich jak list
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

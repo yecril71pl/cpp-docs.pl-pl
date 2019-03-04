@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], common controls
 ms.assetid: 8ae39e2d-12a8-4b17-909d-5bf155749123
-ms.openlocfilehash: 0bd1879b8f6f6396fa04f03142cff883c5bee03d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 878423125a5f67bfb76a336f99d19c211e08213e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258830"
 ---
 # <a name="common-control-sample-list"></a>Lista przykładów formantów wspólnych
 
@@ -21,7 +21,6 @@ Zobacz następujące przykładowe programy, które ilustrują wspólnych formant
 
 - [CTRLTEST](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

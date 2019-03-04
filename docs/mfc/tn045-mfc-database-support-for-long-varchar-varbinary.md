@@ -1,5 +1,5 @@
 ---
-title: 'TN045: Bazy danych MFC Obsługa Varchar-Varbinary'
+title: 'TN045: Baza danych MFC Obsługa Varchar-Varbinary'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260117"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: obsługa MFC/bazy danych pod względem typu danych Varchar/Varbinary
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Obsługa MFC/bazy danych długich Varchar/Varbinary
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -101,7 +101,7 @@ Nie jest konieczne zrozumieć, jak aktualizowanie `CLongBinary` działa, ale mo�
 
 Podczas aktualizowania `CLongBinary` pola klasy bazy danych używanie ODBC firmy **DATA_AT_EXEC** mechanizm (zobacz dokumentację ODBC `SQLSetPos`przez rgbValue argument). Kiedy struktura przygotowuje instrukcji insert nebo update, a nie wskazuje `HGLOBAL` zawierające dane, *adres* z `CLongBinary` jest ustawiony jako *wartość* kolumny Zamiast tego i ustaw wskaźnik długość **SQL_DATA_AT_EXEC**. Później, gdy instrukcja update jest wysyłane do źródła danych, `SQLExecDirect` zwróci **SQL_NEED_DATA**. Alerty programu framework, wartości parametrów dla tej kolumny jest faktycznie adres `CLongBinary`. Struktura wywołuje `SQLGetData` raz przy użyciu małych buforów, oczekiwano sterownik zwracać rzeczywista długość danych. Jeśli sterownik zwraca rzeczywistą długością duży obiekt binarny (BLOB), MFC przydzieli tyle miejsca, co jest niezbędne do pobrania obiektu BLOB. Jeśli źródło danych zwraca **SQL_NO_TOTAL**, wskazujący, że nie może ustalić rozmiar obiektu BLOB, MFC, utworzy mniejsze bloki. Początkowy rozmiar domyślny to 64 KB, a kolejne bloki będą podwoi rozmiaru; na przykład drugi będzie 128K, trzeci to 256 KB i tak dalej. Początkowy rozmiar jest konfigurowany.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Powiązanie nie: Pobieranie/przesyłania danych bezpośrednio z ODBC z Procedura SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Powiązanie nie: Trwa pobieranie wysyłania danych bezpośrednio z ODBC z Procedura SQLGetData
 
 Przy użyciu tej metody należy całkowicie pominąć klas baz danych i postępowania z kolumną danych long.
 
@@ -118,8 +118,7 @@ W tym przypadku kolumna długo dane muszą być na liście wyboru zestawu rekord
 > [!NOTE]
 >  Ponieważ kolumny długich danych nie jest powiązany przez platformę, zmiany do niego nie będzie obsługiwana za pomocą `CRecordset::Update` wywołania. Należy utworzyć i wysłać SQL wymagane **Wstaw** i **aktualizacji** instrukcji samodzielnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

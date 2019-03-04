@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258336"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 
@@ -31,13 +31,13 @@ Aby uzyskać dokumentację referencyjną, zobacz [odwołania](../../parallel/con
 |[Migrowanie z OpenMP do środowiska uruchomieniowego współbieżności](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|Porównuje OpenMP do współbieżności środowiska wykonawczego i zawiera przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.|
 |[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Poznasz PPL, która zapewnia pętle równoległe, zadania i kontenerów równoległych.|
 |[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)|Przedstawiono sposób używania agentów asynchronicznych i komunikatów przekazywania można łatwo umieścić przepływu danych i przetwarzanie potokowe zadania w swoich aplikacjach.|
-|[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Poznasz harmonogramu zadań, która umożliwia dostrojenie wydajności aplikacji klasycznych, która używa środowiska uruchomieniowego współbieżności.|
+|[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Poznasz harmonogramu zadań, która umożliwia dostrojenie wydajności aplikacji klasycznych, która używa środowiska uruchomieniowego współbieżności.|
 
 ## <a name="task-parallelism-in-the-ppl"></a>Proste zadania w PPL
 
 |||
 |-|-|
-|[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|W tym artykule opisano zadania i grupy zadań, które mogą ułatwić pisania kodu asynchronicznego i rozkładać równoległą pracę na mniejsze części.|
+|[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|W tym artykule opisano zadania i grupy zadań, które mogą ułatwić pisania kodu asynchronicznego i rozkładać równoległą pracę na mniejsze części.|
 |[Przewodnik: wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć czymś więcej funkcji środowiska uruchomieniowego współbieżności.|
 |[Przewodnik: usuwanie pracy z wątku interfejs użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Pokazuje, jak przenieść pracę wykonywaną przez wątek interfejsu użytkownika w aplikacji MFC do wątku roboczego.|
 |[Biblioteka wzorów równoległych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Zawiera wskazówki i najlepsze rozwiązania dotyczące pracy z PPL.|
@@ -104,7 +104,6 @@ Aby uzyskać dokumentację referencyjną, zobacz [odwołania](../../parallel/con
 |[Przetwarzania równoległego na forum C++ i kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=183874)|Można uczestniczyć w dyskusjach społeczności o środowisku uruchomieniowym współbieżności.|
 |[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Zawiera informacje na temat równoległych model programowania, który jest dostępny w programie .NET Framework.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja](../../parallel/concrt/reference/reference-concurrency-runtime.md)
-

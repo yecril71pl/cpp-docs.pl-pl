@@ -1,5 +1,5 @@
 ---
-title: Klasa CDaoWorkspace
+title: CDaoWorkspace Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoWorkspace
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263458"
 ---
-# <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
+# <a name="cdaoworkspace-class"></a>CDaoWorkspace Class
 
 Zarządza sesję o nazwie bazy danych chronionej hasłem z logowania do wylogowania przez pojedynczego użytkownika.
 
@@ -462,9 +462,9 @@ Opcje, które określają, które informacje o bazie danych do pobrania. Dostęp
 
 - Nazwa AFX_DAO_PRIMARY_INFO (ustawienie domyślne), można zaktualizować, transakcji
 
-- AFX_DAO_SECONDARY_INFO głównej informacje oraz: limit czasu zapytania wersji, w przypadku kolejność sortowania
+- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Wersja, w kolejności, sortowania, limit czasu zapytania
 
-- AFX_DAO_ALL_INFO głównych i dodatkowych informacji plus: łączenie
+- AFX_DAO_ALL_INFO podstawowych i dodatkowych informacji oraz: Połącz
 
 *lpszName*<br/>
 Nazwa obiektu bazy danych do wyszukiwania według nazwy. Nazwa jest ciągiem z maksymalnie 14 znaków, który jednoznacznie nazwy nowego obiektu w obszarze roboczym.
@@ -632,9 +632,9 @@ Opcje, które określają, które informacje na temat obszaru roboczego do pobra
 
 - Nazwa AFX_DAO_PRIMARY_INFO (ustawienie domyślne)
 
-- AFX_DAO_SECONDARY_INFO głównej informacje oraz: nazwa użytkownika
+- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Nazwa użytkownika
 
-- AFX_DAO_ALL_INFO głównych i dodatkowych informacji plus: izolowania ODBCTrans
+- AFX_DAO_ALL_INFO podstawowych i dodatkowych informacji oraz: Izolowanie ODBCTrans
 
 *lpszName*<br/>
 Nazwa obiektu obszaru roboczego do wyszukiwania według nazwy. Nazwa jest ciągiem z maksymalnie 14 znaków, który jednoznacznie nazwy nowego obiektu w obszarze roboczym.
@@ -722,7 +722,7 @@ Chociaż wiele `CDaoWorkspace` element członkowski funkcji można go wywołać 
 
 ||||
 |-|-|-|
-|[Utwórz](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Tworzenie](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Bezczynności (%)](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametry
 
-*nSekund*<br/>
+*nSeconds*<br/>
 Liczba sekund, zanim wystąpi błąd podczas próby logowania do bazy danych ODBC.
 
 ### <a name="remarks"></a>Uwagi
@@ -888,7 +888,7 @@ Próbujesz zalogować się do bazy danych ODBC, takich jak Microsoft SQL Server,
 
 Aby uzyskać powiązane informacje zobacz temat "LoginTimeout Property" w Pomocy programu DAO.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

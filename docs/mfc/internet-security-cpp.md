@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-ms.openlocfilehash: e7892793a82f2b030a99465a712e33e1b9ef4673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 184c8edf3e4a81be1f8b2a282a0db9758a75253f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486102"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259532"
 ---
 # <a name="internet-security-c"></a>Zabezpieczenia internetowe (C++)
 
@@ -28,8 +28,7 @@ Istnieją dwa podstawowe podejścia do zabezpieczeń podczas tworzenia dla Inter
 
 W pierwszym przypadku ufasz, że aplikacja nie będzie żadnych szkód i zaufania punkt początkowy aplikacji. W drugim podpisy cyfrowe są używane w celu sprawdzenia autentyczności. Cyfrowe podpisywanie jest standardem branżowym, który umożliwia identyfikowanie i zawierają szczegółowe informacje o wydawcy kodu. Technologie jest oparta na standardach, w tym RSA i X.509. Przeglądarki zwykle zezwala użytkownikom na wybór, czy chce pobierać i uruchamiać kodem nieznanego pochodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
-

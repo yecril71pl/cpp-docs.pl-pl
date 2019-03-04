@@ -1,5 +1,5 @@
 ---
-title: Klasa CAsyncSocket
+title: CAsyncSocket Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAsyncSocket
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179035"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260013"
 ---
-# <a name="casyncsocket-class"></a>Klasa CAsyncSocket
+# <a name="casyncsocket-class"></a>CAsyncSocket Class
 
 Przedstawia gniazdo Windows — punkt końcowy komunikacji sieciowej.
 
@@ -1835,7 +1835,7 @@ Zwraca `TRUE` w przypadku powodzenia `FALSE` w przypadku niepowodzenia.
 
 Ta metoda przydziela dojścia do gniazda. Nie wywołuje [CAsyncSocket::Bind](#bind) powiązać gniazda określony adres, więc należy wywołać `Bind` później, aby powiązać gniazda z określonego adresu. Możesz użyć [CAsyncSocket::SetSockOpt](#setsockopt) można ustawić opcję gniazda, zanim jest powiązany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

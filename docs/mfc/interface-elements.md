@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175902"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262886"
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
 
@@ -46,7 +46,7 @@ Każdy słupek dock jest podzielony na wiersze dokowania. Zadokuj wiersze są re
 
 ## <a name="mini-frame-windows"></a>Windows mini ramki
 
-Okienko przestawne znajduje się w okno mini ramki. Windows mini ramki są reprezentowane przez dwie klasy: [klasa CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (która może zawierać tylko jedno okienko) i [klasa CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (która może zawierać kilku okienek). Aby przestawić Panel w kodzie, wywołania [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Po pojawia się okienko framework automatycznie tworzy okno mini ramki, a okno mini ramki zostanie okienko przestawne nadrzędnej. Po dokowane okienko przestawne, struktura resetuje jego elementu nadrzędnego i okienko przestawne staje się na pasku dokowania (dla pasków narzędzi) lub (w przypadku o zmiennym rozmiarze okienka) witryny dokowania.
+Okienko przestawne znajduje się w okno mini ramki. Windows mini ramki są reprezentowane przez dwie klasy: [Klasa CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (która może zawierać tylko jedno okienko) i [klasa CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (która może zawierać kilku okienek). Aby przestawić Panel w kodzie, wywołania [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Po pojawia się okienko framework automatycznie tworzy okno mini ramki, a okno mini ramki zostanie okienko przestawne nadrzędnej. Po dokowane okienko przestawne, struktura resetuje jego elementu nadrzędnego i okienko przestawne staje się na pasku dokowania (dla pasków narzędzi) lub (w przypadku o zmiennym rozmiarze okienka) witryny dokowania.
 
 ## <a name="pane-dividers"></a>Separator okienka
 
@@ -66,7 +66,6 @@ Domyślnie każdy `CDockablePane` obsługuje funkcję automatycznego ukrywania. 
 
 Kontrolki paska również opiera się na paskach z kartami. [Klasa CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) jest tworzony na podstawie `CBaseTabbedPane`. Aby uzyskać więcej informacji o sposobie używania pasek programu Outlook, zobacz [klasa CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../mfc/mfc-concepts.md)
-

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 29865e7986e435a4cce1ac1abb2027bc8513231e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f31adc77f50191191ffbc4f7eac89cc8c9caf439
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263237"
 ---
 # <a name="cstringlist-class"></a>Klasa CStringList
 
@@ -137,9 +137,8 @@ Aby uzyskać więcej informacji na temat korzystania z `CStringList`, zapoznaj s
 
 **Nagłówek:** afxcoll.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

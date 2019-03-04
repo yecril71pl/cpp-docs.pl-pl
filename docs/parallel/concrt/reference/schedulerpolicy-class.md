@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265538"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy — Klasa
 
@@ -200,11 +200,10 @@ Metoda zgłosi [invalid_scheduler_policy_value](invalid-scheduler-policy-value-c
 
 Należy zauważyć, że ta metoda nie można ustawić `MinConcurrency` lub `MaxConcurrency` zasad. Aby ustawić te wartości, należy użyć [setconcurrencylimits —](#setconcurrencylimits) metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler, klasa](currentscheduler-class.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>
-[Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
+[Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

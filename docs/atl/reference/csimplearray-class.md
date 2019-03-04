@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263406"
 ---
 # <a name="csimplearray-class"></a>Klasa CSimpleArray
 
@@ -49,7 +49,7 @@ Obiekt cech, definiujący testu równości dla elementów typu *T*.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor dla prostej tablicy.|
-|[CSimpleArray:: ~ CSimpleArray](#dtor)|Destruktor dla prostej tablicy.|
+|[CSimpleArray::~CSimpleArray](#dtor)|Destruktor dla prostej tablicy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -307,6 +307,6 @@ Wartość do przypisania do określonego elementu.
 
 Zwraca wartość PRAWDA, jeśli powodzenia lub wartość FAŁSZ Jeśli indeks jest nieprawidłowy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

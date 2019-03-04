@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: bc202afa357dcb9d75a0dd73a3128b7b3f0cc14e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5cb68ab46e2cac8b2f1dcc13989077e32480a2c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259571"
 ---
 # <a name="cctrlview-class"></a>Klasa CCtrlView
 
@@ -127,7 +127,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia, w której występuje rysunku.
 
 ### <a name="remarks"></a>Uwagi
@@ -161,7 +161,7 @@ Każda klasa jest pochodną `CCtrlView` dodaje swoje własne funkcje do jego zas
 
 Aby uzyskać więcej informacji na temat Zmienianie stylów okna, zobacz [Zmienianie stylów okna utworzonego przez MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CView](../../mfc/reference/cview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

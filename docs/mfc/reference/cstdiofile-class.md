@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456215"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258791"
 ---
 # <a name="cstdiofile-class"></a>Klasa CStdioFile
 
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 Określa wskaźnik do buforu dostarczone przez użytkownika, który będzie otrzymywał ciąg tekstowy zakończony znakiem null.
 
-*nmaks.*<br/>
+*nMax*<br/>
 Określa maksymalną liczbę znaków do odczytania, nie licząc zamykającego kończącego znaku null.
 
 *rString*<br/>
@@ -237,7 +237,7 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 Liczba bajtów do przesuwania wskaźnika.
 
-*nZe*<br/>
+*nFrom*<br/>
 Tryb przenoszenia wskaźnika. Musi być jedną z następujących wartości:
 
 - `CFile::begin`: Przesuń wskaźnik pliku *lOff* bajtów w przód od początku pliku.
@@ -291,7 +291,7 @@ Ta metoda wyrzuca `CFileException*` w odpowiedzi na błędy systemu plików.
 
 [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

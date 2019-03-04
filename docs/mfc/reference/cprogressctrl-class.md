@@ -1,5 +1,5 @@
 ---
-title: Klasa CProgressCtrl
+title: CProgressCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CProgressCtrl
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260273"
 ---
-# <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
+# <a name="cprogressctrl-class"></a>CProgressCtrl Class
 
 Oferuje funkcje formantu Windows typowego paska postępu.
 
@@ -359,7 +359,7 @@ int OffsetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Kwota Przejdź położenie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Parametr|Opis|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] Wartość true, Włącz tryb zaznaczenia na, lub FAŁSZ, aby wyłączyć tryb zaznaczenia.|
-|*Ninterwał*|[in] Czas w milisekundach między aktualizacjami ramki animacji.|
+|*nInterval*|[in] Czas w milisekundach między aktualizacjami ramki animacji.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -476,7 +476,7 @@ int SetPos(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Nowa pozycja formantu paska postępu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -602,9 +602,8 @@ Przyrost kroku jest ustawiana przez `CProgressCtrl::SetStep` funkcja elementu cz
 
 [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

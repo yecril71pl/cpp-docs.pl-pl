@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258259"
 ---
 # <a name="canimationsize-class"></a>Klasa CAnimationSize
 
@@ -73,7 +73,7 @@ class CAnimationSize : public CAnimationBaseObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationSize::operator CSize](#operator_csize)|Konwertuje CAnimationSize CSize.|
-|[CAnimationSize::operator =](#operator_eq)|Przypisuje szSrc CAnimationSize.|
+|[CAnimationSize::operator=](#operator_eq)|Przypisuje szSrc CAnimationSize.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
@@ -164,7 +164,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 Po powrocie z tej funkcji zawiera wskaźniki do dwóch obiektów CAnimationVariable reprezentująca szerokość i wysokość.
 
 ##  <a name="getcx"></a>  CAnimationSize::GetCX
@@ -302,6 +302,6 @@ Określa nowy rozmiar domyślny.
 
 Aby ustawić wartość domyślną obiektu animacji, należy użyć tej funkcji. Ta metoda przypisuje wartości domyślne szerokość i wysokość w rozmiarze animacji. Odtwarza również obiektów COM, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Struktura _ATL_MODULE70
+title: _ATL_MODULE70 Structure
 ms.date: 11/04/2016
 f1_keywords:
 - _ATL_MODULE70
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: bf733a10a0be53eafb634c645dad6a4b58b8206d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05683383fab64f027f198d49bfbf42aa593d582
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263432"
 ---
-# <a name="atlmodule70-structure"></a>Struktura _ATL_MODULE70
+# <a name="atlmodule70-structure"></a>_ATL_MODULE70 Structure
 
 Zawiera dane używane przez każdy moduł ATL.
 
@@ -53,7 +53,6 @@ Używane do koordynowania dostępu do danych wewnętrznych w sytuacjach wielową
 
 **Nagłówek:** atlbase.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../../atl/reference/atl-classes.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 'Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle'
+title: 'Instrukcje: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258661"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Instrukcje: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle
 
 W tym przykładzie pokazano, jak używać [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmów i [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)klasy Liczenie wystąpień słowa w plikach.
 
@@ -39,9 +39,9 @@ W tym przykładzie można użyć `concurrent_unordered_map` klasy, który jest z
 
 Zazwyczaj zrównoleglić tylko zewnętrznego lub wewnętrznego pętli. Jeśli masz stosunkowo niewielką liczbą plików, a każdy plik zawiera wiele słów, zrównoleglić wewnętrzną pętlę. Jeśli posiadasz stosunkowo wiele plików, a każdy plik zawiera kilka słów, zrównoleglić zewnętrzna pętla.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_transform — funkcja](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
-[parallel_reduce — funkcja](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
+[parallel_transform Function](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
+[parallel_reduce Function](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
 [concurrent_unordered_map, klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

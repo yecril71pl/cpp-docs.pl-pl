@@ -1,5 +1,5 @@
 ---
-title: Klasa COleControlSite
+title: COleControlSite Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleControlSite
@@ -106,14 +106,14 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264134"
 ---
-# <a name="colecontrolsite-class"></a>Klasa COleControlSite
+# <a name="colecontrolsite-class"></a>COleControlSite Class
 
 Zapewnia obsługę interfejsów kontrolki niestandardowej po stronie klienta.
 
@@ -1148,10 +1148,10 @@ Stanowisko w lewej części okna.
 *y*<br/>
 Stanowisko w górnej części okna.
 
-*CX*<br/>
+*cx*<br/>
 Nowe szerokość okna
 
-*CY*<br/>
+*cy*<br/>
 Nową wysokość okna.
 
 *nFlags*<br/>
@@ -1215,7 +1215,7 @@ Określa, jak witryna kontrolki ma być wyświetlana. Musi mieć jedną z nastę
 
 Wartość różną od zera, jeśli okno było wcześniej widoczne; 0, jeśli wcześniej została ukryta, okna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

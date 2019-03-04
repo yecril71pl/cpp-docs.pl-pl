@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statically linking to ATL Registrar code
 - linking [C++], to ATL Registrar code
 ms.assetid: 835f5885-87a6-48fa-91e6-60988ee65538
-ms.openlocfilehash: 11600b47abbbd247d099d871fce5e9d5d17d3cf4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b95bd17abca3237710956f3a1bf1b1d6fa9df51e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265330"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Konfigurowanie statycznego Linku do kodu rejestratora (tylko C++)
 
@@ -24,6 +24,6 @@ Najprostszym sposobem skonfigurowania łączenia statycznego zakłada określono
 
 1. Skompiluj ponownie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składnik rejestru (Rejestrator)](../atl/atl-registry-component-registrar.md)

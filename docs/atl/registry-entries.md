@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-ms.openlocfilehash: b61aae9ba9316dded1dcb11353e52eb2fffd49a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a89bc5d510d493f557b7ea74b8eabe5dfd87ac1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261947"
 ---
 # <a name="registry-entries"></a>Wpisy rejestru
 
@@ -24,7 +24,6 @@ Domyślnie usługi generowane ATL używa własny identyfikator CLSID jako identy
 
 Dowolną usługę DCOM również potrzebuje do utworzenia innego klucza w ramach `HKEY_CLASSES_ROOT\AppID`. Ten klucz jest taka sama jak nazwa pliku exe i działa jako odsyłaczy, ponieważ zawiera ona wartością AppID wskazuje wpisy Identyfikator aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Usługi](../atl/atl-services.md)
-

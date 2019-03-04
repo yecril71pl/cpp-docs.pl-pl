@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: ceb92181fcf1fcb17033ac9524c0b113cbc710fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a143c8b08c73676af0d37cd2b67667e8270dc2b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552714"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259866"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nazwy kontrolek, kreator kontrolek ActiveX MFC
 
@@ -81,10 +81,9 @@ Określ nazwy klasy kontrolki i klasy strony właściwości, nazwy typów, a nas
 
    *ProjectName.NewShortName*PropPage.1
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Ustawienia aplikacji, kreator kontrolek ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Ustawienia kontrolki, kreator kontrolek ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
 [Typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
-

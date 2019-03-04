@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264767"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry — Klasa
 
@@ -185,7 +185,7 @@ Maksymalna liczba łączy, które `multi_link_registry` obiekt może przechowywa
 
 Po ustawieniu granicę spowoduje odłączenie wpis `multi_link_registry` obiektu, aby wprowadzić niezmiennego stanu gdzie dalsze wywołania `add` zgłosi `invalid_link_target` wyjątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [single_link_registry, klasa](single-link-registry-class.md)

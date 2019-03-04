@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-ms.openlocfilehash: 153ff21a9122839c7d306e33d57afab69c3c155e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec628fcde40d3cc4601d6b6ddf49fa5599ac5a86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258388"
 ---
 # <a name="cwintraitsor-class"></a>Klasa CWinTraitsOR
 
@@ -96,8 +96,7 @@ Rozszerzone style służy do tworzenia okna.
 
 Kombinacja rozszerzone style, które są przekazywane w *dwExStyle* i określonych przez domyślne `t_dwExStyle`, przy użyciu operatora logicznego OR
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Opis cech okna](../../atl/understanding-window-traits.md)
-

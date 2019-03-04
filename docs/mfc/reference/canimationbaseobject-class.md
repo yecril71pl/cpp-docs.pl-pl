@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258921"
 ---
 # <a name="canimationbaseobject-class"></a>Klasa CAnimationBaseObject
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Przeciążone. Konstruuje obiekt animacji.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt animacji.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt animacji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -310,12 +310,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 Lista, które należy podać ze zmiennymi animacji w obiekcie animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to czysty metodę wirtualną, która musi zostać zastąpiona w klasie pochodnej. Obiekt Animacja w zależności od jego typu, zawiera co najmniej jednej zmiennej animacji. Na przykład CAnimationPoint zawiera dwie zmienne dla współrzędne X i Y odpowiednio. Klasa bazowa CAnimationBaseObject implementuje kilka metod ogólnych, które działają na listę zmiennych animacji: ApplyTransitions ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Te metody wywołania GetAnimationVariableList, która jest wypełniona w klasie pochodnej zmiennych rzeczywistych animacji zawarte w obiekcie określonym animacji, a następnie pętli listy i wykonać odpowiednie działania. Jeśli tworzysz obiekt animacji niestandardowej, należy dodać do dzieł wszystkie zmienne animacji zawarte w tym obiekcie.
+Jest to czysty metodę wirtualną, która musi zostać zastąpiona w klasie pochodnej. Obiekt Animacja w zależności od jego typu, zawiera co najmniej jednej zmiennej animacji. Na przykład CAnimationPoint zawiera dwie zmienne dla współrzędne X i Y odpowiednio. Klasa bazowa CAnimationBaseObject implementuje kilka metod ogólnych, które działają na listę zmiennych animacji: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Te metody wywołania GetAnimationVariableList, która jest wypełniona w klasie pochodnej zmiennych rzeczywistych animacji zawarte w obiekcie określonym animacji, a następnie pętli listy i wykonać odpowiednie działania. Jeśli tworzysz obiekt animacji niestandardowej, należy dodać do dzieł wszystkie zmienne animacji zawarte w tym obiekcie.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -489,6 +489,6 @@ Określa dane niestandardowe.
 
 Ta metoda umożliwia kojarzenie danych niestandardowych z obiektu animacji. Te dane mogą zostać odzyskane w czasie wykonywania przez funkcji GetUserData.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

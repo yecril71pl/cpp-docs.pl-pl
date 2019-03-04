@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCBaseTabCtrl
+title: CMFCBaseTabCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseTabCtrl
@@ -238,14 +238,14 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261859"
 ---
-# <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
+# <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
 Implementuje podstawowe funkcje dla okien z zakładkami.
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
@@ -419,7 +419,7 @@ Poniższe porady dotyczą `CMFCBaseTabCtrl Class` i wszystkie klasy, które dzie
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
 
@@ -1991,7 +1991,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 [in] Określa nowy kolor tła.
 
 ### <a name="remarks"></a>Uwagi
@@ -2008,7 +2008,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 [in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.
 
 ### <a name="remarks"></a>Uwagi
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Identyfikator zasobu mapy bitowej. `SetImageList` ładuje listy obrazów z tego zasobu.
 
-*CX*<br/>
+*cx*<br/>
 [in] Szerokość każdego obrazu w pikselach.
 
 *clrTransp*<br/>
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: 75a6a769770c9de8b26c08fae852197cdb99248e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261001"
 ---
 # <a name="window-class-macros"></a>Makra klasy okna
 
@@ -127,10 +127,10 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 *WndClassName*<br/>
 [in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna.
 
-*Styl*<br/>
+*style*<br/>
 [in] Styl okna.
 
-*tło /*<br/>
+*bkgnd*<br/>
 [in] Kolor tła okna.
 
 ### <a name="remarks"></a>Uwagi
@@ -141,7 +141,6 @@ To makro służy do określania parametrów klasy nowe klasy okna, o których in
 
 Jeśli chcesz korzystać z domyślnych stylów i kolor tła, użyj [DECLARE_WND_CLASS](#declare_wnd_class) makra. Aby uzyskać więcej informacji na temat korzystania z systemu windows w ATL, zobacz artykuł [klas okien ATL](../../atl/atl-window-classes.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](atl-macros.md)
-

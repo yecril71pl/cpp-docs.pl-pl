@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data transfer [C++], classes
 - data transfer classes [C++]
 ms.assetid: c10bcdc8-b90c-4c2a-9179-fd3de80461da
-ms.openlocfilehash: dc05d4d7ba372af0c2126f9e1980e19637290f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67561d95e7823861fd594b2c47d7537d76163616
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487064"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261846"
 ---
 # <a name="data-transfer-classes"></a>Klasy transferu danych
 
@@ -24,7 +24,6 @@ Następujące klasy obsługi różnych typów transferowanych danych:
 
 - [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) umożliwia asynchroniczne monikera do wysyłania i odbierania informacji dotyczących transferu asynchronicznego danych do i z obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../atl/atl-class-overview.md)
-

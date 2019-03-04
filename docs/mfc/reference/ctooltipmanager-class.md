@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260637"
 ---
 # <a name="ctooltipmanager-class"></a>Klasa CTooltipManager
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in] Element nadrzędny elementu ToolTip.
 
-*nNie*<br/>
+*nType*<br/>
 [in] Typ elementu ToolTip.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -102,7 +102,7 @@ Nieprawidłowa etykietka narzędzia typy są wymienione w poniższej tabeli:
 |AFX_TOOLTIP_TYPE_EDIT|Pole tekstowe.|Brak.|
 |AFX_TOOLTIP_TYPE_MINIFRAME|Pływające.|CPaneFrameWnd|
 |AFX_TOOLTIP_TYPE_PLANNER|Planner.|Brak.|
-|AFX_TOOLTIP_TYPE_RIBBON|Pasek wstążki.|CMFCRibbonBar, cmfcribbonpanelmenubar —|
+|AFX_TOOLTIP_TYPE_RIBBON|Pasek wstążki.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
 |AFX_TOOLTIP_TYPE_TAB|Formant karty.|CMFCTabCtrl|
 |AFX_TOOLTIP_TYPE_TOOLBAR|Pasek narzędzi.|CMFCToolBar, CMFCPopupMenuBar|
 |AFX_TOOLTIP_TYPE_TOOLBOX|Przybornika.|Brak.|
@@ -181,7 +181,7 @@ static void SetTooltipText(
 *pToolTip*<br/>
 [out w] Wskaźnik do kontrolki tooltip, dla której chcesz ustawić tekst i opis.
 
-*nNie*<br/>
+*nType*<br/>
 [in] Określa typ kontrolki, z którą skojarzony jest ten etykietki narzędzia.
 
 *strText*<br/>
@@ -204,7 +204,7 @@ void UpdateTooltips();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

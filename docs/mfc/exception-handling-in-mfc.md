@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260546"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
@@ -50,9 +50,9 @@ W tym artykule opisano mechanizmy obsługi wyjątków dostępne w MFC. Dostępne
 
 Jeśli piszesz nową aplikację przy użyciu biblioteki MFC, należy użyć mechanizmu C++. Jeśli istniejąca aplikacja już używa tego mechanizmu często możesz użyć mechanizmu opartego na makra.
 
-Można łatwo przekonwertować istniejącego kodu do wyjątków C++ zamiast makr wyjątków MFC. Zalety konwertowania kodu oraz wytyczne postępowania są opisane w artykule [wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Można łatwo przekonwertować istniejącego kodu do wyjątków C++ zamiast makr wyjątków MFC. Zalety konwertowania kodu oraz wytyczne postępowania są opisane w artykule [wyjątków: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-Jeśli już opracowano aplikację przy użyciu makr wyjątków MFC, możesz kontynuować używanie tych makr w istniejącym kodzie podczas korzystania z wyjątków C++ w nowy kod. Artykuł [wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) zapewnia wskazówki, aby to zrobić.
+Jeśli już opracowano aplikację przy użyciu makr wyjątków MFC, możesz kontynuować używanie tych makr w istniejącym kodzie podczas korzystania z wyjątków C++ w nowy kod. Artykuł [wyjątków: Zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) zapewnia wskazówki, aby to zrobić.
 
 > [!NOTE]
 >  Aby włączyć obsługę wyjątków C++ w kodzie, wybierz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze projektu języka C/C++ [stron właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe lub użyj [/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora.
@@ -109,28 +109,27 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki dostarczonych 
 
 W poniższych artykułach opisano przy użyciu biblioteki MFC dla pierwszemu wyjątek:
 
-- [Wyjątki: przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
-- [Wyjątki: badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)
+- [Wyjątki: Badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)
 
-- [Wyjątki: zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [Wyjątki: Zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [Wyjątki: zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [Wyjątki: Zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
-- [Wyjątki: wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)
+- [Wyjątki: Wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)
 
-- [Wyjątki: wyjątki OLE](../mfc/exceptions-ole-exceptions.md)
+- [Wyjątki: Wyjątki OLE](../mfc/exceptions-ole-exceptions.md)
 
 Następujące artykuły porównać z makr wyjątków MFC przy użyciu słowa kluczowe wyjątków języka C++ i wyjaśniono, jak możesz dostosować swój kod:
 
-- [Wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Wyjątki: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Wyjątki: używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Wyjątki: Używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)<br/>
-[Jak: tworzenie własnych klas wyjątków niestandardowych](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Jak mogę Tworzenie własnych klas wyjątków niestandardowych](http://go.microsoft.com/fwlink/p/?linkid=128045)

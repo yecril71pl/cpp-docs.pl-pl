@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257907"
 ---
 # <a name="tiledindex-class"></a>tiled_index — Klasa
 
@@ -69,7 +69,7 @@ Długość najmniej znaczącego wymiaru.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[tiled_index — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `tile_index` klasy.|
+|[tiled_index Constructor](#ctor)|Inicjuje nowe wystąpienie klasy `tile_index` klasy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -84,13 +84,13 @@ Długość najmniej znaczącego wymiaru.
 |[barrier — stała](#tiled_index__barrier)|Magazyny [tile_barrier](tile-barrier-class.md) obiekt reprezentujący barierę w bieżącym fragmencie wątków.|
 |||
 |[global Constant](#tiled_index__global)|Magazyny [indeksu](index-class.md) obiektu liczbie wymiarów 1, 2 lub 3, który reprezentuje globalny indeks w obiekcie siatki.|
-|[Stała lokalna](#tiled_index__local)|Magazyny `index` obiektu liczbie wymiarów 1, 2 lub 3, reprezentujący względny indeks w bieżącym fragmencie obiektu [tiled_extent](tiled-extent-class.md) obiektu.|
-|[Rank — stała](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|
+|[local Constant](#tiled_index__local)|Magazyny `index` obiektu liczbie wymiarów 1, 2 lub 3, reprezentujący względny indeks w bieżącym fragmencie obiektu [tiled_extent](tiled-extent-class.md) obiektu.|
+|[rank Constant](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|
 |[Tile — stała](#tiled_index__tile)|Magazyny `index` obiektu liczbie wymiarów 1, 2 lub 3, który reprezentuje współrzędne bieżącego fragmentu obiektu `tiled_extent` obiektu.|
 |[tile_dim0 — stała](#tiled_index__tile_dim0)|Przechowuje długość najbardziej znaczącego wymiaru.|
 |[tile_dim1 — stała](#tiled_index__tile_dim1)|Przechowuje długość następnego najbardziej znaczącego wymiaru.|
 |[tile_dim2 — stała](#tiled_index__tile_dim2)|Przechowuje długość najmniej znaczącego wymiaru.|
-|[tile_origin — stała](#tiled_index__tile_origin)|Magazyny `index` obiektu liczbie wymiarów 1, 2 lub 3, który reprezentuje globalne współrzędne początku bieżącego fragmentu w `tiled_extent` obiektu.|
+|[tile_origin Constant](#tiled_index__tile_origin)|Magazyny `index` obiektu liczbie wymiarów 1, 2 lub 3, który reprezentuje globalne współrzędne początku bieżącego fragmentu w `tiled_extent` obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -108,7 +108,7 @@ Długość najmniej znaczącego wymiaru.
 
 **Nagłówek:** amp.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ## <a name="tiled_index__ctor"></a>  tiled_index — Konstruktor
 
@@ -133,7 +133,7 @@ tiled_index(
 *_Global*<br/>
 Globalna [indeksu](index-class.md) stworzonego elementu `tiled_index`.
 
-*_Lokalny*<br/>
+*_Local*<br/>
 Lokalny [indeksu](index-class.md) stworzonego elementu `tiled_index`
 
 *_Tile*<br/>
@@ -156,7 +156,7 @@ Pochodzenie kafelka [indeksu](index-class.md) stworzonego elementu `tiled_index`
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicjuje nowe wystąpienie klasy `tile_index` klasy z indeksu fragmentu w globalnych współrzędnych i względnego położenia w lokalnych współrzędnych fragmentu. `_Global` i `_Tile_origin` parametry są obliczane.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicjuje nowe wystąpienie klasy `tile_index` klasy poprzez skopiowanie określonego `tiled_index` obiektu.|
 
-## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent —
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 
 Zwraca [zakres](extent-class.md) obiekt, który ma wartości `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.
 
@@ -269,6 +269,6 @@ const index<rank> tile_origin
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

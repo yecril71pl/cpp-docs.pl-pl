@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 2545bda725428835c256ad81edc9070bd004d474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260663"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd
 
@@ -34,7 +34,6 @@ Jednak to domyślny program obsługi nie jest wywoływana, gdy **TTN_NEEDTEXT** 
 
 Domyślnej etykietki narzędzia, podany dla aplikacji dla systemu windows przez [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nie zawierają tekstu skojarzonych z nimi. Aby pobrać tekst etykietki narzędzia wyświetlić, **TTN_NEEDTEXT** powiadomienie jest wysyłane do okna nadrzędnego formantem etykietki narzędzia, po prostu, przed wyświetleniem okna narzędzia porada. Jeśli nie istnieje żadna procedura obsługi dla tego komunikatu przypisać jakąś wartość, aby *pszText* członkiem **TOOLTIPTEXT** struktury, nie będzie żadnych tekst wyświetlany dla etykietki narzędzia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Etykietki narzędzi](../mfc/tool-tips.md)
-

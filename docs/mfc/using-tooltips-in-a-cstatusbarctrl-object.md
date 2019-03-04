@@ -8,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a5ebefe3d5daab9917cdb1db7eface09c78b456a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9a1fec7eb951fa76c542e09df751b4c58ddb16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265093"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Używanie etykietek narzędzi w obiekcie CStatusBarCtrl
 
@@ -26,8 +26,7 @@ Gdy `CStatusBarCtrl` obiektu została pomyślnie utworzona, należy użyć [CSta
 
 Po ustawieniu etykietka narzędzia która jest wyświetlana, tylko wtedy, gdy część ikonę i tekst nie, czy cały tekst nie będzie wyświetlany w części. Etykietki narzędzi są nieobsługiwane w trybie uproszczonym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

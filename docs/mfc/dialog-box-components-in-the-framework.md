@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: cf01e7b881b8f5c9c5ba9847ccf4e15dee3e18d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88027df7433267925e91db2d368b744cee8a9e75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262743"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Składniki okna dialogowego w strukturze
 
@@ -27,8 +27,7 @@ W ramach MFC okno dialogowe ma dwa składniki:
 
    Okno dialogowe jest oknem i zostanie dołączony do okna Windows, gdy jest widoczne. Podczas tworzenia okna dialogowego, zasobu szablonu okna dialogowego służy jako szablon do tworzenia podrzędnego kontrolki okna dla okna dialogowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
-

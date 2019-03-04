@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258284"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 
@@ -49,7 +49,7 @@ Zawiera informacje dla klasy języka C++ utworzona w celu wdrożenia obiektu.
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-- **Klasa coclass**
+- **Coclass**
 
    Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
 
@@ -60,13 +60,12 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
    Określa opis obiektu, który będzie wyświetlany w rejestrze
 
-- **Identyfikator programu**
+- **ProgID**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
 [Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
-

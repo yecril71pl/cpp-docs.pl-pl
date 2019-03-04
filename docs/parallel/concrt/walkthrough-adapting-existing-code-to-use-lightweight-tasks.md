@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich'
+title: 'Przewodnik: Dostosowanie istniejącego kodu do zadań lekkich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e928e7d82b41b83fde5e8a7abaeeeb8d6fefa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261222"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Przewodnik: Dostosowanie istniejącego kodu do zadań lekkich
 
 W tym temacie pokazano, jak dostosować istniejący kod, który używa interfejsu API Windows do tworzenia i wykonywanie wątku w celu użycia lekkiego zadania.
 
@@ -92,7 +92,7 @@ W poniższym przykładzie ukończone pokazano kod, który używa lekkie zadanie 
 
 ### <a name="comments"></a>Komentarze
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler, klasa](../../parallel/concrt/reference/scheduler-class.md)

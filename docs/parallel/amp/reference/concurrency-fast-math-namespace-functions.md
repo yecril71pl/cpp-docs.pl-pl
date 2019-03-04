@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259870"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math, funkcje przestrzeni nazw
 
@@ -60,25 +60,25 @@ ms.locfileid: "50667639"
 |[ACOS](#acos)|[acosf](#acosf)|[ASIN](#asin)|
 |[asinf —](#asinf)|[atan](#atan)|[atan2](#atan2)|
 |[atan2f](#atan2f)|[atanf](#atanf)|[Ceil —](#ceil)|
-|[ceilf](#ceilf)|[COS](#cos)|[cosf](#cosf)|
-|[COSH](#cosh)|[coshf](#coshf)|[EXP](#exp)|
+|[ceilf](#ceilf)|[cos](#cos)|[cosf](#cosf)|
+|[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|
-|[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)|
+|[fabs —](#fabs)|[fabsf —](#fabsf)|[floor](#floor)|
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|
 |[fmin](#fmin)|[fminf —](#fminf)|[Fmod —](#fmod)|
 |[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|
-|[isfinite](#isfinite)|[isinf —](#isinf)|[isNaN —](#isnan)|
+|[isfinite](#isfinite)|[isinf](#isinf)|[isNaN —](#isnan)|
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[Pow](#pow)|[powf](#powf)|
 |[ROUND](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|
 |[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|
-|[SIN](#sin)|[sincos —](#sincos)|[sincosf](#sincosf)|
+|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|
 |[sinf](#sinf)|[SINH](#sinh)|[sinhf](#sinhf)|
 |[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|
-|[tanf —](#tanf)|[TANH](#tanh)|[tanhf](#tanhf)|
-|[TRUNC —](#trunc)|[truncf](#truncf)|
+|[tanf —](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|
+|[trunc](#trunc)|[truncf](#truncf)|
 
 ##  <a name="acos"></a>  ACOS
 
@@ -711,7 +711,7 @@ Wykładnik potęgi liczby całkowitej
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf —
 
@@ -733,7 +733,7 @@ Wykładnik potęgi liczby całkowitej
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="log"></a>  Dziennik
 
@@ -1078,7 +1078,7 @@ Wartość zmiennoprzecinkowa
 *_S*<br/>
 Zwraca wartość funkcji sinus _X
 
-*_KOŃCE*<br/>
+*_C*<br/>
 Zwraca wartość funkcji cosinus z _X
 
 ##  <a name="sincosf"></a>  sincosf —
@@ -1100,7 +1100,7 @@ Wartość zmiennoprzecinkowa
 *_S*<br/>
 Zwraca wartość funkcji sinus _X
 
-*_KOŃCE*<br/>
+*_C*<br/>
 Zwraca wartość funkcji cosinus z _X
 
 ##  <a name="sinh"></a>  SINH
@@ -1120,7 +1120,7 @@ Wartość zmiennoprzecinkowa
 
 Zwraca sinus hiperboliczny wartość argumentu
 
-##  <a name="sinhf"></a>  sinhf —
+##  <a name="sinhf"></a>  sinhf
 
 Oblicza wartość funkcji sinus hiperboliczny dla argumentu
 
@@ -1275,8 +1275,8 @@ Zwraca liczbę całkowitą argumentu
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_math.h **Namespace:** Concurrency::fast_math
+**Nagłówek:** amp_math.h **Namespace:** CONCURRENCY::fast_math
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::fast_math, przestrzeń nazw](concurrency-fast-math-namespace.md)

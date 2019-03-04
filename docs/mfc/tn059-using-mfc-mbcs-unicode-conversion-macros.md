@@ -13,14 +13,14 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: e806cea54fcb1559b7d70b2e7672973501fc0adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 130b459dc87f36325d0f253181a196bea868856f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262817"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: używanie makr konwersji MFC MBCS/Unicode
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Przy użyciu makr konwersji MFC MBCS/Unicode
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -194,8 +194,7 @@ return lpszT; // CString makes copy
 
 Makra są łatwe w użyciu i łatwe do wstawienia w kodzie, ale jak można stwierdzić, że z powyższych ostrzeżenia, należy uważać podczas korzystania z nich.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

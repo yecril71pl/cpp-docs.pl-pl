@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259493"
 ---
 # <a name="canimationrect-class"></a>Klasa CAnimationRect
 
@@ -198,7 +198,7 @@ Określa dane zdefiniowane przez użytkownika.
 *(czas pacyficzny)*<br/>
 Współrzędna w lewym górnym rogu.
 
-*Sz*<br/>
+*sz*<br/>
 Rozmiar prostokąta.
 
 *nLeft*<br/>
@@ -229,7 +229,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*dzieł*<br/>
+*lst*<br/>
 Po powrocie z tej funkcji zawiera wskaźniki do czterech obiektów CAnimationVariable reprezentujący współrzędnych prostokąta.
 
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom
@@ -435,6 +435,6 @@ Określa nowe wartości domyślne po lewej stronie, górnej, prawej strony i dol
 
 Aby ustawić wartość domyślną obiektu animacji, należy użyć tej funkcji. Ta metoda przypisuje wartości domyślne granice prostokąta. Odtwarza również obiektów COM, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: c94cb3849d4101365d137733c08135b86db23801
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5e6b0a22d438f9c26318129e2d04df96d386cda
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264433"
 ---
 # <a name="canimationtimereventhandler-class"></a>Klasa CAnimationTimerEventHandler
 
@@ -135,6 +135,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

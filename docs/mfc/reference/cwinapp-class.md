@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264681"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -469,7 +469,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Odwołanie do kontekstu urządzenia drukarki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -549,7 +549,7 @@ virtual int DoMessageBox(
 *lpszPrompt*<br/>
 Adres tekstu w oknie komunikatu.
 
-*nNie*<br/>
+*nType*<br/>
 W oknie komunikatu [styl](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
 *nIDPrompt*<br/>
@@ -1311,11 +1311,11 @@ Aby włączyć Menedżera ponownego uruchamiania, ustaw `m_dwRestartManagerSuppo
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Włączono automatyczne zapisywanie i automatycznie zapisuje Menedżera ponownego uruchomienia wszelkich otwartych dokumentów, po ponownym uruchomieniu aplikacji.|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Włączono automatyczne zapisywanie i automatycznie zapisuje Menedżera ponownego uruchamiania dowolnego otwieranie dokumentów w regularnych odstępach czasu. Interwał jest definiowany przez [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
 |-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Menedżera ponownego uruchamiania otwiera wcześniej otwartych dokumentów po ponownym uruchomieniu aplikacji z nieoczekiwanego zakończenia. [Klasa CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) obsługuje przechowywanie listy otwartych dokumentów i ich przywracania.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Menedżera ponownego uruchamiania monituje użytkownika o przywracania plików zapisana automatycznie po ponownym uruchomieniu aplikacji. `CDataRecoveryHandler` Klasy zapytania użytkownika.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Złożenie AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER i AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Złożenie AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Złożenie AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Złożenia ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Menedżera ponownego uruchamiania monituje użytkownika o przywracania plików zapisana automatycznie po ponownym uruchomieniu aplikacji. `CDataRecoveryHandler` Klasy zapytania użytkownika.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Złożenie AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER i AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Złożenie AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Złożenie AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Złożenia ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES i AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -2120,7 +2120,7 @@ void SelectPrinter(
 *hDevNames*<br/>
 Dojście do [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktura, która identyfikuje sterownika, urządzenia i dane wyjściowe nazwy portu określonej drukarki.
 
-*pole hDevMode*<br/>
+*hDevMode*<br/>
 Dojście do [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) strukturę, która określa informacje dotyczące inicjowania urządzenia i środowiska drukarki.
 
 *bFreeOld*<br/>
@@ -2391,8 +2391,8 @@ Określa identyfikator modelu użytkownika aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Jak: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)
+[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)

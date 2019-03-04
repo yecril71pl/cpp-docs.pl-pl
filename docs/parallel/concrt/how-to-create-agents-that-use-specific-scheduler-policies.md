@@ -1,24 +1,24 @@
 ---
-title: 'Porady: tworzenie agentów korzystających ze specjalnych zasad harmonogramu'
+title: 'Instrukcje: Tworzenie agentów korzystających ze specjalnych zasad harmonogramu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257374"
 ---
-# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Porady: tworzenie agentów korzystających ze specjalnych zasad harmonogramu
+# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Instrukcje: Tworzenie agentów korzystających ze specjalnych zasad harmonogramu
 
 Agent jest składnik aplikacji asynchronicznie współpracuje z innymi składnikami rozwiązania bardziej złożone zadania obliczeniowe. Agent zazwyczaj ma ustawiony cykl życia i zachowuje stan.
 
 Każdy agent może mieć wymagań aplikacji. Na przykład agent, który umożliwia interakcji z użytkownikiem (Pobieranie danych wejściowych lub wyświetlanie danych wyjściowych) mogą wymagać wyższej priorytetowy dostęp do zasobów obliczeniowych. Zasady harmonogramu pozwalają na kontrolę strategii, używany w harmonogramie podczas zarządzania zadaniami. W tym temacie pokazano, jak tworzenie agentów korzystających ze specjalnych zasad harmonogramu.
 
-Przykład podstawowy używa Niestandardowy harmonogram zasad wraz z bloki komunikatów asynchronicznych, zobacz [porady: Określanie zasad harmonogramu określonego](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Aby uzyskać przykład podstawowego, który używa Niestandardowy harmonogram zasad wraz z bloki komunikatów asynchronicznych, zobacz [jak: Określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 Ten temat korzysta z funkcji z bibliotekę asynchronicznych agentów, np. agenci, bloki komunikatów i funkcje przekazywania komunikatów do wykonywania pracy. Aby uzyskać więcej informacji na temat bibliotekę asynchronicznych agentów, zobacz [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md).
 
@@ -26,7 +26,7 @@ Ten temat korzysta z funkcji z bibliotekę asynchronicznych agentów, np. agenci
 
 Poniższy przykład definiuje dwie klasy, które wynikają z [concurrency::agent](../../parallel/concrt/reference/agent-class.md): `permutor` i `printer`. `permutor` Klasy oblicza wszystkie permutacji z danego ciągu wejściowego. `printer` Klasy drukuje wiadomości dotyczące postępu do konsoli. `permutor` Klasa wykonuje praktyce intensywna operacja, którego może używać wszystkich dostępnych zasobów obliczeniowych. Były przydatne, `printer` klasy należy wydrukować każdy komunikat o postępie w odpowiednim czasie.
 
-Aby zapewnić `printer` klasy uczciwego dostępu do zasobów obliczeniowych, w tym przykładzie użyto kroki, które są opisane w [porady: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) można utworzyć wystąpienia harmonogramu, zawierającej zasady niestandardowe. Zasady niestandardowe określa priorytet wątku za najwyższy priorytet.
+Aby zapewnić `printer` klasy uczciwego dostępu do zasobów obliczeniowych, w tym przykładzie użyto kroki, które są opisane w [jak: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) można utworzyć wystąpienia harmonogramu, zawierającej zasady niestandardowe. Zasady niestandardowe określa priorytet wątku za najwyższy priorytet.
 
 Aby zilustrować korzyści z używania harmonogram, który ma zasady niestandardowe, w tym przykładzie wykonuje całego zadania dwa razy. W przykładzie najpierw użyto domyślnego harmonogramu można zaplanować zarówno do zadań. Następnie w przykładzie użyto domyślnego harmonogramu można zaplanować `permutor` obiekt i harmonogram, który ma zasady niestandardowe, aby zaplanować `printer` obiektu.
 
@@ -52,8 +52,7 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc permute — strings.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)<br/>
 [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)
-

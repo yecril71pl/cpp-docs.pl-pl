@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265720"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy — Struktura
 
@@ -122,7 +122,7 @@ Użyj wartości `Nesting` gdy chcesz tymczasowo odłączyć ten serwer proxy wą
 
 `SwitchTo` musi zostać wywołana w `IThreadProxy` interfejs, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane. Funkcja zgłasza `invalid_argument` Jeśli parametr `pContext` ustawiono `NULL`.
 
-##  <a name="yieldtosystem"></a>  Ithreadproxy::yieldtosystem — metoda
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method
 
 Powoduje, że wątek wywołujący, umożliwiające uzyskanie wykonywania do innego wątku, który jest gotowy do uruchomienia na bieżącym procesora. System operacyjny wybiera następny wątek do wykonania.
 
@@ -136,7 +136,7 @@ Po wywołaniu przez serwer proxy wątku, wspierane przez regularne wątku Window
 
 `YieldToSystem` musi zostać wywołana w `IThreadProxy` interfejs, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IExecutionContext, struktura](iexecutioncontext-structure.md)<br/>

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260715"
 ---
 # <a name="clongbinary-class"></a>Clongbinary — klasa
 
@@ -53,7 +53,7 @@ Aby użyć `CLongBinary` obiektu, deklaruje pole składowej danych typu `CLongBi
 
 Gdy zniszczyć rekordów, osadzonego `CLongBinary` również niszczony jest obiekt i jego destruktor zwalnia `HGLOBAL` dojście do danych.
 
-Aby uzyskać więcej informacji na temat dużych obiektów, a także korzystanie z `CLongBinary`, zobacz artykuły [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md) i [zestaw rekordów: Praca z dużych elementów danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Aby uzyskać więcej informacji na temat dużych obiektów, a także korzystanie z `CLongBinary`, zobacz artykuły [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md) i [zestaw rekordów: Praca z dużymi elementami danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -63,7 +63,7 @@ Aby uzyskać więcej informacji na temat dużych obiektów, a także korzystanie
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdb_.h
+**Header:** afxdb_.h
 
 ##  <a name="clongbinary"></a>  CLongBinary::CLongBinary
 
@@ -93,7 +93,7 @@ Przechowuje wartości Windows HGLOBAL dojścia do danych rzeczywistych duży obi
 HGLOBAL m_hData;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

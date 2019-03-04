@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262704"
 ---
 # <a name="cthreadpool-class"></a>Klasa CThreadPool
 
@@ -53,7 +53,7 @@ Klasa, zapewniając funkcja używana do tworzenia wątków w puli.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor dla puli wątków.|
-|[CThreadPool:: ~ CThreadPool](#dtor)|Destruktor dla puli wątków.|
+|[CThreadPool::~CThreadPool](#dtor)|Destruktor dla puli wątków.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 Inicjuje ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT wartość limitu czasu. Domyślny czas to 36 sekund. Jeśli to konieczne, można zdefiniować własne dodatnią liczbą całkowitą dla tego symbolu, przed dołączeniem atlutil.h.
 
-##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 Destruktor dla puli wątków.
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Żądanie*<br/>
+*request*<br/>
 Żądanie do umieszczone w kolejce.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -346,7 +346,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli upłynie limit czasu, Metoda ta będzie wywoływać [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) dotyczące dowolnego wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie przez destruktor klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>

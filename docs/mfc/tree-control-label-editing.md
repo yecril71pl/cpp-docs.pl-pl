@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 80d4f37ef8b67c2902e5d34cb4ec8aa4cf35a616
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446db94ec49859e2213f00d205df57e332c85af2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264147"
 ---
 # <a name="tree-control-label-editing"></a>Edytowanie etykiety kontrolki drzewa
 
@@ -24,8 +24,7 @@ Gdy edytowanie etykiet jest anulowane lub zakończone, formant drzewa wysyła [T
 
 Podczas Edytowanie etykiet, zwykle w odpowiedzi na [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) komunikat powiadomienia, można uzyskać wskaźnik do kontrolki edycji umożliwiający edytowanie etykiet przy użyciu [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) elementu członkowskiego Funkcja. Możesz wywołać kontrolki edycji [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) funkcja elementu członkowskiego, aby ograniczyć ilość tekstu, użytkownik może wprowadzić lub podklasą kontrolki edycji, aby przechwycić i odrzucić nieprawidłowe znaki. Należy jednak pamiętać, że kontrolka edycji jest wyświetlany tylko *po* **TVN_BEGINLABELEDIT** są wysyłane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

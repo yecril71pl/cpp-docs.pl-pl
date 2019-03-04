@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260143"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parametry
 
-*nSprawdź*<br/>
+*nCheck*<br/>
 Określa stan zaznaczenia. Ten parametr może być jedną z następujących czynności:
 
 |Wartość|Znaczenie|
@@ -1114,7 +1114,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETTEXTMARGIN zgodnie z opisem w [przyciski](/windows/desktop/controls/buttons) część zestawu Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

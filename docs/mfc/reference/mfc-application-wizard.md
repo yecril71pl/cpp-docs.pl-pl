@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: a96fdac743531a47c7d2e586292e87e1bbf9e249
-ms.sourcegitcommit: fd15246715907f7c0415e3a0c3eb80f7303d1139
+ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258635"
 ---
 # <a name="mfc-application-wizard"></a>Kreator aplikacji MFC
 
@@ -79,7 +79,7 @@ Aby zmienić te domyślne ustawienia, należy kliknąć odpowiedni tytuł karty 
 
 Po utworzeniu projektu aplikacji MFC, możesz dodać obiekty i kontrolki do projektu przy użyciu języka Visual C++ [kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md)<br/>
 [Aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md)<br/>

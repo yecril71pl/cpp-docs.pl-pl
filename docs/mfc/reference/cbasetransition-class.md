@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258375"
 ---
 # <a name="cbasetransition-class"></a>Klasa CBaseTransition
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Klatki kluczowej, która określa początek przejścia.
 
-*Oczekujący*<br/>
+*pEnd*<br/>
 Kluczową Określa koniec przejścia.
 
 ### <a name="remarks"></a>Uwagi
@@ -421,6 +421,6 @@ enum TRANSITION_TYPE;
 
 Typ przejścia znajduje się w Konstruktorze określonego przejścia. Na przykład CSinusoidalTransitionFromRange ustawia SINUSOIDAL_FROM_RANGE jego typu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

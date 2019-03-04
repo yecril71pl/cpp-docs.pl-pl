@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 28396d797d0ca63f110fe4482aba8fe69f0608c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259675"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Za pomocą CArchive &lt; &lt; i &gt; &gt; operatorów
 
@@ -48,7 +48,7 @@ Definiuje bibliotekę **< \<** i **>>** operatory `CArchive` jako pierwszy argum
 |`CObject*`|**ROZMIAR** i `CSize`|**float**|
 |**WORD**|`CString`|**PUNKT** i `CPoint`|
 |`DWORD`|**BAJTÓW**|`RECT` i `CRect`|
-|**Double**|**DŁUGI**|`CTime` i `CTimeSpan`|
+|**Double**|**LONG**|`CTime` i `CTimeSpan`|
 |`Int`|**COleCurrency**|`COleVariant`|
 |`COleDateTime`|`COleDateTimeSpan`||
 
@@ -59,7 +59,6 @@ Definiuje bibliotekę **< \<** i **>>** operatory `CArchive` jako pierwszy argum
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
-
+[Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)

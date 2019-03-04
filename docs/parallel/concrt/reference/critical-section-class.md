@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260949"
 ---
 # <a name="criticalsection-class"></a>critical_section — Klasa
 
@@ -57,8 +57,8 @@ class critical_section;
 |Nazwa|Opis|
 |----------|-----------------|
 |[lock](#lock)|Uzyskuje w tej sekcji krytycznych.|
-|[native_handle —](#native_handle)|Zwraca określonego dojścia natywnego platformy, jeśli taka istnieje.|
-|[try_lock —](#try_lock)|Próbuje uzyskać blokady bez blokowania.|
+|[native_handle](#native_handle)|Zwraca określonego dojścia natywnego platformy, jeśli taka istnieje.|
+|[try_lock](#try_lock)|Próbuje uzyskać blokady bez blokowania.|
 |[try_lock_for](#try_lock_for)|Próbuje uzyskać blokady bez blokowania określoną liczbę milisekund.|
 |[unlock](#unlock)|Odblokowuje sekcję krytyczną.|
 
@@ -192,7 +192,7 @@ Odblokowuje sekcję krytyczną.
 void unlock();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [reader_writer_lock, klasa](reader-writer-lock-class.md)

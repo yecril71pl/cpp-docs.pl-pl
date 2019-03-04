@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258739"
 ---
 # <a name="colestreamfile-class"></a>Klasa COleStreamFile
 
@@ -62,7 +62,7 @@ class COleStreamFile : public CFile
 
 `COleStreamFile` obiekty są dokładnie takie jak zmieniane [CFile](../../mfc/reference/cfile-class.md) obiektów.
 
-Aby uzyskać więcej informacji na temat manipulowanie strumieni i magazynów, zobacz artykuł [kontenery: pliki złożone](../../mfc/containers-compound-files.md)...
+Aby uzyskać więcej informacji na temat manipulowanie strumieni i magazynów, zobacz artykuł [kontenerów: Pliki złożone](../../mfc/containers-compound-files.md)...
 
 Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream) i [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) w zestawie Windows SDK.
 
@@ -241,8 +241,7 @@ Wyjątek plików zostanie zgłoszony, jeśli Otwórz kończy się niepowodzeniem
 
 Aby uzyskać więcej informacji, zobacz [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

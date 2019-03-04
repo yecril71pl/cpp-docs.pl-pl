@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z wyników połączonych do poprawiania wydajności'
+title: 'Instrukcje: Korzystanie z wyników połączonych do poprawiania wydajności'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-ms.openlocfilehash: 5d68335046b08aa41028be11d833b334c1dc0055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8f4c40be84b2204e5b5632fe6d3d5a5d22b8719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258128"
 ---
-# <a name="how-to-use-combinable-to-improve-performance"></a>Porady: korzystanie z wyników połączonych do poprawiania wydajności
+# <a name="how-to-use-combinable-to-improve-performance"></a>Instrukcje: Korzystanie z wyników połączonych do poprawiania wydajności
 
 W tym przykładzie pokazano, jak używać [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy, aby obliczyć sumę dwóch liczb w [std::array](../../standard-library/array-class-stl.md) obiekt, który jest pierwsze. `combinable` Klasy zwiększa wydajność, eliminując udostępnionego stanu.
 
@@ -65,7 +65,7 @@ Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu 
 
 Aby uzyskać przykład, że używa operacji mapowania i redukcji w celu uzyskania tych samych wyników, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable, klasa](../../parallel/concrt/reference/combinable-class.md)<br/>

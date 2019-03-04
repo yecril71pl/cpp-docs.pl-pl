@@ -1,19 +1,19 @@
 ---
-title: Struktura CMFCTabToolTipInfo
+title: CMFCTabToolTipInfo Structure
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabToolTipInfo
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: b785754a7970573c42fcc1d0736541416f522c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260820"
 ---
-# <a name="cmfctabtooltipinfo-structure"></a>Struktura CMFCTabToolTipInfo
+# <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo Structure
 
 Ta struktura zawiera informacje dotyczące zakładki MDI, który użytkownik po umieszczeniu wskaźnika nad.
 
@@ -39,7 +39,7 @@ Wskaźnik do `CMFCTabToolTipInfo` struktury jest przekazywany jako parametr AFX_
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `CMFCTabToolTipInfo` jest używany w [MDITabsDemo próbki: aplikacja z kartami MDI w MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie przedstawiono sposób `CMFCTabToolTipInfo` jest używany w [MDITabsDemo próbki: MFC z kartami MDI aplikacji](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -49,7 +49,7 @@ W poniższym przykładzie przedstawiono sposób `CMFCTabToolTipInfo` jest używa
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
 
@@ -65,7 +65,7 @@ Indeks karty, nad którym znajduje się użytkownik.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `m_nTabIndex` jest używany w [MDITabsDemo próbki: aplikacja z kartami MDI w MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie przedstawiono sposób `m_nTabIndex` jest używany w [MDITabsDemo próbki: MFC z kartami MDI aplikacji](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `m_pTabWnd` jest używany w [MDITabsDemo próbki: aplikacja z kartami MDI w MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie przedstawiono sposób `m_pTabWnd` jest używany w [MDITabsDemo próbki: MFC z kartami MDI aplikacji](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,11 +97,11 @@ Jeśli ten ciąg jest pusty, nie jest wyświetlana etykietka narzędzia.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `m_strText` jest używany w [MDITabsDemo próbki: aplikacja z kartami MDI w MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie przedstawiono sposób `m_strText` jest używany w [MDITabsDemo próbki: MFC z kartami MDI aplikacji](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

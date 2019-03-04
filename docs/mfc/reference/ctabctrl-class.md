@@ -1,5 +1,5 @@
 ---
-title: Klasa CTabCtrl
+title: CTabCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTabCtrl
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259545"
 ---
-# <a name="ctabctrl-class"></a>Klasa CTabCtrl
+# <a name="ctabctrl-class"></a>CTabCtrl Class
 
 Oferuje funkcje formantu typowej zakładki Windows.
 
@@ -169,7 +169,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 *bLarger*<br/>
 Wskazuje do wykonywania kolejnej operacji. Jeśli ten parametr ma wartość TRUE, *lprect —* określa prostokątny obszar wyświetlania i odbiera prostokąt odpowiednie okna. Jeśli ten parametr ma wartość FALSE, *lprect —* Określa prostokąt okna i odbiera odpowiedniego prostokątny obszar wyświetlania.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która określa danego prostokąt i odbiera obliczony prostokąt.
 
 ### <a name="example"></a>Przykład
@@ -484,7 +484,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 *nItem*<br/>
 Liczony od zera indeks elementu karty.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający karty. Tych współrzędnych w trybie okienka ekranu bieżące mapowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -645,7 +645,7 @@ Wskaźnik do [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) stru
 *lpszItem*<br/>
 Adres ciąg zakończony wartością null zawierający tekst, na karcie.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu, aby wstawić z listy obrazów.
 
 *nMask*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczony od zera indeks obrazu do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Minimalna szerokość należy ustawić dla elementu kontrolki karty. Jeśli ten parametr jest ustawiona na wartość -1, kontrolka będzie używać domyślnej szerokości karty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -922,7 +922,7 @@ Możesz uzyskać formantem etykietki narzędzia, które są skojarzone z formant
 
   Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

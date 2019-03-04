@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262639"
 ---
 # <a name="csecuritydesc-class"></a>Klasa CSecurityDesc
 
@@ -61,7 +61,7 @@ class CSecurityDesc
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Konstruktor.|
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Destruktor.|
+|[CSecurityDesc::~CSecurityDesc](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -132,7 +132,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 `CSecurityDesc` Opcjonalnie można utworzyć obiekt przy użyciu `SECURITY_DESCRIPTOR` struktury lub uprzednio zdefiniowany `CSecurityDesc` obiektu.
 
-##  <a name="dtor"></a>  CSecurityDesc:: ~ CSecurityDesc
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc
 
 Destruktor.
 
@@ -675,7 +675,7 @@ bool ToString(
 *pstr*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który otrzyma [format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*SI*<br/>
+*si*<br/>
 Określa kombinacja flag bitowych SECURITY_INFORMATION, aby wskazać składniki deskryptora zabezpieczeń, aby uwzględnić w ciągu wyjściowym.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -701,7 +701,7 @@ Jeśli nie ustawiono bitu kontroli SE_DACL_PRESENT w deskryptorze zabezpieczeń 
 
 Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>

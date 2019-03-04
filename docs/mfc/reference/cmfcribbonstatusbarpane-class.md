@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonStatusBarPane
+title: CMFCRibbonStatusBarPane Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265733"
 ---
-# <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
+# <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane Class
 
 `CMFCRibbonStatusBarPane` Klasa implementuje element wstążki, który można dodać do paska stanu wstążki.
 
@@ -359,7 +359,7 @@ Zatrzymuje animacji, która została przypisana do okienka paska stanu.
 void StopAnimation();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

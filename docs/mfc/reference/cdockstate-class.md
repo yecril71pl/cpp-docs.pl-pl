@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443605"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262691"
 ---
 # <a name="cdockstate-class"></a>Klasa CDockState
 
@@ -58,7 +58,7 @@ Pasek może być dowolną dokowalne kontrolkę paska narzędzi, pasek stanu lub 
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) pobiera informacje o stanie wszystkie ramki okna firmy `CControlBar` obiektów i umieszcza go w `CDockState` obiektu. Następnie można napisać zawartość `CDockState` obiektu do magazynu przy użyciu [Serialize](../../mfc/reference/cobject-class.md#serialize) lub [CDockState::SaveState](#savestate). Jeśli chcesz później przywrócić stan pasków sterowania w oknie ramki, można załadować stanu z `Serialize` lub [CDockState::LoadState](#loadstate), następnie za pomocą [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) zastosować zapisane stan do pasków sterowania oknem ramki.
 
-Aby uzyskać więcej informacji na temat dokowania pasków sterowania, zobacz artykuły [paski sterowania](../../mfc/control-bars.md), [paski narzędzi: zadokowane i przestawne](../../mfc/docking-and-floating-toolbars.md), i [Windows ramki](../../mfc/frame-windows.md).
+Aby uzyskać więcej informacji na temat dokowania pasków sterowania, zobacz artykuły [paski sterowania](../../mfc/control-bars.md), [paski narzędzi: Zadokowane i przestawne](../../mfc/docking-and-floating-toolbars.md), i [ramki Windows](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -140,8 +140,7 @@ Wskazuje ciąg teminated o wartości null, który określa nazwę sekcji w pliku
 
 Nazwa profilu jest części aplikacji. Plik INI lub rejestr zawierający informacje o stanie paska sterowania. `SaveState` Ponadto zapisuje bieżący rozmiar ekranu. Informacje dotyczące paska sterowania można pobrać z rejestru lub. Plik INI, za pomocą `LoadState`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

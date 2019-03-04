@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 8b84f982d06547dd162da530d326d4cdb92e254a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50119d21b041f37f03ca416a9a56ca9e29ae3344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263536"
 ---
 # <a name="iolecontrolimpl-class"></a>Klasa IOleControlImpl
 
@@ -92,7 +92,7 @@ Zobacz [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecont
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange
 
@@ -120,13 +120,13 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
 [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>

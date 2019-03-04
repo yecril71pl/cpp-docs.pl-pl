@@ -1,18 +1,18 @@
 ---
-title: 'Porady: używanie nadsubskrypcji do przesuwania opóźnienia'
+title: 'Instrukcje: Używanie Nadsubskrypcji do przesuwania opóźnienia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257946"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Porady: używanie nadsubskrypcji do przesuwania opóźnienia
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Instrukcje: Używanie Nadsubskrypcji do przesuwania opóźnienia
 
 Nadsubskrypcja może zwiększyć ogólną wydajność niektórych aplikacji, które zawiera zadania, które mają dużej ilości opóźnienia. W tym temacie pokazano, jak używanie nadsubskrypcji do opóźnienia, które jest spowodowany przez odczytywanie danych z połączeniem sieciowym.
 
@@ -60,7 +60,7 @@ Przykład mogą działać szybciej po włączeniu nadsubskrypcji, ponieważ doda
 
 Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `download-oversubscription.cpp` i następnie uruchom jeden z następujących poleceń w **Visual Studio Command Prompt** okna.
 
-**Cl.exe/ehsc/MD /D "_AFXDLL" download-oversubscription.cpp**
+**cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
 
 **Cl.exe/ehsc/MT pobierania oversubscription.cpp**
 
@@ -78,8 +78,7 @@ Poniższy przykład modyfikuje treści `download` metody Użyj RAII, aby upewni�
 
 [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
 [Context::oversubscribe — metoda](reference/context-class.md#oversubscribe)
-

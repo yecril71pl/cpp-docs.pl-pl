@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265148"
 ---
 # <a name="csplitterwndex-class"></a>Klasa CSplitterWndEx
 
@@ -74,10 +74,10 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia. Jeśli ten parametr ma wartość NULL, w ramach odrysowuje aktywnego okna.
 
-*nNie*<br/>
+*nType*<br/>
 [in] Jedną z `CSplitterWnd::ESplitType` wartości wyliczenia określających element okno rozdzielacza, aby narysować. Prawidłowe wartości to `splitBox`, `splitBar`, `splitIntersection`, i `splitBorder`.
 
 *Rect*<br/>
@@ -85,7 +85,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../hierarchy-chart.md)<br/>
 [Klasy](mfc-classes.md)<br/>

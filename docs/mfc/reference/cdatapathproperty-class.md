@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262769"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
 
@@ -64,9 +64,9 @@ Klasa `CDataPathProperty` jest tworzony na podstawie `CAysncMonikerFile`. Aby za
 
 Aby uzyskać więcej informacji o sposobie używania formantów ActiveX i monikerów asynchronicznych w aplikacjach internetowych zobacz następujące artykuły:
 
-- [Internecie pierwsze kroki: Kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)
 
-- [Internecie pierwsze kroki: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet First Steps: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -215,7 +215,7 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 Ścieżką, która może być bezwzględny lub względny, do właściwości są ładowane asynchronicznie. `CDataPathProperty` używa adresów URL, a nie nazwy plików. Jeśli chcesz `CDataPathProperty` obiektu dla pliku, dołączana `file://` do ścieżki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obraz przykładowej MFC](../../visual-cpp-samples.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>

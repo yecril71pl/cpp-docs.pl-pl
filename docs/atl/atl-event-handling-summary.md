@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-ms.openlocfilehash: e2b17e7b6849163ee0e8e12696df25169e2773cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e3a47719e3160170ed1bfa64b315415ddc7a1c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265356"
 ---
 # <a name="atl-event-handling-summary"></a>Podsumowanie obsługi zdarzeń ATL
 
@@ -45,8 +45,7 @@ Istnieją trzy główne sposoby wniosku oraz unadvising źródła zdarzeń za po
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Kontrolki ActiveX w formanty złożone|Nie|`CComCompositeControl::AdviseSinkMap` Zaleca się, że wszystkie wpisy w zdarzeniu ujścia mapy. Tę samą funkcję unadvises wpisów. Ta metoda jest wywoływana automatycznie przez `CComCompositeControl` klasy.|
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Kontrolki ActiveX w oknie dialogowym|Nie|`CAxDialogImpl::AdviseSinkMap` z informacją o tym i unadvises wszystkich kontrolek ActiveX w zasobu okna dialogowego. Odbywa się to automatycznie dla Ciebie.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)<br/>
 [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)
-

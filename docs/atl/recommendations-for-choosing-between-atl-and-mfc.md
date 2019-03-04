@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: b3c01a54c1250ae97d5377cb0b1ff49a17c3f7c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259779"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Zalecenia dotyczące wybierania między ATL i MFC
 
@@ -28,7 +28,6 @@ MFC umożliwia tworzenie pełnych aplikacji, formanty ActiveX i dokumenty aktywn
 
 Możesz dodać obsługę przy użyciu biblioteki ATL w istniejącym projekcie MFC za pomocą kreatora. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do ATL](../atl/introduction-to-atl.md)
-

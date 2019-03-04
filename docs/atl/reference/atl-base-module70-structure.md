@@ -1,5 +1,5 @@
 ---
-title: Struktura _ATL_BASE_MODULE70
+title: _ATL_BASE_MODULE70 Structure
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_ATL_BASE_MODULE70
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 806ed86076d8b27662bcd9a328d43cabf5df5c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261464"
 ---
-# <a name="atlbasemodule70-structure"></a>Struktura _ATL_BASE_MODULE70
+# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 Structure
 
 Używane przez dowolny projekt, który używa ATL.
 
@@ -69,7 +69,6 @@ Tablica używanych do wyszukiwania zasobów we wszystkich wystąpieniach zasobó
 
 **Nagłówek:** atlcore.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../../atl/reference/atl-classes.md)
-

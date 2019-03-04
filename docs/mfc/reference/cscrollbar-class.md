@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 3b8e7dc78ddfa22097c97fb4e97fff92f0984c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263120"
 ---
 # <a name="cscrollbar-class"></a>Klasa CScrollBar
 
@@ -353,7 +353,7 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa nowe położenie suwaka. Musi ona należeć do zakresu przewijania.
 
 *bRedraw*<br/>
@@ -428,7 +428,7 @@ Aplikacja nie powinna wywołać tę funkcję, aby ukryć pasek przewijania podcz
 
   Zobacz przykład [CScrollBar::Create](#create).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -2,12 +2,12 @@
 title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570326"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260884"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -203,7 +203,7 @@ W poniższej tabeli wymieniono prawidłowe liczby bitów na kanał dla każdego 
 |-----------------------|-----------------------------------|
 |int, int_2, int_4<br /><br /> uint, uint_2, uint_4|8, 16, 32|
 |int_3, uint_3|32|
-|Float, float_2, float_4|16, 32|
+|float, float_2, float_4|16, 32|
 |float_3|32|
 |double_2 Double,|64|
 |norm norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|
@@ -406,7 +406,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 Środowisko wykonawcze C++ AMP wspiera współdziałanie między `texture<T,1>` i [interfejsem ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503), między `texture<T,2>` i [interfejsem ID3D11Texture2D](http://go.microsoft.com/fwlink/p/?linkId=255317)oraz między `texture<T,3>`i [interfejsem ID3D11Texture3D](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda przyjmuje `texture` obiektu i zwraca `IUnknown` interfejsu. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda przyjmuje `IUnknown` interfejsu i `accelerator_view` obiektu i zwraca `texture` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [double_2, klasa](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3, klasa](../../parallel/amp/reference/double-3-class.md)<br/>

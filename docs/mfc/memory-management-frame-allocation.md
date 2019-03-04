@@ -1,5 +1,5 @@
 ---
-title: 'Zarządzanie pamięcią: alokacja ramek'
+title: 'Zarządzanie pamięcią: Alokacja ramek'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 45b0242ec8acafa2345482893d14decb02c4a3f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262210"
 ---
-# <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
+# <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: Alokacja ramek
 
 Alokacji na ramce przyjmuje jego nazwę z "ramki stosu", o które ustawiono zawsze, gdy funkcja jest wywoływana. Ramka stosu jest to obszar pamięci, który tymczasowo przechowuje argumenty do funkcji, jak również wszelkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennymi "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.
 
@@ -39,7 +39,6 @@ Gdy obiekt jest zdefiniowany jako zmienna ramki, jego konstruktor jest wywoływa
 
 Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie pamięcią](../mfc/memory-management.md)
-

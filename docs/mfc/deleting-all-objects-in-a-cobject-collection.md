@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257972"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 
@@ -78,7 +78,6 @@ Zgodnie z powyższym przykładzie listy może wywołać `RemoveAll` można usun�
 
 Możesz wywołać `RemoveAll` można usunąć wszystkich elementów w mapie lub `RemoveKey` można usunąć pojedynczego elementu z określonym kluczem.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uzyskiwanie dostępu do wszystkich składowych kolekcji](../mfc/accessing-all-members-of-a-collection.md)
-

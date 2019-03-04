@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260598"
 ---
 # <a name="tooltiptext-structure"></a>Struktura TOOLTIPTEXT
 
@@ -30,7 +30,7 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*HDR*<br/>
+*hdr*<br/>
 Określa narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury, który może być konieczne jest identyfikator formantu polecenia. Identyfikator polecenia kontrolki będą znajdować się w *idFrom* członkiem **NMHDR** struktury, uzyskać dostęp przy użyciu składni `hdr.idFrom`. Zobacz [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) dyskusję na temat elementów członkowskich **NMHDR** struktury.
 
 *lpszText*<br/>
@@ -50,7 +50,6 @@ Podczas obsługi `TTN_NEEDTEXT` powiadomień wiadomości, określ ciąg, który 
 
 - Skopiuj identyfikator zasobu ciągu do *lpszText* elementu członkowskiego, a następnie skopiuj dojście wystąpienia, które zawiera zasób do *hinst* elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

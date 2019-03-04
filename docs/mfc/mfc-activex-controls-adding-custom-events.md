@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych'
+title: 'Kontrolki ActiveX MFC: Dodawanie zdarzeń niestandardowych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: ad44cb097f03270b09612ad756d34725464a1765
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263016"
 ---
-# <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
+# <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: Dodawanie zdarzeń niestandardowych
 
 Zdarzenia niestandardowe różnią się od standardowych zdarzeń, w tym, że nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje określone działanie, określane przez dewelopera kontrolek, jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez EVENT_CUSTOM — makro. Poniższa sekcja implementuje niestandardowego zdarzenia dla projektu kontrolki ActiveX, który został utworzony przy użyciu Kreatora kontrolek ActiveX.
 
@@ -131,8 +131,8 @@ Poniższa procedura dodaje niestandardowy kliknij zdarzenie.
 
 1. Wywołaj `FireClick` w odpowiednich miejscach w kodzie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
+[Kontrolki ActiveX MFC: Metody](../mfc/mfc-activex-controls-methods.md)<br/>
 [Klasa COleControl](../mfc/reference/colecontrol-class.md)

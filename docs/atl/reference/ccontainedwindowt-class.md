@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261664"
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 
@@ -141,7 +141,7 @@ CContainedWindowT(
 *lpszClassName*<br/>
 [in] Nazwa istniejącej klasy okna, na którym będzie zależeć zawartego okna.
 
-*Obiekt*<br/>
+*pObject*<br/>
 [in] Wskaźnik do obiektu zawierającego, która deklaruje mapy komunikatów. Klasa ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -204,7 +204,7 @@ HWND Create(
 *lpszClassName*<br/>
 [in] Nazwa istniejącej klasy okna, na którym będzie zależeć zawartego okna.
 
-*Obiekt*<br/>
+*pObject*<br/>
 [in] Wskaźnik do obiektu zawierającego, która deklaruje mapy komunikatów. Klasa ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
@@ -460,7 +460,7 @@ Wynik przetwarzania wiadomości.
 
 `WindowProc` kieruje komunikaty do mapy wiadomości identyfikowane przez [m_dwMsgMapID](#m_dwmsgmapid). Jeśli to konieczne, `WindowProc` wywołania [DefWindowProc](#defwindowproc) do przetwarzania komunikatów dodatkowe.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWindow](../../atl/reference/cwindow-class.md)<br/>
 [Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>

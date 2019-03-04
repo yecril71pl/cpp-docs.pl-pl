@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259961"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Obsługa bazy danych, kreator aplikacji MFC
 
@@ -73,6 +73,6 @@ Ta strona zawiera opcje, które pozwalają na określenie poziomu bazy danych ob
    |**Zestaw dynamiczny**|Określa, czy zestaw rekordów jest dynamiczny. Dynamiczny jest wynikiem kwerendę, która zawiera widok indeksowany do kwerendy bazy danych. Dynamiczny przechowuje tylko całkowitą indeksu do oryginalnych danych i związku z tym jest wydajność uzyskiwać za pośrednictwem migawki. Punkty indeksu bezpośrednio do każdego wybranego rekordu można odnaleźć wyniku zapytania i wskazuje, gdy rekord zostanie usunięty. Masz również dostęp do aktualnych informacji w rekordach kwerendy.|
    |**Migawka**|Określa, czy zestaw rekordów jest migawką. Migawka jest rezultat zapytania i wgląd w bazę danych w jednym punkcie w czasie. Wszystkie rekordy, które można odnaleźć wyniku kwerendy są buforowane, więc nie widzisz wszelkie zmiany, oryginalnym rekordów.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)

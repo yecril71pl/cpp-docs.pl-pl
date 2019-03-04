@@ -1,19 +1,19 @@
 ---
-title: Przegląd stanów elementu kontrolki drzewa
+title: Przegląd stanów elementu formantu drzewa
 ms.date: 11/04/2016
 helpviewer_keywords:
 - states, CTreeCtrl items
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264602"
 ---
-# <a name="tree-control-item-states-overview"></a>Przegląd stanów elementu kontrolki drzewa
+# <a name="tree-control-item-states-overview"></a>Przegląd stanów elementu formantu drzewa
 
 Każdego elementu kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) ma bieżącego stanu. Na przykład, można wybrać element, wyłączone, rozwinięty i tak dalej. W większości przypadków formant drzewa automatycznie ustawia stan elementu do odzwierciedlenia czynności użytkownika, takie jak zaznaczenie elementu. Jednak również można ustawić stanu elementu przy użyciu [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) funkcja elementu członkowskiego i pobrać bieżący stan elementu za pomocą [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) funkcja elementu członkowskiego. Aby uzyskać pełną listę stanów elementu, zobacz [stałe kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-item-states) w zestawie Windows SDK.
 
@@ -27,8 +27,7 @@ Inny przykład zmiany stanu, będzie można ustawić elementu nakładki obrazów
 
 Aby ustawić element obrazu stanu, *nStateMask* musi zawierać `TVIS_STATEIMAGEMASK` wartości i *nInformacje* musi zawierać liczonego od jednego indeksu obrazu stanu przesunięte pozostałych bitów 12 przy użyciu [ INDEXTOSTATEIMAGEMASK](/windows/desktop/api/commctrl/nf-commctrl-indextostateimagemask) makra. Indeks może być 0, aby określić Brak obrazu stanu. Aby uzyskać więcej informacji o obrazach w nakładce, a stan, zobacz [listy obrazów kontrolki drzewa](../mfc/tree-control-image-lists.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

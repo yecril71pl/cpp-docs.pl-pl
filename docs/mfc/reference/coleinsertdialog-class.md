@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: c99344c71d3f9789905516d661749b3668b57d50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260689"
 ---
 # <a name="coleinsertdialog-class"></a>Klasa COleInsertDialog
 
@@ -110,7 +110,7 @@ COleInsertDialog (
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flaga tworzenia, który zawiera dowolną liczbę następujące wartości, które można połączyć za pomocą operatora bitowego OR:
 
 - IOF_SHOWHELP Określa, że przycisk Pomoc, będą wyświetlane, gdy wywoływana jest okno dialogowe.
@@ -169,7 +169,7 @@ INT_PTR
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Jeden z następujących wartości:
 
 `COleInsertDialog::DocObjectsOnly` Wstawia tylko DocObjects.
@@ -302,7 +302,7 @@ Elementy członkowskie tej struktury można zmodyfikować bezpośrednio lub za p
 
 Aby uzyskać więcej informacji, zobacz [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struktury w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: 25ceae897d3cc845ab06fd4d898c87518b15eacb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257444"
 ---
 # <a name="device-context-global-functions"></a>Funkcje globalne kontekstu urządzenia
 
@@ -29,7 +29,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hdc*<br/>
+*hdc*<br/>
 [in] Istniejący uchwyt kontekstu urządzenia, lub wartość NULL.
 
 *ptd*<br/>
@@ -49,6 +49,6 @@ Jeśli *elementu hdc* nie ma wartości NULL i *ptd* ma wartość NULL, funkcja z
 
 **Nagłówek:** atlwin.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../../atl/reference/atl-functions.md)

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: a9653225f3057d6c5ba9fd49cf64487e766ca8d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491549"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258570"
 ---
 # <a name="cacl-class"></a>Klasa CAcl
 
@@ -57,7 +57,7 @@ class CAcl
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Konstruktor.|
-|[CAcl:: ~ CAcl](#dtor)|Destruktor.|
+|[CAcl::~CAcl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -391,7 +391,7 @@ void SetNull() throw();
 
 `CAcl` Można ustawić pustą lub null: dwa stany są różne.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

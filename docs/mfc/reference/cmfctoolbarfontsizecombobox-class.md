@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCToolBarFontSizeComboBox
+title: CMFCToolBarFontSizeComboBox Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 3344687e678f298aa6953fa36514d392251fd2fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440394"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258947"
 ---
-# <a name="cmfctoolbarfontsizecombobox-class"></a>Klasa CMFCToolBarFontSizeComboBox
+# <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox Class
 
 Przycisk paska narzędzi, który zawiera formant pola kombi, która umożliwia użytkownikowi wybranie rozmiar czcionki.
 
@@ -129,7 +129,7 @@ void SetTwipSize(int nSize);
 
 Pobrać poprzedniego rozmiaru poprawną czcionkę później przez wywołanie metody [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
@@ -138,5 +138,4 @@ Pobrać poprzedniego rozmiaru poprawną czcionkę później przez wywołanie met
 [Klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [Klasa CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262613"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
 
@@ -62,9 +62,9 @@ Kontrolki ActiveX używa kilku elementów programowe wchodzić w interakcje wyda
 
 Każdy obiekt formantu ActiveX, tworzysz dziedziczy jej klasa bazowa MFC bogaty zestaw funkcji `COleControl`. Funkcje te obejmują aktywacji w miejscu i logiki automatyzacji. `COleControl` można udostępnić obiekt formantu taką samą funkcjonalność jak obiekt okna MFC, a także możliwość wyzwalać zdarzeń. `COleControl` można też podać [kontrolek bez okien](../mfc/providing-windowless-activation.md), które polegają na ich kontenera, aby uzyskać pomoc dotyczącą niektóre z funkcji okna zapewnia (przechwytywanie myszy, klawiatury, przewijania), ale oferuje znacznie szybsze wyświetlanie.
 
-Ponieważ klasa formantów wywodzi się z `COleControl`, dziedziczy on możliwość wysyłania lub "ogień", wiadomości, wywołuje zdarzenia, do kontenera kontrolki, gdy są spełnione określone warunki. Aby otrzymywać powiadomienia, kontenera kontrolki, gdy coś, co jest ważne się dzieje w kontrolce korzysta z tych zdarzeń. Dodatkowe informacje o zdarzeniu może wysyłać do kontenera kontrolki, dołączając parametrów do zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC: zdarzenia](../mfc/mfc-activex-controls-events.md).
+Ponieważ klasa formantów wywodzi się z `COleControl`, dziedziczy on możliwość wysyłania lub "ogień", wiadomości, wywołuje zdarzenia, do kontenera kontrolki, gdy są spełnione określone warunki. Aby otrzymywać powiadomienia, kontenera kontrolki, gdy coś, co jest ważne się dzieje w kontrolce korzysta z tych zdarzeń. Dodatkowe informacje o zdarzeniu może wysyłać do kontenera kontrolki, dołączając parametrów do zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC: Zdarzenia](../mfc/mfc-activex-controls-events.md).
 
-Ostatnim elementem jest mapa wysyłania, który jest używany do udostępnienia zestaw funkcji (o nazwie metody) i atrybuty (nazywane właściwościami) do formantu użytkownika. Właściwości umożliwiają kontener formantu lub użytkownika kontrolki do manipulowania kontroli na różne sposoby. Użytkownika można zmienić wygląd kontrolki, zmienić niektóre wartości kontrolki lub wysyłać żądania kontrolki, takie jak uzyskiwanie dostępu do konkretne dane, które obsługuje formant. Ten interfejs jest określana przez dewelopera kontrolek i jest definiowana za pomocą **Widok klas**. Aby uzyskać więcej informacji na temat właściwości i metod formantu ActiveX, zobacz artykuły [kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md).
+Ostatnim elementem jest mapa wysyłania, który jest używany do udostępnienia zestaw funkcji (o nazwie metody) i atrybuty (nazywane właściwościami) do formantu użytkownika. Właściwości umożliwiają kontener formantu lub użytkownika kontrolki do manipulowania kontroli na różne sposoby. Użytkownika można zmienić wygląd kontrolki, zmienić niektóre wartości kontrolki lub wysyłać żądania kontrolki, takie jak uzyskiwanie dostępu do konkretne dane, które obsługuje formant. Ten interfejs jest określana przez dewelopera kontrolek i jest definiowana za pomocą **Widok klas**. Aby uzyskać więcej informacji na temat właściwości i metod formantu ActiveX, zobacz artykuły [kontrolki ActiveX MFC: Metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interakcja między formantami za pomocą Windows i kontenery kontrolek ActiveX
 
@@ -92,7 +92,7 @@ Windows przetwarzania komunikatów w oknie kontrolki ActiveX (jeśli jest aktywn
 
 Zdolność do serializowania danych, czasami nazywane trwałości, umożliwia formant do zapisu wartości właściwości w magazynie trwałym. Następnie można odtworzyć formantów, zapoznając się stan obiektu z magazynu.
 
-Należy pamiętać, że kontrolka nie jest odpowiedzialna za uzyskiwanie dostępu do nośnika magazynowania. Zamiast tego należy kontener formantu jest odpowiedzialne za świadczenie kontrolki z nośnika magazynowania do użycia w odpowiednim czasie. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [kontrolki ActiveX MFC: serializacja](../mfc/mfc-activex-controls-serializing.md). Aby uzyskać informacje dotyczące optymalizacji serializacji, zobacz [Optymalizacja stanu trwałego i inicjalizacji](../mfc/optimizing-persistence-and-initialization.md) w kontrolkach ActiveX: optymalizacji.
+Należy pamiętać, że kontrolka nie jest odpowiedzialna za uzyskiwanie dostępu do nośnika magazynowania. Zamiast tego należy kontener formantu jest odpowiedzialne za świadczenie kontrolki z nośnika magazynowania do użycia w odpowiednim czasie. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [kontrolki ActiveX MFC: Serializacja](../mfc/mfc-activex-controls-serializing.md). Aby uzyskać informacje dotyczące optymalizacji serializacji, zobacz [Optymalizacja stanu trwałego i inicjalizacji](../mfc/optimizing-persistence-and-initialization.md) w kontrolkach ActiveX: Optymalizacja.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalowanie narzędzia i klasy kontrolki ActiveX
 
@@ -116,8 +116,8 @@ Domyślnie klasy kontrolek ActiveX i narzędzia są instalowane w poniższych po
 
    Zawiera biblioteki wymagane do rozwoju formantów ActiveX MFC
 
-Dostępne są także przykłady dla kontrolek MFC ActiveX. Aby uzyskać więcej informacji na temat tych przykładów, zobacz [przykłady formantów: MFC-Based kontrolek ActiveX](../visual-cpp-samples.md)
+Dostępne są także przykłady dla kontrolek MFC ActiveX. Aby uzyskać więcej informacji na temat tych przykładów, zobacz [przykłady formantów: Kontrolki ActiveX oparty na bibliotece MFC](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

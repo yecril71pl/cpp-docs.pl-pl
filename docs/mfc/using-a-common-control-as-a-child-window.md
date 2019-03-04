@@ -8,12 +8,12 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 690b48cf50e95265aaf5bdd454e2881b8f5fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260676"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Używanie formantu wspólnego jako okna podrzędnego
 
@@ -29,8 +29,7 @@ Dowolny wspólnych formantów Windows może służyć jako okna podrzędnego inn
 
 1. Po zakończeniu za pomocą kontrolki, użyj [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) do zniszczenia kontrolki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

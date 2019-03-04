@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178743"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259519"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 [COleDataObject](../../mfc/reference/coledataobject-class.md) zawierający dane do wklejenia.
 
-*usługi CF*<br/>
+*cf*<br/>
 Żądany format Schowka.
 
 *hMetaPict*<br/>
@@ -625,7 +625,7 @@ long GetTextLengthEx(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Wartość określająca metoda do użycia przy określaniu długość tekstu. Ten element członkowski może być jedną lub więcej wartości wymienione w flagi członkiem [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) opisanego w zestawie Windows SDK.
 
 *uCodePage*<br/>
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 Format schowka zainteresowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1046,7 +1046,7 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia dla obszaru danych wyjściowych.
 
 *rectLayout*<br/>
@@ -1086,7 +1086,7 @@ long PrintPage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia dla danych wyjściowych strony.
 
 *nIndexStart*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury zawierającej znak nowego domyślnego formatowanie atrybutów.
 
 ### <a name="remarks"></a>Uwagi
@@ -1282,7 +1282,7 @@ Override tę funkcję, aby zmodyfikować sposób, w widoku edycji wzbogaconej re
 
 [!code-cpp[NVC_MFCDocView#163](../../mfc/codesnippet/cpp/cricheditview-class_13.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>

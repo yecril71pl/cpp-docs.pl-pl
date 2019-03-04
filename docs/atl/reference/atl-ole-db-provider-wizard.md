@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441330"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258778"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
 
@@ -31,7 +31,7 @@ W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
 
    Wpisz krótką nazwę dostawcy, który ma zostać utworzony. Pozostałe pola edycji kreatora zostaną wypełnione automatycznie oparte na w tym miejscu wpisz. Jeśli chcesz, możesz edytować pozostałe pola nazw.
 
-- **Klasa coclass**
+- **Coclass**
 
    Nazwa klasy coclass. Nazwa identyfikatora ProgID zostanie zmieniona na pasują do tej nazwy.
 
@@ -41,7 +41,7 @@ W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
 
    Wybranie tej opcji podczas tworzenia projektu bezatrybutowego, Kreator wyświetli ostrzeżenie, zostaną przekonwertowane na projekcie z atrybutami i zapyta, czy chcesz kontynuować, lub nie projektu.
 
-- **Identyfikator programu**
+- **ProgID**
 
    Identyfikator ProgID lub identyfikator programowy, to ciąg tekstowy, który aplikacja może użyć zamiast identyfikatora GUID. Nazwa identyfikatora ProgID ma formę *NazwaProjektu.nazwaklasycoclass*.
 
@@ -85,7 +85,6 @@ W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
 
    Plik implementacji dostawcy. Można zmienić nazwę tego pliku lub wybierz istniejący plik implementacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dostawcy ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
-

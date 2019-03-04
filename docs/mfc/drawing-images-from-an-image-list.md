@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: 2ed309ec4a6e58fbc4a900bc541a80004d6be3d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2058c727620c9aae4ccd9a3fbeaae02c78ce8c6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260533"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Rysowanie obrazów z poziomu listy obrazów
 
@@ -30,8 +30,7 @@ Nonmasked obrazu jest kopiowany do docelowego urządzenia kontekstu przy użyciu
 
 Oprócz funkcję składową Draw inną funkcję, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozszerza możliwości renderowania obrazu. `DrawIndirect` przyjmuje jako parametr, [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struktury. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kody operacji (w prawym GÓRNYM) rastrowych. Aby uzyskać więcej informacji o kodach przycinanie — zobacz [kody operacji rastrowych](/windows/desktop/gdi/raster-operation-codes) i [map bitowych jako pędzle](/windows/desktop/gdi/bitmaps-as-brushes) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

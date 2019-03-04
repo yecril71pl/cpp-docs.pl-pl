@@ -8,12 +8,12 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 2fb557d55576678d8c1199bec20e1fa4c849e1b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264095"
 ---
 # <a name="initializing-documents-and-views"></a>Inicjowanie dokumentów i widoków
 
@@ -21,7 +21,6 @@ Dokumenty są tworzone na dwa różne sposoby, więc klasy dokumentu musi obsłu
 
 Widoki są tworzone po utworzeniu swoich dokumentów. Najlepszy moment na inicjowanie widok jest po zakończeniu przez platformę, tworzenie dokumentów, ramki okna i widoku. Widok można zainicjować przez zastąpienie [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkcji składowej typu [CView](../mfc/reference/cview-class.md). Jeśli musisz ponownie zainicjować lub nic dopasować każdym zmiany w dokumencie, można zastąpić [OnUpdate](../mfc/reference/cview-class.md#onupdate).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 5c623024ef64f49e3379ef02154cda72d445a197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264290"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Używanie list obrazów z formantami nagłówka
 
@@ -42,7 +42,6 @@ Aby uzyskać szczegółowe informacje na podstawie wartości parametru używany,
 > [!NOTE]
 >  Istnieje możliwość mają wiele formantów przy użyciu tej samej listy obrazów. Na przykład w standardowych kontrolka widoku listy, może istnieć obraz listy (16 x 16 pikseli obrazów) używane przez widoku małych ikon kontrolki widoku listy i elementy nagłówka kontrolki widoku listy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

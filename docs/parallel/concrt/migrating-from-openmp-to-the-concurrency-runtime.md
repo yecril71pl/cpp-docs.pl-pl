@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259506"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 
@@ -48,23 +48,22 @@ Gdy opisano, gdy nie mogą nie być odpowiednie przeprowadzić migrację istniej
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-[Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Instrukcje: konwertowanie paraleli OpenMP dla pętli do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Biorąc pod uwagę podstawowe pętli, która korzysta z OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektyw, opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.
 
-[Instrukcje: Konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Instrukcje: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które nie wymagają wszystkich iteracji, aby uruchomić, opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego mechanizmie anulowania.
 
-[Instrukcje: Konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Instrukcje: konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, która wykonuje obsługę wyjątków, opisano sposób konwertowania go do korzystania ze mechanizm obsługi wyjątków współbieżność środowiska wykonawczego.
 
-[Instrukcje: Konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Instrukcje: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Biorąc pod uwagę OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, która używa [redukcji](../../parallel/openmp/reference/reduction.md) klauzuli opisano sposób konwertowania go do korzystania ze współbieżności środowiska wykonawczego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)
-

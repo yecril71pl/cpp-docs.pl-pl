@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 856f45f4b9c78f5bd7d1a2e712f3fe9acd8004f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c00bf60f2ce1fccecd757d13b2f814e3a18be4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260507"
 ---
 # <a name="working-with-the-toolbar-control"></a>Praca z formantem paska narzędzi
 
@@ -57,7 +57,6 @@ W tym artykule wyjaśniono, jak można pobrać [CToolBarCtrl](../mfc/reference/c
 
 Aby uzyskać ogólne informacje o użyciu wspólnych formantów Windows, zobacz [wspólnych formantów](/windows/desktop/Controls/common-controls-intro).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
-

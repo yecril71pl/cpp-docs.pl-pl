@@ -11,12 +11,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: 756f0a3870f4b211cbc7bb40449733cf70610247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc21bd4b3dbe7609a33af4b4f93f15a3f5c9a64e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259974"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Zarządzanie danymi za pomocą zmiennych danych dokumentu
 
@@ -30,7 +30,6 @@ Widoków dostęp do obiektu dokumentu przy użyciu widoku wskaźnik do dokumentu
 
 Transfer danych często wymaga bezpośredniego dostępu lub chcesz użyć niepubliczne składowe klasy dokumentu, można utworzyć widoku klasy friend (w warunkach C++), klasy dokumentu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie dokumentów](../mfc/using-documents.md)
-

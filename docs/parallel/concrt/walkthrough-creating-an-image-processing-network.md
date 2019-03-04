@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: tworzenie sieci przetwarzania obrazów'
+title: 'Przewodnik: Tworzenie sieci przetwarzania obrazów'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262820"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Wskazówki: tworzenie sieci przetwarzania obrazów
+# <a name="walkthrough-creating-an-image-processing-network"></a>Przewodnik: Tworzenie sieci przetwarzania obrazów
 
 W tym dokumencie pokazano, jak utworzyć sieć bloki komunikatów asynchronicznych, wykonujących przetwarzanie obrazu.
 
@@ -164,6 +164,6 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe /DUNICODE/ehsc/Link obrazów — przetwarzanie network.cpp gdiplus.lib**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

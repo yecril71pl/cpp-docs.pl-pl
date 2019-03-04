@@ -10,12 +10,12 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-ms.openlocfilehash: c2ec6c89ab6f54dbcd7433a0f7fedcebd7962b6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257361"
 ---
 # <a name="multiple-dual-interfaces"></a>Wiele podwójnych interfejsów
 
@@ -37,7 +37,6 @@ ATL nie świadczenia pomocy technicznej dla łącząc wiele podwójnych interfej
 
 Te metody występują problemy z potencjalnych konfliktów nazw, a także kod złożoności i łatwości konserwacji. Nie zaleca się, że utworzono wiele podwójnych interfejsów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)
-
