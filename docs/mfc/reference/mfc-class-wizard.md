@@ -7,12 +7,12 @@ helpviewer_keywords:
 - wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: d80dc10467b5180158fcb0f681bbc728ada60764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59f0b39afe467267d61d7b851e654cc8bddc7b36
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265968"
 ---
 # <a name="mfc-class-wizard"></a>Kreator klas MFC
 
@@ -104,6 +104,6 @@ Aby otworzyć **Kreator klas MFC**na **projektu** menu, kliknij przycisk **Kreat
 
    Aby wyświetlić definicji, kliknij dwukrotnie element **metody** listy. Lub wybierz element w **metody** listy, a następnie kliknij przycisk **przejdź do definicji** przycisku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

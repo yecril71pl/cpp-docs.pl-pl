@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275496"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Klasa CMFCDropDownToolbarButton
 
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Przycisk menu*<br/>
+*menuButton*<br/>
 [in] Odwołanie do docelowego przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -288,7 +288,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *sizeDefault*<br/>
@@ -391,7 +391,7 @@ Wartość różną od zera, jeśli przycisk przetwarza komunikat pomocy; w przec
 
 Ta metoda jest rozszerzeniem implementacji klasy podstawowej ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) przez wywołanie metody [CMFCDropDownToolbarButton::OnClick](#onclick) metody z *bDelay*ustawiony na wartość FALSE. Ta metoda zwraca wartość, która jest zwracana przez [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Aby uzyskać więcej informacji na temat wiadomości WM_HELPHITTEST zobacz [TN028: Obsługa pomocy Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).
+Aby uzyskać więcej informacji na temat wiadomości WM_HELPHITTEST zobacz [TN028: Obsługa pomocy kontekstowej](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -444,7 +444,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *Rect*<br/>
@@ -485,7 +485,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *Rect*<br/>
@@ -538,12 +538,11 @@ void SetDefaultCommand(UINT uiCmd);
 
 Wywołaj tę metodę, aby określić polecenie domyślne, które wykonuje szablon, gdy użytkownik kliknie przycisk. Element o identyfikatorze polecenie określone przez *uiCmd* musi znajdować się na pasku narzędzi listy rozwijanej nadrzędnej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

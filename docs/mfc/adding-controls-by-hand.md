@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-ms.openlocfilehash: cf665247dd1ef24bb71d160097fa9514ff8be147
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c70539b49fcf2aa87f0bee375a87b38277b6ed42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270764"
 ---
 # <a name="adding-controls-by-hand"></a>Ręczne dodawanie formantów
 
@@ -33,9 +33,8 @@ Następujące `OnInitDialog` funkcja konfiguruje prostokąt, następnie wywołuj
 
 Po utworzeniu obiektu edycji można również ustawić fokusu wprowadzania do formantu, wywołując `SetFocus` funkcja elementu członkowskiego. Na koniec Zwróć 0 z `OnInitDialog` aby pokazać, że ustawiony fokus. Po powrocie wartość różną od zera Menedżera okna dialogowego Ustawia fokus na pierwszy element formantu listy elementów w oknie dialogowym. W większości przypadków należy dodać formanty do swojej okien dialogowych za pomocą edytora okien dialogowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)<br/>
 [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
-

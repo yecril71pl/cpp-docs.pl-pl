@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277121"
 ---
 # <a name="cwinformsdialog-class"></a>Klasa CWinFormsDialog
 
@@ -59,7 +59,7 @@ Formant użytkownika .NET Framework, która mają być wyświetlane w aplikacji 
 |Nazwa||
 |----------|-|
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Zastępuje [CWinFormsDialog::GetControl](#getcontrol) w wyrażeniach.|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Rzutuje typu jako odwołanie do formant użytkownika interfejsu Windows Forms.|
+|[CWinFormsDialog::operator TManagedControl^](#operator_tmanagedcontrol)|Rzutuje typu jako odwołanie do formant użytkownika interfejsu Windows Forms.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -152,7 +152,7 @@ inline operator TManagedControl^() const throw();
 
 Ten operator rzutuje typu jako odwołanie do formantu Windows Forms. Służy do przekazywania `CWinFormsDialog<TManagedControl>` okno dialogowe do funkcji, które akceptują wskaźnik do obiektu formant użytkownika Windows Forms.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md)<br/>

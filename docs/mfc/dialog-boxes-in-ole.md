@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270894"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
 
@@ -39,9 +39,8 @@ Okno dialogowe Edytuj linki umożliwia użytkownikowi zmianę informacji o źró
 *Serwer jest zajęty lub serwer nie odpowiada*<br/>
 Serwer jest zajęty okno dialogowe jest wyświetlany, gdy użytkownik próbuje uaktywnić element i serwer nie może obecnie obsłużyć żądania, zazwyczaj, ponieważ serwer jest używany przez innego użytkownika lub zadanie. Jeśli serwer nie odpowiada na żądania uaktywnienia na wszystkich, zostanie wyświetlone okno dialogowe serwer nie odpowiada. Okna te są wyświetlane przy użyciu `COleMessageFilter`zgodnie z implementacją interfejsu OLE `IMessageFilter`, i użytkownik może podjąć decyzję o próbę żądania aktywacji. Użyj [COleBusyDialog](../mfc/reference/colebusydialog-class.md) klasy, aby wyświetlić to okno dialogowe.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

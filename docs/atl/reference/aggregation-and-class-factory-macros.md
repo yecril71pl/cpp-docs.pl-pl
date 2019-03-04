@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274898"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregacji i makra fabryki klas
 
@@ -84,7 +84,7 @@ DECLARE_CLASSFACTORY()
 
 [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]
 
-##  <a name="ccomclassfactory_class"></a>  Klasa CComClassFactory
+##  <a name="ccomclassfactory_class"></a>  CComClassFactory Class
 
 Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejsu.
 
@@ -121,7 +121,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 [in] Nazwa klasy, który implementuje obiekt fabryki klas.
 
 ### <a name="remarks"></a>Uwagi
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametry
 
-*— Umowa licencyjna*<br/>
+*lic*<br/>
 [in] Klasa, która implementuje `VerifyLicenseKey`, `GetLicenseKey`, i `IsLicenseValid`.
 
 ### <a name="remarks"></a>Uwagi
@@ -155,7 +155,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>  Klasa CComClassFactory2
+##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 Class
 
 Ta klasa implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interfejsu.
 
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametry
 
-*Licencja*<br/>
+*license*<br/>
 Klasa, która implementuje następujące funkcje statyczne:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -209,7 +209,7 @@ Podczas tworzenia obiektów w apartamentach wiele (w serwerze procesem), należy
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="ccomclassfactoryautothread_class"></a>  Klasa CComClassFactoryAutoThread
+##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread Class
 
 Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejs i umożliwia tworzenie w apartamentach wielu obiektów.
 
@@ -250,7 +250,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="ccomclassfactorysingleton_class"></a>  Klasa CComClassFactorySingleton
+##  <a name="ccomclassfactorysingleton_class"></a>  CComClassFactorySingleton Class
 
 Ta klasa jest pochodną [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu.
 
@@ -379,6 +379,6 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

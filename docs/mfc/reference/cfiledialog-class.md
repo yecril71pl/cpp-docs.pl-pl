@@ -1,5 +1,5 @@
 ---
-title: Klasa CFileDialog
+title: CFileDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CFileDialog
@@ -132,14 +132,14 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262106"
 ---
-# <a name="cfiledialog-class"></a>Klasa CFileDialog
+# <a name="cfiledialog-class"></a>CFileDialog Class
 
 Hermetyzuje wspólne okno dialogowe, które służy do otwarcia pliku lub pliku operacji zapisywania.
 
@@ -251,7 +251,7 @@ Niektóre `CFileDialog` metody nie są obsługiwane w Windows Vista lub nowszym.
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Komunikaty systemu windows dla `CFileDialog` klasy różnią się zależnie od jakiego systemu operacyjnego, którego używasz. Na przykład Windows XP nie obsługuje [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) i [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) dla `CFileDialog` klasy. Jednakże Windows Vista i nowszych systemów operacyjnych obsługują je. Aby uzyskać więcej informacji o różnych komunikatów, które są generowane i kolejności, w której zostały odebrane, zobacz [CFileDialog próbki: rejestrowanie kolejności zdarzeń](../../visual-cpp-samples.md).
+Komunikaty systemu windows dla `CFileDialog` klasy różnią się zależnie od jakiego systemu operacyjnego, którego używasz. Na przykład Windows XP nie obsługuje [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) i [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) dla `CFileDialog` klasy. Jednakże Windows Vista i nowszych systemów operacyjnych obsługują je. Aby uzyskać więcej informacji o różnych komunikatów, które są generowane i kolejności, w której zostały odebrane, zobacz [CFileDialog próbki: Rejestrowanie kolejności zdarzeń](../../visual-cpp-samples.md).
 
 Aby użyć `CFileDialog` obiektów, należy najpierw utworzyć obiekt przy użyciu `CFileDialog` konstruktora. Po został skonstruowany okna dialogowego, można ustawić lub zmodyfikować dowolne wartości na [CFileDialog::m_ofn](#m_ofn) strukturę, aby zainicjować wartości lub stany formantów okna dialogowego. `m_ofn` Struktury jest typu `OPENFILENAME`. Aby uzyskać więcej informacji, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK.
 
@@ -427,7 +427,7 @@ void AddPlace(
 *fdap*<br/>
 Określa, gdzie folder znajduje się w obrębie listy.
 
-*PSI*<br/>
+*psi*<br/>
 Wskaźnik do IShellItem, który reprezentuje folder, który ma zostać udostępniony użytkownikowi. Może to być tylko folder.
 
 ### <a name="remarks"></a>Uwagi
@@ -549,7 +549,7 @@ explicit CFileDialog(
 *lpszFileName*<br/>
 [in] Początkowa nazwa pliku, który pojawia się w polu Nazwa pliku. Jeśli ma wartość NULL, zostanie wyświetlone nie początkowa nazwa pliku.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Połączenie jednego lub więcej flagi, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury elementu członkowskiego, użyj operatora bitowego OR zmiany, aby zachować domyślne zachowanie.
 
 *lpszFilter*<br/>
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in] Wskaźnik do okna nadrzędnego lub właściciela, okno dialogowe pliku.
 
-*niezerowego*<br/>
+*dwSize*<br/>
 [in] Rozmiar `OPENFILENAME` struktury. Ta wartość jest zależna od wersji systemu operacyjnego. MFC używana tego parametru, aby określić odpowiedni rodzaj okno dialogowe, aby utworzyć. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar okno dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego, na którym program jest uruchamiany.
 
 *bVistaStyle*<br/>
@@ -1638,8 +1638,7 @@ W tym przykładzie aktualizuje `CFileDialog` przed wyświetleniem go. Przed zakt
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

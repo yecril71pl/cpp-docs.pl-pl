@@ -1,5 +1,5 @@
 ---
-title: Klasa CTabbedPane
+title: CTabbedPane Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTabbedPane
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: d345d7a5aef53ac7975564a580f1353157a01376
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645721"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263354"
 ---
-# <a name="ctabbedpane-class"></a>Klasa CTabbedPane
+# <a name="ctabbedpane-class"></a>CTabbedPane Class
 
 Implementuje funkcje okienka z odłączanymi zakładkami.
 
@@ -59,7 +59,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTabbedPane::DetachPane](#detachpane)|(Przesłania [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
+|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Włącza lub wyłącza automatyczne kolorowanie kart.|
 |[CTabbedPane::FloatTab](#floattab)|Liczby zmiennoprzecinkowe okienko, ale tylko wtedy, jeśli zawartość okienka aktualnie znajduje się na karcie odłączane. (Przesłania [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
 |[CTabbedPane::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie wartości obszar karty w oknie z kartami.|
@@ -161,7 +161,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxTabbedPane.h
+**Header:** afxTabbedPane.h
 
 ##  <a name="detachpane"></a>  CTabbedPane::DetachPane
 
@@ -340,7 +340,7 @@ Ta metoda umożliwia dostosowywanie listy kolorów, które są używane, gdy jes
 
 Użyj [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) Aby włączyć lub wyłączyć funkcję automatycznego kolor.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

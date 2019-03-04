@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263725"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka
 
@@ -23,7 +23,6 @@ Mającego typową funkcjonalność przeciągania i upuszczania, mogą rozszerza�
 > [!NOTE]
 >  Jeśli są Zapewnianie obsługi przeciągania i upuszczania, dla formantu osadzonego nagłówka w formancie listy, zobacz sekcję rozszerzone Style w [Zmienianie stylów kontrolki listy](../mfc/changing-list-control-styles.md) tematu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

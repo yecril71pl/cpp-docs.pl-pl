@@ -1,5 +1,5 @@
 ---
-title: Klasa CSharedFile
+title: CSharedFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSharedFile
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 188330317a8d65060d0aad0e1617365723f4f928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273078"
 ---
-# <a name="csharedfile-class"></a>Klasa CSharedFile
+# <a name="csharedfile-class"></a>CSharedFile Class
 
 [CMemFile](../../mfc/reference/cmemfile-class.md)-klasy pochodnej, który obsługuje współdzielone pliki w pamięci.
 
@@ -128,7 +128,7 @@ Określa, czy blok pamięci może wzrosnąć.
 
 Jeśli *bAllowGrow* zostanie wartość różną od zera, rozmiar bloku pamięci zwiększa się zgodnie z potrzebami, na przykład, jeśli próba zostanie podjęta zapisu większą liczbę bajtów w pliku nie została przydzielona do bloku pamięci.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CMemFile](../../mfc/reference/cmemfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

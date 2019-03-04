@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271141"
 ---
 # <a name="frame-windows"></a>Okna ramowe
 
@@ -71,7 +71,7 @@ Inny układ wspólnej dotyczy ramki okna ramki wiele widoków, zwykle za pomocą
 
 - [Odpowiadanie na dynamiczną wymianę danych (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [Stany półmodalne: Windows Context-sensitive Help (organizowanie innych akcji okna)](../mfc/orchestrating-other-window-actions.md)
+- [Stany półmodalne: Pomoc kontekstowa Windows (organizowanie innych akcji okna)](../mfc/orchestrating-other-window-actions.md)
 
 - [Stany półmodalne: drukowanie i Podgląd wydruku (organizowanie innych akcji okna)](../mfc/orchestrating-other-window-actions.md)
 
@@ -83,7 +83,6 @@ Inny układ wspólnej dotyczy ramki okna ramki wiele widoków, zwykle za pomocą
 
 - [Kontrolki](../mfc/controls-mfc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Windows](../mfc/windows.md)
-

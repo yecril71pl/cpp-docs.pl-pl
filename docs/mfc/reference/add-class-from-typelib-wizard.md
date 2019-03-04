@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654340"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273884"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 
@@ -34,7 +34,7 @@ Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreato
 
    Wyświetla listę bibliotek typów w danym momencie zarejestrowany w systemie. Wybierz bibliotekę typów z tej listy, aby wyświetlić swoje interfejsy w **interfejsów** listy.
 
-   Zobacz "Wewnątrz rozproszonego modelu COM: typ biblioteki i język Integration" w bibliotece MSDN, aby uzyskać więcej informacji na temat rejestrowania biblioteki typów.
+   Zobacz "wewnątrz rozproszonego modelu COM: Wpisz biblioteki oraz integracji języków"w bibliotece MSDN, aby uzyskać więcej informacji na temat rejestrowania biblioteki typów.
 
 - **Lokalizacja**
 
@@ -67,8 +67,7 @@ Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreato
 
    Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa MFC z biblioteki typów](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)
-
+[Klienci automatyzacji: Korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275431"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
@@ -496,7 +496,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Określa, które strony okna ramki, aby zadokować.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
@@ -719,7 +719,7 @@ Określa położenie etykiet kartę.
 *bTabCloseButton*<br/>
 Określa, czy mają być wyświetlane przyciski Zamknij kartę.
 
-*Styl*<br/>
+*style*<br/>
 Określa styl karty. Na użytek STYLE_3D_SCROLLED zwykłe karty lub STYLE_3D_ONENOTE dla programu Microsoft OneNote kart.
 
 *bTabCustomTooltips*<br/>
@@ -1438,7 +1438,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pMenuButton*<br/>
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

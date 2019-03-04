@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279448"
 ---
 # <a name="handling-the-apply-button"></a>Obsługa przycisku Zastosuj
 
-Arkusze właściwości mają pola standardowe okno dialogowe nie obsługują funkcji: zezwalały na użytkownika zastosować zmiany wprowadzone przed zamknięciem arkusza właściwości. Odbywa się przy użyciu przycisku Zastosuj. W tym artykule omówiono metody, których można użyć, aby prawidłowo zaimplementować tę funkcję.
+Arkusze właściwości mają pola standardowe okno dialogowe nie obsługują funkcji: Umożliwiają one użytkownika zastosować zmiany wprowadzone przed zamknięciem arkusza właściwości. Odbywa się przy użyciu przycisku Zastosuj. W tym artykule omówiono metody, których można użyć, aby prawidłowo zaimplementować tę funkcję.
 
-Modalne okna dialogowe zwykle dotyczą ustawienia obiektu zewnętrznego, gdy użytkownik kliknie przycisk OK, aby zamknąć okno dialogowe. To samo dotyczy arkusz właściwości: gdy użytkownik kliknie przycisk OK, nowe ustawienia w arkuszu właściwości zaczęły obowiązywać.
+Modalne okna dialogowe zwykle dotyczą ustawienia obiektu zewnętrznego, gdy użytkownik kliknie przycisk OK, aby zamknąć okno dialogowe. Dotyczy to także dla arkusza właściwości: Gdy użytkownik kliknie przycisk OK, nowe ustawienia w arkuszu właściwości zaczęły obowiązywać.
 
 Jednak można zezwolić użytkownikowi, który można zapisać ustawień bez konieczności zamknąć okno dialogowe arkusza właściwości. To jest funkcja przycisku Zastosuj. Przycisk Zastosuj stosuje bieżące ustawienia we wszystkich stron właściwości do obiektu zewnętrznego w przeciwieństwie do stosowania tylko bieżące ustawienia aktualnie aktywnej strony.
 
@@ -32,7 +32,6 @@ Aby zaimplementować efekt przycisk Zastosuj, arkusz właściwości musisz poinf
 
 Na przykład ten proces Zobacz próbki MFC-ogólne [PROPDLG](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Arkusze właściwości](../mfc/property-sheets-mfc.md)
-

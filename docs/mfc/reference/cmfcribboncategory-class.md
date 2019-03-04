@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279474"
 ---
 # <a name="cmfcribboncategory-class"></a>Klasa CMFCRibbonCategory
 
@@ -649,7 +649,7 @@ int GetMaxHeight(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia do paneli wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1084,7 +1084,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla kategorii wstążki.
 
 ### <a name="remarks"></a>Uwagi
@@ -1105,7 +1105,7 @@ virtual BOOL OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla obrazu.
 
 *Rect*<br/>
@@ -1141,7 +1141,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Ten parametr nie jest używany.
 
 *pMenuBar*<br/>
@@ -1290,7 +1290,7 @@ virtual void RecalcLayout(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla kategorii wstążki.
 
 ### <a name="remarks"></a>Uwagi
@@ -1310,7 +1310,7 @@ BOOL RemovePanel(
 *nIndex*<br/>
 [in] Numer indeksu panelu do usunięcia. Można uzyskać przez wywołanie [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) metody.
 
-*bUsuń*<br/>
+*bDelete*<br/>
 [in] Wartość TRUE, aby usunąć obiekt panelu z pamięci. Wartość FALSE, aby usunąć obiekt panelu bez usuwania go.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1327,7 +1327,7 @@ virtual void ReposPanels(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia do paneli wstążki, które są zawarte w kategorii wstążki.
 
 ### <a name="remarks"></a>Uwagi
@@ -1439,7 +1439,7 @@ Kolor może być jednym z następujących wartości:
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -33,28 +33,28 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278213"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 
 ||||
 |-|-|-|
 |[Alokacji](#alloc)|[CreateResourceManager](#createresourcemanager)|[Disabletracing —](#disabletracing)|
-|[Enabletracing —](#enabletracing)|[Bezpłatne](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[Enabletracing —](#enabletracing)|[Bezpłatna](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend —](#asend)|
 |[cancel_current_task](#cancel_current_task)|[Usuń zaznaczenie](#clear)|[create_async](#create_async)|
 |[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|
-|[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice —](#make_choice)|
+|[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[Odbieranie](#receive)|
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[Wyślij](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Czekaj](#wait)|
@@ -306,7 +306,7 @@ Unikatowy identyfikator dla kontekstu wykonywania.
 
 Użyj tej metody, aby uzyskać identyfikator kontekstu wykonywania, zanim przekażesz `IExecutionContext` interfejsu jako parametr do dowolnej z metod oferowane przez Menedżera zasobów.
 
-##  <a name="getosversion"></a>  Getosversion —
+##  <a name="getosversion"></a>  GetOSVersion
 
 Zwraca wersję systemu operacyjnego.
 
@@ -322,7 +322,7 @@ Wartość wyliczana reprezentująca systemu operacyjnego.
 
 [unsupported_os](unsupported-os-class.md) jest generowany, jeśli system operacyjny nie jest obsługiwany przez środowisko uruchomieniowe współbieżności.
 
-##  <a name="getprocessorcount"></a>  Getprocessorcount —
+##  <a name="getprocessorcount"></a>  GetProcessorCount
 
 Zwraca liczbę wątków sprzętu w systemie podstawowym.
 
@@ -338,7 +338,7 @@ Liczba wątków sprzętu.
 
 [unsupported_os](unsupported-os-class.md) jest generowany, jeśli system operacyjny nie jest obsługiwany przez środowisko uruchomieniowe współbieżności.
 
-##  <a name="getprocessornodecount"></a>  Getprocessornodecount —
+##  <a name="getprocessornodecount"></a>  GetProcessorNodeCount
 
 Zwraca liczbę węzłów NUMA lub opakowań procesora w systemie podstawowym.
 
@@ -392,7 +392,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *pierwszy*<br/>
 
-*ostatni*<br/>
+*last*<br/>
 
 ##  <a name="interruption_point"></a>  interruption_point —
 
@@ -475,7 +475,7 @@ Dodatkowe zasoby.
 
 A `choice` blok komunikatów przy użyciu dwóch lub więcej źródeł danych wejściowych.
 
-##  <a name="make_greedy_join"></a>  make_greedy_join —
+##  <a name="make_greedy_join"></a>  make_greedy_join
 
 Konstruuje `greedy multitype_join` Blok obsługi wiadomości z opcjonalnego `Scheduler` lub `ScheduleGroup` i co najmniej dwóch źródeł danych wejściowych.
 
@@ -757,7 +757,7 @@ Typ partycjonera, który jest używany do partycjonowania wprowadzony zakres.
 *pierwszy*<br/>
 Pierwszy indeks, które mają zostać uwzględnione w iteracji.
 
-*ostatni*<br/>
+*last*<br/>
 Indeks jednej ostatnie ostatni indeks, które mają zostać uwzględnione w iteracji.
 
 *_Step*<br/>
@@ -766,7 +766,7 @@ Wartość w kroku podczas iteracji z `first` do `last`. Ten krok musi być dodat
 *_Func*<br/>
 Funkcja, które mają być wykonane w każdej iteracji. Może to być wyrażenie lambda, wskaźnika funkcji lub dowolnego obiektu, która obsługuje wersję operator wywołania funkcji z podpisem `void operator()(_Index_type)`.
 
-*_Part —*<br/>
+*_Part*<br/>
 Odwołanie do obiektu partycjonera. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ partycjonera](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) `&` Jeśli [affinity_partitioner](affinity-partitioner-class.md) obiekt jest używany, odwołanie musi być wartością l niż stała odwołanie, tak aby algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 ### <a name="remarks"></a>Uwagi
@@ -804,13 +804,13 @@ Typ funkcji, które zostaną zastosowane do każdego elementu w zakresie.
 *pierwszy*<br/>
 Iterator adresowania adresuje pozycję pierwszego elementu mają zostać uwzględnione w iteracjami równoległymi.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator odnoszący się do pozycji pierwszej po elemencie końcowym mają zostać uwzględnione w iteracjami równoległymi.
 
 *_Func*<br/>
 Obiekt funkcji zdefiniowanej przez użytkownika, która jest stosowana do każdego elementu w zakresie.
 
-*_Part —*<br/>
+*_Part*<br/>
 Odwołanie do obiektu partycjonera. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ partycjonera](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) `&` Jeśli [affinity_partitioner](affinity-partitioner-class.md) obiekt jest używany, odwołanie musi być wartością l niż stała odwołanie, tak aby algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1315,7 +1315,7 @@ Typ binarny funkcję parowania wykonywane elementów z dwóch zakresów.
 *first1*<br/>
 Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym lub tylko zakres źródłowy na.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Iterator danych wejściowych, odnoszący się do pozycji pierwszej po ostatnim elementem w pierwszej lub tylko zakresu źródłowego na.
 
 *_Result*<br/>
@@ -1324,7 +1324,7 @@ Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w za
 *_Unary_op*<br/>
 Jednoargumentowy zdefiniowanych przez użytkownika obiekt funkcji, która jest stosowana do każdego elementu w zakresie źródłowym.
 
-*_Part —*<br/>
+*_Part*<br/>
 Odwołanie do obiektu partycjonera. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ partycjonera](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) `&` Jeśli [affinity_partitioner](affinity-partitioner-class.md) obiekt jest używany, odwołanie musi być wartością l niż stała odwołanie, tak aby algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 *first2*<br/>
@@ -1757,6 +1757,6 @@ Zadanie, które zostaje wykonane pomyślnie, gdy jeden z zadania wejściowe zost
 
 Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-ms.openlocfilehash: 8634765bcfdc483e014b8552c67a57a11236f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e939c693f3f474cce9d2ca118bc86d163d6146dc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277472"
 ---
 # <a name="event-handling-and-atl"></a>Obsługa zdarzeń i ATL
 
@@ -39,7 +39,6 @@ Zawiera podsumowanie przy użyciu tabel, głównych sposobów implementowania in
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)
-

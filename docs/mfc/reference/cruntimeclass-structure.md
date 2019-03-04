@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521961"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274300"
 ---
 # <a name="cruntimeclass-structure"></a>Struktura CRuntimeClass
 
@@ -141,7 +141,7 @@ Relacja jest określany przez "zjawisku"analizowania z elementu członkowskiego 
 > [!NOTE]
 >  Aby użyć `CRuntimeClass` struktury, należy dołączyć IMPLEMENT_DYNAMIC IMPLEMENT_DYNCREATE i IMPLEMENT_SERIAL — makro implementację klasy, dla którego chcesz pobrać informacji o obiekcie środowiska wykonawczego.
 
-Aby uzyskać więcej informacji na temat korzystania z `CRuntimeClass`, zapoznaj się z artykułem [klasa CObject: uzyskiwanie dostępu do środowiska wykonawczego informacji o klasie](../../mfc/accessing-run-time-class-information.md).
+Aby uzyskać więcej informacji na temat korzystania z `CRuntimeClass`, zapoznaj się z artykułem [klasa CObject: Uzyskiwanie dostępu do informacji o klasie czasu wykonywania](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Przykład
 
@@ -215,7 +215,7 @@ Aby uzyskać więcej informacji na liczbach schematu, zobacz [IMPLEMENT_SERIAL](
 
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
@@ -224,4 +224,3 @@ Aby uzyskać więcej informacji na liczbach schematu, zobacz [IMPLEMENT_SERIAL](
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

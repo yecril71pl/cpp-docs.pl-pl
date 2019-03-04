@@ -1,5 +1,5 @@
 ---
-title: Implementowanie klasy CComObjectRootEx
+title: Implementing CComObjectRootEx
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectRootEx
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CComObjectRoot class, implementing
 - CComObjectRootEx class
 ms.assetid: 79630c44-f2df-4e9e-b730-400a0ebfbd2b
-ms.openlocfilehash: c56777034445e89dd86db935fc725755ad43a617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e533f8809238bc94bc95a689197d56f3c616f736
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273832"
 ---
-# <a name="implementing-ccomobjectrootex"></a>Implementowanie klasy CComObjectRootEx
+# <a name="implementing-ccomobjectrootex"></a>Implementing CComObjectRootEx
 
 [Klasy CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) ma zasadnicze znaczenie; wszystkie obiekty ATL muszą mieć jedno wystąpienie `CComObjectRootEx` lub [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) w ich dziedziczenia. `CComObjectRootEx` udostępnia domyślną `QueryInterface` mechanizm oparte na wpisy mapy COM.
 
@@ -24,8 +24,7 @@ Możesz wprowadzić interfejsy do tabeli mapy modelu COM z [com_interface_entry 
 
 [!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Makra mapy modelu COM](../atl/reference/com-map-macros.md)
-

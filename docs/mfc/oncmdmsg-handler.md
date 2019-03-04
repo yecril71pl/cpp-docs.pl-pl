@@ -10,12 +10,12 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 37b3d5ffa3e6492c8c00b8b22eba58d09fad51f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ed2e4c09e2fe413d29ad9953dbb8a03c106e86c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274599"
 ---
 # <a name="oncmdmsg-handler"></a>Program obsługi OnCmdMsg
 
@@ -25,7 +25,6 @@ Każda klasa w elemencie docelowym polecenia mogą zastępować `OnCmdMsg` funkc
 
 Wartość domyślna `CCmdTarget` implementacji `OnCmdMsg` używa mapę komunikatów w elemencie docelowym polecenia klasy do wyszukiwania dla funkcji programu obsługi dla każdego komunikatu polecenia odbierze — w taki sam sposób, że standardowe komunikaty są przeszukiwane. Jeśli znajdzie dopasowanie, wywołuje metodę programu obsługi. Wyszukiwanie w mapie komunikatów zostało wyjaśnione w [jak Framework wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
-

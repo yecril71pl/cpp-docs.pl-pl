@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275340"
 ---
 # <a name="ctypedptrarray-class"></a>Ctypedptrarray — klasa
 
@@ -42,7 +42,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 #### <a name="parameters"></a>Parametry
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasą bazową klasy tablicy wpisane wskaźnika; musi być array — klasa ( `CObArray` lub `CPtrArray`).
 
 *TYP*<br/>
@@ -123,7 +123,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 ### <a name="parameters"></a>Parametry
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasą bazową klasy tablicy wpisane wskaźnika; musi być array — klasa ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
 *TYP*<br/>
@@ -150,7 +150,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 ### <a name="parameters"></a>Parametry
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasą bazową klasy tablicy wpisane wskaźnika; musi być array — klasa ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
 *TYP*<br/>
@@ -243,7 +243,7 @@ Liczba przypadków, gdy ten element powinien być wstawiany (wartość domyślna
 *nStartIndex*<br/>
 Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez obiekt `CObArray::GetUpperBound`.
 
-*ELEMENT $BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Klasą bazową klasy tablicy wpisane wskaźnika; musi być array — klasa ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
 *pNewArray*<br/>
@@ -326,7 +326,7 @@ Obiekt wskaźnika, który ma zostać dodany do tej tablicy. A **NULL** może mie
 
 Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

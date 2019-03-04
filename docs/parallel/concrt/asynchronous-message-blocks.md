@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586124"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274170"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloki komunikatów asynchronicznych
 
@@ -27,7 +27,7 @@ Ten temat zawiera następujące sekcje:
 
 - [Omówienie typów bloku komunikatu](#overview)
 
-- [Klasa unbounded_buffer](#unbounded_buffer)
+- [unbounded_buffer, klasa](#unbounded_buffer)
 
 - [overwrite_buffer, klasa](#overwrite_buffer)
 
@@ -86,7 +86,7 @@ Wykonuje pracę, po odebraniu komunikatu.
 [transformer](#transformer)<br/>
 Wykonuje pracę, gdy odbiera dane i wysyła wynikiem tej pracy do innego bloku docelowego. `transformer` Klasy może działać na różne dane wejściowe i typów danych wyjściowych.
 
-[Wybór](#choice)<br/>
+[choice](#choice)<br/>
 Wybiera pierwszy komunikat dostępne z zestawu źródeł.
 
 [sprzężenia i multitype sprzężenia](#join)<br/>
@@ -97,9 +97,9 @@ Wysyła komunikat do bloku docelowego w regularnych odstępach czasu.
 
 Tych typów bloku komunikatu mają różne cechy, które były przydatne w przypadku różnych sytuacjach. Oto niektóre właściwości:
 
-- *Typ propagacji*: czy blok komunikatów działa jako źródło danych i/lub odbiorcy danych.
+- *Typ propagacji*: Czy blok komunikatów działa jako źródło danych i/lub odbiorcy danych.
 
-- *Kolejność komunikatów*: czy blok komunikatów przechowuje oryginalnej kolejności, w której wiadomości są wysyłane lub odbierane. Każdy typ bloku komunikatu wstępnie zdefiniowanych zachowuje kolejności, w którym wysyła i odbiera komunikaty.
+- *Kolejność komunikatów*: Czy blok komunikatów przechowuje oryginalnej kolejności, w której wiadomości są wysyłane lub odbierane. Każdy typ bloku komunikatu wstępnie zdefiniowanych zachowuje kolejności, w którym wysyła i odbiera komunikaty.
 
 - *Liczba źródłowych*: Maksymalna liczba źródeł, które może odczytywać blok komunikatów.
 
@@ -112,7 +112,7 @@ W poniższej tabeli przedstawiono, jak te cechy odnoszą się do różnych typó
 |`unbounded_buffer`|Oba|Uporządkowane|niepowiązane|niepowiązane|
 |`overwrite_buffer`|Oba|Uporządkowane|niepowiązane|niepowiązane|
 |`single_assignment`|Oba|Uporządkowane|niepowiązane|niepowiązane|
-|`call`|Docelowy|Uporządkowane|niepowiązane|Nie dotyczy|
+|`call`|Cel|Uporządkowane|niepowiązane|Nie dotyczy|
 |`transformer`|Oba|Uporządkowane|niepowiązane|1|
 |`choice`|Oba|Uporządkowane|10|1|
 |`join`|Oba|Uporządkowane|niepowiązane|1|
@@ -139,7 +139,7 @@ Ten przykład generuje następujące wyniki:
 334455
 ```
 
-Pełny przykład, który pokazuje, jak używać `unbounded_buffer` klasy, zobacz [porady: Implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `unbounded_buffer` klasy, zobacz [jak: Implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Górnej](#top)]
 
@@ -161,7 +161,7 @@ Ten przykład generuje następujące wyniki:
 555555
 ```
 
-Pełny przykład, który pokazuje, jak używać `overwrite_buffer` klasy, zobacz [porady: Implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `overwrite_buffer` klasy, zobacz [jak: Implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Górnej](#top)]
 
@@ -181,7 +181,7 @@ Ten przykład generuje następujące wyniki:
 333333
 ```
 
-Pełny przykład, który pokazuje, jak używać `single_assignment` klasy, zobacz [wskazówki: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `single_assignment` klasy, zobacz [wskazówki: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 [[Górnej](#top)]
 
@@ -201,7 +201,7 @@ Ten przykład generuje następujące wyniki:
 334455
 ```
 
-Pełny przykład, który pokazuje, jak używać `call` klasy, zobacz [jak: Podaj funkcji pracy do wywoływania oraz klasy transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `call` klasy, zobacz [jak: Zapewnianie funkcji pracy wywoływania oraz klasy transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
 
 [[Górnej](#top)]
 
@@ -225,7 +225,7 @@ Ten przykład generuje następujące wyniki:
 10.8914.5218.15
 ```
 
-Pełny przykład, który pokazuje, jak używać `transformer` klasy, zobacz [porady: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `transformer` klasy, zobacz [jak: Używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 [[Górnej](#top)]
 
@@ -255,7 +255,7 @@ Ponieważ zadanie, które oblicza 35<sup>th</sup> numer Fibonacci nie jest gwara
 
 W tym przykładzie użyto [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm obliczania liczb Fibonacci równolegle. Aby uzyskać więcej informacji na temat `parallel_invoke`, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-Pełny przykład, który pokazuje, jak używać `choice` klasy, zobacz [jak: Wybierz spośród ukończone zadania](../../parallel/concrt/how-to-select-among-completed-tasks.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `choice` klasy, zobacz [jak: Wybierz spośród zadań wykonanych](../../parallel/concrt/how-to-select-among-completed-tasks.md).
 
 [[Górnej](#top)]
 
@@ -287,7 +287,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 W tym przykładzie użyto [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm obliczania liczb Fibonacci równolegle. Aby uzyskać więcej informacji na temat `parallel_invoke`, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-Kompletne przykłady pokazujące, jak używać `join` klasy, zobacz [jak: Wybierz spośród ukończone zadania](../../parallel/concrt/how-to-select-among-completed-tasks.md) i [Instruktaż: za pomocą, aby zapobiec zakleszczeniu](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Aby uzyskać kompletny przykład przedstawiający sposób użycia `join` klasy, zobacz [jak: Wybierz spośród zadań wykonanych](../../parallel/concrt/how-to-select-among-completed-tasks.md) i [instruktażu: Za pomocą, aby zapobiec zakleszczeniu](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 [[Górnej](#top)]
 
@@ -313,7 +313,7 @@ Ten przykład generuje następujące przykładowe dane wyjściowe:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Pełny przykład, który pokazuje, jak używać `timer` klasy, zobacz [porady: wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Aby uzyskać kompletny przykład, który ilustruje sposób używania `timer` klasy, zobacz [jak: Wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
 [[Górnej](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 Aby wyeliminować niepotrzebnego kopiowania danych, użyj drugiego formularza, jeśli masz typ agregacji, który jest propagowany przez wartość.
 
-Obsługuje filtrowanie komunikatów *przepływu danych* modelu programowania, w którym składniki wykonują obliczenia, po otrzymaniu danych. Przykłady, korzystających z funkcji filtru do sterowania przepływem danych w sieci, przekazywanie wiadomości, zobacz [porady: Korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md), [wskazówki: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), i [ Wskazówki: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Obsługuje filtrowanie komunikatów *przepływu danych* modelu programowania, w którym składniki wykonują obliczenia, po otrzymaniu danych. Przykłady, korzystających z funkcji filtru do sterowania przepływem danych w sieci, przekazywanie wiadomości, zobacz [jak: Korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md), [instruktażu: Tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), i [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Górnej](#top)]
 
@@ -352,11 +352,10 @@ Należy wziąć pod uwagę niezachłanne i zachłanne sprzężenia. Zastrzeżeni
 
 Zachłanne złączenia również odczytuje komunikaty wejściowe z wielu źródeł, używa zastrzeżenie komunikatu można odczytać dodatkowych komunikatów podczas oczekiwania na komunikat z każdego źródła. Na przykład, należy wziąć pod uwagę zachłanne złączenia, która odbiera komunikaty z bloków komunikatów `A` i `B`. Jeśli zachłanne złączenia otrzymuje dwa komunikaty z B, ale jeszcze nie otrzymał komunikat z `A`, zachłanne złączenia zapisuje komunikat Unikatowy identyfikator drugi komunikat z `B`. Po zachłanne złączenia otrzymuje komunikat z `A` i propaguje tych wiadomości, używa ona identyfikator zapisanego komunikatu Aby sprawdzić, czy drugi komunikat z `B` jest nadal dostępna.
 
-Zastrzeżenie komunikatu można użyć podczas implementowania swój własny typ bloku komunikatów niestandardowych. Aby uzyskać przykład sposobu tworzenia komunikatów niestandardowy typ bloku, zobacz [wskazówki: Tworzenie niestandardowego bloku komunikatów](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
+Zastrzeżenie komunikatu można użyć podczas implementowania swój własny typ bloku komunikatów niestandardowych. Aby uzyskać przykład sposobu tworzenia komunikatów niestandardowy typ bloku, zobacz [instruktażu: Tworzenie niestandardowego bloku komunikatów](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
 
 [[Górnej](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)
-

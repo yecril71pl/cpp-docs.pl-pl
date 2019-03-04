@@ -1,5 +1,5 @@
 ---
-title: Klasa CSimpleMapEqualHelperFalse
+title: CSimpleMapEqualHelperFalse Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 7ccfe59e6741c267aded8f59828947a1d98bfbc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c4241049ad323047f06c0b29f946521f2c02167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268905"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>Klasa CSimpleMapEqualHelperFalse
+# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse Class
 
 Ta klasa jest pomocnika dla [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy.
 
@@ -56,10 +56,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametry
 
-*K1*<br/>
+*k1*<br/>
 Pierwszy klucz.
 
-*K2*<br/>
+*k2*<br/>
 Drugi klucz.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -86,7 +86,7 @@ Zwraca wartość false.
 
 Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. Celem `CSimpleMapEqualHelperFalse::IsEqualValue` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

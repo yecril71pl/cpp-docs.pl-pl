@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657503"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275665"
 ---
 # <a name="textureview-class"></a>texture_view — Klasa
 
@@ -74,7 +74,7 @@ Ranga `texture_view`.
 |[gather_green](#gather_green)|Przeciążone. Pobiera próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki zielone (y) z czterech próbkowanych tekseli.|
 |[gather_red](#gather_red)|Przeciążone. Pobiera próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki czerwone (x) z czterech próbkowanych tekseli.|
 |[get](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|
-|[Próbki](#sample)|Przeciążone. Pobiera próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji pobierania próbek.|
+|[sample](#sample)|Przeciążone. Pobiera próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji pobierania próbek.|
 |[set](#set)|Ustawia wartość elementu według indeksu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
@@ -484,6 +484,6 @@ Typ wartości elementów texture_view.
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

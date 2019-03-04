@@ -1,5 +1,5 @@
 ---
-title: 'TN022: implementacja poleceń standardowych'
+title: 'TN022: Implementacja poleceń standardowych'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279375"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022: implementacja poleceń standardowych
+# <a name="tn022-standard-commands-implementation"></a>TN022: Implementacja poleceń standardowych
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -468,30 +468,29 @@ Dla każdego Identyfikatora polecenia występuje ciąg monitu standardową wiado
 
 Identyfikatory poleceń standardowych kilka są używane jako wskaźniki na paskach stanu. Te używać tego samego interfejsu użytkownika aktualizacji poleceń mechanizm obsługi do wyświetlenia ich bieżącego stanu wizualnego w czasie bezczynności aplikacji. Ponieważ nie można wybrać przez użytkownika (oznacza to, że nie można wypchnąć w okienku paska stanu), a następnie nie ma sensu ma nieprawidłowego ON_COMMAND tych identyfikatorów poleceń.
 
-- Id_indicator_caps —: Zakończenie blokady wskaźnik.
+- ID_INDICATOR_CAPS : Zakończenie blokady wskaźnik.
 
-- Id_indicator_num —: NUM lock wskaźnik.
+- ID_INDICATOR_NUM —: NUM lock wskaźnik.
 
-- Id_indicator_scrl —: SCRL wskaźnik.
+- ID_INDICATOR_SCRL —: Wskaźnik blokady SCRL.
 
-- Id_indicator_kana —: Znaki KANA blokady wskaźnik (dotyczy tylko systemów japońskiego).
+- ID_INDICATOR_KANA —: Znaki KANA zablokować wskaźnika (dotyczy tylko systemów japońskiego).
 
 Wszystkie trzy z nich są implementowane w `CFrameWnd::OnUpdateKeyIndicator`, pomocnika wdrożenia, który używa Identyfikatora polecenia do mapowania na odpowiedni klucz wirtualnego. Najczęstszą implementacją Włącza lub wyłącza (dla okienka stanu wyłączone = Brak tekstu) `CCmdUI` obiekt, w zależności od tego, czy odpowiedni klucz wirtualnych jest zablokowana.
 
 Nie zaleca się dostosowanie ten program obsługi poleceń.
 
-- Id_indicator_ext —: Rozszerzona wybór wskaźnika.
+- ID_INDICATOR_EXT —: Rozszerzone Wybierz wskaźnik.
 
-- Id_indicator_ovr —: Wskaźnik zastępowania.
+- ID_INDICATOR_OVR —: Wskaźnik zastępowania.
 
-- Id_indicator_rec —: Rejestrowanie wskaźnika.
+- ID_INDICATOR_REC —: Wskaźnik rejestrowania.
 
 Obecnie nie ma żadnych standardowej implementacji dla tych wskaźników.
 
-Jeśli użytkownik chce zaimplementować te wskaźniki, zalecamy użycie tych identyfikatorów wskaźnika i utrzymywania porządkowanie wskaźników w pasku stanu (czyli w następującej kolejności: EXT limit, liczba, SCRL, zas, "rec").
+Jeśli użytkownik chce zaimplementować te wskaźniki, zalecamy użycie tych identyfikatorów wskaźnika i utrzymywania porządkowanie wskaźników w pasku stanu (czyli w następującej kolejności: EXT, ZAKOŃCZENIA, LICZBA, SCRL, ZAS, "REC").
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

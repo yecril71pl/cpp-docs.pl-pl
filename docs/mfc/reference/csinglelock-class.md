@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259896"
 ---
 # <a name="csinglelock-class"></a>Klasa CSingleLock
 
@@ -55,7 +55,7 @@ Aby można było używać klas synchronizacji [CSemaphore](../../mfc/reference/c
 
 Aby użyć `CSingleLock` obiektu, wywołaj jej konstruktora wewnątrz funkcji składowej klasy zasobów kontrolowany. Następnie wywołaj [IsLocked](#islocked) funkcja elementu członkowskiego, aby ustalić, czy zasób jest dostępny. Jeśli tak jest, przejdź do końca funkcji elementu członkowskiego. Jeśli zasób jest niedostępny, poczekaj, aż określony przedział czasu dla zasobu, które mogą być wprowadzane lub zwraca błąd. Po zakończeniu korzystania z zasobów albo wywołaj [Unlock](#unlock) działać, jeśli `CSingleLock` obiekt ma być ponownie używane lub zezwalać na `CSingleLock` zniszczenia obiektu.
 
-`CSingleLock` obiekty wymagają obecności obiektu wywodzącego się z [CSyncObject](../../mfc/reference/csyncobject-class.md). Jest to zazwyczaj element członkowski danych klasy zasobów kontrolowany. Aby uzyskać więcej informacji na temat sposobu użycia `CSingleLock` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock` obiekty wymagają obecności obiektu wywodzącego się z [CSyncObject](../../mfc/reference/csyncobject-class.md). Jest to zazwyczaj element członkowski danych klasy zasobów kontrolowany. Aby uzyskać więcej informacji na temat sposobu użycia `CSingleLock` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -77,7 +77,7 @@ explicit CSingleLock(
 
 ### <a name="parameters"></a>Parametry
 
-*Obiekt*<br/>
+*pObject*<br/>
 Wskazuje obiekt synchronizacji, można uzyskać dostęp. Nie może mieć wartości NULL.
 
 *bInitialLock*<br/>
@@ -166,7 +166,7 @@ Jeśli musisz zwolnić więcej niż jeden licznik dostępu semafor, należy uży
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMultiLock](../../mfc/reference/cmultilock-class.md)

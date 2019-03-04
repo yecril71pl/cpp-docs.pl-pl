@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 799035976ea55988a635f7dc9b667e87c48d8f7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175759"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273507"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, widoki i struktura
 
@@ -64,6 +64,6 @@ Obiekty w uruchomionej aplikacji interfejsu SDI
 
 Pozostała część tej rodziny artykuły wyjaśniono, jak narzędzia framework, Kreator aplikacji MFC i edytory zasobów, utworzyć te obiekty, jak one współdziałają ze sobą i sposób ich używania w programowaniu usługi. Dokumentów, widoków i okien ramowych zostały omówione bardziej szczegółowo w [obiektów okien](../mfc/window-objects.md) i [architektury dokument/widok](../mfc/document-view-architecture.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

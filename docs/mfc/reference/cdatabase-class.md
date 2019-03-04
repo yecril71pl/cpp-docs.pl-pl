@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273455"
 ---
 # <a name="cdatabase-class"></a>Klasa CDatabase
 
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 Źródło danych jest określone wystąpienie danych hostowanych przez niektóre system zarządzania bazami danych (DBMS). Przykłady obejmują programu Microsoft SQL Server, Microsoft Access, Borland dBASE i języka xBASE. Może mieć co najmniej jeden `CDatabase` obiekty aktywne w czasie w aplikacji.
 
 > [!NOTE]
->  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy Open Database Connectivity (ODBC), należy użyć klasy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).
+>  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy Open Database Connectivity (ODBC), należy użyć klasy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: Baza danych programowania](../../data/data-access-programming-mfc-atl.md).
 
 Aby użyć `CDatabase`, konstruowania `CDatabase` obiektu, a następnie wywołać jej `OpenEx` funkcja elementu członkowskiego. Spowoduje to otwarcie połączenia. Gdy następnie konstruowania `CRecordset` obiektów zasilany połączonego źródła danych, Przekaż Konstruktora zestawu rekordów, wskaźnik do Twojej `CDatabase` obiektu. Po zakończeniu wprowadzania zmian przy użyciu połączenia, należy wywołać `Close` element członkowski funkcji i zniszcz `CDatabase` obiektu. `Close` Zamyka wszystkie zestawy rekordów, które wcześniej nie zostało zamknięte.
 
-Aby uzyskać więcej informacji na temat `CDatabase`, zobacz artykuły [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md) i [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).
+Aby uzyskać więcej informacji na temat `CDatabase`, zobacz artykuły [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md) i [omówienie: Baza danych programowania](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -146,7 +146,7 @@ Transakcja składa się z jednego lub wielu wywołań do `AddNew`, `Edit`, `Dele
 > [!CAUTION]
 >  W zależności od sterownika ODBC, otwierając zestaw rekordów przed wywołaniem `BeginTrans` mogą powodować problemy podczas wywoływania `Rollback`. Należy sprawdzić określonego sterownika, którego używasz. Na przykład gdy za pomocą sterownika Microsoft Access, należącym do firmy Microsoft 3.0 pakiet sterownika pulpitu ODBC, należy uwzględnić wymagania aparatu bazy danych Jet nie powinna rozpoczynać transakcji na dowolnej bazy danych, który ma otwartego kursora. W klas baz danych MFC, otwartego kursora oznacza, że otwartą `CRecordset` obiektu. Aby uzyskać więcej informacji, zobacz [techniczne 68 Uwaga](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).
 
-`BeginTrans` również może zablokować rekordów danych na serwerze, w zależności od żądanej współbieżność i możliwości źródła danych. Dla informacji na temat blokowania danych, zobacz artykuł [zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+`BeginTrans` również może zablokować rekordów danych na serwerze, w zależności od żądanej współbieżność i możliwości źródła danych. Dla informacji na temat blokowania danych, zobacz artykuł [zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 Zdefiniowane przez użytkownika transakcje są wyjaśnione w artykule [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
 
@@ -161,7 +161,7 @@ Aby uzyskać więcej informacji na temat transakcji, zobacz artykuł [transakcja
 
 ### <a name="example"></a>Przykład
 
-  Zapoznaj się z artykułem [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Zapoznaj się z artykułem [transakcji: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -288,7 +288,7 @@ Aby uzyskać więcej informacji na temat transakcji, zobacz artykuł [transakcja
 
 ### <a name="example"></a>Przykład
 
-  Zapoznaj się z artykułem [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Zapoznaj się z artykułem [transakcji: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
@@ -341,7 +341,7 @@ Poniższa lista zawiera wartości masek bitowych, które można łączyć, aby u
 |SQL_BP_UPDATE|Zakładki dla wiersza jest prawidłowe po `Update` operacji w tym wierszu.|
 |SQL_BP_OTHER_HSTMT|Zakładki skojarzone z jednego obiektu zestawu rekordów są prawidłowe dla drugiego zestawu rekordów.|
 
-Aby uzyskać więcej informacji na temat tej wartości zwracanej, zobacz opis funkcji interfejsu API ODBC `SQLGetInfo` w zestawie Windows SDK. Aby uzyskać więcej informacji na temat zakładek, zobacz artykuł [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Aby uzyskać więcej informacji na temat tej wartości zwracanej, zobacz opis funkcji interfejsu API ODBC `SQLGetInfo` w zestawie Windows SDK. Aby uzyskać więcej informacji na temat zakładek, zobacz artykuł [zestaw rekordów: Zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="getconnect"></a>  CDatabase::GetConnect
 
@@ -600,7 +600,7 @@ Po wycofanie rekord, który były aktualne przed wycofaniem pozostaje bieżąceg
 
 ### <a name="example"></a>Przykład
 
-  Zapoznaj się z artykułem [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Zapoznaj się z artykułem [transakcji: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 
@@ -640,7 +640,7 @@ Przekroczono limit czasu może być operacją, ze względu na problemy z dostęp
 
 Wartością domyślną dla zapytania przekroczeń limitu czasu wynosi 15 sekund. Nie wszystkie źródła danych obsługują możliwość ustawiania wartości limitu czasu zapytania. Jeśli ustawisz wartość limitu czasu zapytania, 0, następuje limitu czasu; komunikacja ze źródłem danych może przestać odpowiadać. To zachowanie może być przydatne podczas programowania. Jeśli źródło danych nie obsługuje limitu czasu, otrzymasz dane wyjściowe śledzenia, ale nie wyjątek.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

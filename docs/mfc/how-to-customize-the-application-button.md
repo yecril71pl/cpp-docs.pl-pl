@@ -1,17 +1,17 @@
 ---
-title: 'Porady: dostosowywanie przycisku Aplikacja'
+title: 'Instrukcje: Dostosowywanie przycisku aplikacja'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175330"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269542"
 ---
-# <a name="how-to-customize-the-application-button"></a>Porady: dostosowywanie przycisku Aplikacja
+# <a name="how-to-customize-the-application-button"></a>Instrukcje: Dostosowywanie przycisku aplikacja
 
 Po kliknięciu przycisku aplikacja, jest wyświetlany menu poleceń. Zazwyczaj menu zawiera polecenia związane z plików takich jak **Otwórz**, **Zapisz**, **drukowania**, i **zakończenia**.
 
@@ -38,14 +38,14 @@ W poniższej tabeli opisano właściwości przycisku aplikacji.
 |**Obraz HDPI**|Określa identyfikator wysokie dpi ikona przycisku (HDPI) aplikacji. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **obraz HDPI** jest używana zamiast **obraz**.|
 |**Duże obrazy HDPI**|Określa identyfikator o wysokiej rozdzielczości DPI dużych obrazów. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **duże obrazy HDPI** jest używana zamiast **duże obrazy**.|
 |**Małe obrazy HDPI**|Określa identyfikator o wysokiej rozdzielczości DPI małe obrazy. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **małe obrazy HDPI** jest używana zamiast **małe obrazy**.|
-|**ID**|Określa identyfikator kontrolki.|
+|**Identyfikator**|Określa identyfikator kontrolki.|
 |**Obraz**|Określa identyfikator ikony przycisku aplikacji. Ikona jest mapą bitową 26 x 26 32-bitowych, zawierającej alfa przezroczystości. Po kliknięciu przycisku aplikacji lub najechania kursorem, zostały wyróżnione przezroczyste obiekty ikony.|
 |**klucze**|Określa ciąg, który jest wyświetlany, gdy porada klucz Nawigacja jest włączona. Porada klucz nawigacji jest włączona po naciśnięciu klawisza ALT.|
 |**Duże obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 32 x 32. Ikony są używane przez przycisków w kolekcji elementów Main.|
 |**Elementy główne**|Zawiera kolekcję elementów menu, które są wyświetlane w menu aplikacji.|
 |**Podpis MRU**|Określa tekst wyświetlany na panelu listy ostatnio używanych.|
 |**Małe obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 16 x 16. Ikony są używane przez przycisków w kolekcji przycisków.|
-|**Użyj**|Włącza lub wyłącza panel listy ostatnio używanych. W menu aplikacji zostanie wyświetlony panel listy ostatnio używanych.|
+|**Korzystanie**|Włącza lub wyłącza panel listy ostatnio używanych. W menu aplikacji zostanie wyświetlony panel listy ostatnio używanych.|
 |**Szerokość**|Określa szerokość w pikselach na panelu listy ostatnio używanych.|
 
 W menu aplikacji nie jest wyświetlana na powierzchni projektowej. Aby ją wyświetlić, możesz przeglądanie Wstążki lub uruchomić aplikację.
@@ -54,6 +54,6 @@ W menu aplikacji nie jest wyświetlana na powierzchni projektowej. Aby ją wyśw
 
 - Na **pasek narzędzi edytora wstążki**, kliknij przycisk **Testuj Wstążkę**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)

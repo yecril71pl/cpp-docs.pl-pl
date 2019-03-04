@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 6f0d888f49cf27505882e89e3cdbb469ea9e8684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261951"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 
@@ -44,7 +44,6 @@ Dla tej samej kontrolki inicjowanie kontrolki można zoptymalizować poprzez zas
 
 Mimo że `Serialize` i `OnResetState` zostały nadpisane, `DoPropExchange` funkcji powinny być przechowywane bez zmian, ponieważ jest nadal używana potrzeby stanu trwałego w formacie zbioru właściwości. Jest to ważne, aby zachować wszystkie trzy te funkcje, aby upewnić się, formant spójnie zarządza jej właściwości niezależnie od tego, w którym trwałość używa mechanizmu kontenera.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
-
+[Kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)

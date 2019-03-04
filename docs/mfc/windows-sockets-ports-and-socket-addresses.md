@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: porty i adresy gniazd'
+title: 'Windows Sockets: Porty i adresy gniazd'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277784"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: porty i adresy gniazd
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Porty i adresy gniazd
 
 W tym artykule opisano terminy "port" i "address" jako używane z Windows Sockets.
 
@@ -40,17 +40,16 @@ Podczas wyszukiwania można utworzyć gniazda, zazwyczaj nie trzeba określić w
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
-

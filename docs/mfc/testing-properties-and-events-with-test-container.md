@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267904"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testowanie właściwości i zdarzeń za pomocą kontenera testu
 
@@ -54,8 +54,7 @@ W tym momencie można przetestować kontroli nad właściwości lub zdarzenia.
 
 1. Określ miejsce docelowe informacji o zdarzeniach.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Instrukcje: debugowanie kontrolki ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
-
+[Instrukcje: Debugowanie kontrolki ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 08ed3771edbc0ebebfe98643a2651ff10c85d41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c480696bdec3591f0509cbad04051a2b3af4070
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544797"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262158"
 ---
 # <a name="registering-ole-controls"></a>Rejestrowanie formantów OLE
 
@@ -24,11 +24,11 @@ Następujące funkcje umożliwiają dodawanie i usuwanie formantu klasy strony w
 
 |||
 |-|-|
-|[Afxoleregistercontrolclass —](#afxoleregistercontrolclass)|Dodaje klasę formantu w bazie danych rejestracji.|
-|[Afxoleregisterpropertypageclass —](#afxoleregisterpropertypageclass)|Dodaje strony właściwości formantu w bazie danych rejestracji.|
-|[Afxoleregistertypelib —](#afxoleregistertypelib)|Dodaje bibliotekę typów formantu do bazy danych rejestracji.|
-|[Afxoleunregisterclass —](#afxoleunregisterclass)|Usuwa z bazy danych rejestracji klasy formantu lub klasy strony właściwości.|
-|[Afxoleunregistertypelib —](#afxoleunregistertypelib)|Usuwa biblioteki typu formantu z bazy danych rejestracji.|
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Dodaje klasę formantu w bazie danych rejestracji.|
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Dodaje strony właściwości formantu w bazie danych rejestracji.|
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Dodaje bibliotekę typów formantu do bazy danych rejestracji.|
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Usuwa z bazy danych rejestracji klasy formantu lub klasy strony właściwości.|
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Usuwa biblioteki typu formantu z bazy danych rejestracji.|
 
 `AfxOleRegisterTypeLib` zwykle jest wywoływana w celu wykonania Biblioteka DLL formantów `DllRegisterServer`. Podobnie `AfxOleUnregisterTypeLib` jest wywoływana przez `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, i `AfxOleUnregisterClass` są zwykle nazywane `UpdateRegistry` funkcji składowej klasy formantu strony fabryki lub właściwość.
 
@@ -240,7 +240,7 @@ Ta funkcja aktualizuje rejestr przy użyciu nazwy biblioteki typów i jego lokal
 
   **Nagłówek** afxdisp.h
 
-##  <a name="afxoleunregisterclass"></a>  Afxoleunregisterclass —
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
 
 Usuwa wpis klasy strony formantu lub właściwości z bazy danych rejestracji Windows.
 
@@ -250,7 +250,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*<br/>
+*clsID*<br/>
 Identyfikator unikatowy klasy strony formantu lub właściwości.
 
 *pszProgID*<br/>
@@ -264,7 +264,7 @@ Wartość różną od zera, jeśli klasa strony formantu lub właściwości zost
 
   **Nagłówek** afxctl.h
 
-##  <a name="afxoleunregistertypelib"></a>  Afxoleunregistertypelib —
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
 
 Wywołaj tę funkcję, aby usunąć wpis biblioteki typów z bazy danych rejestracji Windows.
 
@@ -289,6 +289,6 @@ Wartość różną od zera, jeśli biblioteka typów został pomyślnie wyrejest
 
   **Nagłówek** afxdisp.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

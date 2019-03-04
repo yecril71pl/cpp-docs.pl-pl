@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 7a53b33892b23d414a877721eca514931f82080e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259766"
 ---
 # <a name="atl-project-wizard"></a>Kreator projektu ATL
 
@@ -46,7 +46,7 @@ Ponadto należy wziąć pod uwagę te zadania podczas tworzenia i zwiększyć pr
 
 Można określić właściwości projektu (na przykład [czy statycznie połączyć CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) w [właściwości projektu](../../ide/general-property-page-project.md) strony, na które można ustawić [konfiguracje kompilacji](/visualstudio/ide/understanding-build-configurations) dla Projekt ATL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 [Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
@@ -54,4 +54,3 @@ Można określić właściwości projektu (na przykład [czy statycznie połącz
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Samouczek](../../atl/active-template-library-atl-tutorial.md)
-

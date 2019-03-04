@@ -7,12 +7,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 7e531937fc61898a6d2d432f74cb5608ea94fbc9
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: d91daeded9933abd73612a6a66a19a159bf36006
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893473"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277832"
 ---
 # <a name="structures-used-by-mfc"></a>Struktury używane przez MFC
 
@@ -46,7 +46,6 @@ W poniższej tabeli wymieniono struktur, które są wywoływane z różnych funk
 |[Struktura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)||
 |[Struktura FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)||
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

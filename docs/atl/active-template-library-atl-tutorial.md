@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270114"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
 
@@ -26,7 +26,7 @@ Samouczek jest podzielone na siedem kroków. Należy wykonać każdy krok w kole
 
 - [Krok 1: Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)
 
-- [Krok 2: Dodawanie formantu do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [Krok 2: Dodawanie kontrolki do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 - [Krok 3. Dodawanie właściwości do kontrolki](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
@@ -38,7 +38,6 @@ Samouczek jest podzielone na siedem kroków. Należy wykonać każdy krok w kole
 
 - [Krok 7: Umieszczanie kontrolki na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)
-

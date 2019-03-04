@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: 58fb08ee48f3cc51a96304b9c1708dbfbf195adb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429721"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263484"
 ---
 # <a name="catlfilemapping-class"></a>Klasa CAtlFileMapping
 
@@ -71,7 +71,7 @@ Zwraca `T*` wskaźnik do początku plików mapowanych na pamięć.
 
 Wywołania [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) i reinterpretuje obiekt zwrócony wskaźnik jako `T*` gdzie *T* jest typ używany jako parametr szablonu tej klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

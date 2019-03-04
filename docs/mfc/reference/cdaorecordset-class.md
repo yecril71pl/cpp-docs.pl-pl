@@ -1,5 +1,5 @@
 ---
-title: Cdaorecordset — klasa
+title: CDaoRecordset Class
 ms.date: 08/27/2018
 f1_keywords:
 - CDaoRecordset
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273897"
 ---
-# <a name="cdaorecordset-class"></a>Cdaorecordset — klasa
+# <a name="cdaorecordset-class"></a>CDaoRecordset Class
 
 Reprezentuje zestaw rekordów wybranych ze źródła danych.
 
@@ -567,7 +567,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 
 ### <a name="parameters"></a>Parametry
 
-*Plik pFX*<br/>
+*pFX*<br/>
 Zawiera wskaźnik do `CDaoFieldExchange` obiektu. Struktura będzie już skonfigurowano ten obiekt do określenia kontekstu dla operacji wymiany pól.
 
 ### <a name="remarks"></a>Uwagi
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Liczony od zera indeks wstępnie zdefiniowane pole w zestawie rekordów kolekcji pól, do wyszukiwania według indeksu.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Odwołanie do [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Opcje, które określają, które informacje o zestawie rekordów do pobrania. D
 
 - `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty
 
-- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, plus: numer pozycji, wymagane, Zezwalaj na tabeli źródłowej obcego Nazwa pola źródła zerową długość, kolejność sortowania,
+- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Zezwalaj na porządkowym wymagane, zerową długość, sortowania, kolejność, nazwa obcego, pole źródła, tabela źródłowa
 
-- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze, plus: tekst sprawdzania poprawności wartości domyślnej reguły walidacji
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Domyślna wartość, reguła sprawdzania poprawności, tekst sprawdzania poprawności
 
 *lpszName*<br/>
 Nazwa pola.
@@ -1237,9 +1237,9 @@ Opcje, które określają, które informacje o indeksie do pobrania. Dostępne o
 
 - `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa pola Info, pola
 
-- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, plus: podstawowej, unikatowe, Clustered IgnoreNulls, wymagane, obcych
+- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Podstawowy, unikatowe, klastra, IgnoreNulls, wymagane, obcego
 
-- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze, a także: liczności unikatowych wartości
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Liczność unikatowych wartości
 
 *lpszName*<br/>
 Wskaźnik na nazwę obiektu indeksu wyszukiwania według nazwy.
@@ -1424,7 +1424,7 @@ Jeden z następujących wartości, które wskazuje typ zestaw rekordów:
 
 - `dbOpenTable` Typ tabeli rekordów
 
-- `dbOpenDynaset` Dynamicznego zestawu rekordów
+- `dbOpenDynaset` Dynaset-type recordset
 
 - `dbOpenSnapshot` Zestaw rekordów typu migawka
 
@@ -2525,7 +2525,7 @@ Gdy obiekt zestawu rekordów pessimistically jest zablokowana w środowisku wiel
 
 Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "CancelUpdate metody", "Usuń metodę", "LastModified Property", "Metoda aktualizacji" i "Trybu edycji właściwości" w Pomocy programu DAO.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

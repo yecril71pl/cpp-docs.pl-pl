@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 0856a9de06d07b3851dc748644e84ba9c4b56c4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274378"
 ---
 # <a name="array-list-and-map-classes"></a>Klasy tablic, list i map
 
@@ -27,7 +27,6 @@ Listy są podobne do tablic, ale są przechowywane bardzo różny sposób. Każd
 
 Mapy odnoszą się wartość klucza do wartości danych. Na przykład klucz mapy może być ciąg i wskaźnik na listę danych. Czy poproś map umożliwiają kursor skojarzony z określonego ciągu. Map, wyszukiwania są szybkie, ponieważ mapy korzystanie z tabel skrótu klucza wyszukiwania. Dodawanie i usuwanie elementów jest również szybkie. Mapy są często używane z innych struktur danych jako indeksy pomocnicze. MFC używa specjalnego rodzaju mapy o nazwie [mapy komunikatów](../mfc/mapping-messages.md) do mapowania Windows wiadomości na wskaźnik do funkcji obsługi dla tego komunikatu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

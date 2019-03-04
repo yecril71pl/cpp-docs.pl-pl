@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269217"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 
@@ -24,18 +24,18 @@ Ten mechanizm mapowanie danych mapuje właściwości formantów strony do poszcz
 
 |||
 |-|-|
-|[Ddp_cbindex —](#ddp_cbindex)|Łączy indeksu zaznaczony ciąg w polu kombi z właściwością kontrolki.|
-|[Ddp_cbstring —](#ddp_cbstring)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi, w pełni zgodny.|
-|[Ddp_cbstringexact —](#ddp_cbstringexact)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
-|[Ddp_check —](#ddp_check)|Pole wyboru na stronie właściwości kontrolki z właściwością kontrolki łącza.|
-|[Ddp_lbindex —](#ddp_lbindex)|Łączy indeksu zaznaczony ciąg w polu listy, z właściwością kontrolki.|
-|[Ddp_lbstring —](#ddp_lbstring)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi być zgodna go całkowicie.|
-|[Ddp_lbstringexact —](#ddp_lbstringexact)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
+|[DDP_CBIndex](#ddp_cbindex)|Łączy indeksu zaznaczony ciąg w polu kombi z właściwością kontrolki.|
+|[DDP_CBString](#ddp_cbstring)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi, w pełni zgodny.|
+|[DDP_CBStringExact](#ddp_cbstringexact)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
+|[DDP_Check](#ddp_check)|Pole wyboru na stronie właściwości kontrolki z właściwością kontrolki łącza.|
+|[DDP_LBIndex](#ddp_lbindex)|Łączy indeksu zaznaczony ciąg w polu listy, z właściwością kontrolki.|
+|[DDP_LBString](#ddp_lbstring)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi być zgodna go całkowicie.|
+|[DDP_LBStringExact](#ddp_lbstringexact)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
 |[Ddp_postprocessing —](#ddp_postprocessing)|Kończy transfer wartości właściwości z Twoją kontrolą.|
-|[Ddp_radio —](#ddp_radio)|Grupa przycisków radiowych, na stronie właściwości kontrolki z właściwością kontrolki łącza.|
-|[Ddp_text —](#ddp_text)|Łączy kontrolki na stronie właściwości kontrolki z właściwością kontrolki. Ta funkcja obsługuje kilka różnych typów właściwości, takie jak **double**, **krótki**, BSTR, i **długie**.|
+|[DDP_Radio](#ddp_radio)|Grupa przycisków radiowych, na stronie właściwości kontrolki z właściwością kontrolki łącza.|
+|[DDP_Text](#ddp_text)|Łączy kontrolki na stronie właściwości kontrolki z właściwością kontrolki. Ta funkcja obsługuje kilka różnych typów właściwości, takie jak **double**, **krótki**, BSTR, i **długie**.|
 
-Aby uzyskać więcej informacji na temat `DoDataExchange` strony funkcji i właściwości, zobacz artykuł [kontrolek ActiveX: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na temat `DoDataExchange` strony funkcji i właściwości, zobacz artykuł [kontrolek ActiveX: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
 Oto lista makra używane do tworzenia i zarządzania nimi stron właściwości kontrolki OLE:
 
@@ -81,7 +81,7 @@ Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_CBIndex` wywołania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_cbstring"></a>  Ddp_cbstring —
+##  <a name="ddp_cbstring"></a>  DDP_CBString
 
 Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu zachowując bieżący wybór w polu kombi na stronie właściwości.
 
@@ -183,7 +183,7 @@ Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_Check` wywołania f
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_lbindex"></a>  Ddp_lbindex —
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex
 
 Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości Liczba całkowita z indeksem bieżące zaznaczenie w polu listy na stronie właściwości.
 
@@ -217,7 +217,7 @@ Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_LBIndex` wywołania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_lbstring"></a>  Ddp_lbstring —
+##  <a name="ddp_lbstring"></a>  DDP_LBString
 
 Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu zachowując bieżący wybór w polu listy na stronie właściwości.
 
@@ -308,7 +308,7 @@ Ta funkcja powinna być wywoływana po wykonaniu wszystkie funkcje wymiany danyc
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_radio"></a>  Ddp_radio —
+##  <a name="ddp_radio"></a>  DDP_Radio
 
 Wywołaj tę funkcję w kontroli nad `DoPropExchange` funkcję, aby zsynchronizować wartości właściwości z kontrolkę przycisku radiowego strony skojarzonej właściwości.
 
@@ -438,7 +438,7 @@ Liczba stron właściwości używane przez klasę formantu.
 
 W pliku implementacji (.cpp), który definiuje funkcji elementów członkowskich dla swojej klasy rozpoczynać lista stron właściwości BEGIN_PROPPAGEIDS — makro, a następnie dodaj makro wpisy dla każdej ze stron właściwości i Pełna lista strony właściwości, za pomocą END_PROPPAGEIDS makra.
 
-Aby uzyskać więcej informacji na stronach właściwości, zobacz artykuł [kontrolek ActiveX: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na stronach właściwości, zobacz artykuł [kontrolek ActiveX: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -482,6 +482,6 @@ Wszystkie makra PROPPAGEID muszą być umieszczone między BEGIN_PROPPAGEIDS i E
 
   **Nagłówek** afxctl.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

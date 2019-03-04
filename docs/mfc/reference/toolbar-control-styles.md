@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-ms.openlocfilehash: f26edc6c0ce4a19528a9a8754428411318e9b9d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ad85ca19235478e6a5aa1d917ebe75e62308be5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277576"
 ---
 # <a name="toolbar-control-styles"></a>Style formantu ToolBar
 
@@ -52,9 +52,8 @@ Wizualne manager określa wygląd przycisków w każdym stanie. Zobacz [Menedże
 
 **Nagłówek:** afxtoolbarbutton.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Menedżer wizualizacji](../../mfc/visualization-manager.md)
-

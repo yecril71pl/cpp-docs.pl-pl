@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277368"
 ---
 # <a name="sourceblock-class"></a>source_block — Klasa
 
@@ -102,7 +102,7 @@ Typ procesora do przetwarzania komunikatów.
 |[propagate_output_messages](#propagate_output_messages)|Propagacja komunikatów do celów.|
 |[propagate_to_any_targets](#propagate_to_any_targets)|W przypadku przesłonięcia w klasie pochodnej, propaguje tego komunikatu do jednej lub wszystkich połączonych elementów docelowych. Jest to procedura propagacji głównych bloków komunikatów.|
 |[release_message](#release_message)|W przypadku przesłonięcia w klasie pochodnej, zwalnia poprzedniej wiadomości rezerwacji.|
-|[remove_targets —](#remove_targets)|Usuwa wszystkie łącza miejsc docelowych dla tego bloku źródła. Powinna to być wywoływana z destruktora.|
+|[remove_targets](#remove_targets)|Usuwa wszystkie łącza miejsc docelowych dla tego bloku źródła. Powinna to być wywoływana z destruktora.|
 |[reserve_message](#reserve_message)|W przypadku przesłonięcia w klasie pochodnej, rezerwuje komunikat oferowane wcześniej to `source_block` obiektu.|
 |[resume_propagation](#resume_propagation)|W przypadku przesłonięcia w klasie pochodnej, wznawia propagacji po udostępnieniu rezerwacji.|
 |[sync_send](#sync_send)|Synchronicznie kolejki komunikaty i uruchamia zadanie propagacji, jeśli nie zostało to zrobione już.|
@@ -314,7 +314,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Wskaźnik do wiadomości, które mają być przetwarzane.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages —
+##  <a name="propagate_output_messages"></a> propagate_output_messages
 
 Propagacja komunikatów do celów.
 
@@ -529,7 +529,7 @@ Czeka, aż wszystkie asynchronicznego propagacji zakończyć. Ten oczekiwania po
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ISource, klasa](isource-class.md)

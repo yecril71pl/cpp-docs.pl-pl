@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264338"
 ---
 # <a name="tiledextent-class"></a>tiled_extent — Klasa
 
@@ -63,14 +63,14 @@ Długość najmniej znaczącego wymiaru.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[tiled_extent konstruktora](#ctor)|Inicjuje nowe wystąpienie klasy `tiled_extent` klasy.|
+|[tiled_extent Constructor](#ctor)|Inicjuje nowe wystąpienie klasy `tiled_extent` klasy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[get_tile_extent](#get_tile_extent)|Zwraca `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|
-|[Konsola](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów powiększonym rozmiarem, aby był podzielny przez wymiary fragmentu.|
+|[pad](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów powiększonym rozmiarem, aby był podzielny przez wymiary fragmentu.|
 |[Obetnij](#truncate)|Zwraca nowy `tiled_extent` obiektu z zakresów pomniejszonym rozmiarem, aby był podzielny przez wymiary fragmentu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
@@ -103,7 +103,7 @@ Długość najmniej znaczącego wymiaru.
 
 **Nagłówek:** amp.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ## <a name="ctor"> </a>  tiled_extent konstruktora
 
@@ -126,7 +126,7 @@ tiled_extent(
 *_Inne*<br/>
 `extent` Lub `tiled_extent` obiektu do skopiowania.
 
-## <a name="get_tile_extent"> </a>  get_tile_extent —
+## <a name="get_tile_extent"> </a>  get_tile_extent
 
 Zwraca `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.
 
@@ -226,6 +226,6 @@ static const int tile_dim2 = _Dim2;
 __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

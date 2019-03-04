@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: e4a2169d3b11b36b747f13663fdcb40baf52cd8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272077"
 ---
 # <a name="using-ctabctrl"></a>Korzystanie z CTabCtrl
 
@@ -36,7 +36,6 @@ Aby uzyskać więcej informacji dotyczących kontrolki karty, zobacz [kontrolki 
 
 - [Przetwarzanie komunikatów powiadomień dotyczących kontrolki karty](../mfc/processing-tab-control-notification-messages.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

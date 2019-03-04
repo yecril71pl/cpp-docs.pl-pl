@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268944"
 ---
 # <a name="asynchronous-agents"></a>Agenci asynchroniczni
 
@@ -59,9 +59,8 @@ Po utworzeniu obiektu agenta należy wywołać [concurrency::agent::start](refer
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład pokazujący sposób tworzenia podstawowych aplikacji opartej o agentów, zobacz [wskazówki: tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Aby uzyskać przykład pokazujący sposób tworzenia podstawowych aplikacji opartej o agentów, zobacz [instruktażu: Tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)
-

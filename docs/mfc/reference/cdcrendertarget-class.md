@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268281"
 ---
 # <a name="cdcrendertarget-class"></a>Klasa CDCRenderTarget
 
@@ -104,7 +104,7 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Kontekst urządzenia, do którego obiektu docelowego renderowania wydaje polecenia rysowania
 
 *Rect*<br/>
@@ -183,6 +183,6 @@ operator ID2D1DCRenderTarget*();
 
 Wskaźnik do interfejsu ID2D1DCRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

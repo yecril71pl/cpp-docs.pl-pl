@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: fd9dbc58c4887a1ad62d5690ec38ed96cf77feac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279708"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jak struktura wywołuje kod
 
@@ -29,9 +29,8 @@ Taki układ jest dość dobrze znanych programistom technicznego z systemem Wind
 
 W powiązanych tematach możesz przeczytać co struktura ponieważ inicjuje i uruchamia aplikację i następnie czyści jako zakończenia aplikacji. Również wiedzieć, gdzie tworzonego kodu znajdzie się.
 
-Aby uzyskać więcej informacji, zobacz [klasa CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md) i [szablonów dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md).
+Aby uzyskać więcej informacji, zobacz [CWinApp klasy: Klasa aplikacji](../mfc/cwinapp-the-application-class.md) i [szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opieranie się na strukturze](../mfc/building-on-the-framework.md)
-

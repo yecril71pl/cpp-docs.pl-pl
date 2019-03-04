@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551492"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262457"
 ---
 # <a name="cdebugreporthook-class"></a>Klasa CDebugReportHook
 
@@ -37,7 +37,7 @@ class CDebugReportHook
 |Nazwa|Opis|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Wywołania [SetPipeName](#setpipename), [SetTimeout](#settimeout), i [SetHook](#sethook).|
-|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Wywołania [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Wywołania [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -182,6 +182,6 @@ void SetTimeout(DWORD dwTimeout);
 *dwTimeout*<br/>
 Czas w milisekundach, że ta klasa będzie czekać nazwany potok staną się dostępne.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../atl/reference/atl-classes.md)

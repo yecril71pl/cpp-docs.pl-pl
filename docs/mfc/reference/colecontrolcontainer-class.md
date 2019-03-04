@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274989"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania są zmiany właściwości otoczenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 Identyfikator przycisku, który ma zostać zmodyfikowana.
 
-*nSprawdź*<br/>
+*nCheck*<br/>
 Określa stan przycisku. Może to być jeden z następujących elementów:
 
 - Ustawia BST_CHECKED przycisku stan zaznaczone.
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Wskaźnik do lokacji kontroli, z którego będą pobierane właściwości otoczenia.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator alokacji żądanej właściwości otoczenia.
 
 *pVarResult*<br/>
@@ -680,7 +680,7 @@ virtual BOOL OnPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia używane przez kontener.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -737,7 +737,7 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wielkość, w pikselach, przewijania wzdłuż osi x.
 
 *dy*<br/>
@@ -809,7 +809,7 @@ Identyfikator kontrolki.
 *lpszString*<br/>
 Wskaźnik do tekstu kontrolki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

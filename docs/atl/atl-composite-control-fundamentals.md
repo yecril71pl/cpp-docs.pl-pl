@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 18190f4d35d69f167be075130c8332baf7b459ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556718"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272233"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Podstawy złożonych kontrolek ALT
 
@@ -27,9 +27,8 @@ Kreator projektu ATL i **Dodaj klasę** okno dialogowe zautomatyzować tworzenie
 
 - [Tworzenie i testowanie projektu ATL](../atl/building-and-testing-the-atl-project.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
 [Funkcje globalne kontrolek złożonych](../atl/reference/composite-control-global-functions.md)<br/>
 [Makra kontrolek złożonych](../atl/reference/composite-control-macros.md)
-

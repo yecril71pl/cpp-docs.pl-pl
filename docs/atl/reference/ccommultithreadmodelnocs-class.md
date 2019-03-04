@@ -1,5 +1,5 @@
 ---
-title: Klasa CComMultiThreadModelNoCS
+title: CComMultiThreadModelNoCS Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 5bad9ead5cb25d8ca1078bbbb25a00af1ebfcaa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b1622525635a4ea852dec9095fcd479b21044c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261560"
 ---
-# <a name="ccommultithreadmodelnocs-class"></a>Klasa CComMultiThreadModelNoCS
+# <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS Class
 
 `CComMultiThreadModelNoCS` udostępnia metody wątkowo zwiększanie i zmniejszanie wartości zmiennej, bez sekcję krytyczną blokowanie lub odblokowywanie funkcji.
 
@@ -87,7 +87,7 @@ Oprócz `AutoCriticalSection`, możesz użyć **typedef** nazwa [CriticalSection
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
 ##  <a name="criticalsection"></a>  CComMultiThreadModelNoCS::CriticalSection
 
@@ -113,7 +113,7 @@ Oprócz `CriticalSection`, możesz użyć **typedef** nazwa `AutoCriticalSection
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
 
@@ -183,8 +183,8 @@ Niezależnie od tego, klasa określona dla `ThreadModel` (takie jak `CComMultiTh
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

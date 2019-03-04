@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274937"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 
@@ -649,7 +649,7 @@ Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogo
 
   **Nagłówek** afxdd_.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Standardowe procedury walidacji danych okna dialogowego](standard-dialog-data-validation-routines.md)<br/>
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>

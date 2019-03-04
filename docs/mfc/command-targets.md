@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: 3f3305e7b67f4c001861c79c76c3b43a0c5a8ef0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274461"
 ---
 # <a name="command-targets"></a>Obiekty docelowe poleceń
 
@@ -20,7 +20,6 @@ Rysunek [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.m
 
 Windows wysyła komunikaty, które nie są komunikaty poleceń, bezpośrednio do okna, którego program obsługi wiadomości jest następnie wywoływana. Jednak struktura kieruje polecenia do liczby obiektów Release candidate — o nazwie "obiekty docelowe poleceń" — jeden z nich zwykle wywołuje program obsługi dla polecenia. Funkcje obsługi działają tak samo dla poleceń i standardowe komunikaty Windows, ale mechanizmy, według których są one nazywane różnią się, jak wyjaśniono w [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
-

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ae9ff828f342bc4270c3701ced3e670988c7d54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277717"
 ---
 # <a name="wm-message-handlers-d---e"></a>Programy obsługi komunikatów WM_: D - E
 
@@ -64,8 +64,7 @@ Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po praw
 |ON_WM_ERASEBKGND()|afx_msg BOOL [onerasebkgnd —](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264851"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view — Klasa
 
@@ -94,7 +94,7 @@ Urządzenia fizyczne mogą być współużytkowane przez wiele wątków klienta.
 
 **Nagłówek:** amprt.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ## <a name="accelerator"></a> Akcelerator
 
@@ -149,7 +149,7 @@ void flush();
 
 Zwraca `void`.
 
-## <a name="accelerator_view__get_accelerator"></a> get_accelerator —
+## <a name="accelerator_view__get_accelerator"></a> get_accelerator
 
 Zwraca obiekt akceleratora dla obiektu accelerator_view.
 ### <a name="syntax"></a>Składnia
@@ -345,6 +345,6 @@ Niszczy obiekt accelerator_view.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

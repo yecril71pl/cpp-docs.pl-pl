@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 3de59c57c1303fec06e5926f445cdbbb21e13c55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631754"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275405"
 ---
 # <a name="double4-class"></a>double_4 — Klasa
 
@@ -600,7 +600,7 @@ class double_4;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="ctor"></a> double_4
 
@@ -672,6 +672,6 @@ Obiekt używany do inicjowania.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

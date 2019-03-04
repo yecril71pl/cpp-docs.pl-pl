@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 8251d30f6cef898138dfb2c08619f68e17a1cd83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01a5ed4ac09c466cefe195cea83f73ba270c21bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275821"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Dodawanie dostawcy ATL OLE DB
 
@@ -29,6 +29,6 @@ Ten kreator umożliwia dodawanie dostawcy ATL OLE DB do projektu. Dostawcy ATL O
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora, który powoduje wstawienie nowo utworzony kod dostawcy OLE DB w projekcie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)

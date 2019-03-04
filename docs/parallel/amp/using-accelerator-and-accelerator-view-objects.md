@@ -2,12 +2,12 @@
 title: Używanie akceleratora i obiektów accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668601"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272906"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Używanie akceleratora i obiektów accelerator_view
 
@@ -168,17 +168,17 @@ Istnieją dwa sposoby użycia wielu akceleratorów w aplikacji:
 
 Ścieżki urządzenia dla trzech akceleratorów specjalnych są dostępne jako właściwości `accelerator` klasy:
 
-- [Accelerator::direct3d_ref — element członkowski danych](reference/accelerator-class.md#direct3d_ref): ten akcelerator jednowątkowy używa oprogramowania CPU do emulowania rodzajowej karty graficznej. Jest on używany domyślnie do debugowania, ale nie jest przydatne w środowisku produkcyjnym, ponieważ jest wolniejszy niż akceleratory sprzętowe. Ponadto jest dostępna tylko w zestawie DirectX SDK i zestaw Windows SDK i jest mało prawdopodobne, należy zainstalować na komputerach klientów. Aby uzyskać więcej informacji, zobacz [debugowania kodu GPU](/visualstudio/debugger/debugging-gpu-code).
+- [accelerator::direct3d_ref Data Member](reference/accelerator-class.md#direct3d_ref): Ten akcelerator jednowątkowy używa oprogramowania CPU do emulowania rodzajowej karty graficznej. Jest on używany domyślnie do debugowania, ale nie jest przydatne w środowisku produkcyjnym, ponieważ jest wolniejszy niż akceleratory sprzętowe. Ponadto jest dostępna tylko w zestawie DirectX SDK i zestaw Windows SDK i jest mało prawdopodobne, należy zainstalować na komputerach klientów. Aby uzyskać więcej informacji, zobacz [debugowania kodu GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [Accelerator::direct3d_warp — element członkowski danych](reference/accelerator-class.md#direct3d_warp): Akcelerator ten dostarcza rozwiązanie alternatywne do wykonywania kodu C++ AMP na wielordzeniowych procesorach, które używają rozszerzenia SSE (Streaming SIMD).
+- [accelerator::direct3d_warp Data Member](reference/accelerator-class.md#direct3d_warp): Akcelerator ten dostarcza rozwiązanie alternatywne do wykonywania kodu C++ AMP na wielordzeniowych procesorach, które używają rozszerzenia SSE (Streaming SIMD).
 
-- [Accelerator::cpu_accelerator — członek danych](reference/accelerator-class.md#cpu_accelerator): Akcelerator ten można użyć do tworzenia tablic tymczasowych. Nie może wykonywać kodu C++ AMP. Aby uzyskać więcej informacji, zobacz [tablice tymczasowe w bibliotece C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) opublikuj wpis na blogu programowania równoległego w kodzie natywnym.
+- [accelerator::cpu_accelerator Data Member](reference/accelerator-class.md#cpu_accelerator): Akcelerator ten służy do tworzenia tablic tymczasowych. Nie może wykonywać kodu C++ AMP. Aby uzyskać więcej informacji, zobacz [tablice tymczasowe w bibliotece C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) opublikuj wpis na blogu programowania równoległego w kodzie natywnym.
 
 ## <a name="interoperability"></a>Współdziałanie
 
 Środowisko wykonawcze C++ AMP wspiera współdziałanie między `accelerator_view` klasy a występującym w Direct3D [interfejsu ID3D11Device](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). [Create_accelerator_view —](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda przyjmuje `IUnknown` interfejsu i zwraca `accelerator_view` obiektu. [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) metoda przyjmuje `accelerator_view` obiektu i zwraca `IUnknown` interfejsu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

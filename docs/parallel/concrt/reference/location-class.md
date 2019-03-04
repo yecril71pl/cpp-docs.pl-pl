@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273257"
 ---
 # <a name="location-class"></a>location — Klasa
 
@@ -33,7 +33,7 @@ class location;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Lokalizacja](#ctor)|Przeciążone. Konstruuje `location` obiektu.|
+|[location](#ctor)|Przeciążone. Konstruuje `location` obiektu.|
 |[~ location — destruktor](#dtor)|Niszczy `location` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -121,7 +121,7 @@ location(
 
 *_LocationType*<br/>
 
-*_Identyfikator*<br/>
+*_Id*<br/>
 
 *_BindingId*<br/>
 
@@ -181,6 +181,6 @@ Operand `location`.
 
 **wartość true,** Jeśli dwiema lokalizacjami są identyczne, i **false** inaczej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

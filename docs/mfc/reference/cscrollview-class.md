@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259259"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 
@@ -162,7 +162,7 @@ void FillOutsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Kontekst urządzenia, w którym ma zostać wykonane wypełniania.
 
 *pBrush*<br/>
@@ -332,7 +332,7 @@ void SetScrollSizes(
 ### <a name="parameters"></a>Parametry
 
 *nMapMode*<br/>
-Tryb mapowania, aby ustawić dla tego widoku. Możliwe wartości:
+Tryb mapowania, aby ustawić dla tego widoku. Możliwe wartości obejmują:
 
 |Tryb mapowania|Jednostka logiczna|Rozszerzenie dodatnie y...|
 |------------------|------------------|---------------------------------|
@@ -374,7 +374,7 @@ Należy ustawić tryb mapowania do dowolnego z trybów mapowania Windows z wyją
 
 [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [Klasa CView](../../mfc/reference/cview-class.md)<br/>

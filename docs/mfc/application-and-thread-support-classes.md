@@ -11,12 +11,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 5f69ea6a87d0e1ae16a6079a414d623af6dd88fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262042"
 ---
 # <a name="application-and-thread-support-classes"></a>Klasy obsługi aplikacji i wątków
 
@@ -28,7 +28,7 @@ Biblioteka Microsoft Foundation Class (MFC) obsługuje wielu wątków wykonania 
 
 ## <a name="application-and-thread-classes"></a>Klasy aplikacji i wątków
 
-[Klasa CWinApp](../mfc/reference/cwinapp-class.md)<br/>
+[CWinApp](../mfc/reference/cwinapp-class.md)<br/>
 Hermetyzuje kod, aby zainicjować, uruchamiania i zakończyć działanie aplikacji. Obiekt aplikacji będą pochodzić z tej klasy.
 
 [CWinThread](../mfc/reference/cwinthread-class.md)<br/>
@@ -71,7 +71,6 @@ Obsługuje trwałego magazynowania dokowania pasków sterowania dane o stanie.
 [CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
 Obsługuje listy ostatnio używanych (MRU) pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

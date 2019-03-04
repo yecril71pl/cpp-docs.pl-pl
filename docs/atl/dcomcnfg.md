@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261495"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG to narzędzie Windows NT 4.0, które można skonfigurować różne ustawienia specyficzne dla modelu DCOM w rejestrze. W oknie DCOMCNFG ma trzy strony: zabezpieczenia domyślne, właściwości domyślne i aplikacji. W obszarze Windows 2000 na czwartej stronie domyślne protokołów, jest obecny.
+DCOMCNFG to narzędzie Windows NT 4.0, które można skonfigurować różne ustawienia specyficzne dla modelu DCOM w rejestrze. W oknie DCOMCNFG ma trzy strony: Zabezpieczenia domyślne, właściwości domyślne i aplikacji. W obszarze Windows 2000 na czwartej stronie domyślne protokołów, jest obecny.
 
 ## <a name="default-security-page"></a>Domyślna strona zabezpieczeń
 
-Aby określić domyślne uprawnienia dla obiektów w systemie, można użyć strony Zabezpieczenia domyślne. Strona domyślna zabezpieczeń będzie mieć trzy sekcje: dostępu, uruchamiania i konfiguracji. Aby zmienić ustawienia domyślne sekcji, kliknij odpowiedni **Edytuj domyślne** przycisku. Te ustawienia domyślne zabezpieczeń są przechowywane w kluczu rejestru `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+Aby określić domyślne uprawnienia dla obiektów w systemie, można użyć strony Zabezpieczenia domyślne. Strona domyślna zabezpieczeń będzie mieć trzy sekcje: Dostępu, uruchamiania i konfiguracji. Aby zmienić ustawienia domyślne sekcji, kliknij odpowiedni **Edytuj domyślne** przycisku. Te ustawienia domyślne zabezpieczeń są przechowywane w kluczu rejestru `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
 
 ## <a name="default-protocols-page"></a>Domyślna strona protokołów
 
@@ -44,7 +44,6 @@ Możesz zmienić ustawienia dla określonego obiektu ze strony aplikacji. Po pro
 
 - Na stronie punkty końcowe, wyświetla zestaw protokołów i punktów końcowych dostępne do użycia przez klientów dla wybranego serwera modelu DCOM.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Usługi](../atl/atl-services.md)
-

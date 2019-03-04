@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273299"
 ---
 # <a name="cmutex-class"></a>Klasa CMutex
 
@@ -43,7 +43,7 @@ Alternatywna metoda przy użyciu `CMutex` obiektów jest dodanie do zmiennej typ
 
 Dostęp do zasobów w wartości clientauthtrustmode `CMutex` obiektów w ten sposób, najpierw Utwórz zmienną typu albo [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w funkcji składowej dostępu do zasobu. Następnie wywołaj zablokować obiektu `Lock` funkcja elementu członkowskiego (na przykład [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). W tym momencie wątek będzie albo uzyskania dostępu do zasobu, poczekaj, aż zasób zwolnione i uzyskać dostęp lub poczekaj, aż zasób, które mogą być wprowadzane i limit czasu, w których nie można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Do zwolnienia zasobu, użyj obiektu blokady `Unlock` funkcja elementu członkowskiego (na przykład [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), lub zezwalać na obiekt blokady do wykraczać poza zakres.
 
-Aby uzyskać więcej informacji na temat korzystania z `CMutex` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat korzystania z `CMutex` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -86,8 +86,7 @@ Dostęp i zwalniania `CMutex` obiektu, Utwórz [CMultiLock](../../mfc/reference/
 > [!IMPORTANT]
 >  Po utworzeniu `CMutex` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

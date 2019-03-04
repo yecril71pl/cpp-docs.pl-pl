@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 552d0a0f5cbc93bd0d8fc6eb4a77eecee851add6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ec3c6e0d2b534c3af49000202461a43a65dae9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261469"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
@@ -24,8 +24,7 @@ Każdy interfejs jest tworzony na podstawie `IUnknown`, dzięki czemu każdy int
 
 Należy zauważyć, że należy przestrzegać [zliczanie odwołań](../atl/reference-counting.md) reguły przez cały czas. Jeśli wywołasz `Release` na wskaźnik interfejsu do liczbę odwołań do zera, nie należy używać tego wskaźnika ponownie. Może od czasu do czasu może być konieczne uzyskanie słabe odwołanie do obiektu (oznacza to, że możesz uzyskać wskaźnik do jednego z jego interfejsów bez zwiększania licznika odwołań), ale nie jest dopuszczalne, aby to zrobić, wywołując `QueryInterface` następuje `Release`. Wskaźnik uzyskane w taki sposób, jest nieprawidłowy i nie powinna być używana. To bardziej łatwo staje się jasne, kiedy [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) jest zdefiniowana, więc Definiowanie to makro jest to wygodny sposób wyszukiwania zliczanie błędów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-[QueryInterface: Nawigacja w obiekcie](/windows/desktop/com/queryinterface--navigating-in-an-object)
-
+[QueryInterface: Nawigowanie w obiekcie](/windows/desktop/com/queryinterface--navigating-in-an-object)

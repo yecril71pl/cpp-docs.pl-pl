@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467109"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268177"
 ---
 # <a name="icommandui-interface"></a>Klasa Icommandui
 
@@ -51,7 +51,7 @@ Ten interfejs zapewnia metody i właściwości, które zarządzają poleceń int
 
 `ICommandUI` jest używana wewnątrz procedury obsługi ON_UPDATE_COMMAND_UI w [obiektu ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-klasy pochodnej. Gdy użytkownik aplikacji aktywuje (zaznacza lub kliknięcia) menu, każdy element menu jest wyświetlany jako włączone lub wyłączone. Celem każdego polecenia menu udostępnia te informacje poprzez implementację programu obsługi ON_UPDATE_COMMAND_UI. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji okno właściwości do utworzenia wpisu mapy wiadomości i prototypu funkcji dla każdej procedury obsługi.
 
-Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routingu poleceń, zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routingu poleceń, zobacz [jak: Dodaj polecenie routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z programem obsługi ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz techniczne Uwaga TN006: mapy komunikatów.
+Jest to funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z programem obsługi ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji zobacz Pomoc TN006 Uwaga: Mapy komunikatów.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 
@@ -141,6 +141,6 @@ Ta właściwość określa tekst elementu interfejsu użytkownika dla tego polec
 
 **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdUI](../../mfc/reference/ccmdui-class.md)

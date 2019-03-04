@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277888"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -119,7 +119,7 @@ CPageSetupDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Co najmniej jeden flagi używane do dostosowywania ustawień w oknie dialogowym. Wartości można łączyć, używając operatora bitowego OR. Te wartości mają następujące znaczenie:
 
 - PSD_DEFAULTMINMARGINS określa minimalne szerokości dozwoloną dla marginesy strony, aby być taka sama jak minimalnych drukarki. Ta flaga jest ignorowana, jeśli określono też flagi PSD_MARGINS i PSD_MINMARGINS.
@@ -322,10 +322,10 @@ virtual UINT OnDrawPage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia drukarki.
 
-*nkomunikat*<br/>
+*nMessage*<br/>
 Określa komunikat, wskazujący obszarze strony obecnie rysowania. Może to być jeden z następujących elementów:
 
 - WM_PSD_FULLPAGERECT obszaru całej strony.
@@ -340,7 +340,7 @@ Określa komunikat, wskazujący obszarze strony obecnie rysowania. Może to być
 
 - Obszar WM_PSD_YAFULLPAGERECT dla reprezentacji adres zwrotny. Rozszerza ten obszar do krawędzi obszaru przykładowej strony.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) obiekt, który zawiera współrzędne obszaru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -403,9 +403,8 @@ Wartość różną od zera, jeśli obsługiwane; w przeciwnym razie 0.
 
 Należy przesłonić tę funkcję, aby dostosować rysowania obrazu. Jeśli możesz przesłonić tę funkcję i zwraca wartość TRUE, należy narysować całego obrazu. Jeśli przesłonić tę funkcję i zwraca wartość FALSE, cały domyślnego obrazu jest rysowana przez platformę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

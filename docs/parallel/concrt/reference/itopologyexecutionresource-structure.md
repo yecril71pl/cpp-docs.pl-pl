@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: fa4d8978cbdb5cab36367138ffb607a722b6b91a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bfb614d5ffd6a399fae33d38a50cee62f17c208
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272857"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource — Struktura
 
@@ -32,7 +32,7 @@ struct ITopologyExecutionResource;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Itopologyexecutionresource::getid —](#getid)|Zwraca unikatowy identyfikator dla tego zasobu wykonywania, Menedżer zasobów.|
+|[ITopologyExecutionResource::GetId](#getid)|Zwraca unikatowy identyfikator dla tego zasobu wykonywania, Menedżer zasobów.|
 |[Itopologyexecutionresource::GETNEXT —](#getnext)|Zwraca interfejs do następnego wykonania zasobu w kolejności wyliczenia.|
 
 ## <a name="remarks"></a>Uwagi
@@ -73,6 +73,6 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 Interfejs do następnego wykonania zasobu w kolejności wyliczenia. Jeśli nie ma żadnych więcej węzłów w kolejności wyliczenia węzła, do której należy dany zasób wykonywania, ta metoda zwróci wartość `NULL`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

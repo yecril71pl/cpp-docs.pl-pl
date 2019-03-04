@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: sekwencja operacji'
+title: 'Windows Sockets: Sekwencja operacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265551"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sekwencja operacji
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sekwencja operacji
 
 W tym artykule przedstawiono obok siebie, sekwencja operacji gniazda serwera i gniazda klienta. Ponieważ jest używany przez gniazdami `CArchive` obiektów, są one zawsze [strumienia sockets](../mfc/windows-sockets-stream-sockets.md).
 
@@ -36,7 +36,7 @@ Aż do momentu konstruowanie `CSocketFile` obiektu, następująca sekwencja jest
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> —lub—<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> — lub obu —|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> —lub—<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> — lub obu —|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> —lub—<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> —lub—<br /><br /> `arOut << dwValue;`6|
 
-1. Gdzie *nPort* jest numerem portu. Zobacz [Windows Sockets: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md) szczegółowe informacje na temat portów.
+1. Gdzie *nPort* jest numerem portu. Zobacz [Windows Sockets: Porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md) szczegółowe informacje na temat portów.
 
 2. Serwer zawsze należy określić port, dzięki czemu klienci mogą łączyć się. `Create` Wywołanie określa również czasami adresu. Po stronie klienta należy używać parametrów domyślnych, które poproś MFC, aby użyć dowolnego dostępnego portu.
 
@@ -56,20 +56,19 @@ Sekwencja wywołań przedstawione w powyższej tabeli jest dla gniazda strumieni
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: Porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [Klasa CSocket](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

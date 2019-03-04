@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261352"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -350,7 +350,7 @@ BOOL DeleteItem(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa liczony od zera indeks elementu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -498,7 +498,7 @@ BOOL GetItem(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa liczony od zera indeks elementu do pobrania.
 
 *pHeaderItem*<br/>
@@ -542,8 +542,8 @@ BOOL GetItemDropDownRect(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Towaru*|[in] Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|
-|*lprect —*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|
+|*iItem*|[in] Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|
+|*lpRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -580,7 +580,7 @@ BOOL GetItemRect(
 *nIndex*<br/>
 Liczony od zera indeks elementu kontrolki nagłówka.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik na adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lprect —*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|
+|*lpRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -703,7 +703,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Liczony od zera indeks elementu, który ma zostać wstawiony. Jeśli wartość wynosi zero, element zostanie wstawiony na początku formantu nagłówka. Jeśli wartość jest większa niż wartość maksymalna, element zostanie wstawiony na końcu kontrolki nagłówka.
 
 *phdi*<br/>
@@ -825,7 +825,7 @@ BOOL SetFocusedItem(int iItem);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Towaru*|[in] Liczony od zera indeks elementu nagłówka.|
+|*iItem*|[in] Liczony od zera indeks elementu nagłówka.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -913,7 +913,7 @@ BOOL SetItem(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Liczony od zera indeks elementu do można modyfikować.
 
 *pHeaderItem*<br/>
@@ -957,7 +957,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie makra Win32 [HDM_SET
 
   Zobacz przykład [CHeaderCtrl::GetOrderArray](#getorderarray).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

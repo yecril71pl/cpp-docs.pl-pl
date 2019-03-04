@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519194"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273182"
 ---
 # <a name="colecurrency-class"></a>Klasa COleCurrency
 
@@ -64,7 +64,7 @@ class COleCurrency
 |[operator =](#operator_eq)|Kopiuje `COleCurrency` wartość.|
 |[operator +, -](#operator_plus_minus)|Dodaje, odejmuje i zmienia znak `COleCurrency` wartości.|
 |[operator +=-=](#operator_plus_minus_eq)|Dodaje i odejmuje `COleCurrency` wartości z tego `COleCurrency` obiektu.|
-|[operator * /](#operator_star)|Skaluje `COleCurrency` wartości przez wartość całkowitą.|
+|[operator */](#operator_star)|Skaluje `COleCurrency` wartości przez wartość całkowitą.|
 |[operator * =, / =](#operator_star_div_eq)|Umożliwia to skalowanie `COleCurrency` wartości przez wartość całkowitą.|
 |[Operator <<](#operator_stream)|Dane wyjściowe `COleCurrency` wartość `CArchive` lub `CDumpContext`.|
 |[operator >>](#operator_stream)|Dane wejściowe `COleCurrency` obiektu z `CArchive`.|
@@ -154,7 +154,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa flagi dla ustawień regionalnych. Dotyczy tylko następujące flagi walucie:
 
 - LOCALE_NOUSEROVERRIDE używane domyślne ustawienia regionalne systemu, a nie niestandardowych ustawień użytkownika.
@@ -287,7 +287,7 @@ Aby uzyskać więcej informacji na temat operacji, które mogą ustawić stan ni
 
 - [operator +=-=](#operator_plus_minus_eq)
 
-- [operator * /](#operator_star)
+- [operator */](#operator_star)
 
 - [operator * =, / =](#operator_star_div_eq)
 
@@ -464,7 +464,7 @@ throw(COleException*);
 *lpszCurrency*<br/>
 Wskaźnik na ciąg zakończony znakiem null, które ma być analizowana.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa flagi dla ustawień regionalnych, prawdopodobnie następujące flagi:
 
 - LOCALE_NOUSEROVERRIDE używane domyślne ustawienia regionalne systemu, a nie niestandardowych ustawień użytkownika.
@@ -574,7 +574,7 @@ Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
 > [!CAUTION]
 >  Ta funkcja jest zaawansowane sytuacjach programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. W większości przypadków posłuży go ustawić stan na wartość null lub nieprawidłowa. Należy pamiętać, że operator przypisania ( [operator =](#operator_eq)) i [SetCurrency](#setcurrency) skonfigurowały do obiektu, w oparciu o wartości źródła.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleVariant](../../mfc/reference/colevariant-class.md)

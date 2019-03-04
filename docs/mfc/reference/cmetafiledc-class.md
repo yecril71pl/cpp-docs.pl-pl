@@ -1,5 +1,5 @@
 ---
-title: Cmetafiledc — klasa
+title: CMetaFileDC Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMetaFileDC
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 95f54f50d7a87e9a2ad4689c14f3b7f8d42ff71e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276792"
 ---
-# <a name="cmetafiledc-class"></a>Cmetafiledc — klasa
+# <a name="cmetafiledc-class"></a>CMetaFileDC Class
 
 Implementuje metaplik Windows, który zawiera sekwencję poleceń interface (GDI) urządzenia grafiki, które można powtarzać tak, aby utworzyć żądany obraz lub tekst.
 
@@ -72,7 +72,7 @@ Aby uzyskać więcej informacji na temat `CMetaFileDC`, zobacz [konteksty urząd
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[PRZECHWYTYWANIE ZMIAN DANYCH](../../mfc/reference/cdc-class.md)
+[CDC](../../mfc/reference/cdc-class.md)
 
 `CMetaFileDC`
 
@@ -213,8 +213,7 @@ Aplikacje muszą używać Win32 `GetWinMetaFileBits` funkcję, aby skonwertować
 
 Należy użyć nazwy pliku dla rozszerzony metaplik. Rozszerzenie EMF.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDC](../../mfc/reference/cdc-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

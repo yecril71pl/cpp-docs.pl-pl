@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259883"
 ---
 # <a name="crendertarget-class"></a>Klasa CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Tworzy obiekt CRenderTarget.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.
 
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*Elipsa*<br/>
+*ellipse*<br/>
 Położenie i radius ikonę wielokropka, aby narysować w pikselach niezależnych od urządzenia.
 
 *pBrush*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*Elipsa*<br/>
+*ellipse*<br/>
 Położenie i usługi radius, w pikselach niezależnych od urządzenia, elipsy do malowania.
 
 *pBrush*<br/>
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 Granice zawartości, maska geometryczne, nieprzezroczystość, maski krycia i opcje antialiasingu warstwy.
 
-*Warstwa*<br/>
+*layer*<br/>
 Warstwa, która odbiera kolejnych operacji rysowania.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1146,6 +1146,6 @@ Wskaźnik do obiektu CD2DResource.
 
 Wartość TRUE, to obiekt, jeśli są one prawidłowe; w przeciwnym razie wartość FALSE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

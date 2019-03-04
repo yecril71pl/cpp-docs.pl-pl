@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: b671057d0abc01f31d5625d5be0e9678207d8abe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270803"
 ---
 # <a name="clineartransition-class"></a>Klasa CLinearTransition
 
@@ -121,6 +121,6 @@ Czas trwania przejścia.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

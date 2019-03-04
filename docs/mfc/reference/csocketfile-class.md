@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274275"
 ---
 # <a name="csocketfile-class"></a>Klasa CSocketFile
 
@@ -50,7 +50,7 @@ W poniższym przykładzie `m_dwExpected` jest przybliżona liczba bajtów, któr
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets w MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md), a także [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets w MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md), a także [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -93,9 +93,9 @@ W trybie "archiwum compatible" `CSocketFile` obiekt zapewnia lepszą wydajność
 
 Za pomocą `CSocketFile`, jednak dane są na podstawie komunikatu; bufor może zawierać wiele komunikatów, więc odbieranie mniej niż żądana liczba bajtów nie oznacza koniec pliku. Aplikacja nie są blokowane w tym przypadku na przykład za pomocą `CFile`, i można kontynuować, odczytywanie wiadomości z buforu, dopóki rozmiar buforu jest pusty. [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) funkcja jest przydatna do monitorowania stanu bufora archiwum w takiej sytuacji.
 
-Aby uzyskać więcej informacji na temat użytkowania `CSocketFile`, zobacz artykuły [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md) i [Windows Sockets: przykład z gniazda przy użyciu archiwa](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Aby uzyskać więcej informacji na temat użytkowania `CSocketFile`, zobacz artykuły [Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md) i [Windows Sockets: Przykład gniazd korzystających z archiwów](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

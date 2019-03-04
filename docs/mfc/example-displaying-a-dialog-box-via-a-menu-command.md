@@ -1,5 +1,5 @@
 ---
-title: 'Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu'
+title: 'Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260481"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu
 
 Ten temat zawiera procedury, aby:
 
@@ -70,7 +70,7 @@ Procedury należy użyć następujących nazw i wartości:
 
          [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
 
-1. Edytuj DisplayDialogView.cpp:
+1. Edit DisplayDialogView.cpp:
 
    - Dodaj następujące instrukcję #include po istniejącej instrukcji #include:
 
@@ -88,7 +88,7 @@ Procedury należy użyć następujących nazw i wartości:
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Modalne i niemodalne okna dialogowe](../mfc/modal-and-modeless-dialog-boxes.md)

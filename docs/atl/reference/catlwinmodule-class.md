@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 3e38aebf3eadceafad3e70463d5bcf2d26fef96e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269464"
 ---
 # <a name="catlwinmodule-class"></a>Klasa CAtlWinModule
 
@@ -37,7 +37,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Konstruktor.|
-|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Destruktor.|
+|[CAtlWinModule::~CAtlWinModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -73,7 +73,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 *pData*<br/>
 Wskaźnik do `_AtlCreateWndData` struktury, inicjowanie i dodawane do bieżącego modułu.
 
-*Obiekt*<br/>
+*pObject*<br/>
 Wskaźnik do obiektu **to** wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -116,7 +116,7 @@ void* ExtractCreateWndData();
 
 Zwraca wskaźnik do `_AtlCreateWndData` struktury, wcześniej dodany z [CAtlWinModule::AddCreateWndData](#addcreatewnddata), lub wartość NULL, jeśli żaden obiekt nie jest dostępna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

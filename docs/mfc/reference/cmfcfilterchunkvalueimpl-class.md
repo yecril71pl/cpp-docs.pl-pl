@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264446"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Klasa CMFCFilterChunkValueImpl
 
@@ -113,7 +113,7 @@ hr = fragmentów. SetBoolValue(PKEY_IsAttachment, true);
 
 lub
 
-hr = fragmentów. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -318,7 +318,7 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *bVal*<br/>
@@ -361,7 +361,7 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *chunkType*<br/>
@@ -402,7 +402,7 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *dwVal*<br/>
@@ -446,7 +446,7 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *dtVal*<br/>
@@ -490,7 +490,7 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *nVal*<br/>
@@ -534,7 +534,7 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *nVal*<br/>
@@ -578,7 +578,7 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *lVal*<br/>
@@ -622,7 +622,7 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *systemTime*<br/>
@@ -666,7 +666,7 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>Parametry
 
-*PKEY*<br/>
+*pkey*<br/>
 Określa klucz właściwości.
 
 *pszValue*<br/>
@@ -693,6 +693,6 @@ S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

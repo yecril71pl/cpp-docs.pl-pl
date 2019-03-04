@@ -1,5 +1,5 @@
 ---
-title: Komunikaty powiadomień dotyczących kontrolki drzewa
+title: Komunikaty powiadomień dotyczących formantu drzewa
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], tree controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-ms.openlocfilehash: e187e08f894eeac37c8ad27aea45a1c8568c8a9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90e2e112d7862dfed7d8af31cfb72ff45633a2c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278405"
 ---
-# <a name="tree-control-notification-messages"></a>Komunikaty powiadomień dotyczących kontrolki drzewa
+# <a name="tree-control-notification-messages"></a>Komunikaty powiadomień dotyczących formantu drzewa
 
 Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień w postaci wiadomości WM_NOTIFY:
 
@@ -34,8 +34,7 @@ Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła nast
 |TVN_SELCHANGING|Sygnalizuje, że zaznaczenie zostanie zmieniony z jednego elementu do innego|
 |TVN_SETDISPINFO|Powiadomienie, aby zaktualizować informacje dla elementu|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

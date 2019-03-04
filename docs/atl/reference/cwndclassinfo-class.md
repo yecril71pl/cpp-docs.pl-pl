@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 4aeac558c28d0ac89707423433e51f348bc35d29
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274118"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo Class
 
@@ -188,7 +188,7 @@ Jeśli określono [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) 
 
 Jeśli określono [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra `Register` rejestruje superklasą — klasy okna, która opiera się na istniejącej klasy, ale używa procedury innego okna. Istniejące klasy okna procedurę okna jest zwracany w *pProc*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

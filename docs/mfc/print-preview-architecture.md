@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-ms.openlocfilehash: 2a57b3c8ef6df46c2e2524cb44dd29d68751389b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea80b67b3f6bb6980e4e8f7f12a967cb7bb5b6c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261521"
 ---
 # <a name="print-preview-architecture"></a>Architektura podglądu wydruku
 
@@ -55,7 +55,7 @@ Czasami możesz chcieć `OnPreparePrinting` przeprowadzić inicjowanie różne w
 
 `CPrintInfo` Struktura zawiera także składową o nazwie *m_strPageDesc*, który jest używany do formatowania ciągów wyświetlane u dołu ekranu w trybie jednej strony i wielu stron. Domyślnie te ciągi mają postać "strony *n*" i "stron *n* - *m*,", ale możesz modyfikować *m_strPageDesc* z w ramach `OnPreparePrinting` i ustaw ciągi na coś bardziej rozbudowany. Zobacz [klasa Cprintinfo](../mfc/reference/cprintinfo-structure.md) w *odwołanie MFC* Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Drukowanie i podgląd wydruku](../mfc/printing-and-print-preview.md)<br/>
 [Drukowanie](../mfc/printing.md)<br/>

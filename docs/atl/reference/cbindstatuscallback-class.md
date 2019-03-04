@@ -1,5 +1,5 @@
 ---
-title: Klasa CBindStatusCallback
+title: CBindStatusCallback Class
 ms.date: 11/04/2016
 f1_keywords:
 - CBindStatusCallback
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259207"
 ---
-# <a name="cbindstatuscallback-class"></a>Klasa CBindStatusCallback
+# <a name="cbindstatuscallback-class"></a>CBindStatusCallback Class
 
 Ta klasa implementuje `IBindStatusCallback` interfejsu.
 
@@ -67,7 +67,7 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 |Nazwa|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor.|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Destruktor.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -135,7 +135,7 @@ Tworzy obiekt, aby otrzymywać powiadomienia dotyczące transferu asynchroniczne
 
 Konstruktor inicjuje również [m_pT](#m_pt) i [m_pFunc](#m_pfunc) na wartość NULL.
 
-##  <a name="dtor"></a>  CBindStatusCallback:: ~ CBindStatusCallback
+##  <a name="dtor"></a>  CBindStatusCallback::~CBindStatusCallback
 
 Destruktor.
 
@@ -162,7 +162,7 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 [in] Wskaźnik do obiektu żądającego transferu asynchronicznego danych. `CBindStatusCallback` Obiektu jest szablonowana na klasy tego obiektu.
 
 *pFunc*<br/>
@@ -236,7 +236,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead
 
@@ -357,9 +357,9 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *grfBSCF*<br/>
-[in] Wartość wyliczenia BSCF. Co najmniej jeden z następujących czynności: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION lub BSCF_LASTDATANOTIFICATION.
+[in] Wartość wyliczenia BSCF. Jeden lub więcej z następujących czynności: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION lub BSCF_LASTDATANOTIFICATION.
 
-*niezerowego*<br/>
+*dwSize*<br/>
 [in] Zbiorcza kwota (w bajtach) dostępnych od początku powiązanie danych. Może być równy zero, wskazującą, ilości danych nie jest ważna, lub że bez żadnej kwoty określone stały się dostępne.
 
 *pformatetc*<br/>
@@ -469,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parametry
 
-*wartość HRESULT*<br/>
+*hresult*<br/>
 Kod stanu zwrócony przez operację powiązania.
 
 *szError*<br/>
@@ -494,7 +494,7 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 [in] Wskaźnik do obiektu żądającego transferu asynchronicznego danych. `CBindStatusCallback` Obiektu jest szablonowana na klasy tego obiektu.
 
 *pFunc*<br/>
@@ -534,6 +534,6 @@ W poniższym przykładzie (z [ASYNC](../../visual-cpp-samples.md) przykładowych
 
 [!code-cpp[NVC_ATL_Windowing#87](../../atl/codesnippet/cpp/cbindstatuscallback-class_2.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

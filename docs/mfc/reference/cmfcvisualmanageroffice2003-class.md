@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCVisualManagerOffice2003
+title: CMFCVisualManagerOffice2003 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -92,14 +92,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558815"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273273"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>Klasa CMFCVisualManagerOffice2003
+# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 Class
 
 `CMFCVisualManagerOffice2003` Nadaje aplikacji wygląd programu Microsoft Office 2003.
 
@@ -242,7 +242,7 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -278,7 +278,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -315,7 +315,7 @@ virtual void DrawCustomizeButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu wyświetlania.
 
 *Rect*<br/>
@@ -349,7 +349,7 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -449,7 +449,7 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *sizeDefault*<br/>
@@ -586,7 +586,7 @@ virtual BOOL GetToolTipInfo(
 *params*<br/>
 [out] Odwołanie do [klasa CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiektu, w której ta metoda zwraca informacje.
 
-*nNie*<br/>
+*nType*<br/>
 [in] Wpisz informacje o informacje etykietki narzędzia ma zostać zwrócona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -730,7 +730,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectBounds*<br/>
@@ -762,7 +762,7 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla paska sterowania.
 
 *rectGripper*<br/>
@@ -817,7 +817,7 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.
 
 *pButton*<br/>
@@ -850,7 +850,7 @@ virtual void OnDrawCaptionBarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -885,13 +885,13 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
 [in] Prostokąt otaczający pole wyboru.
 
-*nInformacje*<br/>
+*nState*<br/>
 [in] Stan pola wyboru: 0, jeśli nie jest zaznaczone, 1, jeśli pole jest zaznaczone, 2 po zaznaczeniu mieszane.
 
 *bHighlighted*<br/>
@@ -921,7 +921,7 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia przycisk pola kombi.
 
 *Rect*<br/>
@@ -959,7 +959,7 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1010,7 +1010,7 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu wyświetlania, w którym ma być rysowany rozwijającego się pola.
 
 *Rect*<br/>
@@ -1042,7 +1042,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pCtrl*<br/>
 [in] Wskaźnik do [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura rysuje krawędzią tej kontrolki nagłówka.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1069,7 +1069,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.
 
 *pMenu*<br/>
@@ -1094,7 +1094,7 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectSplitter*<br/>
@@ -1118,7 +1118,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectBtn*<br/>
@@ -1147,7 +1147,7 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia paska sterowania.
 
 *pBar*<br/>
@@ -1175,7 +1175,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -1208,7 +1208,7 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia okna podręcznego.
 
 *Rect*<br/>
@@ -1229,7 +1229,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia przycisku.
 
 *rectClient*<br/>
@@ -1253,7 +1253,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia podpisu.
 
 *rectCaption*<br/>
@@ -1283,7 +1283,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pGroup*<br/>
@@ -1312,7 +1312,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia należącego do kategorii wstążki.
 
 *pContextCaption*<br/>
@@ -1339,7 +1339,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pTab*<br/>
@@ -1371,7 +1371,7 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pProgress*<br/>
@@ -1403,7 +1403,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pSeparator*<br/>
@@ -1429,7 +1429,7 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
@@ -1458,7 +1458,7 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
@@ -1497,7 +1497,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
@@ -1535,7 +1535,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -1567,7 +1567,7 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1598,7 +1598,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla paska sterowania.
 
 *pBar*<br/>
@@ -1627,7 +1627,7 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1653,7 +1653,7 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -1691,7 +1691,7 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia na pasek stanu
 
 *pStatusBar*<br/>
@@ -1730,7 +1730,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pStatBar*<br/>
@@ -1758,7 +1758,7 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectTab*<br/>
@@ -1792,7 +1792,7 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1826,7 +1826,7 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pTask*<br/>
@@ -1859,7 +1859,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1890,7 +1890,7 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pGroup*<br/>
@@ -1922,7 +1922,7 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1950,7 +1950,7 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
@@ -1974,7 +1974,7 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2003,7 +2003,7 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2034,7 +2034,7 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2064,7 +2064,7 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2092,7 +2092,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla paska sterowania.
 
 *pBar*<br/>
@@ -2127,7 +2127,7 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.
 
 *pButton*<br/>
@@ -2156,7 +2156,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2189,7 +2189,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pCtrl*<br/>
 [in] Wskaźnik do [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura wypełnienia tła dla tego formantu nagłówka.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2213,7 +2213,7 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2240,7 +2240,7 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectCaption*<br/>
@@ -2270,7 +2270,7 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2301,7 +2301,7 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2327,7 +2327,7 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectFill*<br/>
@@ -2362,7 +2362,7 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -2387,7 +2387,7 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectWorkArea*<br/>
@@ -2410,7 +2410,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla przycisku.
 
 *pButton*<br/>
@@ -2433,7 +2433,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectRarelyUsed*<br/>
@@ -2508,7 +2508,7 @@ Jeśli `CMFCVisualManagerOffice2003` obiekt używa motyw globalny, jego rysuje e
 
 Jeśli `CMFCVisualManagerOffice2003` obiektu nie korzysta z motyw globalny, jego rysuje elementy graficznego interfejsu użytkownika przy użyciu [klasa CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

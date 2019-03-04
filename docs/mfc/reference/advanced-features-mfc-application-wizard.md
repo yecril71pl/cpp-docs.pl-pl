@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278226"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
 
@@ -21,7 +21,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Generuje zestaw plików pomocy dla pomocy kontekstowej, dostępnej za pomocą menu Pomoc i F1 lub klikając **pomocy** przycisku w oknie dialogowym. Obsługa pomocy wymaga kompilatora plików pomocy. Jeśli nie masz kompilatora plików pomocy, o zainstaluj go, uruchamiając ponownie Instalatora.
 
-   Zobacz [Pomoc HTML: pomoc kontekstowa do programów](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.
+   Zobacz [Pomoc HTML: Pomoc kontekstowa do programów Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.
 
 - **Drukowanie i Podgląd wydruku**
 
@@ -57,7 +57,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
 - **Obsługa Menedżera ponownego uruchamiania**
 
-   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [Jak mogę Użyj nowego Menedżera ponownego uruchamiania](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Zaawansowane okienka ramki**
 
@@ -73,7 +73,6 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Określa liczbę plików wymienionych na liście niedawno używanych. Liczbą domyślną jest 4.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
-

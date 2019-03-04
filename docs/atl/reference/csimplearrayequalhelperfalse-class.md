@@ -1,5 +1,5 @@
 ---
-title: Klasa CSimpleArrayEqualHelperFalse
+title: CSimpleArrayEqualHelperFalse Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 91987d369291a092b6dfb5f7db9ca8ba1434a7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269061"
 ---
-# <a name="csimplearrayequalhelperfalse-class"></a>Klasa CSimpleArrayEqualHelperFalse
+# <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse Class
 
 Ta klasa jest pomocnika dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
 
@@ -63,7 +63,7 @@ Zwraca wartość false.
 
 Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem false, jeśli przywoływany. Celem `CSimpleArrayEqualHelperFalse::IsEqual` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

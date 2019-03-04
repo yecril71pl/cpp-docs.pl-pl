@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: f0ff337a7193093456ab4f5de2f6087d88ca12df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267137"
 ---
 # <a name="odbc-classes"></a>Klasy ODBC
 
@@ -43,7 +43,6 @@ Hermetyzuje dojścia do magazynu w celu duży obiekt binarny (BLOB), takie jak m
 [CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
 Służy do przechowywania wartości bez martwienia się o typ danych wartości. `CDBVariant` śledzi bieżącą wartość przechowywaną w Unii typ danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

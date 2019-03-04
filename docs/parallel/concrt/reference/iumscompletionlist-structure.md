@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: ec3c38ee609dfa7aec8d688269f1183d307be5b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 567b8668934d81c49757660d1a60ca74eb033e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273924"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList — Struktura
 
@@ -31,7 +31,7 @@ struct IUMSCompletionList;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Iumscompletionlist::getunblocknotifications —](#getunblocknotifications)|Pobiera łańcuch `IUMSUnblockNotification` interfejsów reprezentujący kontekstów wykonanie, którego skojarzonego wątku proxy ma odblokowany od czasu ostatniego ta metoda została wywołana.|
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Pobiera łańcuch `IUMSUnblockNotification` interfejsów reprezentujący kontekstów wykonanie, którego skojarzonego wątku proxy ma odblokowany od czasu ostatniego ta metoda została wywołana.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -63,7 +63,7 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 
 Zwrócone powiadomień są nieprawidłowe, po kontekstami wykonywania są zaplanowane ponownie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IUMSScheduler, struktura](iumsscheduler-structure.md)<br/>

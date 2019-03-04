@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCCmdUsageCount
+title: CMFCCmdUsageCount Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCmdUsageCount
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275366"
 ---
-# <a name="cmfccmdusagecount-class"></a>Klasa CMFCCmdUsageCount
+# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Class
 
 Śledzi Licznik użycia komunikatów Windows, na przykład gdy użytkownik wybierze element menu.
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 Ta metoda wykonuje serializację struktury mapy liczb polecenia `m_CmdUsage`i użycie polecenia całkowita `m_nTotalUsage`, licznik, z lub do określonego archiwum.
 
-Przykłady serializacji, zobacz [serializacja: serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
+Przykłady serializacji, zobacz [serializacji: Serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 
@@ -236,7 +236,7 @@ Ta metoda ustawia wspólnie `CMFCCmdUsageCount` składowe danych klasy `m_nStart
 
 W kompilacjach debugowania, ta metoda generuje błąd potwierdzenia, jeśli *nMinUsagePercentage* parametru jest większy niż lub równa 100.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

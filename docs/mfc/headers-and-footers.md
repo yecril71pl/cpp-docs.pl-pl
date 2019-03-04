@@ -11,12 +11,12 @@ helpviewer_keywords:
 - printing [MFC], headers and footers
 - page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
-ms.openlocfilehash: 15c76dabb2512b5906ca631e0da5047fabddf848
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e57331ccbc7f0afd7b82dc035410af495abd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279461"
 ---
 # <a name="headers-and-footers"></a>Nagłówki i stopki
 
@@ -36,7 +36,6 @@ Nie można wydrukować nagłówek lub czymkolwiek, z [OnPrepareDC](../mfc/refere
 
 - [Alokowanie zasobów GDI związane z drukowaniem](../mfc/allocating-gdi-resources.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Drukowanie](../mfc/printing.md)
-

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259026"
 ---
 # <a name="array-class"></a>array — Klasa
 
@@ -62,7 +62,7 @@ Ranga tablicy.
 |Nazwa|Opis|
 |----------|-----------------|
 |[copy_to](#copy_to)|Kopiuje zawartość tablicy do innej tablicy.|
-|[Dane](#data)|Zwraca wskaźnik do danych pierwotnych tablicy.|
+|[data](#data)|Zwraca wskaźnik do danych pierwotnych tablicy.|
 |[get_accelerator_view](#get_accelerator_view)|Zwraca [accelerator_view](accelerator-view-class.md) obiekt, który reprezentuje lokalizację, w której zaalokowano tablicę. Ta właściwość jest możliwy tylko na procesorze CPU.|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|Pobiera drugi [accelerator_view](accelerator-view-class.md) obiektu, który jest przekazywany jako parametr gdy wywołany zostanie Konstruktor tymczasowy w celu utworzenia wystąpienia `array` obiektu.|
 |[get_cpu_access_type](#get_cpu_access_type)|Zwraca [access_type](concurrency-namespace-enums-amp.md#access_type) tablicy. Ta metoda jest możliwy tylko na procesorze CPU.|
@@ -75,7 +75,7 @@ Ranga tablicy.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Operator std::vector&lt;value_type&gt;](#operator_vec)|Używa `copy(*this, vector)` można niejawnie przekonwertować tablicę do std::[wektor](../../../standard-library/vector-class.md) obiektu.|
+|[operator std::vector&lt;value_type&gt;](#operator_vec)|Używa `copy(*this, vector)` można niejawnie przekonwertować tablicę do std::[wektor](../../../standard-library/vector-class.md) obiektu.|
 |[operator()](#operator_call)|Zwraca wartość elementu, która jest określona przez parametry.|
 |[Operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
 |[operator=](#operator_eq)|Kopiuje zawartość określonego `array` obiektu do wskazanego.|
@@ -84,7 +84,7 @@ Ranga tablicy.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Przechowuje rangę tablicy.|
+|[rank Constant](#rank)|Przechowuje rangę tablicy.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -450,7 +450,7 @@ Pobiera drugi [accelerator_view](accelerator-view-class.md) obiektu, który jest
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to —
+##  <a name="copy_to"></a> copy_to
 
 Kopiuje zawartość `array` do innego `array`.
 
@@ -531,7 +531,7 @@ access_type get_cpu_access_type() const restrict(cpu);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-##  <a name="get_extent"></a> get_extent —
+##  <a name="get_extent"></a> get_extent
 
 Zwraca [zakres](extent-class.md) obiektu `array`.
 
@@ -835,6 +835,6 @@ Typ danych elementów w pierwotnym `array` obiektu i zwracanym `array_view` obie
 
 [Array_view](array-view-class.md) obiektu, który jest konstruowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

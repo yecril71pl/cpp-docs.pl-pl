@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605871"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264719"
 ---
 # <a name="cd2dbitmap-class"></a>Klasa CD2DBitmap
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Przeciążone. Tworzy obiekt CD2DBitmap z HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt bitmap D2D.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt bitmap D2D.|
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -93,7 +93,7 @@ class CD2DBitmap : public CD2DResource;
 |[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Kopiuje określony region z określonego obiekt docelowy renderowania do bieżącego mapy bitowej|
 |[CD2DBitmap::Create](#create)|Tworzy CD2DBitmap. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DBitmap::Destroy](#destroy)|Niszczy obiekt CD2DBitmap. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DBitmap::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DBitmap::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DBitmap::Get](#get)|Zwraca ID2D1Bitmap interfejsu|
 |[CD2DBitmap::GetDPI](#getdpi)|Zwróć punktów na cal (DPI) mapy bitowej|
 |[CD2DBitmap::GetPixelFormat](#getpixelformat)|Pobiera tryb format i alfa pikseli, mapy bitowej|
@@ -473,6 +473,6 @@ operator ID2D1Bitmap*();
 
 Wskaźnik do interfejsu ID2D1Bitmap lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

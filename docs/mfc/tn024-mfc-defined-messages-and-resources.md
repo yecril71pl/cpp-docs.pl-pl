@@ -1,5 +1,5 @@
 ---
-title: 'TN024: komunikaty i zasoby zdefiniowane przez MFC'
+title: 'TN024: Komunikaty i zasoby zdefiniowane przez MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278135"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: komunikaty i zasoby zdefiniowane przez MFC
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Komunikaty i zasoby zdefiniowane przez MFC
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -162,7 +162,7 @@ Te komunikaty są używane w implementacji Pomoc kontekstowa. Zapoznaj się [Uwa
 
 ## <a name="mfc-private-resource-formats"></a>Formatów zasobów prywatnych w MFC
 
-Obecnie MFC definiuje dwa formaty prywatnego zasobu: rt_toolbar — i RT_DLGINIT.
+Obecnie MFC definiuje dwa formaty prywatnego zasobu: Rt_toolbar — i RT_DLGINIT.
 
 ## <a name="rttoolbar-resource-format"></a>Rt_toolbar — zasób formatu
 
@@ -199,8 +199,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 
 Jest bardzo ogólny format, dzięki czemu wszystkie Windows wiadomości i zawartość danych. Edytor zasobów Visual C++ i MFC obsługują tylko ograniczonym podzbiorem Windows wiadomości: CB_ADDSTRING dla początkowych opcji lista dla pola kombi (dane to ciąg tekstowy).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: ff29a867a8351a51ad7f09a5ca31d871fc67bab8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269022"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 
@@ -41,7 +41,7 @@ Hermetyzacja oznacza, że klasy C++ `CWnd`, na przykład zawiera zmienną skład
 
 [Jak struktura wywołuje kod](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -49,6 +49,6 @@ Hermetyzacja oznacza, że klasy C++ `CWnd`, na przykład zawiera zmienną skład
 
 [Obiekty okna](../mfc/window-objects.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: 87e216f1959a7c169673822ffa7041ed511817d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279266"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializacja danych do plików i z plików
 
@@ -45,7 +45,6 @@ Struktura odpowiada automatycznie po otwarciu menu Plik Zapisz, a następnie Zap
 
 Ogólnie rzecz biorąc dane typu klasy, powinno być możliwe do serializacji sam. Oznacza to jeśli obiekt do archiwum, obiekt powinien wiedzieć sposób zapisania się do archiwum i jak odczytać sam z archiwum. MFC obsługuje składania klas do serializacji w ten sposób. Jeśli zamierzasz serializowania danych tego typu zaprojektować klasy, aby zdefiniować typ danych, projektowanie dla serializacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie dokumentów](../mfc/using-documents.md)
-

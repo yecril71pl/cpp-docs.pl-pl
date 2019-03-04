@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-ms.openlocfilehash: 1bf60bd3f076dbf682b92898d66cc5f96841c9e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d1c86732966d8222582dc6d4527af89963a5cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274976"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo — Struktura
 
@@ -66,7 +66,7 @@ Zawiera informacje o typie relacji. Wartość tego elementu członkowskiego moż
 *m_pFieldInfos*<br/>
 Wskaźnik do tablicy [cdaorelationfieldinfo —](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Tablica zawiera jeden obiekt dla każdego pola w relacji. `m_nFields` Element członkowski danych podaje liczbę elementów tablicy.
 
-*m_nfields —*<br/>
+*m_nFields*<br/>
 Liczba `CDaoRelationFieldInfo` obiekty w `m_pFieldInfos` element członkowski danych.
 
 ## <a name="remarks"></a>Uwagi
@@ -81,6 +81,6 @@ Informacje o pobrane przez [CDaoDatabase::GetRelationInfo](../../mfc/reference/c
 
 **Nagłówek:** afxdao.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Struktura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)

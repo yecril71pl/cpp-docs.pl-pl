@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: f96c9eee1ca1d0d89a4ce401c8705984efabfeaa
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 85422e5abd313aad4f87052748610e099363c1c6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657360"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276064"
 ---
 # <a name="cstringarray-class"></a>Klasa CStringArray
 
@@ -134,8 +134,7 @@ Aby uzyskać więcej informacji na temat korzystania z `CStringArray`, zapoznaj 
 
 **Nagłówek:** afxcoll.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

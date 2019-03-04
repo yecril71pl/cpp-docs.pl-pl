@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-ms.openlocfilehash: b99a6b0e9f9728d74057d05f7ad9082017e31005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3c165a0bf495da4e6cda05c7e109b338b0a364f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278681"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sekwencja operacji przy tworzeniu aplikacji MFC
 
@@ -41,10 +41,9 @@ W poniższej tabeli opisano ogólne sekwencji, które zazwyczaj wykonujesz podcz
 |Dodawanie okna podziału.|Jeśli chcesz obsługiwać, dzielenie okna, Dodaj [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) obiektu do ramki okna SDI lub okno podrzędne MDI i dołączyć go w oknie programu [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) funkcja elementu członkowskiego.|Struktura dostarcza formantów okno rozdzielacza obok paski przewijania i zarządza nimi podział widoku na wiele okienek. Jeśli użytkownik dzieli okno, struktura tworzy i dołącza dodatkowy widok obiektów do dokumentu.|
 |Tworzenia, testowania i debugowania aplikacji.|Użyj funkcji programu Visual C++ do tworzenia, testowania i debugowania aplikacji.|Visual C++ pozwala na dostosowanie kompilacji, link i inne opcje. Umożliwia także przeglądanie struktury kodu i klasa źródła.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)<br/>
 [Opieranie się na strukturze](../mfc/building-on-the-framework.md)
-

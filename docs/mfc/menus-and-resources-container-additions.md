@@ -1,5 +1,5 @@
 ---
-title: 'Menu i zasoby: dodatki do kontenera'
+title: 'Menu i zasoby: Dodatki do kontenera'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279355"
 ---
-# <a name="menus-and-resources-container-additions"></a>Menu i zasoby: dodatki do kontenera
+# <a name="menus-and-resources-container-additions"></a>Menu i zasoby: Dodatki do kontenera
 
 W tym artykule opisano zmiany, które należy podjąć, menu i innych zasobów w visual edycję aplikacji kontenera.
 
@@ -52,7 +52,7 @@ W menu Edycja, należy dodać następujące elementy:
 
 Oprócz zmian wymienione w tym artykule pliku źródłowego musi zawierać AFXOLECL. RC, który jest wymagany do wykonania w bibliotece klas Microsoft Foundation. Wstaw nowy obiekt jest tylko wymagane menu. Można dodać inne elementy, ale przedstawionych tutaj są najbardziej rozpowszechnione.
 
-Jeśli chcesz obsługiwać aktywacji w miejscu zawartych w niej elementów, należy utworzyć nowe menu dla aplikacji kontenera. To menu składa się z tym samym menu Plik i menu podręczne okna używany, gdy pliki są otwarte, ale ma dwa separatory znajdująca się między nimi. Separatory te są używane do wskazać, gdzie element serwera (składnik) (aplikacja) należy umieszczać jego menu, gdy aktywowany w miejscu. Aby uzyskać więcej informacji na temat tej techniki scalania menu, zobacz [menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md).
+Jeśli chcesz obsługiwać aktywacji w miejscu zawartych w niej elementów, należy utworzyć nowe menu dla aplikacji kontenera. To menu składa się z tym samym menu Plik i menu podręczne okna używany, gdy pliki są otwarte, ale ma dwa separatory znajdująca się między nimi. Separatory te są używane do wskazać, gdzie element serwera (składnik) (aplikacja) należy umieszczać jego menu, gdy aktywowany w miejscu. Aby uzyskać więcej informacji na temat tej techniki scalania menu, zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Dodawanie tabeli akceleratora aplikacji kontenera
 
@@ -60,19 +60,19 @@ Niewielkie zmiany zasobów Tabela akceleratora aplikacji kontenera są niezbędn
 
 |ID|Key|Typ|
 |--------|---------|----------|
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE —|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się do nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela zawiera wpisy dla menu Plik i okna, oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabela akceleratora utworzone dla aktywacji w miejscu, w przykładzie MFC [kontenera](../visual-cpp-samples.md):
 
 |ID|Key|Typ|
 |--------|---------|----------|
-|ID_FILE_NEW —|CTRL + N|**VIRTKEY**|
+|ID_FILE_NEW —|CTRL+N|**VIRTKEY**|
 |ID_FILE_OPEN —|CTRL+O|**VIRTKEY**|
-|ID_FILE_SAVE —|CTRL+S|**VIRTKEY**|
-|ID_FILE_PRINT|NACIŚNIJ KLAWISZE CTRL + P|**VIRTKEY**|
-|ID_NEXT_PANE —|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE —|SHIFT + VK_F6|**VIRTKEY**|
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE —|**VIRTKEY**|
+|ID_FILE_SAVE|CTRL+S|**VIRTKEY**|
+|ID_FILE_PRINT|CTRL+P|**VIRTKEY**|
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|
+|ID_PREV_PANE —|SHIFT+VK_F6|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Parametry tabeli dodatki dla aplikacji kontenera
 
@@ -83,8 +83,7 @@ Większość zmian do tabel ciągów dla aplikacji kontenera odnoszą się do el
 |IDP_OLE_INIT_FAILED|Zainicjowanie OLE nie powiodło się. Upewnij się, że biblioteki OLE są w poprawnej wersji.|
 |IDP_FAILED_TO_CREATE|Nie można utworzyć obiektu. Upewnij się, że obiekt wprowadzono do rejestru systemu.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md)
-
+[Menu i zasoby: Dodatki do serwera](../mfc/menus-and-resources-server-additions.md)

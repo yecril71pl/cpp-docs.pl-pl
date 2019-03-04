@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
-ms.openlocfilehash: fd47854c7073565fbe0c15ca6be7a9843af5f387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94700f850be62404f22974a1d5e76acad711555c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278746"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Izolacja biblioteki formantów wspólnych MFC
 
@@ -22,4 +22,3 @@ Możesz użyć [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-services
 Technicznie rzecz biorąc, wykonywać wywołania interfejsu API biblioteki formantów wspólnych za pośrednictwem klasy otoki `CComCtlWrapper` (zdefiniowanymi w afxcomctl32.h). `CComCtlWrapper` jest również odpowiedzialne za ładowanie i zwalnianie pliku Comctl32.dll. Stanu modułu MFC zawiera wskaźnik do wystąpienia `CComCtlWrapper`. Możesz uzyskać dostęp przy użyciu klasy otoki `afxComCtlWrapper` makra.
 
 Należy pamiętać, że wywołanie wspólnych formantów interfejsu API z bezpośrednio (bez użycia funkcji otoki MFC) z MFC aplikacji lub użytkownika biblioteki DLL będzie działać w większości przypadków, ponieważ aplikacja MFC lub użytkownika biblioteki DLL jest powiązany z biblioteki formantów wspólnych żądane go w swoim manifeście). Jednak sam kod MFC musi używać otoki, ponieważ może wywołać kodu MFC z biblioteki DLL użytkownika, z użyciem różnych wersji biblioteki formantów wspólnych.
-

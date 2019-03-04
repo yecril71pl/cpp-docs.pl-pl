@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275285"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager — Struktura
 
@@ -37,18 +37,18 @@ struct IResourceManager;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Iresourcemanager::OSVersion —](#osversion)|Typ wyliczany reprezentujący wersję systemu operacyjnego.|
+|[IResourceManager::OSVersion](#osversion)|Typ wyliczany reprezentujący wersję systemu operacyjnego.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Iresourcemanager::createnodetopology —](#createnodetopology)|Obecnie tylko podczas debugowania kompilacji środowiska uruchomieniowego, ta metoda jest hook testu, zaprojektowany w celu ułatwienia badania Menedżera zasobów na różnych topologii sprzętu, bez konieczności rzeczywistego sprzętu zgodnego konfiguracji sprzętu. Za pomocą kompilacji detalicznej środowiska uruchomieniowego ta metoda zwróci bez wykonywania żadnych czynności.|
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Obecnie tylko podczas debugowania kompilacji środowiska uruchomieniowego, ta metoda jest hook testu, zaprojektowany w celu ułatwienia badania Menedżera zasobów na różnych topologii sprzętu, bez konieczności rzeczywistego sprzętu zgodnego konfiguracji sprzętu. Za pomocą kompilacji detalicznej środowiska uruchomieniowego ta metoda zwróci bez wykonywania żadnych czynności.|
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Zwraca liczbę węzłów, które są dostępne do usługi Resource Manager.|
 |[IResourceManager::GetFirstNode](#getfirstnode)|Zwraca pierwszy węzeł w kolejności wyliczenia, zgodnie z definicją przez Menedżera zasobów.|
 |[Iresourcemanager::Reference —](#reference)|Zwiększa liczbę odwołań w wystąpieniu usługi Resource Manager.|
 |[IResourceManager::RegisterScheduler](#registerscheduler)|Rejestruje harmonogramu przy użyciu usługi Resource Manager. Po zarejestrowaniu harmonogram powinien komunikować się przy użyciu usługi Resource Manager `ISchedulerProxy` interfejsu, który jest zwracany.|
-|[Iresourcemanager::Release —](#release)|Dekrementuje liczbę odwołań w wystąpieniu usługi Resource Manager. Menedżer zasobów jest niszczony, kiedy jego licznik odwołań zbliża się do `0`.|
+|[IResourceManager::Release](#release)|Dekrementuje liczbę odwołań w wystąpieniu usługi Resource Manager. Menedżer zasobów jest niszczony, kiedy jego licznik odwołań zbliża się do `0`.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -78,7 +78,7 @@ virtual void CreateNodeTopology(
 
 ### <a name="parameters"></a>Parametry
 
-*NodeCount*<br/>
+*nodeCount*<br/>
 Liczba węzłów procesora jest symulowane.
 
 *pCoreCount*<br/>
@@ -180,7 +180,7 @@ virtual unsigned int Release() = 0;
 
 Wynikowa liczba odwołań.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ISchedulerProxy, struktura](ischedulerproxy-structure.md)<br/>

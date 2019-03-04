@@ -1,5 +1,5 @@
 ---
-title: Klasa IOleObjectImpl
+title: IOleObjectImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleObjectImpl
@@ -49,14 +49,14 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: e0ea787f0998a26f67418957584e9d12152aa618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268469"
 ---
-# <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
+# <a name="ioleobjectimpl-class"></a>IOleObjectImpl Class
 
 Ta klasa implementuje `IUnknown` i jest główną interfejs, za pomocą którego kontener komunikuje się za pomocą kontrolki.
 
@@ -397,7 +397,7 @@ STDMETHOD(GetClipboardData)(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -448,7 +448,7 @@ STDMETHOD(GetMoniker)(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -495,7 +495,7 @@ STDMETHOD(InitFromData)(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -733,7 +733,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -787,7 +787,7 @@ STDMETHOD(SetMoniker)(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -821,7 +821,7 @@ Zwraca wartość S_OK.
 
 Zobacz [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: b6be476e4b9f7d1aaa09a588e1c06e72032f48c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267748"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Wymagania wstępne dotyczące klas klientów internetowych
 
@@ -69,7 +69,7 @@ Niektóre akcje podjęte przez klienta internetowego (na przykład podczas odczy
 |Otwórz plik gopher.|Nawiąż połączenie gopher. Tworzenie lokalizatora gopher z [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) lub znaleźć lokalizatora z [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Wywołaj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
 |Odczytywanie pliku gopher.|Otwórz plik gopher. Użyj [CGopherFile](../mfc/reference/cgopherfile-class.md).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Klasy MFC do tworzenia klienckich aplikacji internetowych](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>

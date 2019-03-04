@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCColorPickerCtrl
+title: CMFCColorPickerCtrl Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276016"
 ---
-# <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
+# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
 
 `CMFCColorPickerCtrl` Klasa oferuje funkcję dla formantu, który jest używany do wybierania kolorów.
 
@@ -130,7 +130,7 @@ Poniższy przykład pokazuje, jak skonfigurować `CMFCColorPickerCtrl` obiektu p
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcolorpickerctrl.h
+**Header:** afxcolorpickerctrl.h
 
 ##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl
 
@@ -156,7 +156,7 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -446,7 +446,7 @@ Typy są definiowane przez `CMFCColorPickerCtrl::COLORTYPE` wyliczenia. Możliwe
 
 Aby określić typ formantu selektora kolorów, tę metodę należy wywołać przed utworzeniem kontrolki Windows.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

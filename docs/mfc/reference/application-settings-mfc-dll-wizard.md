@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-ms.openlocfilehash: 66e7b907e3ed50c97e5cc864d51c621713cbf992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f021f2023af839413306c1e3d56dc741749cf216
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276601"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Ustawienia aplikacji, kreator biblioteki MFC DLL
 
@@ -47,8 +47,7 @@ Wybierz, czy biblioteki MFC DLL powinien obsługiwać automatyzacji oraz czy pow
 
    Jeśli biblioteka DLL MFC przy użyciu Windows sockets pomocy technicznej jest tworzony, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) Inicjuje obsługę gniazda, a plik nagłówka MFC StdAfx.h zawiera AfxSock.h.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator biblioteki MFC DLL](../../mfc/reference/mfc-dll-wizard.md)<br/>
 [Tworzenie projektu MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)
-

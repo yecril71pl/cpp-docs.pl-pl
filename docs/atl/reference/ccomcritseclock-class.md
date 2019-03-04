@@ -1,5 +1,5 @@
 ---
-title: Klasa CComCritSecLock
+title: CComCritSecLock Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: e0f68f48867510c270c7c69e325a796f274198d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607002"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261235"
 ---
-# <a name="ccomcritseclock-class"></a>Klasa CComCritSecLock
+# <a name="ccomcritseclock-class"></a>CComCritSecLock Class
 
 Ta klasa dostarcza metody do blokowanie i odblokowywanie obiektu sekcję krytyczną.
 
@@ -39,7 +39,7 @@ Obiekt, który może zostać zablokowany i odblokować.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|Konstruktor.|
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Destruktor.|
+|[CComCritSecLock::~CComCritSecLock](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -76,7 +76,7 @@ Stan początkowy blokady: **true** oznacza, że zablokowane.
 
 Inicjuje obiekt sekcję krytyczną.
 
-##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock
+##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
 
 Destruktor.
 
@@ -116,7 +116,7 @@ void Unlock() throw();
 
 Jeśli obiekt jest już odblokowane, wystąpi błąd ASERCJI w kompilacjach do debugowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Klasa CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

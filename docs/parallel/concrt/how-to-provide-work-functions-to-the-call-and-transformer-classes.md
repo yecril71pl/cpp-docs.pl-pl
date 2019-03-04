@@ -1,25 +1,25 @@
 ---
-title: 'Porady: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora'
+title: 'Instrukcje: Zapewnianie funkcji pracy wywoływania oraz klasy transformatora'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277694"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Porady: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Instrukcje: Zapewnianie funkcji pracy wywoływania oraz klasy transformatora
 
 W tym temacie przedstawiono kilka sposobów zapewnianie funkcji pracy do [concurrency::call](../../parallel/concrt/reference/call-class.md) i [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy.
 
 Pierwszy przykład przedstawia sposób przekazania wyrażenia lambda do `call` obiektu. Drugi przykład pokazuje, jak przekazać obiekt funkcji `call` obiektu. Trzeci przykład pokazuje jak powiązać metodę klasy `call` obiektu.
 
-Do celów informacyjnych, co w tym temacie przykładzie `call` klasy. Aby uzyskać przykład, który używa `transformer` klasy, zobacz [porady: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Do celów informacyjnych, co w tym temacie przykładzie `call` klasy. Aby uzyskać przykład, który używa `transformer` klasy, zobacz [jak: Używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 ## <a name="example"></a>Przykład
 
@@ -57,7 +57,7 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc call.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

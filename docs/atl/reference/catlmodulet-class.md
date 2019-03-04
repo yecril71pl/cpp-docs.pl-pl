@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: 0d7673d634bad2d20dae63e4293f12e5530c4acd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd207038a92b944bf95575f0e0c820b8f09d615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272051"
 ---
 # <a name="catlmodulet-class"></a>Klasa CAtlModuleT
 
@@ -84,7 +84,7 @@ CAtlModuleT() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [CAtlModuleT::InitLibId](#initlibid).
+Calls [CAtlModuleT::InitLibId](#initlibid).
 
 ##  <a name="initlibid"></a>  CAtlModuleT::InitLibId
 
@@ -183,7 +183,7 @@ Zastrzeżone.
 
 Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlModule](../../atl/reference/catlmodule-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264992"
 ---
 # <a name="cmfccaptionbar-class"></a>Klasa CMFCCaptionBar
 
@@ -192,7 +192,7 @@ Logiczne OR kombinacja Style paska podpisu.
 *pParentWnd*<br/>
 Okno nadrzędne kontrolki paska podpisu.
 
-*Identyfikator uID*<br/>
+*uID*<br/>
 Identyfikator formantu paska podpisu.
 
 *nHeight*<br/>
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*elem*<br/>
 [in] Element paska podpisu dla której mają zostać pobrane wyrównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -353,7 +353,7 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia paska podpisu.
 
 *Rect*<br/>
@@ -377,7 +377,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, która jest używana do wyświetlania obramowania.
 
 *Rect*<br/>
@@ -403,7 +403,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
 *Rect*<br/>
@@ -431,7 +431,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania obrazu.
 
 *Rect*<br/>
@@ -454,7 +454,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
 *Rect*<br/>
@@ -729,7 +729,7 @@ Etykieta tekstowa jest wyrównany zgodnie z określonym *TextAlignment to* param
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

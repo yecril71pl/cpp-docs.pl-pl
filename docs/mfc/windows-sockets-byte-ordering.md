@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: określanie kolejności bajtów'
+title: 'Windows Sockets: Określanie kolejności bajtów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - byte order issues in sockets programming
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278096"
 ---
-# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: określanie kolejności bajtów
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Określanie kolejności bajtów
 
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule opisano, określanie kolejności bajtów. Inne problemy zostały omówione w artykułach: [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).
 
@@ -57,7 +57,7 @@ Praca z [CAsyncSocket](../mfc/reference/casyncsocket-class.md), wszystkie konwer
 W idealnym rozwiązaniem w przypadku używanie gniazd MFC jest pisanego obu końcach komunikacji: używanie MFC na obu końcach. Jeśli piszesz aplikację, która będzie komunikować się z aplikacji innych niż MFC, takich jak serwer FTP, prawdopodobnie musisz zarządzać wymienianie bajtów samodzielnie przed przekazywanie danych do obiektu archiwum, przy użyciu procedur konwersji Windows Sockets **ntohs**, **ntohl**, **htons**, i **htonl**. Te funkcje używane podczas komunikacji z aplikacją innego typu niż MFC jest wyświetlany w dalszej części tego artykułu.
 
 > [!NOTE]
->  Po drugiej stronie komunikacja nie jest aplikacja MFC, musisz również unikać przesyłania strumieniowego obiektów C++ pochodzących od `CObject` do archiwum ponieważ odbiornik nie będzie mógł je obsłużyć. Zobacz uwagi w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md).
+>  Po drugiej stronie komunikacja nie jest aplikacja MFC, musisz również unikać przesyłania strumieniowego obiektów C++ pochodzących od `CObject` do archiwum ponieważ odbiornik nie będzie mógł je obsłużyć. Zobacz uwagi w [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Aby uzyskać więcej informacji o zamówieniach bajtów zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.
 
@@ -98,15 +98,14 @@ gdzie `pMsg` jest wskaźnikiem do obiektu języka C++, pochodzi z klasy `CObject
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
-

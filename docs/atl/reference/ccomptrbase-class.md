@@ -1,5 +1,5 @@
 ---
-title: Klasa CComPtrBase
+title: CComPtrBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComPtrBase
@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261703"
 ---
-# <a name="ccomptrbase-class"></a>Klasa CComPtrBase
+# <a name="ccomptrbase-class"></a>CComPtrBase Class
 
 Ta klasa stanowi podstawę dla klas inteligentnego wskaźnika za pomocą procedury opartym na modelu COM pamięci.
 
@@ -46,7 +46,7 @@ Typ obiektu, być przywoływane przez inteligentny wskaźnik.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Destruktor.|
+|[CComPtrBase::~CComPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -128,14 +128,14 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P2*<br/>
+*p2*<br/>
 `CComPtrBase` Obiekt będzie przejęcie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
 `Attach` wywołania [CComPtrBase::Release](#release) na istniejące [CComPtrBase::p](#p) zmiennej składowej, a następnie przypisuje *p2* do `CComPtrBase::p`. Gdy `CComPtrBase` obiektu przejmuje na własność wskaźnika, będzie automatycznie wywoływać `Release` we wskaźniku, co spowoduje usunięcie wskaźnika i wszystkie przydzielone dane, jeśli licznik odwołań obiektu wynosić 0.
 
-##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase
+##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
 Destruktor.
 
@@ -291,7 +291,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 Wskaźnik do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -324,7 +324,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 Wskaźnik do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -366,7 +366,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*<br/>
+*Q*<br/>
 Typ obiektu, którego wskaźnika interfejsu jest wymagana.
 
 *strony*<br/>
@@ -415,6 +415,6 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Ta metoda wywołuje [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: gniazda strumieni'
+title: 'Windows Sockets: Gniazda Stream'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271297"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: gniazda strumieni
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Gniazda Stream
 
 W tym artykule opisano gniazda strumieni, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazdo datagramu](../mfc/windows-sockets-datagram-sockets.md).)
 
@@ -40,8 +40,7 @@ Korzystanie z gniazda strumieni może być nadrzędne w stosunku do aplikacje pr
     > [!NOTE]
     >  Jeśli używasz klasy `CSocket`, należy użyć strumienia. Potwierdzenie MFC zakończy się niepowodzeniem, jeśli określony typ gniazda jako **SOCK_DGRAM**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
-
+[Windows Sockets: Tło](../mfc/windows-sockets-background.md)

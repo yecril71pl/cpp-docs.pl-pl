@@ -1,18 +1,18 @@
 ---
-title: 'Schowek: kopiowanie i wklejanie danych'
+title: 'Schowek: Kopiowanie i wklejanie danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270738"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
+# <a name="clipboard-copying-and-pasting-data"></a>Schowek: Kopiowanie i wklejanie danych
 
 W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zalecane jest przeczytanie [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.
 
@@ -67,7 +67,6 @@ Aby obsłużyć Wklej specjalne opcji menu Edycja, zobacz temat [okna dialogowe 
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Schowek: Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

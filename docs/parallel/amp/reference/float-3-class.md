@@ -74,12 +74,12 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ca8da31f37c74f80579a59fc77bec522e1ff9fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609441"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275804"
 ---
 # <a name="float3-class"></a>float_3 — Klasa
 
@@ -103,7 +103,7 @@ class float_3;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[float_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[float_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -171,7 +171,7 @@ class float_3;
 |----------|-----------------|
 |float_3::b||
 |float_3::bg||
-|float_3::BGR||
+|float_3::bgr||
 |float_3::br||
 |float_3::brg||
 |float_3::g||
@@ -180,10 +180,10 @@ class float_3;
 |float_3::GR||
 |float_3::grb||
 |float_3::r||
-|float_3::RB||
+|float_3::rb||
 |float_3::rbg||
-|float_3::RG||
-|float_3::RGB||
+|float_3::rg||
+|float_3::rgb||
 |float_3::x||
 |float_3::xy||
 |float_3::xyz||
@@ -195,7 +195,7 @@ class float_3;
 |float_3::yz||
 |float_3::yzx||
 |float_3::z||
-|float_3::ZX||
+|float_3::zx||
 |float_3::zxy||
 |float_3::zy||
 |float_3::zyx||
@@ -208,7 +208,7 @@ class float_3;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="ctor"></a> float_3
 
@@ -276,6 +276,6 @@ Obiekt używany do inicjowania.
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

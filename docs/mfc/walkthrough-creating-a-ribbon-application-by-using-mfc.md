@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: tworzenie aplikacji wstążki za pomocą MFC'
+title: 'Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271336"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC
 
 Ten poradnik pokazuje jak używać **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie zawiera Wstążkę. Powstałą Wstążkę, dodając **niestandardowe** kategoria wstążki, który ma **ulubione** wstążki, panelu, a następnie dodając kilka często używanych poleceń do panelu.
 
@@ -83,13 +83,13 @@ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **og�
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Instrukcje: dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Instrukcje: dostosowywanie przycisku Aplikacja](../mfc/how-to-customize-the-application-button.md)
+[Instrukcje: Dostosowywanie przycisku aplikacja](../mfc/how-to-customize-the-application-button.md)
 
 Aby uzyskać przykłady end-to-end, zobacz [przykłady (MFC Feature Pack)](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodniki](../mfc/walkthroughs-mfc.md)<br/>
 [Przykłady (MFC Feature Pack)](../visual-cpp-samples.md)

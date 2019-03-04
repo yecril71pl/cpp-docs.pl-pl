@@ -1,5 +1,5 @@
 ---
-title: 'Serwery: implementowanie okien ramowych w miejscu'
+title: 'Serwery: Implementowanie Windows ramowych w miejscu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278993"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
+# <a name="servers-implementing-in-place-frame-windows"></a>Serwery: Implementowanie Windows ramowych w miejscu
 
 W tym artykule opisano, co należy zrobić, aby zaimplementować okien ramowych w miejscu w visual edycji aplikacji serwera, jeśli nie używasz Kreatora aplikacji do tworzenia aplikacji serwera. Zamiast zgodnie z procedurą opisaną w tym artykule, można użyć istniejącej klasy okien ramowych w miejscu z aplikacji generowanych przez Kreatora aplikacji lub próbkę dostarczanych z programem Visual C++.
 
@@ -45,14 +45,13 @@ W tym artykule opisano, co należy zrobić, aby zaimplementować okien ramowych 
 
 Wywołuje szereg funkcji **Jeśli** instrukcja tworzy pasek narzędzi z zasobów z serwera, pod warunkiem. W tym momencie pasek narzędzi jest częścią hierarchii okno kontenera. Ponieważ ten pasek narzędzi jest tworzony na podstawie `CToolBar`, chyba że zmienił się właścicielem zostaną przetworzone jego wiadomości do jego właściciela aplikacji kontenera ramki okna. Dlatego wywołanie `SetOwner` jest konieczne. To wywołanie zmienia okna, w której polecenia są wysyłane do serwera w miejscu ramki okna co wiadomości, które mają być przekazane do serwera. Dzięki temu serwer reagować na operacje na pasku narzędzi, który zapewnia.
 
-Identyfikator mapy bitowej narzędzi powinna być taka sama, jak inne zasoby w miejscu zdefiniowany w aplikacji serwera. Zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md) Aby uzyskać szczegółowe informacje.
+Identyfikator mapy bitowej narzędzi powinna być taka sama, jak inne zasoby w miejscu zdefiniowany w aplikacji serwera. Zobacz [menu i zasoby: Dodatki do serwera](../mfc/menus-and-resources-server-additions.md) Aby uzyskać szczegółowe informacje.
 
 Aby uzyskać więcej informacji, zobacz [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), i [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) w *odwołanie do biblioteki klas*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Serwery](../mfc/servers.md)<br/>
-[Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
-[Serwery: implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)<br/>
-[Serwery: elementy serwera](../mfc/servers-server-items.md)
-
+[Serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
+[Serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)<br/>
+[Serwery: Elementy serwera](../mfc/servers-server-items.md)

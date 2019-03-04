@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272948"
 ---
 # <a name="propagatorblock-class"></a>propagator_block — Klasa
 
@@ -120,7 +120,7 @@ void decline_incoming_messages();
 
 Ta metoda jest wywoływana przez destruktora, aby upewnić się, w trakcie niszczenia odrzucane nowych wiadomości.
 
-##  <a name="initialize_source_and_target"></a> initialize_source_and_target —
+##  <a name="initialize_source_and_target"></a> initialize_source_and_target
 
 Inicjuje obiekt podstawowy. W szczególności `message_processor` obiekt musi zostać zainicjowany.
 
@@ -222,7 +222,7 @@ Konstruuje `propagator_block` obiektu.
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 Niszczy `propagator_block` obiektu.
 
@@ -240,7 +240,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Metoda filtru.
 
 ##  <a name="remove_network_links"></a> remove_network_links —
@@ -316,7 +316,7 @@ Odłączenie wszystkich bloków źródła z tego `propagator_block` obiektu.
 virtual void unlink_sources();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [source_block, klasa](source-block-class.md)<br/>

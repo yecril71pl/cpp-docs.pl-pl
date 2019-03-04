@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275353"
 ---
 # <a name="cinternetconnection-class"></a>Klasa CInternetConnection
 
@@ -107,7 +107,7 @@ Nigdy nie wywołują metody `CInternetConnection` samodzielnie; zamiast tego nal
 
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CInternetConnection`-pochodzi obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt **InternetConnection**- Obiekt pochodnych. Wartość domyślna jest ustawiona na 1; Jednakże można jawnie przypisać identyfikator określonego kontekstu, w [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktora dla połączenia. Obiekt i wszelkie prace, które wykonuje zostanie skojarzona z tym identyfikatorem kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Wartością domyślną dla *dwContext* są wysyłane przez MFC, aby `CInternetConnection`-pochodzi obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt **InternetConnection**- Obiekt pochodnych. Wartość domyślna jest ustawiona na 1; Jednakże można jawnie przypisać identyfikator określonego kontekstu, w [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktora dla połączenia. Obiekt i wszelkie prace, które wykonuje zostanie skojarzona z tym identyfikatorem kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którą jest identyfikowany. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext
 
@@ -125,7 +125,7 @@ Identyfikator kontekstu przypisanych aplikacji.
 
 W pierwotnie określono identyfikator kontekstu [CInternetSession](../../mfc/reference/cinternetsession-class.md) i propaguje do `CInternetConnection`— i [CInternetFile](../../mfc/reference/cinternetfile-class.md)-pochodnych klas, chyba że określono inaczej w wywołaniu funkcji, która zostanie otwarta połączenie. Identyfikator kontekstu jest skojarzony z wszelkich operacji danego obiektu i identyfikuje informacje o stanie operacji zwrócony przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-Aby uzyskać więcej informacji o tym, jak `GetContext` współpracuje z innych klas WinInet, aby zapewnić informacje o stanie użytkownika, zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Aby uzyskać więcej informacji o tym, jak `GetContext` współpracuje z innych klas WinInet, aby zapewnić informacje o stanie użytkownika, zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName
 
@@ -159,8 +159,7 @@ Można pobrać uchwytu poziom interfejsu API dla bieżącej sesji Internet, nale
 operator HINTERNET() const;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

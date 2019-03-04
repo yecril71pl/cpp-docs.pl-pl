@@ -1,5 +1,5 @@
 ---
-title: Klasa CDaoDatabase
+title: CDaoDatabase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoDatabase
@@ -58,14 +58,14 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272905"
 ---
-# <a name="cdaodatabase-class"></a>Klasa CDaoDatabase
+# <a name="cdaodatabase-class"></a>CDaoDatabase Class
 
 Reprezentuje połączenie z bazą danych, dzięki któremu można działać na danych.
 
@@ -587,9 +587,9 @@ Opcje, które określają, które informacje o zestawie rekordów do pobrania. D
 
 - Nazwa AFX_DAO_PRIMARY_INFO (ustawienie domyślne), typ
 
-- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Data utworzenia, Data ostatniej aktualizacji, zwraca rekordy, aktualizowalne
+- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Data utworzenia, Data ostatniej aktualizacji, zwraca rekordy, można aktualizować
 
-- AFX_DAO_ALL_INFO głównych i dodatkowych informacji plus: ODBCTimeout SQL, Connect
+- AFX_DAO_ALL_INFO podstawowych i dodatkowych informacji oraz: SQL, Connect, ODBCTimeout
 
 *lpszName*<br/>
 Ciąg zawierający nazwę zapytanie zdefiniowane w bazie danych, wyszukiwanie według nazwy.
@@ -744,9 +744,9 @@ Opcje, które określają, które informacje dotyczące tabeli do pobrania. Dost
 
 - Atrybuty nazwy AFX_DAO_PRIMARY_INFO (ustawienie domyślne), można zaktualizować,
 
-- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Data utworzenia, Data ostatniej aktualizacji nazwy tabeli źródłowej, Połącz
+- AFX_DAO_SECONDARY_INFO głównej informacje oraz: Data utworzenia, Data ostatniej aktualizacji, nazwa tabeli źródłowej, Połącz
 
-- AFX_DAO_ALL_INFO głównych i dodatkowych informacji plus: liczba rekordów reguły sprawdzania poprawności, tekst sprawdzania poprawności
+- AFX_DAO_ALL_INFO podstawowych i dodatkowych informacji oraz: Liczba rekordów tekst sprawdzania poprawności reguły sprawdzania poprawności
 
 *lpszName*<br/>
 Nazwa obiektu tabledef wyszukiwania według nazwy.
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametry
 
-*nSekund*<br/>
+*nSeconds*<br/>
 Liczba sekund, aby przed próby kwerendy upłynie limit czasu.
 
 ### <a name="remarks"></a>Uwagi
@@ -893,7 +893,7 @@ Wartością domyślną dla zapytania przekroczeń limitu czasu wynosi 60 sekund.
 
 Aby uzyskać powiązane informacje zobacz temat "QueryTimeout Property" w Pomocy programu DAO.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

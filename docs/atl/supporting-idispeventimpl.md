@@ -12,12 +12,12 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 909f62c88908d7dabf4141fa8ea42be7ea1facb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcc3be5d905bf3f5680902e2f480472c6251aa7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273819"
 ---
 # <a name="supporting-idispeventimpl"></a>Obsługa interfejsu IDispEventImpl
 
@@ -81,7 +81,6 @@ Po zakończeniu obiektu za pomocą zewnętrzne interfejsy interfejsów wychodzą
 
 Ze względu na unikatowy charakter obiektów COM ta procedura różni się w szczegóły i wykonanie, między implementacjami. Te szczegółowe informacje wykraczają poza zakres tego tematu i nie zostały opisane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
-

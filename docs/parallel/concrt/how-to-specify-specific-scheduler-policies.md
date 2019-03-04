@@ -1,22 +1,22 @@
 ---
-title: 'Porady: określanie specjalnych zasad harmonogramu'
+title: 'Instrukcje: Określanie specjalnych zasad harmonogramu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: 1334b8dcf8b6615120d4be8db8530af60df9d668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c03ef6661ebefe0bfe9fab62938ce9987a4bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277862"
 ---
-# <a name="how-to-specify-specific-scheduler-policies"></a>Porady: określanie specjalnych zasad harmonogramu
+# <a name="how-to-specify-specific-scheduler-policies"></a>Instrukcje: Określanie specjalnych zasad harmonogramu
 
 Zasady harmonogramu pozwalają na kontrolę strategii, używany w harmonogramie podczas zarządzania zadaniami. W tym temacie pokazano, jak używać zasadę harmonogramu umożliwia podwyższenie priorytetu wątku zadania, które wyświetla wskaźnik postępu do konsoli.
 
-Na przykład, który używa zasad harmonogramu niestandardowego wraz z agentów asynchronicznych, zobacz [porady: tworzenie agentów tego zasad użycia określonego harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Na przykład, który używa zasad harmonogramu niestandardowego wraz z agentów asynchronicznych, zobacz [jak: Tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="example"></a>Przykład
 
@@ -24,7 +24,7 @@ Poniższy przykład wykonuje dwa zadania. Pierwsze zadanie oblicza n<sup>th</sup
 
 Pierwsze zadanie używa dekompozycji cykliczne do obliczenia liczby Fibonacci. Oznacza to każdy rekursywnie zadanie tworzy podzadania do obliczenia ogólny wynik. Zadanie, które używa dekompozycji cyklicznego mogą używać wszystkich dostępnych zasobów, a tym samym blokować innych zadań. W tym przykładzie zadanie, które wyświetla wskaźnik postępu może nie odbierać szybki dostęp do zasobów obliczeniowych.
 
-Aby zapewnić zadanie, które wyświetla postęp komunikat uczciwego dostępu do zasobów obliczeniowych, w tym przykładzie użyto kroki, które są opisane w [porady: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) można utworzyć wystąpienia harmonogramu, zawierającej zasady niestandardowe. Zasady niestandardowe określa priorytet wątku za najwyższy priorytet.
+Aby zapewnić zadanie, które wyświetla postęp komunikat uczciwego dostępu do zasobów obliczeniowych, w tym przykładzie użyto kroki, które są opisane w [jak: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) można utworzyć wystąpienia harmonogramu, zawierającej zasady niestandardowe. Zasady niestandardowe określa priorytet wątku za najwyższy priorytet.
 
 W tym przykładzie użyto [concurrency::call](../../parallel/concrt/reference/call-class.md) i [concurrency::timer](../../parallel/concrt/reference/timer-class.md) klasy, aby wydrukować wskaźnik postępu. Te klasy mają wersji ich konstruktory, które przyjmują odwołania do [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) obiektu, która planuje je. W przykładzie użyto domyślnego harmonogramu, aby zaplanować zadanie, które oblicza liczbę Fibonacci i wystąpieniem harmonogramu, aby zaplanować zadanie, które wyświetla wskaźnik postępu.
 
@@ -49,9 +49,8 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Usługa scheduler-policy.cpp dla cl.exe/ehsc**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)<br/>
 [Instrukcje: zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Instrukcje: tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Uaktualnianie istniejącego kontrolki ActiveX
+title: Uaktualnianie istniejącego formantu ActiveX
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX controls [MFC], Internet
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276991"
 ---
-# <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
+# <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego formantu ActiveX
 
 Kontrolki ActiveX istniejących (dawniej kontrolka OLE) może służyć w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność.
 
@@ -270,9 +270,8 @@ Przeglądarka ma opcji poziom bezpieczeństwa, które można konfigurować przez
 
 - Obsługa skryptów i trwałości odbywa się bez ostrzeżenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
-[Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[Kontrolki ActiveX MFC: Licencjonowanie kontrolki ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

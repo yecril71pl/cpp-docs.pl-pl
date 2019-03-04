@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276341"
 ---
 # <a name="cmditabinfo-class"></a>Klasa CMDITabInfo
 
@@ -213,7 +213,7 @@ Określ jedną z następujących stylów dla etykiet karty:
 |-|-|
 |STYLE_3D|Styl 3W.  |
 |STYLE_3D_ONENOTE|Styl programu Microsoft OneNote.  |
-|STYLE_3D_VS2005|Styl Microsoft Visual Studio 2005.  |
+|STYLE_3D_VS2005|Microsoft Visual Studio 2005 style.  |
 |STYLE_3D_SCROLLED|Styl 3D z etykietami kartę prostokąta.  |
 |STYLE_FLAT_SHARED_HORZ_SCROLL|Płaski z udostępnionego poziomy pasek przewijania.  |
 |STYLE_3D_ROUNDED_SCROLL|Styl 3D z etykietami round kartę.  |
@@ -247,7 +247,7 @@ void Serialize(CArchive& ar);
 *ar*<br/>
 [in] A [klasie CArchive](../../mfc/reference/carchive-class.md) obiektu do zserializowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)<br/>
 [Grupy z kartami MDI](../../mfc/mdi-tabbed-groups.md)<br/>

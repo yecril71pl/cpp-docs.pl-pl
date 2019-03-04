@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536529"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275284"
 ---
 # <a name="cdocobjectserveritem-class"></a>Klasa CDocObjectServerItem
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>Uwagi
 
-`CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością: [OnHide](#onhide), [OnDoVerb](#ondoverb), i [metodzie OnShow](#onshow).
+`CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością zastąpienia: [OnHide](#onhide), [OnDoVerb](#ondoverb), i [metodzie OnShow](#onshow).
 
 Aby użyć `CDocObjectServerItem`, zapewnić, że [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) zastąpić w usługi `COleServerDoc`— klasie pochodnej zwraca nowy `CDocObjectServerItem` obiektu. Jeśli musisz zmienić żadnych funkcji Twojego elementu, można utworzyć nowe wystąpienie klasy własne `CDocObjectServerItem`-klasy pochodnej.
 
@@ -133,7 +133,7 @@ virtual void OnShow();
 
 Jeśli element nie jest obiekt DocObject, domyślna implementacja wywołuje [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalnego przetwarzania podczas otwierania elementu DocObject.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

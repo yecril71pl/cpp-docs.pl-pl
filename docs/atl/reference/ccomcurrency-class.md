@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277728"
 ---
 # <a name="ccomcurrency-class"></a>Klasa CComCurrency
 
@@ -462,7 +462,7 @@ Element `CComCurrency` obiektu.
 *cySrc*<br/>
 Zmienna typu waluty.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 Wartość liczbowa do przypisania do `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -639,7 +639,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 [!code-cpp[NVC_ATL_Utilities#54](../../atl/codesnippet/cpp/ccomcurrency-class_21.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
 [WALUTY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>

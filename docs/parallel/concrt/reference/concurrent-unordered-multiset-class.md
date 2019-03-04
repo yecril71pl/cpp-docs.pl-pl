@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 8b03245790bf011941cabcb18600bbb1e69c37d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276007"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset — Klasa
 
@@ -88,7 +88,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |Nazwa|Opis|
 |----------|-----------------|
 |[hash_function](#hash_function)|Zwraca przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_multiset` obiektu.|
+|[insert](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_multiset` obiektu.|
 |[key_eq](#key_eq)|Obiekt funkcji porównywania równości przechowywanych.|
 |[swap](#swap)|Zamienia zawartości dwóch `concurrent_unordered_multiset` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_multiset` określonych pozycji. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
@@ -113,7 +113,7 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_unordered_multiset` k
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concurrent_unordered_set.h
+**Header:** concurrent_unordered_set.h
 
 **Namespace:** współbieżności
 
@@ -163,7 +163,7 @@ Usuwa wszystkie elementy w kontenerze współbieżnych. Ta funkcja nie jest bezp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_multiset —
+##  <a name="ctor"></a> concurrent_unordered_multiset
 
 Tworzy równoczesny nieuporządkowany multizbiór.
 
@@ -214,7 +214,7 @@ Funkcja porównywania równości to nieuporządkowany multizbiór.
 Alokator dla tego nieuporządkowany multizbiór.
 
 *pierwszy*<br/>
-*ostatni*<br/>
+*last*<br/>
 *_Uset*<br/>
 Źródło `concurrent_unordered_multiset` obiekt, aby przenosić elementy.
 
@@ -325,7 +325,7 @@ Wartość klucza do wyszukania.
 
 Iterator wskazuje lokalizację pierwszego elementu, który pasuje do klucza dostarczonego lub iteratora `end()` jeśli taki element nie istnieje.
 
-##  <a name="get_allocator"></a> get_allocator —
+##  <a name="get_allocator"></a> get_allocator
 
 Zwraca przechowywany obiekt alokatora dla tego kontenera współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
 
@@ -394,7 +394,7 @@ Począwszy od lokalizacji do wyszukiwania punkt wstawiania.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -680,7 +680,7 @@ size_type unsafe_erase(
 Pozycja sterująca do wymazania z.
 
 *pierwszy*<br/>
-*ostatni*<br/>
+*last*<br/>
 *KVal*<br/>
 Wartość klucza do wymazania.
 
@@ -706,8 +706,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maksymalna liczba zasobników, w tym kontenerze.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

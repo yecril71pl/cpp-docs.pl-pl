@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269386"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
 
@@ -189,7 +189,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu cbSize*<br/>
+*cbSize*<br/>
 [in] Rozmiar listy elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -324,7 +324,7 @@ HRESULT ItemFromPath(
 
 Zwraca brak błędu, jeśli to się powiedzie; wartość błędu zdefiniowany OLE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

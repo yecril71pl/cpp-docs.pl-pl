@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273780"
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
 *piid*<br/>
@@ -58,7 +58,7 @@ Jednorodnej [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Konstruktor.|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|Destruktor.|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -111,7 +111,7 @@ Konstruktor.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 Destruktor.
 
@@ -292,7 +292,7 @@ Standardowe wartości HRESULT.
 
 Zwraca E_INVALIDARG, jeśli *celt* wynosi zero, zwraca wartość S_FALSE, jeśli są mniejsze niż *celt* elementy zostaną zwrócone, w przeciwnym razie zwraca wartość S_OK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [Klasa CComEnum](../../atl/reference/ccomenum-class.md)<br/>

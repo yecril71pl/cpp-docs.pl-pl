@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-ms.openlocfilehash: 8f58a33d3accb8eb81299877df1b0c8a4ebe0576
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe83af2d05af8e3b9da8d0c62f6974b0a5410bfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278954"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relacja z interfejsem API języka C
 
@@ -26,6 +26,6 @@ Ponieważ czasami trzeba wykonać natywnych wywołania funkcji Windows powinna m
 > [!NOTE]
 >  Aby zapoznać się z omówieniem sposób działania w ramach biblioteki MFC, zobacz [używanie klas do pisania aplikacji dla Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ogólne zasady projektowania klas](../mfc/general-class-design-philosophy.md)

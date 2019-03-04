@@ -11,12 +11,12 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-ms.openlocfilehash: 75bd3a8fb562b45289107c8eb01ee3745045462d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 54372facc51062add122c1db2e01e3081127512e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278421"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Obiekty interfejsu użytkownika i identyfikatory poleceń
 
@@ -30,6 +30,6 @@ Na rysunku "Polecenie aktualizacji w programie Framework" poniżej pokazano, jak
 ![Polecenie aktualizacji w ramach](../mfc/media/vc385p2.png "polecenia aktualizacji w strukturze") <br/>
 Polecenie aktualizacji w strukturze
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)

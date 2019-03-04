@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX'
+title: 'Kontrolki ActiveX MFC: Używanie obrazów w kontrolce ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - LPPICTUREDISP
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264563"
 ---
-# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Kontrolki ActiveX MFC: Używanie obrazów w kontrolce ActiveX
 
 W tym artykule opisano typowe typu obrazu i sposobie jego implementowania w kontrolce ActiveX. Tematy obejmują:
 
@@ -31,7 +31,7 @@ W tym artykule opisano typowe typu obrazu i sposobie jego implementowania w kont
 
 Typ obrazu jest jednym z grupą typów wspólnych dla niektórych formantów ActiveX. Typ obrazu obsługuje metapliki, mapy bitowe lub ikony i pozwala użytkownikowi na określenie obraz do wyświetlenia w kontrolce ActiveX. Niestandardowe właściwości obrazu są implementowane za pomocą obiektu obrazu i funkcje Get/Set, które umożliwiają sterowanie dostępem użytkowników do właściwości obrazu. Użytkownicy kontroli dostępu do właściwości niestandardowych obrazów przy użyciu akcji strona właściwości obrazu.
 
-Oprócz standardowych typ obrazu czcionek i kolorów są również dostępne typy. Aby uzyskać więcej informacji na temat używania standardowych typ czcionki w kontrolce ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu czcionek](../mfc/mfc-activex-controls-using-fonts.md).
+Oprócz standardowych typ obrazu czcionek i kolorów są również dostępne typy. Aby uzyskać więcej informacji na temat używania standardowych typ czcionki w kontrolce ActiveX, zobacz artykuł [kontrolki ActiveX MFC: Używanie czcionek](../mfc/mfc-activex-controls-using-fonts.md).
 
 Klasy kontrolek ActiveX zapewniają kilka składników służących do zaimplementowania właściwość obraz w kontrolce. Te składniki obejmują:
 
@@ -41,11 +41,11 @@ Klasy kontrolek ActiveX zapewniają kilka składników służących do zaimpleme
 
 - Wsparcie dla właściwości typu **LPPICTUREDISP**, jest implementowane za pomocą funkcji Get/Set.
 
-   Za pomocą widoku klas, które można szybko dodać właściwość niestandardową lub właściwości, która obsługuje typ obrazu. Aby uzyskać więcej informacji na temat dodawania właściwości formantu ActiveX, za pomocą widoku klas, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).
+   Za pomocą widoku klas, które można szybko dodać właściwość niestandardową lub właściwości, która obsługuje typ obrazu. Aby uzyskać więcej informacji na temat dodawania właściwości formantu ActiveX, za pomocą widoku klas, zobacz artykuł [kontrolki ActiveX MFC: Właściwości](../mfc/mfc-activex-controls-properties.md).
 
 - Strona właściwości, która manipuluje właściwość obrazu lub właściwości formantu.
 
-   Ta strona właściwości jest częścią grupy stron właściwości standardowych dostępna dla kontrolki ActiveX. Aby uzyskać więcej informacji na stronach właściwości kontrolki ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Ta strona właściwości jest częścią grupy stron właściwości standardowych dostępna dla kontrolki ActiveX. Aby uzyskać więcej informacji na stronach właściwości kontrolki ActiveX, zobacz artykuł [kontrolki ActiveX MFC: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementowanie właściwości obrazu niestandardowego w kontrolce ActiveX
 
@@ -147,9 +147,8 @@ Właściwości obrazu muszą być wykonane trwały, więc, że informacje dodane
 
 Po zakończeniu zmiany należy ponownie skompilować projekt, aby zastosować nowe funkcje niestandardowe właściwości obrazu i użyj kontener testu, aby przetestować nową właściwość. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: używanie czcionek](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
-
+[Kontrolki ActiveX MFC: Używanie czcionek](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[Kontrolki ActiveX MFC: Strony właściwości](../mfc/mfc-activex-controls-property-pages.md)

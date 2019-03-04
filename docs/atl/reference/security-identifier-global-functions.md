@@ -37,12 +37,12 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: fc625ffe18aad5cf6e2b15dd61122c97bcf14d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269412"
 ---
 # <a name="security-identifier-global-functions"></a>Funkcje globalne identyfikatora zabezpieczeń
 
@@ -63,13 +63,13 @@ Te funkcje zwracają wspólnej znaną wartością identyfikatora SID obiektów.
 |[Sids::CreatorGroupServer](#creatorgroupserver)|Zwraca identyfikator SID SECURITY_CREATOR_GROUP_SERVER_RID.|
 |[Sids::CreatorOwner](#creatorowner)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_RID.|
 |[Sids::CreatorOwnerServer](#creatorownerserver)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.|
-|[Sids::dialup](#dialup)|Zwraca identyfikator SID SECURITY_DIALUP_RID.|
+|[Sids::Dialup](#dialup)|Zwraca identyfikator SID SECURITY_DIALUP_RID.|
 |[Sids::Guests](#guests)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_GUESTS.|
 |[Sids::Interactive](#interactive)|Zwraca identyfikator SID SECURITY_INTERACTIVE_RID.|
 |[Sids::Local](#local)|Zwraca identyfikator SID SECURITY_LOCAL_RID.|
 |[Sids::Network](#network)|Zwraca identyfikator SID SECURITY_NETWORK_RID.|
 |[Sids::NetworkService](#networkservice)|Zwraca identyfikator SID SECURITY_NETWORK_SERVICE_RID.|
-|[Sids::NULL](#null)|Zwraca identyfikator SID SECURITY_NULL_RID.|
+|[Sids::Null](#null)|Zwraca identyfikator SID SECURITY_NULL_RID.|
 |[Sids::PreW2KAccess](#prew2kaccess)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
 |[Sids::PowerUsers](#powerusers)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_POWER_USERS.|
 |[Sids::PrintOps](#printops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PRINT_OPS.|
@@ -80,7 +80,7 @@ Te funkcje zwracają wspólnej znaną wartością identyfikatora SID obiektów.
 |[Sids::Self](#self)|Zwraca identyfikator SID SECURITY_PRINCIPAL_SELF_RID.|
 |[Sids::ServerLogon](#serverlogon)|Zwraca identyfikator SID SECURITY_SERVER_LOGON_RID.|
 |[Sids::Service](#service)|Zwraca identyfikator SID SECURITY_SERVICE_RID.|
-|[Sids::system](#system)|Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.|
+|[Sids::System](#system)|Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.|
 |[Sids::SystemOps](#systemops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
 |[Sids::TerminalServer](#terminalserver)|Zwraca identyfikator SID SECURITY_TERMINAL_SERVER_RID.|
 |[Sids::Users](#users)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_USERS.|
@@ -170,7 +170,7 @@ Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.
 CSid CreatorOwnerServer() throw(...);
 ```
 
-##  <a name="dialup"></a>  Sids::dialup
+##  <a name="dialup"></a>  Sids::Dialup
 
 Zwraca identyfikator SID SECURITY_DIALUP_RID.
 
@@ -312,7 +312,7 @@ Zwraca identyfikator SID SECURITY_SERVICE_RID.
 CSid Service() throw(...);
 ```
 
-##  <a name="system"></a>  Sids::system
+##  <a name="system"></a>  Sids::System
 
 Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.
 
@@ -352,6 +352,6 @@ Zwraca identyfikator SID SECURITY_WORLD_RID.
 CSid World() throw(...);
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../../atl/reference/atl-functions.md)

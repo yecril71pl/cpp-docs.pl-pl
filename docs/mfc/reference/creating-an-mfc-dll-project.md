@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a24fb136570d1b5984582cab3593a29d843a54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278837"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Tworzenie projektu MFC DLL
 
@@ -38,9 +38,8 @@ Biblioteki MFC DLL jest plikiem binarnym, który działa jako współdzielona bi
 
 Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy projektów Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../../ide/property-pages-visual-cpp.md)
-

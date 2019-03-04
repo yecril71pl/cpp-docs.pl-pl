@@ -1,23 +1,23 @@
 ---
-title: 'Kontrolki ActiveX MFC: metody'
+title: 'Kontrolki ActiveX MFC: Metody'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 9e8bc35989dc0e933cdb67c2574fb3bf6a4d99de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268411"
 ---
-# <a name="mfc-activex-controls-methods"></a>Kontrolki ActiveX MFC: metody
+# <a name="mfc-activex-controls-methods"></a>Kontrolki ActiveX MFC: Metody
 
 Kontrolki ActiveX uruchamia zdarzeń do komunikowania się między sobą i jego kontener formantu. Kontener również mogą komunikować się za pomocą kontrolki za pomocą metod i właściwości. Metody są również nazywane funkcji.
 
-Metody i właściwości, należy podać wyeksportowanego interfejsu do użytku przez inne aplikacje, takie jak klienci automatyzacji i kontenery kontrolek ActiveX. Aby uzyskać więcej informacji na temat właściwości formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md).
+Metody i właściwości, należy podać wyeksportowanego interfejsu do użytku przez inne aplikacje, takie jak klienci automatyzacji i kontenery kontrolek ActiveX. Aby uzyskać więcej informacji na temat właściwości formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: Właściwości](../mfc/mfc-activex-controls-properties.md).
 
-Metody są podobne w użycie i przeznaczenie funkcji składowych klasy języka C++. Istnieją dwa typy metod kontroli nad można zaimplementować: standardowych i niestandardowych. Podobne do magazynu zdarzeń, akcji metody są tych metod, dla którego [COleControl](../mfc/reference/colecontrol-class.md) dostarcza implementację. Aby uzyskać więcej informacji na temat metody akcji, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod akcji](../mfc/mfc-activex-controls-adding-stock-methods.md). Niestandardowych metod, zdefiniowanych przez dewelopera, Zezwalaj na dodatkowe Dostosowywanie formantu. Aby uzyskać więcej informacji, zobacz artykuł [kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md).
+Metody są podobne w użycie i przeznaczenie funkcji składowych klasy języka C++. Istnieją dwa typy metod kontroli nad można zaimplementować: standardowych i niestandardowych. Podobne do magazynu zdarzeń, akcji metody są tych metod, dla którego [COleControl](../mfc/reference/colecontrol-class.md) dostarcza implementację. Aby uzyskać więcej informacji na temat metody akcji, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md). Niestandardowych metod, zdefiniowanych przez dewelopera, Zezwalaj na dodatkowe Dostosowywanie formantu. Aby uzyskać więcej informacji, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md).
 
 Biblioteka Microsoft Foundation Class (MFC) implementuje mechanizm umożliwiający formantu do obsługi zapasów i niestandardowych metod. Pierwsza część jest klasą `COleControl`. Pochodną `CWnd`, `COleControl` funkcji elementów członkowskich obsługuje podstawowe metody, które są wspólne dla wszystkich formantów ActiveX. Druga część ten mechanizm jest mapa wysyłania. Mapa wysyłania jest podobny do mapy komunikatów; Jednak zamiast mapowania funkcji do Identyfikatora wiadomości Windows, mapa wysyłania mapuje funkcji wirtualnych elementów członkowskich IDispatch identyfikatorów.
 
@@ -34,13 +34,12 @@ Jeśli użyto [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-contr
 
 W następujących artykułach omówiono metody szczegółowo:
 
-- [Kontrolki ActiveX MFC: dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [Kontrolki ActiveX MFC: Dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [Kontrolki ActiveX MFC: dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [Kontrolki ActiveX MFC: Dodawanie metod niestandardowych](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [Kontrolki ActiveX MFC: zwracanie kodów błędów z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [Kontrolki ActiveX MFC: Zwracanie kodów błędów z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

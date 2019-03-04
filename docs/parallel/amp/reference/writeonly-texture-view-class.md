@@ -8,12 +8,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 022450469a69e9fe127f23a50b799092e7e057b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274391"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view — Klasa
 
@@ -75,7 +75,7 @@ Ranga tekstury.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Zwraca rangę obiektu `writeonly_texture_view` obiektu.|
+|[rank Constant](#rank)|Zwraca rangę obiektu `writeonly_texture_view` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -87,7 +87,7 @@ Ranga tekstury.
 
 **Nagłówek:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="dtor"></a> ~ writeonly_texture_view
 
@@ -166,6 +166,6 @@ Typ elementów tekstury.
 *_Src*<br/>
 Teksturę, która służy do tworzenia `writeonly_texture_view`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

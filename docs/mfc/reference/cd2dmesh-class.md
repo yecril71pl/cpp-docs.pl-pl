@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 1cc1769f66b54f2a9a23ef9ad94298687fe4d925
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275126"
 ---
 # <a name="cd2dmesh-class"></a>Klasa CD2DMesh
 
@@ -48,16 +48,16 @@ class CD2DMesh : public CD2DResource;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Tworzy obiekt CD2DMesh.|
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt siatki D2D.|
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt siatki D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DMesh::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
+|[CD2DMesh::Attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
 |[CD2DMesh::Create](#create)|Tworzy CD2DMesh. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DMesh::Destroy](#destroy)|Niszczy obiekt CD2DMesh. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DMesh::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DMesh::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DMesh::Get](#get)|Zwraca ID2D1Mesh interfejsu|
 |[CD2DMesh::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 |[CD2DMesh::Open](#open)|Zostanie otwarty siatki dla populacji.|
@@ -218,6 +218,6 @@ operator ID2D1Mesh*();
 
 Wskaźnik do interfejsu ID2D1Mesh lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

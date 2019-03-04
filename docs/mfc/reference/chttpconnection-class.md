@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611006"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273611"
 ---
 # <a name="chttpconnection-class"></a>Klasa CHttpConnection
 
@@ -122,7 +122,7 @@ Wskaźnik Określa hasło używane do logowania się w ciąg zakończony znakiem
 |PUSTY ciąg inną niż NULL|BŁĄD|BŁĄD||
 |Ciąg znaków innych niż NULL|Ciąg znaków innych niż NULL|*pstrUserName*|*pstrPassword*|
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Dowolną kombinację `INTERNET_FLAG_*` flag. Zobacz tabelę w **uwagi** części [CHttpConnection::OpenRequest](#openrequest) opis *Flagidw* wartości.
 
 ### <a name="remarks"></a>Uwagi
@@ -173,7 +173,7 @@ Wskaźnik do tablicą zakończoną znakiem null LPCTSTR wskaźnikami do ciągów
 *pstrVersion*<br/>
 Wskaźnik do ciągu Definiowanie wersji protokołu HTTP. Jeśli ma wartość NULL, jest używany "HTTP/1.0".
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Dowolna kombinacja flag INTERNET_ FLAG_ *. Zobacz sekcję Spostrzeżenia, aby uzyskać opis możliwości *Flagidw* wartości.
 
 *nVerb*<br/>
@@ -205,11 +205,11 @@ Wskaźnik do [CHttpFile](../../mfc/reference/chttpfile-class.md) żądanego obie
 |INTERNET_FLAG_SECURE|Używa bezpiecznego semantyki transakcji. To przekłada się przy użyciu protokołu SSL/PCT i tylko ma sensu w żądaniach HTTP|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|Używany tylko za pośrednictwem protokołu HTTP, określa, że przekierowania nie należy automatycznie obsługiwana w [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Zastąp `dwContext` domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CHttpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Zastąp `dwContext` domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CHttpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 Za pomocą tej funkcji mogą być zgłaszane wyjątki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tool tips [MFC], activating
 - CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
-ms.openlocfilehash: 99ad8b30599b4399e4574dea611991b4c8e1a8e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cc72401da95e63520b544865ea509a8ad219bda
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271934"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Ustawienia formantu etykietki narzędzia
 
@@ -20,8 +20,7 @@ Można ustawić aktywny podpowiedzi do wyświetlenia etykietki narzędzia, gdy k
 
 Większość aplikacji zawiera pasków narzędzi za pomocą narzędzi, które odnoszą się do poleceń menu. Dla tych narzędzi jest wygodne formantem etykietki narzędzia wyświetlić ten sam tekst jako odpowiedniego elementu menu. System automatycznie usuwa handlowe "i" (&) akceleratora znaków z wszystkie ciągi przekazywane do formantem etykietki narzędzia, chyba, że kontrolka ma styl TTS_NOPREFIX.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

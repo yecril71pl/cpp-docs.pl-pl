@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604480"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275197"
 ---
 # <a name="csettingsstoresp-class"></a>Klasa CSettingsStoreSP
 
@@ -145,7 +145,7 @@ Wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli klasa jest ozn
 
 Możesz użyć [klasa CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) do wyprowadzenia klasy z `CSettingsStore`. Użyj metody `SetRuntimeClass` Jeśli chcesz utworzyć obiekty klasę niestandardową, która jest pochodną `CSettingsStore`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

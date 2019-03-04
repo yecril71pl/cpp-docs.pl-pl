@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268190"
 ---
 # <a name="mfc-macros-and-globals"></a>Makra i funkcje globalne MFC
 
@@ -30,7 +30,7 @@ Makra i globalne MFC oferują funkcje w następujących kategoriach.
 
 ## <a name="general-mfc"></a>Ogólne MFC
 
-- [typy danych](data-types-mfc.md)
+- [Typy danych](data-types-mfc.md)
 
 - [Rzutowanie typów obiektów klas MFC](type-casting-of-mfc-class-objects.md)
 
@@ -125,7 +125,6 @@ Pierwszej części tej sekcji krótko opisano każdy z poprzednich kategorii i w
 > [!NOTE]
 >  Wiele funkcji globalnych rozpoczynają się prefiksem "Afx", ale niektóre, na przykład funkcje programu exchange (DDX) danych w oknie dialogowym i wielu funkcji bazy danych nie stosują taką Konwencję. Wszystkie zmienne globalne zaczynać od "afx" jako prefiksu. Makra rozpoczyna się od dowolnego określonego prefiksu, ale są one napisane wielkimi literami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../mfc/class-library-overview.md)
-

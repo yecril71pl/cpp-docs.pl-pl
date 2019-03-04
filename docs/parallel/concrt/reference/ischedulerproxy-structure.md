@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268853"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy — Struktura
 
@@ -99,7 +99,7 @@ Ta metoda harmonogramu chce oversubscribe wątku określonego sprzętu przez ogr
 
 Możesz nawet jest nadsubskrybowanie istniejącego katalogu głównego procesora wirtualnego, ponieważ `IVirtualProcessorRoot` interfejs dziedziczy z `IExecutionResource` interfejsu.
 
-##  <a name="requestinitialvirtualprocessors"></a>  Ischedulerproxy::requestinitialvirtualprocessors — metoda
+##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method
 
 Żądania wstępnego przyznawania korzeni procesora wirtualnego. Każdy procesora wirtualnego katalogu głównego reprezentuje zdolności do jej realizacji jeden wątek, który można wykonać pracę dla harmonogramu.
 
@@ -164,7 +164,7 @@ Zasób wykonywania odebraną za pomocą tej metody powinna zostać zwrócona do 
 
 Czynność subskrybowania wątku zwiększa się o jeden poziom subskrypcji w podstawowym wątku sprzętu. Poziom subskrypcji jest ograniczone przez jeden, gdy subskrypcja jest zakończony. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="unbindcontext"></a>  Ischedulerproxy::unbindcontext — metoda
+##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method
 
 Powoduje usunięcie z kontekstu wykonania określonego przez wątek serwera proxy `pContext` parametr i zwraca go do puli bezpłatnej fabryki serwera proxy wątku. Ta metoda lze volat pouze w kontekście wykonywania, który został powiązany za pośrednictwem [ischedulerproxy::bindcontext —](#bindcontext) metody i nie zostało jeszcze uruchomione za pośrednictwem trwa `pContext` parametru [ithreadproxy::switchto — ](ithreadproxy-structure.md#switchto) wywołania metody.
 
@@ -177,7 +177,7 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 *pContext*<br/>
 Kontekst wykonywania, aby usunąć skojarzenie z jego agent proxy wątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IScheduler, struktura](ischeduler-structure.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276939"
 ---
 # <a name="memory-management-functions"></a>Funkcje zarządzania pamięcią
 
@@ -30,10 +30,9 @@ Użyj `Alloc` i `Free` działa, gdy możesz przydzielać i zwalniać ustalony ze
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład, który używa `Alloc` i `Free` funkcje do poprawiania wydajności pamięci, zobacz [porady: Użyj alokacji i bezpłatnie do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Aby uzyskać przykład, który używa `Alloc` i `Free` funkcje do poprawiania wydajności pamięci, zobacz [jak: Używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-

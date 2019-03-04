@@ -5,12 +5,12 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: ecec4a7bd705dc74a3f45cc07da4abcdb168f43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274582"
 ---
 # <a name="command-ids"></a>Identyfikatory poleceń
 
@@ -20,7 +20,6 @@ Na przykład, usuń zaznaczenie wszystkich elementów w menu Edycja może zosta�
 
 Podczas tworzenia własnych menu w programie Visual C++ Edytor menu, jest dobrym rozwiązaniem postępuj zgodnie z biblioteki klas w konwencji nazewnictwa zgodnie z przedstawionymi **id_file_open —**. [Polecenia standardowe](../mfc/standard-commands.md) opisano standardowe polecenia, które są definiowane przez bibliotekę klas.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
-

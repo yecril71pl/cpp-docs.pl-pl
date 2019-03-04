@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCVisualManagerWindows
+title: CMFCVisualManagerWindows Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerWindows
@@ -140,14 +140,14 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275964"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>Klasa CMFCVisualManagerWindows
+# <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows Class
 
 `CMFCVisualManagerWindows` Naśladuje wygląd systemu Microsoft Windows XP lub Microsoft Vista po wybraniu przez użytkownika, Windows XP lub Vista motywu.
 
@@ -1487,7 +1487,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

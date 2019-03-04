@@ -1,5 +1,5 @@
 ---
-title: Klasa CComPolyObject
+title: CComPolyObject Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComPolyObject
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277939"
 ---
-# <a name="ccompolyobject-class"></a>Klasa CComPolyObject
+# <a name="ccompolyobject-class"></a>CComPolyObject Class
 
 Ta klasa implementuje `IUnknown` zagregowane lub nieagregowane w obiekcie.
 
@@ -48,7 +48,7 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Konstruktor.|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|Destruktor.|
+|[CComPolyObject::~CComPolyObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -126,7 +126,7 @@ Inicjuje `CComContainedObject` element członkowski danych, [m_contained](#m_con
 
 Dekrementuje destruktor liczbę blokad modułu.
 
-##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject
+##  <a name="dtor"></a>  CComPolyObject::~CComPolyObject
 
 Destruktor.
 
@@ -212,7 +212,7 @@ HRESULT QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*<br/>
+*Q*<br/>
 Interfejs COM.
 
 *IID*<br/>
@@ -244,7 +244,7 @@ STDMETHOD_(ULONG, Release)();
 
 W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nondebug `Release` zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555262"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274612"
 ---
 # <a name="ccomtearoffobject-class"></a>Klasa CComTearOffObject
 
@@ -35,7 +35,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.
 
 ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase` metody obsługują licznik odwołań i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -47,7 +47,7 @@ ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Konstruktor.|
-|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Destruktor.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -57,13 +57,13 @@ ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase
 |[CComTearOffObject::QueryInterface](#queryinterface)|Zwraca wskaźnik do żądanego interfejsu w klasie odrywania lub klasy właściciela.|
 |[CComTearOffObject::Release](#release)|Dekrementuje liczbę odwołań dla `CComTearOffObject` obiektu, a następnie niszczy go.|
 
-### <a name="ccomtearoffobjectbase-methods"></a>Metody CComTearOffObjectBase
+### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase Methods
 
 |||
 |-|-|
 |[CComTearOffObjectBase](#ccomtearoffobjectbase)|Konstruktor.|
 
-### <a name="ccomtearoffobjectbase-data-members"></a>Elementy członkowskie danych CComTearOffObjectBase
+### <a name="ccomtearoffobjectbase-data-members"></a>CComTearOffObjectBase Data Members
 
 |||
 |-|-|
@@ -120,7 +120,7 @@ CComTearOffObject(void* pv);
 
 Zwiększa liczbę odwołań właściciela o jeden.
 
-##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject
+##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
 Destruktor.
 
@@ -197,7 +197,7 @@ STDMETHOD_ULONG Release();
 
 W kompilacjach nieprzeznaczonych do debugowania zawsze zwraca wartość zero. W przypadku kompilacji do debugowania zwraca wartość, która może być użyteczna, diagnostykę lub testowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

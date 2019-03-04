@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: cf845d04c008e83d0e9851718c995036bc810b55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449351"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273026"
 ---
 # <a name="cpatht-class"></a>Klasa CPathT
 
@@ -296,7 +296,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Kontekst urządzenia używane do miar czcionek.
 
 *nWidth*<br/>
@@ -323,7 +323,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 *nMaxChars*<br/>
 Maksymalna liczba znaków, które mają być zawarte w nowy ciąg, w tym kończącego znaku NULL.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -907,7 +907,7 @@ typedef StringType::XCHAR XCHAR;
 
 `StringType` Parametr szablonu jest `CPathT`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../atl/reference/atl-classes.md)<br/>
 [CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa CD2DRadialGradientBrush
+title: CD2DRadialGradientBrush Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DRadialGradientBrush
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564336"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277277"
 ---
-# <a name="cd2dradialgradientbrush-class"></a>Klasa CD2DRadialGradientBrush
+# <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush Class
 
 Otoka ID2D1RadialGradientBrush.
 
@@ -62,16 +62,16 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Tworzy obiekt CD2DLinearGradientBrush.|
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt RadialGradientBrush D2D.|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt RadialGradientBrush D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
+|[CD2DRadialGradientBrush::Attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
 |[CD2DRadialGradientBrush::Create](#create)|Tworzy CD2DRadialGradientBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DRadialGradientBrush::Destroy](#destroy)|Niszczy obiekt CD2DRadialGradientBrush. (Przesłania [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DRadialGradientBrush::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DRadialGradientBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DRadialGradientBrush::Get](#get)|Zwraca ID2D1RadialGradientBrush interfejsu|
 |[CD2DRadialGradientBrush::GetCenter](#getcenter)|Pobiera środek elipsy gradientu|
 |[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Pobiera przesunięcie źródło gradientu względem Centrum elipsy gradientu|
@@ -111,7 +111,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::~CD2DRadialGradientBrush
 
 Destruktor. Wywołuje się, kiedy niszczony jest obiekt RadialGradientBrush D2D.
 
@@ -119,7 +119,7 @@ Destruktor. Wywołuje się, kiedy niszczony jest obiekt RadialGradientBrush D2D.
 virtual ~CD2DRadialGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DRadialGradientBrush::attach
+##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach
 
 Dołącza istniejących zasobów interfejsu do obiektu
 
@@ -199,7 +199,7 @@ Niszczy obiekt CD2DRadialGradientBrush.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DRadialGradientBrush::detach
+##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach
 
 Odłącza interfejsu zasobów z obiektu
 
@@ -351,6 +351,6 @@ void SetRadiusY(FLOAT radiusY);
 *radiusY*<br/>
 Promień y elipsy gradientu. Ta wartość jest przestrzeni współrzędnych pędzla
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

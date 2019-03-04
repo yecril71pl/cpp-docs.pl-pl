@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263887"
 ---
 # <a name="connection-point-global-functions"></a>Funkcje globalne punktu połączenia
 
@@ -95,7 +95,7 @@ HRESULT    AtlUnadvise(
 *IID*<br/>
 [in] Identyfikator GUID punktu połączenia. Zazwyczaj jest taka sama jak interfejsu wychodzącego zarządzane przez punkt połączenia.
 
-*Magazyn danych*<br/>
+*dw*<br/>
 [in] Plik cookie, który unikatowo identyfikuje połączenie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -119,7 +119,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 [in] Wskaźnik do obiektu zawierającego mapy ujścia.
 
 *bAdvise*<br/>
@@ -133,7 +133,7 @@ Standardowe wartości HRESULT.
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Makra punktów połączenia](../../atl/reference/connection-point-macros.md)

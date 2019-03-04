@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: da7b1310f80bfb03645d386b59632e1c2811a367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267302"
 ---
 # <a name="csacl-class"></a>Klasa CSacl
 
@@ -39,7 +39,7 @@ class CSacl : public CAcl
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Konstruktor.|
-|[CSacl:: ~ CSacl](#dtor)|Destruktor.|
+|[CSacl::~CSacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -149,7 +149,7 @@ Istniejące `ACL` struktury (lista kontroli dostępu).
 
 `CSacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `ACL` struktury. Upewnij się, że ten parametr jest system listy kontroli dostępu (SACL) i nie list arbitralnej kontroli dostępu (DACL). W przypadku kompilacji do debugowania, jeśli nie dostarczono listy DACL potwierdzenie zostanie przeprowadzona. W kompilacjach wydania wszystkie wpisy z listy DACL są ignorowane.
 
-##  <a name="dtor"></a>  CSacl:: ~ CSacl
+##  <a name="dtor"></a>  CSacl::~CSacl
 
 Destruktor.
 
@@ -219,7 +219,7 @@ void RemoveAllAces() throw();
 
 Usuwa co `ACE` struktury (jeśli istnieją) w `CSacl` obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAcl](../../atl/reference/cacl-class.md)<br/>
 [Listy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-lists)<br/>

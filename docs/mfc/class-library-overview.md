@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278769"
 ---
 # <a name="class-library-overview"></a>Przegląd biblioteki klas
 
@@ -23,7 +23,7 @@ Ten przegląd kategoryzuje i opisuje klasy w Microsoft Foundation Class Library 
 
 Klasy bibliotek są prezentowane w następujących kategoriach:
 
-- [Klasa główna: CObject](../mfc/root-class-cobject.md)
+- [Root Class: CObject](../mfc/root-class-cobject.md)
 
 - [Klasy związane z architekturą aplikacji MFC](../mfc/mfc-application-architecture-classes.md)
 
@@ -117,7 +117,6 @@ Aby zobaczyć dziedziczenie klasy, użyj [Tabela hierarchii klas](../mfc/hierarc
 
 Oprócz klas wymienionych w tym przeglądzie Biblioteka MFC zawiera szereg funkcji globalnych, zmienne globalne i makra. Przegląd i szczegółowe wyliczenie w temacie [makr MFC i funkcje globalne](../mfc/reference/mfc-macros-and-globals.md), który następuje po umożliwiają alfabetyczne odniesienia do klas MFC.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md)
-

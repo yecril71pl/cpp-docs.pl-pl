@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267111"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Opis składni formularza (BNF) Backus Nauer
 
@@ -20,7 +20,7 @@ Skrypty używane przez rejestrator ALT są opisane w tym temacie, przy użyciu s
 |------------------------|-------------|
 |::=|Odpowiednik|
 |&#124;|LUB|
-|X +|Co najmniej jeden Xs.|
+|X+|Co najmniej jeden Xs.|
 |[X]|X jest opcjonalne. Ograniczniki opcjonalne są wskazywane przez \[].|
 |Wszelkie **bold** tekstu|Literał ciągu.|
 |Wszelkie *kursywą* tekstu|Jak utworzyć literału ciągu.|
@@ -98,7 +98,6 @@ val 'testhex' = d '&H55'
 
 Określa, że nazwa klucza `testhex` ustawiono wartość DWORD na szesnastkowe 55 (dziesiętna 85). Ten format jest zgodna Uwaga **& H** notacji, jak znaleźć w specyfikacji języka Visual Basic.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)
-

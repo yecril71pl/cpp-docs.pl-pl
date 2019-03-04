@@ -23,12 +23,12 @@ helpviewer_keywords:
 - ON_WM_VKEYTOITEM [MFC]
 - ON_WM_VSCROLL
 ms.assetid: c528bb2e-ddb5-4da6-b652-432a387408b8
-ms.openlocfilehash: 1f543489271c6bc6e5cef2bc61de0d6df3f52748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b5dbcb52ef7a61712f2c59c217a71f533799f67
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271856"
 ---
 # <a name="wm-messages-t---z"></a>Komunikaty WM_: T - Z
 
@@ -53,8 +53,7 @@ Następujące wpisy mapy odpowiadają prototypy funkcji:
 |ON_WM_XBUTTONDOWN()|afx_msg void [OnXButtonDown](../../mfc/reference/cwnd-class.md#onxbuttondown)(UINT, UINT, CPoint);|
 |ON_WM_XBUTTONUP()|afx_msg void [OnXButtonUp](../../mfc/reference/cwnd-class.md#onxbuttonup)(UINT, UINT, CPoint);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

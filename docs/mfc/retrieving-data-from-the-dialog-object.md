@@ -21,12 +21,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: 345a2894693eace5aa464ca3940c785b2da08784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279032"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Pobieranie danych z obiektu okna dialogowego
 
@@ -40,7 +40,6 @@ DDX i DDV omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i 
 
 Dla modalnego okna dialogowego, można pobrać żadnych danych, które użytkownik wprowadził, kiedy `DoModal` zwraca IDOK, ale przed okna dialogowego niszczony jest obiekt. Dla niemodalnego okna dialogowego, można pobrać dane z obiektu okna dialogowego w dowolnym momencie przez wywołanie metody `UpdateData` z argumentem **TRUE** ich i uzyskującym zmienne składowe klasy okna dialogowego. Ten temat jest omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
-

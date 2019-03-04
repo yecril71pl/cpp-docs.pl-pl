@@ -1,18 +1,18 @@
 ---
-title: 'Porady: tworzenie zadania kończonego po opóźnieniu'
+title: 'Instrukcje: Tworzenie zadania kończonego po opóźnieniu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272265"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Porady: tworzenie zadania kończonego po opóźnieniu
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Instrukcje: Tworzenie zadania kończonego po opóźnieniu
 
 W tym przykładzie pokazano, jak używać [concurrency::task](../../parallel/concrt/reference/task-class.md), [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ CONCURRENCY::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), i [concurrency::call](../../parallel/concrt/reference/call-class.md) klasy, aby tworzenie zadania kończonego po opóźnieniu. Ta metoda służy do tworzenia pętli, które od czasu do czasu sondowania pod kątem danych, wprowadzają limity czasu, opóźnienie obsługę danych wejściowych użytkownika przez wyznaczony czas i tak dalej.
 
@@ -47,7 +47,7 @@ Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu 
 
 **Cl.exe/ehsc zadań delay.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [task, klasa (środowisko uruchomieniowe współbieżności)](../../parallel/concrt/reference/task-class.md)<br/>
@@ -58,4 +58,3 @@ Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu 
 [call, klasa](../../parallel/concrt/reference/call-class.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Anulowanie w PPL](cancellation-in-the-ppl.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-ms.openlocfilehash: d9025c2a4192b5a2c08d1af9dc925378cff9f504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdfa2333681c988c0e7bceab01eab24b118f1a5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275990"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sekwencja operacji przy tworzeniu kontrolek ActiveX
 
@@ -29,10 +29,9 @@ W poniższej tabeli przedstawiono usługi roli i roli struktury w tworzeniu kont
 |Konstruowania strony właściwości lub strony formantu.|Edytory zasobów Visual C++ umożliwiają wizualne edytowanie interfejs strony właściwości formantu:<br /><br />— Tworzenie strony właściwości dodatkowych.<br />-Tworzenie i edytowanie map bitowych, ikon i kursorów.<br /><br /> Możesz także testować stron właściwości w edytorze okien dialogowych.|Domyślny plik zasobów tworzone przez Kreatora aplikacji MFC udostępnia wiele zasobów, których potrzebujesz. Visual C++ pozwala edytować istniejące zasoby i dodać nowe zasoby, łatwe i wizualnie.|
 |Przetestuj zdarzenia, metod i właściwości formantu.|Ponownie skompiluj kontrolkę i użyć kontenera testu do testowania, czy inne programy obsługi działają poprawnie.|Można wywołać metody kontroli i modyfikowania jego właściwości, za pośrednictwem interfejsu strony właściwości lub kontener testu. Ponadto należy użyć kontenera testu do śledzenia zdarzeń wyzwalanych z formantu i powiadomienia odbierane przez kontener formantu.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opieranie się na strukturze](../mfc/building-on-the-framework.md)<br/>
 [Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

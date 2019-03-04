@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273065"
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Liczony od zera indeks pola wyboru, która znajduje się w polu listy.
 
-*nSprawdź*<br/>
+*nCheck*<br/>
 Stan przycisku dla określonego pola wyboru. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.
 
 ### <a name="remarks"></a>Uwagi
@@ -377,9 +377,9 @@ Style prawidłowe są następujące:
 
 Aby uzyskać informacji na temat tych stylów, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[TSTCON gt; próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample TSTCON](../../visual-cpp-samples.md)<br/>
 [Klasa CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CListBox](../../mfc/reference/clistbox-class.md)

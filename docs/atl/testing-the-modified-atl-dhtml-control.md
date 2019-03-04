@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 55cdaba64ccb95ee5695c082a5e146b1e7dc2cf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277240"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testowanie zmodyfikowanej kontrolki ATL DHTML
 
@@ -41,6 +41,6 @@ Teraz przetestować metody, które nie są częścią interfejsu użytkownika.
 
 Aby dowiedzieć się więcej na temat różnych elementów i plików, które tworzą kontrolki ATL DHTML, zobacz [identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa kontrolki DHTML](../atl/atl-support-for-dhtml-controls.md)

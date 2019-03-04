@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery: funkcje zaawansowane'
+title: 'Kontenery: Funkcje zaawansowane'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - links [MFC], to embedded OLE objects
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506083"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278707"
 ---
-# <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
+# <a name="containers-advanced-features"></a>Kontenery: Funkcje zaawansowane
 
 W tym artykule opisano kroki niezbędne do dołączyć opcjonalny zaawansowane funkcje do istniejących aplikacji kontenerowych. Te funkcje są:
 
@@ -31,7 +31,7 @@ W tym artykule opisano kroki niezbędne do dołączyć opcjonalny zaawansowane f
 
 Aplikacja kontenera/serwera jest aplikacja, która działa jako kontener i serwerem. Program Microsoft Word dla Windows jest przykładem. Dokumenty programu Word for Windows można osadzić w innych aplikacjach, a elementy można również osadzić w dokumentach programu Word for Windows. Modyfikowanie aplikację kontenera do kontenera i całego serwera (nie można utworzyć aplikację kontenera/miniserver kombinacji) proces jest podobny do procesu tworzenia całego serwera.
 
-Artykuł [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md) Wyświetla liczbę zadania wymagane do wdrożenia aplikacji serwera. Po skonwertowaniu aplikacji kontenera do aplikacji kontenera/serwera, należy wykonać niektóre z tych samych zadań, dodając kod do kontenera. Poniższa lista zawiera ważnych kwestii, które należy wziąć pod uwagę:
+Artykuł [serwerów: Implementowanie serwera](../mfc/servers-implementing-a-server.md) Wyświetla liczbę zadania wymagane do wdrożenia aplikacji serwera. Po skonwertowaniu aplikacji kontenera do aplikacji kontenera/serwera, należy wykonać niektóre z tych samych zadań, dodając kod do kontenera. Poniższa lista zawiera ważnych kwestii, które należy wziąć pod uwagę:
 
 - Kod kontenera, tworzone przez Kreatora aplikacji już inicjuje podsystemu OLE. Nie musisz zmieniać lub dodawać żadnych tej obsługi.
 
@@ -71,8 +71,7 @@ Należy pamiętać, że aplikacja MDI nie można wstawić do niej samej. Aplikac
 
 Przykładowe MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tę funkcję. Aby uzyskać przykład jak to zrobić, zobacz `InitInstance` działa w programach *OCLIENT. CPP* plików tej aplikacji przykładowej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery](../mfc/containers.md)<br/>
 [Serwery](../mfc/servers.md)
-

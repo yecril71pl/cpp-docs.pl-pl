@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-ms.openlocfilehash: 99785e2e6ef1c0644833d582774380bff792ac9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ca67d4cac3786ce8bb059464d47acf17e3ecdc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266071"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkcje interfejsu użytkownika, kreator aplikacji MFC
 
@@ -61,7 +61,6 @@ W tym temacie opisano opcje, które można użyć, aby określić wygląd aplika
 
    Aby uzyskać [klasa CDialog](../../mfc/reference/cdialog-class.md)— aplikacje oparte na tylko ten tytuł pojawi się na pasku tytułu okna dialogowego. Aby edytować tego pola, należy najpierw wybrać **oparte o okna dialogowe** opcji w obszarze **typ aplikacji**. Aby uzyskać więcej informacji, zobacz [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
-

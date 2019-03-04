@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276360"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 
@@ -68,7 +68,7 @@ Struktura przekazuje wskaźnik do tego `CPropExchange` obiektu do kontroli nad `
 
 `CPropExchange` można serializować właściwości kontrolki lub zainicjować właściwości formantu w momencie ładowania lub tworzenia kontrolki. `ExchangeProp` i `ExchangeFontProp` funkcje elementów członkowskich `CPropExchange` są w stanie właściwości, aby zapisać i załadować je od innych nośników.
 
-Aby uzyskać więcej informacji na temat korzystania z `CPropExchange`, zapoznaj się z artykułem [kontrolki ActiveX MFC: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na temat korzystania z `CPropExchange`, zapoznaj się z artykułem [kontrolki ActiveX MFC: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -290,8 +290,7 @@ BOOL IsLoading();
 
 Wartość różną od zera, jeśli właściwości są ładowane; w przeciwnym razie 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

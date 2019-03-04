@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607902"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271869"
 ---
 # <a name="cfont-class"></a>Klasa CFont
 
@@ -240,7 +240,7 @@ BOOL CreatePointFont(
 *lpszFaceName*<br/>
 A `CString` lub wskaźnikiem do ciągu zakończony znakiem null, który określa nazwę krój czcionki. Długość ciągu nie może przekraczać 30 znaków. Windows "Funkcja EnumFontFamilies można wyliczyć wszystkie aktualnie dostępne czcionki. Jeśli *lpszFaceName* ma wartość NULL, interfejs GDI używa krój niezależnych od urządzenia.
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do [CDC](../../mfc/reference/cdc-class.md) obiekt ma być używany do przekonwertowania wysokość w *nPointSize* jednostki logiczne. Jeśli ma wartość NULL, kontekst urządzenia ekranu jest używana do konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -272,7 +272,7 @@ BOOL CreatePointFontIndirect(
 *lpLogFont*<br/>
 Wskazuje [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) strukturę, która definiuje właściwości logicznej czcionki. `lfHeight` Członkiem `LOGFONT` struktury jest mierzony w liczbę dziesiątych części punkt, a nie jednostki logiczne. (Na przykład ustawić `lfHeight` 120 żądania czcionki punktu 12.)
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do [CDC](../../mfc/reference/cdc-class.md) obiekt ma być używany do przekonwertowania wysokość w `lfHeight` jednostki logiczne. Jeśli ma wartość NULL, kontekst urządzenia ekranu jest używana do konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -357,9 +357,8 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

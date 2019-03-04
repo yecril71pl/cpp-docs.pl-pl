@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263614"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Nazwa|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Tworzy obiekt CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Niszczy obiekt CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Niszczy obiekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -304,7 +304,7 @@ Zawiera identyfikator zasobu HTML.
 
 Druga forma Konstruktor zapewnia dostęp do zasobu okna dialogowego za pomocą nazwy szablonu. Trzecia formą Konstruktor zapewnia dostęp do zasobu okna dialogowego za pomocą identyfikator szablonu zasobów. Zazwyczaj identyfikator rozpoczyna się od **IDD_** prefiks.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Niszczy obiekt CDHtmlDialog.
 
@@ -370,7 +370,7 @@ Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu
 *szId*<br/>
 Wartość parametru ID tagu obiektu w kodzie źródłowym HTML dla formantu ActiveX.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości, za pomocą którego ma zostać wymiany danych.
 
 *szPropName*<br/>
@@ -465,7 +465,7 @@ Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu
 *szId*<br/>
 Wartość określona dla parametru Identyfikatora kontrolki HTML.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania elementu HTML, z którym chcesz wymiany danych.
 
 *value*<br/>
@@ -586,7 +586,7 @@ Zobacz *fEnable* w [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.co
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -669,7 +669,7 @@ Nazwa właściwości w domyślnych ustawień regionalnych bieżącego użytkowni
 *pdispControl*<br/>
 `IDispatch` Wskaźnika formantu ActiveX.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -729,7 +729,7 @@ Zobacz *ppDropTarget* w `IDocHostUIHandler::GetDropTarget` w zestawie Windows SD
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 Identyfikator elementu HTML.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -942,12 +942,12 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 Zobacz *pchKey* w [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) w zestawie Windows SDK.
 
-*Magazyn danych*<br/>
+*dw*<br/>
 Zobacz *dw* w `IDocHostUIHandler::GetOptionKeyPath` w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -963,7 +963,7 @@ STDMETHOD(HideUI)(void);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1081,7 +1081,7 @@ void Navigate(
 *lpszURL*<br/>
 Wskaźnik do ciągu zawierającego adres URL, który ma zostać użyty.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi zmiennej, która określa, czy można dodać zasobu do listy historii, czy do pamięci podręcznej odczytu lub zapisu z pamięci podręcznej i czy ma być wyświetlany zasób w nowym oknie. Zmienna może być kombinacją wartości zdefiniowanych przez [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) wyliczenia.
 
 *lpszTargetFrameName*<br/>
@@ -1147,7 +1147,7 @@ Zobacz *fActivate* w [IDocHostUIHandler::OnDocWindowActivate](https://msdn.micro
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1168,7 +1168,7 @@ Zobacz *fActivate* w [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.mic
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1236,7 +1236,7 @@ Zobacz *fFrameWindow* w `IDocHostUIHandler::ResizeBorder` w zestawie Windows SDK
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="setcontrolproperty"></a>  CDHtmlDialog::SetControlProperty
 
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 Identyfikator HTML formantu ActiveX.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości do ustawienia.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 Identyfikator elementu HTML.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania właściwości do ustawienia.
 
 *pVar*<br/>
@@ -1371,7 +1371,7 @@ void SetHostFlags(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Możliwe wartości, zobacz [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) w zestawie Windows SDK.
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
@@ -1516,15 +1516,14 @@ STDMETHOD(UpdateUI)(void);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja członkowska jest implementacją firmy CDHtmlDialog [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), zgodnie z opisem w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [DHtmlExplore próbki MFC](../../visual-cpp-samples.md)<br/>
 [Makra pomocnika DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

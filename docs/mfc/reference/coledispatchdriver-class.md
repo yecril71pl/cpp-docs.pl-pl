@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274584"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 
@@ -278,7 +278,7 @@ Zmiennej listy parametrów typów określonych w *pbParamInfo*.
 
 Możliwe wartości dla *vtRet* argument są pobierane z wyliczenia VARENUM. Dopuszczalne są następujące wartości:
 
-|Symbol|Zwracany typ|
+|Symbol|Typ zwracany|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -406,7 +406,7 @@ Pojedynczy parametr typu określonego przez *vtProp*.
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [Próbki MFC acdual —](../../visual-cpp-samples.md)<br/>

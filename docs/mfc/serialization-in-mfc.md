@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462767"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262145"
 ---
 # <a name="serialization-in-mfc"></a>Serializacja w MFC
 
@@ -27,7 +27,7 @@ Podstawowa koncepcja serializacji jest, że obiekt powinien móc zapisać jego b
 
 MFC używa obiektu `CArchive` klasy jako pośrednik pomiędzy nośnika magazynowania i obiektu do zserializowania. Ten obiekt jest skojarzony z zawsze `CFile` obiektu, z którego uzyskuje informacje niezbędne do serializacji, łącznie z nazwą pliku i tego, czy Żądana operacja jest do odczytu lub zapisu. Można użyć obiektu, który wykonuje operację serializacji `CArchive` obiektu bez względu na charakter nośnika magazynowania.
 
-A `CArchive` obiekt używa przeciążona wstawiania (**<\<**) i wyodrębniania (**>>**) operatory do wykonania, zapisywanie i odczytywanie operacji. Aby uzyskać więcej informacji, zobacz [przechowywanie i ładowanie obiektów CObject za pomocą archiwum](../mfc/storing-and-loading-cobjects-via-an-archive.md) w artykule serializacja: serializacja obiektu.
+A `CArchive` obiekt używa przeciążona wstawiania (**<\<**) i wyodrębniania (**>>**) operatory do wykonania, zapisywanie i odczytywanie operacji. Aby uzyskać więcej informacji, zobacz [przechowywanie i ładowanie obiektów CObject za pomocą archiwum](../mfc/storing-and-loading-cobjects-via-an-archive.md) w artykule serializacji: Serializacja obiektu.
 
 > [!NOTE]
 >  Nie należy mylić `CArchive` klasie z atrybutem klasy iostream ogólnego przeznaczenia, które służą do sformatowanego tekstu tylko. `CArchive` Klasa jest binarny format serializacji obiektów.
@@ -36,13 +36,13 @@ Jeśli chcesz, można pominąć serializacji MFC, aby utworzyć własny mechaniz
 
 Następujące artykuły obejmuje dwa główne zadania wymagane do serializacji:
 
-- [Serializacja: ustawianie klasy jako możliwej do serializacji](../mfc/serialization-making-a-serializable-class.md)
+- [Serializacja: Możliwy do serializacji klasy jako możliwej](../mfc/serialization-making-a-serializable-class.md)
 
-- [Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+- [Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)
 
-Artykuł [serializacja: serializacja a. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md) opisano po serializacji jest właściwa metoda wejścia/wyjścia w aplikacjach baz danych.
+Artykuł [serializacji: Serializacja programu vs. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md) opisano po serializacji jest właściwa metoda wejścia/wyjścia w aplikacjach baz danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../mfc/mfc-concepts.md)<br/>
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
-ms.openlocfilehash: 5bfec287aac1dbfc8b068b61414f0bfcf8edc28d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fcad060f257c3c0018cf17aeed9af34d2efce8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268307"
 ---
 # <a name="std-namespace"></a>std — Przestrzeń nazw
 
@@ -31,7 +31,6 @@ namespace std;
 
 **Nagłówek:** ppltasks.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja](reference-concurrency-runtime.md)
-

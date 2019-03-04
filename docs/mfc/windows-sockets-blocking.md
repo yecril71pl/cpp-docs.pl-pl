@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: blokowanie'
+title: 'Windows Sockets: Blokowanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272350"
 ---
-# <a name="windows-sockets-blocking"></a>Windows Sockets: blokowanie
+# <a name="windows-sockets-blocking"></a>Windows Sockets: Blokowanie
 
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule opisano blokowania. Inne problemy zostały omówione w artykułach: [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).
 
@@ -36,22 +36,21 @@ Normalnie Jeśli używasz `CAsyncSocket`, należy unikać blokowania operacji i 
 
 W obszarze Windows wywołania blokowania są traktowane jako złym zwyczajem. Domyślnie [CAsyncSocket](../mfc/reference/casyncsocket-class.md) obsługuje wywołania asynchroniczne, a musi zarządzać, blokowanie, samodzielnie za pomocą powiadomień wywołania zwrotnego. Klasa [CSocket](../mfc/reference/csocket-class.md), z drugiej strony, jest synchroniczne. On pompy komunikatów Windows i zarządza blokowania dla Ciebie.
 
-Aby uzyskać więcej informacji na temat blokowania zobacz specyfikację Windows Sockets. Aby uzyskać więcej informacji na temat "funkcji włączone", zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md) i [Windows Sockets: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Aby uzyskać więcej informacji na temat blokowania zobacz specyfikację Windows Sockets. Aby uzyskać więcej informacji na temat "funkcji włączone", zobacz [Windows Sockets: Gniazda powiadomienia](../mfc/windows-sockets-socket-notifications.md) i [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265941"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 
@@ -468,7 +468,7 @@ Zwracana wartość nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [Klasa CComboBox](../../mfc/reference/ccombobox-class.md)<br/>

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271232"
 ---
 # <a name="cd2dgeometry-class"></a>Klasa CD2DGeometry
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Tworzy obiekt CD2DGeometry.|
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt geometrii D2D.|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt geometrii D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -176,7 +176,7 @@ BOOL CombineWithGeometry(
 *inputGeometry*<br/>
 Geometria połączyć się z tym wystąpieniem.
 
-*trybu combineMode*<br/>
+*combineMode*<br/>
 Typ operacji łączenia do wykonania.
 
 *inputGeometryTransform*<br/>
@@ -601,6 +601,6 @@ Granice maksymalną odległość między punktami w wielokątne zbliżenia geome
 
 Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

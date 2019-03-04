@@ -1,5 +1,5 @@
 ---
-title: 'TN023: standardowe zasoby MFC'
+title: 'TN023: Standardowe zasoby MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277682"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023: standardowe zasoby MFC
+# <a name="tn023-standard-mfc-resources"></a>TN023: Standardowe zasoby MFC
 
 Ta uwaga opisuje standardowe zasoby dostarczany z usługą i wymagane przez bibliotekę MFC.
 
@@ -37,9 +37,9 @@ Obiekty clipart zasoby są dodatkowe zasoby, w ramach nie zależy od, ale które
 
 - Indicate.RC: Zawiera zasoby ciągów dla wskaźników klucz stanu paska stanu, takie jak "Limit", aby uzyskać włączony klawisz Caps Lock.
 
-- Prompts.RC: Zawiera zasoby w postaci ciągów menu wiersza dla każdego polecenia wstępnie zdefiniowanych, takie jak "Utwórz nowy dokument" id_file_new —.
+- Prompts.RC: Id_file_new — zawiera zasoby w postaci ciągów menu wiersza dla każdego polecenia wstępnie zdefiniowanych, takie jak "Utwórz nowy dokument".
 
-- COMMDLG.RC: Visual C++ .rc zgodny plik, który zawiera standardowych szablonów pliku COMMDLG w oknie dialogowym.
+- COMMDLG.RC: Plik .rc zgodne Visual C++, który zawiera standardowych szablonów pliku COMMDLG w oknie dialogowym.
 
 Standardowych zasobów RAM są zasobami za pomocą identyfikatorów zdefiniowanych AFX ramach zależy od wewnętrznej implementacji. Rzadko należy zmieniać te zasoby zdefiniowane AFX. Jeśli to zrobisz, należy wykonać procedury opisane w dalszej części tego tematu.
 
@@ -59,7 +59,7 @@ Następujące zasoby struktury są zawarte w katalogu MFC\INCLUDE:
 
 1. Otwórz plik zasobów aplikacji w języku Visual C++.
 
-1. Otwórz Common.rc. Ten plik zawiera wszystkie zasoby binarne clipart. To może potrwać pewien czas, ponieważ plik Common.rc został skompilowany.
+1. Open Common.rc. Ten plik zawiera wszystkie zasoby binarne clipart. To może potrwać pewien czas, ponieważ plik Common.rc został skompilowany.
 
 1. Przytrzymaj klawisz CTRL podczas przeciągania zasoby, które mają używać ze Common.rc do pliku zasobów aplikacji.
 
@@ -99,8 +99,7 @@ W rzadkich przypadkach możesz chcieć dostosować zawartość standardowych zas
 > [!NOTE]
 >  Nie należy modyfikować zasobów bezpośrednio w plikach .rc standardowych. Ten sposób zmodyfikuje zasoby dostępne w każdej aplikacji, a nie tylko w jeden, w którym aktualnie pracuje.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269451"
 ---
 # <a name="targetblock-class"></a>target_block — Klasa
 
@@ -64,7 +64,7 @@ Typ procesora do przetwarzania komunikatów.
 |Nazwa|Opis|
 |----------|-----------------|
 |[target_block](#ctor)|Konstruuje `target_block` obiektu.|
-|[~ target_block — destruktor](#dtor)|Niszczy `target_block` obiektu.|
+|[~target_block Destructor](#dtor)|Niszczy `target_block` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -86,7 +86,7 @@ Typ procesora do przetwarzania komunikatów.
 |[process_message](#process_message)|W przypadku przesłonięcia w klasie pochodnej, przetwarza komunikat, który został zaakceptowany przez to `target_block` obiektu.|
 |[propagate_message](#propagate_message)|W przypadku przesłonięcia w klasie pochodnej, ta metoda asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `target_block` obiektu. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.|
 |[register_filter](#register_filter)|Rejestruje filter — metoda, która zostanie wywołana na każdy komunikat.|
-|[remove_sources —](#remove_sources)|Odłączenie wszystkich źródeł oczekiwania na zakończenie operacji oczekujących asynchronicznego wysyłania.|
+|[remove_sources](#remove_sources)|Odłączenie wszystkich źródeł oczekiwania na zakończenie operacji oczekujących asynchronicznego wysyłania.|
 |[send_message](#send_message)|W przypadku przesłonięcia w klasie pochodnej, ta metoda przekazuje synchronicznego komunikatu z `ISource` bloku, aby to `target_block` obiektu. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.|
 |[sync_send](#sync_send)|Synchronicznie, Wyślij wiadomość do przetworzenia.|
 |[unlink_source](#unlink_source)|Wstrzymuje bloku określonego źródła, z tego `target_block` obiektu.|
@@ -252,7 +252,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parametry
 
-*_Filtruj*<br/>
+*_Filter*<br/>
 Metoda filtru.
 
 ##  <a name="remove_sources"></a> remove_sources —
@@ -336,7 +336,7 @@ Konstruuje `target_block` obiektu.
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 Niszczy `target_block` obiektu.
 
@@ -377,7 +377,7 @@ void wait_for_async_sends();
 
 Ta metoda jest używana przez destruktory bloku komunikatu, aby upewnić się, że wszystkie operacje asynchroniczne mieli czas na zakończenie przed niszczenie bloku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ITarget, klasa](itarget-class.md)

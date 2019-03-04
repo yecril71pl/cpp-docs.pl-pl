@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272649"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 
@@ -23,7 +23,7 @@ Ta grupa funkcji obejmuje również globalnego procedurę do wyświetlania okno 
 
 |||
 |-|-|
-|[Afxextractsubstring —](#afxextractsubstring)|Wyodrębnianie podciągów rozdzielone pojedynczy znak w ciągu danego źródła.|
+|[AfxExtractSubString](#afxextractsubstring)|Wyodrębnianie podciągów rozdzielone pojedynczy znak w ciągu danego źródła.|
 |[AfxFormatString1](#afxformatstring1)|Substytuty dany ciąg znaków formatu "%1" w ciągu zawartych w tablicy ciągów.|
 |[AfxFormatString2](#afxformatstring2)|Substytuty dwa ciągi formatu znaków "%1" i "%2" w ciągu zawartych w tablicy ciągów.|
 |[AfxMessageBox](#afxmessagebox)|Wyświetla okno komunikatu.|
@@ -173,7 +173,7 @@ int AFXAPI AfxMessageBox(
 *lpszText*<br/>
 Wskazuje `CString` obiekt lub ciąg przerwany wartością null, zawierający komunikat do wyświetlenia w oknie komunikatu.
 
-*nNie*<br/>
+*nType*<br/>
 Styl okna komunikatu. Zastosowania któregokolwiek z [Style okna komunikatu](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) do pola.
 
 *nIDHelp*<br/>
@@ -214,7 +214,7 @@ Druga forma funkcji wykorzystuje zasoby ciągu z Identyfikatorem *nIDPrompt* Aby
 
 [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)

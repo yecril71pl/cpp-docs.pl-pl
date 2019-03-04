@@ -1,5 +1,5 @@
 ---
-title: Etykiety elementów kontrolki drzewa
+title: Etykiety elementów formantu drzewa
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tree controls [MFC], item labels
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: 0abfeee170dbc9cbb4639e896e7a22d7184b35a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278889"
 ---
-# <a name="tree-control-item-labels"></a>Etykiety elementów kontrolki drzewa
+# <a name="tree-control-item-labels"></a>Etykiety elementów formantu drzewa
 
 Zwykle określasz tekst etykiety elementu podczas dodawania elementu do kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Można przekazać funkcję członkowską [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) strukturę, która definiuje właściwości elementów, w tym ciąg zawierający tekst etykiety. `InsertItem` ma kilka przeciążeń, które mogą być wywoływane przy użyciu różnych kombinacji parametrów.
 
@@ -23,8 +23,7 @@ Kontrolka drzewa przydziela pamięć do przechowywania każdego elementu; tekst 
 
 Kontrolka drzewa używa pamięci zaalokowanej z sterty procesu, który tworzy formant drzewa. Maksymalna liczba elementów kontrolki drzewa zależy od ilości dostępnej pamięci na stosie. Każdy element ma 64 bajtów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

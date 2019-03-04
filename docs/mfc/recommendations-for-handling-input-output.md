@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261974"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Zalecenia dotyczące obsługi we/wy
 
@@ -27,7 +27,7 @@ Czy używasz opartych na plikach we/wy lub nie zależy od tego, jak odpowiadać 
 
    - Tak: Jest to dokument domyślny MFC. Użyj `CDocument` serializacji.
 
-   - Nie: To jest typowe w przypadku opartej na transakcjach aktualizowania pliku. Zaktualizuj plik na podstawie każdej transakcji które nie potrzebują `CDocument` serializacji.
+   - Nie: Zazwyczaj jest to przypadek, opartej na transakcjach aktualizowania pliku. Zaktualizuj plik na podstawie każdej transakcji które nie potrzebują `CDocument` serializacji.
 
 - Nie, podstawowe nie znajdują się w pliku na dysku:
 
@@ -47,6 +47,6 @@ Na potrzeby obsługi Otwórz, Zapisz i Zapisz jako polecenia w menu Plik, strukt
 
 Aby uzyskać informacje o serializacji, zobacz [serializacji](../mfc/serialization-in-mfc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja: serializacja a Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serializacja: Serializacja programu vs. Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)

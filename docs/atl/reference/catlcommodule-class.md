@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 270e6ca4dcb5c7701281cc2ac6c04e1d60093db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275873"
 ---
 # <a name="catlcommodule-class"></a>Klasa CAtlComModule
 
@@ -36,7 +36,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor.|
-|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|
+|[CAtlComModule::~CAtlComModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -75,7 +75,7 @@ CAtlComModule() throw();
 
 Inicjuje modułu.
 
-##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule
+##  <a name="dtor"></a>  CAtlComModule::~CAtlComModule
 
 Destruktor.
 
@@ -181,7 +181,7 @@ Usuwa informacji na temat biblioteki typów z rejestru systemowego. Jeśli wyst�
 
 Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

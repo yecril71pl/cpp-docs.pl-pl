@@ -1,5 +1,5 @@
 ---
-title: 'Podstawy OLE: implementacja MFC'
+title: 'Podstawy OLE: Implementacja interfejsu MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267280"
 ---
-# <a name="ole-background-mfc-implementation"></a>Podstawy OLE: implementacja MFC
+# <a name="ole-background-mfc-implementation"></a>Podstawy OLE: Implementacja interfejsu MFC
 
 Ze względu na rozmiar i złożoność pierwotne OLE interfejsu API wywołując ją bezpośrednio do pisania aplikacji OLE może być bardzo czasochłonne. Celem wdrożenia bibliotekę Microsoft Foundation Class OLE jest aby zmniejszyć ilość pracy, który trzeba napisać obsługą OLE, w pełni funkcjonalne aplikacje.
 
@@ -35,7 +35,7 @@ Imoniker — interfejs `IMoniker` interfejs jest implementowany przez bibliotek�
 
 IUnknown i interfejsy IMarshal `IUnknown` interfejs jest implementowany przez bibliotekę klas, ale nie jest narażony na potwierdzeniu programisty. `IMarshal` Interfejsu nie jest zaimplementowana przez bibliotekę klas, ale jest używana wewnętrznie. Serwery automatyzacji utworzone przy użyciu biblioteki klas już mieć marshaling funkcji wbudowanych.
 
-Plików złożonych OLE (pliki złożone) są obsługiwane częściowo przez bibliotekę klas. Żadna z funkcji, które bezpośrednio modyfikować pliki złożone poza tworzenia nie jest obsługiwana. MFC używa klasy `COleFileStream` umożliwiają manipulowanie strumieni przy użyciu standardowych plikowych funkcji. Aby uzyskać więcej informacji, zobacz artykuł [kontenery: pliki złożone](../mfc/containers-compound-files.md).
+Plików złożonych OLE (pliki złożone) są obsługiwane częściowo przez bibliotekę klas. Żadna z funkcji, które bezpośrednio modyfikować pliki złożone poza tworzenia nie jest obsługiwana. MFC używa klasy `COleFileStream` umożliwiają manipulowanie strumieni przy użyciu standardowych plikowych funkcji. Aby uzyskać więcej informacji, zobacz artykuł [kontenerów: Pliki złożone](../mfc/containers-compound-files.md).
 
 Serwery wewnątrzprocesowe serwerów w procesie i obsługi obiektu i obiekt obsługi umożliwiają wdrażania visual edycji danych lub pełne obiektów Component Object Model (COM) w bibliotece dołączanej (dynamicznie DLL). Aby to zrobić, można zaimplementować biblioteki DLL przez OLE bezpośredniego wywoływania interfejsu API. Jednak jeśli piszesz serwera automatyzacji, a serwer nie ma interfejsu użytkownika, można użyć przez kreatora AppWizard w celu podejmowania serwera wewnątrz procesowego i umieść je całkowicie biblioteki DLL. Aby uzyskać więcej informacji na temat tych tematów, zobacz [serwerów automatyzacji](../mfc/automation-servers.md).
 
@@ -44,8 +44,7 @@ Serwery wewnątrzprocesowe serwerów w procesie i obsługi obiektu i obiekt obs�
 
 Aby uzyskać więcej informacji na temat sposobu klas Microsoft Foundation OLE implementacji interfejsów OLE, zobacz Uwagi techniczne dotyczące MFC [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), i [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawy OLE](../mfc/ole-background.md)<br/>
-[Podstawy OLE: strategie implementacji](../mfc/ole-background-implementation-strategies.md)
-
+[Podstawy OLE: Strategie implementacji](../mfc/ole-background-implementation-strategies.md)

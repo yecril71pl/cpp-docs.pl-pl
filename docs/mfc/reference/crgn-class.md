@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279379"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 
@@ -264,7 +264,7 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu prostokąt otaczający elipsy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -323,7 +323,7 @@ BOOL CreateFromPath(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Identyfikuje kontekst urządzenia, który zawiera ścieżkę zamknięte.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -486,7 +486,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu regionu. `RECT` Struktura ma następującą postać:
 
 ```cpp
@@ -543,7 +543,7 @@ Określa logiczną współrzędną y prawego dolnego rogu regionu.
 *x3*<br/>
 Określa szerokość elipsy pozwala utworzyć zaokrąglone rogi.
 
-*Y3*<br/>
+*y3*<br/>
 Określa wysokość elipsy pozwala utworzyć zaokrąglone rogi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -607,7 +607,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 
 ### <a name="parameters"></a>Parametry
 
-*hrgn —*<br/>
+*hRgn*<br/>
 Określa dojścia do obszaru Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -654,7 +654,7 @@ int GetRgnBox(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` struktury lub `CRect` obiektu do odbierania współrzędne prostokąt otaczający. `RECT` Struktura ma następującą postać:
 
 `typedef struct tagRECT {`
@@ -785,7 +785,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` struktury lub `CRect` obiektu. `RECT` Struktura ma następującą postać:
 
 ```cpp
@@ -829,7 +829,7 @@ Określa współrzędną x w prawym dolnym rogu prostokątny obszar.
 *y2*<br/>
 Określa współrzędną y prawego dolnego rogu prostokątny obszar.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokątny obszar. Może być wskaźnik do `RECT` struktury lub `CRect` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -838,8 +838,7 @@ W odróżnieniu od [CreateRectRgn](#createrectrgn), jednak ją nie przydziela ż
 
 Użyj tej funkcji, zamiast `CreateRectRgn` funkcja elementu członkowskiego, aby uniknąć wywołania do Menedżera pamięci lokalnej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

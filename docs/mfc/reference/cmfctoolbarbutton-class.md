@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275236"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Klasa CMFCToolBarButton
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Wartość logiczna określająca, czy przycisk jest zdefiniowane przez użytkownika. Jeśli ten parametr ma wartość TRUE, ten przycisk jest zdefiniowane przez użytkownika. W przeciwnym razie obraz przycisku jest ładowany z zasobu.
 
-*Zablokowane*<br/>
+*bLocked*<br/>
 [in] Wartość logiczna określająca, czy można dostosować przycisku. Jeśli ten parametr ma wartość PRAWDA, nie można dostosować przycisku. W przeciwnym razie można dostosować przycisku.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Przycisk menu*<br/>
+*menuButton*<br/>
 [in] Odwołanie do docelowego przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1082,7 +1082,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *sizeDefault*<br/>
@@ -1201,7 +1201,7 @@ Ta metoda zwraca wartość FALSE.
 
 Domyślna implementacja tej metody nie robi nic i zwraca wartość FALSE. Zastąpienie tej metody zwraca wartość różną od zera, jeśli przycisk przetwarza komunikat pomocy.
 
-Aby uzyskać więcej informacji na temat wiadomości WM_HELPHITTEST zobacz [TN028: Obsługa pomocy Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).
+Aby uzyskać więcej informacji na temat wiadomości WM_HELPHITTEST zobacz [TN028: Obsługa pomocy kontekstowej](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1215,7 +1215,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *nCtlColor*<br/>
@@ -1291,7 +1291,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *Rect*<br/>
@@ -1332,7 +1332,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.
 
 *Rect*<br/>
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Ta metoda obsługuje procesy transferu danych, takich jak Schowek lub operacji przeciągania i upuszczania. Jego operacja odczytu lub zapisu właściwości przycisku, takie jak identyfikator, etykietę tekstową i identyfikator obrazu, z lub do podanych `CArchive` obiektu.
 
-Przykłady serializacji, zobacz [serializacja: serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
+Przykłady serializacji, zobacz [serializacji: Serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1599,7 +1599,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Okno nadrzędne przycisku paska narzędzi.
 
-*Dane*<br/>
+*data*<br/>
 [in] A `CAccessibilityData` obiekt, który został wypełniony danymi ułatwień dostępu przycisku paska narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1751,7 +1751,7 @@ Użyj [CMFCToolBarButton::SetVisible](#setvisible) metodę, aby ustawić widoczn
 
 Ta metoda wywołuje [CMFCToolBarButton::OnShow](#onshow) metoda po powoduje zaktualizowanie stanu widoczności przycisku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

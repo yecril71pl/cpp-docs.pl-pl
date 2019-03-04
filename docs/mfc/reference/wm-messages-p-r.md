@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ON_WM_QUERYENDSESSION [MFC]
 - WM_ messages
 ms.assetid: f46962e5-8329-4f1f-9b4d-fdad2a5ce1f8
-ms.openlocfilehash: ff34f8d25a48cffd75bed6b13c5811a6cabd9c53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 283e7aa52008d76067249978d667ce641020a3bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276913"
 ---
 # <a name="wm-messages-p---r"></a>Komunikaty WM_: P - R
 
@@ -62,8 +62,7 @@ Następujące wpisy mapy odpowiadają prototypy funkcji:
 |ON_WM_RENDERALLFORMATS()|afx_msg void [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)();|
 |ON_WM_RENDERFORMAT()|afx_msg void [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
 [Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278824"
 ---
 # <a name="cpaneframewnd-class"></a>Klasa CPaneFrameWnd
 
@@ -897,7 +897,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia używany do rysowania obramowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1157,7 +1157,7 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>Parametry
 
-*Nlimit*<br/>
+*nTimeOut*<br/>
 [in] Wartość limitu czasu w milisekundach.
 
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState
@@ -1273,7 +1273,7 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

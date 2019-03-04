@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: d6d76ecb9042f299ce0c5e573870ee79954751c5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274950"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 
@@ -158,7 +158,7 @@ CPrintDialog(
 *bPrintSetupOnly*<br/>
 Określa, czy jest wyświetlany standardowe okno dialogowe drukowania Windows lub okno dialogowe Ustawienia wydruku. Ustaw ten parametr na wartość true, ekran standardowe okno dialogowe Ustawienia wydruku Windows. Ustaw ją na wartość FALSE, aby wyświetlić okno dialogowe drukowania Windows. Jeśli *bPrintSetupOnly* ma wartość FALSE, ustawienia wydruku, opcję, jeśli jest nadal wyświetlany w oknie dialogowym drukowania.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres wydruku dla wszystkich stron dokumentu. Zobacz [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.
 
 *pParentWnd*<br/>
@@ -506,7 +506,7 @@ Wywołaj tę funkcję, po wywołaniu `DoModal` do określenia, czy można drukow
 
   Zobacz przykład [CPrintDialog::m_pd](#m_pd).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>

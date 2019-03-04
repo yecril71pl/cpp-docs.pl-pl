@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna'
+title: 'Kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277056"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows
 
 W tym artykule opisano proces Tworzenie podklasy kontrolki Windows wspólnego, aby utworzyć formant ActiveX. Tworzenie podklasy Windows istniejący formant jest możliwość szybkiego tworzenia formantu ActiveX. Nowy formant mają możliwości formantów będących podklasami Windows, takich jak malowanie i odpowiadanie na kliknięcia myszą. Przykładowe kontrolki MFC ActiveX [przycisk](../visual-cpp-samples.md) jest przykładem Tworzenie podklasy kontrolki Windows.
 
@@ -95,7 +95,6 @@ Aby dodać program obsługi komunikatów dla komunikatów odbitych okna ręcznie
 
 Przykładowy sposób uwzględnione, komunikaty są przetwarzane, znaleźć przykładowe kontrolki MFC ActiveX [przycisk](../visual-cpp-samples.md). Pokazuje `OnOcmCommand` program obsługi, który wykrywa BN_CLICKED kod powiadomienia i odpowiada wyzwalania (wysyłającym) `Click` zdarzeń.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Klasa CComCachedTearOffObject
+title: CComCachedTearOffObject Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComCachedTearOffObject
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277537"
 ---
-# <a name="ccomcachedtearoffobject-class"></a>Klasa CComCachedTearOffObject
+# <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject Class
 
 Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) odrywania interfejsu.
 
@@ -49,7 +49,7 @@ Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Konstruktor.|
-|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Destruktor.|
+|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -203,7 +203,7 @@ STDMETHOD_(ULONG, Release)();
 
 W kompilacjach nieprzeznaczonych do debugowania zawsze zwraca wartość 0. W przypadku kompilacji do debugowania zwraca wartość, która może być użyteczna, diagnostykę lub testowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>

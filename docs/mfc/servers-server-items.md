@@ -1,5 +1,5 @@
 ---
-title: 'Serwery: elementy serwera'
+title: 'Serwery: Elementy serwera'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262288"
 ---
-# <a name="servers-server-items"></a>Serwery: elementy serwera
+# <a name="servers-server-items"></a>Serwery: Elementy serwera
 
 Gdy kontener uruchamia serwer, dzięki czemu użytkownik może edytować element osadzony lub połączony OLE, aplikacja serwera tworzy "pozycja serwera". Element serwera, który jest obiektem klasy pochodne `COleServerItem`, udostępnia interfejs między dokument serwera i aplikacji kontenera.
 
@@ -35,7 +35,7 @@ Użyj Kreatora aplikacji, aby utworzyć "starter" kod aplikacji, co należy zrob
 
    Struktura wywołuje `OnDraw` aby renderować element OLE w metaplik. Aplikacja kontenera używa tego metaplik do renderowania elementu. Klasa widoku aplikacji ma również `OnDraw` funkcja elementu członkowskiego, który jest używany do renderowania elementu, gdy aplikacja serwera jest aktywny.
 
-1. Implementowanie nadpisanie `OnGetEmbeddedItem` dla swojej klasy dokumentu na serwerze. Aby uzyskać więcej informacji, zobacz artykuł [serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md) przykład MFC OLE i [HIERSVR](../visual-cpp-samples.md).
+1. Implementowanie nadpisanie `OnGetEmbeddedItem` dla swojej klasy dokumentu na serwerze. Aby uzyskać więcej informacji, zobacz artykuł [serwerów: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md) przykład MFC OLE i [HIERSVR](../visual-cpp-samples.md).
 
 1. Implementowanie klasy elementu serwera `OnGetExtent` funkcja elementu członkowskiego. Struktura wywołuje tę funkcję, aby pobrać rozmiar elementu. Domyślna implementacja nic nie robi.
 
@@ -49,7 +49,6 @@ Widoku i elementu `OnDraw` funkcje Członkowskie, ponieważ można narysować w 
 
 Aby uzyskać więcej informacji, zobacz [CView::OnDraw](../mfc/reference/cview-class.md#ondraw), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), i [COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)w *klasy odwołanie do biblioteki*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Serwery](../mfc/servers.md)
-

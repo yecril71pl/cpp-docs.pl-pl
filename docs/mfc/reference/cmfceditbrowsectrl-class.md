@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCEditBrowseCtrl
+title: CMFCEditBrowseCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273286"
 ---
-# <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
+# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Class
 
 `CMFCEditBrowseCtrl` Klasa obsługuje formant przeglądania edycji, który jest edytowalnym polem tekstowym opcjonalnie zawierający przycisk przeglądania. Gdy użytkownik kliknie przycisk przeglądania, formant wykonuje niestandardowe lub wyświetla standardowe okno dialogowe zawierający przeglądarkę plików lub przeglądarkę katalogów.
 
@@ -88,7 +88,7 @@ Użyj formant przeglądania edycji, aby wybrać nazwę pliku lub folderu. Opcjon
 
    Okno dialogowe Wybieranie folderu standard jest wyświetlany, gdy użytkownik kliknie przycisk przeglądania.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Instrukcje: Określanie formant przeglądania edycji
+## <a name="how-to-specify-an-edit-browse-control"></a>Instrukcje: Określ formant przeglądania edycji
 
 Wykonaj poniższe kroki, aby włączyć formant przeglądania edycji w Twojej aplikacji:
 
@@ -172,7 +172,7 @@ Określa rozszerzenie nazwy pliku domyślny, który jest używany w oknie dialog
 *lpszFilter*<br/>
 Określa domyślny ciąg filtru jest używana w oknie dialogowym wyboru plików. Wartością domyślną jest NULL.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi okno dialogowe. Wartością domyślną jest bitową kombinacją (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.
 
 ### <a name="remarks"></a>Uwagi
@@ -268,7 +268,7 @@ virtual void OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -337,7 +337,7 @@ Powinna zwrócić FALSE, jeśli ta nazwa pliku nie może być przekazywany dosto
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

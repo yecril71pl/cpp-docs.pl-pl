@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274222"
 ---
 # <a name="csemaphore-class"></a>Klasa CSemaphore
 
@@ -45,7 +45,7 @@ Dostęp do zasobów w wartości clientauthtrustmode `CSemaphore` obiektów w ten
 
 Alternatywnie można utworzyć `CSemaphore` obiektu autonomiczny i do niego dostęp jawnie przed podjęciem próby dostępu do kontrolowanego zasobu. Ta metoda, podczas przejrzyste komuś czytanie kodu źródłowego, jest bardziej podatne na błędy.
 
-Aby uzyskać więcej informacji na temat sposobu użycia `CSemaphore` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat sposobu użycia `CSemaphore` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -92,8 +92,7 @@ Dostęp i zwalniania `CSemaphore` obiektu, Utwórz [CMultiLock](../../mfc/refere
 > [!IMPORTANT]
 >  Po utworzeniu `CSemaphore` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

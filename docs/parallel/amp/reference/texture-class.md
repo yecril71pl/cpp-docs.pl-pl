@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279747"
 ---
 # <a name="texture-class"></a>texture — Klasa
 
@@ -64,7 +64,7 @@ Ranga tekstury.
 |Nazwa|Opis|
 |----------|-----------------|
 |[copy_to](#copy_to)|Kopiuje `texture` obiektu do miejsca docelowego, wykonując kopię głęboką.|
-|[Dane](#data)|Zwraca wskaźnik CPU do danych pierwotnych tekstury.|
+|[data](#data)|Zwraca wskaźnik CPU do danych pierwotnych tekstury.|
 |[get](#get)|Zwraca wartość elementu wskazywanego przez określony indeks.|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|Zwraca [accelerator_view](accelerator-view-class.md) czyli preferowany cel kopiowania tej tekstury do skopiowania do.|
 |[get_depth_pitch](#get_depth_pitch)|Zwraca liczbę bajtów między każdym wycinkiem głębi tymczasowej tekstury 3D na CPU.|
@@ -83,7 +83,7 @@ Ranga tekstury.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Rank — stała](#rank)|Zwraca rangę obiektu `texture` obiektu.|
+|[rank Constant](#rank)|Zwraca rangę obiektu `texture` obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -121,7 +121,7 @@ Pobiera [accelerator_view](accelerator-view-class.md) czyli preferowany cel kopi
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to —
+##  <a name="copy_to"></a> copy_to
 
 Kopiuje `texture` obiektu do miejsca docelowego, wykonując kopię głęboką.
 
@@ -594,6 +594,6 @@ Inne źródła danych.
 *_Rank*<br/>
 Ranga sekcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 9f8861e3b6aa0fee95aa84b989cf1057ae0f76b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261677"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Dodawanie obsługi ATL do projektu MFC
 
@@ -39,7 +39,7 @@ Jeśli utworzono już aplikacja oparta na MFC, następnie można dodać obsług�
 
 Aby uzyskać więcej informacji na temat jak dodawanie obsługi ATL zmienia kod projektu MFC, zobacz [szczegóły ATL obsługuje dodanej przez kreatora ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

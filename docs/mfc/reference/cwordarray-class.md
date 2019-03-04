@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259454"
 ---
 # <a name="cwordarray-class"></a>Klasa CWordArray
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 Hostowanie kontrolki użytkownika w widoku MFC [klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Wdrażając, nadaj kontrolki użytkownika odwołanie do `ICommandSource` obiektu.
 
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -162,7 +162,7 @@ Dojście do metody obsługi polecenia.
 
 Ta metoda dodaje procedurę obsługi poleceń *cmdHandler* do obiektu źródła polecenia i mapuje program obsługi *cmdID*.
 
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `AddCommandHandler`.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `AddCommandHandler`.
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 Hostowanie kontrolki użytkownika w widoku MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Implementując `ICommandTarget`, podać odwołanie do obiektu kontrolki użytkownika.
 
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -383,7 +383,7 @@ Dojście do obiektu źródła polecenia.
 
 Hostowanie kontrolki użytkownika w widoku MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC.
 
-Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z obiektu źródłowego określonego polecenia *cmdSource*. Powinien zostać wywołany w implementacji klasy formantu użytkownika. Podczas inicjowania, należy zarejestrować programy obsługi poleceń za pomocą obiektu źródła polecenia przez wywołanie metody [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) w `Initialize` implementacji. Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `Initialize` w tym celu.
+Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z obiektu źródłowego określonego polecenia *cmdSource*. Powinien zostać wywołany w implementacji klasy formantu użytkownika. Podczas inicjowania, należy zarejestrować programy obsługi poleceń za pomocą obiektu źródła polecenia przez wywołanie metody [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) w `Initialize` implementacji. Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `Initialize` w tym celu.
 
 ##  <a name="icommandui_interface"></a>  Klasa Icommandui
 
@@ -399,7 +399,7 @@ Ten interfejs zapewnia metody i właściwości, które zarządzają poleceń int
 
 `ICommandUI` jest używany w ramach `ON_UPDATE_COMMAND_UI` obsługi klasy pochodnej. Gdy użytkownik aplikacji aktywuje (zaznacza lub kliknięcia) menu, każdy element menu jest wyświetlany jako włączone lub wyłączone. Celem każdego polecenia menu zawiera informacje, implementując `ON_UPDATE_COMMAND_UI` programu obsługi. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji okno właściwości do utworzenia wpisu mapy wiadomości i prototypu funkcji dla każdej procedury obsługi.
 
-Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routingu poleceń, zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routingu poleceń, zobacz [jak: Dodaj polecenie routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Uwagi
 
-To jest funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) program obsługi, który zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów](../../mfc/tn006-message-maps.md).
+To jest funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) program obsługi, który zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: Mapy komunikatów](../../mfc/tn006-message-maps.md).
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -544,9 +544,8 @@ void OnUpdate();
 
 Ta funkcja umożliwia widok, aby zaktualizować jego ekranu, aby odzwierciedlić zmiany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

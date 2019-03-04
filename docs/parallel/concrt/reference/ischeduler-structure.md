@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603220"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274079"
 ---
 # <a name="ischeduler-structure"></a>Struktura IScheduler
 
@@ -41,8 +41,8 @@ struct IScheduler;
 |[IScheduler::GetId](#getid)|Zwraca unikatowy identyfikator dla harmonogramu.|
 |[IScheduler::GetPolicy](#getpolicy)|Zwraca kopię obiektu zasadę harmonogramu. Aby uzyskać więcej informacji na temat zasad harmonogramu, zobacz [SchedulerPolicy](schedulerpolicy-class.md).|
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` są obecnie używane przez inne transfery danych.|
-|[Ischeduler::notifyresourcesexternallyidle —](#notifyresourcesexternallyidle)|Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` nie są używane przez inne transfery danych.|
-|[Ischeduler::removevirtualprocessors —](#removevirtualprocessors)|Powoduje zainicjowanie usuwania głównych procesorów wirtualnych, które wcześniej zostały przydzielone do tego harmonogramu.|
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` nie są używane przez inne transfery danych.|
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Powoduje zainicjowanie usuwania głównych procesorów wirtualnych, które wcześniej zostały przydzielone do tego harmonogramu.|
 |[Ischeduler::statistics —](#statistics)|Zawiera informacje dotyczące stawek przybycia i ukończenia zadania w celu zmiany długości kolejki dla harmonogramu.|
 
 ## <a name="remarks"></a>Uwagi
@@ -221,7 +221,7 @@ Należy zaimplementować tę metodę, jeśli chcesz, aby Menedżer zasobów na p
 
 W przypadku braku informacji statystycznych Menedżer zasobów użyje poziomy subskrypcji wątków sprzętu podjąć decyzje dotyczące zasobów alokacji i migracji. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>

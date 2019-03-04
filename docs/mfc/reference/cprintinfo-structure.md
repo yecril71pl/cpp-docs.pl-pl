@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273364"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo — struktura
 
@@ -67,7 +67,7 @@ Element `CPrintInfo` obiektu jest przekazywana między struktury i klasy widoku 
 
 Innym przykładem jest przypadek, w którym długość dokumentu nie jest znany do momentu, wydrukowaniu. W takiej sytuacji widok klasy testy do końca dokumentu każdorazowo, gdy strona zostanie wydrukowany. Po osiągnięciu końca Ustawia widok klasy `m_bContinuePrinting` członkiem `CPrintInfo` false; informuje platformę, by zatrzymać pętlę drukowania.
 
-`CPrintInfo` jest używany przez funkcje elementów członkowskich `CView` wymienionych w sekcji "Zobacz też." Aby uzyskać więcej informacji na temat Architektura drukowania, dostarczone przez bibliotekę Microsoft Foundation Class zobacz [Windows ramki](../../mfc/frame-windows.md) i [architektury dokument/widok](../../mfc/document-view-architecture.md) artykuły [ Drukowanie](../../mfc/printing.md) i [drukowanie: dokumenty wielostronicowe](../../mfc/multipage-documents.md).
+`CPrintInfo` jest używany przez funkcje elementów członkowskich `CView` wymienionych w sekcji "Zobacz też." Aby uzyskać więcej informacji na temat Architektura drukowania, dostarczone przez bibliotekę Microsoft Foundation Class zobacz [Windows ramki](../../mfc/frame-windows.md) i [architektury dokument/widok](../../mfc/document-view-architecture.md) artykuły [ Drukowanie](../../mfc/printing.md) i [drukowania: Dokumenty wielostronicowe](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -315,7 +315,7 @@ Numer pierwszej strony dokumentu.
 
 Numery stron są zwykle liczone od 1. Ta wartość jest przechowywana w `CPrintDialog` zawiera odwołanie do obiektu `m_pPD` elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
@@ -325,4 +325,3 @@ Numery stron są zwykle liczone od 1. Ta wartość jest przechowywana w `CPrintD
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

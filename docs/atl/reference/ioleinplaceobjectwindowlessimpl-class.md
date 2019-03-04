@@ -1,5 +1,5 @@
 ---
-title: Klasa IOleInPlaceObjectWindowlessImpl
+title: IOleInPlaceObjectWindowlessImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: a83fbed524c55c6bc98aa25caa17b80c1e5f89f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267178"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>Klasa IOleInPlaceObjectWindowlessImpl
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl Class
 
 Ta klasa implementuje `IUnknown` i dostarcza metod, które umożliwiają kontrolce do odbierania komunikatów okien i uczestniczyć w operacji przeciągania i upuszczania.
 
@@ -79,7 +79,7 @@ Z klasą pochodną `IOleInPlaceObjectWindowlessImpl`.
 
 ##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
@@ -91,7 +91,7 @@ Zobacz [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-
 
 ##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ```
 HRESULT GetDropTarget(IDropTarget** ppDropTarget);
@@ -147,7 +147,7 @@ Zobacz [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl
 
 ##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
-Zwraca E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ```
 HRESULT ReactivateAndUndo();
@@ -185,7 +185,7 @@ Ustawia element członkowski danych Twojej klasy kontrolki `m_bUIActive` na wart
 
 Zobacz [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

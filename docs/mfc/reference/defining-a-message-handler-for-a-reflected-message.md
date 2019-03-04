@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 89cb1631be7b8588d02518eacbc93b466a275828
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278967"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definiowanie obsługi komunikatów dla komunikatów odbitych
 
@@ -47,7 +47,7 @@ Aby utworzyć [formantu ActiveX](../../mfc/activex-controls-on-the-internet.md) 
 
 9. Aby edytować lub usunąć program obsługi komunikatów, powtórz kroki od 4 do 7. Kliknij komórkę zawierającą nazwę programu obsługi w taki sposób, aby edytować lub usunąć i kliknij odpowiednie zadanie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapowanie komunikatów do funkcji](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

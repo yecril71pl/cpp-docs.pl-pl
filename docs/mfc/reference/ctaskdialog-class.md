@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265018"
 ---
 # <a name="ctaskdialog-class"></a>Klasa CTaskDialog
 
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*Usuń flagę ze*<br/>
+*nFlag*<br/>
 [in] Skojarzony typ wspólny przycisk `CTaskDialog` klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1399,7 +1399,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 [in] Stan pasek postępu. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1618,9 +1618,9 @@ Wartości *wParam* i *lParam* są zależne od szczegółowy komunikat o błędzi
 |TDN_HELP|Nie używany.|Nie używany.|
 |TDN_EXPANDO_BUTTON_CLICKED|0, jeśli obszar rozszerzenia jest zwinięte; różna od zera, jeśli jest wyświetlany tekst rozszerzenia.|Nie używany.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Przewodnik: dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

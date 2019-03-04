@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: 5bc17bfc415576d50c84e880bef955e49d926c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90dafc411f3262dc458c5158df049740a9d7a683
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266903"
 ---
 # <a name="atl-com-property-pages"></a>Strony właściwości ALT COM
 
@@ -42,7 +42,6 @@ Abstrakcyjny próbki dla przykładu ATLPages, która implementuje stronę właś
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)
-

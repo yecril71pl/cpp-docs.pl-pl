@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: 87168b6e58264b4257b7adfb32207ec1dd40729e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcb1dda1d915dc13e01effed9ba99070b825a15e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274534"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Powiadomienia z formantów edycji wzbogaconej
 
@@ -30,8 +30,7 @@ Następuje lista kilka określone powiadomienia i ich zastosowań:
 
 - EN_SELCHANGE aplikacji może wykryć, gdy bieżące zaznaczenie zostanie zmienione przez przetwarzanie komunikatów powiadomień EN_SELCHANGE. Określa komunikat powiadomienia [selchange —](/windows/desktop/api/richedit/ns-richedit-_selchange) struktury zawierającej informacje o nowe zaznaczenie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

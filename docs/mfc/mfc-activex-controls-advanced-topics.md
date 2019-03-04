@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: tematy zaawansowane'
+title: 'Kontrolki ActiveX MFC: Tematy zaawansowane'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277329"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
+# <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: Tematy zaawansowane
 
 W tym artykule omówiono zaawansowane tematy związane z tworzenia formantów ActiveX. Należą do nich następujące elementy:
 
@@ -180,7 +180,6 @@ Można utworzyć kontrolki okna dialogowego, bez interfejsu użytkownika, które
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

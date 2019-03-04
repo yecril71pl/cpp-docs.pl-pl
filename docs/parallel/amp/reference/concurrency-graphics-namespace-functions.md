@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 30503ffa7e5c3845af6c9f61f4e8fc2f64b74e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278239"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>CONCURRENCY::Graphics, funkcje przestrzeni nazw
 
@@ -154,7 +154,7 @@ Przesunięcie do źródła z którego chcesz rozpocząć kopiowanie.
 *pierwszy*<br/>
 Początkowy iterator do kontenera źródłowego.
 
-*ostatni*<br/>
+*last*<br/>
 Końcowy iterator do kontenera źródłowego.
 
 ##  <a name="copy_async"></a>  copy_async — funkcja (Namespace Concurrency::graphics)
@@ -289,15 +289,15 @@ Przesunięcie do źródła z którego chcesz rozpocząć kopiowanie.
 *pierwszy*<br/>
 Początkowy iterator do kontenera źródłowego.
 
-*ostatni*<br/>
+*last*<br/>
 Końcowy iterator do kontenera źródłowego.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

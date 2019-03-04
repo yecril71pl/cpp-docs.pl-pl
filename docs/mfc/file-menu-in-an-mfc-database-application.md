@@ -5,12 +5,12 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279123"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu Plik w aplikacji bazy danych MFC
 
@@ -32,7 +32,6 @@ Interpretowanie polecenia menu Plik w specjalny sposób, konieczne jest przesło
 
 - Ponieważ aplikacje baz danych zwykle nie zapisuj cały dokument, prawdopodobnie należy usunąć zapisywania i Zapisz jako implementacji, chyba że używasz Dokument zserializowany do przechowywania informacji o profilu. W przeciwnym razie może zaimplementować polecenia Zapisz jako, na przykład "commit transakcji." Zobacz [techniczne 22 Uwaga](../mfc/tn022-standard-commands-implementation.md) Aby uzyskać więcej informacji o zastępowanie tych poleceń.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja: serializacja a Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)
-
+[Serializacja: Serializacja programu vs. Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)

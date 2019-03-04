@@ -8,12 +8,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275314"
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne rejestracji serwera
 
@@ -117,7 +117,7 @@ Wskaźnik do modułu COM.
 *dwClsContext*<br/>
 Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Zobacz [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Aby uzyskać więcej informacji.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Zobacz [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -183,6 +183,6 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Ta funkcja pomocnika jest wykorzystywany przez [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (przestarzałe w wersji 7.0 ATL) i [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../../atl/reference/atl-functions.md)

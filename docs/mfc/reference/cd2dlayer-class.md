@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531719"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270881"
 ---
 # <a name="cd2dlayer-class"></a>Klasa CD2DLayer
 
@@ -48,7 +48,7 @@ class CD2DLayer : public CD2DResource;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Tworzy obiekt CD2DLayer.|
-|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt warstwy D2D.|
+|[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt warstwy D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -57,7 +57,7 @@ class CD2DLayer : public CD2DResource;
 |[CD2DLayer::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
 |[CD2DLayer::Create](#create)|Tworzy CD2DLayer. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DLayer::Destroy](#destroy)|Niszczy obiekt CD2DLayer. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DLayer::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DLayer::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DLayer::Get](#get)|Zwraca ID2D1Layer interfejsu|
 |[CD2DLayer::GetSize](#getsize)|Zwraca rozmiar obiektu docelowego renderowania w pikselach niezależnych od urządzenia|
 |[CD2DLayer::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
@@ -218,6 +218,6 @@ operator ID2D1Layer* ();
 
 Wskaźnik do interfejsu ID2D1Layer lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

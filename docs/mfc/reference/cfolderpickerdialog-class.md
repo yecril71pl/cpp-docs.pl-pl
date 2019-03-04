@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ba189badaa9b1605e3467526e7b92a18a1bb5a73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1718919a4fe9019ef591d83473c118eba966900
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276185"
 ---
 # <a name="cfolderpickerdialog-class"></a>Klasa CFolderPickerDialog
 
@@ -31,7 +31,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
+|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|
 
 ## <a name="remarks"></a>Uwagi
@@ -73,13 +73,13 @@ explicit CFolderPickerDialog(
 *lpszFolder*<br/>
 Folder początkowy.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Połączenie jednego lub więcej flagi, które umożliwiają dostosowanie okno dialogowe.
 
 *pParentWnd*<br/>
 Wskaźnik do okna nadrzędnego lub właściciel obiektu okno dialogowe.
 
-*niezerowego*<br/>
+*dwSize*<br/>
 Rozmiar LPSTRFILE struktury.
 
 ### <a name="remarks"></a>Uwagi
@@ -94,6 +94,6 @@ virtual ~CFolderPickerDialog();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

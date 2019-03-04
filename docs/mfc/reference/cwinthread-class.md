@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270137"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -636,7 +636,7 @@ Wątek w poprzednim zawiesić liczba w przypadku powodzenia; `0xFFFFFFFF` inacze
 
 Jeśli wątek wstrzymania liczenia większych niż zero, który nie jest wykonywane. Wątek może być wznowione przez wywołanie metody [ResumeThread](#resumethread) funkcja elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

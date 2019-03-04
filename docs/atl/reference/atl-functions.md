@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [ATL]
 - ATL, global functions
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
-ms.openlocfilehash: 5cf56d21be605094c3ae812bd7aa39b573d2b733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f0c6ccaa049290d3e183ae682c19ab7e497c2b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261742"
 ---
 # <a name="atl-functions"></a>Funkcje ATL
 
@@ -58,10 +58,10 @@ Zapewnia obsługę zarejestrować lub wyrejestrować serwer obiektów na mapie o
 [Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)<br/>
 Zapewnia pomoc techniczną dla `_AtlCreateWndData` struktury operacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
-[Definicje typów](../../atl/reference/atl-typedefs.md)<br/>
+[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [Klasy i struktury](../../atl/reference/atl-classes.md)

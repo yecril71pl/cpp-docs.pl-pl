@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262470"
 ---
 # <a name="crecordview-class"></a>Crecordview — klasa
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 Widok jest podłączone bezpośrednio do widoku formularza `CRecordset` obiektu. Widok jest tworzony z zasobu szablonu okna dialogowego i są wyświetlane pola `CRecordset` obiektu w kontrolkach szablonu okna dialogowego. `CRecordView` Obiekt używa wymiana danych okna dialogowego (DDX) i wymiana pól rekordów (RFX) do automatyzowania przenoszenia danych między pól zestawu rekordów i formantów w formularzu. `CRecordView` dostarcza również domyślna implementacja przechodzenia do pierwszego, dalej, poprzednie lub ostatni rekord a interfejsem aktualizowania rekordu aktualnie w widoku.
 
 > [!NOTE]
->  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy Open Database Connectivity (ODBC), należy użyć klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).
+>  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy Open Database Connectivity (ODBC), należy użyć klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: Baza danych programowania](../../data/data-access-programming-mfc-atl.md).
 
 Najczęstszym sposobem tworzenia widoku rekordu jest za pomocą Kreatora aplikacji. Kreatora aplikacji TGE tworzy zarówno w klas widoków rekordów, jak i w swojej klasie skojarzony zestaw rekordów w ramach początkowego szkielet aplikacji. Jeśli nie utworzysz klas widoków rekordów za pomocą Kreatora aplikacji, można utworzyć ją później za pomocą ClassWizard. Jeśli po prostu potrzebujesz jednego formularza, podejście Kreatora aplikacji jest łatwiejsze. ClassWizard pozwala określić użyć widoku rekordu w dalszej części procesu rozwoju. Tworzenie widoku rekordu i zestawu rekordów osobno, a następnie połącz je za pomocą ClassWizard jest najbardziej elastycznym podejściem, ponieważ zapewnia większą kontrolę w nazwach klasy zestawu rekordów i jego. GODZ. /. Plikach CPP. Takie podejście umożliwia również mieć wiele widoków rekordów w tej samej klasy zestawu rekordów.
 
@@ -220,7 +220,7 @@ Jeśli przenosisz poza ostatni rekord w zestawie, widoku rekordu to jest nadal w
 > [!CAUTION]
 >  Wywoływanie `OnMove` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Wywołanie funkcji obsługi aktualizacji interfejsu użytkownika odpowiedni — `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, lub `OnUpdateRecordPrev` — przed odpowiednimi operacji, aby ustalić, czy zestaw rekordów zawiera wszystkie rekordy przeniesienia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-ms.openlocfilehash: c751458a3a2e7e049364ef22a161a3dc9f81df13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 897612c6d5ac96704cc0a945df65146e6a01480a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264381"
 ---
 # <a name="adding-items-to-the-header-control"></a>Dodawanie elementów do formantu nagłówka
 
@@ -27,8 +27,7 @@ Po utworzeniu kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-c
 
 Aby uzyskać więcej informacji, zobacz [dodanie elementu do kontrolki nagłówka o](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

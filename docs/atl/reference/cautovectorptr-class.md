@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 8485f13b91c72d12c2084d2714f2acfa6dda7f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478758"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259558"
 ---
 # <a name="cautovectorptr-class"></a>Klasa CAutoVectorPtr
 
@@ -46,7 +46,7 @@ Typ wskaźnika.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Konstruktor.|
-|[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Destruktor.|
+|[CAutoVectorPtr::~CAutoVectorPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -224,7 +224,7 @@ operator T*() const throw();
 
 Zwraca wskaźnik do typu danych obiektu zdefiniowane w szablonie klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

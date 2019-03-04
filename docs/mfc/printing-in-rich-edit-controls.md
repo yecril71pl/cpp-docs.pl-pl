@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: bf402f5495ad85eb0c5067d60fcedfe29e6350bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263507"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Drukowanie w formantach edycji wzbogaconej
 
@@ -23,8 +23,7 @@ Po sformatowaniu tekst na urządzeniach, może wysłać dane wyjściowe do urzą
 
 Możesz użyć [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) funkcja elementu członkowskiego, aby określić urządzenie docelowe, dla którego kontrolki edycji wzbogaconej formatuje jego tekstu. Ta funkcja jest przydatne w przypadku typu WYSIWYG (wyświetlanych jest, co można uzyskać) formatowania, w której aplikacja umieszcza tekst przy użyciu domyślnej drukarki miar czcionek zamiast na ekranie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

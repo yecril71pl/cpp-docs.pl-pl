@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 84e12a8f4ca0ce6384bc60b2fa01bfaf7824c864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275392"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
 
@@ -38,6 +38,6 @@ Jak określić prawidłowego sposobu zastąpienia danej komunikatów, gdy w okni
 
 Według Konwencji nazwy te programy obsługi zaczynają się od prefiksu "On". Niektóre z tych programów obsługi nie przyjmują argumentów, podczas gdy inne przejąć kilka. Niektóre również mieć zwracanego typu innego niż **void**. Programy obsługi domyślnego dla wszystkich **WM_** komunikaty są udokumentowane w *odwołanie MFC* jako funkcje Członkowskie klasy `CWnd` których nazwy zaczynają się od "On". W deklaracjach funkcji Członkowskich `CWnd` mają prefiks **afx_msg**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)

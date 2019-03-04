@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: a786579797b9ffacca5b338e4cfd6991965704e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270320"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 
@@ -125,7 +125,7 @@ CMFCColorDialog(
 *clrInit*<br/>
 [in] Domyślny wybór kolorów. Jeśli nie określono wartości, wartość domyślna to RGB(0,0,0) (czarny).
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Zastrzeżone.
 
 *pParentWnd*<br/>
@@ -256,7 +256,7 @@ void SetPageTwo(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

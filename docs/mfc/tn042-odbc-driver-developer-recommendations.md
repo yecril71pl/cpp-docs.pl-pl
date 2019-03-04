@@ -1,5 +1,5 @@
 ---
-title: 'TN042: zalecenia dla deweloperów sterowników ODBC'
+title: 'TN042: Zalecenia dla deweloperów sterowników ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276614"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: zalecenia dla deweloperów sterowników ODBC
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Zalecenia dla deweloperów sterowników ODBC
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -102,13 +102,13 @@ Funkcja migawek wymaga `SQLExtendedFetch` pomocy technicznej. Jak wspomniano pow
 
 `SQLGetInfo`, **SQL_SCROLL_OPTIONS** musi obsługiwać **SQL_SO_STATIC**.
 
-## <a name="dynaset-cursors"></a>Kursory zestawu dynamicznego
+## <a name="dynaset-cursors"></a>Dynaset Cursors
 
 Poniżej przedstawiono minimalne pomocy technicznej, wymagane, aby otworzyć dynamiczny:
 
 `SQLGetInfo`, **SQL_ODBC_VER** musi zwracać > "01".
 
-`SQLGetInfo`, **SQL_SCROLL_OPTIONS** musi obsługiwać **SQL_SO_KEYSET_DRIVEN**.
+`SQLGetInfo`, **SQL_SCROLL_OPTIONS** must support **SQL_SO_KEYSET_DRIVEN**.
 
 `SQLGetInfo`, **SQL_ROW_UPDATES** musi zwracać "Y".
 
@@ -116,8 +116,7 @@ Poniżej przedstawiono minimalne pomocy technicznej, wymagane, aby otworzyć dyn
 
 Ponadto, jeśli pesymistycznego blokowania jest wymagana wywołanie `SQLSetPos` irow 1, fRefresh FALSE i stada **SQL_LCK_EXCLUSIVE** zostaną wprowadzone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

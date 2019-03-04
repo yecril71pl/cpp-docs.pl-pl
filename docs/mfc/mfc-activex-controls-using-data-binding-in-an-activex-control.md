@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX'
+title: 'Kontrolki ActiveX MFC: Używanie powiązania danych w kontrolce ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175811"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265954"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: Używanie powiązania danych w kontrolce ActiveX
 
 Jest jednym z zastosowań bardziej zaawansowanych kontrolek ActiveX powiązania danych, co pozwala z właściwością kontrolki, które można powiązać z konkretnym polem w bazie danych. Gdy użytkownik zmodyfikuje danych w tej właściwości powiązanej, formant powiadamia bazy danych i żądaniami zaktualizowania pola rekordu. Baza danych następnie powiadamia użytkownika, formantu powodzenie lub Niepowodzenie żądania.
 
@@ -133,7 +133,6 @@ Oprócz danych powiązanych z metodą get/set, można również utworzyć [możl
 
 Można teraz tworzyć projektu, które będą rejestrować się kontrolka. Po wstawieniu kontrolki w oknie dialogowym **pola danych** i **źródła danych** będzie dodawać właściwości i można teraz wybrać źródło danych i pola do wyświetlenia w kontrolce.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rebar controls [MFC], creating
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
-ms.openlocfilehash: 3cc4795a0d4500a53c775ba6f44c3dce520e5110
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb651aef599b64b787d96a668e2e1496c1dff8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274465"
 ---
 # <a name="creating-a-rebar-control"></a>Tworzenie formantu paska pomocniczego
 
@@ -34,8 +34,7 @@ Aby użyć `CReBarCtrl` obiektu będzie najczęściej wykonaj następujące krok
 
 1. Wywołaj [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) do wstawienia istniejących okien podrzędnych (takich jak `m_wndReToolBar`) do nowej kontrolki paska pomocniczego. Aby uzyskać więcej informacji na temat Wstawianie pasma do istniejącej kontrolki paska pomocniczego, zobacz [formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: podstawy'
+title: 'Windows Sockets: Tło'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274933"
 ---
-# <a name="windows-sockets-background"></a>Windows Sockets: podstawy
+# <a name="windows-sockets-background"></a>Windows Sockets: Tło
 
 W tym artykule opisano ujawnienia Windows Sockets. Artykuł również:
 
@@ -44,7 +44,7 @@ Wielu dostawców oprogramowania sieci obsługuje Windows Sockets w obszarze prot
 
 Biblioteki Microsoft Foundation Class (MFC) obsługuje programowanie z interfejsem API Windows Sockets, podając dwóch klas. Jedną z tych klas `CSocket`, zapewnia wysoki poziom abstrakcji, aby uprościć programowanie komunikacji dla Twojej sieci.
 
-Specyfikację Windows Sockets Windows Sockets: otworzyć Interfejs sieci obliczeniowych w ramach programu Microsoft Windows, teraz w wersji 1.1, został opracowany jako otwarty standard sieci przez dużą grupę użytkowników indywidualnych i firm w społeczności TCP/IP i jest jest to dostępne bezpłatnie do użytku. Gniazda obecnie programowania modelu obsługuje jeden "komunikacji domena", przy użyciu zestawem protokołów internetowych. Specyfikacja jest dostępna w zestawie Windows SDK.
+Specyfikacja Windows Sockets Windows Sockets: Otwórz interfejs dla sieci obliczeniowych w ramach programu Microsoft Windows, teraz w wersji 1.1, został opracowany jako otwarty standard sieci przez dużą grupę użytkowników indywidualnych i firm w społeczności TCP/IP i jest dostępne bezpłatnie do użytku. Gniazda obecnie programowania modelu obsługuje jeden "komunikacji domena", przy użyciu zestawem protokołów internetowych. Specyfikacja jest dostępna w zestawie Windows SDK.
 
 > [!TIP]
 >  Ponieważ gniazda korzystają z zestawem protokołów internetowych, są one trasą preferowaną dla aplikacji, które obsługują komunikację z Internetem na "drogach informacji".
@@ -70,7 +70,7 @@ Dostępne są dwa typy gniazda:
 > [!NOTE]
 >  W obszarze niektóre protokoły sieciowe, takie jak XNS strumienie mogą być rekord obiektowo strumieni rekordów zamiast strumieni bajtów. W obszarze bardziej powszechne, protokół TCP/IP strumienie są jednak strumienie bajtów. Windows Sockets zapewnia poziom abstrakcji niezależne od podstawowych protokołów.
 
-Aby uzyskać informacje o tych typach i jakiego rodzaju gniazda, aby użyć w sytuacji, w których, zobacz [Windows Sockets: gniazda Stream](../mfc/windows-sockets-stream-sockets.md) i [Windows Sockets: do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md).
+Aby uzyskać informacje o tych typach i jakiego rodzaju gniazda, aby użyć w sytuacji, w których, zobacz [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md) i [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md).
 
 ##  <a name="_core_the_socket_data_type"></a> Typ danych GNIAZDA
 
@@ -93,13 +93,12 @@ Gniazda są bardzo przydatne w kontekstach co najmniej trzech komunikacji:
 
 Aby uzyskać więcej informacji, zobacz Windows Sockets specyfikacji: **ntohs**, **ntohl**, **htons**, **htonl**. Ponadto zobacz następujące tematy:
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Gniazda systemu Windows: przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets: Przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
-

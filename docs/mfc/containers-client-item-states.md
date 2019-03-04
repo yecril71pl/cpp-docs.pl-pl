@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery: stany elementu klienckiego'
+title: 'Kontenery: Stany elementu klienckiego'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 866aa6f2265abe671ce0028e3be5f1c8ee1762a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273677"
 ---
-# <a name="containers-client-item-states"></a>Kontenery: stany elementu klienckiego
+# <a name="containers-client-item-states"></a>Kontenery: Stany elementu klienckiego
 
 W tym artykule opisano różne stany, którego element Klient przechodzi w okresie swojego istnienia.
 
@@ -38,10 +38,10 @@ Jeśli element ma został otwarty w oknie serwera zamiast otwierane bezpośredni
 
 Gdy element został aktywowany w miejscu, przekazuje on, zwykle tylko krótko mówiąc, za pośrednictwem stanie aktywnym. Następnie wprowadza ona stan aktywny interfejsu użytkownika, w którym serwer został scalony jego menu, paski narzędzi i innych składników interfejsu użytkownika z tymi kontenera. Obecność tych składników interfejsu użytkownika odróżnia stan aktywny UI w stanie aktywnym. W przeciwnym razie w stanie aktywnym przypomina stan aktywny UI. Jeśli serwer obsługuje cofania, serwer jest wymagany do przechowania informacji poprzedni stan elementu OLE, dopóki nie osiągnie stan załadowany lub Otwórz.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery](../mfc/containers.md)<br/>
 [Aktywacja](../mfc/activation-cpp.md)<br/>
-[Kontenery: powiadomienia dotyczące elementów klienckich](../mfc/containers-client-item-notifications.md)<br/>
+[Kontenery: Powiadomienia dotyczące elementów klienckich](../mfc/containers-client-item-notifications.md)<br/>
 [Trackery](../mfc/trackers.md)<br/>
 [Klasa CRectTracker](../mfc/reference/crecttracker-class.md)

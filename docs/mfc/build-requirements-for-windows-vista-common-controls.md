@@ -1,18 +1,18 @@
 ---
-title: Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji
+title: Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji
 ms.date: 11/04/2016
 helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: c9a01665339c28b58a5d528cbb9dfaa235e7f1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276900"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji
+# <a name="build-requirements-for-windows-vista-common-controls"></a>Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji
 
 Biblioteka Microsoft Foundation Class (MFC) obsługuje wspólnych formantów Windows w wersji 6.1. Formanty standardowe są uwzględnione w Windows Vista i biblioteki znajduje się w Visual Studio SDK. Biblioteka zawiera nowe metody, które podnoszą istniejących klas i nowe klasy i metody, które obsługują wspólnych formantów Windows Vista. W przypadku tworzenia aplikacji, należy przestrzegać wymagań kompilacji i migracji, które są opisane w poniższych sekcjach.
 
@@ -54,9 +54,8 @@ Jeśli używasz programu Visual Studio IDE do tworzenia nowych aplikacji MFC, kt
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
 [Wykres hierarchii](../mfc/hierarchy-chart.md)<br/>
 [Przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md)
-

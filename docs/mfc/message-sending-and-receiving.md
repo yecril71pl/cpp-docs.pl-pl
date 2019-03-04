@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, messages
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
-ms.openlocfilehash: 95a54f3a518be19c7ae6f001e3096b825e64c0c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bda261f4141a7ceb4e678535d9012650818fabce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274911"
 ---
 # <a name="message-sending-and-receiving"></a>Wysyłanie i odbieranie komunikatów
 
@@ -32,7 +32,6 @@ Każdy obiekt, które są zdolne do otrzymywania wiadomości lub poleceń ma wł
 
 Gdy obiekt docelowy polecenia odbiera wiadomości lub polecenia, wyszukuje jego mapy wiadomości pod kątem dopasowania. W przypadku odnalezienia programu obsługi wiadomości, wywołuje program obsługi. Aby uzyskać więcej informacji na temat sposobu mapy komunikatów są przeszukiwane zobacz [jak Framework wyszukiwania mapy wiadomości](../mfc/how-the-framework-searches-message-maps.md). Można ponownie znaleźć rysunku [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
-

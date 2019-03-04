@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCMaskedEdit
+title: CMFCMaskedEdit Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCMaskedEdit
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: c5625c60d6c3c5037c1ef63719c63371b0ff7934
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276984"
 ---
-# <a name="cmfcmaskededit-class"></a>Klasa CMFCMaskedEdit
+# <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
 
 `CMFCMaskedEdit` Klasa obsługuje formant edycji maskowanej, który sprawdza poprawność danych wejściowych użytkownika w oparciu o maskę i wyświetla zatwierdzone wyniki zgodnie ze wzorcem.
 
@@ -336,7 +336,7 @@ Ta metoda ustawia tekst kontrolki.
 
 Ta metoda redefiniuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

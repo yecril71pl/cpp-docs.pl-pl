@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 4c15fc0ba9c78d8b6416cd88480c8ada6e3febf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265057"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState — Struktura
 
@@ -34,7 +34,7 @@ struct DispatchState;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Dispatchstate::dispatchstate —](#ctor)|Tworzy nowy `DispatchState` obiektu.|
+|[DispatchState::DispatchState](#ctor)|Tworzy nowy `DispatchState` obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -54,7 +54,7 @@ struct DispatchState;
 
 **Namespace:** współbieżności
 
-##  <a name="ctor"></a>  Dispatchstate::dispatchstate — Konstruktor
+##  <a name="ctor"></a>  DispatchState::DispatchState Constructor
 
 Tworzy nowy `DispatchState` obiektu.
 
@@ -62,7 +62,7 @@ Tworzy nowy `DispatchState` obiektu.
 DispatchState();
 ```
 
-##  <a name="m_dispatchstatesize"></a>  Dispatchstate::m_dispatchstatesize — członek danych
+##  <a name="m_dispatchstatesize"></a>  DispatchState::m_dispatchStateSize Data Member
 
 Rozmiar tej struktury, która jest używana do przechowywania wersji.
 
@@ -70,7 +70,7 @@ Rozmiar tej struktury, która jest używana do przechowywania wersji.
 unsigned long m_dispatchStateSize;
 ```
 
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Dispatchstate::m_fispreviouscontextasynchronouslyblocked — członek danych
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member
 
 Informuje, czy wprowadzony w tym kontekście `Dispatch` metody, ponieważ poprzedni kontekst asynchronicznie zablokowany. To jest używane tylko w kontekście harmonogramu UMS i jest ustawiona na wartość `0` dla wszystkich kontekstów wykonanie.
 
@@ -86,6 +86,6 @@ Zarezerwowane dla przyszłych informacji przekazywanie usługi BITS.
 unsigned int m_reserved : 31;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

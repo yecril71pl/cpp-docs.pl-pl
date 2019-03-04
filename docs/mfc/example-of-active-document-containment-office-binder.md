@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279188"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Przykład zawierania dokumentów aktywnych: Office Binder
 
@@ -28,7 +28,6 @@ Po wybraniu aktywnego dokumentu innego typu aplikacji, zmiany w interfejsie inte
 
 Istnieją oczywiście innych możliwych typów kontenery obok wiążących. Eksplorator plików używa typowej interfejsu podwójne okienka, w którym okienka po lewej stronie używa formantu drzewa do wyświetlania hierarchiczną listę katalogów w dysku lub w sieci, a w okienku po prawej stronie wyświetla pliki znajdujące się w aktualnie wybranego katalogu. Internet — typ przeglądarki kontenera (na przykład program Microsoft Internet Explorer), a nie przy użyciu interfejsu podwójne okienka zwykle ma jedną klatkę i zapewnia nawigacji za pomocą hiperlinków.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
-

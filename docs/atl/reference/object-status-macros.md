@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: 9c4df80b2b9828077ec3738bc296f19aadf2df68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb5ff6d7570b03b32852fc450f58043446f721f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267271"
 ---
 # <a name="object-status-macros"></a>Makra stanu obiektów
 
@@ -44,6 +44,6 @@ To makro jest używane do ustawiania flagi OLEMISC dla formantu ActiveX. Zapozna
 
 [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

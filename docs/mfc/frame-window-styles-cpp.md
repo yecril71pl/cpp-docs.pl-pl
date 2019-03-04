@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: 01eb593e6a7c896b3c6e4acf9f753b73a346e3e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cade8e7e50779437feb73a94058dc62118c03c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510750"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274651"
 ---
 # <a name="frame-window-styles-c"></a>Style okna ramowego (C++)
 
@@ -32,7 +32,6 @@ Jeśli okna **FWS_ADDTOTITLE** (co jest ustawieniem domyślnym) ustawiony bit st
 
 - [Style okna ramowego](../mfc/reference/styles-used-by-mfc.md#window-styles)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna ramowe](../mfc/frame-windows.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272103"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 
@@ -86,7 +86,7 @@ Każdą z klas kolekcji dostępne oferuje różną charakterystykę wydajności,
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |Lista|Tak|Nie|Szybko (stały czas)|Powolne O(n)|Tak|
 |Tablica|Tak|Przez int (stały czas)|Powolne O(n), z wyjątkiem sytuacji, w przypadku wstawiania na końcu, w których wielkość stałym czasie|Powolne O(n)|Tak|
-|Mapy|Nie|Według klucza (stały czas)|Szybko (stały czas)|Szybko (stały czas)|Tak (wartości) (kluczy)|
+|Mapa|Nie|Według klucza (stały czas)|Szybko (stały czas)|Szybko (stały czas)|Tak (wartości) (kluczy)|
 |Mapa red czarny|Tak (według kluczy)|Według klucza O (log n)|Szybkie O (log n)|Szybkie O (log n)|Nie|
 |Multimap red czarny|Tak (według kluczy)|Według klucza O(log n) (wiele wartości dla każdego klucza)|Szybkie O (log n)|Szybkie O (log n)|Tak (wiele wartości dla każdego klucza)|
 
@@ -124,7 +124,7 @@ Poniższe przykłady pokazują klas kolekcji:
 
 - [Przykładowe Neon](../visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
 [Klasy kolekcji](../atl/collection-classes.md)

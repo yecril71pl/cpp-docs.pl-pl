@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461961"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272177"
 ---
 # <a name="registration"></a>Rejestracja
 
@@ -46,7 +46,7 @@ RegEdit Scala zawartość pliku tekstowego reg baza danych rejestracji. Aby wery
 
 Po utworzeniu aplikacji serwera za pomocą Kreatora aplikacji, Kreator zakończy pracę wszystkich zadań inicjowania dla Ciebie automatycznie. W tej sekcji opisano, co należy zrobić, jeśli ręcznie napisać aplikację serwera.
 
-Po uruchomieniu aplikacji serwera przez aplikację kontenera OLE systemowych bibliotek DLL należy dodać opcję "/ osadzania" do wiersza polecenia serwera. Zachowanie aplikacji serwera, który różni się w zależności od tego, czy jej uruchamiania przez kontener, więc pierwszą rzeczą, aplikacja powinna wykonać, gdy rozpocznie się wykonywanie sprawdzania dla "/ osadzania" lub "-osadzania" opcji w wierszu polecenia. Jeśli istnieje tego przełącznika, załadować zestaw zasobów, które pokazują server jako znajdujące się albo aktywny w miejscu lub pełni Otwórz. Aby uzyskać więcej informacji, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).
+Po uruchomieniu aplikacji serwera przez aplikację kontenera OLE systemowych bibliotek DLL należy dodać opcję "/ osadzania" do wiersza polecenia serwera. Zachowanie aplikacji serwera, który różni się w zależności od tego, czy jej uruchamiania przez kontener, więc pierwszą rzeczą, aplikacja powinna wykonać, gdy rozpocznie się wykonywanie sprawdzania dla "/ osadzania" lub "-osadzania" opcji w wierszu polecenia. Jeśli istnieje tego przełącznika, załadować zestaw zasobów, które pokazują server jako znajdujące się albo aktywny w miejscu lub pełni Otwórz. Aby uzyskać więcej informacji, zobacz [menu i zasoby: Dodatki do serwera](../mfc/menus-and-resources-server-additions.md).
 
 Aplikacja serwera powinien także wywołać jej `CWinApp::RunEmbedded` funkcję do analizowania wiersza polecenia. Jeśli zwraca wartość różną od zera, aplikacja nie powinna wyświetlone okno, ponieważ została uruchomiona z aplikacji kontenera, nie jako autonomiczną aplikację. Ta funkcja aktualizuje wpis serwera bazy danych rejestracji systemu i wywołania `RegisterAll` funkcja elementu członkowskiego dla Ciebie wykonywania wystąpienia rejestracji.
 
@@ -56,7 +56,7 @@ Przy uruchamianiu aplikacji serwera należy się upewnić, że można wykonywać
 
 Jeśli piszesz miniserver, zgodnie z definicją, który zostanie uruchomiony zawsze przez kontener. Nadal należy przeanalizować wiersza polecenia, aby sprawdzić, czy opcja "/ osadzania". Braku tej opcji w wierszu polecenia oznacza, że użytkownik ma próbowano uruchomić miniserver jako autonomiczną aplikację. W takiej sytuacji należy zarejestrować serwer przy użyciu systemowej bazy danych rejestracji, a następnie wyświetlić okno komunikatu, informujący użytkownika, aby uruchomić miniserver z aplikacji kontenera.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Serwery](../mfc/servers.md)<br/>

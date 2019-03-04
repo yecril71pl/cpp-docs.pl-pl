@@ -1,5 +1,5 @@
 ---
-title: Klasa CPtrList
+title: CPtrList Class
 ms.date: 11/04/2016
 f1_keywords:
 - CPtrList
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: dfd545e1758ea257a89606655bf735829dbe8840
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b88b0950b3b46f9738bd26080883c00d46f8555
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266240"
 ---
-# <a name="cptrlist-class"></a>Klasa CPtrList
+# <a name="cptrlist-class"></a>CPtrList Class
 
 Obsługuje listy wskaźników typu void.
 
@@ -55,7 +55,7 @@ Aby uzyskać więcej informacji na temat korzystania z `CPtrList`, zapoznaj się
 
 **Nagłówek:** afxcoll.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

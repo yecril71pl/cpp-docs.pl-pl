@@ -9,19 +9,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271739"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 
 W tym dokumencie opisano rolę anulowania w Biblioteka równoległych wzorców (PPL), jak anulować czynność równoległą i jak określić, kiedy zostanie anulowane równoległą pracę.
 
 > [!NOTE]
->  Środowisko wykonawcze używa obsługi wyjątków do implementacji anulowania. Catch lub nie obsługiwać tych wyjątków w kodzie. Ponadto firma Microsoft zaleca, pisanie kodu bezpieczne pod względem wyjątków w treści funkcji, dla zadań podrzędnych. Na przykład można użyć *inicjowania jest pozyskiwanie zasobów* wzorca (RAII) w celu zapewnienia zasobów są poprawnie obsługiwania gdy wyjątek jest zgłaszany w treści zadania. Aby uzyskać kompletny przykład używa wzór RAII czyszczenie zasobów w ramach można anulować zadania, zobacz [przewodnik: usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
+>  Środowisko wykonawcze używa obsługi wyjątków do implementacji anulowania. Catch lub nie obsługiwać tych wyjątków w kodzie. Ponadto firma Microsoft zaleca, pisanie kodu bezpieczne pod względem wyjątków w treści funkcji, dla zadań podrzędnych. Na przykład można użyć *inicjowania jest pozyskiwanie zasobów* wzorca (RAII) w celu zapewnienia zasobów są poprawnie obsługiwania gdy wyjątek jest zgłaszany w treści zadania. Aby uzyskać kompletny przykład używa wzór RAII czyszczenie zasobów w ramach można anulować zadania, zobacz [instruktażu: Usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
 
 ## <a name="key-points"></a>Kwestie kluczowe
 
@@ -71,7 +71,7 @@ Można również użyć [concurrency::task_group](reference/task-group-class.md)
 
 Istnieje wiele sposobów, aby anulować czynność równoległą. Jest preferowany sposób użycia tokenu anulowania. Grupy zadań również obsługę [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metody i [CONCURRENCY::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) metody. Końcowe sposób polega na zgłoszenie wyjątku w treści funkcji roboczych zadania. Bez względu na to wybór metody Dowiedz się, że anulowanie nastąpić z opóźnieniem. Mimo że nowa praca nie została uruchomiona, jeśli zadania lub grupy zadań zostanie anulowane, aktywną pracą należy sprawdzić i reagowanie na operację anulowania.
 
-Więcej przykładów, które anulowanie zadań równoległych, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [jak: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), i [porady: użycie Obsługa aby przerwać pętlę równoległą wyjątków](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Aby uzyskać więcej przykładów, które anulowanie zadań równoległych, zobacz [instruktażu: Łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [jak: Użyj anulowania aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), i [jak: Użyj wyjątków, obsługa aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 ###  <a name="tokens"></a> Korzystając z tokena odwołania, aby anulować czynność równoległą
 
@@ -259,9 +259,8 @@ Użyj anulowania jest odpowiednie, jeśli każdy członek grupy powiązanych zad
 
 [cancellation_token, klasa](../../parallel/concrt/reference/cancellation-token-class.md)
 
-[task_group — klasa](reference/task-group-class.md)
+[task_group, klasa](reference/task-group-class.md)
 
 [structured_task_group, klasa](../../parallel/concrt/reference/structured-task-group-class.md)
 
-[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
-
+[parallel_for Function](reference/concurrency-namespace-functions.md#parallel_for)

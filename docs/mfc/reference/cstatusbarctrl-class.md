@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272844"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
@@ -244,7 +244,7 @@ Adres tablicę liczb całkowitych o trzy elementy. Pierwszy element otrzymuje sz
 *nHorz*<br/>
 Odwołanie do liczba całkowita, która odbiera szerokość obramowania poziomej.
 
-*Konweruj*<br/>
+*nVert*<br/>
 Odwołanie do liczba całkowita, która odbiera szerokość obramowania pionowy.
 
 *nSpacing*<br/>
@@ -343,7 +343,7 @@ BOOL GetRect(
 *nPane*<br/>
 Liczony od zera indeks części, w których prostokąt otaczający ma zostać pobrane.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT, powodują pasek stanu, aby używać jej domyślny kolor tła.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 Minimalna wysokość w pikselach formantu.
 
 ### <a name="remarks"></a>Uwagi
@@ -613,7 +613,7 @@ Adres określania tekstu, aby ustawić ciąg zakończony znakiem null. Jeśli *n
 *nPane*<br/>
 Liczony od zera indeks części do ustawienia. Jeśli ta wartość wynosi 255, formantu paska stanu będzie traktowana jako prosty formant mających tylko jednej części.
 
-*nNie*<br/>
+*nType*<br/>
 Typ operacji rysowania. Zobacz [komunikat SB_SETTEXT](/windows/desktop/Controls/sb-settext) listę możliwych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -654,7 +654,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

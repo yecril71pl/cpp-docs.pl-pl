@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273806"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dwa sposoby tworzenia obiektu CArchive
 
@@ -60,7 +60,7 @@ Oprócz serializacji dokumentu przez platformę, są inne sytuacje, kiedy może 
 
    Drugi argument `CArchive` Konstruktor jest wyliczany określający czy archiwum będą używane do przechowywania lub podczas ładowania danych do lub z pliku. `Serialize` Funkcja obiektu sprawdza, czy ten stan, wywołując `IsStoring` funkcji dla obiektu archiwum.
 
-Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektów, zamknij go. Mimo że `CArchive` (i `CFile`) obiektów zostanie automatycznie zamknięte archiwum (i plik), jest dobrą praktyką, aby jawnie w tym celu, ponieważ ułatwia odzyskiwanie z błędami. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz artykuł [wyjątki: wyjątki połowowe i usuwanie](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektów, zamknij go. Mimo że `CArchive` (i `CFile`) obiektów zostanie automatycznie zamknięte archiwum (i plik), jest dobrą praktyką, aby jawnie w tym celu, ponieważ ułatwia odzyskiwanie z błędami. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz artykuł [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Aby zamknąć obiektu CArchive
 
@@ -68,7 +68,6 @@ Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektó
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
-
+[Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)

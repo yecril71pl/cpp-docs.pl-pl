@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567472"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266149"
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 
-Klasy kolekcji `CMap`, `CList`, i `CArray` do celów takich jak porównywanie, kopiując i serializacji elementów za pomocą funkcji oparte na szablonach pomocnika globalnego. W ramach implementacji klas na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji, zgodnie z potrzebami z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Instrukcje dotyczące zastępowanie funkcji pomocnika, takich jak `SerializeElements`, znajduje się w artykule [kolekcje: jak utworzyć kolekcję bezpieczny](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że `ConstructElements` i `DestructElements` zostały wycofane.
+Klasy kolekcji `CMap`, `CList`, i `CArray` do celów takich jak porównywanie, kopiując i serializacji elementów za pomocą funkcji oparte na szablonach pomocnika globalnego. W ramach implementacji klas na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji, zgodnie z potrzebami z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Instrukcje dotyczące zastępowanie funkcji pomocnika, takich jak `SerializeElements`, zapoznaj się z artykułem [kolekcji: Jak utworzyć kolekcję bezpieczny](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że `ConstructElements` i `DestructElements` zostały wycofane.
 
 Biblioteki klas Microsoft Foundation udostępnia następujące funkcje globalne w afxtempl.h do dostosowywania Twoje klasy kolekcji:
 
@@ -105,7 +105,7 @@ Liczba elementów do skopiowania.
 
 Domyślna implementacja używa prosty operator przypisania ( **=** ) do wykonania tej operacji kopiowania. Jeśli typ kopiowane nie jest przeciążony operator =, to domyślna implementacja wykonuje kopię bitową.
 
-Aby uzyskać informacje dotyczące wykonywania tej i innych funkcji pomocnika, zobacz artykuł [kolekcje: jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
+Aby uzyskać informacje dotyczące wykonywania tej i innych funkcji pomocnika, zobacz artykuł [kolekcji: Jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -125,7 +125,7 @@ void  AFXAPI DumpElements(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Zrzuć kontekstu służąca do zrzucania elementów.
 
 *TYP*<br/>
@@ -216,17 +216,17 @@ Liczba elementów jest zarchiwizowany
 
 Domyślna implementacja jest bitową operację odczytu lub zapisu.
 
-Aby uzyskać informacje dotyczące wykonywania tej i innych funkcji pomocnika, zobacz artykuł [kolekcje: jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
+Aby uzyskać informacje dotyczące wykonywania tej i innych funkcji pomocnika, zobacz artykuł [kolekcji: Jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w artykule [kolekcje: jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
+Zobacz przykład w artykule [kolekcji: Jak utworzyć kolekcję bezpieczny](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxtempl.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
 [Klasa CMap](cmap-class.md)<br/>

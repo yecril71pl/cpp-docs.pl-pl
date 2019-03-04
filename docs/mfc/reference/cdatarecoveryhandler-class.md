@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273039"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Klasa CDataRecoveryHandler
 
@@ -146,7 +146,7 @@ Wszystkie metody `CDataRecoveryHandler` klasy są wirtualne. Zastępowanie metod
 
 Przed użyciem `CDataRecoveryHandler` obiektu, należy wywołać [CDataRecoveryHandler::Initialize](#initialize).
 
-Ponieważ `CDataRecoveryHandler` klasy jest ściśle połączony Menedżera ponownego uruchamiania `CDataRecoveryHandler` zależy od parametrów globalnych `m_dwRestartManagerSupportFlags`. Ten parametr określa, jakie uprawnienia ma Menedżera ponownego uruchamiania i sposób jej interakcji z aplikacją. Aby dołączyć Menedżera ponownego uruchamiania do istniejącej aplikacji, musisz przypisać `m_dwRestartManagerSupportFlags` odpowiednią wartość w Konstruktorze głównej aplikacji. Aby uzyskać więcej informacji na temat używania Menedżera ponownego uruchamiania, zobacz [porady: Dodawanie obsługi Menedżera ponownego uruchomienia](../../mfc/how-to-add-restart-manager-support.md).
+Ponieważ `CDataRecoveryHandler` klasy jest ściśle połączony Menedżera ponownego uruchamiania `CDataRecoveryHandler` zależy od parametrów globalnych `m_dwRestartManagerSupportFlags`. Ten parametr określa, jakie uprawnienia ma Menedżera ponownego uruchamiania i sposób jej interakcji z aplikacją. Aby dołączyć Menedżera ponownego uruchamiania do istniejącej aplikacji, musisz przypisać `m_dwRestartManagerSupportFlags` odpowiednią wartość w Konstruktorze głównej aplikacji. Aby uzyskać więcej informacji na temat używania Menedżera ponownego uruchamiania, zobacz [jak: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -684,10 +684,9 @@ Po użytkownik zapisze dokument, aplikacja usuwa plik automatycznie zapisany, po
 
 Aby użyć tej metody, należy ustawić AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES *m_dwRestartManagerSupportFlags*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)
-
+[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)

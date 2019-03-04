@@ -1,5 +1,5 @@
 ---
-title: 'CWinApp: klasa aplikacji'
+title: 'CWinApp: Klasa aplikacji'
 ms.date: 11/04/2016
 f1_keywords:
 - CWinApp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: a19d510dc4c8835497ff9e1bb7d5ca6242206fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258713"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp: klasa aplikacji
+# <a name="cwinapp-the-application-class"></a>CWinApp: Klasa aplikacji
 
 Główna klasa aplikacji w MFC hermetyzuje Inicjalizacja, uruchamianie i kończenie działania aplikacji dla systemu operacyjnego Windows. Aplikacja oparta na strukturze musi mieć jeden i tylko jeden obiekt klasę pochodną [CWinApp](../mfc/reference/cwinapp-class.md). Ten obiekt jest konstruowany przed utworzeniem systemu windows.
 
@@ -37,10 +37,9 @@ Aby zainicjować aplikację, `WinMain` wywołuje obiekt aplikacji `InitApplicati
 > [!NOTE]
 >  Nazw wyświetlanych w **bold** w tej dokumentacji wskazują elementów dostarczanych przez bibliotekę Microsoft Foundation Class i Visual C++. Nazw wyświetlanych w `monospaced` typu wskazać elementy, które można utworzyć ani zastąpić.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
 [Klasa CWinApp i kreator aplikacji MFC](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>
 [Funkcje składowe CWinApp z możliwością zastąpienia](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Specjalne usługi CWinApp](../mfc/special-cwinapp-services.md)
-

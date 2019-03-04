@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c6fb81ad1a6a5233eb27f67fb7985e23b0c0f4b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f83e56e3e9b8468b71534d225080ff5874731b74
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268892"
 ---
 # <a name="creating-an-atl-project"></a>Tworzenie projektu ATL
 
@@ -35,7 +35,7 @@ Najprostszym sposobem, aby utworzyć Projekt ATL jest użycie Kreatora projektu 
 
 Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Aby uzyskać więcej informacji o konfiguracji dla nowego projektu ATL i sposobami ich zmiany, zobacz [domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../../ide/property-pages-visual-cpp.md)

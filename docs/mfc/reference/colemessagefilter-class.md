@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: 4e12b4dc41c0e384025a2af567cb118d066aaa72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259103"
 ---
 # <a name="colemessagefilter-class"></a>Klasa COleMessageFilter
 
@@ -78,7 +78,7 @@ Domyślnie `COleMessageFilter` obiekt jest przydzielany, gdy aplikacja została 
 
 Jest to klasa zaawansowane; rzadko potrzebne do pracy z nim bezpośrednio.
 
-Aby uzyskać więcej informacji, zobacz artykuł [serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
+Aby uzyskać więcej informacji, zobacz artykuł [serwerów: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -250,7 +250,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 ### <a name="parameters"></a>Parametry
 
-*Nlimit*<br/>
+*nTimeout*<br/>
 Liczba milisekund dla opóźnienia oczekujących komunikatów.
 
 ### <a name="remarks"></a>Uwagi
@@ -284,7 +284,7 @@ Gdy oczekuje komunikatów klawiatury lub myszy podczas wywołania i połączenie
 
 Okna dialogowe są wyłączone, bieżący "Ponów próbę wykonania odpowiedzi" jest zawsze używana dla wywołań do aplikacji zajęty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

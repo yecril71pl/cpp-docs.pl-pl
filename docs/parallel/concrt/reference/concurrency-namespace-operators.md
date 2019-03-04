@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 5982ae0ec3baff38b43b0ce504a47d512559390d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d790833e7dcecb5776d2adecd5e6bc1f681db1cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521612"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258804"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
@@ -20,7 +20,7 @@ ms.locfileid: "51521612"
 |[Operator&gt;=](#operator_gt_eq)|[Operator&lt;](#operator_lt)|[Operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>  operator&#124; &#124; — Operator
+##  <a name="operator_lor"></a>  operator&#124;&#124; Operator
 
 Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczone jako argumenty zakończą się pomyślnie.
 
@@ -341,6 +341,6 @@ Zachowanie tego operatora jest taka sama jak równorzędny operator dla `vector`
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

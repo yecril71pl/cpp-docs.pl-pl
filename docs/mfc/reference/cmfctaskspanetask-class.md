@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCTasksPaneTask
+title: CMFCTasksPaneTask Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTask
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 7d7f5a87dc005ee67f9ce65f4ad686cb27d007c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279253"
 ---
-# <a name="cmfctaskspanetask-class"></a>Klasa CMFCTasksPaneTask
+# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask Class
 
 `CMFCTasksPaneTask` Klasy jest pomocnikiem klasy, która reprezentuje zadania związane z formantem panelu zadań ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Obiekt zadania przedstawia element w grupie zadań ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Każde zadanie może mieć polecenie, które wykonuje szablon, gdy użytkownik kliknie ikonę która pojawia się na lewo od nazwy zadania i zadania.
 
@@ -94,7 +94,7 @@ Na poniższej ilustracji przedstawiono grupy zadań, która zawiera trzy zadania
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxTasksPane.h
+**Header:** afxTasksPane.h
 
 ##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask
 
@@ -269,14 +269,14 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Reprezentuje okna nadrzędnego bieżącego zadania.
 
-*Dane*<br/>
+*data*<br/>
 [out] Obiekt typu `CAccessibilityData` , jest wypełniana danymi ułatwień dostępu do bieżącego zadania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość TRUE, jeśli *danych* parametr został pomyślnie wypełnione danymi ułatwień dostępu do bieżącego zadania; w przeciwnym razie FALSE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

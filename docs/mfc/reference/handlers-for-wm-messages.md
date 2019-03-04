@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
-ms.openlocfilehash: ea95958ccc7180ffa6472ea2f288dda85223cea5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2913bd775981eb197fec848aebca227822b45423
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267150"
 ---
 # <a name="handlers-for-wm-messages"></a>Programy obsługi komunikatów WM_
 
@@ -28,7 +28,6 @@ Poniższe tematy odpowiadają wpisy mapy.
 |[S](../../mfc/reference/wm-messages-s.md)|ON_WM_SETCURSOR za pośrednictwem ON_WM_SYSKEYUP|
 |[T - Z](../../mfc/reference/wm-messages-t-z.md)|ON_WM_TIMECHANGE za pośrednictwem ON_WM_WININICHANGE|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274547"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 
@@ -296,7 +296,7 @@ virtual BOOL Read(
 *bcArray*<br/>
 [out] Odwołanie do zmiennej tablicy bajtów, który odbiera wartość odczytu z klucza rejestru.
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 [out] Odwołanie do wskaźnika do `POINT` strukturę, która otrzymuje wartość odczytu z klucza rejestru.
 
 *Rect*<br/>
@@ -420,7 +420,7 @@ virtual BOOL Write(
 *Rect*<br/>
 [in] Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmiennej, która zawiera dane, które mają być przechowywane.
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 [in] Odwołanie do wskaźnika do `POINT` zmiennej, która zawiera dane, które mają być przechowywane.
 
 *pData*<br/>
@@ -446,7 +446,7 @@ Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
 
 Aby można było zapisać do rejestru, należy ustawić *bReadOnly* na wartość różną od zera, tworząc [CSettingsStore](../../mfc/reference/csettingsstore-class.md) obiektu. Aby uzyskać więcej informacji, zobacz [CSettingsStore::CSettingsStore](#csettingsstore).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

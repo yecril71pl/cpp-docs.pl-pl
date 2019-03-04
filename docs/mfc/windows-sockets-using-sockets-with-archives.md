@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: używanie gniazd z archiwami'
+title: 'Windows Sockets: Używanie gniazd z archiwami'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], archives
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261508"
 ---
-# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Używanie gniazd z archiwami
 
 W tym artykule opisano [model programowania CSocket](#_core_the_csocket_programming_model). Klasa [CSocket](../mfc/reference/csocket-class.md) dostarcza obsługę gniazda na wyższym poziomie abstrakcji, niż klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` używa wersji protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. `CSocket` zapewnia blokuje (podczas obsługi przetwarzania w tle Windows wiadomości) oraz dostęp do `CArchive`, która zarządza wieloma aspektami komunikacji, który będzie trzeba samodzielnie przy użyciu surowego interfejsu API lub klasy `CAsyncSocket`.
 
 > [!TIP]
 >  Można użyć klasy `CSocket` przez siebie jako nieco bardziej wygodne `CAsyncSocket`, ale najprostszym modelem programowania jest użycie `CSocket` z `CArchive` obiektu.
 
-Aby uzyskać więcej informacji na temat sposobu działania wdrożenia gniazda z archiwami zobacz [Windows Sockets: jak gniazda z archiwów pracy](../mfc/windows-sockets-how-sockets-with-archives-work.md). Przykładowy kod, zobacz [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md) i [Windows Sockets: przykład z gniazda przy użyciu archiwa](../mfc/windows-sockets-example-of-sockets-using-archives.md). Aby uzyskać informacji na temat niektórych funkcji, aby uzyskać wyprowadzanie własnych klas z klas gniazd, zobacz [Windows Sockets: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Aby uzyskać więcej informacji na temat sposobu działania wdrożenia gniazda z archiwami zobacz [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md). Przykładowy kod, zobacz [Windows Sockets: Sekwencja operacji przy](../mfc/windows-sockets-sequence-of-operations.md) i [Windows Sockets: Przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md). Aby uzyskać informacji na temat niektórych funkcji, aby uzyskać wyprowadzanie własnych klas z klas gniazd, zobacz [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
 >  Jeśli piszesz program kliencki MFC do komunikacji z serwerami ustanowionych (inne niż MFC), nie będą wysyłane obiektów C++ w archiwum. Serwer nie działa aplikacji MFC, która rozumie rodzaje obiektów, które chcesz wysłać, nie będą mogą odbierać i deserializacji obiektów. Powiązane materiału na temat komunikowania się z aplikacji innych niż MFC, również znaleźć w artykule [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md).
@@ -70,16 +70,15 @@ Za pomocą `CSocket` obiektu obejmuje tworzenie i kojarzenie ze sobą kilka obie
     > [!NOTE]
     >  Klasa `CArchive` dostarcza `IsBufferEmpty` funkcja elementu członkowskiego specjalnie dla klasy `CSocket`. Jeśli bufor zawiera wiele wiadomości danych, na przykład, należy w pętli do wszystkich z nich są odczytywane i rozmiar buforu jest wyczyszczone. W przeciwnym razie dalej powiadomienia, że ma danych do odebrania może na czas nieokreślony opóźniona. Użyj `IsBufferEmpty` aby mieć pewność, że można pobrać wszystkich danych.
 
-Artykuł [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md) ilustruje obie strony tego procesu z przykładowym kodem.
+Artykuł [Windows Sockets: Sekwencja operacji przy](../mfc/windows-sockets-sequence-of-operations.md) ilustruje obie strony tego procesu z przykładowym kodem.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

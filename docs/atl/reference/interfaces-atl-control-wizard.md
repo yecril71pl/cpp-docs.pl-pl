@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-ms.openlocfilehash: 5d3afda0f31cf4cc8d02af0363ba1b40414ec8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f19df1723a4e115ca7f8e314bd5ea423082417e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266981"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfejsy, Kreator kontrolki ATL
 
@@ -20,7 +20,7 @@ Ta strona kreatora zidentyfikować interfejsy, które są obsługiwane przez kon
 > [!NOTE]
 > W przypadku wybrania **kontrolka minimalnego** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.
 
-- **Nie jest obsługiwany**
+- **Nieobsługiwane**
 
    Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.
 
@@ -35,7 +35,6 @@ Ta strona kreatora zidentyfikować interfejsy, które są obsługiwane przez kon
    |**\<**|Usuwa nazwę interfejsu aktualnie wybrany w **obsługiwane** listy.|
    |**\<\<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **obsługiwane** listy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
-
