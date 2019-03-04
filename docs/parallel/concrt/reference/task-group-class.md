@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294138"
 ---
 # <a name="taskgroup-class"></a>task_group — Klasa
 
@@ -245,7 +245,7 @@ Wywoływanie `wait` na `task_group` obiektu Ponadto resetuje go do stanu czysteg
 
 W ścieżce niewyjątkowego wykonywania masz upoważnienia do obu tę metodę należy wywołać lub `run_and_wait` metody przed destruktor `task_group` wykonuje.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [structured_task_group, klasa](structured-task-group-class.md)<br/>

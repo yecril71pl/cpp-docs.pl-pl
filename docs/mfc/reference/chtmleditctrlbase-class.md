@@ -1,5 +1,5 @@
 ---
-title: Klasa CHtmlEditCtrlBase
+title: CHtmlEditCtrlBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrlBase
@@ -220,14 +220,14 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590141"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293943"
 ---
-# <a name="chtmleditctrlbase-class"></a>Klasa CHtmlEditCtrlBase
+# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
 
 Przedstawia składnik edycji HTML.
 
@@ -395,10 +395,10 @@ Nazwa tagu (na przykład, "P" lub "table").
 Adres URL obrazu.
 
 *nTagType*<br/>
-Typ znacznika: 0 oznacza, że obraz jest używany tylko w znaczniku otwierającym. 1 oznacza, że obraz jest tylko za pomocą tagu zamykającego. 2 oznacza, że obraz jest otwierającym i zamykającym tagiem. Pojedynczy tagów, takich jak br i komentarz musi zostać dodany z typem tagu ustawione na 0.
+Typ znacznika: wartość 0 oznacza, że obraz jest używany tylko w znaczniku otwierającym. 1 oznacza, że obraz jest tylko za pomocą tagu zamykającego. 2 oznacza, że obraz jest otwierającym i zamykającym tagiem. Pojedynczy tagów, takich jak br i komentarz musi zostać dodany z typem tagu ustawione na 0.
 
 *nAlignment*<br/>
-Wyrównanie (tylko elementy prostokątne): ten parametr wskazuje, że obraz jest element z atrybutem wyrównania. Lewy = 0, Centrum = 1, prawy = 2 i undefined = 3. W lewo, prawo lub atrybutów Centrum musi być jawnie ustawione dla elementu.
+Wyrównanie (tylko elementy prostokątne): Ten parametr wskazuje, że obraz jest element z atrybutem wyrównania. Lewy = 0, Centrum = 1, prawy = 2 i undefined = 3. W lewo, prawo lub atrybutów Centrum musi być jawnie ustawione dla elementu.
 
 *nPosInfo*<br/>
 Pozycjonowanie informacji. Określa, jakie kaskadowe arkusze stylów (CSS) wartość pozycjonowania glif, których dotyczy przypadku, gdy jest to statyczne pozycjonowanie = 0, pozycjonowanie absolutne = 1, pozycjonowanie względne = 2, a wszystkie = 3. W tym polu można określić jeden symbol tagu, gdy nie jest ustawiony i inny symboli, aby wyświetlać punktu kontrolnego, gdy ustawiony jest tag.
@@ -714,7 +714,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ameryka Południowa*<br/>
+*sa*<br/>
 Blok dostępne tagi z formatu, jako tablicę ciągów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2562,8 +2562,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Ta metoda wysyła [identyfikator polecenia IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) do formantu WebBrowser.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Przykładowe HTMLEdit](../../visual-cpp-samples.md)
-

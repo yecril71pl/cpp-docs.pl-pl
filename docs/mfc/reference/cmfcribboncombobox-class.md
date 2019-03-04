@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonComboBox
+title: CMFCRibbonComboBox Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonComboBox
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5c9e6c43c4e87508dc9ab66976309f80cdf09adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541430"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294449"
 ---
-# <a name="cmfcribboncombobox-class"></a>Klasa CMFCRibbonComboBox
+# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox Class
 
 `CMFCRibbonComboBox` Klasa implementuje formant pola kombi, które można dodać do paska wstążki, panelu Wstążki lub menu podręcznego wstążki.
 
@@ -165,7 +165,7 @@ CMFCRibbonComboBox();
 *lpszLabel*<br/>
 [in] Wyświetl etykietę pola kombi.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 [in] Indeks mały obraz pola kombi.
 
 ### <a name="remarks"></a>Uwagi
@@ -286,7 +286,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia dla tego pola kombi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -435,7 +435,7 @@ void SetDropDownHeight(int nHeight);
 
 Domyślna wysokość jest 150 pikseli.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

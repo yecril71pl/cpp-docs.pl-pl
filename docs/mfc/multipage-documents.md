@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295009"
 ---
 # <a name="multipage-documents"></a>Dokumenty wielostronicowe
 
@@ -58,11 +58,11 @@ Aby wydrukować dokument wielostronicowe, framework i widoku wchodzić w interak
 
 |Nazwa|Przyczynę zastąpienia|
 |----------|---------------------------|
-|[Onprepareprinting —](../mfc/reference/cview-class.md#onprepareprinting)|Aby wstawić wartości w oknie dialogowym drukowania, szczególnie długość dokumentu|
-|[Onbeginprinting —](../mfc/reference/cview-class.md#onbeginprinting)|Aby przydzielić czcionki lub innych zasobów GDI|
+|[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Aby wstawić wartości w oknie dialogowym drukowania, szczególnie długość dokumentu|
+|[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Aby przydzielić czcionki lub innych zasobów GDI|
 |[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)|By dostosować atrybuty kontekstu urządzenia dla danej strony można też wykonać wydruku w czasie dzielenia na strony|
 |[OnPrint](../mfc/reference/cview-class.md#onprint)|Aby wydrukować daną stronę|
-|[Onendprinting —](../mfc/reference/cview-class.md#onendprinting)|Można cofnąć alokacji zasobów GDI|
+|[OnEndPrinting](../mfc/reference/cview-class.md#onendprinting)|Można cofnąć alokacji zasobów GDI|
 
 Związane z drukowaniem przetwarzania w innych funkcjach, a także można zrobić, ale te funkcje są tymi, które dysku proces drukowania.
 
@@ -99,7 +99,7 @@ Dla każdej strony dokumentu do wydrukowania struktura wywołuje dwóch funkcji 
 
 [OnPrint](../mfc/reference/cview-class.md#onprint) funkcja elementu członkowskiego przeprowadza rzeczywiste drukowanie strony. Artykuł [jak domyślne drukowania jest wykonywane](../mfc/how-default-printing-is-done.md) pokazuje, jak struktura wywołuje [OnDraw](../mfc/reference/cview-class.md#ondraw) z kontekstem urządzenia drukarki do wykonania drukowania. Mówiąc ściślej, struktura wywołuje `OnPrint` z `CPrintInfo` struktury i kontekst urządzenia i `OnPrint` przekazuje kontekst urządzenia do `OnDraw`. Zastąp `OnPrint` do wykonania dowolnej renderowania, który ma być przeprowadzane tylko podczas drukowania, a nie do wyświetlania na ekranie. Na przykład, aby wydrukować nagłówków i stopek (zapoznaj się z artykułem [nagłówków i stopek](../mfc/headers-and-footers.md) Aby uzyskać więcej informacji). Następnie wywołaj `OnDraw` z zastępowania metody `OnPrint` do renderowania, które są wspólne dla zarówno wyświetlanie na ekranie i drukowania.
 
-Fakt, `OnDraw` nie renderowania, na ekranie zarówno wyświetlania i drukowanie oznacza, że aplikacja jest w trybie WYSIWYG: "zostanie wyświetlony jest what you get". Jednak Załóżmy, że nie są zapisywanie WYSIWYG aplikacji. Na przykład należy wziąć pod uwagę tekstu edytor, który używa czcionki pogrubionej związane z drukowaniem, ale wyświetla kody sterujące, aby wskazać pogrubioną czcionką na ekranie. W takiej sytuacji należy użyć `OnDraw` wyłącznie do wyświetlania na ekranie. Gdy zastąpisz `OnPrint`, Zastąp wywołanie `OnDraw` wywołaniem to oddzielna funkcja rysowania. Tę funkcję rysuje dokumentu w sposób, który pojawia się w dokumencie przy użyciu atrybutów, które nie będą wyświetlane na ekranie.
+Fakt, `OnDraw` nie renderowania, na ekranie zarówno wyświetlania i drukowanie oznacza, że aplikacja jest w trybie WYSIWYG: "What you see is what you get." Jednak Załóżmy, że nie są zapisywanie WYSIWYG aplikacji. Na przykład należy wziąć pod uwagę tekstu edytor, który używa czcionki pogrubionej związane z drukowaniem, ale wyświetla kody sterujące, aby wskazać pogrubioną czcionką na ekranie. W takiej sytuacji należy użyć `OnDraw` wyłącznie do wyświetlania na ekranie. Gdy zastąpisz `OnPrint`, Zastąp wywołanie `OnDraw` wywołaniem to oddzielna funkcja rysowania. Tę funkcję rysuje dokumentu w sposób, który pojawia się w dokumencie przy użyciu atrybutów, które nie będą wyświetlane na ekranie.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Vs stron drukarki. Strony dokumentu
 
@@ -123,7 +123,7 @@ Domyślna implementacja klasy `OnPrepareDC` ustawia *m_bContinuePrinting* do **F
 
 - [Alokowanie zasobów GDI](../mfc/allocating-gdi-resources.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Drukowanie](../mfc/printing.md)<br/>
 [Klasa CView](../mfc/reference/cview-class.md)<br/>

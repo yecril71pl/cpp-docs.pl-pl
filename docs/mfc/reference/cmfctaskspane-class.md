@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293774"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 
@@ -372,7 +372,7 @@ W poniższym przykładzie pokazano sposób tworzenia `CMFCTasksPane` obiektu i k
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxTasksPane.h
+**Header:** afxTasksPane.h
 
 ##  <a name="addgroup"></a>  CMFCTasksPane::AddGroup
 
@@ -434,7 +434,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa indeks grupy, gdzie etykieta jest dodawany.
 
 *lpszLabelName*<br/>
@@ -466,7 +466,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa indeks grupy. Metoda ta umożliwia dodanie listy ostatnio używanych plików do grupy określonej w tym parametrze.
 
 *nMaxFiles*<br/>
@@ -522,7 +522,7 @@ int AddTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa indeks grupy, w których zadanie zostanie dodane.
 
 *lpszTaskName*<br/>
@@ -556,7 +556,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa indeks grupy, w której zostanie dodany okna.
 
 *hwndTask*<br/>
@@ -626,7 +626,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in] Wartość TRUE, aby zwinąć grupy; Wartość FALSE, aby rozwinąć grupę.
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy, aby zwinąć w wewnętrznej listy grup.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -898,7 +898,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in] Określa grupę zadań, którego lokalizacja jest pobierany.
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [out] Zawiera liczony od zera indeks grupy zadań.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -957,7 +957,7 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy zadań.
 
 *nPage*<br/>
@@ -1017,10 +1017,10 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy, która zawiera zadania.
 
-*nNie*<br/>
+*nTask*<br/>
 [in] Określa liczony od zera indeks zadanie na liście określone przez *Rozgrupuj*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1037,7 +1037,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa indeks grupy zadań.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1054,7 +1054,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy do pobrania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1087,10 +1087,10 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in] Określa identyfikator polecenia tego zadania można znaleźć.
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [out] Zawiera indeks grupy zadania.
 
-*nNie*<br/>
+*nTask*<br/>
 [out] Zawiera indeks tego zadania w grupie zadań.
 
 *hwndTask*<br/>
@@ -1511,7 +1511,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy.
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1524,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1559,10 +1559,10 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy zadań, która zawiera zadanie do usunięcia.
 
-*nNie*<br/>
+*nTask*<br/>
 [in] Określa liczony od zera indeks zadanie do usunięcia.
 
 *bRedraw*<br/>
@@ -1647,7 +1647,7 @@ void SetGroupCaptionHeight(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa wysokość podpis.
 
 ### <a name="remarks"></a>Uwagi
@@ -1666,7 +1666,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa przesunięcie w poziomie podpis grupy.
 
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset
@@ -1679,7 +1679,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa przesunięcie w pionie, w pikselach, podpis grupy.
 
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName
@@ -1694,7 +1694,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy.
 
 *lpszGroupName*<br/>
@@ -1717,7 +1717,7 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy.
 
 *Kolor*<br/>
@@ -1740,7 +1740,7 @@ void SetGroupVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa przesunięcie w pionie.
 
 ### <a name="remarks"></a>Uwagi
@@ -1759,7 +1759,7 @@ void SetHorzMargin(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Margines, określa w pikselach.
 
 ### <a name="remarks"></a>Uwagi
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Określa identyfikator zasobu listy obrazów.
 
-*CX*<br/>
+*cx*<br/>
 [in] Określa rozmiar ikon z listy obrazów.
 
 *clrTransparent*<br/>
@@ -1836,10 +1836,10 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy zadań.
 
-*nNie*<br/>
+*nTask*<br/>
 [in] Określa liczony od zera indeks tego zadania.
 
 *lpszTaskName*<br/>
@@ -1859,7 +1859,7 @@ void SetTasksHorzOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa przesunięcie w poziomie.
 
 ### <a name="remarks"></a>Uwagi
@@ -1908,10 +1908,10 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy zadań, która zawiera zadania.
 
-*nNie*<br/>
+*nTask*<br/>
 [in] Określa liczony od zera indeks tego zadania.
 
 *Kolor*<br/>
@@ -1934,7 +1934,7 @@ void SetVertMargin(int n = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 [in] Określa pionowego marginesu do ustawienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1960,7 +1960,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy, który zawiera formant okna.
 
 *hwndTask*<br/>
@@ -2003,10 +2003,10 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozgrupuj*<br/>
+*nGroup*<br/>
 [in] Określa liczony od zera indeks grupy.
 
-*nNie*<br/>
+*nTask*<br/>
 [in] Określa liczony od zera indeks zadania, aby pokazać lub ukryć.
 
 *bShow*<br/>
@@ -2067,7 +2067,7 @@ Ta metoda aktualizuje podpis w okienku zadania, dostosowuje paska przewijania, p
 
 Zastępuje tę metodę w klasie pochodnej do wykonania kodu niestandardowego, gdy struktura odświeża okienka zadań.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294424"
 ---
 # <a name="ole-background"></a>Podstawy OLE
 
@@ -26,7 +26,7 @@ OLE zawiera wiele różnych pojęć, współpracujących osiąganiu celu bezprob
 
 - Łączenie i osadzanie
 
-   Łączenie i osadzanie są dwie metody do przechowywania elementów tworzony w dokumencie OLE, które zostały utworzone w innej aplikacji. Aby uzyskać ogólne informacje na temat różnic między nimi, zobacz artykuł [tła OLE: łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md). Aby uzyskać szczegółowe informacje, zobacz artykuły [kontenery](../mfc/containers.md) i [serwerów](../mfc/servers.md).
+   Łączenie i osadzanie są dwie metody do przechowywania elementów tworzony w dokumencie OLE, które zostały utworzone w innej aplikacji. Aby uzyskać ogólne informacje na temat różnic między nimi, zobacz artykuł [OLE tła: Łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md). Aby uzyskać szczegółowe informacje, zobacz artykuły [kontenery](../mfc/containers.md) i [serwerów](../mfc/servers.md).
 
 - Aktywacja w miejscu (edycja wizualna)
 
@@ -42,7 +42,7 @@ OLE zawiera wiele różnych pojęć, współpracujących osiąganiu celu bezprob
 
 - Pliki złożone
 
-   Pliki złożone zawierają standardowe formacie, który upraszcza ze strukturą przechowywania dokumentów złożonych aplikacji OLE. W pliku złożonym miejsc wiele funkcji, katalogów i strumieni ma wiele funkcji plików. Ta technologia jest również nazywany strukturalny magazyn. Aby uzyskać więcej informacji na temat plików złożonych, zobacz artykuł [kontenery: pliki złożone](../mfc/containers-compound-files.md).
+   Pliki złożone zawierają standardowe formacie, który upraszcza ze strukturą przechowywania dokumentów złożonych aplikacji OLE. W pliku złożonym miejsc wiele funkcji, katalogów i strumieni ma wiele funkcji plików. Ta technologia jest również nazywany strukturalny magazyn. Aby uzyskać więcej informacji na temat plików złożonych, zobacz artykuł [kontenerów: Pliki złożone](../mfc/containers-compound-files.md).
 
 - Transfer danych jednolitego
 
@@ -58,17 +58,16 @@ OLE zawiera wiele różnych pojęć, współpracujących osiąganiu celu bezprob
 
 Niektóre z bardziej ważnych tematów OLE są omówione w następujących artykułach:
 
-- [Podstawy OLE: łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md)
+- [Podstawy OLE: Łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md)
 
-- [Podstawy OLE: kontenery i serwery](../mfc/ole-background-containers-and-servers.md)
+- [Podstawy OLE: Kontenery i serwery](../mfc/ole-background-containers-and-servers.md)
 
-- [Podstawy OLE: strategie implementacji](../mfc/ole-background-implementation-strategies.md)
+- [Podstawy OLE: Strategie implementacji](../mfc/ole-background-implementation-strategies.md)
 
-- [Podstawy OLE: implementacja MFC](../mfc/ole-background-mfc-implementation.md)
+- [Podstawy OLE: Implementacja interfejsu MFC](../mfc/ole-background-mfc-implementation.md)
 
 Nie można odnaleźć w powyższych artykułach ogólne informacje OLE Wyszukaj OLE w bibliotece MSDN.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE](../mfc/ole-in-mfc.md)
-

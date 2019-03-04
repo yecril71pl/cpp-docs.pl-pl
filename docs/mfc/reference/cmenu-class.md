@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293865"
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Określa element menu aby sprawdzić, zgodnie z ustaleniami *nSprawdź*.
 
-*nSprawdź*<br/>
+*nCheck*<br/>
 Określa, jak sprawdzić element menu i jak określić położenie elementu menu. *NSprawdź* parametr może być kombinacją MF_CHECKED lub MF_UNCHECKED z użyciem flag MF_BYPOSITION lub MF_BYCOMMAND. Te flagi można łączyć przy użyciu bitowego operatora OR. Mają następujące znaczenie:
 
 - MF_BYCOMMAND Określa, czy parametr zawiera identyfikator polecenia istniejącego elementu menu. Domyślnie włączone.
@@ -391,7 +391,7 @@ Menu nie zostanie utworzony, dopóki nie wywołać jedną z tworzenia lub załad
 
 - [CreateMenu —](#createmenu)
 
-- [Createpopupmenu —](#createpopupmenu)
+- [CreatePopupMenu](#createpopupmenu)
 
 - [LoadMenu](#loadmenu)
 
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Npozycji*<br/>
+*nPosition*<br/>
 Określa, że element menu, który ma zostać usunięty, zgodnie z ustaleniami *nFlags*.
 
 *nFlags*<br/>
@@ -734,7 +734,7 @@ UINT GetMenuItemID(int nPos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa położenie (liczony od zera) elementu menu pobierania o identyfikatorze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -898,7 +898,7 @@ CMenu* GetSubMenu(int nPos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 Określa położenie menu podręcznego znajdujących się w menu. Wartości pozycji rozpoczynają się od 0 do pierwszego elementu menu. Identyfikator menu podręcznego nie można użyć tej funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Npozycji*<br/>
+*nPosition*<br/>
 Określa, że element menu, przed którym ma zostać wstawiony nowy element menu. *NFlags* parametru może służyć do interpretacji *Npozycji* w następujący sposób:
 
 |nFlags|Interpretacja pozycji|
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Npozycji*<br/>
+*nPosition*<br/>
 Określa element menu, które mają być zmienione. *NFlags* parametru może służyć do interpretacji *Npozycji* w następujący sposób:
 
 |nFlags|Interpretacja pozycji|
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Npozycji*<br/>
+*nPosition*<br/>
 Określa, że element menu do usunięcia. *NFlags* parametru może służyć do interpretacji *Npozycji* w następujący sposób:
 
 |nFlags|Interpretacja pozycji|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>Parametry
 
-*Npozycji*<br/>
+*nPosition*<br/>
 Określa element menu, które mają być zmienione. *NFlags* parametru może służyć do interpretacji *Npozycji* w następujący sposób:
 
 |nFlags|Interpretacja pozycji|
@@ -1427,7 +1427,7 @@ Określa położenie w pionie we współrzędnych ekranu górnej części menu n
 *pWnd*<br/>
 Identyfikuje okna, który jest właścicielem menu podręcznego. Ten parametr nie może być NULL, nawet jeśli określono flagę TPM_NONOTIFY. W tym oknie odbiera wszystkie komunikaty WM_COMMAND z menu. Windows w wersji 3.1 lub nowszej, okno nie otrzymują wm_command — komunikaty do momentu `TrackPopupMenu` zwraca. 3.0 Windows okna odbiera komunikaty WM_COMMAND przed `TrackPopupMenu` zwraca.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Ignorowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1482,7 +1482,7 @@ Jeśli nie określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jes
 
 Zmiennoprzecinkowe menu podręcznego może występować w dowolnym miejscu na ekranie. Aby uzyskać więcej informacji na temat obsługi błędów podczas tworzenia menu podręcznego, zobacz [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [Próbki MFC DYNAMENU](../../visual-cpp-samples.md)<br/>

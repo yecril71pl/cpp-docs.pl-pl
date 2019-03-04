@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294359"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap — Klasa
 
@@ -96,7 +96,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |Nazwa|Opis|
 |----------|-----------------|
 |[hash_function](#hash_function)|Zwraca przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_multimap` obiektu.|
+|[insert](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_multimap` obiektu.|
 |[key_eq](#key_eq)|Zwraca obiekt funkcji porównywania równości przechowywanych.|
 |[swap](#swap)|Zamienia zawartości dwóch `concurrent_unordered_multimap` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_multimap` określonych pozycji. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
@@ -121,7 +121,7 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_unordered_multimap` k
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concurrent_unordered_map.h
+**Header:** concurrent_unordered_map.h
 
 **Namespace:** współbieżności
 
@@ -171,7 +171,7 @@ Usuwa wszystkie elementy w kontenerze współbieżnych. Ta funkcja nie jest bezp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_multimap —
+##  <a name="ctor"></a> concurrent_unordered_multimap
 
 Tworzy równoczesną nieuporządkowaną multimapę.
 
@@ -337,7 +337,7 @@ Wartość klucza do wyszukania.
 
 Iterator wskazuje lokalizację pierwszego elementu, który pasuje do klucza dostarczonego lub iteratora `end()` jeśli taki element nie istnieje.
 
-##  <a name="get_allocator"></a> get_allocator —
+##  <a name="get_allocator"></a> get_allocator
 
 Zwraca przechowywany obiekt alokatora dla tego kontenera współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
 
@@ -406,7 +406,7 @@ Począwszy od lokalizacji do wyszukiwania punkt wstawiania.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -695,7 +695,7 @@ Pozycja sterująca do wymazania z.
 Wartość klucza do wymazania.
 
 *pierwszy*<br/>
-*ostatni*<br/>
+*last*<br/>
 Iteratory.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -720,8 +720,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maksymalna liczba zasobników, w tym kontenerze.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

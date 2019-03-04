@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e039a2deaf3372af5daac8fddd8f3a0672719f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294983"
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
 
@@ -55,7 +55,7 @@ A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól
 
 - `CFieldExchange::inoutParam` Parametr input/output składowych danych.
 
-Większość elementów członkowskich funkcje i dane Członkowskie tej klasy są dostarczane do pisania własnych niestandardowych procedury RFX. Użyjesz `SetFieldType` często. Aby uzyskać więcej informacji, zobacz artykuły [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby dowiedzieć się, jak zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Aby uzyskać szczegółowe informacje dotyczące funkcji globalnych RFX i zbiorcze RFX, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) makr MFC i funkcje globalne sekcji tego odwołania.
+Większość elementów członkowskich funkcje i dane Członkowskie tej klasy są dostarczane do pisania własnych niestandardowych procedury RFX. Użyjesz `SetFieldType` często. Aby uzyskać więcej informacji, zobacz artykuły [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby dowiedzieć się, jak zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Aby uzyskać szczegółowe informacje dotyczące funkcji globalnych RFX i zbiorcze RFX, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) makr MFC i funkcje globalne sekcji tego odwołania.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -124,7 +124,7 @@ Jeśli możesz zdefiniować parametry klasy zestawu rekordów, należy wywołać
 
 Ogólnie rzecz biorąc, poszczególne grupy skojarzone z elementy członkowskie danych pola lub elementy członkowskie danych parametru wywołania funkcji RFX musi być poprzedzona wywołanie `SetFieldType`. *NFieldType* parametru każdego `SetFieldType` wywołanie określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji RFX, które należy wykonać `SetFieldType` wywołania.
 
-Aby uzyskać więcej informacji na temat obsługi danych wyjściowych i parametrów wejściowych/wyjściowych zobacz `CRecordset` funkcja elementu członkowskiego [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Aby uzyskać więcej informacji na temat funkcji RFX i zbiorcze RFX, zobacz temat [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md). Aby uzyskać powiązane informacje na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Aby uzyskać więcej informacji na temat obsługi danych wyjściowych i parametrów wejściowych/wyjściowych zobacz `CRecordset` funkcja elementu członkowskiego [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Aby uzyskać więcej informacji na temat funkcji RFX i zbiorcze RFX, zobacz temat [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md). Aby uzyskać powiązane informacje na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Przykład
 
@@ -132,7 +132,7 @@ W tym przykładzie pokazano kilka wywołań do funkcji RFX z towarzyszącym wywo
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

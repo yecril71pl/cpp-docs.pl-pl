@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: be0b4639fd42461a19db10f88ced336cd1129fb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294957"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Tworzenie kontrolki ActiveX MFC
 
@@ -40,8 +40,7 @@ Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozw
 
 Po utworzeniu projektu umożliwia kreatorów kodu Dodaj [funkcje](../../ide/add-member-function-wizard.md), [zmienne](../../ide/add-member-variable-wizard.md), [zdarzenia](../../ide/add-event-wizard.md), [właściwości](../../ide/names-add-property-wizard.md), i [metody](../../ide/add-method-wizard.md). Aby uzyskać więcej informacji na temat dostosowywania formant ActiveX, zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../../ide/property-pages-visual-cpp.md)
-

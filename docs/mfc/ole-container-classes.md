@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 518ae4889a2c5d9dae10e5b5cba6845010ba883c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292565"
 ---
 # <a name="ole-container-classes"></a>Klasy kontenerów OLE
 
@@ -48,7 +48,6 @@ Umożliwia dostęp klienta do elementu są przechowywane w formancie edycji wzbo
 [COleException](../mfc/reference/coleexception-class.md)<br/>
 Wyjątek, wynikające z wystąpił błąd podczas przetwarzania OLE. Ta klasa jest używana zarówno kontenery i serwery.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

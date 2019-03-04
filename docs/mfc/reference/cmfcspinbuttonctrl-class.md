@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: ecc8a010b534515850752f7d83c9a9976f14ddfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292149"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Klasa CMFCSpinButtonCtrl
 
@@ -76,14 +76,14 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
 Struktura wywołuje `CMFCSpinButtonCtrl::OnPaint` metody, aby obsłużyć [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) komunikat i że metoda z kolei wywołuje to `CMFCSpinButtonCtrl::OnDraw` metody. Zastępuje tę metodę, aby dostosować sposób, w ramach rysuje kontrolka przycisku pokrętła.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

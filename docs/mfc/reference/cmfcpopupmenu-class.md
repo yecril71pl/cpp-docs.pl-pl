@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCPopupMenu
+title: CMFCPopupMenu Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCPopupMenu
@@ -160,14 +160,14 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292279"
 ---
-# <a name="cmfcpopupmenu-class"></a>Klasa CMFCPopupMenu
+# <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu Class
 
 Implementuje funkcje menu podręcznego Windows i rozszerza je, dodając funkcje, takie jak zrywanie menu i etykietek narzędzi.
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Dojście do zasobu menu.
 
-*Zablokowane*<br/>
+*bLocked*<br/>
 [in] Parametr logiczny, który wskazuje, czy jest możliwe do dostosowania. Wartość FALSE wskazuje, że menu podręczne jest możliwe do dostosowania.
 
 *bOwnMessage*<br/>
@@ -633,7 +633,7 @@ Poniższa tabela zawiera listę typów możliwych animacji.
 |||
 |-|-|
 |NO_ANIMATION|Menu podręcznego nie jest animowany i pojawia się natychmiast.  |
-|ROZWIJANIA|Struktura ujawnia wyskakujących menu w lewym górnym rogu, aby prawym dolnym rogu.  |
+|UNFOLD|Struktura ujawnia wyskakujących menu w lewym górnym rogu, aby prawym dolnym rogu.  |
 |SLAJD|Menu podręczne Przenosi od góry do dołu.  |
 |ZANIKANIE|Menu podręczne po raz pierwszy występuje przejrzyste i stopniowo ekstrakt.  |
 
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 [in] Typ wyliczany danych, który określa typ animacji.
 
 ### <a name="remarks"></a>Uwagi
@@ -1469,7 +1469,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 
 Wywołaj tę metodę, gdy menu podręczne, które ma cień nakłada animowany obraz.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

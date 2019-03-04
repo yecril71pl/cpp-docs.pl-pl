@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z parallel_invoke do przeprowadzania operacji równoległych'
+title: 'Instrukcje: Korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293527"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Porady: korzystanie z parallel_invoke do przeprowadzania operacji równoległych
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Instrukcje: Korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych
 
 W tym przykładzie pokazano, jak używać [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych. Ponieważ żadne operacje zmodyfikować źródło, mogą być wykonywane równolegle w prosty sposób.
 
@@ -68,7 +68,7 @@ Ponieważ `parallel_invoke` algorytm wywołania każdej funkcji roboczych równo
 
 Bo w tym przykładzie trzy zadania w sposób równoległy, nie należy się spodziewać wydajność skalowania na komputerach, które mają więcej niż trzy procesory. W celu poprawy wydajności więcej można przerwać zadania najdłużej działających na mniejsze zadania i uruchamiania tych zadań w sposób równoległy.
 
-Możesz użyć `parallel_invoke` algorytmu zamiast [concurrency::task_group](reference/task-group-class.md) i [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) klasy, jeśli nie jest wymagana obsługa anulowania. Aby uzyskać przykład, który porównuje użycie `parallel_invoke` algorytmu i grupy zadań, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
+Możesz użyć `parallel_invoke` algorytmu zamiast [concurrency::task_group](reference/task-group-class.md) i [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) klasy, jeśli nie jest wymagana obsługa anulowania. Aby uzyskać przykład, który porównuje użycie `parallel_invoke` algorytmu i grupy zadań, zobacz [jak: Używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
@@ -76,8 +76,7 @@ Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu 
 
 **Cl.exe/ehsc/MD/DUNICODE /D_AFXDLL równoległych word-mining.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)
-
+[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)

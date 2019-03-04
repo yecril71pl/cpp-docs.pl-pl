@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293462"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 
@@ -22,7 +22,7 @@ Lokalnego magazynu wątków (TLS) to metoda, za pomocą którego każdy wątek w
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementacja kompilatora protokołu TLS
 
-**C ++ 11:** `thread_local` specyfikatora klasy magazynu jest to zalecany sposób, aby określić lokalny magazyn wątków dla obiektów i składowych klasy. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  `thread_local` Specyfikatora klasy magazynu jest to zalecany sposób, aby określić lokalny magazyn wątków dla obiektów i składowych klasy. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).
 
 Visual C++ zapewnia również atrybut specyficzne dla firmy Microsoft, [wątku](../cpp/thread.md), jako modyfikator klasy magazynu rozszerzonego. Użyj **__declspec** — słowo kluczowe do deklarowania **wątku** zmiennej. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
@@ -106,6 +106,6 @@ Należy przestrzegać następujących wytycznych podczas deklarowania statycznie
 
 - W systemach operacyjnych Windows przed Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteka DLL deklaruje żadnych danych ani obiektu jako `__declspec`(wątek), może to spowodować błąd ochrony Jeśli dynamicznie załadowane. Po załadowaniu pliku DLL za pomocą [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), sprawia, że wystąpił błąd systemu zawsze wtedy, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni na wątek jest przydzielany w czasie wykonywania, rozmiar to miejsce opiera się na obliczanie wymagań aplikacji, a także wymagania wszystkie biblioteki dll, które są statycznie łączone. Kiedy używasz `LoadLibrary`, nie można rozszerzyć tego miejsca, aby umożliwić zadeklarowane za pomocą zmiennych lokalnych wątku `__declspec`(wątek). Używanie interfejsów API protokołu TLS, takiej jak [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), w bibliotece DLL, można przydzielić TLS, jeśli biblioteka DLL jest obciążany `LoadLibrary`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

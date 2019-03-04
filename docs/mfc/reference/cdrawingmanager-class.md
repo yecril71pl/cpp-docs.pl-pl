@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293449"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 
@@ -135,7 +135,7 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 [in] Odwołanie do kontekstu urządzenia. `CDrawingManager` Używa tego kontekstu do rysowania.
 
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parametr|Opis|
 |*Rozmiar*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, który wskazuje rozmiar mapy bitowej.|
 |*pBits*|[out] Wskaźnik do wskaźnika danych, który odbiera lokalizację DIB wartości bitowe.|
-|*Mapy bitowej*|Dojście do oryginalnego mapy bitowej|
+|*bitmap*|Dojście do oryginalnego mapy bitowej|
 |*clrTransparent*|Wartość RGB, określając kolor przezroczysty, oryginalnym mapy bitowej.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -699,7 +699,7 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parametry
 
-*M1*<br/>
+*m1*<br/>
 [in] Zobacz uwagi.
 
 *m2*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Początkowy kolor piksela.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Liczba od 0 do 100, która przedstawia wartość procentową przezroczystości. Wartość 100 oznacza, że kolor początkowy jest całkowicie przezroczysty.
 
 *percentR*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] Współrzędna pionowy pikseli na kolor.
 
-*Procent*<br/>
+*percent*<br/>
 [in] Procent przezroczystości.
 
 *iShadowSize*<br/>
@@ -968,8 +968,8 @@ static void __stdcall SetPixel(
 |-|-|
 |Parametr|Opis|
 |*pBits*|[in] Wskaźnik do wartości bitowe mapy bitowej.|
-|*CX*|[in] Łączna szerokość mapy bitowej.|
-|*CY*|[in] Całkowita wysokość mapy bitowej.|
+|*cx*|[in] Łączna szerokość mapy bitowej.|
+|*cy*|[in] Całkowita wysokość mapy bitowej.|
 |*x*|[in] Współrzędna x piksel w mapie bitowej można zmienić.|
 |*y*|[in] Współrzędna y piksel w mapie bitowej można zmienić.|
 |*Kolor*|[in] Nowy kolor piksela o podanej współrzędnych.|
@@ -992,11 +992,11 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parametr|Opis|
-|*kolorem1*|[in] Pierwszy kolor połączenie.|
+|*color1*|[in] Pierwszy kolor połączenie.|
 |*color2*|[in] Drugi kolor połączenie.|
 |*dblLumRatio*|[in] Współczynnik jasność nowy kolor. `SmartMixColors` Mnoży jasność koloru mieszane przez ten stosunek przed ustaleniem ostateczny kolor.|
-|*K1*|[in] Ważona współczynnik pierwszy kolor.|
-|*K2*|[in] Ważona współczynnik drugi kolor.|
+|*k1*|[in] Ważona współczynnik pierwszy kolor.|
+|*k2*|[in] Ważona współczynnik drugi kolor.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1032,7 +1032,7 @@ Wartość TRUE wskazuje, obracania + 90 stopni; Wartość FALSE wskazuje, obraca
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

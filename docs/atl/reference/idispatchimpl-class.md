@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: 078bbaec870f6661bb33a9bbb844f5e062bba6f2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293215"
 ---
 # <a name="idispatchimpl-class"></a>Klasa IDispatchImpl
 
@@ -171,6 +171,6 @@ STDMETHOD(Invoke)(
 
 Zobacz [uwzględniając](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

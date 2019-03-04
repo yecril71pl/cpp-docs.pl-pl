@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293787"
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
 
@@ -101,7 +101,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor.|
-|[CAtlMap:: ~ CAtlMap](#dtor)|Destruktor.|
+|[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -780,7 +780,7 @@ V  m_value;
 *V*<br/>
 Typ elementu wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe Neon](../../visual-cpp-samples.md)<br/>
 [Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294151"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Rejestrowanie klasy okna
 
@@ -106,8 +106,7 @@ Jeśli chcesz to zaawansowane niczego więcej niż co `AfxRegisterWndClass` udos
 
 Ważne jest, aby użyć `AfxRegisterClass` (lub `AfxRegisterWndClass`) w bibliotece DLL na Win32. Win32 nie automatycznie wyrejestrować klasy zarejestrowany przez bibliotekę DLL, aby jawnie musi wyrejestrować klas, gdy biblioteka DLL jest zakończony. Za pomocą `AfxRegisterClass` zamiast `RegisterClass` to odbywa się automatycznie dla Ciebie. `AfxRegisterClass` przechowuje listę klas unikatowy rejestrowane przez biblioteki DLL i automatycznie, aby wyrejestrować się je, gdy kończy się biblioteki DLL. Zastosowania `RegisterClass` w bibliotece DLL, upewnij się, wszystkie klasy są wyrejestrowany, jeśli biblioteka DLL jest zakończona (w Twojej [DllMain](/windows/desktop/Dlls/dllmain) funkcji). Niewykonanie tej czynności może powodować `RegisterClass` się nieoczekiwanie ulegają awarii, gdy inna aplikacja klienta próbuje użyć biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

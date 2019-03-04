@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294411"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Klasa CD2DBitmapBrush
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Przeciążone. Tworzy obiekt CD2DBitmapBrush z pliku.|
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt D2D bitmap pędzla.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt D2D bitmap pędzla.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -75,7 +75,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |[CD2DBitmapBrush::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
 |[CD2DBitmapBrush::Create](#create)|Tworzy CD2DBitmapBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DBitmapBrush::Destroy](#destroy)|Niszczy obiekt CD2DBitmapBrush. (Przesłania [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DBitmapBrush::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DBitmapBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
 |[CD2DBitmapBrush::Get](#get)|Zwraca ID2D1BitmapBrush interfejsu|
 |[CD2DBitmapBrush::GetBitmap](#getbitmap)|Pobiera źródło mapy bitowej, używającej tego pędzla do malowania|
 |[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Pobiera metodę, za pomocą którego pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej|
@@ -394,6 +394,6 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 *interpolationMode*<br/>
 Tryb interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

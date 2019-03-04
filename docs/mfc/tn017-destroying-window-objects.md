@@ -1,5 +1,5 @@
 ---
-title: 'TN017: niszczenie obiektów okien'
+title: 'TN017: Likwidowanie obiektów okien'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294114"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017: niszczenie obiektów okien
+# <a name="tn017-destroying-window-objects"></a>TN017: Likwidowanie obiektów okien
 
 Ta uwaga opisuje korzystanie z [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) metody. Użyj tej metody, jeśli chcesz wykonać przydziału dostosowanego `CWnd`-obiektami wywodzącymi. Ta uwaga wyjaśnia, dlaczego należy używać [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) do zniszczenia obiektu języka C++ Windows zamiast **Usuń** operatora.
 
@@ -93,8 +93,7 @@ W przypadku obiektów C++ Windows, które wykonują automatycznego oczyszczania,
 
 Po wywołaniu `DestroyWindow` w obiekcie bez czyszczenia automatycznie obiektu języka C++ nadal będzie się wokół, ale *m_hWnd* będzie mieć wartość NULL. Po wywołaniu `DestroyWindow` na obiekcie automatyczne oczyszczanie obiektu języka C++ nie będą już dostępne, uwolniony przez operatora delete C++ w implementacji automatyczne oczyszczanie `PostNcDestroy`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

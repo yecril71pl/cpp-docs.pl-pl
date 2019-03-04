@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295659"
 ---
 # <a name="curl-class"></a>Klasa cUrl
 
@@ -62,7 +62,7 @@ class CUrl
 |Nazwa|Opis|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Konstruktor.|
-|[CUrl:: ~ CUrl](#dtor)|Destruktor.|
+|[CUrl::~CUrl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -118,7 +118,7 @@ class CUrl
 
 - Nazwa użytkownika: "ktoś"
 
-- Hasło: "wpis tajny"
+- Password: "secret"
 
 - Nazwa hosta: "`www.microsoft.com`"
 
@@ -144,20 +144,20 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi sterujące kanoniczną. Jeśli nie określono żadnych flag (*Flagidw* = 0), Metoda ta konwertuje wszystkich niebezpiecznych znaków i sekwencji meta (takie jak \\., \.., i \\...) jako znak ucieczki dla sekwencji. *Flagidw* może być jedną z następujących wartości:
 
-- ATL_URL_BROWSER_MODE: Nie jest w stanie kodowania lub dekodowania znaków po "#" lub "" i nie powoduje usunięcia odstępu po "". Jeśli ta wartość nie jest określona, cały adres URL jest zaszyfrowana i końcowe biały znak zostanie usunięta.
+- ATL_URL_BROWSER_MODE: Nie kodowania i dekodowania znaków po "#" lub "" i nie powoduje usunięcia odstępu po "". Jeśli ta wartość nie jest określona, cały adres URL jest zaszyfrowana i końcowe biały znak zostanie usunięta.
 
-- ATL_URL _DECODE: konwertuje wszystkie % XX sekwencje znaków, w tym sekwencje ucieczki, aby adres URL jest analizowany.
+- ATL_URL _DECODE: Konwertuje wszystkie % XX sekwencje znaków, w tym sekwencje ucieczki, aby adres URL jest analizowany.
 
-- ATL_URL _ENCODE_PERCENT: koduje wszystkie znaki procentu napotkano. Domyślnie nie są kodowane procentu.
+- ATL_URL _ENCODE_PERCENT: Koduje wszystkie znaki procentu napotkano. Domyślnie nie są kodowane procentu.
 
-- ATL_URL _ENCODE_SPACES_ONLY: koduje tylko spacje.
+- ATL_URL _ENCODE_SPACES_ONLY: Koduje tylko spacje.
 
-- ATL_URL _NO_ENCODE: nie konwertuje niebezpieczne znaki na sekwencje ucieczki.
+- ATL_URL _NO_ENCODE: Konwertuje niebezpieczne znaki na sekwencje ucieczki.
 
-- ATL_URL _NO_META: nie powoduje usunięcia meta sekwencji (takie jak "."i"..") z adresu URL.
+- ATL_URL _NO_META: Nie powoduje usunięcia meta sekwencji (takie jak "."i"..") z adresu URL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -188,7 +188,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 *lpszUrl*<br/>
 Adres URL.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określ ATL_URL_DECODE lub ATL_URL_ESCAPE przekonwertować wszystkie znaki ucieczki w *lpszUrl* rzeczywistych wartości po analizie. (Przed Visual C++ 2005, ATL_URL_DECODE przekonwertować wszystkie znaki ucieczki przed analizą.)
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -214,7 +214,7 @@ Buforu ciągu do przechowywania całego ciągu adresu URL.
 *pdwMaxLength*<br/>
 Maksymalna długość *lpszUrl* buforu ciągu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określ ATL_URL_ESCAPE do konwersji wszystkich znaków ucieczki w *lpszUrl* rzeczywistych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -225,7 +225,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 Ta metoda dołącza jej poszczególne pola w celu utworzenia całego ciągu adresu URL w następującym formacie:
 
-**\<Schemat > ://\<użytkownika >:\<przekazać >\@\<domeny >:\<port >\<ścieżka >\<dodatkowe >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Po wywołaniu tej metody *pdwMaxLength* parametr początkowo musi zawierać maksymalną długość buforu ciągu odwołuje się *lpszUrl* parametru. Wartość *pdwMaxLength* parametr zostanie zaktualizowany o rzeczywistej długości ciągu adresu URL.
 
@@ -598,6 +598,6 @@ Nazwa użytkownika.
 
 Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../atl/reference/atl-classes.md)

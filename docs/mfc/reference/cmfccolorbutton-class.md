@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293488"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 
@@ -260,7 +260,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskazuje kontekst urządzenia, który jest używany do renderowania obrazu przycisku.
 
 *Rect*<br/>
@@ -286,7 +286,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskazuje kontekst urządzenia używany do rysowania obramowania.
 
 *rectClient*<br/>
@@ -311,7 +311,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskazuje kontekst urządzenia używany do rysowania prostokąt fokusu.
 
 *rectClient*<br/>
@@ -472,7 +472,7 @@ virtual void UpdateColor(COLORREF color);
 
 `UpdateColor` Funkcji zmienia kolor aktualnie zaznaczonego przycisku i powiadamia o jego obiektu nadrzędnego, wysyłając wiadomość z powiadomieniem do standardowego BN_CLICKED WM_COMMAND. Użyj [CMFCColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

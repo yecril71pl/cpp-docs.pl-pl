@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294567"
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 
@@ -148,7 +148,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 [in] Wskaźnik do obiektu strony. Ten parametr nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -174,7 +174,7 @@ void AddPageToTree(
 *pCategory*<br/>
 [in] Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Wywołaj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby uzyskać ten wskaźnik.
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 [in] Wskaźnik do obiektu strony właściwości.
 
 *nIconNum*<br/>
@@ -360,7 +360,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 [in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę dla właściwości włączone.
 
 ### <a name="remarks"></a>Uwagi
@@ -380,7 +380,7 @@ virtual void OnDrawPageHeader(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *nPage*<br/>
@@ -403,7 +403,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 [in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -438,7 +438,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 [in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia. Nie może mieć wartości NULL.
 
 *nPage*<br/>
@@ -465,7 +465,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Identyfikator zasobu z listy obrazów.
 
-*CX*<br/>
+*cx*<br/>
 [in] Szerokość w pikselach, ikony na liście obrazów.
 
 *clrTransparent*<br/>
@@ -496,7 +496,7 @@ void SetLook(
 
 ### <a name="parameters"></a>Parametry
 
-*wygląd*<br/>
+*look*<br/>
 [in] Jedna z wartości wyliczenia, które określa wygląd arkusza właściwości. Jest to styl domyślny dla arkusza właściwości `CMFCPropertySheet::PropSheetLook_Tabs`. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag w tym temacie.
 
 *nNavControlWidth*<br/>
@@ -516,7 +516,7 @@ W poniższej tabeli wymieniono wartości wyliczenia, które można określić w 
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Wyświetla kartę w stylu programu Microsoft OneNote dla każdej strony właściwości. Struktura wyświetla karty w górnej części arkusza właściwości i strzałki przewijania w przypadku więcej kart niż mieści się w jednym wierszu.|
 |`CMFCPropertySheet::PropSheetLook_List`|Wyświetla listę po lewej stronie arkusza właściwości. Każdy element tej listy odnosi się do strony właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej elementów listy, niż mieści się w obszarze widoczne listy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

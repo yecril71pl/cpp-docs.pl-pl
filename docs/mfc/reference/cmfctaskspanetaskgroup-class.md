@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCTasksPaneTaskGroup
+title: CMFCTasksPaneTaskGroup Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295230"
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup Class
 
 `CMFCTasksPaneTaskGroup` Klasa jest klasą pomocnika używaną przez [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupa zadań to lista elementów wyświetlanych w osobnym oknie z przyciskiem rozwijania. To pole może mieć opcjonalny podpisem (nazwa grupy). Jeśli grupa jest zwinięta, lista zadań nie jest widoczny.
 
@@ -94,7 +94,7 @@ Poniższa ilustracja przedstawia dwa grup zadań. Pierwsza grupa zadania jest oz
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxTasksPane.h
+**Header:** afxTasksPane.h
 
 ##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
 
@@ -124,7 +124,7 @@ Określa, czy grupa jest wyznaczony jako *specjalne* i w związku z tym, czy pod
 *bIsCollapsed*<br/>
 Określa, czy grupa jest zwinięta.
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 Określa strony właściwości, do której należy ta grupa zadaniowa.
 
 *hIcon*<br/>
@@ -231,14 +231,14 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Reprezentuje okno nadrzędne bieżącej grupy zadań.
 
-*Dane*<br/>
+*data*<br/>
 [out] Obiekt typu `CAccessibilityData` , jest wypełniana danymi dostępności bieżącej grupy zadań.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość TRUE, jeśli *danych* parametr został pomyślnie wypełnione danymi ułatwień dostępu w bieżącej grupy zadań; w przeciwnym razie FALSE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

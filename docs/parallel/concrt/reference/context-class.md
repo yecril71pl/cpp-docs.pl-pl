@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555080"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293956"
 ---
 # <a name="context-class"></a>Context — Klasa
 
@@ -54,12 +54,12 @@ class Context;
 |[GetId](#getid)|Zwraca identyfikator kontekstu, który jest unikatowy w obrębie harmonogramu, do której należy dany kontekst.|
 |[GetScheduleGroupId](#getschedulegroupid)|Zwraca identyfikator grupy harmonogramu, który aktualnie pracuje kontekst.|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Zwraca identyfikator wirtualnego procesora, który jest aktualnie wywoływany na.|
-|[Id](#id)|Zwraca identyfikator bieżącego kontekstu, która jest unikatowa w obrębie harmonogramu, do którego należy bieżący kontekst.|
+|[Identyfikator](#id)|Zwraca identyfikator bieżącego kontekstu, która jest unikatowa w obrębie harmonogramu, do którego należy bieżący kontekst.|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Zwraca wskazanie, czy kolekcja zadań, która jest aktualnie wykonywana i wbudowana w bieżącym kontekście jest w środku aktywnego anulowania (lub będzie wkrótce).|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Określa, czy kontekst jest synchronicznie zablokowany. Kontekst uznaje się synchronicznie zablokowany, jeśli jawnie wykonał akcję, która doprowadziła do blokady.|
 |[Oversubscribe](#oversubscribe)|Wprowadza dodatkowy procesor wirtualny do harmonogramu na czas trwania bloku kodu, gdy wywoływany w kontekście wykonywania na jednym z procesorów wirtualnych w tym harmonogramie.|
 |[ScheduleGroupId](#schedulegroupid)|Zwraca identyfikator grupy harmonogramu, który pracuje bieżącego kontekstu.|
-|[Odblokowywanie](#unblock)|Odblokowuje kontekst i powoduje, że usługa będzie możliwy do uruchomienia.|
+|[Unblock](#unblock)|Odblokowuje kontekst i powoduje, że usługa będzie możliwy do uruchomienia.|
 |[VirtualProcessorId](#virtualprocessorid)|Zwraca identyfikator wirtualnego procesora, który jest wykonywany bieżący kontekst.|
 |[Yield](#yield)|Przekazuje wykonywanie kodu, dzięki czemu można wykonać w innym kontekście. Jeśli żaden inny kontekst nie jest dostępny do podania, harmonogram może podać inny wątek systemu operacyjnego.|
 
@@ -121,7 +121,7 @@ Wskaźnik do bieżącego kontekstu.
 
 Ta metoda powoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu obecnie skojarzony kontekst wywołania.
 
-##  <a name="getid"></a> Getid —
+##  <a name="getid"></a> GetId
 
 Zwraca identyfikator kontekstu, który jest unikatowy w obrębie harmonogramu, do której należy dany kontekst.
 
@@ -149,7 +149,7 @@ Identyfikator grupy harmonogramu, w którym aktualnie pracuje kontekst.
 
 Wartość zwrócona przez tę metodę jest natychmiastowe próbkowania grupy harmonogramu, który kontekst. Jeśli ta metoda jest wywoływana w kontekście innej niż bieżący kontekst, wartość może być nieaktualne moment, są zwracane i nie można polegać. Zazwyczaj ta metoda jest używana do debugowania lub tylko do celów śledzenia.
 
-##  <a name="getvirtualprocessorid"></a> Getvirtualprocessorid —
+##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId
 
 Zwraca identyfikator wirtualnego procesora, który jest aktualnie wywoływany na.
 
@@ -189,7 +189,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 
 Jeśli harmonogram jest dołączony do wywoływania kontekstu i grupy zadań jest wykonywana i wbudowana zadania w tym kontekście, wskazanie, czy tej grupy zadań jest w środku aktywnego anulowania (lub będzie wkrótce) w przeciwnym razie wartość `false`.
 
-##  <a name="issynchronouslyblocked"></a> Issynchronouslyblocked —
+##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked
 
 Określa, czy kontekst jest synchronicznie zablokowany. Kontekst uznaje się synchronicznie zablokowany, jeśli jawnie wykonał akcję, która doprowadziła do blokady.
 
@@ -261,7 +261,7 @@ Istnieje kilka wyjątków, które mogą być generowane przez tę metodę. Jeśl
 
 Należy pamiętać, że między punktem, w którym kod publikuje kontekst do innego wątku można było wywołać okresie krytycznym `Unblock` metody i punkt, gdzie wywołanie metody rzeczywiste `Block` wykonano. W tym okresie nie należy wywołać każdą metodę, która z kolei można blokować i odblokowywać swój własny powodów (np. uzyskiwania blokady). Wywołania `Block` i `Unblock` Przyczyna blokowania i odblokowywania "nie Śledź" metoda. Tylko jeden obiekt powinien mieć własności `Block` i `Unblock` pary.
 
-##  <a name="virtualprocessorid"></a> Virtualprocessorid —
+##  <a name="virtualprocessorid"></a> VirtualProcessorId
 
 Zwraca identyfikator wirtualnego procesora, który jest wykonywany bieżący kontekst.
 
@@ -303,9 +303,8 @@ Ta metoda powoduje procesu domyślnego harmonogramu są tworzone i/lub dołączy
 
 Ta funkcja jest nowa w programie Visual Studio 2015 i jest taka sama jak [uzyskanie](#yield) funkcji, ale nie powoduje konfliktu z makr Yield w Windows.h.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>
-[Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
+[Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

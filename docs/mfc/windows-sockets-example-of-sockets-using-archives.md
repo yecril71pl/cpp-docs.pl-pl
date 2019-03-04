@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: przykład gniazd korzystających z archiwów'
+title: 'Windows Sockets: Przykład gniazd korzystających z archiwów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295265"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Przykład gniazd korzystających z archiwów
 
 W tym artykule przedstawiono przykład użycia klasy [CSocket](../mfc/reference/csocket-class.md). Przykład wykorzystuje `CArchive` obiekty do serializowania danych za pośrednictwem gniazd. Należy pamiętać, że nie jest serializacja dokumentu do lub z pliku.
 
@@ -43,17 +43,17 @@ Do odbierania, funkcja działa podobnie, z tą różnicą, że używa operatora 
 W tym modelu łączności słowo "Odebrane" wysłana wiadomość *strText* zmiennej, jest do wyświetlenia na drugim końcu komunikacji, więc określa odbieranie użytkownika zostały pewne pakiety danych odebrane. Odbiornik odpowiedzi przy użyciu podobnych ciąg, który jest wyświetlany komunikat "Wysłano", do wyświetlenia na ekranie oryginalnego nadawcy. Otrzymania obu ciągów wskazuje że pomyślnej komunikacji.
 
 > [!CAUTION]
->  Jeśli piszesz program kliencki MFC do komunikacji z serwerami ustanowionych (inne niż MFC), nie będą wysyłane obiektów C++ w archiwum. Serwer nie działa aplikacji MFC, która rozumie rodzaje obiektów, które chcesz wysłać, nie będzie mogła odbierać i deserializacji obiektów. Przykład w artykule [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md) pokazuje komunikat tego typu.
+>  Jeśli piszesz program kliencki MFC do komunikacji z serwerami ustanowionych (inne niż MFC), nie będą wysyłane obiektów C++ w archiwum. Serwer nie działa aplikacji MFC, która rozumie rodzaje obiektów, które chcesz wysłać, nie będzie mogła odbierać i deserializacji obiektów. Przykład w artykule [Windows Sockets: Porządkowanie bajtów](../mfc/windows-sockets-byte-ordering.md) pokazuje komunikat tego typu.
 
 Aby uzyskać więcej informacji, zobacz Windows Sockets specyfikacji: **htonl**, **htons**, **ntohl**, **ntohs**. Aby uzyskać więcej informacji, zobacz też:
 
-- [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)<br/>
@@ -61,4 +61,3 @@ Aby uzyskać więcej informacji, zobacz Windows Sockets specyfikacji: **htonl**,
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

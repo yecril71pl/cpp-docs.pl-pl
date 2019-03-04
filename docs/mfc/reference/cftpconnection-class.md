@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295126"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -177,7 +177,7 @@ Określa, czy odpowiedź jest oczekiwana z serwera FTP. Może być jednym z nast
 
 - `CmdRespRead` Odpowiedź jest oczekiwany.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Wartość flagami, które kontrolują tej funkcji. Aby uzyskać pełną listę, zobacz [polecenie FTP](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).
 
 *dwContext*<br/>
@@ -336,7 +336,7 @@ Określa atrybuty pliku. Może to być dowolną kombinacją następujących flag
 
 - FILE_ATTRIBUTE_TEMPORARY plik jest używany do tymczasowego przechowywania danych. Aplikacje należy zapisywać do pliku, tylko wtedy, gdy jest to absolutnie konieczne. Większość plików danych pozostaje w pamięci bez opróżnianych na nośniku, ponieważ plik zostanie wkrótce usunięty.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa warunki, na których występuje transferu. Ten parametr może być dowolny z *Flagidw* wartości opisane w [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) w zestawie Windows SDK.
 
 *dwContext*<br/>
@@ -354,7 +354,7 @@ Jeśli *Flagidw* FILE_TRANSFER_TYPE_ASCII, tłumaczenia pliku danych również k
 
 Zarówno *pstrRemoteFile* i *pstrLocalFile* może być albo częściowo kwalifikowane nazwy plików względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnik odwrotny (\\) lub ukośnika (/) może być używany jako separator katalogu dla obu nazwy. `GetFile` wykonuje translację separatora nazwy katalogów na odpowiednie znaki, zanim zostaną użyte.
 
-Zastąp *dwContext* domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Zastąp *dwContext* domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
@@ -376,7 +376,7 @@ Wskaźnik do ciągu zawierającego nazwę pliku, który ma zostać otwarty.
 *dwAccess*<br/>
 Określa, jak plik będzie dostępny. Może być GENERIC_READ lub GENERIC_WRITE, ale nie oba.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa warunki, w których kolejnych Transfer odbywa się. Może to być dowolny z następujących stałych FTP_TRANSFER_ *:
 
 - FTP_TRANSFER_TYPE_ASCII pliku przesyła przy użyciu metody transferu FTP ASCII (typ A). Konwertuje kontroli i informacje o formatowaniu na lokalne odpowiedniki.
@@ -404,7 +404,7 @@ Po wywołaniu `OpenFile` i do momentu wywołania `CInternetConnection::Close`, a
 
 *PstrFileName* parametr może być albo częściowo kwalifikowane nazwy pliku względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnik odwrotny (\\) lub ukośnika (/) może być używany jako separator katalogu dla obu nazwy. `OpenFile` wykonuje translację separatora nazwy katalogów na odpowiednie znaki, przed jego użyciem.
 
-Zastąp *dwContext* domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Zastąp *dwContext* domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -426,7 +426,7 @@ Wskaźnik do ciągu zawierającego nazwę pliku do wysłania z systemu lokalnego
 *pstrRemoteFile*<br/>
 Wskaźnik do ciągu zawierającego nazwę pliku do utworzenia na serwerze FTP.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa warunki, na których występuje transfer pliku. Może być dowolną ze stałych FTP_TRANSFER_ * opisanego w [OpenFile](#openfile).
 
 *dwContext*<br/>
@@ -440,7 +440,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W pr
 
 `PutFile` jest procedurę wysokiego poziomu, która obsługuje wszystkich operacji związanych z przechowywaniem plików na serwerze FTP. Aplikacje wysyłać tylko dane lub które wymagają ściślejszej kontroli nad transferu plików, powinny używać [OpenFile](#openfile) i [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).
 
-Zastąp `dwContext` domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
+Zastąp `dwContext` domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CFtpConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwsze kroki: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.
 
 ##  <a name="remove"></a>  CFtpConnection::Remove
 
@@ -535,7 +535,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W pr
 
 Użyj [GetCurrentDirectory](#getcurrentdirectory) Aby określić bieżący katalog roboczy serwer FTP. Nie należy zakładać, że system zdalny połączył należy do katalogu głównego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

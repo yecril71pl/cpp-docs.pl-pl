@@ -1,5 +1,5 @@
 ---
-title: 'TN021: routing poleceń i komunikatów'
+title: 'TN021: Polecenie i routingu wiadomości'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294398"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021: routing poleceń i komunikatów
+# <a name="tn021-command-and-message-routing"></a>TN021: Polecenie i routingu wiadomości
 
 > [!NOTE]
 >  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -203,7 +203,7 @@ Dla **CMDIFrameWnd** Style paska przewijania przekazanej do **Utwórz** lub **lo
 
 Aby uzyskać **CSplitterWnd** Style paska przewijania dotyczą pasków specjalne przewijania udostępnionego dla regionów rozdzielacza. W przypadku systemu windows statyczny rozdzielacz ustawi zwykle nie albo styl paska przewijania. Dynamiczne okna podziału, zazwyczaj należy przypadku pasek zestaw stylów dla kierunku podzielisz, czyli przewijania **WS_HSCROLL** czy jest możliwe podzielenie wierszy, **WS_VSCROLL** czy jest możliwe podzielenie kolumn.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

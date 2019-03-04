@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295867"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Zmiana kodu rysującego (ATL — Samouczek, część 4)
 
@@ -156,7 +156,7 @@ W następnym kroku dodasz zdarzenie.
 
 [Wróć do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)<br/>
 [Testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md)

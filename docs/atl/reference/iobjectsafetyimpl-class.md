@@ -1,5 +1,5 @@
 ---
-title: Klasa IObjectSafetyImpl
+title: IObjectSafetyImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectSafetyImpl
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e9035a8573a917e732f3452aeb7fd07af160517f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293280"
 ---
-# <a name="iobjectsafetyimpl-class"></a>Klasa IObjectSafetyImpl
+# <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl Class
 
 Ta klasa udostępnia domyślną implementację elementu `IObjectSafety` interfejsu, aby umożliwić klientowi pobierać i ustawiać poziom bezpieczeństwa obiektu.
 
@@ -127,7 +127,7 @@ Implementacja zwraca E_NOINTERFACE dla dowolnego interfejsu nie jest obsługiwan
 
 Zobacz [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Interfejs IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 04444ca1318eaf52f05c05a251baf120c16eec29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9f09715f53247cc8a3abf0fbc63517e76d810c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296322"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologia Active w Internecie
 
@@ -24,7 +24,7 @@ Kontrolki ActiveX (dawniej kontrolka OLE) to obiekty, które mogą być wstawian
 
 ## <a name="internet-data-download-services"></a>Danych w Internecie Pobierz usługi
 
-Można pobrać danych w Internecie przy użyciu popularnych protokołów: HTTP, FTP i gopher. Klas MFC WinInet ułatwiają na przesyłanie danych przy użyciu protokołów HTTP, FTP i gopher, zapewniając abstrakcyjność protokołów TCP/IP i WinSock. Moniker asynchronicznej klas MFC umożliwiają pobieranie plików bez blokowania i asynchronicznie renderowania dużych obiektów. Aby uzyskać więcej informacji, zobacz [rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
+Dane można pobrać za pośrednictwem Internetu, przy użyciu protokołów wspólne: HTTP, FTP i gopher. Klas MFC WinInet ułatwiają na przesyłanie danych przy użyciu protokołów HTTP, FTP i gopher, zapewniając abstrakcyjność protokołów TCP/IP i WinSock. Moniker asynchronicznej klas MFC umożliwiają pobieranie plików bez blokowania i asynchronicznie renderowania dużych obiektów. Aby uzyskać więcej informacji, zobacz [rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="active-scripts"></a>Skrypty aktywne
 
@@ -34,9 +34,8 @@ Skrypt VBScript i innych języków skryptowych łączenie kontrolek i dodać int
 
 Rozszerzenia języka HTML, takie jak tag obiekt zostały dodane do obsługi formantów i skryptów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
 [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)<br/>
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
-

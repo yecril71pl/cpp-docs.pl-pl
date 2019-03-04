@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293267"
 ---
 # <a name="cminiframewnd-class"></a>Klasa CMiniFrameWnd
 
@@ -204,7 +204,7 @@ Jeśli zostanie określony styl WS_VISIBLE, Windows wysyła okna wszystkie komun
 
 Okna przybornika palety stary styl nie są już obsługiwane. Stary styl nie miał przycisk "X" Zamknij, było obsługiwane, podczas uruchamiania aplikacji MFC w poprzednich wersjach systemu Windows, ale nie jest już obsługiwana w programie Visual C++ .NET. Obsługiwana jest tylko nowy styl WS_EX_TOOLWINDOW; Aby uzyskać opis ten styl, zobacz [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

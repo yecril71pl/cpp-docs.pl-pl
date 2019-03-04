@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 7a526c56c15d3e61f63b0def6d462d22b3560169
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293514"
 ---
 # <a name="making-and-using-controls"></a>Tworzenie i używanie formantów
 
@@ -41,7 +41,6 @@ Upewnij się większość formantów dla okien dialogowych w programie Visual C+
 
 - [Paski dialogowe](../mfc/dialog-bars.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki](../mfc/controls-mfc.md)
-

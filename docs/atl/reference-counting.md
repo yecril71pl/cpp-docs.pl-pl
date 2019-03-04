@@ -8,12 +8,12 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: f77939c25de19d619d6b4eeb2d3d6a0f3f1e5178
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473115"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293436"
 ---
 # <a name="reference-counting"></a>Zliczanie odwołań
 
@@ -32,8 +32,7 @@ Zliczanie odwołań może też być implementowany tak, aby każde odwołanie do
 > [!NOTE]
 >  Gdy `CComObject`— pochodnej obiekt jest tworzony przy użyciu **nowe** operatora, licznik odwołań to 0. W związku z tym, wywołanie `AddRef` musi nastąpić po pomyślnym utworzeniu `CComObject`-pochodnych obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
 [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
-

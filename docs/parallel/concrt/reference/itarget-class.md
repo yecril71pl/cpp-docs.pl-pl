@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295334"
 ---
 # <a name="itarget-class"></a>ITarget — Klasa
 
@@ -199,7 +199,7 @@ W przypadku przesłonięcia w klasie pochodnej, odłączenie wszystkich bloków 
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ISource, klasa](isource-class.md)

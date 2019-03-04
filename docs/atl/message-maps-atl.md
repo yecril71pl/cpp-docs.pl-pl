@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-ms.openlocfilehash: 92d0b4887127e1803d1d3209a6a1dd51e9a98d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8b3fcb2f10f975ebdf68a285c7d5e364b9e1b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496112"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292578"
 ---
 # <a name="message-maps-atl"></a>Mapy komunikatów (ATL)
 
@@ -31,7 +31,6 @@ Można połączyć w łańcuch do każdej klasy, która deklaruje mapy komunikat
 
 Na koniec ATL obsługuje mapy komunikatów alternatywne, zadeklarowany za pomocą [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) makra. Każdej mapie komunikatów alternatywne jest identyfikowany przez unikatowy numer, który zostanie przekazany do ALT_MSG_MAP. Za pomocą alternatywnej komunikatu mapy, może obsługiwać komunikaty wiele okien w jedną mapę. Należy pamiętać, że domyślnie `CWindowImpl` nie korzysta z mapy komunikatów alternatywne. Aby dodać tę obsługę, Zastąp `WindowProc` method in Class metoda swoje `CWindowImpl`-pochodne klasy i wywołania `ProcessWindowMessage` o identyfikatorze mapy wiadomości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Implementowanie okna](../atl/implementing-a-window.md)
-

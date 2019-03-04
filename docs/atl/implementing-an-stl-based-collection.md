@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: b82599bd95abb473a361a962566669ed1ef7a35b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292929"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcję C++ Standard Library
 
@@ -99,8 +99,8 @@ Jest jedynym elementem, który pozostaje do wypełnienia wektora z danymi. W tym
 
 Teraz możesz przetestować kod przy użyciu wybranego klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)<br/>
-[Przykładowe ATLCollections](../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../visual-cpp-samples.md)<br/>
 [Klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md)

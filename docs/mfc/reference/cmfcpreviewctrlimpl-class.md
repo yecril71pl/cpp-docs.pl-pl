@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCPreviewCtrlImpl
+title: CMFCPreviewCtrlImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295750"
 ---
-# <a name="cmfcpreviewctrlimpl-class"></a>Klasa CMFCPreviewCtrlImpl
+# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl Class
 
 Ta klasa implementuje okno, które jest umieszczone na oknie hosta zapewnionym przez powłokę podglądu sformatowanego.
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs obiekt formantu (wersja zapoznawcza).|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs obiekt formantu (wersja zapoznawcza).|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Tworzy obiekt formantu (wersja zapoznawcza).|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -170,7 +170,7 @@ virtual void DoPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia dla malowania.
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
@@ -301,7 +301,7 @@ Kolor tła okna podglądu.
 *clrText*<br/>
 Kolor tekstu w oknie podglądu.
 
-*PLF*<br/>
+*plf*<br/>
 Czcionka używana do wyświetlania tekstu w oknie podglądu.
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
@@ -329,7 +329,7 @@ Określa, czy formant powinien być narysowany ponownie.
 
 Zazwyczaj nowy prostokąt otaczający jest ustawiona, gdy zmieni się rozmiar kontrolki hosta.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Destructs obiekt formantu (wersja zapoznawcza).
 
@@ -338,4 +338,3 @@ Destructs obiekt formantu (wersja zapoznawcza).
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295880"
 ---
 # <a name="security-global-functions"></a>Funkcje globalne zabezpieczeń
 
@@ -65,7 +65,7 @@ inline bool AtlGetDacl(
 *hObject*<br/>
 Uchwytu do obiektu, dla którego mają zostać pobrane informacje o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *pDacl*<br/>
@@ -99,7 +99,7 @@ inline bool AtlSetDacl(
 *hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *rDacl*<br/>
@@ -138,7 +138,7 @@ inline bool AtlGetGroupSid(
 *hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *pSid*<br/>
@@ -171,7 +171,7 @@ inline bool AtlSetGroupSid(
 *hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *rSid*<br/>
@@ -204,7 +204,7 @@ inline bool AtlGetOwnerSid(
 *hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *pSid*<br/>
@@ -237,7 +237,7 @@ inline bool AtlSetOwnerSid(
 *hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *rSid*<br/>
@@ -271,7 +271,7 @@ inline bool AtlGetSacl(
 *hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *pSacl*<br/>
@@ -313,7 +313,7 @@ inline bool AtlSetSacl(
 *hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
 *rSacl*<br/>
@@ -362,7 +362,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 *pszObjectName*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*<br/>
+*ObjectType*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *pszObjectName* parametru.
 
 *pSecurityDescriptor*<br/>
@@ -386,6 +386,6 @@ Jeśli `AtlGetSecurityDescriptor` jest wywoływana wiele razy na wiele różnych
 
 **Nagłówek:** atlsecurity.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../../atl/reference/atl-functions.md)

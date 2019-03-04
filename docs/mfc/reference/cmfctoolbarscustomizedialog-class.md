@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295035"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
 
 Zakładka niemodalne okno dialogowe ( [klasa CPropertySheet](../../mfc/reference/cpropertysheet-class.md)), który umożliwia użytkownikowi dostosowywanie pasków narzędzi, menu, skrótów klawiaturowych, narzędzi zdefiniowanych przez użytkownika i stylu wizualnego w aplikacji. Zazwyczaj użytkownik uzyskuje dostęp do tego okna dialogowego wybierając **Dostosuj** z **narzędzia** menu.
 
-**Dostosuj** okno dialogowe zawiera sześć kart: **polecenia**, **pasków narzędzi**, **narzędzia**, **klawiatury**,  **Menu**, i **opcje**.
+**Dostosuj** okno dialogowe zawiera sześć karty: **Polecenia**, **pasków narzędzi**, **narzędzia**, **klawiatury**, **Menu**, i **opcje**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Wskaźnik do okna nadrzędnego.
 
-*Mapy bitowej*<br/>
+*bitmap*<br/>
 [in] Odwołanie do obiektu mapy bitowej do edycji.
 
 *nBitsPerPixel*<br/>
@@ -750,7 +750,7 @@ Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE
 
 Ustawienie kategorii użytkownika nie jest obecnie używany przez platformę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

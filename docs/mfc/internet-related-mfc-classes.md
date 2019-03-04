@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet classes
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
-ms.openlocfilehash: 7e0b4dd19c023229386c1af9d1e50ad18fe7f224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd8e85d236f451c2d6e5e03ed3495cf02f5f3ba7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293553"
 ---
 # <a name="internet-related-mfc-classes"></a>Klasy MFC związane z Internetem
 
@@ -17,9 +17,9 @@ Aby uzyskać informacji na temat klasy związane z Internetem i funkcje Zobacz:
 
 ## <a name="global-functions"></a>Funkcje globalne
 
-- [Afxparseurl —](reference/internet-url-parsing-globals.md#afxparseurl)
+- [AfxParseURL](reference/internet-url-parsing-globals.md#afxparseurl)
 
-- [Afxgetinternethandletype —](reference/internet-url-parsing-globals.md#afxgetinternethandletype)
+- [AfxGetInternetHandleType](reference/internet-url-parsing-globals.md#afxgetinternethandletype)
 
 ## <a name="activex-control-classes"></a>Klasy kontrolek ActiveX
 
@@ -65,7 +65,6 @@ Aby uzyskać informacji na temat klasy związane z Internetem i funkcje Zobacz:
 
 - [CInternetException](../mfc/reference/cinternetexception-class.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
-

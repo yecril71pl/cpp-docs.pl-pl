@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: 9d42e9cdd8e2711fc6ed6aa0d08a19b8bc55d5f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba56a38cfc5ccf808c7d95f24666fff0313ecc43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294515"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Przeciąganie obrazów z listy obrazów
 
@@ -30,8 +30,7 @@ Wywołaj [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) po zakończeniu
 
 Kiedy aplikacja wywołuje `BeginDrag`, system tworzy listę obrazu tymczasowego, wewnętrzne i kopiuje określony przeciągnij obraz do wewnętrznej listy. Wskaźnik do listy obrazów tymczasowe przeciągania można pobrać za pomocą [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) funkcja elementu członkowskiego. Funkcja pobiera również bieżącej pozycji przeciągania i przesunięcie przeciągnij obraz względem pozycji przeciągania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

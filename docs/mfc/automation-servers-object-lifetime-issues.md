@@ -1,5 +1,5 @@
 ---
-title: 'Serwery automatyzacji: kwestie okresu istnienia obiektów'
+title: 'Automation Servers: Kwestie okresu istnienia obiektu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293583"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Serwery automatyzacji: kwestie okresu istnienia obiektów
+# <a name="automation-servers-object-lifetime-issues"></a>Automation Servers: Kwestie okresu istnienia obiektu
 
 Klienta automatyzacji tworzy lub uaktywnia element OLE, serwer przekazuje klienta wskaźnikiem tego obiektu. Odwołanie do obiektu przez wywołanie funkcji OLE nawiązaniu przez klienta [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Ta dokumentacja jest włączona do momentu wywołania klienta [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Aplikacje klienckie pisane przy użyciu klasy OLE bibliotekę Microsoft Foundation Class nie musi wprowadzać te wywołania; wykonuje tę platformę). OLE system i sam serwer może utworzyć odwołania do obiektu. Serwer powinien niszczy obiekt tak długo, jak obowiązywały odwołania zewnętrzne do obiektu.
 
@@ -28,8 +28,7 @@ Czasami okoliczności wymusić zakończenie, gdy klient nadal ma odwołania do o
 
 W zestawie Windows SDK, zobacz `IUnknown::AddRef` i `IUnknown::Release`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Serwery automatyzacji](../mfc/automation-servers.md)<br/>
-[Afxolecanexitapp —](../mfc/reference/application-control.md#afxolecanexitapp)
-
+[AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)

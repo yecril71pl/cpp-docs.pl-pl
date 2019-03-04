@@ -1,5 +1,5 @@
 ---
-title: Klasa CA2AEX
+title: CA2AEX Class
 ms.date: 11/04/2016
 f1_keywords:
 - CA2AEX
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 77bb49ab87c20b6df317282d8f5e6e228deb3a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293826"
 ---
-# <a name="ca2aex-class"></a>Klasa CA2AEX
+# <a name="ca2aex-class"></a>CA2AEX Class
 
 Ta klasa jest używana przez makra konwersji ciągów CA2TEX i CT2AEX i typedef CA2A.
 
@@ -43,7 +43,7 @@ Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 baj
 |Nazwa|Opis|
 |----------|-----------------|
 |[CA2AEX::CA2AEX](#ca2aex)|Konstruktor.|
-|[CA2AEX:: ~ CA2AEX](#dtor)|Destruktor.|
+|[CA2AEX::~CA2AEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -149,7 +149,7 @@ operator LPSTR() const throw();
 
 Zwraca ciąg tekstowy jako typu LPSTR.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
 [Klasa CA2WEX](../../atl/reference/ca2wex-class.md)<br/>

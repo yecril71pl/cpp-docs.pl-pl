@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: ef0224ccb9e2592daecb94204db5e1a8c785c7b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292384"
 ---
 # <a name="cheapptrlist-class"></a>Klasa CHeapPtrList
 
@@ -78,7 +78,7 @@ Rozmiar bloku.
 
 Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlList](../../atl/reference/catllist-class.md)<br/>
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>

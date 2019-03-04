@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295022"
 ---
 # <a name="cdbexception-class"></a>Klasa CDBException
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 Klasa zawiera dwa elementy członkowskie danych publicznych, których można użyć, aby ustalić przyczynę wyjątku lub, aby wyświetlić wiadomość SMS z opisem wyjątku. `CDBException` obiekty są zbudowane i generowane przez funkcje składowe klasy bazy danych.
 
 > [!NOTE]
->  Ta klasa jest jedną z klas interfejsu Open Database Connectivity (ODBC) biblioteki MFC. Jeśli zamiast tego są przy użyciu nowszej klas obiektów dostępu do danych (DAO), użyj [CDaoException](../../mfc/reference/cdaoexception-class.md) zamiast tego. Wszystkie nazwy klasy DAO mają "CDao" jako prefiksu. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).
+>  Ta klasa jest jedną z klas interfejsu Open Database Connectivity (ODBC) biblioteki MFC. Jeśli zamiast tego są przy użyciu nowszej klas obiektów dostępu do danych (DAO), użyj [CDaoException](../../mfc/reference/cdaoexception-class.md) zamiast tego. Wszystkie nazwy klasy DAO mają "CDao" jako prefiksu. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: Baza danych programowania](../../data/data-access-programming-mfc-atl.md).
 
 Wyjątki są przypadki nietypowe wykonanie obejmujące warunki poza kontrolą programu, takie jak źródło danych lub błędy We/Wy sieci. Błędy, które można by oczekiwać w trakcie normalnego wykonania programu zwykle nie są uznawane za wyjątki.
 
 Możesz uzyskać dostęp tych obiektów w zakresie **CATCH** wyrażenia. Może również zgłosić `CDBException` obiektów w kodzie za pomocą `AfxThrowDBException` funkcja globalna.
 
-Aby uzyskać więcej informacji na temat obsługi wyjątków w ogólne lub wkrótce `CDBException` obiektów, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
+Aby uzyskać więcej informacji na temat obsługi wyjątków w ogólne lub wkrótce `CDBException` obiektów, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątków: Baza danych wyjątki](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -110,7 +110,7 @@ Ten typ zawiera prefiks SQL zdefiniowane przez sterownik ODBC i prefiksem AFX_SQ
 
 - AFX_SQL_ERROR_RECORDSET_READONLY próby zaktualizowania rekordów tylko do odczytu lub źródło danych jest tylko do odczytu. Żadne operacje aktualizacji mogą być wykonywane przy użyciu zestawu rekordów lub `CDatabase` obiekt jest skojarzony.
 
-- Wartość SQL_ERROR funkcji nie powiodło się. Komunikat o błędzie zwrócona przez funkcję ODBC `SQLError` są przechowywane w `m_strError` element członkowski danych.
+- SQL_ERROR Function failed. Komunikat o błędzie zwrócona przez funkcję ODBC `SQLError` są przechowywane w `m_strError` element członkowski danych.
 
 - Funkcja SQL_INVALID_HANDLE nie powiodło się z powodu nieprawidłowych dojścia, dojścia połączenia lub dojście instrukcji. Oznacza to błąd programistyczny. Nie dodatkowe informacje są dostępne z funkcji ODBC `SQLError`.
 
@@ -144,13 +144,13 @@ Aby uzyskać dodatkowe informacje na temat kodów umożliwia tworzą ten ciąg, 
 
 ### <a name="example"></a>Przykład
 
-  Z ODBC: "Stan: S0022, natywne: 207, źródło: [Microsoft] [sterownik ODBC SQL Server] [SQL Server] Nieprawidłowa nazwa kolumny"Nazwa kolumny""
+  Z ODBC: "Stan: S0022, natywne: 207, źródło: [Microsoft] [SQL Server sterownika ODBC] [SQL Server] Nieprawidłowa nazwa kolumny"Nazwa kolumny""
 
 W `m_strStateNativeOrigin`: "Stan: S0022, natywne: 207, źródło: [Microsoft] [sterownik ODBC SQL Server] [SQL Server]"
 
 W `m_strError`: "Nieprawidłowa nazwa kolumny"Nazwa kolumny""
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

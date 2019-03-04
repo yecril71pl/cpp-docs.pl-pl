@@ -1,5 +1,5 @@
 ---
-title: 'TN029: okna podziału'
+title: 'TN029: Splitter — Windows'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294996"
 ---
-# <a name="tn029-splitter-windows"></a>TN029: okna podziału
+# <a name="tn029-splitter-windows"></a>TN029: Splitter — Windows
 
 Ta uwaga opisuje MFC [klasa CSplitterWnd](../mfc/reference/csplitterwnd-class.md), zapewniającą okna dzieli i zarządza rozmiaru inne okna okienka.
 
@@ -64,7 +64,7 @@ Pasek podziału: Formant, który jest umieszczany między wierszami i kolumnami 
 
 Okno rozdzielacza: Kontrolki w dynamicznym `CSplitterWnd` służące do tworzenia nowych wierszy lub kolumn okienka. Jest on umieszczony u góry pasków przewijania w pionie lub w lewo poziome paski przewijania.
 
-Przecięcie rozdzielacz: Przecięciu pionowy pasek podziału i poziomy pasek podziału. Można przeciągnąć go do dopasowania rozmiaru wierszy i kolumn okienka jednocześnie.
+Przecięcie rozdzielacz: Przecięcie pionowy pasek podziału i poziomy pasek podziału. Można przeciągnąć go do dopasowania rozmiaru wierszy i kolumn okienka jednocześnie.
 
 ## <a name="shared-scroll-bars"></a>Udostępnione paski przewijania
 
@@ -136,8 +136,7 @@ Te funkcje zaimplementować logikę dynamiczne okno rozdzielacza. Możesz przes�
 
    Wykonuje polecenie podziału klawiatury, zwykle "podział okna".
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

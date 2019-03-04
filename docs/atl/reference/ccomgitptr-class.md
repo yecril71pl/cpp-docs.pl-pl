@@ -1,5 +1,5 @@
 ---
-title: Klasa CComGITPtr
+title: CComGITPtr Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComGITPtr
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296036"
 ---
-# <a name="ccomgitptr-class"></a>Klasa CComGITPtr
+# <a name="ccomgitptr-class"></a>CComGITPtr Class
 
 Ta klasa dostarcza metody radzenia sobie z wskaźniki interfejsu i tabeli interfejsu globalnego (GIT).
 
@@ -44,7 +44,7 @@ Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Konstruktor.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|Destruktor.|
+|[CComGITPtr::~CComGITPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -60,7 +60,7 @@ Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComGITPtr::operator typu DWORD.](#operator_dword)|Zwraca plik cookie z `CComGITPtr` obiektu.|
+|[CComGITPtr::operator DWORD](#operator_dword)|Zwraca plik cookie z `CComGITPtr` obiektu.|
 |[CComGITPtr::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
@@ -123,13 +123,13 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Wskaźnik interfejsu do przechowywania w tabeli interfejsu globalnego (GIT).
 
-*usługi git*<br/>
+*git*<br/>
 [in] Odwołanie do istniejącego `CComGITPtr` obiektu.
 
 *dwCookie*<br/>
 [in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
 
-*Rv*<br/>
+*rv*<br/>
 [in] Źródło `CComGITPtr` przeniesienia danych z obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -138,7 +138,7 @@ Tworzy nową `CComGITPtr` obiektu opcjonalnie przy użyciu istniejącego `CComGI
 
 Przy użyciu konstruktora *rv* jest konstruktora przenoszącego. Dane są przenoszone ze źródła, *rv*, a następnie *rv* jest wyczyszczone.
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 Destruktor.
 
@@ -231,13 +231,13 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Wskaźnik do interfejsu.
 
-*usługi git*<br/>
+*git*<br/>
 [in] Odwołanie do `CComGITPtr` obiektu.
 
 *dwCookie*<br/>
 [in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
 
-*Rv*<br/>
+*rv*<br/>
 [in] `CComGITPtr` Do przenoszenia danych z.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -276,7 +276,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Usuwa interfejs z narzędzia GIT.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Marshaler trybu](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
 [Uzyskiwanie dostępu do interfejsów w Apartamentach](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>

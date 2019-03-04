@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294606"
 ---
 # <a name="cmfckeymapdialog-class"></a>Klasa CMFCKeyMapDialog
 
@@ -207,13 +207,13 @@ virtual int OnPrintHeader(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 [in] Kontekst urządzenia dla drukarki.
 
 *nPage*<br/>
 [in] Numer strony do wydrukowania.
 
-*CX*<br/>
+*cx*<br/>
 [in] Przesunięcie w poziomie nagłówka, w pikselach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -239,7 +239,7 @@ virtual int OnPrintItem(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 [in] Kontekst urządzenia drukarki.
 
 *nItem*<br/>
@@ -248,7 +248,7 @@ virtual int OnPrintItem(
 *y*<br/>
 [in] Przesunięcie w pionie między górnej części strony i pozycja elementu.
 
-*CX*<br/>
+*cx*<br/>
 [in] Przesunięcie w poziomie między lewym rogu strony i pozycja elementu.
 
 *bCalcHeight*<br/>
@@ -298,7 +298,7 @@ virtual void SetColumnsWidth();
 
 Ta metoda umożliwia określenie listy wewnętrznych kolumn formantu do domyślnej szerokości. Po pierwsze jest obliczana szerokość kolumny klawiszy skrótów. Następnie jedną trzecią szerokości jest przydzielany do kolumny polecenia i pozostałych dwóch jest przydzielany do opis kolumny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

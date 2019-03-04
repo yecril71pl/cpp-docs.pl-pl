@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: ba85a811e0ea8c6d1658be3403ca466bb6877914
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293722"
 ---
 # <a name="cpen-class"></a>Cpen — klasa
 
@@ -276,7 +276,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 
 ### <a name="parameters"></a>Parametry
 
-*hpen —*<br/>
+*hPen*<br/>
 `HPEN` Obsługa pióro Windows GDI.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -385,7 +385,7 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz ar
 
 [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

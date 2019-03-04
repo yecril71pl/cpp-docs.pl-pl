@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292925"
 ---
 # <a name="registry-macros"></a>Makra rejestru
 
@@ -108,7 +108,7 @@ DECLARE_REGISTRY(
 [in] UINT, indeksem ciągu zasobu w rejestrze, aby użyć jako opis programu.
 
 *flagi*<br/>
-[in] DWORD zawierający programu modelu wątkowości w rejestrze. Musi mieć jedną z następujących wartości: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
+[in] DWORD zawierający programu modelu wątkowości w rejestrze. Musi być jedną z następujących wartości: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -192,6 +192,6 @@ Jeśli chcesz, aby ATL, aby zastąpić wartości zastępcze w czasie wykonywania
 
 Aby uzyskać więcej informacji na temat parametrów zastępowalnych i skryptów, zobacz artykuł [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

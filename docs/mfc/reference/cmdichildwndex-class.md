@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293432"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 
@@ -201,7 +201,7 @@ Aby móc korzystać z rozszerzonych funkcji dokowania w aplikacji MDI, pochodną
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pochodzi z klasy `CMDIChildWndEx`. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: MFC Visual Studio Application](../../visual-cpp-samples.md).
+Poniższy przykład pochodzi z klasy `CMDIChildWndEx`. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -316,7 +316,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Identyfikator okienka.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Wskaźnik do prostokąta.
 
 ### <a name="remarks"></a>Uwagi
@@ -431,7 +431,7 @@ W przypadku struktura jest przywracania stanu później nazwa dokumentu jest odc
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `GetDocumentName` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: MFC Visual Studio Application](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano użycie `GetDocumentName` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Ta funkcja jest używana, aby uniemożliwić zapisywanie dokumentów tylko do od
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano zastępowanie `IsReadOnly` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: MFC Visual Studio Application](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano zastępowanie `IsReadOnly` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -847,7 +847,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Kombinacja wartości STPFLAG. Aby uzyskać więcej informacji, zobacz [ITaskbarList4::SetTabProperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).
 
 ### <a name="remarks"></a>Uwagi
@@ -961,7 +961,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa, czy `CWnd` jest aktywowany lub dezaktywowany.
 
 *pWndOther*<br/>
@@ -1183,7 +1183,7 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

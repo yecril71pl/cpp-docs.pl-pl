@@ -2,12 +2,12 @@
 title: Przykładowy program więlowątkowy w języku C
 ms.date: 11/04/2016
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 340ac700bae316b0665991249325b2ca262ed9a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 560fdd9e1d5633a240ada8979dc059a901690476
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293228"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
 
@@ -209,6 +209,6 @@ a
 q
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

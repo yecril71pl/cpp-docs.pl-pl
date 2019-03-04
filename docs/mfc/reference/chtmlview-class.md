@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295997"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -1041,10 +1041,10 @@ void Navigate(
 
 ### <a name="parameters"></a>Parametry
 
-*ADRES URL*<br/>
+*Adres URL*<br/>
 Przydzielonej przez obiekt wywołujący ciąg znaków zawierający adres URL, aby przejść do lub pełną ścieżkę pliku do wyświetlenia.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi zmiennej, która określa, czy można dodać zasobu do listy historii, czy do odczytu lub zapisu z pamięci podręcznej i czy ma być wyświetlany zasób w nowym oknie. Zmienna może być kombinacją wartości zdefiniowanych przez [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) wyliczenia.
 
 *lpszTargetFrameName*<br/>
@@ -1094,7 +1094,7 @@ void Navigate2(
 *pIDL*<br/>
 Wskaźnik do [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struktury.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi zmiennej, która określa, czy można dodać zasobu do listy historii, czy do odczytu lub zapisu z pamięci podręcznej i czy ma być wyświetlany zasób w nowym oknie. Zmienna może być kombinacją wartości zdefiniowanych przez [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) wyliczenia.
 
 *lpszTargetFrameName*<br/>
@@ -1171,7 +1171,7 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parametry
 
-*Npolecenie*<br/>
+*nCommand*<br/>
 Identyfikator polecenia, w których włączono stan został zmieniony.
 
 *bWłączenie*<br/>
@@ -2231,10 +2231,9 @@ void Stop();
 
 Ma zastosowanie do programu Internet Explorer i WebBrowser.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [Klasa CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

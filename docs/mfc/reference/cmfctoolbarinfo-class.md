@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCToolBarInfo
+title: CMFCToolBarInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarInfo
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
-ms.openlocfilehash: e1e460fe3efb5401227e91f49d8f7c4f6689fa27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292253"
 ---
-# <a name="cmfctoolbarinfo-class"></a>Klasa CMFCToolBarInfo
+# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo Class
 
 Zawiera identyfikatory paska narzędzi obrazów w różnych stanach. `CMFCToolBarInfo` jest pomocnikiem klasy, która jest używana jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.
 
@@ -130,7 +130,7 @@ Określa identyfikator zasobu dla wszystkich obrazów elementów menu regularne 
 UINT m_uiMenuResID;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

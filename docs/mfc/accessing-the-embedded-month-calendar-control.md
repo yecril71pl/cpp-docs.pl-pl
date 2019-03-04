@@ -9,12 +9,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 56a735f9e79ca4f5423201139adc740878afb279
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfe6fa220e19deebd86e7c8b7bd25dab60165f73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292145"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Uzyskiwanie dostępu do osadzonego formantu kalendarza miesięcznego
 
@@ -37,8 +37,7 @@ Jak wspomniano wcześniej, wszelkie modyfikacje właściwości formantu kalendar
 
 Po czcionka została zmieniona, z wywołaniem `CDateTimeCtrl::SetMonthCalFont`, przechowywanym i wykorzystywanym przy następnym miesięczny kalendarz zostanie wyświetlona nowa czcionka.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

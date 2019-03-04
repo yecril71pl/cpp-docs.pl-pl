@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: edb48b510be1de73abe3361f9bd409a8fed929d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b0a4507df7f352355fc95354e1e83aa7b6d0a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292407"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Dodawanie handlera komunikatów MFC
 
@@ -22,7 +22,7 @@ Za pomocą okna właściwości do definiowania funkcji obsługi wiadomości i zd
 > [!NOTE]
 >  Można dodać program obsługi komunikatów do klasy ATL za pomocą okna właściwości; Jednak niektóre wyniki mogą się różnić. Aby uzyskać więcej informacji, zobacz temat ATL [Dodawanie programu obsługi komunikatów ATL](../../atl/adding-an-atl-message-handler.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
@@ -31,4 +31,3 @@ Za pomocą okna właściwości do definiowania funkcji obsługi wiadomości i zd
 [Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
 [Edytor okien dialogowych](../../windows/dialog-editor.md)
-

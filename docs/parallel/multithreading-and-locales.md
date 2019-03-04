@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-ms.openlocfilehash: dc3f43f67bbc744d550e2770096f0b6ae985175a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12a3fa1922db7a1ec0a7bcd43ddf09000d97961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293605"
 ---
 # <a name="multithreading-and-locales"></a>Wielowątkowość i ustawienia regionalne
 
@@ -435,7 +435,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)<br/>
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)<br/>
@@ -443,6 +443,6 @@ unsigned __stdcall RunThreadB(void *params)
 [setlocale](../preprocessor/setlocale.md)<br/>
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
 [Wersja regionalna](../c-runtime-library/locale.md)<br/>
-[\<clocale — >](../standard-library/clocale.md)<br/>
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<clocale>](../standard-library/clocale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [locale, klasa](../standard-library/locale-class.md)

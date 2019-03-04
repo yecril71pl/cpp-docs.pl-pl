@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCAcceleratorKey
+title: CMFCAcceleratorKey Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCAcceleratorKey
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 169530b213e9201dd59782aad05b71c73c62c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292266"
 ---
-# <a name="cmfcacceleratorkey-class"></a>Klasa CMFCAcceleratorKey
+# <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey Class
 
 Klasa pomocnika, która implementuje wirtualne mapowanie i formatowanie kluczy.
 
@@ -118,7 +118,7 @@ void SetAccelerator(LPACCEL lpAccel);
 
 Ta metoda umożliwia ustawianie klawisz skrótu `CMFCAcceleratorKey` Jeśli nie podano klawisz skrótu podczas tworzenia `CMFCAcceleratorKey`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Klasa CD2DRectU
+title: CD2DRectU Class
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DRectU
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: afcd328a8945853761fecfce8f3c14f73b2a96e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feb8af3992b9f56164ded0e3b6a4529a46fe2a1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294385"
 ---
-# <a name="cd2drectu-class"></a>Klasa CD2DRectU
+# <a name="cd2drectu-class"></a>CD2DRectU Class
 
 Otoka dla `D2D1_RECT_U`.
 
@@ -114,6 +114,6 @@ operator CRect();
 
 Bieżąca wartość prostokąta D2D.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

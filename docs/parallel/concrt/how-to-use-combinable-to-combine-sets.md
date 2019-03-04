@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z wyników połączonych w celu łączenia zestawów'
+title: 'Instrukcje: Korzystanie z wyników połączonych w celu łączenia zestawów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571811"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296101"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>Porady: korzystanie z wyników połączonych w celu łączenia zestawów
+# <a name="how-to-use-combinable-to-combine-sets"></a>Instrukcje: Korzystanie z wyników połączonych w celu łączenia zestawów
 
 W tym temacie pokazano, jak używać [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy w celu obliczenia zbiór liczb pierwszych.
 
@@ -38,9 +38,8 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc równoległych — łączenie primes.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable, klasa](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable::combine_each — metoda](reference/combinable-class.md#combine_each)
-

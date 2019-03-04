@@ -1,5 +1,5 @@
 ---
-title: Interfejs IWorkerThreadClient
+title: IWorkerThreadClient Interface
 ms.date: 11/04/2016
 f1_keywords:
 - IWorkerThreadClient
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 22ea136dd91a514ff10e13cd02b796565b7b0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295282"
 ---
-# <a name="iworkerthreadclient-interface"></a>Interfejs IWorkerThreadClient
+# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient Interface
 
 `IWorkerThreadClient` interfejs implementowany przez klientów [CWorkerThread](../../atl/reference/cworkerthread-class.md) klasy.
 
@@ -35,7 +35,7 @@ __interface IWorkerThreadClient
 
 |||
 |-|-|
-|[Funkcja CloseHandle](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|
+|[CloseHandle](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|
 |[Execute](#execute)|Zaimplementuj tę metodę w celu wykonania kodu, gdy staje się sygnalizowane uchwyt skojarzone z tym obiektem.|
 
 ## <a name="remarks"></a>Uwagi
@@ -103,7 +103,7 @@ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::Execute`.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../atl/reference/atl-classes.md)<br/>
 [Klasa CWorkerThread](../../atl/reference/cworkerthread-class.md)

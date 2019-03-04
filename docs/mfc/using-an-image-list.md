@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: fb0636d29d5bf72007eb440f763de0d5e1f4b581
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb95de134939e1b06e2a8b827424c986f8c48ef3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581249"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293878"
 ---
 # <a name="using-an-image-list"></a>Używanie list obrazów
 
@@ -28,8 +28,7 @@ Typowy listy obrazów jest zgodny ze wzorcem poniżej:
 > [!NOTE]
 >  Jeśli na liście obraz został utworzony za pomocą **nowe** operatora, użytkownik musi zniszczyć `CImageList` obiektu, kiedy są z nią zrobić.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

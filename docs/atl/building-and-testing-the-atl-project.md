@@ -5,12 +5,12 @@ helpviewer_keywords:
 - composite controls, building and testing the project
 - composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-ms.openlocfilehash: 0a6363ca3c3cee7e23729121124457311e056a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d976aba48521df1429b27bb20b8277b72166ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295438"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Tworzenie i testowanie projektu ATL
 
@@ -18,7 +18,6 @@ Jak wspomniano w [Wstawianie kontrolki złożonej](../atl/inserting-a-composite-
 
 Możesz także testować formantu złożonego za pomocą narzędzia do testowania kontenera lub innej aplikacji, który może obsługiwać formant ActiveX. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)
-

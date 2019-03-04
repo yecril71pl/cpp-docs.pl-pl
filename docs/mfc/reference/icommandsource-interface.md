@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538440"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296023"
 ---
 # <a name="icommandsource-interface"></a>Klasa Icommandsource
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 Hostowanie kontrolki użytkownika w widoku MFC [klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Implementując [klasa Icommandtarget](../../mfc/reference/icommandtarget-interface.md), podać odwołanie do formantu użytkownika `ICommandSource` obiektu.
 
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
 
 Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -82,7 +82,7 @@ Dojście do metody obsługi polecenia.
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda dodaje cmdHandler obsługi polecenia do obiektu źródła polecenia i mapuje cmdID program obsługi.
-Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia AddCommandHandler.
+Zobacz [jak: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
@@ -246,7 +246,7 @@ Identyfikator polecenia komunikatu do wysłania.
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda synchronicznie wysyła komunikat zamapowane na identyfikator określony przez polecenie. On wywołuje CWnd::SendMessage można umieścić komunikatu w kolejce komunikatów okna i czeka, aż tej procedury okna przetworzeniu komunikatu przed zwróceniem.
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Klasa ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

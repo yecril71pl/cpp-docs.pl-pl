@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-ms.openlocfilehash: 8ea73da76f079359a4fc0250cacf70d10b545038
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe599ee0e84c393bed656b7304fd13d55ce95a50
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296114"
 ---
 # <a name="cdefaultchartraits-class"></a>Klasa CDefaultCharTraits
 
@@ -81,6 +81,6 @@ static char CharToUpper(char x);
 *x*<br/>
 Znak do przekonwertowania na wielkie litery.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

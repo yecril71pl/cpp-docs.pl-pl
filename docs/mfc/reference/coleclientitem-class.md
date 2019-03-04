@@ -1,5 +1,5 @@
 ---
-title: Klasa COleClientItem
+title: COleClientItem Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleClientItem
@@ -164,14 +164,14 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295360"
 ---
-# <a name="coleclientitem-class"></a>Klasa COleClientItem
+# <a name="coleclientitem-class"></a>COleClientItem Class
 
 Definiuje interfejs kontenera elementów OLE.
 
@@ -287,7 +287,7 @@ Element OLE można osadzony lub połączony. Jeśli jest wbudowany, jego dane s�
 
 `COleClientItem` może być używany z [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) klasy. Aby użyć `COleClientItem`dziedziczyć po nim klasę i zaimplementować [OnChange](#onchange) funkcja elementu członkowskiego, który definiuje, jak kontenera reaguje na zmiany wprowadzone do elementu. Aby zapewnić obsługę aktywacji w miejscu, należy zastąpić [OnGetItemPosition](#ongetitemposition) funkcja elementu członkowskiego. Ta funkcja zawiera informacje dotyczące wyświetlana pozycja elementu OLE.
 
-Aby uzyskać więcej informacji o korzystaniu z interfejsu kontenera, zobacz artykuły [kontenery: Implementowanie kontenera](../../mfc/containers-implementing-a-container.md) i [aktywacji](../../mfc/activation-cpp.md).
+Aby uzyskać więcej informacji o korzystaniu z interfejsu kontenera, zobacz artykuły [kontenerów: Implementowanie kontenera](../../mfc/containers-implementing-a-container.md) i [aktywacji](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  Zestaw Windows SDK odnosi się do elementy osadzone i połączone jako "obiekty" i odwołuje się do typów elementów jako "klasy". Ta dokumentacja używa termin "item", aby odróżnić jednostki OLE z odpowiedniego obiektu języka C++ i termin "type" odróżnienia kategorii OLE klasy języka C++.
@@ -1084,7 +1084,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do [CDC](../../mfc/reference/cdc-class.md) obiekt używany do rysowania elementu OLE.
 
 *lpBounds*<br/>
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `COleClientItem::ItemState` wyliczyć wartość, która może być jedną z następujących czynności: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Aby uzyskać informacje o tych stanów, zobacz artykuł [kontenery: stany elementu klienckiego](../../mfc/containers-client-item-states.md).
+A `COleClientItem::ItemState` wyliczyć wartość, która może być jedną z następujących czynności: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Aby uzyskać informacje o tych stanów, zobacz artykuł [kontenerów: Stany elementu klienckiego](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Uwagi
 
 Aby otrzymać powiadomienie po zmianie stanu elementu OLE, użyj [OnChange](#onchange) funkcja elementu członkowskiego.
 
-Aby uzyskać więcej informacji, zobacz artykuł [kontenery: stany elementu klienckiego](../../mfc/containers-client-item-states.md).
+Aby uzyskać więcej informacji, zobacz artykuł [kontenerów: Stany elementu klienckiego](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Wskazuje pustego menu.
 
 *lpMenuWidths*<br/>
-Wskazuje na tablicy sześciu DŁUGICH wartości wskazujący, ile menu znajdują się w każdej z następujących grup menu: plik, Edytuj, kontenerów, obiektów, w oknie Pomoc. Aplikacja kontenera jest odpowiedzialny za grupy menu Plik, kontener i okna, odpowiadające elementom 0, 2 i 4 tej tablicy.
+Punkty do tablicy sześciu DŁUGICH wartości wskazujący, ile menu znajdują się w każdej z następujących grup menu: Plik, Edytuj, kontenerów, obiektów, w oknie Pomoc. Aplikacja kontenera jest odpowiedzialny za grupy menu Plik, kontener i okna, odpowiadające elementom 0, 2 i 4 tej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2185,7 +2185,7 @@ Połączone elementy funkcji znajduje się źródło łącza, aby uzyskać nowe 
 
 Aby uzyskać więcej informacji, zobacz [IOleLink::Update](/windows/desktop/api/oleidl/nf-oleidl-iolelink-update) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>

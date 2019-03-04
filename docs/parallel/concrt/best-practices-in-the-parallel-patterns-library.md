@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293618"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 
@@ -76,7 +76,7 @@ Aby zmniejszyć ilość planowania obciążenie w tym przykładzie, można zrów
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Aby uzyskać podobny przykład, który używa potoku do wykonywania przetwarzania obrazów w sposób równoległy, zobacz [wskazówki: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Aby uzyskać podobny przykład, który używa potoku do wykonywania przetwarzania obrazów w sposób równoległy, zobacz [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Górnej](#top)]
 
@@ -90,7 +90,7 @@ Poniższy przykład ilustruje użycie `parallel_invoke` algorytm bitonicznego so
 
 Aby zmniejszyć obciążenie, `parallel_invoke` algorytm wykonuje ostatniego sekwencję zadań na kontekst wywołania.
 
-Aby uzyskać pełną wersję tego przykładu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Aby uzyskać więcej informacji na temat `parallel_invoke` algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Aby uzyskać więcej informacji na temat `parallel_invoke` algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
 [[Górnej](#top)]
 
@@ -102,7 +102,7 @@ Podczas pracy bezpośrednio z obiektu grupy zadań, użyj [concurrency::task_gro
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Algorytmy równoległe używają grupy zadań, gdy jeden z równoległych iteracji anuluje grupę nadrzędną zadań, całkowitej zadanie zostanie anulowane. Aby uzyskać pełną wersję tego przykładu, zobacz [porady: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Algorytmy równoległe używają grupy zadań, gdy jeden z równoległych iteracji anuluje grupę nadrzędną zadań, całkowitej zadanie zostanie anulowane. Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Użyj anulowania aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 Obsługa wyjątków jest mniej skuteczny sposób, aby anulować czynność równoległą niż mechanizmie anulowania, istnieją przypadki, gdy obsługi wyjątków jest odpowiedni. Na przykład następującą metodę `for_all`, rekursywnie wykonuje funkcję pracy w każdym węźle `tree` struktury. W tym przykładzie `_children` element członkowski danych jest [kontener std::list](../../standard-library/list-class.md) zawierający `tree` obiektów.
 
@@ -112,7 +112,7 @@ Obiekt wywołujący `tree::for_all` metoda może zgłosić wyjątek, jeśli ta f
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Aby uzyskać pełną wersję tego przykładu, zobacz [porady: Użyj obsługi wyjątków aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Użyj wyjątków, obsługa aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Aby uzyskać więcej ogólnych informacji na temat anulowania i mechanizmy obsługi wyjątków, które są dostarczane przez PPL, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md) i [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -198,7 +198,7 @@ Poniższy przykład modyfikuje poprzedni, za pomocą `combinable` zamiast obiekt
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Aby uzyskać pełną wersję tego przykładu, zobacz [porady: Korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Aby uzyskać więcej informacji na temat `combinable` klasy, zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).
+Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Aby uzyskać więcej informacji na temat `combinable` klasy, zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).
 
 [[Górnej](#top)]
 
@@ -256,7 +256,7 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lam
 
 [[Górnej](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -270,4 +270,3 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lam
 [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Biblioteka agentów asynchronicznych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

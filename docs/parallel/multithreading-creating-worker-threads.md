@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 54bea7b42018637bf868dfdd923b94dd75aa2307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559487"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293241"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Wielowątkowość: Tworzenie wątków roboczych w MFC
 
@@ -43,7 +43,7 @@ Istnieją dwie przeciążone wersje `AfxBeginThread`: jedną, która tworzy tylk
 
 - (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.
 
-- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
+- (Optional) The desired security attributes. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
 
 `AfxBeginThread` Tworzy i inicjuje `CWinThread` obiekt dla Ciebie, uruchomia go i zwraca jego adres, więc można odwołać się do niego później. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.
 
@@ -55,11 +55,11 @@ Funkcja kontrolowania definiuje wątek. Po wprowadzeniu tej funkcji, rozpoczyna 
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
-Parametr jest wartość typu single. Wartość otrzymywana przez funkcję w tym parametrze to wartość, która została przekazana do konstruktora, gdy został utworzony obiekt wątku. Funkcja kontroli może interpretować tę wartość w jakikolwiek sposób, który wybiera. Może być traktowana jako wartość skalarna lub wskaźnika do struktury zawierającej wiele parametrów lub można je zignorować. Jeśli parametr odnosi się do struktury, struktura może służyć nie tylko do przekazywania danych od elementu wywołującego do wątku, ale także do przekazywania danych powrotem od wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do obiektu wywołującego, wątek musi powiadomić obiekt wywołujący, gdy wyniki są gotowe. Aby uzyskać informacje dotyczące komunikacji między wątkiem roboczym do obiektu wywołującego, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).
+Parametr jest wartość typu single. Wartość otrzymywana przez funkcję w tym parametrze to wartość, która została przekazana do konstruktora, gdy został utworzony obiekt wątku. Funkcja kontroli może interpretować tę wartość w jakikolwiek sposób, który wybiera. Może być traktowana jako wartość skalarna lub wskaźnika do struktury zawierającej wiele parametrów lub można je zignorować. Jeśli parametr odnosi się do struktury, struktura może służyć nie tylko do przekazywania danych od elementu wywołującego do wątku, ale także do przekazywania danych powrotem od wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do obiektu wywołującego, wątek musi powiadomić obiekt wywołujący, gdy wyniki są gotowe. Aby uzyskać informacje dotyczące komunikacji między wątkiem roboczym do obiektu wywołującego, zobacz [wielowątkowość: Porady dotyczące programowania](multithreading-programming-tips.md).
 
-Kiedy funkcja kończy, powinna zwrócić UINT oznaczającą powód zakończenia. Zazwyczaj ten kod wyjścia to 0, informując o powodzeniu inne wartości oznaczają różne typy błędów. Jest to wyłącznie od implementacji zależy. Niektóre wątki mogą utrzymywać liczniki użycia obiektów i zwracać bieżącą liczbę zastosowań tego obiektu. Aby dowiedzieć się, jak aplikacje mogą odzyskiwać tę wartość, zobacz [wielowątkowość: Kończenie wątków](multithreading-terminating-threads.md).
+Kiedy funkcja kończy, powinna zwrócić UINT oznaczającą powód zakończenia. Zazwyczaj ten kod wyjścia to 0, informując o powodzeniu inne wartości oznaczają różne typy błędów. Jest to wyłącznie od implementacji zależy. Niektóre wątki mogą utrzymywać liczniki użycia obiektów i zwracać bieżącą liczbę zastosowań tego obiektu. Aby dowiedzieć się, jak aplikacje mogą odzyskiwać tę wartość, zobacz [wielowątkowość: Przerywanie wątków](multithreading-terminating-threads.md).
 
-Istnieją pewne ograniczenia, co można zrobić w programie wielowątkowym napisane przy użyciu biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).
+Istnieją pewne ograniczenia, co można zrobić w programie wielowątkowym napisane przy użyciu biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [wielowątkowość: Porady dotyczące programowania](multithreading-programming-tips.md).
 
 ##  <a name="_core_controlling_function_example"></a> Przykład funkcji sterowania
 
@@ -92,8 +92,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)
+- [Wielowątkowość: Tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)

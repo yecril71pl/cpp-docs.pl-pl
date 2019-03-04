@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293202"
 ---
 # <a name="cmfctooltipctrl-class"></a>Klasa CMFCToolTipCtrl
 
@@ -205,7 +205,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -249,7 +249,7 @@ virtual BOOL OnDrawIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectImage*<br/>
@@ -276,7 +276,7 @@ virtual CSize OnDrawLabel(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -307,7 +307,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *x1*<br/>
@@ -339,7 +339,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -430,7 +430,7 @@ void SetParams(CMFCToolTipInfo* pParams);
 
 Zawsze, gdy zostanie wyświetlona etykietka narzędzia, jest rysowany przy użyciu kolory i style wizualizacji, które *pParams* określa. Wartość *pParams* znajduje się w chronionej składowej `m_Params`, który może zostać oceniony przez klasę pochodną, która zastępuje [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), lub [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)do obsługi określonego wygląd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

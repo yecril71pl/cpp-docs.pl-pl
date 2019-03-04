@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295464"
 ---
 # <a name="atl-module-classes"></a>Klasy modułów ALT
 
@@ -55,8 +55,7 @@ Funkcje `CComModule` została dystrybuowana do kilku nowych klas z następujący
 
    Metody init i czas trwania zostały przeniesione do konstruktory i destruktory klas modułu; nie ma już konieczności wywołać Init i czas trwania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
 [Klasa — Przegląd](../atl/atl-class-overview.md)
-

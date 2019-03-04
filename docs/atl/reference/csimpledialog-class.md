@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: 8662a1bc17f84c8a2513a1126b28d676d0939b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293545"
 ---
 # <a name="csimpledialog-class"></a>Klasa CSimpleDialog
 
@@ -87,6 +87,6 @@ Jeśli funkcja zawiedzie, wartość zwracana jest wartość -1. Aby uzyskać roz
 
 Ta metoda obsługuje wszystkich interakcji z użytkownikiem, gdy okno dialogowe jest aktywne. Jest to, co sprawia, że okno dialogowe modalne; oznacza to użytkownik nie może korzystać z innymi oknami, do czasu zamknięcia okna dialogowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

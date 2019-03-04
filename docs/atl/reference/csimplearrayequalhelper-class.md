@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: e677a5d12918649597db9614b965118f8d6b7da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293254"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Klasa CSimpleArrayEqualHelper
 
@@ -59,17 +59,17 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Parametry
 
-*T1*<br/>
+*t1*<br/>
 Obiekt typu T.
 
-*T2*<br/>
+*t2*<br/>
 Obiekt typu T.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
 [Klasa CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
