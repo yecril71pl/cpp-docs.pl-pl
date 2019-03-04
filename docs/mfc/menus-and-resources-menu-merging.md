@@ -1,5 +1,5 @@
 ---
-title: 'Menu i zasoby: scalanie menu'
+title: 'Menu i zasoby: Scalanie menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300352"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: scalanie menu
+# <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: Scalanie menu
 
 Ten artykuł szczegółowo opisuje kroki niezbędne do dokumenty i aplikacje OLE do obsługi edycja wizualna i aktywacja w miejscu prawidłowo. Aktywacja w miejscu stanowi wyzwanie dla kontenera i serwera aplikacji (składnik). Użytkownik pozostaje w tym samym oknie ramki (w kontekście dokumentu kontenera), ale jest faktycznie uruchomiona inna aplikacja (serwer). Wymaga to koordynacji między zasobami kontenera i serwera aplikacji.
 
@@ -105,12 +105,11 @@ Po aktywowaniu osadzonego elementu w miejscu ramach ładuje menu w miejscu. Nast
 
 Aplikacje serwera należy utworzyć nowy pasek narzędzi i zapisać jego mapy bitowej w oddzielnym pliku. Aplikacje generowane przez Kreatora aplikacji zapisanie tej mapy bitowej w pliku o nazwie ITOOLBAR. BMP. Nowy pasek narzędzi zastępuje paska narzędzi aplikacji kontenera, gdy elementu danych na serwerze jest aktywowany w miejscu, powinny zawierać te same elementy, jak normalne paska narzędzi, ale usunięcie ikon reprezentujących elementy w menu Plik i okna.
 
-Ten pasek narzędzi jest ładowany w swojej `COleIPFrameWnd`-klasy, tworzone przez Kreatora aplikacji. Na pasku stanu jest obsługiwane przez aplikację kontenera. Aby uzyskać więcej informacji na temat implementacji okien ramowych w miejscu, zobacz [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md).
+Ten pasek narzędzi jest ładowany w swojej `COleIPFrameWnd`-klasy, tworzone przez Kreatora aplikacji. Na pasku stanu jest obsługiwane przez aplikację kontenera. Aby uzyskać więcej informacji na temat implementacji okien ramowych w miejscu, zobacz [serwerów: Implementowanie serwera](../mfc/servers-implementing-a-server.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Aktywacja](../mfc/activation-cpp.md)<br/>
 [Serwery](../mfc/servers.md)<br/>
 [Kontenery](../mfc/containers.md)
-

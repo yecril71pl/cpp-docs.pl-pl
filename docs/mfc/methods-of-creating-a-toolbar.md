@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-ms.openlocfilehash: 5296c0454e035770e196c3d6a4d15291d0c4ca6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612462"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304395"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody tworzenia paska narzędzi
 
@@ -30,8 +30,7 @@ Visual C++ zapewnia dwa sposoby, aby móc korzystać z formantu typowego paska n
 
 Każda z tych metod zapewni Ci dostęp do funkcji Członkowskich z formantem paska narzędzi. Gdy wywołujesz `CToolBar::GetToolBarCtrl`, zwraca odwołanie do `CToolBarCtrl` obiektu, aby można było używać któryś zbiór elementów członkowskich. Zobacz [CToolBar](../mfc/reference/ctoolbar-class.md) informacji na temat tworzenia i utworzenie przy użyciu narzędzi `CToolBar`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

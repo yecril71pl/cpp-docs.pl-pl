@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 9e0ee68970b9ee3255ae72699dc185fc5de5a0f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303075"
 ---
 # <a name="common-dialog-classes"></a>Klasy wspólnych okien dialogowych
 
@@ -37,9 +37,8 @@ Aby uzyskać więcej informacji na temat klasy wspólnych okien dialogowych Zoba
 
 Trzy klasy w MFC mają podobne okno dialogowe właściwości. Aby uzyskać informacje o klasach [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), i [CDaoRecordView](../mfc/reference/cdaorecordview-class.md), patrz klasy w *odwołanie MFC*. Aby uzyskać informacje o klasie [CDialogBar](../mfc/reference/cdialogbar-class.md), zobacz [paski dialogowe](../mfc/dialog-bars.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md)
-

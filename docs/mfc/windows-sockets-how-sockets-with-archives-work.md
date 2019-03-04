@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: jak działają gniazda z archiwami'
+title: 'Windows Sockets: Jak działają gniazda z archiwami'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300690"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: jak działają gniazda z archiwami
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak działają gniazda z archiwami
 
 W tym artykule opisano sposób [CSocket](../mfc/reference/csocket-class.md) obiektu, [CSocketFile](../mfc/reference/csocketfile-class.md) obiektu i [CArchive](../mfc/reference/carchive-class.md) obiektu są łączone w celu uproszczenia wysyłania i odbierania danych za pośrednictwem Windows Gniazda.
 
-Artykuł [Windows Sockets: przykład z gniazda przy użyciu archiwa](../mfc/windows-sockets-example-of-sockets-using-archives.md) przedstawia `PacketSerialize` funkcji. Obiekt archiwum w `PacketSerialize` przykład działa podobnie do archiwum obiekt przekazany do MFC [Serialize](../mfc/reference/cobject-class.md#serialize) funkcji. Zasadnicza różnica jest to, że dla gniazda, archiwum została dołączona nie do standardowego [CFile](../mfc/reference/cfile-class.md) obiektu (zwykle skojarzone z plikiem dyskowym) ale do `CSocketFile` obiektu. Zamiast nawiązywania połączenia z plikiem dyskowym `CSocketFile` łączy się z obiektu `CSocket` obiektu.
+Artykuł [Windows Sockets: Przykład archiwum przy użyciu gniazd](../mfc/windows-sockets-example-of-sockets-using-archives.md) przedstawia `PacketSerialize` funkcji. Obiekt archiwum w `PacketSerialize` przykład działa podobnie do archiwum obiekt przekazany do MFC [Serialize](../mfc/reference/cobject-class.md#serialize) funkcji. Zasadnicza różnica jest to, że dla gniazda, archiwum została dołączona nie do standardowego [CFile](../mfc/reference/cfile-class.md) obiektu (zwykle skojarzone z plikiem dyskowym) ale do `CSocketFile` obiektu. Zamiast nawiązywania połączenia z plikiem dyskowym `CSocketFile` łączy się z obiektu `CSocket` obiektu.
 
 Element `CArchive` obiektu zarządza buforu. Po zapełnieniu buforu zapisywanie archiwum (wysyłającym), skojarzoną `CFile` obiekt zapisuje poza zawartość buforu. Opróżnianie buforu archiwum dołączone do gniazda jest odpowiednikiem wysyłania komunikatu. Po zapełnieniu buforu archiwum (odbieranie) podczas ładowania `CFile` obiektu zatrzymuje odczytu, dopóki rozmiar buforu jest ponownie dostępny.
 
@@ -46,9 +46,9 @@ Jeśli `CSocket` nie zostały zaimplementowane jako obiekt dwoma stanami, może 
 
 W trybie "archiwum compatible" `CSocketFile` obiekt zapewnia lepszą wydajność i zmniejsza zagrożenie "zakleszczenie." Zakleszczenie występuje, gdy gniazd nadawczych i Oczekiwanie na siebie nawzajem lub oczekując na zasób wspólnej. Taka sytuacja może wystąpić, jeśli `CArchive` obiektu doświadczenie z `CSocketFile` sposób, jak za pomocą `CFile` obiektu. Za pomocą `CFile`, archiwum, można założyć, że jeśli odbierze mniej bajtów niż żądana go, na końcu pliku został osiągnięty. Za pomocą `CSocketFile`, jednak dane są na podstawie komunikatu; bufor może zawierać wiele komunikatów, więc odbieranie mniej niż żądana liczba bajtów nie oznacza koniec pliku. Aplikacja nie są blokowane w tym przypadku na przykład za pomocą `CFile`, i można kontynuować, odczytywanie wiadomości z buforu, dopóki rozmiar buforu jest pusty. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) działa w programach `CArchive` przydaje się do monitorowania stanu bufora archiwum w takiej sytuacji.
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

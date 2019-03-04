@@ -47,12 +47,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: f73e6ef070177f39bdf2e0736660f8eb963727ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462737"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303660"
 ---
 # <a name="handling-customization-notifications"></a>Obsługa powiadomień dotyczących dostosowania
 
@@ -152,11 +152,11 @@ typedef struct {
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
 
-- **HDR**
+- **hdr**
 
    Informacje wspólne dla wszystkich **WM_NOTIFY** wiadomości.
 
-- **Towaru**
+- **iItem**
 
    Indeks przycisku skojarzony z powiadomieniem.
 
@@ -174,39 +174,39 @@ typedef struct {
 
 Powiadomienia, które wysyła na pasku narzędzi są następujące:
 
-- **TBN_BEGINADJUST —**
+- **TBN_BEGINADJUST**
 
    Wysyłany, gdy użytkownik rozpoczyna Dostosowywanie formantu paska narzędzi. Wskaźnik wskazuje **NMHDR** strukturę, która zawiera informacje dotyczące powiadomienia. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-- **TBN_BEGINDRAG —**
+- **TBN_BEGINDRAG**
 
    Wysyłany, gdy użytkownik rozpoczął przeciąganie przycisku w formancie paska narzędzi. Wskaźnik wskazuje **tbnotify —** struktury. **Towaru** elementu członkowskiego zawiera liczony od zera indeks przycisk przeciągania. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-- **TBN_CUSTHELP —**
+- **TBN_CUSTHELP**
 
    Wysyłany, gdy użytkownik naciśnie przycisk Pomoc w oknie dialogowym Dostosuj pasek narzędzi. Nie zwraca wartości. Wskaźnik wskazuje **NMHDR** strukturę, która zawiera informacje na temat komunikatu powiadomienia. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-- **TBN_ENDADJUST —**
+- **TBN_ENDADJUST**
 
    Wysyłany, gdy użytkownik zatrzymuje Dostosowywanie formantu paska narzędzi. Wskaźnik wskazuje **NMHDR** strukturę, która zawiera informacje na temat komunikatu powiadomienia. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-- **TBN_ENDDRAG —**
+- **TBN_ENDDRAG**
 
    Wysyłany, gdy użytkownik zatrzymuje przeciąganie przycisku w formancie paska narzędzi. Wskaźnik wskazuje **tbnotify —** struktury. **Towaru** elementu członkowskiego zawiera liczony od zera indeks przycisk przeciągania. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-- **TBN_GETBUTTONINFO —**
+- **TBN_GETBUTTONINFO**
 
    Wysyłany, gdy dostosowywania formancie paska narzędzi przez użytkownika. Pasek narzędzi używa tego komunikatu powiadomienia można pobrać informacji wymaganych przez okna dialogowego Dostosuj pasek narzędzi. Wskaźnik wskazuje **tbnotify —** struktury. **Towaru** elementu członkowskiego określa liczony od zera indeks przycisku. **PszText** i **cchText** członków Podaj adres i długość w znakach dany tekst przycisku. Aplikację należy wypełnić strukturę z informacjami o przycisku. Zwróć **TRUE** Jeśli przycisk informacje zostały skopiowane do struktury, lub **FALSE** inaczej.
 
-- **TBN_QUERYDELETE —**
+- **TBN_QUERYDELETE**
 
    Wysyłane podczas dostosowywania paska narzędzi w celu ustalenia, czy przycisk może zostać usunięty z formantem paska narzędzi przez użytkownika. Wskaźnik wskazuje **tbnotify —** struktury. **Towaru** elementu członkowskiego zawiera liczony od zera indeks przycisku do usunięcia. Zwróć **TRUE** umożliwia przycisk aby usunąć lub **FALSE** aby zapobiec usunięciu przycisku.
 
-- **TBN_QUERYINSERT —**
+- **TBN_QUERYINSERT**
 
    Wysyłane podczas dostosowywania kontrolce paska narzędzi, aby ustalić, czy przycisk może zostać wstawiona po lewej stronie przycisku danego użytkownika. Wskaźnik wskazuje **tbnotify —** struktury. **Towaru** elementu członkowskiego zawiera liczony od zera indeks przycisku, który ma zostać wstawiony. Zwróć **TRUE** zezwalająca na przycisku, który ma zostać wstawiony przed danym przycisk lub **FALSE** aby zapobiec wstawiane przycisku.
 
-- **TBN_RESET —**
+- **TBN_RESET**
 
    Wysyłany, gdy użytkownik resetuje zawartość okna dialogowego Dostosuj pasek narzędzi. Wskaźnik wskazuje **NMHDR** strukturę, która zawiera informacje na temat komunikatu powiadomienia. Program obsługi nie musi zwracać żadnej określonej wartości.
 
@@ -214,8 +214,7 @@ Powiadomienia, które wysyła na pasku narzędzi są następujące:
 
    Wysyłane po użytkownik dostosował formancie paska narzędzi. Wskaźnik wskazuje **NMHDR** strukturę, która zawiera informacje na temat komunikatu powiadomienia. Program obsługi nie musi zwracać żadnej określonej wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

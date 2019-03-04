@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179061"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305084"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -448,7 +448,7 @@ class CDC : public CObject
 |[CDC::CreateIC](#createic)|Tworzy kontekst informacje dla określonego urządzenia. Zapewnia to szybki sposób, aby uzyskać informacje o urządzeniu bez tworzenia kontekstu urządzenia.|
 |[CDC::DeleteDC](#deletedc)|Usuwa kontekst urządzenia Windows, które są skojarzone z tym `CDC` obiektu.|
 |[CDC::DeleteTempMap](#deletetempmap)|Wywoływane przez `CWinApp` obsługi czasu bezczynności można usunąć wszystkie tymczasowe `CDC` obiekt utworzony przez `FromHandle`. Odłącza także kontekst urządzenia.|
-|[CDC::detach](#detach)|Odłącza kontekstu urządzenia Windows z tego `CDC` obiektu.|
+|[CDC::Detach](#detach)|Odłącza kontekstu urządzenia Windows z tego `CDC` obiektu.|
 |[CDC::DPtoHIMETRIC](#dptohimetric)|Konwertuje jednostki urządzenia na jednostkach HIMETRIC.|
 |[CDC::DPtoLP](#dptolp)|Konwertuje jednostek logicznych jednostek urządzenia.|
 |[CDC::Draw3dRect](#draw3drect)|Rysuje prostokąt trójwymiarowej.|
@@ -557,7 +557,7 @@ class CDC : public CObject
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Modyfikuje źródła okna względem współrzędnych pochodzenia bieżącego okna.|
 |[CDC::PaintRgn](#paintrgn)|Wstawia region wybrany pędzel.|
 |[CDC::PatBlt](#patblt)|Tworzy wzorca bitowego.|
-|[CDC::pie](#pie)|Rysuje klina ukształtowane koła.|
+|[CDC::Pie](#pie)|Rysuje klina ukształtowane koła.|
 |[CDC::PlayMetaFile](#playmetafile)|Odtwarza zawartość określonego meta pliku na danym urządzeniu. Rozbudowaną wersją `PlayMetaFile` Wyświetla obraz przechowywany w danym metaplik rozszerzony format. Metaplik mogą być odtwarzane dowolną liczbę razy.|
 |[CDC::PlgBlt](#plgblt)|Wykonuje transfer blok bitowy bity danych kolor prostokąta określonego w kontekście urządzenia źródłowego w określonym równoległobok w kontekście danego urządzenia.|
 |[CDC::PolyBezier](#polybezier)|Rysuje krzywe Bzier jeden lub więcej. Bieżącej pozycji nie jest używany ani aktualizowane.|
@@ -900,16 +900,16 @@ Określa współrzędną y prawego dolnego rogu prostokąt otaczający (w jednos
 *x3*<br/>
 Określa współrzędną x punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y3*<br/>
+*y3*<br/>
 Określa współrzędną y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*X4*<br/>
+*x4*<br/>
 Określa współrzędną x punktu, który definiuje endpoint łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y4*<br/>
+*y4*<br/>
 Określa współrzędną y punktu, który definiuje endpoint łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać albo lprect — lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *ptStart*<br/>
@@ -970,16 +970,16 @@ Określa współrzędną y prawego dolnego rogu prostokąt otaczający (w jednos
 *x3*<br/>
 Określa współrzędną x punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y3*<br/>
+*y3*<br/>
 Określa współrzędną y punktu, który definiuje łuk użytkownika początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*X4*<br/>
+*x4*<br/>
 Określa współrzędną x punktu, który definiuje endpoint łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y4*<br/>
+*y4*<br/>
 Określa współrzędną y punktu, który definiuje endpoint łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *ptStart*<br/>
@@ -1008,7 +1008,7 @@ BOOL Attach(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Windows kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1153,16 +1153,16 @@ Określa współrzędną y prawego dolnego rogu skrót użytkownika blokujących
 *x3*<br/>
 Określa współrzędną x punktu, który definiuje skrót użytkownika początkowy (w jednostkach logicznych).
 
-*Y3*<br/>
+*y3*<br/>
 Określa współrzędną y punktu, który definiuje skrót użytkownika początkowy (w jednostkach logicznych).
 
-*X4*<br/>
+*x4*<br/>
 Określa współrzędną x punktu, który definiuje endpoint skrót (w jednostkach logicznych).
 
-*Y4*<br/>
+*y4*<br/>
 Określa współrzędną y punktu, który definiuje endpoint skrót (w jednostkach logicznych).
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać albo lprect — lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *ptStart*<br/>
@@ -1213,7 +1213,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia. Jeśli *kontrolera pDC* ma wartość NULL, funkcja tworzy kontekst urządzenia pamięci, zgodny z wyświetlaniem systemu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1338,7 +1338,7 @@ Wywoływana automatycznie przez `CWinApp` obsługi czasu bezczynności `DeleteTe
 static void PASCAL DeleteTempMap();
 ```
 
-##  <a name="detach"></a>  CDC::detach
+##  <a name="detach"></a>  CDC::Detach
 
 Wywołaj tę funkcję, aby odłączyć `m_hDC` (kontekst urządzenia dane wyjściowe) z `CDC` obiektu i ustaw obie `m_hDC` i `m_hAttribDC` na wartość NULL.
 
@@ -1388,7 +1388,7 @@ Wskazuje na tablicę [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) st
 *nCount*<br/>
 Liczba punktów w tablicy.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku prostych konwersji prostokąt jednego z punktów na urządzenie logiczne punktów.
 
 *lpSize*<br/>
@@ -1419,7 +1419,7 @@ void Draw3dRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *clrTopLeft*<br/>
@@ -1434,10 +1434,10 @@ Określa logiczną współrzędną x lewego górnego rogu prostokąta trójwymia
 *y*<br/>
 Określa logiczną współrzędną y lewego górnego rogu prostokąta trójwymiarowej.
 
-*CX*<br/>
+*cx*<br/>
 Określa szerokość prostokąta trójwymiarowej.
 
-*CY*<br/>
+*cy*<br/>
 Określa wysokość prostokąta trójwymiarowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -1464,7 +1464,7 @@ void DrawDragRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta — w tym przypadku pozycja końcowa prostokąta jest narysowany ponownie.
 
 *Rozmiar*<br/>
@@ -1501,7 +1501,7 @@ BOOL DrawEdge(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do `RECT` strukturę, która zawiera logiczne współrzędnych prostokąta.
 
 *nEdge*<br/>
@@ -1554,7 +1554,7 @@ void DrawFocusRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa logiczny współrzędnych prostokąta do narysowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1577,13 +1577,13 @@ BOOL DrawFrameControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do `RECT` strukturę, która zawiera logiczne współrzędnych prostokąta.
 
-*nNie*<br/>
+*nType*<br/>
 Określa typ formant ramki do rysowania. Zobacz *uType* parametru w [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) w zestawie SDK Windows, aby uzyskać listę możliwych wartości tego parametru.
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa początkowy stan formant ramki. Może być przynajmniej jedna z wartości opisanych dla *uState* parametr `DrawFrameControl` w zestawie Windows SDK. Użyj *nInformacje* wartość DFCS_ADJUSTRECT, aby dopasować prostokąt otaczający, aby wykluczyć otaczającego krawędzi przycisku polecenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1624,9 +1624,9 @@ W kilku przypadkach *nInformacje* zależy od *nNie* parametru. Na poniższej li�
 
     - Strzałka DFCS_MENUARROW podmenu
 
-    - Punktor DFCS_MENUBULLET
+    - DFCS_MENUBULLET Bullet
 
-    - Znacznik wyboru DFCS_MENUCHECK
+    - DFCS_MENUCHECK Check mark
 
 - DFC_SCROLL
 
@@ -1832,7 +1832,7 @@ Wskazuje ciąg znaków do rysowania. Jeśli *nCount* wynosi -1, ciąg musi być 
 *nCount*<br/>
 Określa liczbę znaków w ciągu. Jeśli *nCount* jest -1, następnie *lpszString* zakłada, że długie wskaźnik na ciąg zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
 
 *str*<br/>
@@ -1889,7 +1889,7 @@ Wskazuje ciąg znaków do rysowania. Jeśli *nCount* wynosi -1, ciąg musi być 
 *nCount*<br/>
 Określa liczbę znaków w ciągu. Jeśli *nCount* jest -1, następnie *lpszString* zakłada, że długie wskaźnik na ciąg zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego) w którym ma być sformatowany tekst.
 
 *str*<br/>
@@ -1938,7 +1938,7 @@ Określa logiczną współrzędną x w prawym dolnym rogu prostokąt otaczający
 *y2*<br/>
 Określa logiczną współrzędną y prawego dolnego rogu prostokąt otaczający elipsy.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa, że elipsy użytkownika prostokąt ograniczający. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2174,7 +2174,7 @@ Określa logiczną współrzędną x w prawym dolnym rogu prostokąta.
 *y2*<br/>
 Określa logiczną współrzędną y prawego dolnego rogu prostokąta.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąta. Można też `CRect` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2300,7 +2300,7 @@ Określa typ prostokąta. Ten parametr może być jeden, zarówno lub żadnego z
 
 - ETO_OPAQUE Określa, czy bieżący kolor tła wypełnia prostokąta. (Można ustaw i kwerendy bieżący kolor tła z [SetBkColor](#setbkcolor) i [GetBkColor](#getbkcolor) funkcji elementów członkowskich.)
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która określa wymiary prostokąta. Ten parametr może mieć wartości NULL. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *lpszString*<br/>
@@ -2353,7 +2353,7 @@ void FillRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która zawiera logiczne współrzędnych prostokąta do wypełnienia. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu dla tego parametru.
 
 *pBrush*<br/>
@@ -2418,7 +2418,7 @@ void FillSolidRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający (w jednostkach logicznych). Można przekazać wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury danych lub `CRect` obiektu dla tego parametru.
 
 *CLR* Określa kolor, który ma być używany, aby wypełnić prostokąt.
@@ -2429,10 +2429,10 @@ Określa logiczną współrzędną x lewego górnego rogu prostokąta.
 *y*<br/>
 Określa logiczną współrzędną y lewego górnego rogu prostokąta docelowego.
 
-*CX*<br/>
+*cx*<br/>
 Określa szerokość prostokąta.
 
-*CY*<br/>
+*cy*<br/>
 Określa wysokość prostokąta.
 
 ### <a name="remarks"></a>Uwagi
@@ -2500,7 +2500,7 @@ void FrameRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu prostokąta. Można również przekazać `CRect` obiektu dla tego parametru.
 
 *pBrush*<br/>
@@ -2558,7 +2558,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Zawiera dojście do kontekstu urządzenia Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2726,7 +2726,7 @@ Określa maksymalny zakres (w jednostkach logicznych), do której są przetwarza
 *lpResults*<br/>
 Wskaźnik do [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) strukturę, która otrzymuje wyniki funkcji.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa sposób przetwarzania ciągu do wymaganych tablic. Ten parametr może mieć jedną lub więcej wartości na liście *Flagidw* części [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) tematu.
 
 *str*<br/>
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Określa pierwszy indeks symbolu w grupie wskaźniki kolejnych symbol z bieżącej czcionki. Ten parametr jest używany tylko, jeśli *pgi* parametr ma wartość NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Określa liczbę indeksów symboli.
 
-*PGI*<br/>
+*pgi*<br/>
 Wskaźnik do tablicę zawierającą indeksów symboli. Jeśli wartość wynosi NULL, *giFirst* parametr jest używany zamiast tego. *Cgi* parametr określa liczbę indeksów symbol w tej tablicy.
 
 *lpabc*<br/>
@@ -2848,7 +2848,7 @@ Określa pierwszy znak w grupie następujących po sobie znaków w bieżącej cz
 *nLastChar*<br/>
 Określa ostatni znak w grupie następujących po sobie znaków w bieżącej czcionki.
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Wskazuje buforu, który będzie otrzymywał wartości szerokości dla grupy kolejnych znaków w bieżącej czcionki.
 
 *lpFloatBuffer*<br/>
@@ -2883,13 +2883,13 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Określa pierwszy indeks symbolu w grupie wskaźniki kolejnych symbol z bieżącej czcionki. Ten parametr jest używany tylko, jeśli *pgi* parametr ma wartość NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Określa liczbę indeksów symboli.
 
-*PGI*<br/>
+*pgi*<br/>
 Wskaźnik do tablicę zawierającą indeksów symboli. Jeśli wartość wynosi NULL, *giFirst* parametr jest używany zamiast tego. *Cgi* parametr określa liczbę indeksów symbol w tej tablicy.
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Wskaźnik do buforu, który otrzymuje szerokości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2910,7 +2910,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który ma otrzymać wymiary prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3190,7 +3190,7 @@ Wskazuje strukturę GLYPHMETRICS, która opisuje położenie symbol w komórce z
 *cbBuffer*<br/>
 Określa rozmiar buforu, w której funkcja kopiuje informacje o znaku konspektu. Jeśli ta wartość wynosi 0 i *nFormat* parametr jest GGO_BITMAP albo GGO_NATIVE wartości, funkcja zwraca wymagany rozmiar buforu.
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Wskazuje buforu, w której funkcja kopiuje informacje o znaku konspektu. Jeśli *nFormat* określa wartość GGO_NATIVE informacje są kopiowane w postaci TTPOLYGONHEADER i TTPOLYCURVE struktur. Jeśli ta wartość jest równa NULL i *nFormat* jest wartością GGO_BITMAP albo GGO_NATIVE, funkcja zwraca wymagany rozmiar buforu.
 
 *lpmat2*<br/>
@@ -3386,7 +3386,7 @@ Określa pierwszy znak w grupie następujących po sobie znaków w bieżącej cz
 *nLastChar*<br/>
 Określa ostatni znak w grupie następujących po sobie znaków w bieżącej czcionki.
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Wskazuje buforu, który będzie otrzymywał wartości szerokości dla grupy kolejnych znaków w bieżącej czcionki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Wskaźnik do tablicy wskaźników symbol, dla których mają być pobierane zakresów.
 
-*CGI*<br/>
+*cgi*<br/>
 Określa liczbę symboli w tablicy, do których prowadzą *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Wskaźnik do tablicy wskaźników symbol, dla których mają być pobierane zakresów.
 
-*CGI*<br/>
+*cgi*<br/>
 Określa liczbę symboli w tablicy, do których prowadzą *pgiIn*.
 
 *lpSize*<br/>
@@ -4183,7 +4183,7 @@ Określa logiczną współrzędną x w prawym dolnym rogu prostokąta.
 *y2*<br/>
 Określa logiczną współrzędną y prawego dolnego rogu prostokąta.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąta. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4212,7 +4212,7 @@ void InvertRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` zawierający logiczne współrzędnych prostokąta do być zmieniany. Można również przekazać `CRect` obiektu dla tego parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -4314,7 +4314,7 @@ Wskazuje tablicy punktów. Każdy punkt w tablicy jest [punktu](/windows/desktop
 *nCount*<br/>
 Liczba punktów w tablicy.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku typowych mapowanie prostokąt, od logicznych jednostek urządzenia.
 
 *lpSize*<br/>
@@ -4662,7 +4662,7 @@ Wzorzec jest kombinacją wybrany pędzel i wzorzec już na urządzeniu. Operacja
 
 Nie wszystkie konteksty urządzenia obsługują `PatBlt` funkcji. Aby sprawdzić, czy kontekst urządzenia obsługuje `PatBlt`, wywołaj `GetDeviceCaps` element członkowski funkcji o indeksie RASTERCAPS i sprawdź wartość zwracaną dla flagi rastercaps.
 
-##  <a name="pie"></a>  CDC::pie
+##  <a name="pie"></a>  CDC::Pie
 
 Rysuje klina ukształtowane kołowy za pomocą rysowania łuk eliptyczny którego Centrum i dwa punkty końcowe są połączone liniami.
 
@@ -4700,16 +4700,16 @@ Określa współrzędną y prawego dolnego rogu prostokąt otaczający (w jednos
 *x3*<br/>
 Określa współrzędną x punktu początkowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y3*<br/>
+*y3*<br/>
 Określa współrzędną y punktu początkowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*X4*<br/>
+*x4*<br/>
 Określa współrzędną x punktu końcowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*Y4*<br/>
+*y4*<br/>
 Określa współrzędną y punktu końcowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.
 
 *ptStart*<br/>
@@ -4790,7 +4790,7 @@ BOOL PlgBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Wskazuje tablicy trzech punktów w przestrzeni logicznej, identyfikujący trzy narożników równoległobok docelowego. W lewym górnym rogu prostokąta źródłowego jest mapowana do pierwszego punktu, w tej tablicy, prawym górnym rogu do drugiego w tej tablicy i lewego dolnego rogu w punkcie trzeci. W prawym dolnym rogu prostokąta źródłowego jest zamapowana na czwarty niejawne momentów równoległobok.
 
 *pSrcDC*<br/>
@@ -5182,7 +5182,7 @@ Określa współrzędną x w prawym dolnym rogu prostokąt (w jednostkach logicz
 *y2*<br/>
 Określa współrzędną y prawego dolnego rogu prostokąta (w jednostkach logicznych).
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt w jednostkach logicznych. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -5209,7 +5209,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne logiczne określonego prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -5325,10 +5325,10 @@ Określa współrzędną y prawego dolnego rogu prostokąta (w jednostkach logic
 *x3*<br/>
 Określa szerokość elipsy używanej do rysowania zaokrąglone rogi (w jednostkach logicznych).
 
-*Y3*<br/>
+*y3*<br/>
 Określa wysokość elipsy, używany do rysowania zaokrąglone rogi (w jednostkach logicznych).
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa prostokąt otaczający w jednostkach logicznych. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.
 
 *Punkt*<br/>
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Określa liczbę jednostek przewijania w poziomie.
 
 *dy*<br/>
@@ -5605,7 +5605,7 @@ Wskaźnik do [CBitmap](../../mfc/reference/cbitmap-class.md) obiektu do wybrania
 *pRgn*<br/>
 Wskaźnik do [CRgn](../../mfc/reference/crgn-class.md) obiektu do wybrania.
 
-*Obiekt*<br/>
+*pObject*<br/>
 Wskaźnik do [CGdiObject](../../mfc/reference/cgdiobject-class.md) obiektu do wybrania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -5791,7 +5791,7 @@ virtual void SetAttribDC(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Windows kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -6146,14 +6146,14 @@ virtual void SetOutputDC(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Windows kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja elementu członkowskiego można wywołać tylko, gdy kontekst urządzenia nie jest dołączony do `CDC` obiektu. Ta funkcja elementu członkowskiego ustawia `m_hDC` , ale nie dołączy kontekst urządzenia do `CDC` obiektu.
 
-##  <a name="setpixel"></a>  CDC::setPixel
+##  <a name="setpixel"></a>  CDC::SetPixel
 
 Ustawia piksel w punkcie określonym najbliższego zbliżenia kolor określony przy użyciu *crColor*.
 
@@ -6326,7 +6326,7 @@ Określa tryb rozciągania. Może być dowolną z następujących wartości:
 |-----------|-----------------|
 |BLACKONWHITE|Wykonuje operację LOGICZNEGO przy użyciu wartości kolorów pikseli usunięte i istniejące. Mapy bitowej w przypadku monochromatycznych map bitowych, w tym trybie zachowuje czarne pikseli kosztem piksele.|
 |COLORONCOLOR|Usuwa pikseli. W tym trybie usuwa wszystkie usunięte wiersze pikseli bez próby zachować swoje informacje.|
-|PÓŁTONÓW|Mapuje pikseli z prostokąta źródłowego na bloki pikseli prostokąta docelowego. Średnia kolor przez blok docelowy pikseli przybliża kolor źródłowych.|
+|HALFTONE|Mapuje pikseli z prostokąta źródłowego na bloki pikseli prostokąta docelowego. Średnia kolor przez blok docelowy pikseli przybliża kolor źródłowych.|
 ||Po ustawieniu PÓŁTONÓW rozciąganie trybu, aplikacja musi wywołać funkcję Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) można ustawić źródła pędzla. Jeśli nie powiedzie się w tym celu, wystąpi niezgodność pędzla.|
 |STRETCH_ANDSCANS|**Windows 95/98**: Takie same jak BLACKONWHITE|
 |STRETCH_DELETESCANS|**Windows 95/98**: Takie same jak COLORONCOLOR|
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Określa zakres x okienka ekranu (w jednostkach urządzenia).
 
-*CY*<br/>
+*cy*<br/>
 Określa zakres y okienka ekranu (w jednostkach urządzenia).
 
 *Rozmiar*<br/>
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Określa x zakresu (w jednostkach logicznych) okna.
 
-*CY*<br/>
+*cy*<br/>
 Określa y zakresu (w jednostkach logicznych) okna.
 
 *Rozmiar*<br/>
@@ -7057,7 +7057,7 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 Ta funkcja się powiedzie, tylko wtedy, gdy pióro geometryczne, utworzone przez drugą wersję bieżącego pióra `CreatePen` funkcji członkowskiej, lub gdy pióro jest tworzony z pierwszą wersję `CreatePen` i ma szerokość w jednostkach urządzenia, większa niż 1. Kontekst urządzenia musi zawierać ścieżkę zamkniętą. Wszelkie krzywych Bzier w ścieżce są konwertowane na sekwencje proste linie, krzywe poszerzył po. W efekcie nie krzywych Bzier pozostają w ścieżce po `WidenPath` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

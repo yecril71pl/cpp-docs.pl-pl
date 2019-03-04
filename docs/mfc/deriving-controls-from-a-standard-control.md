@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-ms.openlocfilehash: a6ce915102a8b85f135aa2c59e5e824b4fee25cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5abdcc87dba937938ffa3643d19ff69431f62af4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300378"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Wyprowadzanie formantów z formantu standardowego
 
@@ -42,8 +42,7 @@ Używanie pochodnej formantu w oknie dialogowym wymaga dodatkowej pracy. Typy i 
 
 Ponieważ osadzone kontroli pochodne klasy okien dialogowych zostanie wykonane, okno dialogowe jest tworzony, gdy zostaną zniszczone, kiedy niszczony jest okno dialogowe. Porównaj ten kod do przykładu w [dodawania formantów By ręcznie](../mfc/adding-controls-by-hand.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

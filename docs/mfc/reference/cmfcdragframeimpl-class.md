@@ -1,19 +1,19 @@
 ---
-title: Klasa CMFCDragFrameImpl
+title: CMFCDragFrameImpl Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301210"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Klasa CMFCDragFrameImpl
+# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl Class
 
 `CMFCDragFrameImpl` Klasy rysuje przeciągnij prostokąt, który jest wyświetlany, gdy użytkownik przeciągnie okienko w trybie standardowego dokowania.
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
@@ -114,7 +114,7 @@ void ResetState();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

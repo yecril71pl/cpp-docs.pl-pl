@@ -1,5 +1,5 @@
 ---
-title: Klasa CMapWordToOb
+title: CMapWordToOb Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMapWordToOb
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: c449fd6e2d2dc1b8d912724d9888b432a2809427
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300706"
 ---
-# <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
+# <a name="cmapwordtoob-class"></a>CMapWordToOb Class
 
 Obsługuje mapy `CObject` wskaźników opartych na kluczach słów 16-bitowych.
 
@@ -111,8 +111,7 @@ Aby uzyskać więcej informacji na temat `CMapWordToOb`, zapoznaj się z artyku�
 
 **Nagłówek:** afxcoll.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

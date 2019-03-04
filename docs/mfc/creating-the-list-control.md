@@ -1,18 +1,18 @@
 ---
-title: Tworzenie kontrolki listy
+title: Tworzenie formantu listy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: b21fb8a7721df571dbe4d65c28053af3610d9bf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b2cb47699339dd413dc1bfae7623069da56e7a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303656"
 ---
-# <a name="creating-the-list-control"></a>Tworzenie kontrolki listy
+# <a name="creating-the-list-control"></a>Tworzenie formantu listy
 
 Jak kontrolować listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest tworzony jest zależna od tego, czy jesteś bezpośrednio za pomocą formantu lub przy użyciu klasy [CListView](../mfc/reference/clistview-class.md) zamiast tego. Jeśli używasz `CListView`, struktura tworzy widok jako część jej Sekwencja tworzenia dokumentu/widoku. Utworzenie widoku listy powoduje utworzenie kontrolki listy również (dwa są tak samo). Formant zostanie utworzony w widoku [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi. W takim przypadku kontrolka jest gotowy do dodawania elementów poprzez wywołanie [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).
 
@@ -32,8 +32,7 @@ Jak kontrolować listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest t
 
 1. Wywoływanie kontrolki [Utwórz](../mfc/reference/clistctrl-class.md#create) funkcję członkowską, prawdopodobnie w [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie jako wczesne jako okno nadrzędne [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi (w przypadku Tworzenie podklasy kontrolki). Ustawianie stylów dla formantu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Klasa CMemFile
+title: CMemFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMemFile
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: a7bc54d30df80ec8d56b6a403582ebe4c48858f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304949"
 ---
-# <a name="cmemfile-class"></a>Klasa CMemFile
+# <a name="cmemfile-class"></a>CMemFile Class
 
 [CFile](../../mfc/reference/cfile-class.md)-pochodne klasy, która obsługuje pliki w pamięci.
 
@@ -130,7 +130,7 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*Sprawdzanie*<br/>
+*lpBuffer*<br/>
 Wskaźnik do buforu do podłączenia do `CMemFile`.
 
 *nBufferSize*<br/>
@@ -288,8 +288,7 @@ Wskaźnik do bloku pamięci, który został ponownie przydzielane (i prawdopodob
 
 Należy przesłonić tę funkcję, aby zaimplementować ponownej alokacji pamięci niestandardowych. Jeśli zastąpisz tę funkcję, prawdopodobnie należy zastąpić [alokacji](#alloc) i [bezpłatna](#free) także.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

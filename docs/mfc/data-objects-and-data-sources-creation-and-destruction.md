@@ -1,5 +1,5 @@
 ---
-title: 'Obiekty danych i źródła danych: tworzenie i likwidacja'
+title: 'Obiekty danych i źródeł danych: Tworzenie i likwidacja'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614971"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304452"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródła danych: tworzenie i likwidacja
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródeł danych: Tworzenie i likwidacja
 
 Zgodnie z opisem w artykule [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md), obiekty danych i źródeł danych reprezentują obie strony transferu danych. W tym artykule wyjaśniono, kiedy należy tworzyć i niszczyć te obiekty i źródeł, aby prawidłowo, wykonaj usługi transfery danych w tym:
 
@@ -70,7 +70,7 @@ Jeśli wykonasz innej metody obsługi operacji wklejania, upewnij się, że obie
 
 Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Przyjrzyj się źródła dla każdej aplikacji `CView`-klasy dla wszystkie elementy oprócz `GetClipboardData` i `OnGetClipboardData` funkcji. Te dwie funkcje są albo `COleClientItem` lub `COleServerItem`-implementacji klasy pochodnej. Te przykładowe programy zapewniają dobrym przykładem sposobu wdrożenia tych pojęć.
 
-Jeden innej sytuacji, w których warto utworzyć `COleDataSource` obiekt występuje w przypadku modyfikowania domyślne zachowanie operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie: dostosowywanie](../mfc/drag-and-drop-customizing.md) artykułu.
+Jeden innej sytuacji, w których warto utworzyć `COleDataSource` obiekt występuje w przypadku modyfikowania domyślne zachowanie operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md) artykułu.
 
 ##  <a name="_core_destroying_data_sources"></a> Niszczenie źródeł danych
 
@@ -82,7 +82,7 @@ Jeśli masz nie przekazywane źródła danych OLE, a następnie odpowiedzialnoś
 
 Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md), [Schowka](../mfc/clipboard.md), i [manipulowanie obiekty danych i źródeł danych](../mfc/data-objects-and-data-sources-manipulation.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>

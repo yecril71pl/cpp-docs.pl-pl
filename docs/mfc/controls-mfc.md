@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: fe427b2330441b5d9d38a8947ded85dedbb4e086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304538"
 ---
 # <a name="controls-mfc"></a>Formanty (MFC)
 
@@ -49,7 +49,7 @@ W poniższej tabeli krótko opisano każdy wspólnych formantów Windows, łącz
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Typowe kontrolki Windows i klasy MFC
 
-|Formant|Klasy MFC|Opis|Nowość w wersji Windows 95|
+|formant|Klasy MFC|Opis|Nowość w wersji Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[Animacja](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Wyświetla kolejnych klatek AVI klipu wideo|Tak|
 |Przycisk|[CButton](../mfc/reference/cbutton-class.md)|Przyciski, które powodują akcję; używane również do pola wyboru, przyciski radiowe i pola grupy|Nie|
@@ -58,13 +58,13 @@ W poniższej tabeli krótko opisano każdy wspólnych formantów Windows, łącz
 |Pole edycji|[CEdit](../mfc/reference/cedit-class.md)|Pola wprowadzania tekstu|Nie|
 |[pole kombi rozszerzone](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Kontrolka pola kombi, możliwość wyświetlania obrazów|Tak|
 |[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Przycisk, który pojawia się powyżej kolumny tekstu. Określa szerokość wyświetlanego tekstu|Tak|
-|[Klawisz skrótu](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, który umożliwia użytkownikowi utworzenie "klawisza dostępu" szybko wykonać akcję|Tak|
+|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, który umożliwia użytkownikowi utworzenie "klawisza dostępu" szybko wykonać akcję|Tak|
 |[listy obrazów](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Kolekcja obrazów, używane do zarządzania dużymi zestawami ikony lub mapy bitowe (listy obrazów nie jest tak naprawdę kontrolki; obsługuje używane przez inne formanty listy)|Tak|
 |[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, które wyświetla listę wartości tekstowych z ikonami|Tak|
 |Pole listy|[CListBox](../mfc/reference/clistbox-class.md)|Pole, które zawiera listę ciągów|Nie|
 |[Kalendarza miesięcznego](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Formant, który wyświetla informacje o dacie|Tak|
-|[Postęp](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, które wskazuje postęp długotrwałej operacji|Tak|
-|[paska pomocniczego](../mfc/using-crebarctrl.md)|[Z CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Pasek narzędzi, który może zawierać dodatkowe elementu podrzędnym MDI w formie formantów|Tak|
+|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, które wskazuje postęp długotrwałej operacji|Tak|
+|[paska pomocniczego](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Pasek narzędzi, który może zawierać dodatkowe elementu podrzędnym MDI w formie formantów|Tak|
 |[Edycji wzbogaconej](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Okno w użytkownika, który można edytować przy użyciu znaku i formatowanie akapitów (zobacz [klasy pokrewne formanty edycji wzbogaconej](../mfc/classes-related-to-rich-edit-controls.md))|Tak|
 |pasek przewijania|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Pasek przewijania służyć jako metoda kontrolowania wewnątrz okno dialogowe, (a nie w oknie)|Nie|
 |[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Okno zawierające kontrolki suwaka z opcjonalnymi znaczniki|Tak|
@@ -74,7 +74,7 @@ W poniższej tabeli krótko opisano każdy wspólnych formantów Windows, łącz
 |[Karta](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Odpowiednikiem separatorów w notesie; używane w "zakładki okna dialogowego" lub arkusze właściwości|Tak|
 |[Pasek narzędzi](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Okno w generowaniu polecenia przycisków, podobny do klasy MFC `CToolBar`|Tak|
 |[Etykietka narzędzia](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Niewielkie okno podręczne, opisujący przeznaczenie przycisku paska narzędzi lub innemu narzędziu|Tak|
-|[drzewo](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Okno, które wyświetla hierarchiczną listę elementów|Tak|
+|[tree](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Okno, które wyświetla hierarchiczną listę elementów|Tak|
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 
@@ -104,8 +104,7 @@ W poniższej tabeli krótko opisano każdy wspólnych formantów Windows, łącz
 
 Aby uzyskać informacje o wspólnych formantów Windows w zestawie Windows SDK, zobacz [wspólnych formantów](/windows/desktop/Controls/common-controls-intro).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Edytor okien dialogowych](../windows/dialog-editor.md)
-

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301899"
 ---
 # <a name="csid-class"></a>Klasa CSid
 
@@ -572,7 +572,7 @@ Zwraca wartość elementu danych, który przechowuje wartości opisujące stan `
 
 Wywołaj [CSid::LoadAccount](#loadaccount) można zaktualizować `CSid` obiekt przed wywołaniem `SidNameUse` do zwrócenia jej stan. `SidNameUse` nie zmienia się stan obiektu (za pośrednictwem wywołania do `LookupAccountName` lub `LookupAccountSid`), ale tylko zwraca bieżący stan.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

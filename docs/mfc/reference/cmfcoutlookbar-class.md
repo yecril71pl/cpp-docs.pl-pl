@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304083"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
 
@@ -68,7 +68,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy mogą zostać zniszczone pustego okienka z zakładkami. (Przesłania [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy mogą zostać zniszczone pustego okienka z zakładkami. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Określa, czy do okienko paska Outlook może być zadokowane innego okienka. (Przesłania CDockablePane::CanAcceptPane).|
 |[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Określa, czy podpisu dla okienka z zakładkami ten sam tekst jest wyświetlany jako aktywną kartę. (Przesłania [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|
 |[CMFCOutlookBar::Create](#create)|Tworzy kontrolkę paska Outlook.|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Uwagi
 
-Na przykład paska Outlook zobacz [OutlookDemo próbki: aplikacja OutlookDemo MFC](../../visual-cpp-samples.md).
+Na przykład paska Outlook zobacz [OutlookDemo próbki: Aplikacja OutlookDemo MFC](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementacja paska Outlook
 
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*klasy uipage o identyfikatorze*<br/>
+*uiPage*<br/>
 [in] Liczony od zera indeks strony w oknie nadrzędnym programu Outlook.
 
 *pTargetWnd*<br/>
@@ -573,7 +573,7 @@ Domyślnie ten tryb jest wyłączona.
 > [!NOTE]
 >  Ta funkcja musi zostać wywołana przed [CMFCOutlookBar::Create](#create).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

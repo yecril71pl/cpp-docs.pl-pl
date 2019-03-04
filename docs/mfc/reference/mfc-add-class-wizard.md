@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304096"
 ---
 # <a name="mfc-add-class-wizard"></a>Kreator dodawania klasy MFC
 
@@ -69,7 +69,7 @@ Na tej stronie Określ nazwę klasy, klasy bazowej i nazwy plików dla nowej kla
 
   Dotyczy klasy pochodne `CDHtmlDialog` tylko. Określa identyfikator zasobu okna dialogowego DHTML. Identyfikator zasobu pojawia się w sekcji HTML w pliku .rc w projekcie, wraz z nazwą pliku okno dialogowe HTML. Zasobu DHTML, określonego przez ten identyfikator jest hostowana przez okno dialogowe identyfikowane przez **identyfikator okna dialogowego**.
 
-- **. Plik HTM**
+- **.HTM file**
 
   Dotyczy klasy pochodne `CDHtmlDialog` tylko. Określa nazwę pliku HTML dla DHTML, okno dialogowe. Domyślnie ta nazwa pliku opiera się na nazwę klasy. Nazwa pliku pojawia się w sekcji HTML projektu pliku .rc, wraz z identyfikatorem DHTML okna dialogowego pole zasobów.
 
@@ -117,7 +117,7 @@ Na tej stronie Określ nazwę klasy, klasy bazowej i nazwy plików dla nowej kla
 
   Zobacz [szablonów dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

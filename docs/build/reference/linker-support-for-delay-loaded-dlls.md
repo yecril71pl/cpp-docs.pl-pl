@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301392"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem
 
@@ -17,7 +17,7 @@ Konsolidator Visual C++ obsługuje teraz opóźnionym ładowaniem bibliotek DLL.
 
 Przed Visual C++ 6.0, jedynym sposobem, aby załadować biblioteki DLL w czasie wykonywania, było wystosowanie **LoadLibrary** i **GetProcAddress**; system operacyjny będzie załadować biblioteki DLL gdy plik wykonywalny lub biblioteka DLL używająca została załadowana.
 
-Visual C++ 6.0, począwszy od podczas statycznie łączenia z biblioteką DLL, konsolidator zawiera opcje, aby opóźnić załadować biblioteki DLL, dopóki program wywołuje funkcję w tej bibliotece DLL.
+Visual C++ 6.0, począwszy od podczas niejawnie łączenia z biblioteką DLL, konsolidator zawiera opcje, aby opóźnić załadować biblioteki DLL, dopóki program wywołuje funkcję w tej bibliotece DLL.
 
 Aplikację można opóźnić załadować biblioteki DLL przy użyciu [/delayload (Opóźnij importowanie ładowania)](../../build/reference/delayload-delay-load-import.md) — opcja konsolidatora przy użyciu funkcji pomocnika (Domyślna implementacja dostarczone przez Visual C++). Funkcja pomocnika będzie załadować biblioteki DLL w czasie wykonywania przez wywołanie metody **LoadLibrary** i **GetProcAddress** dla Ciebie.
 

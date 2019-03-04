@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302819"
 ---
 # <a name="application-design-choices"></a>Opcje do wyboru przy projektowaniu aplikacji
 
@@ -52,7 +52,7 @@ Wiele aplikacji, uruchom w Internecie i są dostępne dla wszystkich odbiorców 
 
 Aplikacja może działać na komputerze klienckim lub na komputerze serwera. Aplikacji może również przechowywane na serwerze i następnie pobrania w Internecie i uruchomienia na komputerze klienckim. Klas MFC WinInet służą aplikacjom klienckim do pobierania plików. MFC i moniker asynchronicznej klas są używane do pobierania plików i właściwości formantu. Klasy dla formantów ActiveX i dokumenty aktywne są używane dla aplikacji klienckich i aplikacji, które są pobierane z serwera w celu uruchomienia na komputerze klienckim.
 
-##  <a name="_core_the_web_page"></a> Strony sieci Web: Kontrolki ActiveX HTML, dokumenty aktywne
+##  <a name="_core_the_web_page"></a> Strona sieci Web: Kontrolki ActiveX HTML, dokumenty aktywne
 
 Firma Microsoft oferuje kilka sposobów udostępniania zawartości na stronie sieci Web. Strony sieci Web można użyć standardowego kodu HTML lub HTML rozszerzeń, takich jak tag obiekt, aby zapewnić dynamicznej zawartości takiej jak kontrolki ActiveX.
 
@@ -86,10 +86,9 @@ W poniższej tabeli przedstawiono kilka sposobów korzystania z biblioteki MFC d
 |[WinInet](../mfc/win32-internet-extensions-wininet.md)|Dla protokołów internetowych dla protokołu HTTP, FTP i gopher. Dane mogą być przenoszone synchronicznie lub asynchronicznie i są przechowywane w pamięci podręcznej całego systemu.|[CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpFileFind](../mfc/reference/cftpfilefind-class.md), [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)i wiele innych.|
 |[WinSock](../mfc/windows-sockets-in-mfc.md)|Aby uzyskać maksymalną wydajność i kontroli. Wymaga zrozumienia sockets i protokołów TCP/IP.|[CSocket](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Monikery asynchroniczne w Internecie](../mfc/asynchronous-monikers-on-the-internet.md)
-

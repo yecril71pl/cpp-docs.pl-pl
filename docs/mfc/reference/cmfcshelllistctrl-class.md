@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCShellListCtrl
+title: CMFCShellListCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellListCtrl
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302549"
 ---
-# <a name="cmfcshelllistctrl-class"></a>Klasa CMFCShellListCtrl
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl Class
 
 `CMFCShellListCtrl` Klasa oferuje funkcję formantu listy Windows i rozszerza ją przez uwzględnienie możliwości wyświetlenia listy elementów powłoki.
 
@@ -247,7 +247,7 @@ BOOL GetItemPath(
 *strPath*<br/>
 [out] Odwołanie do ciągu, który odbiera ścieżki.
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Indeks elementu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -363,7 +363,7 @@ virtual int OnGetItemIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Indeks elementu.
 
 *pItem*<br/>
@@ -392,7 +392,7 @@ virtual CString OnGetItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Indeks elementu.
 
 *iColumn*<br/>
@@ -456,7 +456,7 @@ void SetItemTypes(SHCONTF nTypes);
 
 Aby uzyskać więcej informacji dotyczących listy typów elementów, zobacz [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

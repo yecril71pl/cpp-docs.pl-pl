@@ -5,12 +5,12 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 033edfd289ea075b89e9d44111da94b987177470
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300079"
 ---
 # <a name="messages"></a>Komunikaty
 
@@ -18,7 +18,6 @@ Pętli komunikatów w `Run` funkcji składowej klasy typu `CWinApp` pobiera komu
 
 Kategorie ważne wiadomości są opisane w [kategorie komunikatów](../mfc/message-categories.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
-

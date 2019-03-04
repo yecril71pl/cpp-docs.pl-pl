@@ -1,5 +1,5 @@
 ---
-title: Klasa CInterpolatorBase
+title: CInterpolatorBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CInterpolatorBase
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302289"
 ---
-# <a name="cinterpolatorbase-class"></a>Klasa CInterpolatorBase
+# <a name="cinterpolatorbase-class"></a>CInterpolatorBase Class
 
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy należy obliczyć nową wartość zmiennej animacji.
 
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 Przesunięcie od początku przejścia. Przesunięcie jest zawsze większa lub równa zero i mniejsza niż czas trwania przejścia. Ta metoda nie jest wywoływana, jeśli czas trwania przejścia wynosi zero.
 
-*Szybkość pracy*<br/>
+*velocity*<br/>
 Dane wyjściowe. Prędkość zmiennej przy przesunięciu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -255,7 +255,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="parameters"></a>Parametry
 
-*Wartość początkowa*<br/>
+*initialValue*<br/>
 Wartość zmiennej na początku tego przejścia.
 
 *initialVelocity*<br/>
@@ -265,6 +265,6 @@ Prędkość zmiennej na początku tego przejścia.
 
 Jeśli metoda się powiedzie, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub implementację niestandardową zwróci wartość FALSE z metody SetInitialValueAndVelocity zwraca E_FAIL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

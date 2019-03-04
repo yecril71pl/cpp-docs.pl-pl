@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301834"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funkcje globalne rejestru i elementu TypeLib
 
@@ -408,7 +408,7 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*<br/>
+*pT*<br/>
 Wskaźnik do bieżącego obiektu.
 
 *rdxOp*<br/>
@@ -437,7 +437,7 @@ Wartości wyliczenia możliwych, wskazujący, że należy wykonywać operacji fu
 
 **Nagłówek:** atlbase.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](atl-functions.md)<br/>
 [Makra wymiany danych rejestru](registry-data-exchange-macros.md)

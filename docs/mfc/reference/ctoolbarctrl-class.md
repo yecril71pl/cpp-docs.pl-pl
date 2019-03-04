@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302515"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identyfikator polecenia przycisku, aby zaznacz lub usuń zaznaczenie.
 
-*bSprawdź*<br/>
+*bCheck*<br/>
 Wartość true, sprawdź przycisku, wartość FALSE, aby je wyczyścić.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1084,7 +1084,7 @@ BOOL GetItemRect(
 *nIndex*<br/>
 Liczony od zera indeks przycisku, dla którego mają zostać pobrane informacje.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który odbiera współrzędne prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1201,7 +1201,7 @@ BOOL GetRect(
 *nID*<br/>
 Identyfikator przycisku.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nciągu*<br/>
+*nString*<br/>
 Indeks ciągu.
 
 *lpstrString*<br/>
@@ -2294,7 +2294,7 @@ void SetRows(
 *bLarger*<br/>
 Informuje, czy ma być używany mniej wierszy lub więcej wierszy, jeśli pasek narzędzi nie można zmienić rozmiaru do żądanej liczby wierszy.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zostanie wyświetlony nowy prostokąt otaczający paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
@@ -2326,7 +2326,7 @@ BOOL SetState(
 *nID*<br/>
 Identyfikator polecenia przycisku.
 
-*nInformacje*<br/>
+*nState*<br/>
 Flagi stanu. Może być kombinacją wartości wymienione na stany przycisku w [CToolBarCtrl::AddButtons](#addbuttons).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2384,9 +2384,9 @@ Zwracana wartość nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

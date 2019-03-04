@@ -10,12 +10,12 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: 63bdc8372223075804d8c710909909382167b2c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305032"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Minikery asynchroniczne w Internecie
 
@@ -63,8 +63,7 @@ Klasy MFC `CDataPathProperty` i [CCachedDataPathProperty](../mfc/reference/ccach
 
 Aby dowiedzieć się, jak pobieranie asynchronicznie w kontrolce ActiveX, zobacz [kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
-

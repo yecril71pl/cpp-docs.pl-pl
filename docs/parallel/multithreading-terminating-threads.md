@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303634"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: Przerywanie wątków w MFC
 
@@ -32,13 +32,13 @@ Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istn
 
 ##  <a name="_core_normal_thread_termination"></a> Zakończenie normalne wątku
 
-W przypadku wątku roboczego zakończenie zwykłych wątków jest proste: zamknij funkcję kontrolującą i zwróć wartość, która oznacza powód zakończenia. Można użyć dowolnego [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkcji lub **zwracają** instrukcji. Typowo 0 oznacza pomyślne ukończenie, ale która zależy od użytkownika.
+Wątku roboczego zakończenie zwykłych wątków jest proste: Zamknij funkcję kontrolującą i zwróć wartość, która oznacza powód zakończenia. Można użyć dowolnego [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkcji lub **zwracają** instrukcji. Typowo 0 oznacza pomyślne ukończenie, ale która zależy od użytkownika.
 
 Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.
 
 ##  <a name="_core_premature_thread_termination"></a> Przedwczesne zakończenie wątku
 
-Przedwczesne zakończenie wątku jest prawie tak samo proste: wywołanie [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z wewnątrz wątku. Przekaż żądany kod zakończenia jako jedyny parametr. To zatrzymuje wykonanie wątku, powoduje cofnięcie przydziału stosu wątku, odłącza wszystkie biblioteki dll, dołączone do wątku i usuwa obiekt ciągu z pamięci.
+Przedwczesne zakończenie wątku jest prawie tak samo proste: Wywołaj [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z wewnątrz wątku. Przekaż żądany kod zakończenia jako jedyny parametr. To zatrzymuje wykonanie wątku, powoduje cofnięcie przydziału stosu wątku, odłącza wszystkie biblioteki dll, dołączone do wątku i usuwa obiekt ciągu z pamięci.
 
 `AfxEndThread` Musi być wywołana z wewnątrz wątku, który ma zostać zakończony. Jeśli chcesz zakończyć wątek z innego wątku, należy skonfigurować metodę komunikacji pomiędzy dwoma wątkami.
 
@@ -56,7 +56,7 @@ Trwa pobieranie kodu wyjścia [CWinThread](../mfc/reference/cwinthread-class.md)
 
 Każda z tych metod pozwala określić dlaczego `CWinThread` obiekt został zakończony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>

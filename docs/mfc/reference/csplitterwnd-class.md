@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302107"
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
 
@@ -391,7 +391,7 @@ virtual BOOL CreateView(
 *wiersz*<br/>
 Określa wiersz okno rozdzielacza, w której chcesz umieścić nowy widok.
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę okno rozdzielacza, w której chcesz umieścić nowy widok.
 
 *pViewClass*<br/>
@@ -478,7 +478,7 @@ virtual void DeleteView(
 *wiersz*<br/>
 Określa wiersz okna rozdzielacza, od którego należy usunąć widoku.
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę okno rozdzielacza, od którego należy usunąć widoku.
 
 ### <a name="remarks"></a>Uwagi
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę.
 
 *cxCur*<br/>
@@ -652,7 +652,7 @@ CWnd* GetPane(
 *wiersz*<br/>
 Określa wiersz.
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -730,7 +730,7 @@ int IdFromRowCol(
 *wiersz*<br/>
 Określa wiersz okno rozdzielacza.
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę okno rozdzielacza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -804,10 +804,10 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia do rysowania. Jeśli *kontrolera pDC* ma wartość NULL, następnie [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) jest wywoływana przez platformę i nie podział okna jest rysowany.
 
-*nNie*<br/>
+*nType*<br/>
 Wartość `enum ESplitType`, który może być jedną z następujących czynności:
 
     - `splitBox` Przeciągnij pole rozdzielacza.
@@ -880,7 +880,7 @@ virtual void SetActivePane(
 *wiersz*<br/>
 Jeśli *pWnd* ma wartość NULL, określa wiersz w okienku, które będą aktywne.
 
-*Kolumna*<br/>
+*col*<br/>
 Jeśli *pWnd* ma wartość NULL, określa kolumnę w okienku, które będą aktywne.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolumna*<br/>
+*col*<br/>
 Określa kolumnę okno rozdzielacza.
 
 *cxIdeal*<br/>
@@ -1029,12 +1029,12 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC VIEWEX](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

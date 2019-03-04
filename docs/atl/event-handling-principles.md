@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: e460685d17a568d9e3b49af40dd1e3f1dbda7c28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b882a1d356a431f75be1feb6e7bd997abed41c33
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301483"
 ---
 # <a name="event-handling-principles"></a>Reguły obsługi zdarzeń
 
@@ -42,7 +42,6 @@ Po pomyślnym zarejestrowaniu zainteresowanie odbierania zdarzeń metod na inter
 
 Uważaj uniknąć odwołania cykli podczas obsługi zdarzeń.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)
-

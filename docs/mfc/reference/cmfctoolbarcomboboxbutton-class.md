@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303173"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 
@@ -132,7 +132,7 @@ Aby dodać przycisk pola kombi na pasku narzędzi, wykonaj następujące kroki:
 
 3. Programu obsługi wiadomości, która przetwarza komunikat AFX_WM_RESETTOOLBAR, Zamień zastępczy przycisk Nowy przycisk pola kombi przy użyciu [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Aby uzyskać więcej informacji, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md). Na przykład przycisk paska narzędzi pole kombi zobacz przykładowy projekt VisualStudioDemo.
+Aby uzyskać więcej informacji, zobacz [instruktażu: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md). Na przykład przycisk paska narzędzi pole kombi zobacz przykładowy projekt VisualStudioDemo.
 
 ## <a name="example"></a>Przykład
 
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Przycisk menu*<br/>
+*menuButton*<br/>
 [out] Odwołanie do przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -898,7 +898,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które wyświetla przycisk pola kombi.
 
 *sizeDefault*<br/>
@@ -958,7 +958,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które wyświetla przycisk pola kombi.
 
 *nCtlColor*<br/>
@@ -1027,7 +1027,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Kontekst urządzenia, które wyświetla przycisk pola kombi.
 
 *Rect*<br/>
@@ -1227,7 +1227,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Okno nadrzędne przycisk pola kombi.
 
-*Dane*<br/>
+*data*<br/>
 [out] A `CAccessibilityData` obiekt, który odbiera dane dostępności z przycisk pola kombi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1328,12 +1328,11 @@ void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 [in] Wskaźnik do ciągu, który zawiera tekst w polu edycji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Klasa CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

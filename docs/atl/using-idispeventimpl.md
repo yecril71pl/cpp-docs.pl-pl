@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 7ece96b26605c9f881ead2ba7cfcd1313a053faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5175ffd615837fb10ba1bbced5da7f7733b6e193
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301561"
 ---
 # <a name="using-idispeventimpl"></a>Korzystanie z interfejsu IDispEventImpl
 
@@ -57,8 +57,7 @@ Poniższy kod zostanie wyświetlony w NotSoSimple.h. Odpowiedni kod jest oznaczo
 
 [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)<br/>
 [Przykładowe ATLEventHandling](../visual-cpp-samples.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304070"
 ---
 # <a name="cobject-class"></a>Klasa CObject
 
@@ -157,7 +157,7 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Kontekst diagnostycznych zrzutu służąca do zrzucania zwykle `afxDump`.
 
 ### <a name="remarks"></a>Uwagi
@@ -366,7 +366,7 @@ Użyj [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) lub
 
 `Serialize` jest wywoływana przez [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) i [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Te funkcje są skojarzone z `CArchive` operator wstawiania ( **< \<**) i operatorów wyodrębniania ( **>>**).
 
-Przykłady serializacji, zobacz artykuł [serializacja: serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
+Przykłady serializacji, zobacz artykuł [serializacji: Serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
 
 ### <a name="example"></a>Przykład
 
@@ -374,7 +374,6 @@ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

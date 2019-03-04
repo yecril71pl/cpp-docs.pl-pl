@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304560"
 ---
 # <a name="crebarctrl-class"></a>Klasa CReBarCtrl
 
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 Liczony od zera indeks poza pasmem do przeniesienia.
 
-*utomatyczna zmiana*<br/>
+*uTo*<br/>
 Liczony od zera indeks w nowe miejsce poza pasmem. Wartości tego parametru nigdy nie może być większa niż liczba grup minus jeden. Aby uzyskać liczbę grup, należy wywołać [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -916,7 +916,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Wartość COLORREF, który reprezentuje nowy domyślny kolor tła.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*dwMask*|[in] Bitowa kombinacja (lub) flagi określające flag, które w *dwStyleEx* zastosować parametr. Użyj co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie pokazuj rozdzielacza na dole w poziomym trybie, a po prawej stronie w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Przekazuj [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości do okna nadrzędnego.|
+|*dwMask*|[in] Bitowa kombinacja (lub) flagi określające flag, które w *dwStyleEx* zastosować parametr. Użyj co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie pokazuj rozdzielacza na dole w poziomym trybie, a po prawej stronie w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Do przodu [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości do okna nadrzędnego.|
 |*dwStyleEx*|[in] Bitowa kombinacja (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, podaj tę samą flagę, która jest używana w *dwMask* parametru. Aby zresetować stylu, należy określić binarne zero.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1041,7 +1041,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Wartość COLORREF, który reprezentuje nowy tekst koloru `CReBarCtrl` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1133,8 +1133,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartoś
 
 Należy zauważyć, że ta funkcja członkowska używa `CRect` obiektu jako parametr, a nie `RECT` struktury.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

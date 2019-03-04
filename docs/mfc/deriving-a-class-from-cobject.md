@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301249"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
 
@@ -28,7 +28,7 @@ W omówieniach dotyczących `CObject`, warunki interfejsu "pliku" i "plik implem
 
 Można wybierać spośród czterech poziomów funkcjonalności podczas wyprowadzania z klasy `CObject`:
 
-- Podstawowe funkcje: Brak obsługi informacji o klasie czasu wykonywania lub serializacji, ale obejmuje zarządzanie diagnostyki pamięci.
+- Podstawowe funkcje: Brak obsługi informacji o klasie czasu wykonywania lub serializacji ale obejmuje zarządzanie pamięcią diagnostycznych.
 
 - Podstawowe funkcje oraz wsparcie dla informacji o klasie czasu wykonywania.
 
@@ -47,9 +47,9 @@ W poniższej tabeli przedstawiono relacje między makra używane do obsługi ser
 |Makra używane|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |Podstawowe `CObject` funkcji|Nie|Nie|Nie|
-|`DECLARE_DYNAMIC`|Tak|Nie|Nie|
-|`DECLARE_DYNCREATE`|Tak|Tak|Nie|
-|`DECLARE_SERIAL`|Tak|Tak|Tak|
+|`DECLARE_DYNAMIC`|Yes|Nie|Nie|
+|`DECLARE_DYNCREATE`|Yes|Yes|Nie|
+|`DECLARE_SERIAL`|Yes|Yes|Tak|
 
 #### <a name="to-use-basic-cobject-functionality"></a>Aby korzystać z podstawowych funkcji CObject
 
@@ -59,11 +59,10 @@ W poniższej tabeli przedstawiono relacje między makra używane do obsługi ser
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: Zrzucanie zawartość obiektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Artykuł [Określanie poziomów funkcjonalności](../mfc/specifying-levels-of-functionality.md) opisuje sposób określenia innych poziomach funkcjonalności, w tym informacje o klasie czasu wykonywania, dynamiczne tworzenie obiektów i serializacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie obiektu CObject](../mfc/using-cobject.md)
-

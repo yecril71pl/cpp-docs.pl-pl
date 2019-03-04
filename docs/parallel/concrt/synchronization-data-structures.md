@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301886"
 ---
 # <a name="synchronization-data-structures"></a>Struktury danych synchronizacji
 
@@ -40,7 +40,7 @@ W poniższej tabeli przedstawiono ważne metody, które są definiowane przez `c
 |Metoda|Opis|
 |------------|-----------------|
 |[lock](reference/critical-section-class.md#lock)|Uzyskuje sekcję krytyczną. Wywołujący kontekstu blokuje, aż do jego uzyskuje blokadę.|
-|[try_lock —](reference/critical-section-class.md#try_lock)|Próbuje uzyskać sekcję krytyczną, ale nie są blokowane.|
+|[try_lock](reference/critical-section-class.md#try_lock)|Próbuje uzyskać sekcję krytyczną, ale nie są blokowane.|
 |[unlock](reference/critical-section-class.md#unlock)|Zwalnia sekcję krytyczną.|
 
 [[Górnej](#top)]
@@ -67,7 +67,7 @@ W poniższej tabeli przedstawiono ważne metody, które są definiowane przez `r
 |Metoda|Opis|
 |------------|-----------------|
 |[lock](reference/reader-writer-lock-class.md#lock)|Ukończone operacje odczytu i zapisu blokady.|
-|[try_lock —](reference/reader-writer-lock-class.md#try_lock)|Próbuje uzyskać dostępu do odczytu i zapisu do blokady, ale nie są blokowane.|
+|[try_lock](reference/reader-writer-lock-class.md#try_lock)|Próbuje uzyskać dostępu do odczytu i zapisu do blokady, ale nie są blokowane.|
 |[lock_read](reference/reader-writer-lock-class.md#lock_read)|Uzyskuje dostęp tylko do odczytu do blokady.|
 |[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Próbuje uzyskać dostęp do blokadę tylko do odczytu, ale nie są blokowane.|
 |[unlock](reference/reader-writer-lock-class.md#unlock)|Zwalnia blokadę.|
@@ -115,4 +115,3 @@ Porównuje zachowanie struktur danych synchronizacji udostępnianych przez inter
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 W tym artykule opisano środowisko uruchomieniowe współbieżności, upraszczający Programowanie równoległe i zawiera linki do powiązanych tematów.
-

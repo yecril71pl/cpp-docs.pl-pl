@@ -1,5 +1,5 @@
 ---
-title: Klasa COleTemplateServer
+title: COleTemplateServer Class
 ms.date: 11/04/2016
 f1_keywords:
 - COleTemplateServer
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302887"
 ---
-# <a name="coletemplateserver-class"></a>Klasa COleTemplateServer
+# <a name="coletemplateserver-class"></a>COleTemplateServer Class
 
 Używany do edytowania serwerów, serwerów automatyzacji i kontenerów łączy (aplikacje, które obsługują linki do wbudowanych elementów) obrazu OLE.
 
@@ -53,7 +53,7 @@ Ta klasa jest pochodną klasy [COleObjectFactory](../../mfc/reference/coleobject
 
 `COleTemplateServer` zastępuje `OnCreateInstance` funkcja elementu członkowskiego zdefiniowane przez `COleObjectFactory`. Ta funkcja członkowska jest wywoływana przez strukturę w celu utworzenia obiektu języka C++, właściwego typu.
 
-Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
+Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [serwerów: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -169,7 +169,7 @@ Informacje przedstawione w argumentach *rglpszRegister* i *rglpszOverwrite* są 
 
 Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Klasa COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>

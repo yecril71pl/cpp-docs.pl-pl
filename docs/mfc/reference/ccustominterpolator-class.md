@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 49685d079e367449ee5973ab37f0bbc7ea44da14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303095"
 ---
 # <a name="ccustominterpolator-class"></a>Klasa CCustomInterpolator
 
@@ -229,7 +229,7 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>Parametry
 
-*Szybkość pracy*<br/>
+*velocity*<br/>
 Dane wyjściowe. Prędkość zmiennej przy przesunięciu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -313,7 +313,7 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>Parametry
 
-*Wartość początkowa*<br/>
+*initialValue*<br/>
 Wartość zmiennej na początku tego przejścia.
 
 *initialVelocity*<br/>
@@ -323,6 +323,6 @@ Prędkość zmiennej na początku tego przejścia.
 
 Podstawową implementację zawsze zwraca wartość PRAWDA. Zwraca wartość FALSE od implementacji zgodnym z przesłoniętą jeśli chce się nie powieść zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

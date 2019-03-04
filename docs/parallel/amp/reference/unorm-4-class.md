@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302523"
 ---
 # <a name="unorm4-class"></a>unorm_4 — Klasa
 
@@ -464,10 +464,10 @@ class unorm_4;
 |Nazwa|Opis|
 |----------|-----------------|
 |unorm_4::a||
-|unorm_4::AB||
+|unorm_4::ab||
 |unorm_4::abg||
 |unorm_4::abgr||
-|unorm_4::ABR||
+|unorm_4::abr||
 |unorm_4::abrg||
 |unorm_4::AG||
 |unorm_4::agb||
@@ -488,7 +488,7 @@ class unorm_4;
 |unorm_4::bg||
 |unorm_4::bga||
 |unorm_4::bgar||
-|unorm_4::BGR||
+|unorm_4::bgr||
 |unorm_4::bgra||
 |unorm_4::br||
 |unorm_4::bra||
@@ -497,7 +497,7 @@ class unorm_4;
 |unorm_4::brga||
 |unorm_4::g||
 |unorm_4::ga||
-|unorm_4::GAB||
+|unorm_4::gab||
 |unorm_4::gabr||
 |unorm_4::gar||
 |unorm_4::garb||
@@ -600,7 +600,7 @@ class unorm_4;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="ctor"></a> unorm_4
 
@@ -683,6 +683,6 @@ Obiekt używany do inicjowania.
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

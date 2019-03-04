@@ -1,19 +1,19 @@
 ---
-title: 'Kontrolki ActiveX MFC: dodawanie metod standardowych'
+title: 'Kontrolki ActiveX MFC: Dodawanie metod standardowych'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305214"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>Kontrolki ActiveX MFC: dodawanie metod standardowych
+# <a name="mfc-activex-controls-adding-stock-methods"></a>Kontrolki ActiveX MFC: Dodawanie metod standardowych
 
 Podstawowe metody różni się od niestandardowej metody, w tym, że został już zaimplementowany przez klasę [COleControl](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metodę odświeżania kontrolki. Wpis mapy wysyłania dla tej metody akcji jest DISP_STOCKFUNC_REFRESH.
 
@@ -24,8 +24,8 @@ Podstawowe metody różni się od niestandardowej metody, w tym, że został ju�
 
 |Metoda|Wpis mapy wysyłania|Komentarz|
 |------------|------------------------|-------------|
-|`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Wyzwala zdarzenie Click.|
-|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Aktualizacje od razu wygląd formantu.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Wyzwala zdarzenie Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Aktualizacje od razu wygląd formantu.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Dodawanie metody akcji przy użyciu Kreator dodawania metody
 
@@ -61,7 +61,6 @@ Następujący wiersz jest dodawany do formantu. Plik IDL:
 
 Ten wiersz przypisuje metoda odświeżanie określony numer Identyfikatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

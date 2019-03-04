@@ -21,12 +21,12 @@ helpviewer_keywords:
 - ON_EN_KILLFOCUS macro [MFC]
 - edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
-ms.openlocfilehash: 67734281191d0b16d3ebaa43610915b04a8069ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53586de574fca6ab88b93444c9d571c62354cef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509035"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302029"
 ---
 # <a name="edit-control-handlers"></a>Edytowanie programów obsługi sterowania
 
@@ -34,16 +34,15 @@ Następujące wpisy mapy odpowiadają prototypu funkcji.
 
 |Wpis mapy|Prototyp funkcji|
 |---------------|------------------------|
-|ON_EN_CHANGE ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
+|ON_EN_CHANGE( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
 |ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_HSCROLL ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_KILLFOCUS ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
+|ON_EN_HSCROLL( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
+|ON_EN_KILLFOCUS( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
 |ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_SETFOCUS ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
+|ON_EN_SETFOCUS( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
 |ON_EN_UPDATE ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_VSCROLL ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
+|ON_EN_VSCROLL( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)
-

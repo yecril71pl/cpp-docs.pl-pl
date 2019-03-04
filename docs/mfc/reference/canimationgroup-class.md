@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304382"
 ---
 # <a name="canimationgroup-class"></a>Klasa CAnimationGroup
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Tworzy grupę animacji.|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Destruktor. Wywołuje się, kiedy niszczony jest grupą animacji.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Destruktor. Wywołuje się, kiedy niszczony jest grupą animacji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -387,6 +387,6 @@ Określa, jak można zniszczyć przejścia.
 
 Tę wartość można ustawić na wartość FALSE, tylko wtedy, gdy przydzielić przejścia na stosie. Wartość domyślna to TRUE, w związku z tym zdecydowanie zaleca się alokowania obiektów przejścia za pomocą nowego operatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy](../../mfc/reference/mfc-classes.md)

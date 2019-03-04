@@ -7,12 +7,12 @@ helpviewer_keywords:
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: 73042dbbdc28819ecc736c282599189ee074ce77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457112"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304873"
 ---
 # <a name="spin-button-styles"></a>Style przycisku pokrętła
 
@@ -35,8 +35,7 @@ Wiele ustawień dla przycisku pokrętła ([CSpinButtonCtrl](../mfc/reference/csp
 
 - **Klawisze strzałek** powoduje, że przycisk pokrętła, aby zwiększyć lub zmniejszyć pozycji po naciśnięciu klawisza Strzałka w górę i Strzałka w dół. Skojarzone ze stylem UDS_ARROWKEYS.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie ze CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

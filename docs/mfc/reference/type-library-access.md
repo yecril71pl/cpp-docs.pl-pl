@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 4dc5a445f4a7736182350c16720686ca7e0bc27c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5aa92d520e2a806837ceb5208ca1262504ee02e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301977"
 ---
 # <a name="type-library-access"></a>Dostęp do biblioteki typów
 
@@ -77,6 +77,6 @@ To makro musi znajdować się w pliku implementacji dla każdej klasy kontrolki,
 
 **Nagłówek:** afxdisp.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

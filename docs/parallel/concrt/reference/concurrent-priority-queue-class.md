@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304785"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue — Klasa
 
@@ -93,7 +93,7 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_priority_queue` klasy
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concurrent_priority_queue.h
+**Header:** concurrent_priority_queue.h
 
 **Namespace:** współbieżności
 
@@ -109,7 +109,7 @@ void clear();
 
 `clear` nie jest bezpieczna pod kątem współbieżności. Należy się upewnić, że nie ma innych wątków są wywoływanie metod na kolejki priorytetowej współbieżnych, po wywołaniu tej metody. `clear` nie spowoduje zwolnienia pamięci.
 
-##  <a name="ctor"></a> concurrent_priority_queue —
+##  <a name="ctor"></a> concurrent_priority_queue
 
 Tworzy kolejki priorytetowej współbieżnych.
 
@@ -187,7 +187,7 @@ bool empty() const;
 
 **wartość true,** Jeśli kolejka priorytetowa był pusty w tej chwili funkcja została wywołana, **false** inaczej.
 
-##  <a name="get_allocator"></a> get_allocator —
+##  <a name="get_allocator"></a> get_allocator
 
 Zwraca kopię obiektu alokator używany do utworzenia kolejki priorytetowej współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -279,8 +279,7 @@ Odwołanie do zmiennej, która zostanie wypełniona element najwyższy priorytet
 
 **wartość true,** Jeśli wartość została zdjęte ze stosu, **false** inaczej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
-

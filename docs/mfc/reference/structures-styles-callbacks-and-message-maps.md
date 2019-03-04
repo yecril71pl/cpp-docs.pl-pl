@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: 0f7251e93672df438e3b994a1fdad0bf0e926693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301925"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, style, wywołania zwrotne i mapy komunikatów
 
@@ -41,4 +41,3 @@ Wyświetla listę klas w bibliotece MFC według kategorii.
 
 [Przykłady MFC](../../visual-cpp-samples.md)<br/>
 Zawiera łącza do przykładów, które przedstawiają korzystanie z biblioteki MFC.
-

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303351"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Wartość TRUE, jeśli `CMFCToolBarImages` obiekt używa głębi kolorów (bity na piksel) nowego obrazu. FAŁSZ Jeśli `CMFCToolbarImages` obiekt przechowuje bieżące głębi kolorów.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Odwołanie do `CMFCToolbarImages` obiekt, który zawiera obraz, aby dodać.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parametry
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Listy obrazów, który ma być używany jako źródło dla paska narzędzi obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -467,7 +467,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *x*<br/>
@@ -582,7 +582,7 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1381,7 +1381,7 @@ Wartość TRUE, jeśli zmiana rozmiaru zakończy się pomyślnie; w przeciwnym r
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

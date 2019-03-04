@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: strony właściwości'
+title: 'Kontrolki ActiveX MFC: Strony właściwości'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303901"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
+# <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: Strony właściwości
 
 Strony właściwości umożliwiają użytkownik formantu ActiveX do wyświetlania i zmieniania właściwości formantu ActiveX. Te właściwości są dostępne za pomocą kontrolki okno dialogowe właściwości, która zawiera jedną lub więcej stron właściwości, które zapewniają dostosowany interfejs graficzny służący do wyświetlania i edytowania właściwości formantu.
 
@@ -45,15 +45,15 @@ W tym artykule opisano tematów związanych z używanie stron właściwości for
 
 Aby uzyskać więcej informacji na temat używania stron właściwości w kontrolce ActiveX zobacz następujące artykuły:
 
-- [Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Kontrolki ActiveX MFC: Dodawanie innego niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Kontrolki ActiveX MFC: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Aby uzyskać informacje na używanie arkuszy właściwości w aplikacji innych niż kontrolki ActiveX MFC, zobacz [arkusze właściwości](../mfc/property-sheets-mfc.md).
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementowanie domyślna strona właściwości
 
-Jeśli używasz kreatora kontrolek ActiveX do utworzenia projektu kontrolki, Kreator kontrolek ActiveX przewiduje domyślnej klasy strony właściwości formant pochodzące z [klasa COlePropertyPage](../mfc/reference/colepropertypage-class.md). Początkowo tej strony właściwości jest pusta, ale można dodać żadnych kontrolka okna dialogowego lub zestaw formantów do niego. Ponieważ Kreator kontrolek ActiveX powoduje utworzenie tylko jednej właściwości klasy strony domyślnie klasy strony właściwości dodatkowych (również pochodzącego z `COlePropertyPage`) musi zostać utworzona za pomocą widoku klas. Aby uzyskać więcej informacji na temat tej procedury, zobacz [kontrolki ActiveX MFC: Dodawanie strony właściwości niestandardowego innego](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Jeśli używasz kreatora kontrolek ActiveX do utworzenia projektu kontrolki, Kreator kontrolek ActiveX przewiduje domyślnej klasy strony właściwości formant pochodzące z [klasa COlePropertyPage](../mfc/reference/colepropertypage-class.md). Początkowo tej strony właściwości jest pusta, ale można dodać żadnych kontrolka okna dialogowego lub zestaw formantów do niego. Ponieważ Kreator kontrolek ActiveX powoduje utworzenie tylko jednej właściwości klasy strony domyślnie klasy strony właściwości dodatkowych (również pochodzącego z `COlePropertyPage`) musi zostać utworzona za pomocą widoku klas. Aby uzyskać więcej informacji na temat tej procedury, zobacz [kontrolki ActiveX MFC: Dodawanie innego niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementowanie właściwości strony (w tym przypadku wartość domyślna) to proces trzech kroków:
 
@@ -115,7 +115,7 @@ Po utworzeniu strony właściwości kontrolki wstawione, należy ustanowić łą
 |`DDP_Radio`|Przycisk radiowy z właściwością kontrolki.|
 |`DDP_Text`|Tekst z właściwością kontrolki.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Klasa COlePropertyPage](../mfc/reference/colepropertypage-class.md)

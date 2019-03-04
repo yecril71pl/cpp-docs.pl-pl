@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304339"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
 
@@ -372,7 +372,7 @@ Identyfikator polecenia menu polecenia, gdy użytkownik wybierze; 0, jeśli uży
 
 Ta metoda działa jako modalne wywołanie, aby wyświetlić menu skrótów. Aplikacja nie będzie następujący wiersz w kodzie dopóki użytkownik zamyka menu skrótów lub wybierze polecenie. Jest alternatywną metodę, której można użyć, aby wyświetlić menu skrótów [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Tej metody nie jest wywołaniem modalne i nie będzie zwracać identyfikator wybranego polecenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

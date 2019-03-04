@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: używanie stron właściwości standardowych'
+title: 'Kontrolki ActiveX MFC: Używanie stron właściwości standardowych'
 ms.date: 09/12/2018
 f1_keywords:
 - CLSID_CPicturePropPage
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545395"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304707"
 ---
-# <a name="mfc-activex-controls-using-stock-property-pages"></a>Kontrolki ActiveX MFC: używanie stron właściwości standardowych
+# <a name="mfc-activex-controls-using-stock-property-pages"></a>Kontrolki ActiveX MFC: Używanie stron właściwości standardowych
 
 W tym artykule omówiono dostępne dla formantów ActiveX i sposobu ich używania stron właściwości standardowych.
 
@@ -31,9 +31,9 @@ W tym artykule omówiono dostępne dla formantów ActiveX i sposobu ich używani
 
 Aby uzyskać więcej informacji na temat używania stron właściwości w kontrolce ActiveX zobacz następujące artykuły:
 
-- [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
+- [Kontrolki ActiveX MFC: Strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Kontrolki ActiveX MFC: Dodawanie innego niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 Biblioteka MFC zawiera trzy strony właściwości podstawowych do użytku z kontrolek ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, i `CLSID_CPicturePropPage`. Interfejs użytkownika dla standardowych kolor, czcionki i właściwości obrazu, na tych stronach są wyświetlane w odpowiednio.
 
@@ -51,8 +51,7 @@ Po dokonaniu tych modyfikacji, należy ponownie skompilować projekt. Formant ma
 > [!TIP]
 >  Jeśli Twoje strony właściwości podstawowych nie są widoczne (patrz Uwaga poprzedniego), zarejestruj plik DLL, uruchamiając RegSvr32.exe z wiersza polecenia, za pomocą pełną nazwę ścieżki do biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)
-
+[Kontrolki ActiveX MFC: Dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)

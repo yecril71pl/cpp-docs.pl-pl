@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom'
+title: 'Przewodnik: Korzystając ze złączy, aby zapobiec zakleszczeniu'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303056"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Przewodnik: Korzystając ze złączy, aby zapobiec zakleszczeniu
 
 Ten temat używa problem ucztujących filozofów, aby zilustrować, jak używać [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy w celu uniknięcia zakleszczenia w aplikacji. W przypadku aplikacji oprogramowania *zakleszczenia* występuje, gdy dwa lub więcej procesów każdego zasobu do przechowywania i wzajemnie poczekaj, aż inny proces zwolnić innego zasobu.
 
@@ -152,7 +152,7 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 [[Górnej](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 8db8165325c7bcd1e626b6707c35b69ebd211073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585110"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300332"
 ---
 # <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
 
@@ -220,7 +220,7 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametry
 
-*npos —*<br/>
+*nPos*<br/>
 [in] Określa pozycję, aby ustawić suwak. Pozycja jest określana względem początku suwaka.
 
 *bRedraw*<br/>
@@ -238,10 +238,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Określa minimalną wartość suwaka.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Określa maksymalną wartość suwaka.
 
 ### <a name="remarks"></a>Uwagi
@@ -273,7 +273,7 @@ void SetZoomIncrement(int nZoomIncrement);
 *nZoomIncrement*<br/>
 [in] Określa zmiany wielkości kontrolki suwaka.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

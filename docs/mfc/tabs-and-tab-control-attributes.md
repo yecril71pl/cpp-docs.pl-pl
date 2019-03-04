@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-ms.openlocfilehash: ba63fdca32af28d0763dd4cf2da3465a99ddeb1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304798"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty i atrybuty formantu karty
 
@@ -27,8 +27,7 @@ Poniższy kod usuwa stan wszystkich elementów w karcie i następnie modyfikuje 
 
 Aby uzyskać więcej informacji na temat atrybutów karty zobacz [karty i atrybuty w karcie](/windows/desktop/Controls/tab-controls) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Dodawanie kart do formantu karty zobacz [Dodawanie kart do formantu karty](../mfc/adding-tabs-to-a-tab-control.md) w dalszej części tego tematu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

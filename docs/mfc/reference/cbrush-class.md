@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303082"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
 
@@ -184,7 +184,7 @@ BOOL CreateDIBPatternBrush(
 *hPackedDIB*<br/>
 Identyfikuje obiekt pamięci globalnej, zawierający upakowaną map bitowych niezależnych od urządzenia (DIB).
 
-*Nużycie*<br/>
+*nUsage*<br/>
 Określa, czy `bmiColors[]` pola [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struktury danych (część "pakowane DIB") zawiera jawne wartości RGB lub indeksów do aktualnie zrealizowane palety logiczne. Parametr musi mieć jedną z następujących wartości:
 
 - DIB_PAL_COLORS tabeli kolorów składa się z tablicy indeksów 16-bitowych.
@@ -218,7 +218,7 @@ Aby dowiedzieć się, jak za pomocą następujących funkcji Windows zobacz zest
 
 - [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (tej funkcji należy używać dla aplikacji opartych na Win32).
 
-- [Działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)
 
 ### <a name="example"></a>Przykład
 
@@ -433,9 +433,9 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC Sample PROPDLG](../../visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>

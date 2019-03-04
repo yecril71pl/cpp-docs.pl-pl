@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301457"
 ---
 # <a name="ctoolbar-class"></a>Klasa CToolBar
 
@@ -405,7 +405,7 @@ virtual void GetItemRect(
 *nIndex*<br/>
 Indeks elementu (przycisk lub separatorem), którego współrzędne prostokąt, które mają być pobierane.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) strukturę, która będzie zawierać współrzędne elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -715,11 +715,11 @@ Wywołaj tę funkcję elementu członkowskiego tylko dla pasków narzędzi, któ
 
 [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[DLGCBR32 próbki MFC](../../visual-cpp-samples.md)<br/>
-[Próbki MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
+[MFC Sample DOCKTOOL](../../visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)<br/>

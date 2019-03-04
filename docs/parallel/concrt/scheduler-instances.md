@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301301"
 ---
 # <a name="scheduler-instances"></a>Wystąpienia harmonogramu
 
@@ -38,7 +38,7 @@ Wątek, który jest dołączony do harmonogramu jest znany jako *kontekstu wykon
 
 Zazwyczaj `CurrentScheduler` klasa jest używana do dostępu do bieżącego harmonogramu. `Scheduler` Klasy jest przydatne w przypadku, gdy trzeba zarządzać harmonogram, który jest inny niż bieżąca.
 
-Poniżej opisano sposób tworzenia i Zarządzanie wystąpieniem harmonogramu. Aby uzyskać pełny przykład ilustrujący te zadania, zobacz [porady: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Poniżej opisano sposób tworzenia i Zarządzanie wystąpieniem harmonogramu. Aby uzyskać pełny przykład ilustrujący te zadania, zobacz [jak: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Górnej](#top)]
 
@@ -93,7 +93,7 @@ W poniższej tabeli przedstawiono ważne metody, które są definiowane przez `C
 
 |Metoda|Opis|
 |------------|-----------------|
-|[Utwórz](reference/currentscheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonymi zasadami i kojarzy ją z bieżącego kontekstu.|
+|[Tworzenie](reference/currentscheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonymi zasadami i kojarzy ją z bieżącego kontekstu.|
 |[Get](reference/currentscheduler-class.md#get)|Pobiera wskaźnik do `Scheduler` obiektu, który jest skojarzony z bieżącym kontekstem. Ta metoda nie zwiększa licznik odwołań `Scheduler` obiektu.|
 |[Detach](reference/currentscheduler-class.md#detach)|Odłącza bieżącego harmonogramu z bieżącego kontekstu i ustawia poprzedni jako bieżącego harmonogramu.|
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Rejestruje zdarzenie, które ustawia środowisko uruchomieniowe, kiedy niszczony jest bieżącego harmonogramu.|
@@ -105,7 +105,7 @@ W poniższej tabeli przedstawiono ważne metody, które są definiowane przez `S
 
 |Metoda|Opis|
 |------------|-----------------|
-|[Utwórz](reference/scheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonymi zasadami.|
+|[Tworzenie](reference/scheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonymi zasadami.|
 |[Attach](reference/scheduler-class.md#attach)|Kojarzy `Scheduler` obiektu wraz z bieżącym kontekście.|
 |[Dokumentacja](reference/scheduler-class.md#reference)|Zwiększa licznik odwołań `Scheduler` obiektu.|
 |[Wersja](reference/scheduler-class.md#release)|Dekrementuje licznikiem odwołań `Scheduler` obiektu.|
@@ -120,12 +120,11 @@ W poniższej tabeli przedstawiono ważne metody, które są definiowane przez `S
 
 ##  <a name="example"></a> Przykład
 
-Podstawowe przykłady sposobu tworzenia i Zarządzanie wystąpieniem harmonogramu, zobacz [porady: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Podstawowe przykłady sposobu tworzenia i Zarządzanie wystąpieniem harmonogramu, zobacz [jak: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)<br/>
 [Grupy harmonogramu](../../parallel/concrt/schedule-groups.md)
-

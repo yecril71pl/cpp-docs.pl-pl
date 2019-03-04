@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: 1b8c5522d0e1f223c31cd53e8995c962c7095d46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08e482e6900e96f1d02c34efddc7635bb8e0120e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304668"
 ---
 # <a name="colebusydialog-class"></a>Klasa COleBusyDialog
 
@@ -103,7 +103,7 @@ Dojście do zadania serwera, który jest zajęty.
 *bNotResponding*<br/>
 W przypadku opcji TRUE Wywołaj okno dialogowe nie odpowiada zamiast okna dialogowego serwer jest zajęty. Treść w oknie dialogowym nie odpowiada są nieco inne niż treść serwer jest zajęty w oknie dialogowym, a przycisk Anuluj jest wyłączony.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi tworzenia. Może zawierać zero lub więcej z następujących wartości, które są połączone za pomocą operatora bitowego OR:
 
 - Podczas wywoływania okno dialogowe, BZ_DISABLECANCELBUTTON wyłączyć przycisk Anuluj.
@@ -191,7 +191,7 @@ Można modyfikować składowe tej struktury, bezpośrednio lub za pośrednictwem
 
 Aby uzyskać więcej informacji, zobacz [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) struktury w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

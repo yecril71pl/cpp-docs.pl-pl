@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303610"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 
@@ -141,7 +141,7 @@ static BOOL FindDefaultAccelerator(
 *str*<br/>
 [out] Odwołanie do `CString` obiektu.
 
-*Element pWndFrame*<br/>
+*pWndFrame*<br/>
 [in] Wskaźnik do ramki okna.
 
 *bIsDefaultFrame*<br/>
@@ -174,7 +174,7 @@ static BOOL __stdcall IsKeyHandled(
 |Parametr|Opis|
 |*nKey*|[in] Klucz do sprawdzenia.|
 |*fVirt*|[in] Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*Element pWndFrame*|[in] Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|
+|*pWndFrame*|[in] Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|
 |*bIsDefaultFrame*|[in] Parametr logiczny, który wskazuje, czy *element pWndFrame* domyślny okna ramki.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -375,11 +375,10 @@ Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
 Funkcja ta jest przydatna w celu zastąpienia istniejącej tabeli skrótów za pomocą nowych kluczy skrótów dla wielu obiektów okna ramki. Funkcja odbiera szablon dokumentu, jako parametr w celu uzyskania dostępu do wszystkich obiektów okna ramki podłączone do danego dokumentu szablonu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Dostosowywanie klawiatury i myszy](../../mfc/keyboard-and-mouse-customization.md)
-

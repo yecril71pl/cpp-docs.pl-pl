@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304694"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue — Klasa
 
@@ -87,7 +87,7 @@ Aby uzyskać więcej informacji, zobacz [równoległe kontenery oraz obiekty](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concurrent_queue.h
+**Header:** concurrent_queue.h
 
 **Namespace:** współbieżności
 
@@ -99,7 +99,7 @@ Czyści kolejka współbieżna, niszczenie dowolnego aktualnie elementów umiesz
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue —
+##  <a name="ctor"></a> concurrent_queue
 
 Tworzy kolejka współbieżna.
 
@@ -149,7 +149,7 @@ Trzeci Konstruktor Określa przeniesienie kolejka współbieżna `_OtherQ`.
 
 Czwarty Konstruktor określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~ concurrent_queue
+##  <a name="dtor"></a> ~concurrent_queue
 
 Niszczy kolejka współbieżna.
 
@@ -173,7 +173,7 @@ bool empty() const;
 
 Gdy ta metoda jest bezpieczna pod kątem współbieżności w odniesieniu do wywołania metody `push`, `try_pop`, i `empty`, wartość zwracana może być niepoprawny według czasu sprawdzana jest przez wywołującego wątku.
 
-##  <a name="get_allocator"></a> get_allocator —
+##  <a name="get_allocator"></a> get_allocator
 
 Zwraca kopię obiektu programu przydzielania użytego do stworzenia kolejka współbieżna. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -279,6 +279,6 @@ Rozmiar kolejki współbieżnych.
 
 `unsafe_size` nie jest bezpieczna pod kątem współbieżności i może wygenerować niepoprawne wyniki, jeśli wywołania będą równocześnie z wywołaniami metod `push`, `try_pop`, i `empty`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

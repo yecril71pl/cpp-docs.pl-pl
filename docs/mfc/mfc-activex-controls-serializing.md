@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: serializacja'
+title: 'Kontrolki ActiveX MFC: Serializacja'
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522216"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303355"
 ---
-# <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
+# <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: Serializacja
 
 W tym artykule omówiono sposób serializacji formantu ActiveX. Serializacja jest proces odczytu / zapisu na nośnik z magazynu trwałego, na przykład plik dysku. Biblioteka Microsoft Foundation Class (MFC) udostępnia wbudowaną obsługę serializacji w klasie `CObject`. `COleControl` Rozszerza tę obsługę do formantów ActiveX przy użyciu właściwości mechanizm wymiany.
 
@@ -56,7 +56,7 @@ W poniższej tabeli wymieniono funkcje programu exchange możliwymi właściwoś
 |---------------------------------|-------------|
 |**Px_blob —)**|Serializuje typ właściwości danych binarnych dużych obiektów (BLOB).|
 |**Px_bool —)**|Serializuje typ właściwości typu Boolean.|
-|**Px_color —)**|Serializuje typ właściwości color.|
+|**PX_Color( )**|Serializuje typ właściwości color.|
 |**Px_currency —)**|Serializuje typu **CY** właściwości (currency).|
 |**Px_double —)**|Serializuje typu **double** właściwości.|
 |**Px_font —)**|Serializuje właściwość Typ czcionki.|
@@ -66,8 +66,8 @@ W poniższej tabeli wymieniono funkcje programu exchange możliwymi właściwoś
 |**Px_picture —)**|Serializuje typ właściwości obrazu.|
 |**Px_short —)**|Serializuje typu **krótki** właściwości.|
 |**(PXstring)**|Serializuje typu `CString` właściwości.|
-|**Px_ulong —)**|Serializuje typu **ULONG** właściwości.|
-|**Px_ushort —)**|Serializuje typu **USHORT** właściwości.|
+|**PX_ULong( )**|Serializuje typu **ULONG** właściwości.|
+|**PX_UShort( )**|Serializuje typu **USHORT** właściwości.|
 
 Aby uzyskać więcej informacji na temat tych funkcji exchange właściwości, zobacz [stanu trwałego elementu OLE kontrolki](../mfc/reference/persistence-of-ole-controls.md) w *odwołanie MFC*.
 
@@ -93,7 +93,6 @@ W poniższym przykładzie wersja 1 tej kontrolki przykładowe ma właściwość 
 
 Domyślnie formant "konwertuje" stare dane do najnowszego formatu. Na przykład jeśli formant w wersji 2 ładuje dane, który został zapisany w wersji 1, jego zapisze format wersji 2 po zapisaniu go ponownie. Jeśli chcesz kontrolować dane zapisane w formacie ostatniego przeczytanego, przekazać **FALSE** jako trzeci parametr podczas wywoływania `ExchangeVersion`. To trzeci parametr jest opcjonalny, a także jest **TRUE** domyślnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

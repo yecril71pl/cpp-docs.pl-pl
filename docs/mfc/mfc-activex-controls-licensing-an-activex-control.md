@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX'
+title: 'Kontrolki ActiveX MFC: Licencjonowanie kontrolki ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304629"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: Licencjonowanie kontrolki ActiveX
 
 Licencjonowanie pomocy technicznej, opcjonalna funkcja formantów ActiveX pozwala na kontrolowanie, kto ma możliwość używania i rozpowszechniania formantu. (Dodatkowe Omówienie licencjonowania problemów, można znaleźć w temacie licencjonowania problemy w [Uaktualnianie istniejącego kontrolki ActiveX](../mfc/upgrading-an-existing-activex-control.md).)
 
@@ -74,7 +74,7 @@ Korzystając z Kreatora kontrolek ActiveX dodać obsługę licencjonowania do fo
 
 Te funkcje elementów członkowskich są następujące:
 
-- [Verifyuserlicense —](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
+- [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
    Sprawdza, czy kontrolka zezwala na użycie w czasie projektowania, sprawdzając systemu pod kątem obecności pliku licencji formantu. Ta funkcja jest wywoływana przez framework jako część przetwarzania `IClassFactory2::GetLicInfo` i `IClassFactory::CreateInstanceLic`.
 
@@ -122,8 +122,7 @@ Można również dodać kod, aby `VerifyLicenseKey` funkcja, która udostępnia 
 
 Omówienie dodatkowe problemy z licencjonowaniem, zobacz licencjonowania problemy w [Uaktualnianie istniejącego kontrolki ActiveX](../mfc/upgrading-an-existing-activex-control.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)
-

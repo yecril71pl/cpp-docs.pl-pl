@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304655"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Wielowątkowość: Jak używać klas synchronizacji MFC
 
@@ -54,8 +54,8 @@ singleLock.Unlock();
 
 Wady tego podejścia to, że klasa będzie przebiegać wolniej niż do tej samej klasy bez obiekty synchronizacji dodane. Ponadto w przypadku prawdopodobieństwo, że więcej niż jeden wątek może spowodować usunięcie obiektu scalonych podejście może nie zawsze działać. W takiej sytuacji zaleca się zachować oddzielne synchronizacji obiektów.
 
-Aby uzyskać informacje dotyczące ustalania, która klasa synchronizacji do użycia w różnych sytuacjach, zobacz [wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat synchronizacji, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Obsługa wielowątkowości w MFC, zobacz [wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md).
+Aby uzyskać informacje dotyczące ustalania, która klasa synchronizacji do użycia w różnych sytuacjach, zobacz [wielowątkowość: Kiedy należy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat synchronizacji, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Obsługa wielowątkowości w MFC, zobacz [wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa CGdiObject
+title: CGdiObject Class
 ms.date: 11/04/2016
 f1_keywords:
 - CGdiObject
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177852"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301223"
 ---
-# <a name="cgdiobject-class"></a>Klasa CGdiObject
+# <a name="cgdiobject-class"></a>CGdiObject Class
 
 Udostępnia klasę bazową dla różnych rodzajów grafiki Windows obiekty interface (GDI) urządzenia, takie jak mapy bitowe, regiony, pędzle, pióra, palety i czcionki.
 
@@ -250,7 +250,7 @@ Funkcja pobiera strukturę danych, którego typ zależy od typu obiektu graficzn
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[MAPY BITOWEJ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|Nieobsługiwane|
 
@@ -274,11 +274,11 @@ Typ obiektu, jeśli to się powiedzie; w przeciwnym razie 0. Wartość może by�
 
 - OBJ_BRUSH pędzla
 
-- Czcionka OBJ_FONT
+- OBJ_FONT Font
 
-- OBJ_PAL palety
+- OBJ_PAL Palette
 
-- OBJ_PEN pióra
+- OBJ_PEN Pen
 
 - Rozszerzony OBJ_EXTPEN pióra
 
@@ -386,7 +386,7 @@ Aby uzyskać `CBrush` obiektów, `UnrealizeObject` instruuje system, aby zreseto
 
 `UnrealizeObject` Nie należy używać funkcji przy użyciu standardowych obiektów. `UnrealizeObject` Zawsze wtedy, gdy ustawiono nowe źródła pędzla należy wywołać funkcję (przez [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) funkcji). `UnrealizeObject` Funkcji nie może być wywoływana dla aktualnie wybrany pędzel lub aktualnie wybranego paletę wszystkich kontekstach wyświetlania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>

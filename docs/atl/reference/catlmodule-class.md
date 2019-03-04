@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302016"
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Konstruktor.|
-|[CAtlModule:: ~ CAtlModule](#dtor)|Destruktor.|
+|[CAtlModule::~CAtlModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -122,7 +122,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 Wskaźnik do funkcji, które można dodać.
 
-*Magazyn danych*<br/>
+*dw*<br/>
 Danych zdefiniowane przez użytkownika, przekazana do funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -352,7 +352,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 Podobnie jak [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzy statycznego linku do składnik rejestru Alt (Rejestrator).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

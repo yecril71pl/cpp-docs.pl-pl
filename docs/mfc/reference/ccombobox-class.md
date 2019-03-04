@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304473"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 
@@ -214,7 +214,7 @@ gdzie `id` Określa identyfikator okna podrzędnego kontrolki pola kombi, wysył
 
 Prototyp funkcji elementu nadrzędnego jest następująca:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 Nie można przewidzieć kolejności, w której niektóre powiadomienia będą wysyłane. W szczególności powiadomienie CBN_SELCHANGE może wystąpić przed lub po powiadomieniu CBN_CLOSEUP.
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nWybierz*<br/>
+*nSelect*<br/>
 Określa liczony od zera indeks ciągu, aby wybrać. Jeśli wartość -1, wszystkie bieżące zaznaczenie w polu listy zostanie usunięty, a kontrolka edycji zostanie wyczyszczona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bPrzedłużony*<br/>
+*bExtended*<br/>
 Określa, czy pole kombi powinien używać interfejsu użytkownika rozszerzonej lub domyślny interfejs użytkownika. Wartość TRUE wybiera interfejs użytkownika rozszerzone; wartość FALSE wybiera standardowy interfejs użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1555,7 +1555,7 @@ Ta funkcja elementu członkowskiego nie ma wpływu na utworzone za pomocą pola 
 
   Zobacz przykład [CComboBox::GetDroppedState](#getdroppedstate).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

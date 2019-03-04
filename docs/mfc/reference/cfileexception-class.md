@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305123"
 ---
 # <a name="cfileexception-class"></a>Klasa CFileException
 
@@ -98,7 +98,7 @@ CFileException(
 
 ### <a name="parameters"></a>Parametry
 
-*Przyczyna*<br/>
+*cause*<br/>
 Zmienna typu wyliczeniowego, która wskazuje przyczynę, dla wyjątku. Zobacz [CFileException::m_cause](#m_cause) listę możliwych wartości.
 
 *lOsError*<br/>
@@ -187,33 +187,33 @@ int m_cause;
 
 Ten element członkowski danych jest publiczną zmienną typu **int**. Moduły wyliczające i ich znaczenie są następujące:
 
-- `CFileException::none` 0: nie wystąpił błąd.
+- `CFileException::none` 0: Nie wystąpił błąd.
 
 - `CFileException::genericException` 1: Wystąpił nieokreślony błąd.
 
-- `CFileException::fileNotFound` 2: nie można zlokalizować pliku.
+- `CFileException::fileNotFound` 2: Nie można zlokalizować pliku.
 
-- `CFileException::badPath` 3: całość lub część ścieżki jest nieprawidłowy.
+- `CFileException::badPath` 3: Całość lub część ścieżki jest nieprawidłowy.
 
-- `CFileException::tooManyOpenFiles` 4: dozwolona liczba otwartych plików została przekroczona.
+- `CFileException::tooManyOpenFiles` 4: Dozwolona liczba otwartych plików została przekroczona.
 
-- `CFileException::accessDenied` 5: nie można uzyskać dostępu do pliku.
+- `CFileException::accessDenied` 5: Nie można uzyskać dostępu do pliku.
 
-- `CFileException::invalidFile` 6: Wystąpił próba użycia nieprawidłowe dojście do pliku.
+- `CFileException::invalidFile` 6: Podczas próby użycia nieprawidłowe dojście do pliku.
 
-- `CFileException::removeCurrentDir` 7: nie można usunąć bieżącego katalogu roboczego.
+- `CFileException::removeCurrentDir` 7: Nie można usunąć bieżącego katalogu roboczego.
 
-- `CFileException::directoryFull` 8: nie ma żadnych więcej wpisów w katalogu.
+- `CFileException::directoryFull` 8: Nie istnieją żadne więcej wpisów w katalogu.
 
 - `CFileException::badSeek` 9: Wystąpił błąd podczas próby ustawienia wskaźnika pliku.
 
 - `CFileException::hardIO` 10: Wystąpił błąd sprzętowy.
 
-- `CFileException::sharingViolation` 11: UDZIAŁ. Nie załadowano plik EXE lub udostępniony region został zablokowany.
+- `CFileException::sharingViolation` 11: Udostępnij. Nie załadowano plik EXE lub udostępniony region został zablokowany.
 
-- `CFileException::lockViolation` 12: próbę zablokować region, który został już zablokowany.
+- `CFileException::lockViolation` 12: Podczas próby zablokować region, który został już zablokowany.
 
-- `CFileException::diskFull` 14: dysk jest pełny.
+- `CFileException::diskFull` 14: Dysk jest pełny.
 
 - `CFileException::endOfFile` 15: Osiągnięto koniec pliku.
 
@@ -308,9 +308,8 @@ Wskaźnik do ciągu zawierającego nazwę pliku, który spowodował wyjątek, je
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Przetwarzanie wyjątków](../../mfc/reference/exception-processing.md)
-

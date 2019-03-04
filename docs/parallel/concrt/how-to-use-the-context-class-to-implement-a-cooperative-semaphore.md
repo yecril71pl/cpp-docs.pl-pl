@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora'
+title: 'Instrukcje: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300768"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Instrukcje: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora
 
 W tym temacie pokazano, jak korzystać z concurrency::Context klasy do zaimplementowania klasy kooperatywnego semafora.
 
@@ -86,8 +86,7 @@ Poniższy przykład modyfikuje treści funkcji pracy, który jest przekazywany d
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)
-

@@ -1,18 +1,18 @@
 ---
-title: 'Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających'
+title: 'Kontrolki ActiveX MFC: Uzyskiwanie dostępu do właściwości otaczających'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: f6daff09969e82daa4e8f76c8b1eb4972ddd6eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305227"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Kontrolki ActiveX MFC: Uzyskiwanie dostępu do właściwości otaczających
 
 W tym artykule omówiono, jak kontrolki ActiveX mogą dostęp do właściwości otaczających swojego kontenera kontrolki.
 
@@ -55,7 +55,6 @@ Dla Twojej wygody `COleControl` dostarcza funkcje pomocnicze, dostęp do wielu p
 
 Jeśli wartość właściwości otoczenia zmieni się (za pośrednictwem niektóre działania kontenera) `OnAmbientPropertyChanged` nosi nazwę funkcji składowej typu kontrolki. Zastąpienie tej funkcji elementu członkowskiego, aby obsłużyć takie powiadomienie. Parametr `OnAmbientPropertyChanged` jest Identyfikatorem wysyłania dotyczy właściwości otoczenia. Wartość tego Identyfikatora wysyłania mogą być DISPID_UNKNOWN, co oznacza, że co najmniej jednej właściwości otoczenia został zmieniony, ale informacje na temat tego, jakie właściwości są niedostępne.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

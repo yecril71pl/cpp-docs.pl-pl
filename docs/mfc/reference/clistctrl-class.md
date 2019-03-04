@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304525"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -460,7 +460,7 @@ Oprócz style listy standardowych klas `CListCtrl` obsługuje duży zestaw rozsz
 
 - Widoki listy wirtualnej
 
-   Po włączeniu umożliwia formant aby obsłużyć maksymalnie elementów typu DWORD. Jest to możliwe, umieszczając związanym z zarządzaniem danych elementów w aplikacji. Z wyjątkiem zaznaczenie elementu i informacji fokus wszystkie informacje o elementach musi być zarządzany przez aplikację. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: wirtualne kontrolki listy](../../mfc/virtual-list-controls.md).
+   Po włączeniu umożliwia formant aby obsłużyć maksymalnie elementów typu DWORD. Jest to możliwe, umieszczając związanym z zarządzaniem danych elementów w aplikacji. Z wyjątkiem zaznaczenie elementu i informacji fokus wszystkie informacje o elementach musi być zarządzany przez aplikację. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: Wirtualne kontrolki listy](../../mfc/virtual-list-controls.md).
 
 - Aktywacja jednego i dwa kliknięcia
 
@@ -478,7 +478,7 @@ Każdy element w kontrolce widok listy składa się z ikony (z listy obrazu), et
 
 Klasa `CListCtrl` udostępnia kilka funkcji do wstawiania, usuwanie, wyszukiwanie i modyfikowanie tych elementów. Aby uzyskać więcej informacji, zobacz [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), i [CListCtrl::FindItem](#finditem), [Dodawanie elementów do formantu](../adding-items-to-the-control.md), i [przewijanie, porządkowanie, sortowanie i znajdowanie w kontrolkach listy](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Domyślnie kontrolka widoku listy jest odpowiedzialny za przechowywanie atrybuty elementu ikonę i tekst. Jednakże, oprócz tych typów elementów klasy `CListCtrl` obsługuje ""wywołanie zwrotne items. "Element wywołania zwrotnego" jest elementu widoku listy, dla którego aplikacja — zamiast kontrolki — przechowuje tekst i/lub ikonę. Maska wywołania zwrotnego jest używany do określenia, jakie atrybuty elementu (tekst i/lub ikonę) są dostarczane przez aplikację. Jeśli aplikacja używa elementy wywołania zwrotnego, musi być w stanie dostarczyć atrybutów tekstu i/lub ikonę na żądanie. Elementy wywołania zwrotnego są przydatne, gdy aplikacja już obsługuje niektóre z tych informacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: elementy wywołania zwrotnego i maska wywołania zwrotnego](../callback-items-and-the-callback-mask.md).
+Domyślnie kontrolka widoku listy jest odpowiedzialny za przechowywanie atrybuty elementu ikonę i tekst. Jednakże, oprócz tych typów elementów klasy `CListCtrl` obsługuje ""wywołanie zwrotne items. "Element wywołania zwrotnego" jest elementu widoku listy, dla którego aplikacja — zamiast kontrolki — przechowuje tekst i/lub ikonę. Maska wywołania zwrotnego jest używany do określenia, jakie atrybuty elementu (tekst i/lub ikonę) są dostarczane przez aplikację. Jeśli aplikacja używa elementy wywołania zwrotnego, musi być w stanie dostarczyć atrybutów tekstu i/lub ikonę na żądanie. Elementy wywołania zwrotnego są przydatne, gdy aplikacja już obsługuje niektóre z tych informacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: Elementy wywołania zwrotnego i maska wywołania zwrotnego](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Listy obrazów
 
@@ -500,7 +500,7 @@ Ikony, obrazy elementu nagłówka i aplikacji — zdefiniowane stany elementy wi
 
    Używane w widoku raportu do małych obrazów, które pojawiają się w każdym elemencie kontrolki nagłówka.
 
-Domyślnie kontrolka widoku listy niszczy listy obrazów do niej przypisany, kiedy niszczony jest ona; jednak Deweloper można dostosować to zachowanie niszczenie każdej listy obrazów, gdy nie jest już używany, zgodnie z ustaleniami aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: elementy listy oraz listy obrazów](../list-items-and-image-lists.md).
+Domyślnie kontrolka widoku listy niszczy listy obrazów do niej przypisany, kiedy niszczony jest ona; jednak Deweloper można dostosować to zachowanie niszczenie każdej listy obrazów, gdy nie jest już używany, zgodnie z ustaleniami aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: Elementy listy, listy obrazów](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -529,7 +529,7 @@ CSize ApproximateViewRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Sz*<br/>
+*sz*<br/>
 Proponowana wymiary formantu w pikselach. Jeśli nie określono wymiarów, struktura używa bieżącej wartości szerokości lub wysokości kontrolki.
 
 *iCount*<br/>
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 *nItem*<br/>
 Indeks elementu, którego przeciągnij obraz lista ma zostać utworzony.
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która otrzymuje początkową lokalizację w lewym górnym rogu obrazu, w widoku współrzędne.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Wskaźnik do [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) struktury zawierającej informacje o elementach, które mają być wyszukiwane.
 
-*nczas uruchomienia*<br/>
+*nStart*<br/>
 Indeks elementu, aby rozpocząć wyszukiwanie przy użyciu lub -1, aby rozpocząć od samego początku. Element o *nczas uruchomienia* jest wykluczony z wyszukiwania, jeśli *nczas uruchomienia* nie jest równy-1.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Opis|
 |---------------|-----------------|
 |*iGroupId*|[in] Określa grupę.|
-|*lprect —*|[out w] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|
+|*lpRect*|[out w] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|
 |*iCoords*|[in] Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> -LVGGR_GROUP - współrzędnych (ustawienie domyślne) rozwiniętej całej grupy.<br />-LVGGR_HEADER - współrzędne tylko nagłówek (zwinięte grupy).<br />-LVGGR_SUBSETLINK - współrzędne tylko łącze podzestawu (znaczników podzbioru).|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1843,7 +1843,7 @@ BOOL GetItemPosition(
 *nItem*<br/>
 Indeks elementu, którego pozycja ma być pobrana.
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera położenie elementu lewego górnego rogu, w widoku współrzędne.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1882,7 +1882,7 @@ BOOL GetItemRect(
 *nItem*<br/>
 Indeks elementu, którego pozycja ma być pobrana.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.
 
 *nCode*<br/>
@@ -2219,7 +2219,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint —*<br/>
+*lpPoint*<br/>
 Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która odbiera początkowego widoku.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2348,7 +2348,7 @@ BOOL GetSubItemRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 Indeks elementu nadrzędnego podelementu.
 
 *iSubItem*<br/>
@@ -2530,7 +2530,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2774,13 +2774,13 @@ Indeks elementu do wstawienia.
 *lpszItem*<br/>
 Adres ciąg zawierający etykietę elementu lub LPSTR_TEXTCALLBACK, jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Indeks elementu obrazu lub I_IMAGECALLBACK, jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
 *NMask* parametr określa, który element atrybuty przekazywane jako parametry są prawidłowe. Może to być jedna lub więcej wartości maski opisanego w [struktury LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) w zestawie Windows SDK. Prawidłowe wartości można łączyć przy użyciu bitowego operatora OR.
 
-*nInformacje*<br/>
+*nState*<br/>
 Wskazuje, nakładki obrazów, obraz stanu i stanu elementu. Zapoznaj się z tematami zestawu Windows SDK [struktury LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Aby uzyskać więcej informacji i [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states) listę prawidłowe flagi.
 
 *nStateMask*<br/>
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parametry
 
-*Npierwszy*<br/>
+*nFirst*<br/>
 Indeks pierwszego elementu, aby odświeżana.
 
-*Nostatni*<br/>
+*nLast*<br/>
 Indeks ostatniego elementu, aby odświeżana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 Kolor tła, aby ustawić lub wartość CLR_NONE bez koloru tła. Kontrolki widoku listy za pomocą kolorów tła odświeżyć się znacznie szybciej niż bez kolory tła. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Liczony od zera indeks elementu kontrolki listy.
 
-*Zapoznaj*<br/>
+*fCheck*<br/>
 Określa, czy obraz stanu elementu powinien być widoczny, czy nie. Domyślnie *zapoznaj* ma wartość TRUE a obraz stanu jest widoczny. Jeśli *zapoznaj* ma wartość FAŁSZ, nie jest widoczny.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3320,7 +3320,7 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Indeks kolumny, dla którego ma być ustawiona szerokość. W widoku listy ten parametr musi być 0.
 
-*CX*<br/>
+*cx*<br/>
 Szerokość nowej kolumny. Może to być LVSCW_AUTOSIZE lub LVSCW_AUTOSIZE_USEHEADER, zgodnie z opisem w [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*cx*<br/>
 Odległość (w pikselach) między ikony na osi x.
 
-*CY*<br/>
+*cy*<br/>
 Odległość (w pikselach) między ikony na osi y.
 
 *Rozmiar*<br/>
@@ -3655,10 +3655,10 @@ Określa atrybuty, które są określone (zobacz Uwagi).
 *lpszItem*<br/>
 Adres ciąg zakończony zerem, określając etykietę elementu.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Indeks obrazu elementu w obrębie listy obrazów.
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa wartości dla stanów, które mają być zmienione (zobacz Uwagi).
 
 *nStateMask*<br/>
@@ -3739,7 +3739,7 @@ BOOL SetItemCountEx(
 *iCount*<br/>
 Liczba elementów, które ostatecznie zawiera formant.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa zachowanie kontrolka widoku listy, po przywróceniu liczby elementów. Ta wartość może być kombinacją następujących czynności:
 
 - LVSICF_NOINVALIDATEALL nie spowoduje odświeżenia kontrolka widoku listy, chyba że objęte elementy są obecnie dostępne w widoku. Jest to wartość domyślna.
@@ -3893,7 +3893,7 @@ Indeks elementu, którego stan ma być utworzony.
 *pItem*<br/>
 Adres [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) struktury, zgodnie z opisem w zestawie Windows SDK. Struktura `stateMask` elementu członkowskiego określa określonym stanie bits do zmiany i struktury `state` elementu członkowskiego zawiera nowe wartości dla tych bitów. Inni członkowie są ignorowane.
 
-*nInformacje*<br/>
+*nState*<br/>
 Nowe wartości dla bitów stanu. Aby uzyskać listę możliwych wartości, zobacz [CListCtrl::GetNextItem](#getnextitem) i [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) stanu elementu członkowskiego.
 
 *nMask*<br/>
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 COLORREF, określając nowy kolor tła tekstu. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 COLORREF, określając nowy kolor tekstu. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4166,7 +4166,7 @@ void SetWorkAreas(
 *nWorkAreas*<br/>
 Liczba `RECT` struktur (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekty) w tablicy, do których prowadzą *lprect —*.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Adres tablicę `RECT` struktur (lub `CRect` obiektów) określające nowych obszarów roboczych kontrolka widoku listy. Te obszary, musi być określona w współrzędne klienta. Jeśli ten parametr ma wartość NULL, obszar roboczy zostanie ustawiona do obszaru klienckiego kontrolki.
 
 ### <a name="remarks"></a>Uwagi
@@ -4420,10 +4420,9 @@ Tę funkcję również rozmieszcza kontrolka widoku listy, jeśli ma on styl LVS
 
   Zobacz przykład [CListCtrl::GetSelectedCount](#getselectedcount).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ROWLIST](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)<br/>
 [Klasa CImageList](cimagelist-class.md)
-

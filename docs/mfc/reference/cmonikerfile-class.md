@@ -1,5 +1,5 @@
 ---
-title: Klasa CMonikerFile
+title: CMonikerFile Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMonikerFile
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: dc7c2615ff4de7370bee74c64c8bcddbd1f1fcd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302471"
 ---
-# <a name="cmonikerfile-class"></a>Klasa CMonikerFile
+# <a name="cmonikerfile-class"></a>CMonikerFile Class
 
 Przedstawia strumień danych ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) o nazwie określonej przez [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker).
 
@@ -197,7 +197,7 @@ Możesz użyć adresu URL lub nazwę pliku do *lpszURL* parametru. Na przykład:
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleStreamFile](../../mfc/reference/colestreamfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

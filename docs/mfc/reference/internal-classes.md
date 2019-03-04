@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435493"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300092"
 ---
 # <a name="internal-classes"></a>Klasy wewnętrzne
 
@@ -325,7 +325,7 @@ Następujące klasy są używane wewnętrznie w MFC. Aby informacje były komple
 |`CCommandManager Class`|`CCommandManager` Klasa zarządza poleceń i ich powiązania z obrazami.|
 |`CDialogImpl Class (MFC)`|Zawiera szczegóły dotyczące implementacji na podstawie pola klasy okien dialogowych, takich jak `CDialogEx`.|
 |`CDocumentAdapter Class`|Interfejs IDocument implementuje wymagane w celu wyszukiwania i Organizuj obsługi.|
-|`CFrameImpl Class`|`CFrameImpl` Klasa obsługuje pasków narzędzi dla następujące klasy okien ramowych: [klasa CFrameWndEx](../../mfc/reference/cframewndex-class.md), [klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), i [klasa COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|`CFrameImpl` Klasa obsługuje następujące klasy okien ramowych Dostosowywanie paska narzędzi: [Klasa CFrameWndEx](../../mfc/reference/cframewndex-class.md), [klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), i [klasa COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
 |`CFullScreenImpl Class`|Implementuje funkcje pełnego ekranu wspólne aplikacje SDI i MDI.|
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Klasa jest klasą pomocnika, która upraszcza implementacji kart MDI i grup z kartami MDI.|
 |`CMemDC Class`|Klasa pomocnicza do kontekstu urządzenia pamięci. Kontekst urządzenia pamięci obsługuje rysowania poza ekranem.|
@@ -409,7 +409,6 @@ Następujące klasy są używane wewnętrznie w MFC. Aby informacje były komple
 |`CVSListBoxEditCtrl Class`|Rozszerza formant edycji pola listy standardowych, wyświetlając małego przycisku, który powoduje otwarcie okna dialogowego.|
 |`CVSToolsListBox Class`|Rozszerza standardowe pole listy, zapewniając dodatkowe przyciski umożliwia dodawanie, usuwanie i przenoszenie elementów w polu listy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md)
-

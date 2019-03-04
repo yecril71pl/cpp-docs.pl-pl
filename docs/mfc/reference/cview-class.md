@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694390"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305019"
 ---
 # <a name="cview-class"></a>Cview — klasa
 
@@ -247,7 +247,7 @@ virtual void OnActivateFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa, czy okno ramowe jest aktywowane lub dezaktywowane. Może to być jedna z następujących wartości:
 
 - Trwa dezaktywowanie WA_INACTIVE ramki okna.
@@ -305,7 +305,7 @@ virtual void OnBeginPrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia drukarki.
 
 *pInfo*<br/>
@@ -334,7 +334,7 @@ virtual DROPEFFECT OnDragEnter(
 Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) przeciąganie obszar upuszczania widoku.
 
 *dwKeyState*<br/>
-Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
+Zawiera stan klawisze modyfikujące. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
 *Punkt*<br/>
 Bieżącego położenia kursora myszy względem pola klienta widoku.
@@ -357,7 +357,7 @@ Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OC
 
 Domyślna implementacja to nic nie rób i powrót DROPEFFECT_NONE.
 
-Przesłonić tę funkcję, aby przygotować się do przyszłych wywołań [ondragover —](#ondragover) funkcja elementu członkowskiego. Wszystkie dane wymagane od obiektu danych powinny zostać pobrane w tej chwili do późniejszego użycia z `OnDragOver` funkcja elementu członkowskiego. Widok również powinien zostać zaktualizowany w tej chwili, aby przesłać opinię visual użytkownika. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Przesłonić tę funkcję, aby przygotować się do przyszłych wywołań [ondragover —](#ondragover) funkcja elementu członkowskiego. Wszystkie dane wymagane od obiektu danych powinny zostać pobrane w tej chwili do późniejszego użycia z `OnDragOver` funkcja elementu członkowskiego. Widok również powinien zostać zaktualizowany w tej chwili, aby przesłać opinię visual użytkownika. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie miejsca docelowego](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,7 +388,7 @@ virtual DROPEFFECT OnDragOver(
 Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) przeciągany nad element docelowy upuszczania.
 
 *dwKeyState*<br/>
-Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
+Zawiera stan klawisze modyfikujące. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
 *Punkt*<br/>
 Bieżące położenie myszy względem pola klienta widoku.
@@ -411,7 +411,7 @@ Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OC
 
 Domyślna implementacja to nic nie rób i powrót DROPEFFECT_NONE.
 
-Należy przesłonić tę funkcję, aby dać wizualną opinię użytkownika podczas operacji przeciągania. Ponieważ ta funkcja jest wywoływana w sposób ciągły, każdy kod w nim zawarte optymalizacji możliwie. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Należy przesłonić tę funkcję, aby dać wizualną opinię użytkownika podczas operacji przeciągania. Ponieważ ta funkcja jest wywoływana w sposób ciągły, każdy kod w nim zawarte optymalizacji możliwie. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie miejsca docelowego](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,7 +426,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Parametry
 
 *dwKeyState*<br/>
-Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
+Zawiera stan klawisze modyfikujące. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
 *Punkt*<br/>
 Zawiera lokalizacji kursora, w pikselach, względem ekranu.
@@ -449,7 +449,7 @@ Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OC
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę funkcję, aby zapewnić specjalne zachowanie dla tego zdarzenia. Domyślna implementacja automatycznie przewija systemu windows, gdy kursor jest przeciągany w domyślnym regionie przewijania wewnątrz obramowania każde okno. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Należy przesłonić tę funkcję, aby zapewnić specjalne zachowanie dla tego zdarzenia. Domyślna implementacja automatycznie przewija systemu windows, gdy kursor jest przeciągany w domyślnym regionie przewijania wewnątrz obramowania każde okno. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie miejsca docelowego](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondraw"></a>  CView::OnDraw
 
@@ -461,7 +461,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia, które ma być używany do renderowania obrazu dokumentu.
 
 ### <a name="remarks"></a>Uwagi
@@ -588,7 +588,7 @@ virtual void OnEndPrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia drukarki.
 
 *pInfo*<br/>
@@ -612,7 +612,7 @@ virtual void OnEndPrintPreview(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia drukarki.
 
 *pInfo*<br/>
@@ -654,7 +654,7 @@ virtual void OnPrepareDC(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia, które ma być używany do renderowania obrazu dokumentu.
 
 *pInfo*<br/>
@@ -731,7 +731,7 @@ virtual void OnPrint(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Wskazuje kontekst urządzenia drukarki.
 
 *pInfo*<br/>
@@ -793,7 +793,7 @@ Kod paska przewijania, który wskazuje użytkownika przewijanym żądania. Ten p
 
 - Przewija SB_TOP do góry.
 
-*npos —*<br/>
+*nPos*<br/>
 Zawiera bieżące położenie pola przewijania, jeśli kod pasek przewijania jest SB_THUMBTRACK; w przeciwnym razie nie jest używany. W zależności od zakresu początkowej przewijania *npos —* może być ujemny i powinny być rzutowane na **int** w razie potrzeby.
 
 *bDoScroll*<br/>
@@ -869,7 +869,7 @@ Zazwyczaj nie należy wykonywać dowolne rysowanie bezpośrednio z poziomu `OnUp
 
 Jeśli *lHint* wynosi 0 i *pHint* ma wartość NULL, dokumentu zostało wysłane powiadomienie ogólną aktualizację. Jeśli widok otrzyma powiadomienie o ogólną aktualizację lub nie można go zdekodować wskazówek, należy go unieważnienie jego całego obszaru klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

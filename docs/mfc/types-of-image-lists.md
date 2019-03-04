@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-ms.openlocfilehash: 5f5843f25faed90c195f7f2c605027858f089fb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 939aad78b7cf8cca9c940bae11892d23dbb659cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304759"
 ---
 # <a name="types-of-image-lists"></a>Typy list obrazów
 
@@ -21,8 +21,7 @@ Jednego z przeciążeń `Create` funkcja elementu członkowskiego pobiera flagę
 
 Podczas rysowania obrazu nonmasked po prostu jest kopiowana do kontekstu urządzenia docelowego; oznacza to, że jej rysowania za pośrednictwem istniejących kolor tła kontekstu urządzenia. Podczas rysowania obrazu maskowanego bitów obrazu, są połączone z bity maski zazwyczaj tworzenie obszarów przezroczystych w mapie bitowej gdzie zawiera kolor tła kontekstu urządzenia docelowego za pomocą. Można określić kilka stylów rysunku, podczas rysowania obrazu maskowanego. Na przykład można określić, czy obraz być symulowane w celu wskazania wybranego obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-

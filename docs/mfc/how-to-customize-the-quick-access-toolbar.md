@@ -1,17 +1,17 @@
 ---
-title: 'Porady: dostosowywanie paska narzędzi Szybki dostęp'
+title: 'Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300726"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Porady: dostosowywanie paska narzędzi Szybki dostęp
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp
 
 Szybki dostęp do paska narzędzi (QAT) jest paskiem narzędzi, który zawiera zestaw poleceń, które są albo wyświetlane obok przycisku aplikacji lub w ramach karty kategorii. Poniższa ilustracja przedstawia typowy narzędzi Szybki dostęp.
 
@@ -52,6 +52,6 @@ Szybkie polecenia narzędzi dostęp nie jest wyświetlana na powierzchni projekt
 
 - Na **pasek narzędzi edytora wstążki**, kliknij przycisk **Testuj Wstążkę**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)

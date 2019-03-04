@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329218"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302783"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 
@@ -17,7 +17,7 @@ Program Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania
 
 ## <a name="debugging"></a>Debugowanie
 
-Debuger programu Visual Studio zawiera **stosów równoległych** oknie **zadań równoległych** oknie i **równoległego wyrażenia kontrolnego** okna. Aby uzyskać więcej informacji, zobacz [wskazówki: debugowanie aplikacji równoległych](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) i [porady: Użyj okna czujki równoległej](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
+Debuger programu Visual Studio zawiera **stosów równoległych** oknie **zadań równoległych** oknie i **równoległego wyrażenia kontrolnego** okna. Aby uzyskać więcej informacji, zobacz [instruktażu: Debugowanie aplikacji równoległych](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) i [jak: Korzystanie z okna równoległego wyrażenia kontrolnego](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
 
 ## <a name="profiling"></a>Profilowanie
 
@@ -35,19 +35,19 @@ W poniższej tabeli opisano zdarzenia, które środowisko uruchomieniowe zgłasz
 
 |Zdarzenie|Opis|Wartość|
 |-----------|-----------------|-----------|
-|[CONCURRENCY::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identyfikator dostawcy funkcji ETW w czasie wykonywania współbieżności.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identyfikator dostawcy funkcji ETW w czasie wykonywania współbieżności.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[CONCURRENCY::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Oznacza zdarzenia, które są powiązane z kontekstów.|`5727a00f-50be-4519-8256-f7699871fecb`|
 |[CONCURRENCY::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Oznacza wejścia i wyjścia do wywołania [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
 |[CONCURRENCY::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Oznacza wejścia i wyjścia do wywołania [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
 |[CONCURRENCY::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Oznacza wejścia i wyjścia do wywołania [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
 |[CONCURRENCY::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Oznacza zdarzenia, które są powiązane z [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
-|[CONCURRENCY::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Oznacza zdarzenia, które są powiązane z procesorów wirtualnych.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Oznacza zdarzenia, które są powiązane z procesorów wirtualnych.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
 Środowisko uruchomieniowe współbieżności definiuje, ale obecnie zgłaszaj, następujące zdarzenia. Środowisko uruchomieniowe rezerwuje te zdarzenia do użytku w przyszłości:
 
 - [CONCURRENCY::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
 
-- [CONCURRENCY::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
+- [concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
 
 - [CONCURRENCY::ChoreEventGuid](reference/concurrency-namespace-constants1.md#choreeventguid)
 
@@ -63,7 +63,6 @@ W poniższym przykładzie pokazano sposób włączania śledzenia wywołania `pa
 
 Środowisko uruchomieniowe śledzi, ile razy wywołasz `EnableTracing` i `DisableTracing`. W związku z tym jeśli wywołasz `EnableTracing` wielokrotnie, należy wywołać `DisableTracing` taką samą liczbę razy, aby można było wyłączyć śledzenie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)
-

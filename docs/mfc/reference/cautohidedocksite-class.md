@@ -1,5 +1,5 @@
 ---
-title: Klasa CAutoHideDockSite
+title: CAutoHideDockSite Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoHideDockSite
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 5bfff575861d92eaaef07a1f2f21b79d89cb52b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302965"
 ---
-# <a name="cautohidedocksite-class"></a>Klasa CAutoHideDockSite
+# <a name="cautohidedocksite-class"></a>CAutoHideDockSite Class
 
 `CAutoHideDockSite` Rozszerza [klasa CDockSite](../../mfc/reference/cdocksite-class.md) do wdrożenia automatycznie ukrywanego zadokowanego okienka.
 
@@ -139,7 +139,7 @@ virtual void DockPane(
 |Parametr|Opis|
 |*pWnd*|[in] Okienko w którym dokowane platformę.|
 |*dockMethod*|[in] Dokowanie opcje okienka.|
-|*lprect —*|[in] Prostokąt, który określa granice zadokowanego okienka.|
+|*lpRect*|[in] Prostokąt, który określa granice zadokowanego okienka.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -250,7 +250,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 Metoda ta wyszukuje dla wiersza, który zawiera *pAutoHideToolbar*. Wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów w tym wierszu. Jeśli *pAutoHideToolbar* nie można odnaleźć lub ma wartość NULL, ta metoda wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów na `CAutoHideDockSite`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

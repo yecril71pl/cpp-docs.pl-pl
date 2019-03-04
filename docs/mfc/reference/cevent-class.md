@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667902"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300274"
 ---
 # <a name="cevent-class"></a>Klasa CEvent
 
@@ -66,7 +66,7 @@ Alternatywna metoda przy użyciu `CEvent` obiektów jest dodanie do zmiennej typ
 
 Do uzyskania dostępu do zasobu w wartości clientauthtrustmode `CEvent` obiektu w ten sposób, najpierw Utwórz zmienną typu albo [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w metodzie dostępu do zasobu. Następnie wywołaj `Lock` metody obiektu blokady (na przykład [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). W tym momencie wątek będzie albo uzyskania dostępu do zasobów, zaczekaj, aż zasób zwolnione i uzyskać dostęp lub poczekaj, aż zasobów, które mogą być wprowadzane, limit czasu i nie można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Do zwolnienia zasobu, należy wywołać `SetEvent` zasygnalizowania obiektu zdarzenia, a następnie użyć `Unlock` metody obiektu blokady (na przykład [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), lub pozwól, aby zablokować obiektu wykraczać poza zakres.
 
-Aby uzyskać więcej informacji o sposobie używania `CEvent` obiekty, zobacz [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji o sposobie używania `CEvent` obiekty, zobacz [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Przykład
 
@@ -191,8 +191,7 @@ Wartość różną od zera, jeśli wątek należące do obiektu zdarzenia i zdar
 
 Ta funkcja członkowska jest wywoływana przez wątki, które obecnie właścicielem zdarzenie automatyczne zwolnienie go po są wykonywane tylko, jeśli ich blokady obiektu ma być ponownie używane. Jeśli obiekt blokady nie będzie można użyć ponownie, ta funkcja zostanie wywołana przez destruktora obiektu blokady.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

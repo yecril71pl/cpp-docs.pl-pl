@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303322"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parametry
 
-*FMT*<br/>
+*fmt*<br/>
 Odwołanie do typu danych do dodania.
 
 *lpszFormat*<br/>
@@ -134,7 +134,7 @@ Ciąg, który opisuje wynik, jeśli ten format jest wybierany w oknie dialogowym
 *flagi*<br/>
 Różne łączenie i osadzanie opcjami dostępnymi na potrzeby tego formatu. Ta flaga jest bitową kombinacją jeden lub więcej różnych wartości OLEUIPASTEFLAG Typ wyliczany.
 
-*usługi CF*<br/>
+*cf*<br/>
 Format schowka do dodania.
 
 *tymed*<br/>
@@ -151,7 +151,7 @@ Flaga określająca, czy przycisk radiowy Wklej łącze jest włączone, gdy ten
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja może zostać wywołana dodać standardowych formatów, takich jak CF_TEXT lub CF_TIFF albo formatów niestandardowych, które aplikacja została zarejestrowana w systemie. Aby uzyskać więcej informacji na temat wklejanie obiektów danych w aplikacji, zobacz artykuł [obiekty danych i źródeł danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Ta funkcja może zostać wywołana dodać standardowych formatów, takich jak CF_TEXT lub CF_TIFF albo formatów niestandardowych, które aplikacja została zarejestrowana w systemie. Aby uzyskać więcej informacji na temat wklejanie obiektów danych w aplikacji, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ wyliczeniowy i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 Format schowka do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -214,7 +214,7 @@ COlePasteSpecialDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi tworzenia zawiera dowolną liczbę następujące flagi, które są połączone za pomocą operatora bitowego OR:
 
 - PSF_SELECTPASTE Określa, że przycisk radiowy Wklej będą sprawdzane początkowo, gdy okno dialogowe jest wywoływana. Nie można używać w połączeniu z PSF_SELECTPASTELINK. Domyślnie włączone.
@@ -381,7 +381,7 @@ Można modyfikować składowe tej struktury, bezpośrednio lub za pośrednictwem
 
 Aby uzyskać więcej informacji, zobacz [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktury w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>

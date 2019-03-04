@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300894"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 
@@ -409,7 +409,7 @@ Określa, które strony okna ramki, należy wziąć pod uwagę dokowania. Może 
 
 Jeśli jest to 0, pasek sterowania może być zadokowane dowolnej stronie włączone dla dokowania w oknie ramki docelowej.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Określa we współrzędnych ekranu, w którym będzie zadokowany pasek sterowania w nieklienckim obszarze okna ramki docelowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -1093,7 +1093,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*nInformacje*|[in] Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br />-AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|
+|*nState*|[in] Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br />-AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parametry
 
 *tbpFlags*<br/>
-Flagi sterujące bieżący stan przycisku postępu. Należy określić tylko jeden z następujących flag, ponieważ wykluczają się wzajemnie wszystkie stany: TBPF_NOPROGRESS TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Flagi sterujące bieżący stan przycisku postępu. Należy określić tylko jeden z następujących flag, ponieważ wykluczają się wzajemnie wszystkie stany: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1273,7 +1273,7 @@ void ShowOwnedWindows(BOOL bShow);
 *bShow*<br/>
 Określa, czy należących do systemu windows mają zostać pokazane lub ukryte.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

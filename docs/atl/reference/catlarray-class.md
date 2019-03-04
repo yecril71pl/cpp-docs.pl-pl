@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301860"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
 
@@ -61,7 +61,7 @@ Kod używany do kopiowania lub przenoszenia elementów.
 |[Dołącz](#append)|Wywołaj tę metodę, aby dodać zawartość jednej tablicy do końca innej.|
 |[AssertValid](#assertvalid)|Wywołaj tę metodę, aby upewnić się, że obiekt array jest prawidłowy.|
 |[CAtlArray](#catlarray)|Konstruktor.|
-|[~ CAtlArray](#dtor)|Destruktor.|
+|[~CAtlArray](#dtor)|Destruktor.|
 |[Kopiuj](#copy)|Wywołaj tę metodę, aby skopiować elementy tablicy do innej.|
 |[FreeExtra](#freeextra)|Wywołaj tę metodę w celu usunięcia żadnych pustych elementów z tablicy.|
 |[GetAt](#getat)|Wywołaj tę metodę, aby pobrać jeden element z obiektu tablicy.|
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
+*element*<br/>
 Element, który ma zostać dodany do tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 Indeks, w którym element lub elementy mają zostać wstawione.
 
-*Element*<br/>
+*element*<br/>
 Wartość elementu lub elementów do wstawienia.
 
 *nCount*<br/>
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 Indeks wskazujący element tablicy do ustawienia.
 
-*Element*<br/>
+*element*<br/>
 Nowa wartość określonego elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 Indeks wskazujący element tablicy do ustawienia.
 
-*Element*<br/>
+*element*<br/>
 Nowa wartość określonego elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -547,7 +547,7 @@ Zamienia wartość elementu wskazywanego przez indeks. Jeśli *iElement* jest wi
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe MMXSwarm](../../visual-cpp-samples.md)<br/>
 [Przykładowe DynamicConsumer](../../visual-cpp-samples.md)<br/>

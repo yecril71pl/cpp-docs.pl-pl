@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302987"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
 
@@ -395,7 +395,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Identyfikator strony okna ramki, aby zadokować do.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Wskaźnik do stałej struktura Rect, która określa położenie ekranu i rozmiar okna.
 
 ### <a name="remarks"></a>Uwagi
@@ -885,7 +885,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 [in] Czy ramki jest aktywne lub nieaktywne. Zobacz tabelę w sekcji uwag uzyskać odpowiednie wartości.
 
 *pWndOther*<br/>
@@ -1095,7 +1095,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pMenuButton*<br/>
@@ -1125,7 +1125,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *pMenu*<br/>
@@ -1537,7 +1537,7 @@ BOOL OnSetMenu(HMENU hmenu);
 *LP*<br/>
 [in] Dojście do nowego menu Okno.
 
-*HMENU*<br/>
+*hmenu*<br/>
 [in] Dojście do menu Okno ramki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1677,13 +1677,13 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nNie*<br/>
+*nType*<br/>
 [in] Typ zmiany rozmiaru. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_SIZE](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Nową szerokość ramki w pikselach.
 
-*CY*<br/>
+*cy*<br/>
 [in] Nową wysokość ramki w pikselach.
 
 ### <a name="remarks"></a>Uwagi
@@ -2113,7 +2113,7 @@ Polecenie help. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](/wind
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

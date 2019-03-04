@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCTabDropTarget
+title: CMFCTabDropTarget Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabDropTarget
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303940"
 ---
-# <a name="cmfctabdroptarget-class"></a>Klasa CMFCTabDropTarget
+# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget Class
 
 Udostępnia mechanizm komunikacji między formantem karty i bibliotek OLE.
 
@@ -77,7 +77,7 @@ W poniższym przykładzie pokazano sposób tworzenia `CMFCTabDropTarget` obiektu
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter
 
@@ -98,7 +98,7 @@ virtual DROPEFFECT OnDragEnter(
 |Parametr|Opis|
 |*pWnd*|[in] Nieużywane.|
 |*pDataObject*|[in] Wskaźnik do obiektu, który użytkownik przeciąga.|
-|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|
+|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|
 |*Punkt*|[in] Lokalizacja kursora w współrzędne klienta.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -159,7 +159,7 @@ virtual DROPEFFECT OnDragOver(
 |Parametr|Opis|
 |*pWnd*|[in] Nieużywane.|
 |*pDataObject*|[in] Wskaźnik do obiektu, który użytkownik przeciąga.|
-|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|
+|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|
 |*Punkt*|[in] Lokalizacja wskaźnik myszy na współrzędne klienta.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -249,9 +249,8 @@ Wartość różną od zera, jeśli rejestracja powiodła się; w przeciwnym razi
 
 Ta metoda wywołuje [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) do rejestrowania formantu dla operacji przeciągania i upuszczania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md)
-

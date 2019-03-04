@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505394"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305058"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 
@@ -851,7 +851,7 @@ int nHeight);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia do panelu wstążki.
 
 *nHeight*<br/>
@@ -876,7 +876,7 @@ BOOL bDelete = TRUE);
 *nIndex*<br/>
 [in] Określa liczony od zera indeks elementu, który zostanie usunięty z panelu wstążki.
 
-*bUsuń*<br/>
+*bDelete*<br/>
 [in] Wartość TRUE, aby usunąć element usunięte; w przeciwnym razie wartość FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1248,7 +1248,7 @@ Wskaźnik do wąsko zdefiniowany element lub wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

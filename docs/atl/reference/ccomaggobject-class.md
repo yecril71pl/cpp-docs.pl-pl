@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301665"
 ---
 # <a name="ccomaggobject-class"></a>Klasa CComAggObject
 
@@ -48,7 +48,7 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|Konstruktor.|
-|[CComAggObject:: ~ CComAggObject](#dtor)|Destruktor.|
+|[CComAggObject::~CComAggObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -118,7 +118,7 @@ Inicjuje `CComContainedObject` elementu członkowskiego, [m_contained](#m_contai
 
 Dekrementuje destruktor liczbę blokad modułu.
 
-##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject
+##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
 Destruktor.
 
@@ -233,7 +233,7 @@ STDMETHOD_(ULONG, Release)();
 
 W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>

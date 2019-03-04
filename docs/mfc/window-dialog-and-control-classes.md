@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: aef31f7831ef7480793abdf75eecaf11f6a6b7a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467260"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302562"
 ---
 # <a name="window-dialog-and-control-classes"></a>Klasy okien, okien dialogowych i formantów
 
@@ -20,7 +20,6 @@ Klasa `CWnd` i jej klasy pochodne hermetyzacji `HWND`, uchwytem do okna Windows.
 [CWnd](../mfc/reference/cwnd-class.md)<br/>
 Klasa bazowa dla wszystkich okien. Można użyć jednej z klas pochodnych `CWnd` lub bezpośrednio od niej pochodzić własnych klas.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../mfc/class-library-overview.md)
-

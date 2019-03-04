@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303030"
 ---
 # <a name="ccommandlineinfo-class"></a>Klasa CCommandLineInfo
 
@@ -293,7 +293,7 @@ Parametr lub flagi.
 *bFlag*<br/>
 Wskazuje, czy *pszParam* jest parametr lub flagi.
 
-*rażenia*<br/>
+*bLast*<br/>
 Wskazuje, czy jest ostatni parametr lub flagi w wierszu polecenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -322,10 +322,9 @@ Domyślna implementacja ustawia również [m_bShowSplash](#m_bshowsplash) na war
 
 Przesłonić tę funkcję w swojej klasie pochodnej, aby obsłużyć inne flagi i wartości parametrów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

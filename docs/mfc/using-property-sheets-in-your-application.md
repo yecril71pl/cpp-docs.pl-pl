@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301691"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Używanie arkuszy właściwości w aplikacji
 
@@ -42,7 +42,7 @@ Aby korzystać z arkusza właściwości w aplikacji, wykonaj następujące czynn
 
 1. Utwórz element członkowski zmienne do przechowywania wartości dla tej strony właściwości. Proces dodawania zmiennych składowych do strony właściwości jest dokładnie taka sama jak dodawanie zmiennych składowych do okna dialogowego, ponieważ wyspecjalizowane okno dialogowe strony właściwości. Aby uzyskać więcej informacji, zobacz [Definiowanie zmiennych Członkowskich dla formantów okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md).
 
-1. Konstruowania [CPropertySheet](../mfc/reference/cpropertysheet-class.md) obiektu w kodzie źródłowym. Zazwyczaj konstruowania `CPropertySheet` obiekt programu obsługi dla polecenia, które wyświetla arkusz właściwości. Ten obiekt reprezentuje arkusza właściwości całego. Jeśli tworzysz modalny arkusz właściwości z [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) funkcji w ramach dostarcza trzy przyciski poleceń domyślnie: OK, Anuluj i Zastosuj. Szablon tworzy przyciski nie poleceń dla niemodalne arkusze właściwości są tworzone za pomocą [Utwórz](../mfc/reference/cpropertysheet-class.md#create) funkcji. Nie należy wyprowadzić klasę z `CPropertySheet` chyba że chcesz dodać inne formanty (na przykład okno podglądu) lub wyświetlić niemodalnego arkusza właściwości. Ten krok jest konieczny do niemodalne arkusze właściwości, ponieważ nie zawierają żadnych kontrolkami domyślnymi, które mogłyby zostać użyte, aby zamknąć arkusza właściwości.
+1. Konstruowania [CPropertySheet](../mfc/reference/cpropertysheet-class.md) obiektu w kodzie źródłowym. Zazwyczaj konstruowania `CPropertySheet` obiekt programu obsługi dla polecenia, które wyświetla arkusz właściwości. Ten obiekt reprezentuje arkusza właściwości całego. Jeśli tworzysz modalny arkusz właściwości z [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) funkcji w ramach dostarcza trzy przyciski poleceń domyślnie: Dobrze Anuluj i zastosować. Szablon tworzy przyciski nie poleceń dla niemodalne arkusze właściwości są tworzone za pomocą [Utwórz](../mfc/reference/cpropertysheet-class.md#create) funkcji. Nie należy wyprowadzić klasę z `CPropertySheet` chyba że chcesz dodać inne formanty (na przykład okno podglądu) lub wyświetlić niemodalnego arkusza właściwości. Ten krok jest konieczny do niemodalne arkusze właściwości, ponieważ nie zawierają żadnych kontrolkami domyślnymi, które mogłyby zostać użyte, aby zamknąć arkusza właściwości.
 
 1. Dla każdej strony, które mają zostać dodane do arkusza właściwości należy wykonać następujące czynności:
 
@@ -60,7 +60,6 @@ Aby korzystać z arkusza właściwości w aplikacji, wykonaj następujące czynn
 
 Na przykład jak używać arkuszy właściwości, zobacz próbki MFC-ogólne [PROPDLG](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Arkusze właściwości](../mfc/property-sheets-mfc.md)
-

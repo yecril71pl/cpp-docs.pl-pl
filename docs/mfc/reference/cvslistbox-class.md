@@ -1,5 +1,5 @@
 ---
-title: Klasa CVSListBox
+title: CVSListBox Class
 ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176215"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301523"
 ---
-# <a name="cvslistbox-class"></a>Klasa CVSListBox
+# <a name="cvslistbox-class"></a>CVSListBox Class
 
 `CVSListBox` Klasa obsługuje formant edytowalnej listy.
 
@@ -285,7 +285,7 @@ virtual BOOL SelectItem(int iItem);
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Liczony od zera indeks elementu formant edytowalnej listy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -316,7 +316,7 @@ virtual void SetItemData(
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

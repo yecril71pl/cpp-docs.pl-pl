@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305097"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 
@@ -301,7 +301,7 @@ void EndDialog(int nResult);
 
 ### <a name="parameters"></a>Parametry
 
-*Nwynik*<br/>
+*nResult*<br/>
 Zawiera wartość zwracaną z okna dialogowego do obiektu wywołującego `DoModal`.
 
 ### <a name="remarks"></a>Uwagi
@@ -404,7 +404,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -556,10 +556,9 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 Określa identyfikator pomocy kontekstowej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[DLGCBR32 próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
 [Próbki MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

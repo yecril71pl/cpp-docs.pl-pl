@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301595"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Dodawanie klasy MFC z biblioteki typów
 
@@ -20,7 +20,7 @@ Ten kreator umożliwia tworzenie klasy MFC z biblioteki dostępnych typów inter
 > [!NOTE]
 >  Nie trzeba tworzyć projektu MFC przy użyciu usługi Automation, możliwość dodawania klasy z biblioteki typów.
 
-Biblioteka typów zawiera opis binarne interfejsów udostępnianego przez składnik, definiowania metod wraz z ich parametrów i zwracanych typów. Twoja Biblioteka typów musi być zarejestrowana do będzie wyświetlana na **bibliotek typów dostępnych** liście dodawania klasy z Typelib kreatora. Zobacz "Wewnątrz rozproszonego modelu COM: typ biblioteki i język Integration" w bibliotece MSDN, aby uzyskać więcej informacji.
+Biblioteka typów zawiera opis binarne interfejsów udostępnianego przez składnik, definiowania metod wraz z ich parametrów i zwracanych typów. Twoja Biblioteka typów musi być zarejestrowana do będzie wyświetlana na **bibliotek typów dostępnych** liście dodawania klasy z Typelib kreatora. Zobacz "wewnątrz rozproszonego modelu COM: Wpisz biblioteki oraz integracji języków"w bibliotece MSDN, aby uzyskać więcej informacji.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Dodawanie klasy MFC z biblioteki typów
 
@@ -34,8 +34,7 @@ W kreatorze możesz dodać więcej niż jednej klasy w bibliotece typów. Podobn
 
 Kreator utworzy klasę MFC pochodną [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), dla każdego interfejsu, możesz dodać z wybranej biblioteki typów. `COleDispatchDriver` implementuje po stronie klienta automatyzację OLE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klienci automatyzacji](../../mfc/automation-clients.md)<br/>
-[Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)
-
+[Klienci automatyzacji: Korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)

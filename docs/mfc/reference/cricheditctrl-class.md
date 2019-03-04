@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303437"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 
@@ -600,7 +600,7 @@ long FindText(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Aby uzyskać listę możliwych wartości, zobacz *wParam* w [EM_FINDTEXTEXT](/windows/desktop/Controls/em-findtextex) w zestawie Windows SDK.
 
 *pFindText*<br/>
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Określa akcję do wykonania. Aby uzyskać listę możliwych wartości, zobacz opis parametru *kodu* w EM_FINDWORDBREAK w zestawie Windows SDK.
 
-*nczas uruchomienia*<br/>
+*nStart*<br/>
 Pozycja od zera znaku, który ma wyznaczać początek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parametry
 
-*PFR*<br/>
+*pfr*<br/>
 Wskaźnik do [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) strukturę, która zawiera informacje o urządzeniu w danych wyjściowych. O wartości NULL wskazuje buforowanych informacji w formancie edycji wzbogaconej może być zwolniony.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 W pierwszej wersji wskaźnik do `CHARFORMAT` struktury zawierający domyślny znak formatowanie atrybutów.
 
 W drugiej wersji, wskaźnik do `CHARFORMAT2` struktury, która jest rozszerzeniem 2.0 edycji wzbogaconej do `CHARFORMAT` struktury, zawierający domyślny znak formatowanie atrybutów.
@@ -972,7 +972,7 @@ void GetRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 [CRect](../../atl-mfc-shared/reference/crect-class.md) lub wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) do odbierania prostokąt formatowania `CRichEditCtrl` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parametry
 
-*CR*<br/>
+*cr*<br/>
 Odwołanie do [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktury do odbierania zakresem bieżącego zaznaczenia.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 W pierwszej wersji wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury do odbierania formatowanie atrybutów bieżącego zaznaczenia znaków.
 
 W drugiej wersji, wskaźnik do [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury, która jest rozszerzeniem 2.0 edycji wzbogaconej do `CHARFORMAT` struktury do odbierania formatowanie atrybutów bieżącego zaznaczenia znaków.
@@ -1162,7 +1162,7 @@ long GetTextLengthEx(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Wartość określająca metoda do użycia przy określaniu długość tekstu. Ten element członkowski może być jedną lub więcej wartości wymienione w flagi członkiem [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) opisanego w zestawie Windows SDK.
 
 *uCodePage*<br/>
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Npierwszy*<br/>
+*nFirst*<br/>
 Pozycja znaku indeksu, bezpośrednio poprzedzających pierwszego znaku w zakresie.
 
-*Nostatni*<br/>
+*nLast*<br/>
 Pozycja znaku, natychmiast po ostatnim znaku w zakresie.
 
 *refString*<br/>
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Wskazuje, jeśli kolor tła powinna być ustawiona na wartość systemu. Jeśli ta wartość wynosi TRUE, *cr* jest ignorowana.
 
-*CR*<br/>
+*cr*<br/>
 Kolor tła żądany. Używane tylko wtedy, gdy *bSysColor* ma wartość FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 W pierwszej wersji wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury zawierającej znak nowego domyślnego formatowanie atrybutów.
 
 W drugiej wersji, wskaźnik do [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury, która jest rozszerzeniem 2.0 edycji wzbogaconej do `CHARFORMAT` struktury, zawierającą znak domyślne atrybuty formatowania.
@@ -1732,7 +1732,7 @@ Wskazuje typ operacji. Jeden z następujących wartości:
 
 - Logicznie ECOOP_XOR wykluczające OR bieżące opcje z określonymi przez *Flagidw*.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Zaawansowane opcje edytowania. Wartości flagi są wymienione w sekcji uwag.
 
 ### <a name="remarks"></a>Uwagi
@@ -1854,7 +1854,7 @@ void SetRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 [CRect](../../atl-mfc-shared/reference/crect-class.md) lub wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) wskazujące nowe granice dla formatowania prostokąta.
 
 ### <a name="remarks"></a>Uwagi
@@ -1887,7 +1887,7 @@ Liczony od zera indeks pierwszego wystąpienia znaku wyboru.
 *nEndChar*<br/>
 Liczony od zera indeks ostatniego znaku wyboru.
 
-*CR*<br/>
+*cr*<br/>
 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) strukturę, która przechowuje zakresem bieżącego zaznaczenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 W pierwszej wersji wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury zawierającej nowy format czcionki atrybuty dla bieżącego zaznaczenia.
 
 W drugiej wersji, wskaźnik do [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury, która jest rozszerzeniem 2.0 edycji wzbogaconej do `CHARFORMAT` struktury, zawierającą znak nowego formatowanie atrybutów dla bieżącego zaznaczenia.
@@ -1954,13 +1954,13 @@ BOOL SetTargetDevice(
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*<br/>
+*hDC*<br/>
 Dojście do kontekstu urządzenia dla nowego urządzenia.
 
 *lLineWidth*<br/>
 Szerokość linii do formatowania.
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 [Przechwytywanie zmian danych](../../mfc/reference/cdc-class.md) dla nowego urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1987,7 +1987,7 @@ BOOL SetTextMode(UINT fMode);
 
 ### <a name="parameters"></a>Parametry
 
-*fmode —*<br/>
+*fMode*<br/>
 Określa nowe ustawienia dla kontrolki tekstu tryb i cofania poziomu parametrów. Aby uzyskać listę możliwych wartości, zobacz parametr trybu [EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*<br/>
+*cf*<br/>
 W pierwszej wersji wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury zawierającej nowy format czcionki atrybuty dla aktualnie wybranego programu word.
 
 W drugiej wersji, wskaźnik do [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury, która jest rozszerzeniem 2.0 edycji wzbogaconej do `CHARFORMAT` struktury, zawierającą znak nowego formatowanie atrybutów dla aktualnie wybranego programu word.
@@ -2196,7 +2196,7 @@ Aby uzyskać więcej informacji, zobacz [EM_UNDO](/windows/desktop/Controls/em-u
 
   Zobacz przykład [CanUndo](#canundo).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

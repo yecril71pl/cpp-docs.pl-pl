@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300625"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 
@@ -171,7 +171,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 Wskazuje stronę, które mają zostać dodane do arkusza właściwości. Nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -547,7 +547,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 Wskazuje stronę z indeksem, który ma zostać odnaleziona. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -606,7 +606,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -647,8 +647,8 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
-Nprzycisk: identyfikuje przycisk aby zostać naciśnięte. Ten parametr może być jedną z następujących wartości:
+*nButton*<br/>
+Nprzycisk: Określa przycisk aby zostać naciśnięte. Ten parametr może być jedną z następujących wartości:
 
 - PSBTN_BACK wybierze przycisk Wstecz.
 
@@ -685,7 +685,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 Wskazuje stronę, która ma zostać usunięty z arkusza właściwości. Nie może mieć wartości NULL.
 
 *nPage*<br/>
@@ -709,7 +709,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 *nPage*<br/>
 Indeks strony do ustawienia. Musi być między 0 a mniejszy niż liczba stron w arkuszu właściwości, włącznie.
 
-*Strona_fizyczna*<br/>
+*pPage*<br/>
 Wskazuje stronę, aby ustawić w arkuszu właściwości. Nie może być równa NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -781,7 +781,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Zestaw flag, umożliwiające dostosowanie funkcji i wygląd przycisków kreatora. Ten parametr może być kombinacją następujących wartości:
 
 - Przycisk Wstecz PSWIZB_BACK
@@ -828,11 +828,11 @@ Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu me
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
-[Próbki MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC Sample PROPDLG](../../visual-cpp-samples.md)<br/>
 [Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonSeparator
+title: CMFCRibbonSeparator Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonSeparator
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302770"
 ---
-# <a name="cmfcribbonseparator-class"></a>Klasa CMFCRibbonSeparator
+# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator Class
 
 Implementuje separator wstążki.
 
@@ -165,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do zawartości urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -210,7 +210,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList
@@ -232,14 +232,14 @@ virtual void OnDrawOnList(
 |||
 |-|-|
 |Parametr|Opis|
-|*podstawowego kontrolera domeny*|[in] Wskaźnik do kontekstu urządzenia.|
+|*pDC*|[in] Wskaźnik do kontekstu urządzenia.|
 |*strText*|[in] Tekst wyświetlany na liście.|
 |*nTextOffset*|[in] Odstęp między tekstem a po lewej stronie prostokąt otaczający.|
 |*Rect*|[in] Określa prostokąt otaczający.|
 |*bIsSelected*|[in] Ignorowane.|
 |*bHighlighted*|[in] Ignorowane.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

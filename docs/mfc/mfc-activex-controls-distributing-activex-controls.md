@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX'
+title: 'Kontrolki ActiveX MFC: Dystrybucja kontrolek ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
 - GetWindowsDirectory
@@ -25,14 +25,14 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300127"
 ---
-# <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
+# <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: Dystrybucja kontrolek ActiveX
 
 W tym artykule omówiono kilka problemów związanych z redystrybuowanie kontrolek ActiveX:
 
@@ -79,7 +79,6 @@ Zaletą bezpośrednio rejestrowanie kontrolki jest konieczne do wywołania i ła
 
 Należy zarejestrować MFCx0.DLL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
-

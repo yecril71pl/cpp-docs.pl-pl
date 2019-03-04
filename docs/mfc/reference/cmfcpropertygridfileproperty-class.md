@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCPropertyGridFileProperty
+title: CMFCPropertyGridFileProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 659b2cf4cf563450e51b1d6f407414273a5109aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5022063fe7eb8242f01684438e2fdeeeedc80616
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302900"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Klasa CMFCPropertyGridFileProperty
+# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty Class
 
 `CMFCPropertyGridFileProperty` Klasa obsługuje element formantu listy właściwości, które otwiera okno dialogowe wyboru pliku.
 
@@ -85,7 +85,7 @@ CMFCPropertyGridFileProperty(
 *lpszDefExt*<br/>
 [in] Ciąg o jeden lub więcej rozszerzeń nazw plików. Wartością domyślną jest NULL.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Flagi okno dialogowe. Wartością domyślną jest bitową kombinacją (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.
 
 *lpszFilter*<br/>
@@ -109,7 +109,7 @@ Poniższy przykład przedstawia sposób tworzenia obiektu przy użyciu konstrukt
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

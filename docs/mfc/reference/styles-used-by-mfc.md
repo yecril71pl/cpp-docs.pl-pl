@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304902"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC
 
@@ -360,12 +360,12 @@ Dostępne są następujące style okno komunikatu.
 
 |Styl|Opis|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|W oknie komunikatu zawiera trzy przyciski: przerwać ponawiania próby i Ignoruj.|
-|MB_OK|W oknie komunikatu zawiera jeden przycisk: OK.|
+|MB_ABORTRETRYIGNORE|W oknie komunikatu zawiera trzy przyciski: Przerwij, a następnie ponów próbę wykonania i Ignoruj.|
+|MB_OK|W oknie komunikatu zawiera jeden przycisk: Dobrze.|
 |MB_OKCANCEL|W oknie komunikatu zawiera dwa przyciski: OK i Anuluj.|
-|MB_RETRYCANCEL|W oknie komunikatu zawiera dwa przyciski: Ponów i Anuluj.|
-|MB_YESNO|W oknie komunikatu zawiera dwa przyciski: tak i nie.|
-|MB_YESNOCANCEL|W oknie komunikatu zawiera trzy przyciski: tak, nie i Anuluj.|
+|MB_RETRYCANCEL|W oknie komunikatu zawiera dwa przyciski: Spróbuj ponownie i anulować.|
+|MB_YESNO|W oknie komunikatu zawiera dwa przyciski: Tak i nie.|
+|MB_YESNOCANCEL|W oknie komunikatu zawiera trzy przyciski: Tak, nie i Anuluj.|
 
 ### <a name="message-box-modality"></a>Modalności okno komunikatu
 
@@ -431,7 +431,7 @@ Style statyczne dotyczą [klasa CStatic](../../mfc/reference/cstatic-class.md) o
 |SS_LEFT|Wyznacza prosty prostokąt, a następnie wyświetli dany tekst opróżniania lewej w prostokącie. Tekst jest sformatowany przed wyświetleniem. Wyrazy wykraczające poza końcem wiersza automatycznie zostaną opakowane na początku następnego wiersza opróżniania lewej.|
 |SS_LEFTNOWORDWRAP|Wyznacza prosty prostokąt, a następnie wyświetli dany tekst opróżniania lewej w prostokącie. Karty zostaną rozwinięte, ale nie zostały zapakowane słów. Tekst, który wykracza poza koniec wiersza zostanie obcięta.|
 |SS_NOPREFIX|Chyba że ten styl jest określony, Windows interpretują wszelkie handlowe "i" (&) znaków tekstu formantu znaków prefiksu akceleratora. W tym przypadku handlowe "i" zostanie usunięta i podkreślony następny znak w ciągu. Jeśli formant statyczny jest zawierają tekst których ta funkcja jest niepożądana, SS_NOPREFIX mogą zostać dodane. Ten styl kontrolki statycznej może być dołączone do dowolnego z określonych formantów statycznych. SS_NOPREFIX można łączyć z innymi stylami przy użyciu bitowego operatora OR. Jest to najczęściej używane, gdy nazwy plików lub innych ciągów, które mogą zawierać handlowe "i" muszą być wyświetlane w formant statyczny w oknie dialogowym.|
-|WYWOŁANIA SS_NOTIFY|Wysyła okno nadrzędne STN_CLICKED, STN_DBLCLK, STN_DISABLE i STN_ENABLE komunikaty powiadomień, gdy użytkownik kliknie lub dwukrotnym kliknięciu formantu.|
+|SS_NOTIFY|Wysyła okno nadrzędne STN_CLICKED, STN_DBLCLK, STN_DISABLE i STN_ENABLE komunikaty powiadomień, gdy użytkownik kliknie lub dwukrotnym kliknięciu formantu.|
 |SS_OWNERDRAW|Określa, że właściciel kontrolki statycznej odpowiedzialne za narysowanie formantu. Okno właściciela odbiera komunikat WM_DRAWITEM zawsze wtedy, gdy kontrolka musi zostać narysowany.|
 |SS_REALSIZEIMAGE|Uniemożliwia zmianę rozmiaru zgodnie z ładowania lub rysowane ikony lub mapy bitowej formant statyczny (czyli statyczne formantów, które mają styl SS_ICON lub SS_BITMAP). Jeśli ikona lub mapa bitowa jest większy niż obszaru docelowego, obraz zostanie obcięta.|
 |SS_RIGHT|Wyznacza prosty prostokąt, a następnie wyświetli dany tekst opróżniania prawej w prostokącie. Tekst jest sformatowany przed wyświetleniem. Wyrazy wykraczające poza końcem wiersza automatycznie zostaną opakowane na początku następnego wiersza opróżniania prawo.|
@@ -503,10 +503,10 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 |WS_EX_STATICEDGE|Tworzy okno z trójwymiarowe obramowanie, przeznaczony do użycia dla elementów, które nie akceptują dane wejściowe użytkownika.|
 |WS_EX_TOOLWINDOW|Tworzy okno narzędzi jest oknem, które mają być używane jako swobodny pasek narzędzi. Okno narzędzia ma paska tytułu, który jest krótszy od zwykłego paska tytułu i tytuł okna jest rysowany przy użyciu mniejszej czcionki. Okna narzędzi nie jest wyświetlany na pasku zadań lub w oknie, który jest wyświetlany, gdy użytkownik naciśnie klawisz ALT + TAB.|
 |WS_EX_TOPMOST|Określa, że okna utworzonego za pomocą ten styl ma zostać umieszczony nad nontopmost systemu windows, a następnie pozostają nad nimi, nawet wtedy, gdy okno jest dezaktywowany. Aplikacja może użyć `SetWindowPos` funkcja elementu członkowskiego, aby dodać lub usunąć ten atrybut.|
-|WS_EX_TRANSPARENT —|Określa, że okna utworzonego z tym stylem jest do zachowania przejrzystości. Oznacza to wszystkich oknach, które są pod okna nie są przesłonięte przez okno. Okno utworzone za pomocą tego stylu odbiera komunikaty WM_PAINT tylko wtedy, gdy wszystkie okna równorzędne znajdujące się poniżej zostały zaktualizowane.|
+|WS_EX_TRANSPARENT|Określa, że okna utworzonego z tym stylem jest do zachowania przejrzystości. Oznacza to wszystkich oknach, które są pod okna nie są przesłonięte przez okno. Okno utworzone za pomocą tego stylu odbiera komunikaty WM_PAINT tylko wtedy, gdy wszystkie okna równorzędne znajdujące się poniżej zostały zaktualizowane.|
 |WS_EX_WINDOWEDGE|Określa, czy okno ma obramowanie z uniesioną krawędzią.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przegląd klas MFC](../../mfc/class-library-overview.md)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>
@@ -516,7 +516,7 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)<br/>
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)<br/>
-[Elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)<br/>
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)<br/>
 [Style przycisku (Windows)](/windows/desktop/Controls/button-styles)<br/>
 [Style pola kombi (Windows)](/windows/desktop/Controls/combo-box-styles)<br/>
 [Edytuj style kontrolki (Windows)](/windows/desktop/Controls/edit-control-styles)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 0333f7e0e0d5b91665978082f112df6d16105dd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301938"
 ---
 # <a name="iviewobjecteximpl-class"></a>Klasa IViewObjectExImpl
 
@@ -346,7 +346,7 @@ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::Execute`.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>

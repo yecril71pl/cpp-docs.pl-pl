@@ -1,19 +1,19 @@
 ---
-title: 'Porady: korzystanie z kontenerów równoległych do zwiększania wydajności'
+title: 'Instrukcje: Korzystanie z kontenerów równoległych do zwiększania wydajności'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300638"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Porady: korzystanie z kontenerów równoległych do zwiększania wydajności
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Instrukcje: Korzystanie z kontenerów równoległych do zwiększania wydajności
 
 W tym temacie pokazano, jak za pomocą kontenerów równoległych wydajne magazynowanie i uzyskać dostęp do danych w sposób równoległy.
 
@@ -69,12 +69,12 @@ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej 
 
 **Cl.exe/ehsc carmichael-primes.cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [concurrent_vector, klasa](../../parallel/concrt/reference/concurrent-vector-class.md)<br/>
 [concurrent_queue, klasa](../../parallel/concrt/reference/concurrent-queue-class.md)<br/>
-[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
-[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)<br/>
-[task_group — klasa](reference/task-group-class.md)
+[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
+[parallel_for Function](reference/concurrency-namespace-functions.md#parallel_for)<br/>
+[task_group, klasa](reference/task-group-class.md)

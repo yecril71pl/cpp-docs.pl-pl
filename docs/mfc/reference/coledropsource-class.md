@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304980"
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 
@@ -147,7 +147,7 @@ virtual SCODE QueryContinueDrag(
 Stany, czy od ostatniego wywołania, aby został naciśnięty klawisz ESC `COleDropSource::QueryContinueDrag`.
 
 *dwKeyState*<br/>
-Zawiera stan klawisze modyfikujące na klawiaturze. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
+Zawiera stan klawisze modyfikujące na klawiaturze. Jest to kombinacja którakolwiek z następujących czynności: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -161,10 +161,9 @@ Domyślna implementacja inicjuje listy lub Anuluje przeciąganie w następujący
 
 Ponieważ ta funkcja jest często wywoływana, należy można zoptymalizować możliwie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
-

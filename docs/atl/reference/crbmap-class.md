@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: fc702feacff5b2f2bbe53a9ea49f664a241d788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301509"
 ---
 # <a name="crbmap-class"></a>Klasa CRBMap
 
@@ -53,7 +53,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRBMap::CRBMap](#crbmap)|Konstruktor.|
-|[CRBMap:: ~ CRBMap](#dtor)|Destruktor.|
+|[CRBMap::~CRBMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -211,7 +211,7 @@ Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-cla
 
 [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CRBTree](../../atl/reference/crbtree-class.md)<br/>
 [Klasa CAtlMap](../../atl/reference/catlmap-class.md)<br/>
