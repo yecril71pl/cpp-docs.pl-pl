@@ -10,12 +10,12 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 47ef359f71d9dd30f2ba1ff1c4cf504bccd33ffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326631"
 ---
 # <a name="the-ccmdui-class"></a>Klasa CCmdUI
 
@@ -25,7 +25,6 @@ Gdy polecenie aktualizacji kieruje do jej obsługi, struktura przekazuje obsług
 
 Ten program obsługi wywołania `Enable` funkcji składowej typu obiektu z dostępem do elementu menu. `Enable` udostępnia element do użycia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
-
+[Instrukcje: Aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)

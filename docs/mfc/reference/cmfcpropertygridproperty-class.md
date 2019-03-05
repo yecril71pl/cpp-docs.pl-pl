@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCPropertyGridProperty
+title: CMFCPropertyGridProperty Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridProperty
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305071"
 ---
-# <a name="cmfcpropertygridproperty-class"></a>Klasa CMFCPropertyGridProperty
+# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
 
 A `CMFCPropertyGridProperty` obiekt reprezentuje element listy w formancie listy właściwości.
 
@@ -566,10 +566,10 @@ void EnableSpinControl(
 *bWłączenie*<br/>
 [in] Wartość TRUE, aby włączyć kontrolki przycisku pokrętła; Wartość FALSE umożliwia wyłączenie kontrolka przycisku pokrętła. Wartość domyślna to TRUE.
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Minimalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Maksymalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
 ### <a name="remarks"></a>Uwagi
@@ -1202,7 +1202,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *nCtlColor*<br/>
@@ -1257,7 +1257,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectButton*<br/>
@@ -1277,7 +1277,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1299,7 +1299,7 @@ virtual void OnDrawExpandBox(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *rectExpand*<br/>
@@ -1321,7 +1321,7 @@ virtual void OnDrawName(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1341,7 +1341,7 @@ virtual void OnDrawValue(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
@@ -1550,7 +1550,7 @@ Wartość TRUE, jeśli jest kontynuowanie operacji edycji; w przeciwnym razie wa
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda obsługuje właściwość, która polega na listę wartości, albo jeden z następujących typów variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 i VT_BSTR.
+Ta metoda obsługuje właściwość, która jest lista wartości lub jedną z następujących typów variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 i VT_BSTR.
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1589,7 +1589,7 @@ BOOL RemoveSubItem(
 *pProp*<br/>
 [in] Wskaźnik do elementu podrzędnego właściwości.
 
-*bUsuń*<br/>
+*bDelete*<br/>
 [in] Wartość true, Usuń właściwości obiektu, który jest określony przez *pProp* parametru; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1710,7 +1710,7 @@ void Show(
 *bAdjustLayout*<br/>
 [in] Wartość TRUE, aby ponownie obliczyć jak narysować etykieta i wartość właściwości, a następnie narysuj właściwości; Wartość FALSE, aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to TRUE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
