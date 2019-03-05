@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: c723d76f17ad1c74ab98e7348450cea3f03c4d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290563"
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 
@@ -170,12 +170,12 @@ Za pomocą `CComGlobalsThreadModel` uwalnia użytkownika od określenia konkretn
 
 Oprócz `CComGlobalsThreadModel`, ATL dostarcza **typedef** nazwa [CComObjectThreadModel](#ccomobjectthreadmodel). Klasa przywoływana przez każdą `typedef` zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+| — klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Użyj `CComObjectThreadModel` w ramach pojedynczego obiektu klasy. Użyj `CComGlobalsThreadModel` w obiekcie dostępnej globalnie do programu, lub gdy zachodzi potrzeba ochrony zasobów modułu w wielu wątkach.
 
@@ -210,12 +210,12 @@ Za pomocą `CComObjectThreadModel` uwalnia użytkownika od określenia konkretne
 
 Oprócz `CComObjectThreadModel`, ATL dostarcza **typedef** nazwa [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+| — klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Użyj `CComObjectThreadModel` w ramach pojedynczego obiektu klasy. Użyj `CComGlobalsThreadModel` w obiekcie, który jest ogólnie dostępna, do programu lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
 
@@ -337,7 +337,7 @@ typedef CUrl* LPURL;
 
 **Nagłówek:** atlutil.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Funkcje](../../atl/reference/atl-functions.md)<br/>

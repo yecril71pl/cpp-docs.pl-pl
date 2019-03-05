@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268066"
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
 
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*VarType*<br/>
+*vartype*<br/>
 VARTYPE tego `COleVariant` obiektu.
 
 *pSrc*<br/>
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Ciąg zakończony wartością null do skopiowania w nowe `COleVariant` obiektu.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 VARTYPE nowego `COleVariant` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -399,6 +399,6 @@ Parametr *vtSrc* musi być VT_BSTR (UNICODE) lub VT_BSTRT (ANSI). `SetString` Za
 
 Zestaw rekordów DAO w kompilacji innego niż UNICODE oczekuje, że ciągi jako ANSI. W związku z tym, do DAO funkcji używających `COleVariant` obiektów są nietworzenie zestawu rekordów UNICODE, należy użyć **COleVariant::COleVariant (** *lpszSrc* **,** *vtSrc* **)** formularza konstruktora z *vtSrc* ustawić VT_BSTRT (ANSI) lub użyć `SetString` z *vtSrc* równa VT _BSTRT się ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) użyj `COleVariant` obiektów jako parametrów. Te obiekty muszą być ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

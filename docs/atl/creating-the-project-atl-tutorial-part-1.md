@@ -3,12 +3,12 @@ title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273936"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
@@ -60,7 +60,7 @@ Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tw
 |Polygon.def|Ten plik definicji modułu zawiera konsolidatora z informacjami o eksporty wymagane przez bibliotekę DLL.|
 |Polygon.IDL|Plik języka definicji interfejsu, opisujący interfejsy specyficzne dla obiektów.|
 |Polygon.rgs|Ten skrypt rejestru zawiera informacje dotyczące rejestrowania biblioteki DLL programu.|
-|Polygon.RC|Plik zasobów początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
+|Polygon.rc|Plik zasobów początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
 |Resource.h|Plik nagłówka dla pliku zasobów.|
 |Polygonps.def|Ten plik definicji modułu zawiera program łączący się z informacjami o informacje o operacjach eksportowania wymagane przez serwer proxy i szkieletu kodu, które obsługują wywołania w apartamentach.|
 |stdafx.cpp|Plik który będzie `#include` ATL pliki wdrożenia.|
@@ -78,6 +78,6 @@ W następnym kroku dodasz formant do projektu.
 
 [Do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

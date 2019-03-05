@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df13c94eb0cc2aa7e2dea49aba6901f01fce0a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326429"
 ---
 # <a name="atl-com-10-component-wizard"></a>Kreator 1.0 składnika ATL COM +
 
@@ -65,7 +65,7 @@ Określ nazwy dla obiektu, interfejsów i klas, które mają zostać dodane do p
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-- **Klasa coclass**
+- **Coclass**
 
    Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
 
@@ -80,11 +80,10 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
    Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera swoje niestandardowe metody.
 
-- **Identyfikator programu**
+- **ProgID**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składnik ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265577"
 ---
 # <a name="atl-classes-and-structs"></a>Klasy i struktury ATL
 
@@ -219,11 +219,10 @@ Active Template Library (ATL) obejmuje następujące klasy i struktury. Aby znal
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Ta klasa adaptera argument umożliwia nazw zasobów (LPCTSTRs) lub identyfikatory zasobów (UINTs), który zostanie przekazany do funkcji bez konieczności obiekt wywołujący, aby przekonwertować na ciąg przy użyciu makra MAKEINTRESOURCE identyfikator.|atlwin.h|
 |[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)|Ta klasa udostępnia funkcję tworzenia wątku Windows. Jeśli wątek nie użyje funkcji CRT, należy użyć tej klasy.|atlbase.h|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
-[Definicje typów](../../atl/reference/atl-typedefs.md)<br/>
+[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)
-

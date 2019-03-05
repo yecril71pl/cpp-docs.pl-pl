@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276380"
 ---
 # <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra
 
@@ -319,7 +319,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*ClassName*<br/>
+*classname*<br/>
 [in] Klasa bazowa bieżącego obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -345,7 +345,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *IID*<br/>
 [in] Identyfikator GUID interfejsu widoczne.
 
-*Magazyn danych*<br/>
+*dw*<br/>
 [in] Parametr przekazywany za pośrednictwem do *func*.
 
 *FUNC*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*Magazyn danych*<br/>
+*dw*<br/>
 [in] Parametr przekazywany za pośrednictwem do *func*.
 
 *FUNC*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Aby zapobiec używany w przypadku określonego interfejsu, można użyć tego makra. Na przykład można wstawić tego makra do mapy COM bezpośrednio poprzedzający COM_INTERFACE_ENTRY_AGGREGATE_BLIND, aby uniemożliwić przekazywane do agregacji wewnętrzny nieznany zapytania dla interfejsu.
 
 Interfejsu IID, zostanie wykonane przez dołączenie *x* do `IID_`. Na przykład jeśli *x* jest `IPersistStorage`, będzie identyfikatora IID `IID_IPersistStorage`.
-

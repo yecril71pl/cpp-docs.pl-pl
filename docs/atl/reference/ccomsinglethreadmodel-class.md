@@ -1,5 +1,5 @@
 ---
-title: Klasa CComSingleThreadModel
+title: CComSingleThreadModel Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComSingleThreadModel
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565363"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262054"
 ---
-# <a name="ccomsinglethreadmodel-class"></a>Klasa CComSingleThreadModel
+# <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel Class
 
 Ta klasa zawiera metody służące do zwiększanie i zmniejszanie, wartość zmiennej.
 
@@ -54,12 +54,12 @@ class CComSingleThreadModel
 
 Zazwyczaj można użyć `CComSingleThreadModel` za pomocą jednego z dwóch **typedef** nazwy albo [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy model wątkowości|Model wątkowości typu apartment|Model wątkowości bezpłatnie|
+| — klasa typedef|Pojedynczy model wątkowości|Model wątkowości typu apartment|Model wątkowości bezpłatnie|
 |-------------|----------------------------|-------------------------------|--------------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComSingleThreadModel` sam definiuje trzy **typedef** nazwy. `ThreadModelNoCS` odwołania `CComSingleThreadModel`. `AutoCriticalSection` i `CriticalSection` reference — klasa [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), która zapewnia metody pusty związanych z uzyskaniem i zwalniania własności sekcję krytyczną.
 
@@ -91,7 +91,7 @@ Oprócz `AutoCriticalSection`, możesz użyć **typedef** nazwa [CriticalSection
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
 ##  <a name="criticalsection"></a>  CComSingleThreadModel::CriticalSection
 
@@ -117,7 +117,7 @@ Oprócz `CriticalSection`, możesz użyć **typedef** nazwa [AutoCriticalSection
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComSingleThreadModel::Decrement
 
@@ -173,8 +173,8 @@ typedef CComSingleThreadModel ThreadModelNoCS;
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

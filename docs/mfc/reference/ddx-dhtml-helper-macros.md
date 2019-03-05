@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: e2deed5e3fb63f46d83cf4c6f0d3c13525e93a2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326650"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra pomocnika Ddx_dhtml
 
@@ -58,7 +58,7 @@ DDX_DHtml_Anchor_Href(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -84,7 +84,7 @@ DDX_DHtml_Anchor_Target(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -110,7 +110,7 @@ DDX_DHtml_ElementInnerHtml(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -136,7 +136,7 @@ DDX_DHtml_ElementInnerText(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -162,7 +162,7 @@ DDX_DHtml_ElementValue(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -190,7 +190,7 @@ DDX_DHtml_Frame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -216,7 +216,7 @@ DDX_DHtml_IFrame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -242,7 +242,7 @@ DDX_DHtml_Img_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
 
 *Nazwa*<br/>
@@ -257,6 +257,6 @@ Pobrać właściwości src elementu obrazu za pomocą makra DDX_DHtml_Img_Src, o
 
 Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLIMGELEMENT_SRC wysyłania identyfikatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

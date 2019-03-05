@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298987"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
 
@@ -38,8 +38,7 @@ Ta strona kreatora umożliwia definiowanie wątkowości modelu i agregację pozi
    |**Brak**|Utwórz stronę właściwości nie można agregować.|
    |**Only**|Utwórz stronę właściwości wystąpienia można tworzyć tylko za pomocą agregacji.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)
-

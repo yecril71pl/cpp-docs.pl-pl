@@ -7,12 +7,12 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: b0eae559fd15b7b19867cef9f785f7c70f782c30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621783"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326040"
 ---
 # <a name="menus-mfc"></a>Menu (MFC)
 
@@ -32,6 +32,6 @@ Visual C++ zapewnia również [Edytor menu](../windows/menu-editor.md) do tworze
 
 - [Próbki](../mfc/menu-sample-list.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

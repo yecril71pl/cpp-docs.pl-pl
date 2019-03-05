@@ -7,12 +7,12 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
-ms.openlocfilehash: 5cd005908656f09028f95be38ee78c7887c2f223
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d2a920d3053a920638dd20a23e1c2334745bbc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326507"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Procedura usuwania pliku w typowej aplikacji klienckiej FTP
 
@@ -30,7 +30,7 @@ W poniższej tabeli przedstawiono kroki, które można wykonywać w typowej apli
 |Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|
 |Kończy sesję FTP.|Usuwanie [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza połączenia i uchwytów otwartego pliku.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br/>

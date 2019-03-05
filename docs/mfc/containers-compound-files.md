@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery: pliki złożone'
+title: 'Kontenery: Pliki złożone'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326629"
 ---
-# <a name="containers-compound-files"></a>Kontenery: pliki złożone
+# <a name="containers-compound-files"></a>Kontenery: Pliki złożone
 
 W tym artykule opisano składniki i implementacja pliki złożone i zalety i wady używania pliki złożone w aplikacji OLE.
 
@@ -82,9 +82,9 @@ Po pomyślnym tworzenia aplikacji, która pochodzi od klasy dokumentów `COleDoc
 
 W *OLE Podręcznik programisty*, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream), [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage), i [interfejsu ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery](../mfc/containers.md)<br/>
-[Kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md)<br/>
+[Kontenery: Problemy z interfejsem użytkownika](../mfc/containers-user-interface-issues.md)<br/>
 [Klasa COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
 [Klasa COleDocument](../mfc/reference/coledocument-class.md)

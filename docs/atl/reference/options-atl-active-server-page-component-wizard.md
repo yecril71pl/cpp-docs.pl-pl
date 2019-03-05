@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280241"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opcje, Kreator składników stron Active Server ATL
 
@@ -30,8 +30,8 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Single**|Określa, że obiekt używa pojedynczego modelu wątkowości. W jednym modelu wątkowości obiekt zawsze działa w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|
    |**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|
    |**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|
-   |**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
-   |**Niezależny od**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
+   |**Bezpłatna**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
+   |**Neutral**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
 
 - **Agregacja**
 
@@ -43,7 +43,7 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Brak**|Określa, że obiekt nie jest agregowany.|
    |**Only**|Określa, czy obiekt musi być agregowana.|
 
-- **Obsługa**
+- **Pomoc techniczna**
 
    Dodatkowe opcje pomocy technicznej:
 
@@ -53,8 +53,7 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Punkty połączenia**|Włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
    |**Bezwątkowego**|Tworzy obiekt bezwątkowego na przeprowadzanie marshalingu wskaźników interfejsu efektywnie między wątkami w tym samym procesie. Dostępne do wybrania obiektu **zarówno** lub **bezpłatna** jako modelu wątkowości.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator składników stron Active Server Page ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [Składnika strony Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

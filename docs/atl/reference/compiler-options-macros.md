@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258479"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
@@ -201,7 +201,7 @@ Symbol, który wskazuje funkcji nie może być śródwierszowa.
 
 ### <a name="parameters"></a>Parametry
 
-*myFunction*<br/>
+*myfunction*<br/>
 Funkcja, która nie może być śródwierszowa.
 
 ### <a name="remarks"></a>Uwagi
@@ -220,6 +220,6 @@ _ATL_SINGLE_THREADED
 
 Określa, czy obiekt jest zawsze uruchamiany w podstawowym wątku com. Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych wątków opcje, a [opcji, Kreator obiektów proste ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis wątkowości modele dostępne dla obiektu ATL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

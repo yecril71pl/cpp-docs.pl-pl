@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326544"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Pisanie wielowątkowego programu Win32
 
@@ -28,7 +28,7 @@ Podczas pisania programu przy użyciu wielu wątków, musisz skoordynować ich z
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Udostępnianie wspólnych zasobów między wątkami
 
 > [!NOTE]
->  Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md) i [wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md).
+>  Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: Porady dotyczące programowania](multithreading-programming-tips.md) i [wielowątkowość: Kiedy należy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md).
 
 Każdy wątek ma swój własny stosu i rejestruje własną kopię procesora CPU. Inne zasoby, takie jak pliki, dane statyczne i pamięć sterty są współużytkowane przez wszystkie wątki w procesie. Wątki używające tych wspólnych zasobów musi być synchronizowane. Win32 oferuje kilka sposobów, aby zsynchronizować zasoby, w tym semaforów, sekcje krytyczne, zdarzeń i muteksy.
 
@@ -61,6 +61,6 @@ Ponieważ każdy wątek ma swój własny stosu, możesz uniknąć potencjalnych 
 
 Win32 udostępnia również magazynu Thread-Local (TLS) do przechowywania danych na wątek. Aby uzyskać więcej informacji, zobacz [wątku lokalnego magazynu (TLS)](thread-local-storage-tls.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

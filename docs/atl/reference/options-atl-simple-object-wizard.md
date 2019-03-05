@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273399"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostych obiektów ATL
 
@@ -30,8 +30,8 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Single**|Określa, czy obiekt jest zawsze uruchamiany w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|
    |**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|
    |**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|
-   |**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
-   |**Niezależny od**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
+   |**Bezpłatna**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
+   |**Neutral**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
 
 - **Agregacja**
 
@@ -52,7 +52,7 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Dual**|Określa, że obiekt obsługuje interfejs podwójny (jego vtable ma niestandardowy interfejs funkcji oraz późne powiązania `IDispatch` metody). Umożliwia obaj klienci COM i [kontrolery automatyzacji](../../mfc/automation-clients.md) dostępu do obiektu. Domyślnie.|
    |**Custom**|Określa, że obiekt obsługuje interfejs niestandardowy (jego vtable ma niestandardowy interfejs funkcji). Niestandardowy interfejs może być szybsza niż podwójnego interfejsu, szczególnie w granicach procesu.<br /><br /> - **Automatyzacja zgodne** kontrolery automatyzacji umożliwia dostępu do obiektu, który obsługuje niestandardowy interfejs.|
 
-- **Obsługa**
+- **Pomoc techniczna**
 
    Wskazuje dodatkową pomoc techniczną dla obiektu.
 
@@ -63,9 +63,8 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
    |**Bezwątkowego**|Tworzy obiekt bezwątkowego na przeprowadzanie marshalingu wskaźników interfejsu efektywnie między wątkami w tym samym procesie. Dostępne do określania obiektu **zarówno** jako modelu wątkowości.|
    |**IObjectWithSite** (Obsługa obiektów programu Internet Explorer)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), który zapewnia prosty sposób obsługi komunikacji między obiektem i jego witryny w kontenerze.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator prostych obiektów ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Prosty obiekt ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problemy wielowątkowości dotyczące serwera przetwarzania](/windows/desktop/com/in-process-server-threading-issues)
-

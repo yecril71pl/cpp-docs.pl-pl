@@ -1,5 +1,5 @@
 ---
-title: Klasa CComMultiThreadModel
+title: CComMultiThreadModel Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModel
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: ae341763ef40125057b815d2071abbebdcf08f2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290732"
 ---
-# <a name="ccommultithreadmodel-class"></a>Klasa CComMultiThreadModel
+# <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel Class
 
 `CComMultiThreadModel` zapewnia metody obsługujące wielowątkowość zwiększanie i zmniejszanie wartości zmiennej.
 
@@ -52,12 +52,12 @@ class CComMultiThreadModel
 
 Zazwyczaj można użyć `CComMultiThreadModel` za pomocą jednego z dwóch **typedef** nazwy albo [CComObjectThreadModel] (atl-typedefs.md #ccomobjectthreadmodel lub [CComGlobalsThreadModel] (atl-typedefs.md #ccomglobalsthreadmodel. Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+| — klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComMultiThreadModel` sam definiuje trzy **typedef** nazwy. `AutoCriticalSection` i `CriticalSection` odwoływać się do klasy, które zapewniają metody uzyskiwania i zwalniania własności sekcję krytyczną. `ThreadModelNoCS` odwołania do klasy [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).
 
@@ -153,7 +153,7 @@ Oprócz `CriticalSection`, możesz użyć **typedef** nazwa [AutoCriticalSection
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
@@ -219,9 +219,9 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
+See [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CComSingleThreadModel](ccomsinglethreadmodel-class.md)<br/>
 [Klasa CComAutoCriticalSection](ccomautocriticalsection-class.md)<br/>

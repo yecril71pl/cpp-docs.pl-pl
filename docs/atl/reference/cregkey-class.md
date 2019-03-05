@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283660"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -69,7 +69,7 @@ class CRegKey
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor.|
-|[CRegKey:: ~ CRegKey](#dtor)|Destruktor.|
+|[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -359,10 +359,10 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*<br/>
+*si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) wartość, która wskazuje żądane informacje o zabezpieczeniach.
 
-*PSD*<br/>
+*psd*<br/>
 Wskaźnik do buforu, który otrzymuje kopię deskryptora zabezpieczeń żądanej.
 
 *pnBytes*<br/>
@@ -884,7 +884,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*SI*<br/>
+*si*<br/>
 Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość może być kombinacją następujących wartości:
 
 |Wartość|Znaczenie|
@@ -894,7 +894,7 @@ Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość
 |OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|
 |SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](/windows/desktop/secauthz/privileges) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|
 
-*PSD*<br/>
+*psd*<br/>
 Wskaźnik do [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1056,7 +1056,7 @@ Dwie wersje oryginalnego `SetValue` są oznaczone jako ATL_DEPRECATED i już nie
 
 Trzeci wywołania metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowy model DCOM](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

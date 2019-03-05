@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508917"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326741"
 ---
 # <a name="double3-class"></a>double_3 — Klasa
 
@@ -206,7 +206,7 @@ class double_3;
 
 **Nagłówek:** amp_short_vectors.h
 
-**Namespace:** Concurrency::graphics
+**Namespace:** CONCURRENCY::Graphics
 
 ##  <a name="ctor"></a> double_3
 
@@ -274,6 +274,6 @@ Obiekt używany do inicjowania.
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

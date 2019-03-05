@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326000"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -44,7 +44,7 @@ Można użyć jednego z kreatorów kodu biblioteki ATL, można dodać obiektu lu
 
    Alternatywnie Jeśli spróbujesz dodać obiekt ATL do projektu MFC bez wcześniej Dodawanie obsługi ATL programu Visual Studio wyświetli monit o określenie, czy mają obsługi ATL dodanej do projektu. Kliknij przycisk **tak** Dodaj obsługę ATL do projektu i Otwórz kreatora ATL wybrane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
