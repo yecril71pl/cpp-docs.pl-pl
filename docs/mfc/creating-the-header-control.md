@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: fdb96eee243214d053a8f375f742cf69aa4e512d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326143"
 ---
 # <a name="creating-the-header-control"></a>Tworzenie formantu nagłówka
 
@@ -40,8 +40,7 @@ W obu przypadkach formantu osadzonego obiektu jest tworzony podczas tworzenia ob
 
 Aby uzyskać więcej informacji, zobacz [Tworzenie formantu nagłówka](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)
-
