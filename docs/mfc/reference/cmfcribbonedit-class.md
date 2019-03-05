@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292194"
 ---
 # <a name="cmfcribbonedit-class"></a>Klasa CMFCRibbonEdit
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Etykieta dla `CMFCRibbonEdit` kontroli.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 [in] Indeks małych obrazów do użycia dla `CMFCRibbonEdit` kontroli. Kolekcja małe obrazy są obsługiwane przez kategorii nadrzędnej wstążki.
 
 ### <a name="remarks"></a>Uwagi
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Wartość minimalna przycisku pokrętła.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Maksymalna wartość przycisku pokrętła.
 
 ### <a name="remarks"></a>Uwagi
@@ -303,7 +303,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -336,7 +336,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -472,7 +472,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.
 
 ### <a name="remarks"></a>Uwagi
@@ -487,7 +487,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.
 
 ### <a name="remarks"></a>Uwagi
@@ -502,7 +502,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.
 
 ### <a name="remarks"></a>Uwagi
@@ -523,7 +523,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.
 
 *strText*<br/>
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.
 
-*Dane*<br/>
+*data*<br/>
 Dane dostępności `CMFCRibbonEdit` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -750,7 +750,7 @@ Wartość TRUE, aby ustawić szerokość tryb przestawny Wartość FALSE, aby us
 
 `CMFCRibbonEdit` Kontrolka ma dwa szerokości, w zależności od jego trybu wyświetlania: liczb zmiennoprzecinkowych tryb i do trybu normalnego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262873"
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
 
@@ -78,7 +78,7 @@ Ten przykład generuje następujące przykładowe dane wyjściowe:
 
 Ponieważ `parallel_for` algorytm działa dla każdego elementu w sposób równoległy, różnią się w kolejności, w których wartości są drukowane do konsoli.
 
-Aby uzyskać kompletny przykład, który używa `parallel_for` algorytmu, zobacz [instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Aby uzyskać kompletny przykład, który używa `parallel_for` algorytmu, zobacz [jak: Pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[Górnej](#top)]
 
@@ -104,7 +104,7 @@ Ten przykład generuje następujące przykładowe dane wyjściowe:
 
 Ponieważ `parallel_for_each` algorytm działa dla każdego elementu w sposób równoległy, różnią się w kolejności, w których wartości są drukowane do konsoli.
 
-Aby uzyskać kompletny przykład, który używa `parallel_for_each` algorytmu, zobacz [instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Aby uzyskać kompletny przykład, który używa `parallel_for_each` algorytmu, zobacz [jak: Pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[Górnej](#top)]
 
@@ -128,7 +128,7 @@ Ten przykład generuje następujące wyniki:
 108 11.2 HelloHello
 ```
 
-Kompletne przykłady, które używają `parallel_invoke` algorytmu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [porady: używanie parallel_invoke do operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Kompletne przykłady, które używają `parallel_invoke` algorytmu, zobacz [jak: Używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [jak: Używanie parallel_invoke do operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[Górnej](#top)]
 
@@ -189,7 +189,7 @@ W poniższym przykładzie porównano czasu potrzebnego do obliczania sumy liczby
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Inny przykład, która wykonuje mapy i zmniejszyć liczbę operacji równoległych, zobacz [jak: wykonywać mapy i zmniejszyć operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Inny przykład, która wykonuje mapy i zmniejszyć liczbę operacji równoległych, zobacz [jak: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[Górnej](#top)]
 
@@ -199,10 +199,10 @@ Równoległe przetwarzanie operacji na źródle danych, jest bardzo ważnym etap
 
 `parallel_for`, `parallel_for_each`, I `parallel_transform` algorytmy podać przeciążone wersje, które przyjmują dodatkowy parametr, `_Partitioner`. Ten parametr określa typ partycjonera, który dzieli pracy. Poniżej przedstawiono rodzaje partycjonery definiujących PPL:
 
-[CONCURRENCY::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Dzieli działają na stałą liczbę zakresów (zwykle liczba wątków roboczych, które są dostępne do pracy w pętli). Ten typ partycjonera przypomina `static_partitioner`, ale zwiększa koligacji pamięci podręcznej, sposób mapowania zakresów wątków roboczych. Ten typ partycjonera może poprawić wydajność, jeśli pętla jest wykonywana za pośrednictwem tego samego zestawu danych, wiele razy (na przykład pętli w pętli) i danych mieści się w pamięci podręcznej. Ta partycjonera nie pełni uczestniczy w anulowania. On również nie używa semantyki blokowanie współpracy i dlatego nie można używać z pętli równoległych, które mają zależności do przodu.
 
-[CONCURRENCY::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Dzieli działają na początkową liczbę zakresów (zwykle liczba wątków roboczych, które są dostępne do pracy w pętli). Środowisko wykonawcze używa tego typu domyślnie podczas nie należy wywoływać metody przeciążone algorytmu równoległego, która przyjmuje `_Partitioner` parametru. Każdy z zakresów, mogą zostać podzielone na zakresy podrzędne, a tym samym umożliwia równoważenie obciążenia nastąpi. Po zakończeniu zakresu pracy, środowisko uruchomieniowe dystrybuuje zakresy podrzędne pracy od innych wątków do tego wątku. Użyj tego partycjonera, jeśli obciążenie nie znajduje się w jednej z innych kategorii, lub wymagasz pełnej obsługi anulowania lub blokowanie współpracy.
 
 [CONCURRENCY::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
@@ -243,7 +243,7 @@ W poniższej tabeli podsumowano ważne właściwości trzy równoległych algory
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
 |`parallel_sort`|Ogólnego przeznaczenia sortowania na podstawie porównania.|Na podstawie porównania (rosnąco)|Niestabilne|Brak|O((N/P)log(N/P) + 2N((P-1)/P))|losowe|
 |`parallel_buffered_sort`|Szybsze ogólnego przeznaczenia na podstawie porównania sortowania, które wymaga O(N) miejsca.|Na podstawie porównania (rosnąco)|Niestabilne|Wymaga dodatkowego miejsca O(N)|O((N/P)log(N))|losowe|
-|`parallel_radixsort`|Liczba całkowita opartego na kluczach sortowania, które wymaga O(N) miejsca.|Bazujących na skrótach|Wersja stabilna|Wymaga dodatkowego miejsca O(N)|O(N/P)|losowe|
+|`parallel_radixsort`|Liczba całkowita opartego na kluczach sortowania, które wymaga O(N) miejsca.|Bazujących na skrótach|Stable|Wymaga dodatkowego miejsca O(N)|O(N/P)|losowe|
 
 Poniżej przedstawiono ważne właściwości trzy równoległych algorytmów sortowania bardziej graficznie.
 
@@ -316,7 +316,7 @@ W tym przykładzie przyjęto założenie, że jest dopuszczalne przydzielanie O(
 |[Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Ilustruje sposób używania `parallel_for` algorytm mnożenie macierzy.|
 |[Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Ilustruje sposób używania `parallel_for_each` algorytm obliczania liczby liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.|
 |[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność algorytmu sortowania bitonicznego.|
-|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych.|
+|[Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych.|
 |[Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Ilustruje sposób używania `parallel_transform` i `parallel_reduce` algorytmy umożliwiające wykonywanie mapowania i zmniejszanie operacji, który zlicza wystąpienia słów w plikach.|
 |[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, która zapewnia model programowania na najwyższym skalowalność i łatwość użytkowania umożliwiający projektowanie aplikacji współbieżnych.|
 |[Anulowanie w PPL](cancellation-in-the-ppl.md)|W tym artykule wyjaśniono roli anulowanie w PPL, jak anulować czynność równoległą i jak określić, kiedy grupy zadań zostanie anulowane.|
@@ -324,11 +324,11 @@ W tym przykładzie przyjęto założenie, że jest dopuszczalne przydzielanie O(
 
 ## <a name="reference"></a>Tematy pomocy
 
-[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
+[parallel_for Function](reference/concurrency-namespace-functions.md#parallel_for)
 
-[parallel_for_each — funkcja](reference/concurrency-namespace-functions.md#parallel_for_each)
+[parallel_for_each Function](reference/concurrency-namespace-functions.md#parallel_for_each)
 
-[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)
+[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)
 
 [affinity_partitioner, klasa](../../parallel/concrt/reference/affinity-partitioner-class.md)
 
@@ -340,7 +340,6 @@ W tym przykładzie przyjęto założenie, że jest dopuszczalne przydzielanie O(
 
 [parallel_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_sort)
 
-[parallel_buffered_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
+[parallel_buffered_sort Function](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

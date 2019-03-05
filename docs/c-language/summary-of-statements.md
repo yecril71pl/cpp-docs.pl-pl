@@ -53,7 +53,7 @@ ms.locfileid: "56152758"
 
 *labeled-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:** *— instrukcja*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**domyślne:** *— instrukcja* 
 
 *instrukcji z wyjątkiem try*: /\* Specific firmy Microsoft \*/<br/>

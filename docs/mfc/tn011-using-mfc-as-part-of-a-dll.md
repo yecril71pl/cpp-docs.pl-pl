@@ -1,5 +1,5 @@
 ---
-title: 'TN011: używanie MFC jako części biblioteki DLL'
+title: 'TN011: Używanie MFC jako części biblioteki DLL'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326455"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: używanie MFC jako części biblioteki DLL
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Używanie MFC jako części biblioteki DLL
 
 Ta uwaga opisuje regularne biblioteki DLL MFC, które umożliwiają korzystanie z biblioteki MFC jako części Windows biblioteki dołączanej (dynamicznie DLL). Przyjęto założenie, że znasz biblioteki dll Windows i jak je tworzyć. Uzyskać informacji o biblioteki DLL rozszerzeń MFC, dzięki którym możesz tworzyć rozszerzenia do biblioteki MFC, zobacz [wersji MFC DLL](../mfc/tn033-dll-version-of-mfc.md).
 
@@ -111,8 +111,7 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
 
 Struktury używane przez interfejs API nie pochodzą z klasy MFC i są definiowane w nagłówku interfejsu API. Zmniejsza złożoność interfejs między biblioteki DLL i aplikacji i sprawia, że biblioteka DLL można używać przez programy c.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

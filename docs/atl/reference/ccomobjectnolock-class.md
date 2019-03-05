@@ -1,5 +1,5 @@
 ---
-title: Klasa CComObjectNoLock
+title: CComObjectNoLock Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectNoLock
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 85a5a71e330b8171a8e0e239d9afab43a6df1512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301964"
 ---
-# <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
+# <a name="ccomobjectnolock-class"></a>CComObjectNoLock Class
 
 Ta klasa implementuje `IUnknown` nieagregowane obiektu, ale ma nie przyrostu liczbę blokad modułu w konstruktorze.
 
@@ -31,7 +31,7 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*<br/>
+*Base*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -92,7 +92,7 @@ CComObjectNoLock(void* = NULL);
 <em>Void\*</em><br/>
 [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.
 
-##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
 
 Destruktor.
 
@@ -136,6 +136,6 @@ STDMETHOD_(ULONG, Release)();
 
 W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260390"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Informacje o*<br/>
+*info*<br/>
 [in] Odwołania do informacji o strukturę, która zawiera zadokować okienko wyrównania.
 
 *ppDockBar*<br/>
@@ -663,7 +663,7 @@ void DockPane(
 *nDockBarID*<br/>
 [in] Identyfikator pasek dokowania.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Prostokąta docelowego.
 
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Informacje o*<br/>
+*info*<br/>
 [in] Struktura, która zawiera informacje wyrównanie okienka dokowania.
 
 *dwAlignToInsertAfter*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 [in] Wartość TRUE, jeśli okno jest zablokowany; Wartość FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
@@ -1640,7 +1640,7 @@ static void SetDockingMode(
 Określa nowy tryb dokowania. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
 
 *Motyw*<br/>
-Określa motywu, który ma być używane dla znaczników inteligentnego dokowania. Może to być jedna z następujących wartości: AFX_SDT_VS2008 AFX_SDT_DEFAULT, AFX_SDT_VS2005,.
+Określa motywu, który ma być używane dla znaczników inteligentnego dokowania. Może to być jedna z następujących wartości: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1760,11 +1760,11 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca jedną z poniższych wyliczonych wartości: AFX_SDT_VS2008 AFX_SDT_DEFAULT, AFX_SDT_VS2005,.
+Zwraca jedną z poniższych wyliczonych wartości: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
