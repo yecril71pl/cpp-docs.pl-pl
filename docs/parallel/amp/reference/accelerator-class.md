@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326632"
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 
@@ -80,7 +80,7 @@ class accelerator;
 |[get_device_path](#get_device_path)|Zwraca ścieżkę urządzenia.|
 |[get_has_display](#get_has_display)|Określa, czy `accelerator` jest dołączony do ekranu.|
 |[get_is_debug](#get_is_debug)|Określa, czy `accelerator` ma włączoną warstwę debugowanie dla obszernego raportowania błędów.|
-|[get_is_emulated —](#get_is_emulated)|Określa, czy `accelerator` jest emulowany.|
+|[get_is_emulated](#get_is_emulated)|Określa, czy `accelerator` jest emulowany.|
 |[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Określa, czy `accelerator` obsługuje pamięć współużytkowaną|
 |[get_supports_double_precision](#get_supports_double_precision)|Określa, czy `accelerator` jest dołączony do ekranu.|
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Określa, czy `accelerator` ma ograniczoną obsługę działań matematycznych podwójnej precyzji.|
@@ -105,13 +105,13 @@ class accelerator;
 |[default_accelerator](#default_accelerator)|Pobiera stałą typu string dla domyślnego `accelerator`.|
 |[default_cpu_access_type](#default_cpu_access_type)|Pobiera lub ustawia domyślny Procesor [access_type](concurrency-namespace-enums-amp.md#access_type)dla tablic oraz niejawnych alokacji pamięci dokonanych dla tego `accelerator`.|
 |[default_view —](#default_view)|Pobiera domyślny `accelerator_view` obiekt, który jest skojarzony z `accelerator`.|
-|[Opis elementu](#description)|Pobiera krótki opis `accelerator` urządzenia.|
+|[description](#description)|Pobiera krótki opis `accelerator` urządzenia.|
 |[device_path](#device_path)|Pobiera ścieżkę urządzenia.|
 |[direct3d_ref](#direct3d_ref)|Pobiera stałą typu string dla odwołania Direct3D `accelerator`.|
 |[direct3d_warp](#direct3d_warp)|Pobiera stałą typu ciąg `accelerator` obiektu służące do wykonywania kodu C++ AMP na wielordzeniowych procesorach, które używają rozszerzenia SSE (Streaming SIMD).|
-|[has_display —](#has_display)|Pobiera wartość logiczną, wskazującą, czy `accelerator` jest dołączony do ekranu.|
+|[has_display](#has_display)|Pobiera wartość logiczną, wskazującą, czy `accelerator` jest dołączony do ekranu.|
 |[is_debug](#is_debug)|Wskazuje, czy `accelerator` ma włączoną warstwę debugowanie dla obszernego raportowania błędów.|
-|[is_emulated —](#is_emulated)|Wskazuje, czy `accelerator` jest emulowany.|
+|[is_emulated](#is_emulated)|Wskazuje, czy `accelerator` jest emulowany.|
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Wskazuje, czy `accelerator` obsługuje pamięć współużytkowaną.|
 |[supports_double_precision](#supports_double_precision)|Wskazuje, czy akcelerator obsługuje matematykę o podwójnej precyzji.|
 |[supports_limited_double_precision](#supports_limited_double_precision)|Wskazuje, czy akcelerator ma ograniczoną obsługę działań matematycznych podwójnej precyzji.|
@@ -131,7 +131,7 @@ Można skonstruować `accelerator` obiektu przez wyliczenie dostępnych urządze
 
 **Nagłówek:** amprt.h
 
-**Namespace:** współbieżności
+**Namespace:** Współbieżność
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
@@ -163,7 +163,7 @@ accelerator(const accelerator& _Other);
 *_Inne*<br/>
 Akcelerator do skopiowania.
 
-##  <a name="cpu_accelerator"></a> cpu_accelerator —
+##  <a name="cpu_accelerator"></a> cpu_accelerator
 
 Pobiera stałą typu string dla akceleratora Procesora.
 
@@ -336,7 +336,7 @@ std::wstring get_device_path() const;
 
 Ścieżka wystąpienia unikatowych urządzeń w całym systemie.
 
-##  <a name="get_has_display"></a> get_has_display —
+##  <a name="get_has_display"></a> get_has_display
 
 Zwraca wartość logiczną wskazującą, czy `accelerator` może zapewniać dane wyjściowe do wyświetlania.
 
@@ -420,7 +420,7 @@ unsigned int get_version() const;
 
 Wersja `accelerator`.
 
-##  <a name="has_display"></a> has_display —
+##  <a name="has_display"></a> has_display
 
 Pobiera wartość logiczną, wskazującą, czy `accelerator` może zapewniać dane wyjściowe do wyświetlania.
 
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka _wywołania*<br/>
+*_Path*<br/>
 Ścieżka do akceleratora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -616,7 +616,7 @@ void flush();
 
 Zwraca `void`.
 
-##  <a name="get_accelerator"></a> get_accelerator —
+##  <a name="get_accelerator"></a> get_accelerator
 
 Zwraca `accelerator` dla obiektu [accelerator_view](accelerator-view-class.md) obiektu.
 
@@ -771,6 +771,6 @@ void wait();
 
 Zwraca `void`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN003: mapowanie uchwytów okien na obiekty'
+title: 'TN003: Mapowanie Windows uchwytów na obiekty'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: 46421016171f61a199e6a0a04f6b9b81e260496e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677152"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326702"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapowanie uchwytów okien na obiekty
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapowanie Windows uchwytów na obiekty
 
 Ta uwaga opisuje MFC procedur, które obsługuje mapowania Windows obiektu dojścia do obiektów języka C++.
 
@@ -42,7 +42,7 @@ Windows obiektów, które uchwyt mapy są następujące:
 
 - HPALETTE (`CGdiObject`)
 
-- HRGN — (`CGdiObject`)
+- HRGN (`CGdiObject`)
 
 - HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))
 
@@ -83,8 +83,7 @@ Obiekty tymczasowe i stałe są przechowywane na zasadzie na wątek. Oznacza to 
 
 Aby przekazać te obiekty z jednego wątku do innego, zawsze wysyłać je jako ich native `HANDLE` typu. Przekazywanie obiektu języka C++ z jednego wątku do innego często spowodować nieoczekiwane rezultaty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
-

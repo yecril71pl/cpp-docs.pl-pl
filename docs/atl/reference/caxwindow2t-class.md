@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: 3e28bfe15c55342cbdfb50b125243c170ba97698
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326520"
 ---
 # <a name="caxwindow2t-class"></a>Klasa CAxWindow2T
 
@@ -220,7 +220,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 Uchwyt istniejącego okna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Zawieranie kontrolek — często zadawane pytania](../../atl/atl-control-containment-faq.md)

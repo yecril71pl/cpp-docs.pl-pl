@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326780"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 
@@ -620,7 +620,7 @@ virtual BOOL DockPane(
 *pDockBar*<br/>
 [out w] Określa podstawowy okienko, aby zadokować w tym okienku, aby.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Określa prostokąt na podstawowej okienko, w którym ma być zadokowane, w tym okienku.
 
 *dockMethod*<br/>
@@ -683,7 +683,7 @@ virtual BOOL DockToFrameWindow(
 *dwAlignment*<br/>
 [in] Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Określony rozmiar.
 
 *dwDockFlags*<br/>
@@ -1179,7 +1179,7 @@ virtual void OnAfterDock(
 *pBar*<br/>
 [in] Ten parametr nie jest używany.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Ten parametr nie jest używany.
 
 *dockMethod*<br/>
@@ -1237,7 +1237,7 @@ virtual BOOL OnBeforeDock(
 *ppDockBar*<br/>
 [out w] Określa okienko w którym to okienko jest zadokowane do.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] Określa prostokąt dokowania.
 
 *dockMethod*<br/>
@@ -1308,7 +1308,7 @@ Wartość TRUE, jeśli mogą być wyświetlane menu; w przeciwnym razie wartoś�
 
 ### <a name="remarks"></a>Uwagi
 
-Menu zawiera kilka elementów, które umożliwiają określenie zachowania w okienku, a mianowicie: **przestawne**, **dokowanie**, **autoukrywania**, i **Ukryj**. To menu dla wszystkich okienek można włączyć przez wywołanie [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Menu zawiera kilka elementów, które umożliwiają określenie zachowania w okienku, a mianowicie: **Zmiennoprzecinkowe**, **dokowanie**, **autoukrywania**, i **Ukryj**. To menu dla wszystkich okienek można włączyć przez wywołanie [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
@@ -1405,7 +1405,7 @@ void SetBorders(LPCRECT lpRect);
 *cyBottom*<br/>
 [in] Określa szerokość w pikselach, krawędzi dolnej części okienka.
 
-*lprect —*<br/>
+*lpRect*<br/>
 [in] A [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera szerokość w pikselach każdego obramowanie okienka.
 
 ### <a name="remarks"></a>Uwagi
@@ -1604,7 +1604,7 @@ Drugie przeciążenie przenosi wirtualnego prostokąt o kwotę, który jest okre
 
 Trzecie przeciążenie ustawia prostokąt wirtualnego przy użyciu bieżącego położenia obiektu okienka i rozmiar, który jest określony przez *sizeNew*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

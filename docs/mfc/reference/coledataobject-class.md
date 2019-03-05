@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 40c7d87e2dafa3c9b40e8ebda60b15a7b32709eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326728"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 
@@ -336,7 +336,7 @@ void Release();
 
 `IDataObject` Został skojarzony z `COleDataObject` przez wywołanie metody `Attach` lub `AttachClipboard` jawnie lub przez platformę. Jeśli *bAutoRelease* parametru `Attach` ma wartość FAŁSZ, `IDataObject` obiekt nie zostanie zwolniony. W tym przypadku obiekt wywołujący jest odpowiedzialny za przy zwalnianiu `IDataObject` przez wywołanie metody [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>

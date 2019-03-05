@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki'
+title: 'Kontenery kontrolek ActiveX: Wyświetlanie i modyfikowanie właściwości kontrolki'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: abddda015a80b21d941409044524e2f526b26f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326364"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: Wyświetlanie i modyfikowanie właściwości kontrolki
 
 Po wstawieniu kontrolki ActiveX do projektu jest przydatny do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób używania edytora zasobów Visual C++, aby to zrobić.
 
 Jeśli Twojej aplikacji kontenera kontrolek ActiveX używa formantów osadzone, należy można wyświetlać i modyfikować właściwości formantu znajduje się w edytorze zasobów. Edytor zasobów umożliwia również do ustawiania wartości właściwości w czasie projektowania. Edytor zasobów następnie automatycznie zapisuje te wartości w pliku zasobów projektu. Dowolne wystąpienie kontrolki będzie miał jego właściwości inicjowana na te wartości.
 
-W tej procedurze założono, że wstawiono formant do projektu. Aby uzyskać informacje, zobacz [kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md).
+W tej procedurze założono, że wstawiono formant do projektu. Aby uzyskać informacje, zobacz [kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md).
 
 Pierwszym krokiem podczas przeglądania właściwości formantu jest dodaje wystąpienie formantu do projektu szablonu okna dialogowego.
 
@@ -39,7 +39,6 @@ Pierwszym krokiem podczas przeglądania właściwości formantu jest dodaje wyst
 
 Użyj **właściwości** okno dialogowe, aby zmodyfikować i jego natychmiastowe testowanie nowych właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
-

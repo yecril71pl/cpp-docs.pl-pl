@@ -10,12 +10,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: e8b7385a233c2074fe9bfc491d89de7629c730c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07d9e706e8ed01a81ee580e7c4e11fa1f1a7a8df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326248"
 ---
 # <a name="message-categories"></a>Kategorie komunikatów
 
@@ -43,7 +43,6 @@ Komunikaty w kategorii 1 i 2 — Windows wiadomości i powiadomień dotyczących
 
 Komunikaty w kategorii 3 — polecenia — może obsługiwać szerszą gamy obiektów: dokumenty, szablony dokumentów i obiekt aplikacji oprócz okien i widoków. Gdy polecenie bezpośrednio wpływa na niektórych określonego obiektu, dobrym pomysłem będzie mieć ten obiekt obsługi polecenia. Na przykład polecenie Otwórz menu Plik jest logicznie skojarzone z aplikacją: aplikacja zostanie otwarta określonego dokumentu po odebraniu polecenia. Obsługa polecenia Otwórz więc funkcji składowej klasy aplikacji. Aby uzyskać więcej informacji o poleceniach oraz jak są kierowane do obiektów, zobacz [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
-

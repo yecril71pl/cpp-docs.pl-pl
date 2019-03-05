@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-ms.openlocfilehash: 8d8ffccffdf5bb27497e9bc3831f26d33ec8454f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326663"
 ---
 # <a name="windows"></a>Windows
 
@@ -104,11 +104,10 @@ W tym artykule opisano drugiej grupy artykułów [ramowe](../mfc/frame-windows.m
 
 - [Zmienianie stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Paski narzędzi](../mfc/toolbars.md)<br/>
 [Paski stanu](../mfc/status-bars.md)<br/>
 [Paski dialogowe](../mfc/dialog-bars.md)
-

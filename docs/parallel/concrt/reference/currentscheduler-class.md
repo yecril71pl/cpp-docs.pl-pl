@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326793"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 
@@ -40,13 +40,13 @@ class CurrentScheduler;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Utwórz](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisana przez `_Policy` parametru i dołącza go do wywoływania kontekstu. Nowo utworzony harmonogram staną się bieżący harmonogram Kontekst wywołania.|
+|[Tworzenie](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisana przez `_Policy` parametru i dołącza go do wywoływania kontekstu. Nowo utworzony harmonogram staną się bieżący harmonogram Kontekst wywołania.|
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramów w obrębie harmonogramu, skojarzony kontekst wywołania. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w ramach grupy nowo utworzony harmonogram ukierunkowane wykonywania w lokalizacji określonej w tym parametrze.|
 |[Detach](#detach)|Odłącza bieżącego harmonogramu z Kontekst wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody Kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej został dołączony do kontekstu przy użyciu `CurrentScheduler::Create` lub `Scheduler::Attach` metody.|
 |[Get](#get)|Zwraca wskaźnik do harmonogramu skojarzony kontekst wywołania, nazywana także bieżącego harmonogramu.|
-|[Getnumberofvirtualprocessors —](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu skojarzony kontekst wywołania.|
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu skojarzony kontekst wywołania.|
 |[GetPolicy](#getpolicy)|Zwraca kopię obiektu zasady, które utworzono bieżącego harmonogramu.|
-|[Id](#id)|Zwraca unikatowy identyfikator dla bieżącego harmonogramu.|
+|[Identyfikator](#id)|Zwraca unikatowy identyfikator dla bieżącego harmonogramu.|
 |[IsAvailableLocation](#isavailablelocation)|Określa, czy w danej lokalizacji dostępnej bieżącego harmonogramu.|
 |[RegisterShutdownEvent](#registershutdownevent)|Powoduje, że dojście zdarzenia Windows przekazanej `_ShutdownEvent` parametr ma być zasygnalizowany, gdy harmonogram skojarzone z bieżącym kontekstem zamyka i niszczy sam. Na czas, który jest sygnalizowane zdarzenie cała praca, który miał została zaplanowana do harmonogramu jest ukończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.|
 |[Scheduletask —](#scheduletask)|Przeciążone. Planuje pharmonogramy zadań wagi lekkiej w obrębie harmonogramu, skojarzony kontekst wywołania. Pharmonogramy zadań wagi lekkiej zostaną umieszczone w grupie harmonogram ustalany w czasie wykonywania. Wersja, która przyjmuje parametr `_Placement` powoduje zadania ukierunkowane wykonywanie w określonej lokalizacji.|
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametry
 
-*Zasady _dziennika*<br/>
+*_Policy*<br/>
 Zasadę harmonogram, który opisuje zachowanie nowo utworzonego harmonogramu.
 
 ### <a name="remarks"></a>Uwagi
@@ -115,7 +115,7 @@ Należy wywołać [wersji](schedulegroup-class.md#release) metody grupy harmonog
 
 Należy pamiętać, że jeśli w sposób jawny nie utworzył ten harmonogram, trzeba zwolnić wszystkie odwołania do planowania grup, to przed publikacją której można się odwołać w harmonogramie, odłączając bieżącego kontekstu z niego.
 
-##  <a name="detach"></a> Odłącz
+##  <a name="detach"></a> Detach
 
 Odłącza bieżącego harmonogramu z Kontekst wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody Kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej został dołączony do kontekstu przy użyciu `CurrentScheduler::Create` lub `Scheduler::Attach` metody.
 
@@ -267,10 +267,9 @@ Odwołanie do lokalizacji, w którym zadanie lekkie będzie można ukierunkowane
 
 Ta metoda powoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu obecnie skojarzony kontekst wywołania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
-[Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
+[Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

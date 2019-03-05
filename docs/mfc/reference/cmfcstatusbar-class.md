@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCStatusBar
+title: CMFCStatusBar Class
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326754"
 ---
-# <a name="cmfcstatusbar-class"></a>Klasa CMFCStatusBar
+# <a name="cmfcstatusbar-class"></a>CMFCStatusBar Class
 
 `CMFCStatusBar` Klasa implementuje pasek stanu podobny do `CStatusBar` klasy. Jednak `CMFCStatusBar` klasa ma funkcje, które nie są oferowane przez `CStatusBar` klasę, takie jak możliwość wyświetlania obrazów, animacji i pasków postępu, a także zdolność do reagowania na dwukrotne kliknięcie myszy.
 
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Określa indeks części okienka paska postępu, w których włączyć.
 
-*nLiczba*<br/>
+*nTotal*<br/>
 [in] Określa maksymalną wartość dla paska postępu.
 
 *bDisplayText*<br/>
@@ -518,7 +518,7 @@ virtual void OnDrawPane(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia do rysowania.
 
 *pPane*<br/>
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] Indeks w okienku paska stanu, dla której chcesz ustawić nową szerokość.
 
-*CX*<br/>
+*cx*<br/>
 [in] Szerokość nowe okienko paska stanu, w pikselach.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText
@@ -804,7 +804,7 @@ void SetTipText(
 *pszTipText*<br/>
 [in] Nowy tekst etykietki narzędzia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
