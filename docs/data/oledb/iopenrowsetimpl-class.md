@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3d4f778f560b55f22c1c54185bea79af07949ceb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556266"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422763"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl — Klasa
 
@@ -52,11 +52,11 @@ Z klasą pochodną `IOpenRowsetImpl`.
 
 ## <a name="remarks"></a>Uwagi
 
-[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85)) interfejsu jest obowiązkowa, aby obiekt sesji. Otwiera i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.
+[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) interfejsu jest obowiązkowa, aby obiekt sesji. Otwiera i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.
 
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika. Zobacz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
+Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika. Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
 
 ### <a name="syntax"></a>Składnia
 
@@ -80,7 +80,7 @@ Składowa klasy szablonu reprezentująca klasy zestawów wierszy przez użytkown
 *pRowsetObj*<br/>
 [out] Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale mogą używane, jeśli konieczne jest przeprowadzenie więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest ograniczone przez *ppRowset*.
 
-Dla innych parametrów, zobacz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
+Dla innych parametrów, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
