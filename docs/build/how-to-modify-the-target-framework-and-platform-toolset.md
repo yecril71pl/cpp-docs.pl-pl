@@ -1,5 +1,5 @@
 ---
-title: 'Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy'
+title: 'Instrukcje: Modyfikowanie platformy docelowej i zestawu narzędzi platformy'
 ms.custom: conceptual
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12f4f67eee59137042ef36f6709e921287d5528e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523122"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424781"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Instrukcje: Modyfikowanie platformy docelowej i zestawu narzędzi platformy
 
 Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać różnych zestawów narzędzi platformy. Domyślnie system projektu używa wersji .NET Framework i wersji zestawu narzędzi, które odnoszą się do wersji programu Visual Studio, którego używasz do tworzenia projektu. Możesz zmienić zestaw narzędzi platformy docelowej modyfikując właściwości projektu. Możesz zmienić szablon docelowy modyfikując plik projektu (.vcxproj). Nie trzeba utrzymywać osobnego kodu podstawowego dla każdego celu kompilacji.
 
@@ -59,6 +59,6 @@ Możesz rozszerzyć platformę docelową dalej tworząc niestandardowy zestaw na
 
 1. Wybierz **OK** przycisku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
