@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 51198b44346785369771f63b80164c1a131f6950
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279692"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423563"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parametr|Opis|
 |---------------|-----------------|
 |*dwStyle*|[in] Bitowa kombinacja style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|
+|*Rect*|[in] Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która zawiera położenie i rozmiar kontrolki.|
 |*pParentWnd*|[in] Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|
 |*nID*|[in] Identyfikator kontrolki.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Bitowa kombinacja (lub) rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcji.|
 |*dwStyle*|[in] Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|
+|*Rect*|[in] Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która zawiera położenie i rozmiar kontrolki.|
 |*pParentWnd*|[in] Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|
 |*nID*|[in] Identyfikator kontrolki.|
 

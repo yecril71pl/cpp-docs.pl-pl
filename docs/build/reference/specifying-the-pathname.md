@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07afcd102b2b1839b3925ad1e6905507ea316361
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423329"
 ---
 # <a name="specifying-the-pathname"></a>Określanie nazwy ścieżki
 
@@ -36,7 +36,7 @@ Następujące polecenie w wierszu pliku mapowania są wysyłane do drukarki:
 CL /FmPRN HELLO.CPP
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 6e6f758e7a683a28189123b03252223476ac732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b001bff2f5327599fc5ad2ecae141976403ec58
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424070"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 
@@ -62,6 +62,6 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 EPSILON, można użyć stałe FLT_EPSILON, która jest zdefiniowana float jako 1.192092896e-07F, lub DBL_EPSILON, która jest zdefiniowana dla podwójnej precyzji jako 2.2204460492503131e-016. Konieczne jest uwzględnienie float.h dla tych stałych. Te stałe są zdefiniowane jako najmniejsza dodatnia liczba x, na przykład x + 1.0 nie jest równa 1.0. Ponieważ jest to bardzo małej liczby, powinny zostać zdefiniowane przez użytkownika na uszkodzenia w obliczeniach obejmujących bardzo dużych liczb.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Optymalizacja kodu](../../build/reference/optimizing-your-code.md)

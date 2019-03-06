@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620509"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424681"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definicje preprocesora)
 
@@ -46,7 +46,7 @@ To polecenie definiuje symbol DEBUG w TEST.c:
 
 To polecenie usuwa wszystkie wystąpienia słowa kluczowego `__far` w TEST.c:
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 **CL** zmienna środowiskowa nie można ustawić na ciąg, który zawiera znaku równości. Aby użyć **/D** wraz z **CL** środowiska zmiennych, należy określić znak numeru zamiast znaku równości:
 
@@ -54,7 +54,7 @@ To polecenie usuwa wszystkie wystąpienia słowa kluczowego `__far` w TEST.c:
 SET CL=/DTEST#0
 ```
 
-Podczas definiowania symbolu przetwarzania wstępnego w wierszu polecenia, należy wziąć pod uwagę reguły analizy składni zarówno kompilatora, jak i powłoki. Na przykład, aby zdefiniować w programie symbol wstępnego przetwarzania znaku procenta (%), określ dwa znaki procenta (%%) w wierszu polecenia: Jeśli określisz tylko jeden, zostanie wygenerowany błąd analizy składni.
+Podczas definiowania symbolu przetwarzania wstępnego w wierszu polecenia, należy wziąć pod uwagę reguły analizy składni zarówno kompilatora, jak i powłoki. Na przykład, aby zdefiniować symbol wstępnego przetwarzania znaku procenta (%) w swoim programie Określ dwa znaki procenta (%) w wierszu polecenia: Jeśli określisz tylko jeden błąd analizy jest emitowane.
 
 ```
 CL /DTEST=%% TEST.C
@@ -95,7 +95,7 @@ int main( )
 TEST defined 1
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>

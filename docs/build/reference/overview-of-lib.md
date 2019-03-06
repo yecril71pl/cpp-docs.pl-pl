@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a66f78d225a5899b53a931c7eb6a0564de689ca1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423290"
 ---
 # <a name="overview-of-lib"></a>Informacje o LIB
 
@@ -33,7 +33,7 @@ Poniższa tabela zawiera listę opcji lib.exe Link, aby uzyskać więcej informa
 
 |Opcja|Opis|
 |-|-|
-|**/ DEF**|Tworzenie biblioteki importowanej oraz pliku eksportu.<br/><br/>Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/DEF**|Tworzenie biblioteki importowanej oraz pliku eksportu.<br/><br/>Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ERRORREPORT**|   Wysyła do firmy Microsoft informacje o wewnętrznych błędach za pomocą lib.exe.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 |**/EXPORT**|   Eksportuje funkcję z programu.<br/><br/>Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ EXTRACT**|   Utwórz plik obiektowy (.obj), który zawiera kopię elementu członkowskiego istniejącej biblioteki.<br/><br/>Aby uzyskać więcej informacji, zobacz [wyodrębnianie członka biblioteki](../../build/reference/extracting-a-library-member.md).|
@@ -43,7 +43,7 @@ Poniższa tabela zawiera listę opcji lib.exe Link, aby uzyskać więcej informa
 |**/LTCG**|   Powoduje, że biblioteka ma zostać utworzony przy użyciu Generowanie łączonych kodów czasowych.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 |**/ MACHINE**|   Określa platformę docelową dla programu.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 |**/ NAME**|   Podczas kompilowania biblioteki importowanej, określa nazwę biblioteki dll, dla których jest ona kompilowana biblioteki importu.<br/><br/>Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).|
-|**/ NODEFAULTLIB**|   Usuwa co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych.<br/><br/>Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).|
+|**/NODEFAULTLIB**|   Usuwa co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych.<br/><br/>Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).|
 |**/NOLOGO**|   Pomija wyświetlanie LIB praw autorskich komunikat i numer wersji i zapobiega wyświetlania pliku polecenia.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 |**/ OUT**|   Przesłania domyślną nazwę pliku wyjściowego.<br/><br/>Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).|
 |**/ REMOVE**|   Pomija obiekt z biblioteki wyjściowej.<br/><br/>Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).|
@@ -51,7 +51,7 @@ Poniższa tabela zawiera listę opcji lib.exe Link, aby uzyskać więcej informa
 |**/VERBOSE**|   Wyświetla szczegółowe informacje o postępie sesji, w tym nazwy plików .obj, dodawane.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 |**/WX**|   Traktuj ostrzeżenia jako błędy.<br/><br/>Aby uzyskać więcej informacji, zobacz [uruchamianie LIB](../../build/reference/running-lib.md).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [LIB — dokumentacja](../../build/reference/lib-reference.md)<br/>
 [Pliki wejściowe LIB](../../build/reference/lib-input-files.md)<br/>

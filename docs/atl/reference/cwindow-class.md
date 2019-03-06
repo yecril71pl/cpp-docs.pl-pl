@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425071"
 ---
 # <a name="cwindow-class"></a>Klasa CWindow
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Zobacz [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) w Windows SDK.
 
-Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Zobacz [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) w Windows SDK.
 
-Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 W przypadku oknem najwyższego poziomu parametrów obiektu, x i y są względem lewego górnego rogu ekranu. Obiekt okna podrzędne są względem lewego górnego rogu obszaru klienckiego okna nadrzędnego.
 
-Druga wersja ta metoda używa [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, aby określić nową pozycję, szerokość i wysokość okna.
+Druga wersja ta metoda używa [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, aby określić nową pozycję, szerokość i wysokość okna.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Zobacz [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) w Windows SDK.
 
-Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Druga wersja ta metoda umożliwia konwertowanie współrzędne [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Zobacz [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) w Windows SDK.
 
-Druga wersja ta metoda używa [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, aby ustawić nową pozycję, szerokość i wysokość okna.
+Druga wersja ta metoda używa [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, aby ustawić nową pozycję, szerokość i wysokość okna.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 
