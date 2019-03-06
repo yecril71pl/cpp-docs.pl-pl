@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: d393ce8b27a0f04527b912db5936534ebd9b2d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434376"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424784"
 ---
 # <a name="importing-using-def-files"></a>Importowanie przy użyciu plików DEF
 
@@ -61,6 +61,6 @@ Przy użyciu stałej jest bardziej ryzykowne, ponieważ Jeśli zapomnisz dodatko
 
 Bieżący konsolidatora Visual C++ generuje ostrzeżenie, jeśli STAŁĄ w pliku .def konta dla tej sprawy. Tylko rzeczywistego powód, aby używało — STAŁA jest, jeśli nie można ponownie skompilować niektóre pliku obiektu, gdy plik nagłówkowy nie listy **__declspec(dllimport)** na prototypu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Importowanie do aplikacji](../build/importing-into-an-application.md)

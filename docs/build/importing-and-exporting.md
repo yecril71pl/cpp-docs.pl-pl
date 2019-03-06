@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: c7328f0e5f5d408ec93f31fa4cbea987594264ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424798"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
 
@@ -45,6 +45,6 @@ Format przenośnym plikiem wykonywalnym środowiska Win32 jest przeznaczony do z
 
 - [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

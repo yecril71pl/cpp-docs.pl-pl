@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423615"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap — Klasa
 
@@ -62,20 +62,20 @@ Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md)
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Unorderedmap::unorderedmap —](#ctor)|Inicjuje nowe wystąpienie klasy mapy.|
+|[UnorderedMap::UnorderedMap](#ctor)|Inicjuje nowe wystąpienie klasy mapy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[Unorderedmap::Clear —](#clear)|Usuwa wszystkie pary klucz wartość z bieżącego obiektu mapy.|
-|[Unorderedmap::First —](#first)|Zwraca iterator, który określa pierwszy element w mapie.|
+|[UnorderedMap::First](#first)|Zwraca iterator, który określa pierwszy element w mapie.|
 |[Unorderedmap::getview —](#getview)|Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to, że klasa platform::Collections:: unorderedmapview.|
 |[UnorderedMap::HasKey](#haskey)|Określa, czy bieżący mapa zawiera określony klucz.|
-|[Unorderedmap::INSERT —](#insert)|Dodaje określoną parę klucz wartość do bieżącego obiektu mapy.|
-|[Unorderedmap::LOOKUP —](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie mapy.|
-|[Unorderedmap::Remove —](#remove)|Usuwa określoną parę klucz wartość z bieżącego obiektu mapy.|
-|[Unorderedmap::size —](#size)|Zwraca liczbę elementów w bieżącym obiekcie mapy.|
+|[UnorderedMap::Insert](#insert)|Dodaje określoną parę klucz wartość do bieżącego obiektu mapy.|
+|[UnorderedMap::Lookup](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie mapy.|
+|[UnorderedMap::Remove](#remove)|Usuwa określoną parę klucz wartość z bieżącego obiektu mapy.|
+|[UnorderedMap::Size](#size)|Zwraca liczbę elementów w bieżącym obiekcie mapy.|
 
 ### <a name="events"></a>Zdarzenia
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap::First — metoda
 
-Zwraca iterator, który określa pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) element mapy nieuporządkowanej.
+Zwraca iterator, który określa pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) element mapy nieuporządkowanej.
 
 ### <a name="syntax"></a>Składnia
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [wyliczenie CollectionChange](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
@@ -241,7 +241,7 @@ Część klucza pary klucz wartość. Typ *klucz* jest typename *K*.
 
 ## <a name="size"></a>  Unorderedmap::size — metoda
 
-Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w UnorderedMap.
+Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementów w UnorderedMap.
 
 ### <a name="syntax"></a>Składnia
 
@@ -358,7 +358,7 @@ A [std::initializer_list](../standard-library/initializer-list-class.md) z [std:
 *pierwszy*<br/>
 Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania UnorderedMap bieżącego.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych od szeregu elementów używane do zainicjowania bieżącego UnorderedMap pierwszego elementu.
 
 ## <a name="see-also"></a>Zobacz także

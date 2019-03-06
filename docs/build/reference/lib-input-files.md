@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: 885d03e74c7acff54e527c2dbad38de055913b5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0095bd9e8699fbc9a1a144833d12d2cf4a1f83
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423095"
 ---
 # <a name="lib-input-files"></a>Pliki wyjściowe LIB
 
@@ -26,6 +26,6 @@ Pliki wejściowe, oczekiwany przez LIB zależą od trybu, w którym jest on uży
 > [!NOTE]
 >  Biblioteki OMF utworzone przez 16-bitową wersję biblioteki nie można użyć jako dane wejściowe do 32-bitowej wersji LIB.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Informacje o LIB](../../build/reference/overview-of-lib.md)

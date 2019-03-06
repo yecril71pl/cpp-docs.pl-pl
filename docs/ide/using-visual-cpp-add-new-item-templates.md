@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: 0e63a1e9b2ab5c479d5a85cd24e92ad41fb286ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4480bc7389e1c116dbc97235da06cab75e2a5a8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424421"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 
@@ -35,7 +35,7 @@ Poniższa tabela jest alfabetyczną listę szablonów programu Visual C++ Dodaj 
 |Plik nagłówka (.h)|Tworzy plik nagłówka C++.|
 |Strony HTML (.htm)|Tworzy pusty plik HTML.|
 |Plik ikony (.ico)|Tworzy plik ikona Win32.|
-|Klasa Instalatora|Dodaje klasę, która dziedziczy [klasa Instalatora](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) przy użyciu funkcji z aparatem CLR.|
+|Klasa Instalatora|Dodaje klasę, która dziedziczy <xref:System.Configuration.Install.Installer> przy użyciu funkcji z aparatem CLR.|
 |Plik MIDL (.idl)|Tworzy plik języka definicji interfejsu.|
 |Plik definicji modułu (.def)|Tworzy plik definicji eksportowania biblioteki DLL.|
 |Arkusz właściwości (.props)|Tworzy plik arkusza właściwości języka Visual C++.|
@@ -45,14 +45,14 @@ Poniższa tabela jest alfabetyczną listę szablonów programu Visual C++ Dodaj 
 |Plik szablonu zasobu (.rct)|Tworzy plik szablonu zasobów.|
 |Wstążka (.mfcribbon-ms)|Tworzy plik wstążki.|
 |Plik odpowiedzi serwera (.srf)|Tworzy plik odpowiedzi serwera, który jest używany przez serwer ATL.|
-|Plik skryptu SQL (.sql)|Tworzy plik skryptu SQL. **Uwaga:** ten szablon nie jest funkcją w wersji Professional.|
+|Plik skryptu SQL (.sql)|Tworzy plik skryptu SQL. **Uwaga:**  Ten szablon nie jest funkcją w wersji Professional.|
 |Arkusz stylów (CSS)|Dodaje kaskadowy arkusz stylów używany do szczegółowych definicji stylów HTML.|
 |Plik tekstowy (txt)|Dodaje pusty plik tekstowy.|
 |Kontrolka użytkownika|Dodaje formant użytkownika przy użyciu funkcji z aparatem CLR.|
 |Formularz Windows|Dodaje formularza Windows przy użyciu funkcji z aparatem CLR.|
 |Plik XML (.xml)|Dodaje pusty plik XML.|
 |Plik schematu XML (XSD)|Tworzy plik, który jest używany do definiowania schematu dokumentów XML.|
-|Plik XSLT (.xslt)|Tworzy plik wykorzystywany do transformacji dokumentów XML.|
+|XSLT File (.xslt)|Tworzy plik wykorzystywany do transformacji dokumentów XML.|
 
 ## <a name="see-also"></a>Zobacz też
 

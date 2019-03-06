@@ -1,5 +1,5 @@
 ---
-title: 'Biblioteki DLL rozszerzeń: omówienie'
+title: 'Biblioteki DLL rozszerzeń: Omówienie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498205"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425058"
 ---
-# <a name="mfc-extension-dlls-overview"></a>Biblioteki DLL rozszerzeń MFC: omówienie
+# <a name="mfc-extension-dlls-overview"></a>Biblioteki DLL rozszerzeń MFC Omówienie
 
 Rozszerzenia MFC biblioteki DLL jest biblioteki DLL, które zazwyczaj implementują klasy wielokrotnego użytku pochodzące z istniejących klas biblioteki klas Microsoft Foundation. Biblioteki DLL rozszerzeń MFC są tworzone przy użyciu wersji biblioteki DLL MFC (znany także jako udostępnionej wersja MFC). Tylko pliki wykonywalne MFC (aplikacji lub zwykłych bibliotekach MFC dll), które są tworzone za pomocą udostępnionej wersja MFC można użyć rozszerzenia MFC biblioteki DLL. Za pomocą rozszerzenia MFC biblioteki DLL może wyprowadzać nowe klasy niestandardowej z MFC i następnie oferują tej rozszerzonej wersji biblioteki MFC do aplikacji, które wywołują bibliotekę DLL.
 
@@ -35,7 +35,7 @@ Pamiętaj, że termin AFXDLL nie jest już używany w dokumentacji języka Visua
 
 - [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Biblioteki DLL inne niż MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
 
 - [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -43,6 +43,6 @@ Pamiętaj, że termin AFXDLL nie jest już używany w dokumentacji języka Visua
 
 - [Tworzenie biblioteki DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)

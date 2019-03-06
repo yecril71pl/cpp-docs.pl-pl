@@ -6,12 +6,12 @@ helpviewer_keywords:
 - linker command line [C++]
 - LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-ms.openlocfilehash: 844d2fe4c02e274cda02fe71303f0b6dd092b431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55171c1f16b43e08b5c4a6b078c82f4ed08855d5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422731"
 ---
 # <a name="linker-command-line-syntax"></a>Składnia wiersza polecenia konsolidatora
 
@@ -32,7 +32,7 @@ Aby przekazać plik do konsolidatora, określ nazwę pliku w wierszu polecenia p
 
 Link.exe zwraca 0 w przypadku sukcesu (bez błędów).  W przeciwnym razie program łączący zwraca numer błędu, który zatrzymał łącze.  Na przykład jeśli konsolidator wygeneruje LNK1104, konsolidator zwraca 1104.  W związku z tym najniższy numer błędu zwracany w przypadku błędu przez konsolidator wynosi 1000.  Zwracana wartość wynosząca 128 reprezentuje na problem z konfiguracją systemu operacyjnego lub pliku .config; Moduł ładujący nie została załadowana link.exe lub c2.dll.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)

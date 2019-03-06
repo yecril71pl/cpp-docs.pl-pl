@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 9be8573f5f9c344d2675bd7c9fc7d8beb3c8cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21649838ba81f3affdda3f3833de23e4d9e33746
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422536"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Włącz funkcję _pexit Hook)
 
@@ -52,7 +52,7 @@ void __declspec(naked) __cdecl _pexit( void );
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

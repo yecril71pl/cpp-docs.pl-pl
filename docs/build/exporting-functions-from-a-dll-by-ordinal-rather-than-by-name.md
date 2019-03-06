@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: 6a5ac13fdc85b3cb1626aefa28b92866a8c856c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe34ec90aa775e7435d4a02b9d77a9cb9c8fdd65
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423303"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 
@@ -29,6 +29,6 @@ Najprostszym sposobem, aby wyeksportować funkcje z biblioteki DLL nie jest eksp
 
 - [Użyj atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
