@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424083"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (włącz ochronę przepływu sterowania)
 
@@ -48,7 +48,7 @@ Kod skompilowany przy użyciu **/GUARD: CF** mogą być połączone z biblioteki
 
 1. W kontrolce listy rozwijanej wybierz **tak** można włączyć ochrony przepływu sterowania lub **nie** go wyłączyć.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

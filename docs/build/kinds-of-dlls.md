@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441122"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424811"
 ---
 # <a name="kinds-of-dlls"></a>Rodzaje bibliotek DLL
 
@@ -31,7 +31,7 @@ Sama biblioteka MFC jest dostępna, w bibliotekach łącza statycznego lub w sze
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki DLL inne niż MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
 
 - [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -55,11 +55,11 @@ Jeśli biblioteka DLL będzie używana tylko przez pliki wykonywalne MFC, możes
 
 Jeśli biblioteka DLL dynamicznie łączy z MFC, biblioteki MFC dll mogą być rozdystrybuowane z biblioteką DLL. Ta architektura jest szczególnie pomocna przy udostępnianiu biblioteki klas, aby zaoszczędzić miejsce na dysku i zminimalizować użycie pamięci na wielu plikom wykonawczym.
 
-Przed wersją 4.0, Visual C++ obsługiwał tylko dwa rodzaje bibliotek DLL, które używały MFC: Usrdll i Afxdll. Regularne biblioteki DLL MFC połączone statycznie z MFC mają takie same charakterystyki jak dawny USRDLL. Rozszerzone dll MFC mają takie same charakterystyki jak dawne biblioteki Afxdll.
+Przed wersją 4.0 język Visual C++ obsługuje tylko dwa rodzaje bibliotek DLL, które używały MFC: Usrdll i Afxdll. Regularne biblioteki DLL MFC połączone statycznie z MFC mają takie same charakterystyki jak dawny USRDLL. Rozszerzone dll MFC mają takie same charakterystyki jak dawne biblioteki Afxdll.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki DLL inne niż MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
 
 - [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -67,6 +67,6 @@ Przed wersją 4.0, Visual C++ obsługiwał tylko dwa rodzaje bibliotek DLL, któ
 
 - [Biblioteki DLL rozszerzeń MFC: omówienie](../build/extension-dlls-overview.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

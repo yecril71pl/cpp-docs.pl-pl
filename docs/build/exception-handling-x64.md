@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627543"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422978"
 ---
 # <a name="x64-exception-handling"></a>x64 obsługi wyjątków
 
@@ -182,21 +182,21 @@ Kod operacji odwijania jest jedną z następujących wartości:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|Stary RSP|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|Stary RSP|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|PROTOKÓŁ RIP|
 
   Jeśli informacje o operacji jest równa 1, następnie jedną z tych ramki zostało wypchnięte:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|Stary RSP|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|PROTOKÓŁ RIP|
+  |RSP+40|SS|
+  |RSP+32|Stary RSP|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|PROTOKÓŁ RIP|
   |RSP|Kod błędu|
 
   Ten kod odwijania jest zawsze wyświetlany w prologu fikcyjnego z rolą, która faktycznie nigdy nie jest wykonywane, ale zamiast tego jest umieszczany przed punktu wejścia rzeczywistych procedury przerwań i istnieje tylko po to, aby zapewnić miejsce, aby zasymulować wypychania ramki maszyny. `UWOP_PUSH_MACHFRAME` rejestruje symulacji i wskazuje, że komputer ma pod względem koncepcyjnym przeprowadzane tej operacji:
@@ -330,7 +330,7 @@ Do napisania procedury prawidłowego zestawu ustawiono pseudo-operacje, które m
 |Operacja pseudo|Opis|
 |-|-|
 |RAMKA PROC \[:*ehandler*]|Powoduje, że MASM, można wygenerować funkcji tabeli wpis .pdata i unwind informacje zawarte w .xdata dla funkcji w strukturze wyjątków unwind zachowanie.  Jeśli *ehandler* jest obecny, ten proces został wprowadzony w .xdata jako procedura obsługi określonego języka.<br /><br /> Gdy atrybut ramki jest używany, należy wprowadzić znak. Dyrektywa ENDPROLOG.  Jeśli funkcja jest funkcją typu liść (zgodnie z definicją w [funkcji typy](../build/stack-usage.md#function-types)) atrybut ramki jest zbędne, ponieważ są w pozostałej części te pseudo operacje.|
-|. PUSHREG *zarejestrować*|Generuje wpis UWOP_PUSH_NONVOL unwind kodu dla określonego rejestru numeru przy użyciu bieżącego przesunięcie w prologu.<br /><br /> Powinno to można używać tylko z rejestrów nieulotnej liczby całkowitej.  Wypchnięć volatile rejestrów, należy użyć. ALLOCSTACK 8, zamiast tego|
+|.PUSHREG *register*|Generuje wpis UWOP_PUSH_NONVOL unwind kodu dla określonego rejestru numeru przy użyciu bieżącego przesunięcie w prologu.<br /><br /> Powinno to można używać tylko z rejestrów nieulotnej liczby całkowitej.  Wypchnięć volatile rejestrów, należy użyć. ALLOCSTACK 8, zamiast tego|
 |. SETFRAME *zarejestrować*, *przesunięcia*|Wypełnienia w klatce zarejestrować pola i przesunięcie unwind informacje przy użyciu określonego rejestru i przesunięcia. Przesunięcie musi być wielokrotnością liczby 16 i mniejsza niż 240. Ta dyrektywa generuje również nazwę UWOP_SET_FPREG unwind kodu dla określonego rejestru za pomocą bieżące przesunięcie prologu.|
 |. ALLOCSTACK *rozmiar*|Generuje UWOP_ALLOC_SMALL lub UWOP_ALLOC_LARGE o określonym rozmiarze, aby uzyskać bieżące przesunięcie w prologu.<br /><br /> *Rozmiar* operand musi być wielokrotnością liczby 8.|
 |. SAVEREG *zarejestrować*, *przesunięcia*|Generuje UWOP_SAVE_NONVOL lub wpis UWOP_SAVE_NONVOL_FAR unwind kodu dla określonego rejestru i przesunięcia za pomocą bieżące przesunięcie prologu. MASM wybiera najbardziej efektywny sposób kodowania.<br /><br /> *Przesunięcie* musi być dodatnia i wielokrotność liczby 8. *Przesunięcie* względem base ramki procedury, która jest zwykle w RSP, lub, jeśli za pomocą wskaźnika ramki, wskaźnik ramki nieskalowanego.|
@@ -395,10 +395,10 @@ Aby uprościć używanie [pierwotne pseudo-operacje](#raw-pseudo-operations), us
 |-|-|
 |alloc_stack(n)|Przydziela ramkę stosu w bajtach n (przy użyciu `sub rsp, n`) i emituje odpowiednie unwind informacji (.allocstack — n)|
 |save_reg *reg*, *lokalizacja*|Zapisuje nieulotnej rejestru *reg* na stosie na RSP przesunięcie *loc*i emituje odpowiednie informacje o operacji unwind. (reg .savereg — lokalizacja)|
-|push_reg *reg.*|Wypycha nieulotnej rejestru *reg* na stosie i emituje odpowiednie informacje o operacji unwind. (.pushreg — reg)|
-|rex_push_reg *reg.*|Zapisz nieulotnej rejestru na stosie, za pomocą wypychania 2 bajtów, a następnie emituje odpowiednie informacje (.pushreg — reg), ta powinna być używana w przypadku wypychania pierwsza instrukcja w funkcji do upewnij się, że funkcja hot-patchable operacji unwind.|
+|push_reg *reg*|Wypycha nieulotnej rejestru *reg* na stosie i emituje odpowiednie informacje o operacji unwind. (.pushreg — reg)|
+|rex_push_reg *reg*|Zapisz nieulotnej rejestru na stosie, za pomocą wypychania 2 bajtów, a następnie emituje odpowiednie informacje (.pushreg — reg), ta powinna być używana w przypadku wypychania pierwsza instrukcja w funkcji do upewnij się, że funkcja hot-patchable operacji unwind.|
 |save_xmm128 *reg*, *lokalizacja*|Zapisuje nieulotnej rejestru XMM *reg* na stosie na RSP przesunięcie *loc*i emituje odpowiednie unwind informacji (reg .savexmm128 —, lokalizacja)|
-|set_frame *reg*, *przesunięcia*|Ustawia rejestr ramki *reg* jako RSP + *przesunięcie* (przy użyciu `mov`, lub `lea`) i emituje odpowiednie unwind informacji (.set_frame reg, przesunięcie)|
+|set_frame *reg*, *offset*|Ustawia rejestr ramki *reg* jako RSP + *przesunięcie* (przy użyciu `mov`, lub `lea`) i emituje odpowiednie unwind informacji (.set_frame reg, przesunięcie)|
 |push_eflags|Wypycha eflags z `pushfq` instrukcji i emituje odpowiednie unwind informacji (.alloc_stack 8)|
 
 Poniżej przedstawiono przykładowe prologu funkcji, z użyciem odpowiednich makr:
@@ -502,6 +502,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[x64 konwencje kodowania](../build/x64-software-conventions.md)
+[Konwencje kodowania x64](../build/x64-software-conventions.md)

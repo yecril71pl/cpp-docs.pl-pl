@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 513e6bd7b1120dd710852ab61aa7603bba74907e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 055edf4efc066695abb60a09b84cb1b13302af9c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423966"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)
 
@@ -72,6 +72,6 @@ Istnieje nie thunk i nie `jmp` instrukcji, dzięki czemu kod jest mniejsze i szy
 
 Z drugiej strony dla wywołań funkcji wewnątrz biblioteki DLL, nie będzie ma być konieczne użycie wywołanie pośrednie. Znasz już adresu funkcji. Ponieważ czas i miejsce są wymagane do ładowania i przechowywania adresu funkcji przed wywołanie pośrednie, bezpośrednie wywołanie jest zawsze szybszy i mniejszy. Chcesz użyć **__declspec(dllimport)** podczas wywoływania funkcji DLL z poza bibliotekę DLL, sam. Nie używaj **__declspec(dllimport)** funkcji wewnątrz biblioteki DLL, podczas tworzenia tej biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Importowanie do aplikacji](../build/importing-into-an-application.md)

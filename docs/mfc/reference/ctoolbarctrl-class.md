@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302515"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424486"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w obszarze **uwagi**.
 
 *Rect*<br/>
-Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki paska narzędzi. Nie może być równa NULL.
@@ -681,7 +681,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w **uwagi** części [Utwórz](#create).
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Liczony od zera indeks przycisku, dla którego mają zostać pobrane informacje.
 
 *lpRect*<br/>
-Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który odbiera współrzędne prostokąt otaczający.
+Adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który odbiera współrzędne prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 Identyfikator przycisku.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury do uzyskiwania informacji prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parametry
 
 *ppt*<br/>
-Wskaźnik do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która zawiera współrzędną x test trafień w `x` członka i współrzędną y hit test w `y` elementu członkowskiego. Współrzędne są względne wobec obszaru klienckiego pasku narzędzi.
+Wskaźnik do [punktu](/previous-versions/dd162805\(v=vs.85\)) strukturę, która zawiera współrzędną x test trafień w `x` członka i współrzędną y hit test w `y` elementu członkowskiego. Współrzędne są względne wobec obszaru klienckiego pasku narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *ppt*<br/>
-Wskaźnik do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, który zawiera test trafień służy do koordynowania, względem pola klienta, na pasku narzędzi.
+Wskaźnik do [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, który zawiera test trafień służy do koordynowania, względem pola klienta, na pasku narzędzi.
 
 *ptbim*<br/>
 Wskaźnik do [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) strukturę, która otrzymuje informacje znacznika wstawiania.
@@ -2295,7 +2295,7 @@ void SetRows(
 Informuje, czy ma być używany mniej wierszy lub więcej wierszy, jeśli pasek narzędzi nie można zmienić rozmiaru do żądanej liczby wierszy.
 
 *lpRect*<br/>
-Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zostanie wyświetlony nowy prostokąt otaczający paska narzędzi.
+Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która zostanie wyświetlony nowy prostokąt otaczający paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 

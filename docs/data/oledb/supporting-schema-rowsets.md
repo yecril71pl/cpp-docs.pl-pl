@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: f8809754cc79d2a8c3d0f7bd32630ad9cab70a43
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556884"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423108"
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 
-Zestawy wierszy schematu umożliwiają klientom uzyskiwanie informacji na temat magazynu danych nie wiedząc o tym wewnętrzna struktura lub schematu. Na przykład magazyn danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc będzie żaden sposób zapewnić znajomości schematu z wyjątkiem sytuacji, zapoznając się go. (Inny przykład kreatorów Visual C++ Użyj zestawów wierszy schematu do generowania metody dostępu dla użytkownika). Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania `IDBSchemaRowset`.
+Zestawy wierszy schematu umożliwiają klientom uzyskiwanie informacji na temat magazynu danych nie wiedząc o tym wewnętrzna struktura lub schematu. Na przykład magazyn danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc będzie żaden sposób zapewnić znajomości schematu z wyjątkiem sytuacji, zapoznając się go. (Inny przykład kreatorów Visual C++ Użyj zestawów wierszy schematu do generowania metody dostępu dla użytkownika). Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` obsługuje następujące metody:
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` dziedziczy `IDBSchemaRowsetImpl`, więc posiada wartość ograniczenia obsługi metod. Za pomocą `CSchemaRowsetImpl`, Zadeklaruj trzy klasy podrzędnej (wymienione w powyższej Mapa schematu): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, i `CUpdateSessionPTSchemaRowset`. Każda z tych klas podrzędnych ma `Execute` metoda, która obsługuje jego odpowiedniego zestawu ograniczeń (kryteria wyszukiwania). Każdy `Execute` metoda porównuje wartości *cRestrictions* i *rgRestrictions* parametrów. Zobacz opis tych parametrów w [setrestrictions —](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zobacz tabelę wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) w **OLE DB Podręcznik programisty** w zestawie Windows SDK .
+Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zobacz tabelę wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) w **OLE DB Podręcznik programisty** w zestawie Windows SDK .
 
 Na przykład jeśli ograniczenia nazwa_tabeli jest obsługiwana przez DBSCHEMA_TABLES, czy wykonaj następujące czynności:
 
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` Ustawia tylko dla trzech kolumnach: nazwa_tabeli, TABLE_TYPE i opis. Zanotuj wartości kolumn, dla których zwrócić informacje, ponieważ ta informacja będzie potrzebna podczas implementowania `GetDBStatus`:
+`UpdatePV` Ustawia tylko trzy kolumny: Nazwa_tabeli TABLE_TYPE i opis. Zanotuj wartości kolumn, dla których zwrócić informacje, ponieważ ta informacja będzie potrzebna podczas implementowania `GetDBStatus`:
 
 ```cpp
     _ATLTRY

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: 440bf785f61a438099a394319a6df6e7389a608d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19673c9b8415c663462873e87535cf086987388d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692531"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422653"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generowanie manifestu w wierszu polecenia
 
-Podczas kompilowania aplikacji C/C++ z poziomu wiersza polecenia przy użyciu nmake lub podobnego narzędzia, manifest jest generowany po konsolidator jest przetwarzane wszystkie pliki obiektów i wbudowane końcowym pliku binarnym. Konsolidator zbiera informacje o zestawie, przechowywane w plikach obiektowych i łączy te informacje do końcowego pliku manifestu. Domyślnie konsolidator wygeneruje plik o nazwie *binary_name*. *rozszerzenie*manifest do opisania końcowym pliku binarnym. Konsolidator nie można osadzić pliku manifestu wewnątrz pliku binarnego i może generować jedynie jako zewnętrznego pliku manifestu. Istnieje kilka sposobów osadzanie manifestu w końcowym pliku binarnym, takiej jak [narzędziu manifestu (mt.exe)](https://msdn.microsoft.com/library/aa375649) lub kompilowanie manifestu do pliku zasobów. Należy pamiętać, że określone zasady muszą być przestrzegane podczas osadzania manifestu w końcowym pliku binarnym, aby umożliwić takie funkcje jak łączenie przyrostowe podpisywania, i Edytuj i Kontynuuj. Te i inne opcje, które zostały omówione w [porady: osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) podczas kompilowania w wierszu polecenia.
+Podczas kompilowania aplikacji C/C++ z poziomu wiersza polecenia przy użyciu nmake lub podobnego narzędzia, manifest jest generowany po konsolidator jest przetwarzane wszystkie pliki obiektów i wbudowane końcowym pliku binarnym. Konsolidator zbiera informacje o zestawie, przechowywane w plikach obiektowych i łączy te informacje do końcowego pliku manifestu. Domyślnie konsolidator wygeneruje plik o nazwie *binary_name*. *rozszerzenie*manifest do opisania końcowym pliku binarnym. Konsolidator nie można osadzić pliku manifestu wewnątrz pliku binarnego i może generować jedynie jako zewnętrznego pliku manifestu. Istnieje kilka sposobów osadzanie manifestu w końcowym pliku binarnym, takiej jak [narzędziu manifestu (mt.exe)](https://msdn.microsoft.com/library/aa375649) lub kompilowanie manifestu do pliku zasobów. Należy pamiętać, że określone zasady muszą być przestrzegane podczas osadzania manifestu w końcowym pliku binarnym, aby umożliwić takie funkcje jak łączenie przyrostowe podpisywania, i Edytuj i Kontynuuj. Te i inne opcje, które zostały omówione w [jak: Osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) podczas kompilowania w wierszu polecenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manifesty](/windows/desktop/sbscs/manifests)<br/>
 [/INCREMENTAL (Łącz stopniowo)](../build/reference/incremental-link-incrementally.md)<br/>

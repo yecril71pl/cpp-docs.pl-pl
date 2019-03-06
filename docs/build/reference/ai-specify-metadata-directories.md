@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a9e752f68ed53c7a94fec1914bc42c39a17648b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2d87039e2195c96e4209c7b5098473a6f52c486
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424447"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 
@@ -28,7 +28,7 @@ Określa katalog, który kompilator będzie przeszukiwał, aby rozwiązać odwo�
 
 ## <a name="arguments"></a>Argumenty
 
-*Katalog*<br/>
+*directory*<br/>
 Katalog lub ścieżka, w której kompilator będzie wyszukiwał.
 
 ## <a name="remarks"></a>Uwagi
@@ -47,7 +47,7 @@ Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedn�
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
