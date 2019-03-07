@@ -1,5 +1,5 @@
 ---
-title: Formanty w oknach dialogowych (C++) | Dokumentacja firmy Microsoft
+title: Formanty okna dialogowego (C++) | Dokumentacja firmy Microsoft
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,28 +13,26 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336517"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563358"
 ---
-# <a name="controls-in-dialog-boxes-c"></a>Formanty w oknach dialogowych (C++)
+# <a name="dialog-box-controls-c"></a>Formanty okna dialogowego (C++)
 
-Okno dialogowe za pomocą można dodawać formanty [Karta Edytor okien dialogowych](../windows/dialog-editor-tab-toolbox.md) w [okno przybornika](/visualstudio/ide/reference/toolbox), który umożliwia wybranie kontrolki ma i przeciągnij go do okna dialogowego. Domyślnie okno przybornika jest równa Autoukrywanie. Jest wyświetlany jako karty na lewym marginesie rozwiązania, gdy Edytor okien dialogowych jest otwarty. Jednakże, możesz przypiąć **przybornika** okna w miejscu, klikając **Autoukrywanie** przycisk w prawym górnym rogu okna. Aby uzyskać więcej informacji na temat sposobu kontrolowania zachowania tego okna, zobacz [Zarządzanie oknem](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+Formanty można dodać za pomocą okno dialogowe **Edytor okien dialogowych** karcie [okno przybornika](/visualstudio/ide/reference/toolbox) który umożliwia wybranie kontrolki ma i przeciągnij go do okna dialogowego. Domyślnie **przybornika** okna jest ustawiona na automatyczne ukrywanie. Będzie ono wyświetlane jako karty na lewym marginesie rozwiązania podczas **Edytor okien dialogowych** jest otwarty. Jednakże, możesz przypiąć **przybornika** okna w miejscu, wybierając **Autoukrywanie** przycisk w prawym górnym rogu okna. Aby uzyskać więcej informacji na temat sposobu kontrolowania zachowania tego okna, zobacz [Zarządzanie oknem](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 Najszybszym sposobem na dodawanie formantów do okna dialogowego, zmienianie położenia istniejących kontrolek lub przenoszenie formantów w oknie dialogowym do innego, jest metodą przeciągania i upuszczania. Położenie kontrolki jest opisany w linia kropkowana, dopóki nie zostanie usunięte w oknie dialogowym. Po dodaniu kontrolki do okna dialogowego za pomocą metody przeciągania i upuszczania kontrolki otrzymuje standardową wysokość odpowiednie dla tego typu kontrolki.
 
 Podczas dodawania kontrolki do okna dialogowego lub zmienić jej położenie, jego położenie końcowego może zależeć od prowadnice i marginesy, czy należy wprowadzić jakieś siatki układu włączona.
 
-Po dodaniu kontrolki do okna dialogowego, można zmienić właściwości, takie jak jego podpis w [okno właściwości](/visualstudio/ide/reference/properties-window). Można wybrać wiele kontrolek i zmiany ich właściwości wszystkie na raz.
+Po dodaniu kontrolki do okna dialogowego, można zmienić właściwości, takie jak jego podpis w [okno właściwości](/visualstudio/ide/reference/properties-window). Można również wybrać kilka formantów i zmiany ich właściwości wszystkie na raz.
 
-- [Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)
+Aby uzyskać więcej informacji na temat **Edytor okien dialogowych**, zobacz instrukcje [Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md), [układu kontrolek](../windows/arrangement-of-controls-on-dialog-boxes.md), i [wartościidefiniowaniekontrolidostępu](../windows/defining-mnemonics-access-keys.md).
 
-- [Instrukcje: Rozmieszczanie formantów](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Instrukcje: Definiowanie wartości i kontrola dostępu](../windows/defining-mnemonics-access-keys.md)
+Aby uzyskać więcej informacji o oknach dialogowych i formantów, zobacz [klasy kontrolek](../mfc/control-classes.md), [klasy okien dialogowych](../mfc/dialog-box-classes.md), i [Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Formanty standardowe dostępne w **przybornika** z domyślną zdarzenia są:
 
@@ -44,17 +42,18 @@ Formanty standardowe dostępne w **przybornika** z domyślną zdarzenia są:
 |[Kontrolka pola wyboru](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Kontrolka pola kombi](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[Edytuj kontrolkę](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Pole grupy|(Nie dotyczy)|
+|Pole grupy|(nie dotyczy)|
 |[Kontrolka pola listy](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[Kontrolka przycisku radiowego](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Kontrolka tekstu statycznego](../mfc/reference/cstatic-class.md)|(Nie dotyczy)|
-|[Formant obrazu](../mfc/reference/cpictureholder-class.md)|(Nie dotyczy)|
+|[Kontrolka tekstu statycznego](../mfc/reference/cstatic-class.md)|(nie dotyczy)|
+|[Formant obrazu](../mfc/reference/cpictureholder-class.md)|(nie dotyczy)|
 |[Kontrolka 2.0 edycji wzbogaconej](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[Pasek przewijania](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
-Aby uzyskać więcej informacji na temat korzystania z **RichEdit 1.0** kontrolką MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) i [przykłady formantów edycji wzbogaconej](../mfc/rich-edit-control-examples.md).
+> [!NOTE]
+> Aby uzyskać więcej informacji na temat korzystania z **RichEdit 1.0** kontrolką MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) i [przykłady formantów edycji wzbogaconej](../mfc/rich-edit-control-examples.md).
 
-[Wspólnych formantów Windows](../mfc/controls-mfc.md) dostępne w **przybornika** zapewniają większą funkcjonalność w aplikacji. Obejmują one:
+[Wspólnych formantów Windows](../mfc/controls-mfc.md) dostępne w **przybornika** aby zapewnić większą funkcjonalność są:
 
 |Nazwa kontrolki|Domyślne zdarzenia|
 |---|---|
@@ -72,18 +71,17 @@ Aby uzyskać więcej informacji na temat korzystania z **RichEdit 1.0** kontrolk
 |[Rozszerzone formant pola kombi](../mfc/creating-an-extended-combo-box-control.md)||
 |Kontrolka niestandardowa|TTN_GETDISPINFO|
 
-Aby uzyskać więcej informacji, zobacz [klasy kontrolek](../mfc/control-classes.md), [klasy okien dialogowych](../mfc/dialog-box-classes.md), i [Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
-
 ## <a name="custom-controls"></a>Formanty niestandardowe
 
-Edytor okien dialogowych pozwala Użyj istniejącej "niestandardowe" lub "user" kontrolek w szablonu okna dialogowego.
+**Edytor okien dialogowych** umożliwia Użyj istniejącej niestandardowej lub kontrolki użytkownika w szablonu okna dialogowego.
 
 > [!NOTE]
 > Niestandardowe formanty w tym sensie są nie należy mylić z kontrolkami ActiveX. Kontrolki ActiveX były nazywane niestandardowych formantów OLE. Ponadto nie należy mylić tych kontrolek z kontrolki rysowane przez właściciela z Windows.
 
 Ta funkcja jest przeznaczona do umożliwiają używanie kontrolek w inne niż te dostarczone przez Windows. W czasie wykonywania kontrolka jest skojarzony z klasy okna (nie taka sama jak klasa C++). Jest bardziej typowym sposobem wykonania tego samego zadania do zainstalowania dowolnej kontrolki, takie jak formant statyczny w oknie dialogowym. Następnie w czasie wykonywania w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji, Usuń tę kontrolkę i zastąp go własny niestandardowy formant.
 
-Jest to technika stary. Obecnie zaleca w większości przypadków można zapisać formantu ActiveX lub podklasy formantu wspólnego Windows.
+> [!NOTE]
+> Jest to technika stary. Obecnie zaleca w większości przypadków można zapisać formantu ActiveX lub podklasy formantu wspólnego Windows.
 
 W przypadku kontrolek niestandardowych są ograniczone do:
 
@@ -91,7 +89,7 @@ W przypadku kontrolek niestandardowych są ograniczone do:
 
 - Wpisywanie podpisu.
 
-- Identyfikowanie nazwę klasy Windows formantu (kod aplikacji należy go zarejestrować przy użyciu tej nazwy).
+- Identyfikowanie nazwę formantu Windows klasy, ponieważ kod aplikacji należy go zarejestrować przy użyciu tej nazwy.
 
 - Wpisując wartość szesnastkową 32-bitowe i ustawia styl formantu.
 
@@ -101,9 +99,11 @@ W przypadku kontrolek niestandardowych są ograniczone do:
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)<br/>
+
+<!--
+[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Controls](../mfc/controls-mfc.md)<br/>-->

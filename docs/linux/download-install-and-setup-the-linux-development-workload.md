@@ -1,18 +1,22 @@
 ---
 title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 5fa4b6ee953748673564bf6eeb9018783e02dce8
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763892"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562812"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
+# <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
-Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania projektów w języku C++, które są wykonywane na komputerze fizycznym Linux maszyny wirtualnej lub [podsystem Windows dla systemu Linux](/windows/wsl/about). Dla każdego z tych scenariuszy, należy najpierw zainstalować **programowanie dla systemu Linux przy użyciu języka C++** obciążenia.
+Program Visual Studio 2017 IDE w Windows służy do tworzenia, edytowania i debugowania projektów w języku C++, które są wykonywane na komputerze fizycznym Linux maszyny wirtualnej lub [podsystem Windows dla systemu Linux](/windows/wsl/about). 
+
+Można pracować na istniejącej bazie kodu używającej narzędzia CMake lub innego systemu kompilacji bez konieczności konwertowania go do projektu programu Visual Studio. Jeśli baza kodu jest dla wielu platform, mogą kierować zarówno Windows, jak i Linux z poziomu programu Visual Studio. Na przykład, można edytować, debugowania i profilowania kodu na Windows przy użyciu programu Visual Studio. następnie szybko rzekieruj projekt dla systemu Linux w celu dalszego badania. Pliki nagłówkowe systemu Linux są automatycznie kopiowane do komputera lokalnego, gdzie program Visual Studio są one używane do zapewnienia pełną obsługą technologii IntelliSense (uzupełnianie, przejdź do definicji i tak dalej) pomocy technicznej.
+ 
+Dla każdego z tych scenariuszy **programowanie dla systemu Linux przy użyciu języka C++** obciążenie jest wymagane. 
 
 ## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
@@ -22,6 +26,8 @@ Visual Studio IDE w Windows służy do tworzenia, edytowania i debugowania proje
    ![Visual C++ dla obciążenia programowanie dla systemu Linux](media/linuxworkload.png)
 
 1. Jeśli używasz narzędzia CMake lub są przeznaczone dla platformy osadzonych i IoT, przejdź do strony **szczegółowe informacje dotyczące instalacji** w okienku po prawej stronie w obszarze **programowanie dla systemu Linux przy użyciu języka C++**, rozwiń węzeł **składniki opcjonalne** i wybierz potrzebne składniki.
+
+    **Visual Studio 2017 w wersji 15.4 lub nowszy**<br/>: Po zainstalowaniu obciążenia języka Linux C++ dla Visual Studio Obsługa CMake dla systemu Linux jest domyślnie zaznaczone.
 
 1. Kliknij przycisk **Modyfikuj** do kontynuowania instalacji.
 
@@ -62,4 +68,9 @@ Używa docelowej maszynie Fedora **dnf** pakiet Instalatora. Aby pobrać **opens
    `sudo systemctl start sshd`
 
    Spowoduje to uruchomienie usługi i działa w tle, gotowy do akceptowania połączeń.
+
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Upewnij się, że CMake 3.8 na zdalnym komputerze z systemem Linux
+
+Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne na maszynie z systemem Linux na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+
 

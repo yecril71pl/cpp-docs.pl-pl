@@ -2,21 +2,21 @@
 title: Dokumentacja języka Visual C++ (C + +/ CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422965"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Dokumentacja języka Visual C++ (C + +/ CX)
 
 C + +/ CX to zestaw rozszerzeń języka C++, które umożliwiają tworzenie aplikacji Windows i składników środowiska wykonawczego Windows w idiom, który jest możliwie blisko możliwie do nowoczesnego języka C++. Użyj języka C + +/ CX do pisania aplikacji Windows i składników kodu macierzystego, który łatwością wchodzić w interakcje z Visual C#, Visual Basic i języka JavaScript, a inne języki, które obsługują środowiska wykonawczego Windows. W tych rzadkich przypadkach, które wymagają bezpośredniego dostępu do surowego interfejsów COM lub kod bez wyjątków, można użyć [Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> **[C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) jest zalecaną alternatywą dla C + +/ CX**. To nowe, standard C ++ 17 języka projekcji Windows Runtime interfejsów API, dostępne w najnowszy zestaw Windows 10 SDK z wersji 1803 wartości. C + +/ WinRT jest zaimplementowana w całości w plikach nagłówkowych i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu Windows API.
+> **[C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/index) jest zalecaną alternatywą dla C + +/ CX**. To nowe, standard C ++ 17 języka projekcji Windows Runtime interfejsów API, dostępne w najnowszy zestaw Windows 10 SDK z wersji 1803 wartości. C + +/ WinRT jest zaimplementowana w całości w plikach nagłówkowych i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu Windows API.
 >
-> Za pomocą C + +/ WinRT, można używać lub Tworzenie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami języka C ++ 17 kompilatora. C + +/ WinRT zazwyczaj działa lepiej i generuje mniejsze pliki binarne niż innych opcji języka dla środowiska wykonawczego Windows. Firma Microsoft będzie obsługiwać C + +/ CX i WRL, ale zdecydowanie zalecamy, aby użyć nowych aplikacji C + +/ WinRT. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Za pomocą C + +/ WinRT, można używać lub Tworzenie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami języka C ++ 17 kompilatora. C + +/ WinRT zazwyczaj działa lepiej i generuje mniejsze pliki binarne niż innych opcji języka dla środowiska wykonawczego Windows. Firma Microsoft będzie obsługiwać C + +/ CX i WRL, ale zdecydowanie zalecamy, aby użyć nowych aplikacji C + +/ WinRT. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 Za pomocą C + +/ CX, można utworzyć:
 
@@ -26,7 +26,7 @@ Za pomocą C + +/ CX, można utworzyć:
 
 - Gry Windows DirectX i aplikacji intensywnie korzystających z grafiki. Aby uzyskać więcej informacji, zobacz [Tworzenie prostej grze platformy uniwersalnej systemu Windows przy użyciu technologii DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
 
-## <a name="related-articles"></a>Powiązane artykuły
+## <a name="related-articles"></a>Pokrewne artykuły:
 
 |||
 |-|-|
@@ -38,4 +38,4 @@ Za pomocą C + +/ CX, można utworzyć:
 |[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja dotycząca domyślny obszar nazw, przestrzeń nazw platformy, Platform::Collections i pokrewne obszary nazw.|
 |[Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Wyświetla listę funkcji CRT, które nie są dostępne do użycia w aplikacjach Windows Runtime.|
 |[Przewodniki z instrukcjami dla aplikacji systemu Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Zawiera ogólne wskazówki na temat aplikacji systemu Windows 10 i linki do szczegółowych informacji.|
-|[C + +/ CX część 0 \[n\]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX, część 1 z \[n\]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[n\]: typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[n\]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wprowadzające cyklu blogów Visual C++ w języku C + +/ CX.|
+|[C + +/ CX część 0 \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX, część 1 z \[n\]: Proste klasy](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[n\]: Typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[n\]: Statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wprowadzające cyklu blogów Visual C++ w języku C + +/ CX.|

@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549711"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421810"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -27,10 +27,10 @@ Określa Brak rozszerzonych instrukcji, a także określa x87 dla obliczeń zmie
 **/arch:SSE**<br/>
 Włącza używanie instrukcji SSE.
 
-**SSE2**<br/>
+**/arch:SSE2**<br/>
 Włącza używanie instrukcji SSE2. Jest to domyślny instrukcji na x86 platformy, jeśli nie **/arch** określono opcję.
 
-**/ arch:**<br/>
+**/arch:AVX**<br/>
 Włącza używanie instrukcji Intel Advanced Vector Extensions.
 
 **/arch:AVX2**<br/>
@@ -78,7 +78,7 @@ r = t + d;     // This should produce the same overall result
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [/arch (Minimalna architektura procesora CPU)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>

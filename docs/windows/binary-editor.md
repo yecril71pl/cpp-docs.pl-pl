@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210721"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562864"
 ---
 # <a name="binary-editor-c"></a>Edytor plików binarnych (C++)
 
 > [!CAUTION]
 > Edytowanie zasobów, takich jak okna dialogowe, obrazów lub menu w **Edytor plików binarnych** jest niebezpieczne. Niepoprawne edytowanie może spowodować uszkodzenie zasobów, dzięki czemu można odczytać w edytorze natywnych.
 
-**Edytor plików binarnych** służy do edytowania dowolnego zasobu w poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Użyj **Edytor plików binarnych** tylko potrzebne do wyświetlania lub wprowadzić drobne zmiany zasoby niestandardowe lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio.
+**Edytor plików binarnych** służy do edytowania dowolnego zasobu w poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Użyj **Edytor plików binarnych** tylko potrzebne do wyświetlania lub wprowadzić drobne zmiany zasoby niestandardowe lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio. **Edytor plików binarnych** nie jest dostępny w wersji Express.
 
-Aby otworzyć **Edytor plików binarnych** dla nowego pliku, przejdź do menu **pliku** > **New** > **pliku**, wybierz typ plik który chcesz edytować, a następnie wybierz strzałkę obok listy pola **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
+- Aby otworzyć **Edytor plików binarnych** dla nowego pliku, przejdź do menu **pliku** > **New** > **pliku**, wybierz typ plik który chcesz edytować, a następnie wybierz strzałkę obok listy pola **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
 
-Aby otworzyć **Edytor plików binarnych** na istniejący plik, przejdź do menu **pliku** > **Otwórz** > **pliku**, wybierz opcję plik który chcesz edytować, a następnie wybierz strzałkę obok listy pola **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
+- Aby otworzyć **Edytor plików binarnych** na istniejący plik, przejdź do menu **pliku** > **Otwórz** > **pliku**, wybierz opcję plik który chcesz edytować, a następnie wybierz strzałkę obok listy pola **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.
 
    ![Edytor plików binarnych](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Dane binarne dla okna dialogowego wyświetlane w **Edytor plików binarnych**
@@ -45,9 +45,7 @@ Aby otworzyć **Edytor plików binarnych** na istniejący plik, przejdź do menu
 Tylko niektóre wartości ASCII są reprezentowane w **Edytor plików binarnych** (0x20 za pośrednictwem 0x7E). Rozszerzone znaki są wyświetlane jako kropek w prawym okienku ASCII wartość sekcji **Edytor plików binarnych**. Drukowalnych znaków są wartości ASCII 32 za pośrednictwem 126.
 
 > [!TIP]
-> Podczas korzystania z **Edytor plików binarnych**, w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Dostępne polecenia zależą od tego, co kursor wskazuje. Na przykład jeśli klikniesz podczas wskazujący **Edytor plików binarnych** przy użyciu wybranej wartości szesnastkowych, w menu skrótów pojawia się **Wytnij**, **kopiowania**, i **wklejania**  poleceń.
-
-**Edytor plików binarnych** nie jest dostępny w wersji Express.
+> Podczas korzystania z **Edytor plików binarnych**, w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Dostępne polecenia zależą od tego, co kursor wskazuje. Przykładowo po kliknięciu prawym przyciskiem myszy podczas wskazujący **Edytor plików binarnych** przy użyciu wybranej wartości szesnastkowych, w menu skrótów pojawia się **Wytnij**, **kopiowania**i **Wklej** poleceń.
 
 ## <a name="how-to"></a>Instrukcje
 
@@ -55,12 +53,12 @@ Tylko niektóre wartości ASCII są reprezentowane w **Edytor plików binarnych*
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Aby otworzyć zasób pulpitu Windows do edycji plików binarnych
 
-1. W [widok zasobów](../windows/resource-view-window.md), wybierz plik określonego zasobu, który chcesz edytować.
+1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), wybierz plik określonego zasobu, który chcesz edytować.
 
 1. Kliknij prawym przyciskiem myszy zasób, a następnie wybierz pozycję **otwartej obsługi danych binarnych**.
 
 > [!NOTE]
-> Jeśli używasz [widok zasobów](../windows/resource-view-window.md) okna, aby otworzyć zasobu w formacie, który nie rozpoznaje programu Visual Studio, takie jak RCDATA lub zasobów niestandardowych zasobów jest automatycznie otwierany w **Edytor plików binarnych**.
+> Jeśli używasz **widok zasobów** okna, aby otworzyć zasobu w formacie, który nie rozpoznaje programu Visual Studio, takie jak RCDATA lub zasobów niestandardowych zasobów jest automatycznie otwierany w **Edytor plików binarnych**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Aby otworzyć zarządzanych zasobów do edycji plików binarnych
 
@@ -75,8 +73,7 @@ Tylko niektóre wartości ASCII są reprezentowane w **Edytor plików binarnych*
 
 ### <a name="to-edit-a-resource"></a>Aby edytować zasobu
 
-> [!NOTE]
-> Jeśli chcesz używać **Edytor plików binarnych** w zasobie już poddane edycji w innym oknie edytora, zamknąć pozostałe okna edytora najpierw.
+Jeśli chcesz używać **Edytor plików binarnych** w zasobie już poddane edycji w innym oknie edytora, zamknąć pozostałe okna edytora najpierw.
 
 1. Wybierz bajtów, którą chcesz edytować.
 
@@ -93,7 +90,7 @@ Tylko niektóre wartości ASCII są reprezentowane w **Edytor plików binarnych*
 
 Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład, aby znaleźć *Hello*, możesz wyszukać albo ciągu *Hello* lub jego wartości szesnastkowej *48 65 6C 6 C 6 f*.
 
-1. Z **Edytuj** menu, wybierz [znaleźć](/visualstudio/ide/reference/find-command).
+1. Przejdź do menu **Edytuj** > [znaleźć](/visualstudio/ide/reference/find-command).
 
 1. W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub typu danych, którą chcesz znaleźć.
 

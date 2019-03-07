@@ -3,16 +3,16 @@ title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux w języku C
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu zdalnego docelową z wewnątrz projektu języka Linux C++ w programie Visual Studio.
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328399"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562890"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 
-Po utworzeniu projektu języka Linux C++ w programie Visual Studio i łączysz się przy użyciu projektu [Menedżera połączeń systemu Linux](../linux/connect-to-your-remote-linux-computer.md), można uruchamiać i debugować projektu. Skompilować, wykonywanie i możliwe jest debugowanie kodu w zdalnym elemencie docelowym.
+Po utworzeniu projektu języka Linux C++ w programie Visual Studio i łączysz się przy użyciu projektu [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md), można uruchamiać i debugować projektu. Skompilować, wykonywanie i możliwe jest debugowanie kodu w zdalnym elemencie docelowym.
 
 Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
@@ -24,16 +24,16 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
 1. Wybierz tryb debugowania w **debugowanie** stronę właściwości.
 
-   GDB jest używana do debugowania aplikacji działającej w systemie Linux.  Jednak to można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
+   GDB jest używana do debugowania aplikacji działającej w systemie Linux. GDB można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
 
    ![Opcje GDB](media/settings_debugger.png)
 
-   - W **serwera gdbserver** trybie GDB jest uruchamiany lokalnie, w którym do serwera gdbserver uruchomiony w systemie zdalnym.  Należy pamiętać, że jest to tylko trybu, który obsługuje okno konsoli systemu Linux.
+   - W **serwera gdbserver** trybie GDB jest uruchamiany lokalnie, która łączy się serwera gdbserver w systemie zdalnym.  Należy zauważyć, że to tylko tryb, który obsługuje okno konsoli systemu Linux.
 
-   - W **gdb** dyski debugera programu Visual Studio trybie GDB w systemie zdalnym, co jest bardziej zgodne, jeśli lokalna wersja GDB nie jest zgodny z wersją zainstalowaną na komputerze docelowym. |
+   - W **gdb** trybie debugera programu Visual Studio dyski GDB w systemie zdalnym. Jest lepszym rozwiązaniem, jeśli lokalna wersja GDB nie jest zgodny z wersją zainstalowaną na komputerze docelowym. |
 
    > [!NOTE]
-   > Jeśli nie można identyfikować punkty przerwania w trybie debugowania gdbserver następuje lokalne, spróbuj trybie gdb. Najpierw należy gdb [zainstalowane](../linux/download-install-and-setup-the-linux-development-workload.md) w zdalnym elemencie docelowym.
+   > Jeśli nie można identyfikować punkty przerwania w trybie debugowania gdbserver następuje lokalne, spróbuj trybie gdb. Najpierw należy gdb [zainstalowane](download-install-and-setup-the-linux-development-workload.md) w zdalnym elemencie docelowym.
 
 1. Wybierz docelową zdalnego przy użyciu standardu **debugowania** narzędzi w programie Visual Studio.
 
@@ -41,7 +41,7 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
    ![Docelowy zdalnego](media/remote_target.png)
 
-   Jeśli nie masz jeszcze połączenia zdalnego obiektu docelowego, pojawią się instrukcjami, aby użyć [Menedżera połączeń systemu Linux](../linux/connect-to-your-remote-linux-computer.md) nawiązać połączenia z docelowym zdalnego.
+   Jeśli nie masz jeszcze połączenia zdalnego obiektu docelowego, pojawią się instrukcjami, aby użyć [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md) nawiązać połączenia z docelowym zdalnego.
 
    ![Architektura zdalnego](media/architecture.png)
 
@@ -57,7 +57,7 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
    ![Trafiony punkt przerwania](media/hit_breakpoint.png)
 
-   Teraz możesz wchodzić w interakcje z aplikacją w jest bieżący stan, wyświetlanie zmiennych i Przechodź przez kod, naciskając klawisze poleceń takich jak **F10** lub **F11**.
+   Teraz możesz wchodzić w interakcje z aplikacją w jego bieżącym stanie, wyświetlanie zmiennych i Przechodź przez kod, naciskając klawisze poleceń takich jak **F10** lub **F11**.
 
 1. Jeśli chcesz korzystać z konsoli systemu Linux do interakcji z aplikacją, wybierz opcję **Debuguj > Konsola systemu Linux**.
 
@@ -79,10 +79,10 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Aby debugować urządzeń ARM w systemie Linux, zobacz ten wpis w blogu: [debugowania urządzenia osadzonego ARM w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Aby debugować urządzeń ARM w systemie Linux, zobacz ten wpis w blogu: [Debugowanie urządzenia osadzonego ARM w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-- Aby debugować za pomocą **dołączyć do procesu** polecenia, zobacz ten wpis w blogu: [ulepszenia obciążeniu C++ dla systemu Linux w systemie projektu, w oknie konsoli systemu Linux, polecenia rsync i Dołącz do procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
+- Aby debugować za pomocą **dołączyć do procesu** polecenia, zobacz ten wpis w blogu: [Ulepszenia obciążeniu C++ dla systemu Linux w systemie projektu, w oknie konsoli systemu Linux, polecenia rsync i Dołącz do procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Zobacz także
 
-[C++, debugowanie — właściwości (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[C++, debugowanie — właściwości (Linux C++)](prop-pages/debugging-linux.md)

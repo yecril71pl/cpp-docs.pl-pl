@@ -6,16 +6,16 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 30551af0e74759d21cecae54714ca6eca1a37768
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 42b7b95f2da4313bdfcb1d9d8a064ca5be563e40
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423251"
 ---
 # <a name="retrieving-a-blob"></a>Pobieranie obiektu BLOB
 
-Możesz pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Możesz użyć `DBTYPE_BYTES` można pobrać obiektu BLOB jako sekwencja bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiektów blob oraz obiekty OLE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)) w **OLE DB Podręcznik programisty**.
+Możesz pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Możesz użyć `DBTYPE_BYTES` można pobrać obiektu BLOB jako sekwencja bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiektów blob oraz obiekty OLE](/previous-versions/windows/desktop/ms711511(v=vs.85)) w **OLE DB Podręcznik programisty**.
 
 Poniższy kod przedstawia sposób pobierania obiektu BLOB przy użyciu `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) pozwala określić interfejs i flagi używane do interfejsu. Po otwarciu w tabeli, kod wywołuje `Read` wielokrotnie w `ISequentialStream` do odczytywania bajtów z obiektu BLOB. Kod wywołuje `Release` do rozporządzania wskaźnika interfejsu przed wywołaniem `MoveNext` można pobrać następny rekord.
 

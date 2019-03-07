@@ -1,5 +1,5 @@
 ---
-title: Definiowanie wartości i kontrola dostępu
+title: 'Instrukcje: Definiowanie kontroli dostępu i wartości (C++)'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
@@ -22,61 +22,42 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336491"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563371"
 ---
-# <a name="defining-control-access-and-values"></a>Definiowanie wartości i kontrola dostępu
+# <a name="how-to-define-control-access-and-values-c"></a>Instrukcje: Definiowanie kontroli dostępu i wartości (C++)
 
-## <a name="change-the-tab-order-of-controls"></a>Zmiana kolejności kart kontrolek
+## <a name="tab-order"></a>Kolejność tabulacji
 
 Kolejność tabulacji tkwi w kolejności, w którym **kartę** klucz przenosi fokus wprowadzania z jednego formantu do drugiego w oknie dialogowym. Zwykle kolejność tabulacji rozpoczynające się od lewej do prawej i od góry do dołu w oknie dialogowym. Każda kontrolka ma **Tabstop** właściwość, która określa, czy formant uzyskuje fokus wprowadzania.
 
-### <a name="to-set-input-focus-for-a-control"></a>Aby ustawić fokus wprowadzania kontrolki
+- Można ustawić fokusu wprowadzania kontrolki, w [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **True** lub **False** w **Tabstop** właściwości.
 
-W [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **True** lub **False** w **Tabstop** właściwości.
-
-Nawet formantów, które nie mają **Tabstop** właściwością **True** muszą być częścią kolejności tabulacji. Kolejność tabulacji jest ważna, na przykład, gdy użytkownik [Definiowanie kluczy dostępu (Mnemonik)](../windows/defining-mnemonics-access-keys.md) dla formantów, które nie mają podpisy. Statyczny tekst, który zawiera klucz dostępu dla kontrolki powiązane musi bezpośrednio poprzedzać pokrewnej kontrolki w kolejności tabulacji.
+Nawet formantów, które nie mają **Tabstop** właściwością **True** muszą być częścią kolejność tabulacji, szczególnie w przypadku kontrolek, które nie mają podpisy. Statyczny tekst, który zawiera klucz dostępu dla kontrolki powiązane musi bezpośrednio poprzedzać pokrewnej kontrolki w kolejności tabulacji.
 
 > [!NOTE]
 > Jeśli Twoje okno dialogowe zawiera nakładające się formanty, zmiana kolejności kart może zmienić sposób wyświetlania kontrolki. Formanty, które później w kolejności tabulacji są zawsze wyświetlane na górze nakładające się formanty, które je poprzedzają w kolejności tabulacji.
 
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Aby wyświetlić bieżące kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
-
-Przejdź do **Format** menu, a następnie wybierz **kolejność tabulacji**, lub naciśnij **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Aby zmienić kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym
-
-1. Na **Format** menu, wybierz opcję **kolejność tabulacji**.
+- Aby wyświetlić bieżące kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format** > **kolejność tabulacji**, lub naciśnij **Ctrl** + **D**.
 
    Liczba w lewym górnym rogu każdej kontrolki zawiera jej miejscu w kolejności tabulacji w bieżącym.
 
-1. Ustaw kolejność tabulacji, wybierając każdy formant w kolejności, mają **kartę** klucza do wykonania.
+- Aby zmienić kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format** > **kolejność tabulacji** i ustaw kolejność tabulacji, wybierając każdy formant w kolejności, mają **kartę** klucza Aby kontynuować.
 
-1. Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.
-
-   > [!TIP]
-   > Po wprowadzeniu **kolejność tabulacji** tryb, możesz nacisnąć przycisk **Esc** lub **Enter** wyłączyć możliwość zmiany kolejności tabulacji.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Aby zmienić kolejność tabulacji dla co najmniej dwóch formantów
-
-1. Z **Format** menu, wybierz **kolejność tabulacji**.
-
-1. Określ, gdzie rozpoczyna się zmiany w kolejności. Najpierw naciśnij i przytrzymaj **Ctrl** klucza i wybierz kontrolkę, a następnie wybierz subskrypcję, w którym zmiany kolejności do rozpoczęcia.
+- Aby zmienić kolejność tabulacji kontrolek dwóch lub więcej, przejdź do menu **Format** > **kolejność tabulacji**. Naciśnij i przytrzymaj **Ctrl** klucza, a następnie wybierz kontrolkę, której zmiany w kolejności będzie zacząć, a następnie zwolnij **Ctrl** klucza i zaznacz je w kolejności, ma **kartę** klucza Postępuj zgodnie z tego punktu.
 
    Na przykład, jeśli chcesz zmienić kolejność formantów `7` za pośrednictwem `9`, naciśnij i przytrzymaj **Ctrl**, następnie wybierz kontrolkę `6` pierwszy.
 
-   > [!NOTE]
-   > Aby ustawić numer określonej kontrolki `1` (pierwszy w kolejności tabulacji), kliknij dwukrotnie formant.
+- Aby ustawić numer określonej kontrolki `1`, lub najpierw w kolejności tabulacji, kliknij dwukrotnie formant.
 
-1. Wersja **Ctrl** klucza, a następnie wybierz kontrolki, w kolejności, ma **kartę** klawisz, aby wykonać kroki od tego momentu.
+> [!TIP]
+> Po wprowadzeniu **kolejność tabulacji** tryb, naciśnij klawisz **Esc** lub **Enter** aby zakończyć działanie **kolejność tabulacji** tryb i wyłączyć możliwość zmiany kolejności tabulacji.
 
-1. Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.
-
-## <a name="define-mnemonics-access-keys"></a>Definiowanie mnemonik (klucze dostępu)
+## <a name="mnemonics-access-keys"></a>Mnemonik (klucze dostępu)
 
 Zazwyczaj użytkownicy klawiatury przeniesienie fokusu wprowadzania z jednego formantu do drugiego w oknie dialogowym z **kartę** i **strzałkę** kluczy. Jednak można zdefiniować klawisz dostępu (nazwa mnemoników lub łatwa do zapamiętania) umożliwiający użytkownikom na wybór formantu przez naciśnięcie klawisza pojedynczego.
 
@@ -99,14 +80,14 @@ Zazwyczaj użytkownicy klawiatury przeniesienie fokusu wprowadzania z jednego fo
 1. Upewnij się, że formant statyczny tekst bezpośrednio poprzedza formant, który go etykiety w kolejności tabulacji.
 
 > [!NOTE]
-> Klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić, czy zduplikowany klucz dostępu, przejdź do **Format** menu, a następnie wybierz **Sprawdź mnemonik**.
+> Wszystkie klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić, czy zduplikowany klucz dostępu, przejdź do menu **Format** > **Sprawdź mnemonik**.
 
 ## <a name="combo-box-values"></a>Wartości pola kombi
 
-Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **okna dialogowego** edytorze.
+Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **Edytor okien dialogowych** Otwórz.
 
 > [!TIP]
-> To dobry pomysł, aby dodać wszystkie wartości do pola kombi *przed* rozmiar, w tym polu **okna dialogowego** edytora lub użytkownik może obciąć tekst, który powinien zostać wyświetlony w kontrolce kombi.
+> To dobry pomysł, aby dodać wszystkie wartości do pola kombi *przed* rozmiar, w tym polu **Edytor okien dialogowych**, lub może obciąć tekst, który powinien zostać wyświetlony w kontrolce kombi.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Aby wprowadzić wartości do kontrolki pola kombi
 
@@ -131,14 +112,11 @@ Aby uzyskać informacje na powiększanie część rozwijana pola kombi, zobacz [
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Aby przetestować wyświetlania wartości w polu kombi
 
-Po wprowadzeniu wartości w **danych** wybierz **testu** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Po wprowadzeniu wartości w **danych** wybierz **testu** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-   Wypróbuj, przewijając w dół listę całej wartości. Wartości wyświetlane dokładnie tak, jak są wpisywane **danych** właściwość **właściwości** okna. Nie ma pisowni lub sprawdzanie wielkość liter.
+1. Wypróbuj, przewijając w dół listę całej wartości. Wartości wyświetlane dokładnie tak, jak są wpisywane **danych** właściwość **właściwości** okna. Nie ma pisowni lub sprawdzanie wielkość liter.
 
-   Naciśnij klawisz **Esc** aby powrócić do **okno dialogowe** edytora.
-
-   Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
-Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
+1. Naciśnij klawisz **Esc** aby powrócić do **okno dialogowe** edytora.
 
 ## <a name="radio-button-values"></a>Przycisk radiowy wartości
 
@@ -161,13 +139,13 @@ Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym. D
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmiennej składowej w grupie przycisków radiowych
 
-1. Kliknij prawym przyciskiem myszy pierwszą kontrolkę przycisku radiowego w kolejności tabulacji (formant dominujący i z **grupy** właściwością **True**) i wybierz polecenie **Dodaj zmienną** z menu skrótów.
+1. Kliknij prawym przyciskiem myszy pierwszą kontrolkę przycisku radiowego w kolejności tabulacji (formant dominujący i z **grupy** właściwością **True**) i wybierz polecenie **Dodaj zmienną**.
 
 1. W [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), wybierz opcję **zmienna sterująca** pole wyboru, a następnie wybierz **wartość** przycisku radiowego.
 
-1. W **nazwa zmiennej** wpisz nazwę dla nowej zmiennej elementu członkowskiego.
+   - W **nazwa zmiennej** wpisz nazwę dla nowej zmiennej elementu członkowskiego.
 
-1. W **typ zmiennej** pola listy, wybierz opcję **int** lub typ *int*.
+   - W **typ zmiennej** pola listy, wybierz opcję **int** lub typ *int*.
 
    Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
 
@@ -177,5 +155,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Zarządzanie formantów okna dialogowego](controls-in-dialog-boxes.md)<br/>
+[Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)<br/>
+[Instrukcje: Formanty układu](arrangement-of-controls-on-dialog-boxes.md)<br/>

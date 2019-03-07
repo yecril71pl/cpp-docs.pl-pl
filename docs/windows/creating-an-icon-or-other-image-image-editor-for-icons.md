@@ -87,27 +87,24 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336595"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563059"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Instrukcje: Tworzenie ikony lub innego obrazu
 
-Możesz utworzyć nowy obraz (mapa bitowa, ikony, kursor lub narzędzi), a następnie użyć edytora obrazów w celu dostosowania jego wyglądu. Można również tworzyć nowe mapę bitową z deseniem po [szablonu](../windows/how-to-use-resource-templates.md).
+Utwórz nowy obraz, mapy bitowej, ikony, kursor lub narzędzi, a następnie użyj **edytora obrazów** do dostosowania jego wyglądu. Można również tworzyć nowe mapę bitową z deseniem po [szablonu usługi resource](../windows/how-to-use-resource-templates.md).
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Ikony i kursory: Zasoby obrazów do wyświetlania na urządzeniach
 
-Ikony i kursory są zasobów graficznych, które zawiera wiele obrazów o różnych wielkościach i schematów kolorów dla różnych rodzajów wyświetlania na urządzeniach. Kursor ma "punkt aktywny," w lokalizacji Windows używa do śledzenia jego położenie. Ikony i kursory są tworzone oraz edytowane za pomocą **obraz** edytora, jak mapy bitowe i inne obrazy.
+Ikony i kursory są zasobów graficznych, które zawiera wiele obrazów o różnych wielkościach i schematów kolorów dla różnych rodzajów wyświetlania na urządzeniach. Kursor ma również punkt aktywny, używa Windows lokalizacji, aby śledzić jego położenie. Ikony i kursory są tworzone oraz edytowane za pomocą **edytora obrazów**, jak mapy bitowe i inne obrazy.
 
-Po utworzeniu kursor, lub Nowa ikona **obraz** edytora najpierw tworzy obraz standardowego typu. Obraz, który początkowo jest wypełniony kolorem ekranu (przezroczyste). Jeśli obraz kursora, punkt aktywny jest początkowo lewego górnego rogu (współrzędne 0,0).
+Po utworzeniu kursor, lub Nowa ikona **edytora obrazów** najpierw tworzy obraz standardowego typu. Obraz, który początkowo jest wypełniony kolorem ekranu (przezroczyste). Jeśli obraz kursora, punkt aktywny jest początkowo lewego górnego rogu współrzędnych `0,0`.
 
-Domyślnie **obraz** Edytor obsługuje tworzenie dodatkowych obrazów dla urządzeń z poniższą tabelą. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w [okno dialogowe obrazu niestandardowego](custom-image-dialog-box-image-editor-for-icons.md).
-
-> [!NOTE]
-> Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.
+Domyślnie **edytora obrazów** obsługuje tworzenie dodatkowych obrazów dla urządzeń z poniższą tabelą. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w **obraz niestandardowy** okno dialogowe.
 
 |Kolor|Szerokość (w pikselach)|Wysokość (w pikselach)|
 |-----------|----------------------|-----------------------|
@@ -129,13 +126,16 @@ Domyślnie **obraz** Edytor obsługuje tworzenie dodatkowych obrazów dla urząd
 
 ### <a name="create-a-device-image-icon-or-cursor"></a>Tworzenie obrazu urządzenia (kursor lub ikonę)
 
-Podczas tworzenia nowej ikony lub zasobu kursora **obraz** edytora najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32, monochromatyczny liczby kursorów). Można dodać obrazy w różnych rozmiarach i style do początkowego ikony lub kursor i edytowania każdego dodatkowego obrazu zgodnie z potrzebami dla różnych ekranów. Można również edytować obraz przy użyciu operacji kopiowania i wklejania z istniejącego typu obrazu lub mapy bitowej utworzonej w programie graficznym.
+Podczas tworzenia nowej ikony lub zasobu kursora **edytora obrazów** najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32, monochromatyczny liczby kursorów). Można dodać obrazy w różnych rozmiarach i style do początkowego ikony lub kursor i edytowania każdego dodatkowego obrazu zgodnie z potrzebami dla różnych ekranów. Można również edytować obraz przy użyciu operacji kopiowania i wklejania z istniejącego typu obrazu lub mapy bitowej utworzonej w programie graficznym.
 
 Po otwarciu ikony zasobu w [edytora obrazów](../windows/image-editor-for-icons.md), obraz, większość ściśle dopasowując bieżące urządzenie wyświetlające jest domyślnie otwierany.
 
-**New &lt;urządzenia&gt; typ obrazu** okno dialogowe umożliwia utworzenie nowego obrazu urządzenia o określonym typie. Aby otworzyć **New \<urządzenia > obraz** okno dialogowe, wybierz opcję **nowy typ obrazu** na **obraz** menu. Następujące właściwości zawarte są **typ obrazu docelowego** i **niestandardowe**.
+> [!NOTE]
+> Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
-**Typ obrazu docelowego** właściwość zawiera listę typów dostępnych obrazów. Wybierz typ obrazu, który chcesz otworzyć:
+**New &lt;urządzenia&gt; typ obrazu** okno dialogowe umożliwia utworzenie nowego obrazu urządzenia o określonym typie. Aby otworzyć **New \<urządzenia > obraz** okno dialogowe, przejdź do menu **obraz** > **nowy typ obrazu**. Następujące właściwości zawarte są **typ obrazu docelowego** i **niestandardowe**.
+
+**Typ obrazu docelowego** właściwość zawiera listę typów dostępnych obrazów, gdzie wybierz obraz typu, który chcesz otworzyć:
 
 ||||
 |-|-|-|
@@ -167,10 +167,7 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Aby utworzyć nową ikonę lub kursora
 
-1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasobów** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, możesz kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)
-
-   > [!NOTE]
-   > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
+1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i wybierz polecenie **New**. Ikony ta akcja powoduje utworzenie przy użyciu 32 x 32, ikona 16 kolorów zasobu ikony. Dla kursorów, 32 x 32, tworzony jest monochromatyczny obrazu (w kolorze 2).
 
@@ -178,13 +175,13 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Aby dodać obraz wyświetlania na różnych urządzeniach
 
-1. Na **obraz** menu, wybierz opcję **nowy obraz urządzenia** (lub kliknij prawym przyciskiem myszy **edytora obrazów** okienka i wybierz polecenie **nowy obraz urządzenia** z menu skrótów).
+1. Przejdź do menu **obraz** > **nowy obraz urządzenia**, lub kliknij prawym przyciskiem myszy **edytora obrazów** okienka i wybierz polecenie **nowy obraz urządzenia**.
 
 1. Wybierz typ obrazu, który chcesz dodać. Możesz również wybrać **niestandardowe** do utworzenia ikony, którego rozmiar nie jest dostępna na liście domyślnej.
 
 ### <a name="to-copy-a-device-image"></a>Aby skopiować obrazu urządzenia
 
-1. Na **obraz** menu, wybierz opcję **Otwieranie obrazu urządzenia** i wybierzesz obraz z bieżącej listy obrazów. Na przykład wybierz 32 x 32, 16 kolorów wersja ikony.
+1. Przejdź do menu **obraz** > **Otwieranie obrazu urządzenia** i wybierzesz obraz z bieżącej listy obrazów. Na przykład wybierz 32 x 32, 16 kolorów wersja ikony.
 
 1. Skopiuj obraz aktualnie wyświetlane ikony (**Ctrl**+**C**).
 
@@ -194,23 +191,23 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
 ### <a name="to-delete-a-device-image"></a>Aby usunąć obrazu urządzenia
 
-Gdy obraz ikony są wyświetlane w **obraz** edytora, wybierz opcję **usuwanie obrazu urządzenia** z **obraz** menu. Po usunięciu ostatniego obraz ikony w zasobie zasobu są także usuwane.
+Gdy obraz ikony są wyświetlane w **edytora obrazów**, przejdź do menu **obraz** > **usuwanie obrazu urządzenia**. Po usunięciu ostatniego obraz ikony w zasobie zasobu są także usuwane.
 
-   > [!NOTE]
-   > Po naciśnięciu klawisza **Del** klucza, obrazy i kolorów ma być rysowany ikonę są usuwane, ale pozostaje ikonę; możesz teraz ponownie zaprojektować go. Jeśli użytkownik naciśnie klawisz **Del** przez pomyłkę, możesz nacisnąć przycisk **Ctrl**+**Z** cofnięcie akcji.
+> [!NOTE]
+> Po naciśnięciu klawisza **Del** klucza, obrazy i kolorów ma być rysowany ikonę są usuwane, ale ikona pozostaje i możesz teraz ponownie zaprojektować go. Jeśli użytkownik naciśnie klawisz **Del** przez pomyłkę, naciśnij klawisz **Ctrl**+**Z** cofnięcie akcji.
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Aby utworzyć przezroczystych lub odwróconych w obrazach urządzeń
 
-W [edytora obrazów](../windows/image-editor-for-icons.md), początkowego obrazu ikony ma atrybut przezroczysty. Mimo że prostokątny znajdują się obrazy ikon i kursorów, wiele nie pojawiają się więc ponieważ przezroczysty; części obrazu Pokazuje obrazu podstawowego na ekranie za pomocą ikony lub kursor. Podczas przeciągania ikony części obrazu może pojawić się w kolorze odwrócony. Ten efekt, ustawiając kolor ekranu i odwracanie kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md).
+W [edytora obrazów](../windows/image-editor-for-icons.md), początkowego obrazu ikony ma atrybut przezroczysty. Mimo że prostokątny znajdują się obrazy ikon i kursorów, wiele nie pojawiają się więc obrazu podstawowego na ekranie przedstawiono za pośrednictwem ikony lub kursora, ponieważ części obrazu są niewidoczne. Podczas przeciągania ikony części obrazu może pojawić się w kolorze odwrócony. Ten efekt, ustawiając kolor ekranu i odwracanie kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md).
 
 Kolory ekranu i odwrotność, można zastosować do ikony i kursory kształt i kolor obrazu pochodnej albo Przypisz odwracanie regionów. Kolory wskazują części obrazu, które mają te atrybuty. Można zmienić kolory, które reprezentują ekranu odwrotność kolorach i atrybuty w edycji. Te zmiany nie wpływają na wygląd ikony lub kursor znajduje się w aplikacji.
 
 > [!NOTE]
-> Polecenia menu, zostanie wyświetlony i okien dialogowych mogą różnić się od tych opisanych w **pomocy** w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Polecenia menu, zostanie wyświetlony i okien dialogowych mogą różnić się od tych opisanych w **pomocy** w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, przejdź do menu **narzędzia** > **Import i eksport ustawień**. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Aby utworzyć przezroczystych lub odwróconych
 
-1. W **kolory** wybierz **koloru ekranu** selektora lub **kolor odwrotność** selektora.
+1. W **kolory** oknie Wybierz selektor **koloru ekranu** lub **kolor odwrotność**.
 
 1. Zastosuj ekranu lub odwróconych kolorów na obraz przy użyciu narzędzia do rysowania. Aby uzyskać więcej informacji na temat narzędzia do rysowania, zobacz [przy użyciu narzędzia do rysowania](using-a-drawing-tool-image-editor-for-icons.md).
 
@@ -227,20 +224,15 @@ Kolory ekranu i odwrotność, można zastosować do ikony i kursory kształt i k
 
 ### <a name="use-the-256-color-palette"></a>Użyj palety 256 kolorów
 
-Za pomocą **obraz** edytora, ikon i kursorów można wielkości dużych (64 × 64) z palety 256 kolorów do wyboru. Po utworzeniu zasobu stylu obrazu urządzenia jest zaznaczone.
+Za pomocą **edytora obrazów**, ikon i kursorów można wielkości dużych (64 × 64) z palety 256 kolorów, aby wybrać z. Po utworzeniu zasobu stylu obrazu urządzenia jest zaznaczone.
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Tworzenie ikony 256 kolorów lub kursora
 
-1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasobów** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, możesz kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)
-
-   > [!NOTE]
-   > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
+1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i wybierz polecenie **New**.
 
-1. Na **obraz** menu, wybierz opcję **nowy obraz urządzenia**.
-
-1. Wybierz żądany styl obrazu 256 kolorów.
+1. Przejdź do menu **obraz** > **nowy obraz urządzenia** i wybierz żądany styl obrazu 256 kolorów.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Aby wybrać kolor z palety 256 kolorów dla dużych ikon
 
@@ -255,11 +247,9 @@ Aby narysować przy zaznaczeniem z palety 256 kolorów, musisz wybrać kolory z 
    > [!NOTE]
    > Pasuje do początkowej palety 256 kolorów obrazów palety zwracany przez `CreateHalftonePalette` interfejsu Windows API. Wszystkie ikony przeznaczone dla powłoki Windows należy używać tej palety, aby zapobiec migotania podczas realizacji palety.
 
-### <a name="set-a-cursor39s-hot-spot"></a>Ustaw kursor&#39;s aktywny
+### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora
 
-Aktywnego punktu kursora jest punktem, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny w lewym górnym rogu kursora (współrzędne 0,0). **Informacji o hotspotach** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.
-
-#### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora
+Aktywnego punktu kursora jest punktem, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny do lewego górnego rogu kursora współrzędnych `0,0`. **Informacji o hotspotach** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.
 
 1. Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md), wybierz **Ustaw punkt aktywny** narzędzia.
 
@@ -267,27 +257,22 @@ Aktywnego punktu kursora jest punktem, do której Windows odwołuje się w śled
 
    **Informacji o hotspotach** właściwość **właściwości** okno wyświetla nowy współrzędnych.
 
-   > [!TIP]
-   > Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
-
-## <a name="saving-bitmaps-as-gifs-or-jpegs"></a>Zapisywanie map bitowych jako plików GIF lub JPEG
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać mapy bitowej jako obraz GIF lub JPEG
 
 Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). Można jednak zapiszesz obraz GIF lub JPEG lub w innych formatach grafiki.
 
 > [!NOTE]
 > Ten proces nie ma zastosowania do ikony i kursory.
 
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać mapy bitowej jako obraz GIF lub JPEG
-
-1. Z **pliku** menu, wybierz **Otwórz**, a następnie wybierz **pliku**.
+1. Przejdź do menu **pliku** > **Otwórz**, a następnie wybierz **pliku**.
 
 1. W **okno dialogowe Nowy plik**, wybierz **Visual C++** folderu, następnie wybierz pozycję **plik mapy bitowej (bmp)** w **szablony** pole, a następnie wybierz  **Otwórz**.
 
-   Mapa bitowa zostanie otwarty w **obraz** edytora.
+   Mapa bitowa zostanie otwarty w **edytora obrazów**.
 
 1. Wprowadź zmiany do nowej mapy bitowej, zgodnie z potrzebami.
 
-1. Z mapą bitową wciąż otwarty w **obraz** edytorze wybierz **Zapisz *filename*.bmp jako** na **pliku** menu.
+1. Z mapą bitową wciąż otwarty w **edytora obrazów**, przejdź do menu **pliku** > **Zapisz *filename*.bmp jako**.
 
 1. W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład *myfile.gif*.
 
@@ -296,34 +281,29 @@ Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). M
 
 1. Wybierz pozycję **Zapisz**.
 
-## <a name="converting-an-image-from-one-format-to-another"></a>Konwertowanie obrazu z jednego formatu do innego
-
-Możesz otworzyć obrazów GIF lub JPEG w **obraz** edytora i zapisz je jako map bitowych. Ponadto można otworzyć pliku mapy bitowej i zapisz go jako plik GIF lub JPEG. Pracujesz z obrazów nie muszą być częścią projektu do edycji w środowisku programistycznym (zobacz [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
-
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>Aby przekonwertować obrazu z jednego formatu
 
-1. Otwórz obraz w **obraz** edytora.
+Możesz otworzyć obrazów GIF lub JPEG w **edytora obrazów** i zapisz je jako map bitowych. Ponadto można otworzyć pliku mapy bitowej i zapisz go jako plik GIF lub JPEG. Pracujesz z obrazów nie muszą być częścią projektu do edycji w środowisku programistycznym (zobacz [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
 
-1. Z **pliku** menu, wybierz **Zapisz *filename* jako**.
+1. Otwórz obraz w **edytora obrazów**.
+
+1. Przejdź do menu **pliku** > **Zapisz *filename* jako**.
 
 1. W **Zapisz plik jako** dialogowym **nazwy pliku** wpisz nazwę pliku i rozszerzenie, które oznacza żądany format.
 
 1. Wybierz pozycję **Zapisz**.
 
-## <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Aby dodać nowy zasób obrazu do niezarządzanego projektu C++
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Aby dodać nowy zasób obrazu do niezarządzanego projektu C++
 
-1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasobów** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)
-
-   > [!NOTE]
-   > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
+1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz typ zasobu obrazu, które chcesz utworzyć (**mapy bitowej**, na przykład) wybierz **New**.
 
    Jeśli znak plus (**+**) pojawia się obok typ zasobu obrazu w **Wstaw zasobów** okno dialogowe, oznacza to, narzędzi szablony są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie wybierz **New**.
 
-## <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Aby dodać nowy zasób obrazu do projektu w języku programowania .NET
+### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Aby dodać nowy zasób obrazu do projektu w języku programowania .NET
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy folder projektu (na przykład `WindowsApplication1`).
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy folder projektu (na przykład *WindowsApplication1*).
 
 1. Z menu skrótów wybierz **Dodaj**, następnie wybierz **Dodaj nowy element**.
 
@@ -331,10 +311,7 @@ Możesz otworzyć obrazów GIF lub JPEG w **obraz** edytora i zapisz je jako map
 
 1. W **szablony** okienku, wybierz typ zasobu, czy chcesz dodać do projektu.
 
-   Zasób jest dodawany do projektu w **Eksploratora rozwiązań** i zasobów zostanie otwarty w [edytora obrazów](../windows/image-editor-for-icons.md). Narzędzia dostępne w edytorze obrazu umożliwia teraz zmodyfikować obraz. Aby uzyskać więcej informacji na temat dodawania obrazów do projektów zarządzanych, zobacz [podczas ładowania obrazu w czasie projektowania](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
-
-   > [!NOTE]
-   > Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych. Aby uzyskać więcej informacji, zobacz [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) w *przewodniku dewelopera .NET Framework*.
+   Zasób jest dodawany do projektu w **Eksploratora rozwiązań** i zasobów zostanie otwarty w [edytora obrazów](../windows/image-editor-for-icons.md). Teraz można użyć narzędzi dostępnych w ramach **edytora obrazów** Aby zmodyfikować swój obraz. Aby uzyskać więcej informacji na temat dodawania obrazów do projektów zarządzanych, zobacz [podczas ładowania obrazu w czasie projektowania](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -342,11 +319,13 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Konwertowanie map bitowych na paski narzędzi](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Tworzenie nowych pasków narzędzi](../windows/creating-new-toolbars.md)<br/>
-[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
-[Menu obrazu](../windows/image-menu-image-editor-for-icons.md)<br/>
-[Ikony](/windows/desktop/menurc/icons)<br/>
-[Kursory](/windows/desktop/menurc/cursors)<br/>
+[Instrukcje: Edytowanie obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+<!--
+[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Icons](/windows/desktop/menurc/icons)<br/>
+[Cursors](/windows/desktop/menurc/cursors)<br/>-->

@@ -1,21 +1,28 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
 description: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
-ms.date: 07/20/2018
+ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 6f38cd3688281c0afa4d50f4bdc915b35ce24f16
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978325"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563098"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
-**Visual Studio 2017 w wersji 15.4 lub nowszy**<br/>
-Po zainstalowaniu obciążenia języka Linux C++ dla Visual Studio Obsługa CMake dla systemu Linux jest domyślnie zaznaczone. Teraz możesz pracować na istniejącej bazie kodu używającej narzędzia CMake bez konieczności konwertowania go do projektu programu Visual Studio. Jeśli baza kodu jest dla wielu platform, mogą kierować zarówno Windows, jak i Linux z poziomu programu Visual Studio.
+Po otwarciu folderu zawierającego projektu narzędzia CMake, Visual Studio używa metadanych, które CMake generuje do skonfigurowania funkcji IntelliSense i automatyczne kompilacje. Lokalnej konfiguracji i ustawieniami debugowania są przechowywane w plikach w formacie JSON, które można opcjonalnie można udostępniać innym użytkownikom, którzy korzystają z programu Visual Studio. 
 
-W tym temacie założono, że masz podstawowe znajomość Obsługa CMake w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md). Aby uzyskać więcej informacji na temat narzędzia CMake, sama zobacz [kompilacji, testów i pakietów usługi oprogramowania za pomocą narzędzia CMake](https://cmake.org/).
+Programu Visual Studio nie zmodyfikować pliki pliku CMakeLists.txt lub oryginalnego pamięć podręczną CMake, tak aby inne nad tym samym projekcie można nadal korzystać z dowolnych narzędzi jest już używany.  
+
+## <a name="before-you-begin"></a>Przed rozpoczęciem
+
+Najpierw upewnij się, że masz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia zainstalowany, w tym składnik narzędzia CMake. Zobacz [Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+
+Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+
+W tym temacie założono, przeczytanie [narzędzia CMake dla programu Visual Studio](../ide/cmake-tools-for-visual-cpp.md). 
 
 > [!NOTE]
 > Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu dostarczonych przez firmę Microsoft narzędzia CMake pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). W programie Visual Studio 2019 r można automatycznie wdrożyć wstępnie utworzone pliki binarne (zobacz [Pobierz wstępnie utworzone narzędzia CMake pliki binarne](#download-prebuilt-cmake-binaries)).
@@ -47,24 +54,26 @@ add_executable(hello-cmake hello.cpp)
 
 Zaraz po otwarciu folderu, programu Visual Studio analizuje plik CMakeLists.txt i określa obiekt docelowy Windows **debugowania x86**. Aby wskazać system Linux, należy zmienić ustawienia projektu do **debugowania dla systemu Linux** lub **wydania Linux**.
 
-Domyślnie program Visual Studio wybiera pierwszy system zdalny na liście w obszarze **narzędzia** > **opcje** > **Międzyplatformowe**  >  **Menedżera połączeń**. Nie zostaną znalezione nie połączeń zdalnych, monit o jego utworzenie.
+Domyślnie program Visual Studio wybiera pierwszy system zdalny na liście w obszarze **narzędzia** > **opcje** > **Międzyplatformowe**  >  **Menedżera połączeń**. Nie zostaną znalezione nie połączeń zdalnych, monit o jego utworzenie. Aby uzyskać więcej informacji, zobacz [nawiązywanie połączenia zdalnego komputer z systemem Linux](connect-to-your-remote-linux-computer.md).
 
 Po określeniu docelowej systemu Linux, źródło jest kopiowany do maszyną z systemem Linux. Następnie CMake jest uruchamiane na maszynie systemu Linux w celu wygenerowania pamięci podręcznej narzędzia CMake dla Twojego projektu.
 
 ![Generuj pamięć podręczną CMake w systemie Linux](media/cmake-linux-1.png "wygenerowania pamięci podręcznej narzędzia CMake w systemie Linux")
 
 **Visual Studio 2017 w wersji 15.7 lub nowszej:**<br/>
-Aby zapewnić obsługę funkcji IntelliSense dla zdalnych nagłówków, Visual Studio automatycznie kopiuje je do katalogu na komputerze lokalnym Windows. Aby uzyskać więcej informacji, zobacz [technologii IntelliSense dla zdalnych nagłówków](configure-a-linux-project.md#remote_intellisense).
+Aby zapewnić obsługę funkcji IntelliSense dla zdalnych nagłówków, Visual Studio automatycznie kopiuje je z maszyny z systemem Linux do katalogu na komputerze lokalnym Windows. Aby uzyskać więcej informacji, zobacz [technologii IntelliSense dla zdalnych nagłówków](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Debugowanie projektu
 
 Podczas debugowania kodu w systemie zdalnym, ustaw punkt przerwania, wybierz element docelowy narzędzia CMake jako element startowy w menu narzędzi obok ustawienia projektu i wybierz  **&#x23f5; Start** na pasku narzędzi lub naciśnięciu klawisza F5.
 
-Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. To spowoduje otwarcie lub tworzy plik konfiguracji pliku launch.vs.json, który zawiera informacje o programie. Aby określić dodatkowe argumenty, dodaj je w `args` tablicę JSON. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](../ide/non-msbuild-projects.md).
+Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. To spowoduje otwarcie lub tworzy plik konfiguracji pliku launch.vs.json, który zawiera informacje o programie. Aby określić dodatkowe argumenty, dodaj je w `args` tablicę JSON. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](../ide/non-msbuild-projects.md) i [konfigurowania CMake sesjami debugowania](../ide/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Konfiguruj ustawienia narzędzia CMake dla systemu Linux
 
-Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ustawienia narzędzia CMake | CMakeLists.txt** z menu głównego, lub kliknij prawym przyciskiem myszy CMakeSettings.txt w **Eksploratora rozwiązań** i wybierz polecenie **Zmień ustawienia narzędzia CMake**. Program Visual Studio tworzy nowy plik w folderze o nazwie `CMakeSettings.json` , jest wypełniana przy użyciu domyślnej konfiguracji, które są wymienione w elemencie menu ustawień projektu. Poniższy przykład pokazuje, w domyślnej konfiguracji debugowania dla systemu Linux na podstawie w poprzednim przykładzie kodu:
+Określić wszystkie właściwości, które są wymienione w pliku CMakeSettings.json w projektu CMake systemu Linux [CMake dostosować ustawienia](../ide/customize-cmake-settings.md), oraz dodatkowe właściwości, które kontrolują ustawienia kompilacji na zdalnym komputerze z systemem Linux. Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ustawienia narzędzia CMake | CMakeLists.txt** z menu głównego, lub kliknij prawym przyciskiem myszy CMakeSettings.txt w **Eksploratora rozwiązań** i wybierz polecenie **Zmień ustawienia narzędzia CMake**. Program Visual Studio utworzy nowy `CMakeSettings.json` pliku w folderze głównym projektu. Możesz otworzyć plik, używając **ustawienia narzędzia CMake** edytora lub bezpośrednio zmodyfikować plik. 
+
+Poniższy przykład pokazuje, w domyślnej konfiguracji debugowania dla systemu Linux na podstawie w poprzednim przykładzie kodu:
 
 ```json
 {
@@ -91,10 +100,24 @@ Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ust
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+Poniższa tabela zawiera podsumowanie ustawień:
 
-`name` Wartość może być wedle uznania. `remoteMachineName` Wartość określa którego zdalnego systemu docelowego, w przypadku, gdy masz więcej niż jeden. Technologia IntelliSense jest włączona dla tego pola, które ułatwią Ci wybrać odpowiednie system. Pole `remoteCMakeListsRoot` Określa, gdzie źródła projektu zostaną skopiowane do systemu zdalnego. Pole `remoteBuildRoot` jest, gdzie zostaną wygenerowane dane wyjściowe kompilacji w systemie zdalnym. Dane wyjściowe również lokalnie kopiowany do lokalizacji określonej przez `buildRoot`. `remoteInstallRoot` i `installRoot` pola są podobne do `remoteBuildRoot` i `buildRoot`, z wyjątkiem odnoszą się w trakcie instalacji narzędzia cmake. `remoteCopySources` Wpis kontroluje, czy źródłach lokalnych są kopiowane do maszyny zdalnej. Możesz ustawić to wartość false, jeśli masz wiele plików, a już synchronizowania źródeł samodzielnie. `remoteCopyOutputVerbosity` Wartość określa poziom szczegółowości krok kopiowania, w przypadku, gdy musisz zdiagnozować błędy. `remoteCopySourcesConcurrentCopies` Wpis steruje, jak wiele procesów jest zduplikowany kopiowanie. `remoteCopySourcesMethod` Wartość może być jednym z rsync lub sftp. `remoteCopySourcesExclusionList` Pola pozwala na kontrolowanie, co kopiowane do maszyny zdalnej. `rsyncCommandArgs` Wartość umożliwia sterowanie rsync metoda kopiowania. `remoteCopyBuildOutput` Pola określa, czy dane wyjściowe kompilacji zdalnej jest kopiowany do folderu kompilacji lokalnej.
+|Ustawienie|Opis|
+|-----------|-----------------|
+|`name`|Ta wartość może być wedle uznania.|
+|`remoteMachineName`|Określa którego zdalnego systemu docelowego, w przypadku, gdy masz więcej niż jeden. Technologia IntelliSense jest włączona dla tego pola, które ułatwią Ci wybrać odpowiednie system.|
+|`remoteCMakeListsRoot`|Określa, gdzie źródła projektu zostaną skopiowane do systemu zdalnego.|
+|`remoteBuildRoot`|Określa, gdzie zostaną wygenerowane dane wyjściowe kompilacji w systemie zdalnym. Dane wyjściowe również lokalnie kopiowany do lokalizacji określonej przez `buildRoot`.|
+|`remoteInstallRoot` i `installRoot`| Podobnie jak `remoteBuildRoot` i `buildRoot`, z wyjątkiem odnoszą się w trakcie instalacji narzędzia CMake.|
+|`remoteCopySources`|Określa, czy źródłach lokalnych są kopiowane do maszyny zdalnej. Możesz ustawić to wartość false, jeśli masz wiele plików, a już synchronizowania źródeł samodzielnie.|
+|`remoteCopyOutputVerbosity`| Określa poziom szczegółowości krok kopiowania, w przypadku, gdy musisz zdiagnozować błędy.|
+|`remoteCopySourcesConcurrentCopies`| Określa, jak wiele procesów jest zduplikowany kopiowanie.|
+|`remoteCopySourcesMethod`| Może być `rsync` lub `sftp`.|
+|`remoteCopySourcesExclusionList`| Określa pliki, które mają być kopiowane do maszyny zdalnej.|
+|`rsyncCommandArgs`|Określa metodę kopiowania rsync.|
+|`remoteCopyBuildOutput`| Określa, czy dane wyjściowe kompilacji zdalnej jest kopiowany do folderu kompilacji lokalnej.|
 
-Dostępne są także niektóre ustawienia opcjonalne, których można użyć, aby uzyskać większą kontrolę:
+Aby uzyskać większą kontrolę, można użyć tych opcjonalnych ustawień:
 
 ```json
 {
@@ -104,16 +127,21 @@ Dostępne są także niektóre ustawienia opcjonalne, których można użyć, ab
 }
 ```
 
-Te opcje umożliwiają uruchamianie poleceń w oknie zdalnego, przed i po kompilacji, a przed generowania narzędzia CMake. Mogą to być wszystkie prawidłowe polecenia w oknie zdalnego. Dane wyjściowe w potoku do programu Visual Studio.
+Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po kompilacji, a przed generowania narzędzia CMake. Te wartości mogą być dowolnego polecenia, który jest prawidłowy w systemie zdalnym. Dane wyjściowe w potoku do programu Visual Studio.
 
 ## <a name="download-prebuilt-cmake-binaries"></a>Pobierz wstępnie utworzone narzędzia CMake plików binarnych.
 
-Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu dostarczonych przez firmę Microsoft narzędzia CMake pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
-**Visual Studio 2019 r.**<br/>
+**Visual Studio 2019**<br/>
 Jeśli prawidłowe CMake nie zostanie znaleziony na komputerze zdalnym, pasek informacyjny będą wyświetlane i udostępnić jako opcje, aby automatycznie wdrażać wstępnie utworzone pliki binarne narzędzia CMake. Pliki binarne zostanie zainstalowana tak, aby `~/.vs/cmake`. Po wdrożeniu plików binarnych, projekt zostanie automatycznie ponownie wygenerować. Należy pamiętać, że jeśli narzędzia CMake, określony przez `cmakeExecutable` pole `CMakeSettings.json` jest nieprawidłowy (nie istnieje lub ma nieobsługiwaną wersję) i istnieją wstępnie utworzone pliki binarne programu Visual Studio będzie ignorować `cmakeExecutable` i korzystać ze wstępnie utworzonych plików binarnych.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
-[Narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md)
+[Narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md)<br/>
+[Podłącz do komputera zdalnego systemu Linux](connect-to-your-remote-linux-computer.md)<br/>
+[Dostosuj ustawienia narzędzia CMake](../ide/customize-cmake-settings.md)<br/>
+[Konfigurowanie narzędzia CMake sesjami debugowania](../ide/configure-cmake-debugging-sessions.md)<br/>
+[Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)<br/>
+[Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](../ide/cmake-predefined-configuration-reference.md)<br/>

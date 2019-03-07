@@ -1,17 +1,17 @@
 ---
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0323ae57de1e03811b12fec7fea79b6bab954e44
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622498"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563345"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
-W tym temacie opisano sposób konfigurowania projektu systemu Linux w języku C++ w programie Visual Studio. Aby uzyskać informacji na temat narzędzia CMake projektów systemu Linux w programie Visual Studio, zobacz [Konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
+W tym temacie opisano sposób konfigurowania projektu systemu Linux w języku C++, który jest oparty na szablonie projektu systemu Linux w programie Visual Studio. Aby uzyskać informacji na temat narzędzia CMake projektów systemu Linux w programie Visual Studio, zobacz [Konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Ustawienia ogólne
 
@@ -90,7 +90,7 @@ Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzęd
 ## <a name="see-also"></a>Zobacz też
 
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
-[Właściwości ogólne C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Kopiuj źródła właściwości projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Tworzenie właściwości zdarzenia (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Właściwości ogólne C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Katalogi VC ++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Kopiuj źródła właściwości projektu (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Tworzenie właściwości zdarzenia (Linux C++)](prop-pages/build-events-linux.md)

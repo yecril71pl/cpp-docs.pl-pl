@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655005"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424616"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Sprawdzanie błędów czasu wykonywania)
 
@@ -95,7 +95,7 @@ Jeśli zmienna może zostać zainicjowany, nie zostanie on zgłoszony w czasie w
 
 ## <a name="remarks"></a>Uwagi
 
-Sprawdzanie błędów czasu wykonywania to sposób odnajdywania problemów w kodzie uruchomiona; Aby uzyskać więcej informacji, zobacz [porady: użycie macierzystego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Sprawdzanie błędów czasu wykonywania to sposób odnajdywania problemów w kodzie uruchomiona; Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z macierzystego sprawdzania w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Jeśli kompilujesz program w wierszu polecenia przy użyciu dowolnej z **usunęliśmy** opcje kompilatora, wszelkie pragma [zoptymalizować](../../preprocessor/optimize.md) po cichu nie będzie zgodnie z instrukcjami w kodzie. Jest to spowodowane sprawdzanie błędów czasu wykonywania nie są dozwolone w kompilacji wydania (zoptymalizowany).
 
@@ -111,14 +111,14 @@ Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używ
 
 1. Kliknij przycisk **generowania kodu** stronę właściwości.
 
-1. Zmodyfikuj jedną lub obie następujące właściwości: **podstawowe sprawdzenia środowiska uruchomieniowego** lub **sprawdzania mniejszych typów**.
+1. Zmodyfikuj jedną lub obie następujące właściwości: **Podstawowe sprawdzenia środowiska uruchomieniowego** lub **mniejsze wpisz wyboru**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Instrukcje: korzystanie z macierzystego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Instrukcje: Korzystanie z natywnego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks)

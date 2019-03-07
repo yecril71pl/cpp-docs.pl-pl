@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676412"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563046"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
-
-Można było zarządzać zasobami w projekcie przez:
-
-- Kopiowanie i edytowanie zasobów.
-
-- Importowanie i eksportowanie zasobów.
 
 ## <a name="copy-and-edit-resources"></a>Kopiuj i edytowanie zasobów
 
@@ -54,7 +48,7 @@ Można go łatwo skopiować zasoby z istniejącego zasobu lub plik wykonywalny d
 > [!NOTE]
 > Visual C++ zawiera przykładowe pliki zasobów, które można użyć w swojej aplikacji. Aby uzyskać więcej informacji, zobacz [CLIPART: Wspólnych zasobów](https://github.com/Microsoft/VCSamples).
 
-Metoda przeciągania i upuszczania między plikami .rc, które są otwarte poza projektem.
+Użytkownik nie przeciągnij i upuść, kopiowanie, wycinanie lub wklejanie danych między plikami zasobów w projekcie (**widok zasobów**) i otwieranie plików .rc autonomicznego w oknach dokumentów. Można to zrobić w poprzednich wersjach produktu. Tylko metodą przeciągania i upuszczania między plikami .rc, które są otwarte poza projektem.
 
 ### <a name="to-copy-resources"></a>Aby umożliwić kopiowanie zasobów
 
@@ -78,9 +72,6 @@ Metoda przeciągania i upuszczania między plikami .rc, które są otwarte poza 
       1. Kliknij prawym przyciskiem myszy plik zasobów, do którego chcesz wkleić zasobu (na przykład *Source2.rc*) i wybierz polecenie **Wklej**.
 
 > [!NOTE]
-> Użytkownik nie przeciągnij i upuść, kopiowanie, wycinanie lub wklejanie danych między plikami zasobów w projekcie (**widok zasobów**) i pliki .rc autonomicznej, (te otwarte w oknach dokumentów). Można to zrobić w poprzednich wersjach produktu.
-
-> [!NOTE]
 > Aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku, Visual C++ może ulec zmianie wartości symboli zasobu przeniesionych lub nazwy symbolu i wartości po skopiuj go do nowego pliku.
 
 Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub właściwości warunku.
@@ -95,17 +86,17 @@ Język i warunku zasobu są wyświetlane w nawiasie po nazwie zasobu w **obszaru
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Aby skopiować istniejący zasób i zmień jego języka lub warunku
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmień jego języka lub warunku
 
-1. W pliku .rc, lub w [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, o których chcesz skopiować, a następnie wybierz **Wstaw kopiowania**. Następnie określ następujące ustawienia:
+W *.rc* pliku lub [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, o których chcesz skopiować, a następnie wybierz **Wstaw kopiowania**. Następnie określ następujące ustawienia:
 
-   - Aby uzyskać **języka** pola listy, wybierz język.
+- Aby uzyskać **języka** pola listy, wybierz język.
 
-   - W **warunek** wpisz warunek.
+- W **warunek** wpisz warunek.
 
 ### <a name="to-edit-resources"></a>Edytowanie zasobów
 
-Zarządzanych plików zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
+Zarządzanych zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
 
 ## <a name="import-and-export-resources"></a>Importowanie i eksportowanie zasobów
 

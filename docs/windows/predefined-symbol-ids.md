@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954916"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562760"
 ---
 # <a name="predefined-symbol-ids"></a>Wstępnie zdefiniowane symbole identyfikatorów
 
@@ -18,7 +18,7 @@ Po rozpoczęciu nowego projektu, w zależności od typu projektu niektóre symbo
 
 Te identyfikatory symboli nabierają znaczenia podczas pracy z zasobami. Są one dostępne w przypadku, gdy edytowanie tabel akceleratora i niektóre z nich są już skojarzone z klawisze wirtualne. Są one również dostępne za pośrednictwem [okno właściwości](/visualstudio/ide/reference/properties-window). Można przypisać dowolny wstępnie zdefiniowane symbole identyfikatorów nowe zasoby, lub klawiszy skrótów można przypisać do nich oraz funkcje związane z symbolem, który identyfikator automatycznie kojarzy z tej kombinacji klawiszy.
 
-Te biblioteki ma wstępnie zdefiniowane symbole, które będą wyświetlane jako część projektu:
+Biblioteki ma wstępnie zdefiniowane symbole, które będą wyświetlane jako część projektu:
 
 - [Wstępnie zdefiniowane symbole ATL](../windows/atl-predefined-symbols.md)
 

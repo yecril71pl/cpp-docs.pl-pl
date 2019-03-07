@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-ms.openlocfilehash: a902096bf13105e6a6a66b7bd3ccc56b8f7cf624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0685df0baf14685bd24b8390dd58b382ae5ac506
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433596"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422055"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimalna ponowna kompilacja IDE)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50433596"
 
 Jeśli nie włączysz **/Gm** w środowisku programistycznym **/FD** będą używane. **/FD** gwarantuje, że plik .idb ma wystarczające informacje o zależnościach. **/FD** jest używana tylko przez środowisko programistyczne i nie powinny być używane z wiersza polecenia lub skryptu kompilacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>

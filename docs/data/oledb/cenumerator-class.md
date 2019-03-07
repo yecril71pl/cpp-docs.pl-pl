@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3333c624affd2afb61b8828250bf1c2c168c9207
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556681"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422094"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 
-Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.
+Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu.
+Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu.
 
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
@@ -108,7 +108,7 @@ Standardowa HRESULT.
 
 ## <a name="open"></a> CEnumerator::Open
 
-Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Składnia
 

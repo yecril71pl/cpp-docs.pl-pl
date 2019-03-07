@@ -62,12 +62,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: e91767083f54df0b1b30833337cfed603dc331ff
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: f50d734ab35968aa107e23b8450d60f316b6002e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336647"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563150"
 ---
 # <a name="how-to-work-with-color"></a>Instrukcje: Praca z kolorami
 
@@ -77,10 +77,7 @@ Wszystkie kolory monochromatyczny i 16 kolorów obrazów są wyświetlane w **ko
 
 Podczas pracy z ikony 256 kolorów i obrazy kursora **kolory** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) jest używany. Aby uzyskać więcej informacji, zobacz [Tworzenie ikony 256 kolorów](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).
 
-> [!NOTE]
-> Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.
-
-Można również tworzyć obrazy True color. Jednak true koloru próbek nie są wyświetlane w palecie pełnego w **kolory** okna; pojawiają się tylko w obszarze wskaźnik kolor pierwszego planu i tła. Wartość true, kolory są tworzone przy użyciu [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md).
+Można również tworzyć obrazy True color. Jednak true koloru próbek nie są wyświetlane w palecie pełnego w **kolory** okna; pojawiają się tylko w obszarze wskaźnik kolor pierwszego planu i tła. Wartość true, kolory są tworzone przy użyciu **selektor kolorów niestandardowych** okno dialogowe.
 
 Można zapisać palety kolorów niestandardowych na dysku i ponownie załaduj je stosownie do potrzeb. Palety kolorów, ostatnio używane jest zapisywane w rejestrze i ładowane automatycznie przy następnym uruchomieniu programu Visual Studio.
 
@@ -91,25 +88,25 @@ Można zapisać palety kolorów niestandardowych na dysku i ponownie załaduj je
 - **Wskaźnik koloru**, który przedstawia kolory pierwszego planu i tła i selektorów koloru ekranu i odwrotność.
 
    ![Okno kolory](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
-   Okno Kolory
+   **Kolory** okna
 
 > [!NOTE]
 > **Koloru ekranu** i **kolor odwrotność** narzędzia są dostępne tylko dla ikony i kursory.
 
 Możesz użyć **kolory** okno z [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).
 
-- Aby wyświetlić **kolory** okna, kliknij prawym przyciskiem myszy w **edytora obrazów** okienka i wybierz polecenie **Pokaż okno kolorów**, lub wybierz **Pokaż okno kolorów**na [menu obrazu](../windows/image-menu-image-editor-for-icons.md).
+- Aby wyświetlić **kolory** okna, kliknij prawym przyciskiem myszy w **edytora obrazów** okienka i wybierz polecenie **Pokaż okno kolorów**, lub przejdź do menu [obrazu](../windows/image-menu-image-editor-for-icons.md)  >  **Pokaż okno kolorów**.
 
 - Aby ukryć **kolory** okna, Odepnij okna (Ta akcja pozwoli okna ukryte automatycznie, gdy nie jest używany) lub wybierz **Zamknij** przycisku.
 
 **Kolory** palety początkowo wyświetlane są kolory standardowe 16. Z wyświetlonej kolorów można również utworzyć kolory niestandardowe. Następnie można zapisywać i załaduj paletę kolorów niestandardowych.
 
-**Selektor kolorów niestandardowych** okno dialogowe umożliwia dostosowanie kolorów, użyj dla obrazu. Następujące właściwości zawarte są:
+**Selektor kolorów niestandardowych** okno dialogowe umożliwia dostosowanie kolorów, użyj dla obrazu z następującymi właściwościami:
 
 |Właściwość|Opis|
 |--------------------------|--------------------------|
-|**Wyświetlanie kolor gradientu**|Umożliwia zmianę wartości wybrany kolor. Umieść krzyżyk kolor, który chcesz zmienić. Przesuń suwak w górę lub w dół, Zmień jasność lub wartości RGB koloru.|
-|**Jasność paska**|Ustawia jasność koloru w **gradientu wyświetlania kolorów** pole. Wybierz i przeciągnij białe Strzałka w górę paska dla jasności większy lub w dół za niższą cenę. **Kolor** polu jest wyświetlana Kolor wybrano i efekt jasność ustawisz.|
+|**Wyświetlanie kolor gradientu**|Umożliwia zmianę wartości wybrany kolor.<br/><br/>Umieść krzyżyk na kolor, który chcesz zmienić i przesuń suwak w górę lub w dół do Zmień jasność lub wartości RGB koloru.|
+|**Jasność paska**|Ustawia jasność koloru w **gradientu wyświetlania kolorów** pole.<br/><br/>Wybierz i przeciągnij białe Strzałka w górę paska dla jasności większy lub w dół za niższą cenę. **Kolor** polu jest wyświetlana Kolor wybrano i efekt jasność ustawisz.|
 |**Kolor**|Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.|
 |**HUE**|Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.|
 |**NAS.**|Określa wartość nasycenie koloru, który jest definiowany. Nasycenie jest ilość koloru w określonym odcieniu. Wartości z zakresu od 0 do 240.|
@@ -118,18 +115,18 @@ Możesz użyć **kolory** okno z [paska narzędzi edytora obrazów](../windows/t
 |**Zielony**|Określa wartość zielony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.|
 |**Niebieski**|Określa wartość niebieskiego kolor, który jest definiowany. Wartości z zakresu od 0 do 255.|
 
-Można zapisać i załadować **kolory** paletę zawierającą kolorów niestandardowych. (Domyślnie **kolory** palety ostatnio używane jest automatycznie ładowany podczas uruchamiania programu Visual Studio.)
+Można zapisać i załadować **kolory** paletę zawierającą kolorów niestandardowych. Domyślnie **kolory** palety ostatnio używane jest automatycznie ładowany podczas uruchamiania programu Visual Studio.
 
 > [!TIP]
-> Ponieważ **obraz** edytor nie ma żadnych środków, aby przywrócić domyślne **kolory** palety, należy zapisać domyślne **kolory** palety w obszarze nazwy, takie jak  *Standard.PAL* lub *default.pal* tak, aby można je łatwo przywrócić ustawienia domyślne.
+> Ponieważ **edytora obrazów** nie posiada Aby przywrócić domyślne **kolory** palety, należy zapisać domyślne **kolory** palety w obszarze nazwy, takie jak  *Standard.PAL* lub *default.pal* tak, aby można je łatwo przywrócić ustawienia domyślne.
 
-Użyj **ładowanie kolorów palety** okno dialogowe, aby załadować palety kolorów specjalne do użycia w projekcie języka C++. Następujące właściwości zawarte są:
+Użyj **ładowanie kolorów palety** okno dialogowe, aby załadować palety kolorów specjalne do użycia w projekcie języka C++ z następującymi właściwościami:
 
 |Właściwość|Opis|
 |-----------------|-----------------|
-|**Szukaj w**|Określa lokalizację, w którym chcesz zlokalizować pliku lub folderu. Wybierz strzałkę, aby wybrać inną lokalizację lub wybierz ikonę folderu, na pasku narzędzi, aby przenieść poziomów.|
-|**Nazwa pliku**|Miejsce na wpisanie nazwy pliku, który chcesz otworzyć. Aby szybko znaleźć plik, który poprzednio otwarty, wybierz nazwę pliku na liście rozwijanej, jeśli jest dostępny.<br/><br/>Jeśli szukasz pliku można użyć gwiazdki (*) jako symboli wieloznacznych. Na przykład można wpisać \*.\* umożliwia wyświetlenie listy wszystkich plików. Możesz również wpisać pełną ścieżkę pliku, na przykład C:\My Documents\MyColorPalette.pal lub \\\NetworkServer\MyFolder\MyColorPalette.pal.|
-|**Typy plików**|Zawiera listę typów plików do wyświetlenia. Paleta (* .pal) jest typem pliku domyślnej palety kolorów.|
+|**Szukaj w**|Określa lokalizację, w którym chcesz zlokalizować pliku lub folderu.<br/><br/>Wybierz strzałkę, aby wybrać inną lokalizację lub wybierz ikonę folderu, na pasku narzędzi, aby przenieść poziomów.|
+|**Nazwa pliku**|Miejsce na wpisanie nazwy pliku, który chcesz otworzyć.<br/><br/>Aby szybko znaleźć plik, który poprzednio otwarty, wybierz nazwę pliku na liście rozwijanej, jeśli jest dostępny.<br/><br/>Jeśli szukasz pliku można użyć gwiazdki (*) jako symboli wieloznacznych. Na przykład można wpisać \*.\* umożliwia wyświetlenie listy wszystkich plików. Można również wpisz pełną ścieżkę pliku, na przykład *C:\My Documents\MyColorPalette.pal* lub  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
+|**Typy plików**|Zawiera listę typów plików do wyświetlenia.<br/><br/>Paleta (* .pal) jest typem pliku domyślnej palety kolorów.|
 
 ## <a name="how-to"></a>Instrukcje
 
@@ -143,16 +140,13 @@ Z wyjątkiem **Gumka**, narzędzia na **edytora obrazów** rysowania narzędzi b
 
 ### <a name="to-fill-a-bounded-area-of-an-image-with-a-color"></a>Aby wypełnić kolorem ograniczonego obszaru obrazu
 
-Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne ujęte obszar obrazu z bieżącym kolorem rysowania lub bieżący kolor tła.
-
-> [!TIP]
-> Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
+**Edytora obrazów** zapewnia **wypełnienia** narzędzie do wypełniania dowolne ujęte obszar obrazu z bieżącym kolorem rysowania lub bieżący kolor tła.
 
 ### <a name="to-use-the-fill-tool"></a>Aby użyć narzędzia wypełnienia
 
-1. Na **edytora obrazów** paska narzędzi (lub użyj **obraz** > **narzędzia**), wybierz opcję **wypełnienia** narzędzia.
+1. Użyj **edytora obrazów** paska narzędzi lub przejdź do menu **obraz** > **narzędzia** i wybierz **wypełnienia** narzędzia.
 
-1. Jeśli to konieczne, należy wybrać kolory do rysowania: W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), wybierz przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.
+1. Jeśli to konieczne, należy wybrać kolory do rysowania. W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), wybierz przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.
 
 1. Przenieś **wypełnienia** narzędzie do obszaru, który chcesz wypełnić.
 
@@ -162,17 +156,12 @@ Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne uję
 
 **Wybierz kolor**, lub kolor odbiór, narzędzie sprawia, że każdy kolor na obrazku bieżący kolor pierwszego planu lub kolorów tła, w zależności od tego, czy naciśnięciu lewego lub prawego przycisku myszy. Aby anulować **wybierz kolor** narzędzia, wybranie innego narzędzia.
 
-> [!TIP]
-> Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
-
-#### <a name="to-pick-up-a-color"></a>Aby pobrać kolor
-
-1. Na **edytora obrazów** paska narzędzi (lub z **obraz** menu **narzędzia** polecenie), wybierz opcję **wybierz kolor** narzędzia.
+1. Użyj **edytora obrazów** paska narzędzi lub przejdź do menu **obraz** > **narzędzia** i wybierz **wybierz kolor** narzędzia.
 
 1. Wybierz kolor, który chcesz wczytać z obrazu.
 
    > [!NOTE]
-   > Po pobraniu kolor, **obraz** narzędzie uaktywnia ponownie ostatnio używane edytora.
+   > Po pobraniu kolor, **edytora obrazów** uaktywnia ponownie ostatnio używane narzędzia.
 
 1. Rysowanie za pomocą lewego przycisku myszy kolor pierwszego planu lub prawego przycisku myszy kolor tła.
 
@@ -180,7 +169,7 @@ Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne uję
 
 Podczas przenoszenia lub skopiowane z obrazu wszystkie piksele w zaznaczeniu, które odpowiadają bieżącym kolorem tła, są domyślnie, przejrzyste i nie mogą zasłaniać pikseli w lokalizacji docelowej.
 
-Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło nieprzezroczyste i z powrotem. Korzystając z narzędzia zaznaczania **przezroczyste tło** i **tło nieprzezroczyste** opcje są wyświetlane na **opcji** selektor na **edytora obrazów** paska narzędzi (jak pokazano poniżej).
+Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło nieprzezroczyste i z powrotem. Korzystając z narzędzia zaznaczania **przezroczyste tło** i **tło nieprzezroczyste** opcje są wyświetlane na **opcji** selektor na **edytora obrazów** paska narzędzi.
 
 ![Opcje w tle &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "opcje w tle &#45; przezroczystości")<br/>
 **Opcje przezroczystości i nieprzezroczyste** na **paska narzędzi edytora obrazów**
@@ -189,25 +178,24 @@ Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło ni
 
 W **edytora obrazów** narzędzi, wybierz opcję **opcji** selektor, a następnie wybierz odpowiednią tła:
 
-- `Opaque Background (O)`: Istniejący obraz jest zasłonięte przez wszystkie części zaznaczenia.
+- **Tło nieprzezroczyste (O)**: Istniejący obraz jest zasłonięte przez wszystkie części zaznaczenia.
 
-- `Transparent Background (T)`: Istniejący obraz pokazuje fragmenty zaznaczenia, które odpowiadają bieżącym kolorem tła.
+- **Tło przezroczyste (T)**: Istniejący obraz pokazuje fragmenty zaznaczenia, które odpowiadają bieżącym kolorem tła.
 
-   \- lub —
-
-Na **obraz** menu, zaznacz lub wyczyść **Rysowanie nieprzezroczystych**.
+> [!TIP]
+> W przypadku skrótu na **obraz** menu, zaznacz lub wyczyść **Rysowanie nieprzezroczystych**.
 
 Możesz zmienić kolor tła zaznaczenia już w trakcie efekt zmiany, które części obrazu są niewidoczne.
 
 ### <a name="to-invert-the-colors-in-a-selection"></a>Aby odwrócić kolorów w wyborze
 
-**Obraz** edytor oferuje wygodny sposób Odwróć kolory, w wybranych część obrazu, dzięki czemu można sprawdzić, jak obraz zostanie wyświetlone z odwróconą kolorów.
+**Edytora obrazów** zapewnia wygodny sposób Odwróć kolory, w wybranych część obrazu, dzięki czemu można sprawdzić, jak obraz zostanie wyświetlone z odwróconą kolorów.
 
-Aby odwrócić kolorów w bieżącym zaznaczeniu na **obraz** menu, wybierz opcję **Odwróć kolory**.
+Aby Odwróć kolory w bieżącym zaznaczeniu, przejdź do menu **obraz** > **Odwróć kolory**.
 
 ### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Dostosowywanie lub zmiana kolorów palety kolorów
 
-1. Z **obraz** menu, wybierz **Dopasuj kolory**.
+1. Przejdź do menu **obraz** > **Dopasuj kolory**.
 
 1. W **selektor kolorów niestandardowych** okna dialogowego pole, Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednie pola tekstowe lub wybierz kolor w **gradientu wyświetlania kolorów** pole.
 
@@ -221,7 +209,7 @@ Aby odwrócić kolorów w bieżącym zaznaczeniu na **obraz** menu, wybierz opcj
 
 ### <a name="to-save-a-custom-colors-palette"></a>Aby zapisać palety kolorów niestandardowych
 
-1. Z **obraz** menu, wybierz **Zapisz paletę**.
+1. Przejdź do menu **obraz** > **Zapisz paletę**.
 
 1. Przejdź do katalogu, w którym chcesz zapisać palety, a następnie wpisz nazwę palety.
 
@@ -229,7 +217,7 @@ Aby odwrócić kolorów w bieżącym zaznaczeniu na **obraz** menu, wybierz opcj
 
 ### <a name="to-load-a-custom-colors-palette"></a>Aby załadować palety kolorów niestandardowych
 
-1. Z **obraz** menu, wybierz **Załaduj paletę**.
+1. Przejdź do menu **obraz** > **Załaduj paletę**.
 
 1. W **Załaduj paletę kolorów** okna dialogowego pole, przejdź do katalogu poprawny i wybierz paletę chcesz załadować. **Kolor** palet są zapisywane wraz z rozszerzeniem pliku .pal.
 
@@ -239,8 +227,8 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
-[Okno dialogowe wybierania niestandardowego koloru](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
-[Menu obrazu](../windows/image-menu-image-editor-for-icons.md)<br/>
+[Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Instrukcje: Edytowanie obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

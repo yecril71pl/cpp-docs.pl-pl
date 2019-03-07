@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556780"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423056"
 ---
 # <a name="cutlprops-class"></a>CUtlProps — Klasa
 
@@ -67,13 +67,13 @@ Klasa, która zawiera `BEGIN_PROPSET_MAP`.
 |[Isvalidvalue —](#isvalidvalue)|Używany do sprawdzania poprawności wartości przed ustawieniem właściwości.|
 |[OnInterfaceRequested](#oninterfacerequested)|Obsługuje żądania na potrzeby opcjonalny interfejs, gdy użytkownik wywołuje metodę dla interfejsu tworzenia obiektu.|
 |[OnPropertyChanged](#onpropertychanged)|Wywołuje się po ustawieniu właściwości w celu obsługi łańcuchowych właściwości.|
-|[Setpropvalue —](#setpropvalue)|Ustawia właściwość w zbiorze właściwości.|
+|[SetPropValue](#setpropvalue)|Ustawia właściwość w zbiorze właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
 W większości tej klasy jest szczegółowo opisuje implementacja.
 
-`CUtlProps` zawiera dwa elementy członkowskie do ustawiania właściwości wewnętrznie: [getpropvalue —](../../data/oledb/cutlprops-getpropvalue.md) i [setpropvalue —](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` zawiera dwa elementy członkowskie do ustawiania właściwości wewnętrznie: [Getpropvalue —](../../data/oledb/cutlprops-getpropvalue.md) i [setpropvalue —](../../data/oledb/cutlprops-setpropvalue.md).
 
 Aby uzyskać więcej informacji na temat makra używane w mapie zestaw właściwości, zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) i [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 Indeks do tablicy ustawioną właściwość; zero, jeśli istnieje tylko jedna właściwość.
 
 *pDBProp*<br/>
-Identyfikator właściwości i nową wartość w [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+Identyfikator właściwości i nową wartość w [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 Indeks do tablicy ustawioną właściwość; zero, jeśli istnieje tylko jedna właściwość.
 
 *pDBProp*<br/>
-Identyfikator właściwości i nową wartość w [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+Identyfikator właściwości i nową wartość w [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954955"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563212"
 ---
 # <a name="mfc-predefined-symbols"></a>Wstępnie zdefiniowane symbole MFC
 
@@ -236,7 +236,7 @@ Symbole zawarte w tej tabeli są wyświetlane tylko w projekcie MFC po dodaniu o
 
 Te symbole należą również pliki obsługi MFC, ale obsługują standardowe funkcje aplikacji Windows i akcje. Te symbole są używane z menu.
 
-Podczas pracy z menu w **Edytor Menu**, te symbole pojawią się w **okno właściwości** skojarzone z typowych poleceń menu. Na przykład jeśli aplikacja ma **pliku** menu z **zakończenia** polecenia, polecenie będzie skojarzona z symbolem id_app_exit — w [okno właściwości](/visualstudio/ide/reference/properties-window).
+Podczas pracy z menu w **Edytor Menu**, te symbole pojawią się w **właściwość** skojarzone z Typowe polecenia menu okna. Na przykład jeśli aplikacja ma **pliku** menu z **zakończenia** polecenia, polecenie będzie skojarzona z symbolem id_app_exit — w [okno właściwości](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336541"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563124"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Klawisze skrótów (C++ edytor obrazów dla ikon)
 
-Poniżej przedstawiono klawisze skrótów dla poleceń edytora obrazów, które są powiązane z kluczy domyślnie. Aby zmienić klawisze skrótów, kliknij przycisk **opcje** na **narzędzia** menu, a następnie wybierz **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Poniżej przedstawiono klawisze skrótów dla poleceń edytora obrazów, które są powiązane z kluczy domyślnie. Aby zmienić klawisze skrótów, przejdź do menu **narzędzia** > **opcje** i wybierz polecenie **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Dostępne opcje w oknach dialogowych i nazwy i lokalizacje poleceń menu, który zostanie wyświetlony, mogą różnić się od opisanych w pomocy, w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Dostępne opcje w oknach dialogowych i nazwy i lokalizacje poleceń menu, który zostanie wyświetlony, mogą różnić się od opisanych w pomocy, w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, przejdź do menu **narzędzia** > **Import i eksport ustawień**. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Polecenie|klucze|Opis|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
+[Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Instrukcje: Edytowanie obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md)<br/>

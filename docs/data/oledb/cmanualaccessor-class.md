@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 98689fc3262cd8fc3bcb29e0bda59b1f40761141
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556715"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422796"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor — Klasa
 
@@ -62,7 +62,7 @@ class CManualAccessor : public CAccessorBase
 |[AddBindEntry](#addbindentry)|Dodaje wpis powiązanie kolumn danych wyjściowych.|
 |[AddParameterEntry](#addparameterentry)|Dodaje wpis parametru do metody dostępu parametru.|
 |[CreateAccessor](#createaccessor)|Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.|
-|[Createparameteraccessor —](#createparameteraccessor)|Przydziela pamięć dla parametru powiązania struktury i inicjuje elementy członkowskie danych parametru.|
+|[CreateParameterAccessor](#createparameteraccessor)|Przydziela pamięć dla parametru powiązania struktury i inicjuje elementy członkowskie danych parametru.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 *nOrdinal*<br/>
 [in] Numer kolumny.
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 *nOrdinal*<br/>
 [in] Liczba parametrów.

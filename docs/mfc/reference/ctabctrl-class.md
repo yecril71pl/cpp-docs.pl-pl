@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425019"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl Class
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Wskazuje do wykonywania kolejnej operacji. Jeśli ten parametr ma wartość TRUE, *lprect —* określa prostokątny obszar wyświetlania i odbiera prostokąt odpowiednie okna. Jeśli ten parametr ma wartość FALSE, *lprect —* Określa prostokąt okna i odbiera odpowiedniego prostokątny obszar wyświetlania.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która określa danego prostokąt i odbiera obliczony prostokąt.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która określa danego prostokąt i odbiera obliczony prostokąt.
 
 ### <a name="example"></a>Przykład
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Określa styl kontrolki karty. Zastosuj dowolną kombinację [karcie Style kontrolki](/windows/desktop/Controls/tab-control-styles), które zostały opisane w zestawie Windows SDK. Zobacz **uwagi** listę Style okna, które również można zastosować do formantu.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu karty. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie formantu karty. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki karty, zwykle `CDialog`. Nie może być równa NULL.
@@ -250,7 +250,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl kontrolki karty. Zastosuj dowolną kombinację [karcie Style kontrolki](/windows/desktop/Controls/tab-control-styles), które zostały opisane w zestawie Windows SDK. Zobacz **uwagi** w [Utwórz](#create) listę Style okna, które również można zastosować do formantu.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Liczony od zera indeks elementu karty.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający karty. Tych współrzędnych w trybie okienka ekranu bieżące mapowania.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która odbiera prostokąt otaczający karty. Tych współrzędnych w trybie okienka ekranu bieżące mapowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 

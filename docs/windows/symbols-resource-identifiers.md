@@ -10,16 +10,16 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954864"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563319"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identyfikatory zasobów (symbolom) (C++)
 
-Symbol jest identyfikatorem zasobu (identyfikator), który składa się z dwóch części: ciąg tekstowy (nazwa symbolu) zamapowany na wartość całkowitą (wartość symbolu). Na przykład:
+Symbol jest identyfikatorem zasobu (identyfikator) składający się z dwóch części nazwy symbolu (ciąg tekstowy) zamapowany na wartość symbolu (liczba całkowita), na przykład:
 
 ```
 IDC_EDITNAME = 5100
@@ -29,11 +29,6 @@ Nazwy symboli w większości przypadków są określane jako identyfikatorów.
 
 Symbole Podaj opisową sposób odwoływania się do zasobów i obiektów interfejsu użytkownika, zarówno w kodzie źródłowym, jak i podczas pracy z nimi w edytorach zasobów. Możesz wyświetlać i manipulować symboli w jednym wygodnym miejscu przy użyciu [okno dialogowe symboli zasobów](../windows/viewing-resource-symbols.md).
 
-Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows/resource-editors.md) Podaj nazwę domyślną dla danego zasobu, na przykład `IDC_RADIO1`i przypisać jej wartości. Definicja name plus wartość jest przechowywana w `Resource.h` pliku.
-
-> [!NOTE]
-> Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku .rc do innego, Visual C++ mogą ulec zmianie, przeniesione zasób wartości symbolu lub nazwy symbolu i wartości, aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku.
-
 W miarę wzrostu aplikacji w rosnąca liczba i rozmiar, co powoduje jego ilość zasobów oraz symbole. Śledzenie dużą liczbę symboli, rozproszone w wielu plików może być trudne. **Symboli zasobów** okno dialogowe upraszcza zarządzanie symboli, oferując narzędzie centralnego za pomocą którego można:
 
 - [Tworzenie symboli](../windows/creating-new-symbols.md)
@@ -41,6 +36,11 @@ W miarę wzrostu aplikacji w rosnąca liczba i rozmiar, co powoduje jego ilość
 - [Zarządzanie symboli](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Wyświetl wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)
+
+Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows/resource-editors.md) Podaj nazwę domyślną dla danego zasobu, na przykład `IDC_RADIO1`i przypisać jej wartości. Definicja name plus wartość jest przechowywana w `Resource.h` pliku.
+
+> [!NOTE]
+> Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku .rc do innego, Visual C++ mogą ulec zmianie, przeniesione zasób wartości symbolu lub nazwy symbolu i wartości, aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku.
 
 ## <a name="requirements"></a>Wymagania
 

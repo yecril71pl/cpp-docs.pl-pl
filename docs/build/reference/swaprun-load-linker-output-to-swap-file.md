@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: a21b58cf997c64f099ce3b54f915415243fa9124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 085be83bf73288871c71bef00378ddd494cd6f8d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424876"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (Załaduj pliki wyjściowe konsolidatora do pliku Swap)
 
@@ -52,7 +52,7 @@ Jeśli sieć jest określona, system operacyjny najpierw skopiować obraz binarn
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet%2A> właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)
