@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 921e6fac32d37f8976d53d49adab72fb27ab5e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632222"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748570"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 
@@ -26,7 +26,7 @@ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z bibli
 
 [Instrukcje: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Porady: powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Instrukcje: Czy danych DDX/DDV powiązania z Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
@@ -34,7 +34,7 @@ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z bibli
 
 [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [klasa CDialog](../mfc/reference/cdialog-class.md) &#124; [klasa CWnd](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 [Różnice w programie Windows Forms/MFC programowania](../dotnet/windows-forms-mfc-programming-differences.md)<br/>

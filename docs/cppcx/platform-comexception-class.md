@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607808"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745212"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException, klasa
 
@@ -73,11 +73,11 @@ Następujące wstępnie zdefiniowane wyjątki są uzyskiwane z COMException. Ró
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -93,7 +93,7 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Parametry
 
-*wartość HRESULT*<br/>
+*hresult*<br/>
 Błąd HRESULT, który jest reprezentowany przez wyjątek.
 
 ## <a name="hresult"></a> Właściwość COMException::HResult
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 Opis wyjątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

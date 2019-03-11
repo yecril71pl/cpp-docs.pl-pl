@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::UIntPtr Struct
 ms.assetid: dc4f5176-4c4d-4209-b68e-eb30f2c2465b
-ms.openlocfilehash: 480503ec3f846cd908c1d046dc589cc89142ed0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a49438f610af47831aa856e7bd4c33b90feef65
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603453"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746347"
 ---
 # <a name="platformuintptr-value-class"></a>Klasa wartości Platform::UIntPtr
 
@@ -26,14 +26,14 @@ public value struct UintPtr
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

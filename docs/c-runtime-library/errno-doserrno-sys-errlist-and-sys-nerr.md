@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487730"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750783"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
@@ -51,8 +51,8 @@ Każdy `errno` wartość jest skojarzona z komunikatem o błędzie w `_sys_errli
 
 |Makro globalne|Funkcjonalne odpowiedniki|
 |------------------|----------------------------|
-|`_doserrno`|[_get_doserrno —](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno —](../c-runtime-library/reference/set-doserrno.md)|
-|`errno`|[_get_errno —](../c-runtime-library/reference/get-errno.md), [_set_errno —](../c-runtime-library/reference/set-errno.md)|
+|`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
+|`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
 |`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 Procedury matematyczne biblioteki ustawiają `errno` przez wywołanie metody [_matherr](../c-runtime-library/reference/matherr.md). Aby obsługiwać błędy matematyczne w inny sposób, napisz własną procedurę według `_matherr` opisu referencyjnego i nadaj mu nazwę `_matherr`.
@@ -107,11 +107,11 @@ Wszystkie `errno` wartościami w poniższej tabeli są wstępnie zdefiniowanymi 
 |Makro globalne|Wymagany nagłówek|Opcjonalne nagłówki|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h > lub \<stdlib.h >, \<cerrno — > lub \<cstdlib — > (C++)||
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h >, \<cerrno — > (C++)|
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
 `_doserrno`, `_sys_errlist`, I `_sys_nerr` makra są rozszerzeniami Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
 [errno, stałe](../c-runtime-library/errno-constants.md)<br/>

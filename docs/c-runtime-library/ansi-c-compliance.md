@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: c84485fdd06bc9264241cb37aa3c6b2fb29d9322
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620756"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742824"
 ---
 # <a name="ansi-c-compliance"></a>Zgodność ANSI-C
 
@@ -28,6 +28,6 @@ Nazwy funkcji specyficznych dla firmy Microsoft i zmienne globalne rozpoczynają
 
 Nazwy makra specyficzne dla firmy Microsoft i stałych manifestu rozpocząć z dwoma podkreśleniami lub pojedynczego wiodącego podkreślnika bezpośrednio po nim wielkiej litery. Zakres tych identyfikatorów jest bezwzględna. Na przykład nie można użyć identyfikatora specyficzne dla firmy Microsoft **_UPPER** z tego powodu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zgodność](../c-runtime-library/compatibility.md)

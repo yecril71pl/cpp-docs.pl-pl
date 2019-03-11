@@ -10,12 +10,12 @@ helpviewer_keywords:
 - programs [C++], beginning with wizards
 - applications [C++], using wizards
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
-ms.openlocfilehash: 49d0f37268e78f3d3917314505df75d8acdf7fd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14a4d5502226cab1cc2f69a6568c3278ee8f7a87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474772"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750810"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji
 
@@ -35,9 +35,9 @@ Każdy typ projektu Visual C++ zawiera Kreatora aplikacji, który pomaga szybko 
 
 1. Kliknij przycisk **OK**, Kreator projektu wpisz otwiera i. Jeśli chcesz przeczytać temat pomocy dla kreatora, naciśnij klawisz **F1**.
 
-Podczas tworzenia projektu możesz utworzyć nowe rozwiązanie lub dodać projekt do istniejącego rozwiązania. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Podczas tworzenia projektu możesz utworzyć nowe rozwiązanie lub dodać projekt do istniejącego rozwiązania. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i zarządzanie projektami Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Kreatory i okna dialogowe MFC](../mfc/reference/mfc-wizards-and-dialog-boxes.md)<br>

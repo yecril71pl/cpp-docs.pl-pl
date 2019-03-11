@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-ms.openlocfilehash: a73625093607869076851bd253864d796c46fd81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10783ffd6b4f343e4dd768a01396878c186503fa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565467"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747673"
 ---
 # <a name="scanf-type-field-characters"></a>scanf — Znaki pola typu
 
@@ -65,6 +65,6 @@ Ciąg formatu, który może obsługiwać wprowadzanie znaków jednobajtowych lub
 
 Skanowanie ciągów `scanf` funkcje, i `wscanf` funkcje, za pomocą powyższej tabeli specyfikatorów typ formatu `s` i `S` zamiast `c` i `C`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)

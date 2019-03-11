@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556871"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752431"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -86,6 +86,6 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 |[Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX](introduction-to-visual-cpp-for-unix-users.md)|Zawiera informacje dla użytkowników systemu UNIX, którzy jesteś nowym użytkownikiem Visual C++ i chcesz stać się za pomocą go.|
 |[Eksportowanie z systemu UNIX do Win32](porting-from-unix-to-win32.md)|W tym artykule omówiono opcje do migrowania aplikacji systemu UNIX do Windows.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Visual C++](../visual-cpp-in-visual-studio.md)

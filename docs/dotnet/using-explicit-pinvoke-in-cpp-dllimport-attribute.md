@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588711"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740535"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)
 
@@ -39,6 +39,6 @@ Wynik jest zarządzany punkt wejścia dla każdej natywnej funkcji biblioteki DL
 
 - [Instrukcje: przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wywoływanie funkcji natywnych z kodu zarządzanego](../dotnet/calling-native-functions-from-managed-code.md)

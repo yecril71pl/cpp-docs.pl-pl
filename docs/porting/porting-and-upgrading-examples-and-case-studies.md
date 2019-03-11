@@ -2,12 +2,12 @@
 title: 'Przenoszenie i uaktualnianie: Przykłady i analizy przypadków'
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568221"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747193"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Przenoszenie i uaktualnianie: Przykłady i analizy przypadków
 
@@ -23,6 +23,6 @@ W tym miejscu możesz przeczytać o zajęło migracji niektórych skromną przyk
 
 - [Spy ++](../porting/porting-guide-spy-increment.md) to aplikacja, która sprawdza i informacje na temat elementów interfejsu użytkownika w aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

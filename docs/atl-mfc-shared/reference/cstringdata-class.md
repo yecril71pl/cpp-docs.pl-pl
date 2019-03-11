@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589530"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748518"
 ---
 # <a name="cstringdata-class"></a>CStringData, klasa
 
@@ -43,12 +43,12 @@ struct CStringData
 |||
 |-|-|
 |[AddRef](#addref)|Zwiększa licznik odwołań obiektu danych ciągu.|
-|[Dane](#data)|Pobiera dane znaków obiektu ciągu.|
+|[data](#data)|Pobiera dane znaków obiektu ciągu.|
 |[IsLocked](#islocked)|Określa, jeśli bufor z obiektem ciągu skojarzone jest zablokowany.|
 |[IsShared](#isshared)|Określa, jeśli bufor z obiektem ciągu skojarzone jest obecnie udostępniana.|
 |[Blokady](#lock)|Blokuje buforu ciągu skojarzonego obiektu.|
 |[Wersja](#release)|Zwalnia obiektu określonego ciągu.|
-|[Odblokowywanie](#unlock)|Odblokowuje buforu ciągu skojarzonego obiektu.|
+|[Unlock](#unlock)|Odblokowuje buforu ciągu skojarzonego obiektu.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -249,8 +249,7 @@ Wywołaj tę funkcję, aby odblokować buforu znaków ciągu obiektu danych. Po 
 
 Blokowanie i odblokowywanie jest używany, gdy deweloper należy upewnić się, że dane ciągu nie można udostępnić. Dobrym przykładem blokowania obrazuje [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) i [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

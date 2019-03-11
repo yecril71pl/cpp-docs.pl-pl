@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582640"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751703"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i Marshaling (C + +/ CX)
 
@@ -61,7 +61,7 @@ Ostrzeżenie, wystawiany jest następujący:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Po dodaniu odwołania — w zakresie elementu członkowskiego lub zakresu globalnego — do obiektu, który ma zachowanie marshalingu "Standardowa", kompilator generuje ostrzeżenie z informacją o tym, aby opakować typ w `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Jeśli używasz `Agile<T>`, będzie można korzystać z klasy jak w przypadku dowolnej klasy agile. Użyj `Platform::Agile<T>` w takiej sytuacji:
+Po dodaniu odwołania — w zakresie elementu członkowskiego lub zakresu globalnego — do obiektu, który ma zachowanie marshalingu "Standardowa", kompilator generuje ostrzeżenie z informacją o tym, aby opakować typ w `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Jeśli używasz `Agile<T>`, jak w przypadku innych agile klasy wykorzystywaną klasy. Użyj `Platform::Agile<T>` w takiej sytuacji:
 
 - Agile zmienna jest zadeklarowana w zakresie globalnym.
 
@@ -122,7 +122,7 @@ Niezapieczętowane klasy musi mieć ustawienia atrybut organizowania i wątków,
 
 Wątkowość i marshaling informacje wymagane przez składnik środowiska uruchomieniowego Windows innej firmy jest określona w aplikacji informacje rejestracyjne manifestu składnika. Firma Microsoft zaleca wykonanie wszystkie składniki środowiska wykonawczego Windows agile. Dzięki temu kod klienta może wywołać składnika z żadnym z wątków w aplikacji i poprawia wydajność te wywołania, ponieważ są one bezpośrednie wywołania, które mają nie marshaling. Jeśli Tworzenie klasy w ten sposób, a następnie kod klienta, nie trzeba używać `Platform::Agile<T>` korzystanie z klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

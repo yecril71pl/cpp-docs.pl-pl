@@ -1,19 +1,19 @@
 ---
-title: 'Porady: definiowanie statycznego konstruktora interfejsu (C++/CLI)'
+title: 'Instrukcje: Definiowanie statycznego konstruktora interfejsu (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566390"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748618"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Porady: definiowanie statycznego konstruktora interfejsu (C++/CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Instrukcje: Definiowanie statycznego konstruktora interfejsu (C + +/ CLI)
 
 Interfejs może mieć statyczny Konstruktor, który może służyć do zainicjowania elementów członkowskich danych statycznych.  Konstruktor statyczny będzie wywoływana co najwyżej jeden raz i zostanie wywołana przed metodą uzyskiwania dostępu do składowej interfejsu statycznego po raz pierwszy.
 
@@ -54,6 +54,6 @@ in MyInterface static constructor
 99
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa interfejsu](../windows/interface-class-cpp-component-extensions.md)

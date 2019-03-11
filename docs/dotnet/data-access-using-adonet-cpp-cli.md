@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638480"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749350"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Dostęp do danych za pomocą ADO.NET (C++/CLI)
 
@@ -43,7 +43,7 @@ Pokazuje, jak dodać parametry natywnych (`char *`) do bazy danych oraz sposób 
 
 W tym przykładzie klasa DatabaseClass służy do interakcji z ADO.NET <xref:System.Data.DataTable> obiektu. Należy pamiętać, że ta klasa jest natywnym kodzie C++ `class` (w porównaniu z `ref class` lub `value class`). Jest to konieczne, ponieważ chcemy użyć tej klasy z kodu natywnego, a nie można używać typów zarządzanych w kodzie natywnym. Ta klasa zostanie skompilowany pod kątem środowiska CLR, wskazane przez `#pragma managed` dyrektywy przed deklaracją klasy. Aby uzyskać więcej informacji na temat tej dyrektywy, zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md).
 
-Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
+Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [jak: Deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Pozostała część kodu, w tym przykładzie jest macierzystego kodu C++, wskazane przez `#pragma unmanaged` dyrektywy poprzedzających `main`. W tym przykładzie jesteśmy tworzenia nowego wystąpienia DatabaseClass i wywoływania jego metody, aby utworzyć tabelę i wypełnić kilka wierszy w tabeli. Należy pamiętać, że ciągi natywne C++ są przekazywanej jako wartości kolumny StringCol bazy danych. Wewnątrz DatabaseClass, te ciągi są organizowane ciągi zarządzane przy użyciu funkcji kierowania, znajdujących się w <xref:System.Runtime.InteropServices?displayProperty=fullName> przestrzeni nazw. Ściślej mówiąc, Metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> służy do organizowania `char *` do <xref:System.String>, a także metoda <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> służy do organizowania <xref:System.String> do `char *`.
 
@@ -169,7 +169,7 @@ Pokazuje, jak dodać parametry COM (`BSTR`) do bazy danych oraz sposób organizo
 
 W tym przykładzie klasa DatabaseClass służy do interakcji z ADO.NET <xref:System.Data.DataTable> obiektu. Należy pamiętać, że ta klasa jest natywnym kodzie C++ `class` (w porównaniu z `ref class` lub `value class`). Jest to konieczne, ponieważ chcemy użyć tej klasy z kodu natywnego, a nie można używać typów zarządzanych w kodzie natywnym. Ta klasa zostanie skompilowany pod kątem środowiska CLR, wskazane przez `#pragma managed` dyrektywy przed deklaracją klasy. Aby uzyskać więcej informacji na temat tej dyrektywy, zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md).
 
-Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
+Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [jak: Deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Pozostała część kodu, w tym przykładzie jest macierzystego kodu C++, wskazane przez `#pragma unmanaged` dyrektywy poprzedzających `main`. W tym przykładzie jesteśmy tworzenia nowego wystąpienia DatabaseClass i wywoływania jego metody, aby utworzyć tabelę i wypełnić kilka wierszy w tabeli. Należy pamiętać, że ciągów COM jest przekazywany jako wartości dla kolumny bazy danych StringCol. Wewnątrz DatabaseClass, te ciągi są organizowane ciągi zarządzane przy użyciu funkcji kierowania, znajdujących się w <xref:System.Runtime.InteropServices?displayProperty=fullName> przestrzeni nazw. Ściślej mówiąc, Metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> służy do organizowania `BSTR` do <xref:System.String>, a także metoda <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> służy do organizowania <xref:System.String> do `BSTR`.
 
@@ -303,7 +303,7 @@ Przedstawiono sposób dodawania natywnych ciąg Unicode (`wchar_t *`) do bazy da
 
 W tym przykładzie klasa DatabaseClass służy do interakcji z ADO.NET <xref:System.Data.DataTable> obiektu. Należy pamiętać, że ta klasa jest natywnym kodzie C++ `class` (w porównaniu z `ref class` lub `value class`). Jest to konieczne, ponieważ chcemy użyć tej klasy z kodu natywnego, a nie można używać typów zarządzanych w kodzie natywnym. Ta klasa zostanie skompilowany pod kątem środowiska CLR, wskazane przez `#pragma managed` dyrektywy przed deklaracją klasy. Aby uzyskać więcej informacji na temat tej dyrektywy, zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md).
 
-Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
+Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [jak: Deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Pozostała część kodu, w tym przykładzie jest macierzystego kodu C++, wskazane przez `#pragma unmanaged` dyrektywy poprzedzających `main`. W tym przykładzie jesteśmy tworzenia nowego wystąpienia DatabaseClass i wywoływania jego metody, aby utworzyć tabelę i wypełnić kilka wierszy w tabeli. Należy pamiętać, że ciągi Unicode C++ są przekazywanej jako wartości kolumny StringCol bazy danych. Wewnątrz DatabaseClass, te ciągi są organizowane ciągi zarządzane przy użyciu funkcji kierowania, znajdujących się w <xref:System.Runtime.InteropServices?displayProperty=fullName> przestrzeni nazw. Ściślej mówiąc, Metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> służy do organizowania `wchar_t *` do <xref:System.String>, a także metoda <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> służy do organizowania <xref:System.String> do `wchar_t *`.
 
@@ -429,7 +429,7 @@ Przedstawiono sposób dodawania macierzystej `VARIANT` bazę danych i sposobu or
 
 W tym przykładzie klasa DatabaseClass służy do interakcji z ADO.NET <xref:System.Data.DataTable> obiektu. Należy pamiętać, że ta klasa jest natywnym kodzie C++ `class` (w porównaniu z `ref class` lub `value class`). Jest to konieczne, ponieważ chcemy użyć tej klasy z kodu natywnego, a nie można używać typów zarządzanych w kodzie natywnym. Ta klasa zostanie skompilowany pod kątem środowiska CLR, wskazane przez `#pragma managed` dyrektywy przed deklaracją klasy. Aby uzyskać więcej informacji na temat tej dyrektywy, zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md).
 
-Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
+Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [jak: Deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Pozostała część kodu, w tym przykładzie jest macierzystego kodu C++, wskazane przez `#pragma unmanaged` dyrektywy poprzedzających `main`. W tym przykładzie jesteśmy tworzenia nowego wystąpienia DatabaseClass i wywoływania jego metody, aby utworzyć tabelę i wypełnić kilka wierszy w tabeli. Należy pamiętać, że native `VARIANT` typy są przekazywanej jako wartości kolumny ObjectCol bazy danych. Wewnątrz DatabaseClass te `VARIANT` typy są przekazywane do obiektów zarządzanych przy użyciu funkcji kierowania, znajdujących się w <xref:System.Runtime.InteropServices?displayProperty=fullName> przestrzeni nazw. Ściślej mówiąc, Metoda <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> służy do organizowania `VARIANT` do <xref:System.Object>, a także metoda <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> służy do organizowania <xref:System.Object> do `VARIANT`.
 
@@ -570,7 +570,7 @@ Przedstawiono sposób dodawania macierzystej `SAFEARRAY` bazę danych i sposobu 
 
 W tym przykładzie klasa DatabaseClass służy do interakcji z ADO.NET <xref:System.Data.DataTable> obiektu. Należy pamiętać, że ta klasa jest natywnym kodzie C++ `class` (w porównaniu z `ref class` lub `value class`). Jest to konieczne, ponieważ chcemy użyć tej klasy z kodu natywnego, a nie można używać typów zarządzanych w kodzie natywnym. Ta klasa zostanie skompilowany pod kątem środowiska CLR, wskazane przez `#pragma managed` dyrektywy przed deklaracją klasy. Aby uzyskać więcej informacji na temat tej dyrektywy, zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md).
 
-Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
+Należy pamiętać, prywatny element członkowski klasy DatabaseClass: `gcroot<DataTable ^> table`. Ponieważ typy natywne nie może zawierać typy zarządzane `gcroot` — słowo kluczowe jest konieczne. Aby uzyskać więcej informacji na temat `gcroot`, zobacz [jak: Deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Pozostała część kodu, w tym przykładzie jest macierzystego kodu C++, wskazane przez `#pragma unmanaged` dyrektywy poprzedzających `main`. W tym przykładzie jesteśmy tworzenia nowego wystąpienia DatabaseClass i wywoływania jego metody, aby utworzyć tabelę i wypełnić kilka wierszy w tabeli. Należy pamiętać, że native `SAFEARRAY` typy są przekazywanej jako wartości kolumny ArrayIntsCol bazy danych. Wewnątrz DatabaseClass te `SAFEARRAY` typy są przekazywane do obiektów zarządzanych przy użyciu funkcji kierowania, znajdujących się w <xref:System.Runtime.InteropServices?displayProperty=fullName> przestrzeni nazw. W szczególności metoda <xref:System.Runtime.InteropServices.Marshal.Copy%2A> służy do organizowania `SAFEARRAY` zarządzanej tablicy liczb całkowitych, a także metoda <xref:System.Runtime.InteropServices.Marshal.Copy%2A> służy do organizowania zarządzanych tablicę liczb całkowitych na `SAFEARRAY`.
 
@@ -725,7 +725,7 @@ Aby uzyskać informacji na temat problemów z zabezpieczeniami, obejmujących AD
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Omówienie ADO.NET, zestaw klas, które ujawniają usługi dostępu do danych do programisty .NET.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

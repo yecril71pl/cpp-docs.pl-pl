@@ -1,17 +1,17 @@
 ---
-title: 'Porady: jawne żądanie konwersji boxing'
+title: 'Instrukcje: Jawne żądanie konwersji Boxing'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: ae0d26157bce1892888ea64d953d4c020c0bec87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e720923c89a79f75350b6e7d0781ad6fc5759ed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636335"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748752"
 ---
-# <a name="how-to-explicitly-request-boxing"></a>Porady: jawne żądanie konwersji boxing
+# <a name="how-to-explicitly-request-boxing"></a>Instrukcje: Jawne żądanie konwersji Boxing
 
 Możesz jawne żądanie konwersji boxing, przypisując zmienną do zmiennej typu `Object`.
 
@@ -45,6 +45,6 @@ f(Object^ o)
 f(Object^ o)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja boxing](../windows/boxing-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustalanie, czy obraz jest obrazem natywnym, czy CLR'
+title: 'Instrukcje: Określić, czy obraz jest obrazem natywnym, czy CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: ad8603827f5d1c951411403a62f8ffff58bfca88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637401"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747232"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Porady: ustalanie, czy obraz jest obrazem natywnym, czy CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Instrukcje: Określić, czy obraz jest obrazem natywnym, czy CLR
 
 Jednym ze sposobów, aby ustalić, czy obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego, jest użycie **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
 
-Można także programowo sprawdzać, czy obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego. Aby uzyskać więcej informacji, zobacz [instrukcje: wykrywanie kompilacji/CLR](../dotnet/how-to-detect-clr-compilation.md).
+Można także programowo sprawdzać, czy obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego. Aby uzyskać więcej informacji, zobacz [jak: Wykrywanie kompilacji/CLR](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Przykład
 
@@ -81,6 +81,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

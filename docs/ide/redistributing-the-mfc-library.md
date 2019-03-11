@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659943"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746959"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redystrybuowanie biblioteki MFC
 
@@ -25,7 +25,7 @@ Jeśli aplikacja został utworzony przy użyciu starszej wersji biblioteki MFC, 
 
 Jeśli statycznie połączysz aplikacje do MFC (to znaczy, jeśli określisz **Użyj MFC w bibliotece statycznej** na **ogólne** karcie **stron właściwości** okno dialogowe), nie masz Redystrybucja biblioteki MFC DLL. Jednak mimo że łączenie statyczne może działać w przypadku testowania i wewnętrznego wdrażania aplikacji, zaleca się że nie używasz go do redystrybucji MFC. Aby uzyskać więcej informacji dotyczących zalecanych strategii wdrażania bibliotek Visual C++, zobacz [Wybieranie metody wdrażania](../ide/choosing-a-deployment-method.md).
 
-Jeśli aplikacja używa klas MFC, które implementują formant WebBrowser (na przykład [klasa CHtmlView](../mfc/reference/chtmlview-class.md) lub [klasa CHtmlEditView](../mfc/reference/chtmleditview-class.md)), firma Microsoft zaleca również zainstalowanie najbardziej aktualnej wersji Program Microsoft Internet Explorer, aby komputer docelowy będzie miał najbardziej aktualne pliki wspólnej kontroli. (Co najmniej program Internet Explorer 4.0 jest wymagany). Informacje dotyczące sposobu instalowania składników programu Internet Explorer są dostępne w "Artykule 185375: jak do utworzyć pojedynczy EXE instalacji programu Internet Explorer" w witrynie Microsoft Support.
+Jeśli aplikacja używa klas MFC, które implementują formant WebBrowser (na przykład [klasa CHtmlView](../mfc/reference/chtmlview-class.md) lub [klasa CHtmlEditView](../mfc/reference/chtmleditview-class.md)), firma Microsoft zaleca również zainstalowanie najbardziej aktualnej wersji Program Microsoft Internet Explorer, aby komputer docelowy będzie miał najbardziej aktualne pliki wspólnej kontroli. (Co najmniej program Internet Explorer 4.0 jest wymagany). Informacje dotyczące sposobu instalowania składników programu Internet Explorer są dostępne w "artykule 185375: Jak utworzyć pojedynczej EXE instalacji programu Internet Explorer"w witrynie Microsoft Support.
 
 Jeśli aplikacja używa klas baz danych MFC (na przykład [klasa CRecordset](../mfc/reference/crecordset-class.md) i [klasa CRecordView](../mfc/reference/crecordview-class.md)), można redystrybuować ODBC i wszystkie sterowniki ODBC używane przez aplikację.
 
@@ -45,6 +45,6 @@ Aby uzyskać więcej informacji o sposobie lokalizowania aplikacji MFC, zobacz [
 
 Można redystrybuować Lokalizacja biblioteki MFC DLL przez wdrożenie biblioteki MFC DLL w lokalnym folderze aplikacji. Aby uzyskać więcej informacji na temat sposobu redystrybucji bibliotek Visual C++, zobacz [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)

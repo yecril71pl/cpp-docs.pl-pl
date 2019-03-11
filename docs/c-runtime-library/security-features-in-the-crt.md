@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538363"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746946"
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 
@@ -86,7 +86,7 @@ Niektóre funkcje zabezpieczeń obejmują następujące czynności:
 
 - `Format string syntax checking`. Nieprawidłowe ciągi są wykrywane, na przykład przy użyciu znaków nieprawidłowy typ pola `printf` ciągi formatujące.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Walidacja parametru](../c-runtime-library/parameter-validation.md)<br/>
 [Przeciążenia bezpiecznych szablonów](../c-runtime-library/secure-template-overloads.md)<br/>

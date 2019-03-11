@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: c23c3b70a2152fbceb771e085b73d7daf7aa3c2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527559"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747504"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)
 
@@ -46,6 +46,6 @@ Następujące opcje konsolidatora, obsługują podpisywanie zestawów:
 
 Aby uzyskać więcej informacji na zestawy o silnych zobacz [tworzenie i zestawy Using Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

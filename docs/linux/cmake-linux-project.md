@@ -3,12 +3,12 @@ title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
 description: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 6f38cd3688281c0afa4d50f4bdc915b35ce24f16
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563098"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750601"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -136,12 +136,12 @@ Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Ob
 **Visual Studio 2019**<br/>
 Jeśli prawidłowe CMake nie zostanie znaleziony na komputerze zdalnym, pasek informacyjny będą wyświetlane i udostępnić jako opcje, aby automatycznie wdrażać wstępnie utworzone pliki binarne narzędzia CMake. Pliki binarne zostanie zainstalowana tak, aby `~/.vs/cmake`. Po wdrożeniu plików binarnych, projekt zostanie automatycznie ponownie wygenerować. Należy pamiętać, że jeśli narzędzia CMake, określony przez `cmakeExecutable` pole `CMakeSettings.json` jest nieprawidłowy (nie istnieje lub ma nieobsługiwaną wersję) i istnieją wstępnie utworzone pliki binarne programu Visual Studio będzie ignorować `cmakeExecutable` i korzystać ze wstępnie utworzonych plików binarnych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
 [Narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md)<br/>
-[Podłącz do komputera zdalnego systemu Linux](connect-to-your-remote-linux-computer.md)<br/>
+[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](connect-to-your-remote-linux-computer.md)<br/>
 [Dostosuj ustawienia narzędzia CMake](../ide/customize-cmake-settings.md)<br/>
-[Konfigurowanie narzędzia CMake sesjami debugowania](../ide/configure-cmake-debugging-sessions.md)<br/>
+[Konfigurowanie sesji debugowania narzędzia CMake](../ide/configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)<br/>
 [Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](../ide/cmake-predefined-configuration-reference.md)<br/>

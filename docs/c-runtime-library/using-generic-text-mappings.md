@@ -27,25 +27,25 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471451"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747933"
 ---
 # <a name="using-generic-text-mappings"></a>Mapowania zwykłego tekstu
 
 **Microsoft Specific**
 
-Aby uprościć tworzenie kodu na różne rynki międzynarodowe, biblioteki wykonawczej Microsoft przewiduje mapowania "generic-text" specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Te mapowania są zdefiniowane w TCHAR. H. Te mapowania nazwy można użyć do pisania ogólnego kodu, który może być kompilowane dla każdego z trzech typów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stała manifestu, można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
+Aby uprościć tworzenie kodu na różne rynki międzynarodowe, biblioteki wykonawczej Microsoft przewiduje mapowania "generic-text" specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Te mapowania są zdefiniowane w TCHAR. H. Te mapowania nazwy służy do pisania ogólnego kodu, który może być kompilowane dla każdego z trzech typów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stała manifestu, można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora do mapowania zwykłego tekstu
 
 |#define|Skompilowanych wersji|Przykład|
 |--------------|----------------------|-------------|
 |`_UNICODE`|Unicode (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|
-|`_MBCS`|Znak wielobajtowy|`_tcsrev` Mapuje `_mbsrev`|
+|`_MBCS`|Multibyte-character|`_tcsrev` Mapuje `_mbsrev`|
 |None (wartość domyślna: ani `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS (ASCII)|`_tcsrev` Mapuje `strrev`|
 
 Na przykład funkcja generic tekst `_tcsrev`zdefiniowaną w TCHAR. Godz., mapuje `mbsrev` Jeśli `MBCS` został zdefiniowany w programie lub do `_wcsrev` Jeśli `_UNICODE` został zdefiniowany. W przeciwnym razie `_tcsrev` mapuje `strrev`.
@@ -97,7 +97,7 @@ Ten sposób można napisać, obsługa i skompiluj plik kodu źródłowego pojedy
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>

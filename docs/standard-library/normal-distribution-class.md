@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519857"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743066"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution — Klasa
 
@@ -209,7 +209,7 @@ Struktura parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 ≤ stddev`
+**Warunek wstępny:** `0.0 < stddev`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `mean` wartość przechowuje wartość *oznacza* i którego przechowywane `stddev` wartość przechowuje wartość *stddev*.
 
@@ -244,10 +244,10 @@ struct param_type {
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 ≤ stddev`
+**Warunek wstępny:** `0.0 < stddev`
 
 Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

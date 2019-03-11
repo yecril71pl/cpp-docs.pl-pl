@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330622"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744396"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray, klasa
 
@@ -54,9 +54,9 @@ Te metody mają wewnętrznej dostępności — oznacza to, że tylko są one dos
 
 — Opcja kompilatora: **/ZW**
 
-**Metadane:** Platform.winmd
+**Metadata:** Platform.winmd
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 ## <a name="begin"></a>  Metoda WriteOnlyArray::begin
 
@@ -187,7 +187,7 @@ Odwołanie do elementu, który właśnie został ustawiony.
 
 Aby uzyskać więcej informacji dotyczących sposobu interpretowania wartości HRESULT, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)<br/>
 [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

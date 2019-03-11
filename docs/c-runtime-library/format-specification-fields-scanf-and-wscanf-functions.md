@@ -21,12 +21,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 83c380adc1a8985bb232d70c6d7c4cb4a885e789
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b45de9af3642825f1fddf3a1560b2fc1dbc4ffc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625943"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748466"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pola specyfikacji formatu dla funkcji wscanf
 
@@ -58,7 +58,7 @@ Znak gwiazdki (`*`) po znaku procentu pomija przypisania dalej pola wejściowego
 
 Bezpieczne wersje (z `_s` sufiks) z `scanf` rodzinę funkcji wymagają, że parametr rozmiaru buforu można przekazać bezpośrednio po każdego parametru typu `c`, `C`, `s`, `S`lub `[`. Aby uzyskać więcej informacji na temat bezpieczne wersje `scanf` rodzinę funkcji, zobacz [scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [scanf, specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf, znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>

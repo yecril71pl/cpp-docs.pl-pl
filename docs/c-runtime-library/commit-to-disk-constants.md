@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: f4da66c913cd8a046257158e837e5bdb20ed71c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581403"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750614"
 ---
 # <a name="commit-to-disk-constants"></a>Stałe typu commit-to-disk
 
@@ -33,7 +33,7 @@ Tryby commit-to-disk są następujące:
 
    Zapisuje zawartość niepisane określonego bufora na dysku. Ta funkcja commit-to-disk jest wykonywana wyłącznie w jawnych wywołań albo [fflush —](../c-runtime-library/reference/fflush.md) lub [_flushall —](../c-runtime-library/reference/flushall.md) funkcji. Ten tryb jest przydatny podczas pracy z danymi poufnymi. Na przykład, jeśli program kończy się po wywołaniu `fflush` lub `_flushall`, możesz mieć pewność, że dane z Tobą skontaktować bufory systemu operacyjnego. Jednakże chyba, że plik jest otwierany przy użyciu **c** opcji danych może nie należy wprowadzać je na dysku, jeśli system operacyjny także ulega zakończeniu.
 
-- **N**
+- **n**
 
    Zapisuje zawartość niepisane określonego bufora bufory systemu operacyjnego. System operacyjny dane z pamięci podręcznej i następnie określić optymalny czas zapisu na dysku. W wielu okolicznościach to zachowanie sprawia, że program wydajne zachowania. Jednak w przypadku przechowywania danych krytycznych (np. transakcji bankowych lub informacje o bilecie linii lotniczych) należy wziąć pod uwagę przy użyciu **c** opcji. **n** tryb jest ustawieniem domyślnym.
 
@@ -48,7 +48,7 @@ Wynikowy plik wykonywalny wywołuje w celu `fflush` zapisywanie zawartości bufo
 
 **END specyficzny dla Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stream operacji We/Wy](../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>

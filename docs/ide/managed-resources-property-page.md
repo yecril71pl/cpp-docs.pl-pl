@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 7445c9634ddd242935f3304efae76cc9eb8f007f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bccd0effa353a3ee493055e315e068133cfdf9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655614"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744595"
 ---
 # <a name="managed-resources-property-page"></a>Strona właściwości Zarządzane zasoby
 
@@ -35,7 +35,7 @@ Umożliwia ustawień dla kompilatora zasobów.
 
 Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zarządzanych zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Za pomocą RC (RC wiersza polecenia)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
 [Strony właściwości](../ide/property-pages-visual-cpp.md)<br>

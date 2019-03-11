@@ -22,12 +22,12 @@ helpviewer_keywords:
 - tcmdln global variable
 - acmdln global variable
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
-ms.openlocfilehash: 519cfb305d0092907ff8f10d2b66429a260a5fe2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4cacb512cb9b5bb6ea22f4dc4014ac2a2eeebe6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668055"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747024"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
 
@@ -49,6 +49,6 @@ wchar_t * _wcmdln;
 
 Te zmienne wewnętrznego CRT przechowywać cały wiersz polecenia. One są udostępniane w symbolach wyeksportowany do CRT, ale nie są przeznaczone do użycia w kodzie. `_acmdln` przechowuje dane jako ciąg znaków. `_wcmdln` przechowuje dane jako ciąg znaków dwubajtowych. `_tcmdln` można zdefiniować jako `_acmdln` lub `_wcmdln`, w których jest właściwy zależności.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)

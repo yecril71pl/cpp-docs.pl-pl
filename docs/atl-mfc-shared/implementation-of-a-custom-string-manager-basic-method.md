@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: 4e3ffcdcd034fea81734aaeb87e4c33d81647f66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537819"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752353"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementacja elementu niestandardowego Menedżera ciągów (Metoda podstawowa)
 
@@ -21,9 +21,9 @@ Najprostszym sposobem dostosować schematu alokacji pamięci dla danych string j
 
 - [CLocalHeap](../atl/reference/clocalheap-class.md) Opakowuje interfejsów API systemu Win32: [Funkcja LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), i [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Opakowuje interfejsów API systemu Win32: [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), i [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Opakowuje interfejsów API systemu Win32: [Działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), i [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
 
-- [CComHeap](../atl/reference/ccomheap-class.md) Opakowuje interfejsów API programu przydzielania zadań COM: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), i [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) Opakowuje interfejsów API programu przydzielania zadań COM: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), and [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
 Na potrzeby zarządzania pamięcią ciąg, jest najbardziej użyteczne klasy `CWin32Heap` , ponieważ pozwala na tworzenie wielu niezależnych stosów. Na przykład jeśli chcesz korzystać z oddzielnym stosie do ciągów, można wykonaj następujące czynności:
 
@@ -33,7 +33,6 @@ Na potrzeby zarządzania pamięci dla tego menedżera ciągów prywatnej `CStrin
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

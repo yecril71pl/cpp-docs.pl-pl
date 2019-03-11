@@ -11,12 +11,12 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629271"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751482"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Poznanie zależności aplikacji Visual C++
 
@@ -32,6 +32,6 @@ Korzystając z depends.exe, należy pamiętać, że biblioteka DLL może zależe
 
 Jeśli wiadomo, od których plików DLL zależy aplikacja, możesz określić te, które trzeba rozpowszechniać wraz z aplikacją, kiedy wdraża się ją na innym komputerze. W większości przypadków nie trzeba redystrybuować systemowych bibliotek DLL, ale może być konieczna Redystrybucja dll dla bibliotek języka Visual C++. Aby uzyskać więcej informacji, zobacz [Determining Which DLLs to Redistribute](../ide/determining-which-dlls-to-redistribute.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)

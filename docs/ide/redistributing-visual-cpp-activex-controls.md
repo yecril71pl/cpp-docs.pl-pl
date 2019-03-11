@@ -1,18 +1,18 @@
 ---
-title: Redystrybuowanie kontrolek ActiveX programu Visual C++
+title: Redystrybuowanie formantów ActiveX programu Visual C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 6c1f75665d43d927e21a1fd7d365e1bde46c57a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb4ef7b58f5ef596ac6484761ab891ceb8bb85ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551401"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744643"
 ---
-# <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie kontrolek ActiveX programu Visual C++
+# <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie formantów ActiveX programu Visual C++
 
 Visual C++ 6.0 dostarcza kontrolki ActiveX, używane w aplikacjach, które następnie ponownie rozesłać. Te kontrolki znajdują się już w programie Visual C++. Na umowy licencyjne dla Visual C++ 6.0 można redystrybuować tych kontrolek, za pomocą aplikacji utworzonych w programie Visual C++.
 
@@ -25,7 +25,7 @@ Podczas dystrybucji aplikacji, należy zainstalować i zarejestrować .ocx dla f
 
 - Asycfilt.dll
 
-- Plik comcat.dll \*
+- Comcat.dll \*
 
 - Oleaut32.dll \*
 
@@ -39,6 +39,6 @@ Korzystając z formantu ActiveX, który nawiązuje połączenie z bazą danych, 
 
 Niektóre formanty ActiveX redystrybucyjne mają dodatkowe zależności. Dla każdego pliku .ocx w folderze Os\System na dysku CD produktu Visual C++ 6.0 jest również plik .dep. Dla każdego pliku .ocx, który chcesz wykonać ponowną dystrybucję Wyszukaj jeden lub więcej wpisów UŻYWA w odpowiedni plik .dep. Jeśli plik ma na liście, upewnij się, że plik znajduje się na komputerze docelowym. Bezpośrednio obsługuje pliku ocx muszą być zarejestrowani każdej biblioteki dll. (Dla Regsvr32.exe zakończyło się sukcesem, komputer docelowy musi zawierać wszystkie biblioteki DLL statycznie ładuje kontrolki.) Ponadto jeśli biblioteki DLL, który jest wymieniony jako zależność ma również plik .dep w folderze Os\System na dysku CD programu Visual C++ 6.0, należy zbadać również tego pliku .dep UŻYWA wpisy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)

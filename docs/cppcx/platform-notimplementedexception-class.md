@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-ms.openlocfilehash: 26e8900a10b25507f5091d9cc1f724c73ece7dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467590"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749363"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException, klasa
 
@@ -31,14 +31,14 @@ Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexce
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::COMException, klasa](../cppcx/platform-comexception-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509112"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744863"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Przygotowanie maszyny testowej do uruchomienia debugowania pliku wykonywalnego
 
@@ -20,7 +20,7 @@ Aby przygotować komputer, aby sprawdzić wersję debugowania aplikacji, która 
 
 Istnieją trzy sposoby wdrażania wersji debugowania bibliotek DLL biblioteki Visual C++, wraz z wersji debugowania aplikacji.
 
-- Aby zainstalować wersję debugowania określonej biblioteki DLL Visual C++ w katalogu %windir%\system32\ przy użyciu projektu instalacji, który obejmuje moduły scalania dla odpowiedniej biblioteki wersji i architektury aplikacji, używają centralnego wdrożenia. Moduły scalania znajdują się w Program Files lub katalogu Program Files (x86) \Common modułów\\. Wersja do debugowania modułu scalania generuje debugowania, w tym przykładzie namefor Microsoft_VC110_DebugCRT_x86.msm. Przykładem tego wdrożenia można znaleźć w [wskazówki: Wdrażanie Visual C++ Application By Using projektu Instalatora](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Aby zainstalować wersję debugowania określonej biblioteki DLL Visual C++ w katalogu %windir%\system32\ przy użyciu projektu instalacji, który obejmuje moduły scalania dla odpowiedniej biblioteki wersji i architektury aplikacji, używają centralnego wdrożenia. Moduły scalania znajdują się w Program Files lub katalogu Program Files (x86) \Common modułów\\. Wersja do debugowania modułu scalania generuje debugowania, w tym przykładzie namefor Microsoft_VC110_DebugCRT_x86.msm. Przykładem tego wdrożenia można znaleźć w [instruktażu: Wdrażanie aplikacji Visual C++ przy użyciu projektu instalacji](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Użyj lokalnego wdrażania, aby zainstalować wersję debugowania określonej biblioteki DLL Visual C++ w katalogu instalacyjnym aplikacji przy użyciu plików, które znajdują się w katalogu Program Files (x86) w \Microsoft Visual Studio lub Program Files \<wersja > \VC\redist\Debug_NonRedist\\.
 
@@ -31,7 +31,7 @@ Istnieją trzy sposoby wdrażania wersji debugowania bibliotek DLL biblioteki Vi
 
 Po zainstalowaniu bibliotek DLL Visual C++, można uruchomić zdalnego debugera w udziale sieciowym. Aby uzyskać więcej informacji na temat debugowania zdalnego, zobacz [zdalne debugowanie](/visualstudio/debugger/remote-debugging.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wdrażanie w Visual C++](../ide/deployment-in-visual-cpp.md)<br>
 [Opcje wiersza polecenia Instalatora Windows](/windows/desktop/Msi/command-line-options)<br>

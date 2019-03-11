@@ -3,12 +3,12 @@ title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual St
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
 ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 5fa4b6ee953748673564bf6eeb9018783e02dce8
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562812"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747725"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
@@ -72,5 +72,3 @@ Używa docelowej maszynie Fedora **dnf** pakiet Instalatora. Aby pobrać **opens
 ## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Upewnij się, że CMake 3.8 na zdalnym komputerze z systemem Linux
 
 Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne na maszynie z systemem Linux na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
-
-

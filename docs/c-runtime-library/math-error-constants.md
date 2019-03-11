@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3267a5053cb2cd18cfcb07473bbcc4d6f8295f5d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220026"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751859"
 ---
 # <a name="math-error-constants"></a>Stałe błędów matematycznych
 
@@ -53,7 +53,7 @@ Te błędy, poniżej opisano odpowiadają typów wyjątków zdefiniowanych w MAT
 |`_TLOSS`|Całkowita utrata znaczenia wystąpił.|
 |`_UNDERFLOW`|Wynik jest za mały, aby mogły być reprezentowane.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_matherr](../c-runtime-library/reference/matherr.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

@@ -1,5 +1,5 @@
 ---
-title: __argc __argv, __wargv
+title: __argc, __argv, __wargv
 ms.date: 11/04/2016
 apiname:
 - __wargv
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575321"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743299"
 ---
-# <a name="argc-argv-wargv"></a>__argc __argv, __wargv
+# <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 
 `__argc` Zmienna globalna jest liczbę argumentów wiersza polecenia przekazywane do programu. `__argv` wskaźnik do tablicy ciągi pojedynczych bajtów znaków lub wielu byte znaków, które zawierają argumenty programu i `__wargv` jest wskaźnikiem do tablicy ciągów znaków dwubajtowych, które zawierają argumenty programu. Tych zmiennych globalnych podać argumenty `main` lub `wmain`.
 
@@ -56,8 +56,8 @@ Kod przenośny, zaleca się używać argumentów przekazanych do `main` uzyskać
 
 `__argc`, `__argv`, i `__wargv` są rozszerzeniami Microsoft. Aby uzyskać informacje o zgodności – zobacz [zgodności](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
-[main: uruchamianie programu](../cpp/main-program-startup.md)<br/>
+[główne: Uruchamianie programu](../cpp/main-program-startup.md)<br/>
 [Korzystanie z wmain zamiast main](../cpp/using-wmain-instead-of-main.md)

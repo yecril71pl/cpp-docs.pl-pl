@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: b8783a5826376a65cb71444e2d64c61b6938eab8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 44c7a280ebffd0073f1dfb3a0a3cbdbd2efee0fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220221"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745367"
 ---
 # <a name="heap-constants"></a>Heap — Stałe
 
@@ -51,7 +51,7 @@ Te stałe nadać wartość zwracaną, wskazujący stan sterty.
 |`_HEAPEND`|Koniec sterty osiągnięty został pomyślnie (`_heapwalk` procedury tylko).|
 |`_HEAPOK`|Sterta to spójne (`_heapset` i `_heapchk` procedury tylko). Brak błędów do tej pory; **_Heapinfo —** struktura zawiera informacje o następnej pozycji (`_heapwalk` procedury tylko).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

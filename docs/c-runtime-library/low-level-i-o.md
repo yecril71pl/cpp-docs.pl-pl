@@ -10,12 +10,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 25a61fd7bd033accbbae11fafbd44a0282649e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656927"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740144"
 ---
 # <a name="low-level-io"></a>We/Wy niskiego poziomu
 
@@ -27,7 +27,7 @@ Procedur niższego poziomu mogą uzyskiwać dostęp standardowych strumieni otwi
 |------------|---------------------|
 |**stdin**|0|
 |**STDOUT**|1|
-|**strumienia wyjściowego stderr**|2|
+|**stderr**|2|
 
 Zestaw operacji We/Wy niskiego poziomu w procedury [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) zmienną globalną, po wystąpieniu błędu. Musi zawierać stdio —. H, gdy używasz funkcji niskiego poziomu, tylko wtedy, gdy program wymaga stałą, która jest zdefiniowana w stdio —. Godz., takie jak wskaźnik końca pliku (**EOF**).
 
@@ -51,7 +51,7 @@ Zestaw operacji We/Wy niskiego poziomu w procedury [errno](../c-runtime-library/
 
 **_dup —** i **_dup2 —** są zwykle używane do kojarzenia deskryptorów plików wstępnie zdefiniowane z różnych plików.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

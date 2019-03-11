@@ -1,18 +1,18 @@
 ---
-title: 'Porady: uwidacznianie kontenera STL/CLR z zestawu'
+title: 'Instrukcje: Uwidacznianie kontenera STL/CLR z zestawu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590089"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748440"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Porady: uwidacznianie kontenera STL/CLR z zestawu
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Instrukcje: Uwidacznianie kontenera STL/CLR z zestawu
 
 Kontenery STL/CLR, takie jak `list` i `map` są implementowane jako klasy odwołania szablonu. Ponieważ szablonów języka C++ są tworzone w czasie kompilacji, dwie klasy szablonu, które mają dokładnie taki sam podpis, ale są w różnych zestawach są faktycznie różnych typów. Oznacza to, że szablonu klasy nie można użyć poza granicami zestawu.
 
@@ -384,6 +384,6 @@ cliext::vector contents:
 20
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

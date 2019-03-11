@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke'
+title: 'Instrukcje: Przeprowadzanie marshalingu struktur za pomocą PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429114"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747998"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu struktur za pomocą PInvoke
 
 W tym dokumencie wyjaśniono, jak natywne funkcje, których struktury stylu C może być wywoływana z funkcji zarządzanej przez przy użyciu metody P/Invoke. Mimo że zaleca się, że korzystasz z funkcji międzyoperacyjności języka C++, a nie P/Invoke ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe zaimplementować, jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest dostępne metody P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:
 
@@ -131,6 +131,6 @@ int main() {
 [managed] x=50 y=50
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

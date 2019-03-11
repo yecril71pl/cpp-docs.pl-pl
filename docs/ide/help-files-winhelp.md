@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 142702699523633bf810d0077ce7ba6355557d21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc00902b449905ee75e77f147150cbb68bf3f22
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496310"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751807"
 ---
 # <a name="help-files-winhelp"></a>Pliki pomocy (WinHelp)
 
@@ -33,6 +33,6 @@ WinHelp pomocy technicznej można dodać do projektu kontrolki ActiveX MFC, wybi
 |Makehelp.bat|*Projname*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy, gdy projekt jest skompilowany.|
 |Bullet.bmp|*Projname*|Pliki zasobów|Używane przez standardowy plik tematów do reprezentowania list punktowanych.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

@@ -2,12 +2,12 @@
 title: Integracja środowiska CLR (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: 7b14d8067625719b337e2c830b739269ef96dccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461818"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749026"
 ---
 # <a name="clr-integration-ccx"></a>Integracja środowiska CLR (C + +/ CX)
 
@@ -23,7 +23,7 @@ C + +/ CX mapuje również niektóre typy w przestrzeniach nazw środowiska wyko
 
 Poniższej przedstawiono struktury wartości, które obsługują nowe konstruktory i metody pomocnicze. Jeśli zostały wcześniej napisany kod, który używa listy inicjowania struktury, zmień go do korzystania z nowo dodanym konstruktorów.
 
-**Windows::Foundation —**
+**Windows::Foundation**
 
 - Punkt
 
@@ -35,7 +35,7 @@ Poniższej przedstawiono struktury wartości, które obsługują nowe konstrukto
 
 - Kolor
 
-**Windows::UI::XAML**
+**Windows::UI::Xaml**
 
 - CornerRadius
 
@@ -45,21 +45,21 @@ Poniższej przedstawiono struktury wartości, które obsługują nowe konstrukto
 
 - Grubość
 
-**Windows::UI::XAML::Interop**
+**Windows::UI::Xaml::Interop**
 
 - TypeName
 
-**Windows::UI::XAML::Media**
+**Windows::UI::Xaml::Media**
 
 - Matrix
 
-**Windows::UI::XAML::Media::Animation**
+**Windows::UI::Xaml::Media::Animation**
 
 - KeyTime
 
 - RepeatBehavior
 
-**Windows::UI::XAML::Media::Media3D**
+**Windows::UI::Xaml::Media::Media3D**
 
 - Matrix3D
 
@@ -69,6 +69,6 @@ Jeśli Kompilatory języka Visual C++ lub C# do odczytu pliku winmd, automatyczn
 
 IReference\<T > w środowisku uruchomieniowym Windows mapuje Nullable\<T > na platformie .NET.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Współdziałanie z innymi językami](../cppcx/interoperating-with-other-languages-c-cx.md)

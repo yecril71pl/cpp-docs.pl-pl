@@ -12,12 +12,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: bb67c4cf2f166a8dd67d14b9f61b23241fe442fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607887"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747037"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Uruchamianie jako członek grupy użytkowników
 
@@ -51,6 +51,6 @@ Ogólnie rzecz biorąc działania te powinny być ograniczone do programów inst
 
 Można debugować wszystkie aplikacje, które można uruchomić w programie Visual Studio (natywne i niezarządzane) jako użytkowników niebędących administratorami, staje się częścią grupy debugowanie. Obejmuje to możliwość dołączenia do uruchomionej aplikacji przy użyciu Dołącz do procesu polecenia. Jednakże należy być częścią grupy administratorów, aby debugować aplikacje natywne i zarządzane, które zostały uruchomione przez innego użytkownika.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Najlepsze rozwiązania dotyczące zabezpieczeń](security-best-practices-for-cpp.md)

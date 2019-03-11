@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639156"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743846"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Program MFC lub źródło kontroli i pliki nagłówkowe
 
@@ -32,7 +32,7 @@ Wszystkie te pliki znajdują się w *Projname* katalogu, a w folderze pliki nag�
 |Mainfrm.cpp, Mainfrm.h|Pochodzi **cmainframe —** klasy z poziomu [CFrameWnd](../mfc/reference/cframewnd-class.md) (dla aplikacji interfejsu SDI) lub [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (dla aplikacji MDI). **Cmainframe —** klasy obsługuje tworzenie przycisków paska narzędzi i pasek stanu, wybranie odpowiedniej opcji w Kreatorze aplikacji **Opcje aplikacji** strony (krok 4 z 6). Aby uzyskać informacje na temat korzystania z **cmainframe —**, zobacz [okno ramowe klasy tworzone przez Kreatora aplikacji](../mfc/frame-window-classes-created-by-the-application-wizard.md).|
 |Childfrm.cpp, Childfrm.h|Pochodzi **CChildFrame** klasy z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). **CChildFrame** klasa jest używana dla okien ramowych dokumentu MDI. Te pliki są zawsze tworzone w przypadku wybrania opcji MDI.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [Program ATL lub źródło kontroli i pliki nagłówkowe](../ide/atl-program-or-control-source-and-header-files.md)<br>

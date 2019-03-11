@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 3e97aa61715f0cda8e339a1aabc8e947170b2e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 411bc96f00215ff9f90d8601387ab6bec5a7dc78
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594236"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740895"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Strony właściwości narzędzia generowania dokumentów XML
 
@@ -40,7 +40,7 @@ Strona właściwości narzędzie generowania dokumentów XML udostępnia funkcj�
 
    Jeśli projekt zależny od .lib projektu w rozwiązaniu, może przetwarzać plików xdc z projektu lib w plikach XML dla bieżącego projektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../ide/property-pages-visual-cpp.md)<br>
 [Strony właściwości](../ide/property-pages-visual-cpp.md)

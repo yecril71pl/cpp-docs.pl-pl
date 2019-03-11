@@ -5,12 +5,12 @@ helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: 329a3209f09d2a4cebde067f38e702684ac9e404
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503406"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750796"
 ---
 # <a name="files-and-streams"></a>Pliki i strumienie
 
@@ -38,9 +38,9 @@ Aby można było wykonać wiele operacji na pliku, można otworzyć pliku. Otwie
 
 Gdy plik zostanie pomyślnie otwarty, następnie można określić, czy strumień jest zorientowane na bajt (strumień bajtów) lub całego obiektowo (strumień szerokości). Strumień jest początkowo niepowiązanej. Wywoływanie niektórych funkcji do wykonywania operacji strumienia sprawia, że obiektowo, podczas gdy niektóre inne funkcje ułatwiają szerokiego zorientowanej na bajt. Po strumień obsługuje orientacji, dopóki nie jest ono zamknięte przez wywołanie [fclose —](../c-runtime-library/reference/fclose-fcloseall.md) lub [freopen —](../c-runtime-library/reference/freopen-wfreopen.md).
 
-© 2001 1989 r. przez P.J. Plauger i Jim Brodie. Wszelkie prawa zastrzeżone.
+© 1989-2001 by P.J. Plauger i Jim Brodie. Wszelkie prawa zastrzeżone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strumienie binarne i tekstowe](../c-runtime-library/text-and-binary-streams.md)<br/>
 [Strumienie byte oraz szerokie](../c-runtime-library/byte-and-wide-streams.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539142"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743741"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator, klasa
 
@@ -60,15 +60,15 @@ Element typename VectorViewIterator szablonu klasy.
 |[VectorViewIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do elementu określonego przez bieżący VectorViewIterator.|
 |[VectorViewIterator::operator\[\]](#operator-at)|Pobiera odwołanie do elementu, który jest określony przesunięcia z bieżącej VectorViewIterator.|
 |[VectorViewIterator::operator + — Operator](#operator-plus)|Zwraca VectorViewIterator, która odwołuje się do elementu w określonym przemieszczenia VectorViewIterator określony.|
-|[VectorViewIterator::operator ++ — Operator](#operator-increment)|Zwiększa narastająco VectorViewIterator bieżącego.|
-|[VectorViewIterator::operator += — Operator](#operator-plus-assign)|Zwiększa bieżącego VectorViewIterator o określonym przemieszczenia.|
+|[VectorViewIterator::operator++ Operator](#operator-increment)|Zwiększa narastająco VectorViewIterator bieżącego.|
+|[VectorViewIterator::operator+= Operator](#operator-plus-assign)|Zwiększa bieżącego VectorViewIterator o określonym przemieszczenia.|
 |[VectorViewIterator::operator < — Operator](#operator-less-than)|Wskazuje, czy bieżący VectorViewIterator jest mniejsza niż określony VectorViewIterator.|
 |[VectorViewIterator::operator\<= — Operator](#operator-less-than-or-equals)|Wskazuje, czy bieżący VectorViewIterator jest mniejsza niż lub równa określonej VectorViewIterator.|
 |[VectorViewIterator::operator-= — Operator](#operator-minus-assign)|Zmniejsza bieżące VectorViewIterator przemieszczenie określony.|
-|[VectorViewIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący VectorViewIterator jest równe określonej VectorViewIterator.|
-|[VectorViewIterator::operator > — Operator](#operator-greater-than)|Wskazuje, czy bieżący VectorViewIterator jest większy niż określony VectorViewIterator.|
-|[VectorViewIterator::operator -> — Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący VectorViewIterator.|
-|[VectorViewIterator::operator > = — Operator](#operator-greater-than-or-equals)|Wskazuje, czy bieżący VectorViewIterator jest większa niż lub równa określonej VectorViewIterator.|
+|[VectorViewIterator::operator== Operator](#operator-equality)|Wskazuje, czy bieżący VectorViewIterator jest równe określonej VectorViewIterator.|
+|[VectorViewIterator::operator> Operator](#operator-greater-than)|Wskazuje, czy bieżący VectorViewIterator jest większy niż określony VectorViewIterator.|
+|[VectorViewIterator::operator-> Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący VectorViewIterator.|
+|[VectorViewIterator::operator>= Operator](#operator-greater-than-or-equals)|Wskazuje, czy bieżący VectorViewIterator jest większa niż lub równa określonej VectorViewIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -144,7 +144,7 @@ bool operator==(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorViewIterator innego.
+Another VectorViewIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -164,7 +164,7 @@ bool operator>(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorViewIterator innego.
+Another VectorViewIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -184,7 +184,7 @@ bool operator>=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorViewIterator innego.
+Another VectorViewIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -225,7 +225,7 @@ bool operator!=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorViewIterator innego.
+Another VectorViewIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -285,11 +285,11 @@ difference_type operator-(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Liczba elementów.
 
 *other*<br/>
-VectorViewIterator innego.
+Another VectorViewIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -307,7 +307,7 @@ VectorViewIterator& operator+=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -335,7 +335,7 @@ inline VectorViewIterator<T> operator+
 *T*<br/>
 W drugim składnia elementu VectorViewIterator typename.
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 *i*<br/>
@@ -359,7 +359,7 @@ VectorViewIterator& operator-=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -378,14 +378,14 @@ reference operator[](difference_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Element, który jest przesunięty przez `n` elementy z bieżącego VectorViewIterator.
 
-## <a name="ctor"></a>  Konstruktor VectorViewIterator::VectorViewIterator
+## <a name="ctor"></a>  VectorViewIterator::VectorViewIterator Constructor
 
 Inicjuje nowe wystąpienie klasy VectorViewIterator.
 
@@ -409,6 +409,6 @@ IVectorView\<T > obiektu.
 
 Pierwszy przykład składni jest konstruktor domyślny. Drugi przykład składni jest jawny Konstruktor, który służy do konstruowania VectorViewIterator z IVectorView\<T > obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

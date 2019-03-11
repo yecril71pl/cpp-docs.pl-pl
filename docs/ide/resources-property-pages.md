@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Resources property pages
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
-ms.openlocfilehash: be041ab7cad8b6a84cf016b339cfb99437999dcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d11760d5ec8b899a494ab22b4af229e996dccce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748531"
 ---
 # <a name="resources-property-pages"></a>Strony właściwości zasobów
 
@@ -26,6 +26,6 @@ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zasobów** strony w
 
 Aby programowo uzyskać dostęp do tych właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../ide/property-pages-visual-cpp.md)

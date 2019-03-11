@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 097019b2299ad4d2563b5e0df1b943d190b16197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442643"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746256"
 ---
 # <a name="stream-io"></a>We/Wy strumienia
 
@@ -37,13 +37,13 @@ Te funkcje, przetwarzanie danych w różnych rozmiarów i formatów, pojedyncze 
 |[_fileno](../c-runtime-library/reference/fileno.md)|Pobieranie deskryptora pliku skojarzone z usługą stream|
 |[_flushall](../c-runtime-library/reference/flushall.md)|Opróżnij wszystkie strumienie do buforu lub urządzenie pamięci masowej|
 |[fopen —, _wfopen —](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwieranie strumienia|
-|[fprintf, _fprintf_l —, fwprintf —, _fwprintf_l —](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Wpisz sformatowane dane do usługi stream|
+|[fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Wpisz sformatowane dane do usługi stream|
 |[fputc, fputwc](../c-runtime-library/reference/fputc-fputwc.md)|Wpisz znak w strumieniu (wersje funkcji **putc** i **putwc**)|
 |[_fputchar, _fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|Znak do zapisu **stdout** (wersje funkcji **putchar** i **putwchar**)|
 |[fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)|Zapisz ciąg do strumienia|
 |[fread](../c-runtime-library/reference/fread.md)|Przeczytaj niesformatowanych danych ze strumienia|
 |[freopen —, _wfreopen —](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s —, _wfreopen_s —](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Ponowne przypisywanie **pliku** wskaźnik strumienia do nowego pliku lub urządzenia|
-|[fscanf —, fwscanf —](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [fscanf_s —, _fscanf_s_l —, fwscanf_s —, _fwscanf_s_l —](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|Odczyt sformatowanych danych ze strumienia|
+|[fscanf, fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|Odczyt sformatowanych danych ze strumienia|
 |[fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|Położenie pliku przenoszenia do podanej lokalizacji|
 |[fsetpos](../c-runtime-library/reference/fsetpos.md)|Wskaźnik położenia zestaw strumienia|
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwieranie strumienia z funkcją Udostępnianie plików|
@@ -54,14 +54,14 @@ Te funkcje, przetwarzanie danych w różnych rozmiarów i formatów, pojedyncze 
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Zwraca liczbę jednocześnie otwartych plików, w poziomie operacje We/Wy strumienia.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Odczytaj wiersz z **stdin**|
 |[_getw](../c-runtime-library/reference/getw.md)|Odczytaj plik binarny **int** ze strumienia|
-|[printf, _printf_l —, wprintf, _wprintf_l —](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Wpisz sformatowane dane do **stdout**|
+|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Wpisz sformatowane dane do **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Wpisz znak w strumieniu (wersje — makro **fputc** i **fputwc —**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Znak do zapisu **stdout** (wersje — makro **fputchar —** i **fputwchar —**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Zapisać wiersza do strumienia|
 |[_putw](../c-runtime-library/reference/putw.md)|Zapisywania danych binarnych **int** do strumienia|
 |[rewind](../c-runtime-library/reference/rewind.md)|Przenieś położenie pliku do początku strumienia|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Usuwanie plików tymczasowych utworzonych przez **tmpfile —**|
-|[scanf, _scanf_l —, wscanf, _wscanf_l —](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Odczyt sformatowanych danych z **stdin**|
+|[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Odczyt sformatowanych danych z **stdin**|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|Buforowanie strumienia kontroli|
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Ustaw maksymalną liczbę plików jednocześnie otwarty na we/wy strumienia poziomu.|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|Buforowanie strumienia kontroli i rozmiar buforu|
@@ -95,7 +95,7 @@ Jeśli program nie zamykaj jawnie strumienia, strumień zostanie zamknięty auto
 
 Dane wejściowe można wykonać w danych wyjściowych bezpośrednio tylko interwencyjnego wywołania **fflush —** lub funkcji położenia pliku (**fseek**, **fsetpos**, lub **rewind**). Dane wyjściowe można wykonać dane wejściowe bez interwencyjnego wywołania funkcji położenia pliku, jeśli operacja wprowadzania napotka koniec pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

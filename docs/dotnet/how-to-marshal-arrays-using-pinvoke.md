@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu tablic za pomocą funkcji PInvoke'
+title: 'Instrukcje: Przeprowadzanie marshalingu tablic przy użyciu PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628517"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752314"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Porady: przeprowadzanie marshalingu tablic za pomocą funkcji PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu tablic przy użyciu PInvoke
 
 W tym temacie wyjaśniono, jak natywne funkcje, których można wywołać ciągi stylu C przy użyciu typu ciąg CLR <xref:System.String> dzięki obsłudze wywołania do platformy .NET Framework. W programowaniu w języku Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ metody P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją (w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 
@@ -79,6 +79,6 @@ int main() {
 
 Należy pamiętać, że części biblioteki DLL jest narażony na kodu zarządzanego za pośrednictwem tradycyjnych # dyrektywy include. W rzeczywistości, ponieważ biblioteka DLL jest dostępny tylko w czasie wykonywania, problemy z funkcjami są importowane z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

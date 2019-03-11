@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658188"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745286"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections:: vectorview, klasa
 
@@ -271,10 +271,10 @@ A [std::array](../standard-library/array-class-stl.md) obiekt, który służy do
 *pierwszy*<br/>
 Pierwszy element w sekwencji obiektów, które są stosowane do inicjalizacji VectorView bieżącego. Typ `first` jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*ostatni*<br/>
+*last*<br/>
 Ostatniego elementu w sekwencji obiektów, które są stosowane do inicjalizacji VectorView bieżącego. Typ `last` jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)<br/>
 [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

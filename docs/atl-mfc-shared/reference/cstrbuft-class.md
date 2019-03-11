@@ -1,5 +1,5 @@
 ---
-title: CStrBufT, klasa
+title: CStrBufT Class
 ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492824"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747455"
 ---
-# <a name="cstrbuft-class"></a>CStrBufT, klasa
+# <a name="cstrbuft-class"></a>CStrBufT Class
 
 Ta klasa udostępnia Oczyszczanie zasobów automatyczne dla `GetBuffer` i `ReleaseBuffer` wywołuje na istniejącym `CStringT` obiektu.
 
@@ -117,7 +117,7 @@ Obiekt ciągu skojarzonego z buforu. Zwykle, deweloper będzie używać wstępni
 *nMinLength*<br/>
 Minimalna długość buforu znaków.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa, jeśli długość ciągu jest ustalany automatycznie. Może to być jeden z następujących elementów:
 
 - Długość ciągu AUTO_LENGTH są automatycznie określane podczas [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) jest wywoływana. Ciąg musi być zakończony znakiem null. Wartość domyślna.
@@ -224,8 +224,7 @@ typedef CSimpleStringT<TCharType> StringType;
 
 `TCharType` jest to typ znaku używany specjalizacja szablonu klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

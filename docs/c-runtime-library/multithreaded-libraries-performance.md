@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: f73aa99d1800fc81408b739e556bc7845b348a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587567"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748371"
 ---
 # <a name="multithreaded-libraries-performance"></a>Wydajność bibliotek wielowątkowych
 
@@ -34,6 +34,6 @@ Wydajność bibliotek wielowątkowych została ulepszona i zbliża się wydajno�
 
 - Narażenia uchwyt sterty CRT umożliwia włączenie Windows niskiego fragmentację sterty (LFH) na stercie CRT, która może znacznie poprawić wydajność w scenariuszach wysoce skalowaną.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

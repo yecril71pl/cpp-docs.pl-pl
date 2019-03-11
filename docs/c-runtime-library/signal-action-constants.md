@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 71c2eb796680e90cd16b1798fd478506ce7aa2c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444658"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743874"
 ---
 # <a name="signal-action-constants"></a>Stałe akcji sygnałów
 
@@ -33,12 +33,12 @@ Akcję wykonywaną po odebraniu sygnału przerwania zależy od wartości `func`.
 |||
 |-|-|
 | `SIG_DFL`  | Używa domyślnej system odpowiedzi. Jeśli program wywołujący używa strumienia we/wy, buforów utworzonych przez bibliotekę uruchomieniową nie zostały przesłane.  |
-| `SIG_IGN`  | Ignoruje sygnał przerwania. Ta wartość nigdy nie powinien być podawany dla `SIGFPE`, ponieważ stan zapisu zmiennoprzecinkowego procesu zostanie pozostawiony niezdefiniowane.  |
+| `SIG_IGN`  | Ignores interrupt signal. Ta wartość nigdy nie powinien być podawany dla `SIGFPE`, ponieważ stan zapisu zmiennoprzecinkowego procesu zostanie pozostawiony niezdefiniowane.  |
 | `SIG_SGE`  | Wskazuje, że wystąpił błąd w sygnale.  |
 | `SIG_ACK`  | Wskazuje, że otrzymano potwierdzenia.  |
 | `SIG_ERR`  | Typem zwracanym od sygnałów, co wskazuje na błąd wystąpił.  |
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

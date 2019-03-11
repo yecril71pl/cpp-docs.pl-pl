@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 0c64f6df342e82e3ea5409e2b07af1e591747d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b205aa4c97e78dbb8c5bec28c0f4db638a36c8e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494851"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750991"
 ---
 # <a name="creating-a-c-makefile-project"></a>Tworzenie projektu pliku reguł programu make w języku C++
 
@@ -21,7 +21,7 @@ A *pliku reguł programu make* to plik tekstowy, który zawiera instrukcje dotyc
 Jeśli masz istniejący projekt pliku reguł programu make, masz te opcje, aby kod i/lub jej debugowania w środowisku IDE programu Visual Studio:
 
 - Utwórz projekt pliku reguł programu make w programie Visual Studio korzysta z istniejących plików reguł programu make do kompilacji kodu w środowisku IDE. (Nie będziesz mieć wszystkich funkcji środowiska IDE, które otrzymujesz za pomocą natywnego projektu programu MSBuild.) Zobacz [do utworzenia projektu pliku reguł programu make](#create_a_makefile_project) poniżej.
-- Użyj **Utwórz nowy projekt z istniejących plików kodu** kreatora w celu utworzenia natywnego projektu programu MSBuild z kodu źródłowego. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md).
+- Użyj **Utwórz nowy projekt z istniejących plików kodu** kreatora w celu utworzenia natywnego projektu programu MSBuild z kodu źródłowego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie projektu C++ z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md).
 - **Visual Studio 2017 i nowszym**: Użyj **Otwórz Folder** funkcję, aby otworzyć projekt pliku reguł programu make bez podczas konwertowania go do programu MSBuild. Aby uzyskać więcej informacji, zobacz [projekty Otwórz Folder w programie Visual C++](non-msbuild-projects.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Aby utworzyć projekt pliku reguł programu make przy użyciu szablonu projektu pliku reguł programu make
@@ -42,7 +42,7 @@ Plik wyjściowy określany w projekcie nie ma wpływu na nazwę, którą generuj
 
 Możesz przeglądać i modyfikować właściwości projektu na stronie właściwości. Zobacz [ustawienie właściwości projektu Visual C++](../ide/working-with-project-properties.md) informacje dotyczące wyświetlania strony właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator projektu pliku reguł programu make](../ide/makefile-project-wizard.md)<br/>
 [Znaki specjalne w pliku reguł programu Make](../build/special-characters-in-a-makefile.md)<br/>

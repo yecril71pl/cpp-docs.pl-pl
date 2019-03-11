@@ -1,18 +1,18 @@
 ---
-title: 'Porady: tworzenie aplikacji do konsoli środowiska CLR (C++/CLI)'
+title: 'Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d325bdc4122d85383ecaa49ca41c7709be869463
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525682"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747907"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Porady: tworzenie aplikacji do konsoli środowiska CLR (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C + +/ CLI)
 
 Szablon aplikacji Konsolowej do tworzenia projektu aplikacji konsoli, który ma już odwołania do projektu podstawowych i plików.
 
@@ -22,7 +22,7 @@ Gdy używasz szablonu aplikacji konsoli, aby utworzyć projekt, jego automatyczn
 
 - Odwołania do tych przestrzeni nazw .NET Framework:
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— zawiera podstawowe klasy i klas bazowych, które definiują często używane wartości i odwołania do typów danych, zdarzenia i procedury obsługi zdarzeń, interfejsy, atrybuty i przetwarzanie wyjątków.
+   - <xref:System.AppDomainManager>— Zawiera klasy podstawowe i klas bazowych, które definiują często używanymi wartościami i odwołania do typów danych, zdarzenia i procedury obsługi zdarzeń, interfejsy, atrybuty i przetwarzanie wyjątków.
 
    - mscorlib — zestawu biblioteki DLL, która obsługuje programowanie .NET Framework.
 
@@ -60,7 +60,6 @@ Gdy używasz szablonu aplikacji konsoli, aby utworzyć projekt, jego automatyczn
 
 1. Wybierz **OK** przycisku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projekty CLR](../ide/files-created-for-clr-projects.md)
-

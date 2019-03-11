@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562776"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749906"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potencjalne przekazywanie błędów obiektów CRT w poprzek granic DLL
 
@@ -19,7 +19,7 @@ Powiązane problem może wystąpić, gdy przydzielić pamięci (albo jawnie za p
 
 Inny objawem tego problemu może być błąd w oknie danych wyjściowych podczas debugowania, takich jak:
 
-[] STERTY: Nieprawidłowy adres określony do RtlValidateHeap(#,#)
+HEAP[]: Nieprawidłowy adres określony do RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Powoduje, że
 
@@ -122,6 +122,6 @@ Jeśli plik DLL i .exe są tworzone za pomocą/MD, dzięki czemu jest używana t
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498387"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750926"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, klasa
 
@@ -54,11 +54,11 @@ class StringReference
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Nagłówek:** vccorlib.h
 
@@ -193,6 +193,6 @@ Liczba elementów w `__strArg`.
 
 Pierwsza wersja tego konstruktora jest konstruktor domyślny. Inicjuje nowe wystąpienie druga wersja `StringReference` wystąpienia klasy z obiektu, który jest określony przez `__fstrArg` parametru. Trzecia i czwarta przeciążenia zainicjować nowy `StringReference` wystąpienia z tablicy wartości char16. char16 reprezentuje znak tekst UNICODE 16-bitowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::StringReference, klasa](../cppcx/platform-stringreference-class.md)

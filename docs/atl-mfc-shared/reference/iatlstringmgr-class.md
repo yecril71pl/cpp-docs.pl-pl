@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493941"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749961"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr, klasa
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[Przydziel](#allocate)|Wywołaj tę metodę można przydzielić nowej struktury danych ciągu.|
 |[Clone](#clone)|Wywołaj tę metodę, aby zwrócić wskaźnik do nowego Menedżera ciąg do użycia z innego wystąpienia programu `CSimpleStringT`.|
-|[Bezpłatne](#free)|Wywołaj tę metodę, aby zwolnić struktury danych ciągu.|
+|[Bezpłatna](#free)|Wywołaj tę metodę, aby zwolnić struktury danych ciągu.|
 |[GetNilString](#getnilstring)|Zwraca wskaźnik do `CStringData` obiekt używany przez obiekty pusty ciąg.|
 |[Ponowne przydzielenie](#reallocate)|Wywołaj tę metodę w celu ponownego przydzielenia struktury danych ciągu.|
 
@@ -181,7 +181,7 @@ Wywołaj [IAtlStringMgr::Free](#free) zwolnienie pamięci przydzielonej przez t�
 > [!NOTE]
 > Aby uzyskać przykłady użycia, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

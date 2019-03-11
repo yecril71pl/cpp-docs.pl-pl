@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7c91e0f369a4e6fe24e656f1b9e8504d7cb434a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551336"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750432"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Różnice w zachowaniu obsługi wyjątków w przypadku użycia opcji /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Ponownie zgłasza których skojarzenie usunięto
 
-**/ CLR** nie obsługuje ponowne generowanie wyjątku poza obsługi catch (nazywanych, których skojarzenie usunięto Zgłoś ponownie). Wyjątki tego typu są traktowane jako standard C++ Zgłoś ponownie. Jeśli których skojarzenie usunięto Zgłoś ponownie po active zarządzanych wyjątek, wyjątek jest opakowane w wyjątek C++ i następnie zgłaszany ponownie. Wyjątki tego typu można stosować wyłącznie jako wyjątek typu [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/ CLR** nie obsługuje ponowne generowanie wyjątku poza obsługi catch (nazywanych, których skojarzenie usunięto Zgłoś ponownie). Wyjątki tego typu są traktowane jako standard C++ Zgłoś ponownie. Jeśli których skojarzenie usunięto Zgłoś ponownie po active zarządzanych wyjątek, wyjątek jest opakowane w wyjątek C++ i następnie zgłaszany ponownie. Wyjątki tego typu można stosować wyłącznie jako wyjątek typu <xref:System.Runtime.InteropServices.SEHException>.
 
 Poniższy przykład ilustruje wyjątków zarządzanych zgłaszany ponownie jako wyjątków C++:
 
@@ -188,7 +188,7 @@ int main() {
 Counter=-3
 ```
 
-##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator — funkcja
+##  <a name="vcconthe_set_se_translatorfunction"></a> The _set_se_translator Function
 
 Ustaw funkcję tłumacza, przez wywołanie `_set_se_translator`, dotyczy tylko pamięci w niezarządzanym kodzie. W poniższym przykładzie pokazano tego ograniczenia:
 
@@ -275,8 +275,8 @@ In my_trans_func.
 Caught an SEH exception with exception code: e0000101
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[przedstawienie operacji safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)

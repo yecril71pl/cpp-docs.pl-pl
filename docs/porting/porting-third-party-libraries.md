@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658305"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750965"
 ---
 # <a name="porting-third-party-libraries"></a>Przenoszenie bibliotek innych firm
 
@@ -26,6 +26,6 @@ Jeśli biblioteka nie jest obecny w **vcpkg** katalogu, można otworzyć zgłosz
 
 Aby uzyskać zastrzeżonej 3rd bibliotek innych firm (inne niż Otwórz źródło) firma Microsoft zaleca, skontaktuj się z dostawcą biblioteki. Jednak Dbamy o dowolnym własności libs jest używany i nie można zablokować, Daj nam znać, który z nich, na których polegasz (skontaktuj się z nami pod adresem vcupgrade@microsoft.com).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-porting-and-upgrading-guide.md)

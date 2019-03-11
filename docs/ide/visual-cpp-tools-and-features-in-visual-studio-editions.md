@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463755"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751898"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia języka Visual C++ i funkcji w wersjach programu Visual Studio
 
@@ -21,7 +21,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ||||||
 |-|-|-|-|-|
-|Platforma|Program Visual Studio Express for Windows 10|Program Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|Platforma|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows Desktop||X|X|X|
 |Platforma uniwersalna Windows ((telefon, tablet, PC, konsoli Xbox, IoT i HoloLens))|X||X|X|
 |Microsoft Store 8.1|||X|X|
@@ -31,16 +31,16 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="compilers"></a>Kompilatory
 
-|Kompilator|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Kompilator|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |X86 32-bitowy kompilator|X|X|X|X|
 |X86_arm kompilator krzyżowy|X||X|X|
 |x64 64-bitowego kompilatora|||X|X|
-|X86_ x64 kompilator krzyżowy|X|X|X|X|
+|X86_ x64 cross-compiler|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Nagłówki i biblioteki
 
-|Biblioteka lub nagłówek|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Biblioteka lub nagłówek|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Windows nagłówki i biblioteki i biblioteki CRT|(X)|X|X|X|
 |Standardowa biblioteka C++|X|X|X|X|
@@ -50,9 +50,9 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 |Biblioteka obsługi języka C++ dla platformy .NET||X|X|X|
 |OpenMP|X|X|X|X|
 
-## <a name="project-templates"></a>Szablony projektów
+## <a name="project-templates"></a>Project Templates
 
-|Szablon|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Szablon|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Szablony XAML dla platformy uniwersalnej systemu Windows, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Aplikacja Direct3D|X||X|X|
@@ -69,14 +69,14 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 |Projekt pliku reguł programu make||X|X|X|
 |Kontrolki ActiveX MFC|||X|X|
 |Aplikacja MFC|||X|X|
-|BIBLIOTEKI MFC DLL|||X|X|
+|MFC DLL|||X|X|
 |Projekt testowy|X|X|X|X|
 |Aplikacja konsoli Win32||X|X|X|
-|Projekt systemu Win32||X|X|X|
+|Win32 Project||X|X|X|
 
 ## <a name="tools"></a>Narzędzia
 
-|Narzędzie|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Narzędzie|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Program łączący (Link.exe)|X|X|X|X|
 |Narzędzie konserwacji programu (Nmake.exe)||X|X|X|
@@ -98,7 +98,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="debugging-features"></a>Funkcje debugowania
 
-|Funkcja debugowania|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Funkcja debugowania|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Debugowanie w trybie macierzystym|X|X|X|X|
 |natvis (wizualizacji typem natywnym)|X|X|X|X|
@@ -112,14 +112,14 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="designers-and-editors"></a>Projektanci i edytory
 
-|Projektant lub Edytor|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Projektant lub Edytor|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |XAML Designer|X||X|X|
 |Projektant/Edytor stylów CSS|X|X|X|X|
 |Projektant/edytor HTML|X|X|X|X|
 |Edytor XML|X|X|X|X|
 |Edytor kodu źródłowego|X|X|X|X|
-|Funkcje produktywności: Refaktoryzacja, funkcja IntelliSense, formatowania kodu C++|X|X|X|X|
+|Funkcje wydajności: Refaktoryzacja, funkcja IntelliSense, formatowania kodu C++|X|X|X|X|
 |Projektant Windows Forms||X|X|X|
 |Projektant danych|||X|X|
 |Edytor zasobów natywnych (plików .rc)|||X|X|
@@ -129,7 +129,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="data-features"></a>Funkcje związane z danymi
 
-|Funkcja danych|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Funkcja danych|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Projektant danych|||X|X|
 |Obiekty danych|||X|X|
@@ -138,7 +138,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="build-and-project-systems"></a>Skompiluj i zaprojektuj systemy
 
-|Kompilacja lub funkcja projektu|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Kompilacja lub funkcja projektu|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Kompilacje z wiersza polecenia (msbuild.exe)|X|X|X|X|
 |Natywna wielowersyjność||X|X|X|
@@ -149,7 +149,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ## <a name="automation-and-extensibility"></a>Automatyzacja i rozszerzalność
 
-|Automatyzacja i rozszerzalność|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Automatyzacja i rozszerzalność|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Modele obiektów rozszerzalności|||X|X|
 |Model kodu|||X|X|
@@ -162,7 +162,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 ||||||
 |-|-|-|-|-|
-|Narzędzie|Program Visual Studio Express for Windows|Program Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Narzędzie|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |Unit Testing (natywnej struktury)|X|X|X|X|
 |Unit Testing (zarządzane framework)||X|X|X|
 |Pokrycie kodu||||X|
@@ -172,7 +172,7 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 |Wykresy mapy i zależności kodu|||tylko do odczytu|X|
 |Debugowanie mapy kodów||||X|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>

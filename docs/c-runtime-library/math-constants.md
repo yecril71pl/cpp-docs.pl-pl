@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: dae30ca5e44d00f5480431d5de2ea856047e0590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531991"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744163"
 ---
 # <a name="math-constants"></a>Stałe matematyczne
 
@@ -57,14 +57,14 @@ Następujące znaki są zdefiniowane dla wartości ich wskazanej wyrażeń:
 |M_PI_4|pi/4|0.785398163397448309616|
 |M_1_PI|1/pi|0.318309886183790671538|
 |M_2_PI|2/pi|0.636619772367581343076|
-|M_2_SQRTPI|2/SQRT(pi)|1.12837916709551257390|
-|M_SQRT2|SQRT(2)|1.41421356237309504880|
-|M_SQRT1_2|1/SQRT(2)|0.707106781186547524401|
+|M_2_SQRTPI|2/sqrt(pi)|1.12837916709551257390|
+|M_SQRT2|sqrt(2)|1.41421356237309504880|
+|M_SQRT1_2|1/sqrt(2)|0.707106781186547524401|
 
 Stałe matematyczne nie są zdefiniowane w standardowe C/C++. Aby korzystać z nich, należy najpierw zdefiniować `_USE_MATH_DEFINES` , a następnie dołącz cmath lub math.h.
 
 Plik ATLComTime.h obejmuje math.h, gdy projekt został skompilowany w trybie wydania. Użycie co najmniej jeden stałe matematyczne w projekcie, który obejmuje również ATLComTime.h, należy zdefiniować `_USE_MATH_DEFINES` przed wprowadzeniem ATLComTime.h.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

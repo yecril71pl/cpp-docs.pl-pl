@@ -1,5 +1,5 @@
 ---
-title: 'Platform::details:: heapentryhandler, delegat'
+title: Platform::Details::HeapEntryHandler Delegate
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::HeapEntryHandler Delegate
 ms.assetid: 97ba4e47-ac0f-47c6-a93c-67a21c0a16d3
-ms.openlocfilehash: 81dbec3d6e0bcc80b8104ddfc18fd37e7a95a76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7acdef091511982a2117f15cff1042037d7b2ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630389"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743495"
 ---
-# <a name="platformdetailsheapentryhandler-delegate"></a>Platform::details:: heapentryhandler, delegat
+# <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler Delegate
 
 Ten delegat jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
 
@@ -38,6 +38,6 @@ Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być k
 
 **Namespace:** Platform::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

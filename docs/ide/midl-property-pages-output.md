@@ -1,5 +1,5 @@
 ---
-title: 'Strony właściwości MIDL: wyjściowe'
+title: 'Strony właściwości MIDL: Dane wyjściowe'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.ProxyFileName
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: b850b21b-ed38-46dd-a712-807e8eabd9aa
-ms.openlocfilehash: e31f20989a40b58b0e9d49bf6102029d2efdbaf2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 392a4e7e28dce3ee4a42fe098daa48c9465f4fe2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590326"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740939"
 ---
-# <a name="midl-property-pages-output"></a>Strony właściwości MIDL: wyjściowe
+# <a name="midl-property-pages-output"></a>Strony właściwości MIDL: Dane wyjściowe
 
 **Dane wyjściowe** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:
 
@@ -41,6 +41,6 @@ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **dane wyjściowe** �
 
 Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości MIDL](../ide/midl-property-pages.md)

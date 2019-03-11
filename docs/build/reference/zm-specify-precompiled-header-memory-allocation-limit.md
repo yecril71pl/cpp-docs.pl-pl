@@ -1,6 +1,6 @@
 ---
 title: /Zm (Określ limit alokacji pamięci prekompilowanego nagłówka)
-ms.date: 11/04/2016
+ms.date: 03/08/2019
 f1_keywords:
 - /zm
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: ee42fc2d1065a755fa816a99563ccc9f0108e847
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634801"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751989"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Określ limit alokacji pamięci prekompilowanego nagłówka)
 
@@ -40,9 +40,11 @@ Czynnik skalowania określa ilość pamięci, której kompilator używa do konst
 
 ## <a name="remarks"></a>Uwagi
 
-We wcześniejszych wersjach Visual C++ kompilator używał kilku stert dyskretnych, a każda miała skończony limit. Obecnie kompilator dynamicznie powiększa sterty w miarę potrzeb, aż do całkowitego limitu rozmiaru sterty, i wymaga bufora o stałym rozmiarze wyłącznie w celu konstruowania wstępnie skompilowanych nagłówków. W związku z tym **/Zm** — opcja kompilatora jest niepotrzebna.
+W wersjach starszych niż program Visual Studio 2015 C++ kompilator używał kilku stert dyskretnych, a każda miała skończony limit. Obecnie kompilator dynamicznie powiększa sterty w miarę potrzeb, aż do całkowitego limitu rozmiaru sterty i umożliwia prekompilowanego pliku nagłówkowego obejmuje wiele zakresów adresów. W związku z tym **/Zm** — opcja kompilatora jest niepotrzebna.
 
-Jeśli kompilatorowi zabraknie miejsca na stertę i emituje [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) komunikat o błędzie, gdy używasz **/Zm** — opcja kompilatora, prawdopodobnie zarezerwowano zbyt dużo pamięci. Rozważ usunięcie **/Zm** opcji. Jeśli kompilator generuje [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) komunikat o błędzie, towarzyszący [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) komunikat Określa *współczynnik* argumentu, aby zastosować, rekompilując przy użyciu **/Zm** — opcja kompilatora.
+Jeśli kompilatorowi zabraknie miejsca na stertę i emituje [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) komunikat o błędzie, gdy używasz **/Zm** — opcja kompilatora, prawdopodobnie zarezerwowano zbyt dużo pamięci. Rozważ usunięcie **/Zm** opcji.
+
+Jeśli kompilator generuje [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) komunikat o błędzie, towarzyszący [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) komunikat Określa *współczynnik* argumentu, aby zastosować, rekompilując przy użyciu **/Zm** — opcja kompilatora. Ten komunikat jest znaczące tylko wtedy, gdy używa prekompilowanego nagłówka `#pragma hdrstop`. W pozostałych przypadkach jest fałszywe błąd spowodowany przez problemy z dużego wykorzystania pamięci wirtualnej Windows i zalecenie, aby używać **/Zm** opcji, które mają być ignorowane. Zamiast tego Rozważ zmniejszenie liczby równoległych procesów, korzystając z **/maxcpucount** opcji do programu MSBUILD. Plik EXE w połączeniu z **/MP** opcji cl. PLIK EXE. Aby uzyskać więcej informacji, zobacz [Prekompilowanego nagłówka (PCH) zagadnienia i zalecenia dotyczące](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
 W poniższej tabeli przedstawiono sposób, w jaki *współczynnik* argument wpływa na limit alokacji pamięci, jeśli zakładać, że rozmiar domyślny bufora wstępnie skompilowanego nagłówka to 75 MB.
 
@@ -56,19 +58,19 @@ W poniższej tabeli przedstawiono sposób, w jaki *współczynnik* argument wpł
 
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Inne sposoby ustawiania limitu alokacji pamięci
 
-#### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję kompilatora /Zm w środowisku programistycznym Visual Studio
+### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję kompilatora /Zm w środowisku programistycznym Visual Studio
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. W okienku nawigacji wybierz **właściwości konfiguracji**, **C/C++**, **wiersza polecenia**.
+1. W okienku nawigacji wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia**.
 
 1. Wprowadź **/Zm** w — opcja kompilatora **dodatkowe opcje** pole.
 
-#### <a name="to-set-the-zm-compiler-option-programmatically"></a>Aby programowo ustawić opcję kompilatora /Zm
+### <a name="to-set-the-zm-compiler-option-programmatically"></a>Aby programowo ustawić opcję kompilatora /Zm
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

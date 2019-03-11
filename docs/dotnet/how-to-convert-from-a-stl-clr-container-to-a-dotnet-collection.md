@@ -1,18 +1,18 @@
 ---
-title: 'Porady: konwertowanie kontenera STL/CLR na kolekcję .NET'
+title: 'Instrukcje: Konwertowanie kontenera STL/CLR na kolekcję .NET'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: 3444339f43f8000d8a9c9b8a6577adb286245dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf67e362751dd164916cc94cd644d55110d88a5f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621627"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751586"
 ---
-# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Porady: konwertowanie kontenera STL/CLR na kolekcję .NET
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Instrukcje: Konwertowanie kontenera STL/CLR na kolekcję .NET
 
 W tym temacie pokazano, jak przekonwertować kontenery STL/CLR do ich równoważne kolekcji .NET. Na przykład pokazujemy, jak konwertować STL/CLR [wektor](../dotnet/vector-stl-clr.md) do .NET <xref:System.Collections.Generic.ICollection%601> oraz sposobach przekształcania STL/CLR [mapy](../dotnet/map-stl-clr.md) do .NET <xref:System.Collections.Generic.IDictionary%602>, ale procedura jest podobna dla wszystkich kolekcji i kontenery.
 
@@ -111,7 +111,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [Instrukcje: konwertowanie kolekcji .NET na kontener STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525499"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750874"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -137,7 +137,7 @@ Określa, czy klasa string konieczne Obsługa bibliotek C Run-Time (CRT) i gdzie
 |Nazwa|Opis|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Konstruuje `CStringT` obiektu na różne sposoby.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Niszczy `CStringT` obiektu.|
+|[CStringT::~CStringT](#_dtorcstringt)|Niszczy `CStringT` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -274,7 +274,7 @@ Ponieważ `CStringT` używa argumentu szablonu, aby zdefiniować typ znaku (albo
 |nagłówek|Na użytek|
 |------------|-------------|
 |cstringt.h|Obiekty ciągu tylko do MFC|
-|pliku atlstr.h|Inne niż MFC obiektów w postaci ciągów|
+|atlstr.h|Inne niż MFC obiektów w postaci ciągów|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
 
@@ -335,7 +335,7 @@ Ciąg formantu formatu.
 *nFormatID*<br/>
 Identyfikatora zasobu ciągu, który zawiera ciąg formantu formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -568,9 +568,9 @@ Dojście do `CStringT` obiektu.
 
 Konstruktory skopiować dane wejściowe do nowego magazynu przydzielone, dlatego należy pamiętać, że pamięć wyjątków może spowodować. Należy pamiętać, że niektóre z tych konstruktorów pełnią funkcje konwersji. Dzięki temu można na przykład, zastąpić LPTSTR gdzie `CStringT` Oczekiwano obiektu.
 
-- `CStringT`( `LPCSTR` `lpsz` ): Tworzy Unicode `CStringT` z na ciąg ANSI. Można również użyć tego konstruktora, można załadować zasobu ciągu, jak pokazano w poniższym przykładzie.
+- `CStringT`( `LPCSTR` `lpsz` ): Konstruuje Unicode `CStringT` z na ciąg ANSI. Można również użyć tego konstruktora, można załadować zasobu ciągu, jak pokazano w poniższym przykładzie.
 
-- `CStringT(` `LPCWSTR` `lpsz` ): Tworzy `CStringT` z ciągu Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Konstruuje `CStringT` z ciągu Unicode.
 
 - `CStringT`( `const unsigned char*` `psz` ): Służy do konstruowania `CStringT` ze wskaźnika do **unsigned char**.
 
@@ -709,7 +709,7 @@ Identyfikatora zasobu ciągu, który zawiera ciąg formantu formatu.
 *pszFormat*<br/>
 Ciąg formantu formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -743,7 +743,7 @@ Identyfikator zasobu ciągu zawierający tekst sformatowany komunikat.
 *pszFormat*<br/>
 Wskazuje ciąg formantu formatu. Zostanie ono skanowane pod kątem operacji wstawienia i odpowiednio sformatowane. Ciąg formatu jest podobna do funkcji wykonawczej *printf*-stylu ciągów formatu, z wyjątkiem umożliwia parametry, które ma zostać wstawiony w dowolnej kolejności.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
@@ -1040,10 +1040,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
 *str1*<br/>
@@ -1141,10 +1141,10 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI lub Unicode znaków do porównania.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI lub Unicode znaków do porównania.
 
 *str1*<br/>
@@ -1183,10 +1183,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
-*CH2*<br/>
+*ch2*<br/>
 ANSI lub Unicode znak do łączenia się z parametrami.
 
 *str1*<br/>
@@ -1728,9 +1728,8 @@ Usuwa końcowe wystąpienia jednego z następujących czynności:
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT, klasa](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

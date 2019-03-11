@@ -4,12 +4,12 @@ ms.date: 01/22/2017
 helpviewer_keywords:
 - C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
-ms.openlocfilehash: 6896691140a54955e98755ce9b0a7ca6af27d6bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a749220b4f1f735e9559d8e4aacca27d73fa5d76
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428317"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751651"
 ---
 # <a name="namespaces-reference-ccx"></a>Odwołanie do przestrzeni nazw (C + +/ CX)
 
@@ -27,6 +27,6 @@ Upraszczania kodowania programów o docelowej wersji Windows środowiska uruchom
 |[Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)|Zawiera opisy typów, których można używać, a także typy wewnętrzne, które są używane tylko przez infrastrukturę kompilatora.|
 |[Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Zawiera opis ulepszeń i rozszerzeń do środowiska wykonawczego Windows`Windows::Foundation::Collections` przestrzeni nazw.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452601"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749090"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
 
@@ -37,9 +37,9 @@ Nie możesz redystrybuować wszystkich plików, które znajdują się w programi
 
 W poniższej tabeli opisano niektóre z bibliotek DLL Visual C++, które aplikacja może zależeć od.
 
-|Biblioteki Visual C++|Opis|Informacje zawarte w tym artykule dotyczą|
+|Visual C++ Library|Opis|Informacje zawarte w tym artykule dotyczą|
 |--------------------------|-----------------|----------------|
-|vcruntime*wersji*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje, które korzystają z normalnym C i C++ language uruchamianie i kończenie działania usług.|
+|vcruntime*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje, które korzystają z normalnym C i C++ language uruchamianie i kończenie działania usług.|
 |vccorlib*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu zarządzanego.|Aplikacje, które używają usług języka C++ dla kodu zarządzanego.|
 |msvcp*wersji*.dll i msvcp*wersji*_*dotnumber*.dll|Standardowa biblioteka C++ dla kodu natywnego.|Aplikacje, które używają [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*wersji*.dll|Biblioteka środowiska uruchomieniowego współbieżności dla kodu natywnego.|Aplikacje, które używają [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).|
@@ -47,10 +47,10 @@ W poniższej tabeli opisano niektóre z bibliotek DLL Visual C++, które aplikac
 |MFC*wersji* *języka*.dll|Microsoft Foundation Classes (MFC) zasobów biblioteki.|Aplikacje, które używają zasobów określonego języka dla MFC.|
 |MFC*wersji*u.dll|Biblioteka MFC z obsługą standardu Unicode.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) i wymagają obsługi standardu Unicode.|
 |mfcmifc80.dll|Biblioteka interfejsów zarządzanych MFC.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) z [kontrolek formularzy Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*wersji*.dll|Biblioteka zarządzana MFC.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) z [kontrolek formularzy Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*wersji*u.dll|Biblioteka zarządzana MFC z obsługą standardu Unicode.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) z [kontrolek formularzy Windows Forms](/dotnet/framework/winforms/controls/index) i wymagają obsługi standardu Unicode.|
-|vcamp*wersji*.dll|Biblioteka AMP dla kodu natywnego.|Aplikacje, które używają [biblioteki C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) kodu.|
-|vcomp*wersji*.dll|Biblioteki OpenMP dla kodu natywnego.|Aplikacje, które używają [biblioteki języka C++, OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) kodu.|
+|mfcm*version*.dll|Biblioteka zarządzana MFC.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) z [kontrolek formularzy Windows Forms](/dotnet/framework/winforms/controls/index).|
+|mfcm*version*u.dll|Biblioteka zarządzana MFC z obsługą standardu Unicode.|Aplikacje, które używają [biblioteki MFC](../mfc/mfc-desktop-applications.md) z [kontrolek formularzy Windows Forms](/dotnet/framework/winforms/controls/index) i wymagają obsługi standardu Unicode.|
+|vcamp*version*.dll|Biblioteka AMP dla kodu natywnego.|Aplikacje, które używają [biblioteki C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) kodu.|
+|vcomp*version*.dll|Biblioteki OpenMP dla kodu natywnego.|Aplikacje, które używają [biblioteki języka C++, OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) kodu.|
 
 > [!NOTE]
 > Nie trzeba redystrybuować biblioteki Active Template Library jako osobne biblioteki DLL. Jego funkcja została przeniesiona do nagłówki i biblioteki statycznej.
@@ -59,7 +59,7 @@ Aby uzyskać więcej informacji na temat sposobu rozpowszechniania tych bibliote
 
 Zazwyczaj nie trzeba redystrybuować systemowych bibliotek DLL, ponieważ są one częścią systemu operacyjnego. Jednak mogą istnieć wyjątki, na przykład, gdy aplikacja jest uruchamiana w różnych wersjach systemów operacyjnych firmy Microsoft. W takim przypadku należy koniecznie przeczytaj odpowiednie postanowienia licencyjne. Ponadto spróbuj systemową bibliotekę DLL aktualizować za pośrednictwem usługi Windows Update, dodatki service Pack lub przy użyciu pakietów redystrybucyjnych udostępnianych przez firmę Microsoft.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wybieranie metody wdrażania](../ide/choosing-a-deployment-method.md)
 

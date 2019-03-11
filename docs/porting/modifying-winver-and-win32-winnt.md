@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual C++ project
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: 3381b6657f78144e7804112135c437824d8555fe
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a936a54620590d4dc21f43acd50abdc49d77ffa8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332248"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748739"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
 
@@ -55,6 +55,6 @@ Można również zdefiniować to makro za pomocą `/D` — opcja kompilatora. Ab
 
 Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Historia zmian Visual C++](../porting/visual-cpp-change-history-2003-2015.md)

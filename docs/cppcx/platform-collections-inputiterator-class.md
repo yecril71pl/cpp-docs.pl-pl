@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455240"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745799"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator, klasa
 
@@ -81,7 +81,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
 
 ### <a name="parameters"></a>Parametry
 
-*ITER*<br/>
+*iter*<br/>
 Obiekt iteratora.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; — Operator
@@ -171,6 +171,6 @@ InputIterator innego.
 
 **wartość true,** Jeśli bieżące InputIterator nie jest równa *innych*; w przeciwnym razie **false**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

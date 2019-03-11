@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 8372bf6284f7974e68ed8beb62888d56b2b49254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d804b93e491799e65de6338611612eed21e163
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433621"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745970"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Wersje funkcji CRT z rozszerzonymi zabezpieczeniami
 
@@ -34,7 +34,7 @@ Bardziej bezpieczne wersje biblioteki wykonawczej procedur są dostępne. Aby uz
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)|[_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Konwertuj czas z typu `time_t`, `__time32_t` lub `__time64_t` do ciągu znaków|
 |[_ecvt](../c-runtime-library/reference/ecvt.md)|[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Konwertuj `double` liczb na ciąg|
 |[_fcvt](../c-runtime-library/reference/fcvt.md)|[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Konwertuje liczbę zmiennoprzecinkową|
-|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)|[fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwórz plik|
+|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)|[fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwieranie pliku|
 |[fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Drukowanie sformatowanych danych do strumienia|
 |[fread](../c-runtime-library/reference/fread.md)|[fread_s](../c-runtime-library/reference/fread-s.md)|Odczyt z pliku|
 |[_fread_nolock](../c-runtime-library/reference/fread-nolock.md)|[_fread_nolock_s](../c-runtime-library/reference/fread-nolock-s2.md)|Odczyt z plików bez korzystania z wielu wątków zapisu blokady|
@@ -99,6 +99,6 @@ Bardziej bezpieczne wersje biblioteki wykonawczej procedur są dostępne. Aby uz
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Konwertowanie sekwencji znaków dwubajtowych do odpowiedniej sekwencji znaków wielobajtowych|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Konwertuj znaków dwubajtowych do odpowiedniego znaku wielobajtowego|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

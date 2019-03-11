@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676503"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746972"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -118,9 +118,9 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje pojedyncze dziedziczenie.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje wirtualne dziedziczenie.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Generuje informacje debugowania zgodne 7.0 C.|
-|[/Za](za-ze-disable-language-extensions.md)|Wyłącza rozszerzenia językowe.|
+|[/Za](za-ze-disable-language-extensions.md)|Wyłącza rozszerzenia języka C89.|
 |[/Zc](zc-conformance.md)|Określa standardowe zachowanie dla opcji [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Przestarzałe. Włącza rozszerzenia językowe.|
+|[/Ze](za-ze-disable-language-extensions.md)|Przestarzałe. Włącza rozszerzenia języka C89.|
 |[/Zf](zf.md)|Poprawia PDB czas generowania w kompilacjach równoległych.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w bazie danych programu zgodne z funkcją Edytuj i Kontynuuj. (tylko x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje kompletne informacje debugowania.|

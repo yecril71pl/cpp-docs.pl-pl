@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597551"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747011"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX
 
@@ -19,7 +19,7 @@ Ten temat zawiera informacje dla użytkowników systemu UNIX, które są nowe w 
 
 Kompilator języka C++ z poziomu wiersza polecenia można użyć w podobny sposób, w których możesz użyć środowisko wiersza polecenia systemu UNIX. Kompilujesz z wiersza polecenia przy użyciu wiersza polecenia kompilatora C i C++ (CL. Z rozszerzeniem EXE), program łączący (LINK. Z rozszerzeniem EXE) i innych narzędzi, takich jak NMAKE. Plik EXE, Microsoft wersję UNIX należy narzędzia.
 
-W systemie UNIX poleceń są instalowane w folderze wspólne, takie jak sfw. W programie Visual Studio narzędzia wiersza polecenia są instalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX narzędzia te nie są dostępne w oknie zwykłych wiersza polecenia. Aby użyć narzędzia wiersza polecenia, użyj skrót do wiersza polecenia dla deweloperów lub uruchom Deweloper polecenia plików, takich jak vcvarsall.bat. Spowoduje to utworzenie ścieżkę i inne zmienne środowiskowe, które są niezbędne do kompilowania programów C++ z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+W systemie UNIX poleceń są instalowane w folderze wspólne, takie jak sfw. W programie Visual Studio narzędzia wiersza polecenia są instalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX narzędzia te nie są dostępne w oknie zwykłych wiersza polecenia. Aby użyć narzędzia wiersza polecenia, użyj skrót do wiersza polecenia dla deweloperów lub uruchom Deweloper polecenia plików, takich jak vcvarsall.bat. Spowoduje to utworzenie ścieżkę i inne zmienne środowiskowe, które są niezbędne do kompilowania programów C++ z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [instruktażu: Kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Otwórz skrót do wiersza polecenia dla deweloperów, wprowadź *wiersz polecenia dla deweloperów* w programie desktop wyszukiwania kontrolki, a następnie wybierz **wiersz polecenia dla deweloperów** wynik dla używanej wersji programu Visual Studio. Aby wybrać wiersz polecenia dla deweloperów, który został wstępnie skonfigurowany dla określonego hosta i Architektura docelowa, otwórz **Start** menu (ikona Windows rogu pulpitu), a następnie przewiń do folderu dla używanej wersji programu Visual Studio , takich jak **programu Visual Studio 2017**. Otwórz folder, a następnie wybierz skrót do wiersza polecenia dla Twojego preferowanego Architektura źródłowa i docelowa.
 
@@ -37,7 +37,7 @@ Aplikacja, która składa się z wielu biblioteki i pliki wykonywalne, każdy po
 
 ## <a name="importing-your-existing-code"></a>Importowanie istniejącego kodu
 
-Kompilator języka C++ umożliwia tworzenie istniejący kod, który jest skonfigurowany do kompilowania z użyciem lub bez pliku reguł programu make i umieścić go w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Kompilator języka C++ umożliwia tworzenie istniejący kod, który jest skonfigurowany do kompilowania z użyciem lub bez pliku reguł programu make i umieścić go w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Tworzenie nowego projektu
 
@@ -63,6 +63,6 @@ Domyślnie wszystkie wstępnie skompilowany kod jest określona w pliku plików 
 
 Aby uzyskać więcej informacji, zobacz [eksportowanie z systemu UNIX do Win32](../porting/porting-from-unix-to-win32.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)

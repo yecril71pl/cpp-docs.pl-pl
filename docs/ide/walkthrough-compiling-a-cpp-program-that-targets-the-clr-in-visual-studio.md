@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 51e8b234792dea8dd7d61e4ac4b97a55bd5ea4e9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72a1a015b97c446a5f81d987c339d31467af9b3f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524634"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752132"
 ---
-# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Wskazówki: kompilowanie programu C++ przeznaczonego dla CLR w Visual Studio
+# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: Kompilowanie programu C++ przeznaczonego dla CLR w programie Visual Studio
 
 Można tworzyć programy Visual C++, które używają klas .NET i skompilować je przy użyciu środowiska programistycznego Visual Studio.
 
@@ -51,7 +51,7 @@ Te tematy założono, że rozumiesz podstawy języka C++.
 
 1. Kliknij nowo utworzoną karcie w programie Visual Studio i wpisz prawidłowy program Visual C++ lub skopiuj i Wklej jeden z przykładowych programów.
 
-   Na przykład, można użyć [porady: wpisywanie tekstu do pliku (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-text-file-cpp-cli.md) przykładowy program (w **Obsługa plików i we/wy** węzła Programming Guide).
+   Na przykład, można użyć [jak: Wpisywanie tekstu do pliku (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) przykładowego programu (w **Obsługa plików i we/wy** węzła Programming Guide).
 
    Jeśli korzystasz z przykładowego program, zwróć uwagę, że używasz `gcnew` słowa kluczowego zamiast `new` podczas tworzenia obiektu platformy .NET, a `gcnew` zwraca uchwyt (`^`) zamiast wskaźnik (`*`):
 
@@ -76,10 +76,10 @@ Te tematy założono, że rozumiesz podstawy języka C++.
 
 ## <a name="whats-next"></a>Jaka jest przyszłość
 
-**Poprzedni:** [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
-**Następnie:** [wskazówki: kompilowanie programu C w wierszu polecenia](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+**Poprzednie:** [Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Dalej:** [Przewodnik: Kompilowanie programu C w wierszu polecenia](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>

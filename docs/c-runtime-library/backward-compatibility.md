@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-ms.openlocfilehash: d418a3450f22e53c8cb320f0a1a27c9f2e434c54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f672f0601a9d20a726f90963265d08ec212dedce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460557"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744470"
 ---
 # <a name="backward-compatibility"></a>Zgodność ze starszymi wersjami
 
@@ -26,6 +26,6 @@ Zgodność między wersjami produktów, biblioteka OLDNAMES. LIB mapuje starych 
 
 Aby uzyskać więcej informacji na temat opcji wiersza polecenia kompilatora, zobacz [odwołanie do kompilatora](../build/reference/compiler-options.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zgodność](../c-runtime-library/compatibility.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522543"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744368"
 ---
 # <a name="global-variables"></a>Zmienne globalne
 
@@ -30,7 +30,7 @@ Biblioteka środowiska uruchomieniowego Microsoft C zawiera następujące zmienn
 |[_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|Zawiera informacje używane przez funkcje klasyfikacji znaków.|
 |[_pgmptr, _wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|Przestarzałe. Zamiast tego należy użyć `_get_pgmptr` lub `_get_wpgmptr`.<br /><br /> Inicjowane w momencie uruchamiania programu, w pełni kwalifikowaną lub względną ścieżkę do programu, pełną nazwę programu lub nazwę programu bez rozszerzenie nazwy pliku, w zależności od tego, w jaki sposób program został wywołany.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)<br/>

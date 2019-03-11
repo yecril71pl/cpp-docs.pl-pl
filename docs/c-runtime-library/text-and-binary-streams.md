@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-ms.openlocfilehash: a47c0b79b10f685c1f43ae4bfbfc6e1b9ea2b508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3754a62fa02bc532eb71eba6b0a8837791b179ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664909"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747712"
 ---
 # <a name="text-and-binary-streams"></a>Strumienie binarne i tekstowe
 
@@ -36,6 +36,6 @@ W efekcie pozycjonowania w strumień binarny jest dobrze zdefiniowane, z wyjątk
 
 Strumień bajtów traktuje plik jako sekwencja bajtów. W ramach programu strumień wyglądają jak ta sama sekwencja bajtów, z wyjątkiem możliwości zmiany opisane powyżej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki i strumienie](../c-runtime-library/files-and-streams.md)

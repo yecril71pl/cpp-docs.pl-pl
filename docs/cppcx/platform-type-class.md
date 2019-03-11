@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517068"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744043"
 ---
 # <a name="platformtype-class"></a>Platform::type, klasa
 
@@ -53,11 +53,11 @@ public ref class Platform::Type :
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -120,6 +120,6 @@ Platform::String^ ToString();
 
 Nazwa typu, jak to określono w jego metadanych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

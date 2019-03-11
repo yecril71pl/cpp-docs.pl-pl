@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652624"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748214"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C++)
 
@@ -157,13 +157,13 @@ public:
 
 Należy zauważyć, że składnika należy określić swojego klucza publicznego. Sugerujemy, uruchom następujące polecenia sekwencyjnie w wierszu polecenia, aby utworzyć parę kluczy i uzyskać klucz publiczny:
 
-**-d friend_assemblies.snk SN**
+**sn -d friend_assemblies.snk**
 
-**SN -k friend_assemblies.snk**
+**sn -k friend_assemblies.snk**
 
-**SN -i friend_assemblies.snk friend_assemblies.snk**
+**sn -i friend_assemblies.snk friend_assemblies.snk**
 
-**SN -pc friend_assemblies.snk key.publickey**
+**sn -pc friend_assemblies.snk key.publickey**
 
 **key.publickey - tp SN**
 
@@ -184,6 +184,6 @@ int main() {
 Class1::Test_Public
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

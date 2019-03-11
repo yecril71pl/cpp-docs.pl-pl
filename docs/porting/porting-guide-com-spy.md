@@ -1,15 +1,15 @@
 ---
-title: 'Przewodnik przenoszenia: narzędzie Spy modelu COM'
+title: 'Przewodnik przenoszenia: Narzędzie Spy modelu COM'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441794"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751690"
 ---
-# <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: narzędzie Spy modelu COM
+# <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: Narzędzie Spy modelu COM
 
 Ten temat jest drugi w serii artykułów pokazano proces uaktualniania starszej projektów Visual C++ do najnowszej wersji programu Visual Studio. Przykładowy kod w tym temacie ostatnio został skompilowany przy użyciu programu Visual Studio 2005.
 
@@ -164,8 +164,8 @@ private void button1_Click(object sender, EventArgs e)
 
 To został uruchomiony bez problemów i za pomocą narzędzie Spy modelu COM pracę i skonfigurowany do monitorowania `Dog` składnika dużą ilość danych zostanie wyświetlona działania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Następny przykład: Narzędzie Spy ++](../porting/porting-guide-spy-increment.md)<br/>
-[Poprzednim przykładzie: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md)
+[Następny przykład: Spy ++](../porting/porting-guide-spy-increment.md)<br/>
+[Poprzedni przykład: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md)

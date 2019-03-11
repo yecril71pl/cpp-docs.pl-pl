@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595965"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746920"
 ---
 # <a name="managed-types-ccli"></a>Typy zarządzane (C++/CLI)
 
@@ -58,7 +58,7 @@ W poniższej tabeli przedstawiono słowa kluczowe dla wbudowanych typów języka
 |**__int64 bez znaku**|**System.UInt64**|
 |**krótki** i **short ze znakiem**|**System.Int16**|
 |**short bez znaku**|**System.UInt16**|
-|**void**|**Elementu System.Void**|
+|**void**|**System.Void**|
 
 ## <a name="version_issues"></a> Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Jednak jeśli dodasz innego członka do `struct S` w nested_value_types.cpp, (na przykład `double d;`) i skompiluj ponownie składnik bez konieczności ponownego kompilowania klienta, wynik jest nieobsługiwany wyjątek (typu <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Porady: testowanie równości
+## <a name="test_equality"></a> Jak: Testowanie dla równości
 
 W poniższym przykładzie test pod kątem równości, który używa zarządzanych rozszerzeń dla C++ opiera się na co uchwytów dotyczą.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Porady: diagnozowanie i rozwiązywanie problemów ze zgodnością zestawu
+## <a name="diagnose_fix"></a> Jak: Diagnozowanie i rozwiązywanie problemów ze zgodnością zestawu
 
 W tym temacie opisano, co może się zdarzyć, gdy wersja zestawu z odwołaniem w czasie kompilacji nie odpowiada wersji zestawu, do których odwołuje się w czasie wykonywania oraz sposób uniknąć tego problemu.
 
@@ -225,7 +225,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Współdziałanie z innymi językami .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>

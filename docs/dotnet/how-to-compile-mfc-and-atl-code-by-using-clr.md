@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kompilowanie kodu MFC i ATL za pomocą opcji / clr'
+title: 'Instrukcje: Kompilowanie kodu MFC i ATL za pomocą opcji / clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638077"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751612"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Porady: kompilowanie kodu MFC i ATL za pomocą opcji /clr
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Instrukcje: Skompilować MFC i ATL kodu za pomocą/CLR
 
 W tym temacie omówiono sposób kompilowania istniejących programów MFC i ATL do docelowe środowisko uruchomieniowe języka wspólnego.
 
@@ -78,6 +78,6 @@ W tym temacie omówiono sposób kompilowania istniejących programów MFC i ATL 
 
 1. Dla pliku, który zawiera funkcji DllMain i nic wywoływanych przez nią, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik, a następnie kliknij przycisk **właściwości**. W obszarze **właściwości konfiguracji**, rozwiń węzeł obok **C/C++** i wybierz **ogólne**. W okienku po prawej stronie w obszarze **domyślne wartości projektu**ustaw **skompilować z obsługą środowiska uruchomieniowego języka wspólnego** do **Obsługa środowiska uruchomieniowego języka wspólnego nie**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

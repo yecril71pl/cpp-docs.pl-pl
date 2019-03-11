@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 9ac318c25b317d783e7fd7e287666bf85bb45b26
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 18e0ad8615bbe89c265247041729027f661915fe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220533"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746698"
 ---
 # <a name="translation-mode-constants"></a>Tryb tłumaczenia — Stałe
 
@@ -46,7 +46,7 @@ Dozwolone wartości to:
 
 Aby uzyskać więcej informacji, zobacz [tekstowych i binarnych We/Wy trybu](../c-runtime-library/text-and-binary-mode-file-i-o.md) i [tłumaczenia pliku](../c-runtime-library/file-translation-constants.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_pipe](../c-runtime-library/reference/pipe.md)<br/>

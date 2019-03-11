@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 3d6e43d8d39cb208efbb6010ef2591a2880fd584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647905"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749103"
 ---
 # <a name="data-type-mappings"></a>Mapowanie typu danych
 
@@ -56,7 +56,7 @@ Aby uzyskać powiązane informacje, zobacz [TCHAR przy użyciu. Typy danych H z 
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
 |`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje zgodnie z jego odpowiednikiem Unicode znak lub ciąg)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapowania zmiennych globalnych i stałych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>

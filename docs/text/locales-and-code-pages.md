@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610541"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750718"
 ---
 # <a name="locales-and-code-pages"></a>Ustawienia regionalne i strony kodowe
 
-Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język w określonym regionie geograficznym. Danego języka, może być używany w więcej niż jednego kraju/regionu; na przykład portugalski jest używany w Brazylii, jak również jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jeden oficjalnego języka. Na przykład, Kanada, ma dwa języki: języka angielskiego i francuskiego. W związku z tym, Kanada, ma dwa różne ustawienia regionalne: kanadyjski angielski i francuski (kanadyjski). Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.
+Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język w określonym regionie geograficznym. Danego języka, może być używany w więcej niż jednego kraju/regionu; na przykład portugalski jest używany w Brazylii, jak również jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jeden oficjalnego języka. Na przykład Kanada, ma dwa języki: Języka angielskiego i francuskiego. W związku z tym Kanada ma dwa różne ustawienia regionalne: Kanada-język angielski i francuski (kanadyjski). Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.
 
 Określa język, tekstu i formatowania Konwencji, podczas gdy kraj/region określa konwencje lokalnych danych. Każdy język ma unikatowe mapowania, reprezentowane przez stron kodowych, w tym znaki inne niż te w alfabecie (na przykład znaków interpunkcyjnych i cyfry). Strona kodowa jest zestawem znaków i jest powiązany z językiem. W efekcie [ustawień regionalnych](../c-runtime-library/locale.md) to unikatowa kombinacja język, kraj/region i stronę kodową. Można zmienić ustawienie strony ustawień regionalnych i kodu w czasie wykonywania przez wywołanie metody [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkcji.
 
@@ -42,7 +42,7 @@ Podobnie, po wielobajtowa strona kodowa zmienia zachowanie wielobajtowych funkcj
 
 Funkcja środowiska wykonawczego języka C `setlocale` Ustawia, zmiany lub zapytania, niektórych lub wszystkich informacji o ustawieniach regionalnych bieżącego programu. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) procedura jest wersją znaków dwubajtowych `setlocale`; argumenty i wartości zwracane `_wsetlocale` są ciągami znaków dwubajtowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
 [Zalety przenośności zestawu znaków](../text/benefits-of-character-set-portability.md)

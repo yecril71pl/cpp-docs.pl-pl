@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469790"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746013"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>Strumień We/Wy Unicode w trybach tekstowym i binarnym
 
@@ -26,7 +26,7 @@ Gdy Unicode strumienia procedury we/wy (takie jak **fwprintf —**, **fwscanf �
 
 Jednak jeśli funkcja strumienia we/wy Unicode działa w trybie binarnym, plik będzie traktowana jako Unicode i bez konwersji tłumaczenia lub znakiem CR-LF wypada w danych wejściowych lub wyjściowych. Użyj _setmode — (_fileno (stdin), _O_BINARY); Instrukcja, aby można było prawidłowo używać wcin na plik tekstowy UNICODE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>

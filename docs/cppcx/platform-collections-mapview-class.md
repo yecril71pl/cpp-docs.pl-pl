@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496388"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749259"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview, klasa
 
@@ -162,7 +162,7 @@ MapView(
 *InIt*<br/>
 Element typename MapView bieżącego.
 
-*Comp*<br/>
+*comp*<br/>
 Obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w MapView.
 
 *m*<br/>
@@ -171,7 +171,7 @@ Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do 
 *pierwszy*<br/>
 Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania MapView bieżącego.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych od szeregu elementów używane do zainicjowania bieżącego MapView pierwszego elementu.
 
 *il*<br/>
@@ -217,6 +217,6 @@ Druga część oryginalnego obiektu MapView.
 
 Ta metoda nie działa; nic nie robi.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

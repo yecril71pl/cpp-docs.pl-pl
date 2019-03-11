@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544576"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743887"
 ---
 # <a name="string-to-numeric-value-functions"></a>Konwertowanie ciągów na wartości
 
@@ -88,7 +88,7 @@ Jeśli wartość zwracana przez te funkcje spowodowałoby przepełnienie lub nie
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, i `_wcstoui64` są wersjami znaków dwubajtowych `strtod`, `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`odpowiednio; wskaźnik do zakończenia z konwersji przez Każda z tych funkcji znaków dwubajtowych argument jest ciągiem znaku dwubajtowego. W przeciwnym wypadku każda z tych funkcji znaków dwubajtowych działa identycznie do jego odpowiednika pojedynczych bajtów znaków.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../c-runtime-library/data-conversion.md)<br/>
 [Wersja regionalna](../c-runtime-library/locale.md)<br/>

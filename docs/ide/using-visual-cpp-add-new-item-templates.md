@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: a4480bc7389e1c116dbc97235da06cab75e2a5a8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f9b3b3dbfe3802326539346a22de11b545577252
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424421"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746314"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 
@@ -54,6 +54,6 @@ Poniższa tabela jest alfabetyczną listę szablonów programu Visual C++ Dodaj 
 |Plik schematu XML (XSD)|Tworzy plik, który jest używany do definiowania schematu dokumentów XML.|
 |XSLT File (.xslt)|Tworzy plik wykorzystywany do transformacji dokumentów XML.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)

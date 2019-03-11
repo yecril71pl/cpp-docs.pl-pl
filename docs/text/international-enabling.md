@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627466"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748011"
 ---
 # <a name="international-enabling"></a>Włączanie internacjonalizacji
 
@@ -38,7 +38,7 @@ Założeń dotyczących znakowe i manipulowania, które nie będą działać dob
 > [!NOTE]
 >  Zestawy znaków Europejską i MBCS mają niektórych znaków, takich jak akcentowanych liter z kody znaków jest większa od 0x80. Ponieważ większość kodu używa znaków podpisem, te znaki, które są większe niż 0x80 są rozszerzona o znak po przekonwertowaniu do **int**. Jest to problem dla indeksowania tablic, ponieważ znaki znakiem jest ujemna, indeksuje spoza tablicy. Języki, które używają MBCS, takich jak japoński, są również unikatowe. Ponieważ znak może składać się z 1 lub 2 bajtów, należy zawsze manipulować zarówno w bajtach, w tym samym czasie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
 [Strategie internacjonalizacji](../text/internationalization-strategies.md)

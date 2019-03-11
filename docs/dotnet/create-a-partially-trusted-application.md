@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie aplikacji częściowo zaufanej (C + +/ CLI)'
+title: 'Instrukcje: Tworzenie aplikacji częściowo zaufanej (C + +/ CLI)'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: fb65c8ff3dc4c3b03fa319fd1e7a6eb95f11bef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445971"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743762"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Porady: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Instrukcje: Tworzenie aplikacji częściowo zaufanej przez usunięcie zależności biblioteki DLL środowiska CRT
 
 W tym temacie omówiono sposób tworzenia częściowo zaufanych aplikacji środowiska uruchomieniowego języka wspólnego przy użyciu języka Visual C++ przez usunięcie zależności od msvcm90.dll.
 
@@ -34,7 +34,7 @@ Jeśli aplikacja nie używa żadnych funkcji biblioteki środowiska uruchomienio
 
 1. Dodanie jednego z biblioteki ptrustm zależności wejściowe konsolidatora. Jeśli tworzysz aplikację w trybie wydania, należy użyć ptrustm.lib. Tryb debugowania można użyć ptrustmd.lib. Aby uzyskać informacje o tym, jak to zrobić przy użyciu środowiska programistycznego Visual Studio lub programowo, zobacz [. Pliki lib — wejście konsolidatora](../build/reference/dot-lib-files-as-linker-input.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 [Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)<br/>

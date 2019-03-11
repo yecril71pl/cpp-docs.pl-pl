@@ -1,5 +1,5 @@
 ---
-title: 'Strony właściwości HLSL: ogólne'
+title: 'Strony właściwości HLSL: Ogólne'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.ShaderModel
@@ -10,14 +10,14 @@ f1_keywords:
 - VC.Project.FXCompilerTool.DisableOptimizations
 - VC.Project.FXCompilerTool.EntryPointName
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-ms.openlocfilehash: 255cf2fb0879ca7a6af0a9bdb340f6a4d2434cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc7c0837def7628414d017a660453915a472318e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494526"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751443"
 ---
-# <a name="hlsl-property-pages-general"></a>Strony właściwości HLSL: ogólne
+# <a name="hlsl-property-pages-general"></a>Strony właściwości HLSL: Ogólne
 
 Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **ogólne** stronę właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **ogólne** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
 
@@ -63,8 +63,8 @@ Ta właściwość odnosi się do **/E [name]** argument wiersza polecenia.
 
    Ta właściwość odnosi się do **/D \[definicje]** argument wiersza polecenia kompilatora HLSL.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości HLSL](../ide/hlsl-property-pages.md)<br>
-[Strony właściwości HLSL: zaawansowane](../ide/hlsl-property-pages-advanced.md)<br>
-[Strony właściwości HLSL: pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)
+[Strony właściwości HLSL: Zaawansowane](../ide/hlsl-property-pages-advanced.md)<br>
+[Strony właściwości HLSL: Pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)

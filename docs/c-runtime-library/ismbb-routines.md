@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481409"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750510"
 ---
 # <a name="ismbb-routines"></a>_ismbb — Procedury
 
@@ -62,7 +62,7 @@ Procedury w `_ismbb` rodziny testu danej liczby całkowitej `c` w następujący 
 
 W poniższej tabeli przedstawiono wartości / / zsumowanie logiczne, które tworzą warunki sprawdzania dla tych procedur. Stałe manifestu `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`, i `_UPPER` są zdefiniowane w Ctype.h.
 
-|Procedura|_PUSTY|_DIGIT|NIŻSZY|_PUNCT|GÓRNY|Non-<br /><br /> ASCII<br /><br /> tekst|Non-<br /><br /> ASCII<br /><br /> punct|
+|Procedura|_BLANK|_DIGIT|NIŻSZY|_PUNCT|GÓRNY|Non-<br /><br /> ASCII<br /><br /> tekst|Non-<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -76,7 +76,7 @@ W poniższej tabeli przedstawiono wartości / / zsumowanie logiczne, które twor
 
 `_ismbb` Procedury są wykonywane zarówno jako funkcje, jak i makra. Aby uzyskać więcej informacji dotyczących sposoby wyboru każdej implementacji, zobacz [zalecenia dotyczące wybierania pomiędzy funkcjami i makrami](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasyfikacja bajtów](../c-runtime-library/byte-classification.md)<br/>
 [is, isw, procedury](../c-runtime-library/is-isw-routines.md)<br/>

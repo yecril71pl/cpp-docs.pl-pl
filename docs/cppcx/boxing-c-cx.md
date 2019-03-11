@@ -2,16 +2,16 @@
 title: Konwersja boxing (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: c680ea0262e8e65345cba40280a389453c2985bb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519519"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750757"
 ---
 # <a name="boxing-ccx"></a>Konwersja boxing (C + +/ CX)
 
-*Konwersja boxing* jest zawijany zmiennej typu wartości takie jak [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— lub typem skalarnym o podstawowych, takich jak `int`— w klasie ref, gdy zmienna jest przekazywana do metody, która przyjmuje [ Platform::Object ^](../cppcx/platform-object-class.md) jako jej typ danych wejściowych.
+*Konwersja boxing* jest zawijany zmiennej typu wartości takie jak [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)— lub typem skalarnym o podstawowych, takich jak `int`— w klasie ref, gdy zmienna jest przekazywana do metody, która przyjmuje [ Platform::Object ^](../cppcx/platform-object-class.md) jako jej typ danych wejściowych.
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Przekazywanie typu wartości do obiektu ^ parametru
 
@@ -36,7 +36,7 @@ W kliencie C#, XAML będzie można korzystać następująco:
     var result = obj.Multiply(a,b); //result = null
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Rzutowanie (C++/CX)](../cppcx/casting-c-cx.md)<br/>

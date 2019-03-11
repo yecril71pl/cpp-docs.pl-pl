@@ -1,17 +1,17 @@
 ---
-title: 'Porady: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia'
+title: 'Instrukcje: Korzystanie z śledzenia odwołań w języku C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454797"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746243"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Porady: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia
+# <a name="how-to-use-tracking-references-in-ccli"></a>Instrukcje: Korzystanie z śledzenia odwołań w języku C + +/ CLI
 
 W tym artykule przedstawiono sposób użycia śledzenia odwołania (%) w języku C + +/ interfejsu wiersza polecenia do przekazania języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) typów przez odwołanie.
 
@@ -341,6 +341,6 @@ T %
 T &
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md)

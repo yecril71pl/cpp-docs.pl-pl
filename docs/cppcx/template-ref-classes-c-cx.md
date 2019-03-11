@@ -2,12 +2,12 @@
 title: Klasy odwołania szablonu (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-ms.openlocfilehash: a128b9fcc7b37ad2cf7c7a17abb24c8074952501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4398cc2c545a57277289a6aa41fc4664d9734eed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642214"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744341"
 ---
 # <a name="template-ref-classes-ccx"></a>Klasy odwołania szablonu (C + +/ CX)
 
@@ -19,7 +19,7 @@ Poniższy przykład pokazuje sposób deklarowania prywatnej klasy ref jako szabl
 
 [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

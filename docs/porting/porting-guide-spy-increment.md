@@ -1,15 +1,15 @@
 ---
-title: 'Przewodnik przenoszenia: Narzędzie Spy++'
+title: 'Przewodnik przenoszenia: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177007"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751377"
 ---
-# <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
+# <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Spy++
 
 To przenoszenia analiza przypadku jest przeznaczona do daje wyobrażenie o jakie typowym projekcie przenoszenia jest podobna, jakiego rodzaju problemy mogą wystąpić i pewne ogólne porady i wskazówki dotyczące przenoszenia problemów adresowania. Ma nie należy traktować jako ostateczny przewodnik do przenoszenia, ponieważ środowisko Eksportowanie projektu zależy od bardzo szczegółowe informacje na temat kodu.
 
@@ -280,7 +280,7 @@ Przechodzenie do definicji to makro, zobaczymy, odwołuje się funkcja `OnNcHitT
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-Ma problem z niezgodności we wskaźniku na typy funkcji elementu członkowskiego. Ten problem nie jest konwersja z `CHotLinkCtrl` jako typ klasy `CWnd` jako typ klasy, ponieważ jest prawidłowa konwersja pochodnych do podstawowego. Problem jest typem zwracanym: UINT programu vs. LRESULT. LRESULT jest rozpoznawany jako LONG_PTR, czyli wskaźnika 64-bitowego lub wskaźnik 32-bitowe, w zależności od typu binary docelowy, więc UINT nie konwertuje do tego typu. To nie jest niczym niezwykłym podczas uaktualniania kod napisany przed 2005, ponieważ zwracany typ wiele metod mapy wiadomości zmieniła się z UINT do LRESULT w programie Visual Studio 2005 jako część zmiany 64-bitowej zgodności. Możemy zmienić typ zwracany z UINT w poniższym kodzie na LRESULT:
+Ma problem z niezgodności we wskaźniku na typy funkcji elementu członkowskiego. Ten problem nie jest konwersja z `CHotLinkCtrl` jako typ klasy `CWnd` jako typ klasy, ponieważ jest prawidłowa konwersja pochodnych do podstawowego. Problem jest typ zwracany: UINT programu vs. LRESULT. LRESULT jest rozpoznawany jako LONG_PTR, czyli wskaźnika 64-bitowego lub wskaźnik 32-bitowe, w zależności od typu binary docelowy, więc UINT nie konwertuje do tego typu. To nie jest niczym niezwykłym podczas uaktualniania kod napisany przed 2005, ponieważ zwracany typ wiele metod mapy wiadomości zmieniła się z UINT do LRESULT w programie Visual Studio 2005 jako część zmiany 64-bitowej zgodności. Możemy zmienić typ zwracany z UINT w poniższym kodzie na LRESULT:
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,9 +292,9 @@ Po zmianie mamy następujący kod:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Ponieważ około dziesięciu wystąpień tej funkcji w różnych klas pochodzące od CWnd, warto użyć **przejdź do definicji** (klawiatura: **F12**) i **przejdź do deklaracji** (Klawiatura: **Ctrl**+**F12**) gdy kursor znajduje się w funkcji w edytorze aby zlokalizować i przejdź do nich z **Znajdź Symbol** okna narzędzi. **Przejdź do definicji** jest zazwyczaj bardziej użyteczne dwóch. **Przejdź do deklaracji** będzie deklaracji Znajdź inne niż Definiowanie klasy deklaracji, takich jak przyjazne deklaracje klas lub przekazywać odwołania.
+Ponieważ około dziesięciu wystąpień tej funkcji w różnych klas pochodzące od CWnd, warto użyć **przejdź do definicji** (klawiatury: **F12**) i **przejdź do deklaracji** (klawiatury: **CTRL**+**F12**) gdy kursor znajduje się w funkcji w edytorze aby zlokalizować i przejdź do nich z **Znajdź Symbol** okna narzędzi. **Przejdź do definicji** jest zazwyczaj bardziej użyteczne dwóch. **Przejdź do deklaracji** będzie deklaracji Znajdź inne niż Definiowanie klasy deklaracji, takich jak przyjazne deklaracje klas lub przekazywać odwołania.
 
-##  <a name="mfc_changes"></a> Krok 9. Zmiany w MFC
+##  <a name="mfc_changes"></a> Krok 9. MFC Changes
 
 Następny błąd również odnosi się do typu deklaracji zmienione i występuje także w makrze.
 
@@ -542,7 +542,7 @@ Umieściliśmy \_T wokół literału ciągu, aby usunąć ten błąd.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_Makro T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi zawierające \_T w programie Visual Studio, najpierw otwórz **szybkiego zamieniania** (klawiatura: **Ctrl**+**F**) pole lub  **Zamienianie w plikach** (klawiatura: **Ctrl**+**Shift**+**H**), następnie wybierz **użycia Wyrażenia regularne** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już \_makro T niektóre ciągi, tej procedurze zostanie dodane ponownie, a także znajdzie przypadki, w których nie chcesz, \_T, na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny**zamiast **Zamień wszystkie**.
+\_Makro T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi zawierające \_T w programie Visual Studio, najpierw otwórz **szybkiego zamieniania** (klawiatury: **CTRL**+**F**) pole lub **zamienianie w plikach** (klawiatury: **CTRL**+**Shift**+**H**), następnie wybierz **Użyj wyrażeń regularnych** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już \_makro T niektóre ciągi, tej procedurze zostanie dodane ponownie, a także znajdzie przypadki, w których nie chcesz, \_T, na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny**zamiast **Zamień wszystkie**.
 
 Tej określonej funkcji [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), faktycznie jest zdefiniowany w nagłówki Windows i dokumentacji, aby zaleca się, że jej nie używane, z powodu przepełnienia buforu możliwe. Nie podano rozmiaru dla `szTmp` buforu, więc nie ma możliwości dla funkcji sprawdzić, czy bufor może zawierać wszystkie dane, które ma zostać zapisana. Zobacz następną sekcję o przenoszenie do bezpiecznego CRT, w którym naprawiony inne podobne problemy. Firma Microsoft zakończył się zastąpienie go za pomocą [_stprintf_s —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 Przenoszenie programu Spy ++ od oryginalnego kodu Visual C++ 6.0 najnowszą wersję kompilatora trwało około 20 godzin kodowania czasu w ciągu około tygodnia. Możemy uaktualnić bezpośrednio w ramach ośmiu wersjach produktu programu Visual Studio 6.0 do programu Visual Studio 2015. Teraz jest to zalecane podejście do wszystkich uaktualnień w projektach dużych i małych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Poprzednie analiza przypadku: narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)
+[Poprzednie analiza przypadku: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)

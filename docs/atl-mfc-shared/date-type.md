@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548190"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750393"
 ---
 # <a name="date-type"></a>DATE — typ
 
@@ -47,13 +47,13 @@ Podczas pracy z tych formatów daty i godziny w usłudze Automation, należy zau
 |28 grudnia 1899, południe|-2.50|
 |28 grudnia 1899, północy|-2.00|
 |29 grudnia 1899, północy|-1.00|
-|30 grudnia 1899, 18: 00|-0.75|
+|30 December 1899, 6 P.M.|-0.75|
 |30 grudnia 1899, południe|-0.50|
-|30 grudnia 1899, godziny 6: 00|-0.25|
+|30 December 1899, 6 A.M.|-0.25|
 |30 grudnia 1899, północy|0.00|
-|30 grudnia 1899, godziny 6: 00|0.25|
+|30 December 1899, 6 A.M.|0.25|
 |30 grudnia 1899, południe|0.50|
-|30 grudnia 1899, 18: 00|0.75|
+|30 December 1899, 6 P.M.|0.75|
 |Do 31 grudnia 1899, północy|1.00|
 |1 stycznia 1900 r. północy|2.00|
 |1 stycznia 1900 południe|2.50|
@@ -62,10 +62,9 @@ Podczas pracy z tych formatów daty i godziny w usłudze Automation, należy zau
 > [!CAUTION]
 >  Należy pamiętać, że ponieważ 6:00 AM zawsze jest reprezentowany przez wartość ułamkowa 0,25 niezależnie od tego, czy (po 30 grudnia 1899) liczbę całkowitą przedstawiającą dzień jest dodatnia lub ujemna (przed 30 grudnia 1899), prosty zmiennoprzecinkowy porównania punktu błędnie posortować Dowolna data reprezentujący 6:00:00 w dniu starszych niż 12/30/1899 *później* niż wartość typu DATE reprezentującą 7:00:00 tego samego dnia.
 
-Więcej informacji na temat problemów związanych z DATĄ i `COleDateTime` typów można znaleźć w obszarze [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md) i [Data i godzina: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md).
+Więcej informacji na temat problemów związanych z DATĄ i `COleDateTime` typów można znaleźć w obszarze [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md) i [daty i godziny: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Data i godzina](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md)
-

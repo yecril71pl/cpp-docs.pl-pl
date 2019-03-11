@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 7197b5cdf551020f4bd964558b5b332b7022ffe6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978299"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750523"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny tekst w pliku tchar.h
 
@@ -40,14 +40,14 @@ Ponieważ niektóre ciąg jednego bajtu znaków Ustaw (SBCS) — Obsługa funkcj
 |Zdefiniuj #|Skompilowanych wersji|Przykład|
 |---------------|----------------------|-------------|
 |`_UNICODE`|Unicode (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|
-|`_MBCS`|Znak wielobajtowy|`_tcsrev` Mapuje `_mbsrev`|
+|`_MBCS`|Multibyte-character|`_tcsrev` Mapuje `_mbsrev`|
 |Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS (ASCII)|`_tcsrev` Mapuje `strrev`|
 
 Na przykład funkcja generic tekst `_tcsrev`, która została zdefiniowana w tchar.h, mapy do `_mbsrev` Jeśli zdefiniowano `_MBCS` w programie lub do `_wcsrev` Jeśli zdefiniowano `_UNICODE`. W przeciwnym razie `_tcsrev` mapuje `strrev`. Inne mapowanie typu danych znajdują się w pliku tchar.h w celu ułatwienia programowania, ale `_TCHAR` jest najbardziej użyteczna.
 
 ### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych — zwykły tekst
 
-|Zwykły tekst<br /> Nazwa typu danych|_UNICODE &AMP;<br /> _MBCS niezdefiniowane|_MBCS<br /> Definicja|_UNICODE<br /> Definicja|
+|Generic-Text<br /> Nazwa typu danych|_UNICODE &AMP;<br /> _MBCS niezdefiniowane|_MBCS<br /> Definicja|_UNICODE<br /> Definicja|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
@@ -91,7 +91,7 @@ RetVal = strrev(szString);
 
 W związku z tym można napisać, obsługa i skompiluj plik kodu źródłowego dla pojedynczego, do uruchamiania przy użyciu procedur, które są specyficzne dla żadnego z trzech typów zestawów znaków.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Używanie typów danych TCHAR.H z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

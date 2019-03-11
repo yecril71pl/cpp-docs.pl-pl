@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++'
+title: 'Instrukcje: Przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570510"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748037"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++
 
 W tym temacie pokazano, jak można ciągów ANSI przekazywane za pomocą międzyoperacyjności języka C++, ale programu .NET Framework <xref:System.String> reprezentuje ciągi w formacie Unicode, więc konwersji do ANSI jest dodatkowego kroku. Do współpracy z innymi typami parametrów, zobacz następujące tematy:
 
@@ -96,6 +96,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL'
+title: 'Instrukcje: Przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635619"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748726"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Instrukcje: Przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL
 
 W kodzie natywnym może przechwycić natywnego wyjątek C++ z MSIL.  Może przechwycić wyjątków CLR za pomocą `__try` i `__except`.
 
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)

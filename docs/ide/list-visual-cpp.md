@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 08751e5fcdf246dd5ad285fc0cda5114d99cce15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 015647cd381ba4dc0c099b322e3c5870246c9fc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646671"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751345"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;Lista&gt; (Visual C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50646671"
 *Termin*<br/>
 Termin, aby zdefiniować, które są definiowane w `description`.
 
-*Opis elementu*<br/>
+*description*<br/>
 Element w punktora lub Lista numerowana lub definicji `term`.
 
 ## <a name="remarks"></a>Uwagi
@@ -69,6 +69,6 @@ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-commen
 class MyClass {};
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

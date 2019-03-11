@@ -21,12 +21,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220195"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749805"
 ---
 # <a name="locale-categories"></a>Kategorie regionalne
 
@@ -53,7 +53,7 @@ Kategorie ustawień regionalnych są stałe manifestu, używane przez procedury 
 
 Zobacz [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) przykład.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

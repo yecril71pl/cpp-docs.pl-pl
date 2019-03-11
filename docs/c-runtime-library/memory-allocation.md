@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: e77548e9f85057f8e8a1c92e4a0aa904a58e14a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618780"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742794"
 ---
 # <a name="memory-allocation"></a>Alokacja pamięci
 
@@ -44,7 +44,7 @@ Użyj tych procedur, aby przydzielić wolnej i ponownego przydzielenia pamięci.
 |[_msize](../c-runtime-library/reference/msize.md)|Zwraca rozmiar zaalokowanego bloku|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Debuguj wersję **_msize —**; jest dostępna tylko w wersji debugowania bibliotek wykonawczych|
 |[new](../c-runtime-library/operator-new-crt.md)|Przydzielanie bloków pamięci ze stosu|
-|[Nowy&#91;&#93;](../c-runtime-library/new-operator-crt.md)|Przydzielanie bloków pamięci ze stosu|
+|[new&#91;&#93;](../c-runtime-library/new-operator-crt.md)|Przydzielanie bloków pamięci ze stosu|
 |[_query_new_handler](../c-runtime-library/reference/query-new-handler.md)|Zwraca adres bieżącej nową procedurę obsługi zgodnie z ustawieniem **_set_new_handler**|
 |[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|Zwracany liczbę całkowitą, wskazującą nowy tryb obsługi ustawione przez **_set_new_mode** dla **— funkcja malloc**|
 |[realloc](../c-runtime-library/reference/realloc.md)|Ponowne przydzielenie nowy rozmiar bloku|
@@ -52,6 +52,6 @@ Użyj tych procedur, aby przydzielić wolnej i ponownego przydzielenia pamięci.
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Włącz mechanizm obsługi błędów podczas **nowe** operator nie powiedzie się (na przykład można przydzielić pamięci) i Włącz zbiór standardowych bibliotek C++|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|Ustaw nowy tryb obsługi dla **— funkcja malloc**|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

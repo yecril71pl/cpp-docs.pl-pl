@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: 1899e3153300bbfbfce068d29351de601f336b6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567092"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746802"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Inkrementacja i dekrementacja wskaźników
 
@@ -56,7 +56,7 @@ Użyj następujących wskazówek:
 
 - Możesz chcieć zachować wskaźnik do poprzedniego znaku na szybsze wywołań `_mbsdec`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
 [Indeksy bajtowe](../text/byte-indices.md)

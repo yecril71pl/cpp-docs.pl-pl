@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: 081d96fcf9b0d0d8d5183e3ed6d0fc69c5a29206
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220234"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744691"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Stałe pola_stat Struktura st_mode
 
@@ -66,7 +66,7 @@ Stałe maska bitowa zostały opisane poniżej:
 |`_S_IWRITE`|Uprawnienia do zapisu właściciela|
 |`_S_IEXEC`|Wykonywanie/wyszukiwania uprawnienia właściciela|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_stat, _wstat — funkcje](../c-runtime-library/reference/stat-functions.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

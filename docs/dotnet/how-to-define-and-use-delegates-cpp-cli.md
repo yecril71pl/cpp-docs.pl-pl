@@ -1,17 +1,17 @@
 ---
-title: 'Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich'
+title: 'Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484763"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748713"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich
+# <a name="how-to-define-and-use-delegates-ccli"></a>Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)
 
 W tym artykule pokazano, jak definiowanie oraz stosowanie delegatów w języku C + +/ interfejsu wiersza polecenia.
 
@@ -502,6 +502,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)

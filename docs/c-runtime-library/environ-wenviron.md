@@ -13,12 +13,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 5982aa367aa043dbe7a5c41128c3646f520d3b4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666911"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748926"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 
@@ -74,7 +74,7 @@ W oznaczenie użyte w tym przykładzie ciągi znaków nie są literały ciągu j
 
 W związku z tym, w środowisku wielobajtowych wartości "`env_var_z`" po pierwszym wywołaniu niejawne `putenv` będzie "`string1`", ale tej wartości zostaną zastąpione na sekundę niejawne wywołanie `putenv`, gdy wartość "`env_var_z`" jest wartość "`string2`". Środowisko Unicode (w `_wenviron`) i wielobajtowych środowiska (w `_environ`) w związku z tym będzie różnić się zgodnie z tej serii wywołań.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
 [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

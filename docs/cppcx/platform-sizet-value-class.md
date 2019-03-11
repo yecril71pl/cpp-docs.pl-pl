@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 02fe62165ce40d267f156eaeb3ad93f636c9ab73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604220"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751560"
 ---
 # <a name="platformsizet-value-class"></a>Klasa wartości Platform::SizeT
 
@@ -32,11 +32,11 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -52,12 +52,12 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parametry
 
-*Wartość1*<br/>
+*value1*<br/>
 Wartość nieoznaczona 32-bitowych.
 
-*Wartość2*<br/>
+*value2*<br/>
 Wskaźnik na wartość nieoznaczona 32-bitowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

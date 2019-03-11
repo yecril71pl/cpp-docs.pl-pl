@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694091"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744505"
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
 
@@ -77,7 +77,7 @@ Podstawowe aplikacji systemu UNIX, w tym wiele aplikacji CGI, powinien portu ła
 
 Inną opcja UNIX programistów przyjrzeć to podsystemu Windows POSIX. Jednakże obsługuje on tylko 1003.1 POSIX, który jedynie wersja POSIX standaryzowane podczas tworzenia systemu Windows NT. Od tamtej pory nastąpiła nieco żądanie do ten podsystem rozszerzania, ponieważ większość aplikacji zostały przekonwertowane na Win32. 1003.1 system jest ograniczone znaczenie w odniesieniu do aplikacji w pełni wyposażone, ponieważ nie zawiera wiele funkcji (takich jak te w 1003.2 sieci pomocy technicznej i tak dalej). Pełne polecanych aplikacji uruchamiana z podsystem Windows POSIX nie mają dostępu do funkcji Windows, które są dostępne do aplikacji Win32, takich jak pliki mapowane w pamięci, sieci i grafiki. Aplikacje, takie jak VI, LS i GREP są główne cele podsystemu Windows POSIX.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>

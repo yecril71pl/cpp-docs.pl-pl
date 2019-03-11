@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-ms.openlocfilehash: 824e9b1b71615bd3fc488052d5e713dee2e0d015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3854ffe205aa8e6cb9cfb800b9aa1473094fffaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524842"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743376"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementacja elementu niestandardowego Menedżera ciągów (metoda zaawansowana)
 
@@ -29,7 +29,6 @@ Aby to zrobić, należy najpierw zrozumieć jak [CStringT](../atl-mfc-shared/ref
 
    Podczas przydzielania `CStringData` struktury, należy ustawić to pole odzwierciedlające typ udostępnianie jest dozwolone dla buforu. W większości implementacji ustawić tę wartość. Dzięki temu zwykłe zachowanie udostępniania kopii przy zapisie. Jednak jeśli Menedżer ciągu nie obsługuje udostępniania buforu ciągu, Ustaw to pole stanie zablokowanym. Zmusza to `CStringT` do użycia tylko tego buforu dla wystąpienia `CStringT` który przydzielony.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: c4c35518130fc233afd055133704bcb0abaccca8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220728"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740037"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -29,7 +29,7 @@ EOF jest zwracany przez procedury We/Wy podczas końca pliku (lub w niektórych 
 
 WEOF daje wartość zwrotu typu **wint_t**, który jest używany w celu sygnalizowania, że koniec strumienia szeroki lub zgłosić błąd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [putc, putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
 [ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>

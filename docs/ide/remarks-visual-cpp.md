@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: bf81c1e9ef51caf1a3f30591d0df559ea4dfc631
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a897b20cbee797bd1e9a7477e30460f2ed4064c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461532"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748986"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;Uwagi&gt; (Visual C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50461532"
 
 #### <a name="parameters"></a>Parametry
 
-*Opis elementu*<br/>
+*description*<br/>
 Opis elementu członkowskiego.
 
 ## <a name="remarks"></a>Uwagi
@@ -52,6 +52,6 @@ using namespace System;
 public ref class MyClass {};
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

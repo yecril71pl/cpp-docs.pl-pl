@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: 380fe73bba71d08bb9315e218f5946a7cf935108
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bddcd09b892950e547c01a77845e679009bbd213
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523889"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747557"
 ---
 # <a name="xml-documentation-visual-c"></a>Dokumentacja XML (Visual C++)
 
@@ -42,6 +42,6 @@ Aby uzyskać szczegółowe informacje na temat tworzenia pliku XML z komentarzam
 
 Jeśli musisz umieścić specjalne znaki XML w tekście komentarza do dokumentacji, należy użyć jednostki XML lub sekcji CDATA.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

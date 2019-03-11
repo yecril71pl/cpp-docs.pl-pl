@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e9d3c7612232cff60be831310dec04b8ba63a227
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626698"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743149"
 ---
 # <a name="general-mbcs-programming-advice"></a>Ogólne porady dotyczące programowania MBSC
 
@@ -36,7 +36,7 @@ Użyj następujących wskazówek:
 
 - Podczas projektowania aplikacji, należy zdecydować, ciągi, które może być lokalizowana. W razie wątpliwości założono zostanie zlokalizowany wszelkie dany ciąg znaków. Jako takie nie należy mieszać ciągów, które może być lokalizowana z tymi, które nie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
 [Inkrementacja i dekrementacja wskaźników](../text/incrementing-and-decrementing-pointers.md)

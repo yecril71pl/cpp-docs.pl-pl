@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-ms.openlocfilehash: 70669f67b78ee4ea4f8073b78d2b9589e56a6356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4d063538339f55fa326163a400b9a7bf2c8bdfe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552623"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751912"
 ---
 # <a name="mbcs-programming-tips"></a>Porady dotyczące programowania MBCS
 
@@ -34,6 +34,6 @@ W nowych wdrożeniach należy używać kodowania znaków Unicode dla wszystkich 
 
 - [Przepełnienie buforu](../text/buffer-overflow.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zestawów znaków wielobajtowych (zestawy MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)

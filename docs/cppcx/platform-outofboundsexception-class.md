@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-ms.openlocfilehash: f3bc2e45cdb205a70128f976674ef7794a02eabf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747219"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException, klasa
 
@@ -31,14 +31,14 @@ Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexce
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::COMException, klasa](../cppcx/platform-comexception-class.md)

@@ -1,15 +1,15 @@
 ---
-title: Typy wyliczeniowe (C + +/ CX)
+title: Enums (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 54d542b9fea127101cc74d4f064a7598889c3bd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583163"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752145"
 ---
-# <a name="enums-ccx"></a>Typy wyliczeniowe (C + +/ CX)
+# <a name="enums-ccx"></a>Enums (C++/CX)
 
 C + +/ CX obsługuje `public enum class` — słowo kluczowe, czyli analagous do standardowego języka C++ `scoped  enum`. Kiedy używasz moduł wyliczający, który jest zadeklarowana za pomocą `public enum class` — słowo kluczowe, musi być identyfikatorem wyliczenia zakresu z każdą wartość modułu wyliczającego.
 
@@ -37,7 +37,7 @@ Następny przykład pokazuje, jak Rzutowanie na odpowiedniki liczbowych i wykony
 
 [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

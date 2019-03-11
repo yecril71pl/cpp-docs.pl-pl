@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449143"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747115"
 ---
 # <a name="platformintptr-value-class"></a>Klasa wartości Platform::IntPtr
 
@@ -38,11 +38,11 @@ Pola IntPtr ma następujące składowe:
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -73,14 +73,14 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*Wartość1*<br/>
+*value1*<br/>
 Wskaźnik do dojścia lub pola IntPtr.
 
-*Wartość2*<br/>
+*value2*<br/>
 32-bitowa liczba całkowita, która może zostać przekonwertowany na element IntPtr.
 
-*Wartość3*<br/>
-Pola IntPtr.
+*value3*<br/>
+An IntPtr.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -100,6 +100,6 @@ int32 IntPtr::ToInt32();
 
 32-bitową liczbę całkowitą.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

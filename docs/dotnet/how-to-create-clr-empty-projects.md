@@ -1,18 +1,18 @@
 ---
-title: 'Porady: tworzenie pustych projektów CLR'
+title: 'Instrukcje: Tworzenie pustych projektów CLR'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3779887a91b69848d767c15af4a53ff2e87b760c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612137"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740479"
 ---
-# <a name="how-to-create-clr-empty-projects"></a>Porady: tworzenie pustych projektów CLR
+# <a name="how-to-create-clr-empty-projects"></a>Instrukcje: Tworzenie pustych projektów CLR
 
 Aby utworzyć pusty projekt CLR, użyj **pusty projekt CLR** szablonu, który jest dostępny z **nowy projekt** okno dialogowe.
 
@@ -34,7 +34,7 @@ Aby utworzyć pusty projekt CLR, użyj **pusty projekt CLR** szablonu, który je
 
 1. Kliknij przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy projektów Visual C++](../ide/visual-cpp-project-types.md)<br/>
 [Typy projektów Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_handle
 ms.assetid: 505e967a-b75f-4bd8-8f46-57eb66c53538
-ms.openlocfilehash: 24b068df7ef34854bb8b1c0504fd5b4dcaaea799
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05fe344514099a4fdd53315cf979a2be0fec1695
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498106"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748375"
 ---
 # <a name="autohandle"></a>auto_handle
 
@@ -32,6 +32,6 @@ W tym pliku nagłówkowym:
 
 [Funkcja swap (auto_handle)](../dotnet/swap-function-auto-handle.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

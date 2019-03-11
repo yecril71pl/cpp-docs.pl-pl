@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499873"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747128"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector, klasa
 
@@ -89,14 +89,14 @@ Jeśli spróbujesz użyć **wektor** wpisz publiczny wartość zwracana lub para
 |[Vector::RemoveAt](#removeat)|Usuwa element identyfikowane przez określony indeks z bieżącym wektora.|
 |[Vector::RemoveAtEnd](#removeatend)|Usuwa element na końcu bieżącego wektora.|
 |[Vector::SetAt](#setat)|Przypisuje wartość określonego elementu w bieżącym wektor, który jest identyfikowany przez określony indeks.|
-|[Vector::size](#size)|Zwraca liczbę elementów w bieżącym obiekcie wektora.|
+|[Vector::Size](#size)|Zwraca liczbę elementów w bieżącym obiekcie wektora.|
 
 ### <a name="events"></a>Zdarzenia
 
 |||
 |-|-|
 |Nazwa|Opis|
-|Zdarzenie [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje po zmianie wektora.|
+|event [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje po zmianie wektora.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -387,10 +387,10 @@ Wskaźnik do `std::vector` umożliwiający inicjują wektor bieżącego.
 *pierwszy*<br/>
 Pierwszy element w sekwencji obiektów, które są stosowane do inicjalizacji bieżącego wektora. Typ *pierwszy* jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*ostatni*<br/>
+*last*<br/>
 Ostatniego elementu w sekwencji obiektów, które są stosowane do inicjalizacji bieżącego wektora. Typ *ostatniego* jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)<br/>
 [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

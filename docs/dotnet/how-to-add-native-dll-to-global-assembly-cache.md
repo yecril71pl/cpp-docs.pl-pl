@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów'
+title: 'Instrukcje: Dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), loading native DLLs
 - native DLLs [C++]
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
-ms.openlocfilehash: 1b11ebfae704ca1529113a00b463df728c85fe60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4b886dfef3185c1b3084ed02abcef1ad2630c11
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641366"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746490"
 ---
-# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Porady: dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów
+# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Instrukcje: Dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów
 
 Natywna Biblioteka DLL (nie COM) można umieścić w globalnej pamięci podręcznej zestawów.
 
@@ -28,6 +28,6 @@ Aby uzyskać więcej informacji, zobacz [assemblylinkresource (Link do zasobów 
 /ASSEMBLYLINKRESOURCE:MyComponent.dll
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

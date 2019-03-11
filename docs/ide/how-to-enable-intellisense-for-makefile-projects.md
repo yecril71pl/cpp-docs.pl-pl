@@ -1,5 +1,5 @@
 ---
-title: 'Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make'
+title: 'Instrukcje: Włączanie funkcji IntelliSense dla projektów plików reguł programu make'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCNMakeTool.IntelliSense
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Makefile projects, IntelliSense
 - IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-ms.openlocfilehash: 80a4696856fea46c7749cfeb120535dcdab86282
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f4799df0dff70c65cee77ca1db58bd8fd8edc0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434674"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748622"
 ---
-# <a name="how-to-enable-intellisense-for-makefile-projects"></a>Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make
+# <a name="how-to-enable-intellisense-for-makefile-projects"></a>Instrukcje: Włączanie funkcji IntelliSense dla projektów plików reguł programu make
 
 IntelliSense nie może działać w środowisku IDE dla projektów plików reguł programu make Visual C++, gdy projekt pewnych ustawień lub opcje kompilatora są nieprawidłowo skonfigurowana. Ta procedura umożliwia konfigurowanie projektów plików reguł programu make Visual C++, tak aby technologia IntelliSense działa w przypadku projektów plików reguł programu make otwarte w środowisku programowania Visual Studio.
 
@@ -46,8 +46,8 @@ IntelliSense nie może działać w środowisku IDE dla projektów plików reguł
 
 Przy następnym otwarciu projektu pliku reguł programu make w środowisku programowania Visual Studio Uruchom **czyste rozwiązanie** polecenia i następnie **Kompiluj rozwiązanie** polecenia projektu pliku reguł programu make. Funkcja IntelliSense powinny działać poprawnie w środowisku IDE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE — dokumentacja](../build/nmake-reference.md)<br>
-[Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+[Instrukcje: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)

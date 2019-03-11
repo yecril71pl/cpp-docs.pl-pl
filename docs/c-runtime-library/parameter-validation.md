@@ -1,17 +1,17 @@
 ---
-title: Walidacja parametru
+title: Sprawdzanie poprawności parametru
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: b0ccc589809fc5204659ad5af28ece0096855d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c7b2ae50fdcbf59cd23cc309a4ddc4c0803e24e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677594"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748427"
 ---
-# <a name="parameter-validation"></a>Walidacja parametru
+# <a name="parameter-validation"></a>Sprawdzanie poprawności parametru
 
 Większość funkcji CRT z rozszerzonymi zabezpieczeniami i wiele z istniejących funkcji sprawdzają poprawność swoich parametrów. Może to obejmować sprawdzenie wskaźniki **NULL**, sprawdzanie, czy liczby całkowite dzielą się na prawidłowym zakresem lub Sprawdzanie, czy wartości wyliczenia są prawidłowe. W przypadku odnalezienia nieprawidłowy parametr jest wykonywana procedura obsługi nieprawidłowego parametru.
 
@@ -25,7 +25,7 @@ Funkcja wysyłania procedurę obsługi nieprawidłowego parametru, z kolei wywo�
 
 To zachowanie można zmienić za pomocą funkcji [_set_invalid_parameter_handler —](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) lub [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) ustawić program obsługi nieprawidłowych parametrów własnej funkcji. W przypadku funkcji, które określisz nie zakończyć aplikację, zwróceniem sterowania do funkcji, który otrzymał nieprawidłowe parametry. W CRT, funkcje te zwykle przestanie wykonywania funkcji Ustaw `errno` kod błędu i zwracają kod błędu. W wielu przypadkach `errno` wartość i wartość zwracana to `EINVAL`, wskazując nieprawidłowy parametr. W niektórych przypadkach dokładniejszą kod błędu jest zwracany, takich jak `EBADF` dla złym wskaźnikiem pliku przekazany jako parametr. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

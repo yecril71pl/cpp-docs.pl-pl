@@ -7,12 +7,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: ab3ac2e59e61e15ae1f309ac26fe30d1557185c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637700"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749311"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Zalecenia dotyczące wybierania pomiędzy funkcjami i makrami
 
@@ -42,6 +42,6 @@ Jeśli musisz wybierać między funkcja i makra stosowania procedury biblioteki 
 
 - **Kontrola typów** kiedy Deklarujesz funkcję, kompilator można sprawdzić typy argumentów. Ponieważ nie można zadeklarować makra, kompilator nie można sprawdzić typy argumentów makra; Mimo że można sprawdzić, liczba argumentów są przekazywane do makra.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

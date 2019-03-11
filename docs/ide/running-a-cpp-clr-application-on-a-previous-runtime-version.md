@@ -11,12 +11,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-ms.openlocfilehash: effcda9de1cb1005855f5752060dc61e28dcebf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af20e7bdb34675b26acc7369c4d37100b796562d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581522"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748245"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Uruchamianie aplikacji C++/clr w poprzedniej wersji środowiska uruchomieniowego
 
@@ -28,6 +28,6 @@ W czasie wykonywania plik app.config musi mieć nazwę w postaci *nazwa_pliku.ex
 
 Jeśli określisz więcej niż jedna wersja środowiska uruchomieniowego i aplikacja zostanie uruchomiona na komputerze, który ma więcej niż jedna wersja zainstalowanego środowiska uruchomieniowego, aplikacja używa pierwszej wersji, została określona w pliku konfiguracji, który jest zainstalowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)

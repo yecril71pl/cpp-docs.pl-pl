@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693480"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749376"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 Poniższy przykład kodu pokazuje, jak odczytywać dane binarne z pliku, przy użyciu dwóch klas z <xref:System.IO?displayProperty=fullName> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik. <xref:System.IO.BinaryReader> udostępnia interfejs do strumienia, który zezwala na dostęp binarny.
 
-Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: zapisu pliku binarnego (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie do pliku binarnego (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
@@ -177,7 +177,7 @@ int main()
 
 Poniższy przykład kodu pokazuje, jak otworzyć i odczytać jeden wiersz pliku tekstowego w czasie, za pomocą <xref:System.IO.StreamReader> klasy, która jest zdefiniowana w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy jest używany do otwierania pliku tekstowego i następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda służy do pobierania każdego wiersza.
 
-Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [porady: wpisywanie tekstu do pliku (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie tekstu do pliku tekstowego (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
@@ -261,7 +261,7 @@ int main()
 
 Poniższy przykład kodu pokazuje zapisu w pliku danych binarnych. Dwie klasy z <xref:System.IO> przestrzeni nazw są używane: <xref:System.IO.FileStream> i <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik podczas <xref:System.IO.BinaryWriter> zapewnia interfejs do strumienia, który zezwala na dostęp binarny.
 
-Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [porady: odczytywanie pliku binarnego (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [jak: Odczytywanie pliku binarnego (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
@@ -332,10 +332,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
-[Plik i Stream we/wy](/dotnet/standard/io/index)
-
-[System.IO — przestrzeń nazw](https://msdn.microsoft.com/library/system.io.aspx)
+[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[We/Wy plików i strumieni](/dotnet/standard/io/index)<br/>
+[System.IO — przestrzeń nazw](/dotnet/api/system.io)

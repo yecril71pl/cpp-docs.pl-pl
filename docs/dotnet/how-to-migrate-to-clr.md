@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Migracja do / clr'
+title: 'Instrukcje: Migracja do / clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454447"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749117"
 ---
-# <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
+# <a name="how-to-migrate-to-clr"></a>Instrukcje: Migracja do/CLR
 
 W tym temacie omówiono problemy, które powstają, gdy kompilacja kodu natywnego za pomocą **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia macierzystego kodu C++ do wywołania i można wywołać z zestawów platformy .NET, oprócz innych macierzystego kodu C++. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) Aby uzyskać więcej informacji na temat korzyści wynikające z kompilowania za pomocą **/CLR**.
 
@@ -164,6 +164,6 @@ Aby uzyskać informacje na temat programowania w języku Visual C++ .NET, zobacz
 
 - [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

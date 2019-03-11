@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389932"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747699"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 
@@ -19,7 +19,7 @@ Gdy klient wykonuje procedurę przechowywaną, wyszukiwanie programu SQL Server 
 
 Program SQL Server udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń, z następującymi poziomami zabezpieczeń:
 
-- Tryb bez ograniczeń: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.
+- Tryb bez ograniczeń: Uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.
 
 - Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe.
 
@@ -76,6 +76,6 @@ Skrypty SQL mogą być wykonywane interaktywnie w analizatorze kwerend SQL lub w
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

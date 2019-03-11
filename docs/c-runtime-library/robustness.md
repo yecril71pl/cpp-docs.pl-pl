@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 9244ba430efab01cd82b8ad773ad669470d67cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c70c9a2bf0b95063fa3f679ca6c3053d2a4f2df5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454707"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744570"
 ---
 # <a name="robustness"></a>Niezawodność
 
@@ -26,7 +26,7 @@ Użyj następujących funkcji biblioteki wykonawczej C do poprawy niezawodności
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Instaluje własną funkcję zakończenia ma zostać wywołana przez [zakończyć](../c-runtime-library/reference/terminate-crt.md).|
 |[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Instaluje własną funkcję zakończenia ma zostać wywołana przez [nieoczekiwany](../c-runtime-library/reference/unexpected-crt.md).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [SetUnhandledExceptionFilter](https://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>

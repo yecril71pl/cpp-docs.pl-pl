@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 57fb089f0d9dc53ba8a65cef41e3341168ffea45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596407"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747154"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType, klasa
 
@@ -36,11 +36,11 @@ Klasa ValueType jest używana do tworzenia typów wartości. Element ValueType p
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -58,6 +58,6 @@ Platform::String ToString();
 
 Platform::String, który reprezentuje wartość.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

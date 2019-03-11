@@ -1,18 +1,18 @@
 ---
-title: 'Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)'
+title: 'Instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436169"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751833"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)
 
 W tym artykule pokazano, jak definiowanie oraz stosowanie typy odwołań zdefiniowanych przez użytkownika i typów wartości w języku C + +/ interfejsu wiersza polecenia.
 
@@ -455,7 +455,7 @@ Kompilator nie wbudowanego wywołanie konstruktora, jeśli klasa ma Konstruktor 
 
 Umożliwia definiowanie statycznego konstruktora jako funkcja prywatnego elementu członkowskiego, ponieważ oznaczało to ma zostać wywołana tylko przez środowisko CLR.
 
-Aby uzyskać więcej informacji na temat konstruktorów statycznych, zobacz [porady: Definiowanie statycznego konstruktora interfejsu (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Aby uzyskać więcej informacji na temat konstruktorów statycznych, zobacz [jak: Definiowanie statycznego konstruktora interfejsu (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr
@@ -912,7 +912,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
 [Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)

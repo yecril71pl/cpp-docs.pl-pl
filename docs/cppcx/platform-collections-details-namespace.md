@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::Details
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-ms.openlocfilehash: b61470d865f751957d796bed7ebf23c24037dd51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f7885397a56391581f9e3d0fe985311164d0219
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567209"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746012"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections:: details Namespace
 
@@ -34,8 +34,8 @@ Członkowie tej przestrzeni nazw są zdefiniowane w collection.h i nie są wyśw
 
 **Nagłówek:** Collection.h
 
-**Namespace:** Platform::Collection::Details
+**Namespace:** Platform::Collection::details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

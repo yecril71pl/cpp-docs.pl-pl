@@ -6,12 +6,12 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-ms.openlocfilehash: 4cca648b3b81dbf0d9f8d3e5f87625464f1d8385
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625050"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747063"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox, interfejs
 
@@ -68,6 +68,6 @@ Zwraca wartość, która pierwotnie została zapisana w tym obiekcie.
 
 Aby uzyskać przykład, zobacz [pakowania](../cppcx/boxing-c-cx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

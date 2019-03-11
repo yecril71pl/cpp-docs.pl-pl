@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0323ae57de1e03811b12fec7fea79b6bab954e44
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563345"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745189"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -87,7 +87,7 @@ Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzęd
 
 ![Nagłówek zdalny IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
 [Właściwości ogólne C++ (Linux C++)](prop-pages/general-linux.md)<br/>

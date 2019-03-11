@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: db3b05edf1496d92eaed5c7f07b9961cdde351c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539415"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744525"
 ---
 # <a name="required-and-optional-header-files"></a>Wymagane i opcjonalne nagłówki plików
 
@@ -26,6 +26,6 @@ Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnyc
 
 Pliki nagłówkowe biblioteki wykonawczej zapewniają deklaracje funkcji w stylu ANSI/ISO C-standardowa zalecane. Kompilator przeprowadza kontrolę typów dla procedur odwołania, występujący po jej deklaracji funkcji skojarzonej. Deklaracje funkcji są szczególnie ważne w przypadku procedur, które zwracają wartość pewnego typu innego niż `int`, co jest ustawieniem domyślnym. Procedur, które nie należy określać ich odpowiednich zwracają wartości w jego deklarację będą uznawane za przez kompilator do zwrócenia `int`, która może spowodować nieoczekiwane rezultaty. Zobacz [sprawdzania typu](../c-runtime-library/type-checking-crt.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym'
+title: 'Instrukcje: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649998"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751495"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Instrukcje: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym
 
 Kroki opisane w tym artykule przyjęto założenie, że tworzysz oparty na dialogu ([klasa CDialog](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation Classes (MFC), ale można również dodać obsługę formantu Windows Forms do istniejącego okna dialogowego MFC.
 
@@ -115,6 +115,6 @@ Kroki opisane w tym artykule przyjęto założenie, że tworzysz oparty na dialo
 
    Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**. W oknie dialogowym MFC powinien być wyświetlany formantu programu Windows Forms.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

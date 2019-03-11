@@ -1,17 +1,17 @@
 ---
-title: 'Porady: korzystanie z tablic w języku C++/interfejsie wiersza polecenia'
+title: 'Instrukcje: Korzystanie z tablic w języku C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3043a277ddca41bc6519d6f127f8a98c07c418d2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596251"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747543"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Porady: korzystanie z tablic w języku C++/interfejsie wiersza polecenia
+# <a name="how-to-use-arrays-in-ccli"></a>Instrukcje: Korzystanie z tablic w języku C + +/ CLI
 
 W tym artykule opisano sposób używania tablic w języku C + +/ interfejsu wiersza polecenia.
 
@@ -503,7 +503,7 @@ int main() {
 
 W odróżnieniu od tablic standard C++ zarządzane tablice niejawnie pochodzą z klasy bazowej tablicy, z którego dziedziczą wspólnego zachowania. Na przykład `Sort` metody, która może służyć do kolejność elementów w tablicy.
 
-Dla tablic, które zawierają typy wewnętrzne podstawowe, wywołując `Sort` metody. Można zmienić kryteria sortowania, i jest to wymagane posortować dla tablic typów złożonych. W tym przypadku typ elementu tablicy musi implementować [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.
+Dla tablic, które zawierają typy wewnętrzne podstawowe, wywołując `Sort` metody. Można zmienić kryteria sortowania, i jest to wymagane posortować dla tablic typów złożonych. W tym przypadku typ elementu tablicy musi implementować <xref:System.IComparable.CompareTo%2A> metody.
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Sortowanie tablic przy użyciu kryteriów niestandardowych
 
-Aby posortować tablic, które zawierają podstawowe typy wewnętrzne, po prostu Wywołaj `Array::Sort` metody. Jednak do tablic sortowania, które zawierają typów złożonych lub aby zastąpić domyślne kryteriów sortowania, należy zastąpić [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.
+Aby posortować tablic, które zawierają podstawowe typy wewnętrzne, po prostu Wywołaj `Array::Sort` metody. Jednak do tablic sortowania, które zawierają typów złożonych lub aby zastąpić domyślne kryteriów sortowania, należy zastąpić <xref:System.IComparable.CompareTo%2A> metody.
 
 W poniższym przykładzie strukturę o nazwie `Element` jest tworzony na podstawie <xref:System.IComparable>i dostarczać <xref:System.IComparable.CompareTo%2A> metodę, która wykorzystuje średnią dwóch liczb całkowitych jako kryterium sortowania.
 
@@ -618,6 +618,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tablice](../windows/arrays-cpp-component-extensions.md)

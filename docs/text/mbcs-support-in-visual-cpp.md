@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-ms.openlocfilehash: 0108068f15132fea38189e17371490a7c0dd5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b292bb12888ce0c08f96d3c46e27297f61bc428d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465240"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750497"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
 
@@ -47,7 +47,7 @@ Edytora IME aktywowany przez ALT +\` kombinacji klawiszy, jest wyświetlana jako
 
 Jeśli chcesz, aby użytkownicy twojej aplikacji, aby mieć możliwość wprowadzania znaków Kanji, aplikacja musi obsługiwać komunikaty Windows edytora IME. Aby uzyskać więcej informacji na temat programowania w edytorze IME zobacz [Menedżera metody wprowadzania](/windows/desktop/intl/input-method-manager).
 
-## <a name="visual-c-debugger"></a>Debuger programu Visual C++
+## <a name="visual-c-debugger"></a>Visual C++ Debugger
 
 Debuger Visual C++ umożliwia ustawianie punktów przerwania w edytorze IME komunikaty w protokole. Ponadto znaki dwubajtowe można wyświetlić w oknie pamięci.
 
@@ -61,7 +61,7 @@ Aby zmienić domyślne ustawienia regionalne w czasie kompilacji kodu źródłow
 
 Narzędzia oparte na Visual C++ Windows, takich jak narzędzie Spy ++ i zasobów, narzędzia, do edycji w pełni obsługiwać ciągi znaków edytora IME.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zestawów znaków wielobajtowych (zestawy MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)

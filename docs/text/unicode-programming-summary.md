@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 130c9027a882de2aae7fb339e4761b0cc81b3a6a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627270"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747959"
 ---
 # <a name="unicode-programming-summary"></a>Podsumowanie programowania Unicode
 
@@ -91,6 +91,6 @@ Aby podsumować, MFC i biblioteki wykonawczej zapewniają obsługę programowani
 
 - Biblioteka środowiska uruchomieniowego zawiera wersja znaków dwubajtowych `main`. Użyj `wmain` aplikacji obsługujących Unicode.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa formatu Unicode](../text/support-for-unicode.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220286"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742706"
 ---
 # <a name="file-permission-constants"></a>Stałe uprawnień pliku
 
@@ -47,7 +47,7 @@ Gdy jest używana jako `pmode` argument `_umask`, stała manifestu ustawia ustaw
 |`_S_IWRITE`|Odczytywanie niedozwolone (plik jest tylko do zapisu)|
 |`_S_IREAD` &#124; `_S_IWRITE`|Zapisywanie ani odczytywanie dozwolone|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

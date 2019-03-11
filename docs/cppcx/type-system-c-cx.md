@@ -2,12 +2,12 @@
 title: System typów (C + +/ CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445988"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745957"
 ---
 # <a name="type-system-ccx"></a>System typów (C + +/ CX)
 
@@ -17,15 +17,15 @@ Aby włączyć obsługę środowiska wykonawczego Windows w nowoczesnych idiom j
 
 Szczegółowe omówienie C + +/ CX języka Prognoza i jak to działa w sposób niewidoczny, zobacz te Posty na blogu:
 
-1. [C + +/ CX część 0 \[n\]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C + +/ CX część 0 \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/ CX, część 1 z \[n\]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C + +/ CX, część 1 z \[n\]: Proste klasy](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/ CX część 2 \[n\]: typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C + +/ CX część 2 \[n\]: Typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
 1. [C + +/ CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/ CX część 4 \[n\]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C + +/ CX część 4 \[n\]: Statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Pliki metadanych (.winmd) Windows
 
@@ -179,6 +179,6 @@ Opisuje sposób oznaczania publicznych interfejsów API jako przestarzałe przy 
 
 Aby uzyskać więcej informacji, zobacz [wycofane typy i składowe](../cppcx/deprecating-types-and-members-c-cx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

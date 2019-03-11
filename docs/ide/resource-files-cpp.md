@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f9ead50c1c8761968ebad65f6a5289cfeea8fdaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e19ad88a52467cd7ad2d5fa17dd964fd1bb38429
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623005"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747050"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -28,8 +28,8 @@ Zobacz [pracy z zasobami](../windows/working-with-resource-files.md) Aby uzyska�
 |*Projname*.ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu lub sterowania. Ikona ta pojawia się, gdy aplikacja jest zminimalizowana. Jest również używany w aplikacji **o** pole. Domyślnie biblioteka MFC zawiera ikonę MFC i ATL zawiera ikonę ATL.|
 |*Projname*Doc.ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu MFC, który zawiera obsługę architektury dokumentu/widoku.|
 |Toolbar.bmp|*Projname*\res|Pliki zasobów|Plik mapy bitowej reprezentujący aplikacja lub formant paska narzędzi lub palety. Ta mapa bitowa znajduje się w pliku zasobów projektu. Początkowy pasek narzędzi i pasek stanu, które są konstruowane w **cmainframe —** klasy.|
-|Ribbon.mfcribbon ms|*Projname*\res|Pliki zasobów|Plik zasobu, który zawiera kod XML, który definiuje przyciskami, formanty i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md).|
+|ribbon.mfcribbon-ms|*Projname*\res|Pliki zasobów|Plik zasobu, który zawiera kod XML, który definiuje przyciskami, formanty i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

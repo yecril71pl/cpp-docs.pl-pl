@@ -8,12 +8,12 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 45349099ed5c607468430d2f0a901c6374d88fc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475741"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750117"
 ---
 # <a name="control-flags"></a>Flagi kontrolne
 
@@ -27,6 +27,6 @@ Wersja do debugowania biblioteki wykonawczej C firmy Microsoft korzysta z nastę
 
 Te flagi mogą być definiowane za pomocą opcji wiersza polecenia/d. lub za pomocą `#define` dyrektywy. Jeśli flaga jest zdefiniowana za pomocą `#define`, dyrektywa musi znajdować się przed plik nagłówkowy obejmują instrukcji dla procedury deklaracji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne i typy standardowe](../c-runtime-library/global-variables-and-standard-types.md)

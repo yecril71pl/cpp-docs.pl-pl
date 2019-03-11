@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467333"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751820"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,7 +60,7 @@ Nagłówek &lt;shared_mutex > określa klasy `shared_mutex` i `shared_timed_mute
 
 |Klasy|Opis|
 |-------------|-----------------|
-|[shared_mutex klasy](../standard-library/shared-mutex.md#class_shared_mutex)|Typ obiektu mutex udostępnionego, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
+|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|Typ obiektu mutex udostępnionego, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
 |[shared_timed_mutex klasy](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Typ udostępnionego mutex Przekroczono limit czasu, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
 |[shared_lock klasy](../standard-library/shared-mutex.md#class_shared_lock)|Klasa szablonu, który otacza udostępnionego obiektu mutex do obsługi operacji przekroczono limit czasu blokady i niewyłączną udostępniania przez wielu agentów.|
 
@@ -228,11 +228,11 @@ Zamienia zawartości dwóch `shared_lock` obiektów. Skutecznie taka sama, jak `
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** &lt;shared_mutex >
+**Header:** &lt;shared_mutex>
 
 **Namespace:** standardowe
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
 [&lt;mutex>](../standard-library/mutex.md)

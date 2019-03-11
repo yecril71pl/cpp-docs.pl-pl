@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie ciągu char * na tablicę System::Byte'
+title: 'Instrukcje: Konwertuj char * ciągu na tablicę System::Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 26ef83533e7da1d272c31a54165626f513a5508a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ef84e31ee3db703857e3b28ef70dda8d5d01229
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594730"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741710"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Porady: konwertowanie char \* ciągu na tablicę System::Byte
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Instrukcje: Konwertuj char \* ciągu na tablicę System::Byte
 
 Najbardziej efektywny sposób, aby przekonwertować `char *` ciągu do <xref:System.Byte> tablicy jest użycie <xref:System.Runtime.InteropServices.Marshal> klasy.
 
@@ -51,6 +51,6 @@ int main() {
 Native String
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Strona właściwości Niestandardowy krok budowania: ogólne'
+title: 'Strona niestandardowy krok budowania właściwości: Ogólne'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-ms.openlocfilehash: dc6765c9519c6cdb4245afa2f07079548a07e1fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c144648308fa91b8da98c0f2992174203c2e5ae7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621757"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746175"
 ---
-# <a name="custom-build-step-property-page-general"></a>Strona właściwości Niestandardowy krok budowania: ogólne
+# <a name="custom-build-step-property-page-general"></a>Strona niestandardowy krok budowania właściwości: Ogólne
 
 Dla każdej kombinacji konfiguracji projektu i platformy docelowej w projekcie można określić niestandardowy krok wykonywany podczas kompilacji projektu.
 
@@ -35,7 +35,7 @@ Wersja systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji nie
 
    Komunikat, który jest wyświetlany podczas wykonywania kroku niestandardowej kompilacji.
 
-- **dane wyjściowe**
+- **Dane wyjściowe**
 
    Plik wyjściowy, generowany przez krok niestandardowej kompilacji. To ustawienie jest wymagane, aby kompilacje przyrostowe działały poprawnie.
 
@@ -59,6 +59,6 @@ Wersja systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji nie
 
 1. Zmodyfikuj ustawienia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../ide/property-pages-visual-cpp.md)

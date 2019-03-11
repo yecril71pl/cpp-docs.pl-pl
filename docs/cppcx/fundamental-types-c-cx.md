@@ -2,12 +2,12 @@
 title: Typy podstawowe (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529132"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752366"
 ---
 # <a name="fundamental-types-ccx"></a>Typy podstawowe (C + +/ CX)
 
@@ -20,7 +20,7 @@ Poniższa lista zawiera wbudowane Boolean i typy znakowe i odpowiedniki standard
 |Przestrzeń nazw|C + +/ CX nazwy|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Platforma|Boolean|Wartość logiczna 8-bitowych.|bool|**wartość true,** (niezerową) i **false** (zero)|
-|default|char16|Wartość nieliczbową 16-bitową, która reprezentuje punkt kodu Unicode (UTF-16).|wchar_t<br /><br /> —lub—<br /><br /> L'c "|(Określony przez Unicode standard)|
+|default|char16|Wartość nieliczbową 16-bitową, która reprezentuje punkt kodu Unicode (UTF-16).|wchar_t<br /><br /> —lub—<br /><br /> L'c'|(Określony przez Unicode standard)|
 
 ## <a name="numeric-types"></a>Typy liczbowe
 
@@ -50,10 +50,10 @@ W poniższej tabeli wymieniono niektóre dodatkowe typy są definiowane przez ar
 |Rect|Zestaw czterech liczb zmiennoprzecinkowych, które reprezentują położenie i rozmiar prostokąta.|
 |SizeT|Uporządkowana para liczb zmiennoprzecinkowych, który określa szerokość i wysokość.|
 |Punkt|Uporządkowana para zmiennoprzecinkowych współrzędnych x i współrzędne y, które definiują punkt w dwuwymiarowej płaszczyzny.|
-|Identyfikator GUID|Wartość nieliczbową 128-bitowego, która jest używana jako unikatowy identyfikator.|
+|Guid|Wartość nieliczbową 128-bitowego, która jest używana jako unikatowy identyfikator.|
 |UIntPtr|(Tylko do użytku wewnętrznego.) Niepodpisane wartość 64-bitową, która jest używana jako wskaźnik.|
-|Pola IntPtr|(Tylko do użytku wewnętrznego.)  Podpisany wartość 64-bitową, która jest używana jako wskaźnik.|
+|IntPtr|(Tylko do użytku wewnętrznego.)  Podpisany wartość 64-bitową, która jest używana jako wskaźnik.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)

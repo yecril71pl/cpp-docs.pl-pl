@@ -1,17 +1,17 @@
 ---
-title: 'Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia'
+title: 'Instrukcje: Korzystanie ze zdarzeń w języku C + +/ CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63bac664afad2852a7b5e70c1c23335c75d0ad3b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513909"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748765"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia
+# <a name="how-to-use-events-in-ccli"></a>Instrukcje: Korzystanie ze zdarzeń w języku C + +/ CLI
 
 W tym artykule pokazano, jak używać interfejsu, który deklaruje zdarzenie i funkcji do wywołania tego zdarzenia i procedury obsługi klasy i zdarzeń, który implementuje interfejs.
 
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [event](../windows/event-cpp-component-extensions.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-ms.openlocfilehash: a23f45b7208899e31d755e17dad4ef1a184746f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f5d4093cccdc3a7ddf11fc48503b01161b04c5c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546386"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748596"
 ---
 # <a name="global-constants"></a>Stałe globalne
 
@@ -43,7 +43,7 @@ Biblioteki wykonawczej firmy Microsoft zawiera definicje stałe globalne używan
 |[TZNAME_MAX](../c-runtime-library/tzname-max.md)|[_WAIT_CHILD, _WAIT_GRANDCHILD](../c-runtime-library/wait-child-wait-grandchild.md)|
 |[WCHAR_MAX](../c-runtime-library/wchar-max.md)|[WCHAR_MIN](../c-runtime-library/wchar-min.md)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
