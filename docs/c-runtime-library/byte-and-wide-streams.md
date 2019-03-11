@@ -7,12 +7,12 @@ helpviewer_keywords:
 - byte streams
 - wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
-ms.openlocfilehash: bb14cbd5caed413425810bfe017e068f4b4b4257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67de6b609b3e0546d539ef9c37f12db1067546ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590437"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739367"
 ---
 # <a name="byte-and-wide-streams"></a>Strumienie byte oraz szerokie
 
@@ -22,7 +22,7 @@ Z drugiej strony szeroki strumienia traktuje plik jako sekwencja uogólnionego z
 
 Położenie w obrębie szerokiej strumienia niska te same ograniczenia, jak w przypadku steams tekstu. Ponadto wskaźnik pozycji pliku również może mieć do czynienia z kodowaniem zależnej od stanu. Zazwyczaj zawiera zarówno bajtów, przesunięcie w strumieniu i obiektu typu `mbstate_t`. W związku z tym, tylko niezawodne sposobem uzyskania położenie pliku, w ramach szerokiej strumienia jest przez wywołanie metody [fgetpos](../c-runtime-library/reference/fgetpos.md), a tylko niezawodny sposób, aby przywrócić pozycji uzyskane w ten sposób to przez wywołanie metody [fsetpos](../c-runtime-library/reference/fsetpos.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki i strumienie](../c-runtime-library/files-and-streams.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

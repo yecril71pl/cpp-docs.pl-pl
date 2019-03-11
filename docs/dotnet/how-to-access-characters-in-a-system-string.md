@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dostęp do znaków w obiekcie System::String'
+title: 'Instrukcje: Dostęp do znaków w obiekcie System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667051"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738449"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Instrukcje: Dostęp do znaków w obiekcie System::String
 
 Możesz uzyskać dostęp znaków <xref:System.String> obiektu dla połączeń o wysokiej wydajności do niezarządzanych funkcji o `wchar_t*` ciągów. Metoda daje posługiwanie się nimi wskaźnik do pierwszego znaku <xref:System.String> obiektu. Tego wskaźnika można modyfikować bezpośrednio lub przypięty i przekazany do funkcji, oczekiwano zwykłej `wchar_t` ciągu.
 
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

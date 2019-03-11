@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178072"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740387"
 ---
 # <a name="cpoint-class"></a>CPoint, klasa
 
@@ -281,7 +281,7 @@ Zawiera [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [
 *Punkt*<br/>
 Zawiera [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Zawiera wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -317,7 +317,7 @@ A [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskaźnik do [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -340,11 +340,10 @@ Aby odwrócić punkt, należy użyć operatora jednoargumentowego. Na przykład 
 
 [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize, klasa](../../atl-mfc-shared/reference/csize-class.md)
-

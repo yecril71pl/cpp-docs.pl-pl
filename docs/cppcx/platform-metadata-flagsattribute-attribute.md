@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-ms.openlocfilehash: 871e9fd1ec095331a895cee72e5e8472962f2b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a09aa89cbe73469e994271179192ef7713e3a0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621380"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745101"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::METADATA:: flagsattribute, atrybut
 
@@ -34,14 +34,14 @@ public ref class Flags abstract : Attribute
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** Platform::Metadata
+**Namespace:** Platform::METADATA
 
 **Metadane:** platform.winmd
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::Metadata, przestrzeń nazw](../cppcx/platform-metadata-namespace.md)

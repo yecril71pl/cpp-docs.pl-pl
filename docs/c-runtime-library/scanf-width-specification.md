@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445165"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743265"
 ---
 # <a name="scanf-width-specification"></a>scanf — Specyfikacje szerokości
 
@@ -55,7 +55,7 @@ Opcjonalne prefiksy parametru **h**, **l**, **ll**, **I64**, i **L** wskazywać 
 |**double** (tak samo, jak double)|**L**|**e**, **E**, **f**, **g**, lub **G**|
 |**long int**|**l**|**d**, **i**, **o**, **x**, lub **X**|
 |**Long unsigned int**|**l**|**u**|
-|**długi długi**|**Wszystko**|**d**, **i**, **o**, **x**, lub **X**|
+|**długi długi**|**ll**|**d**, **i**, **o**, **x**, lub **X**|
 |`short int`|**h**|**d**, **i**, **o**, **x**, lub **X**|
 |**krótka wartość całkowita bez znaku**|**h**|**u**|
 |__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
@@ -79,9 +79,9 @@ Jeśli funkcja niezabezpieczonych w `scanf` rodziny, pominięto parametr rozmiar
 
 ## <a name="reading-undelimited-strings"></a>Odczytywanie Undelimited ciągów
 
-Umożliwiające odczyt ciągów, które nie są rozdzielane znakami odstępu znaków, zestaw znaków w nawiasach kwadratowych (**[**) mogą zastąpić **s** znaku typu (ciąg). Zestaw znaków w nawiasach jest określany jako ciąg formantu. Odpowiednie pole danych wejściowych jest do odczytu do pierwszego znaku, który nie jest widoczna w ciągu kontroli. Jeśli pierwszy znak w zestawie jest znak daszka (**^**), efekt została odwrócona: pola wejściowego jest do odczytu do pierwszego znaku, który jest widoczna w pozostałej części zestawu znaków.
+Umożliwiające odczyt ciągów, które nie są rozdzielane znakami odstępu znaków, zestaw znaków w nawiasach kwadratowych (**[**) mogą zastąpić **s** znaku typu (ciąg). Zestaw znaków w nawiasach jest określany jako ciąg formantu. Odpowiednie pole danych wejściowych jest do odczytu do pierwszego znaku, który nie jest widoczna w ciągu kontroli. Jeśli pierwszy znak w zestawie jest znak daszka (**^**), zostanie odwrócony wpływ: Pola wejściowego jest do odczytu do pierwszego znaku, który jest widoczna w pozostałej części zestawu znaków.
 
-Należy pamiętać, że **% [a-z]** i **% [z-]** są interpretowane jako równoważne **%[abcde...z]**. Jest to często `scanf` rozszerzenie funkcji, ale należy pamiętać, że ANSI standard nie wymaga.
+Należy pamiętać, że **% [a-z]** i **% [z-]** są interpretowane jako równoważne **% [abcde... z]**. Jest to często `scanf` rozszerzenie funkcji, ale należy pamiętać, że ANSI standard nie wymaga.
 
 ## <a name="reading-unterminated-strings"></a>Niezakończony odczyt ciągów
 
@@ -101,7 +101,7 @@ Aby ciąg bez przechowywania kończącego znaku null ('\0'), należy użyć spec
 
 Z jakiegokolwiek powodu gdy `scanf` funkcja przestaje odczytywanie pola wejściowego, dalej pola wejściowego jest uważany za rozpocząć przy pierwszym znaku, jako nieprzeczytane. Znak powodujące konflikt, jeśli istnieje, jest traktowany jako nieprzeczytane i jest pierwszym znakiem następne pole wejściowe lub pierwszy znak w kolejnych operacji odczytu dla strumienia wejściowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

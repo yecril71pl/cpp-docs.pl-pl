@@ -1,5 +1,5 @@
 ---
-title: 'Porady: deklarowanie dojść w typach natywnych'
+title: 'Instrukcje: Deklarowanie dojść w typach natywnych'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464929"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746010"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
+# <a name="how-to-declare-handles-in-native-types"></a>Instrukcje: Deklarowanie dojść w typach natywnych
 
 Nie można zadeklarować na typ dojścia w typie natywnym. vcclr.h oferuje szablon bezpieczny otoki `gcroot` do odwoływania się do obiektu CLR ze stosu C++. Ten szablon umożliwia osadzania wirtualnego dojście w typie natywnym i traktować je tak, jakby był to typ podstawowy. W większości przypadków można użyć `gcroot` obiektu jako osadzonego typu, bez żadnych rzutowania. Jednak w przypadku [dla poszczególnych usług, w](../dotnet/for-each-in.md), trzeba użyć `static_cast` do pobrania podstawowego odwołania zarządzane.
 
@@ -113,6 +113,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

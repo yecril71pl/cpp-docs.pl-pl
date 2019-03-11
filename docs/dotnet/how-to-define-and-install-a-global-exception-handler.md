@@ -1,17 +1,17 @@
 ---
-title: 'Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków'
+title: 'Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b46de22ad962f6ef7653db0c38447d14ca0b54
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534540"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739259"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków
 
 Poniższy przykład kodu demonstruje sposób nieobsłużone wyjątki mogą być przechwytywane. Formularza zawiera przycisk, który, po naciśnięciu klawisza, wykonuje odwołanie o wartości null powoduje zgłoszenie wyjątku. Ta funkcja reprezentuje typowy kod błędu. Wynikowy wyjątek zostaje przechwycony przez program obsługi wyjątków całej aplikacji, instalowane przez funkcję main.
 
@@ -71,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)

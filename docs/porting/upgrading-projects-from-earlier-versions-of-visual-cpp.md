@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 3b9740c47e7fc0b449bf53a11a0ba7a4486a9ce4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592819"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740876"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Uaktualnianie projektów ze starszych wersji programu Visual C++
 
@@ -33,7 +33,7 @@ Wiele uaktualnionych projektów i rozwiązań można skompilować bez modyfikacj
 
 Aby uzyskać informacje o tym, jak można zaktualizować docelowej wersji Windows, zobacz [modyfikowanie WINVER i _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmiany systemu kompilacji](../build/build-system-changes.md)<br/>
 [Co nowego w języku Visual C++ w programie Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>

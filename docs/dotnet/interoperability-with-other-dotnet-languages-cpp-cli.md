@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-ms.openlocfilehash: bfc220852563d8c8f96108e05344c507b63875ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581401"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741728"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Współdziałanie z innymi językami .NET (C++/CLI)
 
@@ -184,6 +184,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

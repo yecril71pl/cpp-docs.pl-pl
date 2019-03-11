@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553182"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744327"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie i zarządzanie projektami opartych na platformie MSBuild Visual C++
 
@@ -53,7 +53,7 @@ Opisuje sposób używania arkusze właściwości i strony właściwości, aby ok
 [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
 W tym artykule opisano sposób dodawania do projektu, aby dodać funkcje klas, metod, zmienne i inne elementy.
 
-[Instrukcje: porządkowanie plików wyjściowych projektu na potrzeby kompilacji](../ide/how-to-organize-project-output-files-for-builds.md)<br>
+[Instrukcje: Porządkowanie plików wyjściowych projektu na potrzeby kompilacji](../ide/how-to-organize-project-output-files-for-builds.md)<br>
 Opisuje sposób organizowania plików wyjściowych projektu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
@@ -61,6 +61,6 @@ Opisuje sposób organizowania plików wyjściowych projektu.
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br>
 Zawiera łącza do tematów opisujących, tworzenie programu z wiersza polecenia lub zintegrowanego środowiska projektowego programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

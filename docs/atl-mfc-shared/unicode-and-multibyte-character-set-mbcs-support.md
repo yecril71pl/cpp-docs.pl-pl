@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596654"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743910"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode i Multibyte Character Set (MBCS) pomocy technicznej
 
@@ -35,11 +35,11 @@ Te biblioteki, debuger i pliki DLL są używane do obsługi standardu Unicode w 
 
 |||||
 |-|-|-|-|
-|UAFXCW.LIB|UAFXCW. PLIK PDB|UAFXCWD.LIB|UAFXCWD. PLIK PDB|
-|MFC*wersji*U.LIB|MFC*wersji*U.PDB|MFC*wersji*U.DLL|MFC*wersji*UD. LIB|
-|MFC*wersji*UD. PLIK PDB|MFC*wersji*UD. BIBLIOTEKI DLL|MFCS*wersji*U.LIB|MFCS*wersji*U.PDB|
+|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
+|MFC*wersji*U.LIB|MFC*wersji*U.PDB|MFC*version*U.DLL|MFC*wersji*UD. LIB|
+|MFC*wersji*UD. PLIK PDB|MFC*version*UD.DLL|MFCS*wersji*U.LIB|MFCS*wersji*U.PDB|
 |MFCS*wersji*UD. LIB|MFCS*wersji*UD. PLIK PDB|MFCM*wersji*U.LIB|MFCM*wersji*U.PDB|
-|MFCM*wersji*U.DLL|MFCM*wersji*UD. LIB|MFCM*wersji*UD. PLIK PDB|MFCM*wersji*UD. BIBLIOTEKI DLL|
+|MFCM*version*U.DLL|MFCM*wersji*UD. LIB|MFCM*wersji*UD. PLIK PDB|MFCM*version*UD.DLL|
 
 (*wersji* reprezentuje numer wersji pliku na przykład "140" oznacza, że w wersji 14.0.)
 
@@ -93,7 +93,7 @@ Mapowania zwykłego tekstu, funkcja wszystkie procedury obsługi ciągów czasu 
 
 Podobnie `CString` metody są implementowane za pomocą mapowania typów danych typu ogólnego. Umożliwia Unicode i MBCS MFC wykorzystuje TCHAR dla **char** lub `wchar_t`, LPTSTR dla **char** <strong>\*</strong> lub `wchar_t*`i LPCTSTR dla **const char** <strong>\*</strong> lub `const wchar_t*`. Te zapewnienia poprawnego mapowania MBCS lub Unicode.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Manipulowanie ciągami](../c-runtime-library/string-manipulation-crt.md)

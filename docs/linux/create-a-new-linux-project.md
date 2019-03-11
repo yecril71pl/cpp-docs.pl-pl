@@ -2,12 +2,12 @@
 title: Tworzenie nowego projektu systemu Linux w języku C++ w programie Visual Studio
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623031"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745160"
 ---
 # <a name="create-a-new-linux-project"></a>Tworzenie nowego projektu systemu Linux
 
@@ -28,4 +28,3 @@ Aby utworzyć nowego projektu systemu Linux w programie Visual Studio, wykonaj n
    | **Aplikacja konsoli (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux przy użyciu przykładowy kod napisany w danych wyjściowych tekst do konsoli
    | **Pusty projekt (Linux)**       | Docelowe dowolnego komputera z systemem Linux przy użyciu nie przykładowy kod napisany projektu
    | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux, która zostanie utworzona przy użyciu standardowego pliku reguł programu make systemu kompilacji
-

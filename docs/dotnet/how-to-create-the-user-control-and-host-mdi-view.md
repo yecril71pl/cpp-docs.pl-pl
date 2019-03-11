@@ -1,28 +1,28 @@
 ---
-title: 'Porady: tworzenie kontrolki użytkownika i hostowanie widoku MDI'
+title: 'Instrukcje: Tworzenie kontrolki użytkownika i hostowanie widoku MDI'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509125"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738770"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Porady: tworzenie kontrolki użytkownika i hostowanie widoku MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Instrukcje: Tworzenie kontrolki użytkownika i hostowanie widoku MDI
 
 Poniższe kroki pokazują jak utworzyć formant użytkownika .NET Framework, tworzenie kontrolki użytkownika w bibliotece klas formantów (w szczególności Projekt Biblioteka formantów Windows) i następnie skompilować projekt w zespół. Formant może być bezpiecznie spożywane z aplikacji MFC, która używa klas pochodzących od [CView Class](../mfc/reference/cview-class.md) i [klasa CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-Aby uzyskać informacje o tym, jak utworzyć formant użytkownika interfejsu Windows Forms i utworzyć bibliotekę klas formantów, zobacz [porady: Tworzenie formantów użytkowników](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Aby uzyskać informacje o tym, jak utworzyć formant użytkownika interfejsu Windows Forms i utworzyć bibliotekę klas formantów, zobacz [jak: Tworzenie kontrolki użytkownika](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  W niektórych przypadkach formanty Windows Forms, takie jak formant siatki innych firm mogą nie zachowywać się niezawodnie w przypadku hostowania w aplikacji MFC. Zalecaną praktyką jest umieszczenie kontrolki użytkownika formularzy Windows w aplikacji MFC i umieszczenie kontrolki siatki innych firm w kontrolce użytkownika.
 
-W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu Windows Forms o nazwie WindowsFormsControlLibrary1, zgodnie z procedurą w [porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu Windows Forms o nazwie WindowsFormsControlLibrary1, zgodnie z procedurą w [jak: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Aby utworzyć aplikację hosta MFC
 
@@ -101,6 +101,6 @@ W tej procedurze założono, że utworzono Projekt Biblioteka formantów systemu
 
    Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

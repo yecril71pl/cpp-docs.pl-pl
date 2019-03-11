@@ -7,12 +7,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.TypeLibraryFile
 - VC.Project.VCManifestTool.ReplacementsFile
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-ms.openlocfilehash: 9eea3b2765bad6bd08cc9ee91a801e2b891511e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6188eeb53b4ffcd3eee754e88a8891310fb2d51
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546533"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738840"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM izolowany, narzędzie manifestu, właściwości konfiguracji, &lt;Projectname&gt; okno dialogowe strony właściwości
 
@@ -42,7 +42,7 @@ Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz str
 
    Używa opcji /replacements, aby określić pełną ścieżkę do pliku, który zawiera wartości dla wymienialnych ciągów w pliku .rgs.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje izolowane](/windows/desktop/SbsCs/isolated-applications)<br>
 [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 31b30d612b625d8dc170110e7c7820dec6ff18de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555717"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739462"
 ---
 # <a name="resource-management-classes"></a>Klasy zarządzania zasobami
 
@@ -27,6 +27,6 @@ Te klasy oferują automatyczne zarządzanie klas zarządzanych.
 |[auto_gcroot](../dotnet/auto-gcroot.md)|Osadza uchwyt wirtualnego w polu typu natywnego.|
 |[auto_handle](../dotnet/auto-handle.md)|Osadza wirtualnego dojście w typ zarządzany.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

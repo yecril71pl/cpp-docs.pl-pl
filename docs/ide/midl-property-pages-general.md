@@ -1,5 +1,5 @@
 ---
-title: 'Strony właściwości MIDL: ogólne'
+title: 'Strony właściwości MIDL: Ogólne'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.PreprocessorDefinitions
@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
-ms.openlocfilehash: 9be01911ec52c62450b64273776a611ad5542db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8e5db5884adf467ba588aa3f00365b3a1a6e6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512683"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742134"
 ---
-# <a name="midl-property-pages-general"></a>Strony właściwości MIDL: ogólne
+# <a name="midl-property-pages-general"></a>Strony właściwości MIDL: Ogólne
 
 **Ogólne** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:
 
@@ -50,6 +50,6 @@ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **ogólne** — stron
 
 Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości MIDL](../ide/midl-property-pages.md)

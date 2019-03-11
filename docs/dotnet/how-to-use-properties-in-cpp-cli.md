@@ -1,18 +1,18 @@
 ---
-title: 'Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia'
+title: 'Instrukcje: Korzystanie z właściwości w języku C + +/ CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617493"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739282"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia
+# <a name="how-to-use-properties-in-ccli"></a>Instrukcje: Korzystanie z właściwości w języku C + +/ CLI
 
 W tym artykule pokazano, jak korzystać z właściwości w języku C + +/ interfejsu wiersza polecenia.
 
@@ -88,7 +88,7 @@ Właściwość indeksowana zwykle przedstawia strukturę danych, która jest dos
 
 Jeśli używasz Właściwość indeksowana domyślnie, dostęp do struktury danych po prostu odwołując się do nazwy klasy, ale użycie właściwości indeksowanych zdefiniowanych przez użytkownika, należy określić nazwę właściwości dostępu do struktury danych.
 
-Aby uzyskać informacje o tym, jak korzystać z indeksatora, który został napisany w języku C#, zobacz [porady: Konsumowanie indeksatora języka C# (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Aby uzyskać informacje o tym, jak korzystać z indeksatora, który jest zapisywany w C#, zobacz [jak: Używanie C# indeksatora (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 Ten przykład kodu pokazuje, jak używać domyślnej i właściwości indeksowanych zdefiniowanych przez użytkownika:
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [właściwość](../windows/property-cpp-component-extensions.md)

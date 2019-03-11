@@ -2,12 +2,12 @@
 title: Interfejsy (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 33fe0df457a4f1bab3a7cffab585501364d5750c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626632"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740743"
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C + +/ CX)
 
@@ -95,7 +95,7 @@ Poniżej przedstawiono, jak typów środowiska wykonawczego Windows może służ
 
 - Klasy oparte na szablonach ref musi być prywatna. Można zaimplementować interfejsów ogólnych i przekazać parametr szablonu *T* do argumentu ogólnego *T*. Każdego wystąpienia klasy ref z szablonem jest klasą ref.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

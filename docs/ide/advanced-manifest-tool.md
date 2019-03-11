@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.ValidateSignature
 - VC.Project.VCManifestTool.KeyContainer
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-ms.openlocfilehash: 10da66c690106255d34c82b066f3450c5cc8a37a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 183b4613362acde9f48c98ee00a76b1fb8a2c4d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530562"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742281"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Zaawansowane, narzędzie manifestu, właściwości konfiguracji &lt;Projectname&gt; okno dialogowe strony właściwości
 
@@ -31,9 +31,9 @@ Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz str
 
    Określa ścieżkę wyszukiwania dla plików, które odwołują się `<file>` elementów. Ta opcja używa również opcja /hashupdate.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<Plik > Element](/visualstudio/deployment/file-element-clickonce-application)<br>
+[\<file> Element](/visualstudio/deployment/file-element-clickonce-application)<br>
 [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Strony właściwości narzędzia manifestu](../ide/manifest-tool-property-pages.md)<br>
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)

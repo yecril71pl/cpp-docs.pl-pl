@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: c462b8f848a34993e01232039d608b627c05961f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430540"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741935"
 ---
 # <a name="fmode"></a>_fmode
 
@@ -38,7 +38,7 @@ Można zmienić wartość `_fmode` na trzy sposoby:
 
 - Zmień wartość właściwości `_fmode` ustawiając go bezpośrednio w programie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
 [_get_fmode](../c-runtime-library/reference/get-fmode.md)<br/>

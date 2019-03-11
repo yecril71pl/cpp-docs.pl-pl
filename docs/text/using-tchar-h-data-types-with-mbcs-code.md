@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 62801cfc2386cf2aee7fd35a5e589d73b4f91918
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626672"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742030"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 
@@ -66,6 +66,6 @@ Poniżej przedstawiono trzy rozwiązania do zapobiegania ten konflikt typu (i os
 
    W przypadku zastosowania tego podejścia musi być ostrożnym, aby zapewnić stosowanie typów danych odpowiednie argumenty typu string i zwracane wartości ciągu. Rzutowanie typów można użyć do zapewnienia odpowiedniego typu dopasowania lub skorzystać z `_TXCHAR` typu danych — zwykły tekst. `_TXCHAR` mapuje do typu **char** SBCS kodu, ale mapy na typ **unsigned char** MBCS kodu. Aby uzyskać więcej informacji na temat makra zwykłego tekstu, zobacz [mapowania typ ogólny-tekst](../c-runtime-library/generic-text-mappings.md) w *odwołanie do biblioteki wykonawczej*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Mapowania typ ogólny tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Mapowania typu ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)

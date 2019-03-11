@@ -9,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 74810328d654787be46794a31d857eb3fd0731ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478146"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741390"
 ---
 # <a name="serialization-ccli"></a>Serializacja (C++/CLI)
 
@@ -51,6 +51,6 @@ private:
 
 Należy pamiętać, że oba atrybuty można odwoływać się za pomocą "krótkiej nazwy" (**Serializable** i **NonSerialized**). Dodatkowo jest to wyjaśnione w [stosowanie atrybutów](/dotnet/standard/attributes/applying-attributes).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

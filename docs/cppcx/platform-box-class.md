@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327034"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742941"
 ---
 # <a name="platformbox-class"></a>Platform::Box, klasa
 
@@ -26,7 +26,7 @@ ref class Box abstract;
 
 **Nagłówek:** vccorlib.h
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -166,7 +166,7 @@ virtual property T Value{
 
 Zwraca wartości spakowanej, za pomocą tego samego typu pierwotnie miała zanim został on ramce.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)<br/>
 [Konwersja boxing](../cppcx/boxing-c-cx.md)

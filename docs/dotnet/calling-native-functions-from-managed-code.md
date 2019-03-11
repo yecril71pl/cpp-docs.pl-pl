@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462041"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743247"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 
@@ -174,7 +174,7 @@ Jednakże musisz zarządzać typami, które nie mają tego samego formularza. Ob
 
 |wtypes.h|Visual C++|Visual C++ z/CLR|Środowisko uruchomieniowe języka wspólnego|
 |--------------|------------------|-----------------------------|-----------------------------|
-|UCHWYT|Void \*|Void \*|IntPtr i UIntPtr|
+|UCHWYT|Void \*|Void \*|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |KRÓTKA|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
@@ -190,7 +190,7 @@ Jednakże musisz zarządzać typami, które nie mają tego samego formularza. Ob
 |LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [w, zewnętrzne]|String ^ [in], StringBuilder ^ [w, zewnętrzne]|
 |LPCWSTR|Const wchar_t \*|String ^|String|
 |FLOAT|float|float|Single|
-|PODWÓJNE|double|double|Double|
+|DOUBLE|double|double|Double|
 
 Organizator niestandardowy automatycznie Przypina pamięć przydzieloną na stosie uruchomieniowym, jeśli adres jest przekazywany do niezarządzanej funkcji. Przypinanie Zapobiega przenoszeniu przydzielonego bloku pamięci podczas kompaktowania przez mechanizmu moduł odśmiecania pamięci.
 
@@ -225,6 +225,6 @@ Mechanizm PInvoke ma obciążenie z zakresu od 10 do 30 x86 instrukcji przypadaj
 
 Lepszą wydajność należy mieć mniejszej liczby wywołań funkcji PInvoke zarządzających jak najwięcej danych, jak to możliwe, zamiast większej liczby wywołań, które zarządzają mniejszą ilością danych na wywołanie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

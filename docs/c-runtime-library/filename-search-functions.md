@@ -17,12 +17,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: f5f0629b97c3f3731e3916af36c9c8e40176462a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621653"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740551"
 ---
 # <a name="filename-search-functions"></a>Funkcje wyszukiwania nazwy pliku
 
@@ -30,7 +30,7 @@ Te funkcje wyszukiwania i zamknąć wyszukuje określony plik nazwy:
 
 - [_findnext, _wfindnext —](../c-runtime-library/reference/findnext-functions.md)
 
-- [_findfirst, _wfindfirst —](../c-runtime-library/reference/findfirst-functions.md)
+- [_findfirst, _wfindfirst](../c-runtime-library/reference/findfirst-functions.md)
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
@@ -153,6 +153,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wywołania systemowe](../c-runtime-library/system-calls.md)

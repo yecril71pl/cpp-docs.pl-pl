@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481461"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745180"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map, klasa
 
@@ -234,7 +234,7 @@ Map(
 *InIt*<br/>
 Element typename bieżącej mapy.
 
-*Comp*<br/>
+*comp*<br/>
 Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie.
 
 *m*<br/>
@@ -243,7 +243,7 @@ Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do 
 *pierwszy*<br/>
 Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania bieżącej mapy.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych w pierwszym elementem po szereg elementów używane do zainicjowania bieżącej mapy.
 
 ## <a name="mapchanged"></a>  Map::mapchanged — zdarzenie
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [wyliczenie CollectionChange](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
@@ -281,7 +281,7 @@ Część klucza pary klucz wartość. Typ *klucz* jest typename *K*.
 
 ## <a name="size"></a>  Metoda map::size
 
-Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w mapie.
+Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementów w mapie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 Liczba elementów w mapie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)<br/>
 [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

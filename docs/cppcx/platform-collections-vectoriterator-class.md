@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595601"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743225"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator, klasa
 
@@ -60,15 +60,15 @@ Element typename VectorIterator szablonu klasy.
 |[VectorIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do elementu określonego przez bieżący VectorIterator.|
 |[VectorIterator::operator\[\]](#operator-at)|Pobiera odwołanie do elementu, który jest określony przesunięcia z bieżącej VectorIterator.|
 |[VectorIterator::operator + — Operator](#operator-plus)|Zwraca VectorIterator, która odwołuje się do elementu w określonym przemieszczenia VectorIterator określony.|
-|[VectorIterator::operator ++ — Operator](#operator-increment)|Zwiększa narastająco VectorIterator bieżącego.|
+|[VectorIterator::operator++ Operator](#operator-increment)|Zwiększa narastająco VectorIterator bieżącego.|
 |[VectorIterator::operator += — Operator](#operator-plus-assign)|Zwiększa bieżącego VectorIterator o określonym przemieszczenia.|
 |[VectorIterator::operator < — Operator](#operator-less-than)|Wskazuje, czy bieżący VectorIterator jest mniejsza niż określony VectorIterator.|
 |[VectorIterator::operator\<= — Operator](#operator-less-than-or-equals)|Wskazuje, czy bieżący VectorIterator jest mniejsza niż lub równa określonej VectorIterator.|
 |[VectorIterator::operator-= — Operator](#operator-subtract-assign)|Zmniejsza bieżące VectorIterator przemieszczenie określony.|
-|[VectorIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący VectorIterator jest równe określonej VectorIterator.|
-|[VectorIterator::operator > — Operator](#operator-greater-than)|Wskazuje, czy bieżący VectorIterator jest większy niż określony VectorIterator.|
-|[VectorIterator::operator -> — Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący VectorIterator.|
-|[VectorIterator::operator > = — Operator](#operator-greater-than-or-equal)|Wskazuje, czy bieżący VectorIterator jest większa niż lub równa określonej VectorIterator.|
+|[VectorIterator::operator== Operator](#operator-equality)|Wskazuje, czy bieżący VectorIterator jest równe określonej VectorIterator.|
+|[VectorIterator::operator> Operator](#operator-greater-than)|Wskazuje, czy bieżący VectorIterator jest większy niż określony VectorIterator.|
+|[VectorIterator::operator-> Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący VectorIterator.|
+|[VectorIterator::operator>= Operator](#operator-greater-than-or-equal)|Wskazuje, czy bieżący VectorIterator jest większa niż lub równa określonej VectorIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -145,7 +145,7 @@ bool operator==(const VectorIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -164,7 +164,7 @@ bool operator>(const VectorIterator& other) const
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -183,7 +183,7 @@ bool operator>=(const VectorIterator& other) const
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -223,7 +223,7 @@ bool operator!=(const VectorIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -242,7 +242,7 @@ bool operator<(const VectorIterator& other) const
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -261,7 +261,7 @@ bool operator<=(const VectorIterator& other) const
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -282,11 +282,11 @@ difference_type operator-(const VectorIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Liczba elementów.
 
 *other*<br/>
-VectorIterator innego.
+Another VectorIterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -304,7 +304,7 @@ VectorIterator& operator+=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -332,7 +332,7 @@ inline VectorIterator<T> operator+(
 *T*<br/>
 W drugim składnia elementu VectorIterator typename.
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 *i*<br/>
@@ -360,7 +360,7 @@ VectorIterator& operator-=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -379,7 +379,7 @@ reference operator[](difference_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Przesunięcie liczby całkowitej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -408,6 +408,6 @@ IVector\<T > obiektu.
 
 Pierwszy przykład składni jest konstruktor domyślny. Drugi przykład składni jest jawny Konstruktor, który służy do konstruowania VectorIterator z IVector\<T > obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

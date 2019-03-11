@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: a642fd136c104b621b83ab6db5a3704ea94fdae1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627348"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741973"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 
@@ -67,7 +67,7 @@ For międzynarodowymi przenośność kodu program jest połączony z [Unicode](.
 
 - [Więcej informacji na temat mapowania typ ogólny tekst przenośności bajt zerowej szerokości](../text/generic-text-mappings-in-tchar-h.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Obsługa MBCS w programie Visual C++](../text/mbcs-support-in-visual-cpp.md)

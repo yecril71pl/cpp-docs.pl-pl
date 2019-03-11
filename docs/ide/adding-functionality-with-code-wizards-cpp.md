@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739806"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
@@ -69,7 +69,7 @@ Istnieją trzy lokalizacje, gdzie uzyskujesz dostęp kreatorów kodu Visual C++:
    |Eksplorator rozwiązań|Dostępne z Eksploratora rozwiązań, kreatorów kodu, zależą od tego, gdzie fokus kursora jest po kliknięciu prawym przyciskiem myszy element. Jeśli **Dodaj** opcja nie jest wyświetlana po kliknięciu prawym przyciskiem myszy element, przesuń kursor góry o jeden poziom w drzewie programowania, a następnie spróbuj ponownie. Kreatorów kodu będzie zawsze umieszczaj dodatkowy kod w odpowiednim miejscu w drzewie programowania niezależnie od tego przypadku kursor. Kreatorzy kodu jest dostępny w Eksploratorze rozwiązań, obejmują:<br /><br />-Dodaj klasę (otwiera **Dodaj klasę** okno dialogowe zawierające nowe kreatorów kodu).<br />— Dodawanie zasobów (nowa, Import lub niestandardowe).<br />-Dodaj odwołanie sieci Web.|
    |Widok klas|Dostępne w widoku klas kreatorów kodu, zależą od tego, gdzie fokus kursora jest kliknięcie prawym przyciskiem myszy element. Jeśli **Dodaj** opcja nie jest wyświetlana po kliknięciu prawym przyciskiem myszy element, przesuń kursor góry o jeden poziom w drzewie klasy, a następnie spróbuj ponownie. Kreatorów kodu będzie zawsze umieszczaj dodatkowy kod w odpowiednim miejscu w drzewie programowania niezależnie od tego przypadku kursor. Kreatorzy kodu jest dostępny w widoku klas obejmują:<br /><br />- [Dodaj funkcję członkowską](../ide/adding-a-member-function-visual-cpp.md).<br />- [Dodaj zmienną składową](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Dodaj klasę](../ide/adding-a-class-visual-cpp.md).<br />- [Implementuj interfejs](../ide/implement-interface-wizard.md) (sterowania tylko z klasy)<br />- [Dodaj punkt połączenia z](../ide/implement-connection-point-wizard.md) (tylko w przypadku klasy ATL)<br />- [Dodaj metodę](../ide/add-method-wizard.md) (z interfejsu tylko)<br />- [Dodaj właściwość](../ide/names-add-property-wizard.md) (z interfejsu tylko)<br />- [Dodaj zdarzenie](../ide/add-event-wizard.md) (sterowania tylko z klasy)<br /><br />Wybór Dodaj klasę spowoduje otwarcie **Dodaj klasę** okno dialogowe, które umożliwia dostęp do wszystkich nowych kreatorów kodu Dodaj klasę.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)<br>

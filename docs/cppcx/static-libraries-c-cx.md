@@ -2,12 +2,12 @@
 title: Biblioteki statyczne (C + +/ CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 4c423f9e59b7597782acfa4c98db3c9bff747098
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437972"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738932"
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C + +/ CX)
 
@@ -31,6 +31,6 @@ Jeśli wykorzystasz bibliotekę statyczną, która tworzy publiczny `ref` klasy,
 
 Można bezpiecznie zignorować to ostrzeżenie, tylko wtedy, gdy biblioteka statyczna nie daje składników środowiska wykonawczego Windows, które są używane poza sama biblioteka. Jeśli biblioteka nie wykorzystasz składnik, który definiuje, następnie konsolidator może optymalizują wdrożenia, nawet jeśli publiczny metadane zawierają informacje o typie. Oznacza to, że publiczne składniki w bibliotece statycznej zostanie skompilowany, ale nie zostanie aktywowany w czasie wykonywania. Z tego powodu dowolny Windows Runtime składnik, który jest przeznaczony do użytku przez inne składniki lub aplikacje muszą zostać zaimplementowane w biblioteki dołączanej (dynamicznie DLL).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md)

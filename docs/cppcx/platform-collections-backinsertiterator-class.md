@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638090"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739530"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections:: backinsertiterator, klasa
 
@@ -48,7 +48,7 @@ Klasa BackInsertIterator implementuje zasady wymagane [back_insert_iterator — 
 |Nazwa|Opis|
 |----------|-----------------|
 |[BackInsertIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do bieżącego BackInsertIterator.|
-|[BackInsertIterator::operator ++ — Operator](#operator-increment)|Zwraca odwołanie do bieżącego BackInsertIterator. Iterator który pozostaje niezmieniona.|
+|[BackInsertIterator::operator++ Operator](#operator-increment)|Zwraca odwołanie do bieżącego BackInsertIterator. Iterator który pozostaje niezmieniona.|
 |[BackInsertIterator::operator = — Operator](#operator-assign)|Dołącza określony obiekt do końca bieżącego sekwencyjną kolekcją.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -143,6 +143,6 @@ Zgodnie z projektem w pierwszym przykładzie składni wstępnie zwiększa bież�
 
 Jednak ten operator nie modyfikuje w rzeczywistości BackInsertIterator. Zamiast tego operatora zwraca odwołanie do iteratora niezmodyfikowanego; bieżący. To jest takie samo zachowanie jako [operator *](#dereference-operator).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

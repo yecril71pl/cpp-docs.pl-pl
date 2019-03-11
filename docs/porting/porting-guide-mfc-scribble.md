@@ -2,12 +2,12 @@
 title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175655"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741296"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 
@@ -85,7 +85,7 @@ Teraz, gdy zostały poddane migracji do programu Visual Studio 2017, można wpro
 
 Bazgrołów został aplikacji pulpitu Windows małe i proste, a nie był trudny do konwersji. Wiele małych, prostych aplikacji równie łatwo przekonwertować do nowej wersji.  W przypadku bardziej złożonych aplikacji o wiele większą liczbę linii kodu, starsze starszego kodu, który może być maksymalnie nowoczesnych standardów inżynieryjnych, wiele projektów i bibliotek niestandardowych kroków kompilacji lub w przypadku złożonych inicjowanych przez skrypty kompilacji automatycznych zajmie więcej czasu na uaktualnienie. Kontynuuj [kolejny przykład](../porting/porting-guide-com-spy.md), ATL/aplikacji modelu COM wywołuje się, narzędzie Spy modelu COM.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Następnym przykładzie: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)
+[Następny przykład: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)

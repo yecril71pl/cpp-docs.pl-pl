@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: testowanie projektu (C++)'
+title: 'Przewodnik: Testowanie projektu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437313"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744606"
 ---
-# <a name="walkthrough-testing-a-project-c"></a>Wskazówki: testowanie projektu (C++)
+# <a name="walkthrough-testing-a-project-c"></a>Przewodnik: Testowanie projektu (C++)
 
 Jeśli program jest uruchomiony w trybie debugowania, można użyć punktów przerwania, aby zatrzymać program i przeanalizować stan zmiennych i obiektów.
 
@@ -51,16 +51,16 @@ W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i wywnio
 
 1. Otwórz menu skrótów dla `return 0;` instrukcji, a następnie wybierz **Uruchom do kursora**. Żółta strzałka po lewej stronie kodu wskazuje na następną instrukcję do wykonania.
 
-1. `Cardgame::totalParticipants` Kiedy Zmniejsz liczbę `Cardgame` kończy. W tym momencie `Cardgame::totalParticipants` powinna być równa 0, ponieważ wszystkie `Cardgame` wystąpienia zostały usunięte, ale **Czujka 1** okno wskazuje, że `Cardgame::totalparticipants` jest równa **18**. Różnica wskazuje, że jest to błąd w kodzie, w którym można wykryć i naprawić poprzez wypełnienie poniższych wskazówek, [wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. `Cardgame::totalParticipants` Kiedy Zmniejsz liczbę `Cardgame` kończy. W tym momencie `Cardgame::totalParticipants` powinna być równa 0, ponieważ wszystkie `Cardgame` wystąpienia zostały usunięte, ale **Czujka 1** okno wskazuje, że `Cardgame::totalparticipants` jest równa **18**. Różnica wskazuje, że jest to błąd w kodzie, w którym można wykryć i naprawić poprzez wypełnienie poniższych wskazówek, [instruktażu: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Aby zatrzymać program, na pasku menu, wybierz opcję **debugowania** > **Zatrzymaj debugowanie**, lub wybierz **Shift**+**F5**skróty klawiaturowe.
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [wskazówki: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Następnie:** [wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Poprzednie:** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Dalej:** [Przewodnik: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>

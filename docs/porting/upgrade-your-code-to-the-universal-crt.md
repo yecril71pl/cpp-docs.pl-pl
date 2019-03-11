@@ -2,12 +2,12 @@
 title: Uaktualnienie kodu do Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331753"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741333"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Uaktualnienie kodu do Universal CRT
 
@@ -43,7 +43,7 @@ Wdrożenia lokalnego dla aplikacji UCRT jest obsługiwane, ale niezalecane ze wz
 
 Wiele funkcji dodane lub zaktualizowane w UCRT w celu zwiększenia zgodności ISO C99 i adresem kod jakości i zagadnienia dotyczące zabezpieczeń. W niektórych przypadkach to wymagane, istotne zmiany w bibliotece. Jeśli kod jest kompilowany nie pozostawia żadnych śladów podczas przy użyciu starszej wersji CRT, ale przerwy podczas kompilowania przy użyciu UCRT, należy zmienić swój kod, aby korzystać z zalet te aktualizacje i funkcje. Aby uzyskać szczegółową listę przełomowe zmiany i aktualizacje CRT w Universal CRT, zobacz [biblioteki środowiska uruchomieniowego C (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) historię zmian w sekcji Visual C++. Zawiera listę dotyczy nagłówków i funkcje, które służą do identyfikowania zmian w kodzie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

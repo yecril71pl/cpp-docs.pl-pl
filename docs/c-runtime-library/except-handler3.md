@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 144bf25495d803a4db42ab45fcb0b101b09fe7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfe007d7b444401accbf547674f96f7f7d54ac1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613866"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741313"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 
@@ -52,7 +52,7 @@ int _except_handler3(
 *Kontekst*<br/>
 [in] Zastrzeżone.
 
-*Dyspozytor*<br/>
+*dispatcher*<br/>
 [in] Zastrzeżone.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -63,6 +63,6 @@ Jeśli wyjątek powinien zostać odwołany, zwraca `DISPOSITION_DISMISS`. Jeśli
 
 Jeśli ta metoda umożliwia znalezienie obsługi wyjątków odpowiednie, przekazuje wyjątek do programu obsługi. W takiej sytuacji ta metoda nie zwraca do kodu, który ją wywołuje, i wartość zwracana jest bez znaczenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

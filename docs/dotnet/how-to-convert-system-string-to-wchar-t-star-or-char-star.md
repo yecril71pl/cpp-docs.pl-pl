@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie obiektu System::String na ciąg wchar_t* lub char*'
+title: 'Instrukcje: Konwertowanie obiektu System::String na wchar_t * lub char *'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550504"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738808"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Porady: konwertowanie obiektu System::String na ciąg wchar_t* lub char*
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Instrukcje: Konwertowanie obiektu System::String na wchar_t * lub char *
 
 Możesz użyć `PtrToStringChars` w Vcclr.h, aby przekonwertować <xref:System.String> do kodu natywnego `wchar_t *` lub `char *`.  To zawsze wraca szeroki wskaźnik ciągu Unicode, ponieważ ciągi CLR są wewnętrznie Unicode. Użytkownik może konwertować z dwubajtowego, jak pokazano w poniższym przykładzie.
 
@@ -64,6 +64,6 @@ Hello
 Hello
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

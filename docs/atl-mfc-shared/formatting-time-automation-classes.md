@@ -6,12 +6,12 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-ms.openlocfilehash: 2d08adcc03c7b9f46f6b6bd290b02ff5f22029f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c3157bd29879ae5206a27e238d05a4b5c9a61e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429708"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742696"
 ---
 # <a name="formatting-time-automation-classes"></a>Czas formatowania: Klasy automatyzacji
 
@@ -29,7 +29,6 @@ Aby uzyskać więcej informacji, zobacz klasy [COleVariant](../mfc/reference/col
 
 - [Praca z SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Data i godzina: obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md)
-
+[Data i godzina: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md)

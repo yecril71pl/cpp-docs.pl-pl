@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 085fc03677b4353aeb515a2f25dd0734935be442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bbd64b27a760969635d70ae7689d09afed2d729
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511881"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740434"
 ---
 # <a name="file-handling"></a>Obsługa plików
 
@@ -84,7 +84,7 @@ Następujące funkcje systemu Win32 jest również otworzyć pliki i potoki:
 
 - [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Kontrola katalogu](../c-runtime-library/directory-control.md)<br/>

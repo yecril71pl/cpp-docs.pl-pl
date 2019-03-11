@@ -2,12 +2,12 @@
 title: Tablica i WriteOnlyArray (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530198"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739416"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C + +/ CX)
 
@@ -79,15 +79,15 @@ System typów środowiska wykonawczego Windows nie obsługuje pojęcie Tablice n
 
 W niektórych scenariuszach, gdzie dane są przekazywane między ABI do [Platform::Array](../cppcx/platform-array-class.md), a ostatecznie chce przetwarzać dane w tablicy stylu C w celu zwiększenia wydajności, można użyć [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) Aby uniknąć operacji kopiowania dodatkowych. Podczas przekazywania [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) jako argumentu do parametru, który przyjmuje `Platform::Array`, `ArrayReference` będą przechowywane dane bezpośrednio do tablicy stylu C, który określisz. Tylko należy pamiętać, że `ArrayReference` ma nie blokadę na źródle danych, więc jeśli zmodyfikowane lub usunięte w innym wątku przed zakończeniem wywołanie danych, wyniki będzie niezdefiniowane.
 
-Poniższy fragment kodu przedstawia sposób kopiowania wyników [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operacji na `Platform::Array` (zwyczajowego wzorca) i następnie zastąp `ArrayReference` do kopiowania danych bezpośrednio do tablicy stylu C:
+Poniższy fragment kodu przedstawia sposób kopiowania wyników [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) operacji na `Platform::Array` (zwyczajowego wzorca) i następnie zastąp `ArrayReference` do kopiowania danych bezpośrednio do tablicy stylu C:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Należy unikać udostępnianie tablicę jako właściwość
 
-Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać jako właściwości w klasie ref, ponieważ zwracany jest całej tablicy, nawet wtedy, gdy kod klienta jest tylko próba uzyskania dostępu pojedynczy element. Gdy trzeba udostępnić kontenerem sekwencyjnym jako właściwość w klasie ref publicznych [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) jest lepszym rozwiązaniem. Prywatne lub wewnętrzne interfejsów API, (które nie są publikowane w metadanych), należy wziąć pod uwagę przy użyciu standardowych kontener C++, takich jak [std::vector](../standard-library/vector-class.md).
+Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać jako właściwości w klasie ref, ponieważ zwracany jest całej tablicy, nawet wtedy, gdy kod klienta jest tylko próba uzyskania dostępu pojedynczy element. Gdy trzeba udostępnić kontenerem sekwencyjnym jako właściwość w klasie ref publicznych [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) jest lepszym rozwiązaniem. Prywatne lub wewnętrzne interfejsów API, (które nie są publikowane w metadanych), należy wziąć pod uwagę przy użyciu standardowych kontener C++, takich jak [std::vector](../standard-library/vector-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

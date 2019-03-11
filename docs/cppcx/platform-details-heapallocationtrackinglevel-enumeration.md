@@ -1,5 +1,5 @@
 ---
-title: 'Platform::details:: heapallocationtrackinglevel, wyliczenie'
+title: Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.assetid: dc341bc0-b47b-4eb2-9445-fbaf788e7b1a
-ms.openlocfilehash: 21bdcb58a6129abe9dfddbc3a4e136c22b852dd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f79d823771410cc3d32a9f758442f2c98656419
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576492"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739201"
 ---
-# <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::details:: heapallocationtrackinglevel, wyliczenie
+# <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel Enumeration
 
 To wyliczenie jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
 
@@ -38,6 +38,6 @@ To wyliczenie jest przeznaczona wyłącznie dla kompletności, ponieważ mogą b
 
 **Namespace:** Platform::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

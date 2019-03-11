@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _local_unwind2 function
 - local_unwind2 function
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
-ms.openlocfilehash: 8ae5c3937c9dedc54f0a936b91963419d59f79cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c62763ecbdd2c05e8cd7b6733ec1df4254362527
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535411"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743999"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 
@@ -53,6 +53,6 @@ Ta metoda jest używana tylko w środowisku uruchomieniowym. Nie wywołuj metody
 
 Ta metoda jest wykonywana programy obsługi zakończenia, uruchamia na bieżącym poziomie leksykalne i działa w drodze się leksykalne poziomów, aż do napotkania poziom jest wskazywany przez `stop`. Nie wykonuj programy obsługi zakończenia na poziomie, który jest wskazywany przez `stop`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

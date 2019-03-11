@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: 1046a12fa0f250b348e6ff171c8865e3eb5ff4b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482674"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738731"
 ---
 # <a name="signal-constants"></a>sygnał — Stałe
 
@@ -47,7 +47,7 @@ ms.locfileid: "50482674"
 |SIGTERM|Zakończenie żądania wysłanego do programu. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
 |SIG_ERR|Typem zwracanym od sygnałów, co wskazuje na błąd wystąpił.  |
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [raise](../c-runtime-library/reference/raise.md)<br/>

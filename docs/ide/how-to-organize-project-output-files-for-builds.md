@@ -1,18 +1,18 @@
 ---
-title: 'Porady: porządkowanie plików wyjściowych projektu dla kompilacji'
+title: 'Instrukcje: Porządkowanie plików wyjściowych projektu dla kompilacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 9dd70f52c79d00282122f935b19770b973901103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fc3f3aeffd40c1b455b743765d40f50abc03ecc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575971"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742543"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Porady: porządkowanie plików wyjściowych projektu dla kompilacji
+# <a name="how-to-organize-project-output-files-for-builds"></a>Instrukcje: Porządkowanie plików wyjściowych projektu dla kompilacji
 
 W tym temacie opisano najlepsze metody organizowania plików wyjściowych projektu. Twórz błędy mogą wystąpić, gdy niepoprawna konfiguracja plików wyjściowych projektu. W tym temacie przedstawiono również zalety i wady każdego rozwiązania alternatywnego do organizowania plików danych wyjściowych projektu.
 
@@ -68,6 +68,6 @@ Lokalizacja plików danych wyjściowych może być poważnym problemem podczas w
 
 1. Lokalizacja projektu danych wyjściowych ustawienia można znaleźć w projekcie **stron właściwości**. Rozwiń węzeł obok **właściwości konfiguracji** i wybierz **ogólne**. Lokalizacja danych wyjściowych jest określona obok **katalog wyjściowy**. Aby uzyskać więcej informacji, zobacz [strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy projektów Visual C++](../ide/visual-cpp-project-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Strony właściwości HLSL: pliki wyjściowe'
+title: 'Strony właściwości HLSL: Pliki wyjściowe'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutput
@@ -8,14 +8,14 @@ f1_keywords:
 - VC.Project.FXCompilerTool.VariableName
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
-ms.openlocfilehash: 96736b58eed280a0b4e91b9cb47cb53dc2e91cd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 746781142d9989910f526c85b38516e8d5302ada
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513713"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739493"
 ---
-# <a name="hlsl-property-pages-output-files"></a>Strony właściwości HLSL: pliki wyjściowe
+# <a name="hlsl-property-pages-output-files"></a>Strony właściwości HLSL: Pliki wyjściowe
 
 Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **pliki wyjściowe** właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **pliki wyjściowe** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
 
@@ -49,8 +49,8 @@ Ta właściwość odnosi się do **/Fo [nazwa]** argument wiersza polecenia.
 
    Ta właściwość odnosi się do **/Fc [name]** i **/Fx [name]** argumenty wiersza polecenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości HLSL](../ide/hlsl-property-pages.md)<br>
-[Strony właściwości HLSL: ogólne](../ide/hlsl-property-pages-general.md)<br>
-[Strony właściwości HLSL: zaawansowane](../ide/hlsl-property-pages-advanced.md)
+[Strony właściwości HLSL: Ogólne](../ide/hlsl-property-pages-general.md)<br>
+[Strony właściwości HLSL: Zaawansowane](../ide/hlsl-property-pages-advanced.md)

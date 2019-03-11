@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: ac584e36154d0035ce3408b1302513dd7e960bf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525930"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743315"
 ---
 # <a name="controlling-streams"></a>Sterowanie strumieniami
 
@@ -37,6 +37,6 @@ A `FILE` obiekt przechowuje stan strumienia, w tym:
 
 Nie należy zmieniać wartości zapisanej w `FILE` obiektu lub buforu pliku, który określisz do użycia z tym obiektem. Nie można skopiować `FILE` obiektu i portably Użyj adresu Kopiuj jako `stream` argument do funkcji biblioteki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki i strumienie](../c-runtime-library/files-and-streams.md)

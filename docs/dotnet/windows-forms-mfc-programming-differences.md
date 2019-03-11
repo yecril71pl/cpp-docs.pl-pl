@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: a284a74fe0b8cac0df43803951e3a5b5655f8189
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 998485a3384512f57cf35fc264e2321fa0996728
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593183"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742518"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
 
@@ -54,6 +54,6 @@ Następujące widoku MFC lub dokumentu i funkcji routing poleceń ma odpowiednik
 
    MFC posiada polecenia mechanizmu aktualizacji. W związku z tym widok aktywny lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład, włączanie lub wyłączanie przycisku lub narzędzia elementu menu i sprawdzane stanów). Formularze Windows nie ma odpowiednika polecenia mechanizmu aktualizacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

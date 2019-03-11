@@ -12,12 +12,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 707aec51b0a244fe305205b9b098f3f67a90de1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521066"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738571"
 ---
 # <a name="code-pages"></a>Strony kodowe
 
@@ -41,7 +41,7 @@ Biblioteki wykonawczej firmy Microsoft korzysta z następujących typów stron k
 
 - Ustawienia regionalne "C" jest zdefiniowany przez ANSI odpowiadające im ustawienia regionalne, w którym tradycyjnie wykonali programów C. Strona kodowa dla ustawień regionalnych "C" (strona kodowa "C") odnosi się do zestawu znaków ASCII. Na przykład w ustawieniach regionalnych "języka C" **islower** zwraca wartość true, wartości 0x61 - 0x7A tylko. W innej wersji regionalnej **islower** może zwracają wartość true dla je, a także inne wartości, zgodnie z definicją danego ustawienia regionalnego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

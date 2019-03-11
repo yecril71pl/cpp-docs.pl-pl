@@ -9,12 +9,12 @@ helpviewer_keywords:
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 32ac86804ac4701dfeca20fb03071198f0291f81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460492"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737984"
 ---
 # <a name="internationalization"></a>Internacjonalizacja
 
@@ -22,6 +22,6 @@ Biblioteka środowiska uruchomieniowego Microsoft udostępnia wiele procedur, kt
 
 Omówiono też alternatywy operatora ISO646.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

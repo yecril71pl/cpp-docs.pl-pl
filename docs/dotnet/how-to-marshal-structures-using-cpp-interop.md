@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++'
+title: 'Instrukcje: Przeprowadzanie marshalingu struktur za pomocą — międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521336"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739385"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>Porady: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-structures-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu struktur za pomocą — międzyoperacyjności języka C++
 
 W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -24,7 +24,7 @@ Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/m
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), specjalne zarządzanie nie jest wymagane. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), specjalne zarządzanie nie jest wymagane. Aby zorganizować niekopiowalnych struktur, takich jak te, które zawierają wskaźniki, zobacz [jak: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct1.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie kierowania jest wymagana. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie kierowania jest wymagana. Aby zorganizować niekopiowalnych struktur, takich jak te, które zawierają wskaźniki, zobacz [jak: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct2.cpp
@@ -147,6 +147,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

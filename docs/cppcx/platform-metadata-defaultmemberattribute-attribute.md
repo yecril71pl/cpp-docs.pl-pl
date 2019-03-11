@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-ms.openlocfilehash: a4b3d5e8ab5d6ce254560bc84daceac74e2c9ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 754d41a385e2717989e87c0e06a180f02429d2c2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486661"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739099"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::METADATA:: DefaultMemberAttribute, atrybut
 
@@ -36,14 +36,14 @@ Zastosowanie atrybutu DefaultMember do metody, która zostanie wchłonięta prze
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** Platform::Metadata
+**Namespace:** Platform::METADATA
 
 **Metadane:** platform.winmd
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::Metadata, przestrzeń nazw](../cppcx/platform-metadata-namespace.md)

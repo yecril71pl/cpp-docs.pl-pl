@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607041"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746191"
 ---
 # <a name="platformstring-class"></a>Platform::String, klasa
 
@@ -94,11 +94,11 @@ Klasa String ma następujące operatory.
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Nagłówek** vccorlib.h (domyślnie)
 
@@ -470,7 +470,7 @@ String(char16* s, unsigned int n);
 *s*<br/>
 Ciąg znaków dwubajtowych, które inicjuje ciąg. char16
 
-*N*<br/>
+*n*<br/>
 Liczba, która określa długość ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -496,6 +496,6 @@ String^ String::ToString();
 
 Element `String` obiektu, którego wartość jest taka sama jak bieżący ciąg.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

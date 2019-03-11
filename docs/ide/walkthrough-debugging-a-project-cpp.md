@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: debugowanie projektu (C++)'
+title: 'Przewodnik: Debugowanie projektu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581951"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741350"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Wskazówki: debugowanie projektu (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Przewodnik: Debugowanie projektu (C++)
 
 W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, który znaleziony podczas testowania projektu.
 
@@ -53,10 +53,10 @@ W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, kt
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Następnie:** [wskazówki: Wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Poprzednie:** [Przewodnik: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Dalej:** [Przewodnik: Wdrażanie programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>

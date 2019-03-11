@@ -2,12 +2,12 @@
 title: Operatory ISO646
 ms.date: 04/11/2018
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
-ms.openlocfilehash: fbb9822002d55ebb90baaff27911017ab6564b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3942a88505282777a153ec9cd79f28460459362
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442500"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738709"
 ---
 # <a name="iso646-operators"></a>Operatory ISO646
 
@@ -29,7 +29,7 @@ Zawiera czytelne alternatywy dla niektórych operatorów lub separatorów. Stand
 |[xor](../c-runtime-library/reference/xor.md)|Alternatywa dla operatora ^.|
 |[xor_eq](../c-runtime-library/reference/xor-eq.md)|Alternatywa dla operatora ^=.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

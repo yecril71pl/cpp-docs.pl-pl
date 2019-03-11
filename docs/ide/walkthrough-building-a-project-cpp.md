@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: tworzenie projektu (C++)'
+title: 'Przewodnik: Tworzenie projektu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524160"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742502"
 ---
-# <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
+# <a name="walkthrough-building-a-project-c"></a>Przewodnik: Tworzenie projektu (C++)
 
 W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzie, aby dowiedzieć się, jak wygląda błąd kompilacji i jak go naprawić. Podczas kompilowania projektu, komunikat o błędzie wskazuje, co to jest problem i gdzie się pojawił.
 
@@ -54,10 +54,10 @@ W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzi
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Następnie:** [wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Poprzednie:** [Przewodnik: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Dalej:** [Przewodnik: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>

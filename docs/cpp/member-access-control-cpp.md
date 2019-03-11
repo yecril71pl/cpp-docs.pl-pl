@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176228"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740273"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
@@ -239,6 +239,6 @@ Dostęp wzdłuż ścieżek Wykres dziedziczenia
 
 Na rysunku, nazwa zadeklarowana w klasie `VBase` zawsze zostanie osiągnięty za pośrednictwem klasy `RightPath`. Właściwym rozwiązaniem jest bardziej dostępny ponieważ `RightPath` deklaruje `VBase` jako publiczne klasy bazowej, natomiast `LeftPath` deklaruje `VBase` jako prywatny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

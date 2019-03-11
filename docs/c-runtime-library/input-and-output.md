@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2669ed3437fe0eea7dd648367feabe66ae6ed6d4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590388"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738515"
 ---
 # <a name="input-and-output"></a>Dane wejściowe i wyjściowe
 
@@ -30,6 +30,6 @@ Funkcje We/Wy odczytu i zapisu danych do i z plików i urządzeń. Operacje We/W
    > [!NOTE]
    > Ponieważ funkcje strumienia są buforowane i nie są funkcje niskiego poziomu, te dwa typy funkcji są zazwyczaj niezgodne. Dla przetwarzania danego pliku, użyj wyłącznie strumienia lub funkcji niskiego poziomu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

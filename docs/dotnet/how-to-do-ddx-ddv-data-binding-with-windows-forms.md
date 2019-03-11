@@ -1,19 +1,19 @@
 ---
-title: 'Porady: powiązanie danych DDX / DDV za pomocą interfejsu Windows Forms'
+title: 'Instrukcje: Czy danych DDX / DDV powiązania z Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456441"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740947"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Porady: powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Instrukcje: Czy danych DDX/DDV powiązania z Windows Forms
 
 [Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) wywołania [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) utworzyć kontrolkę dopasowania identyfikatora zasobu formantu. Jeśli używasz `DDX_ManagedControl` dla `CWinFormsControl` formantu (w generowanych przez kreatora kod), nie powinien wywoływać `CreateManagedControl` jawnie dla tej samej kontrolki.
 
@@ -27,7 +27,7 @@ Oto przykład powiązanie danych DDX/DDV ciągu MFC `m_str` za pomocą zdefiniow
 
 Formant zostanie utworzony, kiedy [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) wywołania `CMyDlg::DoDataExchange` po raz pierwszy, więc każdy kod odwołujący się `m_UserControl` musi przypadać po `DDX_ManagedControl` wywołania.
 
-Ten kod można zaimplementować w utworzonej w aplikacji MFC01 [porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Ten kod można zaimplementować w utworzonej w aplikacji MFC01 [jak: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Umieść następujący kod w deklaracji CMFC01Dlg:
 
@@ -82,8 +82,8 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
 
 Można teraz tworzyć i uruchomić aplikację. Należy zauważyć, że dowolny tekst w polu tekstowym będą wyświetlane w oknie podręcznym komunikatu po zamknięciu aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)<br/>
-[Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>
 [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

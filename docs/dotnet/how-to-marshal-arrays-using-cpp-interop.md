@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu tablic za pomocą międzyoperacyjności języka C++'
+title: 'Instrukcje: Przeprowadzanie marshalingu tablic za pomocą — międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441668"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740002"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Porady: przeprowadzanie marshalingu tablic za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu tablic za pomocą — międzyoperacyjności języka C++
 
 W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -129,6 +129,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

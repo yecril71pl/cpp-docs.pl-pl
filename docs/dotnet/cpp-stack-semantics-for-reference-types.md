@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740926"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 
@@ -27,7 +27,7 @@ Kompilator nie wygeneruje konstruktora kopiującego dla typu referencyjnego. W z
 
 Kompilator nie wygeneruje operator przypisania domyślny dla typu odwołania. Operator przypisania pozwala utworzyć obiekt przy użyciu semantyka stosu i zainicjować go z istniejącym obiektem utworzone za pomocą semantyka stosu. Operator przypisania dla typu odwołania, ma podpis następującą postać: `void operator=( R% ){}`.
 
-Jeśli używasz semantyka stosu dla typów odwołań danego typu destruktor zwalnia zasoby o znaczeniu krytycznym, nie trzeba jawnie wywołać destruktor (lub zadzwoń `delete`). Aby uzyskać więcej informacji dotyczących destruktorów w typach odwołań, zobacz [destruktory i finalizatory w porady: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Jeśli używasz semantyka stosu dla typów odwołań danego typu destruktor zwalnia zasoby o znaczeniu krytycznym, nie trzeba jawnie wywołać destruktor (lub zadzwoń `delete`). Aby uzyskać więcej informacji dotyczących destruktorów w typach odwołań, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Operator przypisania generowane przez kompilator będzie śledzić zwykły standardowe reguły języka C++ z następującymi dodatkami:
 
@@ -111,6 +111,6 @@ int main() {
 13
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)

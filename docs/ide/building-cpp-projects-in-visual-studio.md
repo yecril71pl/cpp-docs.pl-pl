@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-ms.openlocfilehash: 83f79e922a66622611f3f6e493ca8d498435033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5565b582b9b80daef88ed37982f3e23bf44bf8c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569695"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740008"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Kompilowanie projektów C++ w Visual Studio
 
@@ -41,7 +41,7 @@ Aby skompilować projekt, który wybrano w **Eksploratora rozwiązań**, możesz
 
 W przypadku tworzenia aplikacji Visual C++ w programie Visual Studio, można modyfikować wiele ustawień kompilacji w oknie dialogowym strony właściwości projektu. Aby uzyskać informacje o sposobie ustawiania właściwości projektu, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
 
-Na przykład o tym, jak używać IDE do tworzenia, kompilowania i debugowania projektu w języku C++, zobacz [Instruktaż: Zapoznaj się z programu Visual Studio IDE, za pomocą języka C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Na przykład o tym, jak używać IDE do tworzenia w języku C + +/ CLR projektu, zobacz [wskazówki: kompilowanie programu C++ przeznaczonego dla CLR w programie Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Na przykład o tym, jak używać IDE do tworzenia aplikacji środowiska wykonawczego Windows, zobacz [tworzenie pierwszej aplikacji przy użyciu języka C++ środowiska wykonawczego Windows](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).
+Na przykład o tym, jak używać IDE do tworzenia, kompilowania i debugowania projektu w języku C++, zobacz [instruktażu: Poznaj program Visual Studio IDE z językiem C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Na przykład o tym, jak używać IDE do tworzenia w języku C + +/ CLR projektu, zobacz [instruktażu: Kompilowanie programu C++ przeznaczonego dla CLR w programie Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Na przykład o tym, jak używać IDE do tworzenia aplikacji środowiska wykonawczego Windows, zobacz [tworzenie pierwszej aplikacji przy użyciu języka C++ środowiska wykonawczego Windows](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).
 
 Aby przeczytać więcej na temat sposobu tworzenia, modyfikowania ustawień kompilacji i określ niestandardowe kroki kompilacji, zobacz następujące artykuły.
 
@@ -78,6 +78,6 @@ Zawiera łącza do tematów obejmujących problemów dotyczących uaktualniania 
 
 [Visual C++ przewodnik przenoszenia i uaktualniania](../porting/visual-cpp-porting-and-upgrading-guide.md) szczegółowe informacje na temat sposobu uaktualniania aplikacji w języku C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio, a także jak przeprowadzić migrację aplikacji, które zostały utworzone przy użyciu narzędzi innych niż program Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje uniwersalne systemu Windows (C++)](../windows/universal-windows-apps-cpp.md)

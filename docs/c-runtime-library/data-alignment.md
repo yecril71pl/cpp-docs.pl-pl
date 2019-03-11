@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - data alignment [C++]
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
-ms.openlocfilehash: 7d835545bdc1f94de56846f35d510927c06c2560
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92b8df81751e01e655e348d5f090705e5194312b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520292"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738809"
 ---
 # <a name="data-alignment"></a>Wyrównywanie danych
 
@@ -38,6 +38,6 @@ Następujące funkcje środowiska wykonawczego języka C obsługuje wyrównanie 
 |[_aligned_recalloc](../c-runtime-library/reference/aligned-recalloc.md)|Zmienia rozmiar bloku pamięci, która została przydzielona za pomocą [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) lub [_aligned_offset_malloc —](../c-runtime-library/reference/aligned-offset-malloc.md) i inicjuje pamięć na 0.|
 |[_aligned_recalloc_dbg](../c-runtime-library/reference/aligned-recalloc-dbg.md)|Zmienia rozmiar bloku pamięci, która została przydzielona za pomocą [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) lub [_aligned_offset_malloc —](../c-runtime-library/reference/aligned-offset-malloc.md) i inicjuje pamięć na 0 (tylko wersja debugowania).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220442"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739980"
 ---
 # <a name="file-constants"></a>Plik — Stałe
 
@@ -56,7 +56,7 @@ Plik — stałe są następujące:
 | `_O_TRUNC`  | Otwiera się i obcina istniejącego pliku do zera length; Plik musi mieć uprawnienia do zapisu. Zawartość pliku są niszczone. Jeśli ta flaga zostanie podany, nie można określić `_O_RDONLY`.  |
 | `_O_WRONLY`  | Otwiera plik do zapisu. Jeśli ta flaga nie zostanie podany, ani `_O_RDONLY` ani `_O_RDWR` można podać.  |
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

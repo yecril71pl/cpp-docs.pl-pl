@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565324"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740474"
 ---
 # <a name="standard-types"></a>Standardowe typy
 
@@ -253,6 +253,6 @@ Biblioteki wykonawczej Microsoft definiuje następujące typy standardowe i defi
 |`wctype_t` Liczba całkowita|Może reprezentować wszystkie znaki dowolnego zestawu znaków języka.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |`wint_t` Liczba całkowita|Typ obiektu danych, które może mieć dowolny znak dwubajtowy lub dwubajtową wartość znaku końca pliku.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

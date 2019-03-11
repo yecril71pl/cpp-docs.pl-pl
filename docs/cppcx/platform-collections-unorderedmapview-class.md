@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560839"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743448"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
 
@@ -55,8 +55,8 @@ UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collec
 |----------|-----------------|
 |[UnorderedMapView::First](#first)|Zwraca iterator, który jest inicjowany do pierwszego elementu w widoku mapy.|
 |[UnorderedMapView::HasKey](#haskey)|Określa, czy bieżący UnorderedMapView zawiera określony klucz.|
-|[Unorderedmapview::LOOKUP —](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie UnorderedMapView.|
-|[Unorderedmapview::size —](#size)|Zwraca liczbę elementów w bieżącym obiekcie UnorderedMapView.|
+|[UnorderedMapView::Lookup](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie UnorderedMapView.|
+|[UnorderedMapView::Size](#size)|Zwraca liczbę elementów w bieżącym obiekcie UnorderedMapView.|
 |[UnorderedMapView::Split](#split)|Dzieli oryginalnego obiektu UnorderedMapView na dwa obiekty UnorderedMapView.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -71,7 +71,7 @@ UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collec
 
 ## <a name="first"></a>  Unorderedmapview::First — metoda
 
-Zwraca iterator, który określa pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) element mapy nieuporządkowanej.
+Zwraca iterator, który określa pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) element mapy nieuporządkowanej.
 
 ### <a name="syntax"></a>Składnia
 
@@ -129,7 +129,7 @@ Wartość, która jest powiązany z `key`. Typ wartości zwracanej jest typename
 
 ## <a name="size"></a>  Unorderedmapview::size — metoda
 
-Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w UnorderedMapView.
+Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementów w UnorderedMapView.
 
 ### <a name="syntax"></a>Składnia
 
@@ -218,7 +218,7 @@ UnorderedMapView(
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Liczba elementów do wstępnie przydziel miejsce dla.
 
 *InIt*<br/>
@@ -236,10 +236,10 @@ Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do 
 *pierwszy*<br/>
 Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania UnorderedMapView.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych od szeregu elementów używane do zainicjowania UnorderedMapView pierwszego elementu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Platform::Collections, przestrzeń nazw](../cppcx/platform-collections-namespace.md)<br/>
 [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

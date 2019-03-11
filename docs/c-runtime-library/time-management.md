@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328932"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739743"
 ---
 # <a name="time-management"></a>Zarządzanie czasem
 
@@ -32,7 +32,7 @@ Za pomocą tych funkcji można pobrać bieżącego czasu i konwersji, dostosowa�
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Obliczenia różnicy między dwiema wartościami godziny.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Store bieżący czas systemowy w zmiennej typu **_timeb — struktura** lub typ **__timeb64 — struktura** wersje tych funkcji **_s** sufiksem są bardziej bezpieczne.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Ustaw czas modyfikacji na otwieranie pliku|
-|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Konwertuj czasu z typu **time_t** do **tm struktury** lub z typu **__time64_t —** do **tm struktury**. Wersje tych funkcji **_s** sufiksem są bardziej bezpieczne.|
+|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Konwertuj czasu z typu **time_t** do **tm struktury** lub z typu **__time64_t —** do **tm struktury**. Wersje tych funkcji **_s** sufiksem są bardziej bezpieczne.|
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s —, _localtime32_s —, _localtime64_s —](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Przekonwertowanie czasu z **time_t** do **tm struktury** lub z typu **__time64_t —** do **tm struktury** przy użyciu lokalnego korekty. Wersje tych funkcji **_s** sufiksem są bardziej bezpieczne.|
 |[_mkgmtime, _mkgmtime32, _mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|Konwertuj czasu na wartość kalendarza w czas uniwersalny Greenwich.|
 |[mktime, _mktime32, _mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|Konwertuj czasu na wartość kalendarza.|
@@ -49,6 +49,6 @@ Za pomocą tych funkcji można pobrać bieżącego czasu i konwersji, dostosowa�
 > [!NOTE]
 > W wersjach programu Visual C++ i C/C++ firmy Microsoft przed Visual C++ 2005 **time_t** został **długie** **int** (32-bitowy) i dlatego nie może zostać użyty dla dat ostatnie 3:14:07 19 stycznia 2038 r. , UTC. **time_t** odpowiada teraz **__time64_t —** domyślnego, ale zdefiniowanie **_USE_32BIT_TIME_T** zmiany **time_t** do **__time32_t** i wymusza wiele funkcji czasu do wywołania wersje przyjmujące 32-bitowych **time_t**. Aby uzyskać więcej informacji, zobacz [standardowych typów](../c-runtime-library/standard-types.md) i komentarzy w dokumentacji dotyczącej funkcji czasu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

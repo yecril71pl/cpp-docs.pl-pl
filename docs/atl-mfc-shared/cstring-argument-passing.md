@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: bf18265e19e4b1c1db010a4d7638fa959c357bca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562399"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742196"
 ---
 # <a name="cstring-argument-passing"></a>Cstring — przekazywanie argumentów
 
@@ -42,7 +42,6 @@ Zazwyczaj może zwrócić `CString` obiekty z funkcji, ponieważ `CString` obiek
 
 [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

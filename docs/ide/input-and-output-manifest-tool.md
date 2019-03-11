@@ -10,12 +10,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b9af50e6dca2dafa4dabd356a868405dfacc958
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624708"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741191"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Wejście i wyjście, narzędzie manifestu, właściwości konfiguracji &lt;Projectname&gt; okno dialogowe strony właściwości
 
@@ -61,7 +61,7 @@ Używane z **- managedassembly** opcji. Ten tag powoduje, że tagi kategorii do 
 **Włączanie rozpoznawanie DPI**<br/>
 Określa, czy aplikacja jest obsługującą ustawienia DPI. Domyślnym ustawieniem jest **tak** dla projektów MFC i **nie** inaczej, ponieważ tylko projekty MFC mają wbudowane świadomości DPI. Można zastąpić to ustawienie, aby **tak** Jeśli dodasz kod służący do obsługi różnych ustawień DPI. Aplikacja może pojawić się rozmyte lub małe, jeśli zostanie ustawiona jako obsługującą ustawienia DPI gdy nie jest.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [Strony właściwości narzędzia manifestu](../ide/manifest-tool-property-pages.md)<br/>

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532762"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746325"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -31,13 +31,13 @@ Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczo
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 Typ `identifier`.
 
 *Identyfikator*<br/>
 Zmienna iteracyjna, która reprezentuje element kolekcji.  Gdy `identifier` jest [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), można zmodyfikować element.
 
-*Wyrażenie*<br/>
+*expression*<br/>
 Wyrażenie tablicy lub kolekcja. Element kolekcji musi być tak, aby kompilator mógł go konwertować do `identifier` typu.
 
 *Instrukcje*<br/>
@@ -55,11 +55,11 @@ Informacje dodatkowe:
 
 - [Iterowanie przez standardową kolekcję bibliotek C++ za pomocą instrukcji for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Instrukcje: iterowanie przez tablice za pomocą instrukcji for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Instrukcje: Iterowanie przez tablice za pomocą w instrukcji for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Instrukcje: iterowanie przez kolekcję ogólną za pomocą instrukcji for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Instrukcje: Iterowanie przez kolekcję ogólną za pomocą instrukcji for każdego](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Instrukcje: iterowanie przez kolekcję zdefiniowaną przez użytkownika za pomocą instrukcji for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Instrukcje: Dla każdej iteracji po kolekcji zdefiniowanych przez użytkownika za pomocą](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -111,7 +111,7 @@ Testing
 
 Składnia CLR jest taka sama jak **wszystkie środowiska wykonawcze** składnię, z wyjątkiem w następujący sposób.
 
-*Wyrażenie*<br/>
+*expression*<br/>
 Wyrażenie tablicy zarządzanej lub kolekcja. Element kolekcji musi być tak, aby kompilator mógł go skonwertować z <xref:System.Object> do *identyfikator* typu.
 
 *wyrażenie* daje w wyniku typ implementujący <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, lub typ, który definiuje `GetEnumerator` metody, która albo zwraca typ, który implementuje <xref:System.Collections.IEnumerator> albo deklaruje wszystkie metody, które są zdefiniowane w `IEnumerator`.
@@ -157,6 +157,6 @@ abcd
 Testing
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

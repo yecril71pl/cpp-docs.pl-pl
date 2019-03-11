@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429170"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740821"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów
 
@@ -42,7 +42,7 @@ Należy usunąć tę właściwość, jeśli chcesz uaktualnić swoje projekty.
 
 Jeśli wybierzesz nie uaktualnić program Visual Studio nie wprowadza żadnych zmian w plikach rozwiązania lub projektu. Podczas tworzenia projektu, wygenerowane pliki binarne są w pełni zgodne z tymi, które są wbudowane ze starszą wersją programu Visual Studio. Jest to spowodowane programu Visual Studio używa tego samego kompilatora C++ i łączy ten sam bibliotek, które starsze zintegrowanego środowiska Projektowego dostarczane z programem. Jest to Dlaczego okno dialogowe uaktualniania wyświetli ostrzeżenie, aby zachować starszą wersję programu Visual Studio zainstalowany, wybranie opcji **anulować**.
 
-## <a name="instructions-for-visual-studio-2008"></a>Instrukcje dotyczące programu Visual Studio 2008
+## <a name="instructions-for-visual-studio-2008"></a>Instructions for Visual Studio 2008
 
 Program Visual Studio 2008 ma swój własny system kompilacji dedykowane dla języka C++ o nazwie **program VCBuild**. Począwszy od programu Visual Studio 2010 projektów Visual C++ zostały zmienione, aby użyć **MSBuild**. Oznacza to, należy przejść do kroku aktualizacji do tworzenia projektów programu Visual Studio 2008 w najnowszej wersji programu Visual Studio. Zaktualizowano projekt nadal generuje pliki binarne, które są w pełni zgodne z plikami binarnymi utworzone za pomocą programu Visual Studio 2008 IDE.
 
@@ -52,7 +52,7 @@ Następnie należy zaktualizować program Visual Studio 2008 rozwiązanie i proj
 
 Po zakończeniu uaktualniania, jeśli raport dziennika zawiera błędy lub ostrzeżenia dla żadnego z projektów, dokładne zapoznanie się z nimi. Konwersja z **program VCBuild** do **MSBuild** mogą powodować problemy. Upewnij się, zrozumieć i zaimplementować żadnych czynności do wykonania wymienione w raporcie. Aby uzyskać więcej informacji na temat raportu dziennika uaktualniania i problemów, które mogą występować podczas konwertowania **program VCBuild** do **MSBuild**, zobacz ten [C++ natywna Wielowersyjność](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) wpis w blogu.
 
-Po zakończeniu procesu uaktualniania projektu, i zostały skorygowane problemy w pliku dziennika, rozwiązania faktycznie jest przeznaczony dla najnowszych narzędzi. Ostatni krok Zmień właściwości dla każdego projektu w rozwiązaniu, aby użyć zestawu narzędzi programu Visual Studio 2008. Dzięki rozwiązaniu załadowane w bieżącej wersji programu Visual Studio dla każdego projektu w rozwiązaniu, otwórz projekt **stron właściwości** okno dialogowe: kliknij prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** a Wybierz **właściwości**. W **stron właściwości** okno dialogowe, zmiana **konfiguracji** wartość listy rozwijanej **wszystkie konfiguracje**. W **właściwości konfiguracji**, wybierz opcję **ogólne**, a następnie zmień **zestawu narzędzi platformy** do **programu Visual Studio 2008 (v90)**.
+Po zakończeniu procesu uaktualniania projektu, i zostały skorygowane problemy w pliku dziennika, rozwiązania faktycznie jest przeznaczony dla najnowszych narzędzi. Ostatni krok Zmień właściwości dla każdego projektu w rozwiązaniu, aby użyć zestawu narzędzi programu Visual Studio 2008. Dzięki rozwiązaniu załadowane w bieżącej wersji programu Visual Studio dla każdego projektu w rozwiązaniu, otwórz projekt **stron właściwości** okno dialogowe: Kliknij prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** , a następnie wybierz **właściwości**. W **stron właściwości** okno dialogowe, zmiana **konfiguracji** wartość listy rozwijanej **wszystkie konfiguracje**. W **właściwości konfiguracji**, wybierz opcję **ogólne**, a następnie zmień **zestawu narzędzi platformy** do **programu Visual Studio 2008 (v90)**.
 
 Po tej zmianie kompilator programu Visual Studio 2008 i biblioteki są używane do generowania dane binarne projektu podczas kompilowania rozwiązania w bieżącej wersji programu Visual Studio.
 
@@ -64,7 +64,7 @@ Aby uzyskać aktualnie dostępne pliki do pobrania, zobacz [starsze oprogramowan
 
 Po zainstalowaniu tych produktów **zestawu narzędzi platformy** właściwości listy rozwijanej w **stron właściwości** okno dialogowe jest automatycznie aktualizowana, aby wyświetlić dostępne zestawy narzędzi. Najnowszą wersję programu Visual Studio umożliwia teraz tworzenie projektów w przypadku starszych wersji zestawu narzędzi bez konieczności konwertowania lub jej uaktualnienie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)

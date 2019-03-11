@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu ciągów za pomocą funkcji PInvoke'
+title: 'Instrukcje: Przeprowadzanie marshalingu ciągów przy użyciu PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598123"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739245"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Porady: przeprowadzanie marshalingu ciągów za pomocą funkcji PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu ciągów przy użyciu PInvoke
 
 W tym temacie wyjaśniono, jak natywne funkcje, których można wywołać ciągi stylu C przy użyciu ciągu CLR typu System::String dzięki obsłudze wywołania do platformy .NET Framework. W programowaniu w języku Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ metody P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Niezarządzany interfejs API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, następnie P/Invoke jest jedyną opcją, ale w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -77,6 +77,6 @@ Ta technika sprawia, że kopia ciągu skonstruowany na stosie niezarządzanym, d
 
 Należy pamiętać, że części biblioteki DLL jest narażony na kodu zarządzanego za pośrednictwem tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL odbywa się w czasie wykonywania, dzięki czemu problemy z funkcjami zaimportowane wraz z `DllImport` nie zostanie wykryty w czasie kompilacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

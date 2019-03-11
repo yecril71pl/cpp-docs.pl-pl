@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 70e69952e350f96179298e2d64ec6ddf7b9167bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625423"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739379"
 ---
 # <a name="dllonexit"></a>__dllonexit
 
@@ -65,8 +65,8 @@ Jeśli to się powiedzie, wskaźnik do funkcji użytkownika. W przeciwnym razie 
 
 |Procedura|Wymaganego pliku|
 |-------------|-------------------|
-|__dllonexit|OnExit.c|
+|__dllonexit|onexit.c|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

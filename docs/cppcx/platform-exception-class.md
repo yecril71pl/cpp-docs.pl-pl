@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464964"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743418"
 ---
 # <a name="platformexception-class"></a>Platform::Exception, klasa
 
@@ -58,11 +58,11 @@ Klasy wyjątków ma również następujące właściwości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** systemu Windows 8
+**Minimalna obsługiwana klienta:** Windows 8
 
-**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+**Minimalna obsługiwana serwera:** Windows Server 2012
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 **Metadane:** platform.winmd
 
@@ -108,7 +108,7 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parametry
 
-*wartość HRESULT*<br/>
+*hresult*<br/>
 Błąd HRESULT, który jest reprezentowany przez wyjątek.
 
 *komunikat*<br/>
@@ -151,6 +151,6 @@ Wyjątki, które pochodzą ze środowiska wykonawczego Windows jest dostarczany 
 
 W systemie Windows 8 ta właściwość jest tylko do odczytu, ponieważ wyjątki w tej wersji środowiska uruchomieniowego Windows są przenoszone przez ABI tylko jako wartości HRESULT. W Windows 8.1 bogatsze informacje o wyjątku są przesyłane między interfejsem ABI, i możesz podać niestandardowy komunikat, że inne składniki mogą uzyskiwać dostęp do programowego. Aby uzyskać więcej informacji, zobacz [wyjątki (C + +/ CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

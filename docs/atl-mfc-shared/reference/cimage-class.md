@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739438"
 ---
 # <a name="cimage-class"></a>CImage, klasa
 
@@ -258,7 +258,7 @@ Wartość alfa przezroczystości dla całego źródłową mapę bitową. Wartoś
 Funkcja przenikaniem alfa dla źródłowego i docelowego, mapy bitowe, wartości alfa globalnej mają być stosowane do całego źródłową mapę bitową i informacji o formacie dla źródłową mapę bitową. Funkcje programu blend źródłowe i docelowe są obecnie ograniczone do AC_SRC_OVER.
 
 *pointDest*<br/>
-Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.
+Odwołanie do [punktu](/previous-versions/dd162805\(v=vs.85\)) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.
 
 *nDestWidth*<br/>
 Szerokość w jednostkach logicznych, prostokąta docelowego.
@@ -279,7 +279,7 @@ Szerokość w jednostkach logicznych, prostokąta źródłowego.
 Wysokość w jednostkach logicznych, prostokąta źródłowego.
 
 *rectDest*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, identyfikacji miejsca docelowego.
 
 *rectSrc*<br/>
 Odwołanie do `RECT` struktury, identyfikacji źródła.
@@ -368,7 +368,7 @@ Logiczną współrzędną y lewego górnego rogu prostokąta docelowego.
 Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.
 
 *pointDest*<br/>
-A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu prostokąta docelowego.
+A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury wskazujący lewym górnym rogu prostokąta docelowego.
 
 *nDestWidth*<br/>
 Szerokość w jednostkach logicznych, prostokąta docelowego.
@@ -383,7 +383,7 @@ Logiczną współrzędną x lewego górnego rogu prostokąta źródłowego.
 Logiczną współrzędną y lewego górnego rogu prostokąta źródłowego.
 
 *rectDest*<br/>
-A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury wskazujący prostokąta docelowego.
+A [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury wskazujący prostokąta docelowego.
 
 *pointSrc*<br/>
 A `POINT` struktury wskazujący lewym górnym rogu prostokąta źródłowego.
@@ -435,7 +435,7 @@ Wysokość `CImage` mapy bitowej w pikselach. Jeśli *nHeight* jest dodatnia, ma
 *nBPP*<br/>
 Liczby bitów na piksel w mapie bitowej. Zwykle 4, 8, 16, 24 lub 32. Może to być 1 w przypadku monochromatycznych map bitowych lub maski.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa, czy obiekt mapy bitowej ma kanału alfa. Może być kombinacją zero lub więcej z następujących wartości:
 
 - *createAlphaChannel* można używać tylko jeśli *nBPP* wynosi 32, i *eCompression* jest BI_RGB. Jeśli zostanie określony, utworzony obraz ma wartość alfa (przezroczystości) każdego piksela, przechowywane w 4 bajtów każdego piksela (nieużywane obraz 32-bitowy innych niż alfanumeryczne). Ten kanał alfa automatycznie jest używany podczas wywoływania [CImage::AlphaBlend](#alphablend).
@@ -482,7 +482,7 @@ Określa typ kompresji skompresowany mapy bitowej od dołu do góry (nie mogą b
 *pdwBitfields*<br/>
 Używany tylko, jeśli *eCompression* jest ustawiona na BI_BITFIELDS, w przeciwnym razie musi być wartością NULL. Wskaźnik do tablicy trzy DWORD masek bitowych, określając bity każdego piksela, które są używane dla składników czerwonego, zielonego i niebieskiego koloru, odpowiednio. Aby uzyskać informacji na temat ograniczeń dla pola bitów, zobacz [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie Windows SDK.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Określa, czy obiekt mapy bitowej ma kanału alfa. Może być kombinacją zero lub więcej z następujących wartości:
 
 - *createAlphaChannel* można używać tylko jeśli *nBPP* wynosi 32, i *eCompression* jest BI_RGB. Jeśli zostanie określony, utworzony obraz ma wartość alfa (przezroczystości) każdego piksela, przechowywane w 4 bajtów każdego piksela (nieużywane obraz 32-bitowy innych niż alfanumeryczne). Ten kanał alfa automatycznie jest używany podczas wywoływania [CImage::AlphaBlend](#alphablend).
@@ -595,13 +595,13 @@ Szerokość w jednostkach logicznych, prostokąta źródłowego.
 Wysokość w jednostkach logicznych, prostokąta źródłowego.
 
 *rectDest*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, identyfikacji miejsca docelowego.
 
 *rectSrc*<br/>
 Odwołanie do `RECT` struktury, identyfikacji źródła.
 
 *pointDest*<br/>
-Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.
+Odwołanie do [punktu](/previous-versions/dd162805\(v=vs.85\)) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -763,7 +763,7 @@ Wynikowy ciąg formatu można przekazać do usługi MFC [CFileDialog](../../mfc/
 
 Parametr *strExporter* ma następujący format:
 
-Plik description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. opis .xls *n*&#124;\*.roz *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 gdzie "&#124;" znak separatora określoną przez `chSeparator`. Na przykład:
 
@@ -854,7 +854,7 @@ Wynikowy ciąg formatu można przekazać do usługi MFC [CFileDialog](../../mfc/
 
 Parametr *strImporter* ma następujący format:
 
-Plik description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. opis .xls *n*&#124;\*.roz *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 gdzie "&#124;" jest określony przez znak separatora *chSeparator*. Na przykład:
 
@@ -1259,10 +1259,10 @@ Współrzędna x lewy górny róg monochromatyczną mapę bitową.
 Współrzędna y lewy górny róg monochromatyczną mapę bitową.
 
 *rectSrc*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury określenia współrzędnych prostokąta źródłowego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury określenia współrzędnych prostokąta źródłowego.
 
 *pointMask*<br/>
-A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu mapy bitowej maski.
+A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury wskazujący lewym górnym rogu mapy bitowej maski.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1519,7 +1519,7 @@ Wysokość w jednostkach logicznych, prostokąta docelowego.
 Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.
 
 *rectDest*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, identyfikacji miejsca docelowego.
 
 *xSrc*<br/>
 Współrzędną x, w jednostkach logicznych, lewego górnego rogu prostokąta źródłowego.
@@ -1602,7 +1602,7 @@ Wysokość w jednostkach logicznych, prostokąta docelowego.
 Kolor źródłową mapę bitową do traktowania jako przezroczysty. Domyślnie CLR_INVALID, wskazujący, że kolor jest obecnie ustawiony jako przezroczysty kolor obrazu należy używać.
 
 *rectDest*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, identyfikacji miejsca docelowego.
 
 *xSrc*<br/>
 Współrzędną x, w jednostkach logicznych, lewego górnego rogu prostokąta źródłowego.
@@ -1656,7 +1656,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykładowe MMXSwarm](../../visual-cpp-samples.md)<br/>
 [Przykładowe SimpleImage](../../visual-cpp-samples.md)<br/>

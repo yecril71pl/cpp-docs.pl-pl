@@ -13,12 +13,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: f9ed1f842bd174c2b926572856152cd69ade5a56
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328022"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741946"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
@@ -42,14 +42,14 @@ Następujące wskaźniki strumienia są dostępne dla dostępu do standardowych 
 |Wskaźnik|Strumień|
 |-------------|------------|
 |`stdin`|Standardowe dane wejściowe|
-|`stdout`|Standardowe dane wyjściowe|
+|`stdout`|Wyjście standardowe|
 |`stderr`|Standardowy błąd|
 
 Te wskaźniki może służyć jako argumenty funkcji. Niektóre funkcje, takie jak [getchar](../c-runtime-library/reference/getchar-getwchar.md) i [putchar](../c-runtime-library/reference/putchar-putwchar.md), użyj `stdin` i `stdout` automatycznie.
 
 Te wskaźniki są stałe i nie można przypisać nowe wartości. [Freopen —](../c-runtime-library/reference/freopen-wfreopen.md) funkcja może służyć do przekierowania strumieni plików na dysku lub innych urządzeń. System operacyjny umożliwia przekierowywanie standardowe dane wejściowe i dane wyjściowe na poziomie polecenia programu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stream operacji We/Wy](../c-runtime-library/stream-i-o.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

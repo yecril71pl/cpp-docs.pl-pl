@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e755ad44d088dca77f012569cd3783079cd23f86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607652"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739711"
 ---
 # <a name="choosing-a-deployment-method"></a>Wybieranie metody wdrażania
 
@@ -34,7 +34,7 @@ Ponieważ biblioteki Visual C++ są instalowane w katalogu %windir%\system32\ pr
 
 We wdrożeniach można redystrybuować dowolną wersję biblioteki Visual C++, której licencja na to pozwala. Poniżej przedstawiono trzy sposoby ich wdrożenia:
 
-- Wdrożenie centralne przy użyciu pakietów redystrybucyjnych, które instaluje biblioteki Visual C++ jako współdzielone Dlll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Program Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Użyj pola wyszukiwania w Centrum pobierania, aby wyszukać "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i zaktualizuj*" który odpowiada aplikacji. Adapterem, jeśli program Visual Studio 2015 update 3 jest używany do tworzenia aplikacji, wyszukaj "Visual C++ Redistributable pakietu 2015 update 3".) Aby uzyskać informacje o sposobie korzystania z pakietu redystrybucyjnego, zobacz [wskazówki: Wdrażanie Visual C++ Application By Using the Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+- Wdrożenie centralne przy użyciu pakietów redystrybucyjnych, które instaluje biblioteki Visual C++ jako współdzielone Dlll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Program Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Użyj pola wyszukiwania w Centrum pobierania, aby wyszukać "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i zaktualizuj*" który odpowiada aplikacji. Adapterem, jeśli program Visual Studio 2015 update 3 jest używany do tworzenia aplikacji, wyszukaj "Visual C++ Redistributable pakietu 2015 update 3".) Aby uzyskać informacje o sposobie korzystania z pakietu redystrybucyjnego, zobacz [instruktażu: Wdrażanie aplikacji Visual C++ przy użyciu pakietu redystrybucyjnego Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
 - Wdrożenie centralne przy użyciu modułów scalania, każdy z nich instaluje określoną bibliotekę języka Visual C++ jako współdzieloną DLL w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora.) Moduły scalania stają się częścią pliku .msi Instalatora aplikacji. Visual C++ redystrybucyjnych modułów scalania znajdują się w programie Visual Studio, w \Program pliki (x86) \Common modułów\\. Aby uzyskać więcej informacji, zobacz [Redystrybucja za pomocą scalonych modułów](../ide/redistributing-components-by-using-merge-modules.md).
 
@@ -48,7 +48,7 @@ Nieprawidłowe wdrożenie bibliotek Visual C++ może spowodować błędy w czasi
 
 Zaleca się unikać łączenia statycznego, gdy redystrybucji bibliotek Visual C++. Chociaż łączenie statyczne prawie nigdy nie zwiększa znacznie wydajności aplikacji, to prawie zawsze sprawia, że serwisowanie jest droższe. Rozważmy na przykład aplikację, statycznie połączoną z biblioteką, która to biblioteka została zaktualizowana, aby poprawić jej zabezpieczenia — aplikacja z nich nie skorzysta, chyba że zostanie zrekompilowana i ponownie wdrożona. Zamiast tego zaleca się dynamiczne łączenie aplikacji z bibliotekami, od których zależą, aby można było aktualizować biblioteki, kiedy zostaną wdrożone.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)<br>
 [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>

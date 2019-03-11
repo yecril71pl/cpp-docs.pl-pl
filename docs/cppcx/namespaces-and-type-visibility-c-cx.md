@@ -2,12 +2,12 @@
 title: Przestrzenie nazw i widoczność typów (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693897"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739299"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Przestrzenie nazw i widoczność typów (C + +/ CX)
 
@@ -52,8 +52,8 @@ C + +/ CX Definiowanie niektórych typów w tych obszarach nazw jako część pr
 |default|Zawiera wbudowane typy liczbowe i char16. Te typy są w zakresie w każdej przestrzeni nazw i `using` instrukcji nigdy nie jest wymagane.|
 |Platforma|Zawiera typy przede wszystkim publiczne, które odpowiadają typów środowiska wykonawczego Windows, takich jak `Array<T>`, `String`, `Guid`, i `Boolean`. Zawiera także typy pomocnika specjalne, takie jak `Platform::Agile<T>` i `Platform::Box<T>`.|
 |Platform::Collections|Zawiera klasy konkretnych kolekcji, które implementują interfejsy kolekcji środowiska uruchomieniowego Windows `IVector`, `IMap`i tak dalej. Te typy są definiowane w pliku nagłówkowym, collection.h nie znajduje się w platform.winmd.|
-|Platform::details|Zawiera typy, które są używane przez kompilator i nie są przeznaczone do użytku publicznego.|
+|Platform::Details|Zawiera typy, które są używane przez kompilator i nie są przeznaczone do użytku publicznego.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 97488f3023481c20599e8cf5201fbce68dd23516
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566507"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741383"
 ---
 # <a name="buffer-overflow"></a>Przepełnienie buforu
 
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-Pytanie: był ostatni bajt skopiowane bajt wiodący? Następujące nie rozwiązuje problem, ponieważ go może potencjalnie przepełnienie buforu:
+Pytanie jest: Był ostatni bajt skopiowane bajt wiodący? Następujące nie rozwiązuje problem, ponieważ go może potencjalnie przepełnienie buforu:
 
 ```cpp
 cb = 0;
@@ -53,6 +53,6 @@ Ten kod sprawdza przepełnienie buforu możliwe w pętli przetestować, za pomoc
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)

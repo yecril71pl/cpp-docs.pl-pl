@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436431"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743797"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Wskazówki: wdrażanie aplikacji Visual C++ przy użyciu pakietu redystrybucyjnego Visual C++
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Przewodnik: Wdrażanie aplikacji Visual C++ przy użyciu pakietu redystrybucyjnego Visual C++
 
 W tym artykule opisano sposób użycia pakietu redystrybucyjnego Visual C++ do wdrożenia aplikacji w języku Visual C++.
 
@@ -25,7 +25,7 @@ Konieczne jest posiadanie tych składników w celu przeprowadzenia tego instrukt
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Na potrzeby wdrażania aplikacji przez pakiet redystrybucyjny Visual C++
 
-1.  Utworzyć i skompilować aplikację MFC, wykonując kroki opisane w [wskazówki: Wdrażanie Visual C++ Application By Using projektu Instalatora](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1.  Tworzenie i tworzenie aplikacji MFC, wykonując kroki opisane w [instruktażu: Wdrażanie aplikacji Visual C++ przy użyciu projektu instalacji](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Utwórz plik, nadaj jej nazwę setup.bat i dodaj następujące polecenia do niego. Zmiana `MyMFCApplication` do nazwy projektu.
 
@@ -54,7 +54,7 @@ Konieczne jest posiadanie tych składników w celu przeprowadzenia tego instrukt
 
       - Aplikacja MFC (plik .exe).
 
-      - VCRedist_x86.exe. Ten plik znajduje się w \Program Files (x86) \Microsoft Visual Studio \<wersji > \SDK\Bootstrapper\Packages\. Możesz również pobrać ten plik z [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
+      - vcredist_x86.exe. Ten plik znajduje się w \Program Files (x86) \Microsoft Visual Studio \<wersji > \SDK\Bootstrapper\Packages\. Możesz również pobrać ten plik z [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
 
       - Plik setup.bat, który został utworzony w poprzednim kroku.
 
@@ -85,6 +85,6 @@ Konieczne jest posiadanie tych składników w celu przeprowadzenia tego instrukt
       > [!IMPORTANT]
       > Aby określić, która wersja środowiska uruchomieniowego jest zainstalowana, Instalator sprawdza \HKLM\SOFTWARE\Microsoft\VisualStudio klucza rejestru\\\<wersji > \VC\Runtimes\\<platform>. Jeśli aktualnie zainstalowana wersja jest nowsza niż wersja, która Instalator podejmuje próbę instalacji, Instalator zwraca sukces bez konieczności instalowania starszej wersji i pozostawia dodatkowe wpis na stronie zainstalowanych programów w Panelu sterowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykłady wdrożeń](deployment-examples.md)<br/>

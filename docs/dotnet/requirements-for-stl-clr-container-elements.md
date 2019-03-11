@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers, STL/CLR
 - containers, C++ Standard Library
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
-ms.openlocfilehash: 0744d38a08dbd972b786e1cc74c112322ecf181f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113624b15a0c2c6062feb7113c4771fda6d6cf39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428577"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739405"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Wymagania dotyczące elementów kontenera STL/CLR
 
@@ -29,6 +29,6 @@ Ponadto kontenery asocjacyjne, takie jak [ustaw](../dotnet/set-stl-clr.md) i [ma
 
 Podobnie jak typy odwołań typów wartości i uchwytów, aby odwołać się do typów, które mają zostać wstawione w pojemniku asocjacyjnych musi mieć operator porównania takich jak `operator<` zdefiniowane. Wymagania dotyczące konstruktora kopiującego publicznych, operator przypisania publicznego i publicznego destruktora nie istnieją dla typów wartości lub obsługuje typy odwołań.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

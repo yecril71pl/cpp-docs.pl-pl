@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b063abd4186523d27cab7a766f57aadfeaf765d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588243"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746048"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 
@@ -29,7 +29,7 @@ W tym temacie omówiono obsługi wyjątków w aplikacjach zarządzanych. Oznacza
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli kompilujesz z opcją **/CLR** opcji może obsługiwać wyjątki środowiska CLR, a także standard [obsługi wyjątków C++](../cpp/cpp-exception-handling.md) i [obsługę wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md) (SEH). Wyjątek CLR jest wyjątek przez typ zarządzany. [System::Exception](https://msdn.microsoft.com/library/system.exception.aspx) klasy zawiera wiele użytecznych metod do przetwarzania wyjątki środowiska CLR i jest zalecane jako klasa bazowa dla klas wyjątków zdefiniowanych przez użytkownika.
+Jeśli kompilujesz z opcją **/CLR** opcji może obsługiwać wyjątki środowiska CLR, a także standard <xref:System.Exception> klasy zawiera wiele użytecznych metod do przetwarzania wyjątki środowiska CLR i jest zalecana jako klasa bazowa dla wyjątków zdefiniowanych przez użytkownika klasy.
 
 Przechwytywanie typów wyjątków pochodzących z interfejsu nie jest obsługiwany w ramach **/CLR**. Ponadto środowisko uruchomieniowe języka wspólnego pozwala na przechwytywać wyjątków przepełnienia stosu; Wyjątek przepełnienia stosu zakończy proces.
 
@@ -140,7 +140,7 @@ Kolejność zdarzeń zgłoszonego wyjątku jest następująca:
 
 ### <a name="catching-unmanaged-types"></a>Przechwytywanie typy Niezarządzanwe
 
-Gdy typ obiektu niezarządzanego jest zgłaszany, jest ujęte w nawiasy wyjątek typu [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Podczas wyszukiwania odpowiednie **catch** klauzuli, istnieją dwie możliwości.
+Gdy typ obiektu niezarządzanego jest zgłaszany, jest ujęte w nawiasy wyjątek typu <xref:System.Runtime.InteropServices.SEHException>. Podczas wyszukiwania odpowiednie **catch** klauzuli, istnieją dwie możliwości.
 
 - Jeśli okaże się typem natywnym języku C++, wyjątek jest nieopakowanych i w porównaniu do typu napotkano. To porównanie umożliwia typu natywnego języka C++ można przechwycić w normalny sposób.
 
@@ -164,8 +164,8 @@ Jeśli niezarządzany typ zostanie przechwycony przez catch(Object^), nie spowod
 
 Podczas zgłaszania lub przechwytywanie niezarządzane wyjątki, firma Microsoft zaleca użycie [/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora zamiast **/EHS** lub **/eha**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[przedstawienie operacji safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)

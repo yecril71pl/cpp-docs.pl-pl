@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523133"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746217"
 ---
 # <a name="basic-cstring-operations"></a>Operacje na obiekcie CString podstawowe
 
@@ -85,7 +85,7 @@ W poniższej tabeli przedstawiono dostępne [CString](../atl-mfc-shared/referenc
 
 ##  <a name="_core_converting_cstring_objects"></a> Konwersja z cstring — obiekty
 
-Aby uzyskać informacji na temat konwertowania cstring — obiekty na inne typy parametrów, zobacz [porady: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md).
+Aby uzyskać informacji na temat konwertowania cstring — obiekty na inne typy parametrów, zobacz [jak: Konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md).
 
 ## <a name="using-cstring-with-wcout"></a>Cstring — przy użyciu wcout
 
@@ -99,10 +99,9 @@ wcout << (const wchar_t*) cs << endl;
 
 Bez rzutowania `cs` jest traktowany jako `void*` i `wcout` drukuje adres obiektu. To zachowanie jest spowodowane przez subtelne interakcje między argument potrąceń i przeciążenie rozdzielczość szablon używanej w sobie poprawne i zgodność ze standardem C++.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Specjalizacja szablonu](../cpp/template-specialization-cpp.md)<br/>
-[Instrukcje: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)
-
+[Instrukcje: Konwertowanie między różnymi typami ciągów](../text/how-to-convert-between-various-string-types.md)

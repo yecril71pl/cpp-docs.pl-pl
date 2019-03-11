@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178756"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739427"
 ---
 # <a name="crect-class"></a>CRect, klasa
 
@@ -315,7 +315,7 @@ Określa przesunięcie w lewym górnym rogu do dolnego rogu prostokąt, można u
 *TopLeft*<br/>
 Umiejscowienie lewego górnego `CRect`.
 
-*BottomRight*<br/>
+*bottomRight*<br/>
 Określa położenie prawego dolnego rogu `CRect`.
 
 ### <a name="remarks"></a>Uwagi
@@ -384,7 +384,7 @@ Określa liczbę jednostek do korygowania górnej i dolnej części `CRect`.
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) lub [CSize](csize-class.md) , który określa liczbę jednostek do korygowania `CRect`. `cx` Wartość określa liczbę jednostek do korygowania lewej i prawej stronie i `cy` wartość określa liczbę jednostek do korygowania górny i dolny.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` , który określa liczbę jednostek do korygowania każdej stronie.
 
 *l*<br/>
@@ -430,7 +430,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` obiekt, który zawiera współrzędne górnego lewego i prawego dolnego rogu prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -510,7 +510,7 @@ Określa liczbę jednostek rozszerzanie górnej i dolnej części `CRect`.
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) lub [CSize](csize-class.md) , który określa liczbę jednostek rozszerzanie `CRect`. `cx` Wartość określa liczbę jednostek rozszerzanie lewej i prawej stronie i `cy` wartość określa liczbę jednostek, aby zwiększyć górny i dolny.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` , który określa liczbę jednostek po każdej stronie Rozszerzanie.
 
 *l*<br/>
@@ -943,7 +943,7 @@ A [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` obiekt, który zawiera liczbę jednostek po każdej stronie Rozszerzanie `CRect`.
 
 ### <a name="remarks"></a>Uwagi
@@ -981,7 +981,7 @@ A [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej strony `CRect`.
 
 ### <a name="remarks"></a>Uwagi
@@ -1074,7 +1074,7 @@ A [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub [CPoint
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` obiekt, który zawiera liczbę jednostek rozszerzanie na każdej stronie zwracanej wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1117,7 +1117,7 @@ A [punktu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury lub `CPoint
 *Rozmiar*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) struktury lub `CSize` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.
 
-*lprect —*<br/>
+*lpRect*<br/>
 Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej stronie zwracanej wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1499,9 +1499,8 @@ Szerokość może być ujemna.
    ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CPoint, klasa](cpoint-class.md)<br/>
 [CSize, klasa](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

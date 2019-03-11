@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: cb7d99077a082323a6662d29c0386cd1d416297c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665338"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740316"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -70,11 +70,11 @@ Liczba całkowita typów, takich jak `short`, `int`, `long`, `long long`i ich `u
 |**G**|Zmiennoprzecinkowe|Taka sama jak **g** formatowania, chyba że **E**, zamiast **e**, wprowadza wykładnik (tam, gdzie jest odpowiedni).|
 |**a**|Zmiennoprzecinkowe|Podpisana szesnastkowa wartość zmiennoprzecinkową podwójnej precyzji, która ma postać [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysy i *dd* są jedną lub więcej cyfr wykładnika potęgi. Dokładność określa liczbę cyfr po punkcie.|
 |**A**|Zmiennoprzecinkowe|Podpisana szesnastkowa wartość zmiennoprzecinkową podwójnej precyzji, która ma postać [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkich liter) mantysy i *dd* są jedną lub więcej cyfr wykładnika potęgi. Dokładność określa liczbę cyfr po punkcie.|
-|**N**|Wskaźnik do liczby całkowitej.|Liczba znaków, które są pomyślnie zapisywane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w liczbę całkowitą, której adres jest podawana jako argument. Rozmiar liczby całkowitej wskazywany mogą być kontrolowane przez prefiks specyfikacji argumentu rozmiaru. **n** specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważne zabezpieczeń.|
+|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które są pomyślnie zapisywane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w liczbę całkowitą, której adres jest podawana jako argument. Rozmiar liczby całkowitej wskazywany mogą być kontrolowane przez prefiks specyfikacji argumentu rozmiaru. **n** specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważne zabezpieczeń.|
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
 |**S**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
-|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
+|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
 
 W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji liczb zmiennoprzecinkowych (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończone nieokreślony, lub NaN, sformatowane wyniki zgodne ze standardem C99. Poniższa tabela zawiera listę sformatowane wyniki:
 
@@ -91,10 +91,10 @@ Przed Visual Studio 2015 CRT używać innego formatu niestandardowego dla danych
 
 |Wartość|Dane wyjściowe|
 |-----------|------------|
-|+ infinity|`1.#INF` *losowe cyfry*|
-|-nieskończoność|`-1.#INF` *losowe cyfry*|
-|Nieskończona (tak jak cichych NaN)|*cyfra* `.#IND` *losowe cyfry*|
-|NaN|*cyfra* `.#NAN` *losowe cyfry*|
+|+ infinity|`1.#INF` *random-digits*|
+|-nieskończoność|`-1.#INF` *random-digits*|
+|Nieskończona (tak jak cichych NaN)|*digit* `.#IND` *random-digits*|
+|NaN|*digit* `.#NAN` *random-digits*|
 
 Żadnego z tych może być poprzedzona znakiem i mogła zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładności, czasami z nietypowej efekty. Na przykład `printf("%.2f\n", INFINITY)` przetwarzającej `1.#J` ponieważ #INF będzie "zaokrąglony" dokładności 2 cyfry.
 
@@ -203,7 +203,7 @@ W programie Visual C++ mimo że `long double` jest typ samodzielnym, ma taką sa
 > [!NOTE]
 > **Microsoft Specific** **I** (wielkie litery i), **I32**, **I64**, i **w** argumentu rozmiaru modyfikatora prefiksów to firmy Microsoft rozszerzenia i są nie zgodne ISO C. **h** prefiksu, gdy jest używany z danymi typu `char` i **l** (mała litera L) prefiksu, gdy jest używany z danymi typu `double` są rozszerzeniami Microsoft.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

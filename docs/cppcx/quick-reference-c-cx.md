@@ -2,12 +2,12 @@
 title: Krótki przewodnik (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-ms.openlocfilehash: eb407a0264a68f9b89e4a180c8b151076fdd109a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445334"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742064"
 ---
 # <a name="quick-reference-ccx"></a>Krótki przewodnik (C + +/ CX)
 
@@ -46,6 +46,6 @@ W przypadku tworzenia w wierszu polecenia, użyj **/ZW** — opcja kompilatora d
 |Typy z parametrami|szablony|`generic <typename` *T* `> interface class` *identyfikator* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *identyfikator delegata* `() {}`|Deklaruje klasę sparametryzowane interfejsu.<br /><br /> Deklaruje sparametryzowane delegata.|
 |Typy o wartości zerowalnej|`boost::optional<T>`|[Platform::IBox \<T >](../cppcx/platform-ibox-interface.md)|Włącza zmiennych typów skalarnych i strukturach wartości, które mają wartość `nullptr`.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

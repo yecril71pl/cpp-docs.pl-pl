@@ -15,12 +15,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 54b095913ea4ec25fe5bd077d38a6bba303a7b72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546292"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738584"
 ---
 # <a name="text-and-binary-mode-file-io"></a>Operacja We/Wy pliku w trybie binarnym i tekstowym
 
@@ -34,7 +34,7 @@ Operacje We/Wy pliku została wykonana w jednym z dwóch trybów tłumaczenia *t
 
 Jeśli wywołasz funkcję otwartego pliku takich jak [_otwórz](../c-runtime-library/reference/open-wopen.md), [fopen —](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen —](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s —](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen —](../c-runtime-library/reference/fsopen-wfsopen.md) lub [_sopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md), można zastąpić bieżące domyślne ustawienie **_fmode** , określając odpowiedni argument funkcji [_set_fmode —](../c-runtime-library/reference/set-fmode.md). **Stdin**, **stdout**, i **stderr** strumieni zawsze domyślnie otwierane w trybie tekstowym; możesz również zastąpić to ustawienie domyślne podczas otwierania plików. Użyj [_setmode —](../c-runtime-library/reference/setmode.md) Aby zmienić tryb translacji przy użyciu deskryptora pliku, po otwarciu pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

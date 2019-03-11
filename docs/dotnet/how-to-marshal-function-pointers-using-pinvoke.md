@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke'
+title: 'Instrukcje: Przeprowadzanie marshalingu wskaźników funkcji przy użyciu PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435610"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742870"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu wskaźników funkcji przy użyciu PInvoke
 
 W tym temacie wyjaśniono, jak zarządzane delegatów mogą być używane zamiast wskaźników funkcji, podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke. Jednak w programowaniu w języku Visual C++ zachęcamy do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe) ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:
 
@@ -87,6 +87,6 @@ int main() {
 
 Należy pamiętać, że części biblioteki DLL jest uwidaczniany związane z kodem zarządzanym przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, więc problemy z funkcjami zaimportowane wraz z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

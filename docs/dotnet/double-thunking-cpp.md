@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: dc36679a9457939bb5fb110219b2ddfbf05c643e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546409"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741962"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
 
@@ -137,6 +137,6 @@ int main() {
 after calling struct S
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809740"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740247"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -398,4 +398,3 @@ Ochrona prywatności i przechowywać poufne informacje z widoku publicznego, nal
 Problemy usługi GitHub są używane do śledzenia problemów zgłaszanych w naszej dokumentacji. Teraz można utworzyć usługi GitHub problemów bezpośrednio ze strony zawartości, dzięki czemu można wchodzić w interakcje w sposób znacznie bogatsze ze autorzy i zespołach produktu. Jeśli widzisz wystąpił problem z dokumentu, próbkę błędnym kodem, wyjaśnienie mylące, krytyczne pominięcie lub nawet po prostu błąd pisowni, możesz łatwo dać nam znać. Przewiń ekran do dolnej części strony i wybierz pozycję **Zaloguj się przekazać opinię dotyczącą dokumentacji**. Musisz utworzyć konto w usłudze GitHub, jeśli nie masz jeszcze takiego, ale po wykonaniu tej czynności możesz zobaczyć wszystkie problemy dotyczące naszej dokumentacji, ich stan i Otrzymuj powiadomienia, gdy zostaną wprowadzone zmiany do problemu, który zgłoszone przez Ciebie. Aby uzyskać więcej informacji, zobacz [nowe opinii pojawi się System docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Po utworzeniu problem z dokumentacją w serwisie GitHub, korzystając z przycisku opinii dokumentacji problem zostanie automatycznie wypełniona niektóre informacje na temat strony, w której utworzono ten problem, aby było wiadomo, gdzie znajduje się problem. Nie Edytuj te informacje. Po prostu Dołącz szczegóły na temat co to jest problem i, jeśli chcesz sugerowanej poprawki. [Nasza dokumentacja jest typu open source](https://github.com/MicrosoftDocs/cpp-docs/), więc jeśli chcesz faktycznie wprowadzić poprawkę i proponuje samodzielnie, możesz to zrobić. Aby uzyskać więcej informacji na temat sposobu współtworzenia naszej dokumentacji, zobacz nasze [przewodnik Dodawanie](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) w witrynie GitHub.
-

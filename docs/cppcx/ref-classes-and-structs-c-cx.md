@@ -2,12 +2,12 @@
 title: Klasy i struktury odwołania (C + +/ CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: a817529f24f1df3a3258b4596cd4d14533356a02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456228"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741828"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Klasy i struktury odwołania (C + +/ CX)
 
@@ -45,7 +45,7 @@ W kolejnym przykładzie kodu pokazano, jak kod klienta używa `Person` klasy ref
 
 [!code-cpp[cx_classes#05](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#05)]
 
-Semantyka stosu umożliwia również zadeklarować zmienną klasy lokalnego odwołania. Taki obiekt zachowuje się jak zmiennej opartej na stosie, nawet jeśli pamięć nadal jest przydzielany dynamicznie. Jedną istotną różnicą jest, czy odwołania śledzenia (%) nie można przypisać do zmiennej, która jest zadeklarowana za pomocą semantyka stosu; gwarantuje to, że licznik odwołań zostanie zmniejszona do zera, jeśli funkcja kończy działanie. W tym przykładzie przedstawiono klasy referencyjnej podstawowe `Uri`i funkcję, która używa go z semantyką stosu:
+Semantyka stosu umożliwia również zadeklarować zmienną klasy lokalnego odwołania. Taki obiekt zachowuje się jak zmiennej opartej na stosie, nawet jeśli pamięć nadal jest przydzielany dynamicznie. Jedną istotną różnicą jest to, że nie można przypisać odwołania śledzenia (%) do zmiennej, która jest zadeklarowana za pomocą semantyka stosu; gwarantuje to, czy licznik odwołań zostanie zmniejszona do zera, jeśli funkcja kończy działanie. W tym przykładzie przedstawiono klasy referencyjnej podstawowe `Uri`i funkcję, która używa go z semantyką stosu:
 
 [!code-cpp[cx_classes#06](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#06)]
 
@@ -127,7 +127,7 @@ Poniższy przykład pokazuje, jak do udostępnienia klasy publicznej ref pochodz
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Wartość klas i struktur](../cppcx/value-classes-and-structs-c-cx.md)<br/>

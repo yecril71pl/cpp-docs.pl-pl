@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 1fe48f457f2c44720ad7ecec349a68e63a05268b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498309"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738746"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation:: Collections Namespace (C + +/ CX)
 
@@ -41,5 +41,4 @@ namespace Windows {
 
 **Nagłówek:** collection.h
 
-**Namespace:** Windows::Foundation:: Collections
-
+**Namespace:** Windows::Foundation::Collections

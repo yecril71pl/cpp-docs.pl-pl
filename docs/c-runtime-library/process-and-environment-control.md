@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329413"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742112"
 ---
 # <a name="process-and-environment-control"></a>Procedury kontroli środowiska
 
@@ -78,14 +78,14 @@ Różnice między funkcje w **_exec** rodziny, a także między programami znajd
 |Funkcje|Zlokalizuj plik za pomocą zmiennej PATH|Konwencji przekazywania argumentów|Ustawienia środowiska|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
 |**_execl**, **_spawnl**|Nie|Lista|Dziedziczone z procesu wywołującego|
-|**_execle —**, **_spawnel**|Nie|Lista|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
+|**_execle**, **_spawnle**|Nie|Lista|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
 |**_execlp —**, **_spawnlp —**|Tak|Lista|Dziedziczone z procesu wywołującego|
 |**_execvpe**, **_spawnvpe**|Tak|Tablica|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
 |**_execlpe —**, **_spawnlpe —**|Tak|Lista|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
 |**_execv**, **_spawnv**|Nie|Tablica|Dziedziczone z procesu wywołującego|
-|**_execve**, **_spawnve —**|Nie|Tablica|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
-|**_execvp —**, **_spawnvp**|Tak|Tablica|Dziedziczone z procesu wywołującego|
+|**_execve**, **_spawnve**|Nie|Tablica|Wskaźnik do tabeli środowiska dla nowego procesu jest przekazywany jako ostatni argument|
+|**_execvp**, **_spawnvp**|Tak|Tablica|Dziedziczone z procesu wywołującego|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

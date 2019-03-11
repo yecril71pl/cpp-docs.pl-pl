@@ -10,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 7bf16271c0d58e3d87e4c24795ec0bd1ee1ccb89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666192"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746074"
 ---
 # <a name="file-readwrite-access-constants"></a>Odczyt/zapis pliku — Stałe dostępu
 
@@ -35,14 +35,14 @@ W tej tabeli opisano typy dostępu:
 |----------|----------------|
 |**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, wywołanie do otwierania pliku kończy się niepowodzeniem.|
 |**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
-|**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje. Zapisu wszystkie operacje są wykonywane na końcu pliku. Mimo że wskaźnik pliku może być przeniesiony za pomocą `fseek` lub `rewind`, on jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacji jest przeprowadzane. |
+|**"a"**|Zostanie otwarty do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje. Zapisu wszystkie operacje są wykonywane na końcu pliku. Mimo że wskaźnik pliku może być przeniesiony za pomocą `fseek` lub `rewind`, on jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacji jest przeprowadzane. |
 |**"r +"**|Otwiera Odczyt i zapis. Jeśli plik nie istnieje lub nie można znaleźć, wywołanie do otwierania pliku kończy się niepowodzeniem.|
 |**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
 |**"+"**|Taka sama jak **""** , ale również umożliwia odczyt.|
 
 Jeśli "r +", "w +" lub "+" typ jest określony, będą miały Odczyt i zapis (plik jest określany jako otwarty do "aktualizacji"). Jednak podczas przełączania się między Odczyt i zapis, musi istnieć interwencyjne `fflush`, `fsetpos`, `fseek`, lub `rewind` operacji. Bieżąca pozycja może być określona dla `fsetpos` lub `fseek` operacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
