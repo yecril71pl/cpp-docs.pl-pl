@@ -416,4 +416,3 @@
 ## [Rozszerzenia Microsoft](microsoft-extensions.md)
 ## [Niestandardowe zachowanie](nonstandard-behavior.md)
 ### [Limity kompilatora](compiler-limits.md)
-
