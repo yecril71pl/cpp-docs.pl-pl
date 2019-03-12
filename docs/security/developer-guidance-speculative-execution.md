@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631043"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750549"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
@@ -356,7 +356,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Inna technika, który może służyć do złagodzenia związanego z wykonywaniem spekulatywnym po stronie kanału luk w zabezpieczeniach jest usunąć poufne informacje z pamięci. Deweloperzy oprogramowania można wyszukać możliwości refaktoryzacji swoich aplikacji w taki sposób, że informacje poufne nie jest dostępny podczas wykonywania spekulacyjnego. Można to osiągnąć przez refaktoryzacji projektu aplikacji do izolowania poufnych informacji w osobnych procesach. Na przykład aplikacja przeglądarki sieci web mogą próbować izolowania danych skojarzonych z każdego miejsca pochodzenia w sieci web w osobnych procesach i w ten sposób zapobiegając jeden proces będzie mogła uzyskiwać dostęp do związanego z wykonywaniem spekulatywnym między źródłami danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wskazówki, aby uniknąć kanału po stronie wykonywania spekulacyjnego luk w zabezpieczeniach](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Ograniczanie ryzyka związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

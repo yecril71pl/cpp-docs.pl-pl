@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++'
+title: 'Instrukcje: Przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559123"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751521"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++
 
 W tym temacie pokazano, jak ciąg BSTR (format ciągu podstawowe faworytem w programowaniu modelu COM) może być przekazywany z zarządzanej do niezarządzanej funkcji i na odwrót. Do współpracy z innymi typami parametrów, zobacz następujące tematy:
 
@@ -102,6 +102,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
