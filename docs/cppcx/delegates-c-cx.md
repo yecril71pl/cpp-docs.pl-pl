@@ -1,15 +1,15 @@
 ---
-title: Delegaty (C + +/ CX)
+title: Delegates (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635243"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745586"
 ---
-# <a name="delegates-ccx"></a>Delegaty (C + +/ CX)
+# <a name="delegates-ccx"></a>Delegates (C++/CX)
 
 `delegate` — Słowo kluczowe jest używane do deklarowania typu odwołania, który jest odpowiednikiem obiektu funkcyjnego w standardzie języka C++ środowiska wykonawczego Windows. Deklaracja delegata, podobny do podpisu funkcji. Określa typ zwracany i typy parametrów, które jej opakowana funkcja musi mieć. Jest to deklaracja delegata użytkownika:
 
@@ -23,7 +23,7 @@ Delegaty są najczęściej używane w połączeniu ze zdarzeniami. Zdarzenie ma 
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Podczas deklarowania obiektów delegowanych, które będą dostępne dla klientów między interfejsem binarnym aplikacji środowiska wykonawczego Windows, użyj [Windows::Foundation:: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ten delegat jest wstępnie zdefiniowane serwera proxy i klas zastępczych pliki binarne, które umożliwiają go do użycia przez klientów języka Javascript.
+Podczas deklarowania obiektów delegowanych, które będą dostępne dla klientów między interfejsem binarnym aplikacji środowiska wykonawczego Windows, użyj [Windows::Foundation:: typedeventhandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Ten delegat jest wstępnie zdefiniowane serwera proxy i klas zastępczych pliki binarne, które umożliwiają go do użycia przez klientów języka Javascript.
 
 ## <a name="consuming-delegates"></a>Korzystanie z obiektów delegowanych
 
@@ -130,7 +130,7 @@ Jeśli chcesz, aby Twoje utworzony delegat nastąpi wywołanie zwrotne w tym sam
 
 Osoby zaznajomione z programami obsługi zdarzeń w programie .NET wiesz, że zalecaną praktyką jest Utwórz lokalne kopie zdarzenia przed jej środowisko. Umożliwia to uniknięcie Sytuacje wyścigu, w których program obsługi zdarzeń mogą zostać usunięte przed zdarzenie jest wywoływane. Nie trzeba to zrobić w języku C + +/ CX, ponieważ podczas dodawania lub usuwania programów obsługi zdarzeń zostanie utworzona nowa lista programu obsługi. Ponieważ obiektu języka C++ zwiększa liczbę odwołań na liście obsługi przed wywołaniem zdarzenia, jest gwarantowane, będzie obowiązywać wszystkich programów obsługi. Jednak oznacza to, że usunięcie procedury obsługi zdarzeń w zużywającym wątku tego wywołana procedura obsługi nieprawidłowego może nadal uzyskać Jeśli publikowania obiektu nadal działa na własną kopię listy, który jest obecnie przestarzałe. Obiekt publikowania nie otrzyma zaktualizowaną listę po ponownym jej generowane zdarzenie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>

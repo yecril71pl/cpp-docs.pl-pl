@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: 42d2dd6978fda7a88459c015b86ad8c02fdfd06d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636569"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744457"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime:: InteropServices Namespace
 
@@ -32,12 +32,12 @@ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przegl�
 
 |Nazwa|Uwagi|
 |----------|------------|
-|ComInterfaceType|— wyliczenie|
+|ComInterfaceType| — wyliczenie|
 |InterfaceTypeAttribute||
-|LayoutKind|— wyliczenie|
+|LayoutKind| — wyliczenie|
 |MarshalAsAttribute||
 |StuctLayoutAttribute||
-|UnmanagedType|— wyliczenie|
+|UnmanagedType| — wyliczenie|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,6 +49,6 @@ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przegl�
 
 **Namespace:** Platform::InteropServices
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Namespace platformy](platform-namespace-c-cx.md)

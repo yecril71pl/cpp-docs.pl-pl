@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524173"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748479"
 ---
 # <a name="xml-file-processing"></a>Przetwarzanie pliku .Xml
 
@@ -27,7 +27,7 @@ Kompilator stosuje następujące reguły podczas generowania ciągi identyfikato
   |---------------|-----------------|
   | N | — przestrzeń nazw<br /><br /> Nie można dodać komentarze dokumentacji do przestrzeni nazw, możliwe są cref odwołania do przestrzeni nazw. |
   | T | Typ: klasy, interfejsu, struktury, wyliczenia, delegat |
-  | D | — klasa typedef |
+  | D |  — klasa typedef |
   | F | pole |
   | P | właściwości (w tym indeksatory lub innych właściwości indeksowane) |
   | M | metody (w tym specjalnych metodami, takimi jak konstruktory, operatorów i tak dalej) |
@@ -66,7 +66,7 @@ Kompilator stosuje następujące reguły podczas generowania ciągi identyfikato
 
   - Zwracany typ
 
-  - ELEMENT ELEMENT_TYPE_SENTINEL
+  - ELEMENT_TYPE_SENTINEL
 
 - Tylko operatory konwersji, aby uzyskać wartość zwracaną metody jest zakodowane jako "~" następuje zwracany typ, jak wcześniej zakodowany.
 
@@ -178,6 +178,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525525"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740374"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -96,7 +96,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    To nie jest istotną zmianę dla kodu natywnego lub małe i wielkie (`/clr`), ale dla kodu skompilowanego jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować swój kod, aby kompilacja nie powiedzie się. Jeśli kompilujesz kod jako `/clr:pure`, może być konieczne dodanie `#include <new>` lub `#include <new.h>` w celu obejścia błędy kompilacji z powodu tej zmiany. Należy pamiętać, że `/clr:pure` jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Kod, który ma zostać "czysta" powinny być przenoszone do języka C#.
 
-#### <a name="processh"></a>\<process.h >
+#### <a name="processh"></a>\<process.h>
 
 - **_beginthread i _beginthreadex**
 
@@ -139,13 +139,13 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    W poprzednich wersjach nieskończoności i NaNs będą formatowane przy użyciu zestaw określonych MSVC wartownik ciągów.
 
-  - Infinity: 1. #INF
+  - Infinity: 1.#INF
 
-  - Quiet NaN: 1.#QNAN
+  - Ciche NaN: 1.#QNAN
 
-  - Sygnalizowanie NaN: 1. #SNAN
+  - Sygnalizowanie NaN: 1.#SNAN
 
-  - Nieokreślony NaN: 1. #IND
+  - Nieokreślony NaN: 1.#IND
 
   Żadnego z tych może być poprzedzona znakiem i może zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładność (czasami z niezwykłych rzeczy, np. `printf("%.2f\n", INFINITY)` przetwarzającej 1. #J ponieważ #INF będzie "zaokrąglony" dokładności 2 cyfry). C99 wprowadzono nowe wymagania na jak nieskończoności i NaNs powinny być sformatowane. Teraz za pomocą implementacji MSVC jest zgodny z tych wymagań. Nowe parametry są następujące:
 
@@ -207,7 +207,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 - **Wykładnik, formatowanie**
 
-   %E i %E format specyfikatory formatu zmiennoprzecinkowy numer punktu jako dziesiętna mantysy i wykładnika. %G i specyfikatorów formatu %G również sformatować liczby, w tym formularzu w niektórych przypadkach. W poprzednich wersjach CRT będzie zawsze Generuj ciągi zawierające trzycyfrowy wykładników. Na przykład `printf("%e\n", 1.0)` przetwarzającej 1.000000e + 000. To jest niepoprawne: język C wymaga, że w przypadku stałego, przy użyciu tylko jednej lub dwóch cyfr wykładnika, następnie dwie cyfry są do wydrukowania.
+   %E i %E format specyfikatory formatu zmiennoprzecinkowy numer punktu jako dziesiętna mantysy i wykładnika. %G i specyfikatorów formatu %G również sformatować liczby, w tym formularzu w niektórych przypadkach. W poprzednich wersjach CRT będzie zawsze Generuj ciągi zawierające trzycyfrowy wykładników. Na przykład `printf("%e\n", 1.0)` przetwarzającej 1.000000e + 000. To jest niepoprawne: Język C wymaga, że w przypadku stałego, przy użyciu tylko jednej lub dwóch cyfr wykładnika, następnie dwie cyfry są do wydrukowania.
 
    W programie Visual Studio 2005 został dodany przełącznik globalnego zgodność: [_set_output_format —](../c-runtime-library/set-output-format.md). Program można nazwać tę funkcję z _TWO_DIGIT_EXPONENT argumentu, aby włączyć odpowiadające drukowanie wykładnika. Domyślne zachowanie został zmieniony na zgodne z normami wykładnika trybu drukowania.
 
@@ -289,7 +289,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 - **asctime —**
 
-   W poprzednich wersjach [asctime —](../c-runtime-library/reference/asctime-wasctime.md) funkcja będzie konsoli jednocyfrowych dni z wiodącym zerem, na przykład: 06 cze od poniedziałku do piątku 08:00:00 2014 r. Specyfikacja wymaga, że takie dni można dopełniana spację, np. od poniedziałku do piątku cze 6 08:00:00 2014 r. Ten problem został rozwiązany.
+   W poprzednich wersjach [asctime —](../c-runtime-library/reference/asctime-wasctime.md) funkcja będzie konsoli jednocyfrowych dni z wiodącym zerem, na przykład: Od poniedziałku do piątku cze 06 08:00:00 2014 r. Specyfikacja wymaga, że takie dni można dopełniana spację, np. od poniedziałku do piątku cze 6 08:00:00 2014 r. Ten problem został rozwiązany.
 
 - **strftime i wcsftime**
 
@@ -334,7 +334,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
    C++ standard zawsze ma zakazany kontenerów elementów stałych (takich jak wektor\<const T > lub ustaw\<const T >). Visual Studio 2013 lub wcześniejszej akceptowane kontenerów tego typu. W bieżącej wersji kontenerów tego typu kompilacja nie powiedzie się.
 
-- **STD::Allocator:: Cofnij Przydział**
+- **std::allocator::deallocate**
 
    W programie Visual Studio 2013 lub starszej `std::allocator::deallocate(p, n)` ignorowane przekazanego argumentu *n*.  C++ standard, zawsze wymaga *n* być równa wartości przekazywane jako pierwszy argument do wywołania programu przydzielania, który zwracany *p*. Jednak w bieżącej wersji, a wartość *n* sprawdzana jest. Kod, który przekazuje argumenty dla *n* które różnią się od co wymaga standard, mogą ulec awarii w czasie wykonywania.
 
@@ -362,7 +362,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
    |Stara nazwa|Nowa nazwa|
    |--------------|--------------|
-   |add_reference —|add_lvalue_reference|
+   |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
    |has_copy_constructor|is_copy_constructible|
    |has_move_constructor|is_move_constructible|
@@ -1190,7 +1190,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Wyjątki MFC nie może zostać przechwycony przez wartość, ponieważ nie są one do kopiowania**
 
-   Poniższy kod w aplikacji MFC teraz powoduje błąd C2316: gdyby ": nie można przechwycić elementu, ponieważ destruktor i/lub Konstruktor kopiujący są niedostępne lub zostały usunięte
+   Poniższy kod w aplikacji MFC teraz powoduje błąd C2316: Gdyby ": nie można przechwycić elementu, ponieważ destruktor i/lub Konstruktor kopiujący są niedostępne lub zostały usunięte
 
     ```cpp
     struct B {
@@ -1480,7 +1480,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Nie można wywołać chroniony Konstruktor podstawowej w treści pochodnej ctor.**
 
-   Poniższy kod teraz powoduje błąd C2248: "S1::S1": nie można uzyskać dostępu chroniona składowa zadeklarowana w klasie "S1"
+   Poniższy kod teraz generuje błąd C2248: "S1::S1": nie można uzyskać dostępu chroniona składowa zadeklarowana w klasie "S1"
 
     ```cpp
     struct S1 {
@@ -2899,7 +2899,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     };
     ```
 
-   Przed Visual Studio 2013, ten kod wyświetla następujący komunikat: "ostrzeżenie C4370:"S2": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie".
+   Przed Visual Studio 2013, ten kod wyświetla następujący komunikat: "ostrzeżenie C4370: "S2": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie ".
 
    X86 kompilatora ma ten sam problem z nieoptymalnym układem we wszystkich wersjach kompilatora. Na przykład, jeśli ten kod jest kompilowany dla architektury x86:
 
@@ -2963,7 +2963,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="mfc-and-atl"></a>MFC i ATL
 
-- **Programu Visual Studio 2013 tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest bardzo popularny i zastosowanie MBCS jest dużo mniejsze. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli musisz nadal korzystać z biblioteki MFC MBCS, możesz ją pobrać z Centrum pobierania MSDN, w [wielobajtowych MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: biblioteki DLL MBCS znajduje się w C++ składników instalacji programu Visual Studio 2015 lub nowszy).
+- **Programu Visual Studio 2013 tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest bardzo popularny i zastosowanie MBCS jest dużo mniejsze. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli musisz nadal korzystać z biblioteki MFC MBCS, możesz ją pobrać z Centrum pobierania MSDN, w [wielobajtowych MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: Biblioteki DLL MBCS znajduje się za pomocą składników Instalatora języka C++ w programie Visual Studio 2015 lub nowszy).
 
 - Ułatwienia dostępu dla wstążki MFC jest zmieniany.  Zamiast architektury jednego poziomu jest teraz architektura hierarchiczna. Można nadal używać starego zachowania wywołując `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -2995,7 +2995,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Narzędzie śledzenia ATL/MFC jest usuwane wraz z biblioteką ATL DLL i mechanizm śledzenia jest uproszczony. `CTraceCategory` Konstruktor przyjmuje teraz jeden parametr (nazwę kategorii) a makra śledzenia wywoływać funkcje raportowania debugowania CRT.
 
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 fundamentalne zmiany
+## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3043,7 +3043,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Następujące istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03, za pomocą jawnych argumentów szablonów do wywołania `make_pair()` — podobnie jak w `make_pair<int, int>(x, y)` — zwykle nie można skompilować w programie Visual C++ w programie Visual Studio 2012. Rozwiązaniem jest zawsze wywołuj `make_pair() `bez jawnych argumentów szablonów — podobnie jak w `make_pair(x, y)`. Zapewnianie zaprzeczenie argumentów jawnego szablonu celem tej funkcji. Jeśli potrzebujesz precyzyjną kontrolę nad tym wynikowy typ, użyj `pair` zamiast `make_pair` — podobnie jak w `pair<short, short>(int1, int2)`.
 
-- Innego istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03: podczas jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, A nie jest niejawnie konwertowany na C i C ++ 98/03 Visual C++ 2010 dozwolone, ale `pair<A, X>` ma zostać przekonwertowany (niejawnie jawnie lub) do `pair<C, X>`. (Typ, X, nie jest tutaj interesują, a nie jest specyficzne dla pierwszego typu w parze.) Ponieważ C ++ 11 i kompilator języka C++ w programie Visual Studio 2012 wykryć, A nie jest niejawnie konwertowany na C, usuwają pary konwersja przeciążeniu rozdzielczości. Jest to pozytywnych zmian w wielu scenariuszach. Na przykład przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywoływać metodę `func()` z `pair<const char *, const char *>` będzie kompilowany przy użyciu tej zmiany. Jednak ta zmiana podziały wierszy kodu, który opierał się na konwersji agresywne pary. Zazwyczaj można naprawić tego kodu, wykonując jedną z części pakietu konwersji jawnie — na przykład, przekazując `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.
+- Inny istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03: Kiedy jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, A nie jest niejawnie konwertowany na C i C ++ 98/03 Visual C++ 2010 dozwolone, ale `pair<A, X>` (jawnie lub niejawnie) do przekonwertowania `pair<C, X>`. (Typ, X, nie jest tutaj interesują, a nie jest specyficzne dla pierwszego typu w parze.) Ponieważ C ++ 11 i kompilator języka C++ w programie Visual Studio 2012 wykryć, A nie jest niejawnie konwertowany na C, usuwają pary konwersja przeciążeniu rozdzielczości. Jest to pozytywnych zmian w wielu scenariuszach. Na przykład przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywoływać metodę `func()` z `pair<const char *, const char *>` będzie kompilowany przy użyciu tej zmiany. Jednak ta zmiana podziały wierszy kodu, który opierał się na konwersji agresywne pary. Zazwyczaj można naprawić tego kodu, wykonując jedną z części pakietu konwersji jawnie — na przykład, przekazując `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.
 
 - Visual C++ 2010 symulowane szablony wariadyczne — na przykład `make_shared<T>(arg1, arg2, argN)`— do określonego limitu 10 argumentów, przez wybijaniu przeciążenia i specjalizacje z preprocesora maszyny. W programie Visual Studio 2012 to ograniczenie jest ograniczone do 5 argumenty, aby poprawić czasy kompilacji i zużycie pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne określenie _VARIADIC_MAX jako 10, całego projektu.
 
@@ -3091,7 +3091,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Dodano parametr `CFolderPickerDialog` konstruktora. (Jest to domyślny parametr, a nie jest wymuszających).
 
-- `CFileStatus` zmienić rozmiar struktury: `m_attribute` elementu członkowskiego zmieniła się z BAJTU do typu DWORD (Aby dopasować wartość, która jest zwracana z `GetFileAttributes`).
+- `CFileStatus` zmienić rozmiar struktury: `m_attribute` Elementu członkowskiego zmieniła się z BAJTU do typu DWORD (Aby dopasować wartość, która jest zwracana z `GetFileAttributes`).
 
 - `CRichEditCtrl` i `CRichEditView` Użyj MSFTEDIT_CLASS (kontrolka RichEdit 4.1) zamiast RICHEDIT_CLASS (kontrolka RichEdit 3.0) w kompilacjach Unicode.
 
@@ -3229,7 +3229,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Zmieniono nazwę `CPane::GetDockSiteRow(CDockingPanesRow *)` do `CPane::SetDockSiteRow`.
 
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 fundamentalne zmiany
+## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3307,7 +3307,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Kilka dyrektyw zostały usunięte z kompilatora Microsoft Macro Assembler — odwołanie. Usunięto dyrektywy są.186,.286, .286P.287,.8086,.8087, i. NO87.
 
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 fundamentalne zmiany
+## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3319,7 +3319,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
    - perf_object
 
-   - Monitora wydajności
+   - perfmon
 
    - request_handler
 
@@ -3405,23 +3405,23 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` Klasa: `CTime` klasy będzie teraz akceptować daty począwszy od 1/1/1900 r. zamiast 1/1/1970 r.
+- `CTime` Klasa: `CTime` Klasy będzie teraz akceptować daty począwszy od 1/1/1900 r. zamiast 1/1/1970 r.
 
-- Karta zlecenia kontrolki w oknach dialogowych MFC: kolejność tabulacji poprawne wielu formantów w oknie dialogowym MFC jest rozproszonych była możliwa, jeśli formant MFC ActiveX jest wstawiana w kolejności tabulacji. Ta zmiana rozwiązuje ten problem.
+- Kolejność tabulacji kontrolek w oknach dialogowych MFC: Kolejność tabulacji poprawne wielu formantów w oknie dialogowym MFC jest rozproszonych była możliwa, jeśli formant MFC ActiveX jest wstawiana w kolejności tabulacji. Ta zmiana rozwiązuje ten problem.
 
    Na przykład utworzyć formant ActiveX i kilka formantów edycji aplikacji okna dialogowego MFC. Położenie formantu ActiveX w środku kolejność tabulacji kontrolek edycji. Uruchom aplikację, kliknij kontrolkę edycji, w których kolejność tabulacji jest po formantu ActiveX, a następnie kartę. Przed tą zmianą fokus zmieniał się do kontrolki edycji następującego formantu ActiveX, zamiast następny formant edycji, w kolejności tabulacji.
 
-- `CFileDialog` Klasa: Szablonów niestandardowych usługi `CFileDialog` klasy nie można automatycznie przenieść do Windows Vista. One nadal można używać, ale nie mają dodatkowe funkcje lub wygląda systemu Windows Vista stylu w oknach dialogowych.
+- `CFileDialog` Klasa: Szablony niestandardowe dla `CFileDialog` klasy nie można automatycznie przenieść do Windows Vista. One nadal można używać, ale nie mają dodatkowe funkcje lub wygląda systemu Windows Vista stylu w oknach dialogowych.
 
-- `CWnd` Klasy i `CFrameWnd` klasy: `CWnd::GetMenuBarInfo` metoda została usunięta.
+- `CWnd` Klasy i `CFrameWnd` klasy: `CWnd::GetMenuBarInfo` Metoda została usunięta.
 
    `CFrameWnd::GetMenuBarInfo` Metoda jest obecnie metody niewirtualnej. Aby uzyskać więcej informacji, zobacz **funkcja GetMenuBarInfo** w zestawie Windows SDK.
 
-- Obsługa interfejsu ISAPI MFC: biblioteki MFC nie są już obsługuje tworzenie aplikacji z Internetu ISAPI Server Application Programming Interface (). Aby utworzyć aplikację interfejsu ISAPI, rozszerzenia ISAPI należy wywoływać bezpośrednio.
+- Obsługa MFC ISAPI: MFC nie są już obsługuje tworzenie aplikacji z Internetu ISAPI Server Application Programming Interface (). Aby utworzyć aplikację interfejsu ISAPI, rozszerzenia ISAPI należy wywoływać bezpośrednio.
 
 - Przestarzałe interfejsy API ANSI: Wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji standardu Unicode tych metod w Twojej aplikacji tworzonych w przyszłości. Aby uzyskać więcej informacji, zobacz **tworzenie wymagania dla Windows Vista wspólnych formantów**.
 
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 fundamentalne zmiany
+## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 Breaking Changes
 
 ### <a name="crt"></a>CRT
 
@@ -3471,7 +3471,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Podczas wywoływania `valarray::resize()`, zawartość `valarray` zostaną utracone i zostaną zastąpione wartościami domyślnymi. `resize()` Metoda jest przeznaczona do ponownego inicjowania `valarray` zamiast zwiększanie takich jak wektora.
 
-- Iteratory debugowania: Aplikacje tworzone przy użyciu wersji debugowania biblioteki środowiska uruchomieniowego C i które Iteratory użycia niepoprawnie mogą zacząć Zobacz potwierdzenia w czasie wykonywania. Aby wyłączyć te potwierdza, należy zdefiniować _HAS_ITERATOR_DEBUGGING (zastąpione przez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010) na wartość 0. Aby uzyskać więcej informacji, zobacz [Debug Iterator Support](../standard-library/debug-iterator-support.md)
+- Debugowanie Iteratory: Aplikacje utworzone przy użyciu wersji debugowania biblioteki środowiska uruchomieniowego C i które Iteratory użycia niepoprawnie mogą zacząć Zobacz potwierdza w czasie wykonywania. Aby wyłączyć te potwierdza, należy zdefiniować _HAS_ITERATOR_DEBUGGING (zastąpione przez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010) na wartość 0. Aby uzyskać więcej informacji, zobacz [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes
 
@@ -3523,6 +3523,6 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Kompilator zgłasza teraz nieosiągalnego kodu (C4702).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Co nowego w języku Visual C++ w programie Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
