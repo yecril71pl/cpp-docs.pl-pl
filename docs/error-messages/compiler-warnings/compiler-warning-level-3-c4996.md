@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472179"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816428"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilator ostrzeżenie (poziom 3) C4996
 
@@ -45,7 +45,7 @@ Możesz wyłączyć to ostrzeżenie globalnie w kompilacji z wiersza polecenia p
 
 Aby wyłączyć ostrzeżenia dla całego projektu w środowisku IDE programu Visual Studio:
 
-- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../ide/property-pages-visual-cpp.md).
+- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../build/reference/property-pages-visual-cpp.md).
 - Wybierz **właściwości konfiguracji**, **C/C++**, **zaawansowane** strony.
 - Edytuj **Wyłącz określone ostrzeżenia** właściwości do dodania `4996`. Wybierz **OK** Aby zastosować zmiany.
 
@@ -53,7 +53,7 @@ Makra preprocesora umożliwia również wyłączyć niektórych określonych kla
 
 Aby zdefiniować makro preprocesora w programie Visual Studio:
 
-- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../ide/property-pages-visual-cpp.md).
+- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../build/reference/property-pages-visual-cpp.md).
 - Rozwiń **właściwości konfiguracji > C/C++ > preprocesora**.
 - W **definicje preprocesora** właściwości, Dodaj nazwę makra. Wybierz **OK** Zapisz, a następnie ponownie skompiluj projekt.
 
@@ -279,7 +279,7 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Przykład: Zdefiniowane przez użytkownika funkcja przestarzałe
+## <a name="example-user-defined-deprecated-function"></a>Przykład: Przestarzałe funkcji zdefiniowanej przez użytkownika
 
 Atrybut przestarzałe we własnym kodzie umożliwia Ostrzegaj wywołań, gdy już nie zaleca się użycie niektórych funkcji. W tym przykładzie C4996 jest generowany dla wiersza, w którym zadeklarowano zaniechanej funkcji i dla wiersza, na którym jest używana funkcja.
 

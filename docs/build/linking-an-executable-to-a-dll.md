@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 24912c13d3528377ab849a4205ef072eb26490d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648776"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818365"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
 
@@ -30,7 +30,7 @@ Plik wykonywalny można użyć jednej z metod łączenia połączyć z tej samej
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Określić, której metody łączenia użyjesz
+## <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
 
 Czy ma być używany z jawnymi łączami lub jawnego łączenia jest architektury decyzji, które należy wykonać w aplikacji. Istnieją zalety i wady każdej metody.
 
@@ -70,13 +70,13 @@ Poniżej przedstawiono dwa zagrożenia z jawnymi łączami, w których trzeba pa
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Jak połączyć niejawnie biblioteki DLL
+## <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
 
 Aby korzystać z biblioteki DLL, łącząc niejawne, pliki wykonywalne klienta musisz uzyskać te pliki z dostawcą biblioteki DLL:
 
 - Co najmniej jeden nagłówek pliki (.h) zawierające deklaracje wyeksportowane dane, funkcje i/lub klasy C++ w bibliotece DLL. Klasy, funkcje i dane eksportowanych przez DLL musi być oznaczona jako `__declspec(dllimport)` w pliku nagłówkowym. Aby uzyskać więcej informacji, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).
 
-- Importuj biblioteki do połączenia w programie wykonywalnym. Podczas kompilowania biblioteki DLL, konsolidator tworzy bibliotekę importu. Aby uzyskać więcej informacji, zobacz [. Pliki LIB](../build/reference/dot-lib-files-as-linker-input.md).
+- Importuj biblioteki do połączenia w programie wykonywalnym. Podczas kompilowania biblioteki DLL, konsolidator tworzy bibliotekę importu. Aby uzyskać więcej informacji, zobacz [. Pliki LIB](reference/dot-lib-files-as-linker-input.md).
 
 - Rzeczywisty plik DLL.
 
@@ -139,10 +139,10 @@ W odróżnieniu od w tym przykładzie w większości przypadków należy wywoła
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Praca z bibliotekami importowanymi oraz plikami eksportowanymi](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Praca z bibliotekami importowanymi oraz plikami eksportowanymi](reference/working-with-import-libraries-and-export-files.md)
 
 - [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

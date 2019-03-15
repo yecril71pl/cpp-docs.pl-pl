@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: ffe32a1df1fb85c7ae47b07c1ada6c53b269f5f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667301"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818846"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zapobiegaj powiązaniu biblioteki DLL)
 
@@ -29,11 +29,11 @@ ms.locfileid: "50667301"
 
 /ALLOWBIND:no Ustawia bit w nagłówku biblioteki DLL, która wskazuje Bind.exe, że obraz nie może być powiązana. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo (powiązanie unieważnia podpis).
 
-Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/ALLOWBIND](../../build/reference/allowbind.md) — opcja polecenia EDITBIN narzędzia.
+Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/ALLOWBIND](allowbind.md) — opcja polecenia EDITBIN narzędzia.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji**, **konsolidatora**i wybierz **wiersza polecenia**.
 
@@ -43,9 +43,9 @@ Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/A
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
 [BindImage — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656979"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820367"
 ---
 # <a name="running-lib"></a>Uruchamianie LIB
 
@@ -62,11 +62,11 @@ Opcja składa się z specyfikator opcji, która jest albo dash (**-**) lub ukoś
 
 Poniższe opcje są stosowane do wszystkich rodzajów LIB:
 
-> **/ ERRORREPORT** [**NONE** &AMP;#124; **MONITU** &AMP;#124; **KOLEJKI** &AMP;#124; **WYSYŁANIA**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 Lib.exe zakończy się niepowodzeniem w czasie wykonywania, można użyć **/errorreport** do wysyłania informacji do firmy Microsoft dotyczących tych błędów wewnętrznych.
 
-Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
@@ -88,12 +88,12 @@ Pomija wyświetlanie LIB praw autorskich komunikat i numer wersji i zapobiega wy
 
 Wyświetla szczegółowe informacje o postępie sesji, w tym nazwy plików .obj, dodawane. Informacje są wysyłane do wyjścia standardowego i mogą zostać przekierowane do pliku.
 
-> **/WX**[**: NO**]
+> **/WX**[**:NO**]
 
-Traktuj ostrzeżenia jako błędy. Zobacz [/WX (Traktuj ostrzeżenia konsolidatora jak błędy)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Aby uzyskać więcej informacji.
+Traktuj ostrzeżenia jako błędy. Zobacz [/WX (Traktuj ostrzeżenia konsolidatora jak błędy)](wx-treat-linker-warnings-as-errors.md) Aby uzyskać więcej informacji.
 
 Inne opcje są stosowane tylko do określonych rodzajów LIB. Te opcje są omówione w sekcji opisem każdego trybu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[LIB — dokumentacja](../../build/reference/lib-reference.md)
+[LIB — dokumentacja](lib-reference.md)

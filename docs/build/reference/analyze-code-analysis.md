@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: a43cce2633fc2f54374bee6b5ef7196dbb87ad55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663778"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819509"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (analiza kodu)
 
@@ -32,7 +32,7 @@ Włącza opcje analizy kodu i kontroli.
 
 / analyze włącza funkcję analizy w trybie domyślnym. Analiza danych wyjściowych trafia do **dane wyjściowe** okna, podobnie jak inne komunikaty o błędach. Użyj **/ analyze-** Aby jawnie wyłączyć analizę.
 
-/ analyze: WX-określanie **/ analyze: WX -** oznacza, że ostrzeżenia analizy kodu nie są traktowane jako błędy podczas kompilowania przy użyciu **/WX**. Aby uzyskać więcej informacji, zobacz [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md).
+/ analyze: WX-określanie **/ analyze: WX -** oznacza, że ostrzeżenia analizy kodu nie są traktowane jako błędy podczas kompilowania przy użyciu **/WX**. Aby uzyskać więcej informacji, zobacz [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](compiler-option-warning-level.md).
 
 / analyze: log `filename` szczegółowe wyniki analizatora są zapisywane w formacie XML do pliku, który jest określony przez `filename`.
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji, zobacz [analiza kodu C/C++ — Przegląd](/visu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -93,7 +93,7 @@ Aby uzyskać więcej informacji, zobacz [analiza kodu C/C++ — Przegląd](/visu
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora](../../build/reference/compiler-options.md)
-- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+- [MSVC Compiler Options](compiler-options.md)
+- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

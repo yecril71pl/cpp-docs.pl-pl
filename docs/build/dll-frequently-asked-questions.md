@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 4d6490691583162fc95042601bd85566f693d049
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629141"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821940"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL — często zadawane pytania
 
@@ -59,14 +59,14 @@ Należy pamiętać, że ponieważ `CWinApp::Run` mechanizm nie ma zastosowania d
 
 Jeśli biblioteka DLL jest zwykłej biblioteki MFC DLL, które jest połączone statycznie z MFC, zmieniając go na zwykły biblioteki MFC DLL łączonej dynamicznie z MFC zmniejsza rozmiar pliku.
 
-Jeśli biblioteka DLL ma dużą liczbę eksportowanych funkcji, należy użyć pliku .def, aby wyeksportować funkcje (zamiast **__declspec(dllexport)**) i użyć pliku .def [noname — atrybut](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) na każdym wyeksportowanej funkcji. Noname — atrybut powoduje, że wartości porządkowej, a nie nazwę funkcji mają być przechowywane w tabeli eksportu biblioteki DLL, co zmniejsza rozmiar pliku.
+Jeśli biblioteka DLL ma dużą liczbę eksportowanych funkcji, należy użyć pliku .def, aby wyeksportować funkcje (zamiast **__declspec(dllexport)**) i użyć pliku .def [noname — atrybut](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) na każdym wyeksportowanej funkcji. Noname — atrybut powoduje, że wartości porządkowej, a nie nazwę funkcji mają być przechowywane w tabeli eksportu biblioteki DLL, co zmniejsza rozmiar pliku.
 
-Biblioteki dll, które są niejawnie połączona z aplikacją są ładowane podczas ładowania aplikacji. Aby poprawić wydajność podczas ładowania, spróbuj dzielenia biblioteki DLL do różnych bibliotek DLL. Umieść wszystkie funkcje, których potrzebuje aplikacja wywołująca, natychmiast po ładowania do jedną bibliotekę DLL i mieć aplikacja wywołująca niejawne łącze do tej biblioteki DLL. Umieścić inne funkcje, które aplikacja wywołująca nie wymaga się natychmiast w innej bibliotece DLL i mieć aplikacja jawnie utworzyć łącze do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [określić, której metody łączenia użyjesz](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
+Biblioteki dll, które są niejawnie połączona z aplikacją są ładowane podczas ładowania aplikacji. Aby poprawić wydajność podczas ładowania, spróbuj dzielenia biblioteki DLL do różnych bibliotek DLL. Umieść wszystkie funkcje, których potrzebuje aplikacja wywołująca, natychmiast po ładowania do jedną bibliotekę DLL i mieć aplikacja wywołująca niejawne łącze do tej biblioteki DLL. Umieścić inne funkcje, które aplikacja wywołująca nie wymaga się natychmiast w innej bibliotece DLL i mieć aplikacja jawnie utworzyć łącze do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
 
 ## <a name="memory_leak"></a> Brak&#39;s przeciek pamięci w mojej zwykłej bibliotece DLL MFC, ale mój kod wygląda dobrze. Jak mogę znaleźć przeciek pamięci?
 
 Jedną z możliwych przyczyn przeciek pamięci jest, że MFC tworzy obiekty tymczasowe, które są używane w funkcji obsługi komunikatów. W aplikacjach MFC takie obiekty tymczasowe są automatycznie czyszczone w `CWinApp::OnIdle()` funkcja, która jest wywoływana Between przetwarzanie komunikatów. Jednak w MFC bibliotek dołączanych dynamicznie (dll) `OnIdle()` funkcja nie jest wywoływana automatycznie. W rezultacie obiekty tymczasowe są nie automatycznie czyszczone. Aby wyczyścić obiekty tymczasowe, biblioteki DLL należy jawnie wywołać `OnIdle(1)` okresowo.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

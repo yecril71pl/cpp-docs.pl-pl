@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850301"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808394"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Przed Windows Vista, aplikacje, które uzyskać dostępu do rejestru, zwykle używane **HKEY_CLASSES_ROOT** węzła. Jednak przy użyciu Windows Vista lub nowszych systemach operacyjnych, należy uruchomić aplikację w trybie podniesionych uprawnień do zapisu do klucza HKCR.
 
-Ta metoda pozwala aplikacji na odczytywanie i zapisywanie do rejestru, bez konieczności uruchamiania w trybie podniesionych uprawnień, przekierowując dostęp z HKCR do rejestru HKCU. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../../ide/linker-property-pages.md).
+Ta metoda pozwala aplikacji na odczytywanie i zapisywanie do rejestru, bez konieczności uruchamiania w trybie podniesionych uprawnień, przekierowując dostęp z HKCR do rejestru HKCU. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../../build/reference/linker-property-pages.md).
 
 Jeśli włączysz przekierowanie do rejestru, struktura przekierowuje dostęp z klucza HKCR **HKEY_CURRENT_USER\Software\Classes**. Dotyczy tylko struktury MFC i ATL przekierowania.
 

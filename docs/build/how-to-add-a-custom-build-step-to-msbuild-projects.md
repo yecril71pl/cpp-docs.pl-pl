@@ -1,19 +1,19 @@
 ---
-title: 'Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild'
+title: 'Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610980"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814010"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild
 
 Krok niestandardowej kompilacji jest krokiem zdefiniowanych przez użytkownika w kompilacji. Niestandardowy krok kompilacji, który zachowuje się jak każdy inny *narzędzia poleceń* kroku, takie jak standardowy kroku narzędzie kompilacji lub łącza.
 
@@ -27,7 +27,7 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Aby zdefiniować, co to jest wykonywane przez krok niestandardowej kompilacji
 
-1. Dodaj grupy właściwości do pliku projektu. W tej grupie właściwości określ polecenie, jego danych wejściowych i danych wyjściowych oraz wiadomość, jak pokazano w poniższym przykładzie. W tym przykładzie tworzy plik cab z pliku main.cpp został utworzony w [Instruktaż: przy użyciu programu MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Dodaj grupy właściwości do pliku projektu. W tej grupie właściwości określ polecenie, jego danych wejściowych i danych wyjściowych oraz wiadomość, jak pokazano w poniższym przykładzie. W tym przykładzie tworzy plik cab z pliku main.cpp został utworzony w [instruktażu: Korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -50,8 +50,8 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

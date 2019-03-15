@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /PDBALTPATH dumpbin option
 - PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-ms.openlocfilehash: dd7bdc8d161e92eedf4856fcd28d9f9f1ac781b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 660e39a97b9fed0c5a9228fe011e7c0fa2566e68
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551102"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820718"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Użyj alternatywnej ścieżki PDB)
 
@@ -34,7 +34,7 @@ Użyj tej opcji, aby zapewnić alternatywną lokalizację pliku bazy danych prog
 
 Wartość *pdb_file_name* może być dowolny ciąg, zmienną środowiskową lub **_PDB %**. Konsolidator rozwinie zmiennej środowiskowej, takich jak **% SystemRoot %**, jego wartość. Konsolidator definiuje zmiennych środowiskowych **_PDB %** i **_EXT %**. **_PDB %** rozszerza się na nazwę pliku w pliku .pdb rzeczywista, bez żadnych informacji o ścieżce i **_EXT %** jest rozszerzeniem wygenerowany plik wykonywalny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
-[/PDBPATH](../../build/reference/pdbpath.md)
+[Opcje DUMPBIN](dumpbin-options.md)<br/>
+[/PDBPATH](pdbpath.md)

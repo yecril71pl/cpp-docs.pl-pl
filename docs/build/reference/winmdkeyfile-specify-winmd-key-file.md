@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKeyFile
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
-ms.openlocfilehash: 076533278bb9b8ec2838cfb719bcb4df1784b258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b0c847bc5be6c73b78af4aa15b0074c712cc840
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436794"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820406"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (określ plik klucza winmd)
 
@@ -21,11 +21,11 @@ Określa klucz lub parę kluczy do podpisania pliku metadanych środowiska wykon
 
 ## <a name="remarks"></a>Uwagi
 
-Przypomina [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opcji konsolidatora, która jest stosowana do pliku winmd.
+Przypomina [/KeyFile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opcji konsolidatora, która jest stosowana do pliku winmd.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **konsolidatora** folderu.
 
@@ -33,7 +33,7 @@ Przypomina [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-s
 
 1. W **plik klucza metadanych Windows** wpisz lokalizację pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

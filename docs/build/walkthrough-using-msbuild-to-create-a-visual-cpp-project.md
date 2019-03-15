@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++'
+title: 'Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++'
 ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677220"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57813919"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++
 
 W tym przewodniku pokazano, jak używać programu MSBuild do tworzenia projektu Visual C++ w wierszu polecenia. Dowiesz się, jak utworzyć pliki źródłowe C++ i pliku projektu opartego na języku XML dla aplikacji konsoli Visual C++. Po utworzeniu projektu dowiesz się, jak dostosować proces kompilacji.
 
@@ -265,8 +265,8 @@ Aby odbudować projektu za pomocą narzędzi Visual C++ 11.0 Windows XP, wpisz n
 
 Program MSBuild udostępnia różne sposoby dostosowywania procesu kompilacji. W następujących tematach opisano sposób dodawania niestandardowych kroków kompilacji, narzędzi i zdarzeń do projektu programu MSBuild:
 
-- [Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)

@@ -1,102 +1,33 @@
 ---
-title: Ostrzeżenia kompilatora od C4000 C4199
+title: Compiler Warnings C4000 Through C4199
 ms.date: 11/17/2017
 f1_keywords:
 - C4000
-- C4002
-- C4006
-- C4008
-- C4019
-- C4023
-- C4025
-- C4026
-- C4027
-- C4030
-- C4033
 - C4035
-- C4036
-- C4038
-- C4041
-- C4045
-- C4051
-- C4052
-- C4053
-- C4057
 - C4060
 - C4063
 - C4064
 - C4065
 - C4066
-- C4068
 - C4069
-- C4075
-- C4076
-- C4077
-- C4080
-- C4081
-- C4085
-- C4086
-- C4087
-- C4097
-- C4102
-- C4109
-- C4112
-- C4115
-- C4117
-- C4119
-- C4120
-- C4122
 - C4123
-- C4125
-- C4130
-- C4131
-- C4132
 - C4137
-- C4138
-- C4141
-- C4143
-- C4145
-- C4152
-- C4153
-- C4155
-- C4158
-- C4160
-- C4161
-- C4163
-- C4164
-- C4165
-- C4166
-- C4167
-- C4168
-- C4174
-- C4175
-- C4176
-- C4177
-- C4178
-- C4179
-- C4180
 - C4181
-- C4182
-- C4185
-- C4186
-- C4187
 - C4188
-- C4189
-- C4191
 - C4193
 - C4194
 - C4195
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 6f9c69f0e6835513facf101be8f61c6e1c6430ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f764cfca3ea3ae39a1598aa39029925b9edcc80c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617701"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988196"
 ---
-# <a name="compiler-warnings-c4000-through-c4199"></a>Ostrzeżenia kompilatora od C4000 C4199
+# <a name="compiler-warnings-c4000-through-c4199"></a>Compiler Warnings C4000 Through C4199
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -165,7 +96,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4077|Nieznana opcja check_stack|
 |[Ostrzeżenie kompilatora (poziom 1) C4079](../../error-messages/compiler-warnings/compiler-warning-level-1-c4079.md)|Nieoczekiwany token 'token'|
 |Ostrzeżenie kompilatora (poziom 1) C4080|Oczekiwano identyfikatora dla nazwy segmentu; znaleziono "symbol"|
-|Ostrzeżenie kompilatora (poziom 1) C4081|Oczekiwano 'token1'; Znaleziono token2|
+|Ostrzeżenie kompilatora (poziom 1) C4081|expected 'token1'; found 'token2'|
 |[Ostrzeżenie kompilatora (poziom 1) C4083](../../error-messages/compiler-warnings/compiler-warning-level-1-c4083.md)|Oczekiwano 'token'; Znaleziono identyfikator 'Identyfikator'|
 |Ostrzeżenie kompilatora (poziom 1) C4085|Oczekiwano wartości parametru pragma "on" lub "off"|
 |Ostrzeżenie kompilatora (poziom 1) C4086|Oczekiwano parametru pragma "1", "2", "4", "8" lub "16"|

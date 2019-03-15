@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432364"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814491"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows
 
@@ -47,9 +47,9 @@ Poniższa tabela zawiera listę słów kluczowych w rozszerzenie języka C++.
 |**delegate**|Tak|Deklaruje delegata.|[delegat  (C++/CLI i C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Tak|Deklaruje zdarzenie.|[event](../windows/event-cpp-component-extensions.md)|
 
-## <a name="override-specifiers"></a>Specyfikatory przesłonięć
+## <a name="override-specifiers"></a>Specyfikatory zastąpienia
 
-Następujące słowa kluczowe służy do kwalifikowania zastąpienie zachowania tworzenia wartości pochodnych. Mimo że **nowe** — słowo kluczowe nie jest rozszerzeniem języka c++, ta opcja jest wyświetlana w tym miejscu, ponieważ może służyć w dodatkowy kontekst. Niektóre specyfikatory również są prawidłowe dla natywnej programowania. Aby uzyskać więcej informacji, zobacz [porady: deklarowanie specyfikatorów zastąpienia w kompilacjach kodu natywnego (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Następujące słowa kluczowe służy do kwalifikowania zastąpienie zachowania tworzenia wartości pochodnych. Mimo że **nowe** — słowo kluczowe nie jest rozszerzeniem języka c++, ta opcja jest wyświetlana w tym miejscu, ponieważ może służyć w dodatkowy kontekst. Niektóre specyfikatory również są prawidłowe dla natywnej programowania. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C + +/ CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Słowo kluczowe|Kontekstowa|Cel|Tematy pomocy|
 |-------------|-----------------------|-------------|---------------|
@@ -77,7 +77,7 @@ Następujące słowa kluczowe zostały dodane do rozszerzeń języka C++.
 |**for each, in**|Nie|Wylicza elementów kolekcji.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|Nie|Przydziela typy w stercie zebranych elementów bezużytecznych. Użyj zamiast **nowe** i **Usuń**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**nowe REF**|Tak|Przydziela typów środowiska wykonawczego Windows. Użyj zamiast **nowe** i **Usuń**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**InitOnly**|Tak|Wskazuje, że element członkowski może być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**initonly**|Tak|Wskazuje, że element członkowski może być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literał**|Tak|Tworzy zmienną literału.|[literał](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
@@ -88,9 +88,9 @@ Następujące konstrukcji języka są implementowane jako szablon, zamiast jako 
 |Słowo kluczowe|Cel|Tematy pomocy|
 |-------------|-------------|---------------|
 |**Tablica**|Deklaruje tablicę.|[Tablice](../windows/arrays-cpp-component-extensions.md)|
-|**pomocą interior_ptr**|(Tylko CLR) Punkty danych w typ odwołania.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|
+|**interior_ptr**|(Tylko CLR) Punkty danych w typ odwołania.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Tylko CLR) Wskazuje typy odwołań CLR, aby tymczasowo pominąć system wyrzucania elementów bezużytecznych.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|
-|**przedstawienie operacji safe_cast**|Określa i wykonuje metodę optymalne rzutowania, typu środowiska uruchomieniowego.|[przedstawienie operacji safe_cast](../windows/safe-cast-cpp-component-extensions.md)|
+|**safe_cast**|Określa i wykonuje metodę optymalne rzutowania, typu środowiska uruchomieniowego.|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|
 |**TypeID**|(Tylko CLR) Pobiera <xref:System.Type?displayProperty=fullName> obiekt, który opisuje dany typ lub obiekt.|[TypeID](../windows/typeid-cpp-component-extensions.md)|
 
 ## <a name="declarators"></a>Deklaratory
@@ -128,7 +128,7 @@ W tej sekcji przedstawiono dodatkowe konstrukcje programowania i tematy, które 
 |[Przekazywanie dalej typu (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Włącza przepływ typu w zestawie wysyłanie do innego zestawu. Dzięki temu kod klienta nie musi być ponownie kompilowane.|
 |[Atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md)|Pokazuje atrybuty zdefiniowane przez użytkownika.|
 |[#using — dyrektywa](../preprocessor/hash-using-directive-cpp.md)|Importuje zestawy zewnętrzne.|
-|[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)|Wyjaśnia dokumentacji oparty na składni XML kodu za pomocą  [ /doc (Przetwarzaj komentarze dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Dokumentacja XML](../build/reference/xml-documentation-visual-cpp.md)|Wyjaśnia dokumentacji oparty na składni XML kodu za pomocą  [ /doc (Przetwarzaj komentarze dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Zobacz też
 

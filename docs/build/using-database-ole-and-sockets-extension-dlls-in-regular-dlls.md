@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587528"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807978"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Przy użyciu bazy danych, OLE i MFC gniazd biblioteki DLL rozszerzeń w zwykłych bibliotekach MFC dll
 
 Korzystając z rozszerzenia MFC biblioteki DLL z regularnej biblioteki DLL MFC, jeżeli rozszerzenia MFC biblioteki DLL nie jest dostępna w **CDynLinkLibrary** obiektu łańcucha regularne biblioteki DLL MFC, może wystąpić co najmniej jeden zestaw problemów pokrewnych. Ponieważ obsługuje wersje do debugowania bazy danych MFC, OLE i gniazda biblioteki DLL są implementowane jako biblioteki DLL rozszerzeń MFC, można napotkać podobny problem, jeśli używasz tych MFC funkcji, nawet wtedy, gdy użytkownik nie jawnie korzystania z własnych biblioteki DLL rozszerzeń MFC. Występują pewne objawy:
 
-- Podczas próby deserializacji obiektu typu klasy zdefiniowane w rozszerzeń MFC DLL, komunikat "Ostrzeżenie: nie można załadować CYourClass z archiwum. Klasa nie jest zdefiniowany." pojawia się okno debugowania śledzenia i obiekt kończy się niepowodzeniem do serializacji.
+- Podczas próby deserializacji obiektu typu klasy zdefiniowane w rozszerzeń MFC DLL, komunikat "ostrzeżenia: Nie można załadować CYourClass z archiwum. Klasa nie jest zdefiniowany." pojawia się okno debugowania śledzenia i obiekt kończy się niepowodzeniem do serializacji.
 
 - Może zostać wygenerowany wyjątek wskazujący zły klasy.
 
@@ -132,22 +132,22 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Inicjowanie biblioteki DLL rozszerzenia MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicjowanie biblioteki DLL rozszerzenia MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [Zainicjuj regularną bibliotekę DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Zainicjuj regularną bibliotekę DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls.md)
+- [Biblioteki DLL rozszerzeń MFC](extension-dlls.md)
 
-- [Zwykłe biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Zwykłe biblioteki DLL MFC połączone statycznie z MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 - [Wersja dll biblioteki MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL rozszerzeń MFC](../build/extension-dlls.md)
+[Biblioteki DLL rozszerzeń MFC](extension-dlls.md)

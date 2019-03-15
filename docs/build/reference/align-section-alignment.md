@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665793"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809473"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Wyrównanie sekcji)
 
@@ -35,13 +35,13 @@ Wartość wyrównania w bajtach.
 
 Chyba, że piszesz aplikację taką jak sterownika urządzenia, nie należy do modyfikowania wyrównania.
 
-Istnieje możliwość modyfikowania wyrównania sekcji przy użyciu parametrów wyrównanie do [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.
+Istnieje możliwość modyfikowania wyrównania sekcji przy użyciu parametrów wyrównanie do [/SECTION](section-specify-section-attributes.md) opcji.
 
 Wartość wyrównania, który określisz nie może być mniejszy niż największa wyrównanie sekcji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -53,5 +53,5 @@ Wartość wyrównania, który określisz nie może być mniejszy niż największ
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)
