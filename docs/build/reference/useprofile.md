@@ -3,12 +3,12 @@ title: / USEPROFILE (dane PGO korzystanie z funkcji LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550634"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816532"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (uruchamianie PGO w trybie awaryjnym wątku)
 
@@ -38,7 +38,7 @@ Opcjonalny **AGRESYWNE** argument wyłącza dotyczących rozmiaru Algorytm heury
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
 
@@ -56,5 +56,5 @@ Opcjonalny **AGRESYWNE** argument wyłącza dotyczących rozmiaru Algorytm heury
 
 [/ GENPROFILE i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optymalizacje sterowane profilem](../../build/reference/profile-guided-optimizations.md)<br/>
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optymalizacje sterowane profilem](../profile-guided-optimizations.md)<br/>
+[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../environment-variables-for-profile-guided-optimizations.md)<br/>

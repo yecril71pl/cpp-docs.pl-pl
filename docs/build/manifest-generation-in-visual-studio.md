@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 75f8fcae2a51e4e8296f6f3c252888b6ca55ad20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520357"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809733"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generowanie manifestu w Visual Studio
 
@@ -27,11 +27,8 @@ System kompilacji w programie Visual Studio umożliwia manifest osadzone w pliku
 
 1. Jeśli manifestem osadzonym w pliku binarnym jest taka sama jak manifest wygenerowany przez narzędzie manifestu, kompilacja będzie następne kroki kompilacji.
 
-Manifest jest osadzony w końcowym pliku binarnym jako zasób tekstu i można je wyświetlić, otwierając końcowy danych binarnych jako plik w programie Visual Studio. Aby upewnić się, że manifest wskazuje prawidłowy bibliotek, wykonaj czynności opisane w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) lub postępować zgodnie z sugestii opisanego w [Rozwiązywanieproblemów](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sekcji.
+Manifest jest osadzony w końcowym pliku binarnym jako zasób tekstu i można je wyświetlić, otwierając końcowy danych binarnych jako plik w programie Visual Studio. Aby upewnić się, że manifest wskazuje prawidłowy bibliotek, wykonaj czynności opisane w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) lub postępować zgodnie z sugestii opisanego w [Rozwiązywanieproblemów](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sekcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[Zestawy prywatne informacje](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[Narzędzie manifestu](/windows/desktop/SbsCs/mt-exe)<br/>
-[Ogólne informacje o tworzeniu manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

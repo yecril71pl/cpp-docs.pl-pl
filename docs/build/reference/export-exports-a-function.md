@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456137"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819857"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Eksportuje funkcję)
 
@@ -36,7 +36,7 @@ Istnieją cztery metody eksportowania definicji, wymienione w zalecanej kolejno�
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym
 
-1. [EKSPORTY](../../build/reference/exports.md) instrukcja w pliku .def
+1. [EKSPORTY](exports.md) instrukcja w pliku .def
 
 1. Specyfikacji/Export, za pomocą polecenia łącza
 
@@ -44,7 +44,7 @@ Istnieją cztery metody eksportowania definicji, wymienione w zalecanej kolejno�
 
 Wszystkie te metody może służyć w tym samym programie. Gdy łącze tworzy program, który zawiera eksporty, tworzy również biblioteki importowanej, chyba że używany jest plik .exp w kompilacji.
 
-Zastosowań łącze dekorowane formularzy identyfikatorów. Podczas tworzenia pliku .obj, kompilator zdobi identyfikatora. Jeśli *Nazwa_wpisu* określono konsolidatora w jego niedekorowanego formularza (wyświetlaną w kodzie źródłowym), łącze podejmuje próbę dopasowania nazwy. Nie można znaleźć unikatowego dopasowania, łącze wysyła komunikat o błędzie. Użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzie, aby uzyskać [nazwy ozdobionej](../../build/reference/decorated-names.md) formularz identyfikator, gdy należy określić go do konsolidatora.
+Zastosowań łącze dekorowane formularzy identyfikatorów. Podczas tworzenia pliku .obj, kompilator zdobi identyfikatora. Jeśli *Nazwa_wpisu* określono konsolidatora w jego niedekorowanego formularza (wyświetlaną w kodzie źródłowym), łącze podejmuje próbę dopasowania nazwy. Nie można znaleźć unikatowego dopasowania, łącze wysyła komunikat o błędzie. Użyj [DUMPBIN](dumpbin-reference.md) narzędzie, aby uzyskać [nazwy ozdobionej](decorated-names.md) formularz identyfikator, gdy należy określić go do konsolidatora.
 
 > [!NOTE]
 > Nie określaj ozdobione formularza identyfikatory w języku C, które są zadeklarowane `__cdecl` lub `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -68,7 +68,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)
