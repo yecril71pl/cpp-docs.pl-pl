@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747504"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813932"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)
 
@@ -34,7 +34,7 @@ Nie przy użyciu atrybutów przyczyny fakt, że nazwa klucza jest widoczne w met
 
 Jeśli kompilacji w wierszu polecenia, użyj opcji konsolidatora, aby podpisać zestaw, a następnie uruchom narzędzie przetwarzania końcowego (np. mt.exe), należy ponownie podpisać zestaw za pomocą sn.exe. Alternatywnie możesz tworzyć i opóźnić podpisanie zestawu i po uruchomieniu narzędzia przetwarzania końcowego, wykonać podpisywania.
 
-Jeśli używasz atrybutów podpisywania podczas kompilowania w środowisku deweloperskim, można pomyślnie Podpisz zestaw przez jawne wywołanie sn.exe ([Sn.exe (narzędzie silnych nazw)](/dotnet/framework/tools/sn-exe-strong-name-tool)) w zdarzeniu po kompilacji. Aby uzyskać więcej informacji, zobacz [określanie zdarzeń kompilacji](../ide/specifying-build-events.md). Czasy kompilacji może być niższa, jeśli używasz atrybutów i zdarzenie po kompilacji, w porównaniu z użyciem opcji konsolidatora.
+Jeśli używasz atrybutów podpisywania podczas kompilowania w środowisku deweloperskim, można pomyślnie Podpisz zestaw przez jawne wywołanie sn.exe ([Sn.exe (narzędzie silnych nazw)](/dotnet/framework/tools/sn-exe-strong-name-tool)) w zdarzeniu po kompilacji. Aby uzyskać więcej informacji, zobacz [określanie zdarzeń kompilacji](../build/specifying-build-events.md). Czasy kompilacji może być niższa, jeśli używasz atrybutów i zdarzenie po kompilacji, w porównaniu z użyciem opcji konsolidatora.
 
 Następujące opcje konsolidatora, obsługują podpisywanie zestawów:
 

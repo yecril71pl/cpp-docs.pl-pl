@@ -1,21 +1,21 @@
 ---
-title: 'Porady: osadzanie manifestu w aplikacji C/C++'
+title: 'Instrukcje: Osadzanie manifestu w aplikacji C/C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624875"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809785"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Porady: osadzanie manifestu w aplikacji C/C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Instrukcje: Osadzanie manifestu w aplikacji C/C++
 
-Zaleca się, że aplikacji C/C++ (lub biblioteki) ma osadzony w końcowym pliku binarnym, ponieważ gwarantuje to poprawne zachowanie w większości przypadków manifest. Domyślnie program Visual Studio podejmie do osadzania manifestu, podczas tworzenia projektu z plików źródłowych. zobacz [Manifest Generation w programie Visual Studio](../build/manifest-generation-in-visual-studio.md) Aby uzyskać więcej informacji. Jednak jeśli wniosek został utworzony przy użyciu nmake, konieczne są pewne zmiany do istniejącego pliku reguł programu make. W tej sekcji pokazano, jak zmienić istniejące pliki reguł programu make automatycznie osadzanie manifestu w końcowym pliku binarnym.
+Zaleca się, że aplikacji C/C++ (lub biblioteki) ma osadzony w końcowym pliku binarnym, ponieważ gwarantuje to poprawne zachowanie w większości przypadków manifest. Domyślnie program Visual Studio podejmie do osadzania manifestu, podczas tworzenia projektu z plików źródłowych. zobacz [Manifest Generation w programie Visual Studio](manifest-generation-in-visual-studio.md) Aby uzyskać więcej informacji. Jednak jeśli wniosek został utworzony przy użyciu nmake, konieczne są pewne zmiany do istniejącego pliku reguł programu make. W tej sekcji pokazano, jak zmienić istniejące pliki reguł programu make automatycznie osadzanie manifestu w końcowym pliku binarnym.
 
 ## <a name="two-approaches"></a>Dwie metody
 
@@ -27,7 +27,7 @@ Istnieją dwa sposoby do osadzania manifestu w aplikacji lub biblioteki.
 
    lub
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 dla pliku EXE, 2 dla biblioteki DLL).
 
@@ -253,6 +253,6 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ogólne informacje o tworzeniu manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

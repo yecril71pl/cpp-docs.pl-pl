@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: b30e0239eaca365e738ae6568f159715673fd139
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424551"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813841"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Podaj nazwę pliku manifestu)
 
@@ -25,11 +25,11 @@ ms.locfileid: "57424551"
 
 / Opcja MANIFESTFILE pozwala zmienić domyślną nazwę pliku manifestu.  Domyślna nazwa pliku manifestu to nazwa pliku, przy użyciu manifest dołączane.
 
-/ MANIFESTFILE będzie mieć efektu, jeśli nie możesz również połączyć za pomocą [/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+/ MANIFESTFILE będzie mieć efektu, jeśli nie możesz również połączyć za pomocą [/MANIFEST](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -45,5 +45,5 @@ ms.locfileid: "57424551"
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

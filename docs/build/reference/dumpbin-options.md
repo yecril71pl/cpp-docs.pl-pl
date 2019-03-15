@@ -6,68 +6,68 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 5c57c49a39ae135f88f1f1eca25e59a68c7ad1aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434310"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816029"
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 
-Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), następuje nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmują argumentów, określone po dwukropek (:). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji. Użyj miejsc do magazynowania lub karty do oddzielenia specyfikacje opcji w wierszu polecenia. Opcja nazwy i ich argumenty nazwy pliku lub słowo kluczowe nie są z uwzględnieniem wielkości liter. Większość opcje mają zastosowanie do wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](../../build/reference/out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.
+Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), następuje nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmują argumentów, określone po dwukropek (:). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji. Użyj miejsc do magazynowania lub karty do oddzielenia specyfikacje opcji w wierszu polecenia. Opcja nazwy i ich argumenty nazwy pliku lub słowo kluczowe nie są z uwzględnieniem wielkości liter. Większość opcje mają zastosowanie do wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.
 
 DUMPBIN ma następujące opcje:
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/DISASM](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/ IMPORTS](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [/LINKERMEMBER](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/ OUT](../../build/reference/out-dumpbin.md)
+- [/ OUT](out-dumpbin.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/PDATA](pdata.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDBPATH](pdbpath.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [/RANGE](range.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/RAWDATA](rawdata.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/ SECTION](../../build/reference/section-dumpbin.md)
+- [/ SECTION](section-dumpbin.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SUMMARY](summary.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SYMBOLS](symbols.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/TLS](tls.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)
+[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
+[DUMPBIN — dokumentacja](dumpbin-reference.md)

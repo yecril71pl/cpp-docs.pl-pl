@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464912"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812060"
 ---
 # <a name="bscmake-options"></a>Opcje BSCMAKE
 
 W tej sekcji opisano opcjami dostępnymi na potrzeby kontrolowania BSCMAKE. Kilka opcji kontrolować zawartość pliku informacyjnego przeglądarki, z wyłączeniem lub pewne informacje w tym. Opcje wykluczenia umożliwia BSCMAKE odbywało się szybciej i może skutkować mniejszą pliku .bsc. Opcja nazwy jest uwzględniana wielkość liter (z wyjątkiem **/HELP** i **/nologo**).
 
-Tylko **/nologo** i **/o** są dostępne z poziomu środowiska programistycznego Visual Studio.  Zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md) uzyskać informacji na temat dostępu do strony właściwości projektu.
+Tylko **/nologo** i **/o** są dostępne z poziomu środowiska programistycznego Visual Studio.  Zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md) uzyskać informacji na temat dostępu do strony właściwości projektu.
 
 **/EI (** *filename*... **)**<br/>
 Pomija zawartość plików określonegop dołączanego pliku informacyjnego przeglądarki. Do określenia wielu plików, nazwy należy oddzielić spacjami i ująć listę w nawiasach. Nawiasy nie są konieczne, jeśli określisz tylko jeden *filename*. Użyj **/Ei** wraz z **/Es** opcję, aby wykluczyć pliki nie zostały wyłączone przez **/Es**.
 
-**/EL**<br/>
-Wyklucza symboli lokalnych. Wartość domyślna to dołączać symbole lokalne. Aby uzyskać więcej informacji na temat symboli lokalnych, zobacz [Tworzenie pliku .sbr](../../build/reference/creating-an-dot-sbr-file.md).
+**/El**<br/>
+Wyklucza symboli lokalnych. Wartość domyślna to dołączać symbole lokalne. Aby uzyskać więcej informacji na temat symboli lokalnych, zobacz [Tworzenie pliku .sbr](creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
 Wyklucza symbole w ciele makra. Użyj **/Em** obejmujący tylko nazwy makra w pliku informacyjnego przeglądarki. Wartość domyślna to do nazw makr i wynik makra rozszerzenia.
@@ -54,13 +54,13 @@ Wyklucza symbole w ciele makra. Użyj **/Em** obejmujący tylko nazwy makra w pl
 **/ER (** *symbol*... **)**<br/>
 Pomija symbole określonego pliku informacyjnego przeglądarki. Aby określić wiele nazw symboli, nazwy należy oddzielić spacjami i ująć listę w nawiasach. Nawiasy nie są konieczne, jeśli określisz tylko jeden *symbol*.
 
-**/ES**<br/>
+**/Es**<br/>
 Wyklucza z pliku informacyjnego przeglądarki każdego pliku dołączanego określony za pomocą ścieżką bezwzględną, lub znaleźć ścieżka bezwzględna określone w zmiennej środowiskowej INCLUDE. (Zazwyczaj są to system plików dołączanych, które zawierają wiele informacji, które mogą nie być potrzebne w pliku informacji przeglądania.) Ta opcja nie wyklucza określono bez ścieżki lub ścieżek względnych plików znalezionych w ścieżki względnej w DOŁĄCZANIA plików. Możesz użyć **/Ei** wraz z opcją **/Es** Aby wykluczyć pliki **/Es** nie wyklucza. Jeśli chcesz wykluczyć niektóre pliki, **/Es** wyklucza, użyj **/Ei** zamiast **/Es** i wyświetlić listę plików, które chcesz wykluczyć.
 
-**/ errorreport:**[**Brak** &#124; **wiersza** &#124; **kolejki** &#124; **wysyłania**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Umożliwia wysyłanie informacji do firmy Microsoft dotyczące błędów wewnętrznych w bscmake.exe.
 
-Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md).
 
 **/HELP**<br/>
 Przedstawia podsumowanie składni wiersza polecenia BSCMAKE.
@@ -69,7 +69,7 @@ Przedstawia podsumowanie składni wiersza polecenia BSCMAKE.
 Zawiera symbole bez odwołań. Domyślnie BSCMAKE nie rejestruje wszystkie symbole, które są zdefiniowane, ale nie odwołuje się. Jeśli spakowany plik .sbr ta opcja nie obowiązuje dla tego pliku wejściowego, ponieważ kompilator został już usunięty symbole bez odwołań.
 
 **/n**<br/>
-Wymusza nieprzyrostowa kompilacji. Użyj **/n** wymusić pełna kompilacja pliku informacyjnego przeglądarki, czy istnieje plik .bsc i uniemożliwić plików SBR obcinania. Zobacz [w jaki sposób BSCMAKE kompiluje plik .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+Wymusza nieprzyrostowa kompilacji. Użyj **/n** wymusić pełna kompilacja pliku informacyjnego przeglądarki, czy istnieje plik .bsc i uniemożliwić plików SBR obcinania. Zobacz [w jaki sposób BSCMAKE kompiluje plik .bsc](how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
 Pomija komunikat o prawach autorskich BSCMAKE.
@@ -92,6 +92,6 @@ Następujące polecenie w wierszu informuje BSCMAKE celu pełna kompilacja MAIN.
 BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)
+[BSCMAKE — dokumentacja](bscmake-reference.md)

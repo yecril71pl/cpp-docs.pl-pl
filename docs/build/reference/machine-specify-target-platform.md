@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /MACHINE linker option
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
-ms.openlocfilehash: 872370269e9ab8acaaa8cafe7fb47b1121bcbb97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e64aa7b2ca9e50ebdc0760f64a9b25e851b45310
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546446"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818131"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Określ platformę docelową)
 
@@ -32,7 +32,7 @@ Zazwyczaj nie trzeba określić opcję/Machine. LINK wnioskuje typ maszyny z pli
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -44,7 +44,7 @@ Zazwyczaj nie trzeba określić opcję/Machine. LINK wnioskuje typ maszyny z pli
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632391"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821303"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC
 
@@ -33,7 +33,7 @@ Regularne biblioteki MFC DLL łączonej dynamicznie z MFC ma następujące cechy
 
 - W odróżnieniu od statycznie łączonych regularnej biblioteki DLL MFC tego rodzaju DLL dynamicznie połączone z biblioteki MFC DLL (znany także jako udostępnionej biblioteki MFC DLL).
 
-- Importuj biblioteki MFC, połączone z tego rodzaju DLL jest taka sama, jedną dla bibliotek DLL rozszerzeń MFC lub aplikacji przy użyciu biblioteki MFC DLL: lib MFCxx (D).
+- Importuj biblioteki MFC, połączone z tego rodzaju DLL jest taka sama, jedną dla bibliotek DLL rozszerzeń MFC lub aplikacji przy użyciu biblioteki MFC DLL: MFCxx(D).lib.
 
 Regularne biblioteki MFC DLL łączonej dynamicznie z MFC ma następujące wymagania:
 
@@ -83,18 +83,18 @@ Na przykład sposobu pisania, kompilacji i użyć regularnej biblioteki DLL MFC,
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Zainicjuj regularną bibliotekę DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Zainicjuj regularną bibliotekę DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)
+[Rodzaje bibliotek DLL](kinds-of-dlls.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-ms.openlocfilehash: bfb8273a8299349ea9aa0b78f1ee14a6cbb6276c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440316"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812372"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Dołącz informacje do Mapfile)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50440316"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/MapInfo informuje konsolidator, aby zawierał określone informacje w pliku mapowania, który jest tworzony, jeśli określisz [/MAP](../../build/reference/map-generate-mapfile.md) opcji.  EXPORTS informuje konsolidator, aby dołączał eksportowane funkcje.
+Opcja/MapInfo informuje konsolidator, aby zawierał określone informacje w pliku mapowania, który jest tworzony, jeśli określisz [/MAP](map-generate-mapfile.md) opcji.  EXPORTS informuje konsolidator, aby dołączał eksportowane funkcje.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -42,7 +42,7 @@ Opcja/MapInfo informuje konsolidator, aby zawierał określone informacje w plik
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389945"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814205"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Włącz dodatkowe kontrole zabezpieczeń)
 
@@ -23,7 +23,7 @@ Dodaje zalecane testy cykl projektowania zabezpieczeń (SDL). Testy te obejmują
 
 ## <a name="remarks"></a>Uwagi
 
-**/ SDL** włącza nadzbiór kontrole zabezpieczeń linii bazowej, które są dostarczane przez [/GS](../../build/reference/gs-buffer-security-check.md) i zastępuje **/GS-**. Domyślnie **/SDL** jest wyłączona. **Zgłaszanie** wyłącza dodatkowe kontrole zabezpieczeń.
+**/ SDL** włącza nadzbiór kontrole zabezpieczeń linii bazowej, które są dostarczane przez [/GS](gs-buffer-security-check.md) i zastępuje **/GS-**. Domyślnie **/SDL** jest wyłączona. **Zgłaszanie** wyłącza dodatkowe kontrole zabezpieczeń.
 
 ## <a name="compile-time-checks"></a>Sprawdzanie w czasie kompilacji
 
@@ -67,13 +67,13 @@ Aby uzyskać więcej informacji, zobacz [ostrzeżenia, / SDL i poprawy niezainic
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **C/C++** folderu.
 
 1. Na **ogólne** wybierz tę opcję z **sprawdzenia SDL** listy rozwijanej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

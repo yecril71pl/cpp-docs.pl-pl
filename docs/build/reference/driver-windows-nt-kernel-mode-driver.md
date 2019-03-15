@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423914"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811683"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Sterownik trybu jądra Windows NT)
 
@@ -33,13 +33,13 @@ Jeśli **Driver/Driver** nie zostanie określony, bity te nie są ustawione prze
 
 Jeśli **Driver/Driver** określono:
 
-- **/ Fixed: No** jest aktywna. Aby uzyskać więcej informacji, zobacz [/Fixed (stały adres podstawowy)](../../build/reference/fixed-fixed-base-address.md).
+- **/ Fixed: No** jest aktywna. Aby uzyskać więcej informacji, zobacz [/Fixed (stały adres podstawowy)](fixed-fixed-base-address.md).
 
-- Rozszerzenie nazwy pliku wyjściowego jest równa .sys. Użyj **/OUT** zmienić domyślną nazwę pliku i rozszerzenie. Aby uzyskać więcej informacji, zobacz [/OUT (nazwa pliku wyjściowego)](../../build/reference/out-output-file-name.md).
+- Rozszerzenie nazwy pliku wyjściowego jest równa .sys. Użyj **/OUT** zmienić domyślną nazwę pliku i rozszerzenie. Aby uzyskać więcej informacji, zobacz [/OUT (nazwa pliku wyjściowego)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -53,5 +53,5 @@ Jeśli **Driver/Driver** określono:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

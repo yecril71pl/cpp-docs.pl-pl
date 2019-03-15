@@ -7,18 +7,18 @@ helpviewer_keywords:
 - -INTEGRITYCHECK editbin options
 - /INTEGRITYCHECK editbin options
 - INTEGRITYCHECK editbin options
-ms.openlocfilehash: b3f6622e3628db53c363b239c59accd94f708ab0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4174e22dcdadb3b3319998614285c13741fe3a88
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617277"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814247"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
 Określa, czy podpis cyfrowy obrazu binarnego musi być zaznaczone w czasie ładowania.
 
-> **/ INTEGRITYCHECK**[**: NO**]
+> **/INTEGRITYCHECK**[**:NO**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -26,4 +26,4 @@ W nagłówku pliku DLL lub pliku wykonywalnego ta opcja ustawia flagę, która w
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

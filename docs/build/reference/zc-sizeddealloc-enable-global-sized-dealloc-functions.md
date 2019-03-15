@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: 160e90f0b068da6fe8330ac97dfd8bda52f05a38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536607"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809304"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (Włączanie globalnych funkcji dezalokacji)
 
@@ -40,7 +40,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Z **konfiguracje** menu rozwijanym, wybierz polecenie **wszystkie konfiguracje**.
 
@@ -50,6 +50,6 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>

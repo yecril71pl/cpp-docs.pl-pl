@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: 7b2cb4160a0d25aa65d2c5eb345ba1bc08b1c6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428096"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818456"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Przeszukiwanie manifestu)
 
@@ -39,13 +39,13 @@ Aby uzyskać więcej informacji, zobacz [odwołania plików manifestu](/windows/
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **pliku manifestu** stronę właściwości.
 
 1. Modyfikowanie **Zezwalaj na izolację** właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

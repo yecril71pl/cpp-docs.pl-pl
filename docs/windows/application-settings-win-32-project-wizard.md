@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [C++]
 - Win32 Project Wizard, application settings
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
-ms.openlocfilehash: b9d9e8c0919429a961b4ef47507270534afacf75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 160c0a11408705f261feee41bcae0a72a1760a7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592676"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821966"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Ustawienia aplikacji, kreator projektów Win 32
 
@@ -27,7 +27,7 @@ Tworzy typ określonej aplikacji.
 |**Aplikacja konsolowa**|Tworzy aplikację konsoli. Programy konsoli są tworzone z użyciem [funkcje konsoli](https://msdn.microsoft.com/library/ms813137.aspx), które zapewniają obsługę tryb znakowy w konsoli systemu windows. Visual C++ [biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) również podać dane wyjściowe i dane wejściowe z okna konsoli za pomocą funkcji standardowych operacji We/Wy, takich jak `printf_s()` i `scanf_s()`. Aplikacja konsolowa nie ma graficznego interfejsu użytkownika. On kompilowany na plik .exe i mogą być uruchamiane jako autonomiczną aplikację z poziomu wiersza polecenia.<br /><br /> Możesz dodać obsługę MFC i ATL do aplikacji konsoli.|
 |**Aplikacja Windows**|Powoduje utworzenie programu systemu Win32. Programu systemu Win32 jest aplikacja pliku wykonywalnego (EXE) w języku C lub C++, tworzenie graficznego interfejsu użytkownika przy użyciu wywołania funkcji API Win32.<br /><br /> Nie można dodać MFC lub ATL Obsługa aplikacji Windows.|
 |**DLL**|Tworzy Win32 biblioteki dołączanej (dynamicznie DLL). Biblioteka DLL systemu Win32 jest plik binarny, napisany w języku C lub C++, który używa wywołania funkcji API Win32, a nie do klas MFC i który działa jako współdzielona biblioteka funkcji, które mogą być używane jednocześnie przez wiele aplikacji.<br /><br /> Nie można dodać MFC lub ATL pomocy technicznej dla aplikacji DLL. Można wskazać, że biblioteka DLL eksportuje symboli.|
-|**Biblioteka statyczna**|Tworzy bibliotekę statyczną. Biblioteka statyczna jest plikiem zawierającym obiektów i ich funkcje i dane, który stanowi łącze do tego programu, podczas kompilowania pliku wykonywalnego. W tym temacie opisano sposób tworzenia plikach startowych i [właściwości projektu](../ide/property-pages-visual-cpp.md) dla biblioteki statycznej. Plik biblioteki statycznej zapewnia następujące korzyści:<br /><br />Biblioteka statyczna Win32 jest przydatne w przypadku aplikacji, którą pracujesz nad wywołań interfejsu API Win32, a nie do klas MFC.<br />— Proces łączenia jest taki sam, czy w pozostałej części aplikacji Windows są zapisywane w języku C lub C++.<br />— Biblioteka statyczna możesz połączyć program oparty na bibliotece MFC lub program innego typu niż MFC.|
+|**Biblioteka statyczna**|Tworzy bibliotekę statyczną. Biblioteka statyczna jest plikiem zawierającym obiektów i ich funkcje i dane, który stanowi łącze do tego programu, podczas kompilowania pliku wykonywalnego. W tym temacie opisano sposób tworzenia plikach startowych i [właściwości projektu](../build/reference/property-pages-visual-cpp.md) dla biblioteki statycznej. Plik biblioteki statycznej zapewnia następujące korzyści:<br /><br />Biblioteka statyczna Win32 jest przydatne w przypadku aplikacji, którą pracujesz nad wywołań interfejsu API Win32, a nie do klas MFC.<br />— Proces łączenia jest taki sam, czy w pozostałej części aplikacji Windows są zapisywane w języku C lub C++.<br />— Biblioteka statyczna możesz połączyć program oparty na bibliotece MFC lub program innego typu niż MFC.|
 
 ## <a name="additional-options"></a>Dodatkowe opcje
 

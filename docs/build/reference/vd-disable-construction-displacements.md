@@ -16,12 +16,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: 229306fe93dedcf5c87d53e2227c8f17baef07c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db198dbdc7bd43ffd4de9bde39ee81a8b95a25ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652962"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809015"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Wyłącz przemieszczanie konstrukcji)
 
@@ -58,7 +58,7 @@ Te opcje dotyczą całych plików źródłowych. Użyj [vtordisp](../../preproce
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -70,7 +70,7 @@ Te opcje dotyczą całych plików źródłowych. Użyj [vtordisp](../../preproce
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

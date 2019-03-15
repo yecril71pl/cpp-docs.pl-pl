@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258635"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822668"
 ---
 # <a name="mfc-application-wizard"></a>Kreator aplikacji MFC
 
 Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje podstawowe funkcje aplikacji wykonywalnej systemu Windows (.exe). Aplikacja startowa MFC starter zawiera pliki źródłowe (.cpp) języka C++, pliki zasobów (.rc), pliki nagłówków (.h) i pliki projektu (.vcxproj). Kod generowany w tych plikach startowych jest oparty na bibliotece MFC.
 
 > [!NOTE]
->  Zależnie od wybranych opcji kreator tworzy dodatkowe pliki w projekcie. Na przykład w przypadku wybrania **pomocy kontekstowej** na [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) strony, Kreator tworzy pliki, które są niezbędne do skompilowania plików pomocy projektu. Aby uzyskać więcej informacji dotyczących plików tworzonych przez kreatora, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)i zobacz plik Readme.txt w projekcie.
+>  Zależnie od wybranych opcji kreator tworzy dodatkowe pliki w projekcie. Na przykład w przypadku wybrania **pomocy kontekstowej** na [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) strony, Kreator tworzy pliki, które są niezbędne do skompilowania plików pomocy projektu. Aby uzyskać więcej informacji dotyczących plików tworzonych przez kreatora, zobacz [typy plików utworzonych dla projektów Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)i zobacz plik Readme.txt w projekcie.
 
 ## <a name="overview"></a>Omówienie
 

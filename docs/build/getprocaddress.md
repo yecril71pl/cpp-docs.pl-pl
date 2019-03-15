@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 241f31717274c73a658f4cddf4e6e1ef4e40b402
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ee985da29e38bfb262c72315a57c0b588b2e82e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457671"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810175"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
@@ -55,18 +55,18 @@ Możesz uzyskać tylko Eksport porządkowej Jeśli tworzysz łącze do bibliotek
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Jak połączyć niejawnie biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Określić, której metody łączenia użyjesz](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [LoadLibrary i AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary i AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
 - [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Eksportowanie z biblioteki DLL przy użyciu plików DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL przy użyciu plików DEF](exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-ms.openlocfilehash: 24f5ba7666e6b4a39787b9edac53142cdd1cd149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a20123603030dfe719cd8990018f795df137981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587047"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814270"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Podstawianie trigramów)
 
@@ -34,7 +34,7 @@ Aby uzyskać listę trójznaków C/C++ i przykładowi, który pokazuje, jak uży
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
@@ -42,5 +42,5 @@ Aby uzyskać listę trójznaków C/C++ i przykładowi, który pokazuje, jak uży
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
 [Trigramy](../../c-language/trigraphs.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Biblioteki DLL w programie Visual C++
-ms.date: 11/04/2016
+title: Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667197"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815817"
 ---
-# <a name="dlls-in-visual-c"></a>Biblioteki DLL w programie Visual C++
+# <a name="create-cc-dlls-in-visual-studio"></a>Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio
 
 W Windows biblioteki dołączanej (dynamicznie DLL) jest rodzaj pliku wykonywalnego, który działa jako współdzielona biblioteka funkcji i zasobów. Konsolidacja dynamiczna jest funkcją systemu operacyjnego, która umożliwia plik wykonywalny do wywołania funkcji lub korzystać z zasobów przechowywanych w oddzielnym pliku. Te funkcje i zasoby można skompilowana i wdrożona oddzielnie od plików wykonywalnych, które z nich korzystają. Biblioteka DLL nie jest autonomicznym plikiem wykonywalnym; działa w kontekście aplikacji, który ją wywołuje. System operacyjny może załadować biblioteki DLL do przestrzeni pamięci aplikacji po załadowaniu aplikacji (*niejawna Konsolidacja*), lub na żądanie w czasie wykonywania (*jawne tworzenie łączy*). Biblioteki DLL ułatwiają również udostępniać funkcje i zasoby w plikach wykonywalnych. Wiele aplikacji można uzyskać dostęp do zawartości pojedynczej kopii biblioteki DLL w pamięci, w tym samym czasie.
 
@@ -61,61 +61,61 @@ Potencjalne wadą korzystania z biblioteki DLL jest aplikacja nie jest niezależ
 
 Poniższe tematy zawierają szczegółowe informacje o tym, jak program bibliotek DLL w programie Visual C++.
 
-[Przewodnik: tworzenie i używanie biblioteki dołączanej dynamicznie (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[Przewodnik: tworzenie i używanie biblioteki dołączanej dynamicznie (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Zawiera opis sposobu tworzenia i używania biblioteki DLL przy użyciu Visual Studio.
 
-[Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)<br/>
+[Rodzaje bibliotek DLL](kinds-of-dlls.md)<br/>
 Dostarcza informacje dotyczące różnych rodzajów bibliotek DLL, które mogą być skompilowane.
 
-[DLL — często zadawane pytania](../build/dll-frequently-asked-questions.md)<br/>
+[DLL — często zadawane pytania](dll-frequently-asked-questions.md)<br/>
 Dostarcza odpowiedzi na często zadawane pytania dotyczące bibliotek DLL.
 
-[Łączenie pliku wykonywalnego z biblioteką DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+[Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md)<br/>
 Opisuje jawne i niejawne łączenia z biblioteką DLL.
 
-[Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
 Omawia kod inicjalizacji biblioteki DLL, który musi być wykonany kiedy DLL się ładuje.
 
-[Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)<br/>
+[Zachowanie biblioteki wykonawczej DLL i Visual C++](run-time-library-behavior.md)<br/>
 Opisuje, jak biblioteka uruchomieniowa wykonuje sekwencję uruchamiania biblioteki DLL.
 
-[LoadLibrary i AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary i AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 Omawia przy użyciu **LoadLibrary** i `AfxLoadLibrary` jawne łącze do biblioteki DLL w czasie wykonywania.
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 Omawia przy użyciu **GetProcAddress** celu uzyskania adresu eksportowanych funkcji w bibliotece DLL.
 
-[FreeLibrary i AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary i AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 Omawia przy użyciu **FreeLibrary** i `AfxFreeLibrary` gdy moduł DLL nie jest już potrzebny.
 
 [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 Opisuje ścieżkę wyszukiwania, używany przez system operacyjny Windows do lokalizowania biblioteki DLL w systemie.
 
-[Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 Opisuje Stany modułu zwykłej, które biblioteki MFC DLL łączonej dynamicznie z MFC.
 
-[Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)<br/>
+[Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md)<br/>
 Omawia biblioteki DLL, które zazwyczaj implementują klasy wielokrotnego użytku, pochodzące z istniejących klas biblioteki klas Microsoft Foundation.
 
-[Tworzenie biblioteki DLL z samymi zasobami](../build/creating-a-resource-only-dll.md)<br/>
+[Tworzenie biblioteki DLL z samymi zasobami](creating-a-resource-only-dll.md)<br/>
 Omawia bibliotekę zasobów DLL, która zawierają tylko zasoby, takie jak ikony, mapy bitowe, ciągi i okna dialogowe.
 
-[Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 Oferuje rozszerzoną obsługę satelitarnej biblioteki DLL; jest to funkcja, która pomaga w tworzeniu aplikacji zlokalizowanej w wielu językach.
 
-[Importowanie i eksportowanie](../build/importing-and-exporting.md)<br/>
+[Importowanie i eksportowanie](importing-and-exporting.md)<br/>
 Zawiera opis importowania symboli publicznych do aplikacji lub eksportowania funkcji z biblioteki DLL
 
-[Technologia Active i biblioteki DLL](../build/active-technology-and-dlls.md)<br/>
+[Technologia Active i biblioteki DLL](active-technology-and-dlls.md)<br/>
 Umożliwia serwerom obiektu do zaimplementowania wewnątrz biblioteki DLL.
 
-[Automatyzacja w bibliotece DLL](../build/automation-in-a-dll.md)<br/>
+[Automatyzacja w bibliotece DLL](automation-in-a-dll.md)<br/>
 Zawiera opis opcji automatyzacji w Kreatorze MFC DLL.
 
 [Konwencje nazewnictwa bibliotek MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 Omawia ustrukturyzowaną konwencję nazewnictwa bibliotek DLL i bibliotek zawartych w MFC.
 
-[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Opisuje, jak wywoływać funkcje biblioteki DLL z aplikacji Visual Basic.
 
 ## <a name="related-sections"></a>Sekcje pokrewne

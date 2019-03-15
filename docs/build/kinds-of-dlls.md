@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424811"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820289"
 ---
 # <a name="kinds-of-dlls"></a>Rodzaje bibliotek DLL
 
@@ -31,13 +31,13 @@ Sama biblioteka MFC jest dostępna, w bibliotekach łącza statycznego lub w sze
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](non-mfc-dlls-overview.md)
 
-- [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone statycznie z MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Biblioteki DLL rozszerzeń MFC: omówienie](../build/extension-dlls-overview.md)
+- [Biblioteki DLL rozszerzeń MFC: omówienie](extension-dlls-overview.md)
 
 - [Którego rodzaju DLL użyć](#_core_which_kind_of_dll_to_use)
 
@@ -59,14 +59,14 @@ Przed wersją 4.0 język Visual C++ obsługuje tylko dwa rodzaje bibliotek DLL, 
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](non-mfc-dlls-overview.md)
 
-- [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone statycznie z MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Biblioteki DLL rozszerzeń MFC: omówienie](../build/extension-dlls-overview.md)
+- [Biblioteki DLL rozszerzeń MFC: omówienie](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

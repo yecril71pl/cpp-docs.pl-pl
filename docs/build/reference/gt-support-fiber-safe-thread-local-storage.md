@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 22f9df6248b0ee1af2ef999bbf0dba2e716c9189
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557914"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822519"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Obsługa bezpieczeństwa włókien magazynu wątków lokalnych)
 
@@ -33,11 +33,11 @@ Obsługuje bezpieczeństwo włókien dla danych przydzielonych przy użyciu stat
 
 Dane są deklarowane przy użyciu `__declspec(thread)` jest przywoływane za pośrednictwem tablicy lokalny magazyn wątków (TLS). Tablica TLS to tablicę adresów, które system przechowuje dla każdego wątku. Każdy adres w tej tablicy zawiera lokalizację magazynu wątków lokalnych danych.
 
-Fiber jest obiektem uproszczone, który składa się ze stosu i kontekst rejestru i mogą być planowane w różnych wątkach. Fiber można uruchamiać na żadnym z wątków. Ponieważ włókna mogą uzyskać wymieniane i ponownie uruchomić później w innym wątku, adres tablicy TLS nie musi być buforowane lub optymalizowane jako wspólnych podwyrażeń przez wywołanie funkcji (zobacz [/Og (optymalizacje globalne)](../../build/reference/og-global-optimizations.md) opcja dla szczegółowe informacje). **/GT** zapobiega takich optymalizacji.
+Fiber jest obiektem uproszczone, który składa się ze stosu i kontekst rejestru i mogą być planowane w różnych wątkach. Fiber można uruchamiać na żadnym z wątków. Ponieważ włókna mogą uzyskać wymieniane i ponownie uruchomić później w innym wątku, adres tablicy TLS nie musi być buforowane lub optymalizowane jako wspólnych podwyrażeń przez wywołanie funkcji (zobacz [/Og (optymalizacje globalne)](og-global-optimizations.md) opcja dla szczegółowe informacje). **/GT** zapobiega takich optymalizacji.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -49,7 +49,7 @@ Fiber jest obiektem uproszczone, który składa się ze stosu i kontekst rejestr
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFiberSafeOptimizations%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

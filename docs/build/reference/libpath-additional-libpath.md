@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -LIBPATH linker option
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-ms.openlocfilehash: 40662e77faf03de8e5ef0abf334f4ec7be69c3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615153"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819886"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Dodatkowa Libpath)
 
@@ -36,7 +36,7 @@ Opcja/libpath — umożliwia zastąpienie ścieżki biblioteki środowiska. Kons
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -48,7 +48,7 @@ Opcja/libpath — umożliwia zastąpienie ścieżki biblioteki środowiska. Kons
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

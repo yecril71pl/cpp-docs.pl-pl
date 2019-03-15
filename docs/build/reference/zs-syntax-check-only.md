@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Zs compiler option
 - /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-ms.openlocfilehash: 5cdd52ba6c221cbfa1526c19f3d6cfaf26a96e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3713312b71c4cd539d40e09a3eaa821a2e5caed
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822083"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (Sprawdzaj tylko składnię)
 
@@ -34,7 +34,7 @@ Podczas korzystania z tej opcji nie ma plików wyjściowych są tworzone i komun
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -46,7 +46,7 @@ Podczas korzystania z tej opcji nie ma plików wyjściowych są tworzone i komun
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

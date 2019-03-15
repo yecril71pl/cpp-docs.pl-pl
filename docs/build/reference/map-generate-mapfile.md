@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 8ff2a8f54caa54247050c607004ed328c0d1b11d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436457"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817949"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Generuj plik mapy)
 
@@ -51,11 +51,11 @@ Plik mapy jest plik tekstowy, który zawiera następujące informacje o podłąc
 
 - Punkt wejścia (jako *sekcji*:*przesunięcie*)
 
-[/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) opcja określa dodatkowe informacje, które mają zostać uwzględnione w pliku mapfile.
+[/MapInfo](mapinfo-include-information-in-mapfile.md) opcja określa dodatkowe informacje, które mają zostać uwzględnione w pliku mapfile.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -67,7 +67,7 @@ Plik mapy jest plik tekstowy, który zawiera następujące informacje o podłąc
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

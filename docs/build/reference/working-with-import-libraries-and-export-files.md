@@ -8,12 +8,12 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: 71162d896ee76d99f5d47dfa670b62d456243837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445685"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810111"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Praca z bibliotekami importowanymi oraz plikami eksportowanymi
 
@@ -25,6 +25,6 @@ W większości przypadków nie trzeba używać biblioteki do tworzenia bibliotek
 
 Jednak gdy eksporty biblioteki DLL do programu, który także importowanie elementów z, czy bezpośrednio lub pośrednio, należy użyć LIB utworzenie jednego z bibliotekami importowanymi. Gdy LIB tworzy bibliotekę importu, również tworzy plik eksportu. Podczas łączenia jednej z bibliotek DLL, należy użyć pliku eksportu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[LIB — dokumentacja](../../build/reference/lib-reference.md)
+[LIB — dokumentacja](lib-reference.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424798"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815830"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
 
@@ -27,7 +27,7 @@ Można zaimportować symboli publicznych do aplikacji lub eksportowania funkcji 
 
 Plik definicji modułu (.def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty pliku DLL. Jeśli nie używasz **__declspec(dllimport)** lub **__declspec(dllexport)** do eksportowania funkcji DLL, biblioteka DLL wymaga pliku .def.
 
-Możesz użyć .def — pliki do [importowanie do aplikacji](../build/importing-using-def-files.md) lub [eksportowanie z biblioteki DLL](../build/exporting-from-a-dll-using-def-files.md).
+Możesz użyć .def — pliki do [importowanie do aplikacji](importing-using-def-files.md) lub [eksportowanie z biblioteki DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>Za pomocą __declspec
 
@@ -41,10 +41,10 @@ Format przenośnym plikiem wykonywalnym środowiska Win32 jest przeznaczony do z
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Importowanie do aplikacji](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+- [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

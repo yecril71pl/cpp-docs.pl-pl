@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490496"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813321"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (Zgodny z zapobieganiem wykonywaniu danych)
 
@@ -20,7 +20,7 @@ Wskazuje, że plik wykonywalny jest zgodny z funkcją zapobiegania wykonywaniu d
 
 ## <a name="syntax"></a>Składnia
 
-> **/ NXCOMPAT**[**: NO**]
+> **/NXCOMPAT**[**:NO**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -38,7 +38,7 @@ Aby uzyskać więcej informacji dotyczących zapobiegania wykonywaniu danych zob
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -50,5 +50,5 @@ Aby uzyskać więcej informacji dotyczących zapobiegania wykonywaniu danych zob
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

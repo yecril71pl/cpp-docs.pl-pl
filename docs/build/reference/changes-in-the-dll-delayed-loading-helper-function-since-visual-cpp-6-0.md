@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613775"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808004"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0
 
@@ -33,7 +33,7 @@ Jeśli masz wiele wersji programu Visual C++ na komputerze lub jeśli zdefiniowa
 
 Jeśli masz wiele wersji programu Visual C++ na komputerze, upewnij się, że konsolidator odpowiada delayimp.lib. Jeśli występuje niezgodność, zostanie wyświetlony błąd konsolidatora, raportowanie, albo `___delayLoadHelper2@8` lub `___delayLoadHelper@8` jako nierozpoznany symbol zewnętrzny. Pierwsza oznacza nowe konsolidatora przy użyciu starego delayimp.lib, i jego oznacza stare konsolidator przy użyciu nowego delayimp.lib.
 
-Jeśli wystąpi błąd konsolidatora nierozwiązane Uruchom [dumpbin /linkermember](../../build/reference/linkermember.md): 1 na delayimp.lib, który będzie zawierać funkcji pomocnika, aby zobaczyć funkcji pomocnika, która jest zdefiniowana zamiast tego. Funkcja pomocnika może być także definiowane w pliku obiektu; Uruchom [dumpbin /symbols](../../build/reference/symbols.md) i poszukaj `delayLoadHelper(2)`.
+Jeśli wystąpi błąd konsolidatora nierozwiązane Uruchom [dumpbin /linkermember](linkermember.md): 1 na delayimp.lib, który będzie zawierać funkcji pomocnika, aby zobaczyć funkcji pomocnika, która jest zdefiniowana zamiast tego. Funkcja pomocnika może być także definiowane w pliku obiektu; Uruchom [dumpbin /symbols](symbols.md) i poszukaj `delayLoadHelper(2)`.
 
 Jeśli wiesz, że masz program Visual C++ 6.0 łączący następnie:
 
@@ -47,12 +47,12 @@ Jeśli zdefiniowane własnej funkcji Pomocnik i korzystają z bieżącej wersji 
 
 - Zmiana nazwy funkcji pomocnika **__delayloadhelper2 —**.
 
-- Ponieważ wskaźniki w deskryptorze opóźnienie (ImgDelayDescr w delayimp.h) zostały zmienione z adresów bezwzględnych (kanalików) na względnych adresów (RVA), aby działać w oczekiwany sposób w programach zarówno 32 - i 64-bitowych, musisz przekonwertować te wstecz do wskaźników. Wprowadzono nową funkcję: pfromrva —, znaleziono w delayhlp.cpp. Tej funkcji na każde z pól w deskryptorze umożliwia przekonwertować z powrotem na obu wskaźniki 32 - lub 64-bitowy. Funkcję pomocnika obciążenia opóźnienia domyślne w dalszym ciągu być dobrym szablon do użycia jako przykład.
+- Ponieważ wskaźniki w deskryptorze opóźnienie (ImgDelayDescr w delayimp.h) zostały zmienione z adresów bezwzględnych (kanalików) na względnych adresów (RVA), aby działać w oczekiwany sposób w programach zarówno 32 - i 64-bitowych, musisz przekonwertować te wstecz do wskaźników. Wprowadzono nową funkcję: Pfromrva — znaleziono w delayhlp.cpp. Tej funkcji na każde z pól w deskryptorze umożliwia przekonwertować z powrotem na obu wskaźniki 32 - lub 64-bitowy. Funkcję pomocnika obciążenia opóźnienia domyślne w dalszym ciągu być dobrym szablon do użycia jako przykład.
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Załaduj wszystkie Importy dla bibliotek DLL ładowanych z opóźnieniem
 
-Konsolidator może ładować wszystkie Importy z biblioteki DLL, który określiłeś być ładowane z opóźnieniem. Zobacz [ładowania wszystkie Importy dla bibliotek DLL z Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
+Konsolidator może ładować wszystkie Importy z biblioteki DLL, który określiłeś być ładowane z opóźnieniem. Zobacz [ładowania wszystkie Importy dla bibliotek DLL z Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)

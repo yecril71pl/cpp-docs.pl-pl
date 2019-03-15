@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621471"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813373"
 ---
 # <a name="errlook-reference"></a>Odwołanie ERRLOOK
 
@@ -20,19 +20,19 @@ Akcelerator kluczy dla kopiowania (CTRL + C), wycinania (CTRL + X) i wklej (CTRL
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Kontrolka edycji wartości](../../build/reference/value-edit-control.md)<br/>
+[Kontrolka edycji wartości](value-edit-control.md)<br/>
 W tym artykule opisano edytować wartość kontrolki w aplikacji ERRLOOK.
 
-[Kontrolka edycji komunikatu o błędzie](../../build/reference/error-message-edit-control.md)<br/>
+[Kontrolka edycji komunikatu o błędzie](error-message-edit-control.md)<br/>
 W tym artykule opisano Edytuj komunikat o błędzie formantu w aplikacji ERRLOOK.
 
-[Przycisk modułów](../../build/reference/modules-button.md)<br/>
+[Przycisk modułów](modules-button.md)<br/>
 W tym artykule opisano przycisk modułów w aplikacji ERRLOOK.
 
-[Przycisk wyszukiwania](../../build/reference/look-up-button.md)<br/>
+[Przycisk wyszukiwania](look-up-button.md)<br/>
 W tym artykule opisano przycisk przeglądania w aplikacji ERRLOOK.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
 Zawiera łącza do tematów omawiających C/C++ kompilacji narzędzi dostępnych w programie Visual C++.

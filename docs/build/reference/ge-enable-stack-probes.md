@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: 485a6a479f4d0d6c9e5eb745eda894a01f356e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448935"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812138"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Włącz sondy stosu)
 
@@ -31,15 +31,15 @@ Uaktywnia sondy stosu za każde wywołanie funkcji, wymagająca magazynu dla zmi
 
 ## <a name="remarks"></a>Uwagi
 
-Ten mechanizm jest przydatne, jeśli przepiszesz funkcje sondy stosu. Zaleca się, że używasz [/Gh (Włącz _penter funkcja podłączania)](../../build/reference/gh-enable-penter-hook-function.md) zamiast ponownego zapisywania adresów sondy stosu.
+Ten mechanizm jest przydatne, jeśli przepiszesz funkcje sondy stosu. Zaleca się, że używasz [/Gh (Włącz _penter funkcja podłączania)](gh-enable-penter-hook-function.md) zamiast ponownego zapisywania adresów sondy stosu.
 
-[/GS (wywołania sprawdzania stosu kontroli)](../../build/reference/gs-control-stack-checking-calls.md) ma taki sam skutek.
+[/GS (wywołania sprawdzania stosu kontroli)](gs-control-stack-checking-calls.md) ma taki sam skutek.
 
-**/GE** jest przestarzała; począwszy od programu Visual Studio 2005, kompilator automatycznie generuje sprawdzeniem stosu. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/GE** jest przestarzała; począwszy od programu Visual Studio 2005, kompilator automatycznie generuje sprawdzeniem stosu. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -51,7 +51,7 @@ Ten mechanizm jest przydatne, jeśli przepiszesz funkcje sondy stosu. Zaleca si�
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

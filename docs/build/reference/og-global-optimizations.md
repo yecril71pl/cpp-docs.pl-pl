@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: d6913be5bc02755730ffb6205e9f34811c9a5dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431944"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818534"
 ---
 # <a name="og-global-optimizations"></a>/Og (Optymalizacje globalne)
 
-Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejestrowanie alokacji i optymalizacji pętli. Firma Microsoft zaleca, należy użyć [/O1 (Minimalizuj rozmiar)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [/O2 (Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) zamiast tego.
+Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejestrowanie alokacji i optymalizacji pętli. Firma Microsoft zaleca, należy użyć [/O1 (Minimalizuj rozmiar)](o1-o2-minimize-size-maximize-speed.md) lub [/O2 (Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md) zamiast tego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,7 +30,7 @@ Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejest
 
 ## <a name="remarks"></a>Uwagi
 
-**/Og** jest przestarzała. Optymalizacje te są teraz ogólnie domyślnie włączone. Aby uzyskać więcej informacji na temat optymalizacji, zobacz [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md).
+**/Og** jest przestarzała. Optymalizacje te są teraz ogólnie domyślnie włączone. Aby uzyskać więcej informacji na temat optymalizacji, zobacz [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz większość optymalizacji szybkości)](ox-full-optimization.md).
 
 Następujące optymalizacje są dostępne w obszarze **/Og**:
 
@@ -76,11 +76,11 @@ Następujące optymalizacje są dostępne w obszarze **/Og**:
    > [!NOTE]
    > Można włączyć lub wyłączyć optymalizację globalną na temat korzystania z poszczególnych funkcji przez funkcję `optimize` pragma wraz z `g` opcji.
 
-Aby uzyskać powiązane informacje, zobacz [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md) i [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md).
+Aby uzyskać powiązane informacje, zobacz [/Oi (Generuj funkcje wewnętrzne)](oi-generate-intrinsic-functions.md) i [OX (Włącz większość optymalizacji szybkości)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -92,10 +92,6 @@ Aby uzyskać powiązane informacje, zobacz [/Oi (Generuj funkcje wewnętrzne)](.
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
-
-[Opcje kompilatora](../../build/reference/compiler-options.md)
-
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

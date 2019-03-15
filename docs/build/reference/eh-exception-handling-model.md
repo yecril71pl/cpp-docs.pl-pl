@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329303"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808264"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Model obsługi wyjątku)
 
@@ -43,7 +43,7 @@ Informuje kompilator, aby zawsze Generuj operacje sprawdzania zakończenia środ
 
 ## <a name="remarks"></a>Uwagi
 
-**/Eha** — opcja kompilatora jest używana do obsługi asynchronicznego strukturalna Obsługa wyjątków (SEH) za pomocą natywnego języka C++ `catch(...)` klauzuli. Aby zaimplementować SEH bez określania **/eha**, może używać **__try**, **__except**, i **__finally** składni. Mimo że Windows i Visual C++ obsługuje SEH, zdecydowanie zalecamy używanie obsługi wyjątków ISO standard C++ (**/EHS** lub **/ehsc**), ponieważ dzięki niej kod jest bardziej przenośny i elastyczny. Niemniej jednak w istniejącym kodzie lub dla szczególnych typów programów — na przykład w kodzie skompilowanym z obsługą środowiska uruchomieniowego języka wspólnego ([/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md)) — nadal może być konieczne używanie SEH. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+**/Eha** — opcja kompilatora jest używana do obsługi asynchronicznego strukturalna Obsługa wyjątków (SEH) za pomocą natywnego języka C++ `catch(...)` klauzuli. Aby zaimplementować SEH bez określania **/eha**, może używać **__try**, **__except**, i **__finally** składni. Mimo że Windows i Visual C++ obsługuje SEH, zdecydowanie zalecamy używanie obsługi wyjątków ISO standard C++ (**/EHS** lub **/ehsc**), ponieważ dzięki niej kod jest bardziej przenośny i elastyczny. Niemniej jednak w istniejącym kodzie lub dla szczególnych typów programów — na przykład w kodzie skompilowanym z obsługą środowiska uruchomieniowego języka wspólnego ([/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](clr-common-language-runtime-compilation.md)) — nadal może być konieczne używanie SEH. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
 
 Określanie **/eha** i próba obsługi wszystkich wyjątków za pomocą `catch(...)` może być niebezpieczne. W większości przypadków wyjątki asynchroniczne są nie do odzyskania i powinny być uważane za krytyczne. Ich wychwytywanie i kontynuacja wykonania aplikacji może spowodować uszkodzenie procesu i prowadzić do błędów, które trudno znaleźć i naprawić.
 
@@ -94,11 +94,11 @@ Opcja może być obsadzona przez przy użyciu symbolu **-**. Na przykład **/EHs
 
 **/EHr** — opcja kompilatora wymusza operacje sprawdzania zakończenia środowiska uruchomieniowego w wszystkie funkcje, które mają **noexcept** atrybutu. Domyślnie testy środowiska uruchomieniowego może być w celu optymalizacji Jeśli zapleczu kompilatora okaże się, czy funkcja tylko wywołuje *niezgłaszające* funkcji. Zgłaszanie inne niż funkcje są wszystkie funkcje, które mają atrybut określający, że żadne wyjątki, które mogą być generowane. W tym funkcje oznaczone **noexcept**, `throw()`, `__declspec(nothrow)`i kiedy **opcja/ehc** jest określony, **extern "C"** funkcji. Zgłaszanie inne niż funkcje także tych, które kompilator ustalił, czy niezgłaszające inspekcja. Wartość domyślna została jawnie ustawiona przy użyciu **/EHr-**.
 
-Jednak atrybut niezgłaszające jest gwarancję, że żadne wyjątki mogą być generowane przez funkcję. W odróżnieniu od zachowania **noexcept** funkcji, kompilator języka Visual C++ traktuje wyjątek zgłoszony przez funkcje zadeklarowane za pomocą `throw()`, `__declspec(nothrow)`, lub **extern "C"** jako niezdefiniowane zachowanie. Funkcje korzystające z tych trzech deklaracji atrybutów nie wymuszają operacje sprawdzania zakończenia środowiska uruchomieniowego do obsługi wyjątków. Możesz użyć **/EHr** opcję, aby pomóc w zidentyfikowaniu to niezdefiniowane zachowanie, wymuszając kompilatorowi Generowanie testy środowiska uruchomieniowego dla nieobsłużonych wyjątków, które ucieczki **noexcept** funkcji.
+Jednak atrybut niezgłaszające jest gwarancję, że żadne wyjątki mogą być generowane przez funkcję. W odróżnieniu od zachowania **noexcept** funkcji, za pomocą kompilatora MSVC uwzględnia wyjątek zgłoszony przez funkcje zadeklarowane za pomocą `throw()`, `__declspec(nothrow)`, lub **extern "C"** jako niezdefiniowane zachowanie. Funkcje korzystające z tych trzech deklaracji atrybutów nie wymuszają operacje sprawdzania zakończenia środowiska uruchomieniowego do obsługi wyjątków. Możesz użyć **/EHr** opcję, aby pomóc w zidentyfikowaniu to niezdefiniowane zachowanie, wymuszając kompilatorowi Generowanie testy środowiska uruchomieniowego dla nieobsłużonych wyjątków, które ucieczki **noexcept** funkcji.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **generowanie kodu**.
 
@@ -112,8 +112,8 @@ Jednak atrybut niezgłaszające jest gwarancję, że żadne wyjątki mogą być 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Błędy w obsłudze wyjątków](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

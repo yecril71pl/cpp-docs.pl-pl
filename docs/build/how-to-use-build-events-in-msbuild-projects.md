@@ -1,19 +1,19 @@
 ---
-title: 'Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild'
+title: 'Instrukcje: Korzystanie ze zdarzeń kompilacji w projektach MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570277"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814124"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Instrukcje: Korzystanie ze zdarzeń kompilacji w projektach MSBuild
 
 To zdarzenie kompilacji jest polecenia, który program MSBuild wykonuje na określonym etapie w procesie kompilacji. *Prekompilacji* wystąpi zdarzenie, przed rozpoczęciem kompilacji; *prekonsolidacyjnego* wystąpi zdarzenie przed uruchomieniem kroku łącze; i *po kompilacji* wystąpi zdarzenie po kompilacji kończy się pomyślnie. To zdarzenie kompilacji występuje tylko wtedy, gdy występuje w kroku skojarzonej kompilacji. Na przykład zdarzenia prekonsolidacyjnego nie występuje krokiem link nie zostanie uruchomione.
 
@@ -23,7 +23,7 @@ Opcjonalny *Użyj kompilacji* — element (`<`*zdarzenia kompilacji*`UseInBuild>
 
 Poniższa tabela zawiera listę każdego zdarzenia kompilacji — element XML:
 
-|— Element XML|Opis|
+|XML Element|Opis|
 |-----------------|-----------------|
 |`PreBuildEvent`|To zdarzenie jest wykonywany przed rozpoczęciem kompilacji.|
 |`PreLinkEvent`|To zdarzenie jest wykonywany przed rozpoczęciem kroku łączenia.|
@@ -31,7 +31,7 @@ Poniższa tabela zawiera listę każdego zdarzenia kompilacji — element XML:
 
 W poniższej tabeli wymieniono każdy *Użyj kompilacji* elementu:
 
-|— Element XML|Opis|
+|XML Element|Opis|
 |-----------------|-----------------|
 |`PreBuildEventUseInBuild`|Określa, czy można wykonać *prekompilacji* zdarzeń.|
 |`PreLinkEventUseInBuild`|Określa, czy można wykonać *prekonsolidacyjnego* zdarzeń.|
@@ -39,7 +39,7 @@ W poniższej tabeli wymieniono każdy *Użyj kompilacji* elementu:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj za elementem pliku utworzonego w [Instruktaż: przy użyciu programu MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacji* zdarzeń sprawia, że kopia main.cpp; *prekonsolidacyjnego* zdarzeń sprawia, że kopia main.obj; a co *po kompilacji* zdarzeń tworzy kopię myproject.exe. Jeśli projekt jest kompilowany przy użyciu konfiguracji wydania, wykonywane są zdarzeń kompilacji. Jeśli projekt jest kompilowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.
+Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj za elementem pliku utworzonego w [instruktażu: Korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacji* zdarzeń sprawia, że kopia main.cpp; *prekonsolidacyjnego* zdarzeń sprawia, że kopia main.obj; a co *po kompilacji* zdarzeń tworzy kopię myproject.exe. Jeśli projekt jest kompilowany przy użyciu konfiguracji wydania, wykonywane są zdarzeń kompilacji. Jeśli projekt jest kompilowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.
 
 ```
 <ItemDefinitionGroup>
@@ -70,7 +70,7 @@ Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj 
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Program MSBuild w wierszu polecenia — C++](msbuild-visual-cpp.md)<br/>
+[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

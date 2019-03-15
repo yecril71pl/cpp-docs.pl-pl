@@ -12,12 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-ms.openlocfilehash: 9b3d84d94ed75acd68011b895afbc4f190019673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e6302d90647bce7e37c47a619e814cab300aaee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622245"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813763"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Przetwarzaj wstępnie do pliku)
 
@@ -31,15 +31,15 @@ Wstępnie przetwarza pliki źródłowe C i C++ i zapisuje wstępnie przetworzone
 
 ## <a name="remarks"></a>Uwagi
 
-Plik ma taką samą nazwę pliku źródłowego oraz rozszerzenie .i. W procesie przeprowadzane są wszystkie dyrektywy preprocesora, makra rozszerzenia są wykonywane i komentarze są usuwane. Aby zachować komentarzy w wstępnie przetworzone produkty wyjściowe, należy użyć [/C (Zachowaj komentarze podczas przetwarzania wstępnego)](../../build/reference/c-preserve-comments-during-preprocessing.md) wraz z opcją **/P**.
+Plik ma taką samą nazwę pliku źródłowego oraz rozszerzenie .i. W procesie przeprowadzane są wszystkie dyrektywy preprocesora, makra rozszerzenia są wykonywane i komentarze są usuwane. Aby zachować komentarzy w wstępnie przetworzone produkty wyjściowe, należy użyć [/C (Zachowaj komentarze podczas przetwarzania wstępnego)](c-preserve-comments-during-preprocessing.md) wraz z opcją **/P**.
 
-**/P** dodaje `#line` dyrektywy dane wyjściowe na początku i na końcu każdego dołączony plik i wokół wierszy usuniętych przez dyrektywy preprocesora dla kompilacji warunkowej. Te dyrektywy numerowania wierszy wstępnie przetworzonego pliku. W rezultacie wygenerowane błędy podczas późniejszych etapach przetwarzania można znaleźć numery wierszy oryginalnego pliku źródłowego, a nie wiersze z wstępnie przetworzonego pliku. Aby pominąć Generowanie `#line` użyć dyrektyw, [/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) także **/P**.
+**/P** dodaje `#line` dyrektywy dane wyjściowe na początku i na końcu każdego dołączony plik i wokół wierszy usuniętych przez dyrektywy preprocesora dla kompilacji warunkowej. Te dyrektywy numerowania wierszy wstępnie przetworzonego pliku. W rezultacie wygenerowane błędy podczas późniejszych etapach przetwarzania można znaleźć numery wierszy oryginalnego pliku źródłowego, a nie wiersze z wstępnie przetworzonego pliku. Aby pominąć Generowanie `#line` użyć dyrektyw, [/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) także **/P**.
 
-**/P** opcja pomija kompilację. Nie generuje pliku .obj, nawet w przypadku używania [/Fo (nazwa pliku obiektu)](../../build/reference/fo-object-file-name.md). Należy ponownie przesłać wstępnie przetworzony plik dla kompilacji. **/P** powoduje również pominięcie pliki wyjściowe z **/FA**, **/Fa**, i **/Fm** opcje. Aby uzyskać więcej informacji, zobacz [/FA, /Fa (wyświetlanie listy plików)](../../build/reference/fa-fa-listing-file.md) i [/Fm (nazwa Mapfile)](../../build/reference/fm-name-mapfile.md).
+**/P** opcja pomija kompilację. Nie generuje pliku .obj, nawet w przypadku używania [/Fo (nazwa pliku obiektu)](fo-object-file-name.md). Należy ponownie przesłać wstępnie przetworzony plik dla kompilacji. **/P** powoduje również pominięcie pliki wyjściowe z **/FA**, **/Fa**, i **/Fm** opcje. Aby uzyskać więcej informacji, zobacz [/FA, /Fa (wyświetlanie listy plików)](fa-fa-listing-file.md) i [/Fm (nazwa Mapfile)](fm-name-mapfile.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -59,8 +59,8 @@ Następujące polecenie w wierszu wstępnie przetwarza `ADD.C`, zachowuje koment
 CL /P /C ADD.C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/Fi (Przetwarzaj wstępnie nazwę pliku wyjściowego)](../../build/reference/fi-preprocess-output-file-name.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[/Fi (Przetwarzaj wstępnie nazwę pliku wyjściowego)](fi-preprocess-output-file-name.md)

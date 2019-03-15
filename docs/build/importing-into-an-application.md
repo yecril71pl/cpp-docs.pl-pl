@@ -6,12 +6,12 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 96016a12b5164bcaca3f2c562671f5bf09a187f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442708"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818469"
 ---
 # <a name="importing-into-an-application"></a>Importowanie do aplikacji
 
@@ -23,14 +23,14 @@ Funkcje można zaimportować do aplikacji przy użyciu dwóch metod:
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)](../build/importing-function-calls-using-declspec-dllimport.md)
+- [Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Importowanie danych przy użyciu __declspec(dllimport)](../build/importing-data-using-declspec-dllimport.md)
+- [Importowanie danych przy użyciu __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Importowanie przy użyciu plików DEF](../build/importing-using-def-files.md)
+- [Importowanie przy użyciu plików DEF](importing-using-def-files.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Importowanie i eksportowanie](../build/importing-and-exporting.md)
+[Importowanie i eksportowanie](importing-and-exporting.md)

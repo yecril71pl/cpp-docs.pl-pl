@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434986"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815882"
 ---
 # <a name="attribute-programming-faq"></a>Pogramowanie oparte na atrybutach - najczęściej zadawane pytania
 
@@ -43,7 +43,7 @@ Wartość HRESULT to typ prosty danych, który jest często używana jako warto�
 |Nazwa|Opis|Wartość|
 |----------|-----------------|-----------|
 |S_OK|Operacja zakończona powodzeniem|0x00000000|
-|WARTOŚĆ E_UNEXPECTED|Nieoczekiwany błąd|0x8000FFFF|
+|E_UNEXPECTED|Nieoczekiwany błąd|0x8000FFFF|
 |E_NOTIMPL|Nie zaimplementowano|0x80004001|
 |E_OUTOFMEMORY|Nie można przydzielić wymaganej ilości pamięci|0x8007000E|
 |E_INVALIDARG|Jeden lub więcej argumentów są nieprawidłowe|0x80070057|
@@ -122,7 +122,7 @@ Masz nonattributed Projekt ATL, który ma pliku .idl, i chcesz rozpocząć dodaw
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Jak używać pliku .idl w projekcie z atrybutami?
 
-Może być pliku .idl, którego chcesz użyć w projekcie ATL opartego na atrybutach. W tym przypadku używasz [importidl —](importidl.md) atrybutu, skompilować pliku .idl, aby plik .h (zobacz [strony właściwości MIDL](../../ide/midl-property-pages.md) w projekcie **strony właściwości** okno dialogowe), a następnie dołącz plik .h klasy w projekcie.
+Może być pliku .idl, którego chcesz użyć w projekcie ATL opartego na atrybutach. W tym przypadku używasz [importidl —](importidl.md) atrybutu, skompilować pliku .idl, aby plik .h (zobacz [strony właściwości MIDL](../../build/reference/midl-property-pages.md) w projekcie **strony właściwości** okno dialogowe), a następnie dołącz plik .h klasy w projekcie.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Można zmodyfikować kod, który jest wprowadzony przez atrybut?
 

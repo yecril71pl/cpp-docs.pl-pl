@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648764"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821407"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Wyłącz dwufazowe wyszukiwanie nazw)
 
@@ -162,7 +162,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością, zobacz [ule
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
@@ -170,4 +170,4 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością, zobacz [ule
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>

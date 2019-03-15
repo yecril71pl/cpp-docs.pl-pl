@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423316"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815427"
 ---
 # <a name="decorated-names"></a>Nazwy ozdobione
 
@@ -67,7 +67,7 @@ Po skompilowaniu pliku źródłowego, który zawiera dane, obiekt lub definicji 
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Użyj, aby wyświetlić listę nazw ozdobionych
 
-1. Generowanie listy przez kompilowanie pliku źródłowego, który zawiera dane, obiekt lub definicji funkcji lub prototyp z [listę typu pliku](../../build/reference/fa-fa-listing-file.md) — opcja kompilatora równa asembler z kodem źródłowym (**/FAS**).
+1. Generowanie listy przez kompilowanie pliku źródłowego, który zawiera dane, obiekt lub definicji funkcji lub prototyp z [listę typu pliku](fa-fa-listing-file.md) — opcja kompilatora równa asembler z kodem źródłowym (**/FAS**).
 
    Na przykład, wprowadź `cl /c /FAs example.cpp` w wierszu polecenia dla deweloperów, aby wygenerować plik listingu example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Zobacz także
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
 [Użycie zewnętrznie w celu określenia powiązania](../../cpp/using-extern-to-specify-linkage.md)

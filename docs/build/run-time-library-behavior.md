@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 8293e2e05193b34802aba0af722dd06155fdcd81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429058"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811442"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++
 
@@ -32,10 +32,10 @@ W Windows, wszystkie biblioteki dll mogą zawierać funkcji opcjonalnych punktu 
 
 Biblioteka VCRuntime udostępnia funkcję punktu wejścia o nazwie `_DllMainCRTStartup` na obsługę operacji inicjowanie i kończenie działania domyślne. Na temat procesu dołączania, `_DllMainCRTStartup` funkcja konfiguruje sprawdzenia zabezpieczeń buforu, inicjuje CRT i inne biblioteki, inicjuje informacje typu run-time, inicjuje i wywołuje konstruktory danych statycznych i inną niż lokalna, inicjuje lokalny magazyn wątków , zwiększa Licznik wewnętrzny statyczny dla każdego dołączenia, a następnie wywołuje, dostarczone przez użytkownika lub biblioteki- `DllMain`. W procesie odłączania, funkcja przechodzi przez te kroki w odwrotnej kolejności. Wywołuje `DllMain`zmniejsza wewnętrznego licznika wywołuj destruktory, zakończenie wywołania CRT, funkcje i zarejestrowany `atexit` funkcje i powiadamia innych bibliotek, zakończenia. Gdy licznik załącznika zbliża się do zera, funkcja zwraca `FALSE` do wskazania Windows, czy można zwolnić bibliotekę DLL. `_DllMainCRTStartup` Funkcja jest również nazywany podczas wątku Dołączanie i odłączanie wątku. W takich przypadkach nie żadne dodatkowe inicjowania lub zakończenia na swój własny kod VCRuntime i po prostu wywołuje funkcję `DllMain` do przekazywania wiadomości wzdłuż. Jeśli `DllMain` zwraca `FALSE` z procesu dołączania, sygnalizujących niepowodzenie, `_DllMainCRTStartup` wywołania `DllMain` ponownie i przekazuje `DLL_PROCESS_DETACH` jako *Przyczyna* argumentów, następnie przechodzi przez pozostałą część Zakończenie procesu.
 
-Podczas tworzenia biblioteki dll w programie Visual C++, domyślny punkt wejścia `_DllMainCRTStartup` dostarczonych przez VCRuntime jest automatycznie konsolidowana. Nie należy określić funkcję punktu wejścia dla biblioteki DLL przy użyciu [/Entry (symbol punktu wejścia)](../build/reference/entry-entry-point-symbol.md) — opcja konsolidatora.
+Podczas tworzenia biblioteki dll w programie Visual C++, domyślny punkt wejścia `_DllMainCRTStartup` dostarczonych przez VCRuntime jest automatycznie konsolidowana. Nie należy określić funkcję punktu wejścia dla biblioteki DLL przy użyciu [/Entry (symbol punktu wejścia)](reference/entry-entry-point-symbol.md) — opcja konsolidatora.
 
 > [!NOTE]
-> Choć jest możliwe określić inną funkcję punktu wejścia dla biblioteki DLL przy użyciu / Entry: — opcja konsolidatora, nie jest zalecane, ponieważ funkcja punktu wejścia będzie już potrzeby duplikowania wszystko, co który `_DllMainCRTStartup` jest w tej samej kolejności. VCRuntime udostępnia funkcje, które pozwalają na zduplikowane jego zachowanie. Na przykład, można wywołać [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) natychmiast na temat procesu dołączania do obsługi [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md) buforu opcję sprawdzania. Możesz wywołać `_CRT_INIT` funkcję, przekazując te same parametry jako funkcję punktu wejścia do wykonania pozostałej części funkcji DLL inicjowania lub zakończenia.
+> Choć jest możliwe określić inną funkcję punktu wejścia dla biblioteki DLL przy użyciu / Entry: — opcja konsolidatora, nie jest zalecane, ponieważ funkcja punktu wejścia będzie już potrzeby duplikowania wszystko, co który `_DllMainCRTStartup` jest w tej samej kolejności. VCRuntime udostępnia funkcje, które pozwalają na zduplikowane jego zachowanie. Na przykład, można wywołać [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) natychmiast na temat procesu dołączania do obsługi [/GS (Sprawdzanie zabezpieczeń bufora)](reference/gs-buffer-security-check.md) buforu opcję sprawdzania. Możesz wywołać `_CRT_INIT` funkcję, przekazując te same parametry jako funkcję punktu wejścia do wykonania pozostałej części funkcji DLL inicjowania lub zakończenia.
 
 <a name="initializing-a-dll"></a>
 
@@ -178,8 +178,8 @@ Należy pamiętać, że plik nagłówkowy Afxdllx.h zawiera specjalne definicje 
 
 Funkcja inicjowania próbki, która obsługuje wielowątkowość znajduje się w [za pomocą wątku lokalnego magazynu w bibliotece dll](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) w zestawie Windows SDK. Należy pamiętać, że przykład zawiera funkcję punktu wejścia o nazwie `LibMain`, ale należy nazwać tę funkcję, `DllMain` , która działa z biblioteki wykonawczej MFC i C.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)<br/>
 [Punkt wejścia funkcji DllMain](/windows/desktop/Dlls/dllmain)<br/>
 [Biblioteka dołączana dynamicznie najlepszych rozwiązań](/windows/desktop/Dlls/dynamic-link-library-best-practices)

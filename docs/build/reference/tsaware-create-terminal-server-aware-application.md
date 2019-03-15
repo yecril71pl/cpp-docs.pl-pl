@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 4b6cebfd30c6572c2ea7d9a0e59625ac8fd66de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566598"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816948"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Utwórz aplikację świadomą serwera terminali)
 
@@ -34,15 +34,15 @@ Jeśli aplikacja jest świadome serwera terminali, jego musi korzystają z plik�
 
 Jeśli używasz/tsaware, a aplikacja nadal używa plików INI, pliki będą udostępniane przez wszystkich użytkowników systemu. Jeżeli jest to akceptowalne, nadal można połączyć aplikacji za pomocą/tsaware; w przeciwnym razie należy użyć aktywność.
 
-Opcja/tsaware jest domyślnie włączona, Windows i aplikacji konsoli. Zobacz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) i [Version](../../build/reference/version-version-information.md) informacji.
+Opcja/tsaware jest domyślnie włączona, Windows i aplikacji konsoli. Zobacz [/Subsystem](subsystem-specify-subsystem.md) i [Version](version-version-information.md) informacji.
 
 / TSAWARE nie jest prawidłowy dla sterowników, urządzenia vxd lub biblioteki dll.
 
-Jeśli aplikacja została połączona z/tsaware, DUMPBIN [/HEADERS](../../build/reference/headers.md) spowoduje to wyświetlenie informacji w tym celu.
+Jeśli aplikacja została połączona z/tsaware, DUMPBIN [/HEADERS](headers.md) spowoduje to wyświetlenie informacji w tym celu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -54,9 +54,9 @@ Jeśli aplikacja została połączona z/tsaware, DUMPBIN [/HEADERS](../../build/
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
 [Przechowywanie informacji o użytkowniku](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Starsze aplikacje w środowisku usług terminalowych](https://msdn.microsoft.com/library/aa382957.aspx)

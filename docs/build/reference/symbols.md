@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: d71f0e0ce02bca1e50d177ffbfd7ffe61e9e8998
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667606"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822551"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -66,8 +66,8 @@ Poniższy opis, wiersze rozpoczynające się od numeru symboli w tym artykule op
 
 Ostatnia kolumna numerowana wiersza nazwy symbolu, zarówno dekorowane i niedekorowanego.
 
-Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opcje DUMPBIN](dumpbin-options.md)

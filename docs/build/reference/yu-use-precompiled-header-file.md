@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424122"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810123"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Korzystaj z prekompilowanego pliku nagłówka)
 
@@ -45,7 +45,7 @@ Kompilator traktuje cały kod przed plik .h jako wstępnie skompilowane. Pomija 
 
 W wierszu polecenia nie może być spacji między **/Yu** i `filename`.
 
-Po określeniu **/Yu** opcji bez nazwy pliku, program źródłowy musi zawierać [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma, który określa nazwę pliku prekompilowanego pliku nagłówkowego pliku .pch. W tym przypadku kompilator będzie używał prekompilowanego pliku nagłówkowego (pliku .pch) o nazwie określonej przez  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md). Kompilator pomija do lokalizacji pragmy tego przywraca stan kompilacji z prekompilowanego pliku nagłówkowego określone przez dyrektywę i następnie kompiluje kod, który następuje po pragmie. Jeśli **#pragma hdrstop** nie określa nazwę pliku, kompilator szuka pliku o nazwie pochodzące z podstawowej nazwy pliku źródłowego z rozszerzeniem .pch. Można również użyć **/FP** opcję, aby określić plik .pch różne.
+Po określeniu **/Yu** opcji bez nazwy pliku, program źródłowy musi zawierać [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma, który określa nazwę pliku prekompilowanego pliku nagłówkowego pliku .pch. W tym przypadku kompilator będzie używał prekompilowanego pliku nagłówkowego (pliku .pch) o nazwie określonej przez  [ /FP (nazwa. Plik pch)](fp-name-dot-pch-file.md). Kompilator pomija do lokalizacji pragmy tego przywraca stan kompilacji z prekompilowanego pliku nagłówkowego określone przez dyrektywę i następnie kompiluje kod, który następuje po pragmie. Jeśli **#pragma hdrstop** nie określa nazwę pliku, kompilator szuka pliku o nazwie pochodzące z podstawowej nazwy pliku źródłowego z rozszerzeniem .pch. Można również użyć **/FP** opcję, aby określić plik .pch różne.
 
 Jeśli określisz **/Yu** opcji bez nazwy pliku i nie można określić **hdrstop** pragma, generowany jest komunikat o błędzie i kompilacja zakończy się niepowodzeniem.
 
@@ -55,15 +55,15 @@ Ponieważ .pch — pliki zawierają informacje o środowisku komputera, a także
 
 Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
 
-- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Prekompilowane nagłówki)](y-precompiled-headers.md)
 
-- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Określ [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) pliku .cpp w projekcie.
+1. Określ [/Yc (Utwórz prekompilowany plik nagłówkowy)](yc-create-precompiled-header-file.md) pliku .cpp w projekcie.
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -88,7 +88,7 @@ Jeśli następujący kod:
 
 jest skompilowany przy użyciu wiersza polecenia `CL /YuMYAPP.H PROG.CPP`, kompilator nie może przetwarzać trzy obejmują instrukcji, ale używa wstępnie skompilowany kod z MYAPP.pch, a tym samym zapisywanie czasu zaangażowanych w przetwarzaniu wstępnym wszystkie trzy pliki (i wszystkie pliki, mogą one obejmować).
 
-Możesz użyć  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) z opcją **/Yu** opcję, aby określić nazwę pliku .pch, jeśli nazwa jest inna niż albo argument nazwy pliku do **/Yc** lub podstawowej nazwy pliku źródłowego, jak następujące:
+Możesz użyć  [ /FP (nazwa. Plik pch)](fp-name-dot-pch-file.md) z opcją **/Yu** opcję, aby określić nazwę pliku .pch, jeśli nazwa jest inna niż albo argument nazwy pliku do **/Yc** lub podstawowej nazwy pliku źródłowego, jak następujące:
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ To polecenie Określa prekompilowany plik nagłówka o nazwie MYPCH.pch. Kompila
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

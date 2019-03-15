@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260546"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818638"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
@@ -55,7 +55,7 @@ Można łatwo przekonwertować istniejącego kodu do wyjątków C++ zamiast makr
 Jeśli już opracowano aplikację przy użyciu makr wyjątków MFC, możesz kontynuować używanie tych makr w istniejącym kodzie podczas korzystania z wyjątków C++ w nowy kod. Artykuł [wyjątków: Zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) zapewnia wskazówki, aby to zrobić.
 
 > [!NOTE]
->  Aby włączyć obsługę wyjątków C++ w kodzie, wybierz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze projektu języka C/C++ [stron właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe lub użyj [/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora.
+>  Aby włączyć obsługę wyjątków C++ w kodzie, wybierz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze projektu języka C/C++ [stron właściwości](../build/reference/property-pages-visual-cpp.md) okno dialogowe lub użyj [/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora.
 
 W tym artykule omówiono następujące tematy:
 

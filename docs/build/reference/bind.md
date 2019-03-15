@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: 671a26268ab07db4a38ae241ae1e0867dd0eb43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ba0a5f0235c8771567e4e43172bdf8c81c99a2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470853"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818482"
 ---
 # <a name="bind"></a>/BIND
 
@@ -32,6 +32,6 @@ Określ plik wykonywalny i biblioteki dll w programie *pliki* argument w wierszu
 
 Domyślnie moduł ładujący program ustawia adresy punktów wejścia, podczas ładowania programu. Ilość czasu potrzebnego przez ten proces różni się w zależności od szeregu bibliotek DLL i liczbę punktów wejścia, do którego odwołuje się program. Jeśli program został zmodyfikowany z /BIND i base adresów dla pliku wykonywalnego, a jego biblioteki DLL nie wchodzą w konflikt z biblioteki dll, które zostały już załadowane, system operacyjny nie trzeba ustawić te adresy. W sytuacji, w której pliki są niepoprawnie na podstawie system operacyjny przenosi bibliotek DLL programu i ponownie oblicza adresy punktu wejścia, który dodaje do czasu ładowania tego programu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

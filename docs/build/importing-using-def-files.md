@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424784"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815336"
 ---
 # <a name="importing-using-def-files"></a>Importowanie przy użyciu plików DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 Przy użyciu stałej jest bardziej ryzykowne, ponieważ Jeśli zapomnisz dodatkowy poziom pośredni, użytkownik może potencjalnie uzyskać dostęp do tabeli adresów importowania wskaźnik do zmiennej — nie zmiennej. Tego rodzaju problem można często manifestu jako naruszenie zasad dostępu, ponieważ tabeli adresów importowania jest obecnie tylko do odczytu przez kompilatora i konsolidatora.
 
-Bieżący konsolidatora Visual C++ generuje ostrzeżenie, jeśli STAŁĄ w pliku .def konta dla tej sprawy. Tylko rzeczywistego powód, aby używało — STAŁA jest, jeśli nie można ponownie skompilować niektóre pliku obiektu, gdy plik nagłówkowy nie listy **__declspec(dllimport)** na prototypu.
+Bieżący konsolidatora MSVC generuje ostrzeżenie, jeśli STAŁĄ w pliku .def konta dla tej sprawy. Tylko rzeczywistego powód, aby używało — STAŁA jest, jeśli nie można ponownie skompilować niektóre pliku obiektu, gdy plik nagłówkowy nie listy **__declspec(dllimport)** na prototypu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Importowanie do aplikacji](../build/importing-into-an-application.md)
+[Importowanie do aplikacji](importing-into-an-application.md)

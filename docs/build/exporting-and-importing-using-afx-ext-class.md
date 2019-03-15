@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 521fa0e0f786111e4e273685d2db6f6d011c72c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482579"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821225"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS
 
-[Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md) użyć makra **AFX_EXT_CLASS** Aby wyeksportować klasy; pliki wykonywalne, które łączą się rozszerzenia MFC biblioteki DLL użyć makra, aby zaimportować klasy. Za pomocą **AFX_EXT_CLASS** — makro, ten sam pliki nagłówkowe, które są używane w celu skompilowania rozszerzenia MFC biblioteki DLL mogą być używane z pliki wykonywalne, które łącze do biblioteki DLL.
+[Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md) użyć makra **AFX_EXT_CLASS** Aby wyeksportować klasy; pliki wykonywalne, które łączą się rozszerzenia MFC biblioteki DLL użyć makra, aby zaimportować klasy. Za pomocą **AFX_EXT_CLASS** — makro, ten sam pliki nagłówkowe, które są używane w celu skompilowania rozszerzenia MFC biblioteki DLL mogą być używane z pliki wykonywalne, które łącze do biblioteki DLL.
 
 W pliku nagłówka dla biblioteki DLL, należy dodać **AFX_EXT_CLASS** — słowo kluczowe z deklaracją klasy, w następujący sposób:
 
@@ -104,28 +104,28 @@ Ponieważ MFC zawsze używa `AFX_DATA` symboli dla elementów danych definiuje s
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL za pomocą plików .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL za pomocą plików .def](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Określić, której metody eksportowania użyjesz](../build/determining-which-exporting-method-to-use.md)
+- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
 
-- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Nazwy ozdobione](../build/reference/decorated-names.md)
+- [Nazwy ozdobione](reference/decorated-names.md)
 
-- [Importowanie i eksportowanie funkcji śródwierszowych](../build/importing-and-exporting-inline-functions.md)
+- [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 
-- [Importy wzajemne](../build/mutual-imports.md)
+- [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+[Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

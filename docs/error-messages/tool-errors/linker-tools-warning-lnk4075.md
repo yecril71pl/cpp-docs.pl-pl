@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548255"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809902"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Ostrzeżenie LNK4075 narzędzi konsolidatora
 
@@ -21,7 +21,7 @@ Druga opcja przesłania pierwszego.
 
 Określania opcji konsolidatora wzajemnie się wykluczają.  Sprawdź opcje konsolidatora.  Gdzie są określone opcje konsolidatora, zależy od tego, jak tworzysz projekt.
 
-- Jeśli tworzysz w środowisku programistycznym, Szukaj w strony właściwości konsolidatora projektu i zobacz, gdzie określone obie opcje konsolidatora.  Zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md) Aby uzyskać więcej informacji.
+- Jeśli tworzysz w środowisku programistycznym, Szukaj w strony właściwości konsolidatora projektu i zobacz, gdzie określone obie opcje konsolidatora.  Zobacz [Ustaw kompilatora i właściwości kompilacji](../../build/working-with-project-properties.md) Aby uzyskać więcej informacji.
 
 - Jeśli kompilujesz w wierszu polecenia, sprawdź opcje konsolidatora określone.
 

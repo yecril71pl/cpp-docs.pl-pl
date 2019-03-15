@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175775"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820744"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
 
@@ -49,7 +49,7 @@ Następnie można skonfigurować `CMyReceiver` metody `handler1` i `handler2` do
 
 ## <a name="basic-mechanics-of-attributes"></a>Podstawowa mechanika atrybutów
 
-Istnieją trzy sposoby, aby wstawić atrybuty do projektu. Po pierwsze można wstawić je ręcznie w kodzie źródłowym. Po drugie można wstawić je przy użyciu siatki właściwości obiektu w projekcie. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z **właściwości** okna i różne kreatory, zobacz [tworzenie i zarządzanie projekty języka Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md).
+Istnieją trzy sposoby, aby wstawić atrybuty do projektu. Po pierwsze można wstawić je ręcznie w kodzie źródłowym. Po drugie można wstawić je przy użyciu siatki właściwości obiektu w projekcie. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z **właściwości** okna i różne kreatory, zobacz [tworzenie i zarządzanie projekty języka Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Jako wcześniej, gdy projekt jest kompilowany, w którym kompilator analizuje każdego pliku źródłowego języka C++, tworzenie pliku obiektu. Jednak gdy kompilator napotka atrybutu, jest analizowany i składniowo zweryfikowane. Kompilator dynamicznie wywołuje dostawcę atrybutu Wstaw kod lub wprowadzić inne zmiany w czasie kompilacji. Implementacja dostawcy różni się w zależności od typu atrybutu. Na przykład związane z ATL atrybuty są implementowane przez Atlprov.dll.
 

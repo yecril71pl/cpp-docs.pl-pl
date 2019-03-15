@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422211"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816597"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Pomijanie _ftol)
 
@@ -42,16 +42,16 @@ Oprócz konwersji z typu zmiennoprzecinkowego na typ całkowity `_ftol` funkcja 
 
 Możesz użyć [_control87 —, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkcji C Run-Time, aby zmodyfikować zachowanie zaokrąglania FPU. Domyślny tryb FPU zaokrąglania jest "Round do najbliższego." Za pomocą **/QIfist** może poprawić wydajność aplikacji, ale nie bez ryzyka. Należy dokładnie przetestować fragmenty kodu, które są wrażliwe na trybów zaokrąglania, zanim opierająca się na kod skompilowany przy użyciu **/QIfist** w środowiskach produkcyjnych.
 
-[/ arch (x86)](../../build/reference/arch-x86.md) i **/QIfist** nie można używać w tym samym compiland —.
+[/ arch (x86)](arch-x86.md) i **/QIfist** nie można używać w tym samym compiland —.
 
 > [!NOTE]
 >  **/ QIfist** jest obowiązuje domyślnie ponieważ zaokrąglanie bits także wpływ zmiennoprzecinkowa do zmiennoprzecinkowych wskazuje zaokrąglania (która pojawia się po obliczeniu co), dzięki czemu podczas ustawiania flagi zaokrąglania stylu języka C (w kierunku zera) z liczby zmiennoprzecinkowej obliczenia może się różnić. **/ QIfist** nie powinny być używane, jeśli kod jest zależna od oczekiwanego zachowania obcinanie część ułamkową liczby zmiennoprzecinkowej. Jeśli wiesz, nie używaj **/QIfist**.
 
-**/QIfist** opcja jest przestarzały, począwszy od programu Visual Studio 2005. Kompilator wprowadził istotne ulepszenia float szybkości konwersji int. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/QIfist** opcja jest przestarzały, począwszy od programu Visual Studio 2005. Kompilator wprowadził istotne ulepszenia float szybkości konwersji int. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -65,6 +65,6 @@ Możesz użyć [_control87 —, _controlfp, \__control87_2](../../c-runtime-libr
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Q Opcje (Operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/Q Opcje (Operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

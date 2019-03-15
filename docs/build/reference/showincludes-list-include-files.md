@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -showIncludes compiler option [C++]
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
-ms.openlocfilehash: 0c968f406043f5c0b5fd04c18e22a77cd640d873
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d454054c132976a899fcc4a56a63be427e79beec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424161"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819242"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Wymień pliki dołączane)
 
@@ -50,7 +50,7 @@ W tym przypadku `2.h` został dostarczony z w ramach `1.h`, dlatego wcięcia.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -64,5 +64,5 @@ W tym przypadku `2.h` został dostarczony z w ramach `1.h`, dlatego wcięcia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

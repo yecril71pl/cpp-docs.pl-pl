@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509477"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822356"
 ---
 # <a name="bscmake-reference"></a>Odwołanie BSCMAKE
 
@@ -33,18 +33,18 @@ Jeśli kompilujesz program poza środowiskiem programowania, można utworzyć .b
 
 Ta sekcja zawiera następujące tematy:
 
-- [Kompilowanie plików przeglądania informacji: Przegląd](../../build/reference/building-browse-information-files-overview.md)
+- [Kompilowanie plików przeglądania informacji: omówienie](building-browse-information-files-overview.md)
 
-- [Kompilowanie pliku .bsc](../../build/reference/building-a-dot-bsc-file.md)
+- [Kompilowanie pliku .bsc](building-a-dot-bsc-file.md)
 
-- [Wiersz polecenia BSCMAKE](../../build/reference/bscmake-command-line.md)
+- [Wiersz polecenia BSCMAKE](bscmake-command-line.md)
 
-- [Plik polecenia BSCMAKE](../../build/reference/bscmake-command-file-response-file.md)
+- [Plik polecenia BSCMAKE](bscmake-command-file-response-file.md)
 
-- [Opcje BSCMAKE](../../build/reference/bscmake-options.md)
+- [Opcje BSCMAKE](bscmake-options.md)
 
-- [Kody zakończenia BSCMAKE](../../build/reference/bscmake-exit-codes.md)
+- [Kody zakończenia BSCMAKE](bscmake-exit-codes.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)
+[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)

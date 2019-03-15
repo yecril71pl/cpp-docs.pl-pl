@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-ms.openlocfilehash: d03ee9d4f2ad3626dc260d171ef349a3a392fd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626034"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815219"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Usuń symbole prywatne)
 
@@ -31,7 +31,7 @@ Określone przez użytkownika nazwa usuniętych bazy danych programu (PDB) tworz
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/pdbstripped tworzy drugi plik bazy danych (PDB) programu podczas tworzenia obrazu programu za pomocą kompilatora lub konsolidatora, opcje, które generują plik PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/z7](../../build/reference/z7-zi-zi-debug-information-format.md), / zd, lub /Zi). Ten drugi plik PDB pomija symbole, których nie chcesz wysłać do klientów. Drugi plik PDB będzie zawierać tylko:
+Opcja/pdbstripped tworzy drugi plik bazy danych (PDB) programu podczas tworzenia obrazu programu za pomocą kompilatora lub konsolidatora, opcje, które generują plik PDB ([/DEBUG](debug-generate-debug-info.md), [/z7](z7-zi-zi-debug-information-format.md), / zd, lub /Zi). Ten drugi plik PDB pomija symbole, których nie chcesz wysłać do klientów. Drugi plik PDB będzie zawierać tylko:
 
 - Symbole publiczne
 
@@ -53,7 +53,7 @@ Jeśli nie utworzysz plik PDB, / pdbstripped jest ignorowana.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -65,7 +65,7 @@ Jeśli nie utworzysz plik PDB, / pdbstripped jest ignorowana.
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-ms.openlocfilehash: 512e658cf546e77bff6d58465932d2f830541521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666131"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818352"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Wymuszaj fast transcendentals)
 
@@ -28,11 +28,11 @@ generuje kod wbudowanej funkcji przestępne.
 
 Ta opcja kompilator wymusza przestępna funkcje są konwertowane na wbudowany kod w celu zwiększenia szybkości wykonywania. Ta opcja obowiązuje tylko wtedy, gdy powiązany z **/FP: z wyjątkiem** lub **/FP: precise**. Generowanie kodu wbudowanego przestępna funkcji jest już zachowanie domyślne w obszarze **Fast**.
 
-Ta opcja jest niezgodna z **/FP: strict**. Zobacz [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md) Aby uzyskać więcej informacji na temat liczb zmiennoprzecinkowych opcje kompilatora punktu.
+Ta opcja jest niezgodna z **/FP: strict**. Zobacz [/FP (określenie zachowania zmiennopozycyjna)](fp-specify-floating-point-behavior.md) Aby uzyskać więcej informacji na temat liczb zmiennoprzecinkowych opcje kompilatora punktu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -44,8 +44,8 @@ Ta opcja jest niezgodna z **/FP: strict**. Zobacz [/FP (określenie zachowania z
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/Q Opcje (Operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/Q Opcje (Operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
